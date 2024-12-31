@@ -25,7 +25,6 @@ public class Period extends AbstractModel {
 
     /**
     * 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -33,17 +32,14 @@ public class Period extends AbstractModel {
 
     /**
     * 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-     * Get 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间跨度 
      * @return TimeSpan 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -51,19 +47,15 @@ public class Period extends AbstractModel {
 
     /**
      * Set 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间单位，"m"代表月。 
      * @return TimeUnit 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -71,9 +63,7 @@ public class Period extends AbstractModel {
 
     /**
      * Set 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

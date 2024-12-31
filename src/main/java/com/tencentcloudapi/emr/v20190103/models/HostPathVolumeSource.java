@@ -25,7 +25,6 @@ public class HostPathVolumeSource extends AbstractModel {
 
     /**
     * 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -33,17 +32,14 @@ public class HostPathVolumeSource extends AbstractModel {
 
     /**
     * 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 主机路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机路径 
      * @return Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -51,19 +47,15 @@ public class HostPathVolumeSource extends AbstractModel {
 
     /**
      * Set 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机路径类型，当前默认DirectoryOrCreate 
      * @return Type 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -71,9 +63,7 @@ public class HostPathVolumeSource extends AbstractModel {
 
     /**
      * Set 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

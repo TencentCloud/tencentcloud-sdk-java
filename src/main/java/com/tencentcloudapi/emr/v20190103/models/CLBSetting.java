@@ -25,7 +25,6 @@ public class CLBSetting extends AbstractModel {
 
     /**
     * CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBType")
     @Expose
@@ -40,10 +39,8 @@ public class CLBSetting extends AbstractModel {
     private VPCSettings VPCSettings;
 
     /**
-     * Get CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段  
      * @return CLBType CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLBType() {
         return this.CLBType;
@@ -51,9 +48,7 @@ public class CLBSetting extends AbstractModel {
 
     /**
      * Set CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBType CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBType(String CLBType) {
         this.CLBType = CLBType;

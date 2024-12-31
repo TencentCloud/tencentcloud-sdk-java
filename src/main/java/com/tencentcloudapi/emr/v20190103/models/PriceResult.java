@@ -25,7 +25,6 @@ public class PriceResult extends AbstractModel {
 
     /**
     * 原价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,17 +32,14 @@ public class PriceResult extends AbstractModel {
 
     /**
     * 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-     * Get 原价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价 
      * @return OriginalCost 原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -51,19 +47,15 @@ public class PriceResult extends AbstractModel {
 
     /**
      * Set 原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价 
      * @return DiscountCost 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
@@ -71,9 +63,7 @@ public class PriceResult extends AbstractModel {
 
     /**
      * Set 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;

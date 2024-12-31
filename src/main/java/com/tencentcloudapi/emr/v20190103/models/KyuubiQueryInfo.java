@@ -25,7 +25,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIP")
     @Expose
@@ -33,7 +32,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -41,7 +39,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -49,7 +46,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineID")
     @Expose
@@ -57,7 +53,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
     @Expose
@@ -65,7 +60,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -73,7 +67,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * Session Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionID")
     @Expose
@@ -81,7 +74,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -89,7 +81,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionState")
     @Expose
@@ -97,7 +88,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStatement")
     @Expose
@@ -105,7 +95,6 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatementID")
     @Expose
@@ -113,17 +102,14 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
     * 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-     * Get 提交IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交IP 
      * @return ClientIP 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIP() {
         return this.ClientIP;
@@ -131,19 +117,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIP 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
     }
 
     /**
-     * Get 执行时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时长 
      * @return Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -151,19 +133,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -171,19 +149,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Engine Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Engine Id 
      * @return EngineID Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineID() {
         return this.EngineID;
@@ -191,19 +165,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineID Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineID(String EngineID) {
         this.EngineID = EngineID;
     }
 
     /**
-     * Get 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算引擎 
      * @return EngineType 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineType() {
         return this.EngineType;
@@ -211,19 +181,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineType 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ID 
      * @return Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -231,19 +197,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Session Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Session Id 
      * @return SessionID Session Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionID() {
         return this.SessionID;
@@ -251,19 +213,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set Session Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionID Session Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionID(String SessionID) {
         this.SessionID = SessionID;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeginTime() {
         return this.BeginTime;
@@ -271,19 +229,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 执行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行状态 
      * @return ExecutionState 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionState() {
         return this.ExecutionState;
@@ -291,19 +245,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionState 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionState(String ExecutionState) {
         this.ExecutionState = ExecutionState;
     }
 
     /**
-     * Get 执行语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行语句 
      * @return ExecutionStatement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStatement() {
         return this.ExecutionStatement;
@@ -311,19 +261,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionStatement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStatement(String ExecutionStatement) {
         this.ExecutionStatement = ExecutionStatement;
     }
 
     /**
-     * Get Statement Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Statement Id 
      * @return StatementID Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatementID() {
         return this.StatementID;
@@ -331,19 +277,15 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatementID Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatementID(String StatementID) {
         this.StatementID = StatementID;
     }
 
     /**
-     * Get 提交用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交用户 
      * @return User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -351,9 +293,7 @@ public class KyuubiQueryInfo extends AbstractModel {
 
     /**
      * Set 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;

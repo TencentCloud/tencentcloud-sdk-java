@@ -25,7 +25,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIP")
     @Expose
@@ -33,7 +32,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * CPU总时间(ns)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPUCost")
     @Expose
@@ -41,7 +39,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDB")
     @Expose
@@ -49,7 +46,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,7 +53,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 执行IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionIP")
     @Expose
@@ -65,7 +60,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryID")
     @Expose
@@ -73,7 +67,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryType")
     @Expose
@@ -81,7 +74,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 消耗总内存(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemCost")
     @Expose
@@ -89,7 +81,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * plan阶段CPU占用(ns)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanCpuCosts")
     @Expose
@@ -97,7 +88,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * plan阶段内存占用(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanMemCosts")
     @Expose
@@ -105,7 +95,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryTime")
     @Expose
@@ -113,7 +102,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 资源组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
     @Expose
@@ -121,7 +109,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnRows")
     @Expose
@@ -129,7 +116,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 扫描数据量(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanBytes")
     @Expose
@@ -137,7 +123,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRows")
     @Expose
@@ -145,7 +130,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -153,7 +137,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionState")
     @Expose
@@ -161,7 +144,6 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStatement")
     @Expose
@@ -169,17 +151,14 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-     * Get 提交IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交IP 
      * @return ClientIP 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIP() {
         return this.ClientIP;
@@ -187,19 +166,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIP 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
     }
 
     /**
-     * Get CPU总时间(ns)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU总时间(ns) 
      * @return CPUCost CPU总时间(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCPUCost() {
         return this.CPUCost;
@@ -207,19 +182,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set CPU总时间(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPUCost CPU总时间(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPUCost(Long CPUCost) {
         this.CPUCost = CPUCost;
     }
 
     /**
-     * Get 默认DB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认DB 
      * @return DefaultDB 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultDB() {
         return this.DefaultDB;
@@ -227,19 +198,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultDB 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDB(String DefaultDB) {
         this.DefaultDB = DefaultDB;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -247,19 +214,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 执行IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行IP 
      * @return ExecutionIP 执行IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionIP() {
         return this.ExecutionIP;
@@ -267,19 +230,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 执行IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionIP 执行IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionIP(String ExecutionIP) {
         this.ExecutionIP = ExecutionIP;
     }
 
     /**
-     * Get 查询ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询ID 
      * @return QueryID 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueryID() {
         return this.QueryID;
@@ -287,19 +246,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryID 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryID(String QueryID) {
         this.QueryID = QueryID;
     }
 
     /**
-     * Get 查询类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询类型 
      * @return QueryType 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueryType() {
         return this.QueryType;
@@ -307,19 +262,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryType 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
     }
 
     /**
-     * Get 消耗总内存(bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗总内存(bytes) 
      * @return MemCost 消耗总内存(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemCost() {
         return this.MemCost;
@@ -327,19 +278,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 消耗总内存(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemCost 消耗总内存(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemCost(Long MemCost) {
         this.MemCost = MemCost;
     }
 
     /**
-     * Get plan阶段CPU占用(ns)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get plan阶段CPU占用(ns) 
      * @return PlanCpuCosts plan阶段CPU占用(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPlanCpuCosts() {
         return this.PlanCpuCosts;
@@ -347,19 +294,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set plan阶段CPU占用(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanCpuCosts plan阶段CPU占用(ns)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanCpuCosts(Long PlanCpuCosts) {
         this.PlanCpuCosts = PlanCpuCosts;
     }
 
     /**
-     * Get plan阶段内存占用(bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get plan阶段内存占用(bytes) 
      * @return PlanMemCosts plan阶段内存占用(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPlanMemCosts() {
         return this.PlanMemCosts;
@@ -367,19 +310,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set plan阶段内存占用(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanMemCosts plan阶段内存占用(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanMemCosts(Long PlanMemCosts) {
         this.PlanMemCosts = PlanMemCosts;
     }
 
     /**
-     * Get 执行时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时长 
      * @return QueryTime 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQueryTime() {
         return this.QueryTime;
@@ -387,19 +326,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryTime 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryTime(Long QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get 资源组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组 
      * @return ResourceGroup 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
         return this.ResourceGroup;
@@ -407,19 +342,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroup 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
         this.ResourceGroup = ResourceGroup;
     }
 
     /**
-     * Get 获取行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取行数 
      * @return ReturnRows 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnRows() {
         return this.ReturnRows;
@@ -427,19 +358,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnRows 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnRows(Long ReturnRows) {
         this.ReturnRows = ReturnRows;
     }
 
     /**
-     * Get 扫描数据量(bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描数据量(bytes) 
      * @return ScanBytes 扫描数据量(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanBytes() {
         return this.ScanBytes;
@@ -447,19 +374,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 扫描数据量(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanBytes 扫描数据量(bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanBytes(Long ScanBytes) {
         this.ScanBytes = ScanBytes;
     }
 
     /**
-     * Get 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描行数 
      * @return ScanRows 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRows() {
         return this.ScanRows;
@@ -467,19 +390,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanRows 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRows(Long ScanRows) {
         this.ScanRows = ScanRows;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeginTime() {
         return this.BeginTime;
@@ -487,19 +406,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 执行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行状态 
      * @return ExecutionState 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionState() {
         return this.ExecutionState;
@@ -507,19 +422,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionState 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionState(String ExecutionState) {
         this.ExecutionState = ExecutionState;
     }
 
     /**
-     * Get 执行语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行语句 
      * @return ExecutionStatement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStatement() {
         return this.ExecutionStatement;
@@ -527,19 +438,15 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionStatement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStatement(String ExecutionStatement) {
         this.ExecutionStatement = ExecutionStatement;
     }
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -547,9 +454,7 @@ public class StarRocksQueryInfo extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;

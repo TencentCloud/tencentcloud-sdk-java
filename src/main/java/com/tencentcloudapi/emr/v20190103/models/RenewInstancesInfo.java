@@ -89,7 +89,6 @@ public class RenewInstancesInfo extends AbstractModel {
 
     /**
     * 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootSize")
     @Expose
@@ -97,7 +96,6 @@ public class RenewInstancesInfo extends AbstractModel {
 
     /**
     * 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootStorageType")
     @Expose
@@ -260,10 +258,8 @@ public class RenewInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘大小 
      * @return RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootSize() {
         return this.RootSize;
@@ -271,19 +267,15 @@ public class RenewInstancesInfo extends AbstractModel {
 
     /**
      * Set 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘类型 
      * @return RootStorageType 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootStorageType() {
         return this.RootStorageType;
@@ -291,9 +283,7 @@ public class RenewInstancesInfo extends AbstractModel {
 
     /**
      * Set 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootStorageType 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootStorageType(Long RootStorageType) {
         this.RootStorageType = RootStorageType;

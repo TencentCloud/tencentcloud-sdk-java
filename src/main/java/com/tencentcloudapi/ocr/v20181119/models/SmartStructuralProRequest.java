@@ -66,6 +66,13 @@ public class SmartStructuralProRequest extends AbstractModel {
     private String ConfigId;
 
     /**
+    * 是否开启全文字段坐标值的识别
+    */
+    @SerializedName("EnableCoord")
+    @Expose
+    private Boolean EnableCoord;
+
+    /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -161,6 +168,22 @@ public class SmartStructuralProRequest extends AbstractModel {
         this.ConfigId = ConfigId;
     }
 
+    /**
+     * Get 是否开启全文字段坐标值的识别 
+     * @return EnableCoord 是否开启全文字段坐标值的识别
+     */
+    public Boolean getEnableCoord() {
+        return this.EnableCoord;
+    }
+
+    /**
+     * Set 是否开启全文字段坐标值的识别
+     * @param EnableCoord 是否开启全文字段坐标值的识别
+     */
+    public void setEnableCoord(Boolean EnableCoord) {
+        this.EnableCoord = EnableCoord;
+    }
+
     public SmartStructuralProRequest() {
     }
 
@@ -190,6 +213,9 @@ public class SmartStructuralProRequest extends AbstractModel {
         if (source.ConfigId != null) {
             this.ConfigId = new String(source.ConfigId);
         }
+        if (source.EnableCoord != null) {
+            this.EnableCoord = new Boolean(source.EnableCoord);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class SmartStructuralProRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
         this.setParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
 
     }
 }

@@ -80,7 +80,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读
+    * 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读，MultiHA-多节点，cvmMultiHA-云盘
     */
     @SerializedName("InstanceType")
     @Expose
@@ -93,6 +93,13 @@ CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘�
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
+
+    /**
+    * 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private String [] DrZones;
 
     /**
      * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
@@ -223,16 +230,16 @@ CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘�
     }
 
     /**
-     * Get 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读 
-     * @return InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读
+     * Get 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读，MultiHA-多节点，cvmMultiHA-云盘 
+     * @return InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读，MultiHA-多节点，cvmMultiHA-云盘
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读
-     * @param InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读
+     * Set 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读，MultiHA-多节点，cvmMultiHA-云盘
+     * @param InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读，MultiHA-多节点，cvmMultiHA-云盘
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -256,6 +263,22 @@ CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘�
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。 
+     * @return DrZones 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。
+     */
+    public String [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。
+     * @param DrZones 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。
+     */
+    public void setDrZones(String [] DrZones) {
+        this.DrZones = DrZones;
     }
 
     public InquiryPriceCreateDBInstancesRequest() {
@@ -296,6 +319,12 @@ CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘�
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.DrZones != null) {
+            this.DrZones = new String[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new String(source.DrZones[i]);
+            }
+        }
     }
 
 
@@ -313,6 +342,7 @@ CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘�
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
 
     }
 }

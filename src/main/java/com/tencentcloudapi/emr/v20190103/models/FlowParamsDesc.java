@@ -32,7 +32,6 @@ public class FlowParamsDesc extends AbstractModel {
 
     /**
     * 参数value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PValue")
     @Expose
@@ -55,10 +54,8 @@ public class FlowParamsDesc extends AbstractModel {
     }
 
     /**
-     * Get 参数value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数value 
      * @return PValue 参数value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPValue() {
         return this.PValue;
@@ -66,9 +63,7 @@ public class FlowParamsDesc extends AbstractModel {
 
     /**
      * Set 参数value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PValue 参数value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPValue(String PValue) {
         this.PValue = PValue;

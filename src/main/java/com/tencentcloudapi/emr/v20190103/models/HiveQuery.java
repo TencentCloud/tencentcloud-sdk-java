@@ -25,7 +25,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statement")
     @Expose
@@ -33,7 +32,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -41,7 +39,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,7 +53,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -65,7 +60,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -81,7 +75,6 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEngine")
     @Expose
@@ -89,17 +82,14 @@ public class HiveQuery extends AbstractModel {
 
     /**
     * 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get 查询语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询语句 
      * @return Statement 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatement() {
         return this.Statement;
@@ -107,19 +97,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statement 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatement(String Statement) {
         this.Statement = Statement;
     }
 
     /**
-     * Get 执行时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时长 
      * @return Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
         return this.Duration;
@@ -127,19 +113,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间毫秒 
      * @return StartTime 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -147,19 +129,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间毫秒 
      * @return EndTime 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -167,19 +145,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -187,19 +161,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -207,9 +177,7 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
@@ -236,10 +204,8 @@ public class HiveQuery extends AbstractModel {
     }
 
     /**
-     * Get 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行引擎 
      * @return ExecutionEngine 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEngine() {
         return this.ExecutionEngine;
@@ -247,19 +213,15 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionEngine 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEngine(String ExecutionEngine) {
         this.ExecutionEngine = ExecutionEngine;
     }
 
     /**
-     * Get 查询ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询ID 
      * @return Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -267,9 +229,7 @@ public class HiveQuery extends AbstractModel {
 
     /**
      * Set 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;

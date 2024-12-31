@@ -25,7 +25,6 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,7 +32,6 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
     * 名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
     * 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -49,17 +46,14 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
     * 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDiskSize")
     @Expose
     private Long DefaultDiskSize;
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -67,19 +61,15 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名字 
      * @return Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -87,19 +77,15 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
      * Set 名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘类型 
      * @return DiskType 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -107,19 +93,15 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
      * Set 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定磁盘大小 
      * @return DefaultDiskSize 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultDiskSize() {
         return this.DefaultDiskSize;
@@ -127,9 +109,7 @@ public class NodeSpecDiskV2 extends AbstractModel {
 
     /**
      * Set 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultDiskSize 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDiskSize(Long DefaultDiskSize) {
         this.DefaultDiskSize = DefaultDiskSize;

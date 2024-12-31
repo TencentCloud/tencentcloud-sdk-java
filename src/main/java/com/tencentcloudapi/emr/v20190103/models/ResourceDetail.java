@@ -25,7 +25,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 规格名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -49,7 +46,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -57,7 +53,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootSize")
     @Expose
@@ -65,7 +60,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemSize")
     @Expose
@@ -73,7 +67,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -81,7 +74,6 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -89,17 +81,14 @@ public class ResourceDetail extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return Spec 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
         return this.Spec;
@@ -107,19 +96,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 规格名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格名 
      * @return SpecName 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
         return this.SpecName;
@@ -127,19 +112,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecName 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘类型 
      * @return StorageType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageType() {
         return this.StorageType;
@@ -147,19 +128,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘类型 
      * @return DiskType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -167,19 +144,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘大小 
      * @return RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootSize() {
         return this.RootSize;
@@ -187,19 +160,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get 内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小 
      * @return MemSize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemSize() {
         return this.MemSize;
@@ -207,19 +176,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get CPU个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU个数 
      * @return Cpu CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -227,19 +192,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘大小 
      * @return DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -247,19 +208,15 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return InstanceType 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -267,9 +224,7 @@ public class ResourceDetail extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

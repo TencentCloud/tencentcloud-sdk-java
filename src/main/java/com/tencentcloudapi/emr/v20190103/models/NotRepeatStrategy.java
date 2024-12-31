@@ -25,17 +25,14 @@ public class NotRepeatStrategy extends AbstractModel {
 
     /**
     * 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteAt")
     @Expose
     private String ExecuteAt;
 
     /**
-     * Get 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00" 
      * @return ExecuteAt 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteAt() {
         return this.ExecuteAt;
@@ -43,9 +40,7 @@ public class NotRepeatStrategy extends AbstractModel {
 
     /**
      * Set 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteAt 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteAt(String ExecuteAt) {
         this.ExecuteAt = ExecuteAt;

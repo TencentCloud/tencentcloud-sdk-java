@@ -25,7 +25,6 @@ public class NodeSelectorRequirement extends AbstractModel {
 
     /**
     * 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class NodeSelectorRequirement extends AbstractModel {
 
     /**
     * 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -48,10 +46,8 @@ public class NodeSelectorRequirement extends AbstractModel {
     private String [] Values;
 
     /**
-     * Get 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点选择项Key值 
      * @return Key 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -59,19 +55,15 @@ public class NodeSelectorRequirement extends AbstractModel {
 
     /**
      * Set 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt. 
      * @return Operator 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -79,9 +71,7 @@ public class NodeSelectorRequirement extends AbstractModel {
 
     /**
      * Set 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

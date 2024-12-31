@@ -25,7 +25,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statement")
     @Expose
@@ -33,7 +32,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -57,7 +53,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,7 +60,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -73,7 +67,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowsFetched")
     @Expose
@@ -81,7 +74,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -89,7 +81,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDB")
     @Expose
@@ -97,7 +88,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 执行的Coordinator节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coordinator")
     @Expose
@@ -105,7 +95,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 单节点内存峰值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxNodePeakMemoryUsage")
     @Expose
@@ -113,7 +102,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryType")
     @Expose
@@ -121,7 +109,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 扫描的HDFS行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanHDFSRows")
     @Expose
@@ -129,7 +116,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 扫描的Kudu行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanKUDURows")
     @Expose
@@ -137,7 +123,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 扫描的总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRowsTotal")
     @Expose
@@ -145,7 +130,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 读取的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalBytesRead")
     @Expose
@@ -153,7 +137,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 发送的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalBytesSent")
     @Expose
@@ -161,7 +144,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * CPU总时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCpuTime")
     @Expose
@@ -169,7 +151,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 内部数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalInnerBytesSent")
     @Expose
@@ -177,7 +158,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 内部扫描数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalScanBytesSent")
     @Expose
@@ -185,7 +165,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 预估单节点内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EstimatedPerHostMemBytes")
     @Expose
@@ -193,7 +172,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 从缓存中获取的数据行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumRowsFetchedFromCache")
     @Expose
@@ -201,7 +179,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -209,7 +186,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 单节点内存峰值和(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PerNodePeakMemoryBytesSum")
     @Expose
@@ -217,7 +193,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 后端个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackendsCount")
     @Expose
@@ -225,7 +200,6 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * fragment数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FragmentInstancesCount")
     @Expose
@@ -233,17 +207,14 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
     * 剩余未完成Fragment数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainingFragmentCount")
     @Expose
     private Long RemainingFragmentCount;
 
     /**
-     * Get 执行语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行语句 
      * @return Statement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatement() {
         return this.Statement;
@@ -251,19 +222,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatement(String Statement) {
         this.Statement = Statement;
     }
 
     /**
-     * Get 查询ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询ID 
      * @return Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -271,19 +238,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -291,19 +254,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 运行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时间 
      * @return Duration 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
         return this.Duration;
@@ -311,19 +270,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -331,19 +286,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 执行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行状态 
      * @return State 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -351,19 +302,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 获取行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取行数 
      * @return RowsFetched 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowsFetched() {
         return this.RowsFetched;
@@ -371,19 +318,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowsFetched 获取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowsFetched(Long RowsFetched) {
         this.RowsFetched = RowsFetched;
     }
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -391,19 +334,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 默认DB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认DB 
      * @return DefaultDB 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultDB() {
         return this.DefaultDB;
@@ -411,19 +350,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultDB 默认DB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDB(String DefaultDB) {
         this.DefaultDB = DefaultDB;
     }
 
     /**
-     * Get 执行的Coordinator节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行的Coordinator节点 
      * @return Coordinator 执行的Coordinator节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoordinator() {
         return this.Coordinator;
@@ -431,19 +366,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 执行的Coordinator节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coordinator 执行的Coordinator节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoordinator(String Coordinator) {
         this.Coordinator = Coordinator;
     }
 
     /**
-     * Get 单节点内存峰值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单节点内存峰值 
      * @return MaxNodePeakMemoryUsage 单节点内存峰值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxNodePeakMemoryUsage() {
         return this.MaxNodePeakMemoryUsage;
@@ -451,19 +382,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 单节点内存峰值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxNodePeakMemoryUsage 单节点内存峰值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxNodePeakMemoryUsage(String MaxNodePeakMemoryUsage) {
         this.MaxNodePeakMemoryUsage = MaxNodePeakMemoryUsage;
     }
 
     /**
-     * Get 查询类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询类型 
      * @return QueryType 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueryType() {
         return this.QueryType;
@@ -471,19 +398,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryType 查询类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
     }
 
     /**
-     * Get 扫描的HDFS行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描的HDFS行数 
      * @return ScanHDFSRows 扫描的HDFS行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanHDFSRows() {
         return this.ScanHDFSRows;
@@ -491,19 +414,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 扫描的HDFS行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanHDFSRows 扫描的HDFS行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanHDFSRows(Long ScanHDFSRows) {
         this.ScanHDFSRows = ScanHDFSRows;
     }
 
     /**
-     * Get 扫描的Kudu行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描的Kudu行数 
      * @return ScanKUDURows 扫描的Kudu行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanKUDURows() {
         return this.ScanKUDURows;
@@ -511,19 +430,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 扫描的Kudu行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanKUDURows 扫描的Kudu行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanKUDURows(Long ScanKUDURows) {
         this.ScanKUDURows = ScanKUDURows;
     }
 
     /**
-     * Get 扫描的总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描的总行数 
      * @return ScanRowsTotal 扫描的总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRowsTotal() {
         return this.ScanRowsTotal;
@@ -531,19 +446,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 扫描的总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanRowsTotal 扫描的总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRowsTotal(Long ScanRowsTotal) {
         this.ScanRowsTotal = ScanRowsTotal;
     }
 
     /**
-     * Get 读取的总字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读取的总字节数 
      * @return TotalBytesRead 读取的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalBytesRead() {
         return this.TotalBytesRead;
@@ -551,19 +462,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 读取的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalBytesRead 读取的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalBytesRead(Long TotalBytesRead) {
         this.TotalBytesRead = TotalBytesRead;
     }
 
     /**
-     * Get 发送的总字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发送的总字节数 
      * @return TotalBytesSent 发送的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalBytesSent() {
         return this.TotalBytesSent;
@@ -571,19 +478,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 发送的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalBytesSent 发送的总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalBytesSent(Long TotalBytesSent) {
         this.TotalBytesSent = TotalBytesSent;
     }
 
     /**
-     * Get CPU总时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU总时间 
      * @return TotalCpuTime CPU总时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCpuTime() {
         return this.TotalCpuTime;
@@ -591,19 +494,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set CPU总时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCpuTime CPU总时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCpuTime(Long TotalCpuTime) {
         this.TotalCpuTime = TotalCpuTime;
     }
 
     /**
-     * Get 内部数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部数据发送总量(Bytes) 
      * @return TotalInnerBytesSent 内部数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalInnerBytesSent() {
         return this.TotalInnerBytesSent;
@@ -611,19 +510,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 内部数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalInnerBytesSent 内部数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalInnerBytesSent(Long TotalInnerBytesSent) {
         this.TotalInnerBytesSent = TotalInnerBytesSent;
     }
 
     /**
-     * Get 内部扫描数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部扫描数据发送总量(Bytes) 
      * @return TotalScanBytesSent 内部扫描数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalScanBytesSent() {
         return this.TotalScanBytesSent;
@@ -631,19 +526,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 内部扫描数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalScanBytesSent 内部扫描数据发送总量(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalScanBytesSent(Long TotalScanBytesSent) {
         this.TotalScanBytesSent = TotalScanBytesSent;
     }
 
     /**
-     * Get 预估单节点内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预估单节点内存 
      * @return EstimatedPerHostMemBytes 预估单节点内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEstimatedPerHostMemBytes() {
         return this.EstimatedPerHostMemBytes;
@@ -651,19 +542,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 预估单节点内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EstimatedPerHostMemBytes 预估单节点内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEstimatedPerHostMemBytes(Long EstimatedPerHostMemBytes) {
         this.EstimatedPerHostMemBytes = EstimatedPerHostMemBytes;
     }
 
     /**
-     * Get 从缓存中获取的数据行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 从缓存中获取的数据行数 
      * @return NumRowsFetchedFromCache 从缓存中获取的数据行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumRowsFetchedFromCache() {
         return this.NumRowsFetchedFromCache;
@@ -671,19 +558,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 从缓存中获取的数据行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumRowsFetchedFromCache 从缓存中获取的数据行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumRowsFetchedFromCache(Long NumRowsFetchedFromCache) {
         this.NumRowsFetchedFromCache = NumRowsFetchedFromCache;
     }
 
     /**
-     * Get 会话ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话ID 
      * @return SessionId 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
         return this.SessionId;
@@ -691,19 +574,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 单节点内存峰值和(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单节点内存峰值和(Bytes) 
      * @return PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPerNodePeakMemoryBytesSum() {
         return this.PerNodePeakMemoryBytesSum;
@@ -711,19 +590,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 单节点内存峰值和(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPerNodePeakMemoryBytesSum(Long PerNodePeakMemoryBytesSum) {
         this.PerNodePeakMemoryBytesSum = PerNodePeakMemoryBytesSum;
     }
 
     /**
-     * Get 后端个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端个数 
      * @return BackendsCount 后端个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackendsCount() {
         return this.BackendsCount;
@@ -731,19 +606,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 后端个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackendsCount 后端个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackendsCount(Long BackendsCount) {
         this.BackendsCount = BackendsCount;
     }
 
     /**
-     * Get fragment数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get fragment数 
      * @return FragmentInstancesCount fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFragmentInstancesCount() {
         return this.FragmentInstancesCount;
@@ -751,19 +622,15 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FragmentInstancesCount fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFragmentInstancesCount(Long FragmentInstancesCount) {
         this.FragmentInstancesCount = FragmentInstancesCount;
     }
 
     /**
-     * Get 剩余未完成Fragment数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余未完成Fragment数 
      * @return RemainingFragmentCount 剩余未完成Fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainingFragmentCount() {
         return this.RemainingFragmentCount;
@@ -771,9 +638,7 @@ public class ImpalaQuery extends AbstractModel {
 
     /**
      * Set 剩余未完成Fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainingFragmentCount 剩余未完成Fragment数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainingFragmentCount(Long RemainingFragmentCount) {
         this.RemainingFragmentCount = RemainingFragmentCount;

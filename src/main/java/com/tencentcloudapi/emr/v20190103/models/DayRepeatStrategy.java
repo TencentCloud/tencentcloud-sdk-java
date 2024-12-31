@@ -25,7 +25,6 @@ public class DayRepeatStrategy extends AbstractModel {
 
     /**
     * 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteAtTimeOfDay")
     @Expose
@@ -33,17 +32,14 @@ public class DayRepeatStrategy extends AbstractModel {
 
     /**
     * 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Step")
     @Expose
     private Long Step;
 
     /**
-     * Get 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复任务执行的具体时刻，例如"01:02:00" 
      * @return ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteAtTimeOfDay() {
         return this.ExecuteAtTimeOfDay;
@@ -51,19 +47,15 @@ public class DayRepeatStrategy extends AbstractModel {
 
     /**
      * Set 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteAtTimeOfDay(String ExecuteAtTimeOfDay) {
         this.ExecuteAtTimeOfDay = ExecuteAtTimeOfDay;
     }
 
     /**
-     * Get 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每隔Step天执行一次 
      * @return Step 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStep() {
         return this.Step;
@@ -71,9 +63,7 @@ public class DayRepeatStrategy extends AbstractModel {
 
     /**
      * Set 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Step 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStep(Long Step) {
         this.Step = Step;

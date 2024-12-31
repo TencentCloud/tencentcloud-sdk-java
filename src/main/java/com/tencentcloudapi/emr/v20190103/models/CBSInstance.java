@@ -25,7 +25,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskId")
     @Expose
@@ -33,7 +32,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -41,7 +39,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskName")
     @Expose
@@ -49,7 +46,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -57,7 +53,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -65,7 +60,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -73,7 +67,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -81,7 +74,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskState")
     @Expose
@@ -89,7 +81,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -97,7 +88,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineTime")
     @Expose
@@ -105,7 +95,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attached")
     @Expose
@@ -113,7 +102,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferDaysOfDeadline")
     @Expose
@@ -129,7 +117,6 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -137,17 +124,14 @@ public class CBSInstance extends AbstractModel {
 
     /**
     * 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Shareable")
     @Expose
     private Boolean Shareable;
 
     /**
-     * Get 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘ID 
      * @return DiskId 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskId() {
         return this.DiskId;
@@ -155,19 +139,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskId 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘类型 
      * @return DiskUsage 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskUsage() {
         return this.DiskUsage;
@@ -175,19 +155,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskUsage 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘名称 
      * @return DiskName 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskName() {
         return this.DiskName;
@@ -195,19 +171,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskName 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;
     }
 
     /**
-     * Get 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘大小 
      * @return DiskSize 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -215,19 +187,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘介质类型 
      * @return DiskType 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -235,19 +203,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否跟随实例删除 
      * @return DeleteWithInstance 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
@@ -255,19 +219,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteWithInstance 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘收费类型 
      * @return DiskChargeType 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
@@ -275,19 +235,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskChargeType 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
     }
 
     /**
-     * Get 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘运行状态 
      * @return DiskState 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskState() {
         return this.DiskState;
@@ -295,19 +251,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskState 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskState(String DiskState) {
         this.DiskState = DiskState;
     }
 
     /**
-     * Get 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动续费 
      * @return RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -315,19 +267,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间 
      * @return DeadlineTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
@@ -335,19 +283,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadlineTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘是否挂载到云主机上 
      * @return Attached 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAttached() {
         return this.Attached;
@@ -355,19 +299,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attached 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttached(Boolean Attached) {
         this.Attached = Attached;
     }
 
     /**
-     * Get 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前时间距离盘到期的天数 
      * @return DifferDaysOfDeadline 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDifferDaysOfDeadline() {
         return this.DifferDaysOfDeadline;
@@ -375,9 +315,7 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferDaysOfDeadline 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferDaysOfDeadline(Long DifferDaysOfDeadline) {
         this.DifferDaysOfDeadline = DifferDaysOfDeadline;
@@ -404,10 +342,8 @@ public class CBSInstance extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘挂载的云主机ID 
      * @return InstanceId 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -415,19 +351,15 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘是否为共享型云盘。 
      * @return Shareable 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getShareable() {
         return this.Shareable;
@@ -435,9 +367,7 @@ public class CBSInstance extends AbstractModel {
 
     /**
      * Set 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Shareable 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareable(Boolean Shareable) {
         this.Shareable = Shareable;

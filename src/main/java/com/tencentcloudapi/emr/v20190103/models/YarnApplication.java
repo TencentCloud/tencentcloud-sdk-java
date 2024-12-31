@@ -25,7 +25,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -41,7 +39,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 应用名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 队列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Queue")
     @Expose
@@ -57,7 +53,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -65,7 +60,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElapsedTime")
     @Expose
@@ -73,7 +67,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -81,7 +74,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 最终状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinalStatus")
     @Expose
@@ -89,7 +81,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -97,7 +88,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartedTime")
     @Expose
@@ -105,7 +95,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedTime")
     @Expose
@@ -113,7 +102,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 申请内存MB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllocatedMB")
     @Expose
@@ -121,7 +109,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 申请VCores
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllocatedVCores")
     @Expose
@@ -129,7 +116,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 运行的Containers数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningContainers")
     @Expose
@@ -137,7 +123,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 内存MB*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemorySeconds")
     @Expose
@@ -145,7 +130,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * VCores*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VCoreSeconds")
     @Expose
@@ -153,7 +137,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 队列资源占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueUsagePercentage")
     @Expose
@@ -161,7 +144,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 集群资源占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterUsagePercentage")
     @Expose
@@ -169,7 +151,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 预占用的内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreemptedResourceMB")
     @Expose
@@ -177,7 +158,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 预占用的VCore
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreemptedResourceVCores")
     @Expose
@@ -185,7 +165,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 预占的非应用程序主节点容器数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumNonAMContainerPreempted")
     @Expose
@@ -193,7 +172,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * AM预占用的容器数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumAMContainerPreempted")
     @Expose
@@ -201,7 +179,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Map总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapsTotal")
     @Expose
@@ -209,7 +186,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 完成的Map数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapsCompleted")
     @Expose
@@ -217,7 +193,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Reduce总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReducesTotal")
     @Expose
@@ -225,7 +200,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 完成的Reduce数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReducesCompleted")
     @Expose
@@ -233,7 +207,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 平均Map时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgMapTime")
     @Expose
@@ -241,7 +214,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 平均Reduce时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgReduceTime")
     @Expose
@@ -249,7 +221,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 平均Shuffle时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgShuffleTime")
     @Expose
@@ -257,7 +228,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 平均Merge时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgMergeTime")
     @Expose
@@ -265,7 +235,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 失败的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReduceAttempts")
     @Expose
@@ -273,7 +242,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Kill的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KilledReduceAttempts")
     @Expose
@@ -281,7 +249,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 成功的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessfulReduceAttempts")
     @Expose
@@ -289,7 +256,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 失败的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedMapAttempts")
     @Expose
@@ -297,7 +263,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Kill的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KilledMapAttempts")
     @Expose
@@ -305,7 +270,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 成功的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessfulMapAttempts")
     @Expose
@@ -313,7 +277,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * GC毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GcTimeMillis")
     @Expose
@@ -321,7 +284,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Map使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VCoreMillisMaps")
     @Expose
@@ -329,7 +291,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Map使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MbMillisMaps")
     @Expose
@@ -337,7 +298,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Reduce使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VCoreMillisReduces")
     @Expose
@@ -345,7 +305,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Reduce使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MbMillisReduces")
     @Expose
@@ -353,7 +312,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 启动Map的总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalLaunchedMaps")
     @Expose
@@ -361,7 +319,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * 启动Reduce的总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalLaunchedReduces")
     @Expose
@@ -369,7 +326,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Map输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapInputRecords")
     @Expose
@@ -377,7 +333,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Map输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapOutputRecords")
     @Expose
@@ -385,7 +340,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Reduce输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReduceInputRecords")
     @Expose
@@ -393,7 +347,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * Reduce输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReduceOutputRecords")
     @Expose
@@ -401,7 +354,6 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * HDFS写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HDFSBytesWritten")
     @Expose
@@ -409,17 +361,14 @@ public class YarnApplication extends AbstractModel {
 
     /**
     * HDFS读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HDFSBytesRead")
     @Expose
     private Long HDFSBytesRead;
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return Id 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -427,19 +376,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -447,19 +392,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 应用名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名 
      * @return Name 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -467,19 +408,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 队列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列 
      * @return Queue 队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueue() {
         return this.Queue;
@@ -487,19 +424,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Queue 队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -507,19 +440,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 运行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时间 
      * @return ElapsedTime 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElapsedTime() {
         return this.ElapsedTime;
@@ -527,19 +456,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElapsedTime 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElapsedTime(String ElapsedTime) {
         this.ElapsedTime = ElapsedTime;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -547,19 +472,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 最终状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最终状态 
      * @return FinalStatus 最终状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinalStatus() {
         return this.FinalStatus;
@@ -567,19 +488,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 最终状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinalStatus 最终状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinalStatus(String FinalStatus) {
         this.FinalStatus = FinalStatus;
     }
 
     /**
-     * Get 进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度 
      * @return Progress 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -587,19 +504,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间毫秒 
      * @return StartedTime 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartedTime() {
         return this.StartedTime;
@@ -607,19 +520,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartedTime 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartedTime(Long StartedTime) {
         this.StartedTime = StartedTime;
     }
 
     /**
-     * Get 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间毫秒 
      * @return FinishedTime 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFinishedTime() {
         return this.FinishedTime;
@@ -627,19 +536,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedTime 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedTime(Long FinishedTime) {
         this.FinishedTime = FinishedTime;
     }
 
     /**
-     * Get 申请内存MB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请内存MB 
      * @return AllocatedMB 申请内存MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllocatedMB() {
         return this.AllocatedMB;
@@ -647,19 +552,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 申请内存MB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocatedMB 申请内存MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllocatedMB(Long AllocatedMB) {
         this.AllocatedMB = AllocatedMB;
     }
 
     /**
-     * Get 申请VCores
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请VCores 
      * @return AllocatedVCores 申请VCores
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllocatedVCores() {
         return this.AllocatedVCores;
@@ -667,19 +568,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 申请VCores
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocatedVCores 申请VCores
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllocatedVCores(Long AllocatedVCores) {
         this.AllocatedVCores = AllocatedVCores;
     }
 
     /**
-     * Get 运行的Containers数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行的Containers数 
      * @return RunningContainers 运行的Containers数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningContainers() {
         return this.RunningContainers;
@@ -687,19 +584,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 运行的Containers数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningContainers 运行的Containers数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningContainers(Long RunningContainers) {
         this.RunningContainers = RunningContainers;
     }
 
     /**
-     * Get 内存MB*时间秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存MB*时间秒 
      * @return MemorySeconds 内存MB*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemorySeconds() {
         return this.MemorySeconds;
@@ -707,19 +600,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 内存MB*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemorySeconds 内存MB*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemorySeconds(Long MemorySeconds) {
         this.MemorySeconds = MemorySeconds;
     }
 
     /**
-     * Get VCores*时间秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VCores*时间秒 
      * @return VCoreSeconds VCores*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVCoreSeconds() {
         return this.VCoreSeconds;
@@ -727,19 +616,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set VCores*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VCoreSeconds VCores*时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVCoreSeconds(Long VCoreSeconds) {
         this.VCoreSeconds = VCoreSeconds;
     }
 
     /**
-     * Get 队列资源占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列资源占比 
      * @return QueueUsagePercentage 队列资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQueueUsagePercentage() {
         return this.QueueUsagePercentage;
@@ -747,19 +632,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 队列资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueUsagePercentage 队列资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueUsagePercentage(Float QueueUsagePercentage) {
         this.QueueUsagePercentage = QueueUsagePercentage;
     }
 
     /**
-     * Get 集群资源占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群资源占比 
      * @return ClusterUsagePercentage 集群资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterUsagePercentage() {
         return this.ClusterUsagePercentage;
@@ -767,19 +648,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 集群资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterUsagePercentage 集群资源占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterUsagePercentage(Float ClusterUsagePercentage) {
         this.ClusterUsagePercentage = ClusterUsagePercentage;
     }
 
     /**
-     * Get 预占用的内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预占用的内存 
      * @return PreemptedResourceMB 预占用的内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPreemptedResourceMB() {
         return this.PreemptedResourceMB;
@@ -787,19 +664,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 预占用的内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreemptedResourceMB 预占用的内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreemptedResourceMB(Long PreemptedResourceMB) {
         this.PreemptedResourceMB = PreemptedResourceMB;
     }
 
     /**
-     * Get 预占用的VCore
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预占用的VCore 
      * @return PreemptedResourceVCores 预占用的VCore
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPreemptedResourceVCores() {
         return this.PreemptedResourceVCores;
@@ -807,19 +680,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 预占用的VCore
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreemptedResourceVCores 预占用的VCore
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreemptedResourceVCores(Long PreemptedResourceVCores) {
         this.PreemptedResourceVCores = PreemptedResourceVCores;
     }
 
     /**
-     * Get 预占的非应用程序主节点容器数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预占的非应用程序主节点容器数量 
      * @return NumNonAMContainerPreempted 预占的非应用程序主节点容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumNonAMContainerPreempted() {
         return this.NumNonAMContainerPreempted;
@@ -827,19 +696,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 预占的非应用程序主节点容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumNonAMContainerPreempted 预占的非应用程序主节点容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumNonAMContainerPreempted(Long NumNonAMContainerPreempted) {
         this.NumNonAMContainerPreempted = NumNonAMContainerPreempted;
     }
 
     /**
-     * Get AM预占用的容器数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AM预占用的容器数量 
      * @return NumAMContainerPreempted AM预占用的容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumAMContainerPreempted() {
         return this.NumAMContainerPreempted;
@@ -847,19 +712,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set AM预占用的容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumAMContainerPreempted AM预占用的容器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumAMContainerPreempted(Long NumAMContainerPreempted) {
         this.NumAMContainerPreempted = NumAMContainerPreempted;
     }
 
     /**
-     * Get Map总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Map总数 
      * @return MapsTotal Map总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMapsTotal() {
         return this.MapsTotal;
@@ -867,19 +728,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Map总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MapsTotal Map总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapsTotal(Long MapsTotal) {
         this.MapsTotal = MapsTotal;
     }
 
     /**
-     * Get 完成的Map数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成的Map数 
      * @return MapsCompleted 完成的Map数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMapsCompleted() {
         return this.MapsCompleted;
@@ -887,19 +744,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 完成的Map数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MapsCompleted 完成的Map数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapsCompleted(Long MapsCompleted) {
         this.MapsCompleted = MapsCompleted;
     }
 
     /**
-     * Get Reduce总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Reduce总数 
      * @return ReducesTotal Reduce总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReducesTotal() {
         return this.ReducesTotal;
@@ -907,19 +760,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Reduce总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReducesTotal Reduce总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReducesTotal(Long ReducesTotal) {
         this.ReducesTotal = ReducesTotal;
     }
 
     /**
-     * Get 完成的Reduce数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成的Reduce数 
      * @return ReducesCompleted 完成的Reduce数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReducesCompleted() {
         return this.ReducesCompleted;
@@ -927,19 +776,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 完成的Reduce数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReducesCompleted 完成的Reduce数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReducesCompleted(Long ReducesCompleted) {
         this.ReducesCompleted = ReducesCompleted;
     }
 
     /**
-     * Get 平均Map时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均Map时间 
      * @return AvgMapTime 平均Map时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvgMapTime() {
         return this.AvgMapTime;
@@ -947,19 +792,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 平均Map时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvgMapTime 平均Map时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgMapTime(Long AvgMapTime) {
         this.AvgMapTime = AvgMapTime;
     }
 
     /**
-     * Get 平均Reduce时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均Reduce时间 
      * @return AvgReduceTime 平均Reduce时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvgReduceTime() {
         return this.AvgReduceTime;
@@ -967,19 +808,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 平均Reduce时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvgReduceTime 平均Reduce时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgReduceTime(Long AvgReduceTime) {
         this.AvgReduceTime = AvgReduceTime;
     }
 
     /**
-     * Get 平均Shuffle时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均Shuffle时间毫秒 
      * @return AvgShuffleTime 平均Shuffle时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvgShuffleTime() {
         return this.AvgShuffleTime;
@@ -987,19 +824,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 平均Shuffle时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvgShuffleTime 平均Shuffle时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgShuffleTime(Long AvgShuffleTime) {
         this.AvgShuffleTime = AvgShuffleTime;
     }
 
     /**
-     * Get 平均Merge时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均Merge时间毫秒 
      * @return AvgMergeTime 平均Merge时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvgMergeTime() {
         return this.AvgMergeTime;
@@ -1007,19 +840,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 平均Merge时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvgMergeTime 平均Merge时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgMergeTime(Long AvgMergeTime) {
         this.AvgMergeTime = AvgMergeTime;
     }
 
     /**
-     * Get 失败的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败的Reduce执行次数 
      * @return FailedReduceAttempts 失败的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedReduceAttempts() {
         return this.FailedReduceAttempts;
@@ -1027,19 +856,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 失败的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedReduceAttempts 失败的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReduceAttempts(Long FailedReduceAttempts) {
         this.FailedReduceAttempts = FailedReduceAttempts;
     }
 
     /**
-     * Get Kill的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kill的Reduce执行次数 
      * @return KilledReduceAttempts Kill的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKilledReduceAttempts() {
         return this.KilledReduceAttempts;
@@ -1047,19 +872,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Kill的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KilledReduceAttempts Kill的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKilledReduceAttempts(Long KilledReduceAttempts) {
         this.KilledReduceAttempts = KilledReduceAttempts;
     }
 
     /**
-     * Get 成功的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功的Reduce执行次数 
      * @return SuccessfulReduceAttempts 成功的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessfulReduceAttempts() {
         return this.SuccessfulReduceAttempts;
@@ -1067,19 +888,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 成功的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessfulReduceAttempts 成功的Reduce执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessfulReduceAttempts(Long SuccessfulReduceAttempts) {
         this.SuccessfulReduceAttempts = SuccessfulReduceAttempts;
     }
 
     /**
-     * Get 失败的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败的Map执行次数 
      * @return FailedMapAttempts 失败的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedMapAttempts() {
         return this.FailedMapAttempts;
@@ -1087,19 +904,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 失败的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedMapAttempts 失败的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedMapAttempts(Long FailedMapAttempts) {
         this.FailedMapAttempts = FailedMapAttempts;
     }
 
     /**
-     * Get Kill的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kill的Map执行次数 
      * @return KilledMapAttempts Kill的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKilledMapAttempts() {
         return this.KilledMapAttempts;
@@ -1107,19 +920,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Kill的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KilledMapAttempts Kill的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKilledMapAttempts(Long KilledMapAttempts) {
         this.KilledMapAttempts = KilledMapAttempts;
     }
 
     /**
-     * Get 成功的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功的Map执行次数 
      * @return SuccessfulMapAttempts 成功的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessfulMapAttempts() {
         return this.SuccessfulMapAttempts;
@@ -1127,19 +936,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 成功的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessfulMapAttempts 成功的Map执行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessfulMapAttempts(Long SuccessfulMapAttempts) {
         this.SuccessfulMapAttempts = SuccessfulMapAttempts;
     }
 
     /**
-     * Get GC毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GC毫秒 
      * @return GcTimeMillis GC毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGcTimeMillis() {
         return this.GcTimeMillis;
@@ -1147,19 +952,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set GC毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GcTimeMillis GC毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGcTimeMillis(Long GcTimeMillis) {
         this.GcTimeMillis = GcTimeMillis;
     }
 
     /**
-     * Get Map使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Map使用的VCore毫秒 
      * @return VCoreMillisMaps Map使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVCoreMillisMaps() {
         return this.VCoreMillisMaps;
@@ -1167,19 +968,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Map使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VCoreMillisMaps Map使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVCoreMillisMaps(Long VCoreMillisMaps) {
         this.VCoreMillisMaps = VCoreMillisMaps;
     }
 
     /**
-     * Get Map使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Map使用的内存毫秒 
      * @return MbMillisMaps Map使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMbMillisMaps() {
         return this.MbMillisMaps;
@@ -1187,19 +984,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Map使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MbMillisMaps Map使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMbMillisMaps(Long MbMillisMaps) {
         this.MbMillisMaps = MbMillisMaps;
     }
 
     /**
-     * Get Reduce使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Reduce使用的VCore毫秒 
      * @return VCoreMillisReduces Reduce使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVCoreMillisReduces() {
         return this.VCoreMillisReduces;
@@ -1207,19 +1000,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Reduce使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VCoreMillisReduces Reduce使用的VCore毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVCoreMillisReduces(Long VCoreMillisReduces) {
         this.VCoreMillisReduces = VCoreMillisReduces;
     }
 
     /**
-     * Get Reduce使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Reduce使用的内存毫秒 
      * @return MbMillisReduces Reduce使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMbMillisReduces() {
         return this.MbMillisReduces;
@@ -1227,19 +1016,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Reduce使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MbMillisReduces Reduce使用的内存毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMbMillisReduces(Long MbMillisReduces) {
         this.MbMillisReduces = MbMillisReduces;
     }
 
     /**
-     * Get 启动Map的总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动Map的总数 
      * @return TotalLaunchedMaps 启动Map的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalLaunchedMaps() {
         return this.TotalLaunchedMaps;
@@ -1247,19 +1032,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 启动Map的总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalLaunchedMaps 启动Map的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalLaunchedMaps(Long TotalLaunchedMaps) {
         this.TotalLaunchedMaps = TotalLaunchedMaps;
     }
 
     /**
-     * Get 启动Reduce的总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动Reduce的总数 
      * @return TotalLaunchedReduces 启动Reduce的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalLaunchedReduces() {
         return this.TotalLaunchedReduces;
@@ -1267,19 +1048,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set 启动Reduce的总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalLaunchedReduces 启动Reduce的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalLaunchedReduces(Long TotalLaunchedReduces) {
         this.TotalLaunchedReduces = TotalLaunchedReduces;
     }
 
     /**
-     * Get Map输入记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Map输入记录数 
      * @return MapInputRecords Map输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMapInputRecords() {
         return this.MapInputRecords;
@@ -1287,19 +1064,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Map输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MapInputRecords Map输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapInputRecords(Long MapInputRecords) {
         this.MapInputRecords = MapInputRecords;
     }
 
     /**
-     * Get Map输出记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Map输出记录数 
      * @return MapOutputRecords Map输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMapOutputRecords() {
         return this.MapOutputRecords;
@@ -1307,19 +1080,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Map输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MapOutputRecords Map输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapOutputRecords(Long MapOutputRecords) {
         this.MapOutputRecords = MapOutputRecords;
     }
 
     /**
-     * Get Reduce输入记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Reduce输入记录数 
      * @return ReduceInputRecords Reduce输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReduceInputRecords() {
         return this.ReduceInputRecords;
@@ -1327,19 +1096,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Reduce输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReduceInputRecords Reduce输入记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReduceInputRecords(Long ReduceInputRecords) {
         this.ReduceInputRecords = ReduceInputRecords;
     }
 
     /**
-     * Get Reduce输出记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Reduce输出记录数 
      * @return ReduceOutputRecords Reduce输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReduceOutputRecords() {
         return this.ReduceOutputRecords;
@@ -1347,19 +1112,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set Reduce输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReduceOutputRecords Reduce输出记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReduceOutputRecords(Long ReduceOutputRecords) {
         this.ReduceOutputRecords = ReduceOutputRecords;
     }
 
     /**
-     * Get HDFS写入字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDFS写入字节数 
      * @return HDFSBytesWritten HDFS写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHDFSBytesWritten() {
         return this.HDFSBytesWritten;
@@ -1367,19 +1128,15 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set HDFS写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HDFSBytesWritten HDFS写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHDFSBytesWritten(Long HDFSBytesWritten) {
         this.HDFSBytesWritten = HDFSBytesWritten;
     }
 
     /**
-     * Get HDFS读取字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDFS读取字节数 
      * @return HDFSBytesRead HDFS读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHDFSBytesRead() {
         return this.HDFSBytesRead;
@@ -1387,9 +1144,7 @@ public class YarnApplication extends AbstractModel {
 
     /**
      * Set HDFS读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HDFSBytesRead HDFS读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHDFSBytesRead(Long HDFSBytesRead) {
         this.HDFSBytesRead = HDFSBytesRead;

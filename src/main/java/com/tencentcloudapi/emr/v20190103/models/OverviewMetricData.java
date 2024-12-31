@@ -25,7 +25,6 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
     * 指标名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
     @Expose
@@ -33,7 +32,6 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
     * 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("First")
     @Expose
@@ -41,7 +39,6 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
     * 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Last")
     @Expose
@@ -49,7 +46,6 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
     * 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -72,10 +68,8 @@ public class OverviewMetricData extends AbstractModel {
     private MetricTags Tags;
 
     /**
-     * Get 指标名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标名 
      * @return Metric 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
         return this.Metric;
@@ -83,19 +77,15 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
      * Set 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第一个数据时间戳 
      * @return First 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirst() {
         return this.First;
@@ -103,19 +93,15 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
      * Set 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param First 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirst(Long First) {
         this.First = First;
     }
 
     /**
-     * Get 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一个数据时间戳 
      * @return Last 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLast() {
         return this.Last;
@@ -123,19 +109,15 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
      * Set 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Last 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLast(Long Last) {
         this.Last = Last;
     }
 
     /**
-     * Get 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样点时间间隔 
      * @return Interval 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
         return this.Interval;
@@ -143,9 +125,7 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
      * Set 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

@@ -25,7 +25,6 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
     * 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -48,7 +47,6 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -56,7 +54,6 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
     * 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -64,17 +61,14 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
     * 额外性能
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraPerformance")
     @Expose
     private Long ExtraPerformance;
 
     /**
-     * Get 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘数量 
      * @return Count 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -82,9 +76,7 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
      * Set 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -106,8 +98,7 @@ public class DiskSpecInfo extends AbstractModel {
 <li>LOCAL_SSD：表示本地SSD。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
-<li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>CLOUD_TSSD：表示极速型SSD云硬盘。</li> 
      * @return DiskType 系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -124,7 +115,6 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -147,7 +137,6 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -164,17 +153,14 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据容量，单位为GB 
      * @return DiskSize 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -182,19 +168,15 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
      * Set 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 额外性能
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 额外性能 
      * @return ExtraPerformance 额外性能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExtraPerformance() {
         return this.ExtraPerformance;
@@ -202,9 +184,7 @@ public class DiskSpecInfo extends AbstractModel {
 
     /**
      * Set 额外性能
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraPerformance 额外性能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraPerformance(Long ExtraPerformance) {
         this.ExtraPerformance = ExtraPerformance;

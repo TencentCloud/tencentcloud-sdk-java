@@ -25,7 +25,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attribute")
     @Expose
@@ -33,7 +32,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 当前生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InEffect")
     @Expose
@@ -41,7 +39,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 待生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingEffectiveness")
     @Expose
@@ -49,7 +46,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
     @Expose
@@ -57,7 +53,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 队列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Queue")
     @Expose
@@ -65,7 +60,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 配置集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigSet")
     @Expose
@@ -73,7 +67,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelName")
     @Expose
@@ -81,7 +74,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 当前所在位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InEffectIndex")
     @Expose
@@ -89,7 +81,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 待生效的位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingEffectIndex")
     @Expose
@@ -97,7 +88,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 计划模式名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanName")
     @Expose
@@ -105,7 +95,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -113,7 +102,6 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 放置规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -121,17 +109,14 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get 属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性 
      * @return Attribute 属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttribute() {
         return this.Attribute;
@@ -139,19 +124,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attribute 属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttribute(String Attribute) {
         this.Attribute = Attribute;
     }
 
     /**
-     * Get 当前生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前生效 
      * @return InEffect 当前生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInEffect() {
         return this.InEffect;
@@ -159,19 +140,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 当前生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InEffect 当前生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInEffect(String InEffect) {
         this.InEffect = InEffect;
     }
 
     /**
-     * Get 待生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待生效 
      * @return PendingEffectiveness 待生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPendingEffectiveness() {
         return this.PendingEffectiveness;
@@ -179,19 +156,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 待生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingEffectiveness 待生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingEffectiveness(String PendingEffectiveness) {
         this.PendingEffectiveness = PendingEffectiveness;
     }
 
     /**
-     * Get 操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作 
      * @return Operation 操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperation() {
         return this.Operation;
@@ -199,19 +172,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operation 操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 队列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列 
      * @return Queue 队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueue() {
         return this.Queue;
@@ -219,19 +188,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Queue 队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
     }
 
     /**
-     * Get 配置集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置集 
      * @return ConfigSet 配置集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigSet() {
         return this.ConfigSet;
@@ -239,19 +204,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 配置集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigSet 配置集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigSet(String ConfigSet) {
         this.ConfigSet = ConfigSet;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return LabelName 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelName() {
         return this.LabelName;
@@ -259,19 +220,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelName 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelName(String LabelName) {
         this.LabelName = LabelName;
     }
 
     /**
-     * Get 当前所在位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前所在位置 
      * @return InEffectIndex 当前所在位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInEffectIndex() {
         return this.InEffectIndex;
@@ -279,19 +236,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 当前所在位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InEffectIndex 当前所在位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInEffectIndex(String InEffectIndex) {
         this.InEffectIndex = InEffectIndex;
     }
 
     /**
-     * Get 待生效的位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待生效的位置 
      * @return PendingEffectIndex 待生效的位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPendingEffectIndex() {
         return this.PendingEffectIndex;
@@ -299,19 +252,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 待生效的位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingEffectIndex 待生效的位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingEffectIndex(String PendingEffectIndex) {
         this.PendingEffectIndex = PendingEffectIndex;
     }
 
     /**
-     * Get 计划模式名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划模式名称 
      * @return PlanName 计划模式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanName() {
         return this.PlanName;
@@ -319,19 +268,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 计划模式名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanName 计划模式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -339,19 +284,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 放置规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 放置规则 
      * @return RuleName 放置规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -359,19 +300,15 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 放置规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 放置规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -379,9 +316,7 @@ public class DiffDetailItem extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

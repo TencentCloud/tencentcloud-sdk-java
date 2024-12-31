@@ -25,7 +25,6 @@ public class Arg extends AbstractModel {
 
     /**
     * key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -40,10 +39,8 @@ public class Arg extends AbstractModel {
     private String [] Values;
 
     /**
-     * Get key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key 
      * @return Key key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,9 +48,7 @@ public class Arg extends AbstractModel {
 
     /**
      * Set key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;

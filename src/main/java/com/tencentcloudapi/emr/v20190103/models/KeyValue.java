@@ -25,7 +25,6 @@ public class KeyValue extends AbstractModel {
 
     /**
     * 键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class KeyValue extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 键 
      * @return Key 键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class KeyValue extends AbstractModel {
 
     /**
      * Set 键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class KeyValue extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

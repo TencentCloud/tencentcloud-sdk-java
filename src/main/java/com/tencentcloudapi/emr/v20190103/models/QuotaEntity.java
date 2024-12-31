@@ -25,7 +25,6 @@ public class QuotaEntity extends AbstractModel {
 
     /**
     * 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedQuota")
     @Expose
@@ -33,7 +32,6 @@ public class QuotaEntity extends AbstractModel {
 
     /**
     * 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainingQuota")
     @Expose
@@ -41,7 +39,6 @@ public class QuotaEntity extends AbstractModel {
 
     /**
     * 总配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalQuota")
     @Expose
@@ -49,17 +46,14 @@ public class QuotaEntity extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用配额 
      * @return UsedQuota 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedQuota() {
         return this.UsedQuota;
@@ -67,19 +61,15 @@ public class QuotaEntity extends AbstractModel {
 
     /**
      * Set 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedQuota 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedQuota(Long UsedQuota) {
         this.UsedQuota = UsedQuota;
     }
 
     /**
-     * Get 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余配额 
      * @return RemainingQuota 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainingQuota() {
         return this.RemainingQuota;
@@ -87,19 +77,15 @@ public class QuotaEntity extends AbstractModel {
 
     /**
      * Set 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainingQuota 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainingQuota(Long RemainingQuota) {
         this.RemainingQuota = RemainingQuota;
     }
 
     /**
-     * Get 总配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总配额 
      * @return TotalQuota 总配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalQuota() {
         return this.TotalQuota;
@@ -107,19 +93,15 @@ public class QuotaEntity extends AbstractModel {
 
     /**
      * Set 总配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalQuota 总配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalQuota(Long TotalQuota) {
         this.TotalQuota = TotalQuota;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -127,9 +109,7 @@ public class QuotaEntity extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

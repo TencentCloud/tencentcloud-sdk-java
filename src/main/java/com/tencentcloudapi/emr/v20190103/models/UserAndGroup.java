@@ -25,7 +25,6 @@ public class UserAndGroup extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -33,17 +32,14 @@ public class UserAndGroup extends AbstractModel {
 
     /**
     * 用户组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroup")
     @Expose
     private String UserGroup;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -51,19 +47,15 @@ public class UserAndGroup extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 用户组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户组 
      * @return UserGroup 用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserGroup() {
         return this.UserGroup;
@@ -71,9 +63,7 @@ public class UserAndGroup extends AbstractModel {
 
     /**
      * Set 用户组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserGroup 用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroup(String UserGroup) {
         this.UserGroup = UserGroup;

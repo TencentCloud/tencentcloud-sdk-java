@@ -53,7 +53,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanPartitionNum")
     @Expose
@@ -61,7 +60,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRowNum")
     @Expose
@@ -69,7 +67,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanFileNum")
     @Expose
@@ -77,7 +74,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTotalData")
     @Expose
@@ -93,7 +89,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputRowNum")
     @Expose
@@ -101,7 +96,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputFileNum")
     @Expose
@@ -109,7 +103,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputPartitionNum")
     @Expose
@@ -117,7 +110,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputTotalData")
     @Expose
@@ -125,7 +117,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -133,7 +124,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -204,10 +194,8 @@ public class SparkQuery extends AbstractModel {
     }
 
     /**
-     * Get 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描分区数 
      * @return ScanPartitionNum 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanPartitionNum() {
         return this.ScanPartitionNum;
@@ -215,19 +203,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanPartitionNum 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanPartitionNum(Long ScanPartitionNum) {
         this.ScanPartitionNum = ScanPartitionNum;
     }
 
     /**
-     * Get 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描总行数 
      * @return ScanRowNum 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRowNum() {
         return this.ScanRowNum;
@@ -235,19 +219,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanRowNum 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRowNum(Long ScanRowNum) {
         this.ScanRowNum = ScanRowNum;
     }
 
     /**
-     * Get 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描总文件数 
      * @return ScanFileNum 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanFileNum() {
         return this.ScanFileNum;
@@ -255,19 +235,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanFileNum 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanFileNum(Long ScanFileNum) {
         this.ScanFileNum = ScanFileNum;
     }
 
     /**
-     * Get 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询扫描总数据量(单位B) 
      * @return ScanTotalData 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanTotalData() {
         return this.ScanTotalData;
@@ -275,9 +251,7 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTotalData 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTotalData(Long ScanTotalData) {
         this.ScanTotalData = ScanTotalData;
@@ -304,10 +278,8 @@ public class SparkQuery extends AbstractModel {
     }
 
     /**
-     * Get 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出总行数 
      * @return OutputRowNum 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputRowNum() {
         return this.OutputRowNum;
@@ -315,19 +287,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputRowNum 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputRowNum(Long OutputRowNum) {
         this.OutputRowNum = OutputRowNum;
     }
 
     /**
-     * Get 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出总文件数 
      * @return OutputFileNum 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputFileNum() {
         return this.OutputFileNum;
@@ -335,19 +303,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputFileNum 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputFileNum(Long OutputFileNum) {
         this.OutputFileNum = OutputFileNum;
     }
 
     /**
-     * Get 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出分区数 
      * @return OutputPartitionNum 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputPartitionNum() {
         return this.OutputPartitionNum;
@@ -355,19 +319,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputPartitionNum 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputPartitionNum(Long OutputPartitionNum) {
         this.OutputPartitionNum = OutputPartitionNum;
     }
 
     /**
-     * Get 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出总数据量（单位B） 
      * @return OutputTotalData 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputTotalData() {
         return this.OutputTotalData;
@@ -375,19 +335,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputTotalData 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputTotalData(Long OutputTotalData) {
         this.OutputTotalData = OutputTotalData;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeginTime() {
         return this.BeginTime;
@@ -395,19 +351,15 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -415,9 +367,7 @@ public class SparkQuery extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -54,7 +54,6 @@ public class TableSchemaItem extends AbstractModel {
 
     /**
     * 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clickable")
     @Expose
@@ -62,7 +61,6 @@ public class TableSchemaItem extends AbstractModel {
 
     /**
     * 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -137,10 +135,8 @@ public class TableSchemaItem extends AbstractModel {
     }
 
     /**
-     * Get 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可点击 
      * @return Clickable 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getClickable() {
         return this.Clickable;
@@ -148,19 +144,15 @@ public class TableSchemaItem extends AbstractModel {
 
     /**
      * Set 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clickable 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClickable(Boolean Clickable) {
         this.Clickable = Clickable;
     }
 
     /**
-     * Get 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 展示的名字 
      * @return Title 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -168,9 +160,7 @@ public class TableSchemaItem extends AbstractModel {
 
     /**
      * Set 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;

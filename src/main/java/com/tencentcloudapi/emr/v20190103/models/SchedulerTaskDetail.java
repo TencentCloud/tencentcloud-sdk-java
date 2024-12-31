@@ -25,7 +25,6 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
     * 步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Step")
     @Expose
@@ -33,7 +32,6 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
     * 进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -41,7 +39,6 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
     * 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -49,17 +46,14 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
     * 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-     * Get 步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤 
      * @return Step 步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStep() {
         return this.Step;
@@ -67,19 +61,15 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
      * Set 步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Step 步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStep(String Step) {
         this.Step = Step;
     }
 
     /**
-     * Get 进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度 
      * @return Progress 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgress() {
         return this.Progress;
@@ -87,19 +77,15 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
      * Set 进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(String Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 失败信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败信息 
      * @return FailReason 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -107,19 +93,15 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
      * Set 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用来获取详情的id 
      * @return JobId 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobId() {
         return this.JobId;
@@ -127,9 +109,7 @@ public class SchedulerTaskDetail extends AbstractModel {
 
     /**
      * Set 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;

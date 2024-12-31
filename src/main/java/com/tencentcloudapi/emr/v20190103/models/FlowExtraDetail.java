@@ -25,7 +25,6 @@ public class FlowExtraDetail extends AbstractModel {
 
     /**
     * 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -40,10 +39,8 @@ public class FlowExtraDetail extends AbstractModel {
     private FlowParamsDesc [] Detail;
 
     /**
-     * Get 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 额外信息Title 
      * @return Title 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -51,9 +48,7 @@ public class FlowExtraDetail extends AbstractModel {
 
     /**
      * Set 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;

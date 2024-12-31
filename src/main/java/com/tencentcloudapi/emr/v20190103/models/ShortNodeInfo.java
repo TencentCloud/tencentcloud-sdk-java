@@ -25,7 +25,6 @@ public class ShortNodeInfo extends AbstractModel {
 
     /**
     * 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
     @Expose
@@ -33,17 +32,14 @@ public class ShortNodeInfo extends AbstractModel {
 
     /**
     * 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeSize")
     @Expose
     private Long NodeSize;
 
     /**
-     * Get 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型，Master/Core/Task/Router/Common 
      * @return NodeType 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
         return this.NodeType;
@@ -51,19 +47,15 @@ public class ShortNodeInfo extends AbstractModel {
 
     /**
      * Set 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeType 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 节点数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点数量 
      * @return NodeSize 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodeSize() {
         return this.NodeSize;
@@ -71,9 +63,7 @@ public class ShortNodeInfo extends AbstractModel {
 
     /**
      * Set 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeSize 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeSize(Long NodeSize) {
         this.NodeSize = NodeSize;

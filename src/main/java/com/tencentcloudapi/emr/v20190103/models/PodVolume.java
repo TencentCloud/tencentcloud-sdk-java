@@ -25,7 +25,6 @@ public class PodVolume extends AbstractModel {
 
     /**
     * 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeType")
     @Expose
@@ -48,10 +47,8 @@ public class PodVolume extends AbstractModel {
     private HostVolumeContext HostVolume;
 
     /**
-     * Get 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储类型，可为"pvc"，"hostpath"。 
      * @return VolumeType 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeType() {
         return this.VolumeType;
@@ -59,9 +56,7 @@ public class PodVolume extends AbstractModel {
 
     /**
      * Set 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeType 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeType(String VolumeType) {
         this.VolumeType = VolumeType;

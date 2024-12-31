@@ -117,7 +117,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeFlagFilter")
     @Expose
@@ -133,7 +132,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportRoleMonitor")
     @Expose
@@ -149,7 +147,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HAState")
     @Expose
@@ -157,7 +154,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameService")
     @Expose
@@ -165,7 +161,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFederation")
     @Expose
@@ -173,7 +168,6 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
     * datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataNodeMaintenanceState")
     @Expose
@@ -392,10 +386,8 @@ public class ServiceNodeDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型 
      * @return NodeFlagFilter 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeFlagFilter() {
         return this.NodeFlagFilter;
@@ -403,9 +395,7 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeFlagFilter 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeFlagFilter(String NodeFlagFilter) {
         this.NodeFlagFilter = NodeFlagFilter;
@@ -432,10 +422,8 @@ public class ServiceNodeDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色是否支持监控 
      * @return IsSupportRoleMonitor 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSupportRoleMonitor() {
         return this.IsSupportRoleMonitor;
@@ -443,9 +431,7 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportRoleMonitor 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportRoleMonitor(Boolean IsSupportRoleMonitor) {
         this.IsSupportRoleMonitor = IsSupportRoleMonitor;
@@ -472,10 +458,8 @@ public class ServiceNodeDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错 
      * @return HAState 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHAState() {
         return this.HAState;
@@ -483,19 +467,15 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HAState 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHAState(String HAState) {
         this.HAState = HAState;
     }
 
     /**
-     * Get NameService名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NameService名称 
      * @return NameService NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameService() {
         return this.NameService;
@@ -503,19 +483,15 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameService NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameService(String NameService) {
         this.NameService = NameService;
     }
 
     /**
-     * Get 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持联邦 
      * @return IsFederation 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFederation() {
         return this.IsFederation;
@@ -523,19 +499,15 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFederation 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFederation(Boolean IsFederation) {
         this.IsFederation = IsFederation;
     }
 
     /**
-     * Get datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get datanode是否是维护状态 
      * @return DataNodeMaintenanceState datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataNodeMaintenanceState() {
         return this.DataNodeMaintenanceState;
@@ -543,9 +515,7 @@ public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
      * Set datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataNodeMaintenanceState datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataNodeMaintenanceState(Long DataNodeMaintenanceState) {
         this.DataNodeMaintenanceState = DataNodeMaintenanceState;

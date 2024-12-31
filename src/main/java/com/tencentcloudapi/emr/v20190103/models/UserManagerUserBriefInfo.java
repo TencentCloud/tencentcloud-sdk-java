@@ -46,7 +46,6 @@ public class UserManagerUserBriefInfo extends AbstractModel {
 
     /**
     * 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -61,7 +60,6 @@ public class UserManagerUserBriefInfo extends AbstractModel {
 
     /**
     * keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownLoadKeyTabUrl")
     @Expose
@@ -116,10 +114,8 @@ public class UserManagerUserBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户创建时间 
      * @return CreateTime 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -127,9 +123,7 @@ public class UserManagerUserBriefInfo extends AbstractModel {
 
     /**
      * Set 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -152,10 +146,8 @@ public class UserManagerUserBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get keytab文件的下载地址 
      * @return DownLoadKeyTabUrl keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownLoadKeyTabUrl() {
         return this.DownLoadKeyTabUrl;
@@ -163,9 +155,7 @@ public class UserManagerUserBriefInfo extends AbstractModel {
 
     /**
      * Set keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownLoadKeyTabUrl keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownLoadKeyTabUrl(String DownLoadKeyTabUrl) {
         this.DownLoadKeyTabUrl = DownLoadKeyTabUrl;

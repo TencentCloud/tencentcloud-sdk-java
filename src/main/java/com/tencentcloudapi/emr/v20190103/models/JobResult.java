@@ -25,7 +25,6 @@ public class JobResult extends AbstractModel {
 
     /**
     * 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -36,7 +35,6 @@ public class JobResult extends AbstractModel {
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionOnFailure")
     @Expose
@@ -48,7 +46,6 @@ public class JobResult extends AbstractModel {
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobState")
     @Expose
@@ -56,17 +53,14 @@ public class JobResult extends AbstractModel {
 
     /**
     * YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务步骤名称。 
      * @return Name 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -74,9 +68,7 @@ public class JobResult extends AbstractModel {
 
     /**
      * Set 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -86,13 +78,11 @@ public class JobResult extends AbstractModel {
      * Get 任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
-“CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。 
+“CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。 
      * @return ActionOnFailure 任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionOnFailure() {
         return this.ActionOnFailure;
@@ -103,12 +93,10 @@ public class JobResult extends AbstractModel {
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionOnFailure 任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionOnFailure(String ActionOnFailure) {
         this.ActionOnFailure = ActionOnFailure;
@@ -119,14 +107,12 @@ public class JobResult extends AbstractModel {
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
-“JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。 
+“JobFlowStepStatusSucceed”，任务步骤执行成功。 
      * @return JobState 当前步骤的状态，可以为以下值：
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobState() {
         return this.JobState;
@@ -138,23 +124,19 @@ public class JobResult extends AbstractModel {
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobState 当前步骤的状态，可以为以下值：
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobState(String JobState) {
         this.JobState = JobState;
     }
 
     /**
-     * Get YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get YARN任务ID 
      * @return ApplicationId YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -162,9 +144,7 @@ public class JobResult extends AbstractModel {
 
     /**
      * Set YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

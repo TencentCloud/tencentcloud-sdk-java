@@ -238,6 +238,10 @@ public class Component extends AbstractModel {
 <ul><li> <b>Opacity</b>：印章透明度，支持范围：0.6-1，0.7表示70%的透明度，1表示无透明度</li></ul>
 <b>参数样例</b>：`{"Opacity":0.7}`
 
+<font color="red">签署印章大小功能设置，</font>当ComponentType为SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL时，可以通过以下参数设置签署时按照实际印章的大小进行签署，如果印章没有设置大小，那么默认会是4.2cm的印章大小：
+<ul><li> <b>UseSealSize</b>：使用印章设置的大小盖章，true表示使用印章设置的大小盖章，false表示使用签署控件的大小进行盖章；不传则为false</li></ul>
+<b>参数样例</b>：`{"UseSealSize":true}`
+
 <font color="red">关键字模式下支持关键字找不到的情况下不进行报错的设置</font>
 <ul><li> <b>IgnoreKeywordError</b> :1-关键字查找不到时不进行报错</li></ul>
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
@@ -301,6 +305,7 @@ ChildrenComponent结构体定义:
     </tbody>
 </table>
 <b>参数样例</b>：
+  
 ```json
 {
     "ChildrenComponents": [
@@ -1001,6 +1006,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Opacity</b>：印章透明度，支持范围：0.6-1，0.7表示70%的透明度，1表示无透明度</li></ul>
 <b>参数样例</b>：`{"Opacity":0.7}`
 
+<font color="red">签署印章大小功能设置，</font>当ComponentType为SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL时，可以通过以下参数设置签署时按照实际印章的大小进行签署，如果印章没有设置大小，那么默认会是4.2cm的印章大小：
+<ul><li> <b>UseSealSize</b>：使用印章设置的大小盖章，true表示使用印章设置的大小盖章，false表示使用签署控件的大小进行盖章；不传则为false</li></ul>
+<b>参数样例</b>：`{"UseSealSize":true}`
+
 <font color="red">关键字模式下支持关键字找不到的情况下不进行报错的设置</font>
 <ul><li> <b>IgnoreKeywordError</b> :1-关键字查找不到时不进行报错</li></ul>
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
@@ -1064,6 +1073,7 @@ ChildrenComponent结构体定义:
     </tbody>
 </table>
 <b>参数样例</b>：
+  
 ```json
 {
     "ChildrenComponents": [
@@ -1165,6 +1175,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Opacity</b>：印章透明度，支持范围：0.6-1，0.7表示70%的透明度，1表示无透明度</li></ul>
 <b>参数样例</b>：`{"Opacity":0.7}`
 
+<font color="red">签署印章大小功能设置，</font>当ComponentType为SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL时，可以通过以下参数设置签署时按照实际印章的大小进行签署，如果印章没有设置大小，那么默认会是4.2cm的印章大小：
+<ul><li> <b>UseSealSize</b>：使用印章设置的大小盖章，true表示使用印章设置的大小盖章，false表示使用签署控件的大小进行盖章；不传则为false</li></ul>
+<b>参数样例</b>：`{"UseSealSize":true}`
+
 <font color="red">关键字模式下支持关键字找不到的情况下不进行报错的设置</font>
 <ul><li> <b>IgnoreKeywordError</b> :1-关键字查找不到时不进行报错</li></ul>
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
@@ -1228,6 +1242,7 @@ ChildrenComponent结构体定义:
     </tbody>
 </table>
 <b>参数样例</b>：
+  
 ```json
 {
     "ChildrenComponents": [
@@ -1335,6 +1350,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Opacity</b>：印章透明度，支持范围：0.6-1，0.7表示70%的透明度，1表示无透明度</li></ul>
 <b>参数样例</b>：`{"Opacity":0.7}`
 
+<font color="red">签署印章大小功能设置，</font>当ComponentType为SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL时，可以通过以下参数设置签署时按照实际印章的大小进行签署，如果印章没有设置大小，那么默认会是4.2cm的印章大小：
+<ul><li> <b>UseSealSize</b>：使用印章设置的大小盖章，true表示使用印章设置的大小盖章，false表示使用签署控件的大小进行盖章；不传则为false</li></ul>
+<b>参数样例</b>：`{"UseSealSize":true}`
+
 <font color="red">关键字模式下支持关键字找不到的情况下不进行报错的设置</font>
 <ul><li> <b>IgnoreKeywordError</b> :1-关键字查找不到时不进行报错</li></ul>
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
@@ -1398,6 +1417,7 @@ ChildrenComponent结构体定义:
     </tbody>
 </table>
 <b>参数样例</b>：
+  
 ```json
 {
     "ChildrenComponents": [
@@ -1499,6 +1519,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Opacity</b>：印章透明度，支持范围：0.6-1，0.7表示70%的透明度，1表示无透明度</li></ul>
 <b>参数样例</b>：`{"Opacity":0.7}`
 
+<font color="red">签署印章大小功能设置，</font>当ComponentType为SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL时，可以通过以下参数设置签署时按照实际印章的大小进行签署，如果印章没有设置大小，那么默认会是4.2cm的印章大小：
+<ul><li> <b>UseSealSize</b>：使用印章设置的大小盖章，true表示使用印章设置的大小盖章，false表示使用签署控件的大小进行盖章；不传则为false</li></ul>
+<b>参数样例</b>：`{"UseSealSize":true}`
+
 <font color="red">关键字模式下支持关键字找不到的情况下不进行报错的设置</font>
 <ul><li> <b>IgnoreKeywordError</b> :1-关键字查找不到时不进行报错</li></ul>
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
@@ -1562,6 +1586,7 @@ ChildrenComponent结构体定义:
     </tbody>
 </table>
 <b>参数样例</b>：
+  
 ```json
 {
     "ChildrenComponents": [

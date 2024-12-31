@@ -25,7 +25,6 @@ public class ZoneDetailPriceResult extends AbstractModel {
 
     /**
     * 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -39,10 +38,8 @@ public class ZoneDetailPriceResult extends AbstractModel {
     private NodeDetailPriceResult [] NodeDetailPrice;
 
     /**
-     * Get 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区Id 
      * @return ZoneId 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneId() {
         return this.ZoneId;
@@ -50,9 +47,7 @@ public class ZoneDetailPriceResult extends AbstractModel {
 
     /**
      * Set 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

@@ -32,7 +32,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -54,7 +53,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubFlowFlag")
     @Expose
@@ -69,7 +67,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -77,7 +74,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -101,7 +97,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HadWoodDetail")
     @Expose
@@ -109,7 +104,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WoodJobId")
     @Expose
@@ -117,7 +111,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanguageKey")
     @Expose
@@ -125,7 +118,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReason")
     @Expose
@@ -133,7 +125,6 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
     * 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeConsuming")
     @Expose
@@ -156,10 +147,8 @@ public class StageInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get 步骤名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤名 
      * @return Name 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -167,9 +156,7 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -208,10 +195,8 @@ public class StageInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子流程标签 
      * @return SubFlowFlag 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubFlowFlag() {
         return this.SubFlowFlag;
@@ -219,9 +204,7 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubFlowFlag 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubFlowFlag(String SubFlowFlag) {
         this.SubFlowFlag = SubFlowFlag;
@@ -244,10 +227,8 @@ public class StageInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤运行状态描述 
      * @return Desc 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -255,19 +236,15 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 运行进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行进度 
      * @return Progress 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
         return this.Progress;
@@ -275,9 +252,7 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
@@ -324,10 +299,8 @@ public class StageInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否有详情信息 
      * @return HadWoodDetail 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHadWoodDetail() {
         return this.HadWoodDetail;
@@ -335,19 +308,15 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HadWoodDetail 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHadWoodDetail(Boolean HadWoodDetail) {
         this.HadWoodDetail = HadWoodDetail;
     }
 
     /**
-     * Get Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Wood子流程Id 
      * @return WoodJobId Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWoodJobId() {
         return this.WoodJobId;
@@ -355,19 +324,15 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WoodJobId Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWoodJobId(Long WoodJobId) {
         this.WoodJobId = WoodJobId;
     }
 
     /**
-     * Get 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多语言版本Key 
      * @return LanguageKey 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanguageKey() {
         return this.LanguageKey;
@@ -375,19 +340,15 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LanguageKey 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanguageKey(String LanguageKey) {
         this.LanguageKey = LanguageKey;
     }
 
     /**
-     * Get 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果stage失败，失败原因 
      * @return FailedReason 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedReason() {
         return this.FailedReason;
@@ -395,19 +356,15 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedReason 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReason(String FailedReason) {
         this.FailedReason = FailedReason;
     }
 
     /**
-     * Get 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤耗时 
      * @return TimeConsuming 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeConsuming() {
         return this.TimeConsuming;
@@ -415,9 +372,7 @@ public class StageInfoDetail extends AbstractModel {
 
     /**
      * Set 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeConsuming 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeConsuming(String TimeConsuming) {
         this.TimeConsuming = TimeConsuming;

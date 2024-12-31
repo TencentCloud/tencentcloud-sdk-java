@@ -25,7 +25,6 @@ public class NodeDetailPriceResult extends AbstractModel {
 
     /**
     * 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
     @Expose
@@ -39,10 +38,8 @@ public class NodeDetailPriceResult extends AbstractModel {
     private PartDetailPriceItem [] PartDetailPrice;
 
     /**
-     * Get 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型 master core task common router mysql 
      * @return NodeType 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
         return this.NodeType;
@@ -50,9 +47,7 @@ public class NodeDetailPriceResult extends AbstractModel {
 
     /**
      * Set 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeType 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;

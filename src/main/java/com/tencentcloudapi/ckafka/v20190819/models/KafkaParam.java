@@ -165,6 +165,14 @@ public class KafkaParam extends AbstractModel {
     private Boolean KeepPartition;
 
     /**
+    * 正则匹配Topic列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicRegularExpression")
+    @Expose
+    private String TopicRegularExpression;
+
+    /**
      * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
      */
@@ -512,6 +520,26 @@ public class KafkaParam extends AbstractModel {
         this.KeepPartition = KeepPartition;
     }
 
+    /**
+     * Get 正则匹配Topic列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicRegularExpression 正则匹配Topic列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicRegularExpression() {
+        return this.TopicRegularExpression;
+    }
+
+    /**
+     * Set 正则匹配Topic列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicRegularExpression 正则匹配Topic列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicRegularExpression(String TopicRegularExpression) {
+        this.TopicRegularExpression = TopicRegularExpression;
+    }
+
     public KafkaParam() {
     }
 
@@ -577,6 +605,9 @@ public class KafkaParam extends AbstractModel {
         if (source.KeepPartition != null) {
             this.KeepPartition = new Boolean(source.KeepPartition);
         }
+        if (source.TopicRegularExpression != null) {
+            this.TopicRegularExpression = new String(source.TopicRegularExpression);
+        }
     }
 
 
@@ -602,6 +633,7 @@ public class KafkaParam extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgMultiple", this.MsgMultiple);
         this.setParamSimple(map, prefix + "ConnectorSyncType", this.ConnectorSyncType);
         this.setParamSimple(map, prefix + "KeepPartition", this.KeepPartition);
+        this.setParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
 
     }
 }

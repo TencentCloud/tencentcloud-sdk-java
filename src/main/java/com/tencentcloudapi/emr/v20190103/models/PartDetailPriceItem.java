@@ -25,7 +25,6 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -33,7 +32,6 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -41,7 +39,6 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealCost")
     @Expose
@@ -49,7 +46,6 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -57,7 +53,6 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -65,17 +60,14 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-     * Get 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB 
      * @return InstanceType 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -83,19 +75,15 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单价（原价） 
      * @return Price 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPrice() {
         return this.Price;
@@ -103,19 +91,15 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单价（折扣价） 
      * @return RealCost 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRealCost() {
         return this.RealCost;
@@ -123,19 +107,15 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealCost 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealCost(Float RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总价（折扣价） 
      * @return RealTotalCost 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRealTotalCost() {
         return this.RealTotalCost;
@@ -143,19 +123,15 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(Float RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 折扣
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣 
      * @return Policy 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPolicy() {
         return this.Policy;
@@ -163,19 +139,15 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(Float Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return GoodsNum 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
@@ -183,9 +155,7 @@ public class PartDetailPriceItem extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsNum 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;

@@ -25,7 +25,6 @@ public class MetricTags extends AbstractModel {
 
     /**
     * 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -33,17 +32,14 @@ public class MetricTags extends AbstractModel {
 
     /**
     * 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 指标单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标单位 
      * @return Unit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -51,19 +47,15 @@ public class MetricTags extends AbstractModel {
 
     /**
      * Set 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 指标Type
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标Type 
      * @return Type 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -71,9 +63,7 @@ public class MetricTags extends AbstractModel {
 
     /**
      * Set 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

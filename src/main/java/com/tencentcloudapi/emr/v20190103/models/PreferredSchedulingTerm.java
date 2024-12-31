@@ -25,7 +25,6 @@ public class PreferredSchedulingTerm extends AbstractModel {
 
     /**
     * 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -40,10 +39,8 @@ public class PreferredSchedulingTerm extends AbstractModel {
     private NodeSelectorTerm Preference;
 
     /**
-     * Get 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权重，范围1-100 
      * @return Weight 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -51,9 +48,7 @@ public class PreferredSchedulingTerm extends AbstractModel {
 
     /**
      * Set 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

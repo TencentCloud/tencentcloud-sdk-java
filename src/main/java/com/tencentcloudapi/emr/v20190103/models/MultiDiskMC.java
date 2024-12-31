@@ -25,7 +25,6 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
     * 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -45,7 +44,6 @@ public class MultiDiskMC extends AbstractModel {
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -53,7 +51,6 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
     * 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -61,17 +58,14 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
     * 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-     * Get 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该类型云盘个数 
      * @return Count 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -79,9 +73,7 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
      * Set 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -100,8 +92,7 @@ public class MultiDiskMC extends AbstractModel {
 13 : 通用型SSD云硬盘
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
-16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。 
+16 : 远端SSD盘 
      * @return Type 磁盘类型
 1  :本地盘
 2  :云硬盘
@@ -115,7 +106,6 @@ public class MultiDiskMC extends AbstractModel {
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -135,7 +125,6 @@ public class MultiDiskMC extends AbstractModel {
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 磁盘类型
 1  :本地盘
 2  :云硬盘
@@ -149,17 +138,14 @@ public class MultiDiskMC extends AbstractModel {
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘大小 
      * @return Size 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSize() {
         return this.Size;
@@ -167,19 +153,15 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
      * Set 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(String Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘大小,单位b 
      * @return Volume 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolume() {
         return this.Volume;
@@ -187,9 +169,7 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
      * Set 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Volume 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;

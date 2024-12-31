@@ -39,7 +39,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -69,7 +68,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -77,7 +75,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteProtect")
     @Expose
@@ -85,7 +82,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -100,7 +96,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
     @Expose
@@ -108,7 +103,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isolation")
     @Expose
@@ -116,7 +110,6 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
     * 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
     @Expose
@@ -155,10 +148,8 @@ public class GatewayLoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关负载均衡所属私有网络。 
      * @return VpcId 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -166,9 +157,7 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -227,10 +216,8 @@ public class GatewayLoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的目标组唯一ID。 
      * @return TargetGroupId 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
@@ -238,19 +225,15 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetGroupId 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启删除保护功能。 
      * @return DeleteProtect 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteProtect() {
         return this.DeleteProtect;
@@ -258,19 +241,15 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteProtect 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteProtect(Boolean DeleteProtect) {
         this.DeleteProtect = DeleteProtect;
     }
 
     /**
-     * Get 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的标签信息。 
      * @return Tags 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -278,9 +257,7 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
@@ -303,10 +280,8 @@ public class GatewayLoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费 
      * @return ChargeType 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
         return this.ChargeType;
@@ -314,19 +289,15 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：表示未被隔离，1：表示被隔离。 
      * @return Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsolation() {
         return this.Isolation;
@@ -334,19 +305,15 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolation(Long Isolation) {
         this.Isolation = Isolation;
     }
 
     /**
-     * Get 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例被隔离的时间 
      * @return IsolatedTime 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
@@ -354,9 +321,7 @@ public class GatewayLoadBalancer extends AbstractModel {
 
     /**
      * Set 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolatedTime 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;

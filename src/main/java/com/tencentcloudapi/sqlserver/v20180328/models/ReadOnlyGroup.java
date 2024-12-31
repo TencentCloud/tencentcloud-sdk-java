@@ -136,6 +136,20 @@ public class ReadOnlyGroup extends AbstractModel {
     private Long TgwWanVPort;
 
     /**
+    * RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+    */
+    @SerializedName("ReadOnlyGroupType")
+    @Expose
+    private Long ReadOnlyGroupType;
+
+    /**
+    * 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+    */
+    @SerializedName("ReadOnlyGroupForcedUpgrade")
+    @Expose
+    private Long ReadOnlyGroupForcedUpgrade;
+
+    /**
      * Get 只读组ID 
      * @return ReadOnlyGroupId 只读组ID
      */
@@ -391,6 +405,38 @@ public class ReadOnlyGroup extends AbstractModel {
         this.TgwWanVPort = TgwWanVPort;
     }
 
+    /**
+     * Get RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面 
+     * @return ReadOnlyGroupType RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     */
+    public Long getReadOnlyGroupType() {
+        return this.ReadOnlyGroupType;
+    }
+
+    /**
+     * Set RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     * @param ReadOnlyGroupType RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     */
+    public void setReadOnlyGroupType(Long ReadOnlyGroupType) {
+        this.ReadOnlyGroupType = ReadOnlyGroupType;
+    }
+
+    /**
+     * Get 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署 
+     * @return ReadOnlyGroupForcedUpgrade 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+     */
+    public Long getReadOnlyGroupForcedUpgrade() {
+        return this.ReadOnlyGroupForcedUpgrade;
+    }
+
+    /**
+     * Set 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+     * @param ReadOnlyGroupForcedUpgrade 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+     */
+    public void setReadOnlyGroupForcedUpgrade(Long ReadOnlyGroupForcedUpgrade) {
+        this.ReadOnlyGroupForcedUpgrade = ReadOnlyGroupForcedUpgrade;
+    }
+
     public ReadOnlyGroup() {
     }
 
@@ -450,6 +496,12 @@ public class ReadOnlyGroup extends AbstractModel {
         if (source.TgwWanVPort != null) {
             this.TgwWanVPort = new Long(source.TgwWanVPort);
         }
+        if (source.ReadOnlyGroupType != null) {
+            this.ReadOnlyGroupType = new Long(source.ReadOnlyGroupType);
+        }
+        if (source.ReadOnlyGroupForcedUpgrade != null) {
+            this.ReadOnlyGroupForcedUpgrade = new Long(source.ReadOnlyGroupForcedUpgrade);
+        }
     }
 
 
@@ -473,6 +525,8 @@ public class ReadOnlyGroup extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ReadOnlyInstanceSet.", this.ReadOnlyInstanceSet);
         this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
         this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+        this.setParamSimple(map, prefix + "ReadOnlyGroupType", this.ReadOnlyGroupType);
+        this.setParamSimple(map, prefix + "ReadOnlyGroupForcedUpgrade", this.ReadOnlyGroupForcedUpgrade);
 
     }
 }

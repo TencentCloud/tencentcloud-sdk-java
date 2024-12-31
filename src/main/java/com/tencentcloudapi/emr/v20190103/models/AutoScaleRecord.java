@@ -88,7 +88,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompensateFlag")
     @Expose
@@ -96,7 +95,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompensateCount")
     @Expose
@@ -104,7 +102,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryCount")
     @Expose
@@ -112,7 +109,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryInfo")
     @Expose
@@ -120,7 +116,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryEnReason")
     @Expose
@@ -128,7 +123,6 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
     * 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryReason")
     @Expose
@@ -279,10 +273,8 @@ public class AutoScaleRecord extends AbstractModel {
     }
 
     /**
-     * Get 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 补偿扩容，0表示不开启，1表示开启 
      * @return CompensateFlag 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
@@ -290,19 +282,15 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompensateFlag 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
     }
 
     /**
-     * Get 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 补偿次数 
      * @return CompensateCount 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompensateCount() {
         return this.CompensateCount;
@@ -310,19 +298,15 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompensateCount 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompensateCount(Long CompensateCount) {
         this.CompensateCount = CompensateCount;
     }
 
     /**
-     * Get 重试次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试次数 
      * @return RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryCount() {
         return this.RetryCount;
@@ -330,19 +314,15 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get 重试信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试信息 
      * @return RetryInfo 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRetryInfo() {
         return this.RetryInfo;
@@ -350,19 +330,15 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryInfo 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryInfo(String RetryInfo) {
         this.RetryInfo = RetryInfo;
     }
 
     /**
-     * Get 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试英文描述 
      * @return RetryEnReason 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRetryEnReason() {
         return this.RetryEnReason;
@@ -370,19 +346,15 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryEnReason 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryEnReason(String RetryEnReason) {
         this.RetryEnReason = RetryEnReason;
     }
 
     /**
-     * Get 重试描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试描述 
      * @return RetryReason 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRetryReason() {
         return this.RetryReason;
@@ -390,9 +362,7 @@ public class AutoScaleRecord extends AbstractModel {
 
     /**
      * Set 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryReason 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryReason(String RetryReason) {
         this.RetryReason = RetryReason;

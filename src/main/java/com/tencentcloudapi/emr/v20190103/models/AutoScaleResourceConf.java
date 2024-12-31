@@ -25,7 +25,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -61,7 +60,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 下次能可扩容时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextTimeCanScale")
     @Expose
@@ -69,7 +67,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GraceDownFlag")
     @Expose
@@ -77,7 +74,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HardwareType")
     @Expose
@@ -85,7 +81,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -93,7 +88,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostPayPercentMin")
     @Expose
@@ -101,7 +95,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChangeToPod")
     @Expose
@@ -109,7 +102,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 伸缩组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -117,7 +109,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnNodeLabel")
     @Expose
@@ -125,7 +116,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 伸缩组状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupStatus")
     @Expose
@@ -133,7 +123,6 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 并行伸缩 0关闭；1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Parallel")
     @Expose
@@ -141,17 +130,14 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 是否支持MNode
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableMNode")
     @Expose
     private Long EnableMNode;
 
     /**
-     * Get 配置ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置ID。 
      * @return Id 配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -159,9 +145,7 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -232,10 +216,8 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
-     * Get 下次能可扩容时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下次能可扩容时间。 
      * @return NextTimeCanScale 下次能可扩容时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNextTimeCanScale() {
         return this.NextTimeCanScale;
@@ -243,19 +225,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 下次能可扩容时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextTimeCanScale 下次能可扩容时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextTimeCanScale(Long NextTimeCanScale) {
         this.NextTimeCanScale = NextTimeCanScale;
     }
 
     /**
-     * Get 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优雅缩容开关 
      * @return GraceDownFlag 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
@@ -263,19 +241,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GraceDownFlag 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。 
      * @return HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHardwareType() {
         return this.HardwareType;
@@ -283,19 +257,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHardwareType(String HardwareType) {
         this.HardwareType = HardwareType;
     }
 
     /**
-     * Get "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。 
      * @return PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -303,19 +273,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数 
      * @return PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPostPayPercentMin() {
         return this.PostPayPercentMin;
@@ -323,19 +289,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostPayPercentMin(Long PostPayPercentMin) {
         this.PostPayPercentMin = PostPayPercentMin;
     }
 
     /**
-     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1) 
      * @return ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChangeToPod() {
         return this.ChangeToPod;
@@ -343,19 +305,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChangeToPod(Long ChangeToPod) {
         this.ChangeToPod = ChangeToPod;
     }
 
     /**
-     * Get 伸缩组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩组名 
      * @return GroupName 伸缩组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -363,19 +321,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 伸缩组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 伸缩组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return YarnNodeLabel 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
@@ -383,19 +337,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param YarnNodeLabel 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get 伸缩组状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩组状态 
      * @return GroupStatus 伸缩组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupStatus() {
         return this.GroupStatus;
@@ -403,19 +353,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 伸缩组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupStatus 伸缩组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupStatus(Long GroupStatus) {
         this.GroupStatus = GroupStatus;
     }
 
     /**
-     * Get 并行伸缩 0关闭；1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 并行伸缩 0关闭；1开启 
      * @return Parallel 并行伸缩 0关闭；1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParallel() {
         return this.Parallel;
@@ -423,19 +369,15 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 并行伸缩 0关闭；1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Parallel 并行伸缩 0关闭；1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParallel(Long Parallel) {
         this.Parallel = Parallel;
     }
 
     /**
-     * Get 是否支持MNode
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持MNode 
      * @return EnableMNode 是否支持MNode
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableMNode() {
         return this.EnableMNode;
@@ -443,9 +385,7 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 是否支持MNode
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableMNode 是否支持MNode
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableMNode(Long EnableMNode) {
         this.EnableMNode = EnableMNode;

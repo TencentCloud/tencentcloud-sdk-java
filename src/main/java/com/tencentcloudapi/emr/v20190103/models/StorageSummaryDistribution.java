@@ -25,7 +25,6 @@ public class StorageSummaryDistribution extends AbstractModel {
 
     /**
     * 数据项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricItem")
     @Expose
@@ -33,7 +32,6 @@ public class StorageSummaryDistribution extends AbstractModel {
 
     /**
     * 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
     @Expose
@@ -48,10 +46,8 @@ public class StorageSummaryDistribution extends AbstractModel {
     private Dps [] Dps;
 
     /**
-     * Get 数据项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据项 
      * @return MetricItem 数据项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricItem() {
         return this.MetricItem;
@@ -59,19 +55,15 @@ public class StorageSummaryDistribution extends AbstractModel {
 
     /**
      * Set 数据项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricItem 数据项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricItem(String MetricItem) {
         this.MetricItem = MetricItem;
     }
 
     /**
-     * Get 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据项描述 
      * @return MetricName 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
         return this.MetricName;
@@ -79,9 +71,7 @@ public class StorageSummaryDistribution extends AbstractModel {
 
     /**
      * Set 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricName 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

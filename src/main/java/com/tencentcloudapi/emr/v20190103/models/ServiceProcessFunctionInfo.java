@@ -25,7 +25,6 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
     * 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectAlert")
     @Expose
@@ -57,7 +56,6 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
     * 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectFunctionKey")
     @Expose
@@ -65,7 +63,6 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
     * 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectFunctionValue")
     @Expose
@@ -73,17 +70,14 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
     * 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectTime")
     @Expose
     private String DetectTime;
 
     /**
-     * Get 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测告警级别 
      * @return DetectAlert 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectAlert() {
         return this.DetectAlert;
@@ -91,9 +85,7 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
      * Set 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectAlert 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectAlert(String DetectAlert) {
         this.DetectAlert = DetectAlert;
@@ -172,10 +164,8 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
     }
 
     /**
-     * Get 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测功能描述 
      * @return DetectFunctionKey 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectFunctionKey() {
         return this.DetectFunctionKey;
@@ -183,19 +173,15 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
      * Set 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectFunctionKey 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectFunctionKey(String DetectFunctionKey) {
         this.DetectFunctionKey = DetectFunctionKey;
     }
 
     /**
-     * Get 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测功能结果 
      * @return DetectFunctionValue 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectFunctionValue() {
         return this.DetectFunctionValue;
@@ -203,19 +189,15 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
      * Set 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectFunctionValue 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectFunctionValue(String DetectFunctionValue) {
         this.DetectFunctionValue = DetectFunctionValue;
     }
 
     /**
-     * Get 探测结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测结果 
      * @return DetectTime 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectTime() {
         return this.DetectTime;
@@ -223,9 +205,7 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
 
     /**
      * Set 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectTime 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectTime(String DetectTime) {
         this.DetectTime = DetectTime;

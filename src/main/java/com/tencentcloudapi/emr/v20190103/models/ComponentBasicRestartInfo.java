@@ -25,7 +25,6 @@ public class ComponentBasicRestartInfo extends AbstractModel {
 
     /**
     * 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentName")
     @Expose
@@ -40,10 +39,8 @@ public class ComponentBasicRestartInfo extends AbstractModel {
     private String [] IpList;
 
     /**
-     * Get 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名，必填，如NameNode 
      * @return ComponentName 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -51,9 +48,7 @@ public class ComponentBasicRestartInfo extends AbstractModel {
 
     /**
      * Set 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentName 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;

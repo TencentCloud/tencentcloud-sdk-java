@@ -25,17 +25,21 @@ public class UserManagerFilter extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 用户来源
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -43,12 +47,26 @@ public class UserManagerFilter extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
+    }
+
+    /**
+     * Get 用户来源 
+     * @return UserType 用户来源
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户来源
+     * @param UserType 用户来源
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
     }
 
     public UserManagerFilter() {
@@ -62,6 +80,9 @@ public class UserManagerFilter extends AbstractModel {
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
     }
 
 
@@ -70,6 +91,7 @@ public class UserManagerFilter extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

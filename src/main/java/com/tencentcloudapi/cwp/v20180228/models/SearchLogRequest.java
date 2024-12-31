@@ -38,7 +38,7 @@ public class SearchLogRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
+    * 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
     */
     @SerializedName("QueryString")
     @Expose
@@ -98,16 +98,16 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508 
-     * @return QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
+     * Get 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508 
+     * @return QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
      */
     public String getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
-     * @param QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
+     * Set 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
+     * @param QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
      */
     public void setQueryString(String QueryString) {
         this.QueryString = QueryString;

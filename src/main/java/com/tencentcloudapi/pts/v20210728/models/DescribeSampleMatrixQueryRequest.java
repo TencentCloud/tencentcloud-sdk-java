@@ -66,7 +66,7 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 分组
+    * 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
     */
     @SerializedName("GroupBy")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
     }
 
     /**
-     * Get 分组 
-     * @return GroupBy 分组
+     * Get 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名 
+     * @return GroupBy 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 分组
-     * @param GroupBy 分组
+     * Set 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
+     * @param GroupBy 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;

@@ -25,7 +25,6 @@ public class DescribeEndUserLoginStatisticResponse extends AbstractModel {
 
     /**
     * 环境终端用户新增与登录统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginStatistics")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEndUserLoginStatisticResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境终端用户新增与登录统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境终端用户新增与登录统计 
      * @return LoginStatistics 环境终端用户新增与登录统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoginStatistic [] getLoginStatistics() {
         return this.LoginStatistics;
@@ -50,9 +47,7 @@ public class DescribeEndUserLoginStatisticResponse extends AbstractModel {
 
     /**
      * Set 环境终端用户新增与登录统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginStatistics 环境终端用户新增与登录统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginStatistics(LoginStatistic [] LoginStatistics) {
         this.LoginStatistics = LoginStatistics;

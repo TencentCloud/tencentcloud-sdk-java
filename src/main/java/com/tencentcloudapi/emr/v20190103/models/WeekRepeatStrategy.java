@@ -25,7 +25,6 @@ public class WeekRepeatStrategy extends AbstractModel {
 
     /**
     * 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteAtTimeOfDay")
     @Expose
@@ -40,10 +39,8 @@ public class WeekRepeatStrategy extends AbstractModel {
     private Long [] DaysOfWeek;
 
     /**
-     * Get 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复任务执行的具体时刻，例如"01:02:00" 
      * @return ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteAtTimeOfDay() {
         return this.ExecuteAtTimeOfDay;
@@ -51,9 +48,7 @@ public class WeekRepeatStrategy extends AbstractModel {
 
     /**
      * Set 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteAtTimeOfDay(String ExecuteAtTimeOfDay) {
         this.ExecuteAtTimeOfDay = ExecuteAtTimeOfDay;

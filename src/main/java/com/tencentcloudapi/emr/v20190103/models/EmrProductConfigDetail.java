@@ -33,7 +33,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterNodeSize")
     @Expose
@@ -41,7 +40,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoreNodeSize")
     @Expose
@@ -49,7 +47,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskNodeSize")
     @Expose
@@ -57,7 +54,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComNodeSize")
     @Expose
@@ -97,7 +93,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnCos")
     @Expose
@@ -105,7 +100,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
     @Expose
@@ -113,7 +107,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouterNodeSize")
     @Expose
@@ -121,7 +114,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportHA")
     @Expose
@@ -129,7 +121,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityOn")
     @Expose
@@ -137,7 +128,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -145,7 +135,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CbsEncrypt")
     @Expose
@@ -153,7 +142,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationRole")
     @Expose
@@ -169,7 +157,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicKeyId")
     @Expose
@@ -196,10 +183,8 @@ public class EmrProductConfigDetail extends AbstractModel {
     }
 
     /**
-     * Get Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Master节点个数 
      * @return MasterNodeSize Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMasterNodeSize() {
         return this.MasterNodeSize;
@@ -207,19 +192,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterNodeSize Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterNodeSize(Long MasterNodeSize) {
         this.MasterNodeSize = MasterNodeSize;
     }
 
     /**
-     * Get Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Core节点个数 
      * @return CoreNodeSize Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCoreNodeSize() {
         return this.CoreNodeSize;
@@ -227,19 +208,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoreNodeSize Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoreNodeSize(Long CoreNodeSize) {
         this.CoreNodeSize = CoreNodeSize;
     }
 
     /**
-     * Get Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Task节点个数 
      * @return TaskNodeSize Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskNodeSize() {
         return this.TaskNodeSize;
@@ -247,19 +224,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNodeSize Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskNodeSize(Long TaskNodeSize) {
         this.TaskNodeSize = TaskNodeSize;
     }
 
     /**
-     * Get Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Common节点个数 
      * @return ComNodeSize Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComNodeSize() {
         return this.ComNodeSize;
@@ -267,9 +240,7 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComNodeSize Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComNodeSize(Long ComNodeSize) {
         this.ComNodeSize = ComNodeSize;
@@ -356,10 +327,8 @@ public class EmrProductConfigDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用COS 
      * @return OnCos 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOnCos() {
         return this.OnCos;
@@ -367,19 +336,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnCos 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnCos(Boolean OnCos) {
         this.OnCos = OnCos;
     }
 
     /**
-     * Get 收费类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收费类型 
      * @return ChargeType 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeType() {
         return this.ChargeType;
@@ -387,19 +352,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Router节点个数 
      * @return RouterNodeSize Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRouterNodeSize() {
         return this.RouterNodeSize;
@@ -407,19 +368,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouterNodeSize Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouterNodeSize(Long RouterNodeSize) {
         this.RouterNodeSize = RouterNodeSize;
     }
 
     /**
-     * Get 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持HA 
      * @return SupportHA 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportHA() {
         return this.SupportHA;
@@ -427,19 +384,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportHA 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportHA(Boolean SupportHA) {
         this.SupportHA = SupportHA;
     }
 
     /**
-     * Get 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持安全模式 
      * @return SecurityOn 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSecurityOn() {
         return this.SecurityOn;
@@ -447,19 +400,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityOn 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityOn(Boolean SecurityOn) {
         this.SecurityOn = SecurityOn;
     }
 
     /**
-     * Get 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组名称 
      * @return SecurityGroup 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
@@ -467,19 +416,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroup 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启Cbs加密 
      * @return CbsEncrypt 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCbsEncrypt() {
         return this.CbsEncrypt;
@@ -487,19 +432,15 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CbsEncrypt 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCbsEncrypt(Long CbsEncrypt) {
         this.CbsEncrypt = CbsEncrypt;
     }
 
     /**
-     * Get 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义应用角色。 
      * @return ApplicationRole 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationRole() {
         return this.ApplicationRole;
@@ -507,9 +448,7 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationRole 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationRole(String ApplicationRole) {
         this.ApplicationRole = ApplicationRole;
@@ -536,10 +475,8 @@ public class EmrProductConfigDetail extends AbstractModel {
     }
 
     /**
-     * Get SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SSH密钥Id 
      * @return PublicKeyId SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicKeyId() {
         return this.PublicKeyId;
@@ -547,9 +484,7 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
      * Set SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicKeyId SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicKeyId(String PublicKeyId) {
         this.PublicKeyId = PublicKeyId;

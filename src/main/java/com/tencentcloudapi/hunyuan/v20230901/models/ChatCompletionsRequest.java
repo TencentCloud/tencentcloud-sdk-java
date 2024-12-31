@@ -207,7 +207,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     * 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
     */
     @SerializedName("EnableRecommendedQuestions")
     @Expose
@@ -721,11 +721,11 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Get 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。 
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。 
      * @return EnableRecommendedQuestions 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
      */
     public Boolean getEnableRecommendedQuestions() {
         return this.EnableRecommendedQuestions;
@@ -735,11 +735,11 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Set 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
      * @param EnableRecommendedQuestions 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
      */
     public void setEnableRecommendedQuestions(Boolean EnableRecommendedQuestions) {
         this.EnableRecommendedQuestions = EnableRecommendedQuestions;

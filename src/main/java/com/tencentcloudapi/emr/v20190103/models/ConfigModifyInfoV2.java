@@ -32,7 +32,6 @@ public class ConfigModifyInfoV2 extends AbstractModel {
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpType")
     @Expose
@@ -47,7 +46,6 @@ public class ConfigModifyInfoV2 extends AbstractModel {
 
     /**
     * 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -55,7 +53,6 @@ public class ConfigModifyInfoV2 extends AbstractModel {
 
     /**
     * 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MyId")
     @Expose
@@ -126,8 +123,7 @@ type AclForYarnQueue struct {
 - 2：新建子队列
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
-- 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。 
+- 6：编辑-增量更新 
      * @return OpType 操作类型，可选值：
 
 - 0：新建队列
@@ -136,7 +132,6 @@ type AclForYarnQueue struct {
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOpType() {
         return this.OpType;
@@ -151,7 +146,6 @@ type AclForYarnQueue struct {
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpType 操作类型，可选值：
 
 - 0：新建队列
@@ -160,7 +154,6 @@ type AclForYarnQueue struct {
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpType(Long OpType) {
         this.OpType = OpType;
@@ -183,10 +176,8 @@ type AclForYarnQueue struct {
     }
 
     /**
-     * Get 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId 
      * @return ParentId 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentId() {
         return this.ParentId;
@@ -194,19 +185,15 @@ type AclForYarnQueue struct {
 
     /**
      * Set 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(String ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。 
      * @return MyId 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMyId() {
         return this.MyId;
@@ -214,9 +201,7 @@ type AclForYarnQueue struct {
 
     /**
      * Set 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MyId 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMyId(String MyId) {
         this.MyId = MyId;

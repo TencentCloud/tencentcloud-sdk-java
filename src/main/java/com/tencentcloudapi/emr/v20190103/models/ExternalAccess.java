@@ -25,7 +25,6 @@ public class ExternalAccess extends AbstractModel {
 
     /**
     * 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -40,10 +39,8 @@ public class ExternalAccess extends AbstractModel {
     private CLBSetting CLBServer;
 
     /**
-     * Get 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外部访问类型，当前仅支持CLB字段 
      * @return Type 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -51,9 +48,7 @@ public class ExternalAccess extends AbstractModel {
 
     /**
      * Set 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

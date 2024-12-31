@@ -25,7 +25,6 @@ public class NodeResourceSpec extends AbstractModel {
 
     /**
     * 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -64,10 +63,8 @@ public class NodeResourceSpec extends AbstractModel {
     private DiskSpecInfo [] LocalDataDisk;
 
     /**
-     * Get 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格类型，如S2.MEDIUM8 
      * @return InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -75,9 +72,7 @@ public class NodeResourceSpec extends AbstractModel {
 
     /**
      * Set 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

@@ -25,7 +25,6 @@ public class LoginStatistic extends AbstractModel {
 
     /**
     * 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatisticalType")
     @Expose
@@ -33,7 +32,6 @@ public class LoginStatistic extends AbstractModel {
 
     /**
     * 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatisticalCycle")
     @Expose
@@ -41,7 +39,6 @@ public class LoginStatistic extends AbstractModel {
 
     /**
     * 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -49,17 +46,14 @@ public class LoginStatistic extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计类型 新增NEWUSER 和登录 LOGIN 
      * @return StatisticalType 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatisticalType() {
         return this.StatisticalType;
@@ -67,19 +61,15 @@ public class LoginStatistic extends AbstractModel {
 
     /**
      * Set 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatisticalType 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatisticalType(String StatisticalType) {
         this.StatisticalType = StatisticalType;
     }
 
     /**
-     * Get 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计周期：日DAY，周WEEK，月MONTH 
      * @return StatisticalCycle 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatisticalCycle() {
         return this.StatisticalCycle;
@@ -87,19 +77,15 @@ public class LoginStatistic extends AbstractModel {
 
     /**
      * Set 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatisticalCycle 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatisticalCycle(String StatisticalCycle) {
         this.StatisticalCycle = StatisticalCycle;
     }
 
     /**
-     * Get 统计总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计总量 
      * @return Count 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -107,19 +93,15 @@ public class LoginStatistic extends AbstractModel {
 
     /**
      * Set 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -127,9 +109,7 @@ public class LoginStatistic extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

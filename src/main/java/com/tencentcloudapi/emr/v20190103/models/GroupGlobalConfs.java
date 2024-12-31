@@ -33,7 +33,6 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
     * 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentNodes")
     @Expose
@@ -41,7 +40,6 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
     * 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentPostPaidNodes")
     @Expose
@@ -49,7 +47,6 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
     * 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentSpotPaidNodes")
     @Expose
@@ -76,10 +73,8 @@ public class GroupGlobalConfs extends AbstractModel {
     }
 
     /**
-     * Get 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前伸缩组扩容出来的节点数量。 
      * @return CurrentNodes 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentNodes() {
         return this.CurrentNodes;
@@ -87,19 +82,15 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
      * Set 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentNodes 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentNodes(Long CurrentNodes) {
         this.CurrentNodes = CurrentNodes;
     }
 
     /**
-     * Get 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前伸缩组扩容出来的后付费节点数量。 
      * @return CurrentPostPaidNodes 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentPostPaidNodes() {
         return this.CurrentPostPaidNodes;
@@ -107,19 +98,15 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
      * Set 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentPostPaidNodes 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentPostPaidNodes(Long CurrentPostPaidNodes) {
         this.CurrentPostPaidNodes = CurrentPostPaidNodes;
     }
 
     /**
-     * Get 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前伸缩组扩容出来的竞价实例节点数量。 
      * @return CurrentSpotPaidNodes 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentSpotPaidNodes() {
         return this.CurrentSpotPaidNodes;
@@ -127,9 +114,7 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
      * Set 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentSpotPaidNodes 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentSpotPaidNodes(Long CurrentSpotPaidNodes) {
         this.CurrentSpotPaidNodes = CurrentSpotPaidNodes;

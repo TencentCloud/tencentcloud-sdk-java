@@ -25,7 +25,6 @@ public class SearchItem extends AbstractModel {
 
     /**
     * 支持搜索的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchType")
     @Expose
@@ -33,17 +32,14 @@ public class SearchItem extends AbstractModel {
 
     /**
     * 支持搜索的值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-     * Get 支持搜索的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持搜索的类型 
      * @return SearchType 支持搜索的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSearchType() {
         return this.SearchType;
@@ -51,19 +47,15 @@ public class SearchItem extends AbstractModel {
 
     /**
      * Set 支持搜索的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchType 支持搜索的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchType(String SearchType) {
         this.SearchType = SearchType;
     }
 
     /**
-     * Get 支持搜索的值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持搜索的值 
      * @return SearchValue 支持搜索的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSearchValue() {
         return this.SearchValue;
@@ -71,9 +63,7 @@ public class SearchItem extends AbstractModel {
 
     /**
      * Set 支持搜索的值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchValue 支持搜索的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;

@@ -25,7 +25,6 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
     * 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependType")
     @Expose
@@ -33,7 +32,6 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
     * 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -41,7 +39,6 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
     * 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -49,17 +46,14 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
     * 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-     * Get 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 依赖关系，0:被其他集群依赖，1:依赖其他集群 
      * @return DependType 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDependType() {
         return this.DependType;
@@ -67,19 +61,15 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
      * Set 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DependType 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependType(Long DependType) {
         this.DependType = DependType;
     }
 
     /**
-     * Get 共用组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共用组件 
      * @return Service 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getService() {
         return this.Service;
@@ -87,19 +77,15 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
      * Set 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 共用集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共用集群 
      * @return ClusterId 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -107,19 +93,15 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
      * Set 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共用集群状态 
      * @return ClusterStatus 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
@@ -127,9 +109,7 @@ public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
      * Set 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterStatus 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;

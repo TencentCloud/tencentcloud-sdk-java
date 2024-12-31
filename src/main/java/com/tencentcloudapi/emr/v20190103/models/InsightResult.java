@@ -25,7 +25,6 @@ public class InsightResult extends AbstractModel {
 
     /**
     * 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class InsightResult extends AbstractModel {
 
     /**
     * 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -69,7 +67,6 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
     @Expose
@@ -77,7 +74,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -85,7 +81,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleExplain")
     @Expose
@@ -93,7 +88,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -101,7 +95,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -109,7 +102,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -117,7 +109,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTaskExecID")
     @Expose
@@ -125,7 +116,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleFlowName")
     @Expose
@@ -133,7 +123,6 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTaskName")
     @Expose
@@ -141,17 +130,14 @@ TEZ-TezTaskGC:TasksGC
 
     /**
     * Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobConf")
     @Expose
     private String JobConf;
 
     /**
-     * Get 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID 
      * @return ID 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -159,19 +145,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ 
      * @return Type 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -179,9 +161,7 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -216,8 +196,7 @@ TEZ-MapperDataSkew:Map数据倾斜
 TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
-TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。 
+TEZ-TezTaskGC:TasksGC 
      * @return RuleID 洞察规则ID
 HIVE-ScanManyMeta:元数据扫描过多
 HIVE-ScanManyPartition:大表扫描
@@ -247,7 +226,6 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleID() {
         return this.RuleID;
@@ -283,7 +261,6 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleID 洞察规则ID
 HIVE-ScanManyMeta:元数据扫描过多
 HIVE-ScanManyPartition:大表扫描
@@ -313,17 +290,14 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 洞察规则名字，可参考RuleID的说明 
      * @return RuleName 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -331,19 +305,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 洞察规则解释 
      * @return RuleExplain 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleExplain() {
         return this.RuleExplain;
@@ -351,19 +321,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleExplain 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleExplain(String RuleExplain) {
         this.RuleExplain = RuleExplain;
     }
 
     /**
-     * Get 详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详情 
      * @return Detail 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetail() {
         return this.Detail;
@@ -371,19 +337,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 建议信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议信息 
      * @return Suggestion 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -391,19 +353,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义 
      * @return Value 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -411,19 +369,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调度任务执行ID 
      * @return ScheduleTaskExecID 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTaskExecID() {
         return this.ScheduleTaskExecID;
@@ -431,19 +385,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleTaskExecID 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTaskExecID(String ScheduleTaskExecID) {
         this.ScheduleTaskExecID = ScheduleTaskExecID;
     }
 
     /**
-     * Get 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调度流，DAG 
      * @return ScheduleFlowName 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleFlowName() {
         return this.ScheduleFlowName;
@@ -451,19 +401,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleFlowName 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleFlowName(String ScheduleFlowName) {
         this.ScheduleFlowName = ScheduleFlowName;
     }
 
     /**
-     * Get 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调度flow中的某个task节点 
      * @return ScheduleTaskName 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTaskName() {
         return this.ScheduleTaskName;
@@ -471,19 +417,15 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleTaskName 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTaskName(String ScheduleTaskName) {
         this.ScheduleTaskName = ScheduleTaskName;
     }
 
     /**
-     * Get Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Yarn任务的部分核心配置 
      * @return JobConf Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobConf() {
         return this.JobConf;
@@ -491,9 +433,7 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobConf Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobConf(String JobConf) {
         this.JobConf = JobConf;

@@ -25,7 +25,6 @@ public class TopologyInfo extends AbstractModel {
 
     /**
     * 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -33,7 +32,6 @@ public class TopologyInfo extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -56,10 +54,8 @@ public class TopologyInfo extends AbstractModel {
     private ShortNodeInfo [] NodeInfoList;
 
     /**
-     * Get 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -67,19 +63,15 @@ public class TopologyInfo extends AbstractModel {
 
     /**
      * Set 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return Zone 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -87,9 +79,7 @@ public class TopologyInfo extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

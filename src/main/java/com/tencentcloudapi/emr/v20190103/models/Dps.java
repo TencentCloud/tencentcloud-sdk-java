@@ -25,7 +25,6 @@ public class Dps extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,17 +32,14 @@ public class Dps extends AbstractModel {
 
     /**
     * 采样值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
         return this.Timestamp;
@@ -51,19 +47,15 @@ public class Dps extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 采样值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样值 
      * @return Value 采样值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class Dps extends AbstractModel {
 
     /**
      * Set 采样值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 采样值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

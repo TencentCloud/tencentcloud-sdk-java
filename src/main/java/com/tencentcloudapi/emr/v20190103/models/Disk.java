@@ -27,7 +27,6 @@ public class Disk extends AbstractModel {
     * 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -35,7 +34,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCapacity")
     @Expose
@@ -43,7 +41,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskNumber")
     @Expose
@@ -52,12 +49,10 @@ public class Disk extends AbstractModel {
     /**
      * Get 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
-<li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>高效云盘: CLOUD_PREMIUM</li> 
      * @return DiskType 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -67,21 +62,17 @@ public class Disk extends AbstractModel {
      * Set 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单块大小GB 
      * @return DiskCapacity 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskCapacity() {
         return this.DiskCapacity;
@@ -89,19 +80,15 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskCapacity 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCapacity(Long DiskCapacity) {
         this.DiskCapacity = DiskCapacity;
     }
 
     /**
-     * Get 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘数量 
      * @return DiskNumber 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskNumber() {
         return this.DiskNumber;
@@ -109,9 +96,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskNumber 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskNumber(Long DiskNumber) {
         this.DiskNumber = DiskNumber;

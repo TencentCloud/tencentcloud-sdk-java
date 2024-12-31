@@ -25,7 +25,6 @@ public class ConfigSetInfo extends AbstractModel {
 
     /**
     * 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigSet")
     @Expose
@@ -76,10 +75,8 @@ key的取值信息如下：
     private Item [] BasicParams;
 
     /**
-     * Get 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置集名称 
      * @return ConfigSet 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigSet() {
         return this.ConfigSet;
@@ -87,9 +84,7 @@ key的取值信息如下：
 
     /**
      * Set 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigSet 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigSet(String ConfigSet) {
         this.ConfigSet = ConfigSet;

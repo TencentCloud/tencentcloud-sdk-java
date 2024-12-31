@@ -25,7 +25,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * catalog
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalog")
     @Expose
@@ -33,7 +32,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIpAddr")
     @Expose
@@ -41,7 +39,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 切片数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompletedSplits")
     @Expose
@@ -49,7 +46,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTime")
     @Expose
@@ -57,7 +53,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CumulativeMemory")
     @Expose
@@ -65,7 +60,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationMillis")
     @Expose
@@ -73,7 +67,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,7 +74,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -89,7 +81,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalNetworkBytes")
     @Expose
@@ -97,7 +88,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputBytes")
     @Expose
@@ -105,7 +95,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeakUserMemoryBytes")
     @Expose
@@ -113,7 +102,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalInputBytes")
     @Expose
@@ -121,7 +109,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessedInputBytes")
     @Expose
@@ -129,7 +116,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlCompileTime")
     @Expose
@@ -137,7 +123,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -145,7 +130,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -153,7 +137,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statement")
     @Expose
@@ -161,7 +144,6 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -169,17 +151,14 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
     * 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WrittenBytes")
     @Expose
     private Long WrittenBytes;
 
     /**
-     * Get catalog
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get catalog 
      * @return Catalog catalog
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalog() {
         return this.Catalog;
@@ -187,19 +166,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set catalog
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalog catalog
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get 提交IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交IP 
      * @return ClientIpAddr 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIpAddr() {
         return this.ClientIpAddr;
@@ -207,19 +182,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIpAddr 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIpAddr(String ClientIpAddr) {
         this.ClientIpAddr = ClientIpAddr;
     }
 
     /**
-     * Get 切片数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切片数 
      * @return CompletedSplits 切片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompletedSplits() {
         return this.CompletedSplits;
@@ -227,19 +198,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 切片数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompletedSplits 切片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompletedSplits(String CompletedSplits) {
         this.CompletedSplits = CompletedSplits;
     }
 
     /**
-     * Get CPU时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU时间 
      * @return CpuTime CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuTime() {
         return this.CpuTime;
@@ -247,19 +214,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuTime CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTime(Long CpuTime) {
         this.CpuTime = CpuTime;
     }
 
     /**
-     * Get 累计内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 累计内存 
      * @return CumulativeMemory 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCumulativeMemory() {
         return this.CumulativeMemory;
@@ -267,19 +230,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CumulativeMemory 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCumulativeMemory(Long CumulativeMemory) {
         this.CumulativeMemory = CumulativeMemory;
     }
 
     /**
-     * Get 执行时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时长 
      * @return DurationMillis 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDurationMillis() {
         return this.DurationMillis;
@@ -287,19 +246,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationMillis 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationMillis(Long DurationMillis) {
         this.DurationMillis = DurationMillis;
     }
 
     /**
-     * Get 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 (s) 
      * @return EndTime 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -307,19 +262,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 查询ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询ID 
      * @return Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -327,19 +278,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部传输量 
      * @return InternalNetworkBytes 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternalNetworkBytes() {
         return this.InternalNetworkBytes;
@@ -347,19 +294,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalNetworkBytes 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalNetworkBytes(Long InternalNetworkBytes) {
         this.InternalNetworkBytes = InternalNetworkBytes;
     }
 
     /**
-     * Get 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出字节数 
      * @return OutputBytes 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputBytes() {
         return this.OutputBytes;
@@ -367,19 +310,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputBytes 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputBytes(Long OutputBytes) {
         this.OutputBytes = OutputBytes;
     }
 
     /**
-     * Get 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 峰值内存量 
      * @return PeakUserMemoryBytes 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeakUserMemoryBytes() {
         return this.PeakUserMemoryBytes;
@@ -387,19 +326,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeakUserMemoryBytes 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeakUserMemoryBytes(Long PeakUserMemoryBytes) {
         this.PeakUserMemoryBytes = PeakUserMemoryBytes;
     }
 
     /**
-     * Get 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理输入量 
      * @return PhysicalInputBytes 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhysicalInputBytes() {
         return this.PhysicalInputBytes;
@@ -407,19 +342,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalInputBytes 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalInputBytes(Long PhysicalInputBytes) {
         this.PhysicalInputBytes = PhysicalInputBytes;
     }
 
     /**
-     * Get 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理输入量 
      * @return ProcessedInputBytes 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProcessedInputBytes() {
         return this.ProcessedInputBytes;
@@ -427,19 +358,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessedInputBytes 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessedInputBytes(Long ProcessedInputBytes) {
         this.ProcessedInputBytes = ProcessedInputBytes;
     }
 
     /**
-     * Get 编译时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编译时长 
      * @return SqlCompileTime 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSqlCompileTime() {
         return this.SqlCompileTime;
@@ -447,19 +374,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SqlCompileTime 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlCompileTime(Long SqlCompileTime) {
         this.SqlCompileTime = SqlCompileTime;
     }
 
     /**
-     * Get 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 (s) 
      * @return StartTime 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -467,19 +390,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 执行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行状态 
      * @return State 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -487,19 +406,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 执行语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行语句 
      * @return Statement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatement() {
         return this.Statement;
@@ -507,19 +422,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatement(String Statement) {
         this.Statement = Statement;
     }
 
     /**
-     * Get 提交用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交用户 
      * @return User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -527,19 +438,15 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写入字节数 
      * @return WrittenBytes 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWrittenBytes() {
         return this.WrittenBytes;
@@ -547,9 +454,7 @@ public class TrinoQueryInfo extends AbstractModel {
 
     /**
      * Set 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WrittenBytes 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWrittenBytes(Long WrittenBytes) {
         this.WrittenBytes = WrittenBytes;

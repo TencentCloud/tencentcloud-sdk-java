@@ -25,7 +25,6 @@ public class DescribeEndUserStatisticResponse extends AbstractModel {
 
     /**
     * 终端用户各平台统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlatformStatistics")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeEndUserStatisticResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 终端用户各平台统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 终端用户各平台统计 
      * @return PlatformStatistics 终端用户各平台统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PlatformStatistic [] getPlatformStatistics() {
         return this.PlatformStatistics;
@@ -57,9 +54,7 @@ public class DescribeEndUserStatisticResponse extends AbstractModel {
 
     /**
      * Set 终端用户各平台统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlatformStatistics 终端用户各平台统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatformStatistics(PlatformStatistic [] PlatformStatistics) {
         this.PlatformStatistics = PlatformStatistics;

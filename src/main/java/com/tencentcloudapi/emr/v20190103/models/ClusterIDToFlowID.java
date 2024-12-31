@@ -25,7 +25,6 @@ public class ClusterIDToFlowID extends AbstractModel {
 
     /**
     * 集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,17 +32,14 @@ public class ClusterIDToFlowID extends AbstractModel {
 
     /**
     * 流程id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-     * Get 集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群id 
      * @return ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -51,19 +47,15 @@ public class ClusterIDToFlowID extends AbstractModel {
 
     /**
      * Set 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 流程id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程id 
      * @return FlowId 流程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -71,9 +63,7 @@ public class ClusterIDToFlowID extends AbstractModel {
 
     /**
      * Set 流程id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

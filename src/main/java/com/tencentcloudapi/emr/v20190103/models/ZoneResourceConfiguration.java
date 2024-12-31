@@ -52,7 +52,6 @@ public class ZoneResourceConfiguration extends AbstractModel {
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneTag")
     @Expose
@@ -122,13 +121,11 @@ public class ZoneResourceConfiguration extends AbstractModel {
      * Get 如果是单可用区，ZoneTag可以不用填， 如果是双AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，如果是三AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，第三个可用区ZoneTag选择third-party，取值范围：
   <li>master</li>
   <li>standby</li>
-  <li>third-party</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+  <li>third-party</li> 
      * @return ZoneTag 如果是单可用区，ZoneTag可以不用填， 如果是双AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，如果是三AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，第三个可用区ZoneTag选择third-party，取值范围：
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneTag() {
         return this.ZoneTag;
@@ -139,12 +136,10 @@ public class ZoneResourceConfiguration extends AbstractModel {
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneTag 如果是单可用区，ZoneTag可以不用填， 如果是双AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，如果是三AZ部署，第一个可用区ZoneTag选择master，第二个可用区ZoneTag选择standby，第三个可用区ZoneTag选择third-party，取值范围：
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneTag(String ZoneTag) {
         this.ZoneTag = ZoneTag;
