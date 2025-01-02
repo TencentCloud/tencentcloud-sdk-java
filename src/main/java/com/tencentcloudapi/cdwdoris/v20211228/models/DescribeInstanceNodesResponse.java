@@ -39,6 +39,13 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
     private InstanceNode [] InstanceNodesList;
 
     /**
+    * 节点类型
+    */
+    @SerializedName("NodeRoles")
+    @Expose
+    private String [] NodeRoles;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +89,22 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
     }
 
     /**
+     * Get 节点类型 
+     * @return NodeRoles 节点类型
+     */
+    public String [] getNodeRoles() {
+        return this.NodeRoles;
+    }
+
+    /**
+     * Set 节点类型
+     * @param NodeRoles 节点类型
+     */
+    public void setNodeRoles(String [] NodeRoles) {
+        this.NodeRoles = NodeRoles;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -114,6 +137,12 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
                 this.InstanceNodesList[i] = new InstanceNode(source.InstanceNodesList[i]);
             }
         }
+        if (source.NodeRoles != null) {
+            this.NodeRoles = new String[source.NodeRoles.length];
+            for (int i = 0; i < source.NodeRoles.length; i++) {
+                this.NodeRoles[i] = new String(source.NodeRoles[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -126,6 +155,7 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceNodesList.", this.InstanceNodesList);
+        this.setParamArraySimple(map, prefix + "NodeRoles.", this.NodeRoles);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

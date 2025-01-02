@@ -25,17 +25,14 @@ public class CertConf extends AbstractModel {
 
     /**
     * ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-     * Get ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ssl证书ID 
      * @return CertificateId ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateId() {
         return this.CertificateId;
@@ -43,9 +40,7 @@ public class CertConf extends AbstractModel {
 
     /**
      * Set ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateId ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

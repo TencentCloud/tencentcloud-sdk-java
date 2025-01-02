@@ -25,7 +25,6 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
     * 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompatibleRuntimes")
     @Expose
@@ -40,7 +39,6 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
     * 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -77,7 +75,6 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
     * Stamp
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stamp")
     @Expose
@@ -92,10 +89,8 @@ public class LayerVersionInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本适用的运行时 
      * @return CompatibleRuntimes 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCompatibleRuntimes() {
         return this.CompatibleRuntimes;
@@ -103,9 +98,7 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
      * Set 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompatibleRuntimes 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompatibleRuntimes(String [] CompatibleRuntimes) {
         this.CompatibleRuntimes = CompatibleRuntimes;
@@ -128,10 +121,8 @@ public class LayerVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 版本描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本描述 
      * @return Description 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -139,9 +130,7 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
      * Set 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -216,10 +205,8 @@ public class LayerVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get Stamp
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Stamp 
      * @return Stamp Stamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStamp() {
         return this.Stamp;
@@ -227,9 +214,7 @@ public class LayerVersionInfo extends AbstractModel {
 
     /**
      * Set Stamp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stamp Stamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStamp(String Stamp) {
         this.Stamp = Stamp;

@@ -25,7 +25,6 @@ public class SecurityPolicyDatabase extends AbstractModel {
 
     /**
     * 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalCidrBlock")
     @Expose
@@ -33,17 +32,14 @@ public class SecurityPolicyDatabase extends AbstractModel {
 
     /**
     * 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteCidrBlock")
     @Expose
     private String [] RemoteCidrBlock;
 
     /**
-     * Get 本端网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本端网段 
      * @return LocalCidrBlock 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalCidrBlock() {
         return this.LocalCidrBlock;
@@ -51,19 +47,15 @@ public class SecurityPolicyDatabase extends AbstractModel {
 
     /**
      * Set 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalCidrBlock 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalCidrBlock(String LocalCidrBlock) {
         this.LocalCidrBlock = LocalCidrBlock;
     }
 
     /**
-     * Get 对端网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对端网段 
      * @return RemoteCidrBlock 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoteCidrBlock() {
         return this.RemoteCidrBlock;
@@ -71,9 +63,7 @@ public class SecurityPolicyDatabase extends AbstractModel {
 
     /**
      * Set 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteCidrBlock 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteCidrBlock(String [] RemoteCidrBlock) {
         this.RemoteCidrBlock = RemoteCidrBlock;

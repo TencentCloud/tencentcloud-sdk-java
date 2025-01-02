@@ -25,7 +25,6 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
     * 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProbeType")
     @Expose
@@ -33,7 +32,6 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
     * 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProbeInterval")
     @Expose
@@ -41,7 +39,6 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
     * 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProbeThreshold")
     @Expose
@@ -49,17 +46,14 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
     * 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProbeTimeout")
     @Expose
     private Long ProbeTimeout;
 
     /**
-     * Get 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测模式，默认值NQA，不可修改。 
      * @return ProbeType 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProbeType() {
         return this.ProbeType;
@@ -67,19 +61,15 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
      * Set 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProbeType 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProbeType(String ProbeType) {
         this.ProbeType = ProbeType;
     }
 
     /**
-     * Get 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。 
      * @return ProbeInterval 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProbeInterval() {
         return this.ProbeInterval;
@@ -87,19 +77,15 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
      * Set 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProbeInterval 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProbeInterval(Long ProbeInterval) {
         this.ProbeInterval = ProbeInterval;
     }
 
     /**
-     * Get 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。 
      * @return ProbeThreshold 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProbeThreshold() {
         return this.ProbeThreshold;
@@ -107,19 +93,15 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
      * Set 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProbeThreshold 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProbeThreshold(Long ProbeThreshold) {
         this.ProbeThreshold = ProbeThreshold;
     }
 
     /**
-     * Get 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测超时时间，范围【10-5000】，单位ms。 
      * @return ProbeTimeout 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProbeTimeout() {
         return this.ProbeTimeout;
@@ -127,9 +109,7 @@ public class HealthCheckConfig extends AbstractModel {
 
     /**
      * Set 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProbeTimeout 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProbeTimeout(Long ProbeTimeout) {
         this.ProbeTimeout = ProbeTimeout;

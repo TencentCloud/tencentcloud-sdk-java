@@ -25,7 +25,6 @@ public class Department extends AbstractModel {
 
     /**
     * 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class Department extends AbstractModel {
 
     /**
     * 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class Department extends AbstractModel {
 
     /**
     * 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
     @Expose
@@ -49,7 +46,6 @@ public class Department extends AbstractModel {
 
     /**
     * 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutpatientOn")
     @Expose
@@ -57,17 +53,14 @@ public class Department extends AbstractModel {
 
     /**
     * 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InHospitalOn")
     @Expose
     private Boolean InHospitalOn;
 
     /**
-     * Get 科室ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 科室ID 
      * @return Id 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class Department extends AbstractModel {
 
     /**
      * Set 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 科室名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 科室名称 
      * @return Name 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -95,19 +84,15 @@ public class Department extends AbstractModel {
 
     /**
      * Set 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 科室类型 0:门诊  1:住院  2:门诊+住院 
      * @return Scope 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScope() {
         return this.Scope;
@@ -115,19 +100,15 @@ public class Department extends AbstractModel {
 
     /**
      * Set 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scope 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效 
      * @return OutpatientOn 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOutpatientOn() {
         return this.OutpatientOn;
@@ -135,19 +116,15 @@ public class Department extends AbstractModel {
 
     /**
      * Set 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutpatientOn 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutpatientOn(Boolean OutpatientOn) {
         this.OutpatientOn = OutpatientOn;
     }
 
     /**
-     * Get 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效 
      * @return InHospitalOn 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInHospitalOn() {
         return this.InHospitalOn;
@@ -155,9 +132,7 @@ public class Department extends AbstractModel {
 
     /**
      * Set 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InHospitalOn 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInHospitalOn(Boolean InHospitalOn) {
         this.InHospitalOn = InHospitalOn;

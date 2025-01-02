@@ -25,7 +25,6 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
     * 平台。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Platform")
     @Expose
@@ -33,7 +32,6 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
     * 软件版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftwareVersion")
     @Expose
@@ -41,17 +39,14 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
     * 供应商名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VendorName")
     @Expose
     private String VendorName;
 
     /**
-     * Get 平台。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平台。 
      * @return Platform 平台。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlatform() {
         return this.Platform;
@@ -59,19 +54,15 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
      * Set 平台。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Platform 平台。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 软件版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 软件版本。 
      * @return SoftwareVersion 软件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSoftwareVersion() {
         return this.SoftwareVersion;
@@ -79,19 +70,15 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
      * Set 软件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoftwareVersion 软件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftwareVersion(String SoftwareVersion) {
         this.SoftwareVersion = SoftwareVersion;
     }
 
     /**
-     * Get 供应商名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 供应商名称。 
      * @return VendorName 供应商名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVendorName() {
         return this.VendorName;
@@ -99,9 +86,7 @@ public class CustomerGatewayVendor extends AbstractModel {
 
     /**
      * Set 供应商名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VendorName 供应商名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVendorName(String VendorName) {
         this.VendorName = VendorName;

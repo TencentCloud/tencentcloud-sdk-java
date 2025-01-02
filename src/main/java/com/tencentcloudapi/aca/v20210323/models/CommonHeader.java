@@ -31,7 +31,7 @@ public class CommonHeader extends AbstractModel {
     private String HospitalId;
 
     /**
-    * 合作方ID
+    * token
     */
     @SerializedName("Token")
     @Expose
@@ -54,16 +54,16 @@ public class CommonHeader extends AbstractModel {
     }
 
     /**
-     * Get 合作方ID 
-     * @return Token 合作方ID
+     * Get token 
+     * @return Token token
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 合作方ID
-     * @param Token 合作方ID
+     * Set token
+     * @param Token token
      */
     public void setToken(String Token) {
         this.Token = Token;

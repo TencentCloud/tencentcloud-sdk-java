@@ -80,6 +80,14 @@ public class WebhookTrigger extends AbstractModel {
     private Long NamespaceId;
 
     /**
+    * 触发器所属命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
      * Get 触发器名称 
      * @return Name 触发器名称
      */
@@ -207,6 +215,26 @@ public class WebhookTrigger extends AbstractModel {
         this.NamespaceId = NamespaceId;
     }
 
+    /**
+     * Get 触发器所属命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceName 触发器所属命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 触发器所属命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceName 触发器所属命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
+    }
+
     public WebhookTrigger() {
     }
 
@@ -245,6 +273,9 @@ public class WebhookTrigger extends AbstractModel {
         if (source.NamespaceId != null) {
             this.NamespaceId = new Long(source.NamespaceId);
         }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
     }
 
 
@@ -260,6 +291,7 @@ public class WebhookTrigger extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
 
     }
 }

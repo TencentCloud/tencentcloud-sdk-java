@@ -67,19 +67,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持对中国大陆主流银行卡正反面关键字段的检测与识别，包括卡号、卡类型、卡名字、银行信息、有效期。支持竖排异形卡识别、多角度旋转图片识别。支持对复印件、翻拍件、边框遮挡的银行卡进行告警，可应用于各种银行卡信息有效性校验场景，如金融行业身份认证、第三方支付绑卡等场景。
-
-默认接口请求频率限制：10次/秒。
-     * @param req BankCardOCRRequest
-     * @return BankCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BankCardOCR", BankCardOCRResponse.class);
-    }
-
-    /**
      *本接口支持银行回单全字段的识别，包括付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
 
 默认接口请求频率限制：10次/秒。

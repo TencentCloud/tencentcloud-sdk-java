@@ -25,7 +25,6 @@ public class EndpointsConf extends AbstractModel {
 
     /**
     * 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -33,7 +32,6 @@ public class EndpointsConf extends AbstractModel {
 
     /**
     * 函数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FunctionName")
     @Expose
@@ -41,7 +39,6 @@ public class EndpointsConf extends AbstractModel {
 
     /**
     * 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qualifier")
     @Expose
@@ -49,7 +46,6 @@ public class EndpointsConf extends AbstractModel {
 
     /**
     * 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathMatch")
     @Expose
@@ -64,10 +60,8 @@ public class EndpointsConf extends AbstractModel {
     private PathRewriteRule [] PathRewrite;
 
     /**
-     * Get 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数命名空间 
      * @return Namespace 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -75,19 +69,15 @@ public class EndpointsConf extends AbstractModel {
 
     /**
      * Set 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 函数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数名 
      * @return FunctionName 函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunctionName() {
         return this.FunctionName;
@@ -95,19 +85,15 @@ public class EndpointsConf extends AbstractModel {
 
     /**
      * Set 函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FunctionName 函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数别名或版本 
      * @return Qualifier 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQualifier() {
         return this.Qualifier;
@@ -115,19 +101,15 @@ public class EndpointsConf extends AbstractModel {
 
     /**
      * Set 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qualifier 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*" 
      * @return PathMatch 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathMatch() {
         return this.PathMatch;
@@ -135,9 +117,7 @@ public class EndpointsConf extends AbstractModel {
 
     /**
      * Set 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathMatch 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathMatch(String PathMatch) {
         this.PathMatch = PathMatch;

@@ -25,7 +25,6 @@ public class SslVpnSever extends AbstractModel {
 
     /**
     * VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -167,17 +166,14 @@ public class SslVpnSever extends AbstractModel {
 
     /**
     * CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpName")
     @Expose
     private String SpName;
 
     /**
-     * Get VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC实例ID. 
      * @return VpcId VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -185,9 +181,7 @@ public class SslVpnSever extends AbstractModel {
 
     /**
      * Set VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -514,10 +508,8 @@ public class SslVpnSever extends AbstractModel {
     }
 
     /**
-     * Get CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CAM服务提供商Name 
      * @return SpName CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpName() {
         return this.SpName;
@@ -525,9 +517,7 @@ public class SslVpnSever extends AbstractModel {
 
     /**
      * Set CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpName CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpName(String SpName) {
         this.SpName = SpName;

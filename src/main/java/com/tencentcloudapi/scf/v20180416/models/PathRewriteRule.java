@@ -25,7 +25,6 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
     * 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -33,7 +32,6 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
     * 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,17 +39,14 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
     * 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rewrite")
     @Expose
     private String Rewrite;
 
     /**
-     * Get 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/* 
      * @return Path 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -59,19 +54,15 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
      * Set 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配 
      * @return Type 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -79,19 +70,15 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
      * Set 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 替换值：比如/, /$ 
      * @return Rewrite 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRewrite() {
         return this.Rewrite;
@@ -99,9 +86,7 @@ public class PathRewriteRule extends AbstractModel {
 
     /**
      * Set 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rewrite 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewrite(String Rewrite) {
         this.Rewrite = Rewrite;

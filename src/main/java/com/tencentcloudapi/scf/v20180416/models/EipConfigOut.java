@@ -32,7 +32,6 @@ public class EipConfigOut extends AbstractModel {
 
     /**
     * IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipAddress")
     @Expose
@@ -55,10 +54,8 @@ public class EipConfigOut extends AbstractModel {
     }
 
     /**
-     * Get IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP列表 
      * @return EipAddress IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEipAddress() {
         return this.EipAddress;
@@ -66,9 +63,7 @@ public class EipConfigOut extends AbstractModel {
 
     /**
      * Set IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipAddress IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipAddress(String [] EipAddress) {
         this.EipAddress = EipAddress;

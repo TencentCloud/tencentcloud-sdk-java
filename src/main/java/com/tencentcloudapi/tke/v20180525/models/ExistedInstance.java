@@ -48,7 +48,7 @@ public class ExistedInstance extends AbstractModel {
     private String AlreadyInCluster;
 
     /**
-    * 实例ID形如：ins-xxxxxxxx。
+    * 实例ID形如：ins-e55paxnt。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -205,16 +205,16 @@ public class ExistedInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例ID形如：ins-xxxxxxxx。 
-     * @return InstanceId 实例ID形如：ins-xxxxxxxx。
+     * Get 实例ID形如：ins-e55paxnt。 
+     * @return InstanceId 实例ID形如：ins-e55paxnt。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID形如：ins-xxxxxxxx。
-     * @param InstanceId 实例ID形如：ins-xxxxxxxx。
+     * Set 实例ID形如：ins-e55paxnt。
+     * @param InstanceId 实例ID形如：ins-e55paxnt。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

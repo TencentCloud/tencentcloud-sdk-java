@@ -145,6 +145,17 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *该接口根据传入参数删除函数的指定版本。
+     * @param req DeleteFunctionVersionRequest
+     * @return DeleteFunctionVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionVersionResponse DeleteFunctionVersion(DeleteFunctionVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunctionVersion", DeleteFunctionVersionResponse.class);
+    }
+
+    /**
      *删除指定层的指定版本，被删除的版本无法再关联到函数上，但不会影响正在引用这个层的函数。
      * @param req DeleteLayerVersionRequest
      * @return DeleteLayerVersionResponse

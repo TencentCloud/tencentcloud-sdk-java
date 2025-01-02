@@ -277,7 +277,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Get 日志等级 
      * @return Level 日志等级
+     * @deprecated
      */
+    @Deprecated
     public String getLevel() {
         return this.Level;
     }
@@ -285,7 +287,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Set 日志等级
      * @param Level 日志等级
+     * @deprecated
      */
+    @Deprecated
     public void setLevel(String Level) {
         this.Level = Level;
     }
@@ -293,7 +297,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Get 日志来源 
      * @return Source 日志来源
+     * @deprecated
      */
+    @Deprecated
     public String getSource() {
         return this.Source;
     }
@@ -301,7 +307,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Set 日志来源
      * @param Source 日志来源
+     * @deprecated
      */
+    @Deprecated
     public void setSource(String Source) {
         this.Source = Source;
     }

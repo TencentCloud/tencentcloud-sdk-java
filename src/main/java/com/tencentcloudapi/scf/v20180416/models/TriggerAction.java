@@ -25,7 +25,6 @@ public class TriggerAction extends AbstractModel {
 
     /**
     * 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerName")
     @Expose
@@ -33,7 +32,6 @@ public class TriggerAction extends AbstractModel {
 
     /**
     * 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerProvisionedConcurrencyNum")
     @Expose
@@ -41,7 +39,6 @@ public class TriggerAction extends AbstractModel {
 
     /**
     * 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerCronConfig")
     @Expose
@@ -56,10 +53,8 @@ public class TriggerAction extends AbstractModel {
     private String ProvisionedType;
 
     /**
-     * Get 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时预置名称 
      * @return TriggerName 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerName() {
         return this.TriggerName;
@@ -67,19 +62,15 @@ public class TriggerAction extends AbstractModel {
 
     /**
      * Set 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerName 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时预置并发数量 
      * @return TriggerProvisionedConcurrencyNum 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerProvisionedConcurrencyNum() {
         return this.TriggerProvisionedConcurrencyNum;
@@ -87,19 +78,15 @@ public class TriggerAction extends AbstractModel {
 
     /**
      * Set 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerProvisionedConcurrencyNum 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerProvisionedConcurrencyNum(Long TriggerProvisionedConcurrencyNum) {
         this.TriggerProvisionedConcurrencyNum = TriggerProvisionedConcurrencyNum;
     }
 
     /**
-     * Get 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。 
      * @return TriggerCronConfig 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerCronConfig() {
         return this.TriggerCronConfig;
@@ -107,9 +94,7 @@ public class TriggerAction extends AbstractModel {
 
     /**
      * Set 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerCronConfig 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerCronConfig(String TriggerCronConfig) {
         this.TriggerCronConfig = TriggerCronConfig;

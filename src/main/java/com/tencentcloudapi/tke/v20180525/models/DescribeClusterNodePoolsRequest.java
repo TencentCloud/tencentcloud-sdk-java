@@ -41,7 +41,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     类型：String
     必选：否
 
-·  "Name":"Tags","Values": ["abc:1"]
+·  "Name":"Tags","Values": ["product:tke"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -77,7 +77,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     类型：String
     必选：否
 
-·  "Name":"Tags","Values": ["abc:1"]
+·  "Name":"Tags","Values": ["product:tke"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否 
@@ -91,7 +91,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     类型：String
     必选：否
 
-·  "Name":"Tags","Values": ["abc:1"]
+·  "Name":"Tags","Values": ["product:tke"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -111,7 +111,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     类型：String
     必选：否
 
-·  "Name":"Tags","Values": ["abc:1"]
+·  "Name":"Tags","Values": ["product:tke"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -125,7 +125,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     类型：String
     必选：否
 
-·  "Name":"Tags","Values": ["abc:1"]
+·  "Name":"Tags","Values": ["product:tke"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否

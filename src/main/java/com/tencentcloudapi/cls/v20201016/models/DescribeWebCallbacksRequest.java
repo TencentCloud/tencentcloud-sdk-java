@@ -24,15 +24,17 @@ import java.util.HashMap;
 public class DescribeWebCallbacksRequest extends AbstractModel {
 
     /**
-    * <li> name
+    * - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
@@ -58,29 +60,33 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <li> name
+     * Get - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。 
-     * @return Filters <li> name
+     * @return Filters - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
@@ -92,29 +98,33 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
     }
 
     /**
-     * Set <li> name
+     * Set - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
-     * @param Filters <li> name
+     * @param Filters - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否

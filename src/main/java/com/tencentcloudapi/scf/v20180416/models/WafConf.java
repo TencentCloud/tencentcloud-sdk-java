@@ -25,7 +25,6 @@ public class WafConf extends AbstractModel {
 
     /**
     * web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafOpen")
     @Expose
@@ -33,17 +32,14 @@ public class WafConf extends AbstractModel {
 
     /**
     * web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafInstanceId")
     @Expose
     private String WafInstanceId;
 
     /**
-     * Get web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get web应用防火墙是否打开， 取值范围:OPEN, CLOSE 
      * @return WafOpen web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWafOpen() {
         return this.WafOpen;
@@ -51,19 +47,15 @@ public class WafConf extends AbstractModel {
 
     /**
      * Set web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafOpen web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafOpen(String WafOpen) {
         this.WafOpen = WafOpen;
     }
 
     /**
-     * Get web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get web应用防火墙实例ID 
      * @return WafInstanceId web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWafInstanceId() {
         return this.WafInstanceId;
@@ -71,9 +63,7 @@ public class WafConf extends AbstractModel {
 
     /**
      * Set web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafInstanceId web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafInstanceId(String WafInstanceId) {
         this.WafInstanceId = WafInstanceId;

@@ -46,7 +46,6 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
     * 命名空间配额总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalConcurrencyMem")
     @Expose
@@ -54,7 +53,6 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
     * 命名空间并发使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalAllocatedConcurrencyMem")
     @Expose
@@ -62,7 +60,6 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
     * 命名空间预置使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalAllocatedProvisionedMem")
     @Expose
@@ -117,10 +114,8 @@ public class NamespaceUsage extends AbstractModel {
     }
 
     /**
-     * Get 命名空间配额总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间配额总量 
      * @return TotalConcurrencyMem 命名空间配额总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalConcurrencyMem() {
         return this.TotalConcurrencyMem;
@@ -128,19 +123,15 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
      * Set 命名空间配额总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalConcurrencyMem 命名空间配额总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalConcurrencyMem(Long TotalConcurrencyMem) {
         this.TotalConcurrencyMem = TotalConcurrencyMem;
     }
 
     /**
-     * Get 命名空间并发使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间并发使用量 
      * @return TotalAllocatedConcurrencyMem 命名空间并发使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalAllocatedConcurrencyMem() {
         return this.TotalAllocatedConcurrencyMem;
@@ -148,19 +139,15 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
      * Set 命名空间并发使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalAllocatedConcurrencyMem 命名空间并发使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalAllocatedConcurrencyMem(Long TotalAllocatedConcurrencyMem) {
         this.TotalAllocatedConcurrencyMem = TotalAllocatedConcurrencyMem;
     }
 
     /**
-     * Get 命名空间预置使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间预置使用量 
      * @return TotalAllocatedProvisionedMem 命名空间预置使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalAllocatedProvisionedMem() {
         return this.TotalAllocatedProvisionedMem;
@@ -168,9 +155,7 @@ public class NamespaceUsage extends AbstractModel {
 
     /**
      * Set 命名空间预置使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalAllocatedProvisionedMem 命名空间预置使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalAllocatedProvisionedMem(Long TotalAllocatedProvisionedMem) {
         this.TotalAllocatedProvisionedMem = TotalAllocatedProvisionedMem;

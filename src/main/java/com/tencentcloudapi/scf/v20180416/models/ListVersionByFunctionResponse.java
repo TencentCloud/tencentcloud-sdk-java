@@ -32,7 +32,6 @@ public class ListVersionByFunctionResponse extends AbstractModel {
 
     /**
     * 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Versions")
     @Expose
@@ -40,7 +39,6 @@ public class ListVersionByFunctionResponse extends AbstractModel {
 
     /**
     * 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -70,10 +68,8 @@ public class ListVersionByFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数版本列表。 
      * @return Versions 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FunctionVersion [] getVersions() {
         return this.Versions;
@@ -81,19 +77,15 @@ public class ListVersionByFunctionResponse extends AbstractModel {
 
     /**
      * Set 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Versions 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersions(FunctionVersion [] Versions) {
         this.Versions = Versions;
     }
 
     /**
-     * Get 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数版本总数。 
      * @return TotalCount 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -101,9 +93,7 @@ public class ListVersionByFunctionResponse extends AbstractModel {
 
     /**
      * Set 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

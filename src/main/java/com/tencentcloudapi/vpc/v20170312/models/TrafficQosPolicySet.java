@@ -25,7 +25,6 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -33,7 +32,6 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * qos id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosId")
     @Expose
@@ -41,7 +39,6 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * 描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosPolicyDescription")
     @Expose
@@ -49,7 +46,6 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * 名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosPolicyName")
     @Expose
@@ -57,7 +53,6 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -65,17 +60,14 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
     * 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosPolicyId")
     @Expose
     private String QosPolicyId;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -83,19 +75,15 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get qos id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get qos id。 
      * @return QosId qos id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQosId() {
         return this.QosId;
@@ -103,19 +91,15 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set qos id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosId qos id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosId(Long QosId) {
         this.QosId = QosId;
     }
 
     /**
-     * Get 描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述。 
      * @return QosPolicyDescription 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosPolicyDescription() {
         return this.QosPolicyDescription;
@@ -123,19 +107,15 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosPolicyDescription 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosPolicyDescription(String QosPolicyDescription) {
         this.QosPolicyDescription = QosPolicyDescription;
     }
 
     /**
-     * Get 名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称。 
      * @return QosPolicyName 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosPolicyName() {
         return this.QosPolicyName;
@@ -143,19 +123,15 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosPolicyName 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosPolicyName(String QosPolicyName) {
         this.QosPolicyName = QosPolicyName;
     }
 
     /**
-     * Get 带宽。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽。 
      * @return Bandwidth 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
@@ -163,19 +139,15 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bandwidth 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量调度策略ID。 
      * @return QosPolicyId 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosPolicyId() {
         return this.QosPolicyId;
@@ -183,9 +155,7 @@ public class TrafficQosPolicySet extends AbstractModel {
 
     /**
      * Set 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosPolicyId 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosPolicyId(String QosPolicyId) {
         this.QosPolicyId = QosPolicyId;

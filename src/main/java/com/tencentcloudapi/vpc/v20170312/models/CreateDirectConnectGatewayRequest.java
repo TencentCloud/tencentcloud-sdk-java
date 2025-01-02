@@ -64,6 +64,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
     private String ModeType;
 
     /**
+    * 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294
+    */
+    @SerializedName("GatewayAsn")
+    @Expose
+    private Long GatewayAsn;
+
+    /**
     * 专线网关可用区
     */
     @SerializedName("Zone")
@@ -76,6 +83,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
     @SerializedName("HaZoneGroupId")
     @Expose
     private String HaZoneGroupId;
+
+    /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 专线网关名称 
@@ -178,6 +192,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
     }
 
     /**
+     * Get 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294 
+     * @return GatewayAsn 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294
+     */
+    public Long getGatewayAsn() {
+        return this.GatewayAsn;
+    }
+
+    /**
+     * Set 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294
+     * @param GatewayAsn 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294
+     */
+    public void setGatewayAsn(Long GatewayAsn) {
+        this.GatewayAsn = GatewayAsn;
+    }
+
+    /**
      * Get 专线网关可用区 
      * @return Zone 专线网关可用区
      */
@@ -209,6 +239,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
         this.HaZoneGroupId = HaZoneGroupId;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDirectConnectGatewayRequest() {
     }
 
@@ -232,11 +278,20 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
         if (source.ModeType != null) {
             this.ModeType = new String(source.ModeType);
         }
+        if (source.GatewayAsn != null) {
+            this.GatewayAsn = new Long(source.GatewayAsn);
+        }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
         if (source.HaZoneGroupId != null) {
             this.HaZoneGroupId = new String(source.HaZoneGroupId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
     }
 
@@ -250,8 +305,10 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
+        this.setParamSimple(map, prefix + "GatewayAsn", this.GatewayAsn);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "HaZoneGroupId", this.HaZoneGroupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

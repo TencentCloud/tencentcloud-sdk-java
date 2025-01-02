@@ -102,7 +102,6 @@ public class TriggerCount extends AbstractModel {
 
     /**
     * Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Eb")
     @Expose
@@ -285,10 +284,8 @@ public class TriggerCount extends AbstractModel {
     }
 
     /**
-     * Get Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Eb触发器数量 
      * @return Eb Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEb() {
         return this.Eb;
@@ -296,9 +293,7 @@ public class TriggerCount extends AbstractModel {
 
     /**
      * Set Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Eb Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEb(Long Eb) {
         this.Eb = Eb;

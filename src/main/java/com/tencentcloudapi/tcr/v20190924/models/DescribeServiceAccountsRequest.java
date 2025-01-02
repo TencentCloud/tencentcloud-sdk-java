@@ -45,7 +45,7 @@ public class DescribeServiceAccountsRequest extends AbstractModel {
     private Boolean EmbedPermission;
 
     /**
-    * 过滤条件
+    * 过滤条件，key 目前只支持ServiceAccountName
     */
     @SerializedName("Filters")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeServiceAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件，key 目前只支持ServiceAccountName 
+     * @return Filters 过滤条件，key 目前只支持ServiceAccountName
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件，key 目前只支持ServiceAccountName
+     * @param Filters 过滤条件，key 目前只支持ServiceAccountName
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

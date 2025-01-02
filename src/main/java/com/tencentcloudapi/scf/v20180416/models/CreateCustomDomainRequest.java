@@ -45,7 +45,7 @@ public class CreateCustomDomainRequest extends AbstractModel {
     private EndpointsConf [] EndpointsConfig;
 
     /**
-    * 证书配置信息，HTTPS协议必穿
+    * 证书配置信息，有使用HTTPS协议时候必须传
     */
     @SerializedName("CertConfig")
     @Expose
@@ -107,16 +107,16 @@ public class CreateCustomDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书配置信息，HTTPS协议必穿 
-     * @return CertConfig 证书配置信息，HTTPS协议必穿
+     * Get 证书配置信息，有使用HTTPS协议时候必须传 
+     * @return CertConfig 证书配置信息，有使用HTTPS协议时候必须传
      */
     public CertConf getCertConfig() {
         return this.CertConfig;
     }
 
     /**
-     * Set 证书配置信息，HTTPS协议必穿
-     * @param CertConfig 证书配置信息，HTTPS协议必穿
+     * Set 证书配置信息，有使用HTTPS协议时候必须传
+     * @param CertConfig 证书配置信息，有使用HTTPS协议时候必须传
      */
     public void setCertConfig(CertConf CertConfig) {
         this.CertConfig = CertConfig;

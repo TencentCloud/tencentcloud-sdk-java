@@ -39,7 +39,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndpointsConfig")
     @Expose
@@ -47,7 +46,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertConfig")
     @Expose
@@ -55,7 +53,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafConfig")
     @Expose
@@ -94,10 +91,8 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由配置信息 
      * @return EndpointsConfig 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EndpointsConf [] getEndpointsConfig() {
         return this.EndpointsConfig;
@@ -105,19 +100,15 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndpointsConfig 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpointsConfig(EndpointsConf [] EndpointsConfig) {
         this.EndpointsConfig = EndpointsConfig;
     }
 
     /**
-     * Get 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书配置信息，HTTPS协议必传路由配置 
      * @return CertConfig 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertConf getCertConfig() {
         return this.CertConfig;
@@ -125,19 +116,15 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertConfig 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertConfig(CertConf CertConfig) {
         this.CertConfig = CertConfig;
     }
 
     /**
-     * Get web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get web 应用防火墙配置 
      * @return WafConfig web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafConf getWafConfig() {
         return this.WafConfig;
@@ -145,9 +132,7 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafConfig web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafConfig(WafConf WafConfig) {
         this.WafConfig = WafConfig;

@@ -273,7 +273,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfsConfig")
     @Expose
@@ -281,7 +280,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableStatus")
     @Expose
@@ -289,7 +287,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qualifier")
     @Expose
@@ -304,7 +301,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusReasons")
     @Expose
@@ -312,7 +308,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRunEnable")
     @Expose
@@ -320,7 +315,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceEnable")
     @Expose
@@ -352,7 +346,6 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
     * 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DnsCache")
     @Expose
@@ -946,10 +939,8 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统配置参数，用于云函数挂载文件系统 
      * @return CfsConfig 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CfsConfig getCfsConfig() {
         return this.CfsConfig;
@@ -957,19 +948,15 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CfsConfig 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfsConfig(CfsConfig CfsConfig) {
         this.CfsConfig = CfsConfig;
     }
 
     /**
-     * Get 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81) 
      * @return AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvailableStatus() {
         return this.AvailableStatus;
@@ -977,19 +964,15 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableStatus(String AvailableStatus) {
         this.AvailableStatus = AvailableStatus;
     }
 
     /**
-     * Get 函数版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数版本 
      * @return Qualifier 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQualifier() {
         return this.Qualifier;
@@ -997,9 +980,7 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qualifier 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
@@ -1022,10 +1003,8 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 函数状态失败原因 
      * @return StatusReasons 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatusReason [] getStatusReasons() {
         return this.StatusReasons;
@@ -1033,19 +1012,15 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusReasons 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusReasons(StatusReason [] StatusReasons) {
         this.StatusReasons = StatusReasons;
     }
 
     /**
-     * Get 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启异步属性 
      * @return AsyncRunEnable 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncRunEnable() {
         return this.AsyncRunEnable;
@@ -1053,19 +1028,15 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRunEnable 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRunEnable(String AsyncRunEnable) {
         this.AsyncRunEnable = AsyncRunEnable;
     }
 
     /**
-     * Get 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启事件追踪 
      * @return TraceEnable 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceEnable() {
         return this.TraceEnable;
@@ -1073,9 +1044,7 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceEnable 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceEnable(String TraceEnable) {
         this.TraceEnable = TraceEnable;
@@ -1142,10 +1111,8 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启DNS缓存 
      * @return DnsCache 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDnsCache() {
         return this.DnsCache;
@@ -1153,9 +1120,7 @@ public class GetFunctionResponse extends AbstractModel {
 
     /**
      * Set 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DnsCache 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDnsCache(String DnsCache) {
         this.DnsCache = DnsCache;

@@ -52,7 +52,7 @@ public class ClusterBasicSettings extends AbstractModel {
     private String ClusterDescription;
 
     /**
-    * 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+    * 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。
     */
     @SerializedName("VpcId")
     @Expose
@@ -172,16 +172,16 @@ public class ClusterBasicSettings extends AbstractModel {
     }
 
     /**
-     * Get 私有网络ID，形如vpc-xxx。创建托管空集群时必传。 
-     * @return VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+     * Get 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。 
+     * @return VpcId 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
-     * @param VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+     * Set 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。
+     * @param VpcId 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

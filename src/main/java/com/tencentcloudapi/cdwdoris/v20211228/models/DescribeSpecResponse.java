@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSpecResponse extends AbstractModel {
 
     /**
-    * zookeeper节点规格描述
+    * fe节点规格描述
     */
     @SerializedName("MasterSpec")
     @Expose
     private ResourceSpec [] MasterSpec;
 
     /**
-    * 数据节点规格描述
+    * be节点规格描述
     */
     @SerializedName("CoreSpec")
     @Expose
@@ -46,6 +46,13 @@ public class DescribeSpecResponse extends AbstractModel {
     private DiskSpec [] AttachCBSSpec;
 
     /**
+    * cn节点列表
+    */
+    @SerializedName("CNSpec")
+    @Expose
+    private ResourceSpec [] CNSpec;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,32 +60,32 @@ public class DescribeSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get zookeeper节点规格描述 
-     * @return MasterSpec zookeeper节点规格描述
+     * Get fe节点规格描述 
+     * @return MasterSpec fe节点规格描述
      */
     public ResourceSpec [] getMasterSpec() {
         return this.MasterSpec;
     }
 
     /**
-     * Set zookeeper节点规格描述
-     * @param MasterSpec zookeeper节点规格描述
+     * Set fe节点规格描述
+     * @param MasterSpec fe节点规格描述
      */
     public void setMasterSpec(ResourceSpec [] MasterSpec) {
         this.MasterSpec = MasterSpec;
     }
 
     /**
-     * Get 数据节点规格描述 
-     * @return CoreSpec 数据节点规格描述
+     * Get be节点规格描述 
+     * @return CoreSpec be节点规格描述
      */
     public ResourceSpec [] getCoreSpec() {
         return this.CoreSpec;
     }
 
     /**
-     * Set 数据节点规格描述
-     * @param CoreSpec 数据节点规格描述
+     * Set be节点规格描述
+     * @param CoreSpec be节点规格描述
      */
     public void setCoreSpec(ResourceSpec [] CoreSpec) {
         this.CoreSpec = CoreSpec;
@@ -102,6 +109,22 @@ public class DescribeSpecResponse extends AbstractModel {
      */
     public void setAttachCBSSpec(DiskSpec [] AttachCBSSpec) {
         this.AttachCBSSpec = AttachCBSSpec;
+    }
+
+    /**
+     * Get cn节点列表 
+     * @return CNSpec cn节点列表
+     */
+    public ResourceSpec [] getCNSpec() {
+        return this.CNSpec;
+    }
+
+    /**
+     * Set cn节点列表
+     * @param CNSpec cn节点列表
+     */
+    public void setCNSpec(ResourceSpec [] CNSpec) {
+        this.CNSpec = CNSpec;
     }
 
     /**
@@ -146,6 +169,12 @@ public class DescribeSpecResponse extends AbstractModel {
                 this.AttachCBSSpec[i] = new DiskSpec(source.AttachCBSSpec[i]);
             }
         }
+        if (source.CNSpec != null) {
+            this.CNSpec = new ResourceSpec[source.CNSpec.length];
+            for (int i = 0; i < source.CNSpec.length; i++) {
+                this.CNSpec[i] = new ResourceSpec(source.CNSpec[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +188,7 @@ public class DescribeSpecResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MasterSpec.", this.MasterSpec);
         this.setParamArrayObj(map, prefix + "CoreSpec.", this.CoreSpec);
         this.setParamArrayObj(map, prefix + "AttachCBSSpec.", this.AttachCBSSpec);
+        this.setParamArrayObj(map, prefix + "CNSpec.", this.CNSpec);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
