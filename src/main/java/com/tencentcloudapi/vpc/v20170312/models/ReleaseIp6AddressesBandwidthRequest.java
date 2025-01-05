@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ReleaseIp6AddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+    * IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
     */
     @SerializedName("Ip6Addresses")
     @Expose
     private String [] Ip6Addresses;
 
     /**
-    * IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+    * IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
     */
     @SerializedName("Ip6AddressIds")
     @Expose
     private String [] Ip6AddressIds;
 
     /**
-     * Get IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个 
-     * @return Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * Get IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个 
+     * @return Ip6Addresses IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      */
     public String [] getIp6Addresses() {
         return this.Ip6Addresses;
     }
 
     /**
-     * Set IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
-     * @param Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * Set IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * @param Ip6Addresses IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      */
     public void setIp6Addresses(String [] Ip6Addresses) {
         this.Ip6Addresses = Ip6Addresses;
     }
 
     /**
-     * Get IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。 
-     * @return Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * Get IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。 
+     * @return Ip6AddressIds IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public String [] getIp6AddressIds() {
         return this.Ip6AddressIds;
     }
 
     /**
-     * Set IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
-     * @param Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * Set IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * @param Ip6AddressIds IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public void setIp6AddressIds(String [] Ip6AddressIds) {
         this.Ip6AddressIds = Ip6AddressIds;

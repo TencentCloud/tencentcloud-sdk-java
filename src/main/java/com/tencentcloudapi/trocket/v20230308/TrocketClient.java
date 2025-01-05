@@ -533,6 +533,19 @@ ConsumerGroup，消费组名称过滤
     }
 
     /**
+     *根据消费组获取主题列表，Filter参数使用说明如下：
+
+TopicName，主题名称过滤
+     * @param req DescribeTopicListByGroupRequest
+     * @return DescribeTopicListByGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicListByGroupResponse DescribeTopicListByGroup(DescribeTopicListByGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicListByGroup", DescribeTopicListByGroupResponse.class);
+    }
+
+    /**
      *导入消费者组列表
      * @param req ImportSourceClusterConsumerGroupsRequest
      * @return ImportSourceClusterConsumerGroupsResponse

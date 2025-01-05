@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * 需要开通公网访问能力的IPV6地址
+    * 需要开通公网访问能力的IPv6地址
     */
     @SerializedName("Ip6Addresses")
     @Expose
@@ -38,14 +38,14 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+    * 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
     */
     @SerializedName("InternetChargeType")
     @Expose
     private String InternetChargeType;
 
     /**
-    * 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+    * 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
@@ -59,16 +59,16 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 需要开通公网访问能力的IPV6地址 
-     * @return Ip6Addresses 需要开通公网访问能力的IPV6地址
+     * Get 需要开通公网访问能力的IPv6地址 
+     * @return Ip6Addresses 需要开通公网访问能力的IPv6地址
      */
     public String [] getIp6Addresses() {
         return this.Ip6Addresses;
     }
 
     /**
-     * Set 需要开通公网访问能力的IPV6地址
-     * @param Ip6Addresses 需要开通公网访问能力的IPV6地址
+     * Set 需要开通公网访问能力的IPv6地址
+     * @param Ip6Addresses 需要开通公网访问能力的IPv6地址
      */
     public void setIp6Addresses(String [] Ip6Addresses) {
         this.Ip6Addresses = Ip6Addresses;
@@ -91,32 +91,32 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。 
-     * @return InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * Get 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。 
+     * @return InternetChargeType 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
     }
 
     /**
-     * Set 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
-     * @param InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * Set 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * @param InternetChargeType 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
     }
 
     /**
-     * Get 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入. 
-     * @return BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     * Get 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入. 
+     * @return BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
-     * @param BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     * Set 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
+     * @param BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

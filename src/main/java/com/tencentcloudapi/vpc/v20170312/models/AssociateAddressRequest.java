@@ -59,7 +59,7 @@ public class AssociateAddressRequest extends AbstractModel {
     private Boolean EipDirectConnection;
 
     /**
-    * 要绑定的实例所在的地域
+    * 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
     */
     @SerializedName("InstanceRegion")
     @Expose
@@ -146,16 +146,16 @@ public class AssociateAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 要绑定的实例所在的地域 
-     * @return InstanceRegion 要绑定的实例所在的地域
+     * Get 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。 
+     * @return InstanceRegion 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 要绑定的实例所在的地域
-     * @param InstanceRegion 要绑定的实例所在的地域
+     * Set 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
+     * @param InstanceRegion 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;

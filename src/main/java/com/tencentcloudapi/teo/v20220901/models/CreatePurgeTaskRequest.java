@@ -25,6 +25,7 @@ public class CreatePurgeTaskRequest extends AbstractModel {
 
     /**
     * 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -72,8 +73,10 @@ public class CreatePurgeTaskRequest extends AbstractModel {
     private CacheTag CacheTag;
 
     /**
-     * Get 站点 ID。 
+     * Get 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。 
      * @return ZoneId 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
      */
     public String getZoneId() {
         return this.ZoneId;
@@ -81,7 +84,9 @@ public class CreatePurgeTaskRequest extends AbstractModel {
 
     /**
      * Set 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
      * @param ZoneId 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

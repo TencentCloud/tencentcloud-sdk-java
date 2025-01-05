@@ -479,6 +479,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *热Key分析
+     * @param req DescribeRedisTopHotKeysRequest
+     * @return DescribeRedisTopHotKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisTopHotKeysResponse DescribeRedisTopHotKeys(DescribeRedisTopHotKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisTopHotKeys", DescribeRedisTopHotKeysResponse.class);
+    }
+
+    /**
      *查询redis实例top key前缀列表。
      * @param req DescribeRedisTopKeyPrefixListRequest
      * @return DescribeRedisTopKeyPrefixListResponse

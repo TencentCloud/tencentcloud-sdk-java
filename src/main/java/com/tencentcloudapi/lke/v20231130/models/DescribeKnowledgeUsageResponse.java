@@ -38,6 +38,13 @@ public class DescribeKnowledgeUsageResponse extends AbstractModel {
     private String ExceedCharSize;
 
     /**
+    * 知识库使用字符总数
+    */
+    @SerializedName("UsedCharSize")
+    @Expose
+    private String UsedCharSize;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeKnowledgeUsageResponse extends AbstractModel {
     }
 
     /**
+     * Get 知识库使用字符总数 
+     * @return UsedCharSize 知识库使用字符总数
+     */
+    public String getUsedCharSize() {
+        return this.UsedCharSize;
+    }
+
+    /**
+     * Set 知识库使用字符总数
+     * @param UsedCharSize 知识库使用字符总数
+     */
+    public void setUsedCharSize(String UsedCharSize) {
+        this.UsedCharSize = UsedCharSize;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class DescribeKnowledgeUsageResponse extends AbstractModel {
         if (source.ExceedCharSize != null) {
             this.ExceedCharSize = new String(source.ExceedCharSize);
         }
+        if (source.UsedCharSize != null) {
+            this.UsedCharSize = new String(source.UsedCharSize);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class DescribeKnowledgeUsageResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AvailableCharSize", this.AvailableCharSize);
         this.setParamSimple(map, prefix + "ExceedCharSize", this.ExceedCharSize);
+        this.setParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

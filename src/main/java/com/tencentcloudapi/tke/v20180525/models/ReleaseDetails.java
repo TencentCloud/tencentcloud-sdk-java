@@ -142,6 +142,30 @@ public class ReleaseDetails extends AbstractModel {
     private String ComputedValues;
 
     /**
+    * chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChartFrom")
+    @Expose
+    private String ChartFrom;
+
+    /**
+    * 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChartURL")
+    @Expose
+    private String ChartURL;
+
+    /**
+    * 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resources")
+    @Expose
+    private String Resources;
+
+    /**
      * Get 应用名称 
      * @return Name 应用名称
      */
@@ -433,6 +457,66 @@ public class ReleaseDetails extends AbstractModel {
         this.ComputedValues = ComputedValues;
     }
 
+    /**
+     * Get chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChartFrom chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChartFrom() {
+        return this.ChartFrom;
+    }
+
+    /**
+     * Set chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChartFrom chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChartFrom(String ChartFrom) {
+        this.ChartFrom = ChartFrom;
+    }
+
+    /**
+     * Get 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChartURL 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChartURL() {
+        return this.ChartURL;
+    }
+
+    /**
+     * Set 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChartURL 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChartURL(String ChartURL) {
+        this.ChartURL = ChartURL;
+    }
+
+    /**
+     * Get 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resources 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resources 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResources(String Resources) {
+        this.Resources = Resources;
+    }
+
     public ReleaseDetails() {
     }
 
@@ -486,6 +570,15 @@ public class ReleaseDetails extends AbstractModel {
         if (source.ComputedValues != null) {
             this.ComputedValues = new String(source.ComputedValues);
         }
+        if (source.ChartFrom != null) {
+            this.ChartFrom = new String(source.ChartFrom);
+        }
+        if (source.ChartURL != null) {
+            this.ChartURL = new String(source.ChartURL);
+        }
+        if (source.Resources != null) {
+            this.Resources = new String(source.Resources);
+        }
     }
 
 
@@ -508,6 +601,9 @@ public class ReleaseDetails extends AbstractModel {
         this.setParamSimple(map, prefix + "FirstDeployedTime", this.FirstDeployedTime);
         this.setParamSimple(map, prefix + "LastDeployedTime", this.LastDeployedTime);
         this.setParamSimple(map, prefix + "ComputedValues", this.ComputedValues);
+        this.setParamSimple(map, prefix + "ChartFrom", this.ChartFrom);
+        this.setParamSimple(map, prefix + "ChartURL", this.ChartURL);
+        this.setParamSimple(map, prefix + "Resources", this.Resources);
 
     }
 }

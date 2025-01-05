@@ -39,13 +39,15 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
     * 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -138,21 +140,25 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
      * Get 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li> 
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li> 
      * @return MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -160,21 +166,25 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
      * Set 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
      * @param MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

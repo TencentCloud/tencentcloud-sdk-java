@@ -157,6 +157,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
     private String EbSubject;
 
     /**
+    * 附加告警内容
+    */
+    @SerializedName("AdditionalAlarmContent")
+    @Expose
+    private String AdditionalAlarmContent;
+
+    /**
+    * 通知模板绑定信息
+    */
+    @SerializedName("NoticeContentTmplBindInfos")
+    @Expose
+    private NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -460,6 +474,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
         this.EbSubject = EbSubject;
     }
 
+    /**
+     * Get 附加告警内容 
+     * @return AdditionalAlarmContent 附加告警内容
+     */
+    public String getAdditionalAlarmContent() {
+        return this.AdditionalAlarmContent;
+    }
+
+    /**
+     * Set 附加告警内容
+     * @param AdditionalAlarmContent 附加告警内容
+     */
+    public void setAdditionalAlarmContent(String AdditionalAlarmContent) {
+        this.AdditionalAlarmContent = AdditionalAlarmContent;
+    }
+
+    /**
+     * Get 通知模板绑定信息 
+     * @return NoticeContentTmplBindInfos 通知模板绑定信息
+     */
+    public NoticeContentTmplBindInfo [] getNoticeContentTmplBindInfos() {
+        return this.NoticeContentTmplBindInfos;
+    }
+
+    /**
+     * Set 通知模板绑定信息
+     * @param NoticeContentTmplBindInfos 通知模板绑定信息
+     */
+    public void setNoticeContentTmplBindInfos(NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos) {
+        this.NoticeContentTmplBindInfos = NoticeContentTmplBindInfos;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -540,6 +586,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
         if (source.EbSubject != null) {
             this.EbSubject = new String(source.EbSubject);
         }
+        if (source.AdditionalAlarmContent != null) {
+            this.AdditionalAlarmContent = new String(source.AdditionalAlarmContent);
+        }
+        if (source.NoticeContentTmplBindInfos != null) {
+            this.NoticeContentTmplBindInfos = new NoticeContentTmplBindInfo[source.NoticeContentTmplBindInfos.length];
+            for (int i = 0; i < source.NoticeContentTmplBindInfos.length; i++) {
+                this.NoticeContentTmplBindInfos[i] = new NoticeContentTmplBindInfo(source.NoticeContentTmplBindInfos[i]);
+            }
+        }
     }
 
 
@@ -566,6 +621,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
         this.setParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
         this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
+        this.setParamSimple(map, prefix + "AdditionalAlarmContent", this.AdditionalAlarmContent);
+        this.setParamArrayObj(map, prefix + "NoticeContentTmplBindInfos.", this.NoticeContentTmplBindInfos);
 
     }
 }

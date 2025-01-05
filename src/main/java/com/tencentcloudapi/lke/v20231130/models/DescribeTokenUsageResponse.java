@@ -66,6 +66,20 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     private Long PageUsage;
 
     /**
+    * 拆分token消耗量
+    */
+    @SerializedName("SplitTokenUsage")
+    @Expose
+    private Float SplitTokenUsage;
+
+    /**
+    * Rag检索次数
+    */
+    @SerializedName("RagSearchUsage")
+    @Expose
+    private Float RagSearchUsage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +183,38 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     }
 
     /**
+     * Get 拆分token消耗量 
+     * @return SplitTokenUsage 拆分token消耗量
+     */
+    public Float getSplitTokenUsage() {
+        return this.SplitTokenUsage;
+    }
+
+    /**
+     * Set 拆分token消耗量
+     * @param SplitTokenUsage 拆分token消耗量
+     */
+    public void setSplitTokenUsage(Float SplitTokenUsage) {
+        this.SplitTokenUsage = SplitTokenUsage;
+    }
+
+    /**
+     * Get Rag检索次数 
+     * @return RagSearchUsage Rag检索次数
+     */
+    public Float getRagSearchUsage() {
+        return this.RagSearchUsage;
+    }
+
+    /**
+     * Set Rag检索次数
+     * @param RagSearchUsage Rag检索次数
+     */
+    public void setRagSearchUsage(Float RagSearchUsage) {
+        this.RagSearchUsage = RagSearchUsage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +256,12 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         if (source.PageUsage != null) {
             this.PageUsage = new Long(source.PageUsage);
         }
+        if (source.SplitTokenUsage != null) {
+            this.SplitTokenUsage = new Float(source.SplitTokenUsage);
+        }
+        if (source.RagSearchUsage != null) {
+            this.RagSearchUsage = new Float(source.RagSearchUsage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +278,8 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ApiCallStats", this.ApiCallStats);
         this.setParamSimple(map, prefix + "SearchUsage", this.SearchUsage);
         this.setParamSimple(map, prefix + "PageUsage", this.PageUsage);
+        this.setParamSimple(map, prefix + "SplitTokenUsage", this.SplitTokenUsage);
+        this.setParamSimple(map, prefix + "RagSearchUsage", this.RagSearchUsage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

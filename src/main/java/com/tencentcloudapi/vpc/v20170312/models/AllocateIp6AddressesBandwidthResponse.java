@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AllocateIp6AddressesBandwidthResponse extends AbstractModel {
 
     /**
-    * 弹性公网 IPV6 的唯一 ID 列表。
+    * 传统弹性公网 IPv6 的唯一 ID 列表。
     */
     @SerializedName("AddressSet")
     @Expose
@@ -45,16 +45,16 @@ public class AllocateIp6AddressesBandwidthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 弹性公网 IPV6 的唯一 ID 列表。 
-     * @return AddressSet 弹性公网 IPV6 的唯一 ID 列表。
+     * Get 传统弹性公网 IPv6 的唯一 ID 列表。 
+     * @return AddressSet 传统弹性公网 IPv6 的唯一 ID 列表。
      */
     public String [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set 弹性公网 IPV6 的唯一 ID 列表。
-     * @param AddressSet 弹性公网 IPV6 的唯一 ID 列表。
+     * Set 传统弹性公网 IPv6 的唯一 ID 列表。
+     * @param AddressSet 传统弹性公网 IPv6 的唯一 ID 列表。
      */
     public void setAddressSet(String [] AddressSet) {
         this.AddressSet = AddressSet;
