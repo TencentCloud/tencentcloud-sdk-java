@@ -67,6 +67,13 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
     private Long DRNetwork;
 
     /**
+    * 备机资源ID。当DRNetwork = 1时必填
+    */
+    @SerializedName("DrInstanceId")
+    @Expose
+    private String DrInstanceId;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -166,6 +173,22 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.DRNetwork = DRNetwork;
     }
 
+    /**
+     * Get 备机资源ID。当DRNetwork = 1时必填 
+     * @return DrInstanceId 备机资源ID。当DRNetwork = 1时必填
+     */
+    public String getDrInstanceId() {
+        return this.DrInstanceId;
+    }
+
+    /**
+     * Set 备机资源ID。当DRNetwork = 1时必填
+     * @param DrInstanceId 备机资源ID。当DRNetwork = 1时必填
+     */
+    public void setDrInstanceId(String DrInstanceId) {
+        this.DrInstanceId = DrInstanceId;
+    }
+
     public ModifyDBInstanceNetworkRequest() {
     }
 
@@ -192,6 +215,9 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         if (source.DRNetwork != null) {
             this.DRNetwork = new Long(source.DRNetwork);
         }
+        if (source.DrInstanceId != null) {
+            this.DrInstanceId = new String(source.DrInstanceId);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
+        this.setParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
 
     }
 }

@@ -231,6 +231,30 @@ public class AlarmEventInfo extends AbstractModel {
     private String AlarmReason;
 
     /**
+    * 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorTimeRangeValue")
+    @Expose
+    private Long IndicatorTimeRangeValue;
+
+    /**
+    * 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorTimeRangeUnit")
+    @Expose
+    private String IndicatorTimeRangeUnit;
+
+    /**
+    * 同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SyncType")
+    @Expose
+    private Long SyncType;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -734,6 +758,66 @@ public class AlarmEventInfo extends AbstractModel {
         this.AlarmReason = AlarmReason;
     }
 
+    /**
+     * Get 近范围值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorTimeRangeValue 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIndicatorTimeRangeValue() {
+        return this.IndicatorTimeRangeValue;
+    }
+
+    /**
+     * Set 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorTimeRangeValue 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorTimeRangeValue(Long IndicatorTimeRangeValue) {
+        this.IndicatorTimeRangeValue = IndicatorTimeRangeValue;
+    }
+
+    /**
+     * Get 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorTimeRangeUnit 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndicatorTimeRangeUnit() {
+        return this.IndicatorTimeRangeUnit;
+    }
+
+    /**
+     * Set 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorTimeRangeUnit 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorTimeRangeUnit(String IndicatorTimeRangeUnit) {
+        this.IndicatorTimeRangeUnit = IndicatorTimeRangeUnit;
+    }
+
+    /**
+     * Get 同步类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SyncType 同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSyncType() {
+        return this.SyncType;
+    }
+
+    /**
+     * Set 同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncType 同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSyncType(Long SyncType) {
+        this.SyncType = SyncType;
+    }
+
     public AlarmEventInfo() {
     }
 
@@ -823,6 +907,15 @@ public class AlarmEventInfo extends AbstractModel {
         if (source.AlarmReason != null) {
             this.AlarmReason = new String(source.AlarmReason);
         }
+        if (source.IndicatorTimeRangeValue != null) {
+            this.IndicatorTimeRangeValue = new Long(source.IndicatorTimeRangeValue);
+        }
+        if (source.IndicatorTimeRangeUnit != null) {
+            this.IndicatorTimeRangeUnit = new String(source.IndicatorTimeRangeUnit);
+        }
+        if (source.SyncType != null) {
+            this.SyncType = new Long(source.SyncType);
+        }
     }
 
 
@@ -857,6 +950,9 @@ public class AlarmEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
         this.setParamSimple(map, prefix + "AlarmReason", this.AlarmReason);
+        this.setParamSimple(map, prefix + "IndicatorTimeRangeValue", this.IndicatorTimeRangeValue);
+        this.setParamSimple(map, prefix + "IndicatorTimeRangeUnit", this.IndicatorTimeRangeUnit);
+        this.setParamSimple(map, prefix + "SyncType", this.SyncType);
 
     }
 }

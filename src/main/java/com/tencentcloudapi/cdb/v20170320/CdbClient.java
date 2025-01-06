@@ -1198,6 +1198,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeTableColumns)用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
+     * @param req DescribeTableColumnsRequest
+     * @return DescribeTableColumnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableColumnsResponse DescribeTableColumns(DescribeTableColumnsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableColumns", DescribeTableColumnsResponse.class);
+    }
+
+    /**
      *本接口(DescribeTables)用于查询云数据库实例的数据库表信息，仅支持主实例和灾备实例，不支持只读实例。
      * @param req DescribeTablesRequest
      * @return DescribeTablesResponse

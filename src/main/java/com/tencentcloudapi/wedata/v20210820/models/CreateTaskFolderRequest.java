@@ -52,7 +52,16 @@ public class CreateTaskFolderRequest extends AbstractModel {
     private String ParentFolderId;
 
     /**
-    * 目录分类
+    * 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
     */
     @SerializedName("TaskNodeType")
     @Expose
@@ -123,16 +132,52 @@ public class CreateTaskFolderRequest extends AbstractModel {
     }
 
     /**
-     * Get 目录分类 
-     * @return TaskNodeType 目录分类
+     * Get 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流 
+     * @return TaskNodeType 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
      */
     public String getTaskNodeType() {
         return this.TaskNodeType;
     }
 
     /**
-     * Set 目录分类
-     * @param TaskNodeType 目录分类
+     * Set 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
+     * @param TaskNodeType 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
      */
     public void setTaskNodeType(String TaskNodeType) {
         this.TaskNodeType = TaskNodeType;

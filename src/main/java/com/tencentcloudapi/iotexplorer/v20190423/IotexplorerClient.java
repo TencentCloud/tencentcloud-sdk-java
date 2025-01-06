@@ -1473,6 +1473,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *暂停设备
+     * @param req PauseTWeCallDeviceRequest
+     * @return PauseTWeCallDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseTWeCallDeviceResponse PauseTWeCallDevice(PauseTWeCallDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseTWeCallDevice", PauseTWeCallDeviceResponse.class);
+    }
+
+    /**
      *发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
 
 发布广播消息
@@ -1576,6 +1587,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *重置设备
+     * @param req ResetTWeCallDeviceRequest
+     * @return ResetTWeCallDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTWeCallDeviceResponse ResetTWeCallDevice(ResetTWeCallDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTWeCallDevice", ResetTWeCallDeviceResponse.class);
+    }
+
+    /**
+     *恢复设备
+     * @param req ResumeWeCallDeviceRequest
+     * @return ResumeWeCallDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeWeCallDeviceResponse ResumeWeCallDevice(ResumeWeCallDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeWeCallDevice", ResumeWeCallDeviceResponse.class);
+    }
+
+    /**
      *搜索位置空间
      * @param req SearchPositionSpaceRequest
      * @return SearchPositionSpaceResponse
@@ -1617,6 +1650,17 @@ public class IotexplorerClient extends AbstractClient{
     public TransferCloudStorageResponse TransferCloudStorage(TransferCloudStorageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TransferCloudStorage", TransferCloudStorageResponse.class);
+    }
+
+    /**
+     *转移设备
+     * @param req TransferTWeCallDeviceRequest
+     * @return TransferTWeCallDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferTWeCallDeviceResponse TransferTWeCallDevice(TransferTWeCallDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferTWeCallDevice", TransferTWeCallDeviceResponse.class);
     }
 
     /**

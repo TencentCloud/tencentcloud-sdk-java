@@ -339,6 +339,13 @@ public class AlarmPolicy extends AbstractModel {
     private String TagOperation;
 
     /**
+    * 通知模板绑定内容模板信息
+    */
+    @SerializedName("NoticeTmplBindInfos")
+    @Expose
+    private NoticeContentTmplBindInfo [] NoticeTmplBindInfos;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -1130,6 +1137,22 @@ public class AlarmPolicy extends AbstractModel {
         this.TagOperation = TagOperation;
     }
 
+    /**
+     * Get 通知模板绑定内容模板信息 
+     * @return NoticeTmplBindInfos 通知模板绑定内容模板信息
+     */
+    public NoticeContentTmplBindInfo [] getNoticeTmplBindInfos() {
+        return this.NoticeTmplBindInfos;
+    }
+
+    /**
+     * Set 通知模板绑定内容模板信息
+     * @param NoticeTmplBindInfos 通知模板绑定内容模板信息
+     */
+    public void setNoticeTmplBindInfos(NoticeContentTmplBindInfo [] NoticeTmplBindInfos) {
+        this.NoticeTmplBindInfos = NoticeTmplBindInfos;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1276,6 +1299,12 @@ public class AlarmPolicy extends AbstractModel {
         if (source.TagOperation != null) {
             this.TagOperation = new String(source.TagOperation);
         }
+        if (source.NoticeTmplBindInfos != null) {
+            this.NoticeTmplBindInfos = new NoticeContentTmplBindInfo[source.NoticeTmplBindInfos.length];
+            for (int i = 0; i < source.NoticeTmplBindInfos.length; i++) {
+                this.NoticeTmplBindInfos[i] = new NoticeContentTmplBindInfo(source.NoticeTmplBindInfos[i]);
+            }
+        }
     }
 
 
@@ -1322,6 +1351,7 @@ public class AlarmPolicy extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
         this.setParamSimple(map, prefix + "TagOperation", this.TagOperation);
+        this.setParamArrayObj(map, prefix + "NoticeTmplBindInfos.", this.NoticeTmplBindInfos);
 
     }
 }

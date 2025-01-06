@@ -215,6 +215,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     private String [] ReceiverOnCallFormIDs;
 
     /**
+    * 通知内容模板ID筛选
+    */
+    @SerializedName("NoticeContentTmplIDs")
+    @Expose
+    private String [] NoticeContentTmplIDs;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -666,6 +673,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
         this.ReceiverOnCallFormIDs = ReceiverOnCallFormIDs;
     }
 
+    /**
+     * Get 通知内容模板ID筛选 
+     * @return NoticeContentTmplIDs 通知内容模板ID筛选
+     */
+    public String [] getNoticeContentTmplIDs() {
+        return this.NoticeContentTmplIDs;
+    }
+
+    /**
+     * Set 通知内容模板ID筛选
+     * @param NoticeContentTmplIDs 通知内容模板ID筛选
+     */
+    public void setNoticeContentTmplIDs(String [] NoticeContentTmplIDs) {
+        this.NoticeContentTmplIDs = NoticeContentTmplIDs;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -791,6 +814,12 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
                 this.ReceiverOnCallFormIDs[i] = new String(source.ReceiverOnCallFormIDs[i]);
             }
         }
+        if (source.NoticeContentTmplIDs != null) {
+            this.NoticeContentTmplIDs = new String[source.NoticeContentTmplIDs.length];
+            for (int i = 0; i < source.NoticeContentTmplIDs.length; i++) {
+                this.NoticeContentTmplIDs[i] = new String(source.NoticeContentTmplIDs[i]);
+            }
+        }
     }
 
 
@@ -824,6 +853,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "PromInsId", this.PromInsId);
         this.setParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
+        this.setParamArraySimple(map, prefix + "NoticeContentTmplIDs.", this.NoticeContentTmplIDs);
 
     }
 }
