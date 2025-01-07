@@ -59,7 +59,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String EngineVersion;
 
     /**
-    * 实例类型，GIO：高IO版；TGIO：高IO万兆
+    * 实例类型，HIO10G：高IO万兆。
     */
     @SerializedName("Machine")
     @Expose
@@ -80,7 +80,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+    * 实例角色，默认传MASTER即可
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -127,6 +127,20 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
+
+    /**
+    * 私有网络ID，如果不传则默认选择基础网络
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
 
     /**
      * Get 实例内存大小，单位：GB 
@@ -209,16 +223,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例类型，GIO：高IO版；TGIO：高IO万兆 
-     * @return Machine 实例类型，GIO：高IO版；TGIO：高IO万兆
+     * Get 实例类型，HIO10G：高IO万兆。 
+     * @return Machine 实例类型，HIO10G：高IO万兆。
      */
     public String getMachine() {
         return this.Machine;
     }
 
     /**
-     * Set 实例类型，GIO：高IO版；TGIO：高IO万兆
-     * @param Machine 实例类型，GIO：高IO版；TGIO：高IO万兆
+     * Set 实例类型，HIO10G：高IO万兆。
+     * @param Machine 实例类型，HIO10G：高IO万兆。
      */
     public void setMachine(String Machine) {
         this.Machine = Machine;
@@ -257,16 +271,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例 
-     * @return InstanceRole 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+     * Get 实例角色，默认传MASTER即可 
+     * @return InstanceRole 实例角色，默认传MASTER即可
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
-     * @param InstanceRole 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+     * Set 实例角色，默认传MASTER即可
+     * @param InstanceRole 实例角色，默认传MASTER即可
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
@@ -368,6 +382,38 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.SecurityGroup = SecurityGroup;
     }
 
+    /**
+     * Get 私有网络ID，如果不传则默认选择基础网络 
+     * @return UniqVpcId 私有网络ID，如果不传则默认选择基础网络
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 私有网络ID，如果不传则默认选择基础网络
+     * @param UniqVpcId 私有网络ID，如果不传则默认选择基础网络
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填 
+     * @return UniqSubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+     * @param UniqSubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -424,6 +470,12 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
                 this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
             }
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
     }
 
 
@@ -446,6 +498,8 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
 
     }
 }

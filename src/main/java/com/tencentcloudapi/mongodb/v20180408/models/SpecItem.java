@@ -25,6 +25,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 规格信息标识
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -32,6 +33,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 规格有效标志，取值：0-停止售卖，1-开放售卖
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,6 +41,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 机器类型，取值：0-HIO，4-HIO10G
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineType")
     @Expose
@@ -46,6 +49,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * cpu核心数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -53,6 +57,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 内存规格，单位为MB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -60,6 +65,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 默认磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultStorage")
     @Expose
@@ -67,6 +73,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最大磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxStorage")
     @Expose
@@ -74,6 +81,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最小磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinStorage")
     @Expose
@@ -81,6 +89,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 可承载qps信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
     @Expose
@@ -88,6 +97,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 连接数限制
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conns")
     @Expose
@@ -95,6 +105,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 实例mongodb版本信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoVersionCode")
     @Expose
@@ -102,6 +113,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 实例mongodb版本号
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoVersionValue")
     @Expose
@@ -109,6 +121,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 实例mongodb版本号（短）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -116,6 +129,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 存储引擎
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
     @Expose
@@ -123,6 +137,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 集群类型，取值：1-分片集群，0-副本集集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -130,6 +145,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最小副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinNodeNum")
     @Expose
@@ -137,6 +153,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最大副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxNodeNum")
     @Expose
@@ -144,6 +161,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最小分片数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinReplicateSetNum")
     @Expose
@@ -151,6 +169,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最大分片数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReplicateSetNum")
     @Expose
@@ -158,6 +177,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最小分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinReplicateSetNodeNum")
     @Expose
@@ -165,14 +185,17 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 最大分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReplicateSetNodeNum")
     @Expose
     private Long MaxReplicateSetNodeNum;
 
     /**
-     * Get 规格信息标识 
+     * Get 规格信息标识
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SpecCode 规格信息标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecCode() {
         return this.SpecCode;
@@ -180,15 +203,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 规格信息标识
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecCode 规格信息标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
+     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 规格有效标志，取值：0-停止售卖，1-开放售卖
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -196,15 +223,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规格有效标志，取值：0-停止售卖，1-开放售卖
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 机器类型，取值：0-HIO，4-HIO10G 
+     * Get 机器类型，取值：0-HIO，4-HIO10G
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineType 机器类型，取值：0-HIO，4-HIO10G
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineType() {
         return this.MachineType;
@@ -212,15 +243,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 机器类型，取值：0-HIO，4-HIO10G
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineType 机器类型，取值：0-HIO，4-HIO10G
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get cpu核心数 
+     * Get cpu核心数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu cpu核心数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -228,15 +263,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set cpu核心数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu cpu核心数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存规格，单位为MB 
+     * Get 内存规格，单位为MB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Memory 内存规格，单位为MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemory() {
         return this.Memory;
@@ -244,15 +283,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 内存规格，单位为MB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存规格，单位为MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 默认磁盘规格，单位MB 
+     * Get 默认磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DefaultStorage 默认磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultStorage() {
         return this.DefaultStorage;
@@ -260,15 +303,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 默认磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultStorage 默认磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultStorage(Long DefaultStorage) {
         this.DefaultStorage = DefaultStorage;
     }
 
     /**
-     * Get 最大磁盘规格，单位MB 
+     * Get 最大磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxStorage 最大磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
@@ -276,15 +323,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最大磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxStorage 最大磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 最小磁盘规格，单位MB 
+     * Get 最小磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinStorage 最小磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinStorage() {
         return this.MinStorage;
@@ -292,15 +343,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最小磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinStorage 最小磁盘规格，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get 可承载qps信息 
+     * Get 可承载qps信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Qps 可承载qps信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQps() {
         return this.Qps;
@@ -308,15 +363,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 可承载qps信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Qps 可承载qps信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 连接数限制 
+     * Get 连接数限制
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Conns 连接数限制
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConns() {
         return this.Conns;
@@ -324,15 +383,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 连接数限制
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Conns 连接数限制
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConns(Long Conns) {
         this.Conns = Conns;
     }
 
     /**
-     * Get 实例mongodb版本信息 
+     * Get 实例mongodb版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MongoVersionCode 实例mongodb版本信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
@@ -340,15 +403,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 实例mongodb版本信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoVersionCode 实例mongodb版本信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
     }
 
     /**
-     * Get 实例mongodb版本号 
+     * Get 实例mongodb版本号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MongoVersionValue 实例mongodb版本号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongoVersionValue() {
         return this.MongoVersionValue;
@@ -356,15 +423,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 实例mongodb版本号
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoVersionValue 实例mongodb版本号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoVersionValue(Long MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
     /**
-     * Get 实例mongodb版本号（短） 
+     * Get 实例mongodb版本号（短）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 实例mongodb版本号（短）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -372,15 +443,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 实例mongodb版本号（短）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 实例mongodb版本号（短）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 存储引擎 
+     * Get 存储引擎
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EngineName 存储引擎
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
         return this.EngineName;
@@ -388,15 +463,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 存储引擎
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineName 存储引擎
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get 集群类型，取值：1-分片集群，0-副本集集群 
+     * Get 集群类型，取值：1-分片集群，0-副本集集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterType 集群类型，取值：1-分片集群，0-副本集集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterType() {
         return this.ClusterType;
@@ -404,15 +483,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 集群类型，取值：1-分片集群，0-副本集集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型，取值：1-分片集群，0-副本集集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 最小副本集从节点数 
+     * Get 最小副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinNodeNum 最小副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinNodeNum() {
         return this.MinNodeNum;
@@ -420,15 +503,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最小副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinNodeNum 最小副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinNodeNum(Long MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get 最大副本集从节点数 
+     * Get 最大副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxNodeNum 最大副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxNodeNum() {
         return this.MaxNodeNum;
@@ -436,15 +523,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最大副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxNodeNum 最大副本集从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxNodeNum(Long MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;
     }
 
     /**
-     * Get 最小分片数 
+     * Get 最小分片数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinReplicateSetNum 最小分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinReplicateSetNum() {
         return this.MinReplicateSetNum;
@@ -452,15 +543,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最小分片数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinReplicateSetNum 最小分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinReplicateSetNum(Long MinReplicateSetNum) {
         this.MinReplicateSetNum = MinReplicateSetNum;
     }
 
     /**
-     * Get 最大分片数 
+     * Get 最大分片数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxReplicateSetNum 最大分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReplicateSetNum() {
         return this.MaxReplicateSetNum;
@@ -468,15 +563,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最大分片数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicateSetNum 最大分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReplicateSetNum(Long MaxReplicateSetNum) {
         this.MaxReplicateSetNum = MaxReplicateSetNum;
     }
 
     /**
-     * Get 最小分片从节点数 
+     * Get 最小分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinReplicateSetNodeNum 最小分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinReplicateSetNodeNum() {
         return this.MinReplicateSetNodeNum;
@@ -484,15 +583,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最小分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinReplicateSetNodeNum 最小分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinReplicateSetNodeNum(Long MinReplicateSetNodeNum) {
         this.MinReplicateSetNodeNum = MinReplicateSetNodeNum;
     }
 
     /**
-     * Get 最大分片从节点数 
+     * Get 最大分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxReplicateSetNodeNum 最大分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReplicateSetNodeNum() {
         return this.MaxReplicateSetNodeNum;
@@ -500,7 +603,9 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 最大分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicateSetNodeNum 最大分片从节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReplicateSetNodeNum(Long MaxReplicateSetNodeNum) {
         this.MaxReplicateSetNodeNum = MaxReplicateSetNodeNum;

@@ -25,7 +25,6 @@ public class DescribeDBInstanceParamTplResponse extends AbstractModel {
 
     /**
     * 参数模板列表信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTpls")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDBInstanceParamTplResponse extends AbstractModel {
 
     /**
     * 参数模板总数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDBInstanceParamTplResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 参数模板列表信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板列表信息。 
      * @return ParamTpls 参数模板列表信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamTpl [] getParamTpls() {
         return this.ParamTpls;
@@ -58,19 +54,15 @@ public class DescribeDBInstanceParamTplResponse extends AbstractModel {
 
     /**
      * Set 参数模板列表信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTpls 参数模板列表信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTpls(ParamTpl [] ParamTpls) {
         this.ParamTpls = ParamTpls;
     }
 
     /**
-     * Get 参数模板总数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板总数。 
      * @return TotalCount 参数模板总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDBInstanceParamTplResponse extends AbstractModel {
 
     /**
      * Set 参数模板总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 参数模板总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

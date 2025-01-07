@@ -45,11 +45,18 @@ public class DescribeRedisTopKeyPrefixListRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 查询数目，默认为20，最大值为100。
+    * 查询数目，默认为20，最大值为500。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 分片ID数组。
+    */
+    @SerializedName("ShardIds")
+    @Expose
+    private Long [] ShardIds;
 
     /**
      * Get 实例ID。 
@@ -100,19 +107,35 @@ public class DescribeRedisTopKeyPrefixListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询数目，默认为20，最大值为100。 
-     * @return Limit 查询数目，默认为20，最大值为100。
+     * Get 查询数目，默认为20，最大值为500。 
+     * @return Limit 查询数目，默认为20，最大值为500。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数目，默认为20，最大值为100。
-     * @param Limit 查询数目，默认为20，最大值为100。
+     * Set 查询数目，默认为20，最大值为500。
+     * @param Limit 查询数目，默认为20，最大值为500。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 分片ID数组。 
+     * @return ShardIds 分片ID数组。
+     */
+    public Long [] getShardIds() {
+        return this.ShardIds;
+    }
+
+    /**
+     * Set 分片ID数组。
+     * @param ShardIds 分片ID数组。
+     */
+    public void setShardIds(Long [] ShardIds) {
+        this.ShardIds = ShardIds;
     }
 
     public DescribeRedisTopKeyPrefixListRequest() {
@@ -135,6 +158,12 @@ public class DescribeRedisTopKeyPrefixListRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ShardIds != null) {
+            this.ShardIds = new Long[source.ShardIds.length];
+            for (int i = 0; i < source.ShardIds.length; i++) {
+                this.ShardIds[i] = new Long(source.ShardIds[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class DescribeRedisTopKeyPrefixListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Date", this.Date);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
 
     }
 }

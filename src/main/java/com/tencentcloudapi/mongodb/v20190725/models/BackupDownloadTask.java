@@ -88,11 +88,26 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
     * 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
+
+    /**
+    * 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
 
     /**
      * Get 任务创建时间 
@@ -239,10 +254,8 @@ public class BackupDownloadTask extends AbstractModel {
     }
 
     /**
-     * Get 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发起备份时指定的备注信息 
      * @return BackupDesc 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupDesc() {
         return this.BackupDesc;
@@ -250,12 +263,50 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
      * Set 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupDesc 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
+    }
+
+    /**
+     * Get 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Bucket Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Bucket Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
     }
 
     public BackupDownloadTask() {
@@ -296,6 +347,12 @@ public class BackupDownloadTask extends AbstractModel {
         if (source.BackupDesc != null) {
             this.BackupDesc = new String(source.BackupDesc);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
     }
 
 
@@ -313,6 +370,8 @@ public class BackupDownloadTask extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeEnvPostpaidDeductResponse extends AbstractModel {
 
     /**
     * 指标抵扣详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostPaidEnvDeductInfoList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEnvPostpaidDeductResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标抵扣详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标抵扣详情列表 
      * @return PostPaidEnvDeductInfoList 指标抵扣详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostPaidEnvDeductInfo [] getPostPaidEnvDeductInfoList() {
         return this.PostPaidEnvDeductInfoList;
@@ -50,9 +47,7 @@ public class DescribeEnvPostpaidDeductResponse extends AbstractModel {
 
     /**
      * Set 指标抵扣详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostPaidEnvDeductInfoList 指标抵扣详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostPaidEnvDeductInfoList(PostPaidEnvDeductInfo [] PostPaidEnvDeductInfoList) {
         this.PostPaidEnvDeductInfoList = PostPaidEnvDeductInfoList;

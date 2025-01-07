@@ -25,7 +25,6 @@ public class DescribePostpayPackageFreeQuotasResponse extends AbstractModel {
 
     /**
     * 免费量资源信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageFreeQuotaInfos")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePostpayPackageFreeQuotasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 免费量资源信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费量资源信息列表 
      * @return PackageFreeQuotaInfos 免费量资源信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PackageFreeQuotaInfo [] getPackageFreeQuotaInfos() {
         return this.PackageFreeQuotaInfos;
@@ -50,9 +47,7 @@ public class DescribePostpayPackageFreeQuotasResponse extends AbstractModel {
 
     /**
      * Set 免费量资源信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageFreeQuotaInfos 免费量资源信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageFreeQuotaInfos(PackageFreeQuotaInfo [] PackageFreeQuotaInfos) {
         this.PackageFreeQuotaInfos = PackageFreeQuotaInfos;

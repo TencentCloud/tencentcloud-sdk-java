@@ -25,7 +25,6 @@ public class NodeTag extends AbstractModel {
 
     /**
     * 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagKey")
     @Expose
@@ -33,17 +32,14 @@ public class NodeTag extends AbstractModel {
 
     /**
     * 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点Tag key 
      * @return TagKey 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagKey() {
         return this.TagKey;
@@ -51,19 +47,15 @@ public class NodeTag extends AbstractModel {
 
     /**
      * Set 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagKey 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点Tag Value 
      * @return TagValue 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagValue() {
         return this.TagValue;
@@ -71,9 +63,7 @@ public class NodeTag extends AbstractModel {
 
     /**
      * Set 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagValue 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

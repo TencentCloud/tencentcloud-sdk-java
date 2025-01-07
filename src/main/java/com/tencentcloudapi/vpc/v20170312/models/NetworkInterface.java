@@ -92,6 +92,19 @@ public class NetworkInterface extends AbstractModel {
     private String State;
 
     /**
+    * 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+    */
+    @SerializedName("NetworkInterfaceState")
+    @Expose
+    private String NetworkInterfaceState;
+
+    /**
     * 内网IP信息。
     */
     @SerializedName("PrivateIpAddressSet")
@@ -347,6 +360,46 @@ public class NetworkInterface extends AbstractModel {
      */
     public void setState(String State) {
         this.State = State;
+    }
+
+    /**
+     * Get 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li> 
+     * @return NetworkInterfaceState 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+     */
+    public String getNetworkInterfaceState() {
+        return this.NetworkInterfaceState;
+    }
+
+    /**
+     * Set 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+     * @param NetworkInterfaceState 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+     */
+    public void setNetworkInterfaceState(String NetworkInterfaceState) {
+        this.NetworkInterfaceState = NetworkInterfaceState;
     }
 
     /**
@@ -619,6 +672,9 @@ public class NetworkInterface extends AbstractModel {
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.NetworkInterfaceState != null) {
+            this.NetworkInterfaceState = new String(source.NetworkInterfaceState);
+        }
         if (source.PrivateIpAddressSet != null) {
             this.PrivateIpAddressSet = new PrivateIpAddressSpecification[source.PrivateIpAddressSet.length];
             for (int i = 0; i < source.PrivateIpAddressSet.length; i++) {
@@ -680,6 +736,7 @@ public class NetworkInterface extends AbstractModel {
         this.setParamSimple(map, prefix + "Primary", this.Primary);
         this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "NetworkInterfaceState", this.NetworkInterfaceState);
         this.setParamArrayObj(map, prefix + "PrivateIpAddressSet.", this.PrivateIpAddressSet);
         this.setParamObj(map, prefix + "Attachment.", this.Attachment);
         this.setParamSimple(map, prefix + "Zone", this.Zone);

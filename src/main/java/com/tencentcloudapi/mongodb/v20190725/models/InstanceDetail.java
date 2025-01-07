@@ -291,7 +291,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneList")
     @Expose
@@ -299,7 +298,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongosNodeNum")
     @Expose
@@ -307,7 +305,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongosMemory")
     @Expose
@@ -315,7 +312,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongosCpuNum")
     @Expose
@@ -323,7 +319,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigServerNodeNum")
     @Expose
@@ -331,7 +326,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigServerMemory")
     @Expose
@@ -339,7 +333,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigServerVolume")
     @Expose
@@ -347,7 +340,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigServerCpuNum")
     @Expose
@@ -355,7 +347,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadonlyNodeNum")
     @Expose
@@ -970,10 +961,8 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例当前可用区信息。 
      * @return ZoneList 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getZoneList() {
         return this.ZoneList;
@@ -981,19 +970,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneList 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneList(String [] ZoneList) {
         this.ZoneList = ZoneList;
     }
 
     /**
-     * Get mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongos节点个数。 
      * @return MongosNodeNum mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongosNodeNum() {
         return this.MongosNodeNum;
@@ -1001,19 +986,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongosNodeNum mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongosNodeNum(Long MongosNodeNum) {
         this.MongosNodeNum = MongosNodeNum;
     }
 
     /**
-     * Get mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongos节点内存。 
      * @return MongosMemory mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
@@ -1021,19 +1002,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongosMemory mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongos节点CPU核数。 
      * @return MongosCpuNum mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongosCpuNum() {
         return this.MongosCpuNum;
@@ -1041,19 +1018,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongosCpuNum mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongosCpuNum(Long MongosCpuNum) {
         this.MongosCpuNum = MongosCpuNum;
     }
 
     /**
-     * Get Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Config Server节点个数。 
      * @return ConfigServerNodeNum Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigServerNodeNum() {
         return this.ConfigServerNodeNum;
@@ -1061,19 +1034,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigServerNodeNum Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigServerNodeNum(Long ConfigServerNodeNum) {
         this.ConfigServerNodeNum = ConfigServerNodeNum;
     }
 
     /**
-     * Get Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Config Server节点内存。 
      * @return ConfigServerMemory Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
@@ -1081,19 +1050,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigServerMemory Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Config Server节点磁盘大小。 
      * @return ConfigServerVolume Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
@@ -1101,19 +1066,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigServerVolume Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;
     }
 
     /**
-     * Get Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Config Server节点CPU核数。 
      * @return ConfigServerCpuNum Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigServerCpuNum() {
         return this.ConfigServerCpuNum;
@@ -1121,19 +1082,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigServerCpuNum Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigServerCpuNum(Long ConfigServerCpuNum) {
         this.ConfigServerCpuNum = ConfigServerCpuNum;
     }
 
     /**
-     * Get readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get readonly节点个数。 
      * @return ReadonlyNodeNum readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadonlyNodeNum() {
         return this.ReadonlyNodeNum;
@@ -1141,9 +1098,7 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadonlyNodeNum readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
         this.ReadonlyNodeNum = ReadonlyNodeNum;

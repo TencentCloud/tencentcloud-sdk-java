@@ -32,7 +32,6 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
     * 在使用RecordId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
     * 在使用TaskId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeWebRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get 在使用RecordId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在使用RecordId查询时返回 
      * @return TaskId 在使用RecordId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -81,19 +77,15 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
      * Set 在使用RecordId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 在使用RecordId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 在使用TaskId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在使用TaskId查询时返回 
      * @return RecordId 在使用TaskId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordId() {
         return this.RecordId;
@@ -101,9 +93,7 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
      * Set 在使用TaskId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordId 在使用TaskId查询时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

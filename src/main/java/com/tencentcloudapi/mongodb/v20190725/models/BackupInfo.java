@@ -46,7 +46,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupDesc")
     @Expose
@@ -54,7 +53,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupSize")
     @Expose
@@ -62,7 +60,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -70,7 +67,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -106,7 +102,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupRegion")
     @Expose
@@ -161,10 +156,8 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份备注 
      * @return BackupDesc 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupDesc() {
         return this.BackupDesc;
@@ -172,19 +165,15 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupDesc 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件大小，单位KB 
      * @return BackupSize 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupSize() {
         return this.BackupSize;
@@ -192,19 +181,15 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSize 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份开始时间 
      * @return StartTime 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -212,19 +197,15 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份结束时间 
      * @return EndTime 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -232,9 +213,7 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -305,10 +284,8 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异地备份地域 
      * @return BackupRegion 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupRegion() {
         return this.BackupRegion;
@@ -316,9 +293,7 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupRegion 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;

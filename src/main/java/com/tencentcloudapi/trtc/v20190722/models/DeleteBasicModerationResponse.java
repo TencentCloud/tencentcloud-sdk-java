@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteBasicModerationResponse extends AbstractModel {
 
     /**
-    * 审核任务的唯一Id，在启动审核任务成功后会返回。
+    * 审核任务的唯一Id。
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteBasicModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 审核任务的唯一Id，在启动审核任务成功后会返回。 
-     * @return TaskId 审核任务的唯一Id，在启动审核任务成功后会返回。
+     * Get 审核任务的唯一Id。 
+     * @return TaskId 审核任务的唯一Id。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 审核任务的唯一Id，在启动审核任务成功后会返回。
-     * @param TaskId 审核任务的唯一Id，在启动审核任务成功后会返回。
+     * Set 审核任务的唯一Id。
+     * @param TaskId 审核任务的唯一Id。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

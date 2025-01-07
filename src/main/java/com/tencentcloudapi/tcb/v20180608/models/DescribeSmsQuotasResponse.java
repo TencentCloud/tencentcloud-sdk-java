@@ -25,7 +25,6 @@ public class DescribeSmsQuotasResponse extends AbstractModel {
 
     /**
     * 短信免费量信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmsFreeQuotaList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSmsQuotasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 短信免费量信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 短信免费量信息列表 
      * @return SmsFreeQuotaList 短信免费量信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmsFreeQuota [] getSmsFreeQuotaList() {
         return this.SmsFreeQuotaList;
@@ -50,9 +47,7 @@ public class DescribeSmsQuotasResponse extends AbstractModel {
 
     /**
      * Set 短信免费量信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmsFreeQuotaList 短信免费量信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmsFreeQuotaList(SmsFreeQuota [] SmsFreeQuotaList) {
         this.SmsFreeQuotaList = SmsFreeQuotaList;

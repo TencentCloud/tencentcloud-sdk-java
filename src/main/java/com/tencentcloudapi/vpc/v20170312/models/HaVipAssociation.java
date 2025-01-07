@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class HaVipAssociation extends AbstractModel {
 
     /**
-    * HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HaVipId")
-    @Expose
-    private String HaVipId;
-
-    /**
     * HaVip绑定的子机或网卡唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -40,32 +32,20 @@ public class HaVipAssociation extends AbstractModel {
     private String InstanceId;
 
     /**
+    * HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HaVipId")
+    @Expose
+    private String HaVipId;
+
+    /**
     * HaVip绑定的类型。取值:CVM, ENI。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-
-    /**
-     * Get HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HaVipId HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getHaVipId() {
-        return this.HaVipId;
-    }
-
-    /**
-     * Set HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HaVipId HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
-    }
 
     /**
      * Get HaVip绑定的子机或网卡唯一ID。
@@ -85,6 +65,26 @@ public class HaVipAssociation extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HaVipId HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHaVipId() {
+        return this.HaVipId;
+    }
+
+    /**
+     * Set HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HaVipId HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHaVipId(String HaVipId) {
+        this.HaVipId = HaVipId;
     }
 
     /**
@@ -115,11 +115,11 @@ public class HaVipAssociation extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public HaVipAssociation(HaVipAssociation source) {
-        if (source.HaVipId != null) {
-            this.HaVipId = new String(source.HaVipId);
-        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.HaVipId != null) {
+            this.HaVipId = new String(source.HaVipId);
         }
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
@@ -131,8 +131,8 @@ public class HaVipAssociation extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }

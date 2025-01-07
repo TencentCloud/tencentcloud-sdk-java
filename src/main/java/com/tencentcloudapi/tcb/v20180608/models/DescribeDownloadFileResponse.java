@@ -25,7 +25,6 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
     * 文件路径，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePath")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
     * 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomKey")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
     * 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeDownloadFileResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件路径，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径，该字段已废弃 
      * @return FilePath 文件路径，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePath() {
         return this.FilePath;
@@ -66,19 +61,15 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
      * Set 文件路径，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePath 文件路径，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c 
      * @return CustomKey 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomKey() {
         return this.CustomKey;
@@ -86,19 +77,15 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
      * Set 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomKey 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomKey(String CustomKey) {
         this.CustomKey = CustomKey;
     }
 
     /**
-     * Get 下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载链接 
      * @return DownloadUrl 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -106,9 +93,7 @@ public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
      * Set 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

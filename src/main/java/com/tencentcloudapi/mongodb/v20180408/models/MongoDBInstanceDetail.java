@@ -214,7 +214,6 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
     * 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadonlyInstances")
     @Expose
@@ -222,7 +221,6 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
     * 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StandbyInstances")
     @Expose
@@ -230,7 +228,6 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
     * 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloneInstances")
     @Expose
@@ -238,7 +235,6 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
     * 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedInstance")
     @Expose
@@ -246,7 +242,6 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
     * 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -727,10 +722,8 @@ public class MongoDBInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读实例信息 
      * @return ReadonlyInstances 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBInstance [] getReadonlyInstances() {
         return this.ReadonlyInstances;
@@ -738,19 +731,15 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
      * Set 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadonlyInstances 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadonlyInstances(MongoDBInstance [] ReadonlyInstances) {
         this.ReadonlyInstances = ReadonlyInstances;
     }
 
     /**
-     * Get 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 灾备实例信息 
      * @return StandbyInstances 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBInstance [] getStandbyInstances() {
         return this.StandbyInstances;
@@ -758,19 +747,15 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
      * Set 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StandbyInstances 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStandbyInstances(MongoDBInstance [] StandbyInstances) {
         this.StandbyInstances = StandbyInstances;
     }
 
     /**
-     * Get 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时实例信息 
      * @return CloneInstances 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBInstance [] getCloneInstances() {
         return this.CloneInstances;
@@ -778,19 +763,15 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
      * Set 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloneInstances 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloneInstances(MongoDBInstance [] CloneInstances) {
         this.CloneInstances = CloneInstances;
     }
 
     /**
-     * Get 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息 
      * @return RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBInstance getRelatedInstance() {
         return this.RelatedInstance;
@@ -798,19 +779,15 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
      * Set 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedInstance(MongoDBInstance RelatedInstance) {
         this.RelatedInstance = RelatedInstance;
     }
 
     /**
-     * Get 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例标签信息集合 
      * @return Tags 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -818,9 +795,7 @@ public class MongoDBInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

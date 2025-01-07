@@ -39,7 +39,6 @@ public class DescribeQuotaDataResponse extends AbstractModel {
 
     /**
     * 指标的附加值信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubValue")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeQuotaDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 指标的附加值信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标的附加值信息 
      * @return SubValue 指标的附加值信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubValue() {
         return this.SubValue;
@@ -96,9 +93,7 @@ public class DescribeQuotaDataResponse extends AbstractModel {
 
     /**
      * Set 指标的附加值信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubValue 指标的附加值信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubValue(String SubValue) {
         this.SubValue = SubValue;

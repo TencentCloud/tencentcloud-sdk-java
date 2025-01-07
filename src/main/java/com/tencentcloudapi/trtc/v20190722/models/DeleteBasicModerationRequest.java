@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteBasicModerationRequest extends AbstractModel {
 
     /**
-    * TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+    * TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteBasicModerationRequest extends AbstractModel {
     private String TaskId;
 
     /**
-     * Get TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。 
-     * @return SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * Get TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。 
+     * @return SdkAppId TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
-     * @param SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * Set TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。
+     * @param SdkAppId TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

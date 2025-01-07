@@ -25,7 +25,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,7 +32,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -41,15 +39,20 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
+    * 节点公网访问地址(IP或域名)。
+    */
+    @SerializedName("WanServiceAddress")
+    @Expose
+    private String WanServiceAddress;
+
+    /**
     * 角色。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -57,7 +60,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 是否为Hidden节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hidden")
     @Expose
@@ -65,7 +67,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +74,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 主从延迟，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveDelay")
     @Expose
@@ -81,7 +81,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点优先级。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -89,7 +88,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点投票权。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Votes")
     @Expose
@@ -97,7 +95,6 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -105,17 +102,14 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 副本集Id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicateSetId")
     @Expose
     private String ReplicateSetId;
 
     /**
-     * Get 节点所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所在的可用区。 
      * @return Zone 节点所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -123,19 +117,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 节点所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 节点名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点名称。 
      * @return NodeName 节点名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -143,19 +133,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 节点名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点访问地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点访问地址。 
      * @return Address 节点访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -163,19 +149,31 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 节点访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 角色。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点公网访问地址(IP或域名)。 
+     * @return WanServiceAddress 节点公网访问地址(IP或域名)。
+     */
+    public String getWanServiceAddress() {
+        return this.WanServiceAddress;
+    }
+
+    /**
+     * Set 节点公网访问地址(IP或域名)。
+     * @param WanServiceAddress 节点公网访问地址(IP或域名)。
+     */
+    public void setWanServiceAddress(String WanServiceAddress) {
+        this.WanServiceAddress = WanServiceAddress;
+    }
+
+    /**
+     * Get 角色。 
      * @return Role 角色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -183,19 +181,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 角色。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 角色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 是否为Hidden节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为Hidden节点 
      * @return Hidden 是否为Hidden节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHidden() {
         return this.Hidden;
@@ -203,19 +197,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 是否为Hidden节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hidden 是否为Hidden节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;
     }
 
     /**
-     * Get 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。 
      * @return Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -223,19 +213,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 主从延迟，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主从延迟，单位秒。 
      * @return SlaveDelay 主从延迟，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSlaveDelay() {
         return this.SlaveDelay;
@@ -243,19 +229,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 主从延迟，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveDelay 主从延迟，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveDelay(Long SlaveDelay) {
         this.SlaveDelay = SlaveDelay;
     }
 
     /**
-     * Get 节点优先级。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点优先级。 
      * @return Priority 节点优先级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -263,19 +245,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点优先级。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 节点优先级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 节点投票权。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点投票权。 
      * @return Votes 节点投票权。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVotes() {
         return this.Votes;
@@ -283,19 +261,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点投票权。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Votes 节点投票权。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVotes(Long Votes) {
         this.Votes = Votes;
     }
 
     /**
-     * Get 节点标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点标签。 
      * @return Tags 节点标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeTag [] getTags() {
         return this.Tags;
@@ -303,19 +277,15 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 节点标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(NodeTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 副本集Id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 副本集Id。 
      * @return ReplicateSetId 副本集Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplicateSetId() {
         return this.ReplicateSetId;
@@ -323,9 +293,7 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 副本集Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplicateSetId 副本集Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicateSetId(String ReplicateSetId) {
         this.ReplicateSetId = ReplicateSetId;
@@ -347,6 +315,9 @@ public class NodeProperty extends AbstractModel {
         }
         if (source.Address != null) {
             this.Address = new String(source.Address);
+        }
+        if (source.WanServiceAddress != null) {
+            this.WanServiceAddress = new String(source.WanServiceAddress);
         }
         if (source.Role != null) {
             this.Role = new String(source.Role);
@@ -385,6 +356,7 @@ public class NodeProperty extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "WanServiceAddress", this.WanServiceAddress);
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
         this.setParamSimple(map, prefix + "Status", this.Status);

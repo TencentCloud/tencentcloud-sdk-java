@@ -32,7 +32,6 @@ public class DescribeSlowLogsResponse extends AbstractModel {
 
     /**
     * 慢日志详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowLogs")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeSlowLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get 慢日志详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢日志详情 
      * @return SlowLogs 慢日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlowLogs() {
         return this.SlowLogs;
@@ -73,9 +70,7 @@ public class DescribeSlowLogsResponse extends AbstractModel {
 
     /**
      * Set 慢日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowLogs 慢日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowLogs(String [] SlowLogs) {
         this.SlowLogs = SlowLogs;

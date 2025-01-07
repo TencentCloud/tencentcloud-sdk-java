@@ -25,7 +25,6 @@ public class CreateStaticStoreResponse extends AbstractModel {
 
     /**
     * 创建静态资源结果(succ/fail)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateStaticStoreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建静态资源结果(succ/fail)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建静态资源结果(succ/fail) 
      * @return Result 创建静态资源结果(succ/fail)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateStaticStoreResponse extends AbstractModel {
 
     /**
      * Set 创建静态资源结果(succ/fail)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 创建静态资源结果(succ/fail)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

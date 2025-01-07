@@ -25,7 +25,6 @@ public class DBInstancePrice extends AbstractModel {
 
     /**
     * 单价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -46,10 +45,8 @@ public class DBInstancePrice extends AbstractModel {
     private Float DiscountPrice;
 
     /**
-     * Get 单价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单价 
      * @return UnitPrice 单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -57,9 +54,7 @@ public class DBInstancePrice extends AbstractModel {
 
     /**
      * Set 单价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;

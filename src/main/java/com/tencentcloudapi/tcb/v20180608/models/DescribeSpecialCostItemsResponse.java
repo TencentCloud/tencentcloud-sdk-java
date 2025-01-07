@@ -25,7 +25,6 @@ public class DescribeSpecialCostItemsResponse extends AbstractModel {
 
     /**
     * 1分钱抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecialCostItems")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSpecialCostItemsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1分钱抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1分钱抵扣详情 
      * @return SpecialCostItems 1分钱抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpecialCostItem [] getSpecialCostItems() {
         return this.SpecialCostItems;
@@ -50,9 +47,7 @@ public class DescribeSpecialCostItemsResponse extends AbstractModel {
 
     /**
      * Set 1分钱抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecialCostItems 1分钱抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecialCostItems(SpecialCostItem [] SpecialCostItems) {
         this.SpecialCostItems = SpecialCostItems;

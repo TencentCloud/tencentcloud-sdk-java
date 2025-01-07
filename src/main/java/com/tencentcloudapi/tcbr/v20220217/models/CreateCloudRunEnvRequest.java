@@ -75,21 +75,21 @@ Activity：活动来源
     private String ReqKey;
 
     /**
-    * 来源：wechat | cloud
+    * 来源：wechat | cloud | weda
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 渠道：wechat | cloud
+    * 渠道：wechat | cloud | weda
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 环境ID
+    * 环境ID 云开发平台必填
     */
     @SerializedName("EnvId")
     @Expose
@@ -216,48 +216,48 @@ Activity：活动来源
     }
 
     /**
-     * Get 来源：wechat | cloud 
-     * @return Source 来源：wechat | cloud
+     * Get 来源：wechat | cloud | weda 
+     * @return Source 来源：wechat | cloud | weda
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源：wechat | cloud
-     * @param Source 来源：wechat | cloud
+     * Set 来源：wechat | cloud | weda
+     * @param Source 来源：wechat | cloud | weda
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 渠道：wechat | cloud 
-     * @return Channel 渠道：wechat | cloud
+     * Get 渠道：wechat | cloud | weda 
+     * @return Channel 渠道：wechat | cloud | weda
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 渠道：wechat | cloud
-     * @param Channel 渠道：wechat | cloud
+     * Set 渠道：wechat | cloud | weda
+     * @param Channel 渠道：wechat | cloud | weda
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get 环境ID 云开发平台必填 
+     * @return EnvId 环境ID 云开发平台必填
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set 环境ID 云开发平台必填
+     * @param EnvId 环境ID 云开发平台必填
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

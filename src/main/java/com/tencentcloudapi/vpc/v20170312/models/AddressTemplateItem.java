@@ -31,14 +31,14 @@ public class AddressTemplateItem extends AbstractModel {
     private String AddressTemplateId;
 
     /**
-    * IP模板名称
+    * IP模板名称。
     */
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
 
     /**
-    * 废弃字段
+    * 废弃字段。
     */
     @SerializedName("From")
     @Expose
@@ -68,32 +68,32 @@ public class AddressTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get IP模板名称 
-     * @return AddressTemplateName IP模板名称
+     * Get IP模板名称。 
+     * @return AddressTemplateName IP模板名称。
      */
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
 
     /**
-     * Set IP模板名称
-     * @param AddressTemplateName IP模板名称
+     * Set IP模板名称。
+     * @param AddressTemplateName IP模板名称。
      */
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;
     }
 
     /**
-     * Get 废弃字段 
-     * @return From 废弃字段
+     * Get 废弃字段。 
+     * @return From 废弃字段。
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 废弃字段
-     * @param From 废弃字段
+     * Set 废弃字段。
+     * @param From 废弃字段。
      */
     public void setFrom(String From) {
         this.From = From;

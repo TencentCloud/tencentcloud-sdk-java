@@ -1253,6 +1253,17 @@ RabbitMQ专享版查询虚拟主机列表
     }
 
     /**
+     *获取环境下主题列表
+     * @param req GetTopicListRequest
+     * @return GetTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTopicListResponse GetTopicList(GetTopicListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTopicList", GetTopicListResponse.class);
+    }
+
+    /**
      *输入迁移任务id和要导入的Group，导入后台
      * @param req ImportRocketMQConsumerGroupsRequest
      * @return ImportRocketMQConsumerGroupsResponse

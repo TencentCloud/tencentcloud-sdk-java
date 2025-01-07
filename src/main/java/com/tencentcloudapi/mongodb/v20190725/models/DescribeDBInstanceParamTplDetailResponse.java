@@ -25,7 +25,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 枚举类参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceEnumParams")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 整形参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIntegerParams")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 文本参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTextParams")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 多值参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceMultiParams")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 参数总个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 模板适配实例版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 模板适配集群类型，副本集或分片。。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
     * 参数模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TplName")
     @Expose
@@ -95,10 +87,8 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 枚举类参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 枚举类参数详情列表。 
      * @return InstanceEnumParams 枚举类参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceEnumParam [] getInstanceEnumParams() {
         return this.InstanceEnumParams;
@@ -106,19 +96,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 枚举类参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceEnumParams 枚举类参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceEnumParams(InstanceEnumParam [] InstanceEnumParams) {
         this.InstanceEnumParams = InstanceEnumParams;
     }
 
     /**
-     * Get 整形参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 整形参数详情列表。 
      * @return InstanceIntegerParams 整形参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceIntegerParam [] getInstanceIntegerParams() {
         return this.InstanceIntegerParams;
@@ -126,19 +112,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 整形参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIntegerParams 整形参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIntegerParams(InstanceIntegerParam [] InstanceIntegerParams) {
         this.InstanceIntegerParams = InstanceIntegerParams;
     }
 
     /**
-     * Get 文本参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本参数详情列表。 
      * @return InstanceTextParams 文本参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceTextParam [] getInstanceTextParams() {
         return this.InstanceTextParams;
@@ -146,19 +128,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 文本参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTextParams 文本参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTextParams(InstanceTextParam [] InstanceTextParams) {
         this.InstanceTextParams = InstanceTextParams;
     }
 
     /**
-     * Get 多值参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多值参数详情列表。 
      * @return InstanceMultiParams 多值参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceMultiParam [] getInstanceMultiParams() {
         return this.InstanceMultiParams;
@@ -166,19 +144,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 多值参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceMultiParams 多值参数详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceMultiParams(InstanceMultiParam [] InstanceMultiParams) {
         this.InstanceMultiParams = InstanceMultiParams;
     }
 
     /**
-     * Get 参数总个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数总个数。 
      * @return TotalCount 参数总个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -186,19 +160,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 参数总个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 参数总个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 模板适配实例版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板适配实例版本。 
      * @return MongoVersion 模板适配实例版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
@@ -206,19 +176,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 模板适配实例版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoVersion 模板适配实例版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 模板适配集群类型，副本集或分片。。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板适配集群类型，副本集或分片。。 
      * @return ClusterType 模板适配集群类型，副本集或分片。。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -226,19 +192,15 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 模板适配集群类型，副本集或分片。。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 模板适配集群类型，副本集或分片。。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 参数模板名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板名称。 
      * @return TplName 参数模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTplName() {
         return this.TplName;
@@ -246,9 +208,7 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
 
     /**
      * Set 参数模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TplName 参数模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTplName(String TplName) {
         this.TplName = TplName;

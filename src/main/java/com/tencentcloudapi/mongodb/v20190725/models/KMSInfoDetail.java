@@ -25,7 +25,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyId")
     @Expose
@@ -33,7 +32,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyName")
     @Expose
@@ -41,7 +39,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyUsage")
     @Expose
@@ -65,7 +60,6 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyOrigin")
     @Expose
@@ -79,10 +73,8 @@ public class KMSInfoDetail extends AbstractModel {
     private String KmsRegion;
 
     /**
-     * Get 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主密钥 ID。 
      * @return KeyId 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyId() {
         return this.KeyId;
@@ -90,19 +82,15 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyId 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主密钥名称。 
      * @return KeyName 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyName() {
         return this.KeyName;
@@ -110,19 +98,15 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyName 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;
     }
 
     /**
-     * Get 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例与密钥绑定时间。 
      * @return CreateTime 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -130,19 +114,15 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥状态。 
      * @return Status 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -150,19 +130,15 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥用途。 
      * @return KeyUsage 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyUsage() {
         return this.KeyUsage;
@@ -170,19 +146,15 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyUsage 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥来源。 
      * @return KeyOrigin 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyOrigin() {
         return this.KeyOrigin;
@@ -190,9 +162,7 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyOrigin 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyOrigin(String KeyOrigin) {
         this.KeyOrigin = KeyOrigin;

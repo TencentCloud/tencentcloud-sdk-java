@@ -231,6 +231,20 @@ HoaiMy
     private String EndFunctionDesc;
 
     /**
+    * 模型是否支持(或者开启)transfer_to_human function calling
+    */
+    @SerializedName("TransferFunctionEnable")
+    @Expose
+    private Boolean TransferFunctionEnable;
+
+    /**
+    * TransferFunctionEnable为true的时候生效: 转人工配置
+    */
+    @SerializedName("TransferItems")
+    @Expose
+    private AITransferItem [] TransferItems;
+
+    /**
     * 用户多久没说话提示时长,最小10秒,默认10秒
     */
     @SerializedName("NotifyDuration")
@@ -335,6 +349,13 @@ HoaiMy
     @SerializedName("CustomTTSConfig")
     @Expose
     private String CustomTTSConfig;
+
+    /**
+    * 提示词变量
+    */
+    @SerializedName("PromptVariables")
+    @Expose
+    private Variable [] PromptVariables;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -961,6 +982,38 @@ HoaiMy
     }
 
     /**
+     * Get 模型是否支持(或者开启)transfer_to_human function calling 
+     * @return TransferFunctionEnable 模型是否支持(或者开启)transfer_to_human function calling
+     */
+    public Boolean getTransferFunctionEnable() {
+        return this.TransferFunctionEnable;
+    }
+
+    /**
+     * Set 模型是否支持(或者开启)transfer_to_human function calling
+     * @param TransferFunctionEnable 模型是否支持(或者开启)transfer_to_human function calling
+     */
+    public void setTransferFunctionEnable(Boolean TransferFunctionEnable) {
+        this.TransferFunctionEnable = TransferFunctionEnable;
+    }
+
+    /**
+     * Get TransferFunctionEnable为true的时候生效: 转人工配置 
+     * @return TransferItems TransferFunctionEnable为true的时候生效: 转人工配置
+     */
+    public AITransferItem [] getTransferItems() {
+        return this.TransferItems;
+    }
+
+    /**
+     * Set TransferFunctionEnable为true的时候生效: 转人工配置
+     * @param TransferItems TransferFunctionEnable为true的时候生效: 转人工配置
+     */
+    public void setTransferItems(AITransferItem [] TransferItems) {
+        this.TransferItems = TransferItems;
+    }
+
+    /**
      * Get 用户多久没说话提示时长,最小10秒,默认10秒 
      * @return NotifyDuration 用户多久没说话提示时长,最小10秒,默认10秒
      */
@@ -1336,6 +1389,22 @@ HoaiMy
         this.CustomTTSConfig = CustomTTSConfig;
     }
 
+    /**
+     * Get 提示词变量 
+     * @return PromptVariables 提示词变量
+     */
+    public Variable [] getPromptVariables() {
+        return this.PromptVariables;
+    }
+
+    /**
+     * Set 提示词变量
+     * @param PromptVariables 提示词变量
+     */
+    public void setPromptVariables(Variable [] PromptVariables) {
+        this.PromptVariables = PromptVariables;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1401,6 +1470,15 @@ HoaiMy
         if (source.EndFunctionDesc != null) {
             this.EndFunctionDesc = new String(source.EndFunctionDesc);
         }
+        if (source.TransferFunctionEnable != null) {
+            this.TransferFunctionEnable = new Boolean(source.TransferFunctionEnable);
+        }
+        if (source.TransferItems != null) {
+            this.TransferItems = new AITransferItem[source.TransferItems.length];
+            for (int i = 0; i < source.TransferItems.length; i++) {
+                this.TransferItems[i] = new AITransferItem(source.TransferItems[i]);
+            }
+        }
         if (source.NotifyDuration != null) {
             this.NotifyDuration = new Long(source.NotifyDuration);
         }
@@ -1412,6 +1490,12 @@ HoaiMy
         }
         if (source.CustomTTSConfig != null) {
             this.CustomTTSConfig = new String(source.CustomTTSConfig);
+        }
+        if (source.PromptVariables != null) {
+            this.PromptVariables = new Variable[source.PromptVariables.length];
+            for (int i = 0; i < source.PromptVariables.length; i++) {
+                this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
+            }
         }
     }
 
@@ -1437,10 +1521,13 @@ HoaiMy
         this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
         this.setParamSimple(map, prefix + "EndFunctionEnable", this.EndFunctionEnable);
         this.setParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
+        this.setParamSimple(map, prefix + "TransferFunctionEnable", this.TransferFunctionEnable);
+        this.setParamArrayObj(map, prefix + "TransferItems.", this.TransferItems);
         this.setParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
         this.setParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
         this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
+        this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
 
     }
 }

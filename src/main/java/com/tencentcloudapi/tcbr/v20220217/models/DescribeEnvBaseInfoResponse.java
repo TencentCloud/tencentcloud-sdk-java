@@ -31,6 +31,13 @@ public class DescribeEnvBaseInfoResponse extends AbstractModel {
     private EnvBaseInfo EnvBaseInfo;
 
     /**
+    * 是否存在
+    */
+    @SerializedName("IsExist")
+    @Expose
+    private Boolean IsExist;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeEnvBaseInfoResponse extends AbstractModel {
      */
     public void setEnvBaseInfo(EnvBaseInfo EnvBaseInfo) {
         this.EnvBaseInfo = EnvBaseInfo;
+    }
+
+    /**
+     * Get 是否存在 
+     * @return IsExist 是否存在
+     */
+    public Boolean getIsExist() {
+        return this.IsExist;
+    }
+
+    /**
+     * Set 是否存在
+     * @param IsExist 是否存在
+     */
+    public void setIsExist(Boolean IsExist) {
+        this.IsExist = IsExist;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DescribeEnvBaseInfoResponse extends AbstractModel {
         if (source.EnvBaseInfo != null) {
             this.EnvBaseInfo = new EnvBaseInfo(source.EnvBaseInfo);
         }
+        if (source.IsExist != null) {
+            this.IsExist = new Boolean(source.IsExist);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class DescribeEnvBaseInfoResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "EnvBaseInfo.", this.EnvBaseInfo);
+        this.setParamSimple(map, prefix + "IsExist", this.IsExist);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

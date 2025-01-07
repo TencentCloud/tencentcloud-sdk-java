@@ -25,7 +25,6 @@ public class DescribeClientConnectionsResponse extends AbstractModel {
 
     /**
     * 客户端连接信息，包括客户端IP和对应IP的连接数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clients")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClientConnectionsResponse extends AbstractModel {
 
     /**
     * 连接数总结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeClientConnectionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 客户端连接信息，包括客户端IP和对应IP的连接数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端连接信息，包括客户端IP和对应IP的连接数量 
      * @return Clients 客户端连接信息，包括客户端IP和对应IP的连接数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClientConnection [] getClients() {
         return this.Clients;
@@ -58,19 +54,15 @@ public class DescribeClientConnectionsResponse extends AbstractModel {
 
     /**
      * Set 客户端连接信息，包括客户端IP和对应IP的连接数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clients 客户端连接信息，包括客户端IP和对应IP的连接数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClients(ClientConnection [] Clients) {
         this.Clients = Clients;
     }
 
     /**
-     * Get 连接数总结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接数总结 
      * @return TotalCount 连接数总结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeClientConnectionsResponse extends AbstractModel {
 
     /**
      * Set 连接数总结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 连接数总结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

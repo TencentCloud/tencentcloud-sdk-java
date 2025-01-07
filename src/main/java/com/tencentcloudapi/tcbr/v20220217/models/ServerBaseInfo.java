@@ -73,6 +73,13 @@ public class ServerBaseInfo extends AbstractModel {
     private String [] CustomDomainNames;
 
     /**
+    * 服务类型: function 云函数2.0；container 容器服务
+    */
+    @SerializedName("ServerType")
+    @Expose
+    private String ServerType;
+
+    /**
      * Get 服务名 
      * @return ServerName 服务名
      */
@@ -184,6 +191,22 @@ public class ServerBaseInfo extends AbstractModel {
         this.CustomDomainNames = CustomDomainNames;
     }
 
+    /**
+     * Get 服务类型: function 云函数2.0；container 容器服务 
+     * @return ServerType 服务类型: function 云函数2.0；container 容器服务
+     */
+    public String getServerType() {
+        return this.ServerType;
+    }
+
+    /**
+     * Set 服务类型: function 云函数2.0；container 容器服务
+     * @param ServerType 服务类型: function 云函数2.0；container 容器服务
+     */
+    public void setServerType(String ServerType) {
+        this.ServerType = ServerType;
+    }
+
     public ServerBaseInfo() {
     }
 
@@ -219,6 +242,9 @@ public class ServerBaseInfo extends AbstractModel {
                 this.CustomDomainNames[i] = new String(source.CustomDomainNames[i]);
             }
         }
+        if (source.ServerType != null) {
+            this.ServerType = new String(source.ServerType);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class ServerBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
         this.setParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
+        this.setParamSimple(map, prefix + "ServerType", this.ServerType);
 
     }
 }

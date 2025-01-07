@@ -32,7 +32,6 @@ public class CreatePostpayPackageResponse extends AbstractModel {
 
     /**
     * 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -62,10 +61,8 @@ public class CreatePostpayPackageResponse extends AbstractModel {
     }
 
     /**
-     * Get 环境ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境ID 
      * @return EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -73,9 +70,7 @@ public class CreatePostpayPackageResponse extends AbstractModel {
 
     /**
      * Set 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

@@ -25,7 +25,6 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
 
     /**
     * Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mongos")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Mongos节点属性。 
      * @return Mongos Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeProperty [] getMongos() {
         return this.Mongos;
@@ -57,9 +54,7 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
 
     /**
      * Set Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mongos Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongos(NodeProperty [] Mongos) {
         this.Mongos = Mongos;

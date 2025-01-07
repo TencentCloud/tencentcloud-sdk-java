@@ -25,7 +25,6 @@ public class DescribeEnvFreeQuotaResponse extends AbstractModel {
 
     /**
     * 免费抵扣配额详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuotaItems")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEnvFreeQuotaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 免费抵扣配额详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费抵扣配额详情 
      * @return QuotaItems 免费抵扣配额详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostpayEnvQuota [] getQuotaItems() {
         return this.QuotaItems;
@@ -50,9 +47,7 @@ public class DescribeEnvFreeQuotaResponse extends AbstractModel {
 
     /**
      * Set 免费抵扣配额详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuotaItems 免费抵扣配额详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuotaItems(PostpayEnvQuota [] QuotaItems) {
         this.QuotaItems = QuotaItems;

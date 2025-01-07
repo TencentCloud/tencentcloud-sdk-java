@@ -53,7 +53,6 @@ public class DescribeUserActivityInfoResponse extends AbstractModel {
 
     /**
     * 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickNameList")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeUserActivityInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应 
      * @return NickNameList 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickNameList() {
         return this.NickNameList;
@@ -142,9 +139,7 @@ public class DescribeUserActivityInfoResponse extends AbstractModel {
 
     /**
      * Set 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickNameList 昵称列表,通过","拼接， 1元钱裂变活动中与Notes中uin一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickNameList(String NickNameList) {
         this.NickNameList = NickNameList;
