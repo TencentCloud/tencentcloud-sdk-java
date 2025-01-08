@@ -31,13 +31,6 @@ public class SaleParam extends AbstractModel {
     private String ParamKey;
 
     /**
-    * 售卖参数值
-    */
-    @SerializedName("ParamValue")
-    @Expose
-    private String ParamValue;
-
-    /**
     * 售卖参数的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -46,12 +39,28 @@ public class SaleParam extends AbstractModel {
     private String ParamKeyName;
 
     /**
+    * 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamValue")
+    @Expose
+    private String ParamValue;
+
+    /**
     * 售卖参数值的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamValueName")
     @Expose
     private String ParamValueName;
+
+    /**
+    * 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamType")
+    @Expose
+    private String ParamType;
 
     /**
      * Get 售卖参数标识 
@@ -67,22 +76,6 @@ public class SaleParam extends AbstractModel {
      */
     public void setParamKey(String ParamKey) {
         this.ParamKey = ParamKey;
-    }
-
-    /**
-     * Get 售卖参数值 
-     * @return ParamValue 售卖参数值
-     */
-    public String getParamValue() {
-        return this.ParamValue;
-    }
-
-    /**
-     * Set 售卖参数值
-     * @param ParamValue 售卖参数值
-     */
-    public void setParamValue(String ParamValue) {
-        this.ParamValue = ParamValue;
     }
 
     /**
@@ -106,6 +99,26 @@ public class SaleParam extends AbstractModel {
     }
 
     /**
+     * Get 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamValue 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamValue() {
+        return this.ParamValue;
+    }
+
+    /**
+     * Set 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamValue 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamValue(String ParamValue) {
+        this.ParamValue = ParamValue;
+    }
+
+    /**
      * Get 售卖参数值的展示名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParamValueName 售卖参数值的展示名称
@@ -125,6 +138,26 @@ public class SaleParam extends AbstractModel {
         this.ParamValueName = ParamValueName;
     }
 
+    /**
+     * Get 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamType 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamType() {
+        return this.ParamType;
+    }
+
+    /**
+     * Set 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamType 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamType(String ParamType) {
+        this.ParamType = ParamType;
+    }
+
     public SaleParam() {
     }
 
@@ -136,14 +169,17 @@ public class SaleParam extends AbstractModel {
         if (source.ParamKey != null) {
             this.ParamKey = new String(source.ParamKey);
         }
-        if (source.ParamValue != null) {
-            this.ParamValue = new String(source.ParamValue);
-        }
         if (source.ParamKeyName != null) {
             this.ParamKeyName = new String(source.ParamKeyName);
         }
+        if (source.ParamValue != null) {
+            this.ParamValue = new String(source.ParamValue);
+        }
         if (source.ParamValueName != null) {
             this.ParamValueName = new String(source.ParamValueName);
+        }
+        if (source.ParamType != null) {
+            this.ParamType = new String(source.ParamType);
         }
     }
 
@@ -153,9 +189,10 @@ public class SaleParam extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ParamKey", this.ParamKey);
-        this.setParamSimple(map, prefix + "ParamValue", this.ParamValue);
         this.setParamSimple(map, prefix + "ParamKeyName", this.ParamKeyName);
+        this.setParamSimple(map, prefix + "ParamValue", this.ParamValue);
         this.setParamSimple(map, prefix + "ParamValueName", this.ParamValueName);
+        this.setParamSimple(map, prefix + "ParamType", this.ParamType);
 
     }
 }

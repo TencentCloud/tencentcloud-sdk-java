@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class IDCardConfig extends AbstractModel {
 
     /**
-    * 默认为false
+    * 复印件告警，默认为false
     */
     @SerializedName("CopyWarn")
     @Expose
     private Boolean CopyWarn;
 
     /**
-    * 默认为false
+    * 边框和框内遮挡告警，默认为false
     */
     @SerializedName("BorderCheckWarn")
     @Expose
     private Boolean BorderCheckWarn;
 
     /**
-    * 默认为false
+    * 翻拍告警，默认为false
     */
     @SerializedName("ReshootWarn")
     @Expose
     private Boolean ReshootWarn;
 
     /**
-    * 默认为false
+    * 疑似存在PS痕迹告警，默认为false
     */
     @SerializedName("DetectPsWarn")
     @Expose
     private Boolean DetectPsWarn;
 
     /**
-    * 默认为false
+    * 临时身份证告警，默认为false
     */
     @SerializedName("TempIdWarn")
     @Expose
     private Boolean TempIdWarn;
 
     /**
-    * 默认为false
+    * 身份证有效日期不合法告警，默认为false
     */
     @SerializedName("InvalidDateWarn")
     @Expose
     private Boolean InvalidDateWarn;
 
     /**
-    * 默认为false
+    * 是否开启反光检测，默认为false
     */
     @SerializedName("ReflectWarn")
     @Expose
     private Boolean ReflectWarn;
 
     /**
-     * Get 默认为false 
-     * @return CopyWarn 默认为false
+     * Get 复印件告警，默认为false 
+     * @return CopyWarn 复印件告警，默认为false
      */
     public Boolean getCopyWarn() {
         return this.CopyWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param CopyWarn 默认为false
+     * Set 复印件告警，默认为false
+     * @param CopyWarn 复印件告警，默认为false
      */
     public void setCopyWarn(Boolean CopyWarn) {
         this.CopyWarn = CopyWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return BorderCheckWarn 默认为false
+     * Get 边框和框内遮挡告警，默认为false 
+     * @return BorderCheckWarn 边框和框内遮挡告警，默认为false
      */
     public Boolean getBorderCheckWarn() {
         return this.BorderCheckWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param BorderCheckWarn 默认为false
+     * Set 边框和框内遮挡告警，默认为false
+     * @param BorderCheckWarn 边框和框内遮挡告警，默认为false
      */
     public void setBorderCheckWarn(Boolean BorderCheckWarn) {
         this.BorderCheckWarn = BorderCheckWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return ReshootWarn 默认为false
+     * Get 翻拍告警，默认为false 
+     * @return ReshootWarn 翻拍告警，默认为false
      */
     public Boolean getReshootWarn() {
         return this.ReshootWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param ReshootWarn 默认为false
+     * Set 翻拍告警，默认为false
+     * @param ReshootWarn 翻拍告警，默认为false
      */
     public void setReshootWarn(Boolean ReshootWarn) {
         this.ReshootWarn = ReshootWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return DetectPsWarn 默认为false
+     * Get 疑似存在PS痕迹告警，默认为false 
+     * @return DetectPsWarn 疑似存在PS痕迹告警，默认为false
      */
     public Boolean getDetectPsWarn() {
         return this.DetectPsWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param DetectPsWarn 默认为false
+     * Set 疑似存在PS痕迹告警，默认为false
+     * @param DetectPsWarn 疑似存在PS痕迹告警，默认为false
      */
     public void setDetectPsWarn(Boolean DetectPsWarn) {
         this.DetectPsWarn = DetectPsWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return TempIdWarn 默认为false
+     * Get 临时身份证告警，默认为false 
+     * @return TempIdWarn 临时身份证告警，默认为false
      */
     public Boolean getTempIdWarn() {
         return this.TempIdWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param TempIdWarn 默认为false
+     * Set 临时身份证告警，默认为false
+     * @param TempIdWarn 临时身份证告警，默认为false
      */
     public void setTempIdWarn(Boolean TempIdWarn) {
         this.TempIdWarn = TempIdWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return InvalidDateWarn 默认为false
+     * Get 身份证有效日期不合法告警，默认为false 
+     * @return InvalidDateWarn 身份证有效日期不合法告警，默认为false
      */
     public Boolean getInvalidDateWarn() {
         return this.InvalidDateWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param InvalidDateWarn 默认为false
+     * Set 身份证有效日期不合法告警，默认为false
+     * @param InvalidDateWarn 身份证有效日期不合法告警，默认为false
      */
     public void setInvalidDateWarn(Boolean InvalidDateWarn) {
         this.InvalidDateWarn = InvalidDateWarn;
     }
 
     /**
-     * Get 默认为false 
-     * @return ReflectWarn 默认为false
+     * Get 是否开启反光检测，默认为false 
+     * @return ReflectWarn 是否开启反光检测，默认为false
      */
     public Boolean getReflectWarn() {
         return this.ReflectWarn;
     }
 
     /**
-     * Set 默认为false
-     * @param ReflectWarn 默认为false
+     * Set 是否开启反光检测，默认为false
+     * @param ReflectWarn 是否开启反光检测，默认为false
      */
     public void setReflectWarn(Boolean ReflectWarn) {
         this.ReflectWarn = ReflectWarn;

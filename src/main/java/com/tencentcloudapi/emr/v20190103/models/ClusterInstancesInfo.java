@@ -25,7 +25,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * ID号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -49,7 +47,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -57,7 +54,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -65,7 +61,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -73,7 +68,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -81,7 +75,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -89,7 +82,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -97,7 +89,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -105,7 +96,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -140,7 +130,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 <li>34：表示集群已退费。</li>
 <li>301：表示创建失败。</li>
 <li>302：表示扩容失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -148,7 +137,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 添加时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -156,7 +144,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunTime")
     @Expose
@@ -172,7 +159,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterIp")
     @Expose
@@ -180,7 +166,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmrVersion")
     @Expose
@@ -188,7 +173,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
     @Expose
@@ -196,7 +180,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 交易版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeVersion")
     @Expose
@@ -204,7 +187,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceOrderId")
     @Expose
@@ -212,7 +194,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTradeCluster")
     @Expose
@@ -220,7 +201,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmInfo")
     @Expose
@@ -228,7 +208,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 是否采用新架构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWoodpeckerCluster")
     @Expose
@@ -236,7 +215,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 元数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaDb")
     @Expose
@@ -252,7 +230,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * Hive元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HiveMetaDb")
     @Expose
@@ -260,7 +237,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群类型:EMR,CLICKHOUSE,DRUID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceClass")
     @Expose
@@ -268,7 +244,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasInfo")
     @Expose
@@ -276,7 +251,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群版本Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -284,7 +258,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -292,7 +265,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneName")
     @Expose
@@ -300,7 +272,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneServiceClass")
     @Expose
@@ -308,7 +279,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 场景化EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneEmrVersion")
     @Expose
@@ -316,7 +286,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayName")
     @Expose
@@ -324,7 +293,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * vpc name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -332,7 +300,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * subnet name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetName")
     @Expose
@@ -348,7 +315,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群vpcid 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -356,7 +322,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 子网id 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -372,7 +337,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 是否是跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMultiZoneCluster")
     @Expose
@@ -380,7 +344,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 是否开通异常节点自动补偿
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCvmReplace")
     @Expose
@@ -388,7 +351,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterTitle")
     @Expose
@@ -404,17 +366,22 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
     * 集群绑定的文件系统数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindFileSystemNum")
     @Expose
     private Long BindFileSystemNum;
 
     /**
-     * Get ID号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id ID号
+    * rss集群的绑定列表
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterRelationInfoList")
+    @Expose
+    private ClusterRelationMeta [] ClusterRelationInfoList;
+
+    /**
+     * Get ID号 
+     * @return Id ID号
      */
     public Long getId() {
         return this.Id;
@@ -422,19 +389,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set ID号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id ID号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -442,9 +405,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -475,10 +436,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名 
      * @return ClusterName 集群名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -486,19 +445,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -506,19 +461,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区ID 
      * @return ZoneId 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -526,19 +477,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户APPID 
      * @return AppId 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -546,19 +493,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户UIN 
      * @return Uin 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -566,19 +509,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 项目Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目Id 
      * @return ProjectId 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -586,19 +525,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群VPCID 
      * @return VpcId 集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVpcId() {
         return this.VpcId;
@@ -606,19 +541,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubnetId() {
         return this.SubnetId;
@@ -626,9 +557,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
@@ -662,8 +591,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 <li>33：表示集群等待退费中。</li>
 <li>34：表示集群已退费。</li>
 <li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>302：表示扩容失败。</li> 
      * @return Status 实例的状态码。取值范围：
 <li>2：表示集群运行中。</li>
 <li>3：表示集群创建中。</li>
@@ -692,7 +620,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 <li>34：表示集群已退费。</li>
 <li>301：表示创建失败。</li>
 <li>302：表示扩容失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -727,7 +654,6 @@ public class ClusterInstancesInfo extends AbstractModel {
 <li>34：表示集群已退费。</li>
 <li>301：表示创建失败。</li>
 <li>302：表示扩容失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 实例的状态码。取值范围：
 <li>2：表示集群运行中。</li>
 <li>3：表示集群创建中。</li>
@@ -756,17 +682,14 @@ public class ClusterInstancesInfo extends AbstractModel {
 <li>34：表示集群已退费。</li>
 <li>301：表示创建失败。</li>
 <li>302：表示扩容失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 添加时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加时间 
      * @return AddTime 添加时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -774,19 +697,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 添加时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 添加时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经运行时间 
      * @return RunTime 已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunTime() {
         return this.RunTime;
@@ -794,9 +713,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunTime 已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunTime(String RunTime) {
         this.RunTime = RunTime;
@@ -827,10 +744,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主节点外网IP 
      * @return MasterIp 主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterIp() {
         return this.MasterIp;
@@ -838,19 +753,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterIp 主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterIp(String MasterIp) {
         this.MasterIp = MasterIp;
     }
 
     /**
-     * Get EMR版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EMR版本 
      * @return EmrVersion EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmrVersion() {
         return this.EmrVersion;
@@ -858,19 +769,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmrVersion EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmrVersion(String EmrVersion) {
         this.EmrVersion = EmrVersion;
     }
 
     /**
-     * Get 收费类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收费类型 
      * @return ChargeType 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeType() {
         return this.ChargeType;
@@ -878,19 +785,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 交易版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易版本 
      * @return TradeVersion 交易版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTradeVersion() {
         return this.TradeVersion;
@@ -898,19 +801,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 交易版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeVersion 交易版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeVersion(Long TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
     /**
-     * Get 资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源订单ID 
      * @return ResourceOrderId 资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceOrderId() {
         return this.ResourceOrderId;
@@ -918,19 +817,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceOrderId 资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceOrderId(Long ResourceOrderId) {
         this.ResourceOrderId = ResourceOrderId;
     }
 
     /**
-     * Get 是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否计费集群 
      * @return IsTradeCluster 是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsTradeCluster() {
         return this.IsTradeCluster;
@@ -938,19 +833,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTradeCluster 是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTradeCluster(Long IsTradeCluster) {
         this.IsTradeCluster = IsTradeCluster;
     }
 
     /**
-     * Get 集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群错误状态告警信息 
      * @return AlarmInfo 集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmInfo() {
         return this.AlarmInfo;
@@ -958,19 +849,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmInfo 集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmInfo(String AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get 是否采用新架构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否采用新架构 
      * @return IsWoodpeckerCluster 是否采用新架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsWoodpeckerCluster() {
         return this.IsWoodpeckerCluster;
@@ -978,19 +865,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 是否采用新架构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWoodpeckerCluster 是否采用新架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
         this.IsWoodpeckerCluster = IsWoodpeckerCluster;
     }
 
     /**
-     * Get 元数据库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据库信息 
      * @return MetaDb 元数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetaDb() {
         return this.MetaDb;
@@ -998,9 +881,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 元数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaDb 元数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaDb(String MetaDb) {
         this.MetaDb = MetaDb;
@@ -1027,10 +908,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get Hive元数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Hive元数据信息 
      * @return HiveMetaDb Hive元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHiveMetaDb() {
         return this.HiveMetaDb;
@@ -1038,19 +917,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set Hive元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HiveMetaDb Hive元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHiveMetaDb(String HiveMetaDb) {
         this.HiveMetaDb = HiveMetaDb;
     }
 
     /**
-     * Get 集群类型:EMR,CLICKHOUSE,DRUID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型:EMR,CLICKHOUSE,DRUID 
      * @return ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceClass() {
         return this.ServiceClass;
@@ -1058,19 +933,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群类型:EMR,CLICKHOUSE,DRUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceClass(String ServiceClass) {
         this.ServiceClass = ServiceClass;
     }
 
     /**
-     * Get 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所有节点的别名序列化 
      * @return AliasInfo 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasInfo() {
         return this.AliasInfo;
@@ -1078,19 +949,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasInfo 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasInfo(String AliasInfo) {
         this.AliasInfo = AliasInfo;
     }
 
     /**
-     * Get 集群版本Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群版本Id 
      * @return ProductId 集群版本Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductId() {
         return this.ProductId;
@@ -1098,19 +965,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群版本Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 集群版本Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 地区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区ID 
      * @return Zone 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -1118,19 +981,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 地区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 场景名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景名称 
      * @return SceneName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneName() {
         return this.SceneName;
@@ -1138,19 +997,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景化集群类型 
      * @return SceneServiceClass 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneServiceClass() {
         return this.SceneServiceClass;
@@ -1158,19 +1013,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneServiceClass 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneServiceClass(String SceneServiceClass) {
         this.SceneServiceClass = SceneServiceClass;
     }
 
     /**
-     * Get 场景化EMR版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景化EMR版本 
      * @return SceneEmrVersion 场景化EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneEmrVersion() {
         return this.SceneEmrVersion;
@@ -1178,19 +1029,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 场景化EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneEmrVersion 场景化EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneEmrVersion(String SceneEmrVersion) {
         this.SceneEmrVersion = SceneEmrVersion;
     }
 
     /**
-     * Get 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景化集群类型 
      * @return DisplayName 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisplayName() {
         return this.DisplayName;
@@ -1198,19 +1045,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisplayName 场景化集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get vpc name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc name 
      * @return VpcName vpc name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -1218,19 +1061,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set vpc name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get subnet name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get subnet name 
      * @return SubnetName subnet name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetName() {
         return this.SubnetName;
@@ -1238,9 +1077,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set subnet name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetName subnet name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
@@ -1267,10 +1104,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群vpcid 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群vpcid 字符串类型 
      * @return UniqVpcId 集群vpcid 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -1278,19 +1113,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群vpcid 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId 集群vpcid 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网id 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 字符串类型 
      * @return UniqSubnetId 子网id 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -1298,9 +1129,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 子网id 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 子网id 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
@@ -1327,10 +1156,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是跨AZ集群 
      * @return IsMultiZoneCluster 是否是跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsMultiZoneCluster() {
         return this.IsMultiZoneCluster;
@@ -1338,19 +1165,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 是否是跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsMultiZoneCluster 是否是跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
     /**
-     * Get 是否开通异常节点自动补偿
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通异常节点自动补偿 
      * @return IsCvmReplace 是否开通异常节点自动补偿
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCvmReplace() {
         return this.IsCvmReplace;
@@ -1358,19 +1181,15 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 是否开通异常节点自动补偿
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCvmReplace 是否开通异常节点自动补偿
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCvmReplace(Boolean IsCvmReplace) {
         this.IsCvmReplace = IsCvmReplace;
     }
 
     /**
-     * Get 标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标题 
      * @return ClusterTitle 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterTitle() {
         return this.ClusterTitle;
@@ -1378,9 +1197,7 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterTitle 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterTitle(String ClusterTitle) {
         this.ClusterTitle = ClusterTitle;
@@ -1407,10 +1224,8 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群绑定的文件系统数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群绑定的文件系统数 
      * @return BindFileSystemNum 集群绑定的文件系统数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindFileSystemNum() {
         return this.BindFileSystemNum;
@@ -1418,12 +1233,30 @@ public class ClusterInstancesInfo extends AbstractModel {
 
     /**
      * Set 集群绑定的文件系统数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindFileSystemNum 集群绑定的文件系统数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindFileSystemNum(Long BindFileSystemNum) {
         this.BindFileSystemNum = BindFileSystemNum;
+    }
+
+    /**
+     * Get rss集群的绑定列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterRelationInfoList rss集群的绑定列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterRelationMeta [] getClusterRelationInfoList() {
+        return this.ClusterRelationInfoList;
+    }
+
+    /**
+     * Set rss集群的绑定列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterRelationInfoList rss集群的绑定列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterRelationInfoList(ClusterRelationMeta [] ClusterRelationInfoList) {
+        this.ClusterRelationInfoList = ClusterRelationInfoList;
     }
 
     public ClusterInstancesInfo() {
@@ -1578,6 +1411,12 @@ public class ClusterInstancesInfo extends AbstractModel {
         if (source.BindFileSystemNum != null) {
             this.BindFileSystemNum = new Long(source.BindFileSystemNum);
         }
+        if (source.ClusterRelationInfoList != null) {
+            this.ClusterRelationInfoList = new ClusterRelationMeta[source.ClusterRelationInfoList.length];
+            for (int i = 0; i < source.ClusterRelationInfoList.length; i++) {
+                this.ClusterRelationInfoList[i] = new ClusterRelationMeta(source.ClusterRelationInfoList[i]);
+            }
+        }
     }
 
 
@@ -1630,6 +1469,7 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
         this.setParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
         this.setParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
+        this.setParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
 
     }
 }

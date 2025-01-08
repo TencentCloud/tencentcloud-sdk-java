@@ -45,7 +45,7 @@ public class NodeProperty extends AbstractModel {
     private String Address;
 
     /**
-    * 节点公网访问地址(IP或域名)。
+    * 节点公网访问外网地址(IP或域名，示例为IP方式)。
     */
     @SerializedName("WanServiceAddress")
     @Expose
@@ -156,16 +156,16 @@ public class NodeProperty extends AbstractModel {
     }
 
     /**
-     * Get 节点公网访问地址(IP或域名)。 
-     * @return WanServiceAddress 节点公网访问地址(IP或域名)。
+     * Get 节点公网访问外网地址(IP或域名，示例为IP方式)。 
+     * @return WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
      */
     public String getWanServiceAddress() {
         return this.WanServiceAddress;
     }
 
     /**
-     * Set 节点公网访问地址(IP或域名)。
-     * @param WanServiceAddress 节点公网访问地址(IP或域名)。
+     * Set 节点公网访问外网地址(IP或域名，示例为IP方式)。
+     * @param WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
      */
     public void setWanServiceAddress(String WanServiceAddress) {
         this.WanServiceAddress = WanServiceAddress;

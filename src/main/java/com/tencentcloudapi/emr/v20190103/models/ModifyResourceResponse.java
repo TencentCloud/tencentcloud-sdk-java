@@ -25,7 +25,6 @@ public class ModifyResourceResponse extends AbstractModel {
 
     /**
     * 流程traceId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceId")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程traceId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程traceId 
      * @return TraceId 流程traceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceId() {
         return this.TraceId;
@@ -50,9 +47,7 @@ public class ModifyResourceResponse extends AbstractModel {
 
     /**
      * Set 流程traceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceId 流程traceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

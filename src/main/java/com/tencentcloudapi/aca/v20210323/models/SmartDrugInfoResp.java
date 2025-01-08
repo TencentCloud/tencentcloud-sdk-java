@@ -339,7 +339,7 @@ public class SmartDrugInfoResp extends AbstractModel {
     private String DrugBasicCode;
 
     /**
-    * OCT标签
+    * OTC标签
     */
     @SerializedName("OctTag")
     @Expose
@@ -1066,16 +1066,16 @@ public class SmartDrugInfoResp extends AbstractModel {
     }
 
     /**
-     * Get OCT标签 
-     * @return OctTag OCT标签
+     * Get OTC标签 
+     * @return OctTag OTC标签
      */
     public String getOctTag() {
         return this.OctTag;
     }
 
     /**
-     * Set OCT标签
-     * @param OctTag OCT标签
+     * Set OTC标签
+     * @param OctTag OTC标签
      */
     public void setOctTag(String OctTag) {
         this.OctTag = OctTag;

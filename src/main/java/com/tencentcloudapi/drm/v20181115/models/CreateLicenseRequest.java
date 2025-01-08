@@ -60,6 +60,14 @@ public class CreateLicenseRequest extends AbstractModel {
     private PlaybackPolicy PlaybackPolicy;
 
     /**
+    * Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+    */
+    @SerializedName("WidevineSecurityLevel")
+    @Expose
+    private String WidevineSecurityLevel;
+
+    /**
      * Get DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。 
      * @return DrmType DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      */
@@ -143,6 +151,26 @@ public class CreateLicenseRequest extends AbstractModel {
         this.PlaybackPolicy = PlaybackPolicy;
     }
 
+    /**
+     * Get Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。 
+     * @return WidevineSecurityLevel Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+     */
+    public String getWidevineSecurityLevel() {
+        return this.WidevineSecurityLevel;
+    }
+
+    /**
+     * Set Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+     * @param WidevineSecurityLevel Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+     */
+    public void setWidevineSecurityLevel(String WidevineSecurityLevel) {
+        this.WidevineSecurityLevel = WidevineSecurityLevel;
+    }
+
     public CreateLicenseRequest() {
     }
 
@@ -169,6 +197,9 @@ public class CreateLicenseRequest extends AbstractModel {
         if (source.PlaybackPolicy != null) {
             this.PlaybackPolicy = new PlaybackPolicy(source.PlaybackPolicy);
         }
+        if (source.WidevineSecurityLevel != null) {
+            this.WidevineSecurityLevel = new String(source.WidevineSecurityLevel);
+        }
     }
 
 
@@ -181,6 +212,7 @@ public class CreateLicenseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamArraySimple(map, prefix + "Tracks.", this.Tracks);
         this.setParamObj(map, prefix + "PlaybackPolicy.", this.PlaybackPolicy);
+        this.setParamSimple(map, prefix + "WidevineSecurityLevel", this.WidevineSecurityLevel);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     private String SubscribeId;
 
     /**
+    * 订阅 ID 筛选，精确匹配
+    */
+    @SerializedName("SubscribeIds")
+    @Expose
+    private String [] SubscribeIds;
+
+    /**
     * 订阅名称，前缀模糊匹配
     */
     @SerializedName("SubscribeName")
@@ -121,6 +128,22 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
+    }
+
+    /**
+     * Get 订阅 ID 筛选，精确匹配 
+     * @return SubscribeIds 订阅 ID 筛选，精确匹配
+     */
+    public String [] getSubscribeIds() {
+        return this.SubscribeIds;
+    }
+
+    /**
+     * Set 订阅 ID 筛选，精确匹配
+     * @param SubscribeIds 订阅 ID 筛选，精确匹配
+     */
+    public void setSubscribeIds(String [] SubscribeIds) {
+        this.SubscribeIds = SubscribeIds;
     }
 
     /**
@@ -310,6 +333,12 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
         if (source.SubscribeId != null) {
             this.SubscribeId = new String(source.SubscribeId);
         }
+        if (source.SubscribeIds != null) {
+            this.SubscribeIds = new String[source.SubscribeIds.length];
+            for (int i = 0; i < source.SubscribeIds.length; i++) {
+                this.SubscribeIds[i] = new String(source.SubscribeIds[i]);
+            }
+        }
         if (source.SubscribeName != null) {
             this.SubscribeName = new String(source.SubscribeName);
         }
@@ -360,6 +389,7 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+        this.setParamArraySimple(map, prefix + "SubscribeIds.", this.SubscribeIds);
         this.setParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);

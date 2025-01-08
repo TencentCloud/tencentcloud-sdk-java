@@ -25,7 +25,6 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
     * Header名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
     * Header值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,17 +39,14 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
     * Header类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppendAction")
     @Expose
     private String AppendAction;
 
     /**
-     * Get Header名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Header名称 
      * @return Key Header名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -59,19 +54,15 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
      * Set Header名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key Header名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Header值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Header值 
      * @return Value Header值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -79,19 +70,15 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
      * Set Header值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value Header值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Header类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Header类型 
      * @return AppendAction Header类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppendAction() {
         return this.AppendAction;
@@ -99,9 +86,7 @@ public class CustomRequestToAdd extends AbstractModel {
 
     /**
      * Set Header类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppendAction Header类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppendAction(String AppendAction) {
         this.AppendAction = AppendAction;

@@ -25,7 +25,6 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
 
     /**
     * 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 项目列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目列表 
      * @return ProjectList 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseProjectVersion [] getProjectList() {
         return this.ProjectList;
@@ -58,19 +54,15 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
 
     /**
      * Set 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectList 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectList(CloudBaseProjectVersion [] ProjectList) {
         this.ProjectList = ProjectList;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

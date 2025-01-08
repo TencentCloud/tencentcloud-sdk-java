@@ -87,7 +87,6 @@ public class OrderInfo extends AbstractModel {
 
     /**
     * 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtensionId")
     @Expose
@@ -95,7 +94,6 @@ public class OrderInfo extends AbstractModel {
 
     /**
     * 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceReady")
     @Expose
@@ -105,7 +103,6 @@ public class OrderInfo extends AbstractModel {
     * 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flag")
     @Expose
@@ -283,10 +280,8 @@ public class OrderInfo extends AbstractModel {
     }
 
     /**
-     * Get 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单绑定的扩展ID 
      * @return ExtensionId 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtensionId() {
         return this.ExtensionId;
@@ -294,19 +289,15 @@ public class OrderInfo extends AbstractModel {
 
     /**
      * Set 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtensionId 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtensionId(String ExtensionId) {
         this.ExtensionId = ExtensionId;
     }
 
     /**
-     * Get 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化) 
      * @return ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceReady() {
         return this.ResourceReady;
@@ -314,9 +305,7 @@ public class OrderInfo extends AbstractModel {
 
     /**
      * Set 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceReady(String ResourceReady) {
         this.ResourceReady = ResourceReady;
@@ -325,12 +314,10 @@ public class OrderInfo extends AbstractModel {
     /**
      * Get 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
-<li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>Activity：活动来源</li> 
      * @return Flag 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlag() {
         return this.Flag;
@@ -340,11 +327,9 @@ public class OrderInfo extends AbstractModel {
      * Set 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flag 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlag(String Flag) {
         this.Flag = Flag;

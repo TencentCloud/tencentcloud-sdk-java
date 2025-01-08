@@ -25,7 +25,6 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
     * 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
     * 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,17 +39,14 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
     * 优先级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数的Key 
      * @return Key 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -59,19 +54,15 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
      * Set 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数的Value 
      * @return Value 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -79,19 +70,15 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
      * Set 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 优先级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先级 
      * @return Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -99,9 +86,7 @@ public class CloudBaseRunKVPriority extends AbstractModel {
 
     /**
      * Set 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

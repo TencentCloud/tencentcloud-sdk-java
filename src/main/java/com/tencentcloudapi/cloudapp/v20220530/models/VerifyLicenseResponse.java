@@ -31,6 +31,20 @@ public class VerifyLicenseResponse extends AbstractModel {
     private License License;
 
     /**
+    * 当前请求服务端的时间戳，格式为RFC3339
+    */
+    @SerializedName("Timestamp")
+    @Expose
+    private String Timestamp;
+
+    /**
+    * 对License字段对应的json数据的签名
+    */
+    @SerializedName("Signature")
+    @Expose
+    private String Signature;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class VerifyLicenseResponse extends AbstractModel {
      */
     public void setLicense(License License) {
         this.License = License;
+    }
+
+    /**
+     * Get 当前请求服务端的时间戳，格式为RFC3339 
+     * @return Timestamp 当前请求服务端的时间戳，格式为RFC3339
+     */
+    public String getTimestamp() {
+        return this.Timestamp;
+    }
+
+    /**
+     * Set 当前请求服务端的时间戳，格式为RFC3339
+     * @param Timestamp 当前请求服务端的时间戳，格式为RFC3339
+     */
+    public void setTimestamp(String Timestamp) {
+        this.Timestamp = Timestamp;
+    }
+
+    /**
+     * Get 对License字段对应的json数据的签名 
+     * @return Signature 对License字段对应的json数据的签名
+     */
+    public String getSignature() {
+        return this.Signature;
+    }
+
+    /**
+     * Set 对License字段对应的json数据的签名
+     * @param Signature 对License字段对应的json数据的签名
+     */
+    public void setSignature(String Signature) {
+        this.Signature = Signature;
     }
 
     /**
@@ -80,6 +126,12 @@ public class VerifyLicenseResponse extends AbstractModel {
         if (source.License != null) {
             this.License = new License(source.License);
         }
+        if (source.Timestamp != null) {
+            this.Timestamp = new String(source.Timestamp);
+        }
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +143,8 @@ public class VerifyLicenseResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "License.", this.License);
+        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "Signature", this.Signature);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

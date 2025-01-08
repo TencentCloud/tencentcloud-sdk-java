@@ -25,7 +25,6 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
     * 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StaticDomain")
     @Expose
@@ -33,7 +32,6 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
     * 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDirName")
     @Expose
@@ -41,7 +39,6 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
     * 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
     * cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,17 +53,14 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
     * bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-     * Get 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 静态CDN域名 
      * @return StaticDomain 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStaticDomain() {
         return this.StaticDomain;
@@ -75,19 +68,15 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
      * Set 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StaticDomain 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStaticDomain(String StaticDomain) {
         this.StaticDomain = StaticDomain;
     }
 
     /**
-     * Get 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 静态CDN默认文件夹，当前为根目录 
      * @return DefaultDirName 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultDirName() {
         return this.DefaultDirName;
@@ -95,19 +84,15 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
      * Set 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultDirName 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDirName(String DefaultDirName) {
         this.DefaultDirName = DefaultDirName;
     }
 
     /**
-     * Get 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源状态(process/online/offline/init) 
      * @return Status 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -115,19 +100,15 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
      * Set 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos所属区域 
      * @return Region cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -135,19 +116,15 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
      * Set cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get bucket信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get bucket信息 
      * @return Bucket bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -155,9 +132,7 @@ public class StaticStorageInfo extends AbstractModel {
 
     /**
      * Set bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

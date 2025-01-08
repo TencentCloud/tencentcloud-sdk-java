@@ -25,7 +25,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
     @Expose
@@ -39,7 +38,6 @@ public class Resource extends AbstractModel {
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -51,7 +49,6 @@ public class Resource extends AbstractModel {
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -59,7 +56,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemSize")
     @Expose
@@ -67,7 +63,6 @@ public class Resource extends AbstractModel {
 
     /**
     * CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -75,7 +70,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -83,7 +77,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootSize")
     @Expose
@@ -107,7 +100,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -115,7 +107,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDiskNum")
     @Expose
@@ -123,17 +114,14 @@ public class Resource extends AbstractModel {
 
     /**
     * 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskNum")
     @Expose
     private Long DiskNum;
 
     /**
-     * Get 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点规格描述，如CVM.SA2。 
      * @return Spec 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
         return this.Spec;
@@ -141,9 +129,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
@@ -156,8 +142,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断 
      * @return StorageType 存储类型
 取值范围：
 <li>4：表示云SSD。</li>
@@ -165,7 +150,6 @@ public class Resource extends AbstractModel {
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageType() {
         return this.StorageType;
@@ -179,7 +163,6 @@ public class Resource extends AbstractModel {
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 存储类型
 取值范围：
 <li>4：表示云SSD。</li>
@@ -187,7 +170,6 @@ public class Resource extends AbstractModel {
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
@@ -198,14 +180,12 @@ public class Resource extends AbstractModel {
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
-<li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>CLOUD_BASIC：表示云硬盘。</li> 
      * @return DiskType 磁盘类型
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -217,23 +197,19 @@ public class Resource extends AbstractModel {
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 磁盘类型
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存容量,单位为M 
      * @return MemSize 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemSize() {
         return this.MemSize;
@@ -241,19 +217,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get CPU核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU核数 
      * @return Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -261,19 +233,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘容量 
      * @return DiskSize 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -281,19 +249,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘容量 
      * @return RootSize 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootSize() {
         return this.RootSize;
@@ -301,9 +265,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
@@ -350,10 +312,8 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格类型，如S2.MEDIUM8 
      * @return InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -361,19 +321,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地盘数量，该字段已废弃 
      * @return LocalDiskNum 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocalDiskNum() {
         return this.LocalDiskNum;
@@ -381,19 +337,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalDiskNum 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
         this.LocalDiskNum = LocalDiskNum;
     }
 
     /**
-     * Get 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地盘数量，如2 
      * @return DiskNum 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskNum() {
         return this.DiskNum;
@@ -401,9 +353,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskNum 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;

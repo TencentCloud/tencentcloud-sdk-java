@@ -356,6 +356,14 @@ public class NotebookDetail extends AbstractModel {
     private String JobCreateTime;
 
     /**
+    * Appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
      * Get notebook  ID 
      * @return Id notebook  ID
      */
@@ -1167,6 +1175,26 @@ public class NotebookDetail extends AbstractModel {
         this.JobCreateTime = JobCreateTime;
     }
 
+    /**
+     * Get Appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId Appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set Appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId Appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
     public NotebookDetail() {
     }
 
@@ -1316,6 +1344,9 @@ public class NotebookDetail extends AbstractModel {
         if (source.JobCreateTime != null) {
             this.JobCreateTime = new String(source.JobCreateTime);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
     }
 
 
@@ -1366,6 +1397,7 @@ public class NotebookDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

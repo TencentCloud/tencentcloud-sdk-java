@@ -31,7 +31,7 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+    * 1表示按负载规则扩缩容，2表示按时间规则扩缩容。必须填写，并且和下面的规则策略匹配
     */
     @SerializedName("StrategyType")
     @Expose
@@ -68,16 +68,16 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配 
-     * @return StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+     * Get 1表示按负载规则扩缩容，2表示按时间规则扩缩容。必须填写，并且和下面的规则策略匹配 
+     * @return StrategyType 1表示按负载规则扩缩容，2表示按时间规则扩缩容。必须填写，并且和下面的规则策略匹配
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
-     * @param StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+     * Set 1表示按负载规则扩缩容，2表示按时间规则扩缩容。必须填写，并且和下面的规则策略匹配
+     * @param StrategyType 1表示按负载规则扩缩容，2表示按时间规则扩缩容。必须填写，并且和下面的规则策略匹配
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;

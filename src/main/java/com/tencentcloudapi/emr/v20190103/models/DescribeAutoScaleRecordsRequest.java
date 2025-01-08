@@ -31,7 +31,11 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+    * 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
     */
     @SerializedName("Filters")
     @Expose
@@ -59,6 +63,13 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     private Long RecordSource;
 
     /**
+    * 是否升序，1:升序，0:降序
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Long Asc;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -75,16 +86,32 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式 
-     * @return Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+     * Get 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+ 
+     * @return Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
      */
     public KeyValue [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
-     * @param Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+     * Set 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
+     * @param Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
      */
     public void setFilters(KeyValue [] Filters) {
         this.Filters = Filters;
@@ -138,6 +165,22 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.RecordSource = RecordSource;
     }
 
+    /**
+     * Get 是否升序，1:升序，0:降序 
+     * @return Asc 是否升序，1:升序，0:降序
+     */
+    public Long getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 是否升序，1:升序，0:降序
+     * @param Asc 是否升序，1:升序，0:降序
+     */
+    public void setAsc(Long Asc) {
+        this.Asc = Asc;
+    }
+
     public DescribeAutoScaleRecordsRequest() {
     }
 
@@ -164,6 +207,9 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         if (source.RecordSource != null) {
             this.RecordSource = new Long(source.RecordSource);
         }
+        if (source.Asc != null) {
+            this.Asc = new Long(source.Asc);
+        }
     }
 
 
@@ -176,6 +222,7 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "RecordSource", this.RecordSource);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

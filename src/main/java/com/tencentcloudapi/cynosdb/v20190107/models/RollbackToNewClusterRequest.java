@@ -215,6 +215,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private String [] OriginalROInstanceList;
 
     /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -666,6 +673,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.OriginalROInstanceList = OriginalROInstanceList;
     }
 
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -776,6 +799,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
                 this.OriginalROInstanceList[i] = new String(source.OriginalROInstanceList[i]);
             }
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -809,6 +835,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
         this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
         this.setParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

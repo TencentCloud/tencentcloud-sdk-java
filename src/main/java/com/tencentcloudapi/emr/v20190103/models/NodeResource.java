@@ -40,7 +40,6 @@ public class NodeResource extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -48,7 +47,6 @@ public class NodeResource extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -56,7 +54,6 @@ public class NodeResource extends AbstractModel {
 
     /**
     * 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
@@ -64,7 +61,6 @@ public class NodeResource extends AbstractModel {
 
     /**
     * 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxResourceNum")
     @Expose
@@ -115,10 +111,8 @@ public class NodeResource extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -126,19 +120,15 @@ public class NodeResource extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -146,19 +136,15 @@ public class NodeResource extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否默认配置,DEFAULT,BACKUP 
      * @return IsDefault 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsDefault() {
         return this.IsDefault;
@@ -166,19 +152,15 @@ public class NodeResource extends AbstractModel {
 
     /**
      * Set 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该类型剩余 
      * @return MaxResourceNum 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxResourceNum() {
         return this.MaxResourceNum;
@@ -186,9 +168,7 @@ public class NodeResource extends AbstractModel {
 
     /**
      * Set 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxResourceNum 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxResourceNum(Long MaxResourceNum) {
         this.MaxResourceNum = MaxResourceNum;

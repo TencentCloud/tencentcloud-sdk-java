@@ -25,7 +25,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * es的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * secret名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretName")
     @Expose
@@ -41,7 +39,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -49,7 +46,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -57,7 +53,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * 索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -65,7 +60,6 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Account")
     @Expose
@@ -73,17 +67,14 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
     * 密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get es的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es的id 
      * @return Id es的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -91,19 +82,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set es的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id es的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get secret名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get secret名字 
      * @return SecretName secret名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretName() {
         return this.SecretName;
@@ -111,19 +98,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set secret名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretName secret名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip地址 
      * @return Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -131,19 +114,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -151,19 +130,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引 
      * @return Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndex() {
         return this.Index;
@@ -171,19 +146,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return Account 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccount() {
         return this.Account;
@@ -191,19 +162,15 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Account 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密码 
      * @return Password 密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -211,9 +178,7 @@ public class CloudBaseEsInfo extends AbstractModel {
 
     /**
      * Set 密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password 密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;

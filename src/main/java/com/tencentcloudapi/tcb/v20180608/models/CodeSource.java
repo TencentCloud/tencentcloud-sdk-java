@@ -25,7 +25,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -41,7 +39,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkDir")
     @Expose
@@ -57,7 +53,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodingPackageName")
     @Expose
@@ -65,7 +60,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodingPackageVersion")
     @Expose
@@ -73,7 +67,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 源码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawCode")
     @Expose
@@ -81,7 +74,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Branch")
     @Expose
@@ -89,7 +81,6 @@ public class CodeSource extends AbstractModel {
 
     /**
     * coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -97,17 +88,14 @@ public class CodeSource extends AbstractModel {
 
     /**
     * coding项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-     * Get 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode" 
      * @return Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -115,19 +103,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载链接 
      * @return Url 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -135,19 +119,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,19 +135,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 工作目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作目录 
      * @return WorkDir 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkDir() {
         return this.WorkDir;
@@ -175,19 +151,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkDir 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkDir(String WorkDir) {
         this.WorkDir = WorkDir;
     }
 
     /**
-     * Get code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get code包名, type为coding的时候需要填写 
      * @return CodingPackageName code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodingPackageName() {
         return this.CodingPackageName;
@@ -195,19 +167,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodingPackageName code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodingPackageName(String CodingPackageName) {
         this.CodingPackageName = CodingPackageName;
     }
 
     /**
-     * Get coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get coding版本名, type为coding的时候需要填写 
      * @return CodingPackageVersion coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodingPackageVersion() {
         return this.CodingPackageVersion;
@@ -215,19 +183,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodingPackageVersion coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodingPackageVersion(String CodingPackageVersion) {
         this.CodingPackageVersion = CodingPackageVersion;
     }
 
     /**
-     * Get 源码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源码 
      * @return RawCode 源码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRawCode() {
         return this.RawCode;
@@ -235,19 +199,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 源码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RawCode 源码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawCode(String RawCode) {
         this.RawCode = RawCode;
     }
 
     /**
-     * Get 代码分支
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代码分支 
      * @return Branch 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBranch() {
         return this.Branch;
@@ -255,19 +215,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Branch 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBranch(String Branch) {
         this.Branch = Branch;
     }
 
     /**
-     * Get coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get coding项目ID，type为coding时需要填写 
      * @return ProjectId coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -275,19 +231,15 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get coding项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get coding项目 
      * @return ProjectName coding项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -295,9 +247,7 @@ public class CodeSource extends AbstractModel {
 
     /**
      * Set coding项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName coding项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;

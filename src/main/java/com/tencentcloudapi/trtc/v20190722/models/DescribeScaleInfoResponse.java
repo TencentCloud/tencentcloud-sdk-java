@@ -32,7 +32,6 @@ public class DescribeScaleInfoResponse extends AbstractModel {
 
     /**
     * 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeScaleInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的数据 
      * @return ScaleList 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScaleInfomation [] getScaleList() {
         return this.ScaleList;
@@ -73,9 +70,7 @@ public class DescribeScaleInfoResponse extends AbstractModel {
 
     /**
      * Set 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleList 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleList(ScaleInfomation [] ScaleList) {
         this.ScaleList = ScaleList;

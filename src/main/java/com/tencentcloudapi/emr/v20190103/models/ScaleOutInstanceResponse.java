@@ -40,7 +40,6 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientToken")
     @Expose
@@ -48,7 +47,6 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -56,7 +54,6 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillId")
     @Expose
@@ -64,7 +61,6 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceId")
     @Expose
@@ -114,10 +110,8 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端Token。 
      * @return ClientToken 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientToken() {
         return this.ClientToken;
@@ -125,19 +119,15 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientToken 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩容流程ID。 
      * @return FlowId 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -145,19 +135,15 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大订单号。 
      * @return BillId 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillId() {
         return this.BillId;
@@ -165,19 +151,15 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillId 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩容TraceId 
      * @return TraceId 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceId() {
         return this.TraceId;
@@ -185,9 +167,7 @@ public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceId 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

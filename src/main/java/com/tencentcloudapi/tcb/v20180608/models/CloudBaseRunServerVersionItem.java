@@ -32,7 +32,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -47,7 +46,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -55,7 +53,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -63,7 +60,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 构建ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildId")
     @Expose
@@ -71,7 +67,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 构建方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadType")
     @Expose
@@ -79,7 +74,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -87,7 +81,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * url中的参数路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlParam")
     @Expose
@@ -95,7 +88,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 优先级（数值越小，优先级越高）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -103,7 +95,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefaultPriority")
     @Expose
@@ -119,7 +110,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinReplicas")
     @Expose
@@ -127,7 +117,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReplicas")
     @Expose
@@ -135,7 +124,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunId")
     @Expose
@@ -143,7 +131,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -151,7 +138,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * 当前副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentReplicas")
     @Expose
@@ -159,7 +145,6 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
     * Monolithic，Microservice
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Architecture")
     @Expose
@@ -182,10 +167,8 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -193,9 +176,7 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -218,10 +199,8 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -229,19 +208,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -249,19 +224,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 构建ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构建ID 
      * @return BuildId 构建ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBuildId() {
         return this.BuildId;
@@ -269,19 +240,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 构建ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildId 构建ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildId(Long BuildId) {
         this.BuildId = BuildId;
     }
 
     /**
-     * Get 构建方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构建方式 
      * @return UploadType 构建方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadType() {
         return this.UploadType;
@@ -289,19 +256,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 构建方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadType 构建方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadType(String UploadType) {
         this.UploadType = UploadType;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -309,19 +272,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get url中的参数路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get url中的参数路径 
      * @return UrlParam url中的参数路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectKV getUrlParam() {
         return this.UrlParam;
@@ -329,19 +288,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set url中的参数路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlParam url中的参数路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlParam(ObjectKV UrlParam) {
         this.UrlParam = UrlParam;
     }
 
     /**
-     * Get 优先级（数值越小，优先级越高）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先级（数值越小，优先级越高） 
      * @return Priority 优先级（数值越小，优先级越高）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -349,19 +304,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 优先级（数值越小，优先级越高）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先级（数值越小，优先级越高）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是默认兜底版本 
      * @return IsDefaultPriority 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefaultPriority() {
         return this.IsDefaultPriority;
@@ -369,9 +320,7 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefaultPriority 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefaultPriority(Boolean IsDefaultPriority) {
         this.IsDefaultPriority = IsDefaultPriority;
@@ -398,10 +347,8 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
     }
 
     /**
-     * Get 最小副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小副本数 
      * @return MinReplicas 最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
@@ -409,19 +356,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinReplicas 最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;
     }
 
     /**
-     * Get 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大副本数 
      * @return MaxReplicas 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
@@ -429,19 +372,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicas 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
     }
 
     /**
-     * Get 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作记录id 
      * @return RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunId() {
         return this.RunId;
@@ -449,19 +388,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;
     }
 
     /**
-     * Get 进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度 
      * @return Percent 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -469,19 +404,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 当前副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前副本数 
      * @return CurrentReplicas 当前副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentReplicas() {
         return this.CurrentReplicas;
@@ -489,19 +420,15 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set 当前副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentReplicas 当前副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentReplicas(Long CurrentReplicas) {
         this.CurrentReplicas = CurrentReplicas;
     }
 
     /**
-     * Get Monolithic，Microservice
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Monolithic，Microservice 
      * @return Architecture Monolithic，Microservice
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchitecture() {
         return this.Architecture;
@@ -509,9 +436,7 @@ public class CloudBaseRunServerVersionItem extends AbstractModel {
 
     /**
      * Set Monolithic，Microservice
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Architecture Monolithic，Microservice
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;

@@ -103,7 +103,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CircuitCode")
     @Expose
@@ -118,7 +117,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vlan")
     @Expose
@@ -126,7 +124,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TencentAddress")
     @Expose
@@ -134,7 +131,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomerAddress")
     @Expose
@@ -142,7 +138,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomerName")
     @Expose
@@ -150,7 +145,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomerContactMail")
     @Expose
@@ -158,7 +152,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomerContactNumber")
     @Expose
@@ -166,7 +159,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -174,7 +166,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
     @Expose
@@ -182,7 +173,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaultReportContactPerson")
     @Expose
@@ -190,7 +180,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaultReportContactNumber")
     @Expose
@@ -198,7 +187,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -213,7 +201,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdcCity")
     @Expose
@@ -221,7 +208,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeState")
     @Expose
@@ -229,7 +215,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -237,7 +222,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignLaw")
     @Expose
@@ -245,7 +229,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalZone")
     @Expose
@@ -253,7 +236,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VlanZeroDirectConnectTunnelCount")
     @Expose
@@ -261,7 +243,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherVlanDirectConnectTunnelCount")
     @Expose
@@ -269,7 +250,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinBandwidth")
     @Expose
@@ -277,7 +257,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Construct")
     @Expose
@@ -285,7 +264,6 @@ public class DirectConnect extends AbstractModel {
 
     /**
     * 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPointName")
     @Expose
@@ -484,10 +462,8 @@ public class DirectConnect extends AbstractModel {
     }
 
     /**
-     * Get 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运营商或者服务商为物理专线提供的电路编码。 
      * @return CircuitCode 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCircuitCode() {
         return this.CircuitCode;
@@ -495,9 +471,7 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CircuitCode 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCircuitCode(String CircuitCode) {
         this.CircuitCode = CircuitCode;
@@ -520,10 +494,8 @@ public class DirectConnect extends AbstractModel {
     }
 
     /**
-     * Get 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。 
      * @return Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVlan() {
         return this.Vlan;
@@ -531,19 +503,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
     }
 
     /**
-     * Get 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线调试腾讯侧互联IP。 
      * @return TencentAddress 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTencentAddress() {
         return this.TencentAddress;
@@ -551,19 +519,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TencentAddress 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTencentAddress(String TencentAddress) {
         this.TencentAddress = TencentAddress;
     }
 
     /**
-     * Get 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线调试用户侧互联IP。 
      * @return CustomerAddress 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomerAddress() {
         return this.CustomerAddress;
@@ -571,19 +535,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerAddress 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomerAddress(String CustomerAddress) {
         this.CustomerAddress = CustomerAddress;
     }
 
     /**
-     * Get 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线申请者姓名。默认从账户体系获取。 
      * @return CustomerName 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomerName() {
         return this.CustomerName;
@@ -591,19 +551,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerName 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomerName(String CustomerName) {
         this.CustomerName = CustomerName;
     }
 
     /**
-     * Get 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线申请者联系邮箱。默认从账户体系获取。 
      * @return CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomerContactMail() {
         return this.CustomerContactMail;
@@ -611,19 +567,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomerContactMail(String CustomerContactMail) {
         this.CustomerContactMail = CustomerContactMail;
     }
 
     /**
-     * Get 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线申请者联系号码。默认从账户体系获取。 
      * @return CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomerContactNumber() {
         return this.CustomerContactNumber;
@@ -631,19 +583,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomerContactNumber(String CustomerContactNumber) {
         this.CustomerContactNumber = CustomerContactNumber;
     }
 
     /**
-     * Get 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线的过期时间。 
      * @return ExpiredTime 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
@@ -651,19 +599,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。 
      * @return ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
         return this.ChargeType;
@@ -671,19 +615,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报障联系人。 
      * @return FaultReportContactPerson 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFaultReportContactPerson() {
         return this.FaultReportContactPerson;
@@ -691,19 +631,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaultReportContactPerson 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaultReportContactPerson(String FaultReportContactPerson) {
         this.FaultReportContactPerson = FaultReportContactPerson;
     }
 
     /**
-     * Get 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报障联系电话。 
      * @return FaultReportContactNumber 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFaultReportContactNumber() {
         return this.FaultReportContactNumber;
@@ -711,19 +647,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaultReportContactNumber 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaultReportContactNumber(String FaultReportContactNumber) {
         this.FaultReportContactNumber = FaultReportContactNumber;
     }
 
     /**
-     * Get 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对 
      * @return TagSet 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -731,9 +663,7 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -756,10 +686,8 @@ public class DirectConnect extends AbstractModel {
     }
 
     /**
-     * Get IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IDC所在城市 
      * @return IdcCity IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdcCity() {
         return this.IdcCity;
@@ -767,19 +695,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdcCity IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdcCity(String IdcCity) {
         this.IdcCity = IdcCity;
     }
 
     /**
-     * Get 计费状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费状态 
      * @return ChargeState 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeState() {
         return this.ChargeState;
@@ -787,19 +711,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeState 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeState(String ChargeState) {
         this.ChargeState = ChargeState;
     }
 
     /**
-     * Get 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线开通时间 
      * @return StartTime 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -807,19 +727,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线是否已签署用户协议 
      * @return SignLaw 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSignLaw() {
         return this.SignLaw;
@@ -827,19 +743,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignLaw 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignLaw(Boolean SignLaw) {
         this.SignLaw = SignLaw;
     }
 
     /**
-     * Get 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线是否为LocalZone 
      * @return LocalZone 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLocalZone() {
         return this.LocalZone;
@@ -847,19 +759,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalZone 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalZone(Boolean LocalZone) {
         this.LocalZone = LocalZone;
     }
 
     /**
-     * Get 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该物理专线下vlan 0的专用通道数量 
      * @return VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVlanZeroDirectConnectTunnelCount() {
         return this.VlanZeroDirectConnectTunnelCount;
@@ -867,19 +775,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVlanZeroDirectConnectTunnelCount(Long VlanZeroDirectConnectTunnelCount) {
         this.VlanZeroDirectConnectTunnelCount = VlanZeroDirectConnectTunnelCount;
     }
 
     /**
-     * Get 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该物理专线下非vlan 0的专用通道数量 
      * @return OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOtherVlanDirectConnectTunnelCount() {
         return this.OtherVlanDirectConnectTunnelCount;
@@ -887,19 +791,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherVlanDirectConnectTunnelCount(Long OtherVlanDirectConnectTunnelCount) {
         this.OtherVlanDirectConnectTunnelCount = OtherVlanDirectConnectTunnelCount;
     }
 
     /**
-     * Get 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线最小带宽 
      * @return MinBandwidth 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinBandwidth() {
         return this.MinBandwidth;
@@ -907,19 +807,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinBandwidth 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinBandwidth(Long MinBandwidth) {
         this.MinBandwidth = MinBandwidth;
     }
 
     /**
-     * Get 建设模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建设模式 
      * @return Construct 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConstruct() {
         return this.Construct;
@@ -927,19 +823,15 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Construct 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstruct(Long Construct) {
         this.Construct = Construct;
     }
 
     /**
-     * Get 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理专线的接入点名称 
      * @return AccessPointName 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPointName() {
         return this.AccessPointName;
@@ -947,9 +839,7 @@ public class DirectConnect extends AbstractModel {
 
     /**
      * Set 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessPointName 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPointName(String AccessPointName) {
         this.AccessPointName = AccessPointName;

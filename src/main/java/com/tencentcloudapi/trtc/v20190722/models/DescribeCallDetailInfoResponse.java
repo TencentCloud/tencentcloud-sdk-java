@@ -32,7 +32,6 @@ public class DescribeCallDetailInfoResponse extends AbstractModel {
 
     /**
     * 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserList")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeCallDetailInfoResponse extends AbstractModel {
 
     /**
     * 质量数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeCallDetailInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户信息列表 
      * @return UserList 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserInformation [] getUserList() {
         return this.UserList;
@@ -81,19 +77,15 @@ public class DescribeCallDetailInfoResponse extends AbstractModel {
 
     /**
      * Set 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserList 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserList(UserInformation [] UserList) {
         this.UserList = UserList;
     }
 
     /**
-     * Get 质量数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 质量数据 
      * @return Data 质量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityData [] getData() {
         return this.Data;
@@ -101,9 +93,7 @@ public class DescribeCallDetailInfoResponse extends AbstractModel {
 
     /**
      * Set 质量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 质量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(QualityData [] Data) {
         this.Data = Data;

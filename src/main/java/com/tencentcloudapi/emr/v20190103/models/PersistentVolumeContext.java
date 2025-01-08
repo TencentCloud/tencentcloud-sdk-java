@@ -45,6 +45,13 @@ public class PersistentVolumeContext extends AbstractModel {
     private Long DiskNum;
 
     /**
+    * 云盘额外性能
+    */
+    @SerializedName("ExtraPerformance")
+    @Expose
+    private Long ExtraPerformance;
+
+    /**
      * Get 磁盘大小，单位为GB。 
      * @return DiskSize 磁盘大小，单位为GB。
      */
@@ -92,6 +99,22 @@ public class PersistentVolumeContext extends AbstractModel {
         this.DiskNum = DiskNum;
     }
 
+    /**
+     * Get 云盘额外性能 
+     * @return ExtraPerformance 云盘额外性能
+     */
+    public Long getExtraPerformance() {
+        return this.ExtraPerformance;
+    }
+
+    /**
+     * Set 云盘额外性能
+     * @param ExtraPerformance 云盘额外性能
+     */
+    public void setExtraPerformance(Long ExtraPerformance) {
+        this.ExtraPerformance = ExtraPerformance;
+    }
+
     public PersistentVolumeContext() {
     }
 
@@ -109,6 +132,9 @@ public class PersistentVolumeContext extends AbstractModel {
         if (source.DiskNum != null) {
             this.DiskNum = new Long(source.DiskNum);
         }
+        if (source.ExtraPerformance != null) {
+            this.ExtraPerformance = new Long(source.ExtraPerformance);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class PersistentVolumeContext extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
+        this.setParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
 
     }
 }

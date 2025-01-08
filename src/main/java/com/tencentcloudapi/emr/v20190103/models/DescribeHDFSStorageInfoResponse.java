@@ -25,7 +25,6 @@ public class DescribeHDFSStorageInfoResponse extends AbstractModel {
 
     /**
     * 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleTime")
     @Expose
@@ -47,10 +46,8 @@ public class DescribeHDFSStorageInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 采样时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样时间 
      * @return SampleTime 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSampleTime() {
         return this.SampleTime;
@@ -58,9 +55,7 @@ public class DescribeHDFSStorageInfoResponse extends AbstractModel {
 
     /**
      * Set 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleTime 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleTime(Long SampleTime) {
         this.SampleTime = SampleTime;

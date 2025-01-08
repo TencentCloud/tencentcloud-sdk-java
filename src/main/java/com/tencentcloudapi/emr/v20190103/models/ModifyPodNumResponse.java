@@ -25,7 +25,6 @@ public class ModifyPodNumResponse extends AbstractModel {
 
     /**
     * 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyPodNumResponse extends AbstractModel {
 
     /**
     * 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -47,10 +45,8 @@ public class ModifyPodNumResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Id 
      * @return InstanceId 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -58,19 +54,15 @@ public class ModifyPodNumResponse extends AbstractModel {
 
     /**
      * Set 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 流程Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程Id 
      * @return FlowId 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -78,9 +70,7 @@ public class ModifyPodNumResponse extends AbstractModel {
 
     /**
      * Set 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

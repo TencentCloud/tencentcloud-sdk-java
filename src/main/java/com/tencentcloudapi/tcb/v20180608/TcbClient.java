@@ -380,7 +380,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询云应用服务版本容器列表
+     *查询云托管服务版本容器列表
      * @param req DescribeCloudBaseRunPodListRequest
      * @return DescribeCloudBaseRunPodListResponse
      * @throws TencentCloudSDKException

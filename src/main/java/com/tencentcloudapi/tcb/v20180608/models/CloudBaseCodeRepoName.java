@@ -25,7 +25,6 @@ public class CloudBaseCodeRepoName extends AbstractModel {
 
     /**
     * repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class CloudBaseCodeRepoName extends AbstractModel {
 
     /**
     * repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-     * Get repo的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get repo的名字 
      * @return Name repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class CloudBaseCodeRepoName extends AbstractModel {
 
     /**
      * Set repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get repo的完整全名 
      * @return FullName repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullName() {
         return this.FullName;
@@ -71,9 +63,7 @@ public class CloudBaseCodeRepoName extends AbstractModel {
 
     /**
      * Set repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FullName repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;

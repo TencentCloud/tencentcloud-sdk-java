@@ -23,6 +23,34 @@ import java.util.HashMap;
 
 public class CloudBaseRunServiceVolumeHostPath extends AbstractModel {
 
+    /**
+    * 主机路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+     * Get 主机路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Path 主机路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 主机路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Path 主机路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
     public CloudBaseRunServiceVolumeHostPath() {
     }
 
@@ -31,6 +59,9 @@ public class CloudBaseRunServiceVolumeHostPath extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CloudBaseRunServiceVolumeHostPath(CloudBaseRunServiceVolumeHostPath source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
     }
 
 
@@ -38,6 +69,7 @@ public class CloudBaseRunServiceVolumeHostPath extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Path", this.Path);
 
     }
 }

@@ -116,7 +116,7 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private Long DataNodeMaintenanceId;
 
     /**
-    * 支持搜索的字段
+    * 支持搜索的字段，目前支持 SearchType	：ipv4
     */
     @SerializedName("SearchFields")
     @Expose
@@ -359,16 +359,16 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get 支持搜索的字段 
-     * @return SearchFields 支持搜索的字段
+     * Get 支持搜索的字段，目前支持 SearchType	：ipv4 
+     * @return SearchFields 支持搜索的字段，目前支持 SearchType	：ipv4
      */
     public SearchItem [] getSearchFields() {
         return this.SearchFields;
     }
 
     /**
-     * Set 支持搜索的字段
-     * @param SearchFields 支持搜索的字段
+     * Set 支持搜索的字段，目前支持 SearchType	：ipv4
+     * @param SearchFields 支持搜索的字段，目前支持 SearchType	：ipv4
      */
     public void setSearchFields(SearchItem [] SearchFields) {
         this.SearchFields = SearchFields;

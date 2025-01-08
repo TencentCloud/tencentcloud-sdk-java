@@ -45,7 +45,7 @@ public class GetRoomEventRequest extends AbstractModel {
     private Long Page;
 
     /**
-    * 每页个数。keyword为空时有效。一次性最多200条。
+    * 每页个数。keyword为空时有效。一次性最多100条。
     */
     @SerializedName("Limit")
     @Expose
@@ -120,16 +120,16 @@ VisibleOff: 页面不可见
     }
 
     /**
-     * Get 每页个数。keyword为空时有效。一次性最多200条。 
-     * @return Limit 每页个数。keyword为空时有效。一次性最多200条。
+     * Get 每页个数。keyword为空时有效。一次性最多100条。 
+     * @return Limit 每页个数。keyword为空时有效。一次性最多100条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页个数。keyword为空时有效。一次性最多200条。
-     * @param Limit 每页个数。keyword为空时有效。一次性最多200条。
+     * Set 每页个数。keyword为空时有效。一次性最多100条。
+     * @param Limit 每页个数。keyword为空时有效。一次性最多100条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

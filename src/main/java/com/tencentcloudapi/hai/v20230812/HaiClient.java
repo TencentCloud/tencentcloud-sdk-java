@@ -39,6 +39,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *创建musk prompt 任务
+     * @param req CreateMuskPromptRequest
+     * @return CreateMuskPromptResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMuskPromptResponse CreateMuskPrompt(CreateMuskPromptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMuskPrompt", CreateMuskPromptResponse.class);
+    }
+
+    /**
      *查询应用
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse

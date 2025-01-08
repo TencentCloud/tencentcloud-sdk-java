@@ -25,7 +25,6 @@ public class CreateVpcPeeringConnectionResponse extends AbstractModel {
 
     /**
     * 对等连接ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeeringConnectionId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateVpcPeeringConnectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 对等连接ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对等连接ID 
      * @return PeeringConnectionId 对等连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeeringConnectionId() {
         return this.PeeringConnectionId;
@@ -50,9 +47,7 @@ public class CreateVpcPeeringConnectionResponse extends AbstractModel {
 
     /**
      * Set 对等连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeeringConnectionId 对等连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeeringConnectionId(String PeeringConnectionId) {
         this.PeeringConnectionId = PeeringConnectionId;

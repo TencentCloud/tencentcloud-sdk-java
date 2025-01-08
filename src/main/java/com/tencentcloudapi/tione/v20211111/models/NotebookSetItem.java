@@ -243,6 +243,14 @@ public class NotebookSetItem extends AbstractModel {
     private String SubUinName;
 
     /**
+    * AppId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -782,6 +790,26 @@ public class NotebookSetItem extends AbstractModel {
         this.SubUinName = SubUinName;
     }
 
+    /**
+     * Get AppId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -883,6 +911,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.SubUinName != null) {
             this.SubUinName = new String(source.SubUinName);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
     }
 
 
@@ -918,6 +949,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

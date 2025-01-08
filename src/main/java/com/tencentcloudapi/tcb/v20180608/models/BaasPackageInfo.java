@@ -25,7 +25,6 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * DAU产品套餐ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
     @Expose
@@ -33,7 +32,6 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * DAU套餐中文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageTitle")
     @Expose
@@ -41,7 +39,6 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * 套餐分组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -49,7 +46,6 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * 套餐分组中文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupTitle")
     @Expose
@@ -58,7 +54,6 @@ public class BaasPackageInfo extends AbstractModel {
     /**
     * json格式化计费标签，例如：
 {"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillTags")
     @Expose
@@ -67,7 +62,6 @@ public class BaasPackageInfo extends AbstractModel {
     /**
     * json格式化用户资源限制，例如：
 {"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceLimit")
     @Expose
@@ -76,7 +70,6 @@ public class BaasPackageInfo extends AbstractModel {
     /**
     * json格式化高级限制，例如：
 {"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvanceLimit")
     @Expose
@@ -84,7 +77,6 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * 套餐描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageDescription")
     @Expose
@@ -92,17 +84,14 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
     * 是否对外展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsExternal")
     @Expose
     private Boolean IsExternal;
 
     /**
-     * Get DAU产品套餐ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DAU产品套餐ID 
      * @return PackageName DAU产品套餐ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
         return this.PackageName;
@@ -110,19 +99,15 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set DAU产品套餐ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageName DAU产品套餐ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get DAU套餐中文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DAU套餐中文名称 
      * @return PackageTitle DAU套餐中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageTitle() {
         return this.PackageTitle;
@@ -130,19 +115,15 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set DAU套餐中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageTitle DAU套餐中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageTitle(String PackageTitle) {
         this.PackageTitle = PackageTitle;
     }
 
     /**
-     * Get 套餐分组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐分组 
      * @return GroupName 套餐分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -150,19 +131,15 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set 套餐分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 套餐分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 套餐分组中文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐分组中文名 
      * @return GroupTitle 套餐分组中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupTitle() {
         return this.GroupTitle;
@@ -170,9 +147,7 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set 套餐分组中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupTitle 套餐分组中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupTitle(String GroupTitle) {
         this.GroupTitle = GroupTitle;
@@ -180,11 +155,9 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Get json格式化计费标签，例如：
-{"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-注意：此字段可能返回 null，表示取不到有效值。 
+{"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"} 
      * @return BillTags json格式化计费标签，例如：
 {"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillTags() {
         return this.BillTags;
@@ -193,10 +166,8 @@ public class BaasPackageInfo extends AbstractModel {
     /**
      * Set json格式化计费标签，例如：
 {"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillTags json格式化计费标签，例如：
 {"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillTags(String BillTags) {
         this.BillTags = BillTags;
@@ -204,11 +175,9 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Get json格式化用户资源限制，例如：
-{"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-注意：此字段可能返回 null，表示取不到有效值。 
+{"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}} 
      * @return ResourceLimit json格式化用户资源限制，例如：
 {"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceLimit() {
         return this.ResourceLimit;
@@ -217,10 +186,8 @@ public class BaasPackageInfo extends AbstractModel {
     /**
      * Set json格式化用户资源限制，例如：
 {"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceLimit json格式化用户资源限制，例如：
 {"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceLimit(String ResourceLimit) {
         this.ResourceLimit = ResourceLimit;
@@ -228,11 +195,9 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Get json格式化高级限制，例如：
-{"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-注意：此字段可能返回 null，表示取不到有效值。 
+{"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false} 
      * @return AdvanceLimit json格式化高级限制，例如：
 {"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdvanceLimit() {
         return this.AdvanceLimit;
@@ -241,20 +206,16 @@ public class BaasPackageInfo extends AbstractModel {
     /**
      * Set json格式化高级限制，例如：
 {"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvanceLimit json格式化高级限制，例如：
 {"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvanceLimit(String AdvanceLimit) {
         this.AdvanceLimit = AdvanceLimit;
     }
 
     /**
-     * Get 套餐描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐描述 
      * @return PackageDescription 套餐描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageDescription() {
         return this.PackageDescription;
@@ -262,19 +223,15 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set 套餐描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageDescription 套餐描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageDescription(String PackageDescription) {
         this.PackageDescription = PackageDescription;
     }
 
     /**
-     * Get 是否对外展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否对外展示 
      * @return IsExternal 是否对外展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsExternal() {
         return this.IsExternal;
@@ -282,9 +239,7 @@ public class BaasPackageInfo extends AbstractModel {
 
     /**
      * Set 是否对外展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsExternal 是否对外展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsExternal(Boolean IsExternal) {
         this.IsExternal = IsExternal;

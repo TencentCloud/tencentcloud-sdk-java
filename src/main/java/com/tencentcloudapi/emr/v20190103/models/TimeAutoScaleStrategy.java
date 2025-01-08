@@ -25,7 +25,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 策略名字，集群内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -33,7 +32,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntervalTime")
     @Expose
@@ -41,7 +39,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleAction")
     @Expose
@@ -49,7 +46,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleNum")
     @Expose
@@ -57,7 +53,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyStatus")
     @Expose
@@ -65,7 +60,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则优先级，越小越高。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -73,7 +67,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryValidTime")
     @Expose
@@ -89,7 +82,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 策略唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -97,7 +89,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GraceDownFlag")
     @Expose
@@ -105,7 +96,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 优雅缩容等待时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GraceDownTime")
     @Expose
@@ -121,7 +111,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigGroupAssigned")
     @Expose
@@ -133,7 +122,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MeasureMethod")
     @Expose
@@ -141,7 +129,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerminatePolicy")
     @Expose
@@ -149,7 +136,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 最长使用时间， 秒数，最短1小时，最长24小时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxUse")
     @Expose
@@ -173,7 +159,6 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompensateFlag")
     @Expose
@@ -181,17 +166,14 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
     * 伸缩组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-     * Get 策略名字，集群内唯一。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名字，集群内唯一。 
      * @return StrategyName 策略名字，集群内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -199,19 +181,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 策略名字，集群内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名字，集群内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。 
      * @return IntervalTime 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
@@ -219,19 +197,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntervalTime 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩缩容动作，1表示扩容，2表示缩容。 
      * @return ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaleAction() {
         return this.ScaleAction;
@@ -239,19 +213,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleAction(Long ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get 扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩缩容数量。 
      * @return ScaleNum 扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaleNum() {
         return this.ScaleNum;
@@ -259,19 +229,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleNum 扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleNum(Long ScaleNum) {
         this.ScaleNum = ScaleNum;
     }
 
     /**
-     * Get 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态，1表示有效，2表示无效，3表示暂停。必须填写 
      * @return StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyStatus() {
         return this.StrategyStatus;
@@ -279,19 +245,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyStatus(Long StrategyStatus) {
         this.StrategyStatus = StrategyStatus;
     }
 
     /**
-     * Get 规则优先级，越小越高。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则优先级，越小越高。 
      * @return Priority 规则优先级，越小越高。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -299,19 +261,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则优先级，越小越高。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 规则优先级，越小越高。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。 
      * @return RetryValidTime 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryValidTime() {
         return this.RetryValidTime;
@@ -319,9 +277,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryValidTime 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryValidTime(Long RetryValidTime) {
         this.RetryValidTime = RetryValidTime;
@@ -348,10 +304,8 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 策略唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略唯一ID。 
      * @return StrategyId 策略唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -359,19 +313,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 策略唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优雅缩容开关 
      * @return GraceDownFlag 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
@@ -379,19 +329,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GraceDownFlag 优雅缩容开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get 优雅缩容等待时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优雅缩容等待时间 
      * @return GraceDownTime 优雅缩容等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGraceDownTime() {
         return this.GraceDownTime;
@@ -399,9 +345,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 优雅缩容等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GraceDownTime 优雅缩容等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGraceDownTime(Long GraceDownTime) {
         this.GraceDownTime = GraceDownTime;
@@ -428,10 +372,8 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预设配置组 
      * @return ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigGroupAssigned() {
         return this.ConfigGroupAssigned;
@@ -439,9 +381,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigGroupAssigned(String ConfigGroupAssigned) {
         this.ConfigGroupAssigned = ConfigGroupAssigned;
@@ -452,14 +392,12 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
-"MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。 
+"MEMORYGB"表示按照机器内存数计算。 
      * @return MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMeasureMethod() {
         return this.MeasureMethod;
@@ -471,23 +409,19 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMeasureMethod(String MeasureMethod) {
         this.MeasureMethod = MeasureMethod;
     }
 
     /**
-     * Get 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁 
      * @return TerminatePolicy 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTerminatePolicy() {
         return this.TerminatePolicy;
@@ -495,19 +429,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TerminatePolicy 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerminatePolicy(String TerminatePolicy) {
         this.TerminatePolicy = TerminatePolicy;
     }
 
     /**
-     * Get 最长使用时间， 秒数，最短1小时，最长24小时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最长使用时间， 秒数，最短1小时，最长24小时 
      * @return MaxUse 最长使用时间， 秒数，最短1小时，最长24小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxUse() {
         return this.MaxUse;
@@ -515,9 +445,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 最长使用时间， 秒数，最短1小时，最长24小时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxUse 最长使用时间， 秒数，最短1小时，最长24小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxUse(Long MaxUse) {
         this.MaxUse = MaxUse;
@@ -564,10 +492,8 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 补偿扩容，0表示不开启，1表示开启 
      * @return CompensateFlag 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
@@ -575,19 +501,15 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompensateFlag 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
     }
 
     /**
-     * Get 伸缩组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩组id 
      * @return GroupId 伸缩组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
         return this.GroupId;
@@ -595,9 +517,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 伸缩组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 伸缩组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

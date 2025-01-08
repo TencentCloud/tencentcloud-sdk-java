@@ -25,7 +25,6 @@ public class InternetAddressStatistics extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,17 +32,14 @@ public class InternetAddressStatistics extends AbstractModel {
 
     /**
     * 互联网公网地址数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetNum")
     @Expose
     private Long SubnetNum;
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -51,19 +47,15 @@ public class InternetAddressStatistics extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 互联网公网地址数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联网公网地址数量 
      * @return SubnetNum 互联网公网地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubnetNum() {
         return this.SubnetNum;
@@ -71,9 +63,7 @@ public class InternetAddressStatistics extends AbstractModel {
 
     /**
      * Set 互联网公网地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetNum 互联网公网地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetNum(Long SubnetNum) {
         this.SubnetNum = SubnetNum;

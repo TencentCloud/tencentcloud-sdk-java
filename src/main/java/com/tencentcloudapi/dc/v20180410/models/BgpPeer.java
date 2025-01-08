@@ -24,8 +24,14 @@ import java.util.HashMap;
 public class BgpPeer extends AbstractModel {
 
     /**
+    * 腾讯侧BGP ASN
+    */
+    @SerializedName("CloudAsn")
+    @Expose
+    private String CloudAsn;
+
+    /**
     * 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Asn")
     @Expose
@@ -33,17 +39,30 @@ public class BgpPeer extends AbstractModel {
 
     /**
     * 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthKey")
     @Expose
     private String AuthKey;
 
     /**
-     * Get 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯侧BGP ASN 
+     * @return CloudAsn 腾讯侧BGP ASN
+     */
+    public String getCloudAsn() {
+        return this.CloudAsn;
+    }
+
+    /**
+     * Set 腾讯侧BGP ASN
+     * @param CloudAsn 腾讯侧BGP ASN
+     */
+    public void setCloudAsn(String CloudAsn) {
+        this.CloudAsn = CloudAsn;
+    }
+
+    /**
+     * Get 用户侧BGP ASN 
      * @return Asn 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsn() {
         return this.Asn;
@@ -51,19 +70,15 @@ public class BgpPeer extends AbstractModel {
 
     /**
      * Set 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Asn 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsn(Long Asn) {
         this.Asn = Asn;
     }
 
     /**
-     * Get 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户侧BGP密钥 
      * @return AuthKey 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthKey() {
         return this.AuthKey;
@@ -71,9 +86,7 @@ public class BgpPeer extends AbstractModel {
 
     /**
      * Set 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthKey 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthKey(String AuthKey) {
         this.AuthKey = AuthKey;
@@ -87,6 +100,9 @@ public class BgpPeer extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BgpPeer(BgpPeer source) {
+        if (source.CloudAsn != null) {
+            this.CloudAsn = new String(source.CloudAsn);
+        }
         if (source.Asn != null) {
             this.Asn = new Long(source.Asn);
         }
@@ -100,6 +116,7 @@ public class BgpPeer extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CloudAsn", this.CloudAsn);
         this.setParamSimple(map, prefix + "Asn", this.Asn);
         this.setParamSimple(map, prefix + "AuthKey", this.AuthKey);
 

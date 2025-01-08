@@ -32,7 +32,6 @@ public class TriggerCondition extends AbstractModel {
 
     /**
     * 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Threshold")
     @Expose
@@ -55,10 +54,8 @@ public class TriggerCondition extends AbstractModel {
     }
 
     /**
-     * Get 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件阈值。 
      * @return Threshold 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getThreshold() {
         return this.Threshold;
@@ -66,9 +63,7 @@ public class TriggerCondition extends AbstractModel {
 
     /**
      * Set 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Threshold 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThreshold(Float Threshold) {
         this.Threshold = Threshold;

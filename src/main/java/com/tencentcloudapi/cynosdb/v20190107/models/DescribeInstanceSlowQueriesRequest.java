@@ -94,6 +94,13 @@ public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
+    * sql语句
+    */
+    @SerializedName("SqlText")
+    @Expose
+    private String SqlText;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -253,6 +260,22 @@ public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get sql语句 
+     * @return SqlText sql语句
+     */
+    public String getSqlText() {
+        return this.SqlText;
+    }
+
+    /**
+     * Set sql语句
+     * @param SqlText sql语句
+     */
+    public void setSqlText(String SqlText) {
+        this.SqlText = SqlText;
+    }
+
     public DescribeInstanceSlowQueriesRequest() {
     }
 
@@ -291,6 +314,9 @@ public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
         }
+        if (source.SqlText != null) {
+            this.SqlText = new String(source.SqlText);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "SqlText", this.SqlText);
 
     }
 }

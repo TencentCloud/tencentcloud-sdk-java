@@ -92,7 +92,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -100,7 +99,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
     @Expose
@@ -108,7 +106,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogServices")
     @Expose
@@ -116,7 +113,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StaticStorages")
     @Expose
@@ -124,7 +120,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAutoDegrade")
     @Expose
@@ -132,7 +127,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvChannel")
     @Expose
@@ -142,7 +136,6 @@ public class EnvInfo extends AbstractModel {
     * 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -150,7 +143,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
@@ -158,7 +150,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -166,7 +157,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -174,7 +164,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomLogServices")
     @Expose
@@ -182,7 +171,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 环境类型：baas, run, hoting, weda
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvType")
     @Expose
@@ -190,7 +178,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 是否是dau新套餐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDauPackage")
     @Expose
@@ -198,7 +185,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 套餐类型:空\baas\tcbr
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -206,7 +192,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 架构类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchitectureType")
     @Expose
@@ -214,7 +199,6 @@ public class EnvInfo extends AbstractModel {
 
     /**
     * 回收标志，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Recycle")
     @Expose
@@ -381,10 +365,8 @@ public class EnvInfo extends AbstractModel {
     }
 
     /**
-     * Get tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tcb产品套餐ID，参考DescribePackages接口的返回值。 
      * @return PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -392,19 +374,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐中文名称，参考DescribePackages接口的返回值。 
      * @return PackageName 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
         return this.PackageName;
@@ -412,19 +390,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageName 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云日志服务列表 
      * @return LogServices 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogServiceInfo [] getLogServices() {
         return this.LogServices;
@@ -432,19 +406,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogServices 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogServices(LogServiceInfo [] LogServices) {
         this.LogServices = LogServices;
     }
 
     /**
-     * Get 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 静态资源信息 
      * @return StaticStorages 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StaticStorageInfo [] getStaticStorages() {
         return this.StaticStorages;
@@ -452,19 +422,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StaticStorages 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStaticStorages(StaticStorageInfo [] StaticStorages) {
         this.StaticStorages = StaticStorages;
     }
 
     /**
-     * Get 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否到期自动降为免费版 
      * @return IsAutoDegrade 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAutoDegrade() {
         return this.IsAutoDegrade;
@@ -472,19 +438,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAutoDegrade 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAutoDegrade(Boolean IsAutoDegrade) {
         this.IsAutoDegrade = IsAutoDegrade;
     }
 
     /**
-     * Get 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境渠道 
      * @return EnvChannel 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvChannel() {
         return this.EnvChannel;
@@ -492,9 +454,7 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvChannel 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvChannel(String EnvChannel) {
         this.EnvChannel = EnvChannel;
@@ -503,12 +463,10 @@ public class EnvInfo extends AbstractModel {
     /**
      * Get 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> postpaid：后付费</li> 
      * @return PayMode 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -518,21 +476,17 @@ public class EnvInfo extends AbstractModel {
      * Set 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为默认环境 
      * @return IsDefault 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
@@ -540,19 +494,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境所属地域 
      * @return Region 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -560,19 +510,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境标签列表 
      * @return Tags 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -580,19 +526,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义日志服务 
      * @return CustomLogServices 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClsInfo [] getCustomLogServices() {
         return this.CustomLogServices;
@@ -600,19 +542,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomLogServices 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomLogServices(ClsInfo [] CustomLogServices) {
         this.CustomLogServices = CustomLogServices;
     }
 
     /**
-     * Get 环境类型：baas, run, hoting, weda
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境类型：baas, run, hoting, weda 
      * @return EnvType 环境类型：baas, run, hoting, weda
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvType() {
         return this.EnvType;
@@ -620,19 +558,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 环境类型：baas, run, hoting, weda
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvType 环境类型：baas, run, hoting, weda
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;
     }
 
     /**
-     * Get 是否是dau新套餐
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是dau新套餐 
      * @return IsDauPackage 是否是dau新套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDauPackage() {
         return this.IsDauPackage;
@@ -640,19 +574,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 是否是dau新套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDauPackage 是否是dau新套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDauPackage(Boolean IsDauPackage) {
         this.IsDauPackage = IsDauPackage;
     }
 
     /**
-     * Get 套餐类型:空\baas\tcbr
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐类型:空\baas\tcbr 
      * @return PackageType 套餐类型:空\baas\tcbr
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -660,19 +590,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 套餐类型:空\baas\tcbr
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 套餐类型:空\baas\tcbr
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 架构类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 架构类型 
      * @return ArchitectureType 架构类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchitectureType() {
         return this.ArchitectureType;
@@ -680,19 +606,15 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 架构类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ArchitectureType 架构类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchitectureType(String ArchitectureType) {
         this.ArchitectureType = ArchitectureType;
     }
 
     /**
-     * Get 回收标志，默认为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回收标志，默认为空 
      * @return Recycle 回收标志，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecycle() {
         return this.Recycle;
@@ -700,9 +622,7 @@ public class EnvInfo extends AbstractModel {
 
     /**
      * Set 回收标志，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Recycle 回收标志，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecycle(String Recycle) {
         this.Recycle = Recycle;

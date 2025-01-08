@@ -25,7 +25,6 @@ public class CloudBaseCapabilities extends AbstractModel {
 
     /**
     * 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Add")
     @Expose
@@ -33,17 +32,14 @@ public class CloudBaseCapabilities extends AbstractModel {
 
     /**
     * 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Drop")
     @Expose
     private String [] Drop;
 
     /**
-     * Get 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用安全能力项列表 
      * @return Add 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAdd() {
         return this.Add;
@@ -51,19 +47,15 @@ public class CloudBaseCapabilities extends AbstractModel {
 
     /**
      * Set 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Add 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdd(String [] Add) {
         this.Add = Add;
     }
 
     /**
-     * Get 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁用安全能力向列表 
      * @return Drop 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDrop() {
         return this.Drop;
@@ -71,9 +63,7 @@ public class CloudBaseCapabilities extends AbstractModel {
 
     /**
      * Set 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Drop 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrop(String [] Drop) {
         this.Drop = Drop;

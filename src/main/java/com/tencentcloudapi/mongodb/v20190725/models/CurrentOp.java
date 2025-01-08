@@ -25,7 +25,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作序号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpId")
     @Expose
@@ -33,7 +32,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作所在的命名空间，形式如db.collection。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ns")
     @Expose
@@ -41,7 +39,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作执行语句。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Query")
     @Expose
@@ -49,7 +46,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Op")
     @Expose
@@ -71,7 +67,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
     @Expose
@@ -79,7 +74,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -87,7 +81,6 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 操作已执行时间（ms）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicrosecsRunning")
     @Expose
@@ -95,17 +88,14 @@ public class CurrentOp extends AbstractModel {
 
     /**
     * 当前操作所在节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecNode")
     @Expose
     private String ExecNode;
 
     /**
-     * Get 操作序号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作序号。 
      * @return OpId 操作序号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOpId() {
         return this.OpId;
@@ -113,19 +103,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作序号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpId 操作序号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpId(Long OpId) {
         this.OpId = OpId;
     }
 
     /**
-     * Get 操作所在的命名空间，形式如db.collection。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作所在的命名空间，形式如db.collection。 
      * @return Ns 操作所在的命名空间，形式如db.collection。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNs() {
         return this.Ns;
@@ -133,19 +119,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作所在的命名空间，形式如db.collection。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ns 操作所在的命名空间，形式如db.collection。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNs(String Ns) {
         this.Ns = Ns;
     }
 
     /**
-     * Get 操作执行语句。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作执行语句。 
      * @return Query 操作执行语句。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuery() {
         return this.Query;
@@ -153,19 +135,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作执行语句。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Query 操作执行语句。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。 
      * @return Op 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOp() {
         return this.Op;
@@ -173,9 +151,7 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Op 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOp(String Op) {
         this.Op = Op;
@@ -214,10 +190,8 @@ public class CurrentOp extends AbstractModel {
     }
 
     /**
-     * Get 操作详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作详细信息。 
      * @return Operation 操作详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperation() {
         return this.Operation;
@@ -225,19 +199,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operation 操作详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 筛选条件，节点状态，可能的取值为：Primary、Secondary。 
      * @return State 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -245,19 +215,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 操作已执行时间（ms）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作已执行时间（ms）。 
      * @return MicrosecsRunning 操作已执行时间（ms）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMicrosecsRunning() {
         return this.MicrosecsRunning;
@@ -265,19 +231,15 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 操作已执行时间（ms）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicrosecsRunning 操作已执行时间（ms）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicrosecsRunning(Long MicrosecsRunning) {
         this.MicrosecsRunning = MicrosecsRunning;
     }
 
     /**
-     * Get 当前操作所在节点信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前操作所在节点信息。 
      * @return ExecNode 当前操作所在节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecNode() {
         return this.ExecNode;
@@ -285,9 +247,7 @@ public class CurrentOp extends AbstractModel {
 
     /**
      * Set 当前操作所在节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecNode 当前操作所在节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecNode(String ExecNode) {
         this.ExecNode = ExecNode;

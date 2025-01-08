@@ -25,7 +25,6 @@ public class EmrPrice extends AbstractModel {
 
     /**
     * 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,7 +32,6 @@ public class EmrPrice extends AbstractModel {
 
     /**
     * 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -41,7 +39,6 @@ public class EmrPrice extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -57,17 +54,14 @@ public class EmrPrice extends AbstractModel {
 
     /**
     * 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportSpotPaid")
     @Expose
     private Boolean SupportSpotPaid;
 
     /**
-     * Get 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 刊例价格 
      * @return OriginalCost 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCost() {
         return this.OriginalCost;
@@ -75,19 +69,15 @@ public class EmrPrice extends AbstractModel {
 
     /**
      * Set 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价格 
      * @return DiscountCost 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountCost() {
         return this.DiscountCost;
@@ -95,19 +85,15 @@ public class EmrPrice extends AbstractModel {
 
     /**
      * Set 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -115,9 +101,7 @@ public class EmrPrice extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
@@ -144,10 +128,8 @@ public class EmrPrice extends AbstractModel {
     }
 
     /**
-     * Get 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持竞价实例 
      * @return SupportSpotPaid 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportSpotPaid() {
         return this.SupportSpotPaid;
@@ -155,9 +137,7 @@ public class EmrPrice extends AbstractModel {
 
     /**
      * Set 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportSpotPaid 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportSpotPaid(Boolean SupportSpotPaid) {
         this.SupportSpotPaid = SupportSpotPaid;

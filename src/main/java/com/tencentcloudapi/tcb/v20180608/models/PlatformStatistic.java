@@ -25,7 +25,6 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
     * 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Platform")
     @Expose
@@ -33,7 +32,6 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
     * 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -41,17 +39,14 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 终端用户从属平台 
      * @return Platform 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlatform() {
         return this.Platform;
@@ -59,19 +54,15 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
      * Set 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Platform 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平台终端用户数 
      * @return Count 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -79,19 +70,15 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
      * Set 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -99,9 +86,7 @@ public class PlatformStatistic extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

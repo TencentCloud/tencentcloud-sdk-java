@@ -25,7 +25,6 @@ public class MultiZoneSetting extends AbstractModel {
 
     /**
     * "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneTag")
     @Expose
@@ -53,10 +52,8 @@ public class MultiZoneSetting extends AbstractModel {
     private NewResourceSpec ResourceSpec;
 
     /**
-     * Get "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "master"、"standby"、"third-party" 
      * @return ZoneTag "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneTag() {
         return this.ZoneTag;
@@ -64,9 +61,7 @@ public class MultiZoneSetting extends AbstractModel {
 
     /**
      * Set "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneTag "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneTag(String ZoneTag) {
         this.ZoneTag = ZoneTag;

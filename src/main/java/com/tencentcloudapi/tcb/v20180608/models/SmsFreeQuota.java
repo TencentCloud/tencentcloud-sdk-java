@@ -25,7 +25,6 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
     * 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -33,7 +32,6 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
     * 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalUsedQuota")
     @Expose
@@ -41,7 +39,6 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
     * 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStart")
     @Expose
@@ -49,7 +46,6 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
     * 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleEnd")
     @Expose
@@ -57,17 +53,14 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
     * 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TodayUsedQuota")
     @Expose
     private Long TodayUsedQuota;
 
     /**
-     * Get 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费量总条数 
      * @return FreeQuota 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFreeQuota() {
         return this.FreeQuota;
@@ -75,19 +68,15 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
      * Set 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuota 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuota(Long FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共计已使用总条数 
      * @return TotalUsedQuota 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalUsedQuota() {
         return this.TotalUsedQuota;
@@ -95,19 +84,15 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
      * Set 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalUsedQuota 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalUsedQuota(Long TotalUsedQuota) {
         this.TotalUsedQuota = TotalUsedQuota;
     }
 
     /**
-     * Get 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费周期起点，0000-00-00 00:00:00 形式 
      * @return CycleStart 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleStart() {
         return this.CycleStart;
@@ -115,19 +100,15 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
      * Set 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CycleStart 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStart(String CycleStart) {
         this.CycleStart = CycleStart;
     }
 
     /**
-     * Get 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费周期终点，0000-00-00 00:00:00 形式 
      * @return CycleEnd 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleEnd() {
         return this.CycleEnd;
@@ -135,19 +116,15 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
      * Set 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CycleEnd 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleEnd(String CycleEnd) {
         this.CycleEnd = CycleEnd;
     }
 
     /**
-     * Get 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 今天已使用总条数 
      * @return TodayUsedQuota 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTodayUsedQuota() {
         return this.TodayUsedQuota;
@@ -155,9 +132,7 @@ public class SmsFreeQuota extends AbstractModel {
 
     /**
      * Set 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TodayUsedQuota 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTodayUsedQuota(Long TodayUsedQuota) {
         this.TodayUsedQuota = TodayUsedQuota;

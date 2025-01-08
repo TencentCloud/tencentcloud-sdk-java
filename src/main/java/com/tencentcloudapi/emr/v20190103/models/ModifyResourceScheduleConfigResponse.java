@@ -32,7 +32,6 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel {
 
     /**
     * 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -40,7 +39,6 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel {
 
     /**
     * 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -70,10 +68,8 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验错误信息，如果不为空，则说明校验失败，配置没有成功 
      * @return ErrorMsg 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -81,19 +77,15 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel {
 
     /**
      * Set 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 返回数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回数据 
      * @return Data 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -101,9 +93,7 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel {
 
     /**
      * Set 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

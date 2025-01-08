@@ -104,7 +104,7 @@ REJECTED:拒绝
     private String RouteType;
 
     /**
-    * 用户侧BGP，Asn，AuthKey
+    * 用户侧BGP，包括： CloudAsn，Asn，AuthKey
     */
     @SerializedName("BgpPeer")
     @Expose
@@ -168,7 +168,6 @@ REJECTED:拒绝
 
     /**
     * 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetDetectId")
     @Expose
@@ -176,7 +175,6 @@ REJECTED:拒绝
 
     /**
     * BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableBGPCommunity")
     @Expose
@@ -184,7 +182,6 @@ REJECTED:拒绝
 
     /**
     * 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatType")
     @Expose
@@ -192,7 +189,6 @@ REJECTED:拒绝
 
     /**
     * VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcRegion")
     @Expose
@@ -200,7 +196,6 @@ REJECTED:拒绝
 
     /**
     * 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BfdEnable")
     @Expose
@@ -208,7 +203,6 @@ REJECTED:拒绝
 
     /**
     * 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPointType")
     @Expose
@@ -216,7 +210,6 @@ REJECTED:拒绝
 
     /**
     * 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectConnectGatewayName")
     @Expose
@@ -224,7 +217,6 @@ REJECTED:拒绝
 
     /**
     * VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -232,7 +224,6 @@ REJECTED:拒绝
 
     /**
     * TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TencentBackupAddress")
     @Expose
@@ -240,7 +231,6 @@ REJECTED:拒绝
 
     /**
     * 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignLaw")
     @Expose
@@ -248,7 +238,6 @@ REJECTED:拒绝
 
     /**
     * 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudAttachId")
     @Expose
@@ -256,7 +245,6 @@ REJECTED:拒绝
 
     /**
     * 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareOrNot")
     @Expose
@@ -463,16 +451,16 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 用户侧BGP，Asn，AuthKey 
-     * @return BgpPeer 用户侧BGP，Asn，AuthKey
+     * Get 用户侧BGP，包括： CloudAsn，Asn，AuthKey 
+     * @return BgpPeer 用户侧BGP，包括： CloudAsn，Asn，AuthKey
      */
     public BgpPeer getBgpPeer() {
         return this.BgpPeer;
     }
 
     /**
-     * Set 用户侧BGP，Asn，AuthKey
-     * @param BgpPeer 用户侧BGP，Asn，AuthKey
+     * Set 用户侧BGP，包括： CloudAsn，Asn，AuthKey
+     * @param BgpPeer 用户侧BGP，包括： CloudAsn，Asn，AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
         this.BgpPeer = BgpPeer;
@@ -607,10 +595,8 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的网络自定义探测ID 
      * @return NetDetectId 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetDetectId() {
         return this.NetDetectId;
@@ -618,19 +604,15 @@ REJECTED:拒绝
 
     /**
      * Set 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetectId 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetDetectId(String NetDetectId) {
         this.NetDetectId = NetDetectId;
     }
 
     /**
-     * Get BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BGP community开关 
      * @return EnableBGPCommunity BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableBGPCommunity() {
         return this.EnableBGPCommunity;
@@ -638,19 +620,15 @@ REJECTED:拒绝
 
     /**
      * Set BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableBGPCommunity BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
         this.EnableBGPCommunity = EnableBGPCommunity;
     }
 
     /**
-     * Get 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为Nat通道 
      * @return NatType 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNatType() {
         return this.NatType;
@@ -658,19 +636,15 @@ REJECTED:拒绝
 
     /**
      * Set 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatType 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatType(Long NatType) {
         this.NatType = NatType;
     }
 
     /**
-     * Get VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC地域简码，如gz、cd 
      * @return VpcRegion VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcRegion() {
         return this.VpcRegion;
@@ -678,19 +652,15 @@ REJECTED:拒绝
 
     /**
      * Set VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcRegion VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcRegion(String VpcRegion) {
         this.VpcRegion = VpcRegion;
     }
 
     /**
-     * Get 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启BFD 
      * @return BfdEnable 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBfdEnable() {
         return this.BfdEnable;
@@ -698,19 +668,15 @@ REJECTED:拒绝
 
     /**
      * Set 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BfdEnable 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBfdEnable(Long BfdEnable) {
         this.BfdEnable = BfdEnable;
     }
 
     /**
-     * Get 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专用通道接入点类型 
      * @return AccessPointType 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPointType() {
         return this.AccessPointType;
@@ -718,19 +684,15 @@ REJECTED:拒绝
 
     /**
      * Set 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessPointType 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPointType(String AccessPointType) {
         this.AccessPointType = AccessPointType;
     }
 
     /**
-     * Get 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专线网关名称 
      * @return DirectConnectGatewayName 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDirectConnectGatewayName() {
         return this.DirectConnectGatewayName;
@@ -738,19 +700,15 @@ REJECTED:拒绝
 
     /**
      * Set 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DirectConnectGatewayName 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
         this.DirectConnectGatewayName = DirectConnectGatewayName;
     }
 
     /**
-     * Get VPC名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC名称 
      * @return VpcName VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -758,19 +716,15 @@ REJECTED:拒绝
 
     /**
      * Set VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TencentBackupAddress，腾讯侧备用互联 IP 
      * @return TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTencentBackupAddress() {
         return this.TencentBackupAddress;
@@ -778,19 +732,15 @@ REJECTED:拒绝
 
     /**
      * Set TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTencentBackupAddress(String TencentBackupAddress) {
         this.TencentBackupAddress = TencentBackupAddress;
     }
 
     /**
-     * Get 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专用通道关联的物理专线是否签署了用户协议 
      * @return SignLaw 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSignLaw() {
         return this.SignLaw;
@@ -798,19 +748,15 @@ REJECTED:拒绝
 
     /**
      * Set 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignLaw 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignLaw(Boolean SignLaw) {
         this.SignLaw = SignLaw;
     }
 
     /**
-     * Get 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高速上云服务ID 
      * @return CloudAttachId 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudAttachId() {
         return this.CloudAttachId;
@@ -818,19 +764,15 @@ REJECTED:拒绝
 
     /**
      * Set 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudAttachId 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudAttachId(String CloudAttachId) {
         this.CloudAttachId = CloudAttachId;
     }
 
     /**
-     * Get 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否共享通道 
      * @return ShareOrNot 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShareOrNot() {
         return this.ShareOrNot;
@@ -838,9 +780,7 @@ REJECTED:拒绝
 
     /**
      * Set 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareOrNot 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareOrNot(Long ShareOrNot) {
         this.ShareOrNot = ShareOrNot;

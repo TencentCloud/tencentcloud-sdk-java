@@ -32,7 +32,6 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
     * 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientToken")
     @Expose
@@ -40,7 +39,6 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
     * 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -48,7 +46,6 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
     * 查询流程状态，流程额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceId")
     @Expose
@@ -64,7 +61,6 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
     * 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillId")
     @Expose
@@ -94,10 +90,8 @@ public class ScaleOutClusterResponse extends AbstractModel {
     }
 
     /**
-     * Get 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端Token。 
      * @return ClientToken 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientToken() {
         return this.ClientToken;
@@ -105,19 +99,15 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
      * Set 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientToken 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩容流程ID。 
      * @return FlowId 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -125,19 +115,15 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
      * Set 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 查询流程状态，流程额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询流程状态，流程额外信息 
      * @return TraceId 查询流程状态，流程额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceId() {
         return this.TraceId;
@@ -145,9 +131,7 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
      * Set 查询流程状态，流程额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceId 查询流程状态，流程额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;
@@ -174,10 +158,8 @@ public class ScaleOutClusterResponse extends AbstractModel {
     }
 
     /**
-     * Get 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大订单号。 
      * @return BillId 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillId() {
         return this.BillId;
@@ -185,9 +167,7 @@ public class ScaleOutClusterResponse extends AbstractModel {
 
     /**
      * Set 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillId 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;

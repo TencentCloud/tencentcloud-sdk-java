@@ -151,6 +151,13 @@ public class FlowApproverDetail extends AbstractModel {
     private String ApproverRoleName;
 
     /**
+    * 模板配置中的参与方ID,与控件绑定
+    */
+    @SerializedName("RecipientId")
+    @Expose
+    private String RecipientId;
+
+    /**
      * Get 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApproveMessage 签署时的相关信息
@@ -257,7 +264,9 @@ public class FlowApproverDetail extends AbstractModel {
     /**
      * Get 模板配置中的参与方ID,与控件绑定 
      * @return ReceiptId 模板配置中的参与方ID,与控件绑定
+     * @deprecated
      */
+    @Deprecated
     public String getReceiptId() {
         return this.ReceiptId;
     }
@@ -265,7 +274,9 @@ public class FlowApproverDetail extends AbstractModel {
     /**
      * Set 模板配置中的参与方ID,与控件绑定
      * @param ReceiptId 模板配置中的参与方ID,与控件绑定
+     * @deprecated
      */
+    @Deprecated
     public void setReceiptId(String ReceiptId) {
         this.ReceiptId = ReceiptId;
     }
@@ -478,6 +489,22 @@ public class FlowApproverDetail extends AbstractModel {
         this.ApproverRoleName = ApproverRoleName;
     }
 
+    /**
+     * Get 模板配置中的参与方ID,与控件绑定 
+     * @return RecipientId 模板配置中的参与方ID,与控件绑定
+     */
+    public String getRecipientId() {
+        return this.RecipientId;
+    }
+
+    /**
+     * Set 模板配置中的参与方ID,与控件绑定
+     * @param RecipientId 模板配置中的参与方ID,与控件绑定
+     */
+    public void setRecipientId(String RecipientId) {
+        this.RecipientId = RecipientId;
+    }
+
     public FlowApproverDetail() {
     }
 
@@ -531,6 +558,9 @@ public class FlowApproverDetail extends AbstractModel {
         if (source.ApproverRoleName != null) {
             this.ApproverRoleName = new String(source.ApproverRoleName);
         }
+        if (source.RecipientId != null) {
+            this.RecipientId = new String(source.RecipientId);
+        }
     }
 
 
@@ -553,6 +583,7 @@ public class FlowApproverDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
         this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
+        this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
 
     }
 }

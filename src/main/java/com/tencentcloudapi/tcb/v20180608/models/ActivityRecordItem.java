@@ -25,7 +25,6 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -33,7 +32,6 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 活动id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityId")
     @Expose
@@ -41,7 +39,6 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 自定义状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 自定义子状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubStatus")
     @Expose
@@ -57,7 +53,6 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 整型子状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubStatusInt")
     @Expose
@@ -65,17 +60,14 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
     * 是否软删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDeleted")
     @Expose
     private Boolean IsDeleted;
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -83,19 +75,15 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 活动id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活动id 
      * @return ActivityId 活动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActivityId() {
         return this.ActivityId;
@@ -103,19 +91,15 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 活动id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityId 活动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get 自定义状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义状态码 
      * @return Status 自定义状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -123,19 +107,15 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 自定义状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 自定义状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 自定义子状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义子状态码 
      * @return SubStatus 自定义子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubStatus() {
         return this.SubStatus;
@@ -143,19 +123,15 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 自定义子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubStatus 自定义子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get 整型子状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 整型子状态码 
      * @return SubStatusInt 整型子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubStatusInt() {
         return this.SubStatusInt;
@@ -163,19 +139,15 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 整型子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubStatusInt 整型子状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubStatusInt(Long SubStatusInt) {
         this.SubStatusInt = SubStatusInt;
     }
 
     /**
-     * Get 是否软删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否软删除 
      * @return IsDeleted 是否软删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDeleted() {
         return this.IsDeleted;
@@ -183,9 +155,7 @@ public class ActivityRecordItem extends AbstractModel {
 
     /**
      * Set 是否软删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDeleted 是否软删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDeleted(Boolean IsDeleted) {
         this.IsDeleted = IsDeleted;

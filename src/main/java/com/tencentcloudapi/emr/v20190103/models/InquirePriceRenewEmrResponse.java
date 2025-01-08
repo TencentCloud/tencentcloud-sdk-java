@@ -25,7 +25,6 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
     * 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
     * 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -42,7 +40,6 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
     /**
     * 实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -50,7 +47,6 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
     * 实例续费的时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -64,10 +60,8 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。 
      * @return OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -75,19 +69,15 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
      * Set 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价，单位为元。 
      * @return DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
@@ -95,9 +85,7 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
      * Set 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
@@ -105,11 +93,9 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
      * Get 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>m：表示月份。</li> 
      * @return TimeUnit 实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -118,20 +104,16 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
     /**
      * Set 实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 实例续费的时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例续费的时长。 
      * @return TimeSpan 实例续费的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -139,9 +121,7 @@ public class InquirePriceRenewEmrResponse extends AbstractModel {
 
     /**
      * Set 实例续费的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 实例续费的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

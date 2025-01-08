@@ -60,7 +60,6 @@ public class LogServiceInfo extends AbstractModel {
 
     /**
     * topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -147,10 +146,8 @@ public class LogServiceInfo extends AbstractModel {
     }
 
     /**
-     * Get topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get topic保存时长 默认7天 
      * @return Period topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
         return this.Period;
@@ -158,9 +155,7 @@ public class LogServiceInfo extends AbstractModel {
 
     /**
      * Set topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

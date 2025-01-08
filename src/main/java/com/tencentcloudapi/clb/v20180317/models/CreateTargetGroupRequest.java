@@ -53,6 +53,25 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
+    * 标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+    * 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get 目标组名称，限定50个字符 
      * @return TargetGroupName 目标组名称，限定50个字符
      */
@@ -120,6 +139,58 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
+    /**
+     * Get 标签。 
+     * @return Tags 标签。
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签。
+     * @param Tags 标签。
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+ 
+     * @return Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+     * @param Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -143,6 +214,15 @@ public class CreateTargetGroupRequest extends AbstractModel {
                 this.TargetGroupInstances[i] = new TargetGroupInstance(source.TargetGroupInstances[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -154,6 +234,8 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

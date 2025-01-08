@@ -25,7 +25,6 @@ public class CreateAndDeployCloudBaseProjectResponse extends AbstractModel {
 
     /**
     * 环境Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAndDeployCloudBaseProjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境Id 
      * @return EnvId 环境Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -50,9 +47,7 @@ public class CreateAndDeployCloudBaseProjectResponse extends AbstractModel {
 
     /**
      * Set 环境Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

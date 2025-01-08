@@ -38,14 +38,14 @@ public class CreateUserRequest extends AbstractModel {
     private String RealName;
 
     /**
-    * 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+    * 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 电子邮件
+    * 电子邮件。手机号和邮箱参数至少传一项
     */
     @SerializedName("Email")
     @Expose
@@ -128,32 +128,32 @@ public class CreateUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx" 
-     * @return Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * Get 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项 
+     * @return Phone 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     * @param Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * Set 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
+     * @param Phone 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 电子邮件 
-     * @return Email 电子邮件
+     * Get 电子邮件。手机号和邮箱参数至少传一项 
+     * @return Email 电子邮件。手机号和邮箱参数至少传一项
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 电子邮件
-     * @param Email 电子邮件
+     * Set 电子邮件。手机号和邮箱参数至少传一项
+     * @param Email 电子邮件。手机号和邮箱参数至少传一项
      */
     public void setEmail(String Email) {
         this.Email = Email;

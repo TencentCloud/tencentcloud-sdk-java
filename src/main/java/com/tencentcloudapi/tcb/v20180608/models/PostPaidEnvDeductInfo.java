@@ -25,7 +25,6 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 资源方
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -33,7 +32,6 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 指标名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
     @Expose
@@ -41,7 +39,6 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResQuota")
     @Expose
@@ -49,7 +46,6 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgQuota")
     @Expose
@@ -57,7 +53,6 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -65,17 +60,14 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
     * 环境id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-     * Get 资源方
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源方 
      * @return ResourceType 资源方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -83,19 +75,15 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 资源方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 指标名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标名 
      * @return MetricName 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
         return this.MetricName;
@@ -103,19 +91,15 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricName 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按量计费详情 
      * @return ResQuota 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getResQuota() {
         return this.ResQuota;
@@ -123,19 +107,15 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResQuota 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResQuota(Float ResQuota) {
         this.ResQuota = ResQuota;
     }
 
     /**
-     * Get 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包抵扣详情 
      * @return PkgQuota 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPkgQuota() {
         return this.PkgQuota;
@@ -143,19 +123,15 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgQuota 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgQuota(Float PkgQuota) {
         this.PkgQuota = PkgQuota;
     }
 
     /**
-     * Get 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费额度抵扣详情 
      * @return FreeQuota 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFreeQuota() {
         return this.FreeQuota;
@@ -163,19 +139,15 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuota 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuota(Float FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 环境id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境id 
      * @return EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -183,9 +155,7 @@ public class PostPaidEnvDeductInfo extends AbstractModel {
 
     /**
      * Set 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

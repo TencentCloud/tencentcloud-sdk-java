@@ -25,7 +25,6 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
     * 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
     * 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -43,7 +41,6 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
     * 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -51,7 +48,6 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
     * 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -81,10 +77,8 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。 
      * @return OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -92,19 +86,15 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
      * Set 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价，单位为元。 
      * @return DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
@@ -112,9 +102,7 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
      * Set 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
@@ -123,12 +111,10 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
     /**
      * Get 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>m：表示月份。</li> 
      * @return TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -138,21 +124,17 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
      * Set 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变配的时长。 
      * @return TimeSpan 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -160,9 +142,7 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
      * Set 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

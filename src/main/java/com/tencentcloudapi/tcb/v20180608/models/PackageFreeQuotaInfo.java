@@ -29,7 +29,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -37,7 +36,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
     * 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceMetric")
     @Expose
@@ -45,7 +43,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
     * 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -53,7 +50,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
     * 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricUnit")
     @Expose
@@ -64,7 +60,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductType")
     @Expose
@@ -73,7 +68,6 @@ public class PackageFreeQuotaInfo extends AbstractModel {
     /**
     * 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuotaType")
     @Expose
@@ -84,14 +78,12 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 <li>COS</li>
 <li>CDN</li>
 <li>FLEXDB</li>
-<li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>SCF</li> 
      * @return ResourceType 资源类型
 <li>COS</li>
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -103,23 +95,19 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型
 <li>COS</li>
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源指标名称 
      * @return ResourceMetric 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceMetric() {
         return this.ResourceMetric;
@@ -127,19 +115,15 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
      * Set 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceMetric 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceMetric(String ResourceMetric) {
         this.ResourceMetric = ResourceMetric;
     }
 
     /**
-     * Get 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源指标免费量 
      * @return FreeQuota 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFreeQuota() {
         return this.FreeQuota;
@@ -147,19 +131,15 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
      * Set 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuota 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuota(Long FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 指标单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标单位 
      * @return MetricUnit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricUnit() {
         return this.MetricUnit;
@@ -167,9 +147,7 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
      * Set 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricUnit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricUnit(String MetricUnit) {
         this.MetricUnit = MetricUnit;
@@ -179,13 +157,11 @@ public class PackageFreeQuotaInfo extends AbstractModel {
      * Get 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
-<li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>totalize:总容量抵扣</li> 
      * @return DeductType 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductType() {
         return this.DeductType;
@@ -196,12 +172,10 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductType 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductType(String DeductType) {
         this.DeductType = DeductType;
@@ -209,11 +183,9 @@ public class PackageFreeQuotaInfo extends AbstractModel {
 
     /**
      * Get 免费量类型
-<li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>basic:通用量抵扣</li> 
      * @return FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFreeQuotaType() {
         return this.FreeQuotaType;
@@ -222,10 +194,8 @@ public class PackageFreeQuotaInfo extends AbstractModel {
     /**
      * Set 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuotaType(String FreeQuotaType) {
         this.FreeQuotaType = FreeQuotaType;

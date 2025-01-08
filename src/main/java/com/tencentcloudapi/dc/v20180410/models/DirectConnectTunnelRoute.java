@@ -66,6 +66,21 @@ public class DirectConnectTunnelRoute extends AbstractModel {
     private String NextHop;
 
     /**
+    * 路由更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 是否配置在通道上
+    */
+    @SerializedName("ApplyOnTunnelEnable")
+    @Expose
+    private Boolean ApplyOnTunnelEnable;
+
+    /**
      * Get 专用通道路由ID 
      * @return RouteId 专用通道路由ID
      */
@@ -161,6 +176,42 @@ public class DirectConnectTunnelRoute extends AbstractModel {
         this.NextHop = NextHop;
     }
 
+    /**
+     * Get 路由更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 路由更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 路由更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 路由更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 是否配置在通道上 
+     * @return ApplyOnTunnelEnable 是否配置在通道上
+     */
+    public Boolean getApplyOnTunnelEnable() {
+        return this.ApplyOnTunnelEnable;
+    }
+
+    /**
+     * Set 是否配置在通道上
+     * @param ApplyOnTunnelEnable 是否配置在通道上
+     */
+    public void setApplyOnTunnelEnable(Boolean ApplyOnTunnelEnable) {
+        this.ApplyOnTunnelEnable = ApplyOnTunnelEnable;
+    }
+
     public DirectConnectTunnelRoute() {
     }
 
@@ -190,6 +241,12 @@ public class DirectConnectTunnelRoute extends AbstractModel {
         if (source.NextHop != null) {
             this.NextHop = new String(source.NextHop);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ApplyOnTunnelEnable != null) {
+            this.ApplyOnTunnelEnable = new Boolean(source.ApplyOnTunnelEnable);
+        }
     }
 
 
@@ -203,6 +260,8 @@ public class DirectConnectTunnelRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "ASPath.", this.ASPath);
         this.setParamSimple(map, prefix + "NextHop", this.NextHop);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ApplyOnTunnelEnable", this.ApplyOnTunnelEnable);
 
     }
 }

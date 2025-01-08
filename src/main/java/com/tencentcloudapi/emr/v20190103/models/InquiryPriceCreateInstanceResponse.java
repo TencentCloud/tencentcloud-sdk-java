@@ -25,7 +25,6 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
     * 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
     * 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -43,7 +41,6 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     * 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -51,7 +48,6 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
     * 购买实例的时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -73,10 +69,8 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。 
      * @return OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -84,19 +78,15 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
      * Set 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价，单位为元。 
      * @return DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
@@ -104,9 +94,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
      * Set 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
@@ -115,12 +103,10 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>m：表示月份。</li> 
      * @return TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -130,21 +116,17 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
      * Set 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 购买实例的时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买实例的时长。 
      * @return TimeSpan 购买实例的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -152,9 +134,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
      * Set 购买实例的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 购买实例的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

@@ -32,7 +32,6 @@ public class DescribeUserInfoResponse extends AbstractModel {
 
     /**
     * 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeUserInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户信息列表 
      * @return UserList 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserInformation [] getUserList() {
         return this.UserList;
@@ -73,9 +70,7 @@ public class DescribeUserInfoResponse extends AbstractModel {
 
     /**
      * Set 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserList 用户信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserList(UserInformation [] UserList) {
         this.UserList = UserList;

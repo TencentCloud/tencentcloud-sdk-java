@@ -83,6 +83,13 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverSignSealId;
 
     /**
+    * 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+    */
+    @SerializedName("RelievedApproverRecipientId")
+    @Expose
+    private String RelievedApproverRecipientId;
+
+    /**
      * Get 签署人姓名，最大长度50个字。
  
      * @return Name 签署人姓名，最大长度50个字。
@@ -121,7 +128,9 @@ public class ReleasedApprover extends AbstractModel {
     /**
      * Get 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/> 
      * @return RelievedApproverReceiptId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @deprecated
      */
+    @Deprecated
     public String getRelievedApproverReceiptId() {
         return this.RelievedApproverReceiptId;
     }
@@ -129,7 +138,9 @@ public class ReleasedApprover extends AbstractModel {
     /**
      * Set 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
      * @param RelievedApproverReceiptId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @deprecated
      */
+    @Deprecated
     public void setRelievedApproverReceiptId(String RelievedApproverReceiptId) {
         this.RelievedApproverReceiptId = RelievedApproverReceiptId;
     }
@@ -234,6 +245,22 @@ public class ReleasedApprover extends AbstractModel {
         this.ApproverSignSealId = ApproverSignSealId;
     }
 
+    /**
+     * Get 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/> 
+     * @return RelievedApproverRecipientId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     */
+    public String getRelievedApproverRecipientId() {
+        return this.RelievedApproverRecipientId;
+    }
+
+    /**
+     * Set 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @param RelievedApproverRecipientId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     */
+    public void setRelievedApproverRecipientId(String RelievedApproverRecipientId) {
+        this.RelievedApproverRecipientId = RelievedApproverRecipientId;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -263,6 +290,9 @@ public class ReleasedApprover extends AbstractModel {
         if (source.ApproverSignSealId != null) {
             this.ApproverSignSealId = new String(source.ApproverSignSealId);
         }
+        if (source.RelievedApproverRecipientId != null) {
+            this.RelievedApproverRecipientId = new String(source.RelievedApproverRecipientId);
+        }
     }
 
 
@@ -277,6 +307,7 @@ public class ReleasedApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
         this.setParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
         this.setParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
+        this.setParamSimple(map, prefix + "RelievedApproverRecipientId", this.RelievedApproverRecipientId);
 
     }
 }

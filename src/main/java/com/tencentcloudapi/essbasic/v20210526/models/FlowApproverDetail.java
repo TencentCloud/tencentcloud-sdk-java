@@ -137,9 +137,18 @@ public class FlowApproverDetail extends AbstractModel {
     private String SignId;
 
     /**
+    * 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+    */
+    @SerializedName("RecipientId")
+    @Expose
+    private String RecipientId;
+
+    /**
      * Get 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色 
      * @return ReceiptId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     * @deprecated
      */
+    @Deprecated
     public String getReceiptId() {
         return this.ReceiptId;
     }
@@ -147,7 +156,9 @@ public class FlowApproverDetail extends AbstractModel {
     /**
      * Set 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
      * @param ReceiptId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     * @deprecated
      */
+    @Deprecated
     public void setReceiptId(String ReceiptId) {
         this.ReceiptId = ReceiptId;
     }
@@ -432,6 +443,22 @@ public class FlowApproverDetail extends AbstractModel {
         this.SignId = SignId;
     }
 
+    /**
+     * Get 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色 
+     * @return RecipientId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     */
+    public String getRecipientId() {
+        return this.RecipientId;
+    }
+
+    /**
+     * Set 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     * @param RecipientId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     */
+    public void setRecipientId(String RecipientId) {
+        this.RecipientId = RecipientId;
+    }
+
     public FlowApproverDetail() {
     }
 
@@ -479,6 +506,9 @@ public class FlowApproverDetail extends AbstractModel {
         if (source.SignId != null) {
             this.SignId = new String(source.SignId);
         }
+        if (source.RecipientId != null) {
+            this.RecipientId = new String(source.RecipientId);
+        }
     }
 
 
@@ -499,6 +529,7 @@ public class FlowApproverDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproveType", this.ApproveType);
         this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
+        this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
 
     }
 }

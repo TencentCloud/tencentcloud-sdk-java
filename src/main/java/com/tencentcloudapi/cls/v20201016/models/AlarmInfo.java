@@ -157,6 +157,14 @@ public class AlarmInfo extends AbstractModel {
     private Long AlarmLevel;
 
     /**
+    * 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Classifications")
+    @Expose
+    private AlarmClassification [] Classifications;
+
+    /**
     * 多触发条件。与
 Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -482,6 +490,26 @@ Condition互斥。
     }
 
     /**
+     * Get 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Classifications 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmClassification [] getClassifications() {
+        return this.Classifications;
+    }
+
+    /**
+     * Set 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Classifications 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClassifications(AlarmClassification [] Classifications) {
+        this.Classifications = Classifications;
+    }
+
+    /**
      * Get 多触发条件。与
 Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -579,6 +607,12 @@ Condition互斥。
         if (source.AlarmLevel != null) {
             this.AlarmLevel = new Long(source.AlarmLevel);
         }
+        if (source.Classifications != null) {
+            this.Classifications = new AlarmClassification[source.Classifications.length];
+            for (int i = 0; i < source.Classifications.length; i++) {
+                this.Classifications[i] = new AlarmClassification(source.Classifications[i]);
+            }
+        }
         if (source.MultiConditions != null) {
             this.MultiConditions = new MultiCondition[source.MultiConditions.length];
             for (int i = 0; i < source.MultiConditions.length; i++) {
@@ -610,6 +644,7 @@ Condition互斥。
         this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
 
     }

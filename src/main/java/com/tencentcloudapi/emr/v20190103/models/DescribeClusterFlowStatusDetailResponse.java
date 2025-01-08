@@ -41,7 +41,6 @@ public class DescribeClusterFlowStatusDetailResponse extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowName")
     @Expose
@@ -50,7 +49,6 @@ public class DescribeClusterFlowStatusDetailResponse extends AbstractModel {
     /**
     * 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowTotalProgress")
     @Expose
@@ -64,7 +62,6 @@ public class DescribeClusterFlowStatusDetailResponse extends AbstractModel {
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowTotalStatus")
     @Expose
@@ -127,10 +124,8 @@ NeedExtraDetail为true时返回
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return FlowName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowName() {
         return this.FlowName;
@@ -138,9 +133,7 @@ NeedExtraDetail为true时返回
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
@@ -148,11 +141,9 @@ NeedExtraDetail为true时返回
 
     /**
      * Get 总任务流程进度：
-例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。 
+例如：0.8 
      * @return FlowTotalProgress 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFlowTotalProgress() {
         return this.FlowTotalProgress;
@@ -161,10 +152,8 @@ NeedExtraDetail为true时返回
     /**
      * Set 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowTotalProgress 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowTotalProgress(Float FlowTotalProgress) {
         this.FlowTotalProgress = FlowTotalProgress;
@@ -177,8 +166,7 @@ NeedExtraDetail为true时返回
 2:完成，
 3:完成（存在跳过步骤），
 -1:失败，
--3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。 
+-3:阻塞， 
      * @return FlowTotalStatus 定义流程总状态：
 0:初始化，
 1:运行中，
@@ -186,7 +174,6 @@ NeedExtraDetail为true时返回
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowTotalStatus() {
         return this.FlowTotalStatus;
@@ -200,7 +187,6 @@ NeedExtraDetail为true时返回
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowTotalStatus 定义流程总状态：
 0:初始化，
 1:运行中，
@@ -208,7 +194,6 @@ NeedExtraDetail为true时返回
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowTotalStatus(Long FlowTotalStatus) {
         this.FlowTotalStatus = FlowTotalStatus;

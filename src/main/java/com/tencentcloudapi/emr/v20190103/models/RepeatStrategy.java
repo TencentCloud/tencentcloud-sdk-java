@@ -71,6 +71,13 @@ public class RepeatStrategy extends AbstractModel {
     private String Expire;
 
     /**
+    * 周期性规则开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
      * Get 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写 
      * @return RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      */
@@ -186,6 +193,22 @@ public class RepeatStrategy extends AbstractModel {
         this.Expire = Expire;
     }
 
+    /**
+     * Get 周期性规则开始时间 
+     * @return StartTime 周期性规则开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 周期性规则开始时间
+     * @param StartTime 周期性规则开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
     public RepeatStrategy() {
     }
 
@@ -212,6 +235,9 @@ public class RepeatStrategy extends AbstractModel {
         if (source.Expire != null) {
             this.Expire = new String(source.Expire);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
     }
 
 
@@ -225,6 +251,7 @@ public class RepeatStrategy extends AbstractModel {
         this.setParamObj(map, prefix + "MonthRepeat.", this.MonthRepeat);
         this.setParamObj(map, prefix + "NotRepeat.", this.NotRepeat);
         this.setParamSimple(map, prefix + "Expire", this.Expire);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

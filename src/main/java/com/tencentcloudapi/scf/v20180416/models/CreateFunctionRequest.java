@@ -73,7 +73,27 @@ public class CreateFunctionRequest extends AbstractModel {
     private Environment Environment;
 
     /**
-    * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7
+    * 函数运行环境，默认Python2.7
+目前支持的运行环境：
+- Python2.7
+- Python3.6
+- Python3.7
+- Python3.9
+- Python3.10
+- Nodejs6.10
+- Nodejs8.9
+- Nodejs10.15
+- Nodejs12.16
+- Nodejs14.18
+- Nodejs16.13
+- Nodejs18.15
+- Php5.6
+- Php7(7.2版本)
+- Php7.4
+- Php8.0
+- Go1
+- Java8
+- CustomRuntime
     */
     @SerializedName("Runtime")
     @Expose
@@ -353,16 +373,96 @@ public class CreateFunctionRequest extends AbstractModel {
     }
 
     /**
-     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7 
-     * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7
+     * Get 函数运行环境，默认Python2.7
+目前支持的运行环境：
+- Python2.7
+- Python3.6
+- Python3.7
+- Python3.9
+- Python3.10
+- Nodejs6.10
+- Nodejs8.9
+- Nodejs10.15
+- Nodejs12.16
+- Nodejs14.18
+- Nodejs16.13
+- Nodejs18.15
+- Php5.6
+- Php7(7.2版本)
+- Php7.4
+- Php8.0
+- Go1
+- Java8
+- CustomRuntime 
+     * @return Runtime 函数运行环境，默认Python2.7
+目前支持的运行环境：
+- Python2.7
+- Python3.6
+- Python3.7
+- Python3.9
+- Python3.10
+- Nodejs6.10
+- Nodejs8.9
+- Nodejs10.15
+- Nodejs12.16
+- Nodejs14.18
+- Nodejs16.13
+- Nodejs18.15
+- Php5.6
+- Php7(7.2版本)
+- Php7.4
+- Php8.0
+- Go1
+- Java8
+- CustomRuntime
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7
-     * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7
+     * Set 函数运行环境，默认Python2.7
+目前支持的运行环境：
+- Python2.7
+- Python3.6
+- Python3.7
+- Python3.9
+- Python3.10
+- Nodejs6.10
+- Nodejs8.9
+- Nodejs10.15
+- Nodejs12.16
+- Nodejs14.18
+- Nodejs16.13
+- Nodejs18.15
+- Php5.6
+- Php7(7.2版本)
+- Php7.4
+- Php8.0
+- Go1
+- Java8
+- CustomRuntime
+     * @param Runtime 函数运行环境，默认Python2.7
+目前支持的运行环境：
+- Python2.7
+- Python3.6
+- Python3.7
+- Python3.9
+- Python3.10
+- Nodejs6.10
+- Nodejs8.9
+- Nodejs10.15
+- Nodejs12.16
+- Nodejs14.18
+- Nodejs16.13
+- Nodejs18.15
+- Php5.6
+- Php7(7.2版本)
+- Php7.4
+- Php8.0
+- Go1
+- Java8
+- CustomRuntime
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

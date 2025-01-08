@@ -53,7 +53,6 @@ public class CloudResource extends AbstractModel {
 
     /**
     * 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -156,10 +155,8 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Get 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称，如HIVE 
      * @return Service 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getService() {
         return this.Service;
@@ -167,9 +164,7 @@ public class CloudResource extends AbstractModel {
 
     /**
      * Set 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(String Service) {
         this.Service = Service;

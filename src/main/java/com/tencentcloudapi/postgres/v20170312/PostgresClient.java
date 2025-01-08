@@ -593,6 +593,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeMaintainTimeWindow) 用于查询实例的维护时间窗口
+     * @param req DescribeMaintainTimeWindowRequest
+     * @return DescribeMaintainTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintainTimeWindowResponse DescribeMaintainTimeWindow(DescribeMaintainTimeWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaintainTimeWindow", DescribeMaintainTimeWindowResponse.class);
+    }
+
+    /**
      *本接口（DescribeOrders）用于查询订单信息。
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse
@@ -966,6 +977,17 @@ public class PostgresClient extends AbstractClient{
     public ModifyDatabaseOwnerResponse ModifyDatabaseOwner(ModifyDatabaseOwnerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDatabaseOwner", ModifyDatabaseOwnerResponse.class);
+    }
+
+    /**
+     *本接口 (ModifyMaintainTimeWindow) 用于实例维护时间窗口的修改。
+     * @param req ModifyMaintainTimeWindowRequest
+     * @return ModifyMaintainTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintainTimeWindowResponse ModifyMaintainTimeWindow(ModifyMaintainTimeWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMaintainTimeWindow", ModifyMaintainTimeWindowResponse.class);
     }
 
     /**

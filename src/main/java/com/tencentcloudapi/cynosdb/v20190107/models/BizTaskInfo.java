@@ -291,6 +291,13 @@ public class BizTaskInfo extends AbstractModel {
     private InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos;
 
     /**
+    * 任务进度信息
+    */
+    @SerializedName("TaskProgressInfo")
+    @Expose
+    private TaskProgressInfo TaskProgressInfo;
+
+    /**
      * Get 任务id 
      * @return ID 任务id
      */
@@ -934,6 +941,22 @@ public class BizTaskInfo extends AbstractModel {
         this.InstanceCLSDeliveryInfos = InstanceCLSDeliveryInfos;
     }
 
+    /**
+     * Get 任务进度信息 
+     * @return TaskProgressInfo 任务进度信息
+     */
+    public TaskProgressInfo getTaskProgressInfo() {
+        return this.TaskProgressInfo;
+    }
+
+    /**
+     * Set 任务进度信息
+     * @param TaskProgressInfo 任务进度信息
+     */
+    public void setTaskProgressInfo(TaskProgressInfo TaskProgressInfo) {
+        this.TaskProgressInfo = TaskProgressInfo;
+    }
+
     public BizTaskInfo() {
     }
 
@@ -1056,6 +1079,9 @@ public class BizTaskInfo extends AbstractModel {
                 this.InstanceCLSDeliveryInfos[i] = new InstanceCLSDeliveryInfo(source.InstanceCLSDeliveryInfos[i]);
             }
         }
+        if (source.TaskProgressInfo != null) {
+            this.TaskProgressInfo = new TaskProgressInfo(source.TaskProgressInfo);
+        }
     }
 
 
@@ -1099,6 +1125,7 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ModifyInstanceParamsData.", this.ModifyInstanceParamsData);
         this.setParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
         this.setParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
+        this.setParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
 
     }
 }

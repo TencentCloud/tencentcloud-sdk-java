@@ -25,7 +25,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 需要的规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
     @Expose
@@ -33,7 +32,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -41,7 +39,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -49,7 +46,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootSize")
     @Expose
@@ -57,7 +53,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemSize")
     @Expose
@@ -65,7 +60,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 核心数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -73,7 +67,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -89,7 +82,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCnt")
     @Expose
@@ -97,7 +89,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -113,7 +104,6 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskNum")
     @Expose
@@ -121,17 +111,14 @@ public class PriceResource extends AbstractModel {
 
     /**
     * 本地盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDiskNum")
     @Expose
     private Long LocalDiskNum;
 
     /**
-     * Get 需要的规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要的规格 
      * @return Spec 需要的规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
         return this.Spec;
@@ -139,19 +126,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 需要的规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 需要的规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘类型 
      * @return StorageType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageType() {
         return this.StorageType;
@@ -159,19 +142,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘类型 
      * @return DiskType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -179,19 +158,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘大小 
      * @return RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootSize() {
         return this.RootSize;
@@ -199,19 +174,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get 内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小 
      * @return MemSize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemSize() {
         return this.MemSize;
@@ -219,19 +190,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 核心数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核心数量 
      * @return Cpu 核心数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -239,19 +206,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 核心数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu 核心数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘大小 
      * @return DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -259,9 +222,7 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -288,10 +249,8 @@ public class PriceResource extends AbstractModel {
     }
 
     /**
-     * Get 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘数量 
      * @return DiskCnt 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskCnt() {
         return this.DiskCnt;
@@ -299,19 +258,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskCnt 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCnt(Long DiskCnt) {
         this.DiskCnt = DiskCnt;
     }
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return InstanceType 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -319,9 +274,7 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -348,10 +301,8 @@ public class PriceResource extends AbstractModel {
     }
 
     /**
-     * Get 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘数量 
      * @return DiskNum 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskNum() {
         return this.DiskNum;
@@ -359,19 +310,15 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskNum 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;
     }
 
     /**
-     * Get 本地盘的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地盘的数量 
      * @return LocalDiskNum 本地盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocalDiskNum() {
         return this.LocalDiskNum;
@@ -379,9 +326,7 @@ public class PriceResource extends AbstractModel {
 
     /**
      * Set 本地盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalDiskNum 本地盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
         this.LocalDiskNum = LocalDiskNum;

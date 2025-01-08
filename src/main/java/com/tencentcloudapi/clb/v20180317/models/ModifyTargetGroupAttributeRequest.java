@@ -45,6 +45,17 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private Long Port;
 
     /**
+    * 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get 目标组的ID。 
      * @return TargetGroupId 目标组的ID。
      */
@@ -92,6 +103,38 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.Port = Port;
     }
 
+    /**
+     * Get 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul> 
+     * @return Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+     * @param Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public ModifyTargetGroupAttributeRequest() {
     }
 
@@ -109,6 +152,9 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -119,6 +165,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

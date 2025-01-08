@@ -95,7 +95,6 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
     * 地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -103,7 +102,6 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
     * Bucket信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
@@ -270,10 +268,8 @@ public class BackupDownloadTask extends AbstractModel {
     }
 
     /**
-     * Get 地区信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区信息。 
      * @return Region 地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -281,19 +277,15 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
      * Set 地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Bucket信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bucket信息。 
      * @return Bucket Bucket信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -301,9 +293,7 @@ public class BackupDownloadTask extends AbstractModel {
 
     /**
      * Set Bucket信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket Bucket信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

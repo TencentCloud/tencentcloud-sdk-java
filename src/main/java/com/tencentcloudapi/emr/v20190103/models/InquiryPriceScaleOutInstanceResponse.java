@@ -25,7 +25,6 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -43,7 +41,6 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     * 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -73,10 +70,8 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。 
      * @return OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCost() {
         return this.OriginalCost;
@@ -84,19 +79,15 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣价，单位为元。 
      * @return DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountCost() {
         return this.DiscountCost;
@@ -104,9 +95,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
      * Set 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
@@ -115,12 +104,10 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>m：表示月份。</li> 
      * @return Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -130,11 +117,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
      * Set 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

@@ -25,7 +25,6 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
     * 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Repo")
     @Expose
@@ -33,7 +32,6 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
     * 仓库平台
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoType")
     @Expose
@@ -41,7 +39,6 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
     * 仓库语言
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoLanguage")
     @Expose
@@ -56,10 +53,8 @@ public class CbrRepoInfo extends AbstractModel {
     private String Branch;
 
     /**
-     * Get 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库名称 
      * @return Repo 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepo() {
         return this.Repo;
@@ -67,19 +62,15 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
      * Set 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Repo 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepo(String Repo) {
         this.Repo = Repo;
     }
 
     /**
-     * Get 仓库平台
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库平台 
      * @return RepoType 仓库平台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoType() {
         return this.RepoType;
@@ -87,19 +78,15 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
      * Set 仓库平台
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoType 仓库平台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoType(String RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get 仓库语言
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库语言 
      * @return RepoLanguage 仓库语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoLanguage() {
         return this.RepoLanguage;
@@ -107,9 +94,7 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
      * Set 仓库语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoLanguage 仓库语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoLanguage(String RepoLanguage) {
         this.RepoLanguage = RepoLanguage;

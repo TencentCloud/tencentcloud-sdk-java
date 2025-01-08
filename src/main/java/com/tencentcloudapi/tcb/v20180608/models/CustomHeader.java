@@ -25,17 +25,14 @@ public class CustomHeader extends AbstractModel {
 
     /**
     * 请求添加头部配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestToAddList")
     @Expose
     private CustomRequestToAdd [] RequestToAddList;
 
     /**
-     * Get 请求添加头部配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求添加头部配置 
      * @return RequestToAddList 请求添加头部配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomRequestToAdd [] getRequestToAddList() {
         return this.RequestToAddList;
@@ -43,9 +40,7 @@ public class CustomHeader extends AbstractModel {
 
     /**
      * Set 请求添加头部配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestToAddList 请求添加头部配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestToAddList(CustomRequestToAdd [] RequestToAddList) {
         this.RequestToAddList = RequestToAddList;

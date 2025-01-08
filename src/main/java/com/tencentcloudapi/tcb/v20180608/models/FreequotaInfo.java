@@ -60,7 +60,6 @@ public class FreequotaInfo extends AbstractModel {
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductType")
     @Expose
@@ -69,7 +68,6 @@ public class FreequotaInfo extends AbstractModel {
     /**
     * 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuotaType")
     @Expose
@@ -159,13 +157,11 @@ public class FreequotaInfo extends AbstractModel {
      * Get 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
-<li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>totalize:总容量抵扣</li> 
      * @return DeductType 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductType() {
         return this.DeductType;
@@ -176,12 +172,10 @@ public class FreequotaInfo extends AbstractModel {
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductType 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductType(String DeductType) {
         this.DeductType = DeductType;
@@ -189,11 +183,9 @@ public class FreequotaInfo extends AbstractModel {
 
     /**
      * Get 免费量类型
-<li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>basic:通用量抵扣</li> 
      * @return FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFreeQuotaType() {
         return this.FreeQuotaType;
@@ -202,10 +194,8 @@ public class FreequotaInfo extends AbstractModel {
     /**
      * Set 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuotaType(String FreeQuotaType) {
         this.FreeQuotaType = FreeQuotaType;

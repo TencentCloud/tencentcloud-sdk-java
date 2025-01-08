@@ -102,7 +102,6 @@ public class EnvBillingInfoItem extends AbstractModel {
     * 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PaymentChannel")
     @Expose
@@ -110,7 +109,6 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
     * 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderInfo")
     @Expose
@@ -118,7 +116,6 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
     * 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -126,7 +123,6 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
     * 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableOverrun")
     @Expose
@@ -134,7 +130,6 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
     * 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtPackageType")
     @Expose
@@ -337,12 +332,10 @@ public class EnvBillingInfoItem extends AbstractModel {
     /**
      * Get 付费渠道。
 <li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> qcloud：腾讯云</li> 
      * @return PaymentChannel 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymentChannel() {
         return this.PaymentChannel;
@@ -352,21 +345,17 @@ public class EnvBillingInfoItem extends AbstractModel {
      * Set 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PaymentChannel 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymentChannel(String PaymentChannel) {
         this.PaymentChannel = PaymentChannel;
     }
 
     /**
-     * Get 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新的订单信息 
      * @return OrderInfo 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrderInfo getOrderInfo() {
         return this.OrderInfo;
@@ -374,19 +363,15 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
      * Set 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderInfo 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderInfo(OrderInfo OrderInfo) {
         this.OrderInfo = OrderInfo;
     }
 
     /**
-     * Get 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免费配额信息。 
      * @return FreeQuota 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFreeQuota() {
         return this.FreeQuota;
@@ -394,19 +379,15 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
      * Set 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeQuota 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeQuota(String FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启 `超过套餐额度部分转按量付费` 
      * @return EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableOverrun() {
         return this.EnableOverrun;
@@ -414,19 +395,15 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
      * Set 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableOverrun(Boolean EnableOverrun) {
         this.EnableOverrun = EnableOverrun;
     }
 
     /**
-     * Get 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境套餐类型 
      * @return ExtPackageType 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtPackageType() {
         return this.ExtPackageType;
@@ -434,9 +411,7 @@ public class EnvBillingInfoItem extends AbstractModel {
 
     /**
      * Set 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtPackageType 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtPackageType(String ExtPackageType) {
         this.ExtPackageType = ExtPackageType;

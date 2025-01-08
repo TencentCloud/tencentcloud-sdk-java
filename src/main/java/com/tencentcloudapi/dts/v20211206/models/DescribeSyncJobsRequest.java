@@ -31,6 +31,13 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private String JobId;
 
     /**
+    * 同步任务id列表，如sync-werwfs23
+    */
+    @SerializedName("JobIds")
+    @Expose
+    private String [] JobIds;
+
+    /**
     * 同步任务名
     */
     @SerializedName("JobName")
@@ -101,6 +108,20 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private TagFilter [] TagFilters;
 
     /**
+    * 源端数据库连接信息，可以输入实例ID或者IP等
+    */
+    @SerializedName("SrcInfoPattern")
+    @Expose
+    private String SrcInfoPattern;
+
+    /**
+    * 目标端数据库连接信息，可以输入实例ID或者IP等
+    */
+    @SerializedName("DstInfoPattern")
+    @Expose
+    private String DstInfoPattern;
+
+    /**
      * Get 同步任务id，如sync-werwfs23 
      * @return JobId 同步任务id，如sync-werwfs23
      */
@@ -114,6 +135,22 @@ public class DescribeSyncJobsRequest extends AbstractModel {
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
+    }
+
+    /**
+     * Get 同步任务id列表，如sync-werwfs23 
+     * @return JobIds 同步任务id列表，如sync-werwfs23
+     */
+    public String [] getJobIds() {
+        return this.JobIds;
+    }
+
+    /**
+     * Set 同步任务id列表，如sync-werwfs23
+     * @param JobIds 同步任务id列表，如sync-werwfs23
+     */
+    public void setJobIds(String [] JobIds) {
+        this.JobIds = JobIds;
     }
 
     /**
@@ -276,6 +313,38 @@ public class DescribeSyncJobsRequest extends AbstractModel {
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get 源端数据库连接信息，可以输入实例ID或者IP等 
+     * @return SrcInfoPattern 源端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public String getSrcInfoPattern() {
+        return this.SrcInfoPattern;
+    }
+
+    /**
+     * Set 源端数据库连接信息，可以输入实例ID或者IP等
+     * @param SrcInfoPattern 源端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public void setSrcInfoPattern(String SrcInfoPattern) {
+        this.SrcInfoPattern = SrcInfoPattern;
+    }
+
+    /**
+     * Get 目标端数据库连接信息，可以输入实例ID或者IP等 
+     * @return DstInfoPattern 目标端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public String getDstInfoPattern() {
+        return this.DstInfoPattern;
+    }
+
+    /**
+     * Set 目标端数据库连接信息，可以输入实例ID或者IP等
+     * @param DstInfoPattern 目标端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public void setDstInfoPattern(String DstInfoPattern) {
+        this.DstInfoPattern = DstInfoPattern;
+    }
+
     public DescribeSyncJobsRequest() {
     }
 
@@ -286,6 +355,12 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     public DescribeSyncJobsRequest(DescribeSyncJobsRequest source) {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
+        }
+        if (source.JobIds != null) {
+            this.JobIds = new String[source.JobIds.length];
+            for (int i = 0; i < source.JobIds.length; i++) {
+                this.JobIds[i] = new String(source.JobIds[i]);
+            }
         }
         if (source.JobName != null) {
             this.JobName = new String(source.JobName);
@@ -323,6 +398,12 @@ public class DescribeSyncJobsRequest extends AbstractModel {
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.SrcInfoPattern != null) {
+            this.SrcInfoPattern = new String(source.SrcInfoPattern);
+        }
+        if (source.DstInfoPattern != null) {
+            this.DstInfoPattern = new String(source.DstInfoPattern);
+        }
     }
 
 
@@ -331,6 +412,7 @@ public class DescribeSyncJobsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamArraySimple(map, prefix + "JobIds.", this.JobIds);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderSeq", this.OrderSeq);
@@ -341,6 +423,8 @@ public class DescribeSyncJobsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobType", this.JobType);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "SrcInfoPattern", this.SrcInfoPattern);
+        this.setParamSimple(map, prefix + "DstInfoPattern", this.DstInfoPattern);
 
     }
 }

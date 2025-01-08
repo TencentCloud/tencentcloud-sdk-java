@@ -32,7 +32,6 @@ public class ModifyResourcePoolsResponse extends AbstractModel {
 
     /**
     * 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -62,10 +61,8 @@ public class ModifyResourcePoolsResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段，暂时没用 
      * @return ErrorMsg 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -73,9 +70,7 @@ public class ModifyResourcePoolsResponse extends AbstractModel {
 
     /**
      * Set 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

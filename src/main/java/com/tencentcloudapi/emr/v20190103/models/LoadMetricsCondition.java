@@ -25,7 +25,6 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
     * 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatisticPeriod")
     @Expose
@@ -33,7 +32,6 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
     * 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerThreshold")
     @Expose
@@ -41,7 +39,6 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
     * 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadMetrics")
     @Expose
@@ -49,7 +46,6 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
     * 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricId")
     @Expose
@@ -64,10 +60,8 @@ public class LoadMetricsCondition extends AbstractModel {
     private TriggerCondition [] Conditions;
 
     /**
-     * Get 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则统计周期，提供1min,3min,5min。 
      * @return StatisticPeriod 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatisticPeriod() {
         return this.StatisticPeriod;
@@ -75,19 +69,15 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
      * Set 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatisticPeriod 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatisticPeriod(Long StatisticPeriod) {
         this.StatisticPeriod = StatisticPeriod;
     }
 
     /**
-     * Get 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。 
      * @return TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerThreshold() {
         return this.TriggerThreshold;
@@ -95,19 +85,15 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
      * Set 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerThreshold(Long TriggerThreshold) {
         this.TriggerThreshold = TriggerThreshold;
     }
 
     /**
-     * Get 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩缩容负载指标。 
      * @return LoadMetrics 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadMetrics() {
         return this.LoadMetrics;
@@ -115,19 +101,15 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
      * Set 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadMetrics 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadMetrics(String LoadMetrics) {
         this.LoadMetrics = LoadMetrics;
     }
 
     /**
-     * Get 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则元数据记录ID。 
      * @return MetricId 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricId() {
         return this.MetricId;
@@ -135,9 +117,7 @@ public class LoadMetricsCondition extends AbstractModel {
 
     /**
      * Set 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricId 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;

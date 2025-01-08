@@ -25,7 +25,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -33,7 +32,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -41,7 +39,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalmDownTime")
     @Expose
@@ -49,7 +46,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleAction")
     @Expose
@@ -57,7 +53,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleNum")
     @Expose
@@ -65,7 +60,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessMethod")
     @Expose
@@ -73,7 +67,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -81,7 +74,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyStatus")
     @Expose
@@ -89,7 +81,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnNodeLabel")
     @Expose
@@ -126,7 +117,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
     * 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigGroupAssigned")
     @Expose
@@ -138,7 +128,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MeasureMethod")
     @Expose
@@ -153,10 +142,8 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private LoadMetricsConditions LoadMetricsConditions;
 
     /**
-     * Get 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID。 
      * @return StrategyId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -164,19 +151,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称。 
      * @return StrategyName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -184,19 +167,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则生效冷却时间。 
      * @return CalmDownTime 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCalmDownTime() {
         return this.CalmDownTime;
@@ -204,19 +183,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CalmDownTime 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalmDownTime(Long CalmDownTime) {
         this.CalmDownTime = CalmDownTime;
     }
 
     /**
-     * Get 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩缩容动作，1表示扩容，2表示缩容。 
      * @return ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaleAction() {
         return this.ScaleAction;
@@ -224,19 +199,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleAction(Long ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每次规则生效时的扩缩容数量。 
      * @return ScaleNum 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaleNum() {
         return this.ScaleNum;
@@ -244,19 +215,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleNum 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleNum(Long ScaleNum) {
         this.ScaleNum = ScaleNum;
     }
 
     /**
-     * Get 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标处理方法，1表示MAX，2表示MIN，3表示AVG。 
      * @return ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProcessMethod() {
         return this.ProcessMethod;
@@ -264,19 +231,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessMethod(Long ProcessMethod) {
         this.ProcessMethod = ProcessMethod;
     }
 
     /**
-     * Get 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则优先级，添加时无效，默认为自增。 
      * @return Priority 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -284,19 +247,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态，1表示启动，3表示禁用。 
      * @return StrategyStatus 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyStatus() {
         return this.StrategyStatus;
@@ -304,19 +263,15 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyStatus 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyStatus(Long StrategyStatus) {
         this.StrategyStatus = StrategyStatus;
     }
 
     /**
-     * Get 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则扩容指定 yarn node label 
      * @return YarnNodeLabel 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
@@ -324,9 +279,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      * @param YarnNodeLabel 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
@@ -401,10 +354,8 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预设配置组 
      * @return ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigGroupAssigned() {
         return this.ConfigGroupAssigned;
@@ -412,9 +363,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 
     /**
      * Set 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigGroupAssigned(String ConfigGroupAssigned) {
         this.ConfigGroupAssigned = ConfigGroupAssigned;
@@ -425,14 +374,12 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
-"MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。 
+"MEMORYGB"表示按照机器内存数计算。 
      * @return MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMeasureMethod() {
         return this.MeasureMethod;
@@ -444,13 +391,11 @@ public class LoadAutoScaleStrategy extends AbstractModel {
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMeasureMethod(String MeasureMethod) {
         this.MeasureMethod = MeasureMethod;

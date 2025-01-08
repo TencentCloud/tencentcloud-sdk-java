@@ -32,7 +32,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * SAM json
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sam")
     @Expose
@@ -40,7 +39,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 来源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -48,7 +46,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 创建时间, unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -56,7 +53,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 更新时间 ,unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -71,7 +67,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 	"deploying"-部署中
 	 "deployFail"-部署失败
 	 "success"-部署成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -79,7 +74,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Parameters")
     @Expose
@@ -90,7 +84,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 "framework-oneclick" 控制台一键部署
 "framework-local-oneclick" cli本地一键部署
 "qci-extension-cicd" 内网coding ci cd
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -98,7 +91,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * ci的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CIId")
     @Expose
@@ -106,7 +98,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * cd的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CDId")
     @Expose
@@ -114,7 +105,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 环境id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -122,7 +112,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionNum")
     @Expose
@@ -130,7 +119,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -138,7 +126,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * rc.json内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RcJson")
     @Expose
@@ -146,7 +133,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 插件配置内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddonConfig")
     @Expose
@@ -154,7 +140,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -162,7 +147,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 网络配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkConfig")
     @Expose
@@ -170,7 +154,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 扩展id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtensionId")
     @Expose
@@ -178,7 +161,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 错误类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailType")
     @Expose
@@ -186,7 +168,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 私有仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoUrl")
     @Expose
@@ -194,7 +175,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * 是否私有仓库代码变更触发自动部署
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoDeployOnCodeChange")
     @Expose
@@ -202,7 +182,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * ci部署进度（%）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildPercent")
     @Expose
@@ -210,7 +189,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -218,7 +196,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * BuildFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildFinishTime")
     @Expose
@@ -226,7 +203,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * DeployFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployFinishTime")
     @Expose
@@ -234,7 +210,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * BuildId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildId")
     @Expose
@@ -242,7 +217,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * SourceUrl
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceUrl")
     @Expose
@@ -250,7 +224,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * FailReasonShort
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReasonShort")
     @Expose
@@ -258,7 +231,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
     * FirstInitRepo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstInitRepo")
     @Expose
@@ -281,10 +253,8 @@ public class CloudBaseProjectVersion extends AbstractModel {
     }
 
     /**
-     * Get SAM json
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SAM json 
      * @return Sam SAM json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSam() {
         return this.Sam;
@@ -292,19 +262,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set SAM json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sam SAM json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSam(String Sam) {
         this.Sam = Sam;
     }
 
     /**
-     * Get 来源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源类型 
      * @return Source 来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodeSource getSource() {
         return this.Source;
@@ -312,19 +278,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(CodeSource Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 创建时间, unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间, unix时间戳 
      * @return CreateTime 创建时间, unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -332,19 +294,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 创建时间, unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间, unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 ,unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 ,unix时间戳 
      * @return UpdateTime 更新时间 ,unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -352,9 +310,7 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 更新时间 ,unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间 ,unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -368,8 +324,7 @@ public class CloudBaseProjectVersion extends AbstractModel {
 	"buildFail"-构建失败
 	"deploying"-部署中
 	 "deployFail"-部署失败
-	 "success"-部署成功
-注意：此字段可能返回 null，表示取不到有效值。 
+	 "success"-部署成功 
      * @return Status 项目状态, 枚举值: 
         "creatingEnv"-创建环境中
 	"createEnvFail"-创建环境失败
@@ -378,7 +333,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 	"deploying"-部署中
 	 "deployFail"-部署失败
 	 "success"-部署成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -393,7 +347,6 @@ public class CloudBaseProjectVersion extends AbstractModel {
 	"deploying"-部署中
 	 "deployFail"-部署失败
 	 "success"-部署成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 项目状态, 枚举值: 
         "creatingEnv"-创建环境中
 	"createEnvFail"-创建环境失败
@@ -402,17 +355,14 @@ public class CloudBaseProjectVersion extends AbstractModel {
 	"deploying"-部署中
 	 "deployFail"-部署失败
 	 "success"-部署成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 环境变量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境变量 
      * @return Parameters 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KVPair [] getParameters() {
         return this.Parameters;
@@ -420,9 +370,7 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Parameters 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameters(KVPair [] Parameters) {
         this.Parameters = Parameters;
@@ -432,13 +380,11 @@ public class CloudBaseProjectVersion extends AbstractModel {
      * Get 项目类型, 枚举值:
 "framework-oneclick" 控制台一键部署
 "framework-local-oneclick" cli本地一键部署
-"qci-extension-cicd" 内网coding ci cd
-注意：此字段可能返回 null，表示取不到有效值。 
+"qci-extension-cicd" 内网coding ci cd 
      * @return Type 项目类型, 枚举值:
 "framework-oneclick" 控制台一键部署
 "framework-local-oneclick" cli本地一键部署
 "qci-extension-cicd" 内网coding ci cd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -449,22 +395,18 @@ public class CloudBaseProjectVersion extends AbstractModel {
 "framework-oneclick" 控制台一键部署
 "framework-local-oneclick" cli本地一键部署
 "qci-extension-cicd" 内网coding ci cd
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 项目类型, 枚举值:
 "framework-oneclick" 控制台一键部署
 "framework-local-oneclick" cli本地一键部署
 "qci-extension-cicd" 内网coding ci cd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get ci的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ci的id 
      * @return CIId ci的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCIId() {
         return this.CIId;
@@ -472,19 +414,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set ci的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CIId ci的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCIId(String CIId) {
         this.CIId = CIId;
     }
 
     /**
-     * Get cd的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cd的id 
      * @return CDId cd的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCDId() {
         return this.CDId;
@@ -492,19 +430,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set cd的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CDId cd的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCDId(String CDId) {
         this.CDId = CDId;
     }
 
     /**
-     * Get 环境id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境id 
      * @return EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -512,19 +446,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本号 
      * @return VersionNum 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionNum() {
         return this.VersionNum;
@@ -532,19 +462,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionNum 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionNum(Long VersionNum) {
         this.VersionNum = VersionNum;
     }
 
     /**
-     * Get 错误原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误原因 
      * @return FailReason 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -552,19 +478,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get rc.json内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rc.json内容 
      * @return RcJson rc.json内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRcJson() {
         return this.RcJson;
@@ -572,19 +494,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set rc.json内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RcJson rc.json内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRcJson(String RcJson) {
         this.RcJson = RcJson;
     }
 
     /**
-     * Get 插件配置内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 插件配置内容 
      * @return AddonConfig 插件配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddonConfig() {
         return this.AddonConfig;
@@ -592,19 +510,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 插件配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddonConfig 插件配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddonConfig(String AddonConfig) {
         this.AddonConfig = AddonConfig;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -612,19 +526,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 网络配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络配置 
      * @return NetworkConfig 网络配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkConfig() {
         return this.NetworkConfig;
@@ -632,19 +542,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 网络配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkConfig 网络配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkConfig(String NetworkConfig) {
         this.NetworkConfig = NetworkConfig;
     }
 
     /**
-     * Get 扩展id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展id 
      * @return ExtensionId 扩展id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtensionId() {
         return this.ExtensionId;
@@ -652,19 +558,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 扩展id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtensionId 扩展id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtensionId(String ExtensionId) {
         this.ExtensionId = ExtensionId;
     }
 
     /**
-     * Get 错误类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误类型 
      * @return FailType 错误类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailType() {
         return this.FailType;
@@ -672,19 +574,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 错误类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailType 错误类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailType(String FailType) {
         this.FailType = FailType;
     }
 
     /**
-     * Get 私有仓库地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有仓库地址 
      * @return RepoUrl 私有仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoUrl() {
         return this.RepoUrl;
@@ -692,19 +590,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 私有仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoUrl 私有仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoUrl(String RepoUrl) {
         this.RepoUrl = RepoUrl;
     }
 
     /**
-     * Get 是否私有仓库代码变更触发自动部署
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否私有仓库代码变更触发自动部署 
      * @return AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoDeployOnCodeChange() {
         return this.AutoDeployOnCodeChange;
@@ -712,19 +606,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set 是否私有仓库代码变更触发自动部署
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoDeployOnCodeChange(Boolean AutoDeployOnCodeChange) {
         this.AutoDeployOnCodeChange = AutoDeployOnCodeChange;
     }
 
     /**
-     * Get ci部署进度（%）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ci部署进度（%） 
      * @return BuildPercent ci部署进度（%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBuildPercent() {
         return this.BuildPercent;
@@ -732,19 +622,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set ci部署进度（%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildPercent ci部署进度（%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildPercent(Long BuildPercent) {
         this.BuildPercent = BuildPercent;
     }
 
     /**
-     * Get Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Uin 
      * @return Uin Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -752,19 +638,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get BuildFinishTime
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BuildFinishTime 
      * @return BuildFinishTime BuildFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildFinishTime() {
         return this.BuildFinishTime;
@@ -772,19 +654,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set BuildFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildFinishTime BuildFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildFinishTime(String BuildFinishTime) {
         this.BuildFinishTime = BuildFinishTime;
     }
 
     /**
-     * Get DeployFinishTime
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DeployFinishTime 
      * @return DeployFinishTime DeployFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployFinishTime() {
         return this.DeployFinishTime;
@@ -792,19 +670,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set DeployFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployFinishTime DeployFinishTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployFinishTime(String DeployFinishTime) {
         this.DeployFinishTime = DeployFinishTime;
     }
 
     /**
-     * Get BuildId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BuildId 
      * @return BuildId BuildId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildId() {
         return this.BuildId;
@@ -812,19 +686,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set BuildId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildId BuildId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildId(String BuildId) {
         this.BuildId = BuildId;
     }
 
     /**
-     * Get SourceUrl
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SourceUrl 
      * @return SourceUrl SourceUrl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceUrl() {
         return this.SourceUrl;
@@ -832,19 +702,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set SourceUrl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceUrl SourceUrl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceUrl(String SourceUrl) {
         this.SourceUrl = SourceUrl;
     }
 
     /**
-     * Get FailReasonShort
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FailReasonShort 
      * @return FailReasonShort FailReasonShort
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReasonShort() {
         return this.FailReasonShort;
@@ -852,19 +718,15 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set FailReasonShort
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReasonShort FailReasonShort
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReasonShort(String FailReasonShort) {
         this.FailReasonShort = FailReasonShort;
     }
 
     /**
-     * Get FirstInitRepo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FirstInitRepo 
      * @return FirstInitRepo FirstInitRepo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstInitRepo() {
         return this.FirstInitRepo;
@@ -872,9 +734,7 @@ public class CloudBaseProjectVersion extends AbstractModel {
 
     /**
      * Set FirstInitRepo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstInitRepo FirstInitRepo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstInitRepo(String FirstInitRepo) {
         this.FirstInitRepo = FirstInitRepo;

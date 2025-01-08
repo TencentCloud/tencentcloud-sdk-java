@@ -25,17 +25,14 @@ public class RouteFilterPrefix extends AbstractModel {
 
     /**
     * 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
     private String Cidr;
 
     /**
-     * Get 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户侧网段地址 
      * @return Cidr 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -43,9 +40,7 @@ public class RouteFilterPrefix extends AbstractModel {
 
     /**
      * Set 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;

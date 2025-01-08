@@ -96,7 +96,6 @@ public class PodSpec extends AbstractModel {
 
     /**
     * 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -104,7 +103,6 @@ public class PodSpec extends AbstractModel {
 
     /**
     * 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -112,7 +110,6 @@ public class PodSpec extends AbstractModel {
 
     /**
     * pod name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
     @Expose
@@ -283,10 +280,8 @@ public class PodSpec extends AbstractModel {
     }
 
     /**
-     * Get 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代表vpc网络唯一id 
      * @return VpcId 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -294,19 +289,15 @@ public class PodSpec extends AbstractModel {
 
     /**
      * Set 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代表vpc子网唯一id 
      * @return SubnetId 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -314,19 +305,15 @@ public class PodSpec extends AbstractModel {
 
     /**
      * Set 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get pod name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod name 
      * @return PodName pod name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
         return this.PodName;
@@ -334,9 +321,7 @@ public class PodSpec extends AbstractModel {
 
     /**
      * Set pod name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodName pod name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;

@@ -137,7 +137,6 @@ public class PeerConnection extends AbstractModel {
 
     /**
     * 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosLevel")
     @Expose
@@ -145,11 +144,17 @@ public class PeerConnection extends AbstractModel {
 
     /**
     * 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 对端VPC唯一ID。
+    */
+    @SerializedName("DestinationVpcId")
+    @Expose
+    private String DestinationVpcId;
 
     /**
      * Get 本端VPC唯一ID。 
@@ -408,10 +413,8 @@ public class PeerConnection extends AbstractModel {
     }
 
     /**
-     * Get 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务分级：PT、AU、AG。 
      * @return QosLevel 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosLevel() {
         return this.QosLevel;
@@ -419,19 +422,15 @@ public class PeerConnection extends AbstractModel {
 
     /**
      * Set 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosLevel 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
     }
 
     /**
-     * Get 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。 
      * @return Type 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -439,12 +438,26 @@ public class PeerConnection extends AbstractModel {
 
     /**
      * Set 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 对端VPC唯一ID。 
+     * @return DestinationVpcId 对端VPC唯一ID。
+     */
+    public String getDestinationVpcId() {
+        return this.DestinationVpcId;
+    }
+
+    /**
+     * Set 对端VPC唯一ID。
+     * @param DestinationVpcId 对端VPC唯一ID。
+     */
+    public void setDestinationVpcId(String DestinationVpcId) {
+        this.DestinationVpcId = DestinationVpcId;
     }
 
     public PeerConnection() {
@@ -512,6 +525,9 @@ public class PeerConnection extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.DestinationVpcId != null) {
+            this.DestinationVpcId = new String(source.DestinationVpcId);
+        }
     }
 
 
@@ -537,6 +553,7 @@ public class PeerConnection extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "DestinationVpcId", this.DestinationVpcId);
 
     }
 }

@@ -25,7 +25,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -33,7 +32,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -41,7 +39,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -49,7 +46,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemSize")
     @Expose
@@ -57,7 +53,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volume")
     @Expose
@@ -65,7 +60,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -73,7 +67,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -81,7 +74,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyTime")
     @Expose
@@ -89,7 +81,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayType")
     @Expose
@@ -97,7 +88,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireFlag")
     @Expose
@@ -105,7 +95,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -113,7 +102,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAutoRenew")
     @Expose
@@ -121,7 +109,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialNo")
     @Expose
@@ -129,7 +116,6 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -137,17 +123,14 @@ public class CdbInfo extends AbstractModel {
 
     /**
     * RegionId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-     * Get 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库实例 
      * @return InstanceName 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -155,19 +138,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库IP 
      * @return Ip 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -175,19 +154,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库端口 
      * @return Port 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -195,19 +170,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库内存规格 
      * @return MemSize 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemSize() {
         return this.MemSize;
@@ -215,19 +186,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库磁盘规格 
      * @return Volume 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolume() {
         return this.Volume;
@@ -235,19 +202,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Volume 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 服务标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务标识 
      * @return Service 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getService() {
         return this.Service;
@@ -255,19 +218,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -275,19 +234,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 申请时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请时间 
      * @return ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyTime() {
         return this.ApplyTime;
@@ -295,19 +250,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get 付费类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费类型 
      * @return PayType 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayType() {
         return this.PayType;
@@ -315,19 +266,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayType 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 过期标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期标识 
      * @return ExpireFlag 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExpireFlag() {
         return this.ExpireFlag;
@@ -335,19 +282,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireFlag 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireFlag(Boolean ExpireFlag) {
         this.ExpireFlag = ExpireFlag;
     }
 
     /**
-     * Get 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库状态 
      * @return Status 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -355,19 +298,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 续费标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费标识 
      * @return IsAutoRenew 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAutoRenew() {
         return this.IsAutoRenew;
@@ -375,19 +314,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAutoRenew 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAutoRenew(Long IsAutoRenew) {
         this.IsAutoRenew = IsAutoRenew;
     }
 
     /**
-     * Get 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库字符串 
      * @return SerialNo 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialNo() {
         return this.SerialNo;
@@ -395,19 +330,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SerialNo 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;
     }
 
     /**
-     * Get ZoneId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ZoneId 
      * @return ZoneId ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -415,19 +346,15 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get RegionId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RegionId 
      * @return RegionId RegionId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -435,9 +362,7 @@ public class CdbInfo extends AbstractModel {
 
     /**
      * Set RegionId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId RegionId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

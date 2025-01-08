@@ -25,7 +25,6 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
     * 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportDate")
     @Expose
@@ -33,7 +32,6 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
     * 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -41,7 +39,6 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
     * 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -49,17 +46,14 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
     * 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 上报日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报日期 
      * @return ReportDate 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportDate() {
         return this.ReportDate;
@@ -67,19 +61,15 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
      * Set 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportDate 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportDate(String ReportDate) {
         this.ReportDate = ReportDate;
     }
 
     /**
-     * Get 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯云uin 
      * @return Uin 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -87,19 +77,15 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
      * Set 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id:环境id 
      * @return EnvId 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -107,19 +93,15 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
      * Set 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报任务状态 
      * @return Status 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -127,9 +109,7 @@ public class SpecialCostItem extends AbstractModel {
 
     /**
      * Set 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
