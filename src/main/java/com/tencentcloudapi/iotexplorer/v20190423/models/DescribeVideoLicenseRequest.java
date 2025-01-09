@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindDeadLetterRequest extends AbstractModel {
+public class DescribeVideoLicenseRequest extends AbstractModel {
 
     /**
-    * 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+    * 实例ID
     */
-    @SerializedName("QueueName")
+    @SerializedName("InstanceId")
     @Expose
-    private String QueueName;
+    private String InstanceId;
 
     /**
-     * Get 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。 
-     * @return QueueName 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
-    public String getQueueName() {
-        return this.QueueName;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
-     * @param QueueName 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
-    public void setQueueName(String QueueName) {
-        this.QueueName = QueueName;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public UnbindDeadLetterRequest() {
+    public DescribeVideoLicenseRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UnbindDeadLetterRequest(UnbindDeadLetterRequest source) {
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
+    public DescribeVideoLicenseRequest(DescribeVideoLicenseRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -64,7 +64,7 @@ public class UnbindDeadLetterRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

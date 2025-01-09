@@ -25,7 +25,6 @@ public class FrequencyLimitConfig extends AbstractModel {
 
     /**
     * 限额对象 "ConnectionsLimit" 或 "QPSLimit"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitObject")
     @Expose
@@ -33,17 +32,14 @@ public class FrequencyLimitConfig extends AbstractModel {
 
     /**
     * 限额配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitConfig")
     @Expose
     private String LimitConfig;
 
     /**
-     * Get 限额对象 "ConnectionsLimit" 或 "QPSLimit"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限额对象 "ConnectionsLimit" 或 "QPSLimit" 
      * @return LimitObject 限额对象 "ConnectionsLimit" 或 "QPSLimit"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLimitObject() {
         return this.LimitObject;
@@ -51,19 +47,15 @@ public class FrequencyLimitConfig extends AbstractModel {
 
     /**
      * Set 限额对象 "ConnectionsLimit" 或 "QPSLimit"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitObject 限额对象 "ConnectionsLimit" 或 "QPSLimit"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitObject(String LimitObject) {
         this.LimitObject = LimitObject;
     }
 
     /**
-     * Get 限额配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限额配置 
      * @return LimitConfig 限额配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLimitConfig() {
         return this.LimitConfig;
@@ -71,9 +63,7 @@ public class FrequencyLimitConfig extends AbstractModel {
 
     /**
      * Set 限额配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitConfig 限额配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitConfig(String LimitConfig) {
         this.LimitConfig = LimitConfig;

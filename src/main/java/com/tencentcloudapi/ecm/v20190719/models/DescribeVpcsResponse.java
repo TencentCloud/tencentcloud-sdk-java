@@ -32,7 +32,6 @@ public class DescribeVpcsResponse extends AbstractModel {
 
     /**
     * 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVpcsResponse extends AbstractModel {
     }
 
     /**
-     * Get 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络对象。 
      * @return VpcSet 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getVpcSet() {
         return this.VpcSet;
@@ -73,9 +70,7 @@ public class DescribeVpcsResponse extends AbstractModel {
 
     /**
      * Set 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcSet 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcSet(VpcInfo [] VpcSet) {
         this.VpcSet = VpcSet;

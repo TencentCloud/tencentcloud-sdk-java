@@ -67,7 +67,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrequencyLimitConfig")
     @Expose
@@ -75,7 +74,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRouteServerType")
     @Expose
@@ -83,7 +81,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 服务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRouteServerName")
     @Expose
@@ -91,7 +88,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRewriteHost")
     @Expose
@@ -99,7 +95,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayVersion")
     @Expose
@@ -107,7 +102,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRoutePath")
     @Expose
@@ -115,7 +109,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRouteMethod")
     @Expose
@@ -123,7 +116,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRoutePort")
     @Expose
@@ -131,7 +123,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRouteEnvId")
     @Expose
@@ -139,7 +130,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayRoutePathMatchType")
     @Expose
@@ -147,7 +137,6 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
     * 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomHeader")
     @Expose
@@ -250,10 +239,8 @@ public class WxGatewayRountItem extends AbstractModel {
     }
 
     /**
-     * Get 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全网关路由限制 
      * @return FrequencyLimitConfig 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FrequencyLimitConfig [] getFrequencyLimitConfig() {
         return this.FrequencyLimitConfig;
@@ -261,19 +248,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrequencyLimitConfig 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrequencyLimitConfig(FrequencyLimitConfig [] FrequencyLimitConfig) {
         this.FrequencyLimitConfig = FrequencyLimitConfig;
     }
 
     /**
-     * Get ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip代表绑定后端ip。cbr代表云托管服务 
      * @return GatewayRouteServerType ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRouteServerType() {
         return this.GatewayRouteServerType;
@@ -281,19 +264,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRouteServerType ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRouteServerType(String GatewayRouteServerType) {
         this.GatewayRouteServerType = GatewayRouteServerType;
     }
 
     /**
-     * Get 服务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名 
      * @return GatewayRouteServerName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRouteServerName() {
         return this.GatewayRouteServerName;
@@ -301,19 +280,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRouteServerName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRouteServerName(String GatewayRouteServerName) {
         this.GatewayRouteServerName = GatewayRouteServerName;
     }
 
     /**
-     * Get ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip 
      * @return GatewayRewriteHost ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRewriteHost() {
         return this.GatewayRewriteHost;
@@ -321,19 +296,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRewriteHost ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRewriteHost(String GatewayRewriteHost) {
         this.GatewayRewriteHost = GatewayRewriteHost;
     }
 
     /**
-     * Get 网关版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关版本 
      * @return GatewayVersion 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayVersion() {
         return this.GatewayVersion;
@@ -341,19 +312,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayVersion 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayVersion(String GatewayVersion) {
         this.GatewayVersion = GatewayVersion;
     }
 
     /**
-     * Get 请求路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求路径 
      * @return GatewayRoutePath 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRoutePath() {
         return this.GatewayRoutePath;
@@ -361,19 +328,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRoutePath 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRoutePath(String GatewayRoutePath) {
         this.GatewayRoutePath = GatewayRoutePath;
     }
 
     /**
-     * Get 请求模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求模式 
      * @return GatewayRouteMethod 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRouteMethod() {
         return this.GatewayRouteMethod;
@@ -381,19 +344,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRouteMethod 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRouteMethod(String GatewayRouteMethod) {
         this.GatewayRouteMethod = GatewayRouteMethod;
     }
 
     /**
-     * Get 4层端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 4层端口 
      * @return GatewayRoutePort 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGatewayRoutePort() {
         return this.GatewayRoutePort;
@@ -401,19 +360,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRoutePort 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRoutePort(Long GatewayRoutePort) {
         this.GatewayRoutePort = GatewayRoutePort;
     }
 
     /**
-     * Get 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由环境ID 
      * @return GatewayRouteEnvId 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRouteEnvId() {
         return this.GatewayRouteEnvId;
@@ -421,19 +376,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRouteEnvId 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRouteEnvId(String GatewayRouteEnvId) {
         this.GatewayRouteEnvId = GatewayRouteEnvId;
     }
 
     /**
-     * Get 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix 
      * @return GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayRoutePathMatchType() {
         return this.GatewayRoutePathMatchType;
@@ -441,19 +392,15 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayRoutePathMatchType(String GatewayRoutePathMatchType) {
         this.GatewayRoutePathMatchType = GatewayRoutePathMatchType;
     }
 
     /**
-     * Get 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全网关自定义头部 
      * @return CustomHeader 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomHeader getCustomHeader() {
         return this.CustomHeader;
@@ -461,9 +408,7 @@ public class WxGatewayRountItem extends AbstractModel {
 
     /**
      * Set 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomHeader 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomHeader(CustomHeader CustomHeader) {
         this.CustomHeader = CustomHeader;

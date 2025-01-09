@@ -765,6 +765,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *查询云存卡套餐信息
+     * @param req DescribeFreeCloudStorageNumRequest
+     * @return DescribeFreeCloudStorageNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(DescribeFreeCloudStorageNumRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFreeCloudStorageNum", DescribeFreeCloudStorageNumResponse.class);
+    }
+
+    /**
      *查询设备消息数量统计
      * @param req DescribeMessageDataStatsRequest
      * @return DescribeMessageDataStatsResponse

@@ -25,7 +25,6 @@ public class DescribeFlowComponentsResponse extends AbstractModel {
 
     /**
     * 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientComponentInfos")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeFlowComponentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。 
      * @return RecipientComponentInfos 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecipientComponentInfo [] getRecipientComponentInfos() {
         return this.RecipientComponentInfos;
@@ -50,9 +47,7 @@ public class DescribeFlowComponentsResponse extends AbstractModel {
 
     /**
      * Set 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientComponentInfos 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientComponentInfos(RecipientComponentInfo [] RecipientComponentInfos) {
         this.RecipientComponentInfos = RecipientComponentInfos;

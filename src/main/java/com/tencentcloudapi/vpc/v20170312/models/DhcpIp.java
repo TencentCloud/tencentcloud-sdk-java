@@ -97,7 +97,6 @@ public class DhcpIp extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -272,10 +271,8 @@ public class DhcpIp extends AbstractModel {
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -283,9 +280,7 @@ public class DhcpIp extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

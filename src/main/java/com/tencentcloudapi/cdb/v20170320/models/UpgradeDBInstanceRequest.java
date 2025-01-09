@@ -160,6 +160,19 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private Long CheckFastUpgradeReboot;
 
     /**
+    * 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+对应的选项为: "high"、"normal"、"low"，默认为空
+参数详解，：
+"high": 对应控制台中的高，数据库负载过高不建议使用
+"normal"：对应控制台中的标准
+"low"：对应控制台中的低
+
+    */
+    @SerializedName("DataCheckSensitive")
+    @Expose
+    private String DataCheckSensitive;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -475,6 +488,46 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.CheckFastUpgradeReboot = CheckFastUpgradeReboot;
     }
 
+    /**
+     * Get 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+对应的选项为: "high"、"normal"、"low"，默认为空
+参数详解，：
+"high": 对应控制台中的高，数据库负载过高不建议使用
+"normal"：对应控制台中的标准
+"low"：对应控制台中的低
+ 
+     * @return DataCheckSensitive 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+对应的选项为: "high"、"normal"、"low"，默认为空
+参数详解，：
+"high": 对应控制台中的高，数据库负载过高不建议使用
+"normal"：对应控制台中的标准
+"low"：对应控制台中的低
+
+     */
+    public String getDataCheckSensitive() {
+        return this.DataCheckSensitive;
+    }
+
+    /**
+     * Set 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+对应的选项为: "high"、"normal"、"low"，默认为空
+参数详解，：
+"high": 对应控制台中的高，数据库负载过高不建议使用
+"normal"：对应控制台中的标准
+"low"：对应控制台中的低
+
+     * @param DataCheckSensitive 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+对应的选项为: "high"、"normal"、"low"，默认为空
+参数详解，：
+"high": 对应控制台中的高，数据库负载过高不建议使用
+"normal"：对应控制台中的标准
+"low"：对应控制台中的低
+
+     */
+    public void setDataCheckSensitive(String DataCheckSensitive) {
+        this.DataCheckSensitive = DataCheckSensitive;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -540,6 +593,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         if (source.CheckFastUpgradeReboot != null) {
             this.CheckFastUpgradeReboot = new Long(source.CheckFastUpgradeReboot);
         }
+        if (source.DataCheckSensitive != null) {
+            this.DataCheckSensitive = new String(source.DataCheckSensitive);
+        }
     }
 
 
@@ -566,6 +622,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoTransType", this.RoTransType);
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
+        this.setParamSimple(map, prefix + "DataCheckSensitive", this.DataCheckSensitive);
 
     }
 }

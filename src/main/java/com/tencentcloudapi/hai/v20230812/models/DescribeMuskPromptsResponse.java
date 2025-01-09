@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.hai.v20230812.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubscribeResponse extends AbstractModel {
+public class DescribeMuskPromptsResponse extends AbstractModel {
 
     /**
-    * SubscriptionId
+    * total count
     */
-    @SerializedName("SubscriptionId")
+    @SerializedName("TotalCount")
     @Expose
-    private String SubscriptionId;
+    private Long TotalCount;
+
+    /**
+    * prompt列表详情
+    */
+    @SerializedName("MuskPromptInfos")
+    @Expose
+    private MuskPromptInfo [] MuskPromptInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateSubscribeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get SubscriptionId 
-     * @return SubscriptionId SubscriptionId
+     * Get total count 
+     * @return TotalCount total count
      */
-    public String getSubscriptionId() {
-        return this.SubscriptionId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set SubscriptionId
-     * @param SubscriptionId SubscriptionId
+     * Set total count
+     * @param TotalCount total count
      */
-    public void setSubscriptionId(String SubscriptionId) {
-        this.SubscriptionId = SubscriptionId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get prompt列表详情 
+     * @return MuskPromptInfos prompt列表详情
+     */
+    public MuskPromptInfo [] getMuskPromptInfos() {
+        return this.MuskPromptInfos;
+    }
+
+    /**
+     * Set prompt列表详情
+     * @param MuskPromptInfos prompt列表详情
+     */
+    public void setMuskPromptInfos(MuskPromptInfo [] MuskPromptInfos) {
+        this.MuskPromptInfos = MuskPromptInfos;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateSubscribeResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSubscribeResponse() {
+    public DescribeMuskPromptsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSubscribeResponse(CreateSubscribeResponse source) {
-        if (source.SubscriptionId != null) {
-            this.SubscriptionId = new String(source.SubscriptionId);
+    public DescribeMuskPromptsResponse(DescribeMuskPromptsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.MuskPromptInfos != null) {
+            this.MuskPromptInfos = new MuskPromptInfo[source.MuskPromptInfos.length];
+            for (int i = 0; i < source.MuskPromptInfos.length; i++) {
+                this.MuskPromptInfos[i] = new MuskPromptInfo(source.MuskPromptInfos[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateSubscribeResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubscriptionId", this.SubscriptionId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "MuskPromptInfos.", this.MuskPromptInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

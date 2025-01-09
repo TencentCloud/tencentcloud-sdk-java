@@ -25,7 +25,6 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
     @Expose
@@ -50,10 +49,8 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。 
      * @return ReportUrl 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
         return this.ReportUrl;
@@ -61,9 +58,7 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
     /**
      * Set 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportUrl 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
         this.ReportUrl = ReportUrl;

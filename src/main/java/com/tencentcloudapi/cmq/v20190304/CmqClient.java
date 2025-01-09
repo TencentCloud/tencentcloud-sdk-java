@@ -39,118 +39,6 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *下线老cmq云API 3.0 无调用量接口
-
-清除queue中的所有消息
-     * @param req ClearQueueRequest
-     * @return ClearQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public ClearQueueResponse ClearQueue(ClearQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ClearQueue", ClearQueueResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-清空订阅者消息标签
-     * @param req ClearSubscriptionFilterTagsRequest
-     * @return ClearSubscriptionFilterTagsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(ClearSubscriptionFilterTagsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ClearSubscriptionFilterTags", ClearSubscriptionFilterTagsResponse.class);
-    }
-
-    /**
-     *创建队列接口
-
-     * @param req CreateQueueRequest
-     * @return CreateQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateQueueResponse CreateQueue(CreateQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateQueue", CreateQueueResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-创建订阅接口
-     * @param req CreateSubscribeRequest
-     * @return CreateSubscribeResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateSubscribe", CreateSubscribeResponse.class);
-    }
-
-    /**
-     *创建主题
-     * @param req CreateTopicRequest
-     * @return CreateTopicResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
-    }
-
-    /**
-     *DeleteQueue
-     * @param req DeleteQueueRequest
-     * @return DeleteQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteQueueResponse DeleteQueue(DeleteQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteQueue", DeleteQueueResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-删除订阅
-     * @param req DeleteSubscribeRequest
-     * @return DeleteSubscribeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSubscribeResponse DeleteSubscribe(DeleteSubscribeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteSubscribe", DeleteSubscribeResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-删除主题
-     * @param req DeleteTopicRequest
-     * @return DeleteTopicResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-枚举死信队列源队列
-     * @param req DescribeDeadLetterSourceQueuesRequest
-     * @return DescribeDeadLetterSourceQueuesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(DescribeDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDeadLetterSourceQueues", DescribeDeadLetterSourceQueuesResponse.class);
-    }
-
-    /**
      *枚举队列列表
      * @param req DescribeQueueDetailRequest
      * @return DescribeQueueDetailResponse
@@ -162,17 +50,6 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *查询订阅详情
-     * @param req DescribeSubscriptionDetailRequest
-     * @return DescribeSubscriptionDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(DescribeSubscriptionDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSubscriptionDetail", DescribeSubscriptionDetailResponse.class);
-    }
-
-    /**
      *查询主题详情
      * @param req DescribeTopicDetailRequest
      * @return DescribeTopicDetailResponse
@@ -181,69 +58,6 @@ public class CmqClient extends AbstractClient{
     public DescribeTopicDetailResponse DescribeTopicDetail(DescribeTopicDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopicDetail", DescribeTopicDetailResponse.class);
-    }
-
-    /**
-     *修改队列属性
-     * @param req ModifyQueueAttributeRequest
-     * @return ModifyQueueAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyQueueAttributeResponse ModifyQueueAttribute(ModifyQueueAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyQueueAttribute", ModifyQueueAttributeResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-修改订阅属性
-     * @param req ModifySubscriptionAttributeRequest
-     * @return ModifySubscriptionAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifySubscriptionAttribute", ModifySubscriptionAttributeResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-修改主题属性
-     * @param req ModifyTopicAttributeRequest
-     * @return ModifyTopicAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTopicAttributeResponse ModifyTopicAttribute(ModifyTopicAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTopicAttribute", ModifyTopicAttributeResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-回溯队列
-     * @param req RewindQueueRequest
-     * @return RewindQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public RewindQueueResponse RewindQueue(RewindQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RewindQueue", RewindQueueResponse.class);
-    }
-
-    /**
-     *下线老cmq云API 3.0 无调用量接口
-
-解绑死信队列
-     * @param req UnbindDeadLetterRequest
-     * @return UnbindDeadLetterResponse
-     * @throws TencentCloudSDKException
-     */
-    public UnbindDeadLetterResponse UnbindDeadLetter(UnbindDeadLetterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UnbindDeadLetter", UnbindDeadLetterResponse.class);
     }
 
 }

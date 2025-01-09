@@ -481,6 +481,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取设备激活详情
+     * @param req DescribeActivateDeviceRequest
+     * @return DescribeActivateDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActivateDeviceResponse DescribeActivateDevice(DescribeActivateDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeActivateDevice", DescribeActivateDeviceResponse.class);
+    }
+
+    /**
+     *获取增值服务激活码详情
+     * @param req DescribeActivateLicenseServiceRequest
+     * @return DescribeActivateLicenseServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActivateLicenseServiceResponse DescribeActivateLicenseService(DescribeActivateLicenseServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeActivateLicenseService", DescribeActivateLicenseServiceResponse.class);
+    }
+
+    /**
      *获取量产详情信息。
      * @param req DescribeBatchProductionRequest
      * @return DescribeBatchProductionResponse
@@ -833,6 +855,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询云存卡套餐信息
+     * @param req DescribeFreeCloudStorageNumRequest
+     * @return DescribeFreeCloudStorageNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(DescribeFreeCloudStorageNumRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFreeCloudStorageNum", DescribeFreeCloudStorageNumResponse.class);
+    }
+
+    /**
      *获取网关绑定的子设备列表
      * @param req DescribeGatewayBindDevicesRequest
      * @return DescribeGatewayBindDevicesResponse
@@ -995,6 +1028,17 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeTopicRuleResponse DescribeTopicRule(DescribeTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopicRule", DescribeTopicRuleResponse.class);
+    }
+
+    /**
+     *用于查询视频激活码统计概览
+     * @param req DescribeVideoLicenseRequest
+     * @return DescribeVideoLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoLicenseResponse DescribeVideoLicense(DescribeVideoLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoLicense", DescribeVideoLicenseResponse.class);
     }
 
     /**

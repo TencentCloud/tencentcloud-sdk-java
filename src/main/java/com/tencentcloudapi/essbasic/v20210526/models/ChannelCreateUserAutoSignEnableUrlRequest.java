@@ -63,9 +63,7 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     private String UrlType;
 
     /**
-    * 是否通知开通方，通知类型:
-<ul><li>默认不设置为不通知开通方</li>
-<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
+    * 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
     */
     @SerializedName("NotifyType")
     @Expose
@@ -189,24 +187,16 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否通知开通方，通知类型:
-<ul><li>默认不设置为不通知开通方</li>
-<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul> 
-     * @return NotifyType 是否通知开通方，通知类型:
-<ul><li>默认不设置为不通知开通方</li>
-<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
+     * Get 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul> 
+     * @return NotifyType 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 是否通知开通方，通知类型:
-<ul><li>默认不设置为不通知开通方</li>
-<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
-     * @param NotifyType 是否通知开通方，通知类型:
-<ul><li>默认不设置为不通知开通方</li>
-<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
+     * Set 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
+     * @param NotifyType 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

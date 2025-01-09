@@ -24,105 +24,177 @@ import java.util.HashMap;
 public class CreateSplitDocumentFlowRequest extends AbstractModel {
 
     /**
-    * 文件类型。支持的文件类型：PDF、DOC、DOCX、XLS、XLSX、PPT、PPTX、MD、TXT、PNG、JPG、JPEG、CSV
+    * 文件类型。
+
+**支持的文件类型：**
+- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
+
+**支持的文件大小：**
+ - `PDF`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
+ - `TXT`、`MD` 最大10M
+ - 其他 最大20M
+
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+    * 文件的 URL 地址。
+文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 文件名，可选，当文件名无法从传入的FileUrl获取时需要通过该字段来明确
+    * 文件名，可选。
+**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文件的 Base64 值。支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+    * 文件的 Base64 值。
+支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
     */
     @SerializedName("FileBase64")
     @Expose
     private String FileBase64;
 
     /**
-    * 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值
+    * 文档的起始页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
     */
     @SerializedName("FileStartPageNumber")
     @Expose
     private Long FileStartPageNumber;
 
     /**
-    * 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+    * 文档的结束页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
     */
     @SerializedName("FileEndPageNumber")
     @Expose
     private Long FileEndPageNumber;
 
     /**
-    * 创建文档拆分任务配置信息创建文档解析任务配置信息		
+    * 文档拆分任务的配置信息。
+
     */
     @SerializedName("Config")
     @Expose
     private CreateSplitDocumentFlowConfig Config;
 
     /**
-     * Get 文件类型。支持的文件类型：PDF、DOC、DOCX、XLS、XLSX、PPT、PPTX、MD、TXT、PNG、JPG、JPEG、CSV 
-     * @return FileType 文件类型。支持的文件类型：PDF、DOC、DOCX、XLS、XLSX、PPT、PPTX、MD、TXT、PNG、JPG、JPEG、CSV
+     * Get 文件类型。
+
+**支持的文件类型：**
+- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
+
+**支持的文件大小：**
+ - `PDF`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
+ - `TXT`、`MD` 最大10M
+ - 其他 最大20M
+ 
+     * @return FileType 文件类型。
+
+**支持的文件类型：**
+- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
+
+**支持的文件大小：**
+ - `PDF`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
+ - `TXT`、`MD` 最大10M
+ - 其他 最大20M
+
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型。支持的文件类型：PDF、DOC、DOCX、XLS、XLSX、PPT、PPTX、MD、TXT、PNG、JPG、JPEG、CSV
-     * @param FileType 文件类型。支持的文件类型：PDF、DOC、DOCX、XLS、XLSX、PPT、PPTX、MD、TXT、PNG、JPG、JPEG、CSV
+     * Set 文件类型。
+
+**支持的文件类型：**
+- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
+
+**支持的文件大小：**
+ - `PDF`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
+ - `TXT`、`MD` 最大10M
+ - 其他 最大20M
+
+     * @param FileType 文件类型。
+
+**支持的文件类型：**
+- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
+
+**支持的文件大小：**
+ - `PDF`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
+ - `TXT`、`MD` 最大10M
+ - 其他 最大20M
+
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
-     * @return FileUrl 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Get 文件的 URL 地址。
+文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749) 
+     * @return FileUrl 文件的 URL 地址。
+文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param FileUrl 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Set 文件的 URL 地址。
+文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+     * @param FileUrl 文件的 URL 地址。
+文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 文件名，可选，当文件名无法从传入的FileUrl获取时需要通过该字段来明确 
-     * @return FileName 文件名，可选，当文件名无法从传入的FileUrl获取时需要通过该字段来明确
+     * Get 文件名，可选。
+**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。 
+     * @return FileName 文件名，可选。
+**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名，可选，当文件名无法从传入的FileUrl获取时需要通过该字段来明确
-     * @param FileName 文件名，可选，当文件名无法从传入的FileUrl获取时需要通过该字段来明确
+     * Set 文件名，可选。
+**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+     * @param FileName 文件名，可选。
+**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件的 Base64 值。支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。 
-     * @return FileBase64 文件的 Base64 值。支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * Get 文件的 Base64 值。
+支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。 
+     * @return FileBase64 文件的 Base64 值。
+支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
      * @deprecated
      */
     @Deprecated
@@ -131,8 +203,14 @@ public class CreateSplitDocumentFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 文件的 Base64 值。支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
-     * @param FileBase64 文件的 Base64 值。支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * Set 文件的 Base64 值。
+支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * @param FileBase64 文件的 Base64 值。
+支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
      * @deprecated
      */
     @Deprecated
@@ -141,48 +219,60 @@ public class CreateSplitDocumentFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值 
-     * @return FileStartPageNumber 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值
+     * Get 文档的起始页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。 
+     * @return FileStartPageNumber 文档的起始页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
      */
     public Long getFileStartPageNumber() {
         return this.FileStartPageNumber;
     }
 
     /**
-     * Set 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值
-     * @param FileStartPageNumber 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值
+     * Set 文档的起始页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * @param FileStartPageNumber 文档的起始页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
      */
     public void setFileStartPageNumber(Long FileStartPageNumber) {
         this.FileStartPageNumber = FileStartPageNumber;
     }
 
     /**
-     * Get 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。 
-     * @return FileEndPageNumber 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+     * Get 文档的结束页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。 
+     * @return FileEndPageNumber 文档的结束页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
      */
     public Long getFileEndPageNumber() {
         return this.FileEndPageNumber;
     }
 
     /**
-     * Set 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
-     * @param FileEndPageNumber 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+     * Set 文档的结束页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * @param FileEndPageNumber 文档的结束页码。
+当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
      */
     public void setFileEndPageNumber(Long FileEndPageNumber) {
         this.FileEndPageNumber = FileEndPageNumber;
     }
 
     /**
-     * Get 创建文档拆分任务配置信息创建文档解析任务配置信息		 
-     * @return Config 创建文档拆分任务配置信息创建文档解析任务配置信息		
+     * Get 文档拆分任务的配置信息。
+ 
+     * @return Config 文档拆分任务的配置信息。
+
      */
     public CreateSplitDocumentFlowConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 创建文档拆分任务配置信息创建文档解析任务配置信息		
-     * @param Config 创建文档拆分任务配置信息创建文档解析任务配置信息		
+     * Set 文档拆分任务的配置信息。
+
+     * @param Config 文档拆分任务的配置信息。
+
      */
     public void setConfig(CreateSplitDocumentFlowConfig Config) {
         this.Config = Config;

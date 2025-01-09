@@ -39,6 +39,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *账号组资源详情
+     * @param req DescribeAggregateDiscoveredResourceRequest
+     * @return DescribeAggregateDiscoveredResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAggregateDiscoveredResourceResponse DescribeAggregateDiscoveredResource(DescribeAggregateDiscoveredResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAggregateDiscoveredResource", DescribeAggregateDiscoveredResourceResponse.class);
+    }
+
+    /**
      *资源详情
      * @param req DescribeDiscoveredResourceRequest
      * @return DescribeDiscoveredResourceResponse
@@ -58,6 +69,17 @@ public class ConfigClient extends AbstractClient{
     public ListAggregateConfigRulesResponse ListAggregateConfigRules(ListAggregateConfigRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAggregateConfigRules", ListAggregateConfigRulesResponse.class);
+    }
+
+    /**
+     *账号组获取资源列表
+     * @param req ListAggregateDiscoveredResourcesRequest
+     * @return ListAggregateDiscoveredResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAggregateDiscoveredResources", ListAggregateDiscoveredResourcesResponse.class);
     }
 
     /**

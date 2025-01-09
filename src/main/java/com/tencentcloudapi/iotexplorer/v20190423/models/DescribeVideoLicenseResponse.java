@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSubscribeResponse extends AbstractModel {
+public class DescribeVideoLicenseResponse extends AbstractModel {
+
+    /**
+    * 视频激活码分类概览
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("License")
+    @Expose
+    private VideoLicenseEntity [] License;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +37,26 @@ public class DeleteSubscribeResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 视频激活码分类概览
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return License 视频激活码分类概览
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VideoLicenseEntity [] getLicense() {
+        return this.License;
+    }
+
+    /**
+     * Set 视频激活码分类概览
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param License 视频激活码分类概览
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLicense(VideoLicenseEntity [] License) {
+        this.License = License;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +74,20 @@ public class DeleteSubscribeResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DeleteSubscribeResponse() {
+    public DescribeVideoLicenseResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSubscribeResponse(DeleteSubscribeResponse source) {
+    public DescribeVideoLicenseResponse(DescribeVideoLicenseResponse source) {
+        if (source.License != null) {
+            this.License = new VideoLicenseEntity[source.License.length];
+            for (int i = 0; i < source.License.length; i++) {
+                this.License[i] = new VideoLicenseEntity(source.License[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class DeleteSubscribeResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "License.", this.License);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

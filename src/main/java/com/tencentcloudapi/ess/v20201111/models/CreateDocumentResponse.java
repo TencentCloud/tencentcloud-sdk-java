@@ -38,7 +38,6 @@ public class CreateDocumentResponse extends AbstractModel {
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
 `2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewFileUrl")
     @Expose
@@ -46,7 +45,6 @@ public class CreateDocumentResponse extends AbstractModel {
 
     /**
     * 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approvers")
     @Expose
@@ -91,13 +89,11 @@ public class CreateDocumentResponse extends AbstractModel {
      * Get 合同预览链接URL。
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
-注意：此字段可能返回 null，表示取不到有效值。 
+`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容` 
      * @return PreviewFileUrl 合同预览链接URL。
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
 `2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewFileUrl() {
         return this.PreviewFileUrl;
@@ -108,22 +104,18 @@ public class CreateDocumentResponse extends AbstractModel {
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
 `2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewFileUrl 合同预览链接URL。
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
 `2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {
         this.PreviewFileUrl = PreviewFileUrl;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方信息，如角色ID、角色名称等 
      * @return Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
@@ -131,9 +123,7 @@ public class CreateDocumentResponse extends AbstractModel {
 
     /**
      * Set 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;

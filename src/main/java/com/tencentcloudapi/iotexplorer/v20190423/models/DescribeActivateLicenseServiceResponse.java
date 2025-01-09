@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyQueueAttributeResponse extends AbstractModel {
+public class DescribeActivateLicenseServiceResponse extends AbstractModel {
+
+    /**
+    * 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private LicenseServiceNumInfo [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +37,26 @@ public class ModifyQueueAttributeResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LicenseServiceNumInfo [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(LicenseServiceNumInfo [] Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +74,20 @@ public class ModifyQueueAttributeResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyQueueAttributeResponse() {
+    public DescribeActivateLicenseServiceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyQueueAttributeResponse(ModifyQueueAttributeResponse source) {
+    public DescribeActivateLicenseServiceResponse(DescribeActivateLicenseServiceResponse source) {
+        if (source.Data != null) {
+            this.Data = new LicenseServiceNumInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new LicenseServiceNumInfo(source.Data[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class ModifyQueueAttributeResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -66,6 +66,30 @@ public class DescribeSignListStatus extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+    */
+    @SerializedName("QualificationId")
+    @Expose
+    private Long QualificationId;
+
+    /**
+    * 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+    */
+    @SerializedName("QualificationName")
+    @Expose
+    private String QualificationName;
+
+    /**
+    * 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+    */
+    @SerializedName("QualificationStatusCode")
+    @Expose
+    private Long QualificationStatusCode;
+
+    /**
      * Get 签名ID。 
      * @return SignId 签名ID。
      */
@@ -161,6 +185,66 @@ public class DescribeSignListStatus extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。 
+     * @return QualificationId 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+     */
+    public Long getQualificationId() {
+        return this.QualificationId;
+    }
+
+    /**
+     * Set 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+     * @param QualificationId 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+     */
+    public void setQualificationId(Long QualificationId) {
+        this.QualificationId = QualificationId;
+    }
+
+    /**
+     * Get 国内短信的资质名称。
+注：国际短信不涉及，默认为空。 
+     * @return QualificationName 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+     */
+    public String getQualificationName() {
+        return this.QualificationName;
+    }
+
+    /**
+     * Set 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+     * @param QualificationName 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+     */
+    public void setQualificationName(String QualificationName) {
+        this.QualificationName = QualificationName;
+    }
+
+    /**
+     * Get 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。 
+     * @return QualificationStatusCode 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+     */
+    public Long getQualificationStatusCode() {
+        return this.QualificationStatusCode;
+    }
+
+    /**
+     * Set 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+     * @param QualificationStatusCode 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+     */
+    public void setQualificationStatusCode(Long QualificationStatusCode) {
+        this.QualificationStatusCode = QualificationStatusCode;
+    }
+
     public DescribeSignListStatus() {
     }
 
@@ -187,6 +271,15 @@ public class DescribeSignListStatus extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.QualificationId != null) {
+            this.QualificationId = new Long(source.QualificationId);
+        }
+        if (source.QualificationName != null) {
+            this.QualificationName = new String(source.QualificationName);
+        }
+        if (source.QualificationStatusCode != null) {
+            this.QualificationStatusCode = new Long(source.QualificationStatusCode);
+        }
     }
 
 
@@ -200,6 +293,9 @@ public class DescribeSignListStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "ReviewReply", this.ReviewReply);
         this.setParamSimple(map, prefix + "SignName", this.SignName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "QualificationId", this.QualificationId);
+        this.setParamSimple(map, prefix + "QualificationName", this.QualificationName);
+        this.setParamSimple(map, prefix + "QualificationStatusCode", this.QualificationStatusCode);
 
     }
 }

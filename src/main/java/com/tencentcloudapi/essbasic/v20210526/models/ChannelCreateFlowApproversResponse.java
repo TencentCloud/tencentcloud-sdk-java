@@ -26,7 +26,6 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel {
     /**
     * 批量补充签署人时，补充失败的报错说明 
 注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FillError")
     @Expose
@@ -41,11 +40,9 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel {
 
     /**
      * Get 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。 
+注:`目前仅补充动态签署人时会返回补充失败的原因`	 
      * @return FillError 批量补充签署人时，补充失败的报错说明 
 注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FillError [] getFillError() {
         return this.FillError;
@@ -54,10 +51,8 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel {
     /**
      * Set 批量补充签署人时，补充失败的报错说明 
 注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FillError 批量补充签署人时，补充失败的报错说明 
 注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFillError(FillError [] FillError) {
         this.FillError = FillError;

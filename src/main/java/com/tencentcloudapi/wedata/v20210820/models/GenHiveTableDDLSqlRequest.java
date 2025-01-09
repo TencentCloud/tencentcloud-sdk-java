@@ -192,6 +192,13 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
     private String SinkSchemaName;
 
     /**
+    * 获取源信息的环境
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -575,6 +582,22 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.SinkSchemaName = SinkSchemaName;
     }
 
+    /**
+     * Get 获取源信息的环境 
+     * @return Env 获取源信息的环境
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 获取源信息的环境
+     * @param Env 获取源信息的环境
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -667,6 +690,9 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         if (source.SinkSchemaName != null) {
             this.SinkSchemaName = new String(source.SinkSchemaName);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
     }
 
 
@@ -698,6 +724,7 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
         this.setParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
         this.setParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
+        this.setParamSimple(map, prefix + "Env", this.Env);
 
     }
 }

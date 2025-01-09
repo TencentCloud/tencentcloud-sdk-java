@@ -39,7 +39,6 @@ public class CreateFlowByFilesResponse extends AbstractModel {
     * 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -47,7 +46,6 @@ public class CreateFlowByFilesResponse extends AbstractModel {
 
     /**
     * 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approvers")
     @Expose
@@ -99,12 +97,10 @@ public class CreateFlowByFilesResponse extends AbstractModel {
     /**
      * Get 合同预览链接URL。
 
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。 
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL 
      * @return PreviewUrl 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
@@ -114,21 +110,17 @@ public class CreateFlowByFilesResponse extends AbstractModel {
      * Set 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方信息，如角色ID、角色名称等 
      * @return Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
@@ -136,9 +128,7 @@ public class CreateFlowByFilesResponse extends AbstractModel {
 
     /**
      * Set 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;

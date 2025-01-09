@@ -66,6 +66,20 @@ public class CreateHiveTableRequest extends AbstractModel {
     private String Incharge;
 
     /**
+    * 数据优化引擎
+    */
+    @SerializedName("DataOptimizationResource")
+    @Expose
+    private String DataOptimizationResource;
+
+    /**
+    * 是否开启数据优化
+    */
+    @SerializedName("SmartOptimizerWritten")
+    @Expose
+    private String SmartOptimizerWritten;
+
+    /**
      * Get 数据源id 
      * @return DatasourceId 数据源id
      */
@@ -161,6 +175,38 @@ public class CreateHiveTableRequest extends AbstractModel {
         this.Incharge = Incharge;
     }
 
+    /**
+     * Get 数据优化引擎 
+     * @return DataOptimizationResource 数据优化引擎
+     */
+    public String getDataOptimizationResource() {
+        return this.DataOptimizationResource;
+    }
+
+    /**
+     * Set 数据优化引擎
+     * @param DataOptimizationResource 数据优化引擎
+     */
+    public void setDataOptimizationResource(String DataOptimizationResource) {
+        this.DataOptimizationResource = DataOptimizationResource;
+    }
+
+    /**
+     * Get 是否开启数据优化 
+     * @return SmartOptimizerWritten 是否开启数据优化
+     */
+    public String getSmartOptimizerWritten() {
+        return this.SmartOptimizerWritten;
+    }
+
+    /**
+     * Set 是否开启数据优化
+     * @param SmartOptimizerWritten 是否开启数据优化
+     */
+    public void setSmartOptimizerWritten(String SmartOptimizerWritten) {
+        this.SmartOptimizerWritten = SmartOptimizerWritten;
+    }
+
     public CreateHiveTableRequest() {
     }
 
@@ -187,6 +233,12 @@ public class CreateHiveTableRequest extends AbstractModel {
         if (source.Incharge != null) {
             this.Incharge = new String(source.Incharge);
         }
+        if (source.DataOptimizationResource != null) {
+            this.DataOptimizationResource = new String(source.DataOptimizationResource);
+        }
+        if (source.SmartOptimizerWritten != null) {
+            this.SmartOptimizerWritten = new String(source.SmartOptimizerWritten);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class CreateHiveTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
+        this.setParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
+        this.setParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
 
     }
 }

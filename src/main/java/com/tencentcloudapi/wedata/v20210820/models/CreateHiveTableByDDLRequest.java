@@ -87,6 +87,20 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
     private Boolean Async;
 
     /**
+    * 数据优化使用的资源
+    */
+    @SerializedName("DataOptimizationResource")
+    @Expose
+    private String DataOptimizationResource;
+
+    /**
+    * 是否开启数据优化
+    */
+    @SerializedName("SmartOptimizerWritten")
+    @Expose
+    private String SmartOptimizerWritten;
+
+    /**
      * Get 数据源ID 
      * @return DatasourceId 数据源ID
      */
@@ -230,6 +244,38 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.Async = Async;
     }
 
+    /**
+     * Get 数据优化使用的资源 
+     * @return DataOptimizationResource 数据优化使用的资源
+     */
+    public String getDataOptimizationResource() {
+        return this.DataOptimizationResource;
+    }
+
+    /**
+     * Set 数据优化使用的资源
+     * @param DataOptimizationResource 数据优化使用的资源
+     */
+    public void setDataOptimizationResource(String DataOptimizationResource) {
+        this.DataOptimizationResource = DataOptimizationResource;
+    }
+
+    /**
+     * Get 是否开启数据优化 
+     * @return SmartOptimizerWritten 是否开启数据优化
+     */
+    public String getSmartOptimizerWritten() {
+        return this.SmartOptimizerWritten;
+    }
+
+    /**
+     * Set 是否开启数据优化
+     * @param SmartOptimizerWritten 是否开启数据优化
+     */
+    public void setSmartOptimizerWritten(String SmartOptimizerWritten) {
+        this.SmartOptimizerWritten = SmartOptimizerWritten;
+    }
+
     public CreateHiveTableByDDLRequest() {
     }
 
@@ -265,6 +311,12 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         if (source.Async != null) {
             this.Async = new Boolean(source.Async);
         }
+        if (source.DataOptimizationResource != null) {
+            this.DataOptimizationResource = new String(source.DataOptimizationResource);
+        }
+        if (source.SmartOptimizerWritten != null) {
+            this.SmartOptimizerWritten = new String(source.SmartOptimizerWritten);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "Async", this.Async);
+        this.setParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
+        this.setParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
 
     }
 }

@@ -205,7 +205,9 @@ public class InstanceSet extends AbstractModel {
     private String OfflineTime;
 
     /**
-    * 流程中的实例，返回子状态。
+    * 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
     */
     @SerializedName("SubStatus")
     @Expose
@@ -920,16 +922,24 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 流程中的实例，返回子状态。 
-     * @return SubStatus 流程中的实例，返回子状态。
+     * Get 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。 
+     * @return SubStatus 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      */
     public Long getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set 流程中的实例，返回子状态。
-     * @param SubStatus 流程中的实例，返回子状态。
+     * Set 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
+     * @param SubStatus 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      */
     public void setSubStatus(Long SubStatus) {
         this.SubStatus = SubStatus;

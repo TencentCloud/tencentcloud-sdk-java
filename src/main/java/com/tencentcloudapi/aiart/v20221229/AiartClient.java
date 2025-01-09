@@ -117,6 +117,21 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req QueryMemeJobRequest
+     * @return QueryMemeJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMemeJobResponse QueryMemeJob(QueryMemeJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryMemeJob", QueryMemeJobResponse.class);
+    }
+
+    /**
      *本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -190,6 +205,22 @@ public class AiartClient extends AbstractClient{
     public SubmitDrawPortraitJobResponse SubmitDrawPortraitJob(SubmitDrawPortraitJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitDrawPortraitJob", SubmitDrawPortraitJobResponse.class);
+    }
+
+    /**
+     *表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+
+- 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req SubmitMemeJobRequest
+     * @return SubmitMemeJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitMemeJobResponse SubmitMemeJob(SubmitMemeJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitMemeJob", SubmitMemeJobResponse.class);
     }
 
     /**

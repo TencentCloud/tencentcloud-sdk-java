@@ -32,7 +32,6 @@ public class DescribeNetworkInterfacesResponse extends AbstractModel {
 
     /**
     * 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkInterfaceSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeNetworkInterfacesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例详细信息列表。 
      * @return NetworkInterfaceSet 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkInterface [] getNetworkInterfaceSet() {
         return this.NetworkInterfaceSet;
@@ -73,9 +70,7 @@ public class DescribeNetworkInterfacesResponse extends AbstractModel {
 
     /**
      * Set 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkInterfaceSet 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkInterfaceSet(NetworkInterface [] NetworkInterfaceSet) {
         this.NetworkInterfaceSet = NetworkInterfaceSet;

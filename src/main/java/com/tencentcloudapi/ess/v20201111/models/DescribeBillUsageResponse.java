@@ -32,7 +32,6 @@ public class DescribeBillUsageResponse extends AbstractModel {
 
     /**
     * 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubOrgSummary")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeBillUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团子企业套餐使用情况 
      * @return SubOrgSummary 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubOrgBillSummary [] getSubOrgSummary() {
         return this.SubOrgSummary;
@@ -73,9 +70,7 @@ public class DescribeBillUsageResponse extends AbstractModel {
 
     /**
      * Set 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubOrgSummary 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubOrgSummary(SubOrgBillSummary [] SubOrgSummary) {
         this.SubOrgSummary = SubOrgSummary;

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.config.v20220802;
 public enum ConfigErrorCode {
+    // 内部错误。
+     INTERNALERROR("InternalError"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      

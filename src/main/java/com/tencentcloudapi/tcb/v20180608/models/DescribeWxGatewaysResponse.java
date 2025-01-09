@@ -25,7 +25,6 @@ public class DescribeWxGatewaysResponse extends AbstractModel {
 
     /**
     * 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gateways")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeWxGatewaysResponse extends AbstractModel {
 
     /**
     * 网关总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeWxGatewaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的服务列表 
      * @return Gateways 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayItem [] getGateways() {
         return this.Gateways;
@@ -58,19 +54,15 @@ public class DescribeWxGatewaysResponse extends AbstractModel {
 
     /**
      * Set 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gateways 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGateways(GatewayItem [] Gateways) {
         this.Gateways = Gateways;
     }
 
     /**
-     * Get 网关总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关总数 
      * @return TotalCount 网关总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeWxGatewaysResponse extends AbstractModel {
 
     /**
      * Set 网关总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 网关总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -83,6 +83,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *获取prompt任务列表
+     * @param req DescribeMuskPromptsRequest
+     * @return DescribeMuskPromptsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMuskPromptsResponse DescribeMuskPrompts(DescribeMuskPromptsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMuskPrompts", DescribeMuskPromptsResponse.class);
+    }
+
+    /**
      *查询地域列表
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse

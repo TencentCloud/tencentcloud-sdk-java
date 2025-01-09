@@ -25,7 +25,6 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
     @Expose
@@ -59,10 +58,8 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL 
      * @return ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
         return this.ReportId;
@@ -70,9 +67,7 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel {
 
     /**
      * Set 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;

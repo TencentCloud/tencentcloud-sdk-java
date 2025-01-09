@@ -28,7 +28,6 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -36,7 +35,6 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
 
     /**
     * 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approvers")
     @Expose
@@ -61,13 +59,11 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
      * Get 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。 
+[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
      * @return FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -78,22 +74,18 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方信息，如角色ID、角色名称等 
      * @return Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
@@ -101,9 +93,7 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
 
     /**
      * Set 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;

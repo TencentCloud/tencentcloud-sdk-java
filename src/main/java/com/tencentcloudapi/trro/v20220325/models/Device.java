@@ -88,6 +88,13 @@ public class Device extends AbstractModel {
     private Long MonthlyRemainTime;
 
     /**
+    * 月封顶时长（分钟)
+    */
+    @SerializedName("LimitedTime")
+    @Expose
+    private Long LimitedTime;
+
+    /**
      * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备ID
@@ -247,6 +254,22 @@ public class Device extends AbstractModel {
         this.MonthlyRemainTime = MonthlyRemainTime;
     }
 
+    /**
+     * Get 月封顶时长（分钟) 
+     * @return LimitedTime 月封顶时长（分钟)
+     */
+    public Long getLimitedTime() {
+        return this.LimitedTime;
+    }
+
+    /**
+     * Set 月封顶时长（分钟)
+     * @param LimitedTime 月封顶时长（分钟)
+     */
+    public void setLimitedTime(Long LimitedTime) {
+        this.LimitedTime = LimitedTime;
+    }
+
     public Device() {
     }
 
@@ -282,6 +305,9 @@ public class Device extends AbstractModel {
         if (source.MonthlyRemainTime != null) {
             this.MonthlyRemainTime = new Long(source.MonthlyRemainTime);
         }
+        if (source.LimitedTime != null) {
+            this.LimitedTime = new Long(source.LimitedTime);
+        }
     }
 
 
@@ -297,6 +323,7 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArraySimple(map, prefix + "LicenseIds.", this.LicenseIds);
         this.setParamSimple(map, prefix + "MonthlyRemainTime", this.MonthlyRemainTime);
+        this.setParamSimple(map, prefix + "LimitedTime", this.LimitedTime);
 
     }
 }

@@ -127,7 +127,7 @@ public class ChannelOrganizationInfo extends AbstractModel {
     private Long ActiveStatus;
 
     /**
-    * 账号过期时间，时间戳
+    * 账号到期时间，时间戳
     */
     @SerializedName("LicenseExpireTime")
     @Expose
@@ -402,16 +402,16 @@ public class ChannelOrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号过期时间，时间戳 
-     * @return LicenseExpireTime 账号过期时间，时间戳
+     * Get 账号到期时间，时间戳 
+     * @return LicenseExpireTime 账号到期时间，时间戳
      */
     public Long getLicenseExpireTime() {
         return this.LicenseExpireTime;
     }
 
     /**
-     * Set 账号过期时间，时间戳
-     * @param LicenseExpireTime 账号过期时间，时间戳
+     * Set 账号到期时间，时间戳
+     * @param LicenseExpireTime 账号到期时间，时间戳
      */
     public void setLicenseExpireTime(Long LicenseExpireTime) {
         this.LicenseExpireTime = LicenseExpireTime;

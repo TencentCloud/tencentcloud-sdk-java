@@ -25,7 +25,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class Tag extends AbstractModel {
 
     /**
     * 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 标签健。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签健。 
      * @return Key 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 标签值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签值。 
      * @return Value 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

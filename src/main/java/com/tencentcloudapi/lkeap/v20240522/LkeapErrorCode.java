@@ -42,6 +42,9 @@ public enum LkeapErrorCode {
     // 文件太大
      LIMITEXCEEDED_TOOLARGEFILEERROR("LimitExceeded.TooLargeFileError"),
      
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // 帐号已欠费。
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      

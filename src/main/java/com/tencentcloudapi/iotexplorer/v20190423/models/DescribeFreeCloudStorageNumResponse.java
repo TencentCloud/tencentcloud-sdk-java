@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteQueueResponse extends AbstractModel {
+public class DescribeFreeCloudStorageNumResponse extends AbstractModel {
+
+    /**
+    * 套餐包信息
+    */
+    @SerializedName("PackageInfos")
+    @Expose
+    private CloudStoragePackageInfo [] PackageInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +36,22 @@ public class DeleteQueueResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 套餐包信息 
+     * @return PackageInfos 套餐包信息
+     */
+    public CloudStoragePackageInfo [] getPackageInfos() {
+        return this.PackageInfos;
+    }
+
+    /**
+     * Set 套餐包信息
+     * @param PackageInfos 套餐包信息
+     */
+    public void setPackageInfos(CloudStoragePackageInfo [] PackageInfos) {
+        this.PackageInfos = PackageInfos;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +69,20 @@ public class DeleteQueueResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DeleteQueueResponse() {
+    public DescribeFreeCloudStorageNumResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteQueueResponse(DeleteQueueResponse source) {
+    public DescribeFreeCloudStorageNumResponse(DescribeFreeCloudStorageNumResponse source) {
+        if (source.PackageInfos != null) {
+            this.PackageInfos = new CloudStoragePackageInfo[source.PackageInfos.length];
+            for (int i = 0; i < source.PackageInfos.length; i++) {
+                this.PackageInfos[i] = new CloudStoragePackageInfo(source.PackageInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class DeleteQueueResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "PackageInfos.", this.PackageInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

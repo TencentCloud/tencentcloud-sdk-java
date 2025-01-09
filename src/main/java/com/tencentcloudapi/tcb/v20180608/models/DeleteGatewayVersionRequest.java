@@ -66,7 +66,7 @@ public class DeleteGatewayVersionRequest extends AbstractModel {
     private Boolean IsForce;
 
     /**
-    * 操作记录
+    * 操作者记录
     */
     @SerializedName("OperatorRemark")
     @Expose
@@ -169,16 +169,16 @@ public class DeleteGatewayVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 操作记录 
-     * @return OperatorRemark 操作记录
+     * Get 操作者记录 
+     * @return OperatorRemark 操作者记录
      */
     public String getOperatorRemark() {
         return this.OperatorRemark;
     }
 
     /**
-     * Set 操作记录
-     * @param OperatorRemark 操作记录
+     * Set 操作者记录
+     * @param OperatorRemark 操作者记录
      */
     public void setOperatorRemark(String OperatorRemark) {
         this.OperatorRemark = OperatorRemark;

@@ -25,7 +25,6 @@ public class DescribeSignFaceVideoResponse extends AbstractModel {
 
     /**
     * 核身视频结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoData")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSignFaceVideoResponse extends AbstractModel {
 
     /**
     * 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionQuestionResult")
     @Expose
@@ -55,10 +53,8 @@ public class DescribeSignFaceVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 核身视频结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核身视频结果。 
      * @return VideoData 核身视频结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetectInfoVideoData getVideoData() {
         return this.VideoData;
@@ -66,19 +62,15 @@ public class DescribeSignFaceVideoResponse extends AbstractModel {
 
     /**
      * Set 核身视频结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoData 核身视频结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoData(DetectInfoVideoData VideoData) {
         this.VideoData = VideoData;
     }
 
     /**
-     * Get 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。 
      * @return IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionQuestionResult getIntentionQuestionResult() {
         return this.IntentionQuestionResult;
@@ -86,9 +78,7 @@ public class DescribeSignFaceVideoResponse extends AbstractModel {
 
     /**
      * Set 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionQuestionResult(IntentionQuestionResult IntentionQuestionResult) {
         this.IntentionQuestionResult = IntentionQuestionResult;

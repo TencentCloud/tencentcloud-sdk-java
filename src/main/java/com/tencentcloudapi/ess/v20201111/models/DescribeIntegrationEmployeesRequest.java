@@ -63,7 +63,7 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+    * 偏移量，默认为0，最大20000。。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
@@ -178,16 +178,16 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+     * Get 偏移量，默认为0，最大20000。。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。 
+     * @return Offset 偏移量，默认为0，最大20000。。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+     * Set 偏移量，默认为0，最大20000。。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
+     * @param Offset 偏移量，默认为0，最大20000。。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

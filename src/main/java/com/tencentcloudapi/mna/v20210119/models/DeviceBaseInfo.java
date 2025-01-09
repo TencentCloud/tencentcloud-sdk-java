@@ -67,7 +67,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicensePayMode")
     @Expose
@@ -75,7 +74,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Payer")
     @Expose
@@ -218,10 +216,8 @@ public class DeviceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license授权有效期 0：月度授权 1：永久授权 
      * @return LicensePayMode license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
@@ -229,19 +225,15 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicensePayMode license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;
     }
 
     /**
-     * Get 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费方 0：厂商付费 1：客户付费 
      * @return Payer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayer() {
         return this.Payer;
@@ -249,9 +241,7 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Payer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayer(Long Payer) {
         this.Payer = Payer;

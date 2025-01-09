@@ -109,6 +109,22 @@ public class AlarmIndicatorInfo extends AbstractModel {
     private Float Threshold;
 
     /**
+    * 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorTimeRangeUnit")
+    @Expose
+    private String IndicatorTimeRangeUnit;
+
+    /**
+    * 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorTimeRangeValue")
+    @Expose
+    private Long IndicatorTimeRangeValue;
+
+    /**
      * Get 指标id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 指标id
@@ -316,6 +332,46 @@ public class AlarmIndicatorInfo extends AbstractModel {
         this.Threshold = Threshold;
     }
 
+    /**
+     * Get 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorTimeRangeUnit 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndicatorTimeRangeUnit() {
+        return this.IndicatorTimeRangeUnit;
+    }
+
+    /**
+     * Set 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorTimeRangeUnit 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorTimeRangeUnit(String IndicatorTimeRangeUnit) {
+        this.IndicatorTimeRangeUnit = IndicatorTimeRangeUnit;
+    }
+
+    /**
+     * Get 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorTimeRangeValue 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIndicatorTimeRangeValue() {
+        return this.IndicatorTimeRangeValue;
+    }
+
+    /**
+     * Set 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorTimeRangeValue 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorTimeRangeValue(Long IndicatorTimeRangeValue) {
+        this.IndicatorTimeRangeValue = IndicatorTimeRangeValue;
+    }
+
     public AlarmIndicatorInfo() {
     }
 
@@ -357,6 +413,12 @@ public class AlarmIndicatorInfo extends AbstractModel {
         if (source.Threshold != null) {
             this.Threshold = new Float(source.Threshold);
         }
+        if (source.IndicatorTimeRangeUnit != null) {
+            this.IndicatorTimeRangeUnit = new String(source.IndicatorTimeRangeUnit);
+        }
+        if (source.IndicatorTimeRangeValue != null) {
+            this.IndicatorTimeRangeValue = new Long(source.IndicatorTimeRangeValue);
+        }
     }
 
 
@@ -375,6 +437,8 @@ public class AlarmIndicatorInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DurationUnit", this.DurationUnit);
         this.setParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
+        this.setParamSimple(map, prefix + "IndicatorTimeRangeUnit", this.IndicatorTimeRangeUnit);
+        this.setParamSimple(map, prefix + "IndicatorTimeRangeValue", this.IndicatorTimeRangeValue);
 
     }
 }

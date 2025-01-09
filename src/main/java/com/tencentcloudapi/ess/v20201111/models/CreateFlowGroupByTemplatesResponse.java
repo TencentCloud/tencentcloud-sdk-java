@@ -25,7 +25,6 @@ public class CreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
     * 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
     * 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -54,10 +52,8 @@ public class CreateFlowGroupByTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同(流程)组的合同组Id 
      * @return FlowGroupId 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
@@ -65,19 +61,15 @@ public class CreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
      * Set 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowGroupId 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同(流程)组中子合同列表. 
      * @return FlowIds 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -85,9 +77,7 @@ public class CreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
      * Set 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowIds 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

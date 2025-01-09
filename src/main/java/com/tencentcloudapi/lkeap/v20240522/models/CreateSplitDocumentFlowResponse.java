@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateSplitDocumentFlowResponse extends AbstractModel {
 
     /**
-    * 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。
+    * 拆分任务唯一ID。
+30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +39,20 @@ public class CreateSplitDocumentFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。 
-     * @return TaskId 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。
+     * Get 拆分任务唯一ID。
+30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。 
+     * @return TaskId 拆分任务唯一ID。
+30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。
-     * @param TaskId 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。
+     * Set 拆分任务唯一ID。
+30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。
+     * @param TaskId 拆分任务唯一ID。
+30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

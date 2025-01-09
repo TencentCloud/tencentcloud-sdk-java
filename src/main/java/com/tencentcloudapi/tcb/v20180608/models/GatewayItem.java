@@ -32,7 +32,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -40,7 +39,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WxAppId")
     @Expose
@@ -48,7 +46,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 环境id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -56,7 +53,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -64,7 +60,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayName")
     @Expose
@@ -72,7 +67,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayType")
     @Expose
@@ -80,7 +74,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayDesc")
     @Expose
@@ -88,7 +81,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageVersion")
     @Expose
@@ -96,7 +88,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -104,7 +95,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -112,7 +102,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -120,7 +109,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -128,7 +116,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * l5地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("L5Addr")
     @Expose
@@ -136,7 +123,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -144,7 +130,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanRenew")
     @Expose
@@ -152,7 +137,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -160,7 +144,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -168,7 +151,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -176,7 +158,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -184,7 +165,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -192,7 +172,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanDowngrade")
     @Expose
@@ -200,7 +179,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowUncertified")
     @Expose
@@ -208,7 +186,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionNumLimit")
     @Expose
@@ -216,7 +193,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LongAccessId")
     @Expose
@@ -224,7 +200,6 @@ public class GatewayItem extends AbstractModel {
 
     /**
     * Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessDomain")
     @Expose
@@ -247,10 +222,8 @@ public class GatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -258,19 +231,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get WxAppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WxAppId 
      * @return WxAppId WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWxAppId() {
         return this.WxAppId;
@@ -278,19 +247,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WxAppId WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWxAppId(String WxAppId) {
         this.WxAppId = WxAppId;
     }
 
     /**
-     * Get 环境id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境id 
      * @return EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -298,19 +263,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Gateway唯一id 
      * @return GatewayId Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -318,19 +279,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Gateway名称 
      * @return GatewayName Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayName() {
         return this.GatewayName;
@@ -338,19 +295,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayName Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Gateway类型 
      * @return GatewayType Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayType() {
         return this.GatewayType;
@@ -358,19 +311,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayType Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Gateway描述 
      * @return GatewayDesc Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayDesc() {
         return this.GatewayDesc;
@@ -378,19 +327,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayDesc Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayDesc(String GatewayDesc) {
         this.GatewayDesc = GatewayDesc;
     }
 
     /**
-     * Get 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐版本 
      * @return PackageVersion 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageVersion() {
         return this.PackageVersion;
@@ -398,19 +343,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageVersion 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
 
     /**
-     * Get 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐唯一id 
      * @return PackageId 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPackageId() {
         return this.PackageId;
@@ -418,19 +359,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(Long PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc唯一id 
      * @return VpcId vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -438,19 +375,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
@@ -458,19 +391,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 网关状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关状态 
      * @return Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -478,19 +407,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get l5地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get l5地址 
      * @return L5Addr l5地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getL5Addr() {
         return this.L5Addr;
@@ -498,19 +423,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set l5地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param L5Addr l5地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setL5Addr(String L5Addr) {
         this.L5Addr = L5Addr;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -518,19 +439,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以续费 
      * @return CanRenew 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanRenew() {
         return this.CanRenew;
@@ -538,19 +455,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanRenew 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanRenew(Boolean CanRenew) {
         this.CanRenew = CanRenew;
     }
 
     /**
-     * Get 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标志 
      * @return AutoRenewFlag 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -558,19 +471,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间 
      * @return IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -578,19 +487,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间 
      * @return ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -598,19 +503,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -618,19 +519,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 变更时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变更时间 
      * @return UpdateTime 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -638,19 +535,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以降配 
      * @return CanDowngrade 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanDowngrade() {
         return this.CanDowngrade;
@@ -658,19 +551,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanDowngrade 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanDowngrade(Boolean CanDowngrade) {
         this.CanDowngrade = CanDowngrade;
     }
 
     /**
-     * Get 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 允许未登录访问 
      * @return AllowUncertified 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllowUncertified() {
         return this.AllowUncertified;
@@ -678,19 +567,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowUncertified 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowUncertified(Long AllowUncertified) {
         this.AllowUncertified = AllowUncertified;
     }
 
     /**
-     * Get 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关版本限额 
      * @return VersionNumLimit 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionNumLimit() {
         return this.VersionNumLimit;
@@ -698,19 +583,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionNumLimit 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionNumLimit(Long VersionNumLimit) {
         this.VersionNumLimit = VersionNumLimit;
     }
 
     /**
-     * Get Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Donut接入ID 
      * @return LongAccessId Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLongAccessId() {
         return this.LongAccessId;
@@ -718,19 +599,15 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LongAccessId Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongAccessId(String LongAccessId) {
         this.LongAccessId = LongAccessId;
     }
 
     /**
-     * Get Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Donut接入域名 
      * @return AccessDomain Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessDomain() {
         return this.AccessDomain;
@@ -738,9 +615,7 @@ public class GatewayItem extends AbstractModel {
 
     /**
      * Set Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessDomain Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessDomain(String AccessDomain) {
         this.AccessDomain = AccessDomain;
