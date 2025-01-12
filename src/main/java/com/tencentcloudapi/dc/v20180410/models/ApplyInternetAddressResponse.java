@@ -25,7 +25,6 @@ public class ApplyInternetAddressResponse extends AbstractModel {
 
     /**
     * 互联网公网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,10 +38,8 @@ public class ApplyInternetAddressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 互联网公网地址ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联网公网地址ID 
      * @return InstanceId 互联网公网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -50,9 +47,7 @@ public class ApplyInternetAddressResponse extends AbstractModel {
 
     /**
      * Set 互联网公网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 互联网公网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

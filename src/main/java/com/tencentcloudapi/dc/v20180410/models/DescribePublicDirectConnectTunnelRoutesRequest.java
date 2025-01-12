@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePublicDirectConnectTunnelRoutesRequest extends AbstractModel {
 
     /**
-    * 专用通道ID
+    * 专用通道ID。
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
@@ -32,38 +32,38 @@ public class DescribePublicDirectConnectTunnelRoutesRequest extends AbstractMode
 
     /**
     * 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 专用通道ID 
-     * @return DirectConnectTunnelId 专用通道ID
+     * Get 专用通道ID。 
+     * @return DirectConnectTunnelId 专用通道ID。
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set 专用通道ID
-     * @param DirectConnectTunnelId 专用通道ID
+     * Set 专用通道ID。
+     * @param DirectConnectTunnelId 专用通道ID。
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
@@ -71,11 +71,11 @@ route-subnet：路由cidr，取值如：192.68.1.0/24
 
     /**
      * Get 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24 
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。 
      * @return Filters 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -83,43 +83,43 @@ route-subnet：路由cidr，取值如：192.68.1.0/24
 
     /**
      * Set 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
      * @param Filters 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

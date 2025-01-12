@@ -25,7 +25,6 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6PrefixLen")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv4BgpQuota")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv4OtherQuota")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv4BgpNum")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv4OtherNum")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPv6互联网公网允许的最小前缀长度 
      * @return Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv6PrefixLen() {
         return this.Ipv6PrefixLen;
@@ -82,19 +75,15 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
      * Set IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6PrefixLen(Long Ipv6PrefixLen) {
         this.Ipv6PrefixLen = Ipv6PrefixLen;
     }
 
     /**
-     * Get BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BGP类型IPv4互联网地址配额 
      * @return Ipv4BgpQuota BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv4BgpQuota() {
         return this.Ipv4BgpQuota;
@@ -102,19 +91,15 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
      * Set BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv4BgpQuota BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv4BgpQuota(Long Ipv4BgpQuota) {
         this.Ipv4BgpQuota = Ipv4BgpQuota;
     }
 
     /**
-     * Get 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 非BGP类型IPv4互联网地址配额 
      * @return Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv4OtherQuota() {
         return this.Ipv4OtherQuota;
@@ -122,19 +107,15 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
      * Set 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv4OtherQuota(Long Ipv4OtherQuota) {
         this.Ipv4OtherQuota = Ipv4OtherQuota;
     }
 
     /**
-     * Get BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BGP类型IPv4互联网地址已使用数量 
      * @return Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv4BgpNum() {
         return this.Ipv4BgpNum;
@@ -142,19 +123,15 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
      * Set BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv4BgpNum(Long Ipv4BgpNum) {
         this.Ipv4BgpNum = Ipv4BgpNum;
     }
 
     /**
-     * Get 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 非BGP类型互联网地址已使用数量 
      * @return Ipv4OtherNum 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv4OtherNum() {
         return this.Ipv4OtherNum;
@@ -162,9 +139,7 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
      * Set 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv4OtherNum 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv4OtherNum(Long Ipv4OtherNum) {
         this.Ipv4OtherNum = Ipv4OtherNum;

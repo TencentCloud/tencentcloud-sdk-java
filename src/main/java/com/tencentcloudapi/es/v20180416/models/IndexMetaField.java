@@ -128,6 +128,14 @@ public class IndexMetaField extends AbstractModel {
     private IndexSettingsField IndexSettingsField;
 
     /**
+    * 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexAliasesField")
+    @Expose
+    private String [] IndexAliasesField;
+
+    /**
     * 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -404,6 +412,26 @@ public class IndexMetaField extends AbstractModel {
     }
 
     /**
+     * Get 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexAliasesField 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIndexAliasesField() {
+        return this.IndexAliasesField;
+    }
+
+    /**
+     * Set 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexAliasesField 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexAliasesField(String [] IndexAliasesField) {
+        this.IndexAliasesField = IndexAliasesField;
+    }
+
+    /**
      * Get 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 索引所属集群APP ID
@@ -493,6 +521,12 @@ public class IndexMetaField extends AbstractModel {
         if (source.IndexSettingsField != null) {
             this.IndexSettingsField = new IndexSettingsField(source.IndexSettingsField);
         }
+        if (source.IndexAliasesField != null) {
+            this.IndexAliasesField = new String[source.IndexAliasesField.length];
+            for (int i = 0; i < source.IndexAliasesField.length; i++) {
+                this.IndexAliasesField[i] = new String(source.IndexAliasesField[i]);
+            }
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
@@ -519,6 +553,7 @@ public class IndexMetaField extends AbstractModel {
         this.setParamObj(map, prefix + "IndexPolicyField.", this.IndexPolicyField);
         this.setParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
         this.setParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
+        this.setParamArraySimple(map, prefix + "IndexAliasesField.", this.IndexAliasesField);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
 

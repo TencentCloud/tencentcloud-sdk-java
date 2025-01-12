@@ -25,7 +25,6 @@ public class InquirePriceCreateDirectConnectGatewayResponse extends AbstractMode
 
     /**
     * 专线网关标准接入费用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquirePriceCreateDirectConnectGatewayResponse extends AbstractMode
 
     /**
     * 专线网关真实接入费用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -47,10 +45,8 @@ public class InquirePriceCreateDirectConnectGatewayResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 专线网关标准接入费用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专线网关标准接入费用 
      * @return TotalCost 专线网关标准接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCost() {
         return this.TotalCost;
@@ -58,19 +54,15 @@ public class InquirePriceCreateDirectConnectGatewayResponse extends AbstractMode
 
     /**
      * Set 专线网关标准接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 专线网关标准接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Long TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 专线网关真实接入费用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专线网关真实接入费用 
      * @return RealTotalCost 专线网关真实接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealTotalCost() {
         return this.RealTotalCost;
@@ -78,9 +70,7 @@ public class InquirePriceCreateDirectConnectGatewayResponse extends AbstractMode
 
     /**
      * Set 专线网关真实接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 专线网关真实接入费用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(Long RealTotalCost) {
         this.RealTotalCost = RealTotalCost;

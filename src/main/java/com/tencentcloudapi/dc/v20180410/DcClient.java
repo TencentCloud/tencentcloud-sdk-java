@@ -196,7 +196,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+     *查询互联网通道路由列表。
      * @param req DescribePublicDirectConnectTunnelRoutesRequest
      * @return DescribePublicDirectConnectTunnelRoutesResponse
      * @throws TencentCloudSDKException

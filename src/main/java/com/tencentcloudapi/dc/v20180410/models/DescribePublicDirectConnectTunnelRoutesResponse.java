@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePublicDirectConnectTunnelRoutesResponse extends AbstractModel {
 
     /**
-    * 互联网通道路由列表
+    * 互联网通道路由列表。
     */
     @SerializedName("Routes")
     @Expose
     private DirectConnectTunnelRoute [] Routes;
 
     /**
-    * 记录总数
+    * 路由总数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePublicDirectConnectTunnelRoutesResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get 互联网通道路由列表 
-     * @return Routes 互联网通道路由列表
+     * Get 互联网通道路由列表。 
+     * @return Routes 互联网通道路由列表。
      */
     public DirectConnectTunnelRoute [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 互联网通道路由列表
-     * @param Routes 互联网通道路由列表
+     * Set 互联网通道路由列表。
+     * @param Routes 互联网通道路由列表。
      */
     public void setRoutes(DirectConnectTunnelRoute [] Routes) {
         this.Routes = Routes;
     }
 
     /**
-     * Get 记录总数 
-     * @return TotalCount 记录总数
+     * Get 路由总数量。 
+     * @return TotalCount 路由总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录总数
-     * @param TotalCount 记录总数
+     * Set 路由总数量。
+     * @param TotalCount 路由总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

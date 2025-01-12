@@ -32,7 +32,6 @@ public class DescribeInternetAddressStatisticsResponse extends AbstractModel {
 
     /**
     * 互联网公网地址统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetAddressStatistics")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInternetAddressStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get 互联网公网地址统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联网公网地址统计信息列表 
      * @return InternetAddressStatistics 互联网公网地址统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternetAddressStatistics [] getInternetAddressStatistics() {
         return this.InternetAddressStatistics;
@@ -73,9 +70,7 @@ public class DescribeInternetAddressStatisticsResponse extends AbstractModel {
 
     /**
      * Set 互联网公网地址统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAddressStatistics 互联网公网地址统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetAddressStatistics(InternetAddressStatistics [] InternetAddressStatistics) {
         this.InternetAddressStatistics = InternetAddressStatistics;

@@ -25,7 +25,6 @@ public class Device extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,7 +32,6 @@ public class Device extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -41,7 +39,6 @@ public class Device extends AbstractModel {
 
     /**
     * 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseCount")
     @Expose
@@ -49,7 +46,6 @@ public class Device extends AbstractModel {
 
     /**
     * 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainDay")
     @Expose
@@ -57,7 +53,6 @@ public class Device extends AbstractModel {
 
     /**
     * 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -65,7 +60,6 @@ public class Device extends AbstractModel {
 
     /**
     * 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -73,7 +67,6 @@ public class Device extends AbstractModel {
 
     /**
     * 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseIds")
     @Expose
@@ -81,7 +74,6 @@ public class Device extends AbstractModel {
 
     /**
     * 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonthlyRemainTime")
     @Expose
@@ -95,10 +87,8 @@ public class Device extends AbstractModel {
     private Long LimitedTime;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -106,19 +96,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -126,19 +112,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经绑定license数量 
      * @return LicenseCount 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseCount() {
         return this.LicenseCount;
@@ -146,19 +128,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseCount 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseCount(Long LicenseCount) {
         this.LicenseCount = LicenseCount;
     }
 
     /**
-     * Get 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余天数：天 
      * @return RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainDay() {
         return this.RemainDay;
@@ -166,19 +144,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainDay(Long RemainDay) {
         this.RemainDay = RemainDay;
     }
 
     /**
-     * Get 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间：s 
      * @return ExpireTime 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -186,19 +160,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务时长：s 
      * @return Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
         return this.Duration;
@@ -206,19 +176,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经绑定licenseId列表 
      * @return LicenseIds 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLicenseIds() {
         return this.LicenseIds;
@@ -226,19 +192,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseIds 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseIds(String [] LicenseIds) {
         this.LicenseIds = LicenseIds;
     }
 
     /**
-     * Get 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每月license的限定时长 
      * @return MonthlyRemainTime 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonthlyRemainTime() {
         return this.MonthlyRemainTime;
@@ -246,9 +208,7 @@ public class Device extends AbstractModel {
 
     /**
      * Set 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonthlyRemainTime 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonthlyRemainTime(Long MonthlyRemainTime) {
         this.MonthlyRemainTime = MonthlyRemainTime;

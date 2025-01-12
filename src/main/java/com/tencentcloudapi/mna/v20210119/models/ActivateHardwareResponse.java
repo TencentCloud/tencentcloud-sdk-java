@@ -25,7 +25,6 @@ public class ActivateHardwareResponse extends AbstractModel {
 
     /**
     * 完成激活的设备信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HardwareInfo")
     @Expose
@@ -39,10 +38,8 @@ public class ActivateHardwareResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 完成激活的设备信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成激活的设备信息 
      * @return HardwareInfo 完成激活的设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ActivateHardware [] getHardwareInfo() {
         return this.HardwareInfo;
@@ -50,9 +47,7 @@ public class ActivateHardwareResponse extends AbstractModel {
 
     /**
      * Set 完成激活的设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HardwareInfo 完成激活的设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHardwareInfo(ActivateHardware [] HardwareInfo) {
         this.HardwareInfo = HardwareInfo;
