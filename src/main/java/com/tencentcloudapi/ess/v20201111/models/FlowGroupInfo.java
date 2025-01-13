@@ -58,7 +58,6 @@ public class FlowGroupInfo extends AbstractModel {
 
     /**
     * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
     */
     @SerializedName("FlowType")
     @Expose
@@ -134,7 +133,7 @@ false：有序签
 
     /**
     * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
     */
     @SerializedName("AutoSignScene")
     @Expose
@@ -232,10 +231,8 @@ false：有序签
     }
 
     /**
-     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同 
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
      * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
      */
     public String getFlowType() {
         return this.FlowType;
@@ -243,9 +240,7 @@ false：有序签
 
     /**
      * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
      * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
@@ -445,9 +440,9 @@ false：有序签
 
     /**
      * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN 
+ 
      * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
      */
     public String getAutoSignScene() {
         return this.AutoSignScene;
@@ -455,9 +450,9 @@ false：有序签
 
     /**
      * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
      * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
      */
     public void setAutoSignScene(String AutoSignScene) {
         this.AutoSignScene = AutoSignScene;

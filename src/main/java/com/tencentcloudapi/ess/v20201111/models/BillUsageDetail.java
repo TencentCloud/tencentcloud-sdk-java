@@ -66,7 +66,7 @@ public class BillUsageDetail extends AbstractModel {
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
     */
@@ -221,7 +221,7 @@ public class BillUsageDetail extends AbstractModel {
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul> 
      * @return Status 当前合同状态,如下是状态码对应的状态。
@@ -236,7 +236,7 @@ public class BillUsageDetail extends AbstractModel {
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
      */
@@ -257,7 +257,7 @@ public class BillUsageDetail extends AbstractModel {
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
      * @param Status 当前合同状态,如下是状态码对应的状态。
@@ -272,7 +272,7 @@ public class BillUsageDetail extends AbstractModel {
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
      */

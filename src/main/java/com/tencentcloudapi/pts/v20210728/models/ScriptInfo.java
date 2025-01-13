@@ -25,7 +25,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -41,7 +39,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +54,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncodedContent")
     @Expose
@@ -65,7 +61,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncodedHttpArchive")
     @Expose
@@ -73,7 +68,6 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadWeight")
     @Expose
@@ -81,17 +75,14 @@ public class ScriptInfo extends AbstractModel {
 
     /**
     * 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,19 +90,15 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 文件大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小 
      * @return Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -119,19 +106,15 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型 
      * @return Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -139,9 +122,7 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -168,10 +149,8 @@ public class ScriptInfo extends AbstractModel {
     }
 
     /**
-     * Get base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64编码后的文件内容 
      * @return EncodedContent base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncodedContent() {
         return this.EncodedContent;
@@ -179,19 +158,15 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncodedContent base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncodedContent(String EncodedContent) {
         this.EncodedContent = EncodedContent;
     }
 
     /**
-     * Get base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64编码后的har结构体 
      * @return EncodedHttpArchive base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncodedHttpArchive() {
         return this.EncodedHttpArchive;
@@ -199,19 +174,15 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncodedHttpArchive base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncodedHttpArchive(String EncodedHttpArchive) {
         this.EncodedHttpArchive = EncodedHttpArchive;
     }
 
     /**
-     * Get 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脚本权重，范围 1-100 
      * @return LoadWeight 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLoadWeight() {
         return this.LoadWeight;
@@ -219,19 +190,15 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadWeight 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadWeight(Long LoadWeight) {
         this.LoadWeight = LoadWeight;
     }
 
     /**
-     * Get 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件 ID 
      * @return FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -239,9 +206,7 @@ public class ScriptInfo extends AbstractModel {
 
     /**
      * Set 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

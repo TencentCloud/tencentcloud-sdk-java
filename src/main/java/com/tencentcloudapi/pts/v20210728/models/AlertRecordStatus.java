@@ -25,7 +25,6 @@ public class AlertRecordStatus extends AbstractModel {
 
     /**
     * 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbortJob")
     @Expose
@@ -33,17 +32,14 @@ public class AlertRecordStatus extends AbstractModel {
 
     /**
     * 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendNotice")
     @Expose
     private Long SendNotice;
 
     /**
-     * Get 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 停止压测任务成功与否 
      * @return AbortJob 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAbortJob() {
         return this.AbortJob;
@@ -51,19 +47,15 @@ public class AlertRecordStatus extends AbstractModel {
 
     /**
      * Set 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbortJob 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbortJob(Long AbortJob) {
         this.AbortJob = AbortJob;
     }
 
     /**
-     * Get 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发送告警通知成功与否 
      * @return SendNotice 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSendNotice() {
         return this.SendNotice;
@@ -71,9 +63,7 @@ public class AlertRecordStatus extends AbstractModel {
 
     /**
      * Set 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendNotice 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendNotice(Long SendNotice) {
         this.SendNotice = SendNotice;

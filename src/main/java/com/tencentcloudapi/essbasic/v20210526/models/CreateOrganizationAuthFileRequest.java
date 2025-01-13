@@ -47,9 +47,8 @@ public class CreateOrganizationAuthFileRequest extends AbstractModel {
 
     /**
     * 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
     */
     @SerializedName("Type")
     @Expose
@@ -121,13 +120,11 @@ public class CreateOrganizationAuthFileRequest extends AbstractModel {
 
     /**
      * Get 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书 
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul> 
      * @return Type 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
      */
     public Long getType() {
         return this.Type;
@@ -135,13 +132,11 @@ public class CreateOrganizationAuthFileRequest extends AbstractModel {
 
     /**
      * Set 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
      * @param Type 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;

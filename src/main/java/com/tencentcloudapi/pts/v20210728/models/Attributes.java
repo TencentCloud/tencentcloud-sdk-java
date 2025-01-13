@@ -25,7 +25,6 @@ public class Attributes extends AbstractModel {
 
     /**
     * 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class Attributes extends AbstractModel {
 
     /**
     * 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -41,7 +39,6 @@ public class Attributes extends AbstractModel {
 
     /**
     * 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -49,7 +46,6 @@ public class Attributes extends AbstractModel {
 
     /**
     * 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -57,17 +53,14 @@ public class Attributes extends AbstractModel {
 
     /**
     * 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
     private String Duration;
 
     /**
-     * Get 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采用请求返回码 
      * @return Status 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -75,19 +68,15 @@ public class Attributes extends AbstractModel {
 
     /**
      * Set 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样请求结果码 
      * @return Result 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -95,19 +84,15 @@ public class Attributes extends AbstractModel {
 
     /**
      * Set 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样请求API 
      * @return Service 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getService() {
         return this.Service;
@@ -115,19 +100,15 @@ public class Attributes extends AbstractModel {
 
     /**
      * Set 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样请求调用方法 
      * @return Method 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -135,19 +116,15 @@ public class Attributes extends AbstractModel {
 
     /**
      * Set 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样请求延时时间 
      * @return Duration 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
         return this.Duration;
@@ -155,9 +132,7 @@ public class Attributes extends AbstractModel {
 
     /**
      * Set 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;

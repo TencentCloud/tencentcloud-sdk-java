@@ -25,7 +25,6 @@ public class DescribeExtendedServiceAuthDetailResponse extends AbstractModel {
 
     /**
     * 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthInfoDetail")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeExtendedServiceAuthDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。 
      * @return AuthInfoDetail 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuthInfoDetail getAuthInfoDetail() {
         return this.AuthInfoDetail;
@@ -50,9 +47,7 @@ public class DescribeExtendedServiceAuthDetailResponse extends AbstractModel {
 
     /**
      * Set 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthInfoDetail 服务授权的信息列表，根据查询类型返回特定扩展服务的开通和授权状况。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthInfoDetail(AuthInfoDetail AuthInfoDetail) {
         this.AuthInfoDetail = AuthInfoDetail;

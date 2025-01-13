@@ -25,7 +25,6 @@ public class NormalLog extends AbstractModel {
 
     /**
     * 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,7 +32,6 @@ public class NormalLog extends AbstractModel {
 
     /**
     * 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SeverityText")
     @Expose
@@ -41,17 +39,14 @@ public class NormalLog extends AbstractModel {
 
     /**
     * 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-     * Get 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 毫秒时间戳 
      * @return Timestamp 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
         return this.Timestamp;
@@ -59,19 +54,15 @@ public class NormalLog extends AbstractModel {
 
     /**
      * Set 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 日志级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志级别 
      * @return SeverityText 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeverityText() {
         return this.SeverityText;
@@ -79,19 +70,15 @@ public class NormalLog extends AbstractModel {
 
     /**
      * Set 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SeverityText 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeverityText(String SeverityText) {
         this.SeverityText = SeverityText;
     }
 
     /**
-     * Get 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志输出内容 
      * @return Body 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -99,9 +86,7 @@ public class NormalLog extends AbstractModel {
 
     /**
      * Set 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;

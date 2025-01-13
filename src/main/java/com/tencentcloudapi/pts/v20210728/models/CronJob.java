@@ -33,7 +33,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +40,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -49,7 +47,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScenarioId")
     @Expose
@@ -57,7 +54,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScenarioName")
     @Expose
@@ -65,7 +61,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronExpression")
     @Expose
@@ -81,7 +76,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbortReason")
     @Expose
@@ -89,7 +83,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -97,7 +90,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeId")
     @Expose
@@ -121,7 +113,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrequencyType")
     @Expose
@@ -129,7 +120,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -137,7 +127,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * tom
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobOwner")
     @Expose
@@ -145,7 +134,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * App ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -153,7 +141,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 主账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -161,7 +148,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 子账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
@@ -188,10 +174,8 @@ public class CronJob extends AbstractModel {
     }
 
     /**
-     * Get 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务名字 
      * @return Name 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -199,19 +183,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -219,19 +199,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 场景ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景ID 
      * @return ScenarioId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScenarioId() {
         return this.ScenarioId;
@@ -239,19 +215,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScenarioId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScenarioId(String ScenarioId) {
         this.ScenarioId = ScenarioId;
     }
 
     /**
-     * Get 场景名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景名称 
      * @return ScenarioName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScenarioName() {
         return this.ScenarioName;
@@ -259,19 +231,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScenarioName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScenarioName(String ScenarioName) {
         this.ScenarioName = ScenarioName;
     }
 
     /**
-     * Get cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cron 表达式 
      * @return CronExpression cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronExpression() {
         return this.CronExpression;
@@ -279,9 +247,7 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronExpression cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronExpression(String CronExpression) {
         this.CronExpression = CronExpression;
@@ -308,10 +274,8 @@ public class CronJob extends AbstractModel {
     }
 
     /**
-     * Get 中止原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 中止原因 
      * @return AbortReason 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAbortReason() {
         return this.AbortReason;
@@ -319,19 +283,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbortReason 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbortReason(Long AbortReason) {
         this.AbortReason = AbortReason;
     }
 
     /**
-     * Get 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务状态 
      * @return Status 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -339,19 +299,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Notice ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Notice ID 
      * @return NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeId() {
         return this.NoticeId;
@@ -359,9 +315,7 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;
@@ -408,10 +362,8 @@ public class CronJob extends AbstractModel {
     }
 
     /**
-     * Get 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行频率类型 
      * @return FrequencyType 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrequencyType() {
         return this.FrequencyType;
@@ -419,19 +371,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrequencyType 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrequencyType(Long FrequencyType) {
         this.FrequencyType = FrequencyType;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -439,19 +387,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get tom
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tom 
      * @return JobOwner tom
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobOwner() {
         return this.JobOwner;
@@ -459,19 +403,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set tom
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobOwner tom
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobOwner(String JobOwner) {
         this.JobOwner = JobOwner;
     }
 
     /**
-     * Get App ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App ID 
      * @return AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -479,19 +419,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账号 
      * @return Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -499,19 +435,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号 
      * @return SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -519,9 +451,7 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;

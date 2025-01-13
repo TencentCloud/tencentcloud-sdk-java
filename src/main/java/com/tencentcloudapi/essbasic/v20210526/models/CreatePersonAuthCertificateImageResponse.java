@@ -32,7 +32,6 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
     * 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageCertId")
     @Expose
@@ -40,7 +39,6 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
     * 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialNumber")
     @Expose
@@ -48,7 +46,6 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
     * CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidFrom")
     @Expose
@@ -56,7 +53,6 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
     * CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidTo")
     @Expose
@@ -86,10 +82,8 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
     }
 
     /**
-     * Get 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动` 
      * @return ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageCertId() {
         return this.ImageCertId;
@@ -97,19 +91,15 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
      * Set 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。该编号会合成到个人用户证书证明图片。注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageCertId(String ImageCertId) {
         this.ImageCertId = ImageCertId;
     }
 
     /**
-     * Get 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。 
      * @return SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialNumber() {
         return this.SerialNumber;
@@ -117,19 +107,15 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
      * Set 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialNumber(String SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
 
     /**
-     * Get CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片 
      * @return ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidFrom() {
         return this.ValidFrom;
@@ -137,19 +123,15 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
      * Set CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidFrom(Long ValidFrom) {
         this.ValidFrom = ValidFrom;
     }
 
     /**
-     * Get CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片 
      * @return ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidTo() {
         return this.ValidTo;
@@ -157,9 +139,7 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
      * Set CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;

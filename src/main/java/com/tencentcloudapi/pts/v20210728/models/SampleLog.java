@@ -25,7 +25,6 @@ public class SampleLog extends AbstractModel {
 
     /**
     * 日志毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,7 +32,6 @@ public class SampleLog extends AbstractModel {
 
     /**
     * 采样日志属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attributes")
     @Expose
@@ -41,17 +39,14 @@ public class SampleLog extends AbstractModel {
 
     /**
     * har格式的采样请求
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-     * Get 日志毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志毫秒时间戳 
      * @return Timestamp 日志毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
         return this.Timestamp;
@@ -59,19 +54,15 @@ public class SampleLog extends AbstractModel {
 
     /**
      * Set 日志毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 日志毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 采样日志属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样日志属性 
      * @return Attributes 采样日志属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Attributes getAttributes() {
         return this.Attributes;
@@ -79,19 +70,15 @@ public class SampleLog extends AbstractModel {
 
     /**
      * Set 采样日志属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attributes 采样日志属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttributes(Attributes Attributes) {
         this.Attributes = Attributes;
     }
 
     /**
-     * Get har格式的采样请求
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get har格式的采样请求 
      * @return Body har格式的采样请求
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -99,9 +86,7 @@ public class SampleLog extends AbstractModel {
 
     /**
      * Set har格式的采样请求
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body har格式的采样请求
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;

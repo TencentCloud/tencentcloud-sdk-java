@@ -32,7 +32,6 @@ public class DescribeSampleLogsResponse extends AbstractModel {
 
     /**
     * 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -70,10 +69,8 @@ public class DescribeSampleLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时 
      * @return Context 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -81,9 +78,7 @@ public class DescribeSampleLogsResponse extends AbstractModel {
 
     /**
      * Set 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 日志上下文，加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;

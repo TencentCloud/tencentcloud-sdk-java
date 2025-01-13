@@ -25,7 +25,6 @@ public class Stage extends AbstractModel {
 
     /**
     * 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationSeconds")
     @Expose
@@ -33,17 +32,14 @@ public class Stage extends AbstractModel {
 
     /**
     * 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetVirtualUsers")
     @Expose
     private Long TargetVirtualUsers;
 
     /**
-     * Get 施压时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 施压时间 
      * @return DurationSeconds 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDurationSeconds() {
         return this.DurationSeconds;
@@ -51,19 +47,15 @@ public class Stage extends AbstractModel {
 
     /**
      * Set 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationSeconds 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationSeconds(Long DurationSeconds) {
         this.DurationSeconds = DurationSeconds;
     }
 
     /**
-     * Get 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟用户数 
      * @return TargetVirtualUsers 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetVirtualUsers() {
         return this.TargetVirtualUsers;
@@ -71,9 +63,7 @@ public class Stage extends AbstractModel {
 
     /**
      * Set 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetVirtualUsers 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetVirtualUsers(Long TargetVirtualUsers) {
         this.TargetVirtualUsers = TargetVirtualUsers;

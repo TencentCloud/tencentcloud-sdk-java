@@ -25,7 +25,6 @@ public class FileInfo extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class FileInfo extends AbstractModel {
 
     /**
     * 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -41,7 +39,6 @@ public class FileInfo extends AbstractModel {
 
     /**
     * 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,17 +54,14 @@ public class FileInfo extends AbstractModel {
 
     /**
     * 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,19 +69,15 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 文件大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小 
      * @return Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -95,19 +85,15 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Set 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型 
      * @return Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -115,9 +101,7 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Set 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -144,10 +128,8 @@ public class FileInfo extends AbstractModel {
     }
 
     /**
-     * Get 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件 ID 
      * @return FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -155,9 +137,7 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Set 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

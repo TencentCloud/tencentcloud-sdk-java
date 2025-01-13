@@ -80,7 +80,7 @@ public class ScoreInfo extends AbstractModel {
     private String ApiDuration;
 
     /**
-    * 分数
+    * 项目总分
     */
     @SerializedName("Score")
     @Expose
@@ -121,6 +121,48 @@ public class ScoreInfo extends AbstractModel {
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * 页面性能评分
+    */
+    @SerializedName("PagePerformanceScore")
+    @Expose
+    private String PagePerformanceScore;
+
+    /**
+    * js错误评分
+    */
+    @SerializedName("JsErrorScore")
+    @Expose
+    private String JsErrorScore;
+
+    /**
+    * API性能评分
+    */
+    @SerializedName("ApiPerformanceScore")
+    @Expose
+    private String ApiPerformanceScore;
+
+    /**
+    * API可用性评分
+    */
+    @SerializedName("ApiAvaliableScore")
+    @Expose
+    private String ApiAvaliableScore;
+
+    /**
+    * 静态资源性能评分
+    */
+    @SerializedName("StaticPerformanceScore")
+    @Expose
+    private String StaticPerformanceScore;
+
+    /**
+    * 静态资源可用性评分
+    */
+    @SerializedName("StaticAvaliableScore")
+    @Expose
+    private String StaticAvaliableScore;
 
     /**
      * Get duration 
@@ -251,16 +293,16 @@ public class ScoreInfo extends AbstractModel {
     }
 
     /**
-     * Get 分数 
-     * @return Score 分数
+     * Get 项目总分 
+     * @return Score 项目总分
      */
     public String getScore() {
         return this.Score;
     }
 
     /**
-     * Set 分数
-     * @param Score 分数
+     * Set 项目总分
+     * @param Score 项目总分
      */
     public void setScore(String Score) {
         this.Score = Score;
@@ -350,6 +392,102 @@ public class ScoreInfo extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 页面性能评分 
+     * @return PagePerformanceScore 页面性能评分
+     */
+    public String getPagePerformanceScore() {
+        return this.PagePerformanceScore;
+    }
+
+    /**
+     * Set 页面性能评分
+     * @param PagePerformanceScore 页面性能评分
+     */
+    public void setPagePerformanceScore(String PagePerformanceScore) {
+        this.PagePerformanceScore = PagePerformanceScore;
+    }
+
+    /**
+     * Get js错误评分 
+     * @return JsErrorScore js错误评分
+     */
+    public String getJsErrorScore() {
+        return this.JsErrorScore;
+    }
+
+    /**
+     * Set js错误评分
+     * @param JsErrorScore js错误评分
+     */
+    public void setJsErrorScore(String JsErrorScore) {
+        this.JsErrorScore = JsErrorScore;
+    }
+
+    /**
+     * Get API性能评分 
+     * @return ApiPerformanceScore API性能评分
+     */
+    public String getApiPerformanceScore() {
+        return this.ApiPerformanceScore;
+    }
+
+    /**
+     * Set API性能评分
+     * @param ApiPerformanceScore API性能评分
+     */
+    public void setApiPerformanceScore(String ApiPerformanceScore) {
+        this.ApiPerformanceScore = ApiPerformanceScore;
+    }
+
+    /**
+     * Get API可用性评分 
+     * @return ApiAvaliableScore API可用性评分
+     */
+    public String getApiAvaliableScore() {
+        return this.ApiAvaliableScore;
+    }
+
+    /**
+     * Set API可用性评分
+     * @param ApiAvaliableScore API可用性评分
+     */
+    public void setApiAvaliableScore(String ApiAvaliableScore) {
+        this.ApiAvaliableScore = ApiAvaliableScore;
+    }
+
+    /**
+     * Get 静态资源性能评分 
+     * @return StaticPerformanceScore 静态资源性能评分
+     */
+    public String getStaticPerformanceScore() {
+        return this.StaticPerformanceScore;
+    }
+
+    /**
+     * Set 静态资源性能评分
+     * @param StaticPerformanceScore 静态资源性能评分
+     */
+    public void setStaticPerformanceScore(String StaticPerformanceScore) {
+        this.StaticPerformanceScore = StaticPerformanceScore;
+    }
+
+    /**
+     * Get 静态资源可用性评分 
+     * @return StaticAvaliableScore 静态资源可用性评分
+     */
+    public String getStaticAvaliableScore() {
+        return this.StaticAvaliableScore;
+    }
+
+    /**
+     * Set 静态资源可用性评分
+     * @param StaticAvaliableScore 静态资源可用性评分
+     */
+    public void setStaticAvaliableScore(String StaticAvaliableScore) {
+        this.StaticAvaliableScore = StaticAvaliableScore;
+    }
+
     public ScoreInfo() {
     }
 
@@ -400,6 +538,24 @@ public class ScoreInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.PagePerformanceScore != null) {
+            this.PagePerformanceScore = new String(source.PagePerformanceScore);
+        }
+        if (source.JsErrorScore != null) {
+            this.JsErrorScore = new String(source.JsErrorScore);
+        }
+        if (source.ApiPerformanceScore != null) {
+            this.ApiPerformanceScore = new String(source.ApiPerformanceScore);
+        }
+        if (source.ApiAvaliableScore != null) {
+            this.ApiAvaliableScore = new String(source.ApiAvaliableScore);
+        }
+        if (source.StaticPerformanceScore != null) {
+            this.StaticPerformanceScore = new String(source.StaticPerformanceScore);
+        }
+        if (source.StaticAvaliableScore != null) {
+            this.StaticAvaliableScore = new String(source.StaticAvaliableScore);
+        }
     }
 
 
@@ -421,6 +577,12 @@ public class ScoreInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordNum", this.RecordNum);
         this.setParamSimple(map, prefix + "PageDuration", this.PageDuration);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PagePerformanceScore", this.PagePerformanceScore);
+        this.setParamSimple(map, prefix + "JsErrorScore", this.JsErrorScore);
+        this.setParamSimple(map, prefix + "ApiPerformanceScore", this.ApiPerformanceScore);
+        this.setParamSimple(map, prefix + "ApiAvaliableScore", this.ApiAvaliableScore);
+        this.setParamSimple(map, prefix + "StaticPerformanceScore", this.StaticPerformanceScore);
+        this.setParamSimple(map, prefix + "StaticAvaliableScore", this.StaticAvaliableScore);
 
     }
 }

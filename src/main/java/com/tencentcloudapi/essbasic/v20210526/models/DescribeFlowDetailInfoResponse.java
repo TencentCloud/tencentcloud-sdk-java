@@ -40,7 +40,6 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
     /**
     * 合同流程的详细信息。
 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowInfo")
     @Expose
@@ -48,7 +47,6 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
 
     /**
     * 合同组ID，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -56,7 +54,6 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
 
     /**
     * 合同组名称，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowGroupName")
     @Expose
@@ -103,11 +100,9 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
 
     /**
      * Get 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。 
      * @return FlowInfo 合同流程的详细信息。
 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FlowDetailInfo [] getFlowInfo() {
         return this.FlowInfo;
@@ -116,20 +111,16 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
     /**
      * Set 合同流程的详细信息。
 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowInfo 合同流程的详细信息。
 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowInfo(FlowDetailInfo [] FlowInfo) {
         this.FlowInfo = FlowInfo;
     }
 
     /**
-     * Get 合同组ID，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同组ID，只有在查询合同组信息时才会返回。 
      * @return FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
@@ -137,19 +128,15 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
 
     /**
      * Set 合同组ID，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同组名称，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同组名称，只有在查询合同组信息时才会返回。 
      * @return FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowGroupName() {
         return this.FlowGroupName;
@@ -157,9 +144,7 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel {
 
     /**
      * Set 合同组名称，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowGroupName(String FlowGroupName) {
         this.FlowGroupName = FlowGroupName;

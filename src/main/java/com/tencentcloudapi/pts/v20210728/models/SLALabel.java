@@ -25,7 +25,6 @@ public class SLALabel extends AbstractModel {
 
     /**
     * 标签名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelName")
     @Expose
@@ -33,17 +32,14 @@ public class SLALabel extends AbstractModel {
 
     /**
     * 标签值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelValue")
     @Expose
     private String LabelValue;
 
     /**
-     * Get 标签名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签名 
      * @return LabelName 标签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelName() {
         return this.LabelName;
@@ -51,19 +47,15 @@ public class SLALabel extends AbstractModel {
 
     /**
      * Set 标签名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelName 标签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelName(String LabelName) {
         this.LabelName = LabelName;
     }
 
     /**
-     * Get 标签值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签值 
      * @return LabelValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelValue() {
         return this.LabelValue;
@@ -71,9 +63,7 @@ public class SLALabel extends AbstractModel {
 
     /**
      * Set 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelValue(String LabelValue) {
         this.LabelValue = LabelValue;

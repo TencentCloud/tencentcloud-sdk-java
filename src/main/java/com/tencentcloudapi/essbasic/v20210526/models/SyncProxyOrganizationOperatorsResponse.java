@@ -28,7 +28,6 @@ public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -36,7 +35,6 @@ public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
 
     /**
     * 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedList")
     @Expose
@@ -53,13 +51,11 @@ public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
      * Get  同步的状态,  全部同步失败接口是接口会直接报错
 
 <ul><li> **1** :全部成功</li>
-<li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> **2** :部分成功</li></ul> 
      * @return Status  同步的状态,  全部同步失败接口是接口会直接报错
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -70,22 +66,18 @@ public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status  同步的状态,  全部同步失败接口是接口会直接报错
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步失败员工ID及其失败原因 
      * @return FailedList 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncFailReason [] getFailedList() {
         return this.FailedList;
@@ -93,9 +85,7 @@ public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
 
     /**
      * Set 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedList 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedList(SyncFailReason [] FailedList) {
         this.FailedList = FailedList;

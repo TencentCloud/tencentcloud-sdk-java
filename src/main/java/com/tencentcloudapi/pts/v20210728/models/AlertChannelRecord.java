@@ -25,7 +25,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeId")
     @Expose
@@ -33,7 +32,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AMPConsumerId")
     @Expose
@@ -41,7 +39,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -49,7 +46,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -65,7 +60,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -73,7 +67,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * App ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -81,7 +74,6 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 主账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -89,17 +81,14 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
     * 子账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
     private String SubAccountUin;
 
     /**
-     * Get Notice ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Notice ID 
      * @return NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeId() {
         return this.NoticeId;
@@ -107,19 +96,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;
     }
 
     /**
-     * Get Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Consumer ID 
      * @return AMPConsumerId Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAMPConsumerId() {
         return this.AMPConsumerId;
@@ -127,19 +112,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AMPConsumerId Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAMPConsumerId(String AMPConsumerId) {
         this.AMPConsumerId = AMPConsumerId;
     }
 
     /**
-     * Get 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目 ID 
      * @return ProjectId 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -147,19 +128,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -167,19 +144,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -187,19 +160,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -207,19 +176,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get App ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App ID 
      * @return AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -227,19 +192,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账号 
      * @return Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -247,19 +208,15 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号 
      * @return SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -267,9 +224,7 @@ public class AlertChannelRecord extends AbstractModel {
 
     /**
      * Set 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;

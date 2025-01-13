@@ -25,7 +25,6 @@ public class CreateOrganizationAuthFileResponse extends AbstractModel {
 
     /**
     * 授权书链接，有效期5分钟。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -39,10 +38,8 @@ public class CreateOrganizationAuthFileResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 授权书链接，有效期5分钟。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权书链接，有效期5分钟。 
      * @return FileUrl 授权书链接，有效期5分钟。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -50,9 +47,7 @@ public class CreateOrganizationAuthFileResponse extends AbstractModel {
 
     /**
      * Set 授权书链接，有效期5分钟。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 授权书链接，有效期5分钟。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

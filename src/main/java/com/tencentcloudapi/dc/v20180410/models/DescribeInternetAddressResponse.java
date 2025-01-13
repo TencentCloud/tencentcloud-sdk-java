@@ -32,7 +32,6 @@ public class DescribeInternetAddressResponse extends AbstractModel {
 
     /**
     * 互联网公网地址列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Subnets")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInternetAddressResponse extends AbstractModel {
     }
 
     /**
-     * Get 互联网公网地址列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联网公网地址列表 
      * @return Subnets 互联网公网地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternetAddressDetail [] getSubnets() {
         return this.Subnets;
@@ -73,9 +70,7 @@ public class DescribeInternetAddressResponse extends AbstractModel {
 
     /**
      * Set 互联网公网地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Subnets 互联网公网地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnets(InternetAddressDetail [] Subnets) {
         this.Subnets = Subnets;

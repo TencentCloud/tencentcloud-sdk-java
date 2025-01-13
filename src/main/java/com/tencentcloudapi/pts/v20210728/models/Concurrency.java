@@ -33,7 +33,6 @@ public class Concurrency extends AbstractModel {
 
     /**
     * 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IterationCount")
     @Expose
@@ -41,7 +40,6 @@ public class Concurrency extends AbstractModel {
 
     /**
     * 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRequestsPerSecond")
     @Expose
@@ -49,7 +47,6 @@ public class Concurrency extends AbstractModel {
 
     /**
     * 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GracefulStopSeconds")
     @Expose
@@ -57,7 +54,6 @@ public class Concurrency extends AbstractModel {
 
     /**
     * 资源数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
     @Expose
@@ -84,10 +80,8 @@ public class Concurrency extends AbstractModel {
     }
 
     /**
-     * Get 运行次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行次数 
      * @return IterationCount 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIterationCount() {
         return this.IterationCount;
@@ -95,19 +89,15 @@ public class Concurrency extends AbstractModel {
 
     /**
      * Set 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IterationCount 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIterationCount(Long IterationCount) {
         this.IterationCount = IterationCount;
     }
 
     /**
-     * Get 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大RPS 
      * @return MaxRequestsPerSecond 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRequestsPerSecond() {
         return this.MaxRequestsPerSecond;
@@ -115,19 +105,15 @@ public class Concurrency extends AbstractModel {
 
     /**
      * Set 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxRequestsPerSecond 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRequestsPerSecond(Long MaxRequestsPerSecond) {
         this.MaxRequestsPerSecond = MaxRequestsPerSecond;
     }
 
     /**
-     * Get 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优雅终止任务的等待时间 
      * @return GracefulStopSeconds 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGracefulStopSeconds() {
         return this.GracefulStopSeconds;
@@ -135,19 +121,15 @@ public class Concurrency extends AbstractModel {
 
     /**
      * Set 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GracefulStopSeconds 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGracefulStopSeconds(Long GracefulStopSeconds) {
         this.GracefulStopSeconds = GracefulStopSeconds;
     }
 
     /**
-     * Get 资源数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数 
      * @return Resources 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResources() {
         return this.Resources;
@@ -155,9 +137,7 @@ public class Concurrency extends AbstractModel {
 
     /**
      * Set 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resources 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(Long Resources) {
         this.Resources = Resources;

@@ -26,7 +26,7 @@ public class HeuristicCache extends AbstractModel {
     /**
     * 启发式缓存配置开关，取值有：
 on：开启
-off：关闭
+off：关闭（默认）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -44,11 +44,11 @@ off：关闭
     /**
      * Get 启发式缓存配置开关，取值有：
 on：开启
-off：关闭
+off：关闭（默认）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Switch 启发式缓存配置开关，取值有：
 on：开启
-off：关闭
+off：关闭（默认）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -58,11 +58,11 @@ off：关闭
     /**
      * Set 启发式缓存配置开关，取值有：
 on：开启
-off：关闭
+off：关闭（默认）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 启发式缓存配置开关，取值有：
 on：开启
-off：关闭
+off：关闭（默认）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

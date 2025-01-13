@@ -33,10 +33,9 @@ public class FollowOrigin extends AbstractModel {
     private String Switch;
 
     /**
-    * 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+    * 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，当 Switch 为 off 时，无需填写此字段，若填写则不生效。取值有：
 <li>on：缓存；</li>
 <li>off：不缓存。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultCache")
     @Expose
@@ -46,15 +45,13 @@ public class FollowOrigin extends AbstractModel {
     * 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
 <li>on：使用默认缓存策略；</li>
 <li>off：不使用默认缓存策略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultCacheStrategy")
     @Expose
     private String DefaultCacheStrategy;
 
     /**
-    * 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0-315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
     */
     @SerializedName("DefaultCacheTime")
     @Expose
@@ -85,28 +82,24 @@ public class FollowOrigin extends AbstractModel {
     }
 
     /**
-     * Get 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+     * Get 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，当 Switch 为 off 时，无需填写此字段，若填写则不生效。取值有：
+<li>on：缓存；</li>
+<li>off：不缓存。</li> 
+     * @return DefaultCache 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，当 Switch 为 off 时，无需填写此字段，若填写则不生效。取值有：
 <li>on：缓存；</li>
 <li>off：不缓存。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultCache 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
-<li>on：缓存；</li>
-<li>off：不缓存。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultCache() {
         return this.DefaultCache;
     }
 
     /**
-     * Set 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+     * Set 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，当 Switch 为 off 时，无需填写此字段，若填写则不生效。取值有：
 <li>on：缓存；</li>
 <li>off：不缓存。</li>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultCache 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+     * @param DefaultCache 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，当 Switch 为 off 时，无需填写此字段，若填写则不生效。取值有：
 <li>on：缓存；</li>
 <li>off：不缓存。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultCache(String DefaultCache) {
         this.DefaultCache = DefaultCache;
@@ -115,12 +108,10 @@ public class FollowOrigin extends AbstractModel {
     /**
      * Get 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
 <li>on：使用默认缓存策略；</li>
-<li>off：不使用默认缓存策略。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：不使用默认缓存策略。</li> 
      * @return DefaultCacheStrategy 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
 <li>on：使用默认缓存策略；</li>
 <li>off：不使用默认缓存策略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultCacheStrategy() {
         return this.DefaultCacheStrategy;
@@ -130,31 +121,25 @@ public class FollowOrigin extends AbstractModel {
      * Set 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
 <li>on：使用默认缓存策略；</li>
 <li>off：不使用默认缓存策略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultCacheStrategy 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
 <li>on：使用默认缓存策略；</li>
 <li>off：不使用默认缓存策略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultCacheStrategy(String DefaultCacheStrategy) {
         this.DefaultCacheStrategy = DefaultCacheStrategy;
     }
 
     /**
-     * Get 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultCacheTime 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0-315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。 
+     * @return DefaultCacheTime 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0-315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
      */
     public Long getDefaultCacheTime() {
         return this.DefaultCacheTime;
     }
 
     /**
-     * Set 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultCacheTime 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0-315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
+     * @param DefaultCacheTime 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0-315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
      */
     public void setDefaultCacheTime(Long DefaultCacheTime) {
         this.DefaultCacheTime = DefaultCacheTime;

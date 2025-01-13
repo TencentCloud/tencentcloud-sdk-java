@@ -66,7 +66,6 @@ public class ChannelGetTaskResultApiResponse extends AbstractModel {
     /**
     * 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -193,11 +192,9 @@ public class ChannelGetTaskResultApiResponse extends AbstractModel {
 
     /**
      * Get 预览文件Url，有效期30分钟 
-当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。 
+当前字段返回为空，发起的时候，将ResourceId 放入发起即可 
      * @return PreviewUrl 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -208,10 +205,8 @@ public class ChannelGetTaskResultApiResponse extends AbstractModel {
     /**
      * Set 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated

@@ -25,7 +25,6 @@ public class SLARule extends AbstractModel {
 
     /**
     * 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
     @Expose
@@ -33,7 +32,6 @@ public class SLARule extends AbstractModel {
 
     /**
     * 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Aggregation")
     @Expose
@@ -41,7 +39,6 @@ public class SLARule extends AbstractModel {
 
     /**
     * 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
     @Expose
@@ -49,7 +46,6 @@ public class SLARule extends AbstractModel {
 
     /**
     * 阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -65,7 +61,6 @@ public class SLARule extends AbstractModel {
 
     /**
     * 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbortFlag")
     @Expose
@@ -73,17 +68,14 @@ public class SLARule extends AbstractModel {
 
     /**
     * 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("For")
     @Expose
     private String For;
 
     /**
-     * Get 压测指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 压测指标 
      * @return Metric 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
         return this.Metric;
@@ -91,19 +83,15 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 压测指标聚合方法 
      * @return Aggregation 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAggregation() {
         return this.Aggregation;
@@ -111,19 +99,15 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Aggregation 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggregation(String Aggregation) {
         this.Aggregation = Aggregation;
     }
 
     /**
-     * Get 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 压测指标条件判断符号 
      * @return Condition 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCondition() {
         return this.Condition;
@@ -131,19 +115,15 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Condition 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阈值 
      * @return Value 阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
         return this.Value;
@@ -151,9 +131,7 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {
         this.Value = Value;
@@ -180,10 +158,8 @@ public class SLARule extends AbstractModel {
     }
 
     /**
-     * Get 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否停止压测任务 
      * @return AbortFlag 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAbortFlag() {
         return this.AbortFlag;
@@ -191,19 +167,15 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbortFlag 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbortFlag(Boolean AbortFlag) {
         this.AbortFlag = AbortFlag;
     }
 
     /**
-     * Get 持续时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持续时长 
      * @return For 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFor() {
         return this.For;
@@ -211,9 +183,7 @@ public class SLARule extends AbstractModel {
 
     /**
      * Set 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param For 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFor(String For) {
         this.For = For;

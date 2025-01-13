@@ -39,7 +39,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -47,7 +46,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -55,7 +53,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -63,7 +60,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Load")
     @Expose
@@ -71,7 +67,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * deprecated
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncodedScripts")
     @Expose
@@ -103,7 +98,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SLAId")
     @Expose
@@ -111,7 +105,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronId")
     @Expose
@@ -133,7 +126,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -141,7 +133,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * App ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -149,7 +140,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -157,7 +147,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
@@ -189,7 +178,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SLAPolicy")
     @Expose
@@ -205,7 +193,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainNameConfig")
     @Expose
@@ -221,7 +208,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
     @Expose
@@ -229,7 +215,6 @@ public class Scenario extends AbstractModel {
 
     /**
     * 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
@@ -268,10 +253,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get 场景描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景描述 
      * @return Description 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -279,19 +262,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter 
      * @return Type 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -299,19 +278,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 场景状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景状态 
      * @return Status 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -319,19 +294,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 施压配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 施压配置 
      * @return Load 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Load getLoad() {
         return this.Load;
@@ -339,19 +310,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Load 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoad(Load Load) {
         this.Load = Load;
     }
 
     /**
-     * Get deprecated
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get deprecated 
      * @return EncodedScripts deprecated
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncodedScripts() {
         return this.EncodedScripts;
@@ -359,9 +326,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set deprecated
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncodedScripts deprecated
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncodedScripts(String EncodedScripts) {
         this.EncodedScripts = EncodedScripts;
@@ -428,10 +393,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SLA规则的ID 
      * @return SLAId SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSLAId() {
         return this.SLAId;
@@ -439,19 +402,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SLAId SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSLAId(String SLAId) {
         this.SLAId = SLAId;
     }
 
     /**
-     * Get Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cron Job规则的ID 
      * @return CronId Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronId() {
         return this.CronId;
@@ -459,9 +418,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronId Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronId(String CronId) {
         this.CronId = CronId;
@@ -500,10 +457,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -511,19 +466,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get App ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App ID 
      * @return AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -531,19 +482,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return Uin 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -551,19 +498,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子用户ID 
      * @return SubAccountUin 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -571,9 +514,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
@@ -640,10 +581,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SLA 策略 
      * @return SLAPolicy SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SLAPolicy getSLAPolicy() {
         return this.SLAPolicy;
@@ -651,9 +590,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SLAPolicy SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSLAPolicy(SLAPolicy SLAPolicy) {
         this.SLAPolicy = SLAPolicy;
@@ -680,10 +617,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名解析配置 
      * @return DomainNameConfig 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainNameConfig getDomainNameConfig() {
         return this.DomainNameConfig;
@@ -691,9 +626,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainNameConfig 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainNameConfig(DomainNameConfig DomainNameConfig) {
         this.DomainNameConfig = DomainNameConfig;
@@ -720,10 +653,8 @@ public class Scenario extends AbstractModel {
     }
 
     /**
-     * Get 创建人员
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人员 
      * @return Owner 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
         return this.Owner;
@@ -731,19 +662,15 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Owner 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景所在的项目的名字 
      * @return ProjectName 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -751,9 +678,7 @@ public class Scenario extends AbstractModel {
 
     /**
      * Set 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;

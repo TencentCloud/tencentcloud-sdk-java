@@ -25,7 +25,6 @@ public class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel {
 
     /**
     * 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -54,10 +53,8 @@ public class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。 
      * @return Url 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -65,9 +62,7 @@ public class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel {
 
     /**
      * Set 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

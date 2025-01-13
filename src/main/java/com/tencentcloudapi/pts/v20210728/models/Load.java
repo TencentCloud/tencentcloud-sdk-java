@@ -25,7 +25,6 @@ public class Load extends AbstractModel {
 
     /**
     * 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadSpec")
     @Expose
@@ -48,10 +47,8 @@ public class Load extends AbstractModel {
     private GeoRegionsLoadItem [] GeoRegionsLoadDistribution;
 
     /**
-     * Get 施压配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 施压配置 
      * @return LoadSpec 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadSpec getLoadSpec() {
         return this.LoadSpec;
@@ -59,9 +56,7 @@ public class Load extends AbstractModel {
 
     /**
      * Set 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadSpec 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadSpec(LoadSpec LoadSpec) {
         this.LoadSpec = LoadSpec;

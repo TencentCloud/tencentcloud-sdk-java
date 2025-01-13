@@ -33,7 +33,6 @@ public class DescribeAlertChannelsResponse extends AbstractModel {
 
     /**
     * 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -67,10 +66,8 @@ public class DescribeAlertChannelsResponse extends AbstractModel {
     }
 
     /**
-     * Get 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知接收组数目 
      * @return Total 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +75,7 @@ public class DescribeAlertChannelsResponse extends AbstractModel {
 
     /**
      * Set 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

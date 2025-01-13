@@ -47,7 +47,6 @@ public class SuccessUpdateStaffData extends AbstractModel {
 
     /**
     * H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
     */
     @SerializedName("Url")
@@ -108,10 +107,8 @@ public class SuccessUpdateStaffData extends AbstractModel {
 
     /**
      * Get H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。 
      * @return Url H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
      */
     public String getUrl() {
@@ -120,10 +117,8 @@ public class SuccessUpdateStaffData extends AbstractModel {
 
     /**
      * Set H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
      * @param Url H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
      */
     public void setUrl(String Url) {

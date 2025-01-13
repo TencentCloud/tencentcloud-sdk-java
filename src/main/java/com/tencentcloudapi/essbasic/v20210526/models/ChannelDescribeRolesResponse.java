@@ -46,7 +46,6 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
 
     /**
     * 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelRoles")
     @Expose
@@ -108,10 +107,8 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询的角色信息列表 
      * @return ChannelRoles 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChannelRole [] getChannelRoles() {
         return this.ChannelRoles;
@@ -119,9 +116,7 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
 
     /**
      * Set 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelRoles 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelRoles(ChannelRole [] ChannelRoles) {
         this.ChannelRoles = ChannelRoles;

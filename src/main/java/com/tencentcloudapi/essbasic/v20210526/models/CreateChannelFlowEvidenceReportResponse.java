@@ -25,7 +25,6 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
     @Expose
@@ -36,7 +35,7 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -44,7 +43,6 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 废除，字段无效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
     @Expose
@@ -58,10 +56,8 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL 
      * @return ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
         return this.ReportId;
@@ -69,9 +65,7 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
      * Set 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
@@ -82,12 +76,12 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul> 
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul> 
      * @return Status 出证任务执行的状态, 状态含义如下：
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
@@ -98,22 +92,20 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      * @param Status 出证任务执行的状态, 状态含义如下：
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 废除，字段无效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废除，字段无效 
      * @return ReportUrl 废除，字段无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
         return this.ReportUrl;
@@ -121,9 +113,7 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
      * Set 废除，字段无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportUrl 废除，字段无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
         this.ReportUrl = ReportUrl;

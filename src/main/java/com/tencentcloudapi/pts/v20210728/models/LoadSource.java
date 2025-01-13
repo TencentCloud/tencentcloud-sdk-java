@@ -25,7 +25,6 @@ public class LoadSource extends AbstractModel {
 
     /**
     * 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
     @Expose
@@ -33,7 +32,6 @@ public class LoadSource extends AbstractModel {
 
     /**
     * 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
     @Expose
@@ -41,17 +39,14 @@ public class LoadSource extends AbstractModel {
 
     /**
     * 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发压host的IP 
      * @return IP 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
         return this.IP;
@@ -59,19 +54,15 @@ public class LoadSource extends AbstractModel {
 
     /**
      * Set 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IP 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发压host所在的pod 
      * @return PodName 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
         return this.PodName;
@@ -79,19 +70,15 @@ public class LoadSource extends AbstractModel {
 
     /**
      * Set 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodName 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get 所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属地域 
      * @return Region 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -99,9 +86,7 @@ public class LoadSource extends AbstractModel {
 
     /**
      * Set 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

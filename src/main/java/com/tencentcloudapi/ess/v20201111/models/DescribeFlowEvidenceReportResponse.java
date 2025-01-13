@@ -35,7 +35,7 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -69,12 +69,12 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul> 
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul> 
      * @return Status 出证任务执行的状态, 状态含义如下：
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
@@ -85,12 +85,12 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      * @param Status 出证任务执行的状态, 状态含义如下：
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

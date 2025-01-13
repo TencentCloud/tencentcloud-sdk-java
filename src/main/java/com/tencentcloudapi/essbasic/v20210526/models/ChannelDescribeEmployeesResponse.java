@@ -25,7 +25,6 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
 
     /**
     * 员工信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Employees")
     @Expose
@@ -33,7 +32,6 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
 
     /**
     * 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
     @Expose
@@ -61,10 +59,8 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 员工信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工信息列表。 
      * @return Employees 员工信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Staff [] getEmployees() {
         return this.Employees;
@@ -72,19 +68,15 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
 
     /**
      * Set 员工信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Employees 员工信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;
     }
 
     /**
-     * Get 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。 
      * @return Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
         return this.Offset;
@@ -92,9 +84,7 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
 
     /**
      * Set 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

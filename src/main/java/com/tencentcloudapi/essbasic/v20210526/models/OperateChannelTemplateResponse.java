@@ -25,7 +25,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
     * 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -33,7 +32,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
     * 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -46,7 +44,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateResult")
     @Expose
@@ -56,7 +53,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     * 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthTag")
     @Expose
@@ -64,7 +60,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
     * 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
@@ -72,7 +67,6 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
     * 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailMessageList")
     @Expose
@@ -86,10 +80,8 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第三方应用平台的应用ID 
      * @return AppId 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -97,19 +89,15 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
      * Set 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同模板ID 
      * @return TemplateId 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -117,9 +105,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
      * Set 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -131,15 +117,13 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-</ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+</ul> 
      * @return OperateResult 描述模板可见性更改的结果。
 <ul>
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateResult() {
         return this.OperateResult;
@@ -152,14 +136,12 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateResult 描述模板可见性更改的结果。
 <ul>
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateResult(String OperateResult) {
         this.OperateResult = OperateResult;
@@ -168,12 +150,10 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     /**
      * Get 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。 
+**part**: 指定的本第三方应用合作企业 
      * @return AuthTag 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthTag() {
         return this.AuthTag;
@@ -183,21 +163,17 @@ public class OperateChannelTemplateResponse extends AbstractModel {
      * Set 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthTag 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthTag(String AuthTag) {
         this.AuthTag = AuthTag;
     }
 
     /**
-     * Get 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第三方平台子客企业标识列表 
      * @return ProxyOrganizationOpenIds 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
@@ -205,19 +181,15 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
      * Set 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyOrganizationOpenIds 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationOpenIds(String [] ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
     }
 
     /**
-     * Get 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作失败信息数组 
      * @return FailMessageList 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuthFailMessage [] getFailMessageList() {
         return this.FailMessageList;
@@ -225,9 +197,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
      * Set 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailMessageList 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailMessageList(AuthFailMessage [] FailMessageList) {
         this.FailMessageList = FailMessageList;

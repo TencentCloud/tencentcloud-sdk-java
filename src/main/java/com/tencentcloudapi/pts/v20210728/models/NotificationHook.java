@@ -33,7 +33,6 @@ public class NotificationHook extends AbstractModel {
 
     /**
     * 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URL")
     @Expose
@@ -60,10 +59,8 @@ public class NotificationHook extends AbstractModel {
     }
 
     /**
-     * Get 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回调 URL 
      * @return URL 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURL() {
         return this.URL;
@@ -71,9 +68,7 @@ public class NotificationHook extends AbstractModel {
 
     /**
      * Set 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param URL 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURL(String URL) {
         this.URL = URL;

@@ -35,7 +35,6 @@ public class CreateSealByImageResponse extends AbstractModel {
     * 电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -71,12 +70,10 @@ public class CreateSealByImageResponse extends AbstractModel {
     /**
      * Get 电子印章预览链接地址，地址默认失效时间为24小时。
 
-注:`图片上传生成的电子印章无预览链接地址`
-注意：此字段可能返回 null，表示取不到有效值。 
+注:`图片上传生成的电子印章无预览链接地址` 
      * @return ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -86,11 +83,9 @@ public class CreateSealByImageResponse extends AbstractModel {
      * Set 电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

@@ -25,7 +25,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Split")
     @Expose
@@ -41,7 +39,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeaderInFile")
     @Expose
@@ -57,7 +54,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineCount")
     @Expose
@@ -73,7 +69,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -97,7 +92,6 @@ public class TestData extends AbstractModel {
 
     /**
     * 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -105,17 +99,14 @@ public class TestData extends AbstractModel {
 
     /**
     * 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试数据集所在的文件名 
      * @return Name 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -123,19 +114,15 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试数据集是否分片 
      * @return Split 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSplit() {
         return this.Split;
@@ -143,19 +130,15 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Split 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSplit(Boolean Split) {
         this.Split = Split;
     }
 
     /**
-     * Get 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首行是否为参数名 
      * @return HeaderInFile 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHeaderInFile() {
         return this.HeaderInFile;
@@ -163,9 +146,7 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeaderInFile 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaderInFile(Boolean HeaderInFile) {
         this.HeaderInFile = HeaderInFile;
@@ -192,10 +173,8 @@ public class TestData extends AbstractModel {
     }
 
     /**
-     * Get 文件行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件行数 
      * @return LineCount 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLineCount() {
         return this.LineCount;
@@ -203,9 +182,7 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LineCount 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineCount(Long LineCount) {
         this.LineCount = LineCount;
@@ -232,10 +209,8 @@ public class TestData extends AbstractModel {
     }
 
     /**
-     * Get 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件字节数 
      * @return Size 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -243,9 +218,7 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -292,10 +265,8 @@ public class TestData extends AbstractModel {
     }
 
     /**
-     * Get 文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型 
      * @return Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -303,19 +274,15 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件 ID 
      * @return FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -323,9 +290,7 @@ public class TestData extends AbstractModel {
 
     /**
      * Set 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

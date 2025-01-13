@@ -32,7 +32,6 @@ public class DescribeUsageResponse extends AbstractModel {
 
     /**
     * 用量明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get 用量明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量明细 
      * @return Details 用量明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UsageDetail [] getDetails() {
         return this.Details;
@@ -73,9 +70,7 @@ public class DescribeUsageResponse extends AbstractModel {
 
     /**
      * Set 用量明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 用量明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(UsageDetail [] Details) {
         this.Details = Details;

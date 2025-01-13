@@ -48,6 +48,20 @@ public class SearchResult extends AbstractModel {
     private String Url;
 
     /**
+    * 搜索引文站点名
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+    * 搜索引文图标
+    */
+    @SerializedName("Icon")
+    @Expose
+    private String Icon;
+
+    /**
      * Get 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 搜索引文序号
@@ -107,6 +121,38 @@ public class SearchResult extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 搜索引文站点名 
+     * @return Text 搜索引文站点名
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set 搜索引文站点名
+     * @param Text 搜索引文站点名
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    /**
+     * Get 搜索引文图标 
+     * @return Icon 搜索引文图标
+     */
+    public String getIcon() {
+        return this.Icon;
+    }
+
+    /**
+     * Set 搜索引文图标
+     * @param Icon 搜索引文图标
+     */
+    public void setIcon(String Icon) {
+        this.Icon = Icon;
+    }
+
     public SearchResult() {
     }
 
@@ -124,6 +170,12 @@ public class SearchResult extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Icon != null) {
+            this.Icon = new String(source.Icon);
+        }
     }
 
 
@@ -134,6 +186,8 @@ public class SearchResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "Icon", this.Icon);
 
     }
 }
