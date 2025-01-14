@@ -25,7 +25,6 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
     * cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretId")
     @Expose
@@ -33,7 +32,6 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
     * cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKey")
     @Expose
@@ -41,17 +39,14 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
     * cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPath")
     @Expose
     private String CosPath;
 
     /**
-     * Get cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos认证中的Id 
      * @return SecretId cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretId() {
         return this.SecretId;
@@ -59,19 +54,15 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
      * Set cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretId cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos认证中的key 
      * @return SecretKey cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -79,19 +70,15 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
      * Set cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretKey cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos认证中的路径 
      * @return CosPath cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosPath() {
         return this.CosPath;
@@ -99,9 +86,7 @@ public class CosSourceInfo extends AbstractModel {
 
     /**
      * Set cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosPath cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;

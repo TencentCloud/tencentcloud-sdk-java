@@ -32,6 +32,14 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     private String TaskId;
 
     /**
+    * 任务名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskName")
+    @Expose
+    private String TaskName;
+
+    /**
     * 数据时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -136,6 +144,21 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     private Long InstanceRunType;
 
     /**
+    * 实例当前总生命周期数
+    */
+    @SerializedName("TotalLifeRound")
+    @Expose
+    private Long TotalLifeRound;
+
+    /**
+    * 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private TaskTypeOpsDto TaskType;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -153,6 +176,26 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 任务名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskName 任务名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskName() {
+        return this.TaskName;
+    }
+
+    /**
+     * Set 任务名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskName 任务名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskName(String TaskName) {
+        this.TaskName = TaskName;
     }
 
     /**
@@ -415,6 +458,42 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.InstanceRunType = InstanceRunType;
     }
 
+    /**
+     * Get 实例当前总生命周期数 
+     * @return TotalLifeRound 实例当前总生命周期数
+     */
+    public Long getTotalLifeRound() {
+        return this.TotalLifeRound;
+    }
+
+    /**
+     * Set 实例当前总生命周期数
+     * @param TotalLifeRound 实例当前总生命周期数
+     */
+    public void setTotalLifeRound(Long TotalLifeRound) {
+        this.TotalLifeRound = TotalLifeRound;
+    }
+
+    /**
+     * Get 任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskTypeOpsDto getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskType(TaskTypeOpsDto TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public InstanceLifeCycleOpsDto() {
     }
 
@@ -425,6 +504,9 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     public InstanceLifeCycleOpsDto(InstanceLifeCycleOpsDto source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
         }
         if (source.CurRunDate != null) {
             this.CurRunDate = new String(source.CurRunDate);
@@ -468,6 +550,12 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         if (source.InstanceRunType != null) {
             this.InstanceRunType = new Long(source.InstanceRunType);
         }
+        if (source.TotalLifeRound != null) {
+            this.TotalLifeRound = new Long(source.TotalLifeRound);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new TaskTypeOpsDto(source.TaskType);
+        }
     }
 
 
@@ -476,6 +564,7 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
         this.setParamSimple(map, prefix + "LifeRound", this.LifeRound);
         this.setParamSimple(map, prefix + "RunType", this.RunType);
@@ -489,6 +578,8 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
         this.setParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
+        this.setParamSimple(map, prefix + "TotalLifeRound", this.TotalLifeRound);
+        this.setParamObj(map, prefix + "TaskType.", this.TaskType);
 
     }
 }

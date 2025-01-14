@@ -358,6 +358,13 @@ HoaiMy
     private Variable [] PromptVariables;
 
     /**
+    * 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+    */
+    @SerializedName("VadSilenceTime")
+    @Expose
+    private Long VadSilenceTime;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1405,6 +1412,22 @@ HoaiMy
         this.PromptVariables = PromptVariables;
     }
 
+    /**
+     * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。 
+     * @return VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     */
+    public Long getVadSilenceTime() {
+        return this.VadSilenceTime;
+    }
+
+    /**
+     * Set 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     * @param VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     */
+    public void setVadSilenceTime(Long VadSilenceTime) {
+        this.VadSilenceTime = VadSilenceTime;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1497,6 +1520,9 @@ HoaiMy
                 this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
             }
         }
+        if (source.VadSilenceTime != null) {
+            this.VadSilenceTime = new Long(source.VadSilenceTime);
+        }
     }
 
 
@@ -1528,6 +1554,7 @@ HoaiMy
         this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+        this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
 
     }
 }

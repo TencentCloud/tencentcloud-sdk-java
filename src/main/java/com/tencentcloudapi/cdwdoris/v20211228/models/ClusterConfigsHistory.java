@@ -46,7 +46,6 @@ public class ClusterConfigsHistory extends AbstractModel {
 
     /**
     * 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -115,10 +114,8 @@ public class ClusterConfigsHistory extends AbstractModel {
     }
 
     /**
-     * Get 修改原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改原因 
      * @return Remark 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -126,9 +123,7 @@ public class ClusterConfigsHistory extends AbstractModel {
 
     /**
      * Set 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

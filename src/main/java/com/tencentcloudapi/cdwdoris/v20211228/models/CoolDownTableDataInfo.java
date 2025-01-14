@@ -25,7 +25,6 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
     * 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -33,7 +32,6 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
     * 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -41,7 +39,6 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
     * 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -49,17 +46,14 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
     * 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteSize")
     @Expose
     private String RemoteSize;
 
     /**
-     * Get 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列：DatabaseName 
      * @return DatabaseName 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -67,19 +61,15 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
      * Set 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列：TableName 
      * @return TableName 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -87,19 +77,15 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
      * Set 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 列：Size
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列：Size 
      * @return Size 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSize() {
         return this.Size;
@@ -107,19 +93,15 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
      * Set 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(String Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列：RemoteSize 
      * @return RemoteSize 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteSize() {
         return this.RemoteSize;
@@ -127,9 +109,7 @@ public class CoolDownTableDataInfo extends AbstractModel {
 
     /**
      * Set 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteSize 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteSize(String RemoteSize) {
         this.RemoteSize = RemoteSize;

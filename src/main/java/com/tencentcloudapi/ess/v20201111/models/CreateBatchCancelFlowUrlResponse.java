@@ -41,7 +41,6 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel {
     /**
     * 签署连接过期时间字符串：年月日-时分秒
 
-例如:2023-07-28 17:25:59
     */
     @SerializedName("UrlExpireOn")
     @Expose
@@ -99,11 +98,9 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel {
 
     /**
      * Get 签署连接过期时间字符串：年月日-时分秒
-
-例如:2023-07-28 17:25:59 
+ 
      * @return UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
 
-例如:2023-07-28 17:25:59
      */
     public String getUrlExpireOn() {
         return this.UrlExpireOn;
@@ -112,10 +109,8 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel {
     /**
      * Set 签署连接过期时间字符串：年月日-时分秒
 
-例如:2023-07-28 17:25:59
      * @param UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
 
-例如:2023-07-28 17:25:59
      */
     public void setUrlExpireOn(String UrlExpireOn) {
         this.UrlExpireOn = UrlExpireOn;

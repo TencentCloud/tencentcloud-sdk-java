@@ -34,6 +34,7 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     /**
     * 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
     */
     @SerializedName("Prompt")
     @Expose
@@ -54,6 +55,14 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     @SerializedName("Product")
     @Expose
     private String Product;
+
+    /**
+    * 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+    */
+    @SerializedName("BackgroundTemplate")
+    @Expose
+    private String BackgroundTemplate;
 
     /**
     * 商品 Mask 图 Url，要求背景透明，保留商品主体。
@@ -123,9 +132,11 @@ public class ReplaceBackgroundRequest extends AbstractModel {
 
     /**
      * Get 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。 
+最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。 
      * @return Prompt 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
      */
     public String getPrompt() {
         return this.Prompt;
@@ -134,8 +145,10 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     /**
      * Set 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
      * @param Prompt 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -179,6 +192,26 @@ public class ReplaceBackgroundRequest extends AbstractModel {
      */
     public void setProduct(String Product) {
         this.Product = Product;
+    }
+
+    /**
+     * Get 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。 
+     * @return BackgroundTemplate 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+     */
+    public String getBackgroundTemplate() {
+        return this.BackgroundTemplate;
+    }
+
+    /**
+     * Set 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+     * @param BackgroundTemplate 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+     */
+    public void setBackgroundTemplate(String BackgroundTemplate) {
+        this.BackgroundTemplate = BackgroundTemplate;
     }
 
     /**
@@ -325,6 +358,9 @@ public class ReplaceBackgroundRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.BackgroundTemplate != null) {
+            this.BackgroundTemplate = new String(source.BackgroundTemplate);
+        }
         if (source.MaskUrl != null) {
             this.MaskUrl = new String(source.MaskUrl);
         }
@@ -351,6 +387,7 @@ public class ReplaceBackgroundRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "BackgroundTemplate", this.BackgroundTemplate);
         this.setParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);

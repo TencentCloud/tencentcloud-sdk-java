@@ -39,7 +39,6 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
 
     /**
     * 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Records")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录列表 
      * @return Records 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataBaseAuditRecord [] getRecords() {
         return this.Records;
@@ -104,19 +100,15 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
 
     /**
      * Set 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Records 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecords(DataBaseAuditRecord [] Records) {
         this.Records = Records;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -124,9 +116,7 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

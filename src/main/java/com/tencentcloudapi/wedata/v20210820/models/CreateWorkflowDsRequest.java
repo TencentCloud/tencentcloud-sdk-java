@@ -52,6 +52,17 @@ public class CreateWorkflowDsRequest extends AbstractModel {
     private String WorkflowDesc;
 
     /**
+    * 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+    */
+    @SerializedName("WorkflowType")
+    @Expose
+    private String WorkflowType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -115,6 +126,38 @@ public class CreateWorkflowDsRequest extends AbstractModel {
         this.WorkflowDesc = WorkflowDesc;
     }
 
+    /**
+     * Get 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+ 
+     * @return WorkflowType 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+     */
+    public String getWorkflowType() {
+        return this.WorkflowType;
+    }
+
+    /**
+     * Set 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+     * @param WorkflowType 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+     */
+    public void setWorkflowType(String WorkflowType) {
+        this.WorkflowType = WorkflowType;
+    }
+
     public CreateWorkflowDsRequest() {
     }
 
@@ -135,6 +178,9 @@ public class CreateWorkflowDsRequest extends AbstractModel {
         if (source.WorkflowDesc != null) {
             this.WorkflowDesc = new String(source.WorkflowDesc);
         }
+        if (source.WorkflowType != null) {
+            this.WorkflowType = new String(source.WorkflowType);
+        }
     }
 
 
@@ -146,6 +192,7 @@ public class CreateWorkflowDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
         this.setParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
+        this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
 
     }
 }

@@ -25,7 +25,6 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
     * key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyName")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
     * 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Display")
     @Expose
@@ -57,17 +53,14 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
     * 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportHotUpdate")
     @Expose
     private Long SupportHotUpdate;
 
     /**
-     * Get key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key 
      * @return KeyName key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyName() {
         return this.KeyName;
@@ -75,19 +68,15 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
      * Set key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyName key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -95,19 +84,15 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Message 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -115,19 +100,15 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1-只读，2-可修改但不可删除，3-可删除 
      * @return Display 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisplay() {
         return this.Display;
@@ -135,19 +116,15 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
      * Set 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Display 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplay(Long Display) {
         this.Display = Display;
     }
 
     /**
-     * Get 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持 1支持热更新 
      * @return SupportHotUpdate 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportHotUpdate() {
         return this.SupportHotUpdate;
@@ -155,9 +132,7 @@ public class ConfigKeyValue extends AbstractModel {
 
     /**
      * Set 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportHotUpdate 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportHotUpdate(Long SupportHotUpdate) {
         this.SupportHotUpdate = SupportHotUpdate;

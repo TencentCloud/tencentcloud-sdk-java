@@ -157,6 +157,55 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     private Boolean AsyncMode;
 
     /**
+    * 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+    */
+    @SerializedName("CheckParentType")
+    @Expose
+    private String CheckParentType;
+
+    /**
+    * 任务原有自依赖配置 true（是）、false（否）
+    */
+    @SerializedName("SameSelfDependType")
+    @Expose
+    private Boolean SameSelfDependType;
+
+    /**
+    * 实例运行并发度
+    */
+    @SerializedName("ParallelNum")
+    @Expose
+    private Long ParallelNum;
+
+    /**
+    * 任务原有自依赖配置 true（是）、false（否）
+    */
+    @SerializedName("SameSelfWorkflowDependType")
+    @Expose
+    private Boolean SameSelfWorkflowDependType;
+
+    /**
+    * 代表重新指定 的  是 或者 否  yes、 no
+    */
+    @SerializedName("SelfWorkflowDependency")
+    @Expose
+    private String SelfWorkflowDependency;
+
+    /**
+    * 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+    */
+    @SerializedName("DataTimeOrder")
+    @Expose
+    private Long DataTimeOrder;
+
+    /**
+    * 重跑参数
+    */
+    @SerializedName("ReDoParams")
+    @Expose
+    private String ReDoParams;
+
+    /**
      * Get 实例列表 
      * @return Instances 实例列表
      */
@@ -460,6 +509,118 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         this.AsyncMode = AsyncMode;
     }
 
+    /**
+     * Get 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查） 
+     * @return CheckParentType 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+     */
+    public String getCheckParentType() {
+        return this.CheckParentType;
+    }
+
+    /**
+     * Set 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+     * @param CheckParentType 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+     */
+    public void setCheckParentType(String CheckParentType) {
+        this.CheckParentType = CheckParentType;
+    }
+
+    /**
+     * Get 任务原有自依赖配置 true（是）、false（否） 
+     * @return SameSelfDependType 任务原有自依赖配置 true（是）、false（否）
+     */
+    public Boolean getSameSelfDependType() {
+        return this.SameSelfDependType;
+    }
+
+    /**
+     * Set 任务原有自依赖配置 true（是）、false（否）
+     * @param SameSelfDependType 任务原有自依赖配置 true（是）、false（否）
+     */
+    public void setSameSelfDependType(Boolean SameSelfDependType) {
+        this.SameSelfDependType = SameSelfDependType;
+    }
+
+    /**
+     * Get 实例运行并发度 
+     * @return ParallelNum 实例运行并发度
+     */
+    public Long getParallelNum() {
+        return this.ParallelNum;
+    }
+
+    /**
+     * Set 实例运行并发度
+     * @param ParallelNum 实例运行并发度
+     */
+    public void setParallelNum(Long ParallelNum) {
+        this.ParallelNum = ParallelNum;
+    }
+
+    /**
+     * Get 任务原有自依赖配置 true（是）、false（否） 
+     * @return SameSelfWorkflowDependType 任务原有自依赖配置 true（是）、false（否）
+     */
+    public Boolean getSameSelfWorkflowDependType() {
+        return this.SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Set 任务原有自依赖配置 true（是）、false（否）
+     * @param SameSelfWorkflowDependType 任务原有自依赖配置 true（是）、false（否）
+     */
+    public void setSameSelfWorkflowDependType(Boolean SameSelfWorkflowDependType) {
+        this.SameSelfWorkflowDependType = SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Get 代表重新指定 的  是 或者 否  yes、 no 
+     * @return SelfWorkflowDependency 代表重新指定 的  是 或者 否  yes、 no
+     */
+    public String getSelfWorkflowDependency() {
+        return this.SelfWorkflowDependency;
+    }
+
+    /**
+     * Set 代表重新指定 的  是 或者 否  yes、 no
+     * @param SelfWorkflowDependency 代表重新指定 的  是 或者 否  yes、 no
+     */
+    public void setSelfWorkflowDependency(String SelfWorkflowDependency) {
+        this.SelfWorkflowDependency = SelfWorkflowDependency;
+    }
+
+    /**
+     * Get 运行实例数据时间排序 0---正常  1--正序  2 – 逆序 
+     * @return DataTimeOrder 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+     */
+    public Long getDataTimeOrder() {
+        return this.DataTimeOrder;
+    }
+
+    /**
+     * Set 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+     * @param DataTimeOrder 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+     */
+    public void setDataTimeOrder(Long DataTimeOrder) {
+        this.DataTimeOrder = DataTimeOrder;
+    }
+
+    /**
+     * Get 重跑参数 
+     * @return ReDoParams 重跑参数
+     */
+    public String getReDoParams() {
+        return this.ReDoParams;
+    }
+
+    /**
+     * Set 重跑参数
+     * @param ReDoParams 重跑参数
+     */
+    public void setReDoParams(String ReDoParams) {
+        this.ReDoParams = ReDoParams;
+    }
+
     public RunRerunScheduleInstancesRequest() {
     }
 
@@ -528,6 +689,27 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         if (source.AsyncMode != null) {
             this.AsyncMode = new Boolean(source.AsyncMode);
         }
+        if (source.CheckParentType != null) {
+            this.CheckParentType = new String(source.CheckParentType);
+        }
+        if (source.SameSelfDependType != null) {
+            this.SameSelfDependType = new Boolean(source.SameSelfDependType);
+        }
+        if (source.ParallelNum != null) {
+            this.ParallelNum = new Long(source.ParallelNum);
+        }
+        if (source.SameSelfWorkflowDependType != null) {
+            this.SameSelfWorkflowDependType = new Boolean(source.SameSelfWorkflowDependType);
+        }
+        if (source.SelfWorkflowDependency != null) {
+            this.SelfWorkflowDependency = new String(source.SelfWorkflowDependency);
+        }
+        if (source.DataTimeOrder != null) {
+            this.DataTimeOrder = new Long(source.DataTimeOrder);
+        }
+        if (source.ReDoParams != null) {
+            this.ReDoParams = new String(source.ReDoParams);
+        }
     }
 
 
@@ -554,6 +736,13 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
         this.setParamSimple(map, prefix + "IsCount", this.IsCount);
         this.setParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
+        this.setParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
+        this.setParamSimple(map, prefix + "SameSelfDependType", this.SameSelfDependType);
+        this.setParamSimple(map, prefix + "ParallelNum", this.ParallelNum);
+        this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+        this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+        this.setParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
+        this.setParamSimple(map, prefix + "ReDoParams", this.ReDoParams);
 
     }
 }

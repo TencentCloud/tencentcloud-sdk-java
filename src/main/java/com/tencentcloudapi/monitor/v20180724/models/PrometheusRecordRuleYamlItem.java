@@ -38,14 +38,14 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * Yaml内容
+    * 如果该聚合规则来至模板，则TemplateId为模板id
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 如果该聚合规则来至模板，则TemplateId为模板id
+    * Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -117,25 +117,25 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel {
     }
 
     /**
-     * Get Yaml内容 
-     * @return TemplateId Yaml内容
+     * Get 如果该聚合规则来至模板，则TemplateId为模板id 
+     * @return TemplateId 如果该聚合规则来至模板，则TemplateId为模板id
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Yaml内容
-     * @param TemplateId Yaml内容
+     * Set 如果该聚合规则来至模板，则TemplateId为模板id
+     * @param TemplateId 如果该聚合规则来至模板，则TemplateId为模板id
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 如果该聚合规则来至模板，则TemplateId为模板id
+     * Get Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content 如果该聚合规则来至模板，则TemplateId为模板id
+     * @return Content Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
@@ -143,9 +143,9 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel {
     }
 
     /**
-     * Set 如果该聚合规则来至模板，则TemplateId为模板id
+     * Set Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content 如果该聚合规则来至模板，则TemplateId为模板id
+     * @param Content Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {

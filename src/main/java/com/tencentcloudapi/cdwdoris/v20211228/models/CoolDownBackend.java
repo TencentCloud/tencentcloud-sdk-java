@@ -25,7 +25,6 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
     * 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -33,7 +32,6 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
     * 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataUsedCapacity")
     @Expose
@@ -41,7 +39,6 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
     * 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCapacity")
     @Expose
@@ -49,17 +46,14 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
     * 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteUsedCapacity")
     @Expose
     private String RemoteUsedCapacity;
 
     /**
-     * Get 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段：Host 
      * @return Host 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -67,19 +61,15 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
      * Set 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段：DataUsedCapacity 
      * @return DataUsedCapacity 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataUsedCapacity() {
         return this.DataUsedCapacity;
@@ -87,19 +77,15 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
      * Set 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataUsedCapacity 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataUsedCapacity(String DataUsedCapacity) {
         this.DataUsedCapacity = DataUsedCapacity;
     }
 
     /**
-     * Get 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段：TotalCapacity 
      * @return TotalCapacity 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCapacity() {
         return this.TotalCapacity;
@@ -107,19 +93,15 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
      * Set 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCapacity 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCapacity(String TotalCapacity) {
         this.TotalCapacity = TotalCapacity;
     }
 
     /**
-     * Get 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段：RemoteUsedCapacity 
      * @return RemoteUsedCapacity 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteUsedCapacity() {
         return this.RemoteUsedCapacity;
@@ -127,9 +109,7 @@ public class CoolDownBackend extends AbstractModel {
 
     /**
      * Set 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteUsedCapacity 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteUsedCapacity(String RemoteUsedCapacity) {
         this.RemoteUsedCapacity = RemoteUsedCapacity;

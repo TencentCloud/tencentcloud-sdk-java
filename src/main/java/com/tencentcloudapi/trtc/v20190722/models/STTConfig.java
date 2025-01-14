@@ -82,6 +82,13 @@ public class STTConfig extends AbstractModel {
     private Long VadSilenceTime;
 
     /**
+    * 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+    */
+    @SerializedName("HotWordList")
+    @Expose
+    private String HotWordList;
+
+    /**
      * Get 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -265,6 +272,22 @@ public class STTConfig extends AbstractModel {
         this.VadSilenceTime = VadSilenceTime;
     }
 
+    /**
+     * Get 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”； 
+     * @return HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     */
+    public String getHotWordList() {
+        return this.HotWordList;
+    }
+
+    /**
+     * Set 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     * @param HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     */
+    public void setHotWordList(String HotWordList) {
+        this.HotWordList = HotWordList;
+    }
+
     public STTConfig() {
     }
 
@@ -288,6 +311,9 @@ public class STTConfig extends AbstractModel {
         if (source.VadSilenceTime != null) {
             this.VadSilenceTime = new Long(source.VadSilenceTime);
         }
+        if (source.HotWordList != null) {
+            this.HotWordList = new String(source.HotWordList);
+        }
     }
 
 
@@ -299,6 +325,7 @@ public class STTConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
         this.setParamSimple(map, prefix + "CustomParam", this.CustomParam);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+        this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
 
     }
 }

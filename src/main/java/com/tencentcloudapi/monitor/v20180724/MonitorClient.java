@@ -1462,7 +1462,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *通过yaml的方式修改Prometheus聚合实例
+     *通过yaml的方式修改Prometheus预聚合规则
      * @param req ModifyPrometheusRecordRuleYamlRequest
      * @return ModifyPrometheusRecordRuleYamlResponse
      * @throws TencentCloudSDKException

@@ -38,7 +38,7 @@ public class ListAggregateDiscoveredResourcesRequest extends AbstractModel {
     private String AccountGroupId;
 
     /**
-    * resourceName：资源名  resourceId ：资源ID
+    * resourceName：资源名  resourceId ：资源ID resourceType：资源类型
     */
     @SerializedName("Filters")
     @Expose
@@ -98,16 +98,16 @@ public class ListAggregateDiscoveredResourcesRequest extends AbstractModel {
     }
 
     /**
-     * Get resourceName：资源名  resourceId ：资源ID 
-     * @return Filters resourceName：资源名  resourceId ：资源ID
+     * Get resourceName：资源名  resourceId ：资源ID resourceType：资源类型 
+     * @return Filters resourceName：资源名  resourceId ：资源ID resourceType：资源类型
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set resourceName：资源名  resourceId ：资源ID
-     * @param Filters resourceName：资源名  resourceId ：资源ID
+     * Set resourceName：资源名  resourceId ：资源ID resourceType：资源类型
+     * @param Filters resourceName：资源名  resourceId ：资源ID resourceType：资源类型
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

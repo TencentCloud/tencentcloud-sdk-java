@@ -259,6 +259,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建安全组，数量限制5个。
+     * @param req CreateStreamLinkSecurityGroupRequest
+     * @return CreateStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroup(CreateStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamLinkSecurityGroup", CreateStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
      *创建用户自定义转码模板，数量上限：1000
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -504,6 +515,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除安全组。
+     * @param req DeleteStreamLinkSecurityGroupRequest
+     * @return DeleteStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroup(DeleteStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamLinkSecurityGroup", DeleteStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
      *删除用户自定义转码模板。
      * @param req DeleteTranscodeTemplateRequest
      * @return DeleteTranscodeTemplateResponse
@@ -600,6 +622,17 @@ public class MpsClient extends AbstractClient{
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
+    }
+
+    /**
+     *根据安全组反差关联的Flow信息。
+     * @param req DescribeGroupAttachFlowsByIdRequest
+     * @return DescribeGroupAttachFlowsByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(DescribeGroupAttachFlowsByIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGroupAttachFlowsById", DescribeGroupAttachFlowsByIdResponse.class);
     }
 
     /**
@@ -825,6 +858,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *批量查询安全组信息。
+     * @param req DescribeStreamLinkSecurityGroupsRequest
+     * @return DescribeStreamLinkSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(DescribeStreamLinkSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamLinkSecurityGroups", DescribeStreamLinkSecurityGroupsResponse.class);
+    }
+
+    /**
      *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -934,6 +978,17 @@ public class MpsClient extends AbstractClient{
     public DisableWorkflowResponse DisableWorkflow(DisableWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableWorkflow", DisableWorkflowResponse.class);
+    }
+
+    /**
+     *批量解绑安全组下面关联的输入输出。
+     * @param req DisassociateSecurityGroupRequest
+     * @return DisassociateSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupResponse DisassociateSecurityGroup(DisassociateSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateSecurityGroup", DisassociateSecurityGroupResponse.class);
     }
 
     /**
@@ -1179,6 +1234,17 @@ public class MpsClient extends AbstractClient{
     public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStreamLinkOutputInfo", ModifyStreamLinkOutputInfoResponse.class);
+    }
+
+    /**
+     *更新安全组。
+     * @param req ModifyStreamLinkSecurityGroupRequest
+     * @return ModifyStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroup(ModifyStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamLinkSecurityGroup", ModifyStreamLinkSecurityGroupResponse.class);
     }
 
     /**

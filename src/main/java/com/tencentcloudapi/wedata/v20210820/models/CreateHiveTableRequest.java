@@ -80,6 +80,13 @@ public class CreateHiveTableRequest extends AbstractModel {
     private String SmartOptimizerWritten;
 
     /**
+    * 数据优化针对的表
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
      * Get 数据源id 
      * @return DatasourceId 数据源id
      */
@@ -207,6 +214,22 @@ public class CreateHiveTableRequest extends AbstractModel {
         this.SmartOptimizerWritten = SmartOptimizerWritten;
     }
 
+    /**
+     * Get 数据优化针对的表 
+     * @return TableName 数据优化针对的表
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 数据优化针对的表
+     * @param TableName 数据优化针对的表
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
     public CreateHiveTableRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateHiveTableRequest extends AbstractModel {
         if (source.SmartOptimizerWritten != null) {
             this.SmartOptimizerWritten = new String(source.SmartOptimizerWritten);
         }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateHiveTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
         this.setParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
         this.setParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
 
     }
 }

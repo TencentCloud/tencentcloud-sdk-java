@@ -96,6 +96,13 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String FileSize;
 
     /**
+    * 日志匹配节点信息
+    */
+    @SerializedName("MatchedBrokerIp")
+    @Expose
+    private String MatchedBrokerIp;
+
+    /**
      * Get 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogInfo 实例运行日志
@@ -275,6 +282,22 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.FileSize = FileSize;
     }
 
+    /**
+     * Get 日志匹配节点信息 
+     * @return MatchedBrokerIp 日志匹配节点信息
+     */
+    public String getMatchedBrokerIp() {
+        return this.MatchedBrokerIp;
+    }
+
+    /**
+     * Set 日志匹配节点信息
+     * @param MatchedBrokerIp 日志匹配节点信息
+     */
+    public void setMatchedBrokerIp(String MatchedBrokerIp) {
+        this.MatchedBrokerIp = MatchedBrokerIp;
+    }
+
     public InstanceLogInfoOpsDto() {
     }
 
@@ -313,6 +336,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         if (source.FileSize != null) {
             this.FileSize = new String(source.FileSize);
         }
+        if (source.MatchedBrokerIp != null) {
+            this.MatchedBrokerIp = new String(source.MatchedBrokerIp);
+        }
     }
 
 
@@ -329,6 +355,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
 
     }
 }

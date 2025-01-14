@@ -83,6 +83,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -91,6 +92,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
     * 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -518,12 +520,14 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -536,12 +540,14 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -550,8 +556,10 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 
     /**
      * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -560,8 +568,10 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 
     /**
      * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {

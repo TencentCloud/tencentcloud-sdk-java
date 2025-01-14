@@ -101,6 +101,13 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
     private String SmartOptimizerWritten;
 
     /**
+    * 数据优化表名
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
      * Get 数据源ID 
      * @return DatasourceId 数据源ID
      */
@@ -276,6 +283,22 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.SmartOptimizerWritten = SmartOptimizerWritten;
     }
 
+    /**
+     * Get 数据优化表名 
+     * @return TableName 数据优化表名
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 数据优化表名
+     * @param TableName 数据优化表名
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
     public CreateHiveTableByDDLRequest() {
     }
 
@@ -317,6 +340,9 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         if (source.SmartOptimizerWritten != null) {
             this.SmartOptimizerWritten = new String(source.SmartOptimizerWritten);
         }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Async", this.Async);
         this.setParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
         this.setParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
 
     }
 }

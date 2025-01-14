@@ -25,7 +25,6 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -33,7 +32,6 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
     * cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CooldownDatetime")
     @Expose
@@ -41,17 +39,14 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
     * cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CooldownTtl")
     @Expose
     private String CooldownTtl;
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -59,19 +54,15 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cooldown_ttl 
      * @return CooldownDatetime cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCooldownDatetime() {
         return this.CooldownDatetime;
@@ -79,19 +70,15 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
      * Set cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CooldownDatetime cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCooldownDatetime(String CooldownDatetime) {
         this.CooldownDatetime = CooldownDatetime;
     }
 
     /**
-     * Get cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cooldown_datetime 
      * @return CooldownTtl cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCooldownTtl() {
         return this.CooldownTtl;
@@ -99,9 +86,7 @@ public class CoolDownPolicyInfo extends AbstractModel {
 
     /**
      * Set cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CooldownTtl cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCooldownTtl(String CooldownTtl) {
         this.CooldownTtl = CooldownTtl;

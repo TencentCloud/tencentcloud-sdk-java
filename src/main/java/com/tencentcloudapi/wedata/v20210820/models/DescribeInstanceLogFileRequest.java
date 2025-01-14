@@ -87,6 +87,34 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     private String ExecutionFileType;
 
     /**
+    * 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+    */
+    @SerializedName("InstanceLifeDetailDtoList")
+    @Expose
+    private InstanceLifeDetailDto [] InstanceLifeDetailDtoList;
+
+    /**
+    * 当前生命周期数
+    */
+    @SerializedName("CurrentLifeRound")
+    @Expose
+    private Long CurrentLifeRound;
+
+    /**
+    * 当前生命周期重试次数
+    */
+    @SerializedName("Tries")
+    @Expose
+    private Long Tries;
+
+    /**
+    * 动态获取日志信息标识
+    */
+    @SerializedName("Dynamic")
+    @Expose
+    private Boolean Dynamic;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -230,6 +258,70 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         this.ExecutionFileType = ExecutionFileType;
     }
 
+    /**
+     * Get 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用 
+     * @return InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     */
+    public InstanceLifeDetailDto [] getInstanceLifeDetailDtoList() {
+        return this.InstanceLifeDetailDtoList;
+    }
+
+    /**
+     * Set 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     * @param InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     */
+    public void setInstanceLifeDetailDtoList(InstanceLifeDetailDto [] InstanceLifeDetailDtoList) {
+        this.InstanceLifeDetailDtoList = InstanceLifeDetailDtoList;
+    }
+
+    /**
+     * Get 当前生命周期数 
+     * @return CurrentLifeRound 当前生命周期数
+     */
+    public Long getCurrentLifeRound() {
+        return this.CurrentLifeRound;
+    }
+
+    /**
+     * Set 当前生命周期数
+     * @param CurrentLifeRound 当前生命周期数
+     */
+    public void setCurrentLifeRound(Long CurrentLifeRound) {
+        this.CurrentLifeRound = CurrentLifeRound;
+    }
+
+    /**
+     * Get 当前生命周期重试次数 
+     * @return Tries 当前生命周期重试次数
+     */
+    public Long getTries() {
+        return this.Tries;
+    }
+
+    /**
+     * Set 当前生命周期重试次数
+     * @param Tries 当前生命周期重试次数
+     */
+    public void setTries(Long Tries) {
+        this.Tries = Tries;
+    }
+
+    /**
+     * Get 动态获取日志信息标识 
+     * @return Dynamic 动态获取日志信息标识
+     */
+    public Boolean getDynamic() {
+        return this.Dynamic;
+    }
+
+    /**
+     * Set 动态获取日志信息标识
+     * @param Dynamic 动态获取日志信息标识
+     */
+    public void setDynamic(Boolean Dynamic) {
+        this.Dynamic = Dynamic;
+    }
+
     public DescribeInstanceLogFileRequest() {
     }
 
@@ -265,6 +357,21 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         if (source.ExecutionFileType != null) {
             this.ExecutionFileType = new String(source.ExecutionFileType);
         }
+        if (source.InstanceLifeDetailDtoList != null) {
+            this.InstanceLifeDetailDtoList = new InstanceLifeDetailDto[source.InstanceLifeDetailDtoList.length];
+            for (int i = 0; i < source.InstanceLifeDetailDtoList.length; i++) {
+                this.InstanceLifeDetailDtoList[i] = new InstanceLifeDetailDto(source.InstanceLifeDetailDtoList[i]);
+            }
+        }
+        if (source.CurrentLifeRound != null) {
+            this.CurrentLifeRound = new Long(source.CurrentLifeRound);
+        }
+        if (source.Tries != null) {
+            this.Tries = new Long(source.Tries);
+        }
+        if (source.Dynamic != null) {
+            this.Dynamic = new Boolean(source.Dynamic);
+        }
     }
 
 
@@ -281,6 +388,10 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
         this.setParamSimple(map, prefix + "LogLevelType", this.LogLevelType);
         this.setParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
+        this.setParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
+        this.setParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+        this.setParamSimple(map, prefix + "Tries", this.Tries);
+        this.setParamSimple(map, prefix + "Dynamic", this.Dynamic);
 
     }
 }

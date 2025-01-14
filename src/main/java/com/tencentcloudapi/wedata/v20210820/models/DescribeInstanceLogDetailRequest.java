@@ -108,6 +108,41 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
+    * 生命周期为基础数据进行日志匹配
+    */
+    @SerializedName("InstanceLifeDetailDtoList")
+    @Expose
+    private InstanceLifeDetailDto [] InstanceLifeDetailDtoList;
+
+    /**
+    * 当前生命周期
+    */
+    @SerializedName("CurrentLifeRound")
+    @Expose
+    private Long CurrentLifeRound;
+
+    /**
+    * 生命周期总数
+    */
+    @SerializedName("MaxLifeRound")
+    @Expose
+    private Long MaxLifeRound;
+
+    /**
+    * 当前生命周期重试次数
+    */
+    @SerializedName("Tries")
+    @Expose
+    private Long Tries;
+
+    /**
+    * 动态加载日志
+    */
+    @SerializedName("Dynamic")
+    @Expose
+    private Boolean Dynamic;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -299,6 +334,86 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.RequestFromSource = RequestFromSource;
     }
 
+    /**
+     * Get 生命周期为基础数据进行日志匹配 
+     * @return InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
+     */
+    public InstanceLifeDetailDto [] getInstanceLifeDetailDtoList() {
+        return this.InstanceLifeDetailDtoList;
+    }
+
+    /**
+     * Set 生命周期为基础数据进行日志匹配
+     * @param InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
+     */
+    public void setInstanceLifeDetailDtoList(InstanceLifeDetailDto [] InstanceLifeDetailDtoList) {
+        this.InstanceLifeDetailDtoList = InstanceLifeDetailDtoList;
+    }
+
+    /**
+     * Get 当前生命周期 
+     * @return CurrentLifeRound 当前生命周期
+     */
+    public Long getCurrentLifeRound() {
+        return this.CurrentLifeRound;
+    }
+
+    /**
+     * Set 当前生命周期
+     * @param CurrentLifeRound 当前生命周期
+     */
+    public void setCurrentLifeRound(Long CurrentLifeRound) {
+        this.CurrentLifeRound = CurrentLifeRound;
+    }
+
+    /**
+     * Get 生命周期总数 
+     * @return MaxLifeRound 生命周期总数
+     */
+    public Long getMaxLifeRound() {
+        return this.MaxLifeRound;
+    }
+
+    /**
+     * Set 生命周期总数
+     * @param MaxLifeRound 生命周期总数
+     */
+    public void setMaxLifeRound(Long MaxLifeRound) {
+        this.MaxLifeRound = MaxLifeRound;
+    }
+
+    /**
+     * Get 当前生命周期重试次数 
+     * @return Tries 当前生命周期重试次数
+     */
+    public Long getTries() {
+        return this.Tries;
+    }
+
+    /**
+     * Set 当前生命周期重试次数
+     * @param Tries 当前生命周期重试次数
+     */
+    public void setTries(Long Tries) {
+        this.Tries = Tries;
+    }
+
+    /**
+     * Get 动态加载日志 
+     * @return Dynamic 动态加载日志
+     */
+    public Boolean getDynamic() {
+        return this.Dynamic;
+    }
+
+    /**
+     * Set 动态加载日志
+     * @param Dynamic 动态加载日志
+     */
+    public void setDynamic(Boolean Dynamic) {
+        this.Dynamic = Dynamic;
+    }
+
     public DescribeInstanceLogDetailRequest() {
     }
 
@@ -343,6 +458,24 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         if (source.RequestFromSource != null) {
             this.RequestFromSource = new String(source.RequestFromSource);
         }
+        if (source.InstanceLifeDetailDtoList != null) {
+            this.InstanceLifeDetailDtoList = new InstanceLifeDetailDto[source.InstanceLifeDetailDtoList.length];
+            for (int i = 0; i < source.InstanceLifeDetailDtoList.length; i++) {
+                this.InstanceLifeDetailDtoList[i] = new InstanceLifeDetailDto(source.InstanceLifeDetailDtoList[i]);
+            }
+        }
+        if (source.CurrentLifeRound != null) {
+            this.CurrentLifeRound = new Long(source.CurrentLifeRound);
+        }
+        if (source.MaxLifeRound != null) {
+            this.MaxLifeRound = new Long(source.MaxLifeRound);
+        }
+        if (source.Tries != null) {
+            this.Tries = new Long(source.Tries);
+        }
+        if (source.Dynamic != null) {
+            this.Dynamic = new Boolean(source.Dynamic);
+        }
     }
 
 
@@ -362,6 +495,11 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LineCount", this.LineCount);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+        this.setParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
+        this.setParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+        this.setParamSimple(map, prefix + "MaxLifeRound", this.MaxLifeRound);
+        this.setParamSimple(map, prefix + "Tries", this.Tries);
+        this.setParamSimple(map, prefix + "Dynamic", this.Dynamic);
 
     }
 }

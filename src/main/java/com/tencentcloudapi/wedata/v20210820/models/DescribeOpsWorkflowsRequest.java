@@ -122,6 +122,20 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
     private String [] ProjectIds;
 
     /**
+    * 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+    */
+    @SerializedName("WorkflowTypeList")
+    @Expose
+    private String [] WorkflowTypeList;
+
+    /**
+    * 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+    */
+    @SerializedName("KeyWord")
+    @Expose
+    private String KeyWord;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -345,6 +359,38 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.ProjectIds = ProjectIds;
     }
 
+    /**
+     * Get 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle 
+     * @return WorkflowTypeList 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+     */
+    public String [] getWorkflowTypeList() {
+        return this.WorkflowTypeList;
+    }
+
+    /**
+     * Set 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+     * @param WorkflowTypeList 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+     */
+    public void setWorkflowTypeList(String [] WorkflowTypeList) {
+        this.WorkflowTypeList = WorkflowTypeList;
+    }
+
+    /**
+     * Get 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割 
+     * @return KeyWord 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+     */
+    public String getKeyWord() {
+        return this.KeyWord;
+    }
+
+    /**
+     * Set 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+     * @param KeyWord 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+     */
+    public void setKeyWord(String KeyWord) {
+        this.KeyWord = KeyWord;
+    }
+
     public DescribeOpsWorkflowsRequest() {
     }
 
@@ -398,6 +444,15 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
                 this.ProjectIds[i] = new String(source.ProjectIds[i]);
             }
         }
+        if (source.WorkflowTypeList != null) {
+            this.WorkflowTypeList = new String[source.WorkflowTypeList.length];
+            for (int i = 0; i < source.WorkflowTypeList.length; i++) {
+                this.WorkflowTypeList[i] = new String(source.WorkflowTypeList[i]);
+            }
+        }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
     }
 
 
@@ -419,6 +474,8 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortItem", this.SortItem);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+        this.setParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
+        this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
 
     }
 }

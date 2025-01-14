@@ -243,6 +243,16 @@ public class MakePlanOpsDto extends AbstractModel {
     private String SelfWorkflowDependency;
 
     /**
+    * 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+    */
+    @SerializedName("MakeDataTimeOrder")
+    @Expose
+    private String MakeDataTimeOrder;
+
+    /**
      * Get 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 补录计划ID
@@ -794,6 +804,34 @@ public class MakePlanOpsDto extends AbstractModel {
         this.SelfWorkflowDependency = SelfWorkflowDependency;
     }
 
+    /**
+     * Get 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序 
+     * @return MakeDataTimeOrder 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     */
+    public String getMakeDataTimeOrder() {
+        return this.MakeDataTimeOrder;
+    }
+
+    /**
+     * Set 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     * @param MakeDataTimeOrder 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     */
+    public void setMakeDataTimeOrder(String MakeDataTimeOrder) {
+        this.MakeDataTimeOrder = MakeDataTimeOrder;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -892,6 +930,9 @@ public class MakePlanOpsDto extends AbstractModel {
         if (source.SelfWorkflowDependency != null) {
             this.SelfWorkflowDependency = new String(source.SelfWorkflowDependency);
         }
+        if (source.MakeDataTimeOrder != null) {
+            this.MakeDataTimeOrder = new String(source.MakeDataTimeOrder);
+        }
     }
 
 
@@ -926,6 +967,7 @@ public class MakePlanOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
         this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
         this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+        this.setParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
 
     }
 }

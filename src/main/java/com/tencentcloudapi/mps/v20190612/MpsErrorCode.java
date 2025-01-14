@@ -42,6 +42,9 @@ public enum MpsErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // InvalidParameter.AlreadyAssociatedInput
+     INVALIDPARAMETER_ALREADYASSOCIATEDINPUT("InvalidParameter.AlreadyAssociatedInput"),
+     
     // InvalidParameter.EndTime
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      
@@ -101,6 +104,9 @@ public enum MpsErrorCode {
      
     // InvalidParameter.Type
      INVALIDPARAMETER_TYPE("InvalidParameter.Type"),
+     
+    // InvalidParameter.Whitelist
+     INVALIDPARAMETER_WHITELIST("InvalidParameter.Whitelist"),
      
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),

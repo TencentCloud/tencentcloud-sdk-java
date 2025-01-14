@@ -119,6 +119,16 @@ false 否
     private String TaskNodeId;
 
     /**
+    * 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+    */
+    @SerializedName("WorkflowType")
+    @Expose
+    private String WorkflowType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -342,6 +352,34 @@ false 否
         this.TaskNodeId = TaskNodeId;
     }
 
+    /**
+     * Get 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流 
+     * @return WorkflowType 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     */
+    public String getWorkflowType() {
+        return this.WorkflowType;
+    }
+
+    /**
+     * Set 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     * @param WorkflowType 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     */
+    public void setWorkflowType(String WorkflowType) {
+        this.WorkflowType = WorkflowType;
+    }
+
     public DescribeDsFolderTreeRequest() {
     }
 
@@ -389,6 +427,9 @@ false 否
         if (source.TaskNodeId != null) {
             this.TaskNodeId = new String(source.TaskNodeId);
         }
+        if (source.WorkflowType != null) {
+            this.WorkflowType = new String(source.WorkflowType);
+        }
     }
 
 
@@ -409,6 +450,7 @@ false 否
         this.setParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
         this.setParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
         this.setParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
+        this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
 
     }
 }

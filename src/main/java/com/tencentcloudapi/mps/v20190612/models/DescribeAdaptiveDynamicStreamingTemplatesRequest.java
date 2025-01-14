@@ -55,6 +55,7 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
 
     /**
     * 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
     */
     @SerializedName("PureAudio")
     @Expose
@@ -140,8 +141,10 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
     }
 
     /**
-     * Get 是否为纯音频，0表示视频，1表示纯音频 
+     * Get 是否为纯音频，0表示视频，1表示纯音频
+默认值：0 
      * @return PureAudio 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
      */
     public Long getPureAudio() {
         return this.PureAudio;
@@ -149,7 +152,9 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
 
     /**
      * Set 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
      * @param PureAudio 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
      */
     public void setPureAudio(Long PureAudio) {
         this.PureAudio = PureAudio;

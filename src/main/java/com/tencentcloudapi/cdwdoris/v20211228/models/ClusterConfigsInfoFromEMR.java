@@ -60,7 +60,6 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
 
     /**
     * 配置文件路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePath")
     @Expose
@@ -76,7 +75,6 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
 
     /**
     * 配置文件kv值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileKeyValuesNew")
     @Expose
@@ -163,10 +161,8 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
     }
 
     /**
-     * Get 配置文件路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件路径 
      * @return FilePath 配置文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePath() {
         return this.FilePath;
@@ -174,9 +170,7 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
 
     /**
      * Set 配置文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePath 配置文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
@@ -207,10 +201,8 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
     }
 
     /**
-     * Get 配置文件kv值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件kv值 
      * @return FileKeyValuesNew 配置文件kv值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigKeyValue [] getFileKeyValuesNew() {
         return this.FileKeyValuesNew;
@@ -218,9 +210,7 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
 
     /**
      * Set 配置文件kv值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileKeyValuesNew 配置文件kv值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileKeyValuesNew(ConfigKeyValue [] FileKeyValuesNew) {
         this.FileKeyValuesNew = FileKeyValuesNew;

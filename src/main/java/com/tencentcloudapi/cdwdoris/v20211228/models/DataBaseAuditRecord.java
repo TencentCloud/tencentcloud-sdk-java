@@ -25,7 +25,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsUser")
     @Expose
@@ -33,7 +32,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialQueryId")
     @Expose
@@ -41,7 +39,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sql")
     @Expose
@@ -49,7 +46,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryStartTime")
     @Expose
@@ -57,7 +53,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationMs")
     @Expose
@@ -65,7 +60,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadRows")
     @Expose
@@ -73,7 +67,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultRows")
     @Expose
@@ -81,7 +74,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultBytes")
     @Expose
@@ -89,7 +81,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryUsage")
     @Expose
@@ -97,7 +88,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialAddress")
     @Expose
@@ -105,7 +95,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -113,7 +102,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * sql类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlType")
     @Expose
@@ -121,7 +109,6 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalog")
     @Expose
@@ -129,17 +116,21 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get 查询用户
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 是否是查询
+    */
+    @SerializedName("IsQuery")
+    @Expose
+    private Boolean IsQuery;
+
+    /**
+     * Get 查询用户 
      * @return OsUser 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsUser() {
         return this.OsUser;
@@ -147,19 +138,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsUser 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsUser(String OsUser) {
         this.OsUser = OsUser;
     }
 
     /**
-     * Get 查询ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询ID 
      * @return InitialQueryId 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitialQueryId() {
         return this.InitialQueryId;
@@ -167,19 +154,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitialQueryId 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialQueryId(String InitialQueryId) {
         this.InitialQueryId = InitialQueryId;
     }
 
     /**
-     * Get SQL语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQL语句 
      * @return Sql SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSql() {
         return this.Sql;
@@ -187,19 +170,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sql SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSql(String Sql) {
         this.Sql = Sql;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return QueryStartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueryStartTime() {
         return this.QueryStartTime;
@@ -207,19 +186,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryStartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryStartTime(String QueryStartTime) {
         this.QueryStartTime = QueryStartTime;
     }
 
     /**
-     * Get 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行耗时 
      * @return DurationMs 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDurationMs() {
         return this.DurationMs;
@@ -227,19 +202,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationMs 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationMs(Long DurationMs) {
         this.DurationMs = DurationMs;
     }
 
     /**
-     * Get 读取行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读取行数 
      * @return ReadRows 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadRows() {
         return this.ReadRows;
@@ -247,19 +218,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadRows 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadRows(Long ReadRows) {
         this.ReadRows = ReadRows;
     }
 
     /**
-     * Get 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读取字节数 
      * @return ResultRows 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultRows() {
         return this.ResultRows;
@@ -267,19 +234,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultRows 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultRows(Long ResultRows) {
         this.ResultRows = ResultRows;
     }
 
     /**
-     * Get 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果字节数 
      * @return ResultBytes 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultBytes() {
         return this.ResultBytes;
@@ -287,19 +250,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultBytes 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultBytes(Long ResultBytes) {
         this.ResultBytes = ResultBytes;
     }
 
     /**
-     * Get 内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存 
      * @return MemoryUsage 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemoryUsage() {
         return this.MemoryUsage;
@@ -307,19 +266,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryUsage 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryUsage(Long MemoryUsage) {
         this.MemoryUsage = MemoryUsage;
     }
 
     /**
-     * Get 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 初始查询IP 
      * @return InitialAddress 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitialAddress() {
         return this.InitialAddress;
@@ -327,19 +282,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitialAddress 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialAddress(String InitialAddress) {
         this.InitialAddress = InitialAddress;
     }
 
     /**
-     * Get 数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库 
      * @return DbName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -347,19 +298,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get sql类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get sql类型 
      * @return SqlType sql类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSqlType() {
         return this.SqlType;
@@ -367,19 +314,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set sql类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SqlType sql类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;
     }
 
     /**
-     * Get catalog名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get catalog名称 
      * @return Catalog catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalog() {
         return this.Catalog;
@@ -387,19 +330,15 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalog catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -407,12 +346,26 @@ public class DataBaseAuditRecord extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
+    }
+
+    /**
+     * Get 是否是查询 
+     * @return IsQuery 是否是查询
+     */
+    public Boolean getIsQuery() {
+        return this.IsQuery;
+    }
+
+    /**
+     * Set 是否是查询
+     * @param IsQuery 是否是查询
+     */
+    public void setIsQuery(Boolean IsQuery) {
+        this.IsQuery = IsQuery;
     }
 
     public DataBaseAuditRecord() {
@@ -465,6 +418,9 @@ public class DataBaseAuditRecord extends AbstractModel {
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.IsQuery != null) {
+            this.IsQuery = new Boolean(source.IsQuery);
+        }
     }
 
 
@@ -486,6 +442,7 @@ public class DataBaseAuditRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "SqlType", this.SqlType);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
 
     }
 }

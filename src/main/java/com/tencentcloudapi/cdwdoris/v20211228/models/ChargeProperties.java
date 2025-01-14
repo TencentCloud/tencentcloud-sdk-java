@@ -25,7 +25,6 @@ public class ChargeProperties extends AbstractModel {
 
     /**
     * 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
     @Expose
@@ -33,7 +32,6 @@ public class ChargeProperties extends AbstractModel {
 
     /**
     * 是否自动续费，1表示自动续费开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -41,7 +39,6 @@ public class ChargeProperties extends AbstractModel {
 
     /**
     * 计费时间长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -49,17 +46,14 @@ public class ChargeProperties extends AbstractModel {
 
     /**
     * 计费时间单位，“m”表示月等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-     * Get 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费 
      * @return ChargeType 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
         return this.ChargeType;
@@ -67,19 +61,15 @@ public class ChargeProperties extends AbstractModel {
 
     /**
      * Set 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 是否自动续费，1表示自动续费开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动续费，1表示自动续费开启 
      * @return RenewFlag 是否自动续费，1表示自动续费开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -87,19 +77,15 @@ public class ChargeProperties extends AbstractModel {
 
     /**
      * Set 是否自动续费，1表示自动续费开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 是否自动续费，1表示自动续费开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 计费时间长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费时间长度 
      * @return TimeSpan 计费时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -107,19 +93,15 @@ public class ChargeProperties extends AbstractModel {
 
     /**
      * Set 计费时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 计费时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 计费时间单位，“m”表示月等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费时间单位，“m”表示月等 
      * @return TimeUnit 计费时间单位，“m”表示月等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -127,9 +109,7 @@ public class ChargeProperties extends AbstractModel {
 
     /**
      * Set 计费时间单位，“m”表示月等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 计费时间单位，“m”表示月等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

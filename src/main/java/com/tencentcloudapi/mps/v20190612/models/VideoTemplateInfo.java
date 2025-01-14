@@ -81,6 +81,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
     */
     @SerializedName("Width")
     @Expose
@@ -93,6 +94,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
     */
     @SerializedName("Height")
     @Expose
@@ -492,13 +494,15 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。 
+默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680 
      * @return Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      */
     public Long getWidth() {
         return this.Width;
@@ -511,12 +515,14 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      * @param Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -528,13 +534,15 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。 
+默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680 
      * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      */
     public Long getHeight() {
         return this.Height;
@@ -547,12 +555,14 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      * @param Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：Codec为MV-HEVC时可以支持到7680
      */
     public void setHeight(Long Height) {
         this.Height = Height;

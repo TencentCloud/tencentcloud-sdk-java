@@ -123,6 +123,14 @@ public class NativeGatewayServerGroup extends AbstractModel {
     private Long DefaultWeight;
 
     /**
+    * 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticNumber")
+    @Expose
+    private Long ElasticNumber;
+
+    /**
      * Get 云原生网关分组唯一id 
      * @return GroupId 云原生网关分组唯一id
      */
@@ -362,6 +370,26 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.DefaultWeight = DefaultWeight;
     }
 
+    /**
+     * Get 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticNumber 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticNumber() {
+        return this.ElasticNumber;
+    }
+
+    /**
+     * Set 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticNumber 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticNumber(Long ElasticNumber) {
+        this.ElasticNumber = ElasticNumber;
+    }
+
     public NativeGatewayServerGroup() {
     }
 
@@ -409,6 +437,9 @@ public class NativeGatewayServerGroup extends AbstractModel {
         if (source.DefaultWeight != null) {
             this.DefaultWeight = new Long(source.DefaultWeight);
         }
+        if (source.ElasticNumber != null) {
+            this.ElasticNumber = new Long(source.ElasticNumber);
+        }
     }
 
 
@@ -429,6 +460,7 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
         this.setParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
+        this.setParamSimple(map, prefix + "ElasticNumber", this.ElasticNumber);
 
     }
 }

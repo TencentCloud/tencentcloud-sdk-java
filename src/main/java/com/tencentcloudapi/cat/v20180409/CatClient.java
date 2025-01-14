@@ -139,7 +139,7 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *暂停拨测任务
+     *暂停任务
      * @param req SuspendProbeTaskRequest
      * @return SuspendProbeTaskResponse
      * @throws TencentCloudSDKException

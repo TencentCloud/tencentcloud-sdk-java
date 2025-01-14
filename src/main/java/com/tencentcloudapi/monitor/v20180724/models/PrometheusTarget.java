@@ -23,6 +23,67 @@ import java.util.HashMap;
 
 public class PrometheusTarget extends AbstractModel {
 
+    /**
+    * 抓取目标的URL
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * target当前状态,当前支持
+up = 健康
+down = 不健康
+unknown = 未知
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+     * Get 抓取目标的URL 
+     * @return Url 抓取目标的URL
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 抓取目标的URL
+     * @param Url 抓取目标的URL
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get target当前状态,当前支持
+up = 健康
+down = 不健康
+unknown = 未知 
+     * @return State target当前状态,当前支持
+up = 健康
+down = 不健康
+unknown = 未知
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set target当前状态,当前支持
+up = 健康
+down = 不健康
+unknown = 未知
+     * @param State target当前状态,当前支持
+up = 健康
+down = 不健康
+unknown = 未知
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
     public PrometheusTarget() {
     }
 
@@ -31,6 +92,12 @@ public class PrometheusTarget extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PrometheusTarget(PrometheusTarget source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -38,6 +105,8 @@ public class PrometheusTarget extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

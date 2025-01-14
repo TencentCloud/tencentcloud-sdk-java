@@ -25,7 +25,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -33,7 +32,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 表总字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalBytes")
     @Expose
@@ -49,7 +46,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 表单个副本的大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SingleReplicaBytes")
     @Expose
@@ -57,7 +53,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 备份状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -65,7 +60,6 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 备份的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupErrorMsg")
     @Expose
@@ -73,17 +67,14 @@ public class BackupTableContent extends AbstractModel {
 
     /**
     * 该库表是否绑定降冷策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOpenCoolDown")
     @Expose
     private Boolean IsOpenCoolDown;
 
     /**
-     * Get 数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库 
      * @return Database 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -91,19 +82,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表 
      * @return Table 表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -111,19 +98,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 表总字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表总字节数 
      * @return TotalBytes 表总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalBytes() {
         return this.TotalBytes;
@@ -131,19 +114,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 表总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalBytes 表总字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalBytes(Long TotalBytes) {
         this.TotalBytes = TotalBytes;
     }
 
     /**
-     * Get 表单个副本的大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表单个副本的大小 
      * @return SingleReplicaBytes 表单个副本的大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSingleReplicaBytes() {
         return this.SingleReplicaBytes;
@@ -151,19 +130,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 表单个副本的大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SingleReplicaBytes 表单个副本的大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSingleReplicaBytes(String SingleReplicaBytes) {
         this.SingleReplicaBytes = SingleReplicaBytes;
     }
 
     /**
-     * Get 备份状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份状态 
      * @return BackupStatus 备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupStatus() {
         return this.BackupStatus;
@@ -171,19 +146,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupStatus 备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupStatus(Long BackupStatus) {
         this.BackupStatus = BackupStatus;
     }
 
     /**
-     * Get 备份的错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份的错误信息 
      * @return BackupErrorMsg 备份的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupErrorMsg() {
         return this.BackupErrorMsg;
@@ -191,19 +162,15 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 备份的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupErrorMsg 备份的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupErrorMsg(String BackupErrorMsg) {
         this.BackupErrorMsg = BackupErrorMsg;
     }
 
     /**
-     * Get 该库表是否绑定降冷策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该库表是否绑定降冷策略 
      * @return IsOpenCoolDown 该库表是否绑定降冷策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsOpenCoolDown() {
         return this.IsOpenCoolDown;
@@ -211,9 +178,7 @@ public class BackupTableContent extends AbstractModel {
 
     /**
      * Set 该库表是否绑定降冷策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsOpenCoolDown 该库表是否绑定降冷策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOpenCoolDown(Boolean IsOpenCoolDown) {
         this.IsOpenCoolDown = IsOpenCoolDown;

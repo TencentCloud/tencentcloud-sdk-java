@@ -95,7 +95,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -103,7 +102,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsQuery")
     @Expose
@@ -111,7 +109,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultBytesMB")
     @Expose
@@ -119,7 +116,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryUsageMB")
     @Expose
@@ -127,7 +123,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationSec")
     @Expose
@@ -135,7 +130,6 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -143,11 +137,17 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
     * Catalog  Name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
+
+    /**
+    * cpu执行时间 
+    */
+    @SerializedName("CpuTimeMs")
+    @Expose
+    private Long CpuTimeMs;
 
     /**
      * Get 查询用户 
@@ -310,10 +310,8 @@ public class SlowQueryRecord extends AbstractModel {
     }
 
     /**
-     * Get 数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名 
      * @return DbName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -321,19 +319,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是查询，0：否，1：查询语句 
      * @return IsQuery 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsQuery() {
         return this.IsQuery;
@@ -341,19 +335,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsQuery 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsQuery(Long IsQuery) {
         this.IsQuery = IsQuery;
     }
 
     /**
-     * Get ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ResultBytes的MB格式 
      * @return ResultBytesMB ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getResultBytesMB() {
         return this.ResultBytesMB;
@@ -361,19 +351,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultBytesMB ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultBytesMB(Float ResultBytesMB) {
         this.ResultBytesMB = ResultBytesMB;
     }
 
     /**
-     * Get MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MemoryUsage的MB表示 
      * @return MemoryUsageMB MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemoryUsageMB() {
         return this.MemoryUsageMB;
@@ -381,19 +367,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryUsageMB MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryUsageMB(Float MemoryUsageMB) {
         this.MemoryUsageMB = MemoryUsageMB;
     }
 
     /**
-     * Get DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DurationMs的秒表示 
      * @return DurationSec DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDurationSec() {
         return this.DurationSec;
@@ -401,19 +383,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationSec DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationSec(Float DurationSec) {
         this.DurationSec = DurationSec;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -421,19 +399,15 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Catalog  Name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Catalog  Name 
      * @return CatalogName Catalog  Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
         return this.CatalogName;
@@ -441,12 +415,26 @@ public class SlowQueryRecord extends AbstractModel {
 
     /**
      * Set Catalog  Name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CatalogName Catalog  Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get cpu执行时间  
+     * @return CpuTimeMs cpu执行时间 
+     */
+    public Long getCpuTimeMs() {
+        return this.CpuTimeMs;
+    }
+
+    /**
+     * Set cpu执行时间 
+     * @param CpuTimeMs cpu执行时间 
+     */
+    public void setCpuTimeMs(Long CpuTimeMs) {
+        this.CpuTimeMs = CpuTimeMs;
     }
 
     public SlowQueryRecord() {
@@ -508,6 +496,9 @@ public class SlowQueryRecord extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.CpuTimeMs != null) {
+            this.CpuTimeMs = new Long(source.CpuTimeMs);
+        }
     }
 
 
@@ -532,6 +523,7 @@ public class SlowQueryRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "DurationSec", this.DurationSec);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "CpuTimeMs", this.CpuTimeMs);
 
     }
 }

@@ -41,7 +41,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - apigateway：ServiceId|Domain， 例：["service-8sk7cqmd|apigw1.tencent.com", "service-8sk7cqmd|apigw2.ninghhuang.online"]
 - teo：Domain， 例：["edgeone1.tencent.com", "edgeone2.tencent.com"]
 - tke：ClusterId|NameSpace|SecretName， 例：["cls-42sa0ae0|default|test-tencent"]
-- cos：Region#Bucket#Domain， 例：["ap-hongkong#ssl-server-1251810746#tencent.com"]
+- cos：Region|Bucket|Domain， 例：["ap-hongkong|ssl-server-1251810746|tencent.com"]
 - lighthouse：Region|InstanceId|Domain， 例：["ap-shanghai|lhins-nh7lql34|tencent.com"]
 - tse：GatewayId|CertificateId， 例：["gateway-s1da9151|fa61bc05-cc54-4eea-c932-24de52577372"]
 - tcb：Type|Region|EnvId|Domain， 例：["AccessService|ap-shanghai|ceshi-4s5h0ymg11c839c7|tencent.com"]
@@ -52,7 +52,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     private String [] InstanceIdList;
 
     /**
-    * 证书部署云资源支持的云资源类型：
+    * 证书部署云资源支持的云资源类型， 不传则默认部署clb：
 - clb
 - cdn
 - ddos
@@ -117,7 +117,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - apigateway：ServiceId|Domain， 例：["service-8sk7cqmd|apigw1.tencent.com", "service-8sk7cqmd|apigw2.ninghhuang.online"]
 - teo：Domain， 例：["edgeone1.tencent.com", "edgeone2.tencent.com"]
 - tke：ClusterId|NameSpace|SecretName， 例：["cls-42sa0ae0|default|test-tencent"]
-- cos：Region#Bucket#Domain， 例：["ap-hongkong#ssl-server-1251810746#tencent.com"]
+- cos：Region|Bucket|Domain， 例：["ap-hongkong|ssl-server-1251810746|tencent.com"]
 - lighthouse：Region|InstanceId|Domain， 例：["ap-shanghai|lhins-nh7lql34|tencent.com"]
 - tse：GatewayId|CertificateId， 例：["gateway-s1da9151|fa61bc05-cc54-4eea-c932-24de52577372"]
 - tcb：Type|Region|EnvId|Domain， 例：["AccessService|ap-shanghai|ceshi-4s5h0ymg11c839c7|tencent.com"]
@@ -132,7 +132,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - apigateway：ServiceId|Domain， 例：["service-8sk7cqmd|apigw1.tencent.com", "service-8sk7cqmd|apigw2.ninghhuang.online"]
 - teo：Domain， 例：["edgeone1.tencent.com", "edgeone2.tencent.com"]
 - tke：ClusterId|NameSpace|SecretName， 例：["cls-42sa0ae0|default|test-tencent"]
-- cos：Region#Bucket#Domain， 例：["ap-hongkong#ssl-server-1251810746#tencent.com"]
+- cos：Region|Bucket|Domain， 例：["ap-hongkong|ssl-server-1251810746|tencent.com"]
 - lighthouse：Region|InstanceId|Domain， 例：["ap-shanghai|lhins-nh7lql34|tencent.com"]
 - tse：GatewayId|CertificateId， 例：["gateway-s1da9151|fa61bc05-cc54-4eea-c932-24de52577372"]
 - tcb：Type|Region|EnvId|Domain， 例：["AccessService|ap-shanghai|ceshi-4s5h0ymg11c839c7|tencent.com"]
@@ -153,7 +153,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - apigateway：ServiceId|Domain， 例：["service-8sk7cqmd|apigw1.tencent.com", "service-8sk7cqmd|apigw2.ninghhuang.online"]
 - teo：Domain， 例：["edgeone1.tencent.com", "edgeone2.tencent.com"]
 - tke：ClusterId|NameSpace|SecretName， 例：["cls-42sa0ae0|default|test-tencent"]
-- cos：Region#Bucket#Domain， 例：["ap-hongkong#ssl-server-1251810746#tencent.com"]
+- cos：Region|Bucket|Domain， 例：["ap-hongkong|ssl-server-1251810746|tencent.com"]
 - lighthouse：Region|InstanceId|Domain， 例：["ap-shanghai|lhins-nh7lql34|tencent.com"]
 - tse：GatewayId|CertificateId， 例：["gateway-s1da9151|fa61bc05-cc54-4eea-c932-24de52577372"]
 - tcb：Type|Region|EnvId|Domain， 例：["AccessService|ap-shanghai|ceshi-4s5h0ymg11c839c7|tencent.com"]
@@ -168,7 +168,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - apigateway：ServiceId|Domain， 例：["service-8sk7cqmd|apigw1.tencent.com", "service-8sk7cqmd|apigw2.ninghhuang.online"]
 - teo：Domain， 例：["edgeone1.tencent.com", "edgeone2.tencent.com"]
 - tke：ClusterId|NameSpace|SecretName， 例：["cls-42sa0ae0|default|test-tencent"]
-- cos：Region#Bucket#Domain， 例：["ap-hongkong#ssl-server-1251810746#tencent.com"]
+- cos：Region|Bucket|Domain， 例：["ap-hongkong|ssl-server-1251810746|tencent.com"]
 - lighthouse：Region|InstanceId|Domain， 例：["ap-shanghai|lhins-nh7lql34|tencent.com"]
 - tse：GatewayId|CertificateId， 例：["gateway-s1da9151|fa61bc05-cc54-4eea-c932-24de52577372"]
 - tcb：Type|Region|EnvId|Domain， 例：["AccessService|ap-shanghai|ceshi-4s5h0ymg11c839c7|tencent.com"]
@@ -179,7 +179,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书部署云资源支持的云资源类型：
+     * Get 证书部署云资源支持的云资源类型， 不传则默认部署clb：
 - clb
 - cdn
 - ddos
@@ -194,7 +194,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - tse
 - tcb
 <dx-alert infotype="explain" title="">当云资源类型传入clb、waf、apigateway、cos、lighthouse、tke、tse、tcb 时，公共参数Region必传。</dx-alert> 
-     * @return ResourceType 证书部署云资源支持的云资源类型：
+     * @return ResourceType 证书部署云资源支持的云资源类型， 不传则默认部署clb：
 - clb
 - cdn
 - ddos
@@ -215,7 +215,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 证书部署云资源支持的云资源类型：
+     * Set 证书部署云资源支持的云资源类型， 不传则默认部署clb：
 - clb
 - cdn
 - ddos
@@ -230,7 +230,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
 - tse
 - tcb
 <dx-alert infotype="explain" title="">当云资源类型传入clb、waf、apigateway、cos、lighthouse、tke、tse、tcb 时，公共参数Region必传。</dx-alert>
-     * @param ResourceType 证书部署云资源支持的云资源类型：
+     * @param ResourceType 证书部署云资源支持的云资源类型， 不传则默认部署clb：
 - clb
 - cdn
 - ddos
