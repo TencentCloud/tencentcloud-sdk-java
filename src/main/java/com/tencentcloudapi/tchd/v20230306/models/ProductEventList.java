@@ -25,17 +25,14 @@ public class ProductEventList extends AbstractModel {
 
     /**
     * 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventList")
     @Expose
     private EventDetail [] EventList;
 
     /**
-     * Get 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件详情列表 
      * @return EventList 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventDetail [] getEventList() {
         return this.EventList;
@@ -43,9 +40,7 @@ public class ProductEventList extends AbstractModel {
 
     /**
      * Set 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventList 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventList(EventDetail [] EventList) {
         this.EventList = EventList;

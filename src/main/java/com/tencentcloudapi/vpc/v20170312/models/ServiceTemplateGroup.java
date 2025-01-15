@@ -52,6 +52,13 @@ public class ServiceTemplateGroup extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 最后更新时间。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
     * 协议端口模板实例信息。
     */
     @SerializedName("ServiceTemplateSet")
@@ -60,7 +67,6 @@ public class ServiceTemplateGroup extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -131,6 +137,22 @@ public class ServiceTemplateGroup extends AbstractModel {
     }
 
     /**
+     * Get 最后更新时间。 
+     * @return UpdatedTime 最后更新时间。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 最后更新时间。
+     * @param UpdatedTime 最后更新时间。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
+    /**
      * Get 协议端口模板实例信息。 
      * @return ServiceTemplateSet 协议端口模板实例信息。
      */
@@ -147,10 +169,8 @@ public class ServiceTemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -158,9 +178,7 @@ public class ServiceTemplateGroup extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -189,6 +207,9 @@ public class ServiceTemplateGroup extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
         if (source.ServiceTemplateSet != null) {
             this.ServiceTemplateSet = new ServiceTemplate[source.ServiceTemplateSet.length];
             for (int i = 0; i < source.ServiceTemplateSet.length; i++) {
@@ -212,6 +233,7 @@ public class ServiceTemplateGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);
         this.setParamArraySimple(map, prefix + "ServiceTemplateIdSet.", this.ServiceTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "ServiceTemplateSet.", this.ServiceTemplateSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 

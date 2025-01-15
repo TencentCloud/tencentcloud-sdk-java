@@ -64,6 +64,14 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private SmartOptimizerIndexPolicy Index;
 
     /**
+    * SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChangeTable")
+    @Expose
+    private SmartOptimizerChangeTablePolicy ChangeTable;
+
+    /**
      * Get 是否继承
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Inherit 是否继承
@@ -163,6 +171,26 @@ public class SmartOptimizerPolicy extends AbstractModel {
         this.Index = Index;
     }
 
+    /**
+     * Get SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChangeTable SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartOptimizerChangeTablePolicy getChangeTable() {
+        return this.ChangeTable;
+    }
+
+    /**
+     * Set SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChangeTable SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChangeTable(SmartOptimizerChangeTablePolicy ChangeTable) {
+        this.ChangeTable = ChangeTable;
+    }
+
     public SmartOptimizerPolicy() {
     }
 
@@ -189,6 +217,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
         if (source.Index != null) {
             this.Index = new SmartOptimizerIndexPolicy(source.Index);
         }
+        if (source.ChangeTable != null) {
+            this.ChangeTable = new SmartOptimizerChangeTablePolicy(source.ChangeTable);
+        }
     }
 
 
@@ -201,6 +232,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "Written.", this.Written);
         this.setParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
         this.setParamObj(map, prefix + "Index.", this.Index);
+        this.setParamObj(map, prefix + "ChangeTable.", this.ChangeTable);
 
     }
 }

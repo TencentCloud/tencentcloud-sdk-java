@@ -469,6 +469,13 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private Long Exclusive;
 
     /**
+    * 已绑定的后端服务数量。
+    */
+    @SerializedName("TargetCount")
+    @Expose
+    private Long TargetCount;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1580,6 +1587,22 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
         this.Exclusive = Exclusive;
     }
 
+    /**
+     * Get 已绑定的后端服务数量。 
+     * @return TargetCount 已绑定的后端服务数量。
+     */
+    public Long getTargetCount() {
+        return this.TargetCount;
+    }
+
+    /**
+     * Set 已绑定的后端服务数量。
+     * @param TargetCount 已绑定的后端服务数量。
+     */
+    public void setTargetCount(Long TargetCount) {
+        this.TargetCount = TargetCount;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1780,6 +1803,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
         if (source.Exclusive != null) {
             this.Exclusive = new Long(source.Exclusive);
         }
+        if (source.TargetCount != null) {
+            this.TargetCount = new Long(source.TargetCount);
+        }
     }
 
 
@@ -1843,6 +1869,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamSimple(map, prefix + "TargetCount", this.TargetCount);
 
     }
 }

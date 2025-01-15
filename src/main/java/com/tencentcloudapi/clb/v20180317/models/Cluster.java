@@ -218,6 +218,14 @@ public class Cluster extends AbstractModel {
     private String IPVersion;
 
     /**
+    * 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private TagInfo [] Tag;
+
+    /**
      * Get 集群唯一ID 
      * @return ClusterId 集群唯一ID
      */
@@ -693,6 +701,26 @@ public class Cluster extends AbstractModel {
         this.IPVersion = IPVersion;
     }
 
+    /**
+     * Get 标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(TagInfo [] Tag) {
+        this.Tag = Tag;
+    }
+
     public Cluster() {
     }
 
@@ -776,6 +804,12 @@ public class Cluster extends AbstractModel {
         if (source.IPVersion != null) {
             this.IPVersion = new String(source.IPVersion);
         }
+        if (source.Tag != null) {
+            this.Tag = new TagInfo[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new TagInfo(source.Tag[i]);
+            }
+        }
     }
 
 
@@ -808,6 +842,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "DisasterRecoveryType", this.DisasterRecoveryType);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "IPVersion", this.IPVersion);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

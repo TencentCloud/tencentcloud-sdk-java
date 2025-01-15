@@ -52,6 +52,13 @@ public class AddressTemplateGroup extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 最后更新时间。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
     * IP地址模板实例。
     */
     @SerializedName("AddressTemplateSet")
@@ -60,7 +67,6 @@ public class AddressTemplateGroup extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -131,6 +137,22 @@ public class AddressTemplateGroup extends AbstractModel {
     }
 
     /**
+     * Get 最后更新时间。 
+     * @return UpdatedTime 最后更新时间。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 最后更新时间。
+     * @param UpdatedTime 最后更新时间。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
+    /**
      * Get IP地址模板实例。 
      * @return AddressTemplateSet IP地址模板实例。
      */
@@ -147,10 +169,8 @@ public class AddressTemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -158,9 +178,7 @@ public class AddressTemplateGroup extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -189,6 +207,9 @@ public class AddressTemplateGroup extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
         if (source.AddressTemplateSet != null) {
             this.AddressTemplateSet = new AddressTemplateItem[source.AddressTemplateSet.length];
             for (int i = 0; i < source.AddressTemplateSet.length; i++) {
@@ -212,6 +233,7 @@ public class AddressTemplateGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "AddressTemplateGroupId", this.AddressTemplateGroupId);
         this.setParamArraySimple(map, prefix + "AddressTemplateIdSet.", this.AddressTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 

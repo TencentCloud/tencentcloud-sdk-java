@@ -25,7 +25,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -44,7 +42,6 @@ public class InstanceInfo extends AbstractModel {
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -52,7 +49,6 @@ Modify 集群变更中；
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -60,7 +56,6 @@ Modify 集群变更中；
 
     /**
     * 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -68,7 +63,6 @@ Modify 集群变更中；
 
     /**
     * 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -76,7 +70,6 @@ Modify 集群变更中；
 
     /**
     * 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -84,7 +77,6 @@ Modify 集群变更中；
 
     /**
     * 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -92,7 +84,6 @@ Modify 集群变更中；
 
     /**
     * 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -100,7 +91,6 @@ Modify 集群变更中；
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -108,7 +98,6 @@ Modify 集群变更中；
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -116,7 +105,6 @@ Modify 集群变更中；
 
     /**
     * 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterSummary")
     @Expose
@@ -124,7 +112,6 @@ Modify 集群变更中；
 
     /**
     * zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoreSummary")
     @Expose
@@ -132,7 +119,6 @@ Modify 集群变更中；
 
     /**
     * 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HA")
     @Expose
@@ -143,7 +129,6 @@ Modify 集群变更中；
 0：非高可用
 1：读高可用
 2：读写高可用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaType")
     @Expose
@@ -151,7 +136,6 @@ Modify 集群变更中；
 
     /**
     * 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessInfo")
     @Expose
@@ -159,7 +143,6 @@ Modify 集群变更中；
 
     /**
     * 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -167,7 +150,6 @@ Modify 集群变更中；
 
     /**
     * regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -175,7 +157,6 @@ Modify 集群变更中；
 
     /**
     * 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -183,7 +164,6 @@ Modify 集群变更中；
 
     /**
     * 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMsg")
     @Expose
@@ -191,7 +171,6 @@ Modify 集群变更中；
 
     /**
     * 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -199,7 +178,6 @@ Modify 集群变更中；
 
     /**
     * 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -207,7 +185,6 @@ Modify 集群变更中；
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -215,7 +192,6 @@ Modify 集群变更中；
 
     /**
     * 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Monitor")
     @Expose
@@ -223,7 +199,6 @@ Modify 集群变更中；
 
     /**
     * 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasClsTopic")
     @Expose
@@ -231,7 +206,6 @@ Modify 集群变更中；
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsTopicId")
     @Expose
@@ -239,7 +213,6 @@ Modify 集群变更中；
 
     /**
     * 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsLogSetId")
     @Expose
@@ -247,7 +220,6 @@ Modify 集群变更中；
 
     /**
     * 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableXMLConfig")
     @Expose
@@ -255,7 +227,6 @@ Modify 集群变更中；
 
     /**
     * 区域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionDesc")
     @Expose
@@ -263,7 +234,6 @@ Modify 集群变更中；
 
     /**
     * 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Eip")
     @Expose
@@ -271,7 +241,6 @@ Modify 集群变更中；
 
     /**
     * 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosMoveFactor")
     @Expose
@@ -279,7 +248,6 @@ Modify 集群变更中；
 
     /**
     * external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kind")
     @Expose
@@ -287,7 +255,6 @@ Modify 集群变更中；
 
     /**
     * cos桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -295,7 +262,6 @@ Modify 集群变更中；
 
     /**
     * cbs
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanAttachCbs")
     @Expose
@@ -303,7 +269,6 @@ Modify 集群变更中；
 
     /**
     * 小版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildVersion")
     @Expose
@@ -312,7 +277,6 @@ Modify 集群变更中；
     /**
     * 组件信息
 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
     @Expose
@@ -328,7 +292,6 @@ Modify 集群变更中；
 
     /**
     * 页面特性，用于前端屏蔽一些页面入口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Characteristic")
     @Expose
@@ -336,7 +299,6 @@ Modify 集群变更中；
 
     /**
     * 超时时间 单位s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestartTimeout")
     @Expose
@@ -344,7 +306,6 @@ Modify 集群变更中；
 
     /**
     * 内核优雅重启超时时间，如果为-1说明未设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GraceShutdownWaitSeconds")
     @Expose
@@ -352,7 +313,6 @@ Modify 集群变更中；
 
     /**
     * 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaseSensitive")
     @Expose
@@ -360,7 +320,6 @@ Modify 集群变更中；
 
     /**
     * 用户是否可以绑定安全组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWhiteSGs")
     @Expose
@@ -368,7 +327,6 @@ Modify 集群变更中；
 
     /**
     * 已绑定的安全组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindSGs")
     @Expose
@@ -376,7 +334,6 @@ Modify 集群变更中；
 
     /**
     * 是否为多可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableMultiZones")
     @Expose
@@ -384,7 +341,6 @@ Modify 集群变更中；
 
     /**
     * 用户可用区和子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNetworkInfos")
     @Expose
@@ -392,7 +348,6 @@ Modify 集群变更中；
 
     /**
     * 是否启用冷热分层。0：未开启 1：已开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableCoolDown")
     @Expose
@@ -400,7 +355,6 @@ Modify 集群变更中；
 
     /**
     * 冷热分层使用COS桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoolDownBucket")
     @Expose
@@ -408,7 +362,6 @@ Modify 集群变更中；
 
     /**
     * 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -416,7 +369,6 @@ Modify 集群变更中；
 
     /**
     * 是否启用DLC 0:关闭 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableDlc")
     @Expose
@@ -424,7 +376,6 @@ Modify 集群变更中；
 
     /**
     * 账户类型 0:普通用户 1:CAM用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountType")
     @Expose
@@ -432,7 +383,6 @@ Modify 集群变更中；
 
     /**
     * 监控模式 0: 老监控 1：新监控
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorMode")
     @Expose
@@ -446,10 +396,8 @@ Modify 集群变更中；
     private NodesSummary CNSummary;
 
     /**
-     * Get 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群实例ID, "cdw-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -457,19 +405,15 @@ Modify 集群变更中；
 
     /**
      * Set 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群实例名称 
      * @return InstanceName 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -477,9 +421,7 @@ Modify 集群变更中；
 
     /**
      * Set 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -489,13 +431,11 @@ Modify 集群变更中；
      * Get 状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。 
+Modify 集群变更中； 
      * @return Status 状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -506,22 +446,18 @@ Modify 集群变更中；
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -529,19 +465,15 @@ Modify 集群变更中；
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域, ap-guangzhou 
      * @return Region 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -549,19 +481,15 @@ Modify 集群变更中；
 
     /**
      * Set 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区， ap-guangzhou-3 
      * @return Zone 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -569,19 +497,15 @@ Modify 集群变更中；
 
     /**
      * Set 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络名称 
      * @return VpcId 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -589,19 +513,15 @@ Modify 集群变更中；
 
     /**
      * Set 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网名称 
      * @return SubnetId 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -609,19 +529,15 @@ Modify 集群变更中；
 
     /**
      * Set 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费类型，"hour", "prepay" 
      * @return PayMode 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -629,19 +545,15 @@ Modify 集群变更中；
 
     /**
      * Set 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -649,19 +561,15 @@ Modify 集群变更中；
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -669,19 +577,15 @@ Modify 集群变更中；
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据节点描述信息 
      * @return MasterSummary 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodesSummary getMasterSummary() {
         return this.MasterSummary;
@@ -689,19 +593,15 @@ Modify 集群变更中；
 
     /**
      * Set 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterSummary 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterSummary(NodesSummary MasterSummary) {
         this.MasterSummary = MasterSummary;
     }
 
     /**
-     * Get zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get zookeeper节点描述信息 
      * @return CoreSummary zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodesSummary getCoreSummary() {
         return this.CoreSummary;
@@ -709,19 +609,15 @@ Modify 集群变更中；
 
     /**
      * Set zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoreSummary zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoreSummary(NodesSummary CoreSummary) {
         this.CoreSummary = CoreSummary;
     }
 
     /**
-     * Get 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高可用，“true" "false" 
      * @return HA 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHA() {
         return this.HA;
@@ -729,9 +625,7 @@ Modify 集群变更中；
 
     /**
      * Set 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HA 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHA(String HA) {
         this.HA = HA;
@@ -741,13 +635,11 @@ Modify 集群变更中；
      * Get 高可用类型：
 0：非高可用
 1：读高可用
-2：读写高可用。
-注意：此字段可能返回 null，表示取不到有效值。 
+2：读写高可用。 
      * @return HaType 高可用类型：
 0：非高可用
 1：读高可用
 2：读写高可用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHaType() {
         return this.HaType;
@@ -758,22 +650,18 @@ Modify 集群变更中；
 0：非高可用
 1：读高可用
 2：读写高可用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaType 高可用类型：
 0：非高可用
 1：读高可用
 2：读写高可用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaType(Long HaType) {
         this.HaType = HaType;
     }
 
     /**
-     * Get 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问地址，例如 "10.0.0.1:9000" 
      * @return AccessInfo 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessInfo() {
         return this.AccessInfo;
@@ -781,19 +669,15 @@ Modify 集群变更中；
 
     /**
      * Set 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessInfo 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;
     }
 
     /**
-     * Get 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录ID，数值型 
      * @return Id 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -801,19 +685,15 @@ Modify 集群变更中；
 
     /**
      * Set 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get regionId, 表示地域 
      * @return RegionId regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -821,19 +701,15 @@ Modify 集群变更中；
 
     /**
      * Set regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区说明，例如 "广州二区" 
      * @return ZoneDesc 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
@@ -841,19 +717,15 @@ Modify 集群变更中；
 
     /**
      * Set 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneDesc 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
     }
 
     /**
-     * Get 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误流程说明信息 
      * @return FlowMsg 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMsg() {
         return this.FlowMsg;
@@ -861,19 +733,15 @@ Modify 集群变更中；
 
     /**
      * Set 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowMsg 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMsg(String FlowMsg) {
         this.FlowMsg = FlowMsg;
     }
 
     /**
-     * Get 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态描述，例如“运行中”等 
      * @return StatusDesc 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -881,19 +749,15 @@ Modify 集群变更中；
 
     /**
      * Set 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标记 
      * @return RenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
@@ -901,19 +765,15 @@ Modify 集群变更中；
 
     /**
      * Set 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -921,19 +781,15 @@ Modify 集群变更中；
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 监控信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控信息 
      * @return Monitor 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitor() {
         return this.Monitor;
@@ -941,19 +797,15 @@ Modify 集群变更中；
 
     /**
      * Set 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Monitor 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitor(String Monitor) {
         this.Monitor = Monitor;
     }
 
     /**
-     * Get 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通日志 
      * @return HasClsTopic 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasClsTopic() {
         return this.HasClsTopic;
@@ -961,19 +813,15 @@ Modify 集群变更中；
 
     /**
      * Set 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasClsTopic 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasClsTopic(Boolean HasClsTopic) {
         this.HasClsTopic = HasClsTopic;
     }
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return ClsTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
@@ -981,19 +829,15 @@ Modify 集群变更中；
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClsTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集ID 
      * @return ClsLogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClsLogSetId() {
         return this.ClsLogSetId;
@@ -1001,19 +845,15 @@ Modify 集群变更中；
 
     /**
      * Set 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClsLogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsLogSetId(String ClsLogSetId) {
         this.ClsLogSetId = ClsLogSetId;
     }
 
     /**
-     * Get 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持xml配置管理 
      * @return EnableXMLConfig 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableXMLConfig() {
         return this.EnableXMLConfig;
@@ -1021,19 +861,15 @@ Modify 集群变更中；
 
     /**
      * Set 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableXMLConfig 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableXMLConfig(Long EnableXMLConfig) {
         this.EnableXMLConfig = EnableXMLConfig;
     }
 
     /**
-     * Get 区域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域 
      * @return RegionDesc 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionDesc() {
         return this.RegionDesc;
@@ -1041,19 +877,15 @@ Modify 集群变更中；
 
     /**
      * Set 区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDesc 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionDesc(String RegionDesc) {
         this.RegionDesc = RegionDesc;
     }
 
     /**
-     * Get 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性网卡地址 
      * @return Eip 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEip() {
         return this.Eip;
@@ -1061,19 +893,15 @@ Modify 集群变更中；
 
     /**
      * Set 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Eip 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEip(String Eip) {
         this.Eip = Eip;
     }
 
     /**
-     * Get 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冷热分层系数 
      * @return CosMoveFactor 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCosMoveFactor() {
         return this.CosMoveFactor;
@@ -1081,19 +909,15 @@ Modify 集群变更中；
 
     /**
      * Set 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosMoveFactor 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosMoveFactor(Long CosMoveFactor) {
         this.CosMoveFactor = CosMoveFactor;
     }
 
     /**
-     * Get external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get external/local/yunti 
      * @return Kind external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKind() {
         return this.Kind;
@@ -1101,19 +925,15 @@ Modify 集群变更中；
 
     /**
      * Set external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kind external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get cos桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos桶 
      * @return CosBucketName cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucketName() {
         return this.CosBucketName;
@@ -1121,19 +941,15 @@ Modify 集群变更中；
 
     /**
      * Set cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosBucketName cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get cbs
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cbs 
      * @return CanAttachCbs cbs
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanAttachCbs() {
         return this.CanAttachCbs;
@@ -1141,19 +957,15 @@ Modify 集群变更中；
 
     /**
      * Set cbs
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanAttachCbs cbs
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanAttachCbs(Boolean CanAttachCbs) {
         this.CanAttachCbs = CanAttachCbs;
     }
 
     /**
-     * Get 小版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小版本 
      * @return BuildVersion 小版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildVersion() {
         return this.BuildVersion;
@@ -1161,9 +973,7 @@ Modify 集群变更中；
 
     /**
      * Set 小版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildVersion 小版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildVersion(String BuildVersion) {
         this.BuildVersion = BuildVersion;
@@ -1171,11 +981,9 @@ Modify 集群变更中；
 
     /**
      * Get 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。 
      * @return Components 组件信息
 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponents() {
         return this.Components;
@@ -1184,10 +992,8 @@ Modify 集群变更中；
     /**
      * Set 组件信息
 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Components 组件信息
 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(String Components) {
         this.Components = Components;
@@ -1218,10 +1024,8 @@ Modify 集群变更中；
     }
 
     /**
-     * Get 页面特性，用于前端屏蔽一些页面入口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 页面特性，用于前端屏蔽一些页面入口 
      * @return Characteristic 页面特性，用于前端屏蔽一些页面入口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCharacteristic() {
         return this.Characteristic;
@@ -1229,19 +1033,15 @@ Modify 集群变更中；
 
     /**
      * Set 页面特性，用于前端屏蔽一些页面入口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Characteristic 页面特性，用于前端屏蔽一些页面入口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCharacteristic(String [] Characteristic) {
         this.Characteristic = Characteristic;
     }
 
     /**
-     * Get 超时时间 单位s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超时时间 单位s 
      * @return RestartTimeout 超时时间 单位s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRestartTimeout() {
         return this.RestartTimeout;
@@ -1249,19 +1049,15 @@ Modify 集群变更中；
 
     /**
      * Set 超时时间 单位s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RestartTimeout 超时时间 单位s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestartTimeout(String RestartTimeout) {
         this.RestartTimeout = RestartTimeout;
     }
 
     /**
-     * Get 内核优雅重启超时时间，如果为-1说明未设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核优雅重启超时时间，如果为-1说明未设置 
      * @return GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGraceShutdownWaitSeconds() {
         return this.GraceShutdownWaitSeconds;
@@ -1269,19 +1065,15 @@ Modify 集群变更中；
 
     /**
      * Set 内核优雅重启超时时间，如果为-1说明未设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGraceShutdownWaitSeconds(String GraceShutdownWaitSeconds) {
         this.GraceShutdownWaitSeconds = GraceShutdownWaitSeconds;
     }
 
     /**
-     * Get 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储 
      * @return CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCaseSensitive() {
         return this.CaseSensitive;
@@ -1289,19 +1081,15 @@ Modify 集群变更中；
 
     /**
      * Set 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaseSensitive(Long CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 用户是否可以绑定安全组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户是否可以绑定安全组 
      * @return IsWhiteSGs 用户是否可以绑定安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsWhiteSGs() {
         return this.IsWhiteSGs;
@@ -1309,19 +1097,15 @@ Modify 集群变更中；
 
     /**
      * Set 用户是否可以绑定安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWhiteSGs 用户是否可以绑定安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWhiteSGs(Boolean IsWhiteSGs) {
         this.IsWhiteSGs = IsWhiteSGs;
     }
 
     /**
-     * Get 已绑定的安全组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已绑定的安全组信息 
      * @return BindSGs 已绑定的安全组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBindSGs() {
         return this.BindSGs;
@@ -1329,19 +1113,15 @@ Modify 集群变更中；
 
     /**
      * Set 已绑定的安全组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindSGs 已绑定的安全组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindSGs(String [] BindSGs) {
         this.BindSGs = BindSGs;
     }
 
     /**
-     * Get 是否为多可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为多可用区 
      * @return EnableMultiZones 是否为多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableMultiZones() {
         return this.EnableMultiZones;
@@ -1349,19 +1129,15 @@ Modify 集群变更中；
 
     /**
      * Set 是否为多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableMultiZones 是否为多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableMultiZones(Boolean EnableMultiZones) {
         this.EnableMultiZones = EnableMultiZones;
     }
 
     /**
-     * Get 用户可用区和子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户可用区和子网信息 
      * @return UserNetworkInfos 用户可用区和子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserNetworkInfos() {
         return this.UserNetworkInfos;
@@ -1369,19 +1145,15 @@ Modify 集群变更中；
 
     /**
      * Set 用户可用区和子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserNetworkInfos 用户可用区和子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNetworkInfos(String UserNetworkInfos) {
         this.UserNetworkInfos = UserNetworkInfos;
     }
 
     /**
-     * Get 是否启用冷热分层。0：未开启 1：已开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用冷热分层。0：未开启 1：已开启 
      * @return EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableCoolDown() {
         return this.EnableCoolDown;
@@ -1389,19 +1161,15 @@ Modify 集群变更中；
 
     /**
      * Set 是否启用冷热分层。0：未开启 1：已开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableCoolDown(Long EnableCoolDown) {
         this.EnableCoolDown = EnableCoolDown;
     }
 
     /**
-     * Get 冷热分层使用COS桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冷热分层使用COS桶 
      * @return CoolDownBucket 冷热分层使用COS桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoolDownBucket() {
         return this.CoolDownBucket;
@@ -1409,19 +1177,15 @@ Modify 集群变更中；
 
     /**
      * Set 冷热分层使用COS桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoolDownBucket 冷热分层使用COS桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoolDownBucket(String CoolDownBucket) {
         this.CoolDownBucket = CoolDownBucket;
     }
 
     /**
-     * Get 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例扩展信息 
      * @return Details 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceDetail getDetails() {
         return this.Details;
@@ -1429,19 +1193,15 @@ Modify 集群变更中；
 
     /**
      * Set 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(InstanceDetail Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 是否启用DLC 0:关闭 1:开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用DLC 0:关闭 1:开启 
      * @return EnableDlc 是否启用DLC 0:关闭 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableDlc() {
         return this.EnableDlc;
@@ -1449,19 +1209,15 @@ Modify 集群变更中；
 
     /**
      * Set 是否启用DLC 0:关闭 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableDlc 是否启用DLC 0:关闭 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableDlc(Long EnableDlc) {
         this.EnableDlc = EnableDlc;
     }
 
     /**
-     * Get 账户类型 0:普通用户 1:CAM用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户类型 0:普通用户 1:CAM用户 
      * @return AccountType 账户类型 0:普通用户 1:CAM用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountType() {
         return this.AccountType;
@@ -1469,19 +1225,15 @@ Modify 集群变更中；
 
     /**
      * Set 账户类型 0:普通用户 1:CAM用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountType 账户类型 0:普通用户 1:CAM用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 监控模式 0: 老监控 1：新监控
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控模式 0: 老监控 1：新监控 
      * @return MonitorMode 监控模式 0: 老监控 1：新监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorMode() {
         return this.MonitorMode;
@@ -1489,9 +1241,7 @@ Modify 集群变更中；
 
     /**
      * Set 监控模式 0: 老监控 1：新监控
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorMode 监控模式 0: 老监控 1：新监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorMode(Long MonitorMode) {
         this.MonitorMode = MonitorMode;

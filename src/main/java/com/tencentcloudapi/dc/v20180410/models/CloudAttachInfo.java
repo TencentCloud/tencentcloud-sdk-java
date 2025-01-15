@@ -95,7 +95,6 @@ stoped：终止状态
 
     /**
     * 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadyTime")
     @Expose
@@ -165,6 +164,13 @@ cross-region：跨地域
     @SerializedName("BUpdateBandwidth")
     @Expose
     private Boolean BUpdateBandwidth;
+
+    /**
+    * 接入地域
+    */
+    @SerializedName("ArRegion")
+    @Expose
+    private String ArRegion;
 
     /**
      * Get 敏捷上云实例id 
@@ -339,10 +345,8 @@ stoped：终止状态
     }
 
     /**
-     * Get 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏捷上云建设完成的时间 
      * @return ReadyTime 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadyTime() {
         return this.ReadyTime;
@@ -350,9 +354,7 @@ stoped：终止状态
 
     /**
      * Set 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadyTime 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadyTime(String ReadyTime) {
         this.ReadyTime = ReadyTime;
@@ -510,6 +512,22 @@ cross-region：跨地域
         this.BUpdateBandwidth = BUpdateBandwidth;
     }
 
+    /**
+     * Get 接入地域 
+     * @return ArRegion 接入地域
+     */
+    public String getArRegion() {
+        return this.ArRegion;
+    }
+
+    /**
+     * Set 接入地域
+     * @param ArRegion 接入地域
+     */
+    public void setArRegion(String ArRegion) {
+        this.ArRegion = ArRegion;
+    }
+
     public CloudAttachInfo() {
     }
 
@@ -575,6 +593,9 @@ cross-region：跨地域
         if (source.BUpdateBandwidth != null) {
             this.BUpdateBandwidth = new Boolean(source.BUpdateBandwidth);
         }
+        if (source.ArRegion != null) {
+            this.ArRegion = new String(source.ArRegion);
+        }
     }
 
 
@@ -601,6 +622,7 @@ cross-region：跨地域
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);
         this.setParamSimple(map, prefix + "CloudAttachServiceGatewaysSupport", this.CloudAttachServiceGatewaysSupport);
         this.setParamSimple(map, prefix + "BUpdateBandwidth", this.BUpdateBandwidth);
+        this.setParamSimple(map, prefix + "ArRegion", this.ArRegion);
 
     }
 }

@@ -119,6 +119,13 @@ public class TableResponseInfo extends AbstractModel {
     private Long HeatValue;
 
     /**
+    * InputFormat的缩写
+    */
+    @SerializedName("InputFormatShort")
+    @Expose
+    private String InputFormatShort;
+
+    /**
      * Get 数据表基本信息。 
      * @return TableBaseInfo 数据表基本信息。
      */
@@ -354,6 +361,22 @@ public class TableResponseInfo extends AbstractModel {
         this.HeatValue = HeatValue;
     }
 
+    /**
+     * Get InputFormat的缩写 
+     * @return InputFormatShort InputFormat的缩写
+     */
+    public String getInputFormatShort() {
+        return this.InputFormatShort;
+    }
+
+    /**
+     * Set InputFormat的缩写
+     * @param InputFormatShort InputFormat的缩写
+     */
+    public void setInputFormatShort(String InputFormatShort) {
+        this.InputFormatShort = InputFormatShort;
+    }
+
     public TableResponseInfo() {
     }
 
@@ -407,6 +430,9 @@ public class TableResponseInfo extends AbstractModel {
         if (source.HeatValue != null) {
             this.HeatValue = new Long(source.HeatValue);
         }
+        if (source.InputFormatShort != null) {
+            this.InputFormatShort = new String(source.InputFormatShort);
+        }
     }
 
 
@@ -426,6 +452,7 @@ public class TableResponseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
         this.setParamSimple(map, prefix + "MapMaterializedViewName", this.MapMaterializedViewName);
         this.setParamSimple(map, prefix + "HeatValue", this.HeatValue);
+        this.setParamSimple(map, prefix + "InputFormatShort", this.InputFormatShort);
 
     }
 }

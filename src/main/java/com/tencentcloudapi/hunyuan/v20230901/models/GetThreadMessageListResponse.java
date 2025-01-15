@@ -39,7 +39,7 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
     private String FirstID;
 
     /**
-    * 最后一条消息 ID
+    * 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastID")
@@ -59,6 +59,20 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
     @SerializedName("Object")
     @Expose
     private String Object;
+
+    /**
+    * 第一条消息 ID
+    */
+    @SerializedName("FirstMsgID")
+    @Expose
+    private String FirstMsgID;
+
+    /**
+    * 最后一条消息 ID
+    */
+    @SerializedName("LastMsgID")
+    @Expose
+    private String LastMsgID;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -88,7 +102,9 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstID 第一条消息 ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getFirstID() {
         return this.FirstID;
     }
@@ -98,27 +114,33 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstID 第一条消息 ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setFirstID(String FirstID) {
         this.FirstID = FirstID;
     }
 
     /**
-     * Get 最后一条消息 ID
+     * Get 已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastID 最后一条消息 ID
+     * @return LastID 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getLastID() {
         return this.LastID;
     }
 
     /**
-     * Set 最后一条消息 ID
+     * Set 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastID 最后一条消息 ID
+     * @param LastID 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setLastID(Long LastID) {
         this.LastID = LastID;
     }
@@ -153,6 +175,38 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
      */
     public void setObject(String Object) {
         this.Object = Object;
+    }
+
+    /**
+     * Get 第一条消息 ID 
+     * @return FirstMsgID 第一条消息 ID
+     */
+    public String getFirstMsgID() {
+        return this.FirstMsgID;
+    }
+
+    /**
+     * Set 第一条消息 ID
+     * @param FirstMsgID 第一条消息 ID
+     */
+    public void setFirstMsgID(String FirstMsgID) {
+        this.FirstMsgID = FirstMsgID;
+    }
+
+    /**
+     * Get 最后一条消息 ID 
+     * @return LastMsgID 最后一条消息 ID
+     */
+    public String getLastMsgID() {
+        return this.LastMsgID;
+    }
+
+    /**
+     * Set 最后一条消息 ID
+     * @param LastMsgID 最后一条消息 ID
+     */
+    public void setLastMsgID(String LastMsgID) {
+        this.LastMsgID = LastMsgID;
     }
 
     /**
@@ -197,6 +251,12 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
         if (source.Object != null) {
             this.Object = new String(source.Object);
         }
+        if (source.FirstMsgID != null) {
+            this.FirstMsgID = new String(source.FirstMsgID);
+        }
+        if (source.LastMsgID != null) {
+            this.LastMsgID = new String(source.LastMsgID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -212,6 +272,8 @@ public class GetThreadMessageListResponse extends SSEResponseModel {
         this.setParamSimple(map, prefix + "LastID", this.LastID);
         this.setParamSimple(map, prefix + "HasMore", this.HasMore);
         this.setParamSimple(map, prefix + "Object", this.Object);
+        this.setParamSimple(map, prefix + "FirstMsgID", this.FirstMsgID);
+        this.setParamSimple(map, prefix + "LastMsgID", this.LastMsgID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

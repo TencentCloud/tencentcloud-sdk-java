@@ -110,6 +110,14 @@ public class TableBaseInfo extends AbstractModel {
     private SmartPolicy SmartPolicy;
 
     /**
+    * T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrimaryKeys")
+    @Expose
+    private String [] PrimaryKeys;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -329,6 +337,26 @@ public class TableBaseInfo extends AbstractModel {
         this.SmartPolicy = SmartPolicy;
     }
 
+    /**
+     * Get T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrimaryKeys T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPrimaryKeys() {
+        return this.PrimaryKeys;
+    }
+
+    /**
+     * Set T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrimaryKeys T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrimaryKeys(String [] PrimaryKeys) {
+        this.PrimaryKeys = PrimaryKeys;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -370,6 +398,12 @@ public class TableBaseInfo extends AbstractModel {
         if (source.SmartPolicy != null) {
             this.SmartPolicy = new SmartPolicy(source.SmartPolicy);
         }
+        if (source.PrimaryKeys != null) {
+            this.PrimaryKeys = new String[source.PrimaryKeys.length];
+            for (int i = 0; i < source.PrimaryKeys.length; i++) {
+                this.PrimaryKeys[i] = new String(source.PrimaryKeys[i]);
+            }
+        }
     }
 
 
@@ -388,6 +422,7 @@ public class TableBaseInfo extends AbstractModel {
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
         this.setParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
         this.setParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
+        this.setParamArraySimple(map, prefix + "PrimaryKeys.", this.PrimaryKeys);
 
     }
 }

@@ -74,7 +74,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -82,7 +81,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * rip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rip")
     @Expose
@@ -90,7 +88,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeRole")
     @Expose
@@ -98,7 +95,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * UUID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UUID")
     @Expose
@@ -106,7 +102,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -232,10 +227,8 @@ public class InstanceNode extends AbstractModel {
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -243,19 +236,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get rip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rip 
      * @return Rip rip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRip() {
         return this.Rip;
@@ -263,19 +252,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set rip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rip rip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRip(String Rip) {
         this.Rip = Rip;
     }
 
     /**
-     * Get FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FE节点角色 
      * @return FeRole FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeRole() {
         return this.FeRole;
@@ -283,19 +268,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeRole FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeRole(String FeRole) {
         this.FeRole = FeRole;
     }
 
     /**
-     * Get UUID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UUID 
      * @return UUID UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUUID() {
         return this.UUID;
@@ -303,19 +284,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UUID UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -323,9 +300,7 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

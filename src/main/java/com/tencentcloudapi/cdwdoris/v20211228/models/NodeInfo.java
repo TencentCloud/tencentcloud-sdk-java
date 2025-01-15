@@ -25,7 +25,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 用户IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -33,7 +32,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 节点角色名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -49,7 +46,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 组件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentName")
     @Expose
@@ -57,7 +53,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeRole")
     @Expose
@@ -65,7 +60,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 节点上次重启的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastRestartTime")
     @Expose
@@ -73,7 +67,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 节点所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -81,17 +74,14 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get 用户IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户IP 
      * @return Ip 用户IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -99,19 +89,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 用户IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 用户IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 节点状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点状态 
      * @return Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -119,19 +105,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点角色名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点角色名 
      * @return NodeName 节点角色名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -139,19 +121,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 节点角色名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 节点角色名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 组件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名 
      * @return ComponentName 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -159,19 +137,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentName 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 节点角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点角色 
      * @return NodeRole 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeRole() {
         return this.NodeRole;
@@ -179,19 +153,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeRole 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeRole(String NodeRole) {
         this.NodeRole = NodeRole;
     }
 
     /**
-     * Get 节点上次重启的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点上次重启的时间 
      * @return LastRestartTime 节点上次重启的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastRestartTime() {
         return this.LastRestartTime;
@@ -199,19 +169,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 节点上次重启的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastRestartTime 节点上次重启的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastRestartTime(String LastRestartTime) {
         this.LastRestartTime = LastRestartTime;
     }
 
     /**
-     * Get 节点所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所在可用区 
      * @return Zone 节点所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -219,19 +185,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 节点所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 节点所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Id 
      * @return Id Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -239,9 +201,7 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;

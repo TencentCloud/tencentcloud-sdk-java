@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateDocumentRequest extends AbstractModel {
 
     /**
-    * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+    * 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
     */
     @SerializedName("Operator")
     @Expose
@@ -104,16 +106,24 @@ public class CreateDocumentRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-     * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
-     * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Get 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。 
+     * @return Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Set 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
+     * @param Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

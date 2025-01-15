@@ -66,6 +66,13 @@ public class CreateCasInput extends AbstractModel {
     private String Remarks;
 
     /**
+    * 接入地域
+    */
+    @SerializedName("ArRegion")
+    @Expose
+    private String ArRegion;
+
+    /**
      * Get 敏捷上云名称 
      * @return Name 敏捷上云名称
      */
@@ -161,6 +168,22 @@ public class CreateCasInput extends AbstractModel {
         this.Remarks = Remarks;
     }
 
+    /**
+     * Get 接入地域 
+     * @return ArRegion 接入地域
+     */
+    public String getArRegion() {
+        return this.ArRegion;
+    }
+
+    /**
+     * Set 接入地域
+     * @param ArRegion 接入地域
+     */
+    public void setArRegion(String ArRegion) {
+        this.ArRegion = ArRegion;
+    }
+
     public CreateCasInput() {
     }
 
@@ -187,6 +210,9 @@ public class CreateCasInput extends AbstractModel {
         if (source.Remarks != null) {
             this.Remarks = new String(source.Remarks);
         }
+        if (source.ArRegion != null) {
+            this.ArRegion = new String(source.ArRegion);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateCasInput extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Telephone", this.Telephone);
         this.setParamSimple(map, prefix + "Remarks", this.Remarks);
+        this.setParamSimple(map, prefix + "ArRegion", this.ArRegion);
 
     }
 }

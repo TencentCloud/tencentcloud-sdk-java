@@ -39,7 +39,6 @@ public class DescribeSpecResponse extends AbstractModel {
 
     /**
     * 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachCBSSpec")
     @Expose
@@ -92,10 +91,8 @@ public class DescribeSpecResponse extends AbstractModel {
     }
 
     /**
-     * Get 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘列表 
      * @return AttachCBSSpec 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpec [] getAttachCBSSpec() {
         return this.AttachCBSSpec;
@@ -103,9 +100,7 @@ public class DescribeSpecResponse extends AbstractModel {
 
     /**
      * Set 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachCBSSpec 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachCBSSpec(DiskSpec [] AttachCBSSpec) {
         this.AttachCBSSpec = AttachCBSSpec;

@@ -67,7 +67,6 @@ public class NodeInfos extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -75,7 +74,6 @@ public class NodeInfos extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -185,10 +183,8 @@ public class NodeInfos extends AbstractModel {
     }
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -196,19 +192,15 @@ public class NodeInfos extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -216,9 +208,7 @@ public class NodeInfos extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

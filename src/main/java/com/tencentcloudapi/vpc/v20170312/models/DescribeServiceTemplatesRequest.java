@@ -55,6 +55,34 @@ public class DescribeServiceTemplatesRequest extends AbstractModel {
     private Boolean NeedMemberInfo;
 
     /**
+    * 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
+    * 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。
+    */
+    @SerializedName("MemberOrderField")
+    @Expose
+    private String MemberOrderField;
+
+    /**
+    * 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+    */
+    @SerializedName("MemberOrderDirection")
+    @Expose
+    private String MemberOrderDirection;
+
+    /**
      * Get 过滤条件。
 <li>service-template-name - 协议端口模板名称。</li>
 <li>service-template-id - 协议端口模板实例ID，例如：ppm-e6dy460g。</li>
@@ -130,6 +158,70 @@ public class DescribeServiceTemplatesRequest extends AbstractModel {
         this.NeedMemberInfo = NeedMemberInfo;
     }
 
+    /**
+     * Get 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。 
+     * @return OrderField 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     * @param OrderField 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。 
+     * @return OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     * @param OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
+     * Get 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。 
+     * @return MemberOrderField 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public String getMemberOrderField() {
+        return this.MemberOrderField;
+    }
+
+    /**
+     * Set 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。
+     * @param MemberOrderField 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public void setMemberOrderField(String MemberOrderField) {
+        this.MemberOrderField = MemberOrderField;
+    }
+
+    /**
+     * Get 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。 
+     * @return MemberOrderDirection 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public String getMemberOrderDirection() {
+        return this.MemberOrderDirection;
+    }
+
+    /**
+     * Set 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     * @param MemberOrderDirection 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public void setMemberOrderDirection(String MemberOrderDirection) {
+        this.MemberOrderDirection = MemberOrderDirection;
+    }
+
     public DescribeServiceTemplatesRequest() {
     }
 
@@ -153,6 +245,18 @@ public class DescribeServiceTemplatesRequest extends AbstractModel {
         if (source.NeedMemberInfo != null) {
             this.NeedMemberInfo = new Boolean(source.NeedMemberInfo);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+        if (source.MemberOrderField != null) {
+            this.MemberOrderField = new String(source.MemberOrderField);
+        }
+        if (source.MemberOrderDirection != null) {
+            this.MemberOrderDirection = new String(source.MemberOrderDirection);
+        }
     }
 
 
@@ -164,6 +268,10 @@ public class DescribeServiceTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamSimple(map, prefix + "MemberOrderField", this.MemberOrderField);
+        this.setParamSimple(map, prefix + "MemberOrderDirection", this.MemberOrderDirection);
 
     }
 }

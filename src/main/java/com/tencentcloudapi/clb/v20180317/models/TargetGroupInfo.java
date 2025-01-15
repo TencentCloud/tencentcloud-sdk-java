@@ -75,6 +75,45 @@ public class TargetGroupInfo extends AbstractModel {
     private AssociationItem [] AssociatedRule;
 
     /**
+    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroupType")
+    @Expose
+    private String TargetGroupType;
+
+    /**
+    * 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociatedRuleCount")
+    @Expose
+    private Long AssociatedRuleCount;
+
+    /**
+    * 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegisteredInstancesCount")
+    @Expose
+    private Long RegisteredInstancesCount;
+
+    /**
+    * 标签。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private TagInfo [] Tag;
+
+    /**
+    * 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -194,6 +233,102 @@ public class TargetGroupInfo extends AbstractModel {
         this.AssociatedRule = AssociatedRule;
     }
 
+    /**
+     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetGroupType() {
+        return this.TargetGroupType;
+    }
+
+    /**
+     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroupType(String TargetGroupType) {
+        this.TargetGroupType = TargetGroupType;
+    }
+
+    /**
+     * Get 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedRuleCount 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssociatedRuleCount() {
+        return this.AssociatedRuleCount;
+    }
+
+    /**
+     * Set 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociatedRuleCount 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociatedRuleCount(Long AssociatedRuleCount) {
+        this.AssociatedRuleCount = AssociatedRuleCount;
+    }
+
+    /**
+     * Get 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegisteredInstancesCount 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegisteredInstancesCount() {
+        return this.RegisteredInstancesCount;
+    }
+
+    /**
+     * Set 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegisteredInstancesCount 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegisteredInstancesCount(Long RegisteredInstancesCount) {
+        this.RegisteredInstancesCount = RegisteredInstancesCount;
+    }
+
+    /**
+     * Get 标签。 
+     * @return Tag 标签。
+     */
+    public TagInfo [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签。
+     * @param Tag 标签。
+     */
+    public void setTag(TagInfo [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -226,6 +361,24 @@ public class TargetGroupInfo extends AbstractModel {
                 this.AssociatedRule[i] = new AssociationItem(source.AssociatedRule[i]);
             }
         }
+        if (source.TargetGroupType != null) {
+            this.TargetGroupType = new String(source.TargetGroupType);
+        }
+        if (source.AssociatedRuleCount != null) {
+            this.AssociatedRuleCount = new Long(source.AssociatedRuleCount);
+        }
+        if (source.RegisteredInstancesCount != null) {
+            this.RegisteredInstancesCount = new Long(source.RegisteredInstancesCount);
+        }
+        if (source.Tag != null) {
+            this.Tag = new TagInfo[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new TagInfo(source.Tag[i]);
+            }
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -240,6 +393,11 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+        this.setParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
+        this.setParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
+        this.setParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

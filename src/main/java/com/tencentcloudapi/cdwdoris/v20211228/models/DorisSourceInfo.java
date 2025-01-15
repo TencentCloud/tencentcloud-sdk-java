@@ -25,7 +25,6 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
     * doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -33,7 +32,6 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
     * doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -41,7 +39,6 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
     * doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -49,17 +46,14 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
     * base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get doris集群的fe的ip 
      * @return Host doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -67,19 +61,15 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
      * Set doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get doris集群的fe的端口号 
      * @return Port doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -87,19 +77,15 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
      * Set doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get doris集群的账号 
      * @return User doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -107,19 +93,15 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
      * Set doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64编码的doris集群对应用户的密码 
      * @return Password base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -127,9 +109,7 @@ public class DorisSourceInfo extends AbstractModel {
 
     /**
      * Set base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;

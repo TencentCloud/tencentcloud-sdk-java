@@ -25,7 +25,6 @@ public class FrontEndRule extends AbstractModel {
 
     /**
     * id序列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class FrontEndRule extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class FrontEndRule extends AbstractModel {
 
     /**
     * 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-     * Get id序列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id序列 
      * @return ID id序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
         return this.ID;
@@ -59,19 +54,15 @@ public class FrontEndRule extends AbstractModel {
 
     /**
      * Set id序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID id序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class FrontEndRule extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 详细规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细规则 
      * @return Rule 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRule() {
         return this.Rule;
@@ -99,9 +86,7 @@ public class FrontEndRule extends AbstractModel {
 
     /**
      * Set 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(String Rule) {
         this.Rule = Rule;

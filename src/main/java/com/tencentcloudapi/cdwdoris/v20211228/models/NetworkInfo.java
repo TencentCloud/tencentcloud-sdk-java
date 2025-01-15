@@ -25,7 +25,6 @@ public class NetworkInfo extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,7 +32,6 @@ public class NetworkInfo extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -41,17 +39,14 @@ public class NetworkInfo extends AbstractModel {
 
     /**
     * 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIpNum")
     @Expose
     private Long SubnetIpNum;
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -59,19 +54,15 @@ public class NetworkInfo extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -79,19 +70,15 @@ public class NetworkInfo extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前子网可用ip数 
      * @return SubnetIpNum 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubnetIpNum() {
         return this.SubnetIpNum;
@@ -99,9 +86,7 @@ public class NetworkInfo extends AbstractModel {
 
     /**
      * Set 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIpNum 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIpNum(Long SubnetIpNum) {
         this.SubnetIpNum = SubnetIpNum;

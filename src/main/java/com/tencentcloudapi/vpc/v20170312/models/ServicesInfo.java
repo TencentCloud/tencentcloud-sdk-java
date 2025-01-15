@@ -38,6 +38,13 @@ public class ServicesInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 更新时间。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 协议端口。 
      * @return Service 协议端口。
      */
@@ -69,6 +76,22 @@ public class ServicesInfo extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 更新时间。 
+     * @return UpdatedTime 更新时间。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 更新时间。
+     * @param UpdatedTime 更新时间。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public ServicesInfo() {
     }
 
@@ -83,6 +106,9 @@ public class ServicesInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ServicesInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

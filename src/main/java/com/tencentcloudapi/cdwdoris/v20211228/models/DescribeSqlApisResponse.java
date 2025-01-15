@@ -25,7 +25,6 @@ public class DescribeSqlApisResponse extends AbstractModel {
 
     /**
     * 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnData")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSqlApisResponse extends AbstractModel {
 
     /**
     * 错误消息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeSqlApisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的查询数据，大部分情况是list，也可能是bool 
      * @return ReturnData 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnData() {
         return this.ReturnData;
@@ -58,19 +54,15 @@ public class DescribeSqlApisResponse extends AbstractModel {
 
     /**
      * Set 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnData 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnData(String ReturnData) {
         this.ReturnData = ReturnData;
     }
 
     /**
-     * Get 错误消息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误消息 
      * @return ErrorMsg 错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -78,9 +70,7 @@ public class DescribeSqlApisResponse extends AbstractModel {
 
     /**
      * Set 错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

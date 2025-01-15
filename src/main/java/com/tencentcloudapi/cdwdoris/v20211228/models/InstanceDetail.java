@@ -25,17 +25,14 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 告警策略是否可用	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableAlarmStrategy")
     @Expose
     private Boolean EnableAlarmStrategy;
 
     /**
-     * Get 告警策略是否可用	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警策略是否可用	 
      * @return EnableAlarmStrategy 告警策略是否可用	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableAlarmStrategy() {
         return this.EnableAlarmStrategy;
@@ -43,9 +40,7 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 告警策略是否可用	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableAlarmStrategy 告警策略是否可用	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableAlarmStrategy(Boolean EnableAlarmStrategy) {
         this.EnableAlarmStrategy = EnableAlarmStrategy;

@@ -25,7 +25,6 @@ public class DescribeTableListResponse extends AbstractModel {
 
     /**
     * 表名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNames")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTableListResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeTableListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 表名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名列表 
      * @return TableNames 表名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTableNames() {
         return this.TableNames;
@@ -58,19 +54,15 @@ public class DescribeTableListResponse extends AbstractModel {
 
     /**
      * Set 表名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNames 表名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNames(String [] TableNames) {
         this.TableNames = TableNames;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -78,9 +70,7 @@ public class DescribeTableListResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

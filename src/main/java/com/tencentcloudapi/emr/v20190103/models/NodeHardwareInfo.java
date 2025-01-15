@@ -25,7 +25,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -33,7 +32,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialNo")
     @Expose
@@ -41,7 +39,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderNo")
     @Expose
@@ -49,7 +46,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * master节点绑定外网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIp")
     @Expose
@@ -58,7 +54,6 @@ public class NodeHardwareInfo extends AbstractModel {
     /**
     * 节点类型。0:common节点；1:master节点
 ；2:core节点；3:task节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flag")
     @Expose
@@ -66,7 +61,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
     @Expose
@@ -74,23 +68,20 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * 节点内存
-注意：此字段可能返回 null，表示取不到有效值。
+    * 节点内存,单位b
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 节点内存描述
-注意：此字段可能返回 null，表示取不到有效值。
+    * 节点内存描述，单位GB
     */
     @SerializedName("MemDesc")
     @Expose
@@ -98,7 +89,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点所在region
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -106,7 +96,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点所在Zone
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -114,7 +103,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyTime")
     @Expose
@@ -122,7 +110,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeTime")
     @Expose
@@ -130,7 +117,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -138,7 +124,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameTag")
     @Expose
@@ -146,31 +131,28 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点部署服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Services")
     @Expose
     private String Services;
 
     /**
-    * 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
     */
     @SerializedName("StorageType")
     @Expose
     private Long StorageType;
 
     /**
-    * 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+    * 系统盘大小，单位GB
     */
     @SerializedName("RootSize")
     @Expose
     private Long RootSize;
 
     /**
-    * 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 付费类型，0：按量计费；1：包年包月
     */
     @SerializedName("ChargeType")
     @Expose
@@ -178,7 +160,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdbIp")
     @Expose
@@ -186,15 +167,13 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdbPort")
     @Expose
     private Long CdbPort;
 
     /**
-    * 硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 硬盘容量,单位b
     */
     @SerializedName("HwDiskSize")
     @Expose
@@ -202,15 +181,13 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 硬盘容量描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HwDiskSizeDesc")
     @Expose
     private String HwDiskSizeDesc;
 
     /**
-    * 内存容量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 内存容量，单位b
     */
     @SerializedName("HwMemSize")
     @Expose
@@ -218,7 +195,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 内存容量描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HwMemSizeDesc")
     @Expose
@@ -226,7 +202,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -234,7 +209,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 节点资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmrResourceId")
     @Expose
@@ -242,7 +216,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAutoRenew")
     @Expose
@@ -250,7 +223,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 设备标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceClass")
     @Expose
@@ -258,7 +230,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 支持变配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mutable")
     @Expose
@@ -282,7 +253,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -290,7 +260,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 此节点是否可销毁，1可销毁，0不可销毁
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Destroyable")
     @Expose
@@ -306,7 +275,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoFlag")
     @Expose
@@ -314,7 +282,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 资源类型, host/pod
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HardwareResourceType")
     @Expose
@@ -322,7 +289,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 是否浮动规格，1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDynamicSpec")
     @Expose
@@ -330,7 +296,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 浮动规格值json字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DynamicPodSpec")
     @Expose
@@ -338,15 +303,14 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 是否支持变更计费类型 1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportModifyPayMode")
     @Expose
     private Long SupportModifyPayMode;
 
     /**
-    * 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
     */
     @SerializedName("RootStorageType")
     @Expose
@@ -354,7 +318,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -370,7 +333,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 客户端
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clients")
     @Expose
@@ -378,7 +340,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 系统当前时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentTime")
     @Expose
@@ -386,7 +347,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 是否用于联邦 ,1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFederation")
     @Expose
@@ -394,7 +354,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -402,7 +361,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceClient")
     @Expose
@@ -410,7 +368,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 该实例是否开启实例保护，true为开启 false为关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisableApiTermination")
     @Expose
@@ -418,7 +375,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 0表示老计费，1表示新计费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeVersion")
     @Expose
@@ -426,7 +382,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServicesStatus")
     @Expose
@@ -434,7 +389,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -442,7 +396,6 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 共享集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedClusterId")
     @Expose
@@ -450,17 +403,28 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
     * 共享集群id描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedClusterIdDesc")
     @Expose
     private String SharedClusterIdDesc;
 
     /**
-     * Get 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 是否是定时销毁资源
+    */
+    @SerializedName("TimingResource")
+    @Expose
+    private Boolean TimingResource;
+
+    /**
+    * 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+    */
+    @SerializedName("TkeClusterId")
+    @Expose
+    private String TkeClusterId;
+
+    /**
+     * Get 用户APPID 
      * @return AppId 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -468,19 +432,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 序列号 
      * @return SerialNo 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialNo() {
         return this.SerialNo;
@@ -488,19 +448,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SerialNo 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;
     }
 
     /**
-     * Get 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例ID 
      * @return OrderNo 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderNo() {
         return this.OrderNo;
@@ -508,19 +464,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderNo 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderNo(String OrderNo) {
         this.OrderNo = OrderNo;
     }
 
     /**
-     * Get master节点绑定外网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get master节点绑定外网IP 
      * @return WanIp master节点绑定外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIp() {
         return this.WanIp;
@@ -528,9 +480,7 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set master节点绑定外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIp master节点绑定外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
@@ -538,11 +488,9 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Get 节点类型。0:common节点；1:master节点
-；2:core节点；3:task节点
-注意：此字段可能返回 null，表示取不到有效值。 
+；2:core节点；3:task节点 
      * @return Flag 节点类型。0:common节点；1:master节点
 ；2:core节点；3:task节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlag() {
         return this.Flag;
@@ -551,20 +499,16 @@ public class NodeHardwareInfo extends AbstractModel {
     /**
      * Set 节点类型。0:common节点；1:master节点
 ；2:core节点；3:task节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flag 节点类型。0:common节点；1:master节点
 ；2:core节点；3:task节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get 节点规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点规格 
      * @return Spec 节点规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
         return this.Spec;
@@ -572,19 +516,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 节点规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 节点核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点核数 
      * @return CpuNum 节点核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuNum() {
         return this.CpuNum;
@@ -592,59 +532,47 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuNum 节点核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get 节点内存
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemSize 节点内存
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 节点内存,单位b 
+     * @return MemSize 节点内存,单位b
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 节点内存
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemSize 节点内存
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 节点内存,单位b
+     * @param MemSize 节点内存,单位b
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 节点内存描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemDesc 节点内存描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 节点内存描述，单位GB 
+     * @return MemDesc 节点内存描述，单位GB
      */
     public String getMemDesc() {
         return this.MemDesc;
     }
 
     /**
-     * Set 节点内存描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemDesc 节点内存描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 节点内存描述，单位GB
+     * @param MemDesc 节点内存描述，单位GB
      */
     public void setMemDesc(String MemDesc) {
         this.MemDesc = MemDesc;
     }
 
     /**
-     * Get 节点所在region
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所在region 
      * @return RegionId 节点所在region
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -652,19 +580,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点所在region
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 节点所在region
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 节点所在Zone
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所在Zone 
      * @return ZoneId 节点所在Zone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -672,19 +596,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点所在Zone
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 节点所在Zone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 申请时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请时间 
      * @return ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyTime() {
         return this.ApplyTime;
@@ -692,19 +612,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get 释放时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 释放时间 
      * @return FreeTime 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFreeTime() {
         return this.FreeTime;
@@ -712,19 +628,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeTime 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeTime(String FreeTime) {
         this.FreeTime = FreeTime;
     }
 
     /**
-     * Get 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘大小 
      * @return DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskSize() {
         return this.DiskSize;
@@ -732,19 +644,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(String DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 节点描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点描述 
      * @return NameTag 节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameTag() {
         return this.NameTag;
@@ -752,19 +660,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameTag 节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameTag(String NameTag) {
         this.NameTag = NameTag;
     }
 
     /**
-     * Get 节点部署服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点部署服务 
      * @return Services 节点部署服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServices() {
         return this.Services;
@@ -772,79 +676,67 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点部署服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Services 节点部署服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServices(String Services) {
         this.Services = Services;
     }
 
     /**
-     * Get 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageType 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+ 
+     * @return StorageType 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageType 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
+     * @param StorageType 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 系统盘大小，单位GB 
+     * @return RootSize 系统盘大小，单位GB
      */
     public Long getRootSize() {
         return this.RootSize;
     }
 
     /**
-     * Set 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 系统盘大小，单位GB
+     * @param RootSize 系统盘大小，单位GB
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get 付费类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 付费类型，0：按量计费；1：包年包月 
+     * @return ChargeType 付费类型，0：按量计费；1：包年包月
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 付费类型，0：按量计费；1：包年包月
+     * @param ChargeType 付费类型，0：按量计费；1：包年包月
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库IP 
      * @return CdbIp 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdbIp() {
         return this.CdbIp;
@@ -852,19 +744,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdbIp 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdbIp(String CdbIp) {
         this.CdbIp = CdbIp;
     }
 
     /**
-     * Get 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库端口 
      * @return CdbPort 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCdbPort() {
         return this.CdbPort;
@@ -872,39 +760,31 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdbPort 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdbPort(Long CdbPort) {
         this.CdbPort = CdbPort;
     }
 
     /**
-     * Get 硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HwDiskSize 硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 硬盘容量,单位b 
+     * @return HwDiskSize 硬盘容量,单位b
      */
     public Long getHwDiskSize() {
         return this.HwDiskSize;
     }
 
     /**
-     * Set 硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HwDiskSize 硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 硬盘容量,单位b
+     * @param HwDiskSize 硬盘容量,单位b
      */
     public void setHwDiskSize(Long HwDiskSize) {
         this.HwDiskSize = HwDiskSize;
     }
 
     /**
-     * Get 硬盘容量描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘容量描述 
      * @return HwDiskSizeDesc 硬盘容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHwDiskSizeDesc() {
         return this.HwDiskSizeDesc;
@@ -912,39 +792,31 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 硬盘容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HwDiskSizeDesc 硬盘容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHwDiskSizeDesc(String HwDiskSizeDesc) {
         this.HwDiskSizeDesc = HwDiskSizeDesc;
     }
 
     /**
-     * Get 内存容量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HwMemSize 内存容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内存容量，单位b 
+     * @return HwMemSize 内存容量，单位b
      */
     public Long getHwMemSize() {
         return this.HwMemSize;
     }
 
     /**
-     * Set 内存容量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HwMemSize 内存容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 内存容量，单位b
+     * @param HwMemSize 内存容量，单位b
      */
     public void setHwMemSize(Long HwMemSize) {
         this.HwMemSize = HwMemSize;
     }
 
     /**
-     * Get 内存容量描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存容量描述 
      * @return HwMemSizeDesc 内存容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHwMemSizeDesc() {
         return this.HwMemSizeDesc;
@@ -952,19 +824,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 内存容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HwMemSizeDesc 内存容量描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHwMemSizeDesc(String HwMemSizeDesc) {
         this.HwMemSizeDesc = HwMemSizeDesc;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -972,19 +840,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 节点资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点资源ID 
      * @return EmrResourceId 节点资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmrResourceId() {
         return this.EmrResourceId;
@@ -992,19 +856,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 节点资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmrResourceId 节点资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmrResourceId(String EmrResourceId) {
         this.EmrResourceId = EmrResourceId;
     }
 
     /**
-     * Get 续费标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费标志 
      * @return IsAutoRenew 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAutoRenew() {
         return this.IsAutoRenew;
@@ -1012,19 +872,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAutoRenew 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAutoRenew(Long IsAutoRenew) {
         this.IsAutoRenew = IsAutoRenew;
     }
 
     /**
-     * Get 设备标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备标识 
      * @return DeviceClass 设备标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceClass() {
         return this.DeviceClass;
@@ -1032,19 +888,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 设备标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceClass 设备标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get 支持变配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持变配 
      * @return Mutable 支持变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMutable() {
         return this.Mutable;
@@ -1052,9 +904,7 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 支持变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mutable 支持变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMutable(Long Mutable) {
         this.Mutable = Mutable;
@@ -1101,10 +951,8 @@ public class NodeHardwareInfo extends AbstractModel {
     }
 
     /**
-     * Get 内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP 
      * @return Ip 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -1112,19 +960,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 此节点是否可销毁，1可销毁，0不可销毁
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此节点是否可销毁，1可销毁，0不可销毁 
      * @return Destroyable 此节点是否可销毁，1可销毁，0不可销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDestroyable() {
         return this.Destroyable;
@@ -1132,9 +976,7 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 此节点是否可销毁，1可销毁，0不可销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Destroyable 此节点是否可销毁，1可销毁，0不可销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestroyable(Long Destroyable) {
         this.Destroyable = Destroyable;
@@ -1161,10 +1003,8 @@ public class NodeHardwareInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。 
      * @return AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoFlag() {
         return this.AutoFlag;
@@ -1172,19 +1012,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoFlag(Long AutoFlag) {
         this.AutoFlag = AutoFlag;
     }
 
     /**
-     * Get 资源类型, host/pod
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型, host/pod 
      * @return HardwareResourceType 资源类型, host/pod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
@@ -1192,19 +1028,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 资源类型, host/pod
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HardwareResourceType 资源类型, host/pod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get 是否浮动规格，1是，0否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否浮动规格，1是，0否 
      * @return IsDynamicSpec 是否浮动规格，1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDynamicSpec() {
         return this.IsDynamicSpec;
@@ -1212,19 +1044,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 是否浮动规格，1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDynamicSpec 是否浮动规格，1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDynamicSpec(Long IsDynamicSpec) {
         this.IsDynamicSpec = IsDynamicSpec;
     }
 
     /**
-     * Get 浮动规格值json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 浮动规格值json字符串 
      * @return DynamicPodSpec 浮动规格值json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDynamicPodSpec() {
         return this.DynamicPodSpec;
@@ -1232,19 +1060,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 浮动规格值json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicPodSpec 浮动规格值json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamicPodSpec(String DynamicPodSpec) {
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
     /**
-     * Get 是否支持变更计费类型 1是，0否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持变更计费类型 1是，0否 
      * @return SupportModifyPayMode 是否支持变更计费类型 1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportModifyPayMode() {
         return this.SupportModifyPayMode;
@@ -1252,39 +1076,35 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 是否支持变更计费类型 1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportModifyPayMode 是否支持变更计费类型 1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportModifyPayMode(Long SupportModifyPayMode) {
         this.SupportModifyPayMode = SupportModifyPayMode;
     }
 
     /**
-     * Get 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RootStorageType 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+ 
+     * @return RootStorageType 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
      */
     public Long getRootStorageType() {
         return this.RootStorageType;
     }
 
     /**
-     * Set 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RootStorageType 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
+     * @param RootStorageType 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+
      */
     public void setRootStorageType(Long RootStorageType) {
         this.RootStorageType = RootStorageType;
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return Zone 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -1292,9 +1112,7 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -1321,10 +1139,8 @@ public class NodeHardwareInfo extends AbstractModel {
     }
 
     /**
-     * Get 客户端
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端 
      * @return Clients 客户端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClients() {
         return this.Clients;
@@ -1332,19 +1148,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 客户端
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clients 客户端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClients(String Clients) {
         this.Clients = Clients;
     }
 
     /**
-     * Get 系统当前时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统当前时间 
      * @return CurrentTime 系统当前时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentTime() {
         return this.CurrentTime;
@@ -1352,19 +1164,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 系统当前时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentTime 系统当前时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentTime(String CurrentTime) {
         this.CurrentTime = CurrentTime;
     }
 
     /**
-     * Get 是否用于联邦 ,1是，0否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否用于联邦 ,1是，0否 
      * @return IsFederation 是否用于联邦 ,1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsFederation() {
         return this.IsFederation;
@@ -1372,19 +1180,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 是否用于联邦 ,1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFederation 是否用于联邦 ,1是，0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFederation(Long IsFederation) {
         this.IsFederation = IsFederation;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -1392,19 +1196,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务 
      * @return ServiceClient 服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceClient() {
         return this.ServiceClient;
@@ -1412,19 +1212,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceClient 服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceClient(String ServiceClient) {
         this.ServiceClient = ServiceClient;
     }
 
     /**
-     * Get 该实例是否开启实例保护，true为开启 false为关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该实例是否开启实例保护，true为开启 false为关闭 
      * @return DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
@@ -1432,19 +1228,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 该实例是否开启实例保护，true为开启 false为关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
     }
 
     /**
-     * Get 0表示老计费，1表示新计费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0表示老计费，1表示新计费 
      * @return TradeVersion 0表示老计费，1表示新计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTradeVersion() {
         return this.TradeVersion;
@@ -1452,19 +1244,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 0表示老计费，1表示新计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeVersion 0表示老计费，1表示新计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeVersion(Long TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
     /**
-     * Get 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止 
      * @return ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServicesStatus() {
         return this.ServicesStatus;
@@ -1472,19 +1260,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServicesStatus(String ServicesStatus) {
         this.ServicesStatus = ServicesStatus;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -1492,19 +1276,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 共享集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享集群id 
      * @return SharedClusterId 共享集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSharedClusterId() {
         return this.SharedClusterId;
@@ -1512,19 +1292,15 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 共享集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedClusterId 共享集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedClusterId(String SharedClusterId) {
         this.SharedClusterId = SharedClusterId;
     }
 
     /**
-     * Get 共享集群id描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享集群id描述 
      * @return SharedClusterIdDesc 共享集群id描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSharedClusterIdDesc() {
         return this.SharedClusterIdDesc;
@@ -1532,12 +1308,42 @@ public class NodeHardwareInfo extends AbstractModel {
 
     /**
      * Set 共享集群id描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedClusterIdDesc 共享集群id描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedClusterIdDesc(String SharedClusterIdDesc) {
         this.SharedClusterIdDesc = SharedClusterIdDesc;
+    }
+
+    /**
+     * Get 是否是定时销毁资源 
+     * @return TimingResource 是否是定时销毁资源
+     */
+    public Boolean getTimingResource() {
+        return this.TimingResource;
+    }
+
+    /**
+     * Set 是否是定时销毁资源
+     * @param TimingResource 是否是定时销毁资源
+     */
+    public void setTimingResource(Boolean TimingResource) {
+        this.TimingResource = TimingResource;
+    }
+
+    /**
+     * Get 资源类型（HardwareResourceType）为pod时，对应的TKE集群id 
+     * @return TkeClusterId 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+     */
+    public String getTkeClusterId() {
+        return this.TkeClusterId;
+    }
+
+    /**
+     * Set 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+     * @param TkeClusterId 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+     */
+    public void setTkeClusterId(String TkeClusterId) {
+        this.TkeClusterId = TkeClusterId;
     }
 
     public NodeHardwareInfo() {
@@ -1716,6 +1522,12 @@ public class NodeHardwareInfo extends AbstractModel {
         if (source.SharedClusterIdDesc != null) {
             this.SharedClusterIdDesc = new String(source.SharedClusterIdDesc);
         }
+        if (source.TimingResource != null) {
+            this.TimingResource = new Boolean(source.TimingResource);
+        }
+        if (source.TkeClusterId != null) {
+            this.TkeClusterId = new String(source.TkeClusterId);
+        }
     }
 
 
@@ -1777,6 +1589,8 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
         this.setParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
+        this.setParamSimple(map, prefix + "TimingResource", this.TimingResource);
+        this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
 
     }
 }

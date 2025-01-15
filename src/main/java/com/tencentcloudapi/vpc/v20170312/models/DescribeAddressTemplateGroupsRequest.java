@@ -54,6 +54,34 @@ public class DescribeAddressTemplateGroupsRequest extends AbstractModel {
     private Boolean NeedMemberInfo;
 
     /**
+    * 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
+    * IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+    */
+    @SerializedName("MemberOrderField")
+    @Expose
+    private String MemberOrderField;
+
+    /**
+    * IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+    */
+    @SerializedName("MemberOrderDirection")
+    @Expose
+    private String MemberOrderDirection;
+
+    /**
      * Get 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li> 
@@ -125,6 +153,70 @@ public class DescribeAddressTemplateGroupsRequest extends AbstractModel {
         this.NeedMemberInfo = NeedMemberInfo;
     }
 
+    /**
+     * Get 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。 
+     * @return OrderField 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     * @param OrderField 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。 
+     * @return OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     * @param OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
+     * Get IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。 
+     * @return MemberOrderField IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public String getMemberOrderField() {
+        return this.MemberOrderField;
+    }
+
+    /**
+     * Set IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+     * @param MemberOrderField IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public void setMemberOrderField(String MemberOrderField) {
+        this.MemberOrderField = MemberOrderField;
+    }
+
+    /**
+     * Get IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。 
+     * @return MemberOrderDirection IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public String getMemberOrderDirection() {
+        return this.MemberOrderDirection;
+    }
+
+    /**
+     * Set IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     * @param MemberOrderDirection IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public void setMemberOrderDirection(String MemberOrderDirection) {
+        this.MemberOrderDirection = MemberOrderDirection;
+    }
+
     public DescribeAddressTemplateGroupsRequest() {
     }
 
@@ -148,6 +240,18 @@ public class DescribeAddressTemplateGroupsRequest extends AbstractModel {
         if (source.NeedMemberInfo != null) {
             this.NeedMemberInfo = new Boolean(source.NeedMemberInfo);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+        if (source.MemberOrderField != null) {
+            this.MemberOrderField = new String(source.MemberOrderField);
+        }
+        if (source.MemberOrderDirection != null) {
+            this.MemberOrderDirection = new String(source.MemberOrderDirection);
+        }
     }
 
 
@@ -159,6 +263,10 @@ public class DescribeAddressTemplateGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamSimple(map, prefix + "MemberOrderField", this.MemberOrderField);
+        this.setParamSimple(map, prefix + "MemberOrderDirection", this.MemberOrderDirection);
 
     }
 }

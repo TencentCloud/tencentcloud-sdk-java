@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class CreateFlowByFilesRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+    * 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+注： 支持填入集团子公司经办人 userId 代发合同。
+
     */
     @SerializedName("Operator")
     @Expose
@@ -255,28 +255,28 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private Boolean OpenDynamicSignFlow;
 
     /**
-     * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * Get 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+注： 支持填入集团子公司经办人 userId 代发合同。
+ 
+     * @return Operator 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+注： 支持填入集团子公司经办人 userId 代发合同。
+
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * Set 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+注： 支持填入集团子公司经办人 userId 代发合同。
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注： 支持填入集团子公司经办人 userId 代发合同。
+
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
