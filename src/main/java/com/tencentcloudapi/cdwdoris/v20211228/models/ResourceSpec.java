@@ -53,7 +53,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemDisk")
     @Expose
@@ -61,7 +60,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisk")
     @Expose
@@ -69,7 +67,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxNodeSize")
     @Expose
@@ -77,7 +74,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Available")
     @Expose
@@ -85,7 +81,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputeSpecDesc")
     @Expose
@@ -93,7 +88,6 @@ public class ResourceSpec extends AbstractModel {
 
     /**
     * cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceQuota")
     @Expose
@@ -164,10 +158,8 @@ public class ResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘描述信息 
      * @return SystemDisk 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpec getSystemDisk() {
         return this.SystemDisk;
@@ -175,19 +167,15 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemDisk 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemDisk(DiskSpec SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘描述信息 
      * @return DataDisk 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpec getDataDisk() {
         return this.DataDisk;
@@ -195,19 +183,15 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataDisk 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisk(DiskSpec DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大节点数目限制 
      * @return MaxNodeSize 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxNodeSize() {
         return this.MaxNodeSize;
@@ -215,19 +199,15 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxNodeSize 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxNodeSize(Long MaxNodeSize) {
         this.MaxNodeSize = MaxNodeSize;
     }
 
     /**
-     * Get 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可用，false代表售罄 
      * @return Available 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAvailable() {
         return this.Available;
@@ -235,19 +215,15 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Available 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格描述信息 
      * @return ComputeSpecDesc 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComputeSpecDesc() {
         return this.ComputeSpecDesc;
@@ -255,19 +231,15 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComputeSpecDesc 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputeSpecDesc(String ComputeSpecDesc) {
         this.ComputeSpecDesc = ComputeSpecDesc;
     }
 
     /**
-     * Get cvm库存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvm库存 
      * @return InstanceQuota cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceQuota() {
         return this.InstanceQuota;
@@ -275,9 +247,7 @@ public class ResourceSpec extends AbstractModel {
 
     /**
      * Set cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceQuota cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceQuota(Long InstanceQuota) {
         this.InstanceQuota = InstanceQuota;

@@ -41,6 +41,7 @@ public class CreateOfflineTaskResponse extends AbstractModel {
 
     /**
     * 结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -94,8 +95,10 @@ public class CreateOfflineTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 结果 
+     * Get 结果
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -103,7 +106,9 @@ public class CreateOfflineTaskResponse extends AbstractModel {
 
     /**
      * Set 结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

@@ -52,7 +52,7 @@ public class GrafanaIntegrationConfig extends AbstractModel {
     private String Description;
 
     /**
-    * Grafana 跳转地址
+    * Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaURL")
@@ -124,9 +124,9 @@ public class GrafanaIntegrationConfig extends AbstractModel {
     }
 
     /**
-     * Get Grafana 跳转地址
+     * Get Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaURL Grafana 跳转地址
+     * @return GrafanaURL Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrafanaURL() {
@@ -134,9 +134,9 @@ public class GrafanaIntegrationConfig extends AbstractModel {
     }
 
     /**
-     * Set Grafana 跳转地址
+     * Set Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaURL Grafana 跳转地址
+     * @param GrafanaURL Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaURL(String GrafanaURL) {

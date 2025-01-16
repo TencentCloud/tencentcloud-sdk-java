@@ -39,7 +39,6 @@ public class AddDeviceResponse extends AbstractModel {
 
     /**
     * 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Signature")
     @Expose
@@ -85,10 +84,8 @@ public class AddDeviceResponse extends AbstractModel {
     }
 
     /**
-     * Get 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签名字符串 
      * @return Signature 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignature() {
         return this.Signature;
@@ -96,9 +93,7 @@ public class AddDeviceResponse extends AbstractModel {
 
     /**
      * Set 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Signature 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignature(String Signature) {
         this.Signature = Signature;

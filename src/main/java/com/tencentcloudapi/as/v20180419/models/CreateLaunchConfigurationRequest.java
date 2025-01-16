@@ -229,6 +229,13 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     private String DedicatedClusterId;
 
     /**
+    * 自定义metadata。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
      * Get 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -724,6 +731,22 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
+    /**
+     * Get 自定义metadata。 
+     * @return Metadata 自定义metadata。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata。
+     * @param Metadata 自定义metadata。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public CreateLaunchConfigurationRequest() {
     }
 
@@ -831,6 +854,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
     }
 
 
@@ -865,6 +891,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

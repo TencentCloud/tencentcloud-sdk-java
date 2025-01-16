@@ -25,7 +25,6 @@ public class UserWorkloadGroup extends AbstractModel {
 
     /**
     * test
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -33,17 +32,14 @@ public class UserWorkloadGroup extends AbstractModel {
 
     /**
     * normal
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkloadGroupName")
     @Expose
     private String WorkloadGroupName;
 
     /**
-     * Get test
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get test 
      * @return UserName test
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -51,19 +47,15 @@ public class UserWorkloadGroup extends AbstractModel {
 
     /**
      * Set test
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName test
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get normal
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get normal 
      * @return WorkloadGroupName normal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkloadGroupName() {
         return this.WorkloadGroupName;
@@ -71,9 +63,7 @@ public class UserWorkloadGroup extends AbstractModel {
 
     /**
      * Set normal
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadGroupName normal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkloadGroupName(String WorkloadGroupName) {
         this.WorkloadGroupName = WorkloadGroupName;

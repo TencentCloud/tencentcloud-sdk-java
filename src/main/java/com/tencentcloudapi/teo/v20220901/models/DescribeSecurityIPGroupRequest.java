@@ -31,9 +31,7 @@ public class DescribeSecurityIPGroupRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+    * 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
     */
     @SerializedName("GroupIds")
     @Expose
@@ -56,24 +54,16 @@ public class DescribeSecurityIPGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li> 
-     * @return GroupIds 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+     * Get 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li> 
+     * @return GroupIds 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
      */
     public Long [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
-     * @param GroupIds 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+     * Set 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+     * @param GroupIds 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
      */
     public void setGroupIds(Long [] GroupIds) {
         this.GroupIds = GroupIds;

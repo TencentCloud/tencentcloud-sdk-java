@@ -136,6 +136,13 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long IsPendingIssue;
 
     /**
+    * 筛选指定证书ID的证书，只支持有权限的证书ID
+    */
+    @SerializedName("CertIds")
+    @Expose
+    private String [] CertIds;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -391,6 +398,22 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.IsPendingIssue = IsPendingIssue;
     }
 
+    /**
+     * Get 筛选指定证书ID的证书，只支持有权限的证书ID 
+     * @return CertIds 筛选指定证书ID的证书，只支持有权限的证书ID
+     */
+    public String [] getCertIds() {
+        return this.CertIds;
+    }
+
+    /**
+     * Set 筛选指定证书ID的证书，只支持有权限的证书ID
+     * @param CertIds 筛选指定证书ID的证书，只支持有权限的证书ID
+     */
+    public void setCertIds(String [] CertIds) {
+        this.CertIds = CertIds;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -453,6 +476,12 @@ public class DescribeCertificatesRequest extends AbstractModel {
         if (source.IsPendingIssue != null) {
             this.IsPendingIssue = new Long(source.IsPendingIssue);
         }
+        if (source.CertIds != null) {
+            this.CertIds = new String[source.CertIds.length];
+            for (int i = 0; i < source.CertIds.length; i++) {
+                this.CertIds[i] = new String(source.CertIds[i]);
+            }
+        }
     }
 
 
@@ -476,6 +505,7 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Hostable", this.Hostable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
+        this.setParamArraySimple(map, prefix + "CertIds.", this.CertIds);
 
     }
 }

@@ -226,6 +226,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private String DedicatedClusterId;
 
     /**
+    * 自定义metadata。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -733,6 +740,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
+    /**
+     * Get 自定义metadata。 
+     * @return Metadata 自定义metadata。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata。
+     * @param Metadata 自定义metadata。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -831,6 +854,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
     }
 
 
@@ -863,6 +889,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

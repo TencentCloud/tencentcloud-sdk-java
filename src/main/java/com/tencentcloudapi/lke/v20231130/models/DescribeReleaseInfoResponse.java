@@ -31,15 +31,14 @@ public class DescribeReleaseInfoResponse extends AbstractModel {
     private String LastTime;
 
     /**
-    * 发布状态
+    * 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 是否编辑过
-
+    * 是否编辑过, 当为true的时候表示可以发布
     */
     @SerializedName("IsUpdated")
     @Expose
@@ -77,36 +76,32 @@ public class DescribeReleaseInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 发布状态 
-     * @return Status 发布状态
+     * Get 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过 
+     * @return Status 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 发布状态
-     * @param Status 发布状态
+     * Set 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过
+     * @param Status 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否编辑过
- 
-     * @return IsUpdated 是否编辑过
-
+     * Get 是否编辑过, 当为true的时候表示可以发布 
+     * @return IsUpdated 是否编辑过, 当为true的时候表示可以发布
      */
     public Boolean getIsUpdated() {
         return this.IsUpdated;
     }
 
     /**
-     * Set 是否编辑过
-
-     * @param IsUpdated 是否编辑过
-
+     * Set 是否编辑过, 当为true的时候表示可以发布
+     * @param IsUpdated 是否编辑过, 当为true的时候表示可以发布
      */
     public void setIsUpdated(Boolean IsUpdated) {
         this.IsUpdated = IsUpdated;

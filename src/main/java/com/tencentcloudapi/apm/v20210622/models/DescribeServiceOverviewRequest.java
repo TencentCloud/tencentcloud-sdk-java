@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeServiceOverviewRequest extends AbstractModel {
 
     /**
-    * 过滤条件
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
     * 指标列表
     */
     @SerializedName("Metrics")
     @Expose
     private QueryMetricItem [] Metrics;
+
+    /**
+    * 业务系统 ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
     * 聚合维度
@@ -45,18 +52,28 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     private String [] GroupBy;
 
     /**
-    * 排序
+    * 开始时间（单位：秒）
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 结束时间（单位：秒）
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * 排序方式
+Value 填写：
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
     */
     @SerializedName("OrderBy")
     @Expose
     private OrderBy OrderBy;
-
-    /**
-    * 业务系统ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
 
     /**
     * 每页大小
@@ -66,41 +83,11 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private Long StartTime;
-
-    /**
     * 分页起始点
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
-
-    /**
-    * 结束时间
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private Long EndTime;
-
-    /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
 
     /**
      * Get 指标列表 
@@ -116,6 +103,38 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
      */
     public void setMetrics(QueryMetricItem [] Metrics) {
         this.Metrics = Metrics;
+    }
+
+    /**
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 过滤条件 
+     * @return Filters 过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param Filters 过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -135,35 +154,63 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序 
-     * @return OrderBy 排序
+     * Get 开始时间（单位：秒） 
+     * @return StartTime 开始时间（单位：秒）
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间（单位：秒）
+     * @param StartTime 开始时间（单位：秒）
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间（单位：秒） 
+     * @return EndTime 结束时间（单位：秒）
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间（单位：秒）
+     * @param EndTime 结束时间（单位：秒）
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 排序方式
+Value 填写：
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序 
+     * @return OrderBy 排序方式
+Value 填写：
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      */
     public OrderBy getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序
-     * @param OrderBy 排序
+     * Set 排序方式
+Value 填写：
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
+     * @param OrderBy 排序方式
+Value 填写：
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      */
     public void setOrderBy(OrderBy OrderBy) {
         this.OrderBy = OrderBy;
-    }
-
-    /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     /**
@@ -183,22 +230,6 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
-     */
-    public Long getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 开始时间
-     * @param StartTime 开始时间
-     */
-    public void setStartTime(Long StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
      * Get 分页起始点 
      * @return Offset 分页起始点
      */
@@ -214,22 +245,6 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
-    /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
-     */
-    public Long getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 结束时间
-     * @param EndTime 结束时间
-     */
-    public void setEndTime(Long EndTime) {
-        this.EndTime = EndTime;
-    }
-
     public DescribeServiceOverviewRequest() {
     }
 
@@ -238,16 +253,19 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeServiceOverviewRequest(DescribeServiceOverviewRequest source) {
-        if (source.Filters != null) {
-            this.Filters = new Filter[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new Filter(source.Filters[i]);
-            }
-        }
         if (source.Metrics != null) {
             this.Metrics = new QueryMetricItem[source.Metrics.length];
             for (int i = 0; i < source.Metrics.length; i++) {
                 this.Metrics[i] = new QueryMetricItem(source.Metrics[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
         if (source.GroupBy != null) {
@@ -256,23 +274,20 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
         if (source.OrderBy != null) {
             this.OrderBy = new OrderBy(source.OrderBy);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.StartTime != null) {
-            this.StartTime = new Long(source.StartTime);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new Long(source.EndTime);
         }
     }
 
@@ -281,15 +296,15 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);
-        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
-        this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

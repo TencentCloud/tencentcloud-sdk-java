@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class OrderBy extends AbstractModel {
 
     /**
-    * 需要排序的字段
+    * 需要排序的字段，现支持 startTIme, endTime, duration
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 顺序排序/倒序排序
+    * asc 顺序排序 / desc 倒序排序
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 需要排序的字段 
-     * @return Key 需要排序的字段
+     * Get 需要排序的字段，现支持 startTIme, endTime, duration 
+     * @return Key 需要排序的字段，现支持 startTIme, endTime, duration
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 需要排序的字段
-     * @param Key 需要排序的字段
+     * Set 需要排序的字段，现支持 startTIme, endTime, duration
+     * @param Key 需要排序的字段，现支持 startTIme, endTime, duration
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 顺序排序/倒序排序 
-     * @return Value 顺序排序/倒序排序
+     * Get asc 顺序排序 / desc 倒序排序 
+     * @return Value asc 顺序排序 / desc 倒序排序
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 顺序排序/倒序排序
-     * @param Value 顺序排序/倒序排序
+     * Set asc 顺序排序 / desc 倒序排序
+     * @param Value asc 顺序排序 / desc 倒序排序
      */
     public void setValue(String Value) {
         this.Value = Value;

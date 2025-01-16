@@ -46,7 +46,7 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long Fps;
 
     /**
-    * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+    * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
     */
     @SerializedName("Bitrate")
@@ -204,9 +204,9 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。 
-     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public Long getBitrate() {
@@ -214,9 +214,9 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
-     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public void setBitrate(Long Bitrate) {

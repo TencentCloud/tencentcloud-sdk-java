@@ -40,9 +40,7 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
     private String Question;
 
     /**
-    * 拒答问题来源的数据源唯一id，取值1，2
-
-
+    * 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
     */
     @SerializedName("BusinessSource")
     @Expose
@@ -98,24 +96,16 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
     }
 
     /**
-     * Get 拒答问题来源的数据源唯一id，取值1，2
-
- 
-     * @return BusinessSource 拒答问题来源的数据源唯一id，取值1，2
-
-
+     * Get 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加 
+     * @return BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
      */
     public Long getBusinessSource() {
         return this.BusinessSource;
     }
 
     /**
-     * Set 拒答问题来源的数据源唯一id，取值1，2
-
-
-     * @param BusinessSource 拒答问题来源的数据源唯一id，取值1，2
-
-
+     * Set 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+     * @param BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
      */
     public void setBusinessSource(Long BusinessSource) {
         this.BusinessSource = BusinessSource;

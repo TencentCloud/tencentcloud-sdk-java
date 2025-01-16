@@ -25,7 +25,6 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
     * 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkloadGroupName")
     @Expose
@@ -33,7 +32,6 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
     * CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuShare")
     @Expose
@@ -41,7 +39,6 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
     * 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryLimit")
     @Expose
@@ -49,7 +46,6 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
     * 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableMemoryOverCommit")
     @Expose
@@ -57,17 +53,14 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
     * cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuHardLimit")
     @Expose
     private String CpuHardLimit;
 
     /**
-     * Get 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组名称 
      * @return WorkloadGroupName 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkloadGroupName() {
         return this.WorkloadGroupName;
@@ -75,19 +68,15 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
      * Set 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadGroupName 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkloadGroupName(String WorkloadGroupName) {
         this.WorkloadGroupName = WorkloadGroupName;
     }
 
     /**
-     * Get CPU权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU权重 
      * @return CpuShare CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuShare() {
         return this.CpuShare;
@@ -95,19 +84,15 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
      * Set CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuShare CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuShare(Long CpuShare) {
         this.CpuShare = CpuShare;
     }
 
     /**
-     * Get 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存限制，所有资源组的内存限制值之和应该小于等于100 
      * @return MemoryLimit 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemoryLimit() {
         return this.MemoryLimit;
@@ -115,19 +100,15 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
      * Set 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryLimit 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryLimit(Long MemoryLimit) {
         this.MemoryLimit = MemoryLimit;
     }
 
     /**
-     * Get 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许超配分配 
      * @return EnableMemoryOverCommit 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableMemoryOverCommit() {
         return this.EnableMemoryOverCommit;
@@ -135,19 +116,15 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
      * Set 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableMemoryOverCommit 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableMemoryOverCommit(Boolean EnableMemoryOverCommit) {
         this.EnableMemoryOverCommit = EnableMemoryOverCommit;
     }
 
     /**
-     * Get cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu硬限制 
      * @return CpuHardLimit cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuHardLimit() {
         return this.CpuHardLimit;
@@ -155,9 +132,7 @@ public class WorkloadGroupConfig extends AbstractModel {
 
     /**
      * Set cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuHardLimit cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuHardLimit(String CpuHardLimit) {
         this.CpuHardLimit = CpuHardLimit;

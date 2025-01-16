@@ -24,27 +24,6 @@ import java.util.HashMap;
 public class ApmInstanceDetail extends AbstractModel {
 
     /**
-    * 存储使用量( MB )
-    */
-    @SerializedName("AmountOfUsedStorage")
-    @Expose
-    private Float AmountOfUsedStorage;
-
-    /**
-    * 业务系统名
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 业务系统所属 Tag 列表
-    */
-    @SerializedName("Tags")
-    @Expose
-    private ApmTag [] Tags;
-
-    /**
     * 业务系统 ID
     */
     @SerializedName("InstanceId")
@@ -52,39 +31,11 @@ public class ApmInstanceDetail extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 创建人 Uin
+    * 业务系统名
     */
-    @SerializedName("CreateUin")
+    @SerializedName("Name")
     @Expose
-    private String CreateUin;
-
-    /**
-    * 该业务系统已上报的服务端应用数量
-    */
-    @SerializedName("ServiceCount")
-    @Expose
-    private Long ServiceCount;
-
-    /**
-    * 日均上报 Span 数
-    */
-    @SerializedName("CountOfReportSpanPerDay")
-    @Expose
-    private Long CountOfReportSpanPerDay;
-
-    /**
-    * AppID 信息
-    */
-    @SerializedName("AppId")
-    @Expose
-    private Long AppId;
-
-    /**
-    * Trace 数据保存时长
-    */
-    @SerializedName("TraceDuration")
-    @Expose
-    private Long TraceDuration;
+    private String Name;
 
     /**
     * 业务系统描述信息
@@ -108,6 +59,55 @@ public class ApmInstanceDetail extends AbstractModel {
     private String Region;
 
     /**
+    * 业务系统 Tag 列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ApmTag [] Tags;
+
+    /**
+    * AppID 信息
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 创建人 Uin
+    */
+    @SerializedName("CreateUin")
+    @Expose
+    private String CreateUin;
+
+    /**
+    * 存储使用量(单位：MB)
+    */
+    @SerializedName("AmountOfUsedStorage")
+    @Expose
+    private Float AmountOfUsedStorage;
+
+    /**
+    * 该业务系统服务端应用数量
+    */
+    @SerializedName("ServiceCount")
+    @Expose
+    private Long ServiceCount;
+
+    /**
+    * 日均上报 Span 数
+    */
+    @SerializedName("CountOfReportSpanPerDay")
+    @Expose
+    private Long CountOfReportSpanPerDay;
+
+    /**
+    * Trace 数据保存时长（单位：天）
+    */
+    @SerializedName("TraceDuration")
+    @Expose
+    private Long TraceDuration;
+
+    /**
     * 业务系统上报额度
     */
     @SerializedName("SpanDailyCounters")
@@ -115,35 +115,35 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long SpanDailyCounters;
 
     /**
-    * 业务系统是否开通计费
+    * 业务系统是否已开通计费（0=未开通，1=已开通）
     */
     @SerializedName("BillingInstance")
     @Expose
     private Long BillingInstance;
 
     /**
-    * 错误率阈值
+    * 错误警示线（单位：%）
     */
     @SerializedName("ErrRateThreshold")
     @Expose
     private Long ErrRateThreshold;
 
     /**
-    * 采样率阈值
+    * 采样率（单位：%）
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 是否开启错误采样 0  关 1 开
+    * 是否开启错误采样（0=关, 1=开）
     */
     @SerializedName("ErrorSample")
     @Expose
     private Long ErrorSample;
 
     /**
-    * 慢调用保存阈值
+    * 采样慢调用保存阈值（单位：ms）
     */
     @SerializedName("SlowRequestSavedThreshold")
     @Expose
@@ -157,49 +157,49 @@ public class ApmInstanceDetail extends AbstractModel {
     private String LogRegion;
 
     /**
-    * 日志来源
+    * 日志源
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * 日志功能开关 0 关 | 1 开
+    * 日志功能开关（0=关， 1=开）
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * 日志主题ID
+    * 日志主题 ID
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * 该实例已上报的客户端应用数量
+    * 该业务系统客户端应用数量
     */
     @SerializedName("ClientCount")
     @Expose
     private Long ClientCount;
 
     /**
-    * 该实例已上报的总应用数量
+    * 该业务系统最近2天活跃应用数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * CLS 日志集 | ES 集群ID
+    * CLS 日志集
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Metric 数据保存时长
+    * Metric 数据保存时长（单位：天）
     */
     @SerializedName("MetricDuration")
     @Expose
@@ -213,9 +213,7 @@ public class ApmInstanceDetail extends AbstractModel {
     private String [] CustomShowTags;
 
     /**
-    * 业务系统计费模式
-1为预付费
-0为按量付费
+    * 业务系统计费模式（1为预付费，0为按量付费）
     */
     @SerializedName("PayMode")
     @Expose
@@ -229,7 +227,7 @@ public class ApmInstanceDetail extends AbstractModel {
     private Boolean PayModeEffective;
 
     /**
-    * 响应时间满意阈值
+    * 响应时间警示线（单位：ms）
     */
     @SerializedName("ResponseDurationWarningThreshold")
     @Expose
@@ -243,87 +241,39 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long Free;
 
     /**
-    * 是否 tsf 默认业务系统（0=否，1-是）
+    * 是否 TSF 默认业务系统（0=否，1=是）
     */
     @SerializedName("DefaultTSF")
     @Expose
     private Long DefaultTSF;
 
     /**
-    * 是否关联 Dashboard： 0 关 1 开
+    * 是否关联 Dashboard（0=关, 1=开）
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * Dashboard ID
+    * 关联的 Dashboard ID
     */
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
 
     /**
-    * 是否开启组件漏洞检测
+    * 是否开启组件漏洞检测（0=关， 1=开）
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
     @Expose
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * 是否开启 SQL 注入分析
+    * 是否开启 SQL 注入分析（0=关， 1=开）
     */
     @SerializedName("IsSqlInjectionAnalysis")
     @Expose
     private Long IsSqlInjectionAnalysis;
-
-    /**
-     * Get 存储使用量( MB ) 
-     * @return AmountOfUsedStorage 存储使用量( MB )
-     */
-    public Float getAmountOfUsedStorage() {
-        return this.AmountOfUsedStorage;
-    }
-
-    /**
-     * Set 存储使用量( MB )
-     * @param AmountOfUsedStorage 存储使用量( MB )
-     */
-    public void setAmountOfUsedStorage(Float AmountOfUsedStorage) {
-        this.AmountOfUsedStorage = AmountOfUsedStorage;
-    }
-
-    /**
-     * Get 业务系统名 
-     * @return Name 业务系统名
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 业务系统名
-     * @param Name 业务系统名
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 业务系统所属 Tag 列表 
-     * @return Tags 业务系统所属 Tag 列表
-     */
-    public ApmTag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 业务系统所属 Tag 列表
-     * @param Tags 业务系统所属 Tag 列表
-     */
-    public void setTags(ApmTag [] Tags) {
-        this.Tags = Tags;
-    }
 
     /**
      * Get 业务系统 ID 
@@ -342,83 +292,19 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建人 Uin 
-     * @return CreateUin 创建人 Uin
+     * Get 业务系统名 
+     * @return Name 业务系统名
      */
-    public String getCreateUin() {
-        return this.CreateUin;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 创建人 Uin
-     * @param CreateUin 创建人 Uin
+     * Set 业务系统名
+     * @param Name 业务系统名
      */
-    public void setCreateUin(String CreateUin) {
-        this.CreateUin = CreateUin;
-    }
-
-    /**
-     * Get 该业务系统已上报的服务端应用数量 
-     * @return ServiceCount 该业务系统已上报的服务端应用数量
-     */
-    public Long getServiceCount() {
-        return this.ServiceCount;
-    }
-
-    /**
-     * Set 该业务系统已上报的服务端应用数量
-     * @param ServiceCount 该业务系统已上报的服务端应用数量
-     */
-    public void setServiceCount(Long ServiceCount) {
-        this.ServiceCount = ServiceCount;
-    }
-
-    /**
-     * Get 日均上报 Span 数 
-     * @return CountOfReportSpanPerDay 日均上报 Span 数
-     */
-    public Long getCountOfReportSpanPerDay() {
-        return this.CountOfReportSpanPerDay;
-    }
-
-    /**
-     * Set 日均上报 Span 数
-     * @param CountOfReportSpanPerDay 日均上报 Span 数
-     */
-    public void setCountOfReportSpanPerDay(Long CountOfReportSpanPerDay) {
-        this.CountOfReportSpanPerDay = CountOfReportSpanPerDay;
-    }
-
-    /**
-     * Get AppID 信息 
-     * @return AppId AppID 信息
-     */
-    public Long getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set AppID 信息
-     * @param AppId AppID 信息
-     */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
-    }
-
-    /**
-     * Get Trace 数据保存时长 
-     * @return TraceDuration Trace 数据保存时长
-     */
-    public Long getTraceDuration() {
-        return this.TraceDuration;
-    }
-
-    /**
-     * Set Trace 数据保存时长
-     * @param TraceDuration Trace 数据保存时长
-     */
-    public void setTraceDuration(Long TraceDuration) {
-        this.TraceDuration = TraceDuration;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -470,6 +356,118 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
+     * Get 业务系统 Tag 列表 
+     * @return Tags 业务系统 Tag 列表
+     */
+    public ApmTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 业务系统 Tag 列表
+     * @param Tags 业务系统 Tag 列表
+     */
+    public void setTags(ApmTag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get AppID 信息 
+     * @return AppId AppID 信息
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set AppID 信息
+     * @param AppId AppID 信息
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 创建人 Uin 
+     * @return CreateUin 创建人 Uin
+     */
+    public String getCreateUin() {
+        return this.CreateUin;
+    }
+
+    /**
+     * Set 创建人 Uin
+     * @param CreateUin 创建人 Uin
+     */
+    public void setCreateUin(String CreateUin) {
+        this.CreateUin = CreateUin;
+    }
+
+    /**
+     * Get 存储使用量(单位：MB) 
+     * @return AmountOfUsedStorage 存储使用量(单位：MB)
+     */
+    public Float getAmountOfUsedStorage() {
+        return this.AmountOfUsedStorage;
+    }
+
+    /**
+     * Set 存储使用量(单位：MB)
+     * @param AmountOfUsedStorage 存储使用量(单位：MB)
+     */
+    public void setAmountOfUsedStorage(Float AmountOfUsedStorage) {
+        this.AmountOfUsedStorage = AmountOfUsedStorage;
+    }
+
+    /**
+     * Get 该业务系统服务端应用数量 
+     * @return ServiceCount 该业务系统服务端应用数量
+     */
+    public Long getServiceCount() {
+        return this.ServiceCount;
+    }
+
+    /**
+     * Set 该业务系统服务端应用数量
+     * @param ServiceCount 该业务系统服务端应用数量
+     */
+    public void setServiceCount(Long ServiceCount) {
+        this.ServiceCount = ServiceCount;
+    }
+
+    /**
+     * Get 日均上报 Span 数 
+     * @return CountOfReportSpanPerDay 日均上报 Span 数
+     */
+    public Long getCountOfReportSpanPerDay() {
+        return this.CountOfReportSpanPerDay;
+    }
+
+    /**
+     * Set 日均上报 Span 数
+     * @param CountOfReportSpanPerDay 日均上报 Span 数
+     */
+    public void setCountOfReportSpanPerDay(Long CountOfReportSpanPerDay) {
+        this.CountOfReportSpanPerDay = CountOfReportSpanPerDay;
+    }
+
+    /**
+     * Get Trace 数据保存时长（单位：天） 
+     * @return TraceDuration Trace 数据保存时长（单位：天）
+     */
+    public Long getTraceDuration() {
+        return this.TraceDuration;
+    }
+
+    /**
+     * Set Trace 数据保存时长（单位：天）
+     * @param TraceDuration Trace 数据保存时长（单位：天）
+     */
+    public void setTraceDuration(Long TraceDuration) {
+        this.TraceDuration = TraceDuration;
+    }
+
+    /**
      * Get 业务系统上报额度 
      * @return SpanDailyCounters 业务系统上报额度
      */
@@ -486,80 +484,80 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 业务系统是否开通计费 
-     * @return BillingInstance 业务系统是否开通计费
+     * Get 业务系统是否已开通计费（0=未开通，1=已开通） 
+     * @return BillingInstance 业务系统是否已开通计费（0=未开通，1=已开通）
      */
     public Long getBillingInstance() {
         return this.BillingInstance;
     }
 
     /**
-     * Set 业务系统是否开通计费
-     * @param BillingInstance 业务系统是否开通计费
+     * Set 业务系统是否已开通计费（0=未开通，1=已开通）
+     * @param BillingInstance 业务系统是否已开通计费（0=未开通，1=已开通）
      */
     public void setBillingInstance(Long BillingInstance) {
         this.BillingInstance = BillingInstance;
     }
 
     /**
-     * Get 错误率阈值 
-     * @return ErrRateThreshold 错误率阈值
+     * Get 错误警示线（单位：%） 
+     * @return ErrRateThreshold 错误警示线（单位：%）
      */
     public Long getErrRateThreshold() {
         return this.ErrRateThreshold;
     }
 
     /**
-     * Set 错误率阈值
-     * @param ErrRateThreshold 错误率阈值
+     * Set 错误警示线（单位：%）
+     * @param ErrRateThreshold 错误警示线（单位：%）
      */
     public void setErrRateThreshold(Long ErrRateThreshold) {
         this.ErrRateThreshold = ErrRateThreshold;
     }
 
     /**
-     * Get 采样率阈值 
-     * @return SampleRate 采样率阈值
+     * Get 采样率（单位：%） 
+     * @return SampleRate 采样率（单位：%）
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 采样率阈值
-     * @param SampleRate 采样率阈值
+     * Set 采样率（单位：%）
+     * @param SampleRate 采样率（单位：%）
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 是否开启错误采样 0  关 1 开 
-     * @return ErrorSample 是否开启错误采样 0  关 1 开
+     * Get 是否开启错误采样（0=关, 1=开） 
+     * @return ErrorSample 是否开启错误采样（0=关, 1=开）
      */
     public Long getErrorSample() {
         return this.ErrorSample;
     }
 
     /**
-     * Set 是否开启错误采样 0  关 1 开
-     * @param ErrorSample 是否开启错误采样 0  关 1 开
+     * Set 是否开启错误采样（0=关, 1=开）
+     * @param ErrorSample 是否开启错误采样（0=关, 1=开）
      */
     public void setErrorSample(Long ErrorSample) {
         this.ErrorSample = ErrorSample;
     }
 
     /**
-     * Get 慢调用保存阈值 
-     * @return SlowRequestSavedThreshold 慢调用保存阈值
+     * Get 采样慢调用保存阈值（单位：ms） 
+     * @return SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
      */
     public Long getSlowRequestSavedThreshold() {
         return this.SlowRequestSavedThreshold;
     }
 
     /**
-     * Set 慢调用保存阈值
-     * @param SlowRequestSavedThreshold 慢调用保存阈值
+     * Set 采样慢调用保存阈值（单位：ms）
+     * @param SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
      */
     public void setSlowRequestSavedThreshold(Long SlowRequestSavedThreshold) {
         this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
@@ -582,112 +580,112 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 日志来源 
-     * @return LogSource 日志来源
+     * Get 日志源 
+     * @return LogSource 日志源
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set 日志来源
-     * @param LogSource 日志来源
+     * Set 日志源
+     * @param LogSource 日志源
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get 日志功能开关 0 关 | 1 开 
-     * @return IsRelatedLog 日志功能开关 0 关 | 1 开
+     * Get 日志功能开关（0=关， 1=开） 
+     * @return IsRelatedLog 日志功能开关（0=关， 1=开）
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set 日志功能开关 0 关 | 1 开
-     * @param IsRelatedLog 日志功能开关 0 关 | 1 开
+     * Set 日志功能开关（0=关， 1=开）
+     * @param IsRelatedLog 日志功能开关（0=关， 1=开）
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return LogTopicID 日志主题ID
+     * Get 日志主题 ID 
+     * @return LogTopicID 日志主题 ID
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set 日志主题ID
-     * @param LogTopicID 日志主题ID
+     * Set 日志主题 ID
+     * @param LogTopicID 日志主题 ID
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 该实例已上报的客户端应用数量 
-     * @return ClientCount 该实例已上报的客户端应用数量
+     * Get 该业务系统客户端应用数量 
+     * @return ClientCount 该业务系统客户端应用数量
      */
     public Long getClientCount() {
         return this.ClientCount;
     }
 
     /**
-     * Set 该实例已上报的客户端应用数量
-     * @param ClientCount 该实例已上报的客户端应用数量
+     * Set 该业务系统客户端应用数量
+     * @param ClientCount 该业务系统客户端应用数量
      */
     public void setClientCount(Long ClientCount) {
         this.ClientCount = ClientCount;
     }
 
     /**
-     * Get 该实例已上报的总应用数量 
-     * @return TotalCount 该实例已上报的总应用数量
+     * Get 该业务系统最近2天活跃应用数量 
+     * @return TotalCount 该业务系统最近2天活跃应用数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 该实例已上报的总应用数量
-     * @param TotalCount 该实例已上报的总应用数量
+     * Set 该业务系统最近2天活跃应用数量
+     * @param TotalCount 该业务系统最近2天活跃应用数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get CLS 日志集 | ES 集群ID 
-     * @return LogSet CLS 日志集 | ES 集群ID
+     * Get CLS 日志集 
+     * @return LogSet CLS 日志集
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS 日志集 | ES 集群ID
-     * @param LogSet CLS 日志集 | ES 集群ID
+     * Set CLS 日志集
+     * @param LogSet CLS 日志集
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Metric 数据保存时长 
-     * @return MetricDuration Metric 数据保存时长
+     * Get Metric 数据保存时长（单位：天） 
+     * @return MetricDuration Metric 数据保存时长（单位：天）
      */
     public Long getMetricDuration() {
         return this.MetricDuration;
     }
 
     /**
-     * Set Metric 数据保存时长
-     * @param MetricDuration Metric 数据保存时长
+     * Set Metric 数据保存时长（单位：天）
+     * @param MetricDuration Metric 数据保存时长（单位：天）
      */
     public void setMetricDuration(Long MetricDuration) {
         this.MetricDuration = MetricDuration;
@@ -710,24 +708,16 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 业务系统计费模式
-1为预付费
-0为按量付费 
-     * @return PayMode 业务系统计费模式
-1为预付费
-0为按量付费
+     * Get 业务系统计费模式（1为预付费，0为按量付费） 
+     * @return PayMode 业务系统计费模式（1为预付费，0为按量付费）
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 业务系统计费模式
-1为预付费
-0为按量付费
-     * @param PayMode 业务系统计费模式
-1为预付费
-0为按量付费
+     * Set 业务系统计费模式（1为预付费，0为按量付费）
+     * @param PayMode 业务系统计费模式（1为预付费，0为按量付费）
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -750,16 +740,16 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 响应时间满意阈值 
-     * @return ResponseDurationWarningThreshold 响应时间满意阈值
+     * Get 响应时间警示线（单位：ms） 
+     * @return ResponseDurationWarningThreshold 响应时间警示线（单位：ms）
      */
     public Long getResponseDurationWarningThreshold() {
         return this.ResponseDurationWarningThreshold;
     }
 
     /**
-     * Set 响应时间满意阈值
-     * @param ResponseDurationWarningThreshold 响应时间满意阈值
+     * Set 响应时间警示线（单位：ms）
+     * @param ResponseDurationWarningThreshold 响应时间警示线（单位：ms）
      */
     public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
@@ -782,80 +772,80 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否 tsf 默认业务系统（0=否，1-是） 
-     * @return DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
+     * Get 是否 TSF 默认业务系统（0=否，1=是） 
+     * @return DefaultTSF 是否 TSF 默认业务系统（0=否，1=是）
      */
     public Long getDefaultTSF() {
         return this.DefaultTSF;
     }
 
     /**
-     * Set 是否 tsf 默认业务系统（0=否，1-是）
-     * @param DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
+     * Set 是否 TSF 默认业务系统（0=否，1=是）
+     * @param DefaultTSF 是否 TSF 默认业务系统（0=否，1=是）
      */
     public void setDefaultTSF(Long DefaultTSF) {
         this.DefaultTSF = DefaultTSF;
     }
 
     /**
-     * Get 是否关联 Dashboard： 0 关 1 开 
-     * @return IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
+     * Get 是否关联 Dashboard（0=关, 1=开） 
+     * @return IsRelatedDashboard 是否关联 Dashboard（0=关, 1=开）
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set 是否关联 Dashboard： 0 关 1 开
-     * @param IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
+     * Set 是否关联 Dashboard（0=关, 1=开）
+     * @param IsRelatedDashboard 是否关联 Dashboard（0=关, 1=开）
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get Dashboard ID 
-     * @return DashboardTopicID Dashboard ID
+     * Get 关联的 Dashboard ID 
+     * @return DashboardTopicID 关联的 Dashboard ID
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set Dashboard ID
-     * @param DashboardTopicID Dashboard ID
+     * Set 关联的 Dashboard ID
+     * @param DashboardTopicID 关联的 Dashboard ID
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
     }
 
     /**
-     * Get 是否开启组件漏洞检测 
-     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * Get 是否开启组件漏洞检测（0=关， 1=开） 
+     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
      */
     public Long getIsInstrumentationVulnerabilityScan() {
         return this.IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Set 是否开启组件漏洞检测
-     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * Set 是否开启组件漏洞检测（0=关， 1=开）
+     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Get 是否开启 SQL 注入分析 
-     * @return IsSqlInjectionAnalysis 是否开启 SQL 注入分析
+     * Get 是否开启 SQL 注入分析（0=关， 1=开） 
+     * @return IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
      */
     public Long getIsSqlInjectionAnalysis() {
         return this.IsSqlInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启 SQL 注入分析
-     * @param IsSqlInjectionAnalysis 是否开启 SQL 注入分析
+     * Set 是否开启 SQL 注入分析（0=关， 1=开）
+     * @param IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
@@ -869,35 +859,11 @@ public class ApmInstanceDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ApmInstanceDetail(ApmInstanceDetail source) {
-        if (source.AmountOfUsedStorage != null) {
-            this.AmountOfUsedStorage = new Float(source.AmountOfUsedStorage);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Tags != null) {
-            this.Tags = new ApmTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new ApmTag(source.Tags[i]);
-            }
-        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.CreateUin != null) {
-            this.CreateUin = new String(source.CreateUin);
-        }
-        if (source.ServiceCount != null) {
-            this.ServiceCount = new Long(source.ServiceCount);
-        }
-        if (source.CountOfReportSpanPerDay != null) {
-            this.CountOfReportSpanPerDay = new Long(source.CountOfReportSpanPerDay);
-        }
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
-        }
-        if (source.TraceDuration != null) {
-            this.TraceDuration = new Long(source.TraceDuration);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -907,6 +873,30 @@ public class ApmInstanceDetail extends AbstractModel {
         }
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.Tags != null) {
+            this.Tags = new ApmTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ApmTag(source.Tags[i]);
+            }
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new String(source.CreateUin);
+        }
+        if (source.AmountOfUsedStorage != null) {
+            this.AmountOfUsedStorage = new Float(source.AmountOfUsedStorage);
+        }
+        if (source.ServiceCount != null) {
+            this.ServiceCount = new Long(source.ServiceCount);
+        }
+        if (source.CountOfReportSpanPerDay != null) {
+            this.CountOfReportSpanPerDay = new Long(source.CountOfReportSpanPerDay);
+        }
+        if (source.TraceDuration != null) {
+            this.TraceDuration = new Long(source.TraceDuration);
         }
         if (source.SpanDailyCounters != null) {
             this.SpanDailyCounters = new Long(source.SpanDailyCounters);
@@ -990,18 +980,18 @@ public class ApmInstanceDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AmountOfUsedStorage", this.AmountOfUsedStorage);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
-        this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
-        this.setParamSimple(map, prefix + "CountOfReportSpanPerDay", this.CountOfReportSpanPerDay);
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
+        this.setParamSimple(map, prefix + "AmountOfUsedStorage", this.AmountOfUsedStorage);
+        this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
+        this.setParamSimple(map, prefix + "CountOfReportSpanPerDay", this.CountOfReportSpanPerDay);
+        this.setParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
         this.setParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
         this.setParamSimple(map, prefix + "BillingInstance", this.BillingInstance);
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);

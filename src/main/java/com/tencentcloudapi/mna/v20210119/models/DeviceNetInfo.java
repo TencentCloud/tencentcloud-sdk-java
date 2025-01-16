@@ -28,7 +28,6 @@ public class DeviceNetInfo extends AbstractModel {
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -153,13 +152,11 @@ public class DeviceNetInfo extends AbstractModel {
      * Get 网络类型：
 0:数据
 1:Wi-Fi
-2:有线
-注意：此字段可能返回 null，表示取不到有效值。 
+2:有线 
      * @return Type 网络类型：
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -170,12 +167,10 @@ public class DeviceNetInfo extends AbstractModel {
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 网络类型：
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;

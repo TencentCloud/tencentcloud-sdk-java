@@ -31,18 +31,18 @@ public class QueryMetricItem extends AbstractModel {
     private String MetricName;
 
     /**
+    * 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+    */
+    @SerializedName("Compares")
+    @Expose
+    private String [] Compares;
+
+    /**
     * 同比，已弃用，不建议使用
     */
     @SerializedName("Compare")
     @Expose
     private String Compare;
-
-    /**
-    * 同比，支持多种同比方式
-    */
-    @SerializedName("Compares")
-    @Expose
-    private String [] Compares;
 
     /**
      * Get 指标名 
@@ -61,6 +61,22 @@ public class QueryMetricItem extends AbstractModel {
     }
 
     /**
+     * Get 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)  
+     * @return Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     */
+    public String [] getCompares() {
+        return this.Compares;
+    }
+
+    /**
+     * Set 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     * @param Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     */
+    public void setCompares(String [] Compares) {
+        this.Compares = Compares;
+    }
+
+    /**
      * Get 同比，已弃用，不建议使用 
      * @return Compare 同比，已弃用，不建议使用
      */
@@ -76,22 +92,6 @@ public class QueryMetricItem extends AbstractModel {
         this.Compare = Compare;
     }
 
-    /**
-     * Get 同比，支持多种同比方式 
-     * @return Compares 同比，支持多种同比方式
-     */
-    public String [] getCompares() {
-        return this.Compares;
-    }
-
-    /**
-     * Set 同比，支持多种同比方式
-     * @param Compares 同比，支持多种同比方式
-     */
-    public void setCompares(String [] Compares) {
-        this.Compares = Compares;
-    }
-
     public QueryMetricItem() {
     }
 
@@ -103,14 +103,14 @@ public class QueryMetricItem extends AbstractModel {
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
-        if (source.Compare != null) {
-            this.Compare = new String(source.Compare);
-        }
         if (source.Compares != null) {
             this.Compares = new String[source.Compares.length];
             for (int i = 0; i < source.Compares.length; i++) {
                 this.Compares[i] = new String(source.Compares[i]);
             }
+        }
+        if (source.Compare != null) {
+            this.Compare = new String(source.Compare);
         }
     }
 
@@ -120,8 +120,8 @@ public class QueryMetricItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
-        this.setParamSimple(map, prefix + "Compare", this.Compare);
         this.setParamArraySimple(map, prefix + "Compares.", this.Compares);
+        this.setParamSimple(map, prefix + "Compare", this.Compare);
 
     }
 }

@@ -46,7 +46,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -54,7 +53,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Main")
     @Expose
@@ -109,10 +107,8 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get Encryptid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Encryptid 
      * @return Encrypt Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncrypt() {
         return this.Encrypt;
@@ -120,19 +116,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encrypt Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncrypt(Long Encrypt) {
         this.Encrypt = Encrypt;
     }
 
     /**
-     * Get 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为主力园区 
      * @return Main 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMain() {
         return this.Main;
@@ -140,9 +132,7 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Main 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMain(Boolean Main) {
         this.Main = Main;

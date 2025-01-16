@@ -31,7 +31,7 @@ public class DescribeGeneralMetricDataRequest extends AbstractModel {
     private String [] Metrics;
 
     /**
-    * 业务系统ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,21 +59,26 @@ public class DescribeGeneralMetricDataRequest extends AbstractModel {
     private String [] GroupBy;
 
     /**
-    * 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+    * 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+    * 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+    * 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
     */
     @SerializedName("Period")
     @Expose
@@ -83,7 +88,7 @@ public class DescribeGeneralMetricDataRequest extends AbstractModel {
     * 对查询指标进行排序：
 Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
 Value 填写排序方式：     
-- asc:对查询指标进行升序排序
+- asc：对查询指标进行升序排序
 - desc：对查询指标进行降序排序
     */
     @SerializedName("OrderBy")
@@ -114,16 +119,16 @@ Value 填写排序方式：
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -178,48 +183,68 @@ Value 填写排序方式：
     }
 
     /**
-     * Get 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。 
-     * @return StartTime 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * Get 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒） 
+     * @return StartTime 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
-     * @param StartTime 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * Set 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+     * @param StartTime 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。 
-     * @return EndTime 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * Get 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒） 
+     * @return EndTime 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
-     * @param EndTime 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * Set 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+     * @param EndTime 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。 
-     * @return Period 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+     * Get 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。 
+     * @return Period 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
-     * @param Period 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+     * Set 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
+     * @param Period 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -229,12 +254,12 @@ Value 填写排序方式：
      * Get 对查询指标进行排序：
 Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
 Value 填写排序方式：     
-- asc:对查询指标进行升序排序
+- asc：对查询指标进行升序排序
 - desc：对查询指标进行降序排序 
      * @return OrderBy 对查询指标进行排序：
 Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
 Value 填写排序方式：     
-- asc:对查询指标进行升序排序
+- asc：对查询指标进行升序排序
 - desc：对查询指标进行降序排序
      */
     public OrderBy getOrderBy() {
@@ -245,12 +270,12 @@ Value 填写排序方式：
      * Set 对查询指标进行排序：
 Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
 Value 填写排序方式：     
-- asc:对查询指标进行升序排序
+- asc：对查询指标进行升序排序
 - desc：对查询指标进行降序排序
      * @param OrderBy 对查询指标进行排序：
 Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
 Value 填写排序方式：     
-- asc:对查询指标进行升序排序
+- asc：对查询指标进行升序排序
 - desc：对查询指标进行降序排序
      */
     public void setOrderBy(OrderBy OrderBy) {

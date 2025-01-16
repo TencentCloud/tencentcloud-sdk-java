@@ -81,7 +81,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -89,7 +88,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -97,7 +95,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowTrunc")
     @Expose
@@ -105,7 +102,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sn")
     @Expose
@@ -113,7 +109,6 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
     * 厂商
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vendor")
     @Expose
@@ -248,10 +243,8 @@ public class DeviceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备分组ID 
      * @return GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -259,19 +252,15 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备分组名称 
      * @return GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -279,19 +268,15 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速 
      * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowTrunc() {
         return this.FlowTrunc;
@@ -299,19 +284,15 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowTrunc(Long FlowTrunc) {
         this.FlowTrunc = FlowTrunc;
     }
 
     /**
-     * Get 设备sn
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备sn 
      * @return Sn 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSn() {
         return this.Sn;
@@ -319,19 +300,15 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sn 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
     }
 
     /**
-     * Get 厂商
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 厂商 
      * @return Vendor 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVendor() {
         return this.Vendor;
@@ -339,9 +316,7 @@ public class DeviceBaseInfo extends AbstractModel {
 
     /**
      * Set 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vendor 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVendor(String Vendor) {
         this.Vendor = Vendor;

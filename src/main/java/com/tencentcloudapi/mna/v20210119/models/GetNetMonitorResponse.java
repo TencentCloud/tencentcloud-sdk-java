@@ -25,7 +25,6 @@ public class GetNetMonitorResponse extends AbstractModel {
 
     /**
     * 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorData")
     @Expose
@@ -50,10 +49,8 @@ AM=美洲
     private String RequestId;
 
     /**
-     * Get 监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控数据 
      * @return MonitorData 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MonitorData [] getMonitorData() {
         return this.MonitorData;
@@ -61,9 +58,7 @@ AM=美洲
 
     /**
      * Set 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorData 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorData(MonitorData [] MonitorData) {
         this.MonitorData = MonitorData;

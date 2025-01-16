@@ -31,18 +31,11 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private String TagKey;
 
     /**
-    * 业务系统ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-
-    /**
-    * 结束时间
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private Long EndTime;
 
     /**
     * 过滤条件
@@ -52,14 +45,21 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 开始时间
+    * 开始时间（单位为秒）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Or过滤条件
+    * 结束时间（单位为秒）
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * Or 过滤条件
     */
     @SerializedName("OrFilters")
     @Expose
@@ -89,35 +89,19 @@ public class DescribeTagValuesRequest extends AbstractModel {
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
-     */
-    public Long getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 结束时间
-     * @param EndTime 结束时间
-     */
-    public void setEndTime(Long EndTime) {
-        this.EndTime = EndTime;
     }
 
     /**
@@ -137,32 +121,48 @@ public class DescribeTagValuesRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间（单位为秒） 
+     * @return StartTime 开始时间（单位为秒）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间（单位为秒）
+     * @param StartTime 开始时间（单位为秒）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Or过滤条件 
-     * @return OrFilters Or过滤条件
+     * Get 结束时间（单位为秒） 
+     * @return EndTime 结束时间（单位为秒）
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间（单位为秒）
+     * @param EndTime 结束时间（单位为秒）
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Or 过滤条件 
+     * @return OrFilters Or 过滤条件
      */
     public Filter [] getOrFilters() {
         return this.OrFilters;
     }
 
     /**
-     * Set Or过滤条件
-     * @param OrFilters Or过滤条件
+     * Set Or 过滤条件
+     * @param OrFilters Or 过滤条件
      */
     public void setOrFilters(Filter [] OrFilters) {
         this.OrFilters = OrFilters;
@@ -198,9 +198,6 @@ public class DescribeTagValuesRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.EndTime != null) {
-            this.EndTime = new Long(source.EndTime);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -209,6 +206,9 @@ public class DescribeTagValuesRequest extends AbstractModel {
         }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
         }
         if (source.OrFilters != null) {
             this.OrFilters = new Filter[source.OrFilters.length];
@@ -228,9 +228,9 @@ public class DescribeTagValuesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
         this.setParamSimple(map, prefix + "Type", this.Type);
 

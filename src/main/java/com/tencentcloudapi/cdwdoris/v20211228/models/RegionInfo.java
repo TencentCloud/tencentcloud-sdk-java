@@ -46,7 +46,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zones")
     @Expose
@@ -61,7 +60,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInternationalSite")
     @Expose
@@ -69,7 +67,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
@@ -124,10 +121,8 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域下所有可用区列表 
      * @return Zones 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZoneInfo [] getZones() {
         return this.Zones;
@@ -135,9 +130,7 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zones 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZones(ZoneInfo [] Zones) {
         this.Zones = Zones;
@@ -160,10 +153,8 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0代表是国际站 1代表不是 
      * @return IsInternationalSite 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsInternationalSite() {
         return this.IsInternationalSite;
@@ -171,19 +162,15 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsInternationalSite 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInternationalSite(Long IsInternationalSite) {
         this.IsInternationalSite = IsInternationalSite;
     }
 
     /**
-     * Get 桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶 
      * @return Bucket 桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -191,9 +178,7 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

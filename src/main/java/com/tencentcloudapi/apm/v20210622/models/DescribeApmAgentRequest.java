@@ -31,28 +31,28 @@ public class DescribeApmAgentRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 接入方式
+    * 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
     */
     @SerializedName("AgentType")
     @Expose
     private String AgentType;
 
     /**
-    * 环境
+    * 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
     */
     @SerializedName("NetworkMode")
     @Expose
     private String NetworkMode;
 
     /**
-    * 语言
+    * 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
     */
     @SerializedName("LanguageEnvironment")
     @Expose
     private String LanguageEnvironment;
 
     /**
-    * 上报方式
+    * 上报方式，已弃用
     */
     @SerializedName("ReportMethod")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeApmAgentRequest extends AbstractModel {
     }
 
     /**
-     * Get 接入方式 
-     * @return AgentType 接入方式
+     * Get 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot 
+     * @return AgentType 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
      */
     public String getAgentType() {
         return this.AgentType;
     }
 
     /**
-     * Set 接入方式
-     * @param AgentType 接入方式
+     * Set 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
+     * @param AgentType 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
      */
     public void setAgentType(String AgentType) {
         this.AgentType = AgentType;
     }
 
     /**
-     * Get 环境 
-     * @return NetworkMode 环境
+     * Get 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public 
+     * @return NetworkMode 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
      */
     public String getNetworkMode() {
         return this.NetworkMode;
     }
 
     /**
-     * Set 环境
-     * @param NetworkMode 环境
+     * Set 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
+     * @param NetworkMode 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
      */
     public void setNetworkMode(String NetworkMode) {
         this.NetworkMode = NetworkMode;
     }
 
     /**
-     * Get 语言 
-     * @return LanguageEnvironment 语言
+     * Get 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang 
+     * @return LanguageEnvironment 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
      */
     public String getLanguageEnvironment() {
         return this.LanguageEnvironment;
     }
 
     /**
-     * Set 语言
-     * @param LanguageEnvironment 语言
+     * Set 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
+     * @param LanguageEnvironment 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
      */
     public void setLanguageEnvironment(String LanguageEnvironment) {
         this.LanguageEnvironment = LanguageEnvironment;
     }
 
     /**
-     * Get 上报方式 
-     * @return ReportMethod 上报方式
+     * Get 上报方式，已弃用 
+     * @return ReportMethod 上报方式，已弃用
      */
     public String getReportMethod() {
         return this.ReportMethod;
     }
 
     /**
-     * Set 上报方式
-     * @param ReportMethod 上报方式
+     * Set 上报方式，已弃用
+     * @param ReportMethod 上报方式，已弃用
      */
     public void setReportMethod(String ReportMethod) {
         this.ReportMethod = ReportMethod;

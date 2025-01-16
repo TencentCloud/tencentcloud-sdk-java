@@ -31,28 +31,28 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 搜索业务系统名
+    * 按业务系统名过滤
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 过滤业务系统 ID
+    * 按业务系统 ID 过滤
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 是否查询官方 Demo 业务系统
+    * 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
     */
     @SerializedName("DemoInstanceFlag")
     @Expose
     private Long DemoInstanceFlag;
 
     /**
-    * 是否查询全地域业务系统
+    * 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
     */
     @SerializedName("AllRegionsFlag")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索业务系统名 
-     * @return InstanceName 搜索业务系统名
+     * Get 按业务系统名过滤 
+     * @return InstanceName 按业务系统名过滤
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 搜索业务系统名
-     * @param InstanceName 搜索业务系统名
+     * Set 按业务系统名过滤
+     * @param InstanceName 按业务系统名过滤
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 过滤业务系统 ID 
-     * @return InstanceIds 过滤业务系统 ID
+     * Get 按业务系统 ID 过滤 
+     * @return InstanceIds 按业务系统 ID 过滤
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 过滤业务系统 ID
-     * @param InstanceIds 过滤业务系统 ID
+     * Set 按业务系统 ID 过滤
+     * @param InstanceIds 按业务系统 ID 过滤
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 是否查询官方 Demo 业务系统 
-     * @return DemoInstanceFlag 是否查询官方 Demo 业务系统
+     * Get 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0） 
+     * @return DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
      */
     public Long getDemoInstanceFlag() {
         return this.DemoInstanceFlag;
     }
 
     /**
-     * Set 是否查询官方 Demo 业务系统
-     * @param DemoInstanceFlag 是否查询官方 Demo 业务系统
+     * Set 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * @param DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
      */
     public void setDemoInstanceFlag(Long DemoInstanceFlag) {
         this.DemoInstanceFlag = DemoInstanceFlag;
     }
 
     /**
-     * Get 是否查询全地域业务系统 
-     * @return AllRegionsFlag 是否查询全地域业务系统
+     * Get 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0） 
+     * @return AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     public Long getAllRegionsFlag() {
         return this.AllRegionsFlag;
     }
 
     /**
-     * Set 是否查询全地域业务系统
-     * @param AllRegionsFlag 是否查询全地域业务系统
+     * Set 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+     * @param AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     public void setAllRegionsFlag(Long AllRegionsFlag) {
         this.AllRegionsFlag = AllRegionsFlag;

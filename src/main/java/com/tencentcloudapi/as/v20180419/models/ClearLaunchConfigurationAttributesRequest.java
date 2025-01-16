@@ -71,6 +71,13 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
     private Boolean ClearInstanceTags;
 
     /**
+    * 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+    */
+    @SerializedName("ClearMetadata")
+    @Expose
+    private Boolean ClearMetadata;
+
+    /**
      * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -186,6 +193,22 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         this.ClearInstanceTags = ClearInstanceTags;
     }
 
+    /**
+     * Get 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。 
+     * @return ClearMetadata 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     */
+    public Boolean getClearMetadata() {
+        return this.ClearMetadata;
+    }
+
+    /**
+     * Set 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     * @param ClearMetadata 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     */
+    public void setClearMetadata(Boolean ClearMetadata) {
+        this.ClearMetadata = ClearMetadata;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         if (source.ClearInstanceTags != null) {
             this.ClearInstanceTags = new Boolean(source.ClearInstanceTags);
         }
+        if (source.ClearMetadata != null) {
+            this.ClearMetadata = new Boolean(source.ClearMetadata);
+        }
     }
 
 
@@ -225,6 +251,7 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
+        this.setParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
 
     }
 }

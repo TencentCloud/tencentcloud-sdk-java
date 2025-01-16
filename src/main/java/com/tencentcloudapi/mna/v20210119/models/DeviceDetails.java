@@ -32,7 +32,6 @@ public class DeviceDetails extends AbstractModel {
 
     /**
     * 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceNetInfo")
     @Expose
@@ -40,7 +39,6 @@ public class DeviceDetails extends AbstractModel {
 
     /**
     * 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewaySite")
     @Expose
@@ -48,7 +46,6 @@ public class DeviceDetails extends AbstractModel {
 
     /**
     * 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessDownRate")
     @Expose
@@ -56,7 +53,6 @@ public class DeviceDetails extends AbstractModel {
 
     /**
     * 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessUpRate")
     @Expose
@@ -79,10 +75,8 @@ public class DeviceDetails extends AbstractModel {
     }
 
     /**
-     * Get 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备网络信息 
      * @return DeviceNetInfo 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceNetInfo [] getDeviceNetInfo() {
         return this.DeviceNetInfo;
@@ -90,19 +84,15 @@ public class DeviceDetails extends AbstractModel {
 
     /**
      * Set 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceNetInfo 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceNetInfo(DeviceNetInfo [] DeviceNetInfo) {
         this.DeviceNetInfo = DeviceNetInfo;
     }
 
     /**
-     * Get 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 聚合服务器地址 
      * @return GatewaySite 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewaySite() {
         return this.GatewaySite;
@@ -110,19 +100,15 @@ public class DeviceDetails extends AbstractModel {
 
     /**
      * Set 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewaySite 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewaySite(String GatewaySite) {
         this.GatewaySite = GatewaySite;
     }
 
     /**
-     * Get 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务下行速率 
      * @return BusinessDownRate 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBusinessDownRate() {
         return this.BusinessDownRate;
@@ -130,19 +116,15 @@ public class DeviceDetails extends AbstractModel {
 
     /**
      * Set 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessDownRate 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessDownRate(Float BusinessDownRate) {
         this.BusinessDownRate = BusinessDownRate;
     }
 
     /**
-     * Get 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务上行速率 
      * @return BusinessUpRate 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBusinessUpRate() {
         return this.BusinessUpRate;
@@ -150,9 +132,7 @@ public class DeviceDetails extends AbstractModel {
 
     /**
      * Set 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessUpRate 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessUpRate(Float BusinessUpRate) {
         this.BusinessUpRate = BusinessUpRate;

@@ -35,7 +35,7 @@ public class EditMediaVideoStream extends AbstractModel {
     private String Codec;
 
     /**
-    * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+    * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0 或不填时，表示自动选择最佳视频码率。
     */
     @SerializedName("Bitrate")
@@ -118,9 +118,9 @@ public class EditMediaVideoStream extends AbstractModel {
     }
 
     /**
-     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0 或不填时，表示自动选择最佳视频码率。 
-     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0 或不填时，表示自动选择最佳视频码率。
      */
     public Long getBitrate() {
@@ -128,9 +128,9 @@ public class EditMediaVideoStream extends AbstractModel {
     }
 
     /**
-     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0 或不填时，表示自动选择最佳视频码率。
-     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0 或不填时，表示自动选择最佳视频码率。
      */
     public void setBitrate(Long Bitrate) {

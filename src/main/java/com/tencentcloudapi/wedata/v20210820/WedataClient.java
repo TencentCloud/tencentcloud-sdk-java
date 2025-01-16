@@ -1890,6 +1890,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询实时任务表粒度指标概览
+     * @param req DescribeTaskTableMetricOverviewRequest
+     * @return DescribeTaskTableMetricOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(DescribeTaskTableMetricOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskTableMetricOverview", DescribeTaskTableMetricOverviewResponse.class);
+    }
+
+    /**
      *查询规则模板维度分布情况
      * @param req DescribeTemplateDimCountRequest
      * @return DescribeTemplateDimCountResponse

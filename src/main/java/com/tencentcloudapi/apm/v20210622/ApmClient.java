@@ -50,7 +50,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *获取 APM Agent信息
+     *获取 APM 接入点
      * @param req DescribeApmAgentRequest
      * @return DescribeApmAgentResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *拉取 APM 业务系统列表
+     *获取 APM 业务系统列表
      * @param req DescribeApmInstancesRequest
      * @return DescribeApmInstancesResponse
      * @throws TencentCloudSDKException
@@ -106,7 +106,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *拉取通用指标列表
+     *查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
      * @param req DescribeMetricRecordsRequest
      * @return DescribeMetricRecordsResponse
      * @throws TencentCloudSDKException

@@ -38,35 +38,35 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private String Description;
 
     /**
-    * Trace 数据保存时长，单位为天默认存储为3天
+    * Trace 数据保存时长（单位：天，默认存储时长为3天）
     */
     @SerializedName("TraceDuration")
     @Expose
     private Long TraceDuration;
 
     /**
-    * 标签列表
+    * 业务系统 Tag 列表
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 业务系统上报额度值，默认赋值为0表示不限制上报额度
+    * 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
     */
     @SerializedName("SpanDailyCounters")
     @Expose
     private Long SpanDailyCounters;
 
     /**
-    * 业务系统的计费模式
+    * 业务系统的计费模式（0=按量付费，1=预付费）
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * （0=付费版；1=tsf 受限免费版；2=免费版）
+    * 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
     */
     @SerializedName("Free")
     @Expose
@@ -105,80 +105,80 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Trace 数据保存时长，单位为天默认存储为3天 
-     * @return TraceDuration Trace 数据保存时长，单位为天默认存储为3天
+     * Get Trace 数据保存时长（单位：天，默认存储时长为3天） 
+     * @return TraceDuration Trace 数据保存时长（单位：天，默认存储时长为3天）
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace 数据保存时长，单位为天默认存储为3天
-     * @param TraceDuration Trace 数据保存时长，单位为天默认存储为3天
+     * Set Trace 数据保存时长（单位：天，默认存储时长为3天）
+     * @param TraceDuration Trace 数据保存时长（单位：天，默认存储时长为3天）
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get 业务系统 Tag 列表 
+     * @return Tags 业务系统 Tag 列表
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set 业务系统 Tag 列表
+     * @param Tags 业务系统 Tag 列表
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 业务系统上报额度值，默认赋值为0表示不限制上报额度 
-     * @return SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度
+     * Get 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃 
+     * @return SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 业务系统上报额度值，默认赋值为0表示不限制上报额度
-     * @param SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度
+     * Set 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+     * @param SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;
     }
 
     /**
-     * Get 业务系统的计费模式 
-     * @return PayMode 业务系统的计费模式
+     * Get 业务系统的计费模式（0=按量付费，1=预付费） 
+     * @return PayMode 业务系统的计费模式（0=按量付费，1=预付费）
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 业务系统的计费模式
-     * @param PayMode 业务系统的计费模式
+     * Set 业务系统的计费模式（0=按量付费，1=预付费）
+     * @param PayMode 业务系统的计费模式（0=按量付费，1=预付费）
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get （0=付费版；1=tsf 受限免费版；2=免费版） 
-     * @return Free （0=付费版；1=tsf 受限免费版；2=免费版）
+     * Get 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版） 
+     * @return Free 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
      */
     public Long getFree() {
         return this.Free;
     }
 
     /**
-     * Set （0=付费版；1=tsf 受限免费版；2=免费版）
-     * @param Free （0=付费版；1=tsf 受限免费版；2=免费版）
+     * Set 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
+     * @param Free 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
      */
     public void setFree(Long Free) {
         this.Free = Free;

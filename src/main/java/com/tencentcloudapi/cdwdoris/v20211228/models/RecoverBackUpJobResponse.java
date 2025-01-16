@@ -24,11 +24,80 @@ import java.util.HashMap;
 public class RecoverBackUpJobResponse extends AbstractModel {
 
     /**
+    * 恢复任务总数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 重复的表名
+    */
+    @SerializedName("DuplicateTables")
+    @Expose
+    private String [] DuplicateTables;
+
+    /**
+    * 错误信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 恢复任务总数量 
+     * @return TotalCount 恢复任务总数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 恢复任务总数量
+     * @param TotalCount 恢复任务总数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 重复的表名 
+     * @return DuplicateTables 重复的表名
+     */
+    public String [] getDuplicateTables() {
+        return this.DuplicateTables;
+    }
+
+    /**
+     * Set 重复的表名
+     * @param DuplicateTables 重复的表名
+     */
+    public void setDuplicateTables(String [] DuplicateTables) {
+        this.DuplicateTables = DuplicateTables;
+    }
+
+    /**
+     * Get 错误信息 
+     * @return ErrorMsg 错误信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrorMsg 错误信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +123,18 @@ public class RecoverBackUpJobResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RecoverBackUpJobResponse(RecoverBackUpJobResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DuplicateTables != null) {
+            this.DuplicateTables = new String[source.DuplicateTables.length];
+            for (int i = 0; i < source.DuplicateTables.length; i++) {
+                this.DuplicateTables[i] = new String(source.DuplicateTables[i]);
+            }
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +145,9 @@ public class RecoverBackUpJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "DuplicateTables.", this.DuplicateTables);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyApmInstanceRequest extends AbstractModel {
 
     /**
-    * 业务系统ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,21 +38,21 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 标签列表
+    * Tag 列表
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 业务系统详情
+    * 业务系统描述
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Trace数据保存时长
+    * Trace 数据保存时长（单位：天）
     */
     @SerializedName("TraceDuration")
     @Expose
@@ -73,63 +73,63 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long SpanDailyCounters;
 
     /**
-    * 错误率阈值
+    * 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
     */
     @SerializedName("ErrRateThreshold")
     @Expose
     private Long ErrRateThreshold;
 
     /**
-    * 采样率
+    * 采样率（单位：%）
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 是否开启错误采样 0 关 1 开
+    * 是否开启错误采样（0=关, 1=开）
     */
     @SerializedName("ErrorSample")
     @Expose
     private Long ErrorSample;
 
     /**
-    * 慢请求阈值
+    * 采样慢调用保存阈值（单位：ms）
     */
     @SerializedName("SlowRequestSavedThreshold")
     @Expose
     private Long SlowRequestSavedThreshold;
 
     /**
-    * 是否开启日志功能 0 关 1 开
+    * 是否开启日志功能（0=关, 1=开）
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * 日志地域
+    * 日志地域，开启日志功能后才会生效
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * CLS日志主题ID | ES 索引名
+    * CLS 日志主题 ID，开启日志功能后才会生效
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * CLS日志集 | ES集群ID
+    * 日志集，开启日志功能后才会生效
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * CLS | ES
+    * 日志源，开启日志功能后才会生效
     */
     @SerializedName("LogSource")
     @Expose
@@ -143,67 +143,65 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private String [] CustomShowTags;
 
     /**
-    * 修改计费模式
-1为预付费
-0为按量付费
+    * 修改计费模式（1为预付费，0为按量付费）
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 响应时间满意阈值
+    * 响应时间警示线
     */
     @SerializedName("ResponseDurationWarningThreshold")
     @Expose
     private Long ResponseDurationWarningThreshold;
 
     /**
-    * （0=付费版；1=tsf受限免费版；2=免费版）
+    * 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
     */
     @SerializedName("Free")
     @Expose
     private Long Free;
 
     /**
-    * 是否关联dashboard： 0 关 1 开
+    * 是否关联 Dashboard（0=关,1=开）
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * dashboard ID
+    * 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
     */
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
 
     /**
-    * 是否开启SQL注入检测
+    * 是否开启 SQL 注入检测（0=关,1=开）
     */
     @SerializedName("IsSqlInjectionAnalysis")
     @Expose
     private Long IsSqlInjectionAnalysis;
 
     /**
-    * 是否开启组件漏洞检测
+    * 是否开启组件漏洞检测（0=关,1=开）
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
     @Expose
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -226,48 +224,48 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get Tag 列表 
+     * @return Tags Tag 列表
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set Tag 列表
+     * @param Tags Tag 列表
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 业务系统详情 
-     * @return Description 业务系统详情
+     * Get 业务系统描述 
+     * @return Description 业务系统描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务系统详情
-     * @param Description 业务系统详情
+     * Set 业务系统描述
+     * @param Description 业务系统描述
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Trace数据保存时长 
-     * @return TraceDuration Trace数据保存时长
+     * Get Trace 数据保存时长（单位：天） 
+     * @return TraceDuration Trace 数据保存时长（单位：天）
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace数据保存时长
-     * @param TraceDuration Trace数据保存时长
+     * Set Trace 数据保存时长（单位：天）
+     * @param TraceDuration Trace 数据保存时长（单位：天）
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
@@ -306,144 +304,144 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 错误率阈值 
-     * @return ErrRateThreshold 错误率阈值
+     * Get 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。 
+     * @return ErrRateThreshold 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
      */
     public Long getErrRateThreshold() {
         return this.ErrRateThreshold;
     }
 
     /**
-     * Set 错误率阈值
-     * @param ErrRateThreshold 错误率阈值
+     * Set 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
+     * @param ErrRateThreshold 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
      */
     public void setErrRateThreshold(Long ErrRateThreshold) {
         this.ErrRateThreshold = ErrRateThreshold;
     }
 
     /**
-     * Get 采样率 
-     * @return SampleRate 采样率
+     * Get 采样率（单位：%） 
+     * @return SampleRate 采样率（单位：%）
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 采样率
-     * @param SampleRate 采样率
+     * Set 采样率（单位：%）
+     * @param SampleRate 采样率（单位：%）
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 是否开启错误采样 0 关 1 开 
-     * @return ErrorSample 是否开启错误采样 0 关 1 开
+     * Get 是否开启错误采样（0=关, 1=开） 
+     * @return ErrorSample 是否开启错误采样（0=关, 1=开）
      */
     public Long getErrorSample() {
         return this.ErrorSample;
     }
 
     /**
-     * Set 是否开启错误采样 0 关 1 开
-     * @param ErrorSample 是否开启错误采样 0 关 1 开
+     * Set 是否开启错误采样（0=关, 1=开）
+     * @param ErrorSample 是否开启错误采样（0=关, 1=开）
      */
     public void setErrorSample(Long ErrorSample) {
         this.ErrorSample = ErrorSample;
     }
 
     /**
-     * Get 慢请求阈值 
-     * @return SlowRequestSavedThreshold 慢请求阈值
+     * Get 采样慢调用保存阈值（单位：ms） 
+     * @return SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
      */
     public Long getSlowRequestSavedThreshold() {
         return this.SlowRequestSavedThreshold;
     }
 
     /**
-     * Set 慢请求阈值
-     * @param SlowRequestSavedThreshold 慢请求阈值
+     * Set 采样慢调用保存阈值（单位：ms）
+     * @param SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
      */
     public void setSlowRequestSavedThreshold(Long SlowRequestSavedThreshold) {
         this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
     }
 
     /**
-     * Get 是否开启日志功能 0 关 1 开 
-     * @return IsRelatedLog 是否开启日志功能 0 关 1 开
+     * Get 是否开启日志功能（0=关, 1=开） 
+     * @return IsRelatedLog 是否开启日志功能（0=关, 1=开）
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set 是否开启日志功能 0 关 1 开
-     * @param IsRelatedLog 是否开启日志功能 0 关 1 开
+     * Set 是否开启日志功能（0=关, 1=开）
+     * @param IsRelatedLog 是否开启日志功能（0=关, 1=开）
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get 日志地域 
-     * @return LogRegion 日志地域
+     * Get 日志地域，开启日志功能后才会生效 
+     * @return LogRegion 日志地域，开启日志功能后才会生效
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set 日志地域
-     * @param LogRegion 日志地域
+     * Set 日志地域，开启日志功能后才会生效
+     * @param LogRegion 日志地域，开启日志功能后才会生效
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get CLS日志主题ID | ES 索引名 
-     * @return LogTopicID CLS日志主题ID | ES 索引名
+     * Get CLS 日志主题 ID，开启日志功能后才会生效 
+     * @return LogTopicID CLS 日志主题 ID，开启日志功能后才会生效
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set CLS日志主题ID | ES 索引名
-     * @param LogTopicID CLS日志主题ID | ES 索引名
+     * Set CLS 日志主题 ID，开启日志功能后才会生效
+     * @param LogTopicID CLS 日志主题 ID，开启日志功能后才会生效
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get CLS日志集 | ES集群ID 
-     * @return LogSet CLS日志集 | ES集群ID
+     * Get 日志集，开启日志功能后才会生效 
+     * @return LogSet 日志集，开启日志功能后才会生效
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS日志集 | ES集群ID
-     * @param LogSet CLS日志集 | ES集群ID
+     * Set 日志集，开启日志功能后才会生效
+     * @param LogSet 日志集，开启日志功能后才会生效
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get CLS | ES 
-     * @return LogSource CLS | ES
+     * Get 日志源，开启日志功能后才会生效 
+     * @return LogSource 日志源，开启日志功能后才会生效
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set CLS | ES
-     * @param LogSource CLS | ES
+     * Set 日志源，开启日志功能后才会生效
+     * @param LogSource 日志源，开启日志功能后才会生效
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
@@ -466,120 +464,112 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改计费模式
-1为预付费
-0为按量付费 
-     * @return PayMode 修改计费模式
-1为预付费
-0为按量付费
+     * Get 修改计费模式（1为预付费，0为按量付费） 
+     * @return PayMode 修改计费模式（1为预付费，0为按量付费）
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 修改计费模式
-1为预付费
-0为按量付费
-     * @param PayMode 修改计费模式
-1为预付费
-0为按量付费
+     * Set 修改计费模式（1为预付费，0为按量付费）
+     * @param PayMode 修改计费模式（1为预付费，0为按量付费）
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 响应时间满意阈值 
-     * @return ResponseDurationWarningThreshold 响应时间满意阈值
+     * Get 响应时间警示线 
+     * @return ResponseDurationWarningThreshold 响应时间警示线
      */
     public Long getResponseDurationWarningThreshold() {
         return this.ResponseDurationWarningThreshold;
     }
 
     /**
-     * Set 响应时间满意阈值
-     * @param ResponseDurationWarningThreshold 响应时间满意阈值
+     * Set 响应时间警示线
+     * @param ResponseDurationWarningThreshold 响应时间警示线
      */
     public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     /**
-     * Get （0=付费版；1=tsf受限免费版；2=免费版） 
-     * @return Free （0=付费版；1=tsf受限免费版；2=免费版）
+     * Get 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0 
+     * @return Free 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
      */
     public Long getFree() {
         return this.Free;
     }
 
     /**
-     * Set （0=付费版；1=tsf受限免费版；2=免费版）
-     * @param Free （0=付费版；1=tsf受限免费版；2=免费版）
+     * Set 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+     * @param Free 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
      */
     public void setFree(Long Free) {
         this.Free = Free;
     }
 
     /**
-     * Get 是否关联dashboard： 0 关 1 开 
-     * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     * Get 是否关联 Dashboard（0=关,1=开） 
+     * @return IsRelatedDashboard 是否关联 Dashboard（0=关,1=开）
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set 是否关联dashboard： 0 关 1 开
-     * @param IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     * Set 是否关联 Dashboard（0=关,1=开）
+     * @param IsRelatedDashboard 是否关联 Dashboard（0=关,1=开）
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get dashboard ID 
-     * @return DashboardTopicID dashboard ID
+     * Get 关联的 Dashboard ID，开启关联 Dashboard 后才会生效 
+     * @return DashboardTopicID 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set dashboard ID
-     * @param DashboardTopicID dashboard ID
+     * Set 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+     * @param DashboardTopicID 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
     }
 
     /**
-     * Get 是否开启SQL注入检测 
-     * @return IsSqlInjectionAnalysis 是否开启SQL注入检测
+     * Get 是否开启 SQL 注入检测（0=关,1=开） 
+     * @return IsSqlInjectionAnalysis 是否开启 SQL 注入检测（0=关,1=开）
      */
     public Long getIsSqlInjectionAnalysis() {
         return this.IsSqlInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启SQL注入检测
-     * @param IsSqlInjectionAnalysis 是否开启SQL注入检测
+     * Set 是否开启 SQL 注入检测（0=关,1=开）
+     * @param IsSqlInjectionAnalysis 是否开启 SQL 注入检测（0=关,1=开）
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启组件漏洞检测 
-     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * Get 是否开启组件漏洞检测（0=关,1=开） 
+     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
      */
     public Long getIsInstrumentationVulnerabilityScan() {
         return this.IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Set 是否开启组件漏洞检测
-     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * Set 是否开启组件漏洞检测（0=关,1=开）
+     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;

@@ -980,6 +980,18 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (ModifyInstancesDisasterRecoverGroup) 用于调整实例所在置放群组。
+* 目前只支持基础网络或私有网络实例。
+     * @param req ModifyInstancesDisasterRecoverGroupRequest
+     * @return ModifyInstancesDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroup(ModifyInstancesDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancesDisasterRecoverGroup", ModifyInstancesDisasterRecoverGroupResponse.class);
+    }
+
+    /**
      *本接口 (ModifyInstancesProject) 用于修改实例所属项目。
 
 * 项目为一个虚拟概念，用户可以在一个账户下面建立多个项目，每个项目中管理不同的资源；将多个不同实例分属到不同项目中，后续使用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728)接口查询实例，项目ID可用于过滤结果。
