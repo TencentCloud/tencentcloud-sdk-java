@@ -25,7 +25,6 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
     * 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucket")
     @Expose
@@ -33,7 +32,6 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
     * 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPath")
     @Expose
@@ -41,17 +39,14 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
     * 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapShotPath")
     @Expose
     private String SnapShotPath;
 
     /**
-     * Get 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件所在的cos桶 
      * @return CosBucket 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucket() {
         return this.CosBucket;
@@ -59,19 +54,15 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
      * Set 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosBucket 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件所在的完整cos路径 
      * @return CosPath 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosPath() {
         return this.CosPath;
@@ -79,19 +70,15 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
      * Set 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosPath 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
     }
 
     /**
-     * Get 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件名称 
      * @return SnapShotPath 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapShotPath() {
         return this.SnapShotPath;
@@ -99,9 +86,7 @@ public class BackupCosInfo extends AbstractModel {
 
     /**
      * Set 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapShotPath 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapShotPath(String SnapShotPath) {
         this.SnapShotPath = SnapShotPath;

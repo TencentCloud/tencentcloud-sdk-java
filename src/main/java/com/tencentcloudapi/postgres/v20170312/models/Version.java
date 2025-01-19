@@ -64,6 +64,7 @@ TDE：支持数据加密。
     /**
     * 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
     */
     @SerializedName("Status")
@@ -172,9 +173,11 @@ TDE：支持数据加密。
     /**
      * Get 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。 
      * @return Status 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
      */
     public String getStatus() {
@@ -184,9 +187,11 @@ DEPRECATED：已弃用。
     /**
      * Set 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
      * @param Status 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
      */
     public void setStatus(String Status) {

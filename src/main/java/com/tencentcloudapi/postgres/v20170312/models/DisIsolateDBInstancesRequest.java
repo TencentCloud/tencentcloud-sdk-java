@@ -32,8 +32,8 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
     * 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
     */
     @SerializedName("Period")
     @Expose
@@ -41,8 +41,8 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
     * 是否使用代金券：
-<li>true：使用
-<li>false：不使用
+<li>true：使用</li>
+<li>false：不使用</li>
 默认值：false
     */
     @SerializedName("AutoVoucher")
@@ -74,11 +74,11 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
      * Get 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1 
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li> 
      * @return Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      */
     public Long getPeriod() {
         return this.Period;
@@ -86,11 +86,11 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
      * Set 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      * @param Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -98,12 +98,12 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
      * Get 是否使用代金券：
-<li>true：使用
-<li>false：不使用
+<li>true：使用</li>
+<li>false：不使用</li>
 默认值：false 
      * @return AutoVoucher 是否使用代金券：
-<li>true：使用
-<li>false：不使用
+<li>true：使用</li>
+<li>false：不使用</li>
 默认值：false
      */
     public Boolean getAutoVoucher() {
@@ -112,12 +112,12 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
      * Set 是否使用代金券：
-<li>true：使用
-<li>false：不使用
+<li>true：使用</li>
+<li>false：不使用</li>
 默认值：false
      * @param AutoVoucher 是否使用代金券：
-<li>true：使用
-<li>false：不使用
+<li>true：使用</li>
+<li>false：不使用</li>
 默认值：false
      */
     public void setAutoVoucher(Boolean AutoVoucher) {

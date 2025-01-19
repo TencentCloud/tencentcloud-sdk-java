@@ -100,6 +100,20 @@ public class HpcClusterInfo extends AbstractModel {
     private String HpcClusterBusinessId;
 
     /**
+    * 高性能计算集群网络模式
+    */
+    @SerializedName("HpcClusterNetMode")
+    @Expose
+    private Long HpcClusterNetMode;
+
+    /**
+    * 高性能计算集群关联的标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 高性能计算集群ID 
      * @return HpcClusterId 高性能计算集群ID
      */
@@ -283,6 +297,38 @@ public class HpcClusterInfo extends AbstractModel {
         this.HpcClusterBusinessId = HpcClusterBusinessId;
     }
 
+    /**
+     * Get 高性能计算集群网络模式 
+     * @return HpcClusterNetMode 高性能计算集群网络模式
+     */
+    public Long getHpcClusterNetMode() {
+        return this.HpcClusterNetMode;
+    }
+
+    /**
+     * Set 高性能计算集群网络模式
+     * @param HpcClusterNetMode 高性能计算集群网络模式
+     */
+    public void setHpcClusterNetMode(Long HpcClusterNetMode) {
+        this.HpcClusterNetMode = HpcClusterNetMode;
+    }
+
+    /**
+     * Get 高性能计算集群关联的标签列表 
+     * @return Tags 高性能计算集群关联的标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 高性能计算集群关联的标签列表
+     * @param Tags 高性能计算集群关联的标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public HpcClusterInfo() {
     }
 
@@ -324,6 +370,15 @@ public class HpcClusterInfo extends AbstractModel {
         if (source.HpcClusterBusinessId != null) {
             this.HpcClusterBusinessId = new String(source.HpcClusterBusinessId);
         }
+        if (source.HpcClusterNetMode != null) {
+            this.HpcClusterNetMode = new Long(source.HpcClusterNetMode);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -341,6 +396,8 @@ public class HpcClusterInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
         this.setParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
+        this.setParamSimple(map, prefix + "HpcClusterNetMode", this.HpcClusterNetMode);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

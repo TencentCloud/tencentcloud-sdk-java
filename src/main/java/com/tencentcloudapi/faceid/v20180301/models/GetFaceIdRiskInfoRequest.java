@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetFaceIdRiskInfoRequest extends AbstractModel {
 
     /**
-    * SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+    * SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
     */
     @SerializedName("FaceIdToken")
     @Expose
     private String FaceIdToken;
 
     /**
-     * Get SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。 
-     * @return FaceIdToken SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+     * Get SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。 
+     * @return FaceIdToken SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
     }
 
     /**
-     * Set SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
-     * @param FaceIdToken SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+     * Set SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
+     * @param FaceIdToken SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;

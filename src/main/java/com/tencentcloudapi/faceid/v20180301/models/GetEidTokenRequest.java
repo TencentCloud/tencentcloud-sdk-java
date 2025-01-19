@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetEidTokenRequest extends AbstractModel {
 
     /**
-    * EID商户id。
+    * EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
     */
     @SerializedName("MerchantId")
@@ -84,9 +84,9 @@ public class GetEidTokenRequest extends AbstractModel {
     private Encryption Encryption;
 
     /**
-     * Get EID商户id。
+     * Get EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。 
-     * @return MerchantId EID商户id。
+     * @return MerchantId EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
      */
     public String getMerchantId() {
@@ -94,9 +94,9 @@ public class GetEidTokenRequest extends AbstractModel {
     }
 
     /**
-     * Set EID商户id。
+     * Set EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
-     * @param MerchantId EID商户id。
+     * @param MerchantId EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
      */
     public void setMerchantId(String MerchantId) {

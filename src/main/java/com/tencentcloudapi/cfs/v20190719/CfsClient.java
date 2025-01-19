@@ -50,6 +50,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *创建用于访问文件系统的凭证
+     * @param req CreateAccessCertRequest
+     * @return CreateAccessCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessCertResponse CreateAccessCert(CreateAccessCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessCert", CreateAccessCertResponse.class);
+    }
+
+    /**
      *创建定期快照策略
      * @param req CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse

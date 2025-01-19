@@ -602,6 +602,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *拉取云存事件列表
+     * @param req DescribeCloudStorageEventsWithAITasksRequest
+     * @return DescribeCloudStorageEventsWithAITasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageEventsWithAITasksResponse DescribeCloudStorageEventsWithAITasks(DescribeCloudStorageEventsWithAITasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageEventsWithAITasks", DescribeCloudStorageEventsWithAITasksResponse.class);
+    }
+
+    /**
      *拉取多个云存事件缩略图
      * @param req DescribeCloudStorageMultiThumbnailRequest
      * @return DescribeCloudStorageMultiThumbnailResponse

@@ -122,6 +122,13 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
     private String [] Catalogs;
 
     /**
+    * 是否是查询	
+    */
+    @SerializedName("IsQuery")
+    @Expose
+    private Boolean [] IsQuery;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -345,6 +352,22 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
         this.Catalogs = Catalogs;
     }
 
+    /**
+     * Get 是否是查询	 
+     * @return IsQuery 是否是查询	
+     */
+    public Boolean [] getIsQuery() {
+        return this.IsQuery;
+    }
+
+    /**
+     * Set 是否是查询	
+     * @param IsQuery 是否是查询	
+     */
+    public void setIsQuery(Boolean [] IsQuery) {
+        this.IsQuery = IsQuery;
+    }
+
     public DescribeDatabaseAuditDownloadRequest() {
     }
 
@@ -407,6 +430,12 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
                 this.Catalogs[i] = new String(source.Catalogs[i]);
             }
         }
+        if (source.IsQuery != null) {
+            this.IsQuery = new Boolean[source.IsQuery.length];
+            for (int i = 0; i < source.IsQuery.length; i++) {
+                this.IsQuery[i] = new Boolean(source.IsQuery[i]);
+            }
+        }
     }
 
 
@@ -428,6 +457,7 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DbNames.", this.DbNames);
         this.setParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
         this.setParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
+        this.setParamArraySimple(map, prefix + "IsQuery.", this.IsQuery);
 
     }
 }

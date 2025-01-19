@@ -25,7 +25,6 @@ public class BindUser extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -33,17 +32,14 @@ public class BindUser extends AbstractModel {
 
     /**
     * 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -51,19 +47,15 @@ public class BindUser extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 主机信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机信息 
      * @return Host 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -71,9 +63,7 @@ public class BindUser extends AbstractModel {
 
     /**
      * Set 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;

@@ -25,7 +25,7 @@ public class GetFaceIdResultRequest extends AbstractModel {
 
     /**
     * SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
     */
     @SerializedName("FaceIdToken")
     @Expose
@@ -49,9 +49,9 @@ public class GetFaceIdResultRequest extends AbstractModel {
 
     /**
      * Get SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。 
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。 
      * @return FaceIdToken SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
@@ -59,9 +59,9 @@ public class GetFaceIdResultRequest extends AbstractModel {
 
     /**
      * Set SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      * @param FaceIdToken SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;

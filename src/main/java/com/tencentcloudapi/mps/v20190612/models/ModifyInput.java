@@ -66,10 +66,7 @@ public class ModifyInput extends AbstractModel {
     private CreateInputRTPSettings RTPSettings;
 
     /**
-    * 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+    * 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
     */
     @SerializedName("Protocol")
     @Expose
@@ -235,28 +232,16 @@ public class ModifyInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。 
-     * @return Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+     * Get 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	- 
+     * @return Protocol 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
-     * @param Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+     * Set 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
+     * @param Protocol 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

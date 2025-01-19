@@ -48,7 +48,7 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
     * 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
     */
     @SerializedName("Range")
@@ -132,10 +132,10 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Get 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。 
      * @return Range 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
      */
     public String getRange() {
@@ -144,10 +144,10 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Set 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
      * @param Range 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
      */
     public void setRange(String Range) {

@@ -56,6 +56,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
     */
     @SerializedName("ServiceType")
     @Expose
@@ -185,11 +186,13 @@ public class CloudStorageAIServiceTask extends AbstractModel {
      * Get 云存 AI 服务类型。可能取值：
 
 - `RealtimeObjectDetect`：目标检测
-- `Highlight`：视频浓缩 
+- `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解 
      * @return ServiceType 云存 AI 服务类型。可能取值：
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -200,10 +203,12 @@ public class CloudStorageAIServiceTask extends AbstractModel {
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      * @param ServiceType 云存 AI 服务类型。可能取值：
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

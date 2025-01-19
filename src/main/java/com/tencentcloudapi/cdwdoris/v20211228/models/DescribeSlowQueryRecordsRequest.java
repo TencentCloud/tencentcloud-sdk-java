@@ -122,6 +122,20 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
     private String MemoryUsage;
 
     /**
+    * 排序字段
+    */
+    @SerializedName("SortField")
+    @Expose
+    private String SortField;
+
+    /**
+    * 排序方式
+    */
+    @SerializedName("SortOrder")
+    @Expose
+    private String SortOrder;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -345,6 +359,38 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.MemoryUsage = MemoryUsage;
     }
 
+    /**
+     * Get 排序字段 
+     * @return SortField 排序字段
+     */
+    public String getSortField() {
+        return this.SortField;
+    }
+
+    /**
+     * Set 排序字段
+     * @param SortField 排序字段
+     */
+    public void setSortField(String SortField) {
+        this.SortField = SortField;
+    }
+
+    /**
+     * Get 排序方式 
+     * @return SortOrder 排序方式
+     */
+    public String getSortOrder() {
+        return this.SortOrder;
+    }
+
+    /**
+     * Set 排序方式
+     * @param SortOrder 排序方式
+     */
+    public void setSortOrder(String SortOrder) {
+        this.SortOrder = SortOrder;
+    }
+
     public DescribeSlowQueryRecordsRequest() {
     }
 
@@ -401,6 +447,12 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         if (source.MemoryUsage != null) {
             this.MemoryUsage = new String(source.MemoryUsage);
         }
+        if (source.SortField != null) {
+            this.SortField = new String(source.SortField);
+        }
+        if (source.SortOrder != null) {
+            this.SortOrder = new String(source.SortOrder);
+        }
     }
 
 
@@ -422,6 +474,8 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadRows", this.ReadRows);
         this.setParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
+        this.setParamSimple(map, prefix + "SortField", this.SortField);
+        this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
 
     }
 }

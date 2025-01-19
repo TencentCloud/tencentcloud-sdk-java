@@ -59,6 +59,13 @@ public class CreateHpcClusterRequest extends AbstractModel {
     private String HpcClusterBusinessId;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -138,6 +145,22 @@ public class CreateHpcClusterRequest extends AbstractModel {
         this.HpcClusterBusinessId = HpcClusterBusinessId;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateHpcClusterRequest() {
     }
 
@@ -161,6 +184,12 @@ public class CreateHpcClusterRequest extends AbstractModel {
         if (source.HpcClusterBusinessId != null) {
             this.HpcClusterBusinessId = new String(source.HpcClusterBusinessId);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class CreateHpcClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
         this.setParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

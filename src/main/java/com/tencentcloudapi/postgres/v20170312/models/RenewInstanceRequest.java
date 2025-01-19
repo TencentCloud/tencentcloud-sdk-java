@@ -31,14 +31,19 @@ public class RenewInstanceRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 续费多少个月
+    * 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 是否自动使用代金券,1是,0否，默认不使用
+    * 是否自动使用代金券：
+<li>0：否</li>
+<li>1：是</li>
+默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -68,32 +73,52 @@ public class RenewInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 续费多少个月 
-     * @return Period 续费多少个月
+     * Get 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li> 
+     * @return Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 续费多少个月
-     * @param Period 续费多少个月
+     * Set 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
+     * @param Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 是否自动使用代金券,1是,0否，默认不使用 
-     * @return AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
+     * Get 是否自动使用代金券：
+<li>0：否</li>
+<li>1：是</li>
+默认值：0 
+     * @return AutoVoucher 是否自动使用代金券：
+<li>0：否</li>
+<li>1：是</li>
+默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券,1是,0否，默认不使用
-     * @param AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
+     * Set 是否自动使用代金券：
+<li>0：否</li>
+<li>1：是</li>
+默认值：0
+     * @param AutoVoucher 是否自动使用代金券：
+<li>0：否</li>
+<li>1：是</li>
+默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

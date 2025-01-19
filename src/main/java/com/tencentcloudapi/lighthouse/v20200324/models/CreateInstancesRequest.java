@@ -131,6 +131,20 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Command InitCommand;
 
     /**
+    * 主域名。
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
+    * 子域名。
+    */
+    @SerializedName("Subdomain")
+    @Expose
+    private String Subdomain;
+
+    /**
      * Get 套餐ID。可以通过调用 [DescribeBundles](https://cloud.tencent.com/document/api/1207/47575) 接口获取。 
      * @return BundleId 套餐ID。可以通过调用 [DescribeBundles](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      */
@@ -390,6 +404,38 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.InitCommand = InitCommand;
     }
 
+    /**
+     * Get 主域名。 
+     * @return DomainName 主域名。
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set 主域名。
+     * @param DomainName 主域名。
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
+     * Get 子域名。 
+     * @return Subdomain 子域名。
+     */
+    public String getSubdomain() {
+        return this.Subdomain;
+    }
+
+    /**
+     * Set 子域名。
+     * @param Subdomain 子域名。
+     */
+    public void setSubdomain(String Subdomain) {
+        this.Subdomain = Subdomain;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -449,6 +495,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.InitCommand != null) {
             this.InitCommand = new Command(source.InitCommand);
         }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Subdomain != null) {
+            this.Subdomain = new String(source.Subdomain);
+        }
     }
 
 
@@ -470,6 +522,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "InitCommand.", this.InitCommand);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Subdomain", this.Subdomain);
 
     }
 }

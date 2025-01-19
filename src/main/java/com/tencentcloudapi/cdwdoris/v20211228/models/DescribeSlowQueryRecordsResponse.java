@@ -39,7 +39,6 @@ public class DescribeSlowQueryRecordsResponse extends AbstractModel {
 
     /**
     * 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBNameList")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeSlowQueryRecordsResponse extends AbstractModel {
 
     /**
     * 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogNameList")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeSlowQueryRecordsResponse extends AbstractModel {
     }
 
     /**
-     * Get 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所有数据库名 
      * @return DBNameList 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDBNameList() {
         return this.DBNameList;
@@ -104,19 +100,15 @@ public class DescribeSlowQueryRecordsResponse extends AbstractModel {
 
     /**
      * Set 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBNameList 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBNameList(String [] DBNameList) {
         this.DBNameList = DBNameList;
     }
 
     /**
-     * Get 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所有catalog名 
      * @return CatalogNameList 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCatalogNameList() {
         return this.CatalogNameList;
@@ -124,9 +116,7 @@ public class DescribeSlowQueryRecordsResponse extends AbstractModel {
 
     /**
      * Set 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CatalogNameList 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogNameList(String [] CatalogNameList) {
         this.CatalogNameList = CatalogNameList;

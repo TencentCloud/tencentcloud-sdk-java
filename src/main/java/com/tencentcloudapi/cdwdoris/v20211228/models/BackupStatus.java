@@ -123,7 +123,6 @@ public class BackupStatus extends AbstractModel {
 
     /**
     * 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupJobId")
     @Expose
@@ -131,7 +130,6 @@ public class BackupStatus extends AbstractModel {
 
     /**
     * 实例对应snapshoit的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -362,10 +360,8 @@ public class BackupStatus extends AbstractModel {
     }
 
     /**
-     * Get 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份实例id 
      * @return BackupJobId 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupJobId() {
         return this.BackupJobId;
@@ -373,19 +369,15 @@ public class BackupStatus extends AbstractModel {
 
     /**
      * Set 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupJobId 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupJobId(Long BackupJobId) {
         this.BackupJobId = BackupJobId;
     }
 
     /**
-     * Get 实例对应snapshoit的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例对应snapshoit的id 
      * @return TaskId 实例对应snapshoit的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -393,9 +385,7 @@ public class BackupStatus extends AbstractModel {
 
     /**
      * Set 实例对应snapshoit的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 实例对应snapshoit的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

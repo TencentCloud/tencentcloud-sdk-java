@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetDetectInfoEnhancedRequest extends AbstractModel {
 
     /**
-    * 人脸核身流程的标识，调用DetectAuth接口时生成。
+    * 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
     */
     @SerializedName("BizToken")
     @Expose
@@ -99,16 +99,16 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private Boolean IsEncryptResponse;
 
     /**
-     * Get 人脸核身流程的标识，调用DetectAuth接口时生成。 
-     * @return BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
+     * Get 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。 
+     * @return BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * Set 人脸核身流程的标识，调用DetectAuth接口时生成。
-     * @param BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
+     * Set 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
+     * @param BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;
