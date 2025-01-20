@@ -600,6 +600,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *根据公网IP查询云原生网关实例信息
+     * @param req DescribeCloudNativeAPIGatewayInfoByIpRequest
+     * @return DescribeCloudNativeAPIGatewayInfoByIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayInfoByIpResponse DescribeCloudNativeAPIGatewayInfoByIp(DescribeCloudNativeAPIGatewayInfoByIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayInfoByIp", DescribeCloudNativeAPIGatewayInfoByIpResponse.class);
+    }
+
+    /**
      *获取云原生网关节点列表
      * @param req DescribeCloudNativeAPIGatewayNodesRequest
      * @return DescribeCloudNativeAPIGatewayNodesResponse

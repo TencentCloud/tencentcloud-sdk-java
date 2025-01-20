@@ -31,7 +31,7 @@ public class ModifyUserProfileRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * 待修改的用户名
+    * 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
     */
     @SerializedName("Nickname")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyUserProfileRequest extends AbstractModel {
     }
 
     /**
-     * Get 待修改的用户名 
-     * @return Nickname 待修改的用户名
+     * Get 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。 
+     * @return Nickname 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 待修改的用户名
-     * @param Nickname 待修改的用户名
+     * Set 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
+     * @param Nickname 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;

@@ -116,7 +116,6 @@ public class ScoreInfo extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -373,10 +372,8 @@ public class ScoreInfo extends AbstractModel {
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return CreateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -384,9 +381,7 @@ public class ScoreInfo extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

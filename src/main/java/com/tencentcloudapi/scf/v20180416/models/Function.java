@@ -67,7 +67,7 @@ public class Function extends AbstractModel {
     private String Namespace;
 
     /**
-    * 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+    * 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
     */
     @SerializedName("Status")
     @Expose
@@ -239,16 +239,16 @@ public class Function extends AbstractModel {
     }
 
     /**
-     * Get 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175) 
-     * @return Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+     * Get 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244) 
+     * @return Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
-     * @param Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+     * Set 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
+     * @param Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
      */
     public void setStatus(String Status) {
         this.Status = Status;

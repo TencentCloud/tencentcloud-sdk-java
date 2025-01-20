@@ -89,6 +89,13 @@ public class AgentConfig extends AbstractModel {
     private Boolean FilterOneWord;
 
     /**
+    * 欢迎消息优先级，0默认，1高优，高优不能被打断。
+    */
+    @SerializedName("WelcomeMessagePriority")
+    @Expose
+    private Long WelcomeMessagePriority;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -240,6 +247,22 @@ public class AgentConfig extends AbstractModel {
         this.FilterOneWord = FilterOneWord;
     }
 
+    /**
+     * Get 欢迎消息优先级，0默认，1高优，高优不能被打断。 
+     * @return WelcomeMessagePriority 欢迎消息优先级，0默认，1高优，高优不能被打断。
+     */
+    public Long getWelcomeMessagePriority() {
+        return this.WelcomeMessagePriority;
+    }
+
+    /**
+     * Set 欢迎消息优先级，0默认，1高优，高优不能被打断。
+     * @param WelcomeMessagePriority 欢迎消息优先级，0默认，1高优，高优不能被打断。
+     */
+    public void setWelcomeMessagePriority(Long WelcomeMessagePriority) {
+        this.WelcomeMessagePriority = WelcomeMessagePriority;
+    }
+
     public AgentConfig() {
     }
 
@@ -275,6 +298,9 @@ public class AgentConfig extends AbstractModel {
         if (source.FilterOneWord != null) {
             this.FilterOneWord = new Boolean(source.FilterOneWord);
         }
+        if (source.WelcomeMessagePriority != null) {
+            this.WelcomeMessagePriority = new Long(source.WelcomeMessagePriority);
+        }
     }
 
 
@@ -291,6 +317,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
         this.setParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
         this.setParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
+        this.setParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
 
     }
 }
