@@ -46,7 +46,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackUpSingleSize")
     @Expose
@@ -75,7 +74,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupType")
     @Expose
@@ -83,7 +81,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupTimeType")
     @Expose
@@ -91,7 +88,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DorisSourceInfo")
     @Expose
@@ -99,7 +95,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobStatusNum")
     @Expose
@@ -107,7 +102,6 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupCosInfo")
     @Expose
@@ -115,11 +109,17 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUserDefineBucket")
     @Expose
     private Boolean IsUserDefineBucket;
+
+    /**
+    * 错误原因
+    */
+    @SerializedName("ErrorReason")
+    @Expose
+    private String ErrorReason;
 
     /**
      * Get 备份实例id 
@@ -170,10 +170,8 @@ public class BackUpJobDisplay extends AbstractModel {
     }
 
     /**
-     * Get 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份单副本数据量 
      * @return BackUpSingleSize 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackUpSingleSize() {
         return this.BackUpSingleSize;
@@ -181,9 +179,7 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackUpSingleSize 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackUpSingleSize(Long BackUpSingleSize) {
         this.BackUpSingleSize = BackUpSingleSize;
@@ -238,10 +234,8 @@ public class BackUpJobDisplay extends AbstractModel {
     }
 
     /**
-     * Get 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为默认。1时是对远端的doris进行备份，不周期，一次性 
      * @return BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupType() {
         return this.BackupType;
@@ -249,19 +243,15 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为默认。1时是立即备份。2时是迁移 
      * @return BackupTimeType 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupTimeType() {
         return this.BackupTimeType;
@@ -269,19 +259,15 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupTimeType 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupTimeType(Long BackupTimeType) {
         this.BackupTimeType = BackupTimeType;
     }
 
     /**
-     * Get 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 远端doris的连接信息 
      * @return DorisSourceInfo 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DorisSourceInfo getDorisSourceInfo() {
         return this.DorisSourceInfo;
@@ -289,19 +275,15 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DorisSourceInfo 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDorisSourceInfo(DorisSourceInfo DorisSourceInfo) {
         this.DorisSourceInfo = DorisSourceInfo;
     }
 
     /**
-     * Get 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态对应的数值 
      * @return JobStatusNum 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobStatusNum() {
         return this.JobStatusNum;
@@ -309,19 +291,15 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobStatusNum 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobStatusNum(Long JobStatusNum) {
         this.JobStatusNum = JobStatusNum;
     }
 
     /**
-     * Get 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份实例中关于cos的信息	 
      * @return BackupCosInfo 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupCosInfo getBackupCosInfo() {
         return this.BackupCosInfo;
@@ -329,19 +307,15 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupCosInfo 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupCosInfo(BackupCosInfo BackupCosInfo) {
         this.BackupCosInfo = BackupCosInfo;
     }
 
     /**
-     * Get 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用的自定义桶 
      * @return IsUserDefineBucket 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUserDefineBucket() {
         return this.IsUserDefineBucket;
@@ -349,12 +323,26 @@ public class BackUpJobDisplay extends AbstractModel {
 
     /**
      * Set 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUserDefineBucket 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUserDefineBucket(Boolean IsUserDefineBucket) {
         this.IsUserDefineBucket = IsUserDefineBucket;
+    }
+
+    /**
+     * Get 错误原因 
+     * @return ErrorReason 错误原因
+     */
+    public String getErrorReason() {
+        return this.ErrorReason;
+    }
+
+    /**
+     * Set 错误原因
+     * @param ErrorReason 错误原因
+     */
+    public void setErrorReason(String ErrorReason) {
+        this.ErrorReason = ErrorReason;
     }
 
     public BackUpJobDisplay() {
@@ -404,6 +392,9 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.IsUserDefineBucket != null) {
             this.IsUserDefineBucket = new Boolean(source.IsUserDefineBucket);
         }
+        if (source.ErrorReason != null) {
+            this.ErrorReason = new String(source.ErrorReason);
+        }
     }
 
 
@@ -424,6 +415,7 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamSimple(map, prefix + "JobStatusNum", this.JobStatusNum);
         this.setParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
         this.setParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
+        this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
 
     }
 }

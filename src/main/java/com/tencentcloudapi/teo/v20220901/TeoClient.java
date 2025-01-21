@@ -229,6 +229,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于在[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中创建规则，支持批量创建。
+     * @param req CreateL7AccRulesRequest
+     * @return CreateL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL7AccRulesResponse CreateL7AccRules(CreateL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL7AccRules", CreateL7AccRulesResponse.class);
+    }
+
+    /**
      *创建负载均衡实例。详情请参考 [快速创建负载均衡实例](https://cloud.tencent.com/document/product/1552/104223)。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
      * @param req CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -478,6 +489,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于删除[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则，支持批量删除。
+     * @param req DeleteL7AccRulesRequest
+     * @return DeleteL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL7AccRulesResponse DeleteL7AccRules(DeleteL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL7AccRules", DeleteL7AccRulesResponse.class);
+    }
+
+    /**
      *删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
      * @param req DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -511,7 +533,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *批量删除规则引擎规则。
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DeleteL7AccRules](https://cloud.tencent.com/document/product/1552/115821)。
      * @param req DeleteRulesRequest
      * @return DeleteRulesResponse
      * @throws TencentCloudSDKException
@@ -786,7 +808,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *用于查询域名配置信息
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，可通过 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819) 和 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820) 来获取域名的详细配置。
      * @param req DescribeHostsSettingRequest
      * @return DescribeHostsSettingResponse
      * @throws TencentCloudSDKException
@@ -838,6 +860,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeL4ProxyRulesResponse DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeL4ProxyRules", DescribeL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *本接口用于查询[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则列表。
+     * @param req DescribeL7AccRulesRequest
+     * @return DescribeL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL7AccRulesResponse DescribeL7AccRules(DescribeL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL7AccRules", DescribeL7AccRulesResponse.class);
+    }
+
+    /**
+     *本接口用于查询[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+     * @param req DescribeL7AccSettingRequest
+     * @return DescribeL7AccSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL7AccSettingResponse DescribeL7AccSetting(DescribeL7AccSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL7AccSetting", DescribeL7AccSettingResponse.class);
     }
 
     /**
@@ -929,7 +973,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *查询规则引擎规则。
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820)。
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
      * @throws TencentCloudSDKException
@@ -940,7 +984,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [RuleEngineAction](https://cloud.tencent.com/document/product/1552/80721#RuleEngineAction)。
      * @param req DescribeRulesSettingRequest
      * @return DescribeRulesSettingResponse
      * @throws TencentCloudSDKException
@@ -1053,7 +1097,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *用于查询站点的所有配置信息。
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819)。
      * @param req DescribeZoneSettingRequest
      * @return DescribeZoneSettingResponse
      * @throws TencentCloudSDKException
@@ -1397,6 +1441,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中的规则，单次仅支持修改单条规则。
+     * @param req ModifyL7AccRuleRequest
+     * @return ModifyL7AccRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL7AccRuleResponse ModifyL7AccRule(ModifyL7AccRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL7AccRule", ModifyL7AccRuleResponse.class);
+    }
+
+    /**
+     *本接口用于修改[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+     * @param req ModifyL7AccSettingRequest
+     * @return ModifyL7AccSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL7AccSettingResponse ModifyL7AccSetting(ModifyL7AccSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL7AccSetting", ModifyL7AccSettingResponse.class);
+    }
+
+    /**
      *修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
      * @param req ModifyLoadBalancerRequest
      * @return ModifyLoadBalancerResponse
@@ -1485,7 +1551,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *用于修改站点配置
+     *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
      * @param req ModifyZoneSettingRequest
      * @return ModifyZoneSettingResponse
      * @throws TencentCloudSDKException

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,51 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttackSourceEdge extends AbstractModel {
+public class OCSPStaplingParameters extends AbstractModel {
 
     /**
-    * 出发节点
+    * OCSP 装订配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
-    @SerializedName("From")
+    @SerializedName("Switch")
     @Expose
-    private String From;
+    private String Switch;
 
     /**
-    * 目标节点
-    */
-    @SerializedName("To")
-    @Expose
-    private String To;
-
-    /**
-     * Get 出发节点 
-     * @return From 出发节点
+     * Get OCSP 装订配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch OCSP 装订配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public String getFrom() {
-        return this.From;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set 出发节点
-     * @param From 出发节点
+     * Set OCSP 装订配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch OCSP 装订配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public void setFrom(String From) {
-        this.From = From;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
-    /**
-     * Get 目标节点 
-     * @return To 目标节点
-     */
-    public String getTo() {
-        return this.To;
-    }
-
-    /**
-     * Set 目标节点
-     * @param To 目标节点
-     */
-    public void setTo(String To) {
-        this.To = To;
-    }
-
-    public AttackSourceEdge() {
+    public OCSPStaplingParameters() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AttackSourceEdge(AttackSourceEdge source) {
-        if (source.From != null) {
-            this.From = new String(source.From);
-        }
-        if (source.To != null) {
-            this.To = new String(source.To);
+    public OCSPStaplingParameters(OCSPStaplingParameters source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -90,8 +74,7 @@ public class AttackSourceEdge extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "From", this.From);
-        this.setParamSimple(map, prefix + "To", this.To);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

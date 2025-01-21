@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DeleteStarProjectResponse extends AbstractModel {
 
     /**
-    * 返回消息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回消息,请求成功才会返回，出现异常默认为null
     */
     @SerializedName("Msg")
     @Expose
@@ -39,20 +38,16 @@ public class DeleteStarProjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回消息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg 返回消息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回消息,请求成功才会返回，出现异常默认为null 
+     * @return Msg 返回消息,请求成功才会返回，出现异常默认为null
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回消息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg 返回消息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回消息,请求成功才会返回，出现异常默认为null
+     * @param Msg 返回消息,请求成功才会返回，出现异常默认为null
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

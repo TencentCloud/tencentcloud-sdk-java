@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetWsTokenResponse extends AbstractModel {
 
     /**
-    * token值（有效期60s）
+    * token值（有效期60s，仅一次有效，多次校验会报错）
     */
     @SerializedName("Token")
     @Expose
@@ -46,6 +46,20 @@ public class GetWsTokenResponse extends AbstractModel {
     private Long InputLenLimit;
 
     /**
+    * 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * SingleWorkflow
+    */
+    @SerializedName("SingleWorkflow")
+    @Expose
+    private KnowledgeQaSingleWorkflow SingleWorkflow;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,16 +67,16 @@ public class GetWsTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get token值（有效期60s） 
-     * @return Token token值（有效期60s）
+     * Get token值（有效期60s，仅一次有效，多次校验会报错） 
+     * @return Token token值（有效期60s，仅一次有效，多次校验会报错）
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set token值（有效期60s）
-     * @param Token token值（有效期60s）
+     * Set token值（有效期60s，仅一次有效，多次校验会报错）
+     * @param Token token值（有效期60s，仅一次有效，多次校验会报错）
      */
     public void setToken(String Token) {
         this.Token = Token;
@@ -105,6 +119,38 @@ public class GetWsTokenResponse extends AbstractModel {
     }
 
     /**
+     * Get 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式 
+     * @return Pattern 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @param Pattern 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get SingleWorkflow 
+     * @return SingleWorkflow SingleWorkflow
+     */
+    public KnowledgeQaSingleWorkflow getSingleWorkflow() {
+        return this.SingleWorkflow;
+    }
+
+    /**
+     * Set SingleWorkflow
+     * @param SingleWorkflow SingleWorkflow
+     */
+    public void setSingleWorkflow(KnowledgeQaSingleWorkflow SingleWorkflow) {
+        this.SingleWorkflow = SingleWorkflow;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -137,6 +183,12 @@ public class GetWsTokenResponse extends AbstractModel {
         if (source.InputLenLimit != null) {
             this.InputLenLimit = new Long(source.InputLenLimit);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.SingleWorkflow != null) {
+            this.SingleWorkflow = new KnowledgeQaSingleWorkflow(source.SingleWorkflow);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -150,6 +202,8 @@ public class GetWsTokenResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "Balance", this.Balance);
         this.setParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class DescribeInstanceUsedSubnetsResponse extends AbstractModel {
 
     /**
     * 集群使用的vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceUsedSubnetsResponse extends AbstractModel {
 
     /**
     * 集群使用的subnet信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedSubnets")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeInstanceUsedSubnetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群使用的vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群使用的vpc信息 
      * @return VpcId 集群使用的vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -58,19 +54,15 @@ public class DescribeInstanceUsedSubnetsResponse extends AbstractModel {
 
     /**
      * Set 集群使用的vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 集群使用的vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 集群使用的subnet信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群使用的subnet信息 
      * @return UsedSubnets 集群使用的subnet信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUsedSubnets() {
         return this.UsedSubnets;
@@ -78,9 +70,7 @@ public class DescribeInstanceUsedSubnetsResponse extends AbstractModel {
 
     /**
      * Set 集群使用的subnet信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedSubnets 集群使用的subnet信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedSubnets(String [] UsedSubnets) {
         this.UsedSubnets = UsedSubnets;

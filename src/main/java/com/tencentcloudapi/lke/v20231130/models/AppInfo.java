@@ -112,12 +112,28 @@ public class AppInfo extends AbstractModel {
     private String ModelName;
 
     /**
-    * 模型别名
+    * 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAliasName")
     @Expose
     private String ModelAliasName;
+
+    /**
+    * 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThoughtModelAliasName")
+    @Expose
+    private String ThoughtModelAliasName;
 
     /**
      * Get 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
@@ -340,9 +356,9 @@ public class AppInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型别名
+     * Get 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAliasName 模型别名
+     * @return ModelAliasName 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelAliasName() {
@@ -350,13 +366,53 @@ public class AppInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型别名
+     * Set 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAliasName 模型别名
+     * @param ModelAliasName 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAliasName(String ModelAliasName) {
         this.ModelAliasName = ModelAliasName;
+    }
+
+    /**
+     * Get 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThoughtModelAliasName 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getThoughtModelAliasName() {
+        return this.ThoughtModelAliasName;
+    }
+
+    /**
+     * Set 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThoughtModelAliasName 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThoughtModelAliasName(String ThoughtModelAliasName) {
+        this.ThoughtModelAliasName = ThoughtModelAliasName;
     }
 
     public AppInfo() {
@@ -403,6 +459,12 @@ public class AppInfo extends AbstractModel {
         if (source.ModelAliasName != null) {
             this.ModelAliasName = new String(source.ModelAliasName);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.ThoughtModelAliasName != null) {
+            this.ThoughtModelAliasName = new String(source.ThoughtModelAliasName);
+        }
     }
 
 
@@ -422,6 +484,8 @@ public class AppInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelAliasName", this.ModelAliasName);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
 
     }
 }

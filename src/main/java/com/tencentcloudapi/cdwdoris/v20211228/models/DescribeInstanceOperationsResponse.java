@@ -32,7 +32,6 @@ public class DescribeInstanceOperationsResponse extends AbstractModel {
 
     /**
     * 操作记录具体数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operations")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInstanceOperationsResponse extends AbstractModel {
     }
 
     /**
-     * Get 操作记录具体数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作记录具体数据 
      * @return Operations 操作记录具体数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceOperation [] getOperations() {
         return this.Operations;
@@ -73,9 +70,7 @@ public class DescribeInstanceOperationsResponse extends AbstractModel {
 
     /**
      * Set 操作记录具体数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operations 操作记录具体数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperations(InstanceOperation [] Operations) {
         this.Operations = Operations;

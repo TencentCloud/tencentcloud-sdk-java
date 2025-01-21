@@ -57,6 +57,13 @@ tool_calls 标识函数调用。
     private Long Index;
 
     /**
+    * 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+    */
+    @SerializedName("ModerationLevel")
+    @Expose
+    private String ModerationLevel;
+
+    /**
      * Get 结束标志位，可能为 stop、 sensitive或者tool_calls。
 stop 表示输出正常结束。
 sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
@@ -140,6 +147,22 @@ tool_calls 标识函数调用。
         this.Index = Index;
     }
 
+    /**
+     * Get 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。 
+     * @return ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     */
+    public String getModerationLevel() {
+        return this.ModerationLevel;
+    }
+
+    /**
+     * Set 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @param ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     */
+    public void setModerationLevel(String ModerationLevel) {
+        this.ModerationLevel = ModerationLevel;
+    }
+
     public Choice() {
     }
 
@@ -160,6 +183,9 @@ tool_calls 标识函数调用。
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.ModerationLevel != null) {
+            this.ModerationLevel = new String(source.ModerationLevel);
+        }
     }
 
 
@@ -171,6 +197,7 @@ tool_calls 标识函数调用。
         this.setParamObj(map, prefix + "Delta.", this.Delta);
         this.setParamObj(map, prefix + "Message.", this.Message);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "ModerationLevel", this.ModerationLevel);
 
     }
 }

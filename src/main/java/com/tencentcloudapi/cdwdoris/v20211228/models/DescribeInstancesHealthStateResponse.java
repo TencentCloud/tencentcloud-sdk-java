@@ -25,7 +25,6 @@ public class DescribeInstancesHealthStateResponse extends AbstractModel {
 
     /**
     * base64编码后的数据，包含了集群的健康信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInstancesHealthStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get base64编码后的数据，包含了集群的健康信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64编码后的数据，包含了集群的健康信息 
      * @return Data base64编码后的数据，包含了集群的健康信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeInstancesHealthStateResponse extends AbstractModel {
 
     /**
      * Set base64编码后的数据，包含了集群的健康信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data base64编码后的数据，包含了集群的健康信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

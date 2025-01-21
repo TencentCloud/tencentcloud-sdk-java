@@ -25,7 +25,6 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
     * 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackUpJobs")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeBackUpJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务列表 
      * @return BackUpJobs 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackUpJobDisplay [] getBackUpJobs() {
         return this.BackUpJobs;
@@ -66,19 +61,15 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
      * Set 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackUpJobs 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackUpJobs(BackUpJobDisplay [] BackUpJobs) {
         this.BackUpJobs = BackUpJobs;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -86,19 +77,15 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -106,9 +93,7 @@ public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

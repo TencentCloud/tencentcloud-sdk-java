@@ -32,7 +32,6 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
     * msg
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
     * 未知version
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUnknownVersion")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -78,10 +75,8 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
     }
 
     /**
-     * Get msg
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get msg 
      * @return Msg msg
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -89,19 +84,15 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
      * Set msg
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg msg
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 未知version
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未知version 
      * @return IsUnknownVersion 未知version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUnknownVersion() {
         return this.IsUnknownVersion;
@@ -109,19 +100,15 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
      * Set 未知version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUnknownVersion 未知version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUnknownVersion(Boolean IsUnknownVersion) {
         this.IsUnknownVersion = IsUnknownVersion;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -129,9 +116,7 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

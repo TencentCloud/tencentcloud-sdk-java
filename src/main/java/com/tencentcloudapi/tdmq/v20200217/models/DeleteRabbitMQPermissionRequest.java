@@ -38,7 +38,7 @@ public class DeleteRabbitMQPermissionRequest extends AbstractModel {
     private String User;
 
     /**
-    * vhost名
+    * vhost名称
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteRabbitMQPermissionRequest extends AbstractModel {
     }
 
     /**
-     * Get vhost名 
-     * @return VirtualHost vhost名
+     * Get vhost名称 
+     * @return VirtualHost vhost名称
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set vhost名
-     * @param VirtualHost vhost名
+     * Set vhost名称
+     * @param VirtualHost vhost名称
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;

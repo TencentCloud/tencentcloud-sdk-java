@@ -1386,32 +1386,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *已废弃
-
-查询攻击溯源
-     * @param req DescribeAttackSourceRequest
-     * @return DescribeAttackSourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackSourceResponse DescribeAttackSource(DescribeAttackSourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackSource", DescribeAttackSourceResponse.class);
-    }
-
-    /**
-     *已废弃
-
-查询攻击溯源事件
-     * @param req DescribeAttackSourceEventsRequest
-     * @return DescribeAttackSourceEventsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(DescribeAttackSourceEventsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackSourceEvents", DescribeAttackSourceEventsResponse.class);
-    }
-
-    /**
      *网络攻击数据统计
      * @param req DescribeAttackStatisticsRequest
      * @return DescribeAttackStatisticsResponse

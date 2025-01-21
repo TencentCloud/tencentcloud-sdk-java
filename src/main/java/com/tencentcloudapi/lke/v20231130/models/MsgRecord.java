@@ -208,6 +208,14 @@ public class MsgRecord extends AbstractModel {
     private QuoteInfo [] QuoteInfos;
 
     /**
+    * Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentThought")
+    @Expose
+    private AgentThought AgentThought;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -667,6 +675,26 @@ public class MsgRecord extends AbstractModel {
         this.QuoteInfos = QuoteInfos;
     }
 
+    /**
+     * Get Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AgentThought getAgentThought() {
+        return this.AgentThought;
+    }
+
+    /**
+     * Set Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentThought(AgentThought AgentThought) {
+        this.AgentThought = AgentThought;
+    }
+
     public MsgRecord() {
     }
 
@@ -762,6 +790,9 @@ public class MsgRecord extends AbstractModel {
                 this.QuoteInfos[i] = new QuoteInfo(source.QuoteInfos[i]);
             }
         }
+        if (source.AgentThought != null) {
+            this.AgentThought = new AgentThought(source.AgentThought);
+        }
     }
 
 
@@ -792,6 +823,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
+        this.setParamObj(map, prefix + "AgentThought.", this.AgentThought);
 
     }
 }

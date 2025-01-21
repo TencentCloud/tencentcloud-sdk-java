@@ -171,6 +171,13 @@ public class ListQaItem extends AbstractModel {
     private Long SimilarQuestionNum;
 
     /**
+    * 返回问答关联的相似问,联动搜索,仅展示一条
+    */
+    @SerializedName("SimilarQuestionTips")
+    @Expose
+    private String SimilarQuestionTips;
+
+    /**
      * Get 问答ID 
      * @return QaBizId 问答ID
      */
@@ -506,6 +513,22 @@ public class ListQaItem extends AbstractModel {
         this.SimilarQuestionNum = SimilarQuestionNum;
     }
 
+    /**
+     * Get 返回问答关联的相似问,联动搜索,仅展示一条 
+     * @return SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
+     */
+    public String getSimilarQuestionTips() {
+        return this.SimilarQuestionTips;
+    }
+
+    /**
+     * Set 返回问答关联的相似问,联动搜索,仅展示一条
+     * @param SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
+     */
+    public void setSimilarQuestionTips(String SimilarQuestionTips) {
+        this.SimilarQuestionTips = SimilarQuestionTips;
+    }
+
     public ListQaItem() {
     }
 
@@ -580,6 +603,9 @@ public class ListQaItem extends AbstractModel {
         if (source.SimilarQuestionNum != null) {
             this.SimilarQuestionNum = new Long(source.SimilarQuestionNum);
         }
+        if (source.SimilarQuestionTips != null) {
+            this.SimilarQuestionTips = new String(source.SimilarQuestionTips);
+        }
     }
 
 
@@ -608,6 +634,7 @@ public class ListQaItem extends AbstractModel {
         this.setParamSimple(map, prefix + "AttrRange", this.AttrRange);
         this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
         this.setParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
+        this.setParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
 
     }
 }

@@ -25,7 +25,6 @@ public class ModifyProjectLimitResponse extends AbstractModel {
 
     /**
     * 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyProjectLimitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回信息 
      * @return Msg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -50,9 +47,7 @@ public class ModifyProjectLimitResponse extends AbstractModel {
 
     /**
      * Set 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

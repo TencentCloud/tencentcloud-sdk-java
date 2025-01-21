@@ -165,7 +165,7 @@ public class GetFunctionResponse extends AbstractModel {
     private String InstallDependency;
 
     /**
-    * 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+    * 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
     */
     @SerializedName("Status")
     @Expose
@@ -691,16 +691,16 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175) 
-     * @return Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * Get 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197) 
+     * @return Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
-     * @param Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * Set 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
+     * @param Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      */
     public void setStatus(String Status) {
         this.Status = Status;

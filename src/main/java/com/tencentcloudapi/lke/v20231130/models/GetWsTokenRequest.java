@@ -45,7 +45,7 @@ public class GetWsTokenRequest extends AbstractModel {
     private String VisitorBizId;
 
     /**
-    * 知识标签（用于知识库中知识的检索过滤）
+    * 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
     */
     @SerializedName("VisitorLabels")
     @Expose
@@ -100,16 +100,16 @@ public class GetWsTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 知识标签（用于知识库中知识的检索过滤） 
-     * @return VisitorLabels 知识标签（用于知识库中知识的检索过滤）
+     * Get 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。 
+     * @return VisitorLabels 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */
     public GetWsTokenReq_Label [] getVisitorLabels() {
         return this.VisitorLabels;
     }
 
     /**
-     * Set 知识标签（用于知识库中知识的检索过滤）
-     * @param VisitorLabels 知识标签（用于知识库中知识的检索过滤）
+     * Set 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
+     * @param VisitorLabels 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */
     public void setVisitorLabels(GetWsTokenReq_Label [] VisitorLabels) {
         this.VisitorLabels = VisitorLabels;

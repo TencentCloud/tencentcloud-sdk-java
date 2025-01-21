@@ -25,7 +25,6 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
     * Be节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeNodes")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
     * Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeNodes")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
     * Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeNodeInfos")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
     * Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeNodeInfos")
     @Expose
@@ -70,10 +66,8 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Be节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Be节点 
      * @return BeNodes Be节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBeNodes() {
         return this.BeNodes;
@@ -81,19 +75,15 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
      * Set Be节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeNodes Be节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeNodes(String [] BeNodes) {
         this.BeNodes = BeNodes;
     }
 
     /**
-     * Get Fe节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Fe节点 
      * @return FeNodes Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFeNodes() {
         return this.FeNodes;
@@ -101,9 +91,7 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
      * Set Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeNodes Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeNodes(String [] FeNodes) {
         this.FeNodes = FeNodes;
@@ -126,10 +114,8 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Be节点信息 
      * @return BeNodeInfos Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getBeNodeInfos() {
         return this.BeNodeInfos;
@@ -137,19 +123,15 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
      * Set Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeNodeInfos Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeNodeInfos(NodeInfo [] BeNodeInfos) {
         this.BeNodeInfos = BeNodeInfos;
     }
 
     /**
-     * Get Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Fe节点信息 
      * @return FeNodeInfos Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getFeNodeInfos() {
         return this.FeNodeInfos;
@@ -157,9 +139,7 @@ public class DescribeInstanceNodesInfoResponse extends AbstractModel {
 
     /**
      * Set Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeNodeInfos Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeNodeInfos(NodeInfo [] FeNodeInfos) {
         this.FeNodeInfos = FeNodeInfos;

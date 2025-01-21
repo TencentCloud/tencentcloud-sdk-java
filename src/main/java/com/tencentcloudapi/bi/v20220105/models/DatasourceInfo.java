@@ -302,6 +302,14 @@ public class DatasourceInfo extends AbstractModel {
     private String DbTypeName;
 
     /**
+    * 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseVPC")
+    @Expose
+    private Boolean UseVPC;
+
+    /**
      * Get 数据库ID 
      * @return Id 数据库ID
      */
@@ -981,6 +989,26 @@ public class DatasourceInfo extends AbstractModel {
         this.DbTypeName = DbTypeName;
     }
 
+    /**
+     * Get 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseVPC 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseVPC() {
+        return this.UseVPC;
+    }
+
+    /**
+     * Set 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseVPC 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseVPC(Boolean UseVPC) {
+        this.UseVPC = UseVPC;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1103,6 +1131,9 @@ public class DatasourceInfo extends AbstractModel {
         if (source.DbTypeName != null) {
             this.DbTypeName = new String(source.DbTypeName);
         }
+        if (source.UseVPC != null) {
+            this.UseVPC = new Boolean(source.UseVPC);
+        }
     }
 
 
@@ -1146,6 +1177,7 @@ public class DatasourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
+        this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
 
     }
 }

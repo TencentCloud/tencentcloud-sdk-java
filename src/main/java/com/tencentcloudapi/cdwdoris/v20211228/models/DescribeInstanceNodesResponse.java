@@ -32,7 +32,6 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
 
     /**
     * 实例节点总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNodesList")
     @Expose
@@ -69,10 +68,8 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例节点总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例节点总数 
      * @return InstanceNodesList 实例节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNode [] getInstanceNodesList() {
         return this.InstanceNodesList;
@@ -80,9 +77,7 @@ public class DescribeInstanceNodesResponse extends AbstractModel {
 
     /**
      * Set 实例节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNodesList 实例节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNodesList(InstanceNode [] InstanceNodesList) {
         this.InstanceNodesList = InstanceNodesList;

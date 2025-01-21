@@ -60,7 +60,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Repo")
     @Expose
@@ -68,7 +67,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URL")
     @Expose
@@ -118,7 +116,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -126,7 +123,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsStar")
     @Expose
@@ -134,7 +130,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectStatus")
     @Expose
@@ -142,11 +137,17 @@ public class RumProject extends AbstractModel {
 
     /**
     * 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPoint")
     @Expose
     private String AccessPoint;
+
+    /**
+    * kafka旁路配置信息
+    */
+    @SerializedName("Kafka")
+    @Expose
+    private Kafka Kafka;
 
     /**
      * Get 项目名 
@@ -229,10 +230,8 @@ public class RumProject extends AbstractModel {
     }
 
     /**
-     * Get 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目仓库地址 
      * @return Repo 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepo() {
         return this.Repo;
@@ -240,19 +239,15 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Repo 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepo(String Repo) {
         this.Repo = Repo;
     }
 
     /**
-     * Get 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目网址地址 
      * @return URL 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURL() {
         return this.URL;
@@ -260,9 +255,7 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param URL 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURL(String URL) {
         this.URL = URL;
@@ -365,10 +358,8 @@ public class RumProject extends AbstractModel {
     }
 
     /**
-     * Get 项目描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目描述 
      * @return Desc 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -376,19 +367,15 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否星标  1:是 0:否 
      * @return IsStar 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsStar() {
         return this.IsStar;
@@ -396,19 +383,15 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsStar 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsStar(Long IsStar) {
         this.IsStar = IsStar;
     }
 
     /**
-     * Get 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁) 
      * @return ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectStatus() {
         return this.ProjectStatus;
@@ -416,19 +399,15 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectStatus(Long ProjectStatus) {
         this.ProjectStatus = ProjectStatus;
     }
 
     /**
-     * Get 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志接入点，用户忽略。 
      * @return AccessPoint 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPoint() {
         return this.AccessPoint;
@@ -436,12 +415,26 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessPoint 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPoint(String AccessPoint) {
         this.AccessPoint = AccessPoint;
+    }
+
+    /**
+     * Get kafka旁路配置信息 
+     * @return Kafka kafka旁路配置信息
+     */
+    public Kafka getKafka() {
+        return this.Kafka;
+    }
+
+    /**
+     * Set kafka旁路配置信息
+     * @param Kafka kafka旁路配置信息
+     */
+    public void setKafka(Kafka Kafka) {
+        this.Kafka = Kafka;
     }
 
     public RumProject() {
@@ -503,6 +496,9 @@ public class RumProject extends AbstractModel {
         if (source.AccessPoint != null) {
             this.AccessPoint = new String(source.AccessPoint);
         }
+        if (source.Kafka != null) {
+            this.Kafka = new Kafka(source.Kafka);
+        }
     }
 
 
@@ -527,6 +523,7 @@ public class RumProject extends AbstractModel {
         this.setParamSimple(map, prefix + "IsStar", this.IsStar);
         this.setParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
         this.setParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
+        this.setParamObj(map, prefix + "Kafka.", this.Kafka);
 
     }
 }

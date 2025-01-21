@@ -132,6 +132,13 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private NetworkInfo UserMultiZoneInfos;
 
     /**
+    * 开启多可用区后，用户的所有可用区和子网信息
+    */
+    @SerializedName("UserMultiZoneInfoArr")
+    @Expose
+    private NetworkInfo [] UserMultiZoneInfoArr;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -370,7 +377,9 @@ public class CreateInstanceNewRequest extends AbstractModel {
     /**
      * Get 开启多可用区后，用户的所有可用区和子网信息 
      * @return UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     * @deprecated
      */
+    @Deprecated
     public NetworkInfo getUserMultiZoneInfos() {
         return this.UserMultiZoneInfos;
     }
@@ -378,9 +387,27 @@ public class CreateInstanceNewRequest extends AbstractModel {
     /**
      * Set 开启多可用区后，用户的所有可用区和子网信息
      * @param UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     * @deprecated
      */
+    @Deprecated
     public void setUserMultiZoneInfos(NetworkInfo UserMultiZoneInfos) {
         this.UserMultiZoneInfos = UserMultiZoneInfos;
+    }
+
+    /**
+     * Get 开启多可用区后，用户的所有可用区和子网信息 
+     * @return UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public NetworkInfo [] getUserMultiZoneInfoArr() {
+        return this.UserMultiZoneInfoArr;
+    }
+
+    /**
+     * Set 开启多可用区后，用户的所有可用区和子网信息
+     * @param UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public void setUserMultiZoneInfoArr(NetworkInfo [] UserMultiZoneInfoArr) {
+        this.UserMultiZoneInfoArr = UserMultiZoneInfoArr;
     }
 
     public CreateInstanceNewRequest() {
@@ -439,6 +466,12 @@ public class CreateInstanceNewRequest extends AbstractModel {
         if (source.UserMultiZoneInfos != null) {
             this.UserMultiZoneInfos = new NetworkInfo(source.UserMultiZoneInfos);
         }
+        if (source.UserMultiZoneInfoArr != null) {
+            this.UserMultiZoneInfoArr = new NetworkInfo[source.UserMultiZoneInfoArr.length];
+            for (int i = 0; i < source.UserMultiZoneInfoArr.length; i++) {
+                this.UserMultiZoneInfoArr[i] = new NetworkInfo(source.UserMultiZoneInfoArr[i]);
+            }
+        }
     }
 
 
@@ -461,6 +494,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         this.setParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
         this.setParamObj(map, prefix + "UserMultiZoneInfos.", this.UserMultiZoneInfos);
+        this.setParamArrayObj(map, prefix + "UserMultiZoneInfoArr.", this.UserMultiZoneInfoArr);
 
     }
 }

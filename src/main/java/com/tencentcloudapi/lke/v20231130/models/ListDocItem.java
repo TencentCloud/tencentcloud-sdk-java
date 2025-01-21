@@ -40,6 +40,13 @@ public class ListDocItem extends AbstractModel {
     private String FileName;
 
     /**
+    * 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+    */
+    @SerializedName("NewName")
+    @Expose
+    private String NewName;
+
+    /**
     * 文件类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -286,6 +293,22 @@ public class ListDocItem extends AbstractModel {
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
+    }
+
+    /**
+     * Get 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称 
+     * @return NewName 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+     */
+    public String getNewName() {
+        return this.NewName;
+    }
+
+    /**
+     * Set 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+     * @param NewName 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+     */
+    public void setNewName(String NewName) {
+        this.NewName = NewName;
     }
 
     /**
@@ -826,6 +849,9 @@ public class ListDocItem extends AbstractModel {
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
+        if (source.NewName != null) {
+            this.NewName = new String(source.NewName);
+        }
         if (source.FileType != null) {
             this.FileType = new String(source.FileType);
         }
@@ -916,6 +942,7 @@ public class ListDocItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "NewName", this.NewName);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

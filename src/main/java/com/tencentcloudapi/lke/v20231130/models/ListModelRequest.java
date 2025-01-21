@@ -31,6 +31,20 @@ public class ListModelRequest extends AbstractModel {
     private String AppType;
 
     /**
+    * 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * 模型类别 generate：生成模型，thought：思考模型
+    */
+    @SerializedName("ModelCategory")
+    @Expose
+    private String ModelCategory;
+
+    /**
     * 登录用户主账号(集成商模式必填)	
     */
     @SerializedName("LoginUin")
@@ -58,6 +72,38 @@ public class ListModelRequest extends AbstractModel {
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
+    }
+
+    /**
+     * Get 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式 
+     * @return Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @param Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get 模型类别 generate：生成模型，thought：思考模型 
+     * @return ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     */
+    public String getModelCategory() {
+        return this.ModelCategory;
+    }
+
+    /**
+     * Set 模型类别 generate：生成模型，thought：思考模型
+     * @param ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     */
+    public void setModelCategory(String ModelCategory) {
+        this.ModelCategory = ModelCategory;
     }
 
     /**
@@ -103,6 +149,12 @@ public class ListModelRequest extends AbstractModel {
         if (source.AppType != null) {
             this.AppType = new String(source.AppType);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.ModelCategory != null) {
+            this.ModelCategory = new String(source.ModelCategory);
+        }
         if (source.LoginUin != null) {
             this.LoginUin = new String(source.LoginUin);
         }
@@ -117,6 +169,8 @@ public class ListModelRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 

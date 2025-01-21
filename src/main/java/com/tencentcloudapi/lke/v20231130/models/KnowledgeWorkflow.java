@@ -32,6 +32,14 @@ public class KnowledgeWorkflow extends AbstractModel {
     private Boolean IsEnabled;
 
     /**
+    * 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsePdl")
+    @Expose
+    private Boolean UsePdl;
+
+    /**
      * Get 是否启用工作流
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsEnabled 是否启用工作流
@@ -51,6 +59,26 @@ public class KnowledgeWorkflow extends AbstractModel {
         this.IsEnabled = IsEnabled;
     }
 
+    /**
+     * Get 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsePdl 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUsePdl() {
+        return this.UsePdl;
+    }
+
+    /**
+     * Set 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsePdl 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsePdl(Boolean UsePdl) {
+        this.UsePdl = UsePdl;
+    }
+
     public KnowledgeWorkflow() {
     }
 
@@ -62,6 +90,9 @@ public class KnowledgeWorkflow extends AbstractModel {
         if (source.IsEnabled != null) {
             this.IsEnabled = new Boolean(source.IsEnabled);
         }
+        if (source.UsePdl != null) {
+            this.UsePdl = new Boolean(source.UsePdl);
+        }
     }
 
 
@@ -70,6 +101,7 @@ public class KnowledgeWorkflow extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
+        this.setParamSimple(map, prefix + "UsePdl", this.UsePdl);
 
     }
 }

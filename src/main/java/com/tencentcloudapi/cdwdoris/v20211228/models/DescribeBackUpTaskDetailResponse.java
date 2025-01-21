@@ -25,7 +25,6 @@ public class DescribeBackUpTaskDetailResponse extends AbstractModel {
 
     /**
     * 备份任务进度详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBackUpTaskDetailResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBackUpTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份任务进度详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份任务进度详情 
      * @return BackupStatus 备份任务进度详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupStatus [] getBackupStatus() {
         return this.BackupStatus;
@@ -58,19 +54,15 @@ public class DescribeBackUpTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 备份任务进度详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupStatus 备份任务进度详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupStatus(BackupStatus [] BackupStatus) {
         this.BackupStatus = BackupStatus;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -78,9 +70,7 @@ public class DescribeBackUpTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

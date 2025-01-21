@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttackSourceEventsResponse extends AbstractModel {
+public class DescribeL7AccSettingResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ZoneSetting")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 攻击溯源事件列表
-    */
-    @SerializedName("List")
-    @Expose
-    private AttackSourceEvent [] List;
+    private ZoneConfigParameters ZoneSetting;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +39,23 @@ public class DescribeAttackSourceEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneSetting 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public ZoneConfigParameters getZoneSetting() {
+        return this.ZoneSetting;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneSetting 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 攻击溯源事件列表 
-     * @return List 攻击溯源事件列表
-     */
-    public AttackSourceEvent [] getList() {
-        return this.List;
-    }
-
-    /**
-     * Set 攻击溯源事件列表
-     * @param List 攻击溯源事件列表
-     */
-    public void setList(AttackSourceEvent [] List) {
-        this.List = List;
+    public void setZoneSetting(ZoneConfigParameters ZoneSetting) {
+        this.ZoneSetting = ZoneSetting;
     }
 
     /**
@@ -92,22 +74,16 @@ public class DescribeAttackSourceEventsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeAttackSourceEventsResponse() {
+    public DescribeL7AccSettingResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAttackSourceEventsResponse(DescribeAttackSourceEventsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.List != null) {
-            this.List = new AttackSourceEvent[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new AttackSourceEvent(source.List[i]);
-            }
+    public DescribeL7AccSettingResponse(DescribeL7AccSettingResponse source) {
+        if (source.ZoneSetting != null) {
+            this.ZoneSetting = new ZoneConfigParameters(source.ZoneSetting);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +95,7 @@ public class DescribeAttackSourceEventsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "ZoneSetting.", this.ZoneSetting);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

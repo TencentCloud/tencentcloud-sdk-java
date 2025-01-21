@@ -31,8 +31,7 @@ public class CreateTawInstanceResponse extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 预付费订单 id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 预付费订单 ，预付费不为null，后付费为null
     */
     @SerializedName("DealName")
     @Expose
@@ -62,20 +61,16 @@ public class CreateTawInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 预付费订单 id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 预付费订单 id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 预付费订单 ，预付费不为null，后付费为null 
+     * @return DealName 预付费订单 ，预付费不为null，后付费为null
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 预付费订单 id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 预付费订单 id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 预付费订单 ，预付费不为null，后付费为null
+     * @param DealName 预付费订单 ，预付费不为null，后付费为null
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

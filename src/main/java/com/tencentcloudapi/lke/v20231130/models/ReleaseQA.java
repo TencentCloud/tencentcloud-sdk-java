@@ -52,7 +52,7 @@ public class ReleaseQA extends AbstractModel {
     private String ActionDesc;
 
     /**
-    * 来源
+    * 来源1:文档生成，2：批量导入，3：手动添加
     */
     @SerializedName("Source")
     @Expose
@@ -172,16 +172,16 @@ public class ReleaseQA extends AbstractModel {
     }
 
     /**
-     * Get 来源 
-     * @return Source 来源
+     * Get 来源1:文档生成，2：批量导入，3：手动添加 
+     * @return Source 来源1:文档生成，2：批量导入，3：手动添加
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-     * @param Source 来源
+     * Set 来源1:文档生成，2：批量导入，3：手动添加
+     * @param Source 来源1:文档生成，2：批量导入，3：手动添加
      */
     public void setSource(Long Source) {
         this.Source = Source;

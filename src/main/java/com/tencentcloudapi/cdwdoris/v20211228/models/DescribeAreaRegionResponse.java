@@ -32,7 +32,6 @@ public class DescribeAreaRegionResponse extends AbstractModel {
 
     /**
     * 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrontEndRules")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeAreaRegionResponse extends AbstractModel {
 
     /**
     * 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableWhiteListNames")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeAreaRegionResponse extends AbstractModel {
     }
 
     /**
-     * Get 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 前端规则描述 
      * @return FrontEndRules 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FrontEndRule [] getFrontEndRules() {
         return this.FrontEndRules;
@@ -81,19 +77,15 @@ public class DescribeAreaRegionResponse extends AbstractModel {
 
     /**
      * Set 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrontEndRules 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrontEndRules(FrontEndRule [] FrontEndRules) {
         this.FrontEndRules = FrontEndRules;
     }
 
     /**
-     * Get 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回可用的白名单名称 
      * @return AvailableWhiteListNames 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAvailableWhiteListNames() {
         return this.AvailableWhiteListNames;
@@ -101,9 +93,7 @@ public class DescribeAreaRegionResponse extends AbstractModel {
 
     /**
      * Set 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableWhiteListNames 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableWhiteListNames(String [] AvailableWhiteListNames) {
         this.AvailableWhiteListNames = AvailableWhiteListNames;

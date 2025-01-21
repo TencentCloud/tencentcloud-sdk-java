@@ -130,6 +130,20 @@ public class TaskListItem extends AbstractModel {
     private Long TaskStatusType;
 
     /**
+    * 架构ID
+    */
+    @SerializedName("ArchId")
+    @Expose
+    private String ArchId;
+
+    /**
+    * 架构名称
+    */
+    @SerializedName("ArchName")
+    @Expose
+    private String ArchName;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -385,6 +399,38 @@ public class TaskListItem extends AbstractModel {
         this.TaskStatusType = TaskStatusType;
     }
 
+    /**
+     * Get 架构ID 
+     * @return ArchId 架构ID
+     */
+    public String getArchId() {
+        return this.ArchId;
+    }
+
+    /**
+     * Set 架构ID
+     * @param ArchId 架构ID
+     */
+    public void setArchId(String ArchId) {
+        this.ArchId = ArchId;
+    }
+
+    /**
+     * Get 架构名称 
+     * @return ArchName 架构名称
+     */
+    public String getArchName() {
+        return this.ArchName;
+    }
+
+    /**
+     * Set 架构名称
+     * @param ArchName 架构名称
+     */
+    public void setArchName(String ArchName) {
+        this.ArchName = ArchName;
+    }
+
     public TaskListItem() {
     }
 
@@ -435,6 +481,12 @@ public class TaskListItem extends AbstractModel {
         if (source.TaskStatusType != null) {
             this.TaskStatusType = new Long(source.TaskStatusType);
         }
+        if (source.ArchId != null) {
+            this.ArchId = new String(source.ArchId);
+        }
+        if (source.ArchName != null) {
+            this.ArchName = new String(source.ArchName);
+        }
     }
 
 
@@ -456,6 +508,8 @@ public class TaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "VerifyId", this.VerifyId);
         this.setParamSimple(map, prefix + "TaskStatusType", this.TaskStatusType);
+        this.setParamSimple(map, prefix + "ArchId", this.ArchId);
+        this.setParamSimple(map, prefix + "ArchName", this.ArchName);
 
     }
 }

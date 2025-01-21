@@ -25,7 +25,6 @@ public class DescribePvListResponse extends AbstractModel {
 
     /**
     * pv列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectPvSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePvListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get pv列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pv列表 
      * @return ProjectPvSet pv列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RumPvInfo [] getProjectPvSet() {
         return this.ProjectPvSet;
@@ -50,9 +47,7 @@ public class DescribePvListResponse extends AbstractModel {
 
     /**
      * Set pv列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectPvSet pv列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectPvSet(RumPvInfo [] ProjectPvSet) {
         this.ProjectPvSet = ProjectPvSet;

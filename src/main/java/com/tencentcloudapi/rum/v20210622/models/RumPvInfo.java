@@ -32,7 +32,6 @@ public class RumPvInfo extends AbstractModel {
 
     /**
     * pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pv")
     @Expose
@@ -62,10 +61,8 @@ public class RumPvInfo extends AbstractModel {
     }
 
     /**
-     * Get pv访问量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pv访问量 
      * @return Pv pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPv() {
         return this.Pv;
@@ -73,9 +70,7 @@ public class RumPvInfo extends AbstractModel {
 
     /**
      * Set pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pv pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPv(String Pv) {
         this.Pv = Pv;

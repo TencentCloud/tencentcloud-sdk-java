@@ -53,7 +53,6 @@ public class ReleaseFile extends AbstractModel {
 
     /**
     * 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -124,10 +123,8 @@ public class ReleaseFile extends AbstractModel {
     }
 
     /**
-     * Get 文件 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件 id 
      * @return ID 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
         return this.ID;
@@ -135,9 +132,7 @@ public class ReleaseFile extends AbstractModel {
 
     /**
      * Set 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
         this.ID = ID;

@@ -217,7 +217,9 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     /**
      * Get 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。 
      * @return ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @deprecated
      */
+    @Deprecated
     public String getModerationLevel() {
         return this.ModerationLevel;
     }
@@ -225,7 +227,9 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     /**
      * Set 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
      * @param ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @deprecated
      */
+    @Deprecated
     public void setModerationLevel(String ModerationLevel) {
         this.ModerationLevel = ModerationLevel;
     }

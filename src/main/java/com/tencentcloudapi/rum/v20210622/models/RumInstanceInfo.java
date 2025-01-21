@@ -109,7 +109,6 @@ public class RumInstanceInfo extends AbstractModel {
 
     /**
     * 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -308,10 +307,8 @@ public class RumInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型 1:原web相关类型 2:app端类型 
      * @return InstanceType 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceType() {
         return this.InstanceType;
@@ -319,9 +316,7 @@ public class RumInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;

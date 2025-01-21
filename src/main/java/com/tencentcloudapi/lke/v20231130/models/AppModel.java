@@ -88,6 +88,22 @@ public class AppModel extends AbstractModel {
     private String UsageType;
 
     /**
+    * 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private String Temperature;
+
+    /**
+    * 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopP")
+    @Expose
+    private String TopP;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 模型名称
@@ -247,6 +263,46 @@ public class AppModel extends AbstractModel {
         this.UsageType = UsageType;
     }
 
+    /**
+     * Get 模型温度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Temperature 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Temperature 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemperature(String Temperature) {
+        this.Temperature = Temperature;
+    }
+
+    /**
+     * Get 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopP 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopP() {
+        return this.TopP;
+    }
+
+    /**
+     * Set 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopP 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopP(String TopP) {
+        this.TopP = TopP;
+    }
+
     public AppModel() {
     }
 
@@ -279,6 +335,12 @@ public class AppModel extends AbstractModel {
         if (source.UsageType != null) {
             this.UsageType = new String(source.UsageType);
         }
+        if (source.Temperature != null) {
+            this.Temperature = new String(source.Temperature);
+        }
+        if (source.TopP != null) {
+            this.TopP = new String(source.TopP);
+        }
     }
 
 
@@ -294,6 +356,8 @@ public class AppModel extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUseContext", this.IsUseContext);
         this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
         this.setParamSimple(map, prefix + "UsageType", this.UsageType);
+        this.setParamSimple(map, prefix + "Temperature", this.Temperature);
+        this.setParamSimple(map, prefix + "TopP", this.TopP);
 
     }
 }

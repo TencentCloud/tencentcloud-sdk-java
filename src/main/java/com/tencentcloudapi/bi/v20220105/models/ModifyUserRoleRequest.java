@@ -80,6 +80,27 @@ public class ModifyUserRoleRequest extends AbstractModel {
     private Long LoginSecurityStatus;
 
     /**
+    * 是否开启密码过期提醒（0 关闭，1 开启
+    */
+    @SerializedName("ResetPassWordTip")
+    @Expose
+    private Long ResetPassWordTip;
+
+    /**
+    * 强制修改密码（0 关闭，1 开启）
+    */
+    @SerializedName("ForceResetPassWord")
+    @Expose
+    private Long ForceResetPassWord;
+
+    /**
+    * 密码过期提醒时间，30、60、90（默认）、180天
+    */
+    @SerializedName("PasswordExpired")
+    @Expose
+    private Long PasswordExpired;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -207,6 +228,54 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.LoginSecurityStatus = LoginSecurityStatus;
     }
 
+    /**
+     * Get 是否开启密码过期提醒（0 关闭，1 开启 
+     * @return ResetPassWordTip 是否开启密码过期提醒（0 关闭，1 开启
+     */
+    public Long getResetPassWordTip() {
+        return this.ResetPassWordTip;
+    }
+
+    /**
+     * Set 是否开启密码过期提醒（0 关闭，1 开启
+     * @param ResetPassWordTip 是否开启密码过期提醒（0 关闭，1 开启
+     */
+    public void setResetPassWordTip(Long ResetPassWordTip) {
+        this.ResetPassWordTip = ResetPassWordTip;
+    }
+
+    /**
+     * Get 强制修改密码（0 关闭，1 开启） 
+     * @return ForceResetPassWord 强制修改密码（0 关闭，1 开启）
+     */
+    public Long getForceResetPassWord() {
+        return this.ForceResetPassWord;
+    }
+
+    /**
+     * Set 强制修改密码（0 关闭，1 开启）
+     * @param ForceResetPassWord 强制修改密码（0 关闭，1 开启）
+     */
+    public void setForceResetPassWord(Long ForceResetPassWord) {
+        this.ForceResetPassWord = ForceResetPassWord;
+    }
+
+    /**
+     * Get 密码过期提醒时间，30、60、90（默认）、180天 
+     * @return PasswordExpired 密码过期提醒时间，30、60、90（默认）、180天
+     */
+    public Long getPasswordExpired() {
+        return this.PasswordExpired;
+    }
+
+    /**
+     * Set 密码过期提醒时间，30、60、90（默认）、180天
+     * @param PasswordExpired 密码过期提醒时间，30、60、90（默认）、180天
+     */
+    public void setPasswordExpired(Long PasswordExpired) {
+        this.PasswordExpired = PasswordExpired;
+    }
+
     public ModifyUserRoleRequest() {
     }
 
@@ -242,6 +311,15 @@ public class ModifyUserRoleRequest extends AbstractModel {
         if (source.LoginSecurityStatus != null) {
             this.LoginSecurityStatus = new Long(source.LoginSecurityStatus);
         }
+        if (source.ResetPassWordTip != null) {
+            this.ResetPassWordTip = new Long(source.ResetPassWordTip);
+        }
+        if (source.ForceResetPassWord != null) {
+            this.ForceResetPassWord = new Long(source.ForceResetPassWord);
+        }
+        if (source.PasswordExpired != null) {
+            this.PasswordExpired = new Long(source.PasswordExpired);
+        }
     }
 
 
@@ -257,6 +335,9 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
         this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
         this.setParamSimple(map, prefix + "LoginSecurityStatus", this.LoginSecurityStatus);
+        this.setParamSimple(map, prefix + "ResetPassWordTip", this.ResetPassWordTip);
+        this.setParamSimple(map, prefix + "ForceResetPassWord", this.ForceResetPassWord);
+        this.setParamSimple(map, prefix + "PasswordExpired", this.PasswordExpired);
 
     }
 }

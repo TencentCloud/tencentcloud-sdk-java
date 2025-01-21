@@ -164,6 +164,20 @@ public class ModifyDatasourceRequest extends AbstractModel {
     private String VpcId;
 
     /**
+    * 开启vpc	
+    */
+    @SerializedName("UseVPC")
+    @Expose
+    private Boolean UseVPC;
+
+    /**
+    * 地域
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get HOST 
      * @return DbHost HOST
      */
@@ -483,6 +497,38 @@ public class ModifyDatasourceRequest extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get 开启vpc	 
+     * @return UseVPC 开启vpc	
+     */
+    public Boolean getUseVPC() {
+        return this.UseVPC;
+    }
+
+    /**
+     * Set 开启vpc	
+     * @param UseVPC 开启vpc	
+     */
+    public void setUseVPC(Boolean UseVPC) {
+        this.UseVPC = UseVPC;
+    }
+
+    /**
+     * Get 地域 
+     * @return RegionId 地域
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域
+     * @param RegionId 地域
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public ModifyDatasourceRequest() {
     }
 
@@ -551,6 +597,12 @@ public class ModifyDatasourceRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.UseVPC != null) {
+            this.UseVPC = new Boolean(source.UseVPC);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -578,6 +630,8 @@ public class ModifyDatasourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

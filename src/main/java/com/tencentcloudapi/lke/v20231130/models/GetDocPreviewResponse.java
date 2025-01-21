@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class GetDocPreviewResponse extends AbstractModel {
 
     /**
-    * 文件名
-
+    * 文件名, 发布端固定使用这个名称
     */
     @SerializedName("FileName")
     @Expose
@@ -63,6 +62,13 @@ public class GetDocPreviewResponse extends AbstractModel {
     private String Bucket;
 
     /**
+    * 存在文档重命名情况下的新名称, 评测端优先使用这个名称
+    */
+    @SerializedName("NewName")
+    @Expose
+    private String NewName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -70,20 +76,16 @@ public class GetDocPreviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件名
- 
-     * @return FileName 文件名
-
+     * Get 文件名, 发布端固定使用这个名称 
+     * @return FileName 文件名, 发布端固定使用这个名称
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名
-
-     * @param FileName 文件名
-
+     * Set 文件名, 发布端固定使用这个名称
+     * @param FileName 文件名, 发布端固定使用这个名称
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -166,6 +168,22 @@ public class GetDocPreviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 存在文档重命名情况下的新名称, 评测端优先使用这个名称 
+     * @return NewName 存在文档重命名情况下的新名称, 评测端优先使用这个名称
+     */
+    public String getNewName() {
+        return this.NewName;
+    }
+
+    /**
+     * Set 存在文档重命名情况下的新名称, 评测端优先使用这个名称
+     * @param NewName 存在文档重命名情况下的新名称, 评测端优先使用这个名称
+     */
+    public void setNewName(String NewName) {
+        this.NewName = NewName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -204,6 +222,9 @@ public class GetDocPreviewResponse extends AbstractModel {
         if (source.Bucket != null) {
             this.Bucket = new String(source.Bucket);
         }
+        if (source.NewName != null) {
+            this.NewName = new String(source.NewName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -219,6 +240,7 @@ public class GetDocPreviewResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+        this.setParamSimple(map, prefix + "NewName", this.NewName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

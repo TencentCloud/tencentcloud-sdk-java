@@ -40,7 +40,7 @@ public class KnowledgeQaConfig extends AbstractModel {
     private String RoleDescription;
 
     /**
-    * 模型配置
+    * 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Model")
@@ -78,6 +78,46 @@ public class KnowledgeQaConfig extends AbstractModel {
     @SerializedName("SearchRange")
     @Expose
     private SearchRange SearchRange;
+
+    /**
+    * 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * 检索策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchStrategy")
+    @Expose
+    private SearchStrategy SearchStrategy;
+
+    /**
+    * 单工作流ID，Pattern为single_workflow时传入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SingleWorkflow")
+    @Expose
+    private KnowledgeQaSingleWorkflow SingleWorkflow;
+
+    /**
+    * 应用关联插件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Plugins")
+    @Expose
+    private KnowledgeQaPlugin [] Plugins;
+
+    /**
+    * 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThoughtModel")
+    @Expose
+    private AppModel ThoughtModel;
 
     /**
      * Get 欢迎语，200字符以内
@@ -120,9 +160,9 @@ public class KnowledgeQaConfig extends AbstractModel {
     }
 
     /**
-     * Get 模型配置
+     * Get 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Model 模型配置
+     * @return Model 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppModel getModel() {
@@ -130,9 +170,9 @@ public class KnowledgeQaConfig extends AbstractModel {
     }
 
     /**
-     * Set 模型配置
+     * Set 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Model 模型配置
+     * @param Model 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModel(AppModel Model) {
@@ -219,6 +259,106 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.SearchRange = SearchRange;
     }
 
+    /**
+     * Get 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pattern 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pattern 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get 检索策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchStrategy 检索策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SearchStrategy getSearchStrategy() {
+        return this.SearchStrategy;
+    }
+
+    /**
+     * Set 检索策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchStrategy 检索策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchStrategy(SearchStrategy SearchStrategy) {
+        this.SearchStrategy = SearchStrategy;
+    }
+
+    /**
+     * Get 单工作流ID，Pattern为single_workflow时传入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SingleWorkflow 单工作流ID，Pattern为single_workflow时传入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeQaSingleWorkflow getSingleWorkflow() {
+        return this.SingleWorkflow;
+    }
+
+    /**
+     * Set 单工作流ID，Pattern为single_workflow时传入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SingleWorkflow 单工作流ID，Pattern为single_workflow时传入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSingleWorkflow(KnowledgeQaSingleWorkflow SingleWorkflow) {
+        this.SingleWorkflow = SingleWorkflow;
+    }
+
+    /**
+     * Get 应用关联插件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Plugins 应用关联插件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeQaPlugin [] getPlugins() {
+        return this.Plugins;
+    }
+
+    /**
+     * Set 应用关联插件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Plugins 应用关联插件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlugins(KnowledgeQaPlugin [] Plugins) {
+        this.Plugins = Plugins;
+    }
+
+    /**
+     * Get 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThoughtModel 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AppModel getThoughtModel() {
+        return this.ThoughtModel;
+    }
+
+    /**
+     * Set 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThoughtModel 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThoughtModel(AppModel ThoughtModel) {
+        this.ThoughtModel = ThoughtModel;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -251,6 +391,24 @@ public class KnowledgeQaConfig extends AbstractModel {
         if (source.SearchRange != null) {
             this.SearchRange = new SearchRange(source.SearchRange);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.SearchStrategy != null) {
+            this.SearchStrategy = new SearchStrategy(source.SearchStrategy);
+        }
+        if (source.SingleWorkflow != null) {
+            this.SingleWorkflow = new KnowledgeQaSingleWorkflow(source.SingleWorkflow);
+        }
+        if (source.Plugins != null) {
+            this.Plugins = new KnowledgeQaPlugin[source.Plugins.length];
+            for (int i = 0; i < source.Plugins.length; i++) {
+                this.Plugins[i] = new KnowledgeQaPlugin(source.Plugins[i]);
+            }
+        }
+        if (source.ThoughtModel != null) {
+            this.ThoughtModel = new AppModel(source.ThoughtModel);
+        }
     }
 
 
@@ -265,6 +423,11 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamObj(map, prefix + "Workflow.", this.Workflow);
         this.setParamObj(map, prefix + "SearchRange.", this.SearchRange);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamObj(map, prefix + "SearchStrategy.", this.SearchStrategy);
+        this.setParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
+        this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
+        this.setParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
 
     }
 }

@@ -164,6 +164,20 @@ public class CreateDatasourceRequest extends AbstractModel {
     private String [] OperationAuthLimit;
 
     /**
+    * 开启vpc
+    */
+    @SerializedName("UseVPC")
+    @Expose
+    private Boolean UseVPC;
+
+    /**
+    * 地域
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get HOST 
      * @return DbHost HOST
      */
@@ -483,6 +497,38 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.OperationAuthLimit = OperationAuthLimit;
     }
 
+    /**
+     * Get 开启vpc 
+     * @return UseVPC 开启vpc
+     */
+    public Boolean getUseVPC() {
+        return this.UseVPC;
+    }
+
+    /**
+     * Set 开启vpc
+     * @param UseVPC 开启vpc
+     */
+    public void setUseVPC(Boolean UseVPC) {
+        this.UseVPC = UseVPC;
+    }
+
+    /**
+     * Get 地域 
+     * @return RegionId 地域
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域
+     * @param RegionId 地域
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public CreateDatasourceRequest() {
     }
 
@@ -554,6 +600,12 @@ public class CreateDatasourceRequest extends AbstractModel {
                 this.OperationAuthLimit[i] = new String(source.OperationAuthLimit[i]);
             }
         }
+        if (source.UseVPC != null) {
+            this.UseVPC = new Boolean(source.UseVPC);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -581,6 +633,8 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
+        this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }
