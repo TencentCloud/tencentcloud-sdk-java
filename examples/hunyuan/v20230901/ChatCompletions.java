@@ -21,6 +21,7 @@ public class ChatCompletions {
             );
 
             ClientProfile clientProfile = new ClientProfile();
+            clientProfile.getHttpProfile().setReadTimeout(360); // 流式接口耗时可能较长
             HunyuanClient client = new HunyuanClient(cred, "ap-guangzhou", clientProfile);
 
             ChatCompletionsRequest req = new ChatCompletionsRequest();
