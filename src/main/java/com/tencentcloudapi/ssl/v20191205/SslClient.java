@@ -94,6 +94,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *根据证书内容检测当前账号下是否存在一致的证书， 存在则返回证书ID， 不存在则返回空
+     * @param req CheckCertificateExistRequest
+     * @return CheckCertificateExistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCertificateExistResponse CheckCertificateExist(CheckCertificateExistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCertificateExist", CheckCertificateExistResponse.class);
+    }
+
+    /**
      *提交证书订单到CA机构。
      * @param req CommitCertificateInformationRequest
      * @return CommitCertificateInformationResponse

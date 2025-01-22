@@ -66,6 +66,13 @@ public class DescribeRedisTopHotKeysRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -161,6 +168,22 @@ public class DescribeRedisTopHotKeysRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeRedisTopHotKeysRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeRedisTopHotKeysRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeRedisTopHotKeysRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArraySimple(map, prefix + "InstanceNodeIds.", this.InstanceNodeIds);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

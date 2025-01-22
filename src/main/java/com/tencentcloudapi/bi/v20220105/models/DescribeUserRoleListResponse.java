@@ -32,7 +32,7 @@ public class DescribeUserRoleListResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 扩展
+    * 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -83,9 +83,9 @@ public class DescribeUserRoleListResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展
+     * Get 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 扩展
+     * @return Extra 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -93,9 +93,9 @@ public class DescribeUserRoleListResponse extends AbstractModel {
     }
 
     /**
-     * Set 扩展
+     * Set 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 扩展
+     * @param Extra 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
