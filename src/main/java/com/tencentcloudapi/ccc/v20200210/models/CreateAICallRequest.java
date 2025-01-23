@@ -166,6 +166,13 @@ HoaiMy
     private Long WelcomeType;
 
     /**
+    * 0: 默认可打断， 1：高优先不可打断
+    */
+    @SerializedName("WelcomeMessagePriority")
+    @Expose
+    private Long WelcomeMessagePriority;
+
+    /**
     * 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
     */
     @SerializedName("MaxDuration")
@@ -203,7 +210,7 @@ HoaiMy
     private String [] Languages;
 
     /**
-    * 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+    * 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
     */
     @SerializedName("InterruptMode")
     @Expose
@@ -363,6 +370,13 @@ HoaiMy
     @SerializedName("VadSilenceTime")
     @Expose
     private Long VadSilenceTime;
+
+    /**
+    * 通话内容提取配置
+    */
+    @SerializedName("ExtractConfig")
+    @Expose
+    private AICallExtractConfigElement [] ExtractConfig;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -801,6 +815,22 @@ HoaiMy
     }
 
     /**
+     * Get 0: 默认可打断， 1：高优先不可打断 
+     * @return WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
+     */
+    public Long getWelcomeMessagePriority() {
+        return this.WelcomeMessagePriority;
+    }
+
+    /**
+     * Set 0: 默认可打断， 1：高优先不可打断
+     * @param WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
+     */
+    public void setWelcomeMessagePriority(Long WelcomeMessagePriority) {
+        this.WelcomeMessagePriority = WelcomeMessagePriority;
+    }
+
+    /**
      * Get 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断 
      * @return MaxDuration 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
      */
@@ -925,16 +955,16 @@ HoaiMy
     }
 
     /**
-     * Get 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断 
-     * @return InterruptMode 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+     * Get 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。 
+     * @return InterruptMode 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
      */
     public Long getInterruptMode() {
         return this.InterruptMode;
     }
 
     /**
-     * Set 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
-     * @param InterruptMode 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+     * Set 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
+     * @param InterruptMode 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
      */
     public void setInterruptMode(Long InterruptMode) {
         this.InterruptMode = InterruptMode;
@@ -1428,6 +1458,22 @@ HoaiMy
         this.VadSilenceTime = VadSilenceTime;
     }
 
+    /**
+     * Get 通话内容提取配置 
+     * @return ExtractConfig 通话内容提取配置
+     */
+    public AICallExtractConfigElement [] getExtractConfig() {
+        return this.ExtractConfig;
+    }
+
+    /**
+     * Set 通话内容提取配置
+     * @param ExtractConfig 通话内容提取配置
+     */
+    public void setExtractConfig(AICallExtractConfigElement [] ExtractConfig) {
+        this.ExtractConfig = ExtractConfig;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1471,6 +1517,9 @@ HoaiMy
         }
         if (source.WelcomeType != null) {
             this.WelcomeType = new Long(source.WelcomeType);
+        }
+        if (source.WelcomeMessagePriority != null) {
+            this.WelcomeMessagePriority = new Long(source.WelcomeMessagePriority);
         }
         if (source.MaxDuration != null) {
             this.MaxDuration = new Long(source.MaxDuration);
@@ -1523,6 +1572,12 @@ HoaiMy
         if (source.VadSilenceTime != null) {
             this.VadSilenceTime = new Long(source.VadSilenceTime);
         }
+        if (source.ExtractConfig != null) {
+            this.ExtractConfig = new AICallExtractConfigElement[source.ExtractConfig.length];
+            for (int i = 0; i < source.ExtractConfig.length; i++) {
+                this.ExtractConfig[i] = new AICallExtractConfigElement(source.ExtractConfig[i]);
+            }
+        }
     }
 
 
@@ -1541,6 +1596,7 @@ HoaiMy
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
         this.setParamSimple(map, prefix + "WelcomeType", this.WelcomeType);
+        this.setParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
@@ -1555,6 +1611,7 @@ HoaiMy
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+        this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
 
     }
 }

@@ -24,44 +24,88 @@ import java.util.HashMap;
 public class RecognizeConfig extends AbstractModel {
 
     /**
-    * 语音转文字支持识别的语言，默认是"zh" 中文
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
+    * 
+语音转文字支持识别的语言，默认是"zh" 中文
 
-语音转文本支持语言类型如下：
-- Chinese = "zh" # 中文
-- Chinese_TW = "zh-TW" # 中国台湾
-- English = "en" # 英语
-- Chinese_YUE = "zh-yue" # 中国粤语
-- Chinese_DIALECT = "zh-dialect" # 中国方言
-- English = "en" # 英语
-- Vietnamese = "vi" # 越南语
-- Japanese = "ja" # 日语
-- Korean = "ko" # 韩语
-- Indonesia = "id" # 印度尼西亚语
-- Thai = "th" # 泰语
-- Portuguese = "pt" # 葡萄牙语
-- Turkish = "tr" # 土耳其语
-- Arabic = "ar" # 阿拉伯语
-- Spanish = "es" # 西班牙语
-- Hindi = "hi" # 印地语
-- French = "fr" # 法语
-- Malay = "ms" # 马来语
-- Filipino = "fil" # 菲律宾语
-- German = "de" # 德语
-- Italian = "it" # 意大利语
-- Russian = "ru" # 俄语
+可通过购买「AI智能识别时长包」解锁或领取包月套餐体验版解锁不同语言. 详细说明参考：[AI智能识别计费说明](https://cloud.tencent.com/document/product/647/111976)
 
-注意：
+语音转文本不同套餐版本支持的语言如下：
+
+**基础版**：
+
+- "zh": 中文
+
+- "zh-TW": 中国台湾
+
+- "en": 英语
+
+**标准版：**
+
+- "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
+
+- "16k_zh_large": 普方英大模型引擎. 当前模型同时支持中文、英文、多种中文方言等语言的识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+- "16k_multi_lang": 多语种大模型引擎. 当前模型同时支持英语、日语、韩语、阿拉伯语、菲律宾语、法语、印地语、印尼语、马来语、葡萄牙语、西班牙语、泰语、土耳其语、越南语、德语的识别，可实现15个语种的自动识别(句子/段落级别).
+
+- "16k_zh_en": 中英大模型引擎. 当前模型同时支持中文、英语识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+**高级版：**
+
+- "zh-dialect": 中国方言
+
+- "zh-yue": 中国粤语
+
+- "vi": 越南语
+
+- "ja": 日语
+
+- "ko": 韩语
+
+- "id": 印度尼西亚语
+
+- "th": 泰语
+
+- "pt": 葡萄牙语
+
+- "tr": 土耳其语
+
+- "ar": 阿拉伯语
+
+- "es": 西班牙语
+
+- "hi": 印地语
+
+- "fr": 法语
+
+- "ms": 马来语
+
+- "fil": 菲律宾语
+
+- "de": 德语
+
+- "it": 意大利语
+
+- "ru": 俄语
+
+- "sv": 瑞典语
+
+- "da": 丹麦语
+
+- "no": 挪威语
+
+**注意：**
+
 如果缺少满足您需求的语言，请联系我们技术人员。
+
+示例值：zh
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
-注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
+    * **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
+注意：不支持填写"zh-dialect"
     */
     @SerializedName("AlternativeLanguage")
     @Expose
@@ -103,152 +147,328 @@ public class RecognizeConfig extends AbstractModel {
     private String TranslationLanguage;
 
     /**
-     * Get 语音转文字支持识别的语言，默认是"zh" 中文
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
+     * Get 
+语音转文字支持识别的语言，默认是"zh" 中文
 
-语音转文本支持语言类型如下：
-- Chinese = "zh" # 中文
-- Chinese_TW = "zh-TW" # 中国台湾
-- English = "en" # 英语
-- Chinese_YUE = "zh-yue" # 中国粤语
-- Chinese_DIALECT = "zh-dialect" # 中国方言
-- English = "en" # 英语
-- Vietnamese = "vi" # 越南语
-- Japanese = "ja" # 日语
-- Korean = "ko" # 韩语
-- Indonesia = "id" # 印度尼西亚语
-- Thai = "th" # 泰语
-- Portuguese = "pt" # 葡萄牙语
-- Turkish = "tr" # 土耳其语
-- Arabic = "ar" # 阿拉伯语
-- Spanish = "es" # 西班牙语
-- Hindi = "hi" # 印地语
-- French = "fr" # 法语
-- Malay = "ms" # 马来语
-- Filipino = "fil" # 菲律宾语
-- German = "de" # 德语
-- Italian = "it" # 意大利语
-- Russian = "ru" # 俄语
+可通过购买「AI智能识别时长包」解锁或领取包月套餐体验版解锁不同语言. 详细说明参考：[AI智能识别计费说明](https://cloud.tencent.com/document/product/647/111976)
 
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。 
-     * @return Language 语音转文字支持识别的语言，默认是"zh" 中文
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
+语音转文本不同套餐版本支持的语言如下：
 
-语音转文本支持语言类型如下：
-- Chinese = "zh" # 中文
-- Chinese_TW = "zh-TW" # 中国台湾
-- English = "en" # 英语
-- Chinese_YUE = "zh-yue" # 中国粤语
-- Chinese_DIALECT = "zh-dialect" # 中国方言
-- English = "en" # 英语
-- Vietnamese = "vi" # 越南语
-- Japanese = "ja" # 日语
-- Korean = "ko" # 韩语
-- Indonesia = "id" # 印度尼西亚语
-- Thai = "th" # 泰语
-- Portuguese = "pt" # 葡萄牙语
-- Turkish = "tr" # 土耳其语
-- Arabic = "ar" # 阿拉伯语
-- Spanish = "es" # 西班牙语
-- Hindi = "hi" # 印地语
-- French = "fr" # 法语
-- Malay = "ms" # 马来语
-- Filipino = "fil" # 菲律宾语
-- German = "de" # 德语
-- Italian = "it" # 意大利语
-- Russian = "ru" # 俄语
+**基础版**：
 
-注意：
+- "zh": 中文
+
+- "zh-TW": 中国台湾
+
+- "en": 英语
+
+**标准版：**
+
+- "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
+
+- "16k_zh_large": 普方英大模型引擎. 当前模型同时支持中文、英文、多种中文方言等语言的识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+- "16k_multi_lang": 多语种大模型引擎. 当前模型同时支持英语、日语、韩语、阿拉伯语、菲律宾语、法语、印地语、印尼语、马来语、葡萄牙语、西班牙语、泰语、土耳其语、越南语、德语的识别，可实现15个语种的自动识别(句子/段落级别).
+
+- "16k_zh_en": 中英大模型引擎. 当前模型同时支持中文、英语识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+**高级版：**
+
+- "zh-dialect": 中国方言
+
+- "zh-yue": 中国粤语
+
+- "vi": 越南语
+
+- "ja": 日语
+
+- "ko": 韩语
+
+- "id": 印度尼西亚语
+
+- "th": 泰语
+
+- "pt": 葡萄牙语
+
+- "tr": 土耳其语
+
+- "ar": 阿拉伯语
+
+- "es": 西班牙语
+
+- "hi": 印地语
+
+- "fr": 法语
+
+- "ms": 马来语
+
+- "fil": 菲律宾语
+
+- "de": 德语
+
+- "it": 意大利语
+
+- "ru": 俄语
+
+- "sv": 瑞典语
+
+- "da": 丹麦语
+
+- "no": 挪威语
+
+**注意：**
+
 如果缺少满足您需求的语言，请联系我们技术人员。
+
+示例值：zh 
+     * @return Language 
+语音转文字支持识别的语言，默认是"zh" 中文
+
+可通过购买「AI智能识别时长包」解锁或领取包月套餐体验版解锁不同语言. 详细说明参考：[AI智能识别计费说明](https://cloud.tencent.com/document/product/647/111976)
+
+语音转文本不同套餐版本支持的语言如下：
+
+**基础版**：
+
+- "zh": 中文
+
+- "zh-TW": 中国台湾
+
+- "en": 英语
+
+**标准版：**
+
+- "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
+
+- "16k_zh_large": 普方英大模型引擎. 当前模型同时支持中文、英文、多种中文方言等语言的识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+- "16k_multi_lang": 多语种大模型引擎. 当前模型同时支持英语、日语、韩语、阿拉伯语、菲律宾语、法语、印地语、印尼语、马来语、葡萄牙语、西班牙语、泰语、土耳其语、越南语、德语的识别，可实现15个语种的自动识别(句子/段落级别).
+
+- "16k_zh_en": 中英大模型引擎. 当前模型同时支持中文、英语识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+**高级版：**
+
+- "zh-dialect": 中国方言
+
+- "zh-yue": 中国粤语
+
+- "vi": 越南语
+
+- "ja": 日语
+
+- "ko": 韩语
+
+- "id": 印度尼西亚语
+
+- "th": 泰语
+
+- "pt": 葡萄牙语
+
+- "tr": 土耳其语
+
+- "ar": 阿拉伯语
+
+- "es": 西班牙语
+
+- "hi": 印地语
+
+- "fr": 法语
+
+- "ms": 马来语
+
+- "fil": 菲律宾语
+
+- "de": 德语
+
+- "it": 意大利语
+
+- "ru": 俄语
+
+- "sv": 瑞典语
+
+- "da": 丹麦语
+
+- "no": 挪威语
+
+**注意：**
+
+如果缺少满足您需求的语言，请联系我们技术人员。
+
+示例值：zh
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 语音转文字支持识别的语言，默认是"zh" 中文
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
+     * Set 
+语音转文字支持识别的语言，默认是"zh" 中文
 
-语音转文本支持语言类型如下：
-- Chinese = "zh" # 中文
-- Chinese_TW = "zh-TW" # 中国台湾
-- English = "en" # 英语
-- Chinese_YUE = "zh-yue" # 中国粤语
-- Chinese_DIALECT = "zh-dialect" # 中国方言
-- English = "en" # 英语
-- Vietnamese = "vi" # 越南语
-- Japanese = "ja" # 日语
-- Korean = "ko" # 韩语
-- Indonesia = "id" # 印度尼西亚语
-- Thai = "th" # 泰语
-- Portuguese = "pt" # 葡萄牙语
-- Turkish = "tr" # 土耳其语
-- Arabic = "ar" # 阿拉伯语
-- Spanish = "es" # 西班牙语
-- Hindi = "hi" # 印地语
-- French = "fr" # 法语
-- Malay = "ms" # 马来语
-- Filipino = "fil" # 菲律宾语
-- German = "de" # 德语
-- Italian = "it" # 意大利语
-- Russian = "ru" # 俄语
+可通过购买「AI智能识别时长包」解锁或领取包月套餐体验版解锁不同语言. 详细说明参考：[AI智能识别计费说明](https://cloud.tencent.com/document/product/647/111976)
 
-注意：
+语音转文本不同套餐版本支持的语言如下：
+
+**基础版**：
+
+- "zh": 中文
+
+- "zh-TW": 中国台湾
+
+- "en": 英语
+
+**标准版：**
+
+- "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
+
+- "16k_zh_large": 普方英大模型引擎. 当前模型同时支持中文、英文、多种中文方言等语言的识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+- "16k_multi_lang": 多语种大模型引擎. 当前模型同时支持英语、日语、韩语、阿拉伯语、菲律宾语、法语、印地语、印尼语、马来语、葡萄牙语、西班牙语、泰语、土耳其语、越南语、德语的识别，可实现15个语种的自动识别(句子/段落级别).
+
+- "16k_zh_en": 中英大模型引擎. 当前模型同时支持中文、英语识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+**高级版：**
+
+- "zh-dialect": 中国方言
+
+- "zh-yue": 中国粤语
+
+- "vi": 越南语
+
+- "ja": 日语
+
+- "ko": 韩语
+
+- "id": 印度尼西亚语
+
+- "th": 泰语
+
+- "pt": 葡萄牙语
+
+- "tr": 土耳其语
+
+- "ar": 阿拉伯语
+
+- "es": 西班牙语
+
+- "hi": 印地语
+
+- "fr": 法语
+
+- "ms": 马来语
+
+- "fil": 菲律宾语
+
+- "de": 德语
+
+- "it": 意大利语
+
+- "ru": 俄语
+
+- "sv": 瑞典语
+
+- "da": 丹麦语
+
+- "no": 挪威语
+
+**注意：**
+
 如果缺少满足您需求的语言，请联系我们技术人员。
-     * @param Language 语音转文字支持识别的语言，默认是"zh" 中文
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
 
-语音转文本支持语言类型如下：
-- Chinese = "zh" # 中文
-- Chinese_TW = "zh-TW" # 中国台湾
-- English = "en" # 英语
-- Chinese_YUE = "zh-yue" # 中国粤语
-- Chinese_DIALECT = "zh-dialect" # 中国方言
-- English = "en" # 英语
-- Vietnamese = "vi" # 越南语
-- Japanese = "ja" # 日语
-- Korean = "ko" # 韩语
-- Indonesia = "id" # 印度尼西亚语
-- Thai = "th" # 泰语
-- Portuguese = "pt" # 葡萄牙语
-- Turkish = "tr" # 土耳其语
-- Arabic = "ar" # 阿拉伯语
-- Spanish = "es" # 西班牙语
-- Hindi = "hi" # 印地语
-- French = "fr" # 法语
-- Malay = "ms" # 马来语
-- Filipino = "fil" # 菲律宾语
-- German = "de" # 德语
-- Italian = "it" # 意大利语
-- Russian = "ru" # 俄语
+示例值：zh
+     * @param Language 
+语音转文字支持识别的语言，默认是"zh" 中文
 
-注意：
+可通过购买「AI智能识别时长包」解锁或领取包月套餐体验版解锁不同语言. 详细说明参考：[AI智能识别计费说明](https://cloud.tencent.com/document/product/647/111976)
+
+语音转文本不同套餐版本支持的语言如下：
+
+**基础版**：
+
+- "zh": 中文
+
+- "zh-TW": 中国台湾
+
+- "en": 英语
+
+**标准版：**
+
+- "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
+
+- "16k_zh_large": 普方英大模型引擎. 当前模型同时支持中文、英文、多种中文方言等语言的识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+- "16k_multi_lang": 多语种大模型引擎. 当前模型同时支持英语、日语、韩语、阿拉伯语、菲律宾语、法语、印地语、印尼语、马来语、葡萄牙语、西班牙语、泰语、土耳其语、越南语、德语的识别，可实现15个语种的自动识别(句子/段落级别).
+
+- "16k_zh_en": 中英大模型引擎. 当前模型同时支持中文、英语识别，模型参数量极大，语言模型性能增强，针对噪声大、回音大、人声小、人声远等低质量音频的识别准确率极大提升.
+
+**高级版：**
+
+- "zh-dialect": 中国方言
+
+- "zh-yue": 中国粤语
+
+- "vi": 越南语
+
+- "ja": 日语
+
+- "ko": 韩语
+
+- "id": 印度尼西亚语
+
+- "th": 泰语
+
+- "pt": 葡萄牙语
+
+- "tr": 土耳其语
+
+- "ar": 阿拉伯语
+
+- "es": 西班牙语
+
+- "hi": 印地语
+
+- "fr": 法语
+
+- "ms": 马来语
+
+- "fil": 菲律宾语
+
+- "de": 德语
+
+- "it": 意大利语
+
+- "ru": 俄语
+
+- "sv": 瑞典语
+
+- "da": 丹麦语
+
+- "no": 挪威语
+
+**注意：**
+
 如果缺少满足您需求的语言，请联系我们技术人员。
+
+示例值：zh
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
-注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效 
-     * @return AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
-注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
+     * Get **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
+注意：不支持填写"zh-dialect" 
+     * @return AlternativeLanguage **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
+注意：不支持填写"zh-dialect"
      */
     public String [] getAlternativeLanguage() {
         return this.AlternativeLanguage;
     }
 
     /**
-     * Set 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
-注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
-     * @param AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
-注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
+     * Set **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
+注意：不支持填写"zh-dialect"
+     * @param AlternativeLanguage **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
+注意：不支持填写"zh-dialect"
      */
     public void setAlternativeLanguage(String [] AlternativeLanguage) {
         this.AlternativeLanguage = AlternativeLanguage;

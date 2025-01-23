@@ -274,6 +274,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取 AI 通话内容提取结果。
+     * @param req DescribeAICallExtractResultRequest
+     * @return DescribeAICallExtractResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAICallExtractResultResponse DescribeAICallExtractResult(DescribeAICallExtractResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAICallExtractResult", DescribeAICallExtractResultResponse.class);
+    }
+
+    /**
      *查询生效运营商白名单规则
      * @param req DescribeActiveCarrierPrivilegeNumberRequest
      * @return DescribeActiveCarrierPrivilegeNumberResponse

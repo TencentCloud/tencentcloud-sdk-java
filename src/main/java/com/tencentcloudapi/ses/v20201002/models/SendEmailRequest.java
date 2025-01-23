@@ -59,7 +59,7 @@ public class SendEmailRequest extends AbstractModel {
     private String [] Cc;
 
     /**
-    * 密送人邮箱地址，最多支持抄送20人。
+    * 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
     */
     @SerializedName("Bcc")
     @Expose
@@ -197,16 +197,16 @@ public class SendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get 密送人邮箱地址，最多支持抄送20人。 
-     * @return Bcc 密送人邮箱地址，最多支持抄送20人。
+     * Get 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。 
+     * @return Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      */
     public String [] getBcc() {
         return this.Bcc;
     }
 
     /**
-     * Set 密送人邮箱地址，最多支持抄送20人。
-     * @param Bcc 密送人邮箱地址，最多支持抄送20人。
+     * Set 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
+     * @param Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      */
     public void setBcc(String [] Bcc) {
         this.Bcc = Bcc;

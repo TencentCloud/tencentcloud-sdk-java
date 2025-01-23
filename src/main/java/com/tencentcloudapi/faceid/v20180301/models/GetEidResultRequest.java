@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetEidResultRequest extends AbstractModel {
 
     /**
-    * E证通流程的唯一标识，调用GetEidToken接口时生成。
+    * E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
     */
     @SerializedName("EidToken")
     @Expose
@@ -74,16 +74,16 @@ public class GetEidResultRequest extends AbstractModel {
     private Boolean IsNeedIdCardAvatar;
 
     /**
-     * Get E证通流程的唯一标识，调用GetEidToken接口时生成。 
-     * @return EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * Get E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。 
+     * @return EidToken E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      */
     public String getEidToken() {
         return this.EidToken;
     }
 
     /**
-     * Set E证通流程的唯一标识，调用GetEidToken接口时生成。
-     * @param EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * Set E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
+     * @param EidToken E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      */
     public void setEidToken(String EidToken) {
         this.EidToken = EidToken;

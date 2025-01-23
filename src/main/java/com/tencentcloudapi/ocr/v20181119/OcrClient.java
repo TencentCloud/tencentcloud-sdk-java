@@ -884,6 +884,32 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *题目识别是教育的基础OCR识别能力。可支持扫描、拍照场景的单题题目识别。接口支持印刷体文本、手写体文本及公式的OCR识别和坐标返回，此外，接口还可对题目中的配图位置进行检测并返回坐标位置。适用于智能批改等场景的题目内容识别作为检索输入。
+
+默认接口请求频率限制：2次/秒。
+     * @param req QuestionOCRRequest
+     * @return QuestionOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuestionOCRResponse QuestionOCR(QuestionOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QuestionOCR", QuestionOCRResponse.class);
+    }
+
+    /**
+     *试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+
+默认接口请求频率限制：2次/秒。
+     * @param req QuestionSplitOCRRequest
+     * @return QuestionSplitOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuestionSplitOCRResponse QuestionSplitOCR(QuestionSplitOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QuestionSplitOCR", QuestionSplitOCRResponse.class);
+    }
+
+    /**
      *本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
 
 默认接口请求频率限制：5次/秒。
@@ -982,14 +1008,16 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
-     * @param req RecognizeGeneralCardWarnRequest
-     * @return RecognizeGeneralCardWarnResponse
+     *公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
+
+默认接口请求频率限制：2次/秒。
+     * @param req RecognizeFormulaOCRRequest
+     * @return RecognizeFormulaOCRResponse
      * @throws TencentCloudSDKException
      */
-    public RecognizeGeneralCardWarnResponse RecognizeGeneralCardWarn(RecognizeGeneralCardWarnRequest req) throws TencentCloudSDKException{
+    public RecognizeFormulaOCRResponse RecognizeFormulaOCR(RecognizeFormulaOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeGeneralCardWarn", RecognizeGeneralCardWarnResponse.class);
+        return this.internalRequest(req, "RecognizeFormulaOCR", RecognizeFormulaOCRResponse.class);
     }
 
     /**

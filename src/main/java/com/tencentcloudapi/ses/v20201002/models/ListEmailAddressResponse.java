@@ -25,7 +25,6 @@ public class ListEmailAddressResponse extends AbstractModel {
 
     /**
     * 发信地址列表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmailSenders")
     @Expose
@@ -39,10 +38,8 @@ public class ListEmailAddressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发信地址列表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发信地址列表详情 
      * @return EmailSenders 发信地址列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmailSender [] getEmailSenders() {
         return this.EmailSenders;
@@ -50,9 +47,7 @@ public class ListEmailAddressResponse extends AbstractModel {
 
     /**
      * Set 发信地址列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmailSenders 发信地址列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmailSenders(EmailSender [] EmailSenders) {
         this.EmailSenders = EmailSenders;
