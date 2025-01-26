@@ -866,19 +866,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *该接口已不再使用
-
-VPC防火墙一键开关
-     * @param req ModifyAllVPCSwitchStatusRequest
-     * @return ModifyAllVPCSwitchStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatus(ModifyAllVPCSwitchStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAllVPCSwitchStatus", ModifyAllVPCSwitchStatusResponse.class);
-    }
-
-    /**
      *资产扫描
      * @param req ModifyAssetScanRequest
      * @return ModifyAssetScanResponse
