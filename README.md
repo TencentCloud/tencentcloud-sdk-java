@@ -23,8 +23,8 @@
     <groupId>com.tencentcloudapi</groupId>
     <artifactId>tencentcloud-sdk-java-指定产品包名</artifactId>
     <!-- 如 CVM 产品包：tencentcloud-sdk-java-cvm -->
-    <!-- 此方式默认安装最新的版本，如果需要指定具体的版本号，请到 maven 官网查询 sdk 的所有版本，将下面的latest替换为指定的版本版本号即可，例如 cvm 的产品包链接为 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java-cvm/versions -->
-    <version>latest</version>
+    <!-- 请到 maven 官网查询 sdk 的所有版本，例如 cvm 的产品包链接为 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java-cvm/versions -->
+    <version>3.1.1000</version>
 </dependency>
 ```
 具体产品的包名缩写请参考 [products.md](./products.md) 中的包名字段。
