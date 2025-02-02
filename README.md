@@ -12,23 +12,42 @@
 
 从 3.1.500 版本开始，本项目使用 [KonaJDK](https://github.com/Tencent/TencentKona-8) 编译发布。
 
-通过 Maven 获取安装是使用 JAVA SDK 的推荐方法，Maven 是 JAVA 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。关于 Maven 详细可参考 Maven 官网。
-1. 请访问[Maven官网](https://maven.apache.org/)下载对应系统Maven安装包进行安装；
-2. 为您的项目添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可。注意这里的版本号只是举例，您可以在[Maven仓库](https://search.maven.org/search?q=tencentcloud-sdk-java)上找到最新的版本(最新版本是3.1.708)。请知悉，SDK 是先确认 `mvn deploy` 发布成功后再更新 GitHub tag，但是 Maven 官网索引更新有延迟，导致新发布的版本暂时（约1-2小时）在 Maven 官网搜索不到，实际不影响使用最新版本，您可以正常执行 `mvn compile` 等指令。
-3. maven仓库中显示的4.0.11是废弃版本，我们已经联系maven官方删除jar包，但maven索引无法清除，请勿使用;
-4. 引用方法可参考示例。
-```xml
+通过 Maven 获取安装是使用 JAVA SDK 的推荐方法，Maven 是 JAVA 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。
+
+关于 Maven 详细可参考 [Maven](https://maven.apache.org/) 官网，并下载对应系统Maven安装包进行安装。
+
+### 安装指定产品 SDK（推荐）
+例如：安装指定产品包
+```bash
 <dependency>
     <groupId>com.tencentcloudapi</groupId>
-    <artifactId>tencentcloud-sdk-java</artifactId>
-    <!-- go to https://search.maven.org/search?q=tencentcloud-sdk-java and get the latest version. -->
-    <!-- 请到https://search.maven.org/search?q=tencentcloud-sdk-java查询所有版本，最新版本如下 -->
+    <artifactId>tencentcloud-sdk-java-指定产品包名</artifactId>
+    <!-- 如 CVM 产品包：tencentcloud-sdk-java-cvm -->
+    <!-- 请到 maven 官网查询 sdk 的所有版本，例如 cvm 的产品包链接为 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java-cvm/versions -->
     <version>3.1.1000</version>
 </dependency>
 ```
-5. 如上引用方式会将腾讯云所有产品sdk下载到本地，可以将artifactId换成tencentcloud-sdk-java-cvm/cbs/vpc等，即可引用特定产品的sdk，代码中使用方式和大包相同，可参考示例。最新版本也可在[Maven仓库](https://search.maven.org/search?q=tencentcloud-sdk-java)查询，可大大节省存储空间。
-6. 中国大陆地区的用户可以使用镜像源加速下载，编辑 maven 的 settings.xml 配置文件，在 mirrors 段落增加镜像配置：
+具体产品的包名缩写请参考 [products.md](./products.md) 中的包名字段。
+
+### 安装全产品 SDK
+```bash
+<dependency>
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java</artifactId>
+    <!-- go to https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java/versions and get the latest version. -->
+    <!-- 请到 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java/versions 查询所有版本，最新版本如下 -->
+    <version>3.1.1000</version>
+</dependency>
 ```
+全产品 SDK 包含了所有云产品的调用代码，体积偏大，对体积敏感的场景，推荐安装指定产品 SDK。
+
+### 注意事项
+- 安装全产品 SDK 和安装指定产品的 SDK 两种方式只能选择其中一种。
+- 如果同时安装多个产品的包，建议多个产品的包和 common 包保持在同一个版本。
+- 项目中添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可。注意这里的版本号只是举例，您可以在[Maven仓库](https://central.sonatype.com/search?q=tencentcloud-sdk-java&smo=true)上找到最新的版本(最新版本是3.1.1000)。请知悉，SDK 是先确认 `mvn deploy` 发布成功后再更新 GitHub tag，但是 Maven 官网索引更新有延迟，导致新发布的版本暂时（约1-2小时）在 Maven 官网搜索不到，实际不影响使用最新版本，您可以正常执行 `mvn compile` 等指令。
+- maven仓库中显示的4.0.11是废弃版本，我们已经联系maven官方删除jar包，但maven索引无法清除，请勿使用;
+- 无法使用官方源的用户可以使用镜像源加速下载，编辑 maven 的 settings.xml 配置文件，在 mirrors 段落增加镜像配置：
+```bash
     <mirror>
       <id>tencent</id>
       <name>tencent maven mirror</name>
