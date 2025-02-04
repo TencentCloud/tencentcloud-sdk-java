@@ -39,6 +39,17 @@ public class LkeapClient extends AbstractClient{
     }
 
     /**
+     *对话
+     * @param req ChatCompletionsRequest
+     * @return ChatCompletionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatCompletionsResponse ChatCompletions(ChatCompletionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChatCompletions", ChatCompletionsResponse.class);
+    }
+
+    /**
      *用于为问答对创建属性标签，以便对内容进行分类和管理。 使用场景：当需要为问答对添加分类标签和属性标记时使用，比如为问答对添加“售后”标签。
      * @param req CreateAttributeLabelRequest
      * @return CreateAttributeLabelResponse
