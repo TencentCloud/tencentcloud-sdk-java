@@ -46,7 +46,6 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
     * 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -54,7 +53,6 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
     * 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -62,7 +60,6 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
     * 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmailId")
     @Expose
@@ -117,10 +114,8 @@ public class ReceiverDetail extends AbstractModel {
     }
 
     /**
-     * Get 无效原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无效原因 
      * @return Reason 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -128,19 +123,15 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
      * Set 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:有效，2:无效 
      * @return Status 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -148,19 +139,15 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
      * Set 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收件人地址id 
      * @return EmailId 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEmailId() {
         return this.EmailId;
@@ -168,9 +155,7 @@ public class ReceiverDetail extends AbstractModel {
 
     /**
      * Set 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmailId 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmailId(Long EmailId) {
         this.EmailId = EmailId;

@@ -25,7 +25,6 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
     * 收件人总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
     * 实际上传数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidCount")
     @Expose
@@ -41,7 +39,6 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
     * 数据过长数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TooLongCount")
     @Expose
@@ -49,7 +46,6 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
     * 邮件地址为空数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmptyEmailCount")
     @Expose
@@ -57,7 +53,6 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
     * 重复数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepeatCount")
     @Expose
@@ -71,10 +66,8 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 收件人总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收件人总数 
      * @return TotalCount 收件人总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -82,19 +75,15 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
      * Set 收件人总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 收件人总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实际上传数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实际上传数量 
      * @return ValidCount 实际上传数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidCount() {
         return this.ValidCount;
@@ -102,19 +91,15 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
      * Set 实际上传数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidCount 实际上传数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidCount(Long ValidCount) {
         this.ValidCount = ValidCount;
     }
 
     /**
-     * Get 数据过长数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据过长数量 
      * @return TooLongCount 数据过长数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTooLongCount() {
         return this.TooLongCount;
@@ -122,19 +107,15 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
      * Set 数据过长数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TooLongCount 数据过长数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTooLongCount(Long TooLongCount) {
         this.TooLongCount = TooLongCount;
     }
 
     /**
-     * Get 邮件地址为空数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 邮件地址为空数量 
      * @return EmptyEmailCount 邮件地址为空数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEmptyEmailCount() {
         return this.EmptyEmailCount;
@@ -142,19 +123,15 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
      * Set 邮件地址为空数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyEmailCount 邮件地址为空数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmptyEmailCount(Long EmptyEmailCount) {
         this.EmptyEmailCount = EmptyEmailCount;
     }
 
     /**
-     * Get 重复数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复数量 
      * @return RepeatCount 重复数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRepeatCount() {
         return this.RepeatCount;
@@ -162,9 +139,7 @@ public class CreateReceiverDetailWithDataResponse extends AbstractModel {
 
     /**
      * Set 重复数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepeatCount 重复数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepeatCount(Long RepeatCount) {
         this.RepeatCount = RepeatCount;

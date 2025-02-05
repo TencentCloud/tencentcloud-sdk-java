@@ -38,6 +38,14 @@ public class Message extends AbstractModel {
     private String Content;
 
     /**
+    * 思维链内容。
+ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+    */
+    @SerializedName("ReasoningContent")
+    @Expose
+    private String ReasoningContent;
+
+    /**
      * Get 角色 
      * @return Role 角色
      */
@@ -69,6 +77,26 @@ public class Message extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 思维链内容。
+ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。 
+     * @return ReasoningContent 思维链内容。
+ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+     */
+    public String getReasoningContent() {
+        return this.ReasoningContent;
+    }
+
+    /**
+     * Set 思维链内容。
+ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+     * @param ReasoningContent 思维链内容。
+ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+     */
+    public void setReasoningContent(String ReasoningContent) {
+        this.ReasoningContent = ReasoningContent;
+    }
+
     public Message() {
     }
 
@@ -83,6 +111,9 @@ public class Message extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ReasoningContent != null) {
+            this.ReasoningContent = new String(source.ReasoningContent);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class Message extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
 
     }
 }

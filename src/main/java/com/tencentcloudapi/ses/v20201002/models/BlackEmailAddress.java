@@ -39,7 +39,6 @@ public class BlackEmailAddress extends AbstractModel {
 
     /**
     * 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IspDesc")
     @Expose
@@ -78,10 +77,8 @@ public class BlackEmailAddress extends AbstractModel {
     }
 
     /**
-     * Get 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被拉黑的理由 
      * @return IspDesc 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIspDesc() {
         return this.IspDesc;
@@ -89,9 +86,7 @@ public class BlackEmailAddress extends AbstractModel {
 
     /**
      * Set 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IspDesc 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIspDesc(String IspDesc) {
         this.IspDesc = IspDesc;

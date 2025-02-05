@@ -45,6 +45,20 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean Stream;
 
     /**
+    * 控制生成的随机性，较高的值会产生更多样化的输出。
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private Float Temperature;
+
+    /**
+    * 最大生成的token数量
+    */
+    @SerializedName("MaxTokens")
+    @Expose
+    private Long MaxTokens;
+
+    /**
      * Get 模型名称 
      * @return Model 模型名称
      */
@@ -92,6 +106,38 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.Stream = Stream;
     }
 
+    /**
+     * Get 控制生成的随机性，较高的值会产生更多样化的输出。 
+     * @return Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
+     */
+    public Float getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set 控制生成的随机性，较高的值会产生更多样化的输出。
+     * @param Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
+     */
+    public void setTemperature(Float Temperature) {
+        this.Temperature = Temperature;
+    }
+
+    /**
+     * Get 最大生成的token数量 
+     * @return MaxTokens 最大生成的token数量
+     */
+    public Long getMaxTokens() {
+        return this.MaxTokens;
+    }
+
+    /**
+     * Set 最大生成的token数量
+     * @param MaxTokens 最大生成的token数量
+     */
+    public void setMaxTokens(Long MaxTokens) {
+        this.MaxTokens = MaxTokens;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -112,6 +158,12 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.Stream != null) {
             this.Stream = new Boolean(source.Stream);
         }
+        if (source.Temperature != null) {
+            this.Temperature = new Float(source.Temperature);
+        }
+        if (source.MaxTokens != null) {
+            this.MaxTokens = new Long(source.MaxTokens);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArrayObj(map, prefix + "Messages.", this.Messages);
         this.setParamSimple(map, prefix + "Stream", this.Stream);
+        this.setParamSimple(map, prefix + "Temperature", this.Temperature);
+        this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
 
     }
 }

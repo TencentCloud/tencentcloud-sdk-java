@@ -46,7 +46,6 @@ public class ReceiverData extends AbstractModel {
 
     /**
     * 收件人列表描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -54,7 +53,6 @@ public class ReceiverData extends AbstractModel {
 
     /**
     * 列表状态(1 待上传 2 上传中 3 上传完成)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiversStatus")
     @Expose
@@ -69,7 +67,6 @@ public class ReceiverData extends AbstractModel {
 
     /**
     * 无效收件人数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvalidCount")
     @Expose
@@ -124,10 +121,8 @@ public class ReceiverData extends AbstractModel {
     }
 
     /**
-     * Get 收件人列表描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收件人列表描述 
      * @return Desc 收件人列表描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -135,19 +130,15 @@ public class ReceiverData extends AbstractModel {
 
     /**
      * Set 收件人列表描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 收件人列表描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 列表状态(1 待上传 2 上传中 3 上传完成)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表状态(1 待上传 2 上传中 3 上传完成) 
      * @return ReceiversStatus 列表状态(1 待上传 2 上传中 3 上传完成)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReceiversStatus() {
         return this.ReceiversStatus;
@@ -155,9 +146,7 @@ public class ReceiverData extends AbstractModel {
 
     /**
      * Set 列表状态(1 待上传 2 上传中 3 上传完成)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiversStatus 列表状态(1 待上传 2 上传中 3 上传完成)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiversStatus(Long ReceiversStatus) {
         this.ReceiversStatus = ReceiversStatus;
@@ -180,10 +169,8 @@ public class ReceiverData extends AbstractModel {
     }
 
     /**
-     * Get 无效收件人数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无效收件人数量 
      * @return InvalidCount 无效收件人数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInvalidCount() {
         return this.InvalidCount;
@@ -191,9 +178,7 @@ public class ReceiverData extends AbstractModel {
 
     /**
      * Set 无效收件人数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvalidCount 无效收件人数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalidCount(Long InvalidCount) {
         this.InvalidCount = InvalidCount;

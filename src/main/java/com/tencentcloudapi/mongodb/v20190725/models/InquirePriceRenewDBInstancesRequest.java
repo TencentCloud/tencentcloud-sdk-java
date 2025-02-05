@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceRenewDBInstancesRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。
+    * 实例ID，格式如：cmgo-p8vn****。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID，且单次最多同时查询5个实例。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceRenewDBInstancesRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。 
-     * @return InstanceIds 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。
+     * Get 实例ID，格式如：cmgo-p8vn****。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID，且单次最多同时查询5个实例。 
+     * @return InstanceIds 实例ID，格式如：cmgo-p8vn****。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID，且单次最多同时查询5个实例。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。
-     * @param InstanceIds 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。
+     * Set 实例ID，格式如：cmgo-p8vn****。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID，且单次最多同时查询5个实例。
+     * @param InstanceIds 实例ID，格式如：cmgo-p8vn****。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID，且单次最多同时查询5个实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
