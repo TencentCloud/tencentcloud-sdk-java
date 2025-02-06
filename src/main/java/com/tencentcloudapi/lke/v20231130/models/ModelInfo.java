@@ -88,6 +88,27 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter MaxTokens;
 
     /**
+    * 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * 模型图标
+    */
+    @SerializedName("Icon")
+    @Expose
+    private String Icon;
+
+    /**
+    * 是否免费
+    */
+    @SerializedName("IsFree")
+    @Expose
+    private Boolean IsFree;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -247,6 +268,54 @@ public class ModelInfo extends AbstractModel {
         this.MaxTokens = MaxTokens;
     }
 
+    /**
+     * Get 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验 
+     * @return Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * @param Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 模型图标 
+     * @return Icon 模型图标
+     */
+    public String getIcon() {
+        return this.Icon;
+    }
+
+    /**
+     * Set 模型图标
+     * @param Icon 模型图标
+     */
+    public void setIcon(String Icon) {
+        this.Icon = Icon;
+    }
+
+    /**
+     * Get 是否免费 
+     * @return IsFree 是否免费
+     */
+    public Boolean getIsFree() {
+        return this.IsFree;
+    }
+
+    /**
+     * Set 是否免费
+     * @param IsFree 是否免费
+     */
+    public void setIsFree(Boolean IsFree) {
+        this.IsFree = IsFree;
+    }
+
     public ModelInfo() {
     }
 
@@ -279,6 +348,15 @@ public class ModelInfo extends AbstractModel {
         if (source.MaxTokens != null) {
             this.MaxTokens = new ModelParameter(source.MaxTokens);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Icon != null) {
+            this.Icon = new String(source.Icon);
+        }
+        if (source.IsFree != null) {
+            this.IsFree = new Boolean(source.IsFree);
+        }
     }
 
 
@@ -294,6 +372,9 @@ public class ModelInfo extends AbstractModel {
         this.setParamObj(map, prefix + "TopP.", this.TopP);
         this.setParamObj(map, prefix + "Temperature.", this.Temperature);
         this.setParamObj(map, prefix + "MaxTokens.", this.MaxTokens);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Icon", this.Icon);
+        this.setParamSimple(map, prefix + "IsFree", this.IsFree);
 
     }
 }

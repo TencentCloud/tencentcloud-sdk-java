@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TccConnection extends AbstractModel {
 
     /**
-    * 终端节点服务Id
+    * 引擎终端节点服务Id
     */
     @SerializedName("EndpointServiceId")
     @Expose
@@ -38,23 +38,44 @@ public class TccConnection extends AbstractModel {
     private String MetaStoreUrl;
 
     /**
-    * 	网络信息
+    * 网络信息
     */
     @SerializedName("NetWork")
     @Expose
     private NetWork NetWork;
 
     /**
-     * Get 终端节点服务Id 
-     * @return EndpointServiceId 终端节点服务Id
+    * hive版本
+    */
+    @SerializedName("HiveVersion")
+    @Expose
+    private String HiveVersion;
+
+    /**
+    * hive location
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * HMS终端节点服务
+    */
+    @SerializedName("HmsEndpointServiceId")
+    @Expose
+    private String HmsEndpointServiceId;
+
+    /**
+     * Get 引擎终端节点服务Id 
+     * @return EndpointServiceId 引擎终端节点服务Id
      */
     public String getEndpointServiceId() {
         return this.EndpointServiceId;
     }
 
     /**
-     * Set 终端节点服务Id
-     * @param EndpointServiceId 终端节点服务Id
+     * Set 引擎终端节点服务Id
+     * @param EndpointServiceId 引擎终端节点服务Id
      */
     public void setEndpointServiceId(String EndpointServiceId) {
         this.EndpointServiceId = EndpointServiceId;
@@ -77,19 +98,67 @@ public class TccConnection extends AbstractModel {
     }
 
     /**
-     * Get 	网络信息 
-     * @return NetWork 	网络信息
+     * Get 网络信息 
+     * @return NetWork 网络信息
      */
     public NetWork getNetWork() {
         return this.NetWork;
     }
 
     /**
-     * Set 	网络信息
-     * @param NetWork 	网络信息
+     * Set 网络信息
+     * @param NetWork 网络信息
      */
     public void setNetWork(NetWork NetWork) {
         this.NetWork = NetWork;
+    }
+
+    /**
+     * Get hive版本 
+     * @return HiveVersion hive版本
+     */
+    public String getHiveVersion() {
+        return this.HiveVersion;
+    }
+
+    /**
+     * Set hive版本
+     * @param HiveVersion hive版本
+     */
+    public void setHiveVersion(String HiveVersion) {
+        this.HiveVersion = HiveVersion;
+    }
+
+    /**
+     * Get hive location 
+     * @return Location hive location
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set hive location
+     * @param Location hive location
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get HMS终端节点服务 
+     * @return HmsEndpointServiceId HMS终端节点服务
+     */
+    public String getHmsEndpointServiceId() {
+        return this.HmsEndpointServiceId;
+    }
+
+    /**
+     * Set HMS终端节点服务
+     * @param HmsEndpointServiceId HMS终端节点服务
+     */
+    public void setHmsEndpointServiceId(String HmsEndpointServiceId) {
+        this.HmsEndpointServiceId = HmsEndpointServiceId;
     }
 
     public TccConnection() {
@@ -109,6 +178,15 @@ public class TccConnection extends AbstractModel {
         if (source.NetWork != null) {
             this.NetWork = new NetWork(source.NetWork);
         }
+        if (source.HiveVersion != null) {
+            this.HiveVersion = new String(source.HiveVersion);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.HmsEndpointServiceId != null) {
+            this.HmsEndpointServiceId = new String(source.HmsEndpointServiceId);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class TccConnection extends AbstractModel {
         this.setParamSimple(map, prefix + "EndpointServiceId", this.EndpointServiceId);
         this.setParamSimple(map, prefix + "MetaStoreUrl", this.MetaStoreUrl);
         this.setParamObj(map, prefix + "NetWork.", this.NetWork);
+        this.setParamSimple(map, prefix + "HiveVersion", this.HiveVersion);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "HmsEndpointServiceId", this.HmsEndpointServiceId);
 
     }
 }

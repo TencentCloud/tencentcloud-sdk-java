@@ -765,7 +765,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *通过该 API 可以查询实例的 CPU 弹性扩容策略
+     *DescribeCpuExpandStrategy
+
+通过该 API 可以查询实例的 CPU 弹性扩容策略
      * @param req DescribeCpuExpandStrategyRequest
      * @return DescribeCpuExpandStrategyResponse
      * @throws TencentCloudSDKException

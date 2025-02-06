@@ -24,28 +24,31 @@ import java.util.HashMap;
 public class CreateRegisterCodeRequest extends AbstractModel {
 
     /**
-    * 注册码描述。
+    * 注册码描述。最大长度为 128 字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 注册实例名称前缀。
+    * 注册实例名称前缀。最大长度为 32 字符。
     */
     @SerializedName("InstanceNamePrefix")
     @Expose
     private String InstanceNamePrefix;
 
     /**
-    * 该注册码允许注册的实例数目。默认限制为10个。
+    * 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。
     */
     @SerializedName("RegisterLimit")
     @Expose
     private Long RegisterLimit;
 
     /**
-    * 该注册码的有效时间，单位为小时。默认为4小时。
+    * 该注册码的有效时间，单位为小时。默认值为 4。
+
+- 若传入值小于等于 99999，则以小时为单位设置有效时间。
+- 若传入值大于 99999，则设置为长期有效。
     */
     @SerializedName("EffectiveTime")
     @Expose
@@ -59,64 +62,76 @@ public class CreateRegisterCodeRequest extends AbstractModel {
     private String IpAddressRange;
 
     /**
-     * Get 注册码描述。 
-     * @return Description 注册码描述。
+     * Get 注册码描述。最大长度为 128 字符。 
+     * @return Description 注册码描述。最大长度为 128 字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 注册码描述。
-     * @param Description 注册码描述。
+     * Set 注册码描述。最大长度为 128 字符。
+     * @param Description 注册码描述。最大长度为 128 字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 注册实例名称前缀。 
-     * @return InstanceNamePrefix 注册实例名称前缀。
+     * Get 注册实例名称前缀。最大长度为 32 字符。 
+     * @return InstanceNamePrefix 注册实例名称前缀。最大长度为 32 字符。
      */
     public String getInstanceNamePrefix() {
         return this.InstanceNamePrefix;
     }
 
     /**
-     * Set 注册实例名称前缀。
-     * @param InstanceNamePrefix 注册实例名称前缀。
+     * Set 注册实例名称前缀。最大长度为 32 字符。
+     * @param InstanceNamePrefix 注册实例名称前缀。最大长度为 32 字符。
      */
     public void setInstanceNamePrefix(String InstanceNamePrefix) {
         this.InstanceNamePrefix = InstanceNamePrefix;
     }
 
     /**
-     * Get 该注册码允许注册的实例数目。默认限制为10个。 
-     * @return RegisterLimit 该注册码允许注册的实例数目。默认限制为10个。
+     * Get 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。 
+     * @return RegisterLimit 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。
      */
     public Long getRegisterLimit() {
         return this.RegisterLimit;
     }
 
     /**
-     * Set 该注册码允许注册的实例数目。默认限制为10个。
-     * @param RegisterLimit 该注册码允许注册的实例数目。默认限制为10个。
+     * Set 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。
+     * @param RegisterLimit 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。
      */
     public void setRegisterLimit(Long RegisterLimit) {
         this.RegisterLimit = RegisterLimit;
     }
 
     /**
-     * Get 该注册码的有效时间，单位为小时。默认为4小时。 
-     * @return EffectiveTime 该注册码的有效时间，单位为小时。默认为4小时。
+     * Get 该注册码的有效时间，单位为小时。默认值为 4。
+
+- 若传入值小于等于 99999，则以小时为单位设置有效时间。
+- 若传入值大于 99999，则设置为长期有效。 
+     * @return EffectiveTime 该注册码的有效时间，单位为小时。默认值为 4。
+
+- 若传入值小于等于 99999，则以小时为单位设置有效时间。
+- 若传入值大于 99999，则设置为长期有效。
      */
     public Long getEffectiveTime() {
         return this.EffectiveTime;
     }
 
     /**
-     * Set 该注册码的有效时间，单位为小时。默认为4小时。
-     * @param EffectiveTime 该注册码的有效时间，单位为小时。默认为4小时。
+     * Set 该注册码的有效时间，单位为小时。默认值为 4。
+
+- 若传入值小于等于 99999，则以小时为单位设置有效时间。
+- 若传入值大于 99999，则设置为长期有效。
+     * @param EffectiveTime 该注册码的有效时间，单位为小时。默认值为 4。
+
+- 若传入值小于等于 99999，则以小时为单位设置有效时间。
+- 若传入值大于 99999，则设置为长期有效。
      */
     public void setEffectiveTime(Long EffectiveTime) {
         this.EffectiveTime = EffectiveTime;

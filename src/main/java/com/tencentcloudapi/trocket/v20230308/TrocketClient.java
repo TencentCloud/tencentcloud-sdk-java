@@ -590,6 +590,17 @@ TopicName，主题名称过滤
     }
 
     /**
+     *修改 RocketMQ 5.x 集群接入点。
+     * @param req ModifyInstanceEndpointRequest
+     * @return ModifyInstanceEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceEndpointResponse ModifyInstanceEndpoint(ModifyInstanceEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceEndpoint", ModifyInstanceEndpointResponse.class);
+    }
+
+    /**
      *更新MQTT实例公网接入点
      * @param req ModifyMQTTInsPublicEndpointRequest
      * @return ModifyMQTTInsPublicEndpointResponse
