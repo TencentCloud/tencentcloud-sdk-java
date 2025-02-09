@@ -35,7 +35,7 @@ public class SketchToImageRequest extends AbstractModel {
     /**
     * 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
     */
     @SerializedName("InputImage")
     @Expose
@@ -44,7 +44,7 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
     /**
     * 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
     */
     @SerializedName("InputUrl")
     @Expose
@@ -103,10 +103,10 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
     /**
      * Get 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
      * @return InputImage 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public String getInputImage() {
         return this.InputImage;
@@ -115,10 +115,10 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
     /**
      * Set 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param InputImage 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public void setInputImage(String InputImage) {
         this.InputImage = InputImage;
@@ -127,10 +127,10 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
     /**
      * Get 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
      * @return InputUrl 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public String getInputUrl() {
         return this.InputUrl;
@@ -139,10 +139,10 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
     /**
      * Set 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param InputUrl 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public void setInputUrl(String InputUrl) {
         this.InputUrl = InputUrl;

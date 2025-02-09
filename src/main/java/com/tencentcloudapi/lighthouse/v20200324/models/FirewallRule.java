@@ -48,6 +48,16 @@ public class FirewallRule extends AbstractModel {
     private String CidrBlock;
 
     /**
+    * IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+    */
+    @SerializedName("Ipv6CidrBlock")
+    @Expose
+    private String Ipv6CidrBlock;
+
+    /**
     * 取值：ACCEPT，DROP。默认为 ACCEPT。
     */
     @SerializedName("Action")
@@ -122,6 +132,34 @@ public class FirewallRule extends AbstractModel {
     }
 
     /**
+     * Get IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。 
+     * @return Ipv6CidrBlock IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+     */
+    public String getIpv6CidrBlock() {
+        return this.Ipv6CidrBlock;
+    }
+
+    /**
+     * Set IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+     * @param Ipv6CidrBlock IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+     */
+    public void setIpv6CidrBlock(String Ipv6CidrBlock) {
+        this.Ipv6CidrBlock = Ipv6CidrBlock;
+    }
+
+    /**
      * Get 取值：ACCEPT，DROP。默认为 ACCEPT。 
      * @return Action 取值：ACCEPT，DROP。默认为 ACCEPT。
      */
@@ -170,6 +208,9 @@ public class FirewallRule extends AbstractModel {
         if (source.CidrBlock != null) {
             this.CidrBlock = new String(source.CidrBlock);
         }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
@@ -186,6 +227,7 @@ public class FirewallRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+        this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "FirewallRuleDescription", this.FirewallRuleDescription);
 

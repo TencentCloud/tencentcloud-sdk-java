@@ -131,7 +131,9 @@ public class RemoteWrite extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxBlockSize 最大block
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getMaxBlockSize() {
         return this.MaxBlockSize;
     }
@@ -141,7 +143,9 @@ public class RemoteWrite extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxBlockSize 最大block
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setMaxBlockSize(String MaxBlockSize) {
         this.MaxBlockSize = MaxBlockSize;
     }
@@ -151,7 +155,9 @@ public class RemoteWrite extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Label Label
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getLabel() {
         return this.Label;
     }
@@ -161,7 +167,9 @@ public class RemoteWrite extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Label Label
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setLabel(String Label) {
         this.Label = Label;
     }

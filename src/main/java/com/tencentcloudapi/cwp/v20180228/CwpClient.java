@@ -1373,19 +1373,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *DescribeAttackEvents 代替
-
-按分页形式展示网络攻击日志列表
-     * @param req DescribeAttackLogsRequest
-     * @return DescribeAttackLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackLogsResponse DescribeAttackLogs(DescribeAttackLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackLogs", DescribeAttackLogsResponse.class);
-    }
-
-    /**
      *网络攻击数据统计
      * @param req DescribeAttackStatisticsRequest
      * @return DescribeAttackStatisticsResponse
@@ -1933,19 +1920,6 @@ public class CwpClient extends AbstractClient{
     public DescribeClientExceptionResponse DescribeClientException(DescribeClientExceptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClientException", DescribeClientExceptionResponse.class);
-    }
-
-    /**
-     *接口已无效
-
-本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
-     * @param req DescribeComponentStatisticsRequest
-     * @return DescribeComponentStatisticsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeComponentStatisticsResponse DescribeComponentStatistics(DescribeComponentStatisticsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeComponentStatistics", DescribeComponentStatisticsResponse.class);
     }
 
     /**

@@ -59,7 +59,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private DynamicRetentionTime DynamicRetentionConfig;
 
     /**
-    * 升配Rebalance时间 参数已废弃,忽略不填!!!
+    * 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
     */
     @SerializedName("RebalanceTime")
     @Expose
@@ -85,6 +85,13 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     @SerializedName("MaxMessageByte")
     @Expose
     private Long MaxMessageByte;
+
+    /**
+    * 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+    */
+    @SerializedName("UncleanLeaderElectionEnable")
+    @Expose
+    private Long UncleanLeaderElectionEnable;
 
     /**
      * Get ckafka集群实例Id 
@@ -167,16 +174,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 升配Rebalance时间 参数已废弃,忽略不填!!! 
-     * @return RebalanceTime 升配Rebalance时间 参数已废弃,忽略不填!!!
+     * Get 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒 
+     * @return RebalanceTime 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
      */
     public Long getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set 升配Rebalance时间 参数已废弃,忽略不填!!!
-     * @param RebalanceTime 升配Rebalance时间 参数已废弃,忽略不填!!!
+     * Set 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
+     * @param RebalanceTime 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
      */
     public void setRebalanceTime(Long RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
@@ -234,6 +241,22 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         this.MaxMessageByte = MaxMessageByte;
     }
 
+    /**
+     * Get 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭 
+     * @return UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     */
+    public Long getUncleanLeaderElectionEnable() {
+        return this.UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Set 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     * @param UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     */
+    public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
+        this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
+    }
+
     public ModifyInstanceAttributesRequest() {
     }
 
@@ -269,6 +292,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         if (source.MaxMessageByte != null) {
             this.MaxMessageByte = new Long(source.MaxMessageByte);
         }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
     }
 
 
@@ -285,6 +311,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
+        this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
 
     }
 }

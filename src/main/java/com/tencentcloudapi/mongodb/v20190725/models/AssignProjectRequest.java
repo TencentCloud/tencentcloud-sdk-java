@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssignProjectRequest extends AbstractModel {
 
     /**
-    * 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+    * 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,16 +38,16 @@ public class AssignProjectRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-     * Get 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceIds 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceIds 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceIds 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceIds 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

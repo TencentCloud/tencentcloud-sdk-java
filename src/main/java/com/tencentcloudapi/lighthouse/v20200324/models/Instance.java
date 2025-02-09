@@ -239,6 +239,20 @@ FAILED：表示操作失败
     private String InstanceRestrictState;
 
     /**
+    * 描述实例是否支持IPv6。
+    */
+    @SerializedName("SupportIpv6Detail")
+    @Expose
+    private SupportIpv6Detail SupportIpv6Detail;
+
+    /**
+    * 公网IPv6地址列表。
+    */
+    @SerializedName("PublicIpv6Addresses")
+    @Expose
+    private String [] PublicIpv6Addresses;
+
+    /**
     * 创建实例后自动执行TAT命令的调用ID。
     */
     @SerializedName("InitInvocationId")
@@ -778,6 +792,38 @@ FAILED：表示操作失败
     }
 
     /**
+     * Get 描述实例是否支持IPv6。 
+     * @return SupportIpv6Detail 描述实例是否支持IPv6。
+     */
+    public SupportIpv6Detail getSupportIpv6Detail() {
+        return this.SupportIpv6Detail;
+    }
+
+    /**
+     * Set 描述实例是否支持IPv6。
+     * @param SupportIpv6Detail 描述实例是否支持IPv6。
+     */
+    public void setSupportIpv6Detail(SupportIpv6Detail SupportIpv6Detail) {
+        this.SupportIpv6Detail = SupportIpv6Detail;
+    }
+
+    /**
+     * Get 公网IPv6地址列表。 
+     * @return PublicIpv6Addresses 公网IPv6地址列表。
+     */
+    public String [] getPublicIpv6Addresses() {
+        return this.PublicIpv6Addresses;
+    }
+
+    /**
+     * Set 公网IPv6地址列表。
+     * @param PublicIpv6Addresses 公网IPv6地址列表。
+     */
+    public void setPublicIpv6Addresses(String [] PublicIpv6Addresses) {
+        this.PublicIpv6Addresses = PublicIpv6Addresses;
+    }
+
+    /**
      * Get 创建实例后自动执行TAT命令的调用ID。 
      * @return InitInvocationId 创建实例后自动执行TAT命令的调用ID。
      */
@@ -914,6 +960,15 @@ FAILED：表示操作失败
         if (source.InstanceRestrictState != null) {
             this.InstanceRestrictState = new String(source.InstanceRestrictState);
         }
+        if (source.SupportIpv6Detail != null) {
+            this.SupportIpv6Detail = new SupportIpv6Detail(source.SupportIpv6Detail);
+        }
+        if (source.PublicIpv6Addresses != null) {
+            this.PublicIpv6Addresses = new String[source.PublicIpv6Addresses.length];
+            for (int i = 0; i < source.PublicIpv6Addresses.length; i++) {
+                this.PublicIpv6Addresses[i] = new String(source.PublicIpv6Addresses[i]);
+            }
+        }
         if (source.InitInvocationId != null) {
             this.InitInvocationId = new String(source.InitInvocationId);
         }
@@ -955,6 +1010,8 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+        this.setParamObj(map, prefix + "SupportIpv6Detail.", this.SupportIpv6Detail);
+        this.setParamArraySimple(map, prefix + "PublicIpv6Addresses.", this.PublicIpv6Addresses);
         this.setParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
         this.setParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
 

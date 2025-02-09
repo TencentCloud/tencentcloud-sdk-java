@@ -68,6 +68,13 @@ UserName和Password必须同时填写或同时为空。
     private String AuthRange;
 
     /**
+    * 自建数据资产的名称，支持修改
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -171,6 +178,22 @@ UserName和Password必须同时填写或同时为空。
         this.AuthRange = AuthRange;
     }
 
+    /**
+     * Get 自建数据资产的名称，支持修改 
+     * @return ResourceName 自建数据资产的名称，支持修改
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set 自建数据资产的名称，支持修改
+     * @param ResourceName 自建数据资产的名称，支持修改
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
     public UpdateDSPASelfBuildResourceRequest() {
     }
 
@@ -197,6 +220,9 @@ UserName和Password必须同时填写或同时为空。
         if (source.AuthRange != null) {
             this.AuthRange = new String(source.AuthRange);
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
     }
 
 
@@ -210,6 +236,7 @@ UserName和Password必须同时填写或同时为空。
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "AuthRange", this.AuthRange);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
 
     }
 }

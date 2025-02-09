@@ -52,6 +52,20 @@ public class NetWork extends AbstractModel {
     private String SubnetCidrBlock;
 
     /**
+    * 服务clbip
+    */
+    @SerializedName("ClbIp")
+    @Expose
+    private String ClbIp;
+
+    /**
+    * 服务clbPort
+    */
+    @SerializedName("ClbPort")
+    @Expose
+    private String ClbPort;
+
+    /**
      * Get vpc实例id 
      * @return VpcId vpc实例id
      */
@@ -115,6 +129,38 @@ public class NetWork extends AbstractModel {
         this.SubnetCidrBlock = SubnetCidrBlock;
     }
 
+    /**
+     * Get 服务clbip 
+     * @return ClbIp 服务clbip
+     */
+    public String getClbIp() {
+        return this.ClbIp;
+    }
+
+    /**
+     * Set 服务clbip
+     * @param ClbIp 服务clbip
+     */
+    public void setClbIp(String ClbIp) {
+        this.ClbIp = ClbIp;
+    }
+
+    /**
+     * Get 服务clbPort 
+     * @return ClbPort 服务clbPort
+     */
+    public String getClbPort() {
+        return this.ClbPort;
+    }
+
+    /**
+     * Set 服务clbPort
+     * @param ClbPort 服务clbPort
+     */
+    public void setClbPort(String ClbPort) {
+        this.ClbPort = ClbPort;
+    }
+
     public NetWork() {
     }
 
@@ -135,6 +181,12 @@ public class NetWork extends AbstractModel {
         if (source.SubnetCidrBlock != null) {
             this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
         }
+        if (source.ClbIp != null) {
+            this.ClbIp = new String(source.ClbIp);
+        }
+        if (source.ClbPort != null) {
+            this.ClbPort = new String(source.ClbPort);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class NetWork extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
+        this.setParamSimple(map, prefix + "ClbIp", this.ClbIp);
+        this.setParamSimple(map, prefix + "ClbPort", this.ClbPort);
 
     }
 }

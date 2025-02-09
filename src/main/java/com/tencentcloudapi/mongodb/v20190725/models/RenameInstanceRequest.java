@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RenameInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例ID，格式如：cmgo-p8vnipr5。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb#/)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
+    * 自定义实例名称，要求为1～128 长度的任意字符。
     */
     @SerializedName("NewName")
     @Expose
     private String NewName;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vnipr5。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb#/)在实例列表复制实例 ID。 
+     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb#/)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vnipr5。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb#/)在实例列表复制实例 ID。
+     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb#/)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 - 
-     * @return NewName 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
+     * Get 自定义实例名称，要求为1～128 长度的任意字符。 
+     * @return NewName 自定义实例名称，要求为1～128 长度的任意字符。
      */
     public String getNewName() {
         return this.NewName;
     }
 
     /**
-     * Set 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
-     * @param NewName 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
+     * Set 自定义实例名称，要求为1～128 长度的任意字符。
+     * @param NewName 自定义实例名称，要求为1～128 长度的任意字符。
      */
     public void setNewName(String NewName) {
         this.NewName = NewName;

@@ -31,7 +31,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     private String Model;
 
     /**
-    * 会话列表
+    * 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
     */
     @SerializedName("Messages")
     @Expose
@@ -75,16 +80,36 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 会话列表 
-     * @return Messages 会话列表
+     * Get 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+ 
+     * @return Messages 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
      */
     public Message [] getMessages() {
         return this.Messages;
     }
 
     /**
-     * Set 会话列表
-     * @param Messages 会话列表
+     * Set 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
+     * @param Messages 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
      */
     public void setMessages(Message [] Messages) {
         this.Messages = Messages;
