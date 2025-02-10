@@ -72,6 +72,28 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *付费提交证书资料
+     * @param req CertificateInfoSubmitRequest
+     * @return CertificateInfoSubmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CertificateInfoSubmitResponse CertificateInfoSubmit(CertificateInfoSubmitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CertificateInfoSubmit", CertificateInfoSubmitResponse.class);
+    }
+
+    /**
+     *提交付费证书订单
+     * @param req CertificateOrderSubmitRequest
+     * @return CertificateOrderSubmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CertificateOrderSubmitResponse CertificateOrderSubmit(CertificateOrderSubmitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CertificateOrderSubmit", CertificateOrderSubmitResponse.class);
+    }
+
+    /**
      *本接口（CheckCertificateChain）用于检查证书链是否完整。
      * @param req CheckCertificateChainRequest
      * @return CheckCertificateChainResponse

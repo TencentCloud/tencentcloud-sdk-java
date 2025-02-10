@@ -116,6 +116,13 @@ public class ModifyOutputInfo extends AbstractModel {
     private String OutputType;
 
     /**
+    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+    */
+    @SerializedName("PidSelector")
+    @Expose
+    private PidSelector PidSelector;
+
+    /**
      * Get 需要修改的Output的Id。 
      * @return OutputId 需要修改的Output的Id。
      */
@@ -327,6 +334,22 @@ public class ModifyOutputInfo extends AbstractModel {
         this.OutputType = OutputType;
     }
 
+    /**
+     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
+     * @return PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public PidSelector getPidSelector() {
+        return this.PidSelector;
+    }
+
+    /**
+     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public void setPidSelector(PidSelector PidSelector) {
+        this.PidSelector = PidSelector;
+    }
+
     public ModifyOutputInfo() {
     }
 
@@ -383,6 +406,9 @@ public class ModifyOutputInfo extends AbstractModel {
         if (source.OutputType != null) {
             this.OutputType = new String(source.OutputType);
         }
+        if (source.PidSelector != null) {
+            this.PidSelector = new PidSelector(source.PidSelector);
+        }
     }
 
 
@@ -403,6 +429,7 @@ public class ModifyOutputInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamSimple(map, prefix + "OutputType", this.OutputType);
+        this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
 
     }
 }

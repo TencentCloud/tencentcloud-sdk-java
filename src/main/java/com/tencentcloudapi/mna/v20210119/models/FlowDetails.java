@@ -25,7 +25,6 @@ public class FlowDetails extends AbstractModel {
 
     /**
     * 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetDetails")
     @Expose
@@ -33,7 +32,6 @@ public class FlowDetails extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -41,7 +39,6 @@ public class FlowDetails extends AbstractModel {
 
     /**
     * 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxValue")
     @Expose
@@ -49,7 +46,6 @@ public class FlowDetails extends AbstractModel {
 
     /**
     * 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgValue")
     @Expose
@@ -57,17 +53,14 @@ public class FlowDetails extends AbstractModel {
 
     /**
     * 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalValue")
     @Expose
     private Float TotalValue;
 
     /**
-     * Get 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量数据点 
      * @return NetDetails 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetDetails [] getNetDetails() {
         return this.NetDetails;
@@ -75,19 +68,15 @@ public class FlowDetails extends AbstractModel {
 
     /**
      * Set 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetails 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetDetails(NetDetails [] NetDetails) {
         this.NetDetails = NetDetails;
     }
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -95,19 +84,15 @@ public class FlowDetails extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量最大值（单位：bytes） 
      * @return MaxValue 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMaxValue() {
         return this.MaxValue;
@@ -115,19 +100,15 @@ public class FlowDetails extends AbstractModel {
 
     /**
      * Set 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxValue 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxValue(Float MaxValue) {
         this.MaxValue = MaxValue;
     }
 
     /**
-     * Get 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量平均值（单位：bytes） 
      * @return AvgValue 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAvgValue() {
         return this.AvgValue;
@@ -135,19 +116,15 @@ public class FlowDetails extends AbstractModel {
 
     /**
      * Set 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvgValue 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgValue(Float AvgValue) {
         this.AvgValue = AvgValue;
     }
 
     /**
-     * Get 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量总值（单位：bytes） 
      * @return TotalValue 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalValue() {
         return this.TotalValue;
@@ -155,9 +132,7 @@ public class FlowDetails extends AbstractModel {
 
     /**
      * Set 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalValue 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalValue(Float TotalValue) {
         this.TotalValue = TotalValue;

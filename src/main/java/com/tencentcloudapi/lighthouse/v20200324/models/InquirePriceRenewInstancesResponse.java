@@ -32,7 +32,6 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel {
 
     /**
     * 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDiskPriceSet")
     @Expose
@@ -40,7 +39,6 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel {
 
     /**
     * 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePriceDetailSet")
     @Expose
@@ -77,10 +75,8 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘价格信息列表。 
      * @return DataDiskPriceSet 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataDiskPrice [] getDataDiskPriceSet() {
         return this.DataDiskPriceSet;
@@ -88,19 +84,15 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel {
 
     /**
      * Set 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataDiskPriceSet 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
         this.DataDiskPriceSet = DataDiskPriceSet;
     }
 
     /**
-     * Get 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待续费实例价格列表。 
      * @return InstancePriceDetailSet 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstancePriceDetail [] getInstancePriceDetailSet() {
         return this.InstancePriceDetailSet;
@@ -108,9 +100,7 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel {
 
     /**
      * Set 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePriceDetailSet 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePriceDetailSet(InstancePriceDetail [] InstancePriceDetailSet) {
         this.InstancePriceDetailSet = InstancePriceDetailSet;

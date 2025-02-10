@@ -32,7 +32,6 @@ public class AbnormalEvent extends AbstractModel {
 
     /**
     * 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerId")
     @Expose
@@ -55,10 +54,8 @@ public class AbnormalEvent extends AbstractModel {
     }
 
     /**
-     * Get 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 远端用户ID,""：表示异常事件不是由远端用户产生 
      * @return PeerId 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeerId() {
         return this.PeerId;
@@ -66,9 +63,7 @@ public class AbnormalEvent extends AbstractModel {
 
     /**
      * Set 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerId 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerId(String PeerId) {
         this.PeerId = PeerId;

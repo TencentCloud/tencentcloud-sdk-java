@@ -122,6 +122,13 @@ public class CreateAclRequest extends AbstractModel {
     private Long [] DeviceIdSet;
 
     /**
+    * 关联的应用资产ID集合
+    */
+    @SerializedName("AppAssetIdSet")
+    @Expose
+    private Long [] AppAssetIdSet;
+
+    /**
     * 关联的资产组ID
     */
     @SerializedName("DeviceGroupIdSet")
@@ -446,6 +453,22 @@ public class CreateAclRequest extends AbstractModel {
     }
 
     /**
+     * Get 关联的应用资产ID集合 
+     * @return AppAssetIdSet 关联的应用资产ID集合
+     */
+    public Long [] getAppAssetIdSet() {
+        return this.AppAssetIdSet;
+    }
+
+    /**
+     * Set 关联的应用资产ID集合
+     * @param AppAssetIdSet 关联的应用资产ID集合
+     */
+    public void setAppAssetIdSet(Long [] AppAssetIdSet) {
+        this.AppAssetIdSet = AppAssetIdSet;
+    }
+
+    /**
      * Get 关联的资产组ID 
      * @return DeviceGroupIdSet 关联的资产组ID
      */
@@ -736,6 +759,12 @@ public class CreateAclRequest extends AbstractModel {
                 this.DeviceIdSet[i] = new Long(source.DeviceIdSet[i]);
             }
         }
+        if (source.AppAssetIdSet != null) {
+            this.AppAssetIdSet = new Long[source.AppAssetIdSet.length];
+            for (int i = 0; i < source.AppAssetIdSet.length; i++) {
+                this.AppAssetIdSet[i] = new Long(source.AppAssetIdSet[i]);
+            }
+        }
         if (source.DeviceGroupIdSet != null) {
             this.DeviceGroupIdSet = new Long[source.DeviceGroupIdSet.length];
             for (int i = 0; i < source.DeviceGroupIdSet.length; i++) {
@@ -811,6 +840,7 @@ public class CreateAclRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UserIdSet.", this.UserIdSet);
         this.setParamArraySimple(map, prefix + "UserGroupIdSet.", this.UserGroupIdSet);
         this.setParamArraySimple(map, prefix + "DeviceIdSet.", this.DeviceIdSet);
+        this.setParamArraySimple(map, prefix + "AppAssetIdSet.", this.AppAssetIdSet);
         this.setParamArraySimple(map, prefix + "DeviceGroupIdSet.", this.DeviceGroupIdSet);
         this.setParamArraySimple(map, prefix + "AccountSet.", this.AccountSet);
         this.setParamArraySimple(map, prefix + "CmdTemplateIdSet.", this.CmdTemplateIdSet);

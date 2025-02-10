@@ -81,6 +81,20 @@ public class DescribeFlow extends AbstractModel {
     private String Region;
 
     /**
+    * 该Flow允许创建的输入协议
+    */
+    @SerializedName("AllowedInputProtocols")
+    @Expose
+    private String [] AllowedInputProtocols;
+
+    /**
+    * 该Flow允许创建的输出协议
+    */
+    @SerializedName("AllowedOutputProtocols")
+    @Expose
+    private String [] AllowedOutputProtocols;
+
+    /**
      * Get 流Id。 
      * @return FlowId 流Id。
      */
@@ -212,6 +226,38 @@ public class DescribeFlow extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get 该Flow允许创建的输入协议 
+     * @return AllowedInputProtocols 该Flow允许创建的输入协议
+     */
+    public String [] getAllowedInputProtocols() {
+        return this.AllowedInputProtocols;
+    }
+
+    /**
+     * Set 该Flow允许创建的输入协议
+     * @param AllowedInputProtocols 该Flow允许创建的输入协议
+     */
+    public void setAllowedInputProtocols(String [] AllowedInputProtocols) {
+        this.AllowedInputProtocols = AllowedInputProtocols;
+    }
+
+    /**
+     * Get 该Flow允许创建的输出协议 
+     * @return AllowedOutputProtocols 该Flow允许创建的输出协议
+     */
+    public String [] getAllowedOutputProtocols() {
+        return this.AllowedOutputProtocols;
+    }
+
+    /**
+     * Set 该Flow允许创建的输出协议
+     * @param AllowedOutputProtocols 该Flow允许创建的输出协议
+     */
+    public void setAllowedOutputProtocols(String [] AllowedOutputProtocols) {
+        this.AllowedOutputProtocols = AllowedOutputProtocols;
+    }
+
     public DescribeFlow() {
     }
 
@@ -250,6 +296,18 @@ public class DescribeFlow extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.AllowedInputProtocols != null) {
+            this.AllowedInputProtocols = new String[source.AllowedInputProtocols.length];
+            for (int i = 0; i < source.AllowedInputProtocols.length; i++) {
+                this.AllowedInputProtocols[i] = new String(source.AllowedInputProtocols[i]);
+            }
+        }
+        if (source.AllowedOutputProtocols != null) {
+            this.AllowedOutputProtocols = new String[source.AllowedOutputProtocols.length];
+            for (int i = 0; i < source.AllowedOutputProtocols.length; i++) {
+                this.AllowedOutputProtocols[i] = new String(source.AllowedOutputProtocols[i]);
+            }
+        }
     }
 
 
@@ -265,6 +323,8 @@ public class DescribeFlow extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArraySimple(map, prefix + "AllowedInputProtocols.", this.AllowedInputProtocols);
+        this.setParamArraySimple(map, prefix + "AllowedOutputProtocols.", this.AllowedOutputProtocols);
 
     }
 }

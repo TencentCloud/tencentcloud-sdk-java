@@ -73,6 +73,13 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     private Long Kind;
 
     /**
+    * 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+    */
+    @SerializedName("KindSet")
+    @Expose
+    private Long [] KindSet;
+
+    /**
     * 所属部门ID
     */
     @SerializedName("DepartmentId")
@@ -199,6 +206,22 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     }
 
     /**
+     * Get 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer 
+     * @return KindSet 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     */
+    public Long [] getKindSet() {
+        return this.KindSet;
+    }
+
+    /**
+     * Set 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     * @param KindSet 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     */
+    public void setKindSet(Long [] KindSet) {
+        this.KindSet = KindSet;
+    }
+
+    /**
      * Get 所属部门ID 
      * @return DepartmentId 所属部门ID
      */
@@ -262,6 +285,12 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
         if (source.Kind != null) {
             this.Kind = new Long(source.Kind);
         }
+        if (source.KindSet != null) {
+            this.KindSet = new Long[source.KindSet.length];
+            for (int i = 0; i < source.KindSet.length; i++) {
+                this.KindSet[i] = new Long(source.KindSet[i]);
+            }
+        }
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
@@ -285,6 +314,7 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
+        this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 

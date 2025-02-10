@@ -73,6 +73,13 @@ public class DescribeAclsRequest extends AbstractModel {
     private Long [] AuthorizedDeviceIdSet;
 
     /**
+    * 有访问权限的应用资产ID集合
+    */
+    @SerializedName("AuthorizedAppAssetIdSet")
+    @Expose
+    private Long [] AuthorizedAppAssetIdSet;
+
+    /**
     * 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
     */
     @SerializedName("Status")
@@ -213,6 +220,22 @@ public class DescribeAclsRequest extends AbstractModel {
     }
 
     /**
+     * Get 有访问权限的应用资产ID集合 
+     * @return AuthorizedAppAssetIdSet 有访问权限的应用资产ID集合
+     */
+    public Long [] getAuthorizedAppAssetIdSet() {
+        return this.AuthorizedAppAssetIdSet;
+    }
+
+    /**
+     * Set 有访问权限的应用资产ID集合
+     * @param AuthorizedAppAssetIdSet 有访问权限的应用资产ID集合
+     */
+    public void setAuthorizedAppAssetIdSet(Long [] AuthorizedAppAssetIdSet) {
+        this.AuthorizedAppAssetIdSet = AuthorizedAppAssetIdSet;
+    }
+
+    /**
      * Get 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期 
      * @return Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
@@ -314,6 +337,12 @@ public class DescribeAclsRequest extends AbstractModel {
                 this.AuthorizedDeviceIdSet[i] = new Long(source.AuthorizedDeviceIdSet[i]);
             }
         }
+        if (source.AuthorizedAppAssetIdSet != null) {
+            this.AuthorizedAppAssetIdSet = new Long[source.AuthorizedAppAssetIdSet.length];
+            for (int i = 0; i < source.AuthorizedAppAssetIdSet.length; i++) {
+                this.AuthorizedAppAssetIdSet[i] = new Long(source.AuthorizedAppAssetIdSet[i]);
+            }
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -343,6 +372,7 @@ public class DescribeAclsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Exact", this.Exact);
         this.setParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
+        this.setParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamSimple(map, prefix + "ExactAccount", this.ExactAccount);

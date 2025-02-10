@@ -112,6 +112,27 @@ public class TextVehicleFront extends AbstractModel {
     private String Seal;
 
     /**
+    * 状态
+    */
+    @SerializedName("StateElectronic")
+    @Expose
+    private String StateElectronic;
+
+    /**
+    * 检验有效期
+    */
+    @SerializedName("InspectionValidityTimeElectronic")
+    @Expose
+    private String InspectionValidityTimeElectronic;
+
+    /**
+    * 生成时间
+    */
+    @SerializedName("GenerationTimeElectronic")
+    @Expose
+    private String GenerationTimeElectronic;
+
+    /**
      * Get 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
@@ -331,6 +352,54 @@ public class TextVehicleFront extends AbstractModel {
         this.Seal = Seal;
     }
 
+    /**
+     * Get 状态 
+     * @return StateElectronic 状态
+     */
+    public String getStateElectronic() {
+        return this.StateElectronic;
+    }
+
+    /**
+     * Set 状态
+     * @param StateElectronic 状态
+     */
+    public void setStateElectronic(String StateElectronic) {
+        this.StateElectronic = StateElectronic;
+    }
+
+    /**
+     * Get 检验有效期 
+     * @return InspectionValidityTimeElectronic 检验有效期
+     */
+    public String getInspectionValidityTimeElectronic() {
+        return this.InspectionValidityTimeElectronic;
+    }
+
+    /**
+     * Set 检验有效期
+     * @param InspectionValidityTimeElectronic 检验有效期
+     */
+    public void setInspectionValidityTimeElectronic(String InspectionValidityTimeElectronic) {
+        this.InspectionValidityTimeElectronic = InspectionValidityTimeElectronic;
+    }
+
+    /**
+     * Get 生成时间 
+     * @return GenerationTimeElectronic 生成时间
+     */
+    public String getGenerationTimeElectronic() {
+        return this.GenerationTimeElectronic;
+    }
+
+    /**
+     * Set 生成时间
+     * @param GenerationTimeElectronic 生成时间
+     */
+    public void setGenerationTimeElectronic(String GenerationTimeElectronic) {
+        this.GenerationTimeElectronic = GenerationTimeElectronic;
+    }
+
     public TextVehicleFront() {
     }
 
@@ -372,6 +441,15 @@ public class TextVehicleFront extends AbstractModel {
         if (source.Seal != null) {
             this.Seal = new String(source.Seal);
         }
+        if (source.StateElectronic != null) {
+            this.StateElectronic = new String(source.StateElectronic);
+        }
+        if (source.InspectionValidityTimeElectronic != null) {
+            this.InspectionValidityTimeElectronic = new String(source.InspectionValidityTimeElectronic);
+        }
+        if (source.GenerationTimeElectronic != null) {
+            this.GenerationTimeElectronic = new String(source.GenerationTimeElectronic);
+        }
     }
 
 
@@ -390,6 +468,9 @@ public class TextVehicleFront extends AbstractModel {
         this.setParamSimple(map, prefix + "RegisterDate", this.RegisterDate);
         this.setParamSimple(map, prefix + "IssueDate", this.IssueDate);
         this.setParamSimple(map, prefix + "Seal", this.Seal);
+        this.setParamSimple(map, prefix + "StateElectronic", this.StateElectronic);
+        this.setParamSimple(map, prefix + "InspectionValidityTimeElectronic", this.InspectionValidityTimeElectronic);
+        this.setParamSimple(map, prefix + "GenerationTimeElectronic", this.GenerationTimeElectronic);
 
     }
 }

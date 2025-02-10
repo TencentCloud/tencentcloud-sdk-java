@@ -39,6 +39,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
     */
     @SerializedName("Source")
@@ -127,6 +129,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语 
      * @return Source 源语言，支持
 zh：简体中文
@@ -143,6 +147,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
      */
     public String getSource() {
@@ -165,6 +171,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
      * @param Source 源语言，支持
 zh：简体中文
@@ -181,6 +189,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
      */
     public void setSource(String Source) {

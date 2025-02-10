@@ -73,8 +73,9 @@ public class CreateTopicRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
-不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
+    * 存储时间，单位天。
+- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
     */
     @SerializedName("Period")
     @Expose
@@ -95,6 +96,15 @@ public class CreateTopicRequest extends AbstractModel {
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
+
+    /**
+    * 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
+- APPID可在https://console.cloud.tencent.com/developer页面查询
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
 
     /**
     * 免鉴权开关。 false：关闭； true：开启。默认为false。
@@ -224,20 +234,24 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
-不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。 
-     * @return Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
-不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
+     * Get 存储时间，单位天。
+- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。 
+     * @return Period 存储时间，单位天。
+- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
-不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
-     * @param Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
-不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
+     * Set 存储时间，单位天。
+- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+     * @param Period 存储时间，单位天。
+- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -281,6 +295,30 @@ public class CreateTopicRequest extends AbstractModel {
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
+    }
+
+    /**
+     * Get 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
+- APPID可在https://console.cloud.tencent.com/developer页面查询 
+     * @return TopicId 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
+- APPID可在https://console.cloud.tencent.com/developer页面查询
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
+- APPID可在https://console.cloud.tencent.com/developer页面查询
+     * @param TopicId 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
+- APPID可在https://console.cloud.tencent.com/developer页面查询
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
     }
 
     /**
@@ -360,6 +398,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
         }
@@ -383,6 +424,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
 

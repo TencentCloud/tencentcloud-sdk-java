@@ -243,6 +243,13 @@ public class Acl extends AbstractModel {
     private Boolean AllowKeyboardLogger;
 
     /**
+    * 关联的应用资产列表
+    */
+    @SerializedName("AppAssetSet")
+    @Expose
+    private AppAsset [] AppAssetSet;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -746,6 +753,22 @@ public class Acl extends AbstractModel {
         this.AllowKeyboardLogger = AllowKeyboardLogger;
     }
 
+    /**
+     * Get 关联的应用资产列表 
+     * @return AppAssetSet 关联的应用资产列表
+     */
+    public AppAsset [] getAppAssetSet() {
+        return this.AppAssetSet;
+    }
+
+    /**
+     * Set 关联的应用资产列表
+     * @param AppAssetSet 关联的应用资产列表
+     */
+    public void setAppAssetSet(AppAsset [] AppAssetSet) {
+        this.AppAssetSet = AppAssetSet;
+    }
+
     public Acl() {
     }
 
@@ -871,6 +894,12 @@ public class Acl extends AbstractModel {
         if (source.AllowKeyboardLogger != null) {
             this.AllowKeyboardLogger = new Boolean(source.AllowKeyboardLogger);
         }
+        if (source.AppAssetSet != null) {
+            this.AppAssetSet = new AppAsset[source.AppAssetSet.length];
+            for (int i = 0; i < source.AppAssetSet.length; i++) {
+                this.AppAssetSet[i] = new AppAsset(source.AppAssetSet[i]);
+            }
+        }
     }
 
 
@@ -909,6 +938,7 @@ public class Acl extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
         this.setParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
         this.setParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
+        this.setParamArrayObj(map, prefix + "AppAssetSet.", this.AppAssetSet);
 
     }
 }

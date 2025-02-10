@@ -102,7 +102,6 @@ public class FileSystem extends AbstractModel {
 
     /**
     * 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRanger")
     @Expose
@@ -110,7 +109,6 @@ public class FileSystem extends AbstractModel {
 
     /**
     * Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RangerServiceAddresses")
     @Expose
@@ -293,10 +291,8 @@ public class FileSystem extends AbstractModel {
     }
 
     /**
-     * Get 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否打开Ranger地址校验 
      * @return EnableRanger 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableRanger() {
         return this.EnableRanger;
@@ -304,19 +300,15 @@ public class FileSystem extends AbstractModel {
 
     /**
      * Set 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableRanger 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRanger(Boolean EnableRanger) {
         this.EnableRanger = EnableRanger;
     }
 
     /**
-     * Get Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ranger地址列表 
      * @return RangerServiceAddresses Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRangerServiceAddresses() {
         return this.RangerServiceAddresses;
@@ -324,9 +316,7 @@ public class FileSystem extends AbstractModel {
 
     /**
      * Set Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RangerServiceAddresses Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
         this.RangerServiceAddresses = RangerServiceAddresses;

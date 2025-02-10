@@ -194,7 +194,7 @@ public class Disk extends AbstractModel {
     private Boolean Attached;
 
     /**
-    * 云硬盘大小，单位GB。
+    * 云硬盘大小，单位GiB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -332,6 +332,14 @@ public class Disk extends AbstractModel {
     @SerializedName("BurstPerformance")
     @Expose
     private Boolean BurstPerformance;
+
+    /**
+    * 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private String EncryptType;
 
     /**
      * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
@@ -738,16 +746,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘大小，单位GB。 
-     * @return DiskSize 云硬盘大小，单位GB。
+     * Get 云硬盘大小，单位GiB。 
+     * @return DiskSize 云硬盘大小，单位GiB。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 云硬盘大小，单位GB。
-     * @param DiskSize 云硬盘大小，单位GB。
+     * Set 云硬盘大小，单位GiB。
+     * @param DiskSize 云硬盘大小，单位GiB。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -1069,6 +1077,26 @@ public class Disk extends AbstractModel {
         this.BurstPerformance = BurstPerformance;
     }
 
+    /**
+     * Get 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptType(String EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
     public Disk() {
     }
 
@@ -1212,6 +1240,9 @@ public class Disk extends AbstractModel {
         if (source.BurstPerformance != null) {
             this.BurstPerformance = new Boolean(source.BurstPerformance);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
     }
 
 
@@ -1261,6 +1292,7 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
         this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
         this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

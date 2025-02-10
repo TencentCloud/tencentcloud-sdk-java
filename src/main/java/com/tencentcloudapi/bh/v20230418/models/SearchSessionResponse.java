@@ -31,6 +31,13 @@ public class SearchSessionResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 会话信息列表
+    */
+    @SerializedName("SessionSet")
+    @Expose
+    private SessionResult [] SessionSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class SearchSessionResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 会话信息列表 
+     * @return SessionSet 会话信息列表
+     */
+    public SessionResult [] getSessionSet() {
+        return this.SessionSet;
+    }
+
+    /**
+     * Set 会话信息列表
+     * @param SessionSet 会话信息列表
+     */
+    public void setSessionSet(SessionResult [] SessionSet) {
+        this.SessionSet = SessionSet;
     }
 
     /**
@@ -80,6 +103,12 @@ public class SearchSessionResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.SessionSet != null) {
+            this.SessionSet = new SessionResult[source.SessionSet.length];
+            for (int i = 0; i < source.SessionSet.length; i++) {
+                this.SessionSet[i] = new SessionResult(source.SessionSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class SearchSessionResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "SessionSet.", this.SessionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

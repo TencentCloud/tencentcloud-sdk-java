@@ -122,6 +122,20 @@ public class SearchSessionRequest extends AbstractModel {
     private String Id;
 
     /**
+    * 应用资产类型, 1-web
+    */
+    @SerializedName("AppAssetKindSet")
+    @Expose
+    private Long [] AppAssetKindSet;
+
+    /**
+    * 应用资产Url
+    */
+    @SerializedName("AppAssetUrl")
+    @Expose
+    private String AppAssetUrl;
+
+    /**
      * Get 内部Ip 
      * @return PrivateIp 内部Ip
      */
@@ -345,6 +359,38 @@ public class SearchSessionRequest extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 应用资产类型, 1-web 
+     * @return AppAssetKindSet 应用资产类型, 1-web
+     */
+    public Long [] getAppAssetKindSet() {
+        return this.AppAssetKindSet;
+    }
+
+    /**
+     * Set 应用资产类型, 1-web
+     * @param AppAssetKindSet 应用资产类型, 1-web
+     */
+    public void setAppAssetKindSet(Long [] AppAssetKindSet) {
+        this.AppAssetKindSet = AppAssetKindSet;
+    }
+
+    /**
+     * Get 应用资产Url 
+     * @return AppAssetUrl 应用资产Url
+     */
+    public String getAppAssetUrl() {
+        return this.AppAssetUrl;
+    }
+
+    /**
+     * Set 应用资产Url
+     * @param AppAssetUrl 应用资产Url
+     */
+    public void setAppAssetUrl(String AppAssetUrl) {
+        this.AppAssetUrl = AppAssetUrl;
+    }
+
     public SearchSessionRequest() {
     }
 
@@ -395,6 +441,15 @@ public class SearchSessionRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.AppAssetKindSet != null) {
+            this.AppAssetKindSet = new Long[source.AppAssetKindSet.length];
+            for (int i = 0; i < source.AppAssetKindSet.length; i++) {
+                this.AppAssetKindSet[i] = new Long(source.AppAssetKindSet[i]);
+            }
+        }
+        if (source.AppAssetUrl != null) {
+            this.AppAssetUrl = new String(source.AppAssetUrl);
+        }
     }
 
 
@@ -416,6 +471,8 @@ public class SearchSessionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
+        this.setParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
 
     }
 }

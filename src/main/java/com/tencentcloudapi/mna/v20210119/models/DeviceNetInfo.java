@@ -116,7 +116,6 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
     * 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetInfoName")
     @Expose
@@ -124,7 +123,6 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
     * 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownRate")
     @Expose
@@ -132,7 +130,6 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
     * 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpRate")
     @Expose
@@ -371,10 +368,8 @@ public class DeviceNetInfo extends AbstractModel {
     }
 
     /**
-     * Get 网卡名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡名 
      * @return NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetInfoName() {
         return this.NetInfoName;
@@ -382,19 +377,15 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
      * Set 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetInfoName(String NetInfoName) {
         this.NetInfoName = NetInfoName;
     }
 
     /**
-     * Get 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下行实时速率（浮点数类型代替上一版本DataRx的整型） 
      * @return DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDownRate() {
         return this.DownRate;
@@ -402,19 +393,15 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
      * Set 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownRate(Float DownRate) {
         this.DownRate = DownRate;
     }
 
     /**
-     * Get 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上行实时速率（浮点数类型代替上一版本TxRate的整型） 
      * @return UpRate 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUpRate() {
         return this.UpRate;
@@ -422,9 +409,7 @@ public class DeviceNetInfo extends AbstractModel {
 
     /**
      * Set 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpRate 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpRate(Float UpRate) {
         this.UpRate = UpRate;

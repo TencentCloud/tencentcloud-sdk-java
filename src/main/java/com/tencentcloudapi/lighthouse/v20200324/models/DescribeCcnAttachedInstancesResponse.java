@@ -25,7 +25,6 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel {
 
     /**
     * 云联网关联的实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnAttachedInstanceSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云联网关联的实例列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网关联的实例列表。 
      * @return CcnAttachedInstanceSet 云联网关联的实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnAttachedInstance [] getCcnAttachedInstanceSet() {
         return this.CcnAttachedInstanceSet;
@@ -50,9 +47,7 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel {
 
     /**
      * Set 云联网关联的实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnAttachedInstanceSet 云联网关联的实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnAttachedInstanceSet(CcnAttachedInstance [] CcnAttachedInstanceSet) {
         this.CcnAttachedInstanceSet = CcnAttachedInstanceSet;

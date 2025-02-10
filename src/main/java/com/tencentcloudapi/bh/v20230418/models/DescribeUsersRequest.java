@@ -81,6 +81,13 @@ public class DescribeUsersRequest extends AbstractModel {
     private Long [] AuthorizedDeviceIdSet;
 
     /**
+    * 查询具有指定应用资产ID访问权限的用户
+    */
+    @SerializedName("AuthorizedAppAssetIdSet")
+    @Expose
+    private Long [] AuthorizedAppAssetIdSet;
+
+    /**
     * 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
     */
     @SerializedName("AuthTypeSet")
@@ -235,6 +242,22 @@ public class DescribeUsersRequest extends AbstractModel {
     }
 
     /**
+     * Get 查询具有指定应用资产ID访问权限的用户 
+     * @return AuthorizedAppAssetIdSet 查询具有指定应用资产ID访问权限的用户
+     */
+    public Long [] getAuthorizedAppAssetIdSet() {
+        return this.AuthorizedAppAssetIdSet;
+    }
+
+    /**
+     * Set 查询具有指定应用资产ID访问权限的用户
+     * @param AuthorizedAppAssetIdSet 查询具有指定应用资产ID访问权限的用户
+     */
+    public void setAuthorizedAppAssetIdSet(Long [] AuthorizedAppAssetIdSet) {
+        this.AuthorizedAppAssetIdSet = AuthorizedAppAssetIdSet;
+    }
+
+    /**
      * Get 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部 
      * @return AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      */
@@ -324,6 +347,12 @@ public class DescribeUsersRequest extends AbstractModel {
                 this.AuthorizedDeviceIdSet[i] = new Long(source.AuthorizedDeviceIdSet[i]);
             }
         }
+        if (source.AuthorizedAppAssetIdSet != null) {
+            this.AuthorizedAppAssetIdSet = new Long[source.AuthorizedAppAssetIdSet.length];
+            for (int i = 0; i < source.AuthorizedAppAssetIdSet.length; i++) {
+                this.AuthorizedAppAssetIdSet[i] = new Long(source.AuthorizedAppAssetIdSet[i]);
+            }
+        }
         if (source.AuthTypeSet != null) {
             this.AuthTypeSet = new Long[source.AuthTypeSet.length];
             for (int i = 0; i < source.AuthTypeSet.length; i++) {
@@ -354,6 +383,7 @@ public class DescribeUsersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
+        this.setParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
         this.setParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

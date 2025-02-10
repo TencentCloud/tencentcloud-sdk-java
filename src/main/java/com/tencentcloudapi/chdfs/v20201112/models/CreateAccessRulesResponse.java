@@ -25,7 +25,6 @@ public class CreateAccessRulesResponse extends AbstractModel {
 
     /**
     * 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessRules")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAccessRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限规则列表 
      * @return AccessRules 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessRule [] getAccessRules() {
         return this.AccessRules;
@@ -50,9 +47,7 @@ public class CreateAccessRulesResponse extends AbstractModel {
 
     /**
      * Set 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRules 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessRules(AccessRule [] AccessRules) {
         this.AccessRules = AccessRules;
