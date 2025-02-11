@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteQAsRequest extends AbstractModel {
 
+    /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
+    * 问答对ID列表。支持批量删除，数量不超过100
+    */
+    @SerializedName("QaIds")
+    @Expose
+    private String [] QaIds;
+
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBaseId 知识库ID
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBaseId 知识库ID
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
+    /**
+     * Get 问答对ID列表。支持批量删除，数量不超过100 
+     * @return QaIds 问答对ID列表。支持批量删除，数量不超过100
+     */
+    public String [] getQaIds() {
+        return this.QaIds;
+    }
+
+    /**
+     * Set 问答对ID列表。支持批量删除，数量不超过100
+     * @param QaIds 问答对ID列表。支持批量删除，数量不超过100
+     */
+    public void setQaIds(String [] QaIds) {
+        this.QaIds = QaIds;
+    }
+
     public DeleteQAsRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DeleteQAsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteQAsRequest(DeleteQAsRequest source) {
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
+        if (source.QaIds != null) {
+            this.QaIds = new String[source.QaIds.length];
+            for (int i = 0; i < source.QaIds.length; i++) {
+                this.QaIds[i] = new String(source.QaIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DeleteQAsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamArraySimple(map, prefix + "QaIds.", this.QaIds);
 
     }
 }

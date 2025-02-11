@@ -185,7 +185,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Get 实例Id, 该参数已废弃，请在Filters内注明 
      * @return InstanceIds 实例Id, 该参数已废弃，请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
@@ -193,7 +195,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Set 实例Id, 该参数已废弃，请在Filters内注明
      * @param InstanceIds 实例Id, 该参数已废弃，请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
@@ -217,7 +221,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Get 该参数已废弃，demo模式请在Filters内注明 
      * @return IsDemo 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public Long getIsDemo() {
         return this.IsDemo;
     }
@@ -225,7 +231,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Set 该参数已废弃，demo模式请在Filters内注明
      * @param IsDemo 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public void setIsDemo(Long IsDemo) {
         this.IsDemo = IsDemo;
     }

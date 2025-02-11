@@ -102,7 +102,9 @@ public class DescribeProjectsRequest extends AbstractModel {
     /**
      * Get 该参数已废弃，demo模式请在Filters内注明 
      * @return IsDemo 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public Long getIsDemo() {
         return this.IsDemo;
     }
@@ -110,7 +112,9 @@ public class DescribeProjectsRequest extends AbstractModel {
     /**
      * Set 该参数已废弃，demo模式请在Filters内注明
      * @param IsDemo 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public void setIsDemo(Long IsDemo) {
         this.IsDemo = IsDemo;
     }

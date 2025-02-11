@@ -25,7 +25,6 @@ public class DescribeRoomForbiddenUserResponse extends AbstractModel {
 
     /**
     * 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MutedAccountList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRoomForbiddenUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间） 
      * @return MutedAccountList 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MutedAccountList [] getMutedAccountList() {
         return this.MutedAccountList;
@@ -50,9 +47,7 @@ public class DescribeRoomForbiddenUserResponse extends AbstractModel {
 
     /**
      * Set 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MutedAccountList 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMutedAccountList(MutedAccountList [] MutedAccountList) {
         this.MutedAccountList = MutedAccountList;

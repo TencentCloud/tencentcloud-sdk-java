@@ -41,7 +41,7 @@ off：关闭
     private String AccessKey;
 
     /**
-    * 密钥
+    * 密钥，字段为脱敏返回。
     */
     @SerializedName("SecretKey")
     @Expose
@@ -92,16 +92,16 @@ off：关闭
     }
 
     /**
-     * Get 密钥 
-     * @return SecretKey 密钥
+     * Get 密钥，字段为脱敏返回。 
+     * @return SecretKey 密钥，字段为脱敏返回。
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 密钥
-     * @param SecretKey 密钥
+     * Set 密钥，字段为脱敏返回。
+     * @param SecretKey 密钥，字段为脱敏返回。
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

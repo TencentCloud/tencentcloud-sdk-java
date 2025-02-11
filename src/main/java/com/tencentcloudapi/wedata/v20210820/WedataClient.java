@@ -1073,6 +1073,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *实例详情页，返回某个实例所有生命周期信息
+     * @param req DescribeInstanceDetailInfoRequest
+     * @return DescribeInstanceDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDetailInfoResponse DescribeInstanceDetailInfo(DescribeInstanceDetailInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceDetailInfo", DescribeInstanceDetailInfoResponse.class);
+    }
+
+    /**
      *日志获取详情页面
      * @param req DescribeInstanceLastLogRequest
      * @return DescribeInstanceLastLogResponse

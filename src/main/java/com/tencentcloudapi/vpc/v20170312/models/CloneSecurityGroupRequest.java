@@ -64,7 +64,7 @@ public class CloneSecurityGroupRequest extends AbstractModel {
     */
     @SerializedName("Tags")
     @Expose
-    private Tag Tags;
+    private Tag [] Tags;
 
     /**
      * Get 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。 
@@ -152,7 +152,7 @@ public class CloneSecurityGroupRequest extends AbstractModel {
      * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
      */
-    public Tag getTags() {
+    public Tag [] getTags() {
         return this.Tags;
     }
 
@@ -162,7 +162,7 @@ public class CloneSecurityGroupRequest extends AbstractModel {
      * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
      */
-    public void setTags(Tag Tags) {
+    public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
@@ -190,7 +190,10 @@ public class CloneSecurityGroupRequest extends AbstractModel {
             this.RemoteRegion = new String(source.RemoteRegion);
         }
         if (source.Tags != null) {
-            this.Tags = new Tag(source.Tags);
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
     }
 
@@ -204,7 +207,7 @@ public class CloneSecurityGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
-        this.setParamObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

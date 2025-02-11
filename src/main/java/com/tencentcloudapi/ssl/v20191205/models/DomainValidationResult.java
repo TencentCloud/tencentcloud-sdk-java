@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DomainValidationResult extends AbstractModel {
 
     /**
-    * 域名。
+    * 证书绑定的域名。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 验证类型。
+    * 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyType")
@@ -39,21 +39,22 @@ public class DomainValidationResult extends AbstractModel {
     private String VerifyType;
 
     /**
-    * 本地检查结果。
+    * 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
+
     */
     @SerializedName("LocalCheck")
     @Expose
     private Long LocalCheck;
 
     /**
-    * CA检查结果。
+    * CA检查结果。取值： -1（未检测通过）；2（检测通过）
     */
     @SerializedName("CaCheck")
     @Expose
     private Long CaCheck;
 
     /**
-    * 检查失败原因。
+    * 检查失败原因。状态LocalCheck的具体描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalCheckFailReason")
@@ -69,39 +70,39 @@ public class DomainValidationResult extends AbstractModel {
     private String [] CheckValue;
 
     /**
-    * 是否频繁请求。
+    * 是否被限频拦截， 取值：false（未被限频）；true（被限频）
     */
     @SerializedName("Frequently")
     @Expose
     private Boolean Frequently;
 
     /**
-    * 是否已经签发。
+    * 证书是否已经签发。取值： false（未签发）；true（已签发）
     */
     @SerializedName("Issued")
     @Expose
     private Boolean Issued;
 
     /**
-     * Get 域名。 
-     * @return Domain 域名。
+     * Get 证书绑定的域名。 
+     * @return Domain 证书绑定的域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名。
-     * @param Domain 域名。
+     * Set 证书绑定的域名。
+     * @param Domain 证书绑定的域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 验证类型。
+     * Get 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VerifyType 验证类型。
+     * @return VerifyType 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVerifyType() {
@@ -109,9 +110,9 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Set 验证类型。
+     * Set 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VerifyType 验证类型。
+     * @param VerifyType 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyType(String VerifyType) {
@@ -119,41 +120,45 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Get 本地检查结果。 
-     * @return LocalCheck 本地检查结果。
+     * Get 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
+ 
+     * @return LocalCheck 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
+
      */
     public Long getLocalCheck() {
         return this.LocalCheck;
     }
 
     /**
-     * Set 本地检查结果。
-     * @param LocalCheck 本地检查结果。
+     * Set 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
+
+     * @param LocalCheck 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
+
      */
     public void setLocalCheck(Long LocalCheck) {
         this.LocalCheck = LocalCheck;
     }
 
     /**
-     * Get CA检查结果。 
-     * @return CaCheck CA检查结果。
+     * Get CA检查结果。取值： -1（未检测通过）；2（检测通过） 
+     * @return CaCheck CA检查结果。取值： -1（未检测通过）；2（检测通过）
      */
     public Long getCaCheck() {
         return this.CaCheck;
     }
 
     /**
-     * Set CA检查结果。
-     * @param CaCheck CA检查结果。
+     * Set CA检查结果。取值： -1（未检测通过）；2（检测通过）
+     * @param CaCheck CA检查结果。取值： -1（未检测通过）；2（检测通过）
      */
     public void setCaCheck(Long CaCheck) {
         this.CaCheck = CaCheck;
     }
 
     /**
-     * Get 检查失败原因。
+     * Get 检查失败原因。状态LocalCheck的具体描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalCheckFailReason 检查失败原因。
+     * @return LocalCheckFailReason 检查失败原因。状态LocalCheck的具体描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalCheckFailReason() {
@@ -161,9 +166,9 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Set 检查失败原因。
+     * Set 检查失败原因。状态LocalCheck的具体描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalCheckFailReason 检查失败原因。
+     * @param LocalCheckFailReason 检查失败原因。状态LocalCheck的具体描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalCheckFailReason(String LocalCheckFailReason) {
@@ -191,32 +196,32 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Get 是否频繁请求。 
-     * @return Frequently 是否频繁请求。
+     * Get 是否被限频拦截， 取值：false（未被限频）；true（被限频） 
+     * @return Frequently 是否被限频拦截， 取值：false（未被限频）；true（被限频）
      */
     public Boolean getFrequently() {
         return this.Frequently;
     }
 
     /**
-     * Set 是否频繁请求。
-     * @param Frequently 是否频繁请求。
+     * Set 是否被限频拦截， 取值：false（未被限频）；true（被限频）
+     * @param Frequently 是否被限频拦截， 取值：false（未被限频）；true（被限频）
      */
     public void setFrequently(Boolean Frequently) {
         this.Frequently = Frequently;
     }
 
     /**
-     * Get 是否已经签发。 
-     * @return Issued 是否已经签发。
+     * Get 证书是否已经签发。取值： false（未签发）；true（已签发） 
+     * @return Issued 证书是否已经签发。取值： false（未签发）；true（已签发）
      */
     public Boolean getIssued() {
         return this.Issued;
     }
 
     /**
-     * Set 是否已经签发。
-     * @param Issued 是否已经签发。
+     * Set 证书是否已经签发。取值： false（未签发）；true（已签发）
+     * @param Issued 证书是否已经签发。取值： false（未签发）；true（已签发）
      */
     public void setIssued(Boolean Issued) {
         this.Issued = Issued;

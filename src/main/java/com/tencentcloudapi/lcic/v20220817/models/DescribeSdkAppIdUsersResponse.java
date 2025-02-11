@@ -32,7 +32,6 @@ public class DescribeSdkAppIdUsersResponse extends AbstractModel {
 
     /**
     * 当前获取用户信息数组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeSdkAppIdUsersResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前获取用户信息数组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前获取用户信息数组列表 
      * @return Users 当前获取用户信息数组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserInfo [] getUsers() {
         return this.Users;
@@ -73,9 +70,7 @@ public class DescribeSdkAppIdUsersResponse extends AbstractModel {
 
     /**
      * Set 当前获取用户信息数组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 当前获取用户信息数组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(UserInfo [] Users) {
         this.Users = Users;

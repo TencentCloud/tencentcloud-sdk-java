@@ -52,6 +52,13 @@ public class InstallAddonRequest extends AbstractModel {
     private String RawValues;
 
     /**
+    * 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 集群ID（仅支持标准tke集群） 
      * @return ClusterId 集群ID（仅支持标准tke集群）
      */
@@ -115,6 +122,22 @@ public class InstallAddonRequest extends AbstractModel {
         this.RawValues = RawValues;
     }
 
+    /**
+     * Get 是否仅做安装检查，设置为true时仅做检查，不会安装组件 
+     * @return DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     * @param DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public InstallAddonRequest() {
     }
 
@@ -135,6 +158,9 @@ public class InstallAddonRequest extends AbstractModel {
         if (source.RawValues != null) {
             this.RawValues = new String(source.RawValues);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InstallAddonRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddonName", this.AddonName);
         this.setParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

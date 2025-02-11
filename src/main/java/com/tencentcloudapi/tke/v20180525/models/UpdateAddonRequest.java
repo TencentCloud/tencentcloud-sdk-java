@@ -59,6 +59,13 @@ public class UpdateAddonRequest extends AbstractModel {
     private String UpdateStrategy;
 
     /**
+    * 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -138,6 +145,22 @@ public class UpdateAddonRequest extends AbstractModel {
         this.UpdateStrategy = UpdateStrategy;
     }
 
+    /**
+     * Get 是否仅做更新检查，设置为true时仅做检查，不会更新组件 
+     * @return DryRun 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+     * @param DryRun 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public UpdateAddonRequest() {
     }
 
@@ -161,6 +184,9 @@ public class UpdateAddonRequest extends AbstractModel {
         if (source.UpdateStrategy != null) {
             this.UpdateStrategy = new String(source.UpdateStrategy);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class UpdateAddonRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
         this.setParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeDocRequest extends AbstractModel {
 
+    /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
+    * 文档ID
+    */
+    @SerializedName("DocId")
+    @Expose
+    private String DocId;
+
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBaseId 知识库ID
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBaseId 知识库ID
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
+    /**
+     * Get 文档ID 
+     * @return DocId 文档ID
+     */
+    public String getDocId() {
+        return this.DocId;
+    }
+
+    /**
+     * Set 文档ID
+     * @param DocId 文档ID
+     */
+    public void setDocId(String DocId) {
+        this.DocId = DocId;
+    }
+
     public DescribeDocRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeDocRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDocRequest(DescribeDocRequest source) {
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
+        if (source.DocId != null) {
+            this.DocId = new String(source.DocId);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeDocRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamSimple(map, prefix + "DocId", this.DocId);
 
     }
 }

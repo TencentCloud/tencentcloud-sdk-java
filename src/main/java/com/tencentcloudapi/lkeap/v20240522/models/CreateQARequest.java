@@ -24,11 +24,80 @@ import java.util.HashMap;
 public class CreateQARequest extends AbstractModel {
 
     /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
+    * 问题，最大1000个英文字符
+    */
+    @SerializedName("Question")
+    @Expose
+    private String Question;
+
+    /**
+    * 答案，最大4000个英文字符
+    */
+    @SerializedName("Answer")
+    @Expose
+    private String Answer;
+
+    /**
     * 属性标签
     */
     @SerializedName("AttributeLabels")
     @Expose
     private AttributeLabelReferItem [] AttributeLabels;
+
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBaseId 知识库ID
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBaseId 知识库ID
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
+    /**
+     * Get 问题，最大1000个英文字符 
+     * @return Question 问题，最大1000个英文字符
+     */
+    public String getQuestion() {
+        return this.Question;
+    }
+
+    /**
+     * Set 问题，最大1000个英文字符
+     * @param Question 问题，最大1000个英文字符
+     */
+    public void setQuestion(String Question) {
+        this.Question = Question;
+    }
+
+    /**
+     * Get 答案，最大4000个英文字符 
+     * @return Answer 答案，最大4000个英文字符
+     */
+    public String getAnswer() {
+        return this.Answer;
+    }
+
+    /**
+     * Set 答案，最大4000个英文字符
+     * @param Answer 答案，最大4000个英文字符
+     */
+    public void setAnswer(String Answer) {
+        this.Answer = Answer;
+    }
 
     /**
      * Get 属性标签 
@@ -54,6 +123,15 @@ public class CreateQARequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateQARequest(CreateQARequest source) {
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
+        if (source.Question != null) {
+            this.Question = new String(source.Question);
+        }
+        if (source.Answer != null) {
+            this.Answer = new String(source.Answer);
+        }
         if (source.AttributeLabels != null) {
             this.AttributeLabels = new AttributeLabelReferItem[source.AttributeLabels.length];
             for (int i = 0; i < source.AttributeLabels.length; i++) {
@@ -67,6 +145,9 @@ public class CreateQARequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamSimple(map, prefix + "Question", this.Question);
+        this.setParamSimple(map, prefix + "Answer", this.Answer);
         this.setParamArrayObj(map, prefix + "AttributeLabels.", this.AttributeLabels);
 
     }

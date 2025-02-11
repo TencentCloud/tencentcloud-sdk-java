@@ -41,7 +41,7 @@ off：关闭
     private String AccessKey;
 
     /**
-    * 密钥。
+    * 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKey")
@@ -109,9 +109,9 @@ off：关闭
     }
 
     /**
-     * Get 密钥。
+     * Get 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretKey 密钥。
+     * @return SecretKey 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretKey() {
@@ -119,9 +119,9 @@ off：关闭
     }
 
     /**
-     * Set 密钥。
+     * Set 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretKey 密钥。
+     * @param SecretKey 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKey(String SecretKey) {

@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteAttributeLabelsRequest extends AbstractModel {
 
+    /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
+    * 属性ID
+    */
+    @SerializedName("AttributeIds")
+    @Expose
+    private String [] AttributeIds;
+
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBaseId 知识库ID
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBaseId 知识库ID
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
+    /**
+     * Get 属性ID 
+     * @return AttributeIds 属性ID
+     */
+    public String [] getAttributeIds() {
+        return this.AttributeIds;
+    }
+
+    /**
+     * Set 属性ID
+     * @param AttributeIds 属性ID
+     */
+    public void setAttributeIds(String [] AttributeIds) {
+        this.AttributeIds = AttributeIds;
+    }
+
     public DeleteAttributeLabelsRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DeleteAttributeLabelsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteAttributeLabelsRequest(DeleteAttributeLabelsRequest source) {
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
+        if (source.AttributeIds != null) {
+            this.AttributeIds = new String[source.AttributeIds.length];
+            for (int i = 0; i < source.AttributeIds.length; i++) {
+                this.AttributeIds[i] = new String(source.AttributeIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DeleteAttributeLabelsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamArraySimple(map, prefix + "AttributeIds.", this.AttributeIds);
 
     }
 }

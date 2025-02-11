@@ -32,7 +32,6 @@ public class DescribeScoreListResponse extends AbstractModel {
 
     /**
     * 课堂评分列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scores")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeScoreListResponse extends AbstractModel {
     }
 
     /**
-     * Get 课堂评分列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课堂评分列表 
      * @return Scores 课堂评分列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassScoreItem [] getScores() {
         return this.Scores;
@@ -73,9 +70,7 @@ public class DescribeScoreListResponse extends AbstractModel {
 
     /**
      * Set 课堂评分列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scores 课堂评分列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScores(ClassScoreItem [] Scores) {
         this.Scores = Scores;

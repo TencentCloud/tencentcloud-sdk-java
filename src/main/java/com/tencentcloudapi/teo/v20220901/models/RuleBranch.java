@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class RuleBranch extends AbstractModel {
 
     /**
-    * [匹配条件
-](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
+    * [匹配条件](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
     */
     @SerializedName("Condition")
     @Expose
@@ -48,20 +47,16 @@ public class RuleBranch extends AbstractModel {
     private RuleEngineSubRule [] SubRules;
 
     /**
-     * Get [匹配条件
-](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。 
-     * @return Condition [匹配条件
-](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
+     * Get [匹配条件](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。 
+     * @return Condition [匹配条件](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set [匹配条件
-](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
-     * @param Condition [匹配条件
-](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
+     * Set [匹配条件](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
+     * @param Condition [匹配条件](https://cloud.tencent.com/document/product/1552/90438#33f65828-c6c6-4b66-a011-25a20b548d5d)。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;

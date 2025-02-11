@@ -25,7 +25,6 @@ public class BatchRegisterResponse extends AbstractModel {
 
     /**
     * 注册成功的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -39,10 +38,8 @@ public class BatchRegisterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 注册成功的用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册成功的用户列表 
      * @return Users 注册成功的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchUserInfo [] getUsers() {
         return this.Users;
@@ -50,9 +47,7 @@ public class BatchRegisterResponse extends AbstractModel {
 
     /**
      * Set 注册成功的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 注册成功的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(BatchUserInfo [] Users) {
         this.Users = Users;

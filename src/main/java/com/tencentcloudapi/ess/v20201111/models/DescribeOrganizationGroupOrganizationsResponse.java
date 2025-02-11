@@ -25,7 +25,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 符合查询条件的资源实例总数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 已授权待激活的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinedTotal")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 已加入的企业数量(废弃,请使用ActivatedTotal)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivedTotal")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 如果入参Export为 true 时使用，表示导出Excel的url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExportUrl")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 成员企业信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
     * 已加入的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivatedTotal")
     @Expose
@@ -79,10 +73,8 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 符合查询条件的资源实例总数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合查询条件的资源实例总数量。 
      * @return Total 符合查询条件的资源实例总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -90,19 +82,15 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 符合查询条件的资源实例总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 符合查询条件的资源实例总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 已授权待激活的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已授权待激活的子企业总数量 
      * @return JoinedTotal 已授权待激活的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJoinedTotal() {
         return this.JoinedTotal;
@@ -110,19 +98,15 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 已授权待激活的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinedTotal 已授权待激活的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinedTotal(Long JoinedTotal) {
         this.JoinedTotal = JoinedTotal;
     }
 
     /**
-     * Get 已加入的企业数量(废弃,请使用ActivatedTotal)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已加入的企业数量(废弃,请使用ActivatedTotal) 
      * @return ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -132,9 +116,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 已加入的企业数量(废弃,请使用ActivatedTotal)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -143,10 +125,8 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Get 如果入参Export为 true 时使用，表示导出Excel的url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果入参Export为 true 时使用，表示导出Excel的url 
      * @return ExportUrl 如果入参Export为 true 时使用，表示导出Excel的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExportUrl() {
         return this.ExportUrl;
@@ -154,19 +134,15 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 如果入参Export为 true 时使用，表示导出Excel的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExportUrl 如果入参Export为 true 时使用，表示导出Excel的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExportUrl(String ExportUrl) {
         this.ExportUrl = ExportUrl;
     }
 
     /**
-     * Get 成员企业信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员企业信息列表 
      * @return List 成员企业信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupOrganization [] getList() {
         return this.List;
@@ -174,19 +150,15 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 成员企业信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 成员企业信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(GroupOrganization [] List) {
         this.List = List;
     }
 
     /**
-     * Get 已加入的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已加入的子企业总数量 
      * @return ActivatedTotal 已加入的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActivatedTotal() {
         return this.ActivatedTotal;
@@ -194,9 +166,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
 
     /**
      * Set 已加入的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivatedTotal 已加入的子企业总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivatedTotal(Long ActivatedTotal) {
         this.ActivatedTotal = ActivatedTotal;

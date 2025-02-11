@@ -38,7 +38,7 @@ public class CdnInstanceDetail extends AbstractModel {
     private String CertId;
 
     /**
-    * 域名状态
+    * 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
     */
     @SerializedName("Status")
     @Expose
@@ -84,16 +84,16 @@ public class CdnInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 域名状态 
-     * @return Status 域名状态
+     * Get 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭 
+     * @return Status 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态
-     * @param Status 域名状态
+     * Set 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
+     * @param Status 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
      */
     public void setStatus(String Status) {
         this.Status = Status;

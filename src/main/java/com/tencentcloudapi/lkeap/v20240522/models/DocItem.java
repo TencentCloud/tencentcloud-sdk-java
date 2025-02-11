@@ -34,6 +34,7 @@ public class DocItem extends AbstractModel {
     /**
     *  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -93,6 +94,7 @@ public class DocItem extends AbstractModel {
     /**
      * Get  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -102,6 +104,7 @@ public class DocItem extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -117,6 +120,7 @@ public class DocItem extends AbstractModel {
     /**
      * Set  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -126,6 +130,7 @@ public class DocItem extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  

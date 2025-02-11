@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ListQAsResponse extends AbstractModel {
 
     /**
+    * 问答对总数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 问答对信息
     */
     @SerializedName("List")
@@ -36,6 +43,22 @@ public class ListQAsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 问答对总数量 
+     * @return TotalCount 问答对总数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 问答对总数量
+     * @param TotalCount 问答对总数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 问答对信息 
@@ -77,6 +100,9 @@ public class ListQAsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListQAsResponse(ListQAsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.List != null) {
             this.List = new QaItem[source.List.length];
             for (int i = 0; i < source.List.length; i++) {
@@ -93,6 +119,7 @@ public class ListQAsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

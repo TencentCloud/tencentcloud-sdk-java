@@ -24,11 +24,103 @@ import java.util.HashMap;
 public class ModifyAttributeLabelRequest extends AbstractModel {
 
     /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
+    * 属性ID
+    */
+    @SerializedName("AttributeId")
+    @Expose
+    private String AttributeId;
+
+    /**
+    * 属性标识，最大40个英文字符，如style
+    */
+    @SerializedName("AttributeKey")
+    @Expose
+    private String AttributeKey;
+
+    /**
+    * 属性名称，最大80个英文字符，如风格
+    */
+    @SerializedName("AttributeName")
+    @Expose
+    private String AttributeName;
+
+    /**
     * 属性标签
     */
     @SerializedName("Labels")
     @Expose
     private AttributeLabelItem [] Labels;
+
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBaseId 知识库ID
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBaseId 知识库ID
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
+    /**
+     * Get 属性ID 
+     * @return AttributeId 属性ID
+     */
+    public String getAttributeId() {
+        return this.AttributeId;
+    }
+
+    /**
+     * Set 属性ID
+     * @param AttributeId 属性ID
+     */
+    public void setAttributeId(String AttributeId) {
+        this.AttributeId = AttributeId;
+    }
+
+    /**
+     * Get 属性标识，最大40个英文字符，如style 
+     * @return AttributeKey 属性标识，最大40个英文字符，如style
+     */
+    public String getAttributeKey() {
+        return this.AttributeKey;
+    }
+
+    /**
+     * Set 属性标识，最大40个英文字符，如style
+     * @param AttributeKey 属性标识，最大40个英文字符，如style
+     */
+    public void setAttributeKey(String AttributeKey) {
+        this.AttributeKey = AttributeKey;
+    }
+
+    /**
+     * Get 属性名称，最大80个英文字符，如风格 
+     * @return AttributeName 属性名称，最大80个英文字符，如风格
+     */
+    public String getAttributeName() {
+        return this.AttributeName;
+    }
+
+    /**
+     * Set 属性名称，最大80个英文字符，如风格
+     * @param AttributeName 属性名称，最大80个英文字符，如风格
+     */
+    public void setAttributeName(String AttributeName) {
+        this.AttributeName = AttributeName;
+    }
 
     /**
      * Get 属性标签 
@@ -54,6 +146,18 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyAttributeLabelRequest(ModifyAttributeLabelRequest source) {
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
+        if (source.AttributeId != null) {
+            this.AttributeId = new String(source.AttributeId);
+        }
+        if (source.AttributeKey != null) {
+            this.AttributeKey = new String(source.AttributeKey);
+        }
+        if (source.AttributeName != null) {
+            this.AttributeName = new String(source.AttributeName);
+        }
         if (source.Labels != null) {
             this.Labels = new AttributeLabelItem[source.Labels.length];
             for (int i = 0; i < source.Labels.length; i++) {
@@ -67,6 +171,10 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamSimple(map, prefix + "AttributeId", this.AttributeId);
+        this.setParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
+        this.setParamSimple(map, prefix + "AttributeName", this.AttributeName);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }

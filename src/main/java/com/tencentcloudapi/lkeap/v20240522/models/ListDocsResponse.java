@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ListDocsResponse extends AbstractModel {
 
     /**
+    * 文档总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 文档信息
     */
     @SerializedName("List")
@@ -36,6 +43,22 @@ public class ListDocsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 文档总数 
+     * @return TotalCount 文档总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 文档总数
+     * @param TotalCount 文档总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 文档信息 
@@ -77,6 +100,9 @@ public class ListDocsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListDocsResponse(ListDocsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.List != null) {
             this.List = new DocItem[source.List.length];
             for (int i = 0; i < source.List.length; i++) {
@@ -93,6 +119,7 @@ public class ListDocsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

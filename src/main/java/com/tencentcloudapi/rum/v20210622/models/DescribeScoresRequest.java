@@ -102,7 +102,9 @@ public class DescribeScoresRequest extends AbstractModel {
     /**
      * Get 该参数已废弃 
      * @return IsDemo 该参数已废弃
+     * @deprecated
      */
+    @Deprecated
     public Long getIsDemo() {
         return this.IsDemo;
     }
@@ -110,7 +112,9 @@ public class DescribeScoresRequest extends AbstractModel {
     /**
      * Set 该参数已废弃
      * @param IsDemo 该参数已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setIsDemo(Long IsDemo) {
         this.IsDemo = IsDemo;
     }

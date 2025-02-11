@@ -251,6 +251,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstanceURL）用于获取指定实例的 URI 形式的连接串访问地址示例。
+     * @param req DescribeDBInstanceURLRequest
+     * @return DescribeDBInstanceURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceURLResponse DescribeDBInstanceURL(DescribeDBInstanceURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceURL", DescribeDBInstanceURLResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

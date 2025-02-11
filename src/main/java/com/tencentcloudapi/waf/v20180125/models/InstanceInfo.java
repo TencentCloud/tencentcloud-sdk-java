@@ -321,6 +321,20 @@ public class InstanceInfo extends AbstractModel {
     private Long FreeDelayFlag;
 
     /**
+    * 最近3天最大qps
+    */
+    @SerializedName("Last3MaxQPS")
+    @Expose
+    private Long Last3MaxQPS;
+
+    /**
+    * 最近3天最大带宽
+    */
+    @SerializedName("Last3MaxBandwidth")
+    @Expose
+    private Long Last3MaxBandwidth;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1016,6 +1030,38 @@ public class InstanceInfo extends AbstractModel {
         this.FreeDelayFlag = FreeDelayFlag;
     }
 
+    /**
+     * Get 最近3天最大qps 
+     * @return Last3MaxQPS 最近3天最大qps
+     */
+    public Long getLast3MaxQPS() {
+        return this.Last3MaxQPS;
+    }
+
+    /**
+     * Set 最近3天最大qps
+     * @param Last3MaxQPS 最近3天最大qps
+     */
+    public void setLast3MaxQPS(Long Last3MaxQPS) {
+        this.Last3MaxQPS = Last3MaxQPS;
+    }
+
+    /**
+     * Get 最近3天最大带宽 
+     * @return Last3MaxBandwidth 最近3天最大带宽
+     */
+    public Long getLast3MaxBandwidth() {
+        return this.Last3MaxBandwidth;
+    }
+
+    /**
+     * Set 最近3天最大带宽
+     * @param Last3MaxBandwidth 最近3天最大带宽
+     */
+    public void setLast3MaxBandwidth(Long Last3MaxBandwidth) {
+        this.Last3MaxBandwidth = Last3MaxBandwidth;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1147,6 +1193,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.FreeDelayFlag != null) {
             this.FreeDelayFlag = new Long(source.FreeDelayFlag);
         }
+        if (source.Last3MaxQPS != null) {
+            this.Last3MaxQPS = new Long(source.Last3MaxQPS);
+        }
+        if (source.Last3MaxBandwidth != null) {
+            this.Last3MaxBandwidth = new Long(source.Last3MaxBandwidth);
+        }
     }
 
 
@@ -1195,6 +1247,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
         this.setParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
+        this.setParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
+        this.setParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
 
     }
 }

@@ -38,7 +38,7 @@ public class DescribeHostVodInstanceListRequest extends AbstractModel {
     private Long IsCache;
 
     /**
-    * 过滤参数列表
+    * 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
     */
     @SerializedName("Filters")
     @Expose
@@ -91,16 +91,16 @@ public class DescribeHostVodInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤参数列表 
-     * @return Filters 过滤参数列表
+     * Get 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配 
+     * @return Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数列表
-     * @param Filters 过滤参数列表
+     * Set 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
+     * @param Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
