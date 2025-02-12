@@ -25,7 +25,6 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
 
     /**
     * 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误：ERROR，正确OK（已废弃） 
      * @return Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -58,19 +54,15 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
 
     /**
      * Set 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -78,9 +70,7 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

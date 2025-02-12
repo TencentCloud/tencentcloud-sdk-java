@@ -41,7 +41,6 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
     * 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountDetail")
     @Expose
@@ -88,10 +87,8 @@ public class InstancePriceDetail extends AbstractModel {
     }
 
     /**
-     * Get 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。 
      * @return DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiscountDetail [] getDiscountDetail() {
         return this.DiscountDetail;
@@ -99,9 +96,7 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
      * Set 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountDetail(DiscountDetail [] DiscountDetail) {
         this.DiscountDetail = DiscountDetail;

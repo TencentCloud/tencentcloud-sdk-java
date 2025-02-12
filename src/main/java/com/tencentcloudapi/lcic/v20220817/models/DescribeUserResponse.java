@@ -53,7 +53,6 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
     * 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginId")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户在客户系统的Id 
      * @return OriginId 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginId() {
         return this.OriginId;
@@ -142,9 +139,7 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
      * Set 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginId 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginId(String OriginId) {
         this.OriginId = OriginId;

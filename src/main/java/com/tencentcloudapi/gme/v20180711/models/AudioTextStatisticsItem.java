@@ -25,17 +25,14 @@ public class AudioTextStatisticsItem extends AbstractModel {
 
     /**
     * 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private Float Data;
 
     /**
-     * Get 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计值，单位：秒 
      * @return Data 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getData() {
         return this.Data;
@@ -43,9 +40,7 @@ public class AudioTextStatisticsItem extends AbstractModel {
 
     /**
      * Set 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(Float Data) {
         this.Data = Data;

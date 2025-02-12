@@ -25,7 +25,6 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
     *  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
     * 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
     * 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -49,17 +46,14 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
     * 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  来源：RESTRICT：封禁、FREEZW：冻结 
      * @return Source  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -67,19 +61,15 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
      * Set  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许自助解封：1是，2否 
      * @return State 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -87,19 +77,15 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
      * Set 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 违规类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 违规类型 
      * @return Reason 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -107,19 +93,15 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
      * Set 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 违规内容（URL、关联域名） 
      * @return Content 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -127,9 +109,7 @@ public class InstanceViolationDetail extends AbstractModel {
 
     /**
      * Set 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;

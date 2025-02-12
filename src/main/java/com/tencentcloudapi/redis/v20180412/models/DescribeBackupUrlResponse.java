@@ -47,7 +47,6 @@ public class DescribeBackupUrlResponse extends AbstractModel {
 
     /**
     * 备份文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupInfos")
     @Expose
@@ -113,10 +112,8 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     }
 
     /**
-     * Get 备份文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件信息列表。 
      * @return BackupInfos 备份文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupDownloadInfo [] getBackupInfos() {
         return this.BackupInfos;
@@ -124,9 +121,7 @@ public class DescribeBackupUrlResponse extends AbstractModel {
 
     /**
      * Set 备份文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupInfos 备份文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupInfos(BackupDownloadInfo [] BackupInfos) {
         this.BackupInfos = BackupInfos;

@@ -409,6 +409,19 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
+
+**注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
+     * @param req CreateFileCounterSignRequest
+     * @return CreateFileCounterSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileCounterSignResponse CreateFileCounterSign(CreateFileCounterSignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFileCounterSign", CreateFileCounterSignResponse.class);
+    }
+
+    /**
      *通过模板创建签署流程<br/>
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
 <table>
@@ -1443,6 +1456,19 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
+
+注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param req DescribeFileCounterSignResultRequest
+     * @return DescribeFileCounterSignResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileCounterSignResultResponse DescribeFileCounterSignResult(DescribeFileCounterSignResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFileCounterSignResult", DescribeFileCounterSignResultResponse.class);
+    }
+
+    /**
      *本接口（DescribeFileUrls）用于查询文件的下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
 
@@ -1972,6 +1998,17 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
     public UploadFilesResponse UploadFiles(UploadFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UploadFiles", UploadFilesResponse.class);
+    }
+
+    /**
+     *对加签后的文件进行数字签名验证，判断数字签名是否有效。
+     * @param req VerifyDigitFileRequest
+     * @return VerifyDigitFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDigitFileResponse VerifyDigitFile(VerifyDigitFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyDigitFile", VerifyDigitFileResponse.class);
     }
 
     /**

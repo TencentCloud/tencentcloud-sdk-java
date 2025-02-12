@@ -513,6 +513,30 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private Boolean HasBizPermission;
 
     /**
+    * 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerByEngine")
+    @Expose
+    private String OwnerByEngine;
+
+    /**
+    * 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorTips")
+    @Expose
+    private String ErrorTips;
+
+    /**
+    * 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IfSupportCreateAndDDL")
+    @Expose
+    private CreateAndDDLSupport IfSupportCreateAndDDL;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1736,6 +1760,66 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.HasBizPermission = HasBizPermission;
     }
 
+    /**
+     * Get 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerByEngine 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerByEngine() {
+        return this.OwnerByEngine;
+    }
+
+    /**
+     * Set 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerByEngine 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerByEngine(String OwnerByEngine) {
+        this.OwnerByEngine = OwnerByEngine;
+    }
+
+    /**
+     * Get 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorTips() {
+        return this.ErrorTips;
+    }
+
+    /**
+     * Set 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorTips(String ErrorTips) {
+        this.ErrorTips = ErrorTips;
+    }
+
+    /**
+     * Get 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IfSupportCreateAndDDL 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CreateAndDDLSupport getIfSupportCreateAndDDL() {
+        return this.IfSupportCreateAndDDL;
+    }
+
+    /**
+     * Set 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IfSupportCreateAndDDL 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIfSupportCreateAndDDL(CreateAndDDLSupport IfSupportCreateAndDDL) {
+        this.IfSupportCreateAndDDL = IfSupportCreateAndDDL;
+    }
+
     public TableMeta() {
     }
 
@@ -1945,6 +2029,15 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.HasBizPermission != null) {
             this.HasBizPermission = new Boolean(source.HasBizPermission);
         }
+        if (source.OwnerByEngine != null) {
+            this.OwnerByEngine = new String(source.OwnerByEngine);
+        }
+        if (source.ErrorTips != null) {
+            this.ErrorTips = new String(source.ErrorTips);
+        }
+        if (source.IfSupportCreateAndDDL != null) {
+            this.IfSupportCreateAndDDL = new CreateAndDDLSupport(source.IfSupportCreateAndDDL);
+        }
     }
 
 
@@ -2013,6 +2106,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
         this.setParamSimple(map, prefix + "Urn", this.Urn);
         this.setParamSimple(map, prefix + "HasBizPermission", this.HasBizPermission);
+        this.setParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
+        this.setParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
+        this.setParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
 
     }
 }

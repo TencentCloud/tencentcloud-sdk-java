@@ -25,7 +25,6 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
     * 账号详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Accounts")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
     * 账号个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账号详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号详细信息。 
      * @return Accounts 账号详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Account [] getAccounts() {
         return this.Accounts;
@@ -58,19 +54,15 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
      * Set 账号详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Accounts 账号详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get 账号个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号个数。 
      * @return TotalCount 账号个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
      * Set 账号个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 账号个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

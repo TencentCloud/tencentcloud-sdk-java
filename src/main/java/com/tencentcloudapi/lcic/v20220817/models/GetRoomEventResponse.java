@@ -32,7 +32,6 @@ public class GetRoomEventResponse extends AbstractModel {
 
     /**
     * 详细事件内容。包含相应的类型、发生的时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -62,10 +61,8 @@ public class GetRoomEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 详细事件内容。包含相应的类型、发生的时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细事件内容。包含相应的类型、发生的时间戳。 
      * @return Events 详细事件内容。包含相应的类型、发生的时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventInfo [] getEvents() {
         return this.Events;
@@ -73,9 +70,7 @@ public class GetRoomEventResponse extends AbstractModel {
 
     /**
      * Set 详细事件内容。包含相应的类型、发生的时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 详细事件内容。包含相应的类型、发生的时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(EventInfo [] Events) {
         this.Events = Events;

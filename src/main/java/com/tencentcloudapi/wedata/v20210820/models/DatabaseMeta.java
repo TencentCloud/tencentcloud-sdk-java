@@ -224,6 +224,22 @@ public class DatabaseMeta extends AbstractModel {
     private String ClusterName;
 
     /**
+    * 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifiedTimeByTables")
+    @Expose
+    private Long ModifiedTimeByTables;
+
+    /**
+    * 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastAccessTimeByTables")
+    @Expose
+    private Long LastAccessTimeByTables;
+
+    /**
      * Get 项目Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
@@ -723,6 +739,46 @@ public class DatabaseMeta extends AbstractModel {
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifiedTimeByTables 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModifiedTimeByTables() {
+        return this.ModifiedTimeByTables;
+    }
+
+    /**
+     * Set 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifiedTimeByTables 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifiedTimeByTables(Long ModifiedTimeByTables) {
+        this.ModifiedTimeByTables = ModifiedTimeByTables;
+    }
+
+    /**
+     * Get 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastAccessTimeByTables 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastAccessTimeByTables() {
+        return this.LastAccessTimeByTables;
+    }
+
+    /**
+     * Set 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastAccessTimeByTables 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastAccessTimeByTables(Long LastAccessTimeByTables) {
+        this.LastAccessTimeByTables = LastAccessTimeByTables;
+    }
+
     public DatabaseMeta() {
     }
 
@@ -809,6 +865,12 @@ public class DatabaseMeta extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.ModifiedTimeByTables != null) {
+            this.ModifiedTimeByTables = new Long(source.ModifiedTimeByTables);
+        }
+        if (source.LastAccessTimeByTables != null) {
+            this.LastAccessTimeByTables = new Long(source.LastAccessTimeByTables);
+        }
     }
 
 
@@ -841,6 +903,8 @@ public class DatabaseMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
+        this.setParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
 
     }
 }

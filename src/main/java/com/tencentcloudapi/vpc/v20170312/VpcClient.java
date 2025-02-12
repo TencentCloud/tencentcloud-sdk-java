@@ -413,6 +413,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *检查流量镜像的采集端接收端（公网IP类型）
+     * @param req CheckTrafficMirrorRequest
+     * @return CheckTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckTrafficMirrorResponse CheckTrafficMirror(CheckTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckTrafficMirror", CheckTrafficMirrorResponse.class);
+    }
+
+    /**
      *本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
      * @param req ClearRouteTableSelectionPoliciesRequest
      * @return ClearRouteTableSelectionPoliciesResponse
@@ -992,6 +1003,17 @@ public class VpcClient extends AbstractClient{
     public CreateSubnetsResponse CreateSubnets(CreateSubnetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSubnets", CreateSubnetsResponse.class);
+    }
+
+    /**
+     *本接口（CreateTrafficMirror）用于创建流量镜像实例。
+     * @param req CreateTrafficMirrorRequest
+     * @return CreateTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrafficMirrorResponse CreateTrafficMirror(CreateTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrafficMirror", CreateTrafficMirrorResponse.class);
     }
 
     /**
@@ -1587,6 +1609,17 @@ public class VpcClient extends AbstractClient{
     public DeleteTemplateMemberResponse DeleteTemplateMember(DeleteTemplateMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTemplateMember", DeleteTemplateMemberResponse.class);
+    }
+
+    /**
+     *本接口（DeleteTrafficMirror）用于删除流量镜像实例。
+     * @param req DeleteTrafficMirrorRequest
+     * @return DeleteTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrafficMirrorResponse DeleteTrafficMirror(DeleteTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrafficMirror", DeleteTrafficMirrorResponse.class);
     }
 
     /**
@@ -2661,6 +2694,17 @@ public class VpcClient extends AbstractClient{
     public DescribeTenantCcnsResponse DescribeTenantCcns(DescribeTenantCcnsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTenantCcns", DescribeTenantCcnsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeTrafficMirrors）用于查询流量镜像实例信息。
+     * @param req DescribeTrafficMirrorsRequest
+     * @return DescribeTrafficMirrorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficMirrorsResponse DescribeTrafficMirrors(DescribeTrafficMirrorsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrafficMirrors", DescribeTrafficMirrorsResponse.class);
     }
 
     /**
@@ -4050,6 +4094,18 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyTrafficMirrorAttribute）用于修改流量镜像实例属性。
+注意：只支持修改名字和描述信息
+     * @param req ModifyTrafficMirrorAttributeRequest
+     * @return ModifyTrafficMirrorAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(ModifyTrafficMirrorAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrafficMirrorAttribute", ModifyTrafficMirrorAttributeResponse.class);
+    }
+
+    /**
      *本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
      * @param req ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -4483,6 +4539,40 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ResetTrafficMirrorFilter）用于更新流量镜像实例过滤规则。
+注意：每一个流量镜像实例，不能同时支持按nat网关和五元组两种规则过滤
+     * @param req ResetTrafficMirrorFilterRequest
+     * @return ResetTrafficMirrorFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilter(ResetTrafficMirrorFilterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorFilter", ResetTrafficMirrorFilterResponse.class);
+    }
+
+    /**
+     *本接口（ResetTrafficMirrorSrcs）用于重置流量镜像实例采集对象。
+     * @param req ResetTrafficMirrorSrcsRequest
+     * @return ResetTrafficMirrorSrcsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcs(ResetTrafficMirrorSrcsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorSrcs", ResetTrafficMirrorSrcsResponse.class);
+    }
+
+    /**
+     *本接口（ResetTrafficMirrorTarget）用于更新流量镜像实例的接收目的信息。
+     * @param req ResetTrafficMirrorTargetRequest
+     * @return ResetTrafficMirrorTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorTargetResponse ResetTrafficMirrorTarget(ResetTrafficMirrorTargetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorTarget", ResetTrafficMirrorTargetResponse.class);
+    }
+
+    /**
      *本接口（ResetVpnConnection）用于重置VPN通道。
      * @param req ResetVpnConnectionRequest
      * @return ResetVpnConnectionResponse
@@ -4547,6 +4637,28 @@ LimitTypes取值范围：
     public SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(SetVpnGatewaysRenewFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetVpnGatewaysRenewFlag", SetVpnGatewaysRenewFlagResponse.class);
+    }
+
+    /**
+     *本接口（StartTrafficMirror）用于开启流量镜像实例。
+     * @param req StartTrafficMirrorRequest
+     * @return StartTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartTrafficMirrorResponse StartTrafficMirror(StartTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartTrafficMirror", StartTrafficMirrorResponse.class);
+    }
+
+    /**
+     *本接口（StopTrafficMirror）用于关闭流量镜像实例。
+     * @param req StopTrafficMirrorRequest
+     * @return StopTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopTrafficMirrorResponse StopTrafficMirror(StopTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopTrafficMirror", StopTrafficMirrorResponse.class);
     }
 
     /**
@@ -4637,6 +4749,28 @@ LimitTypes取值范围：
     public UnlockCcnsResponse UnlockCcns(UnlockCcnsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockCcns", UnlockCcnsResponse.class);
+    }
+
+    /**
+     *本接口（UpdateTrafficMirrorAllFilter）用于更新流量镜像实例的过滤规则或者采集对象。
+     * @param req UpdateTrafficMirrorAllFilterRequest
+     * @return UpdateTrafficMirrorAllFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilter(UpdateTrafficMirrorAllFilterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTrafficMirrorAllFilter", UpdateTrafficMirrorAllFilterResponse.class);
+    }
+
+    /**
+     *本接口（UpdateTrafficMirrorDirection）用于更新流量镜像实例的采集方向。
+     * @param req UpdateTrafficMirrorDirectionRequest
+     * @return UpdateTrafficMirrorDirectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirection(UpdateTrafficMirrorDirectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTrafficMirrorDirection", UpdateTrafficMirrorDirectionResponse.class);
     }
 
     /**

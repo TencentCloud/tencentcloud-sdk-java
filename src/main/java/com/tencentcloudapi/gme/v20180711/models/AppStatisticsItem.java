@@ -25,7 +25,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealtimeSpeechStatisticsItem")
     @Expose
@@ -33,7 +32,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceMessageStatisticsItem")
     @Expose
@@ -41,7 +39,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceFilterStatisticsItem")
     @Expose
@@ -56,7 +53,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioTextStatisticsItem")
     @Expose
@@ -64,7 +60,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamTextStatisticsItem")
     @Expose
@@ -72,7 +67,6 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverseaTextStatisticsItem")
     @Expose
@@ -80,17 +74,14 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
     * 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealtimeTextStatisticsItem")
     @Expose
     private RealtimeTextStatisticsItem RealtimeTextStatisticsItem;
 
     /**
-     * Get 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实时语音统计数据 
      * @return RealtimeSpeechStatisticsItem 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() {
         return this.RealtimeSpeechStatisticsItem;
@@ -98,19 +89,15 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealtimeSpeechStatisticsItem 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem RealtimeSpeechStatisticsItem) {
         this.RealtimeSpeechStatisticsItem = RealtimeSpeechStatisticsItem;
     }
 
     /**
-     * Get 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音消息统计数据 
      * @return VoiceMessageStatisticsItem 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() {
         return this.VoiceMessageStatisticsItem;
@@ -118,19 +105,15 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceMessageStatisticsItem 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem VoiceMessageStatisticsItem) {
         this.VoiceMessageStatisticsItem = VoiceMessageStatisticsItem;
     }
 
     /**
-     * Get 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音过滤统计数据 
      * @return VoiceFilterStatisticsItem 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() {
         return this.VoiceFilterStatisticsItem;
@@ -138,9 +121,7 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceFilterStatisticsItem 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem VoiceFilterStatisticsItem) {
         this.VoiceFilterStatisticsItem = VoiceFilterStatisticsItem;
@@ -163,10 +144,8 @@ public class AppStatisticsItem extends AbstractModel {
     }
 
     /**
-     * Get 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录音转文本用量统计数据 
      * @return AudioTextStatisticsItem 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioTextStatisticsItem getAudioTextStatisticsItem() {
         return this.AudioTextStatisticsItem;
@@ -174,19 +153,15 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioTextStatisticsItem 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioTextStatisticsItem(AudioTextStatisticsItem AudioTextStatisticsItem) {
         this.AudioTextStatisticsItem = AudioTextStatisticsItem;
     }
 
     /**
-     * Get 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流式转文本用量数据 
      * @return StreamTextStatisticsItem 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StreamTextStatisticsItem getStreamTextStatisticsItem() {
         return this.StreamTextStatisticsItem;
@@ -194,19 +169,15 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamTextStatisticsItem 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamTextStatisticsItem(StreamTextStatisticsItem StreamTextStatisticsItem) {
         this.StreamTextStatisticsItem = StreamTextStatisticsItem;
     }
 
     /**
-     * Get 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 海外转文本用量数据 
      * @return OverseaTextStatisticsItem 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OverseaTextStatisticsItem getOverseaTextStatisticsItem() {
         return this.OverseaTextStatisticsItem;
@@ -214,19 +185,15 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverseaTextStatisticsItem 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverseaTextStatisticsItem(OverseaTextStatisticsItem OverseaTextStatisticsItem) {
         this.OverseaTextStatisticsItem = OverseaTextStatisticsItem;
     }
 
     /**
-     * Get 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实时语音转文本用量数据 
      * @return RealtimeTextStatisticsItem 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RealtimeTextStatisticsItem getRealtimeTextStatisticsItem() {
         return this.RealtimeTextStatisticsItem;
@@ -234,9 +201,7 @@ public class AppStatisticsItem extends AbstractModel {
 
     /**
      * Set 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealtimeTextStatisticsItem 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealtimeTextStatisticsItem(RealtimeTextStatisticsItem RealtimeTextStatisticsItem) {
         this.RealtimeTextStatisticsItem = RealtimeTextStatisticsItem;

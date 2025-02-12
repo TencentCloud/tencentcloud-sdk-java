@@ -45,6 +45,13 @@ public class SLInstanceInfo extends AbstractModel {
     private String StatusDesc;
 
     /**
+    * 健康状态
+    */
+    @SerializedName("HealthStatus")
+    @Expose
+    private String HealthStatus;
+
+    /**
     * 实例名称
     */
     @SerializedName("ClusterName")
@@ -197,6 +204,22 @@ public class SLInstanceInfo extends AbstractModel {
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * Get 健康状态 
+     * @return HealthStatus 健康状态
+     */
+    public String getHealthStatus() {
+        return this.HealthStatus;
+    }
+
+    /**
+     * Set 健康状态
+     * @param HealthStatus 健康状态
+     */
+    public void setHealthStatus(String HealthStatus) {
+        this.HealthStatus = HealthStatus;
     }
 
     /**
@@ -464,6 +487,9 @@ public class SLInstanceInfo extends AbstractModel {
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
         }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new String(source.HealthStatus);
+        }
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
@@ -525,6 +551,7 @@ public class SLInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

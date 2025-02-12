@@ -38,7 +38,7 @@ public class ContentInfo extends AbstractModel {
     private Long Confidence;
 
     /**
-    * 字段是否不完整
+    * 字段是否不完整（value内容）
 0 字段正常
 1 字段不完整
     */
@@ -47,13 +47,31 @@ public class ContentInfo extends AbstractModel {
     private Long IsInComplete;
 
     /**
-    * 字段反光
+    * 字段反光（value内容）
 0 字段正常
 1 字段有反光
     */
     @SerializedName("IsReflect")
     @Expose
     private Long IsReflect;
+
+    /**
+    * 字段是否不完整（key内容）
+0 字段正常
+1 字段不完整
+    */
+    @SerializedName("IsKeyInComplete")
+    @Expose
+    private Long IsKeyInComplete;
+
+    /**
+    * 字段反光（key内容）
+0 字段正常
+1 字段有反光
+    */
+    @SerializedName("IsKeyReflect")
+    @Expose
+    private Long IsKeyReflect;
 
     /**
      * Get 字段内容 
@@ -88,10 +106,10 @@ public class ContentInfo extends AbstractModel {
     }
 
     /**
-     * Get 字段是否不完整
+     * Get 字段是否不完整（value内容）
 0 字段正常
 1 字段不完整 
-     * @return IsInComplete 字段是否不完整
+     * @return IsInComplete 字段是否不完整（value内容）
 0 字段正常
 1 字段不完整
      */
@@ -100,10 +118,10 @@ public class ContentInfo extends AbstractModel {
     }
 
     /**
-     * Set 字段是否不完整
+     * Set 字段是否不完整（value内容）
 0 字段正常
 1 字段不完整
-     * @param IsInComplete 字段是否不完整
+     * @param IsInComplete 字段是否不完整（value内容）
 0 字段正常
 1 字段不完整
      */
@@ -112,10 +130,10 @@ public class ContentInfo extends AbstractModel {
     }
 
     /**
-     * Get 字段反光
+     * Get 字段反光（value内容）
 0 字段正常
 1 字段有反光 
-     * @return IsReflect 字段反光
+     * @return IsReflect 字段反光（value内容）
 0 字段正常
 1 字段有反光
      */
@@ -124,15 +142,63 @@ public class ContentInfo extends AbstractModel {
     }
 
     /**
-     * Set 字段反光
+     * Set 字段反光（value内容）
 0 字段正常
 1 字段有反光
-     * @param IsReflect 字段反光
+     * @param IsReflect 字段反光（value内容）
 0 字段正常
 1 字段有反光
      */
     public void setIsReflect(Long IsReflect) {
         this.IsReflect = IsReflect;
+    }
+
+    /**
+     * Get 字段是否不完整（key内容）
+0 字段正常
+1 字段不完整 
+     * @return IsKeyInComplete 字段是否不完整（key内容）
+0 字段正常
+1 字段不完整
+     */
+    public Long getIsKeyInComplete() {
+        return this.IsKeyInComplete;
+    }
+
+    /**
+     * Set 字段是否不完整（key内容）
+0 字段正常
+1 字段不完整
+     * @param IsKeyInComplete 字段是否不完整（key内容）
+0 字段正常
+1 字段不完整
+     */
+    public void setIsKeyInComplete(Long IsKeyInComplete) {
+        this.IsKeyInComplete = IsKeyInComplete;
+    }
+
+    /**
+     * Get 字段反光（key内容）
+0 字段正常
+1 字段有反光 
+     * @return IsKeyReflect 字段反光（key内容）
+0 字段正常
+1 字段有反光
+     */
+    public Long getIsKeyReflect() {
+        return this.IsKeyReflect;
+    }
+
+    /**
+     * Set 字段反光（key内容）
+0 字段正常
+1 字段有反光
+     * @param IsKeyReflect 字段反光（key内容）
+0 字段正常
+1 字段有反光
+     */
+    public void setIsKeyReflect(Long IsKeyReflect) {
+        this.IsKeyReflect = IsKeyReflect;
     }
 
     public ContentInfo() {
@@ -155,6 +221,12 @@ public class ContentInfo extends AbstractModel {
         if (source.IsReflect != null) {
             this.IsReflect = new Long(source.IsReflect);
         }
+        if (source.IsKeyInComplete != null) {
+            this.IsKeyInComplete = new Long(source.IsKeyInComplete);
+        }
+        if (source.IsKeyReflect != null) {
+            this.IsKeyReflect = new Long(source.IsKeyReflect);
+        }
     }
 
 
@@ -166,6 +238,8 @@ public class ContentInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "IsInComplete", this.IsInComplete);
         this.setParamSimple(map, prefix + "IsReflect", this.IsReflect);
+        this.setParamSimple(map, prefix + "IsKeyInComplete", this.IsKeyInComplete);
+        this.setParamSimple(map, prefix + "IsKeyReflect", this.IsKeyReflect);
 
     }
 }

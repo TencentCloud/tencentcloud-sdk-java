@@ -31,7 +31,7 @@ public class FilesUploadsRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+    * 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
     */
     @SerializedName("URL")
     @Expose
@@ -54,16 +54,16 @@ public class FilesUploadsRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。 
-     * @return URL 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+     * Get 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。 
+     * @return URL 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
-     * @param URL 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+     * Set 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
+     * @param URL 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
      */
     public void setURL(String URL) {
         this.URL = URL;

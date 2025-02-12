@@ -25,7 +25,6 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
     * 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TeacherLogo")
     @Expose
@@ -33,7 +32,6 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
     * 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BoardLogo")
     @Expose
@@ -41,7 +39,6 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
     * 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackgroundPicture")
     @Expose
@@ -49,7 +46,6 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
     * 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -63,10 +59,8 @@ public class GetWatermarkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 老师视频区域的水印参数配置 
      * @return TeacherLogo 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkConfig getTeacherLogo() {
         return this.TeacherLogo;
@@ -74,19 +68,15 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
      * Set 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TeacherLogo 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTeacherLogo(WatermarkConfig TeacherLogo) {
         this.TeacherLogo = TeacherLogo;
     }
 
     /**
-     * Get 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白板区域的水印参数配置 
      * @return BoardLogo 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkConfig getBoardLogo() {
         return this.BoardLogo;
@@ -94,19 +84,15 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
      * Set 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BoardLogo 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBoardLogo(WatermarkConfig BoardLogo) {
         this.BoardLogo = BoardLogo;
     }
 
     /**
-     * Get 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 背景图片配置 
      * @return BackgroundPicture 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackgroundPictureConfig getBackgroundPicture() {
         return this.BackgroundPicture;
@@ -114,19 +100,15 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
      * Set 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackgroundPicture 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackgroundPicture(BackgroundPictureConfig BackgroundPicture) {
         this.BackgroundPicture = BackgroundPicture;
     }
 
     /**
-     * Get 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印配置 
      * @return Text 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextMarkConfig getText() {
         return this.Text;
@@ -134,9 +116,7 @@ public class GetWatermarkResponse extends AbstractModel {
 
     /**
      * Set 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(TextMarkConfig Text) {
         this.Text = Text;

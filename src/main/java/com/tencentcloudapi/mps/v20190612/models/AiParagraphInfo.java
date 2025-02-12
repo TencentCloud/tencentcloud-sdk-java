@@ -32,6 +32,20 @@ public class AiParagraphInfo extends AbstractModel {
     private String Summary;
 
     /**
+    * 分段标题
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 分段关键词
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
     * 分段起始时间点，秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -65,6 +79,38 @@ public class AiParagraphInfo extends AbstractModel {
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
+    }
+
+    /**
+     * Get 分段标题 
+     * @return Title 分段标题
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 分段标题
+     * @param Title 分段标题
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 分段关键词 
+     * @return Keywords 分段关键词
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 分段关键词
+     * @param Keywords 分段关键词
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     /**
@@ -118,6 +164,15 @@ public class AiParagraphInfo extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
         if (source.StartTimeOffset != null) {
             this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
@@ -132,6 +187,8 @@ public class AiParagraphInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 

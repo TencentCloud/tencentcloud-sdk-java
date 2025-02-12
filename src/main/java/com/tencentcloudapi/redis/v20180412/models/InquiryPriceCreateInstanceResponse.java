@@ -25,7 +25,6 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
     * 价格，单位：分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -39,10 +38,8 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 价格，单位：分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格，单位：分 
      * @return Price 价格，单位：分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPrice() {
         return this.Price;
@@ -50,9 +47,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
      * Set 价格，单位：分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 价格，单位：分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Float Price) {
         this.Price = Price;

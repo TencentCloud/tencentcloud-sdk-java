@@ -53,7 +53,6 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
 
     /**
     * 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealStartTime")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
 
     /**
     * 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealEndTime")
     @Expose
@@ -153,10 +151,8 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 秒级unix时间戳，实际房间开始时间。 
      * @return RealStartTime 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealStartTime() {
         return this.RealStartTime;
@@ -164,19 +160,15 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
 
     /**
      * Set 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealStartTime 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealStartTime(Long RealStartTime) {
         this.RealStartTime = RealStartTime;
     }
 
     /**
-     * Get 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 秒级unix时间戳，实际房间结束时间。 
      * @return RealEndTime 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealEndTime() {
         return this.RealEndTime;
@@ -184,9 +176,7 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
 
     /**
      * Set 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealEndTime 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealEndTime(Long RealEndTime) {
         this.RealEndTime = RealEndTime;

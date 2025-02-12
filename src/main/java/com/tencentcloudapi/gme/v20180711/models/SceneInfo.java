@@ -23,6 +23,85 @@ import java.util.HashMap;
 
 public class SceneInfo extends AbstractModel {
 
+    /**
+    * 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+    */
+    @SerializedName("SceneId")
+    @Expose
+    private String SceneId;
+
+    /**
+    * 开关状态，true开启/false关闭
+    */
+    @SerializedName("Status")
+    @Expose
+    private Boolean Status;
+
+    /**
+    * 用户回调地址
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+     * Get 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口' 
+     * @return SceneId 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+     */
+    public String getSceneId() {
+        return this.SceneId;
+    }
+
+    /**
+     * Set 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+     * @param SceneId 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+     */
+    public void setSceneId(String SceneId) {
+        this.SceneId = SceneId;
+    }
+
+    /**
+     * Get 开关状态，true开启/false关闭 
+     * @return Status 开关状态，true开启/false关闭
+     */
+    public Boolean getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 开关状态，true开启/false关闭
+     * @param Status 开关状态，true开启/false关闭
+     */
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 用户回调地址 
+     * @return CallbackUrl 用户回调地址
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 用户回调地址
+     * @param CallbackUrl 用户回调地址
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public SceneInfo() {
     }
 
@@ -31,6 +110,15 @@ public class SceneInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SceneInfo(SceneInfo source) {
+        if (source.SceneId != null) {
+            this.SceneId = new String(source.SceneId);
+        }
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -38,6 +126,9 @@ public class SceneInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SceneId", this.SceneId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

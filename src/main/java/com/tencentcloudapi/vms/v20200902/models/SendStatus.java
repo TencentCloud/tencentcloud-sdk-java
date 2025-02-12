@@ -32,7 +32,6 @@ public class SendStatus extends AbstractModel {
 
     /**
     * 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionContext")
     @Expose
@@ -55,10 +54,8 @@ public class SendStatus extends AbstractModel {
     }
 
     /**
-     * Get 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户的 session 内容，腾讯 server 回包中会原样返回。 
      * @return SessionContext 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionContext() {
         return this.SessionContext;
@@ -66,9 +63,7 @@ public class SendStatus extends AbstractModel {
 
     /**
      * Set 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionContext 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

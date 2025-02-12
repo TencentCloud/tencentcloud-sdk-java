@@ -133,7 +133,7 @@ public class TelCdrInfo extends AbstractModel {
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
     */
     @SerializedName("EndStatus")
     @Expose
@@ -263,7 +263,7 @@ public class TelCdrInfo extends AbstractModel {
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
     */
     @SerializedName("EndStatusString")
     @Expose
@@ -576,7 +576,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
- 
+电话呼出        212     carrierBlocked      运营商拦截 
      * @return EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -630,7 +630,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public Long getEndStatus() {
         return this.EndStatus;
@@ -690,7 +690,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      * @param EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -744,7 +744,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
@@ -964,7 +964,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
- 
+电话呼出        212     carrierBlocked      运营商拦截 
      * @return EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -1018,7 +1018,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public String getEndStatusString() {
         return this.EndStatusString;
@@ -1078,7 +1078,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      * @param EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -1132,7 +1132,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;

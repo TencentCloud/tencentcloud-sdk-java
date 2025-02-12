@@ -38,6 +38,20 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private Float Confidence;
 
     /**
+    * 智能描述标题
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 智能描述关键词
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
     * 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -78,6 +92,38 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     }
 
     /**
+     * Get 智能描述标题 
+     * @return Title 智能描述标题
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 智能描述标题
+     * @param Title 智能描述标题
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 智能描述关键词 
+     * @return Keywords 智能描述关键词
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 智能描述关键词
+     * @param Keywords 智能描述关键词
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
      * Get 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Paragraphs 分段结果。
@@ -111,6 +157,15 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
         if (source.Paragraphs != null) {
             this.Paragraphs = new AiParagraphInfo[source.Paragraphs.length];
             for (int i = 0; i < source.Paragraphs.length; i++) {
@@ -126,6 +181,8 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
 
     }

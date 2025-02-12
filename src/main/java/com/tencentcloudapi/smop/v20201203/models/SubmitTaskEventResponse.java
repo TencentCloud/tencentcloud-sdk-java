@@ -25,7 +25,6 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
     * 任务的唯一订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
     @Expose
@@ -33,7 +32,6 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
     * 信息码。0表示成功，-1标识失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -41,7 +39,6 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
     * 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -49,7 +46,6 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
     * 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -63,10 +59,8 @@ public class SubmitTaskEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务的唯一订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的唯一订单号 
      * @return OrderId 任务的唯一订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
         return this.OrderId;
@@ -74,19 +68,15 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
      * Set 任务的唯一订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 任务的唯一订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 信息码。0表示成功，-1标识失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 信息码。0表示成功，-1标识失败 
      * @return Code 信息码。0表示成功，-1标识失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -94,19 +84,15 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
      * Set 信息码。0表示成功，-1标识失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 信息码。0表示成功，-1标识失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提示信息 
      * @return Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -114,19 +100,15 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
      * Set 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务处理结果列表 
      * @return Data 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskEventData [] getData() {
         return this.Data;
@@ -134,9 +116,7 @@ public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
      * Set 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(TaskEventData [] Data) {
         this.Data = Data;

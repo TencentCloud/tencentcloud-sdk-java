@@ -32,7 +32,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proxy")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Redis")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tendis")
     @Expose
@@ -92,10 +89,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Proxy节点信息。 
      * @return Proxy Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyNodes [] getProxy() {
         return this.Proxy;
@@ -103,9 +98,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Proxy Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxy(ProxyNodes [] Proxy) {
         this.Proxy = Proxy;
@@ -128,10 +121,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Redis节点信息。 
      * @return Redis Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RedisNodes [] getRedis() {
         return this.Redis;
@@ -139,9 +130,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Redis Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedis(RedisNodes [] Redis) {
         this.Redis = Redis;
@@ -164,10 +153,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数不再使用，请忽略。 
      * @return Tendis 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TendisNodes [] getTendis() {
         return this.Tendis;
@@ -175,9 +162,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tendis 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTendis(TendisNodes [] Tendis) {
         this.Tendis = Tendis;

@@ -95,6 +95,13 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
     private String TrunkingFlag;
 
     /**
+    * 是否创建RDMA弹性网卡，true:创建rdma弹性网卡，false:普通弹性网卡。不填默认为false
+    */
+    @SerializedName("IsRdma")
+    @Expose
+    private Boolean IsRdma;
+
+    /**
     * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
     */
     @SerializedName("ClientToken")
@@ -266,6 +273,22 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否创建RDMA弹性网卡，true:创建rdma弹性网卡，false:普通弹性网卡。不填默认为false 
+     * @return IsRdma 是否创建RDMA弹性网卡，true:创建rdma弹性网卡，false:普通弹性网卡。不填默认为false
+     */
+    public Boolean getIsRdma() {
+        return this.IsRdma;
+    }
+
+    /**
+     * Set 是否创建RDMA弹性网卡，true:创建rdma弹性网卡，false:普通弹性网卡。不填默认为false
+     * @param IsRdma 是否创建RDMA弹性网卡，true:创建rdma弹性网卡，false:普通弹性网卡。不填默认为false
+     */
+    public void setIsRdma(Boolean IsRdma) {
+        this.IsRdma = IsRdma;
+    }
+
+    /**
      * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
      */
@@ -328,6 +351,9 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
         if (source.TrunkingFlag != null) {
             this.TrunkingFlag = new String(source.TrunkingFlag);
         }
+        if (source.IsRdma != null) {
+            this.IsRdma = new Boolean(source.IsRdma);
+        }
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
@@ -348,6 +374,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
+        this.setParamSimple(map, prefix + "IsRdma", this.IsRdma);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
