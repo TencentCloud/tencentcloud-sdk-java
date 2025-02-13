@@ -100,7 +100,6 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
     * 备注。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -108,7 +107,6 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
     * 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
     @Expose
@@ -116,7 +114,6 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
     * 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Avatar")
     @Expose
@@ -124,7 +121,6 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
     * 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Customize")
     @Expose
@@ -318,10 +314,8 @@ public class CreateUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 备注。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注。 
      * @return Comment 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -329,19 +323,15 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
      * Set 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 昵称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称。 
      * @return Nickname 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
         return this.Nickname;
@@ -349,19 +339,15 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
      * Set 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nickname 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户头像地址。 
      * @return Avatar 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvatar() {
         return this.Avatar;
@@ -369,19 +355,15 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
      * Set 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Avatar 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
     }
 
     /**
-     * Get 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义信息。 
      * @return Customize 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomize() {
         return this.Customize;
@@ -389,9 +371,7 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
      * Set 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Customize 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomize(String Customize) {
         this.Customize = Customize;

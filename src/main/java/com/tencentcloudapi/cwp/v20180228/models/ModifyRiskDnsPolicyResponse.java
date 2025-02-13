@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyRiskDnsPolicyResponse extends AbstractModel {
 
     /**
+    * 0：没有重复，1：和现有策略重复
+    */
+    @SerializedName("Repeat")
+    @Expose
+    private Long Repeat;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 0：没有重复，1：和现有策略重复 
+     * @return Repeat 0：没有重复，1：和现有策略重复
+     */
+    public Long getRepeat() {
+        return this.Repeat;
+    }
+
+    /**
+     * Set 0：没有重复，1：和现有策略重复
+     * @param Repeat 0：没有重复，1：和现有策略重复
+     */
+    public void setRepeat(Long Repeat) {
+        this.Repeat = Repeat;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyRiskDnsPolicyResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyRiskDnsPolicyResponse(ModifyRiskDnsPolicyResponse source) {
+        if (source.Repeat != null) {
+            this.Repeat = new Long(source.Repeat);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyRiskDnsPolicyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Repeat", this.Repeat);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

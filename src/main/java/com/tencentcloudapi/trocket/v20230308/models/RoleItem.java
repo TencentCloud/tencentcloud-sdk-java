@@ -80,6 +80,21 @@ public class RoleItem extends AbstractModel {
     private Long ModifiedTime;
 
     /**
+    * 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
+    * Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetailedRolePerms")
+    @Expose
+    private DetailedRolePerm [] DetailedRolePerms;
+
+    /**
      * Get 角色名称 
      * @return RoleName 角色名称
      */
@@ -207,6 +222,42 @@ public class RoleItem extends AbstractModel {
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别） 
+     * @return PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     * @param PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
+    /**
+     * Get Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetailedRolePerms Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DetailedRolePerm [] getDetailedRolePerms() {
+        return this.DetailedRolePerms;
+    }
+
+    /**
+     * Set Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailedRolePerms Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetailedRolePerms(DetailedRolePerm [] DetailedRolePerms) {
+        this.DetailedRolePerms = DetailedRolePerms;
+    }
+
     public RoleItem() {
     }
 
@@ -239,6 +290,15 @@ public class RoleItem extends AbstractModel {
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new Long(source.ModifiedTime);
         }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
+        if (source.DetailedRolePerms != null) {
+            this.DetailedRolePerms = new DetailedRolePerm[source.DetailedRolePerms.length];
+            for (int i = 0; i < source.DetailedRolePerms.length; i++) {
+                this.DetailedRolePerms[i] = new DetailedRolePerm(source.DetailedRolePerms[i]);
+            }
+        }
     }
 
 
@@ -254,6 +314,8 @@ public class RoleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
+        this.setParamArrayObj(map, prefix + "DetailedRolePerms.", this.DetailedRolePerms);
 
     }
 }

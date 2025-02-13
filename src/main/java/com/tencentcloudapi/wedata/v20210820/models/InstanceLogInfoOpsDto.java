@@ -103,6 +103,13 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String MatchedBrokerIp;
 
     /**
+    * 执行平台通用协议
+    */
+    @SerializedName("ExecutionExtendedProps")
+    @Expose
+    private PairDto [] ExecutionExtendedProps;
+
+    /**
      * Get 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogInfo 实例运行日志
@@ -298,6 +305,22 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.MatchedBrokerIp = MatchedBrokerIp;
     }
 
+    /**
+     * Get 执行平台通用协议 
+     * @return ExecutionExtendedProps 执行平台通用协议
+     */
+    public PairDto [] getExecutionExtendedProps() {
+        return this.ExecutionExtendedProps;
+    }
+
+    /**
+     * Set 执行平台通用协议
+     * @param ExecutionExtendedProps 执行平台通用协议
+     */
+    public void setExecutionExtendedProps(PairDto [] ExecutionExtendedProps) {
+        this.ExecutionExtendedProps = ExecutionExtendedProps;
+    }
+
     public InstanceLogInfoOpsDto() {
     }
 
@@ -339,6 +362,12 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         if (source.MatchedBrokerIp != null) {
             this.MatchedBrokerIp = new String(source.MatchedBrokerIp);
         }
+        if (source.ExecutionExtendedProps != null) {
+            this.ExecutionExtendedProps = new PairDto[source.ExecutionExtendedProps.length];
+            for (int i = 0; i < source.ExecutionExtendedProps.length; i++) {
+                this.ExecutionExtendedProps[i] = new PairDto(source.ExecutionExtendedProps[i]);
+            }
+        }
     }
 
 
@@ -356,6 +385,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
+        this.setParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
 
     }
 }

@@ -32,7 +32,7 @@ public class IDCardInfoResult extends AbstractModel {
     private Long [] WarnCodes;
 
     /**
-    * 地址
+    * 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
@@ -40,7 +40,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Address;
 
     /**
-    * 签发机关
+    * 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Authority")
@@ -48,7 +48,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Authority;
 
     /**
-    * 出生日期
+    * 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Birth")
@@ -56,7 +56,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Birth;
 
     /**
-    * 身份证号
+    * 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdNum")
@@ -64,7 +64,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String IdNum;
 
     /**
-    * 名字
+    * 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -72,7 +72,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Name;
 
     /**
-    * 地区
+    * 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nation")
@@ -80,7 +80,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Nation;
 
     /**
-    * 性别
+    * 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sex")
@@ -88,7 +88,7 @@ public class IDCardInfoResult extends AbstractModel {
     private String Sex;
 
     /**
-    * 到期时间
+    * 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidDate")
@@ -127,6 +127,13 @@ public class IDCardInfoResult extends AbstractModel {
     private String ImageUrl;
 
     /**
+    * 身份证头像照片的地址（人像面）
+    */
+    @SerializedName("PortraitUrl")
+    @Expose
+    private String PortraitUrl;
+
+    /**
      * Get 警告代码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WarnCodes 警告代码
@@ -147,9 +154,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 地址
+     * Get 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Address 地址
+     * @return Address 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
@@ -157,9 +164,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 地址
+     * Set 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Address 地址
+     * @param Address 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
@@ -167,9 +174,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 签发机关
+     * Get 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Authority 签发机关
+     * @return Authority 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthority() {
@@ -177,9 +184,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 签发机关
+     * Set 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Authority 签发机关
+     * @param Authority 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthority(String Authority) {
@@ -187,9 +194,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 出生日期
+     * Get 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Birth 出生日期
+     * @return Birth 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirth() {
@@ -197,9 +204,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 出生日期
+     * Set 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Birth 出生日期
+     * @param Birth 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirth(String Birth) {
@@ -207,9 +214,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 身份证号
+     * Get 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdNum 身份证号
+     * @return IdNum 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdNum() {
@@ -217,9 +224,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 身份证号
+     * Set 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdNum 身份证号
+     * @param IdNum 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdNum(String IdNum) {
@@ -227,9 +234,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 名字
+     * Get 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名字
+     * @return Name 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -237,9 +244,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 名字
+     * Set 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名字
+     * @param Name 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -247,9 +254,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 地区
+     * Get 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nation 地区
+     * @return Nation 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNation() {
@@ -257,9 +264,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 地区
+     * Set 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nation 地区
+     * @param Nation 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNation(String Nation) {
@@ -267,9 +274,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 性别
+     * Get 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sex 性别
+     * @return Sex 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSex() {
@@ -277,9 +284,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 性别
+     * Set 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sex 性别
+     * @param Sex 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSex(String Sex) {
@@ -287,9 +294,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Get 到期时间
+     * Get 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValidDate 到期时间
+     * @return ValidDate 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidDate() {
@@ -297,9 +304,9 @@ public class IDCardInfoResult extends AbstractModel {
     }
 
     /**
-     * Set 到期时间
+     * Set 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValidDate 到期时间
+     * @param ValidDate 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidDate(String ValidDate) {
@@ -382,6 +389,22 @@ public class IDCardInfoResult extends AbstractModel {
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 身份证头像照片的地址（人像面） 
+     * @return PortraitUrl 身份证头像照片的地址（人像面）
+     */
+    public String getPortraitUrl() {
+        return this.PortraitUrl;
+    }
+
+    /**
+     * Set 身份证头像照片的地址（人像面）
+     * @param PortraitUrl 身份证头像照片的地址（人像面）
+     */
+    public void setPortraitUrl(String PortraitUrl) {
+        this.PortraitUrl = PortraitUrl;
+    }
+
     public IDCardInfoResult() {
     }
 
@@ -432,6 +455,9 @@ public class IDCardInfoResult extends AbstractModel {
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.PortraitUrl != null) {
+            this.PortraitUrl = new String(source.PortraitUrl);
+        }
     }
 
 
@@ -452,6 +478,7 @@ public class IDCardInfoResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "PortraitUrl", this.PortraitUrl);
 
     }
 }

@@ -77,8 +77,8 @@ public class PacketFilterConfig extends AbstractModel {
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
     */
@@ -101,7 +101,7 @@ no_match(不匹配)
     /**
     * 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
     */
     @SerializedName("MatchType")
@@ -109,10 +109,7 @@ pcre(正则表达式)
     private String MatchType;
 
     /**
-    * 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+    * 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
     */
     @SerializedName("Str")
     @Expose
@@ -135,7 +132,7 @@ pcre(正则表达式)
     /**
     * 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
     */
     @SerializedName("IsNot")
@@ -143,8 +140,9 @@ pcre(正则表达式)
     private Long IsNot;
 
     /**
-    * 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+    * 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
     */
@@ -153,61 +151,49 @@ none(当没有第二个检测条件时填写此值)
     private String MatchLogic;
 
     /**
-    * 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
+    * （已废弃）
     */
     @SerializedName("MatchBegin2")
     @Expose
     private String MatchBegin2;
 
     /**
-    * 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
+    * （已废弃）
     */
     @SerializedName("MatchType2")
     @Expose
     private String MatchType2;
 
     /**
-    * 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+    * （已废弃）
     */
     @SerializedName("Str2")
     @Expose
     private String Str2;
 
     /**
-    * 从第二个检测位置开始的第二个检测深度，取值[0,1500]
+    * （已废弃）
     */
     @SerializedName("Depth2")
     @Expose
     private Long Depth2;
 
     /**
-    * 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
+    * （已废弃）
     */
     @SerializedName("Offset2")
     @Expose
     private Long Offset2;
 
     /**
-    * 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
+    * （已废弃）
     */
     @SerializedName("IsNot2")
     @Expose
     private Long IsNot2;
 
     /**
-    * 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+    * 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
     */
     @SerializedName("Id")
     @Expose
@@ -337,16 +323,16 @@ pcre(正则表达式)
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ] 
      * @return Action 动作，取值[
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
      */
@@ -359,16 +345,16 @@ forward(继续防护)
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
      * @param Action 动作，取值[
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
      */
@@ -415,11 +401,11 @@ no_match(不匹配)
     /**
      * Get 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ] 
      * @return MatchType 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
      */
     public String getMatchType() {
@@ -429,11 +415,11 @@ pcre(正则表达式)
     /**
      * Set 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
      * @param MatchType 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
      */
     public void setMatchType(String MatchType) {
@@ -441,28 +427,16 @@ pcre(正则表达式)
     }
 
     /**
-     * Get 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-] 
-     * @return Str 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * Get 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ] 
+     * @return Str 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
      */
     public String getStr() {
         return this.Str;
     }
 
     /**
-     * Set 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
-     * @param Str 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * Set 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
+     * @param Str 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
      */
     public void setStr(String Str) {
         this.Str = Str;
@@ -503,11 +477,11 @@ pcre(正则表达式)
     /**
      * Get 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ] 
      * @return IsNot 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
      */
     public Long getIsNot() {
@@ -517,11 +491,11 @@ pcre(正则表达式)
     /**
      * Set 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
      * @param IsNot 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
      */
     public void setIsNot(Long IsNot) {
@@ -529,12 +503,14 @@ pcre(正则表达式)
     }
 
     /**
-     * Get 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * Get 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ] 
-     * @return MatchLogic 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * @return MatchLogic 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
      */
@@ -543,12 +519,14 @@ none(当没有第二个检测条件时填写此值)
     }
 
     /**
-     * Set 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * Set 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
-     * @param MatchLogic 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * @param MatchLogic 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
      */
@@ -557,160 +535,112 @@ none(当没有第二个检测条件时填写此值)
     }
 
     /**
-     * Get 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-] 
-     * @return MatchBegin2 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
+     * Get （已废弃） 
+     * @return MatchBegin2 （已废弃）
      */
     public String getMatchBegin2() {
         return this.MatchBegin2;
     }
 
     /**
-     * Set 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
-     * @param MatchBegin2 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
+     * Set （已废弃）
+     * @param MatchBegin2 （已废弃）
      */
     public void setMatchBegin2(String MatchBegin2) {
         this.MatchBegin2 = MatchBegin2;
     }
 
     /**
-     * Get 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-] 
-     * @return MatchType2 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
+     * Get （已废弃） 
+     * @return MatchType2 （已废弃）
      */
     public String getMatchType2() {
         return this.MatchType2;
     }
 
     /**
-     * Set 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
-     * @param MatchType2 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
+     * Set （已废弃）
+     * @param MatchType2 （已废弃）
      */
     public void setMatchType2(String MatchType2) {
         this.MatchType2 = MatchType2;
     }
 
     /**
-     * Get 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-] 
-     * @return Str2 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * Get （已废弃） 
+     * @return Str2 （已废弃）
      */
     public String getStr2() {
         return this.Str2;
     }
 
     /**
-     * Set 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
-     * @param Str2 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * Set （已废弃）
+     * @param Str2 （已废弃）
      */
     public void setStr2(String Str2) {
         this.Str2 = Str2;
     }
 
     /**
-     * Get 从第二个检测位置开始的第二个检测深度，取值[0,1500] 
-     * @return Depth2 从第二个检测位置开始的第二个检测深度，取值[0,1500]
+     * Get （已废弃） 
+     * @return Depth2 （已废弃）
      */
     public Long getDepth2() {
         return this.Depth2;
     }
 
     /**
-     * Set 从第二个检测位置开始的第二个检测深度，取值[0,1500]
-     * @param Depth2 从第二个检测位置开始的第二个检测深度，取值[0,1500]
+     * Set （已废弃）
+     * @param Depth2 （已废弃）
      */
     public void setDepth2(Long Depth2) {
         this.Depth2 = Depth2;
     }
 
     /**
-     * Get 从第二个检测位置开始的偏移量，取值范围[0,Depth2] 
-     * @return Offset2 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
+     * Get （已废弃） 
+     * @return Offset2 （已废弃）
      */
     public Long getOffset2() {
         return this.Offset2;
     }
 
     /**
-     * Set 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
-     * @param Offset2 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
+     * Set （已废弃）
+     * @param Offset2 （已废弃）
      */
     public void setOffset2(Long Offset2) {
         this.Offset2 = Offset2;
     }
 
     /**
-     * Get 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-] 
-     * @return IsNot2 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
+     * Get （已废弃） 
+     * @return IsNot2 （已废弃）
      */
     public Long getIsNot2() {
         return this.IsNot2;
     }
 
     /**
-     * Set 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
-     * @param IsNot2 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
+     * Set （已废弃）
+     * @param IsNot2 （已废弃）
      */
     public void setIsNot2(Long IsNot2) {
         this.IsNot2 = IsNot2;
     }
 
     /**
-     * Get 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写； 
-     * @return Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+     * Get 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填； 
+     * @return Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
-     * @param Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+     * Set 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
+     * @param Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
      */
     public void setId(String Id) {
         this.Id = Id;

@@ -52,11 +52,25 @@ public class ModifyRoleRequest extends AbstractModel {
     private Boolean PermWrite;
 
     /**
+    * 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
     * 备注
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * Topic&Group维度权限配置
+    */
+    @SerializedName("DetailedPerms")
+    @Expose
+    private DetailedRolePerm [] DetailedPerms;
 
     /**
      * Get 集群ID 
@@ -123,6 +137,22 @@ public class ModifyRoleRequest extends AbstractModel {
     }
 
     /**
+     * Get 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度） 
+     * @return PermType 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+     * @param PermType 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
+    /**
      * Get 备注 
      * @return Remark 备注
      */
@@ -136,6 +166,22 @@ public class ModifyRoleRequest extends AbstractModel {
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get Topic&Group维度权限配置 
+     * @return DetailedPerms Topic&Group维度权限配置
+     */
+    public DetailedRolePerm [] getDetailedPerms() {
+        return this.DetailedPerms;
+    }
+
+    /**
+     * Set Topic&Group维度权限配置
+     * @param DetailedPerms Topic&Group维度权限配置
+     */
+    public void setDetailedPerms(DetailedRolePerm [] DetailedPerms) {
+        this.DetailedPerms = DetailedPerms;
     }
 
     public ModifyRoleRequest() {
@@ -158,8 +204,17 @@ public class ModifyRoleRequest extends AbstractModel {
         if (source.PermWrite != null) {
             this.PermWrite = new Boolean(source.PermWrite);
         }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
+        }
+        if (source.DetailedPerms != null) {
+            this.DetailedPerms = new DetailedRolePerm[source.DetailedPerms.length];
+            for (int i = 0; i < source.DetailedPerms.length; i++) {
+                this.DetailedPerms[i] = new DetailedRolePerm(source.DetailedPerms[i]);
+            }
         }
     }
 
@@ -172,7 +227,9 @@ public class ModifyRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "PermRead", this.PermRead);
         this.setParamSimple(map, prefix + "PermWrite", this.PermWrite);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
 
     }
 }

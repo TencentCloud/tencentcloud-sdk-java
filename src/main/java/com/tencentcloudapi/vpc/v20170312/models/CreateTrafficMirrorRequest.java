@@ -59,7 +59,7 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
     private String Direction;
 
     /**
-    * 流量镜像的采集对象，支持eni_xxxx。
+    * 流量镜像的采集对象。
     */
     @SerializedName("CollectorSrcs")
     @Expose
@@ -188,16 +188,16 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像的采集对象，支持eni_xxxx。 
-     * @return CollectorSrcs 流量镜像的采集对象，支持eni_xxxx。
+     * Get 流量镜像的采集对象。 
+     * @return CollectorSrcs 流量镜像的采集对象。
      */
     public String [] getCollectorSrcs() {
         return this.CollectorSrcs;
     }
 
     /**
-     * Set 流量镜像的采集对象，支持eni_xxxx。
-     * @param CollectorSrcs 流量镜像的采集对象，支持eni_xxxx。
+     * Set 流量镜像的采集对象。
+     * @param CollectorSrcs 流量镜像的采集对象。
      */
     public void setCollectorSrcs(String [] CollectorSrcs) {
         this.CollectorSrcs = CollectorSrcs;

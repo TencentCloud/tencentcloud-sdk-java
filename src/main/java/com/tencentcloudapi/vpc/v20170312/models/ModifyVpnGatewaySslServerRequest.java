@@ -66,14 +66,14 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
     private Long SslVpnPort;
 
     /**
-    * 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+    * 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+    * 认证算法。可选 'SHA1'，默认SHA1。
     */
     @SerializedName("IntegrityAlgorithm")
     @Expose
@@ -197,32 +197,32 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE 
-     * @return EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+     * Get 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。 
+     * @return EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
-     * @param EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+     * Set 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * @param EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE 
-     * @return IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * Get 认证算法。可选 'SHA1'，默认SHA1。 
+     * @return IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
      */
     public String getIntegrityAlgorithm() {
         return this.IntegrityAlgorithm;
     }
 
     /**
-     * Set 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
-     * @param IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * Set 认证算法。可选 'SHA1'，默认SHA1。
+     * @param IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
      */
     public void setIntegrityAlgorithm(String IntegrityAlgorithm) {
         this.IntegrityAlgorithm = IntegrityAlgorithm;

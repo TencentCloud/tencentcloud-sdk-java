@@ -73,6 +73,13 @@ public class IDCardConfig extends AbstractModel {
     private Boolean ReflectWarn;
 
     /**
+    * 是否开启头像剪切
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get 复印件告警，默认为false 
      * @return CopyWarn 复印件告警，默认为false
      */
@@ -184,6 +191,22 @@ public class IDCardConfig extends AbstractModel {
         this.ReflectWarn = ReflectWarn;
     }
 
+    /**
+     * Get 是否开启头像剪切 
+     * @return CropPortrait 是否开启头像剪切
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set 是否开启头像剪切
+     * @param CropPortrait 是否开启头像剪切
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public IDCardConfig() {
     }
 
@@ -213,6 +236,9 @@ public class IDCardConfig extends AbstractModel {
         if (source.ReflectWarn != null) {
             this.ReflectWarn = new Boolean(source.ReflectWarn);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class IDCardConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TempIdWarn", this.TempIdWarn);
         this.setParamSimple(map, prefix + "InvalidDateWarn", this.InvalidDateWarn);
         this.setParamSimple(map, prefix + "ReflectWarn", this.ReflectWarn);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }

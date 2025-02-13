@@ -169,7 +169,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Get 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明 
      * @return InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public Long [] getInstanceStatuses() {
         return this.InstanceStatuses;
     }
@@ -177,7 +179,9 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     /**
      * Set 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
      * @param InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceStatuses(Long [] InstanceStatuses) {
         this.InstanceStatuses = InstanceStatuses;
     }

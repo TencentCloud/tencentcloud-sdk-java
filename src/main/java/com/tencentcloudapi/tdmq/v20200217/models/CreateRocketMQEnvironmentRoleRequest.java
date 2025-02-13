@@ -52,6 +52,13 @@ public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * Topic&Group维度权限配置
+    */
+    @SerializedName("DetailedPerms")
+    @Expose
+    private DetailedRolePerm [] DetailedPerms;
+
+    /**
      * Get 命名空间 
      * @return EnvironmentId 命名空间
      */
@@ -115,6 +122,22 @@ public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get Topic&Group维度权限配置 
+     * @return DetailedPerms Topic&Group维度权限配置
+     */
+    public DetailedRolePerm [] getDetailedPerms() {
+        return this.DetailedPerms;
+    }
+
+    /**
+     * Set Topic&Group维度权限配置
+     * @param DetailedPerms Topic&Group维度权限配置
+     */
+    public void setDetailedPerms(DetailedRolePerm [] DetailedPerms) {
+        this.DetailedPerms = DetailedPerms;
+    }
+
     public CreateRocketMQEnvironmentRoleRequest() {
     }
 
@@ -138,6 +161,12 @@ public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.DetailedPerms != null) {
+            this.DetailedPerms = new DetailedRolePerm[source.DetailedPerms.length];
+            for (int i = 0; i < source.DetailedPerms.length; i++) {
+                this.DetailedPerms[i] = new DetailedRolePerm(source.DetailedPerms[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamArraySimple(map, prefix + "Permissions.", this.Permissions);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
 
     }
 }

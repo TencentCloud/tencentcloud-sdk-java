@@ -101,6 +101,13 @@ public class QueueConfig extends AbstractModel {
     private Long DesiredIdleNodeCapacity;
 
     /**
+    * 队列中期望的总节点数。
+    */
+    @SerializedName("DesiredNodeCount")
+    @Expose
+    private Long DesiredNodeCount;
+
+    /**
     * 扩容比例。默认值：100。取值范围：1～100。
 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。
     */
@@ -319,6 +326,22 @@ public class QueueConfig extends AbstractModel {
     }
 
     /**
+     * Get 队列中期望的总节点数。 
+     * @return DesiredNodeCount 队列中期望的总节点数。
+     */
+    public Long getDesiredNodeCount() {
+        return this.DesiredNodeCount;
+    }
+
+    /**
+     * Set 队列中期望的总节点数。
+     * @param DesiredNodeCount 队列中期望的总节点数。
+     */
+    public void setDesiredNodeCount(Long DesiredNodeCount) {
+        this.DesiredNodeCount = DesiredNodeCount;
+    }
+
+    /**
      * Get 扩容比例。默认值：100。取值范围：1～100。
 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。 
      * @return ScaleOutRatio 扩容比例。默认值：100。取值范围：1～100。
@@ -473,6 +496,9 @@ public class QueueConfig extends AbstractModel {
         if (source.DesiredIdleNodeCapacity != null) {
             this.DesiredIdleNodeCapacity = new Long(source.DesiredIdleNodeCapacity);
         }
+        if (source.DesiredNodeCount != null) {
+            this.DesiredNodeCount = new Long(source.DesiredNodeCount);
+        }
         if (source.ScaleOutRatio != null) {
             this.ScaleOutRatio = new Long(source.ScaleOutRatio);
         }
@@ -506,6 +532,7 @@ public class QueueConfig extends AbstractModel {
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
         this.setParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
+        this.setParamSimple(map, prefix + "DesiredNodeCount", this.DesiredNodeCount);
         this.setParamSimple(map, prefix + "ScaleOutRatio", this.ScaleOutRatio);
         this.setParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
         this.setParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);

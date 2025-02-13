@@ -31,7 +31,11 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel {
     private String [] TrafficMirrorIds;
 
     /**
-    * 流量镜像查询过滤调节
+    * 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
     */
     @SerializedName("Filters")
     @Expose
@@ -68,16 +72,32 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像查询过滤调节 
-     * @return Filters 流量镜像查询过滤调节
+     * Get 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。 
+     * @return Filters 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
      */
     public Filter getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 流量镜像查询过滤调节
-     * @param Filters 流量镜像查询过滤调节
+     * Set 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
+     * @param Filters 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;

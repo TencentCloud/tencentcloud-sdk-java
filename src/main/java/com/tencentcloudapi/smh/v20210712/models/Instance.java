@@ -100,6 +100,21 @@ public class Instance extends AbstractModel {
     private String SuperAdminAccount;
 
     /**
+    * 自选桶模式下，展示存储桶使用
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
+
+    /**
+    * 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogBucket")
+    @Expose
+    private String LogBucket;
+
+    /**
      * Get 实例 ID 
      * @return InstanceId 实例 ID
      */
@@ -283,6 +298,42 @@ public class Instance extends AbstractModel {
         this.SuperAdminAccount = SuperAdminAccount;
     }
 
+    /**
+     * Get 自选桶模式下，展示存储桶使用 
+     * @return Bucket 自选桶模式下，展示存储桶使用
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set 自选桶模式下，展示存储桶使用
+     * @param Bucket 自选桶模式下，展示存储桶使用
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
+    }
+
+    /**
+     * Get 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogBucket 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogBucket() {
+        return this.LogBucket;
+    }
+
+    /**
+     * Set 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogBucket 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogBucket(String LogBucket) {
+        this.LogBucket = LogBucket;
+    }
+
     public Instance() {
     }
 
@@ -321,6 +372,12 @@ public class Instance extends AbstractModel {
         if (source.SuperAdminAccount != null) {
             this.SuperAdminAccount = new String(source.SuperAdminAccount);
         }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.LogBucket != null) {
+            this.LogBucket = new String(source.LogBucket);
+        }
     }
 
 
@@ -338,6 +395,8 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "Isolated", this.Isolated);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "SuperAdminAccount", this.SuperAdminAccount);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+        this.setParamSimple(map, prefix + "LogBucket", this.LogBucket);
 
     }
 }

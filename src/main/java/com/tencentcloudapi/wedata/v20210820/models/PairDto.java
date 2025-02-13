@@ -40,6 +40,13 @@ public class PairDto extends AbstractModel {
     private String Value;
 
     /**
+    * 描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 键名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Key 键名
@@ -79,6 +86,22 @@ public class PairDto extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get 描述 
+     * @return Description 描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+     * @param Description 描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public PairDto() {
     }
 
@@ -93,6 +116,9 @@ public class PairDto extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class PairDto extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

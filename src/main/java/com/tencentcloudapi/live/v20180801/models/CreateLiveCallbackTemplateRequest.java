@@ -119,6 +119,20 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel {
     private String AudioAuditNotifyUrl;
 
     /**
+    * 录制异常回调 URL。
+    */
+    @SerializedName("RecordExceptionNotifyUrl")
+    @Expose
+    private String RecordExceptionNotifyUrl;
+
+    /**
+    * 录制异常回调级别，可选择：error、warning、info。
+    */
+    @SerializedName("RecordExceptionLevels")
+    @Expose
+    private String [] RecordExceptionLevels;
+
+    /**
      * Get 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。 
@@ -354,6 +368,38 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel {
         this.AudioAuditNotifyUrl = AudioAuditNotifyUrl;
     }
 
+    /**
+     * Get 录制异常回调 URL。 
+     * @return RecordExceptionNotifyUrl 录制异常回调 URL。
+     */
+    public String getRecordExceptionNotifyUrl() {
+        return this.RecordExceptionNotifyUrl;
+    }
+
+    /**
+     * Set 录制异常回调 URL。
+     * @param RecordExceptionNotifyUrl 录制异常回调 URL。
+     */
+    public void setRecordExceptionNotifyUrl(String RecordExceptionNotifyUrl) {
+        this.RecordExceptionNotifyUrl = RecordExceptionNotifyUrl;
+    }
+
+    /**
+     * Get 录制异常回调级别，可选择：error、warning、info。 
+     * @return RecordExceptionLevels 录制异常回调级别，可选择：error、warning、info。
+     */
+    public String [] getRecordExceptionLevels() {
+        return this.RecordExceptionLevels;
+    }
+
+    /**
+     * Set 录制异常回调级别，可选择：error、warning、info。
+     * @param RecordExceptionLevels 录制异常回调级别，可选择：error、warning、info。
+     */
+    public void setRecordExceptionLevels(String [] RecordExceptionLevels) {
+        this.RecordExceptionLevels = RecordExceptionLevels;
+    }
+
     public CreateLiveCallbackTemplateRequest() {
     }
 
@@ -398,6 +444,15 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel {
         if (source.AudioAuditNotifyUrl != null) {
             this.AudioAuditNotifyUrl = new String(source.AudioAuditNotifyUrl);
         }
+        if (source.RecordExceptionNotifyUrl != null) {
+            this.RecordExceptionNotifyUrl = new String(source.RecordExceptionNotifyUrl);
+        }
+        if (source.RecordExceptionLevels != null) {
+            this.RecordExceptionLevels = new String[source.RecordExceptionLevels.length];
+            for (int i = 0; i < source.RecordExceptionLevels.length; i++) {
+                this.RecordExceptionLevels[i] = new String(source.RecordExceptionLevels[i]);
+            }
+        }
     }
 
 
@@ -417,6 +472,8 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
         this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
         this.setParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
+        this.setParamSimple(map, prefix + "RecordExceptionNotifyUrl", this.RecordExceptionNotifyUrl);
+        this.setParamArraySimple(map, prefix + "RecordExceptionLevels.", this.RecordExceptionLevels);
 
     }
 }

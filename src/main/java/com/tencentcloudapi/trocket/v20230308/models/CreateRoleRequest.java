@@ -38,13 +38,6 @@ public class CreateRoleRequest extends AbstractModel {
     private String Role;
 
     /**
-    * 备注
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * 是否开启生产权限
     */
     @SerializedName("PermWrite")
@@ -57,6 +50,27 @@ public class CreateRoleRequest extends AbstractModel {
     @SerializedName("PermRead")
     @Expose
     private Boolean PermRead;
+
+    /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
+    * Topic&Group维度权限配置
+    */
+    @SerializedName("DetailedPerms")
+    @Expose
+    private DetailedRolePerm [] DetailedPerms;
 
     /**
      * Get 集群ID 
@@ -91,22 +105,6 @@ public class CreateRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注
-     * @param Remark 备注
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get 是否开启生产权限 
      * @return PermWrite 是否开启生产权限
      */
@@ -138,6 +136,54 @@ public class CreateRoleRequest extends AbstractModel {
         this.PermRead = PermRead;
     }
 
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别） 
+     * @return PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     * @param PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
+    /**
+     * Get Topic&Group维度权限配置 
+     * @return DetailedPerms Topic&Group维度权限配置
+     */
+    public DetailedRolePerm [] getDetailedPerms() {
+        return this.DetailedPerms;
+    }
+
+    /**
+     * Set Topic&Group维度权限配置
+     * @param DetailedPerms Topic&Group维度权限配置
+     */
+    public void setDetailedPerms(DetailedRolePerm [] DetailedPerms) {
+        this.DetailedPerms = DetailedPerms;
+    }
+
     public CreateRoleRequest() {
     }
 
@@ -152,14 +198,23 @@ public class CreateRoleRequest extends AbstractModel {
         if (source.Role != null) {
             this.Role = new String(source.Role);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
         if (source.PermWrite != null) {
             this.PermWrite = new Boolean(source.PermWrite);
         }
         if (source.PermRead != null) {
             this.PermRead = new Boolean(source.PermRead);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
+        if (source.DetailedPerms != null) {
+            this.DetailedPerms = new DetailedRolePerm[source.DetailedPerms.length];
+            for (int i = 0; i < source.DetailedPerms.length; i++) {
+                this.DetailedPerms[i] = new DetailedRolePerm(source.DetailedPerms[i]);
+            }
         }
     }
 
@@ -170,9 +225,11 @@ public class CreateRoleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Role", this.Role);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PermWrite", this.PermWrite);
         this.setParamSimple(map, prefix + "PermRead", this.PermRead);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
+        this.setParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
 
     }
 }

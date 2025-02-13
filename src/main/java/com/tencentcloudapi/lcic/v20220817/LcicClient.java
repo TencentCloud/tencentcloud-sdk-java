@@ -457,6 +457,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *查询录制任务ID
+     * @param req DescribeRecordTaskRequest
+     * @return DescribeRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordTaskResponse DescribeRecordTask(DescribeRecordTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordTask", DescribeRecordTaskResponse.class);
+    }
+
+    /**
      *获取房间配置信息
      * @param req DescribeRoomRequest
      * @return DescribeRoomResponse

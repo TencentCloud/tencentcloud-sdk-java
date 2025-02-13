@@ -45,6 +45,13 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
      * Get 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。 
      * @return RoleName 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
      */
@@ -92,6 +99,22 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup） 
+     * @return PermType 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+     * @param PermType 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
     public CreateRocketMQRoleRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
 
     }
 }

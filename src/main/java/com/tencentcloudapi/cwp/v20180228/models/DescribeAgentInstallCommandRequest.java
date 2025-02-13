@@ -59,7 +59,7 @@ public class DescribeAgentInstallCommandRequest extends AbstractModel {
     private Long [] TagIds;
 
     /**
-    * 命令有效期，非腾讯云时必填
+    * 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
     */
     @SerializedName("ExpireDate")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeAgentInstallCommandRequest extends AbstractModel {
     }
 
     /**
-     * Get 命令有效期，非腾讯云时必填 
-     * @return ExpireDate 命令有效期，非腾讯云时必填
+     * Get 命令有效期，非腾讯云时必填（已废弃，命令永久生效） 
+     * @return ExpireDate 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
      */
     public String getExpireDate() {
         return this.ExpireDate;
     }
 
     /**
-     * Set 命令有效期，非腾讯云时必填
-     * @param ExpireDate 命令有效期，非腾讯云时必填
+     * Set 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
+     * @param ExpireDate 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
      */
     public void setExpireDate(String ExpireDate) {
         this.ExpireDate = ExpireDate;

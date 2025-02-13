@@ -45,6 +45,13 @@ public class ModifyRocketMQRoleRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
      * Get 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。 
      * @return RoleName 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
      */
@@ -92,6 +99,22 @@ public class ModifyRocketMQRoleRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别） 
+     * @return PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     * @param PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
     public ModifyRocketMQRoleRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ModifyRocketMQRoleRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyRocketMQRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
 
     }
 }

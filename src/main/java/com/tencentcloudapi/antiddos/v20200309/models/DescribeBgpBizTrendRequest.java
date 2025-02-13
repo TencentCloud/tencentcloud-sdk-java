@@ -45,7 +45,7 @@ public class DescribeBgpBizTrendRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+    * 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
     */
     @SerializedName("MetricName")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeBgpBizTrendRequest extends AbstractModel {
     }
 
     /**
-     * Get 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg 
-     * @return MetricName 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+     * Get 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率 
+     * @return MetricName 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
-     * @param MetricName 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+     * Set 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
+     * @param MetricName 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

@@ -31,7 +31,7 @@ public class DeleteResourceFilesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 使用状态
+    * 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
     */
     @SerializedName("UseStatus")
     @Expose
@@ -45,7 +45,7 @@ public class DeleteResourceFilesRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
-    * 资源路径列表
+    * 需要删除的资源路径列表 即资源管理中的目录结构
     */
     @SerializedName("FilePaths")
     @Expose
@@ -68,16 +68,16 @@ public class DeleteResourceFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 使用状态 
-     * @return UseStatus 使用状态
+     * Get 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除 
+     * @return UseStatus 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
      */
     public Boolean getUseStatus() {
         return this.UseStatus;
     }
 
     /**
-     * Set 使用状态
-     * @param UseStatus 使用状态
+     * Set 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
+     * @param UseStatus 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
      */
     public void setUseStatus(Boolean UseStatus) {
         this.UseStatus = UseStatus;
@@ -100,16 +100,16 @@ public class DeleteResourceFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源路径列表 
-     * @return FilePaths 资源路径列表
+     * Get 需要删除的资源路径列表 即资源管理中的目录结构 
+     * @return FilePaths 需要删除的资源路径列表 即资源管理中的目录结构
      */
     public String [] getFilePaths() {
         return this.FilePaths;
     }
 
     /**
-     * Set 资源路径列表
-     * @param FilePaths 资源路径列表
+     * Set 需要删除的资源路径列表 即资源管理中的目录结构
+     * @param FilePaths 需要删除的资源路径列表 即资源管理中的目录结构
      */
     public void setFilePaths(String [] FilePaths) {
         this.FilePaths = FilePaths;

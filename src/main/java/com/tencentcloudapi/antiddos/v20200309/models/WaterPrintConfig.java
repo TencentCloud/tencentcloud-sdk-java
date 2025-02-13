@@ -66,7 +66,6 @@ shortfpcheckall（精简模式）
 
     /**
     * 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudSdkProxy")
     @Expose
@@ -177,10 +176,8 @@ shortfpcheckall（精简模式）
     }
 
     /**
-     * Get 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验 
      * @return CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloudSdkProxy() {
         return this.CloudSdkProxy;
@@ -188,9 +185,7 @@ shortfpcheckall（精简模式）
 
     /**
      * Set 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudSdkProxy(Long CloudSdkProxy) {
         this.CloudSdkProxy = CloudSdkProxy;
