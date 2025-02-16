@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class SubmitCertificateInformationRequest extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * 待提交资料的付费证书 ID。
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * CSR 生成方式：online = 在线生成, parse = 手动上传。
+    * 此字段必传。 CSR 生成方式， 取值为：
+online：腾讯云提交的填写的参数信息生成CSR和私钥， 并由腾讯云加密存储
+parse：自行生成CSR和私钥， 并通过上传CSR申请证书
     */
     @SerializedName("CsrType")
     @Expose
@@ -39,69 +41,70 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
 
     /**
     * 上传的 CSR 内容。
+若CstType为parse， 则此字段必传。
     */
     @SerializedName("CsrContent")
     @Expose
     private String CsrContent;
 
     /**
-    * 绑定证书的域名。
+    * 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
     */
     @SerializedName("CertificateDomain")
     @Expose
     private String CertificateDomain;
 
     /**
-    * 上传的域名数组（多域名证书可以上传）。
+    * 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
     */
     @SerializedName("DomainList")
     @Expose
     private String [] DomainList;
 
     /**
-    * 私钥密码（非必填）。
+    * 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
     */
     @SerializedName("KeyPassword")
     @Expose
     private String KeyPassword;
 
     /**
-    * 公司名称。
+    * 字段必传， 公司名称。
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 部门名称。
+    * 字段必传， 部门名称。
     */
     @SerializedName("OrganizationDivision")
     @Expose
     private String OrganizationDivision;
 
     /**
-    * 公司详细地址。
+    * 字段必传， 公司详细地址。
     */
     @SerializedName("OrganizationAddress")
     @Expose
     private String OrganizationAddress;
 
     /**
-    * 国家名称，如中国：CN 。
+    * 字段必传， 国家名称，传CN即可
     */
     @SerializedName("OrganizationCountry")
     @Expose
     private String OrganizationCountry;
 
     /**
-    * 公司所在城市。
+    * 字段必传， 公司所在城市。
     */
     @SerializedName("OrganizationCity")
     @Expose
     private String OrganizationCity;
 
     /**
-    * 公司所在省份。
+    * 字段必传， 公司所在省份。
     */
     @SerializedName("OrganizationRegion")
     @Expose
@@ -115,14 +118,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     private String PostalCode;
 
     /**
-    * 公司座机区号。
+    * 字段必传， 公司座机区号。
     */
     @SerializedName("PhoneAreaCode")
     @Expose
     private String PhoneAreaCode;
 
     /**
-    * 公司座机号码。
+    * 字段必传， 公司座机号码。
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -136,70 +139,70 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     private String VerifyType;
 
     /**
-    * 管理人名。
+    * 字段必传，管理人名。
     */
     @SerializedName("AdminFirstName")
     @Expose
     private String AdminFirstName;
 
     /**
-    * 管理人姓。
+    * 字段必传，管理人姓。
     */
     @SerializedName("AdminLastName")
     @Expose
     private String AdminLastName;
 
     /**
-    * 管理人手机号码。
+    * 字段必传，管理人手机号码。
     */
     @SerializedName("AdminPhoneNum")
     @Expose
     private String AdminPhoneNum;
 
     /**
-    * 管理人邮箱地址。
+    * 字段必传，管理人邮箱地址。
     */
     @SerializedName("AdminEmail")
     @Expose
     private String AdminEmail;
 
     /**
-    * 管理人职位。
+    * 字段必传，管理人职位。
     */
     @SerializedName("AdminPosition")
     @Expose
     private String AdminPosition;
 
     /**
-    * 联系人名。
+    * 字段必传，联系人名。
     */
     @SerializedName("ContactFirstName")
     @Expose
     private String ContactFirstName;
 
     /**
-    * 联系人姓。
+    * 字段必传，联系人姓。
     */
     @SerializedName("ContactLastName")
     @Expose
     private String ContactLastName;
 
     /**
-    * 联系人邮箱地址。
+    * 字段必传，联系人邮箱地址。
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * 联系人手机号码。
+    * 字段必传，联系人手机号码。
     */
     @SerializedName("ContactNumber")
     @Expose
     private String ContactNumber;
 
     /**
-    * 联系人职位。
+    * 字段必传，联系人职位。
     */
     @SerializedName("ContactPosition")
     @Expose
@@ -213,40 +216,50 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     private Boolean IsDV;
 
     /**
-     * Get 证书 ID。 
-     * @return CertificateId 证书 ID。
+     * Get 待提交资料的付费证书 ID。 
+     * @return CertificateId 待提交资料的付费证书 ID。
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertificateId 证书 ID。
+     * Set 待提交资料的付费证书 ID。
+     * @param CertificateId 待提交资料的付费证书 ID。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get CSR 生成方式：online = 在线生成, parse = 手动上传。 
-     * @return CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
+     * Get 此字段必传。 CSR 生成方式， 取值为：
+online：腾讯云提交的填写的参数信息生成CSR和私钥， 并由腾讯云加密存储
+parse：自行生成CSR和私钥， 并通过上传CSR申请证书 
+     * @return CsrType 此字段必传。 CSR 生成方式， 取值为：
+online：腾讯云提交的填写的参数信息生成CSR和私钥， 并由腾讯云加密存储
+parse：自行生成CSR和私钥， 并通过上传CSR申请证书
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set CSR 生成方式：online = 在线生成, parse = 手动上传。
-     * @param CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
+     * Set 此字段必传。 CSR 生成方式， 取值为：
+online：腾讯云提交的填写的参数信息生成CSR和私钥， 并由腾讯云加密存储
+parse：自行生成CSR和私钥， 并通过上传CSR申请证书
+     * @param CsrType 此字段必传。 CSR 生成方式， 取值为：
+online：腾讯云提交的填写的参数信息生成CSR和私钥， 并由腾讯云加密存储
+parse：自行生成CSR和私钥， 并通过上传CSR申请证书
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get 上传的 CSR 内容。 
+     * Get 上传的 CSR 内容。
+若CstType为parse， 则此字段必传。 
      * @return CsrContent 上传的 CSR 内容。
+若CstType为parse， 则此字段必传。
      */
     public String getCsrContent() {
         return this.CsrContent;
@@ -254,151 +267,153 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
 
     /**
      * Set 上传的 CSR 内容。
+若CstType为parse， 则此字段必传。
      * @param CsrContent 上传的 CSR 内容。
+若CstType为parse， 则此字段必传。
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;
     }
 
     /**
-     * Get 绑定证书的域名。 
-     * @return CertificateDomain 绑定证书的域名。
+     * Get 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致 
+     * @return CertificateDomain 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
      */
     public String getCertificateDomain() {
         return this.CertificateDomain;
     }
 
     /**
-     * Set 绑定证书的域名。
-     * @param CertificateDomain 绑定证书的域名。
+     * Set 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
+     * @param CertificateDomain 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
      */
     public void setCertificateDomain(String CertificateDomain) {
         this.CertificateDomain = CertificateDomain;
     }
 
     /**
-     * Get 上传的域名数组（多域名证书可以上传）。 
-     * @return DomainList 上传的域名数组（多域名证书可以上传）。
+     * Get 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填 
+     * @return DomainList 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
      */
     public String [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set 上传的域名数组（多域名证书可以上传）。
-     * @param DomainList 上传的域名数组（多域名证书可以上传）。
+     * Set 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
+     * @param DomainList 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
      */
     public void setDomainList(String [] DomainList) {
         this.DomainList = DomainList;
     }
 
     /**
-     * Get 私钥密码（非必填）。 
-     * @return KeyPassword 私钥密码（非必填）。
+     * Get 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	 
+     * @return KeyPassword 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
      */
     public String getKeyPassword() {
         return this.KeyPassword;
     }
 
     /**
-     * Set 私钥密码（非必填）。
-     * @param KeyPassword 私钥密码（非必填）。
+     * Set 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
+     * @param KeyPassword 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
      */
     public void setKeyPassword(String KeyPassword) {
         this.KeyPassword = KeyPassword;
     }
 
     /**
-     * Get 公司名称。 
-     * @return OrganizationName 公司名称。
+     * Get 字段必传， 公司名称。 
+     * @return OrganizationName 字段必传， 公司名称。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 公司名称。
-     * @param OrganizationName 公司名称。
+     * Set 字段必传， 公司名称。
+     * @param OrganizationName 字段必传， 公司名称。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 部门名称。 
-     * @return OrganizationDivision 部门名称。
+     * Get 字段必传， 部门名称。 
+     * @return OrganizationDivision 字段必传， 部门名称。
      */
     public String getOrganizationDivision() {
         return this.OrganizationDivision;
     }
 
     /**
-     * Set 部门名称。
-     * @param OrganizationDivision 部门名称。
+     * Set 字段必传， 部门名称。
+     * @param OrganizationDivision 字段必传， 部门名称。
      */
     public void setOrganizationDivision(String OrganizationDivision) {
         this.OrganizationDivision = OrganizationDivision;
     }
 
     /**
-     * Get 公司详细地址。 
-     * @return OrganizationAddress 公司详细地址。
+     * Get 字段必传， 公司详细地址。 
+     * @return OrganizationAddress 字段必传， 公司详细地址。
      */
     public String getOrganizationAddress() {
         return this.OrganizationAddress;
     }
 
     /**
-     * Set 公司详细地址。
-     * @param OrganizationAddress 公司详细地址。
+     * Set 字段必传， 公司详细地址。
+     * @param OrganizationAddress 字段必传， 公司详细地址。
      */
     public void setOrganizationAddress(String OrganizationAddress) {
         this.OrganizationAddress = OrganizationAddress;
     }
 
     /**
-     * Get 国家名称，如中国：CN 。 
-     * @return OrganizationCountry 国家名称，如中国：CN 。
+     * Get 字段必传， 国家名称，传CN即可 
+     * @return OrganizationCountry 字段必传， 国家名称，传CN即可
      */
     public String getOrganizationCountry() {
         return this.OrganizationCountry;
     }
 
     /**
-     * Set 国家名称，如中国：CN 。
-     * @param OrganizationCountry 国家名称，如中国：CN 。
+     * Set 字段必传， 国家名称，传CN即可
+     * @param OrganizationCountry 字段必传， 国家名称，传CN即可
      */
     public void setOrganizationCountry(String OrganizationCountry) {
         this.OrganizationCountry = OrganizationCountry;
     }
 
     /**
-     * Get 公司所在城市。 
-     * @return OrganizationCity 公司所在城市。
+     * Get 字段必传， 公司所在城市。 
+     * @return OrganizationCity 字段必传， 公司所在城市。
      */
     public String getOrganizationCity() {
         return this.OrganizationCity;
     }
 
     /**
-     * Set 公司所在城市。
-     * @param OrganizationCity 公司所在城市。
+     * Set 字段必传， 公司所在城市。
+     * @param OrganizationCity 字段必传， 公司所在城市。
      */
     public void setOrganizationCity(String OrganizationCity) {
         this.OrganizationCity = OrganizationCity;
     }
 
     /**
-     * Get 公司所在省份。 
-     * @return OrganizationRegion 公司所在省份。
+     * Get 字段必传， 公司所在省份。 
+     * @return OrganizationRegion 字段必传， 公司所在省份。
      */
     public String getOrganizationRegion() {
         return this.OrganizationRegion;
     }
 
     /**
-     * Set 公司所在省份。
-     * @param OrganizationRegion 公司所在省份。
+     * Set 字段必传， 公司所在省份。
+     * @param OrganizationRegion 字段必传， 公司所在省份。
      */
     public void setOrganizationRegion(String OrganizationRegion) {
         this.OrganizationRegion = OrganizationRegion;
@@ -421,32 +436,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     }
 
     /**
-     * Get 公司座机区号。 
-     * @return PhoneAreaCode 公司座机区号。
+     * Get 字段必传， 公司座机区号。 
+     * @return PhoneAreaCode 字段必传， 公司座机区号。
      */
     public String getPhoneAreaCode() {
         return this.PhoneAreaCode;
     }
 
     /**
-     * Set 公司座机区号。
-     * @param PhoneAreaCode 公司座机区号。
+     * Set 字段必传， 公司座机区号。
+     * @param PhoneAreaCode 字段必传， 公司座机区号。
      */
     public void setPhoneAreaCode(String PhoneAreaCode) {
         this.PhoneAreaCode = PhoneAreaCode;
     }
 
     /**
-     * Get 公司座机号码。 
-     * @return PhoneNumber 公司座机号码。
+     * Get 字段必传， 公司座机号码。 
+     * @return PhoneNumber 字段必传， 公司座机号码。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 公司座机号码。
-     * @param PhoneNumber 公司座机号码。
+     * Set 字段必传， 公司座机号码。
+     * @param PhoneNumber 字段必传， 公司座机号码。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
@@ -469,160 +484,160 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     }
 
     /**
-     * Get 管理人名。 
-     * @return AdminFirstName 管理人名。
+     * Get 字段必传，管理人名。 
+     * @return AdminFirstName 字段必传，管理人名。
      */
     public String getAdminFirstName() {
         return this.AdminFirstName;
     }
 
     /**
-     * Set 管理人名。
-     * @param AdminFirstName 管理人名。
+     * Set 字段必传，管理人名。
+     * @param AdminFirstName 字段必传，管理人名。
      */
     public void setAdminFirstName(String AdminFirstName) {
         this.AdminFirstName = AdminFirstName;
     }
 
     /**
-     * Get 管理人姓。 
-     * @return AdminLastName 管理人姓。
+     * Get 字段必传，管理人姓。 
+     * @return AdminLastName 字段必传，管理人姓。
      */
     public String getAdminLastName() {
         return this.AdminLastName;
     }
 
     /**
-     * Set 管理人姓。
-     * @param AdminLastName 管理人姓。
+     * Set 字段必传，管理人姓。
+     * @param AdminLastName 字段必传，管理人姓。
      */
     public void setAdminLastName(String AdminLastName) {
         this.AdminLastName = AdminLastName;
     }
 
     /**
-     * Get 管理人手机号码。 
-     * @return AdminPhoneNum 管理人手机号码。
+     * Get 字段必传，管理人手机号码。 
+     * @return AdminPhoneNum 字段必传，管理人手机号码。
      */
     public String getAdminPhoneNum() {
         return this.AdminPhoneNum;
     }
 
     /**
-     * Set 管理人手机号码。
-     * @param AdminPhoneNum 管理人手机号码。
+     * Set 字段必传，管理人手机号码。
+     * @param AdminPhoneNum 字段必传，管理人手机号码。
      */
     public void setAdminPhoneNum(String AdminPhoneNum) {
         this.AdminPhoneNum = AdminPhoneNum;
     }
 
     /**
-     * Get 管理人邮箱地址。 
-     * @return AdminEmail 管理人邮箱地址。
+     * Get 字段必传，管理人邮箱地址。 
+     * @return AdminEmail 字段必传，管理人邮箱地址。
      */
     public String getAdminEmail() {
         return this.AdminEmail;
     }
 
     /**
-     * Set 管理人邮箱地址。
-     * @param AdminEmail 管理人邮箱地址。
+     * Set 字段必传，管理人邮箱地址。
+     * @param AdminEmail 字段必传，管理人邮箱地址。
      */
     public void setAdminEmail(String AdminEmail) {
         this.AdminEmail = AdminEmail;
     }
 
     /**
-     * Get 管理人职位。 
-     * @return AdminPosition 管理人职位。
+     * Get 字段必传，管理人职位。 
+     * @return AdminPosition 字段必传，管理人职位。
      */
     public String getAdminPosition() {
         return this.AdminPosition;
     }
 
     /**
-     * Set 管理人职位。
-     * @param AdminPosition 管理人职位。
+     * Set 字段必传，管理人职位。
+     * @param AdminPosition 字段必传，管理人职位。
      */
     public void setAdminPosition(String AdminPosition) {
         this.AdminPosition = AdminPosition;
     }
 
     /**
-     * Get 联系人名。 
-     * @return ContactFirstName 联系人名。
+     * Get 字段必传，联系人名。 
+     * @return ContactFirstName 字段必传，联系人名。
      */
     public String getContactFirstName() {
         return this.ContactFirstName;
     }
 
     /**
-     * Set 联系人名。
-     * @param ContactFirstName 联系人名。
+     * Set 字段必传，联系人名。
+     * @param ContactFirstName 字段必传，联系人名。
      */
     public void setContactFirstName(String ContactFirstName) {
         this.ContactFirstName = ContactFirstName;
     }
 
     /**
-     * Get 联系人姓。 
-     * @return ContactLastName 联系人姓。
+     * Get 字段必传，联系人姓。 
+     * @return ContactLastName 字段必传，联系人姓。
      */
     public String getContactLastName() {
         return this.ContactLastName;
     }
 
     /**
-     * Set 联系人姓。
-     * @param ContactLastName 联系人姓。
+     * Set 字段必传，联系人姓。
+     * @param ContactLastName 字段必传，联系人姓。
      */
     public void setContactLastName(String ContactLastName) {
         this.ContactLastName = ContactLastName;
     }
 
     /**
-     * Get 联系人邮箱地址。 
-     * @return ContactEmail 联系人邮箱地址。
+     * Get 字段必传，联系人邮箱地址。 
+     * @return ContactEmail 字段必传，联系人邮箱地址。
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set 联系人邮箱地址。
-     * @param ContactEmail 联系人邮箱地址。
+     * Set 字段必传，联系人邮箱地址。
+     * @param ContactEmail 字段必传，联系人邮箱地址。
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get 联系人手机号码。 
-     * @return ContactNumber 联系人手机号码。
+     * Get 字段必传，联系人手机号码。 
+     * @return ContactNumber 字段必传，联系人手机号码。
      */
     public String getContactNumber() {
         return this.ContactNumber;
     }
 
     /**
-     * Set 联系人手机号码。
-     * @param ContactNumber 联系人手机号码。
+     * Set 字段必传，联系人手机号码。
+     * @param ContactNumber 字段必传，联系人手机号码。
      */
     public void setContactNumber(String ContactNumber) {
         this.ContactNumber = ContactNumber;
     }
 
     /**
-     * Get 联系人职位。 
-     * @return ContactPosition 联系人职位。
+     * Get 字段必传，联系人职位。 
+     * @return ContactPosition 字段必传，联系人职位。
      */
     public String getContactPosition() {
         return this.ContactPosition;
     }
 
     /**
-     * Set 联系人职位。
-     * @param ContactPosition 联系人职位。
+     * Set 字段必传，联系人职位。
+     * @param ContactPosition 字段必传，联系人职位。
      */
     public void setContactPosition(String ContactPosition) {
         this.ContactPosition = ContactPosition;

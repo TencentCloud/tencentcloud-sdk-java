@@ -24,217 +24,240 @@ import java.util.HashMap;
 public class CertificateInfoSubmitRequest extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * 待提交资料的付费证书 ID。	
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * CSR 生成方式：online = 在线生成, upload = 手动上传。
+    * 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
     */
     @SerializedName("GenCsrType")
     @Expose
     private String GenCsrType;
 
     /**
-    * 绑定证书的主域名。
+    * 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
     */
     @SerializedName("CertCommonName")
     @Expose
     private String CertCommonName;
 
     /**
-    * 组织信息类型：1，个人； 2， 公司； 
+    * 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
     */
     @SerializedName("CompanyType")
     @Expose
     private Long CompanyType;
 
     /**
-    * 公司证件类型（）
-    */
-    @SerializedName("OrgIdType")
-    @Expose
-    private String OrgIdType;
+    * 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
 
-    /**
-    * 公司证件号码
-    */
-    @SerializedName("OrgIdNumber")
-    @Expose
-    private String OrgIdNumber;
 
-    /**
-    * 管理人证件类型
-    */
-    @SerializedName("AdminIdType")
-    @Expose
-    private String AdminIdType;
-
-    /**
-    * 管理人证件号码
-    */
-    @SerializedName("AdminIdNumber")
-    @Expose
-    private String AdminIdNumber;
-
-    /**
-    * 联系人证件类型
-    */
-    @SerializedName("TechIdType")
-    @Expose
-    private String TechIdType;
-
-    /**
-    * 联系人证件号码
-    */
-    @SerializedName("TechIdNumber")
-    @Expose
-    private String TechIdNumber;
-
-    /**
-    * 公司ID
     */
     @SerializedName("CompanyId")
     @Expose
     private String CompanyId;
 
     /**
-    * 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
+    * 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+    */
+    @SerializedName("OrgIdType")
+    @Expose
+    private String OrgIdType;
+
+    /**
+    * 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+    */
+    @SerializedName("OrgIdNumber")
+    @Expose
+    private String OrgIdNumber;
+
+    /**
+    * 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+    */
+    @SerializedName("AdminIdType")
+    @Expose
+    private String AdminIdType;
+
+    /**
+    * 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+    */
+    @SerializedName("AdminIdNumber")
+    @Expose
+    private String AdminIdNumber;
+
+    /**
+    * 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+    */
+    @SerializedName("TechIdType")
+    @Expose
+    private String TechIdType;
+
+    /**
+    * 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+    */
+    @SerializedName("TechIdNumber")
+    @Expose
+    private String TechIdNumber;
+
+    /**
+    * 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
     */
     @SerializedName("Csr")
     @Expose
     private String Csr;
 
     /**
-    * 域名数组（多域名证书可以上传）。
+    * 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
     */
     @SerializedName("DnsNames")
     @Expose
     private String [] DnsNames;
 
     /**
-    * 私钥密码（非必填）。
+    * 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
     */
     @SerializedName("KeyPass")
     @Expose
     private String KeyPass;
 
     /**
-    * 公司名称。
+    * 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgOrganization")
     @Expose
     private String OrgOrganization;
 
     /**
-    * 部门名称。
+    * 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgDivision")
     @Expose
     private String OrgDivision;
 
     /**
-    * 公司详细地址。
+    * 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgAddress")
     @Expose
     private String OrgAddress;
 
     /**
-    * 国家名称，如中国：CN 。
+    * 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgCountry")
     @Expose
     private String OrgCountry;
 
     /**
-    * 公司所在城市。
+    * 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgCity")
     @Expose
     private String OrgCity;
 
     /**
-    * 公司所在省份。
+    * 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgRegion")
     @Expose
     private String OrgRegion;
 
     /**
-    * 公司座机区号。
+    * 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
     */
     @SerializedName("OrgPhoneArea")
     @Expose
     private String OrgPhoneArea;
 
     /**
-    * 公司座机号码。
+    * 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
     */
     @SerializedName("OrgPhoneNumber")
     @Expose
     private String OrgPhoneNumber;
 
     /**
-    * 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+    * 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-    * 管理人名。
+    * 管理人名。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("AdminFirstName")
     @Expose
     private String AdminFirstName;
 
     /**
-    * 管理人姓。
+    * 管理人姓。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("AdminLastName")
     @Expose
     private String AdminLastName;
 
     /**
-    * 管理人手机号码。
+    * 管理人手机号码。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("AdminPhone")
     @Expose
     private String AdminPhone;
 
     /**
-    * 管理人邮箱地址。
+    * 管理人邮箱地址。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("AdminEmail")
     @Expose
     private String AdminEmail;
 
     /**
-    * 管理人职位。
+    * 管理人职位。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("AdminTitle")
     @Expose
     private String AdminTitle;
 
     /**
-    * 联系人名。
+    * 联系人名。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("TechFirstName")
     @Expose
     private String TechFirstName;
 
     /**
-    * 联系人姓。
+    * 联系人姓。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("TechLastName")
     @Expose
     private String TechLastName;
 
     /**
-    * 联系人邮箱地址。
+    * 联系人邮箱地址。CompanyType为1时， 此字段必传
     */
     @SerializedName("ContactEmail")
     @Expose
@@ -248,28 +271,31 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 证书加密参数
+    * 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
     */
     @SerializedName("CsrKeyParameter")
     @Expose
     private String CsrKeyParameter;
 
     /**
-    * 证书加密方式
+    * 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
     private String CsrEncryptAlgo;
 
     /**
-    * 管理人ID
+    * 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
     */
     @SerializedName("ManagerId")
     @Expose
     private String ManagerId;
 
     /**
-    * 联系人电话
+    * 联系人电话。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("TechPhone")
     @Expose
@@ -283,503 +309,595 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
     private String TechEmail;
 
     /**
-    * 联系人职位
+    * 联系人职位。若没有传ManagerId， 则此字段必传
     */
     @SerializedName("TechTitle")
     @Expose
     private String TechTitle;
 
     /**
-     * Get 证书 ID。 
-     * @return CertId 证书 ID。
+     * Get 待提交资料的付费证书 ID。	 
+     * @return CertId 待提交资料的付费证书 ID。	
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertId 证书 ID。
+     * Set 待提交资料的付费证书 ID。	
+     * @param CertId 待提交资料的付费证书 ID。	
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get CSR 生成方式：online = 在线生成, upload = 手动上传。 
-     * @return GenCsrType CSR 生成方式：online = 在线生成, upload = 手动上传。
+     * Get 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书 
+     * @return GenCsrType 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
      */
     public String getGenCsrType() {
         return this.GenCsrType;
     }
 
     /**
-     * Set CSR 生成方式：online = 在线生成, upload = 手动上传。
-     * @param GenCsrType CSR 生成方式：online = 在线生成, upload = 手动上传。
+     * Set 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
+     * @param GenCsrType 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
      */
     public void setGenCsrType(String GenCsrType) {
         this.GenCsrType = GenCsrType;
     }
 
     /**
-     * Get 绑定证书的主域名。 
-     * @return CertCommonName 绑定证书的主域名。
+     * Get 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致 
+     * @return CertCommonName 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
      */
     public String getCertCommonName() {
         return this.CertCommonName;
     }
 
     /**
-     * Set 绑定证书的主域名。
-     * @param CertCommonName 绑定证书的主域名。
+     * Set 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
+     * @param CertCommonName 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
      */
     public void setCertCommonName(String CertCommonName) {
         this.CertCommonName = CertCommonName;
     }
 
     /**
-     * Get 组织信息类型：1，个人； 2， 公司；  
-     * @return CompanyType 组织信息类型：1，个人； 2， 公司； 
+     * Get 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段 
+     * @return CompanyType 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
      */
     public Long getCompanyType() {
         return this.CompanyType;
     }
 
     /**
-     * Set 组织信息类型：1，个人； 2， 公司； 
-     * @param CompanyType 组织信息类型：1，个人； 2， 公司； 
+     * Set 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
+     * @param CompanyType 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
      */
     public void setCompanyType(Long CompanyType) {
         this.CompanyType = CompanyType;
     }
 
     /**
-     * Get 公司证件类型（） 
-     * @return OrgIdType 公司证件类型（）
-     */
-    public String getOrgIdType() {
-        return this.OrgIdType;
-    }
+     * Get 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
 
-    /**
-     * Set 公司证件类型（）
-     * @param OrgIdType 公司证件类型（）
-     */
-    public void setOrgIdType(String OrgIdType) {
-        this.OrgIdType = OrgIdType;
-    }
+ 
+     * @return CompanyId 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
 
-    /**
-     * Get 公司证件号码 
-     * @return OrgIdNumber 公司证件号码
-     */
-    public String getOrgIdNumber() {
-        return this.OrgIdNumber;
-    }
 
-    /**
-     * Set 公司证件号码
-     * @param OrgIdNumber 公司证件号码
-     */
-    public void setOrgIdNumber(String OrgIdNumber) {
-        this.OrgIdNumber = OrgIdNumber;
-    }
-
-    /**
-     * Get 管理人证件类型 
-     * @return AdminIdType 管理人证件类型
-     */
-    public String getAdminIdType() {
-        return this.AdminIdType;
-    }
-
-    /**
-     * Set 管理人证件类型
-     * @param AdminIdType 管理人证件类型
-     */
-    public void setAdminIdType(String AdminIdType) {
-        this.AdminIdType = AdminIdType;
-    }
-
-    /**
-     * Get 管理人证件号码 
-     * @return AdminIdNumber 管理人证件号码
-     */
-    public String getAdminIdNumber() {
-        return this.AdminIdNumber;
-    }
-
-    /**
-     * Set 管理人证件号码
-     * @param AdminIdNumber 管理人证件号码
-     */
-    public void setAdminIdNumber(String AdminIdNumber) {
-        this.AdminIdNumber = AdminIdNumber;
-    }
-
-    /**
-     * Get 联系人证件类型 
-     * @return TechIdType 联系人证件类型
-     */
-    public String getTechIdType() {
-        return this.TechIdType;
-    }
-
-    /**
-     * Set 联系人证件类型
-     * @param TechIdType 联系人证件类型
-     */
-    public void setTechIdType(String TechIdType) {
-        this.TechIdType = TechIdType;
-    }
-
-    /**
-     * Get 联系人证件号码 
-     * @return TechIdNumber 联系人证件号码
-     */
-    public String getTechIdNumber() {
-        return this.TechIdNumber;
-    }
-
-    /**
-     * Set 联系人证件号码
-     * @param TechIdNumber 联系人证件号码
-     */
-    public void setTechIdNumber(String TechIdNumber) {
-        this.TechIdNumber = TechIdNumber;
-    }
-
-    /**
-     * Get 公司ID 
-     * @return CompanyId 公司ID
      */
     public String getCompanyId() {
         return this.CompanyId;
     }
 
     /**
-     * Set 公司ID
-     * @param CompanyId 公司ID
+     * Set 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
+
+
+     * @param CompanyId 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
+
+
      */
     public void setCompanyId(String CompanyId) {
         this.CompanyId = CompanyId;
     }
 
     /**
-     * Get 上传的 CSR 内容。如果GenCsrType为upload则该字段必传 
-     * @return Csr 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
+     * Get 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他） 
+     * @return OrgIdType 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+     */
+    public String getOrgIdType() {
+        return this.OrgIdType;
+    }
+
+    /**
+     * Set 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+     * @param OrgIdType 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+     */
+    public void setOrgIdType(String OrgIdType) {
+        this.OrgIdType = OrgIdType;
+    }
+
+    /**
+     * Get 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+ 
+     * @return OrgIdNumber 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+     */
+    public String getOrgIdNumber() {
+        return this.OrgIdNumber;
+    }
+
+    /**
+     * Set 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+     * @param OrgIdNumber 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+     */
+    public void setOrgIdNumber(String OrgIdNumber) {
+        this.OrgIdNumber = OrgIdNumber;
+    }
+
+    /**
+     * Get 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段 
+     * @return AdminIdType 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public String getAdminIdType() {
+        return this.AdminIdType;
+    }
+
+    /**
+     * Set 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     * @param AdminIdType 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public void setAdminIdType(String AdminIdType) {
+        this.AdminIdType = AdminIdType;
+    }
+
+    /**
+     * Get 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx 
+     * @return AdminIdNumber 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public String getAdminIdNumber() {
+        return this.AdminIdNumber;
+    }
+
+    /**
+     * Set 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     * @param AdminIdNumber 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public void setAdminIdNumber(String AdminIdNumber) {
+        this.AdminIdNumber = AdminIdNumber;
+    }
+
+    /**
+     * Get 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段 
+     * @return TechIdType 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public String getTechIdType() {
+        return this.TechIdType;
+    }
+
+    /**
+     * Set 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     * @param TechIdType 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public void setTechIdType(String TechIdType) {
+        this.TechIdType = TechIdType;
+    }
+
+    /**
+     * Get 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx 
+     * @return TechIdNumber 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public String getTechIdNumber() {
+        return this.TechIdNumber;
+    }
+
+    /**
+     * Set 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     * @param TechIdNumber 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public void setTechIdNumber(String TechIdNumber) {
+        this.TechIdNumber = TechIdNumber;
+    }
+
+    /**
+     * Get 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。 
+     * @return Csr 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
      */
     public String getCsr() {
         return this.Csr;
     }
 
     /**
-     * Set 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
-     * @param Csr 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
+     * Set 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
+     * @param Csr 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
      */
     public void setCsr(String Csr) {
         this.Csr = Csr;
     }
 
     /**
-     * Get 域名数组（多域名证书可以上传）。 
-     * @return DnsNames 域名数组（多域名证书可以上传）。
+     * Get 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填 
+     * @return DnsNames 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
      */
     public String [] getDnsNames() {
         return this.DnsNames;
     }
 
     /**
-     * Set 域名数组（多域名证书可以上传）。
-     * @param DnsNames 域名数组（多域名证书可以上传）。
+     * Set 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
+     * @param DnsNames 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
      */
     public void setDnsNames(String [] DnsNames) {
         this.DnsNames = DnsNames;
     }
 
     /**
-     * Get 私钥密码（非必填）。 
-     * @return KeyPass 私钥密码（非必填）。
+     * Get 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	 
+     * @return KeyPass 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
      */
     public String getKeyPass() {
         return this.KeyPass;
     }
 
     /**
-     * Set 私钥密码（非必填）。
-     * @param KeyPass 私钥密码（非必填）。
+     * Set 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
+     * @param KeyPass 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
      */
     public void setKeyPass(String KeyPass) {
         this.KeyPass = KeyPass;
     }
 
     /**
-     * Get 公司名称。 
-     * @return OrgOrganization 公司名称。
+     * Get 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgOrganization 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgOrganization() {
         return this.OrgOrganization;
     }
 
     /**
-     * Set 公司名称。
-     * @param OrgOrganization 公司名称。
+     * Set 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgOrganization 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgOrganization(String OrgOrganization) {
         this.OrgOrganization = OrgOrganization;
     }
 
     /**
-     * Get 部门名称。 
-     * @return OrgDivision 部门名称。
+     * Get 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgDivision 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgDivision() {
         return this.OrgDivision;
     }
 
     /**
-     * Set 部门名称。
-     * @param OrgDivision 部门名称。
+     * Set 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgDivision 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgDivision(String OrgDivision) {
         this.OrgDivision = OrgDivision;
     }
 
     /**
-     * Get 公司详细地址。 
-     * @return OrgAddress 公司详细地址。
+     * Get 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgAddress 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgAddress() {
         return this.OrgAddress;
     }
 
     /**
-     * Set 公司详细地址。
-     * @param OrgAddress 公司详细地址。
+     * Set 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgAddress 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgAddress(String OrgAddress) {
         this.OrgAddress = OrgAddress;
     }
 
     /**
-     * Get 国家名称，如中国：CN 。 
-     * @return OrgCountry 国家名称，如中国：CN 。
+     * Get 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgCountry 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgCountry() {
         return this.OrgCountry;
     }
 
     /**
-     * Set 国家名称，如中国：CN 。
-     * @param OrgCountry 国家名称，如中国：CN 。
+     * Set 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgCountry 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgCountry(String OrgCountry) {
         this.OrgCountry = OrgCountry;
     }
 
     /**
-     * Get 公司所在城市。 
-     * @return OrgCity 公司所在城市。
+     * Get 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgCity 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgCity() {
         return this.OrgCity;
     }
 
     /**
-     * Set 公司所在城市。
-     * @param OrgCity 公司所在城市。
+     * Set 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgCity 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgCity(String OrgCity) {
         this.OrgCity = OrgCity;
     }
 
     /**
-     * Get 公司所在省份。 
-     * @return OrgRegion 公司所在省份。
+     * Get 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgRegion 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgRegion() {
         return this.OrgRegion;
     }
 
     /**
-     * Set 公司所在省份。
-     * @param OrgRegion 公司所在省份。
+     * Set 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgRegion 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgRegion(String OrgRegion) {
         this.OrgRegion = OrgRegion;
     }
 
     /**
-     * Get 公司座机区号。 
-     * @return OrgPhoneArea 公司座机区号。
+     * Get 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86 
+     * @return OrgPhoneArea 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
      */
     public String getOrgPhoneArea() {
         return this.OrgPhoneArea;
     }
 
     /**
-     * Set 公司座机区号。
-     * @param OrgPhoneArea 公司座机区号。
+     * Set 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
+     * @param OrgPhoneArea 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
      */
     public void setOrgPhoneArea(String OrgPhoneArea) {
         this.OrgPhoneArea = OrgPhoneArea;
     }
 
     /**
-     * Get 公司座机号码。 
-     * @return OrgPhoneNumber 公司座机号码。
+     * Get 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传 
+     * @return OrgPhoneNumber 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public String getOrgPhoneNumber() {
         return this.OrgPhoneNumber;
     }
 
     /**
-     * Set 公司座机号码。
-     * @param OrgPhoneNumber 公司座机号码。
+     * Set 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param OrgPhoneNumber 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public void setOrgPhoneNumber(String OrgPhoneNumber) {
         this.OrgPhoneNumber = OrgPhoneNumber;
     }
 
     /**
-     * Get 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。 
-     * @return VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+     * Get 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217 
+     * @return VerifyType 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
-     * @param VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+     * Set 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
+     * @param VerifyType 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
     }
 
     /**
-     * Get 管理人名。 
-     * @return AdminFirstName 管理人名。
+     * Get 管理人名。若没有传ManagerId， 则此字段必传 
+     * @return AdminFirstName 管理人名。若没有传ManagerId， 则此字段必传
      */
     public String getAdminFirstName() {
         return this.AdminFirstName;
     }
 
     /**
-     * Set 管理人名。
-     * @param AdminFirstName 管理人名。
+     * Set 管理人名。若没有传ManagerId， 则此字段必传
+     * @param AdminFirstName 管理人名。若没有传ManagerId， 则此字段必传
      */
     public void setAdminFirstName(String AdminFirstName) {
         this.AdminFirstName = AdminFirstName;
     }
 
     /**
-     * Get 管理人姓。 
-     * @return AdminLastName 管理人姓。
+     * Get 管理人姓。若没有传ManagerId， 则此字段必传 
+     * @return AdminLastName 管理人姓。若没有传ManagerId， 则此字段必传
      */
     public String getAdminLastName() {
         return this.AdminLastName;
     }
 
     /**
-     * Set 管理人姓。
-     * @param AdminLastName 管理人姓。
+     * Set 管理人姓。若没有传ManagerId， 则此字段必传
+     * @param AdminLastName 管理人姓。若没有传ManagerId， 则此字段必传
      */
     public void setAdminLastName(String AdminLastName) {
         this.AdminLastName = AdminLastName;
     }
 
     /**
-     * Get 管理人手机号码。 
-     * @return AdminPhone 管理人手机号码。
+     * Get 管理人手机号码。若没有传ManagerId， 则此字段必传 
+     * @return AdminPhone 管理人手机号码。若没有传ManagerId， 则此字段必传
      */
     public String getAdminPhone() {
         return this.AdminPhone;
     }
 
     /**
-     * Set 管理人手机号码。
-     * @param AdminPhone 管理人手机号码。
+     * Set 管理人手机号码。若没有传ManagerId， 则此字段必传
+     * @param AdminPhone 管理人手机号码。若没有传ManagerId， 则此字段必传
      */
     public void setAdminPhone(String AdminPhone) {
         this.AdminPhone = AdminPhone;
     }
 
     /**
-     * Get 管理人邮箱地址。 
-     * @return AdminEmail 管理人邮箱地址。
+     * Get 管理人邮箱地址。若没有传ManagerId， 则此字段必传 
+     * @return AdminEmail 管理人邮箱地址。若没有传ManagerId， 则此字段必传
      */
     public String getAdminEmail() {
         return this.AdminEmail;
     }
 
     /**
-     * Set 管理人邮箱地址。
-     * @param AdminEmail 管理人邮箱地址。
+     * Set 管理人邮箱地址。若没有传ManagerId， 则此字段必传
+     * @param AdminEmail 管理人邮箱地址。若没有传ManagerId， 则此字段必传
      */
     public void setAdminEmail(String AdminEmail) {
         this.AdminEmail = AdminEmail;
     }
 
     /**
-     * Get 管理人职位。 
-     * @return AdminTitle 管理人职位。
+     * Get 管理人职位。若没有传ManagerId， 则此字段必传 
+     * @return AdminTitle 管理人职位。若没有传ManagerId， 则此字段必传
      */
     public String getAdminTitle() {
         return this.AdminTitle;
     }
 
     /**
-     * Set 管理人职位。
-     * @param AdminTitle 管理人职位。
+     * Set 管理人职位。若没有传ManagerId， 则此字段必传
+     * @param AdminTitle 管理人职位。若没有传ManagerId， 则此字段必传
      */
     public void setAdminTitle(String AdminTitle) {
         this.AdminTitle = AdminTitle;
     }
 
     /**
-     * Get 联系人名。 
-     * @return TechFirstName 联系人名。
+     * Get 联系人名。若没有传ManagerId， 则此字段必传 
+     * @return TechFirstName 联系人名。若没有传ManagerId， 则此字段必传
      */
     public String getTechFirstName() {
         return this.TechFirstName;
     }
 
     /**
-     * Set 联系人名。
-     * @param TechFirstName 联系人名。
+     * Set 联系人名。若没有传ManagerId， 则此字段必传
+     * @param TechFirstName 联系人名。若没有传ManagerId， 则此字段必传
      */
     public void setTechFirstName(String TechFirstName) {
         this.TechFirstName = TechFirstName;
     }
 
     /**
-     * Get 联系人姓。 
-     * @return TechLastName 联系人姓。
+     * Get 联系人姓。若没有传ManagerId， 则此字段必传 
+     * @return TechLastName 联系人姓。若没有传ManagerId， 则此字段必传
      */
     public String getTechLastName() {
         return this.TechLastName;
     }
 
     /**
-     * Set 联系人姓。
-     * @param TechLastName 联系人姓。
+     * Set 联系人姓。若没有传ManagerId， 则此字段必传
+     * @param TechLastName 联系人姓。若没有传ManagerId， 则此字段必传
      */
     public void setTechLastName(String TechLastName) {
         this.TechLastName = TechLastName;
     }
 
     /**
-     * Get 联系人邮箱地址。 
-     * @return ContactEmail 联系人邮箱地址。
+     * Get 联系人邮箱地址。CompanyType为1时， 此字段必传 
+     * @return ContactEmail 联系人邮箱地址。CompanyType为1时， 此字段必传
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set 联系人邮箱地址。
-     * @param ContactEmail 联系人邮箱地址。
+     * Set 联系人邮箱地址。CompanyType为1时， 此字段必传
+     * @param ContactEmail 联系人邮箱地址。CompanyType为1时， 此字段必传
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
@@ -802,64 +920,76 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书加密参数 
-     * @return CsrKeyParameter 证书加密参数
+     * Get 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传 
+     * @return CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
      */
     public String getCsrKeyParameter() {
         return this.CsrKeyParameter;
     }
 
     /**
-     * Set 证书加密参数
-     * @param CsrKeyParameter 证书加密参数
+     * Set 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
+     * @param CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
      */
     public void setCsrKeyParameter(String CsrKeyParameter) {
         this.CsrKeyParameter = CsrKeyParameter;
     }
 
     /**
-     * Get 证书加密方式 
-     * @return CsrEncryptAlgo 证书加密方式
+     * Get 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传 
+     * @return CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set 证书加密方式
-     * @param CsrEncryptAlgo 证书加密方式
+     * Set 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
+     * @param CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;
     }
 
     /**
-     * Get 管理人ID 
-     * @return ManagerId 管理人ID
+     * Get 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+ 
+     * @return ManagerId 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
      */
     public String getManagerId() {
         return this.ManagerId;
     }
 
     /**
-     * Set 管理人ID
-     * @param ManagerId 管理人ID
+     * Set 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
+     * @param ManagerId 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
      */
     public void setManagerId(String ManagerId) {
         this.ManagerId = ManagerId;
     }
 
     /**
-     * Get 联系人电话 
-     * @return TechPhone 联系人电话
+     * Get 联系人电话。若没有传ManagerId， 则此字段必传 
+     * @return TechPhone 联系人电话。若没有传ManagerId， 则此字段必传
      */
     public String getTechPhone() {
         return this.TechPhone;
     }
 
     /**
-     * Set 联系人电话
-     * @param TechPhone 联系人电话
+     * Set 联系人电话。若没有传ManagerId， 则此字段必传
+     * @param TechPhone 联系人电话。若没有传ManagerId， 则此字段必传
      */
     public void setTechPhone(String TechPhone) {
         this.TechPhone = TechPhone;
@@ -882,16 +1012,16 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
     }
 
     /**
-     * Get 联系人职位 
-     * @return TechTitle 联系人职位
+     * Get 联系人职位。若没有传ManagerId， 则此字段必传 
+     * @return TechTitle 联系人职位。若没有传ManagerId， 则此字段必传
      */
     public String getTechTitle() {
         return this.TechTitle;
     }
 
     /**
-     * Set 联系人职位
-     * @param TechTitle 联系人职位
+     * Set 联系人职位。若没有传ManagerId， 则此字段必传
+     * @param TechTitle 联系人职位。若没有传ManagerId， 则此字段必传
      */
     public void setTechTitle(String TechTitle) {
         this.TechTitle = TechTitle;
@@ -917,6 +1047,9 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
         if (source.CompanyType != null) {
             this.CompanyType = new Long(source.CompanyType);
         }
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
         if (source.OrgIdType != null) {
             this.OrgIdType = new String(source.OrgIdType);
         }
@@ -934,9 +1067,6 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
         }
         if (source.TechIdNumber != null) {
             this.TechIdNumber = new String(source.TechIdNumber);
-        }
-        if (source.CompanyId != null) {
-            this.CompanyId = new String(source.CompanyId);
         }
         if (source.Csr != null) {
             this.Csr = new String(source.Csr);
@@ -1033,13 +1163,13 @@ public class CertificateInfoSubmitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GenCsrType", this.GenCsrType);
         this.setParamSimple(map, prefix + "CertCommonName", this.CertCommonName);
         this.setParamSimple(map, prefix + "CompanyType", this.CompanyType);
+        this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "OrgIdType", this.OrgIdType);
         this.setParamSimple(map, prefix + "OrgIdNumber", this.OrgIdNumber);
         this.setParamSimple(map, prefix + "AdminIdType", this.AdminIdType);
         this.setParamSimple(map, prefix + "AdminIdNumber", this.AdminIdNumber);
         this.setParamSimple(map, prefix + "TechIdType", this.TechIdType);
         this.setParamSimple(map, prefix + "TechIdNumber", this.TechIdNumber);
-        this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "Csr", this.Csr);
         this.setParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
         this.setParamSimple(map, prefix + "KeyPass", this.KeyPass);

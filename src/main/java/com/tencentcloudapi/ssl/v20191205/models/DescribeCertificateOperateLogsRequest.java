@@ -31,7 +31,7 @@ public class DescribeCertificateOperateLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 请求日志数量，默认为20。
+    * 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeCertificateOperateLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 请求日志数量，默认为20。 
-     * @return Limit 请求日志数量，默认为20。
+     * Get 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。 
+     * @return Limit 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求日志数量，默认为20。
-     * @param Limit 请求日志数量，默认为20。
+     * Set 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
+     * @param Limit 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

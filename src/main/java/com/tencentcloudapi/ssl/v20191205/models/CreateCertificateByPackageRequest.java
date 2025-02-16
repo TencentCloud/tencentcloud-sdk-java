@@ -24,7 +24,68 @@ import java.util.HashMap;
 public class CreateCertificateByPackageRequest extends AbstractModel {
 
     /**
-    * 证书产品PID。
+    * 证书产品PID，以下是对每个PID及其对应的证书文字说明：
+1. 1022451 - CFCA-增强型(EV)SSL证书
+2. 1022449 - CFCA-企业型(OV) SSL证书(通配符)
+3. 1022447 - CFCA-企业型(OV)SSL证书
+4. 1014028 - DNSPod亚信国密-企业型(OV)通配符证书
+5. 1014030 - DNSPod亚信国密-企业型(OV)多域名证书
+6. 1014026 - DNSPod亚信国密-企业型(OV)证书
+7. 1014022 - DNSPod亚信国密-域名型(DV)通配符证书
+8. 1014024 - DNSPod亚信国密-域名型(DV)多域名证书
+9. 1014020 - DNSPod亚信国密-域名型(DV)证书
+10. 1013949 - DNSPod SSL 域名型SSL证书(C1)
+11. 1013953 - DNSPod SSL域名型多域名SSL证书(C1)
+12. 1013951 - DNSPod-SSL域名型DV（泛域名）
+13. 1013955 - DNSPod 企业型SSL证书(C1)
+14. 1013959 - DNSPod 企业型多域名SSL证书(C1)
+15. 1013957 - DNSPod 企业型通配符SSL证书(C1)
+16. 1013961 - DNSPod 增强型 SSL 证书(C1)
+17. 1013963 - DNSPod 增强型多域名SSL证书(C1)
+18. 1005919 - TrustAsia-域名型DV（通配符多域名）
+19. 1013882 - SecureSite-增强型专业版EVPro（多域名）
+20. 1018559 - SecureSite-增强型专业版EVPro（单域名）
+21. 1013910 - GlobalSign-增强型EV（多域名）
+22. 1013904 - GlobalSign-增强型EV（单域名）
+23. 1013898 - TrustAsia-增强型EV（多域名）
+24. 1013888 - TrustAsia-增强型EV（单域名）
+25. 1013886 - GeoTrust-增强型EV（多域名）
+26. 1018529 - GeoTrust-增强型EV（单域名）
+27. 1013880 - SecureSite-增强型EV（多域名）
+28. 1018557 - SecureSite-增强型EV（单域名）
+29. 1018586 - TrustAsia-域名型DV（泛域名）
+30. 1018584 - TrustAsia-域名型DV（多域名）
+31. 1013878 - SecureSite-企业型专业版OV Pro（多域名）
+32. 1018582 - SecureSite-企业型专业版OV Pro（单域名）
+33. 1013908 - GlobalSign-企业型OV（通配符多域名）
+34. 1013902 - GlobalSign-企业型OV（泛域名）
+35. 1013906 - GlobalSign-企业型OV（多域名）
+36. 1013900 - GlobalSign-企业型OV（单域名）
+37. 1013896 - TrustAsia-企业型OV（通配符多域名）
+38. 1013892 - TrustAsia-企业型OV（泛域名）
+39. 1013894 - TrustAsia-企业型OV（多域名）
+40. 1013890 - TrustAsia-企业型OV（单域名）
+41. 1004360 - GeoTrust-企业型OV（泛域名）
+42. 1013884 - GeoTrust-企业型OV（单域名）
+43. 1013874 - SecureSite-企业型OV（泛域名）
+44. 1013876 - SecureSite-企业型OV（多域名）
+45. 1018580 - SecureSite-企业型OV（单域名）
+46. 1004460 - DNSPod-国密增强型证书（多域名）
+47. 1004458 - DNSPod-国密增强型证书
+48. 1004370 - DNSPod-国密企业型证书（通配符）
+49. 1004368 - DNSPod-国密企业型证书（多域名）
+50. 1004366 - DNSPod-国密企业型证书
+51. 1004362 - DNSPod-国密域名型证书（通配符）
+52. 1004364 - DNSPod-国密域名型证书（多域名）
+53. 1004358 - DNSPod-国密域名型证书
+54. 1004456 - WoTrus-增强型证书（多域名）
+55. 1004454 - WoTrus-增强型证书
+56. 1004168 - WoTrus-企业型证书（通配符）
+57. 1004166 - WoTrus-企业型证书（多域名）
+58. 1004164 - WoTrus-企业型证书
+59. 1004159 - WoTrus-域名型证书（通配符）
+60. 1004161 - WoTrus-域名型证书（多域名）
+61. 1004157 - WoTrus-域名型证书
     */
     @SerializedName("ProductPid")
     @Expose
@@ -73,14 +134,14 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
     private String RenewCsr;
 
     /**
-    * 续费证书CSR的算法类型。
+    * 续费证书CSR的算法类型：RSA,ECC,SM2
     */
     @SerializedName("RenewAlgorithmType")
     @Expose
     private String RenewAlgorithmType;
 
     /**
-    * 续费证书CSR的算法参数。
+    * 续费证书CSR的算法参数:2048,4096,prime256v1
     */
     @SerializedName("RenewAlgorithmParam")
     @Expose
@@ -143,23 +204,328 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
     private String VerifyType;
 
     /**
-    * 询价参数
+    * 询价参数，以下是对每个询价参数及其对应的证书文字说明：
+1. sv_ssl_cost_cfca_ca_ev - CFCA-增强型(EV)SSL证书
+2. sv_ssl_cost_cfca_ca_ovwildcard - CFCA-企业型(OV) SSL证书(通配符)
+3. sv_ssl_cost_cfca_ca_ov - CFCA-企业型(OV)SSL证书
+4. sv_ssl_cost_dnspod_ca_sm2_ovwildcard - DNSPod亚信国密-企业型(OV)通配符证书
+5. sv_ssl_cost_dnspod_ca_sm2_ovmultidomain - DNSPod亚信国密-企业型(OV)多域名证书
+6. sv_ssl_cost_dnspod_ca_sm2_ov - DNSPod亚信国密-企业型(OV)证书
+7. sv_ssl_cost_dnspod_ca_sm2_dvwildcard - DNSPod亚信国密-域名型(DV)通配符证书
+8. sv_ssl_cost_dnspod_ca_sm2_dvmultidomain - DNSPod亚信国密-域名型(DV)多域名证书
+9. sv_ssl_cost_dnspod_ca_sm2_dv - DNSPod亚信国密-域名型(DV)证书
+10. sv_ssl_cost_dnspod_ca_dv - DNSPod SSL 域名型SSL证书(C1)
+11. sv_ssl_cost_dnspod_ca_dvmultidomain - DNSPod SSL域名型多域名SSL证书(C1)
+12. sv_ssl_cost_dnspod_ca_dvwildcard - DNSPod-SSL域名型DV（泛域名）
+13. sv_ssl_cost_dnspod_ca_ov - DNSPod 企业型SSL证书(C1)
+14. sv_ssl_cost_dnspod_ca_ovmultidomain - DNSPod 企业型多域名SSL证书(C1)
+15. sv_ssl_cost_dnspod_ca_ovwildcard - DNSPod 企业型通配符SSL证书(C1)
+16. sv_ssl_cost_dnspod_ca_ev - DNSPod 增强型 SSL 证书(C1)
+17. sv_ssl_cost_dnspod_ca_evmultidomain - DNSPod 增强型多域名SSL证书(C1)
+18. sv_ssl_cost_trustasia_dvwildcardmulti - TrustAsia-域名型DV（通配符多域名）
+19. sv_ssl_cost_securesiteevpromul_sh - SecureSite-增强型专业版EVPro（多域名）
+20. sv_ssl_cost_symantec_evpro - SecureSite-增强型专业版EVPro（单域名）
+21. sv_ssl_cost_globalsign_ev_mul_sh - GlobalSign-增强型EV（多域名）
+22. sv_ssl_cost_globalsign_ev - GlobalSign-增强型EV（单域名）
+23. sv_ssl_cost_trustasia_evmultidomain - TrustAsia-增强型EV（多域名）
+24. sv_ssl_cost_trustasia_ev - TrustAsia-增强型EV（单域名）
+25. sv_ssl_cost_geotrust_evmultidomain - GeoTrust-增强型EV（多域名）
+26. sv_ssl_cost_geotrust_ev - GeoTrust-增强型EV（单域名）
+27. sv_ssl_cost_symantec_evmultidomain - SecureSite-增强型EV（多域名）
+28. sv_ssl_cost_symantec_ev - SecureSite-增强型EV（单域名）
+29. sv_ssl_cost_trustasia_dvwildcard - TrustAsia-域名型DV（泛域名）
+30. sv_ssl_cost_trustasia_dvmultidomain - TrustAsia-域名型DV（多域名）
+31. sv_ssl_cost_symantec_ovpromultidomain - SecureSite-企业型专业版OV Pro（多域名）
+32. sv_ssl_cost_symantec_ovpro - SecureSite-企业型专业版OV Pro（单域名）
+33. sv_ssl_cost_globalsign_ovwildcardmulti - GlobalSign-企业型OV（通配符多域名）
+34. sv_ssl_cost_globalsign_ovwildcard - GlobalSign-企业型OV（泛域名）
+35. sv_ssl_cost_globalsign_ovmultidomain - GlobalSign-企业型OV（多域名）
+36. sv_ssl_cost_globalsign_ov - GlobalSign-企业型OV（单域名）
+37. sv_ssl_cost_trustasia_ovwildcardmulti - TrustAsia-企业型OV（通配符多域名）
+38. sv_ssl_cost_trustasia_ovwildcard - TrustAsia-企业型OV（泛域名）
+39. sv_ssl_cost_trustasia_ovmultidomain - TrustAsia-企业型OV（多域名）
+40. sv_ssl_cost_trustasia_ov - TrustAsia-企业型OV（单域名）
+41. sv_ssl_cost_geotrust_ovwildcard - GeoTrust-企业型OV（泛域名）
+42. sv_ssl_cost_geotrust_ov - GeoTrust-企业型OV（单域名）
+43. sv_ssl_cost_symantec_ovwildcard - SecureSite-企业型OV（泛域名）
+44. sv_ssl_cost_symantec_ovmultidomain - SecureSite-企业型OV（多域名）
+45. sv_ssl_cost_symantec_ov - SecureSite-企业型OV（单域名）
+46. sv_ssl_cost_dnspod_evmultidomain - DNSPod-国密增强型证书（多域名）
+47. sv_ssl_cost_dnspod_ev - DNSPod-国密增强型证书
+48. sv_ssl_cost_dnspod_ovwildcard - DNSPod-国密企业型证书（通配符）
+49. sv_ssl_cost_dnspod_ovmultidomain - DNSPod-国密企业型证书（多域名）
+50. sv_ssl_cost_dnspod_ov - DNSPod-国密企业型证书
+51. sv_ssl_cost_dnspod_dvwildcard - DNSPod-国密域名型证书（通配符）
+52. sv_ssl_cost_dnspod_dvmultidomain - DNSPod-国密域名型证书（多域名）
+53. sv_ssl_cost_dnspod_dv - DNSPod-国密域名型证书
+54. sv_ssl_cost_wotrus_evmultidomain - WoTrus-增强型证书（多域名）
+55. sv_ssl_cost_wotrus_ev - WoTrus-增强型证书
+56. sv_ssl_cost_wotrus_ovwildcard - WoTrus-企业型证书（通配符）
+57. sv_ssl_cost_wotrus_ovmultidomain - WoTrus-企业型证书（多域名）
+58. sv_ssl_cost_wotrus_ov - WoTrus-企业型证书
+59. sv_ssl_cost_wotrus_dvwildcard - WoTrus-域名型证书（通配符）
+60. sv_ssl_cost_wotrus_dvmultidomain - WoTrus-域名型证书（多域名）
+61. sv_ssl_cost_wotrus_dv - WoTrus-域名型证书
     */
     @SerializedName("PriceKey")
     @Expose
     private String PriceKey;
 
     /**
-     * Get 证书产品PID。 
-     * @return ProductPid 证书产品PID。
+     * Get 证书产品PID，以下是对每个PID及其对应的证书文字说明：
+1. 1022451 - CFCA-增强型(EV)SSL证书
+2. 1022449 - CFCA-企业型(OV) SSL证书(通配符)
+3. 1022447 - CFCA-企业型(OV)SSL证书
+4. 1014028 - DNSPod亚信国密-企业型(OV)通配符证书
+5. 1014030 - DNSPod亚信国密-企业型(OV)多域名证书
+6. 1014026 - DNSPod亚信国密-企业型(OV)证书
+7. 1014022 - DNSPod亚信国密-域名型(DV)通配符证书
+8. 1014024 - DNSPod亚信国密-域名型(DV)多域名证书
+9. 1014020 - DNSPod亚信国密-域名型(DV)证书
+10. 1013949 - DNSPod SSL 域名型SSL证书(C1)
+11. 1013953 - DNSPod SSL域名型多域名SSL证书(C1)
+12. 1013951 - DNSPod-SSL域名型DV（泛域名）
+13. 1013955 - DNSPod 企业型SSL证书(C1)
+14. 1013959 - DNSPod 企业型多域名SSL证书(C1)
+15. 1013957 - DNSPod 企业型通配符SSL证书(C1)
+16. 1013961 - DNSPod 增强型 SSL 证书(C1)
+17. 1013963 - DNSPod 增强型多域名SSL证书(C1)
+18. 1005919 - TrustAsia-域名型DV（通配符多域名）
+19. 1013882 - SecureSite-增强型专业版EVPro（多域名）
+20. 1018559 - SecureSite-增强型专业版EVPro（单域名）
+21. 1013910 - GlobalSign-增强型EV（多域名）
+22. 1013904 - GlobalSign-增强型EV（单域名）
+23. 1013898 - TrustAsia-增强型EV（多域名）
+24. 1013888 - TrustAsia-增强型EV（单域名）
+25. 1013886 - GeoTrust-增强型EV（多域名）
+26. 1018529 - GeoTrust-增强型EV（单域名）
+27. 1013880 - SecureSite-增强型EV（多域名）
+28. 1018557 - SecureSite-增强型EV（单域名）
+29. 1018586 - TrustAsia-域名型DV（泛域名）
+30. 1018584 - TrustAsia-域名型DV（多域名）
+31. 1013878 - SecureSite-企业型专业版OV Pro（多域名）
+32. 1018582 - SecureSite-企业型专业版OV Pro（单域名）
+33. 1013908 - GlobalSign-企业型OV（通配符多域名）
+34. 1013902 - GlobalSign-企业型OV（泛域名）
+35. 1013906 - GlobalSign-企业型OV（多域名）
+36. 1013900 - GlobalSign-企业型OV（单域名）
+37. 1013896 - TrustAsia-企业型OV（通配符多域名）
+38. 1013892 - TrustAsia-企业型OV（泛域名）
+39. 1013894 - TrustAsia-企业型OV（多域名）
+40. 1013890 - TrustAsia-企业型OV（单域名）
+41. 1004360 - GeoTrust-企业型OV（泛域名）
+42. 1013884 - GeoTrust-企业型OV（单域名）
+43. 1013874 - SecureSite-企业型OV（泛域名）
+44. 1013876 - SecureSite-企业型OV（多域名）
+45. 1018580 - SecureSite-企业型OV（单域名）
+46. 1004460 - DNSPod-国密增强型证书（多域名）
+47. 1004458 - DNSPod-国密增强型证书
+48. 1004370 - DNSPod-国密企业型证书（通配符）
+49. 1004368 - DNSPod-国密企业型证书（多域名）
+50. 1004366 - DNSPod-国密企业型证书
+51. 1004362 - DNSPod-国密域名型证书（通配符）
+52. 1004364 - DNSPod-国密域名型证书（多域名）
+53. 1004358 - DNSPod-国密域名型证书
+54. 1004456 - WoTrus-增强型证书（多域名）
+55. 1004454 - WoTrus-增强型证书
+56. 1004168 - WoTrus-企业型证书（通配符）
+57. 1004166 - WoTrus-企业型证书（多域名）
+58. 1004164 - WoTrus-企业型证书
+59. 1004159 - WoTrus-域名型证书（通配符）
+60. 1004161 - WoTrus-域名型证书（多域名）
+61. 1004157 - WoTrus-域名型证书 
+     * @return ProductPid 证书产品PID，以下是对每个PID及其对应的证书文字说明：
+1. 1022451 - CFCA-增强型(EV)SSL证书
+2. 1022449 - CFCA-企业型(OV) SSL证书(通配符)
+3. 1022447 - CFCA-企业型(OV)SSL证书
+4. 1014028 - DNSPod亚信国密-企业型(OV)通配符证书
+5. 1014030 - DNSPod亚信国密-企业型(OV)多域名证书
+6. 1014026 - DNSPod亚信国密-企业型(OV)证书
+7. 1014022 - DNSPod亚信国密-域名型(DV)通配符证书
+8. 1014024 - DNSPod亚信国密-域名型(DV)多域名证书
+9. 1014020 - DNSPod亚信国密-域名型(DV)证书
+10. 1013949 - DNSPod SSL 域名型SSL证书(C1)
+11. 1013953 - DNSPod SSL域名型多域名SSL证书(C1)
+12. 1013951 - DNSPod-SSL域名型DV（泛域名）
+13. 1013955 - DNSPod 企业型SSL证书(C1)
+14. 1013959 - DNSPod 企业型多域名SSL证书(C1)
+15. 1013957 - DNSPod 企业型通配符SSL证书(C1)
+16. 1013961 - DNSPod 增强型 SSL 证书(C1)
+17. 1013963 - DNSPod 增强型多域名SSL证书(C1)
+18. 1005919 - TrustAsia-域名型DV（通配符多域名）
+19. 1013882 - SecureSite-增强型专业版EVPro（多域名）
+20. 1018559 - SecureSite-增强型专业版EVPro（单域名）
+21. 1013910 - GlobalSign-增强型EV（多域名）
+22. 1013904 - GlobalSign-增强型EV（单域名）
+23. 1013898 - TrustAsia-增强型EV（多域名）
+24. 1013888 - TrustAsia-增强型EV（单域名）
+25. 1013886 - GeoTrust-增强型EV（多域名）
+26. 1018529 - GeoTrust-增强型EV（单域名）
+27. 1013880 - SecureSite-增强型EV（多域名）
+28. 1018557 - SecureSite-增强型EV（单域名）
+29. 1018586 - TrustAsia-域名型DV（泛域名）
+30. 1018584 - TrustAsia-域名型DV（多域名）
+31. 1013878 - SecureSite-企业型专业版OV Pro（多域名）
+32. 1018582 - SecureSite-企业型专业版OV Pro（单域名）
+33. 1013908 - GlobalSign-企业型OV（通配符多域名）
+34. 1013902 - GlobalSign-企业型OV（泛域名）
+35. 1013906 - GlobalSign-企业型OV（多域名）
+36. 1013900 - GlobalSign-企业型OV（单域名）
+37. 1013896 - TrustAsia-企业型OV（通配符多域名）
+38. 1013892 - TrustAsia-企业型OV（泛域名）
+39. 1013894 - TrustAsia-企业型OV（多域名）
+40. 1013890 - TrustAsia-企业型OV（单域名）
+41. 1004360 - GeoTrust-企业型OV（泛域名）
+42. 1013884 - GeoTrust-企业型OV（单域名）
+43. 1013874 - SecureSite-企业型OV（泛域名）
+44. 1013876 - SecureSite-企业型OV（多域名）
+45. 1018580 - SecureSite-企业型OV（单域名）
+46. 1004460 - DNSPod-国密增强型证书（多域名）
+47. 1004458 - DNSPod-国密增强型证书
+48. 1004370 - DNSPod-国密企业型证书（通配符）
+49. 1004368 - DNSPod-国密企业型证书（多域名）
+50. 1004366 - DNSPod-国密企业型证书
+51. 1004362 - DNSPod-国密域名型证书（通配符）
+52. 1004364 - DNSPod-国密域名型证书（多域名）
+53. 1004358 - DNSPod-国密域名型证书
+54. 1004456 - WoTrus-增强型证书（多域名）
+55. 1004454 - WoTrus-增强型证书
+56. 1004168 - WoTrus-企业型证书（通配符）
+57. 1004166 - WoTrus-企业型证书（多域名）
+58. 1004164 - WoTrus-企业型证书
+59. 1004159 - WoTrus-域名型证书（通配符）
+60. 1004161 - WoTrus-域名型证书（多域名）
+61. 1004157 - WoTrus-域名型证书
      */
     public Long getProductPid() {
         return this.ProductPid;
     }
 
     /**
-     * Set 证书产品PID。
-     * @param ProductPid 证书产品PID。
+     * Set 证书产品PID，以下是对每个PID及其对应的证书文字说明：
+1. 1022451 - CFCA-增强型(EV)SSL证书
+2. 1022449 - CFCA-企业型(OV) SSL证书(通配符)
+3. 1022447 - CFCA-企业型(OV)SSL证书
+4. 1014028 - DNSPod亚信国密-企业型(OV)通配符证书
+5. 1014030 - DNSPod亚信国密-企业型(OV)多域名证书
+6. 1014026 - DNSPod亚信国密-企业型(OV)证书
+7. 1014022 - DNSPod亚信国密-域名型(DV)通配符证书
+8. 1014024 - DNSPod亚信国密-域名型(DV)多域名证书
+9. 1014020 - DNSPod亚信国密-域名型(DV)证书
+10. 1013949 - DNSPod SSL 域名型SSL证书(C1)
+11. 1013953 - DNSPod SSL域名型多域名SSL证书(C1)
+12. 1013951 - DNSPod-SSL域名型DV（泛域名）
+13. 1013955 - DNSPod 企业型SSL证书(C1)
+14. 1013959 - DNSPod 企业型多域名SSL证书(C1)
+15. 1013957 - DNSPod 企业型通配符SSL证书(C1)
+16. 1013961 - DNSPod 增强型 SSL 证书(C1)
+17. 1013963 - DNSPod 增强型多域名SSL证书(C1)
+18. 1005919 - TrustAsia-域名型DV（通配符多域名）
+19. 1013882 - SecureSite-增强型专业版EVPro（多域名）
+20. 1018559 - SecureSite-增强型专业版EVPro（单域名）
+21. 1013910 - GlobalSign-增强型EV（多域名）
+22. 1013904 - GlobalSign-增强型EV（单域名）
+23. 1013898 - TrustAsia-增强型EV（多域名）
+24. 1013888 - TrustAsia-增强型EV（单域名）
+25. 1013886 - GeoTrust-增强型EV（多域名）
+26. 1018529 - GeoTrust-增强型EV（单域名）
+27. 1013880 - SecureSite-增强型EV（多域名）
+28. 1018557 - SecureSite-增强型EV（单域名）
+29. 1018586 - TrustAsia-域名型DV（泛域名）
+30. 1018584 - TrustAsia-域名型DV（多域名）
+31. 1013878 - SecureSite-企业型专业版OV Pro（多域名）
+32. 1018582 - SecureSite-企业型专业版OV Pro（单域名）
+33. 1013908 - GlobalSign-企业型OV（通配符多域名）
+34. 1013902 - GlobalSign-企业型OV（泛域名）
+35. 1013906 - GlobalSign-企业型OV（多域名）
+36. 1013900 - GlobalSign-企业型OV（单域名）
+37. 1013896 - TrustAsia-企业型OV（通配符多域名）
+38. 1013892 - TrustAsia-企业型OV（泛域名）
+39. 1013894 - TrustAsia-企业型OV（多域名）
+40. 1013890 - TrustAsia-企业型OV（单域名）
+41. 1004360 - GeoTrust-企业型OV（泛域名）
+42. 1013884 - GeoTrust-企业型OV（单域名）
+43. 1013874 - SecureSite-企业型OV（泛域名）
+44. 1013876 - SecureSite-企业型OV（多域名）
+45. 1018580 - SecureSite-企业型OV（单域名）
+46. 1004460 - DNSPod-国密增强型证书（多域名）
+47. 1004458 - DNSPod-国密增强型证书
+48. 1004370 - DNSPod-国密企业型证书（通配符）
+49. 1004368 - DNSPod-国密企业型证书（多域名）
+50. 1004366 - DNSPod-国密企业型证书
+51. 1004362 - DNSPod-国密域名型证书（通配符）
+52. 1004364 - DNSPod-国密域名型证书（多域名）
+53. 1004358 - DNSPod-国密域名型证书
+54. 1004456 - WoTrus-增强型证书（多域名）
+55. 1004454 - WoTrus-增强型证书
+56. 1004168 - WoTrus-企业型证书（通配符）
+57. 1004166 - WoTrus-企业型证书（多域名）
+58. 1004164 - WoTrus-企业型证书
+59. 1004159 - WoTrus-域名型证书（通配符）
+60. 1004161 - WoTrus-域名型证书（多域名）
+61. 1004157 - WoTrus-域名型证书
+     * @param ProductPid 证书产品PID，以下是对每个PID及其对应的证书文字说明：
+1. 1022451 - CFCA-增强型(EV)SSL证书
+2. 1022449 - CFCA-企业型(OV) SSL证书(通配符)
+3. 1022447 - CFCA-企业型(OV)SSL证书
+4. 1014028 - DNSPod亚信国密-企业型(OV)通配符证书
+5. 1014030 - DNSPod亚信国密-企业型(OV)多域名证书
+6. 1014026 - DNSPod亚信国密-企业型(OV)证书
+7. 1014022 - DNSPod亚信国密-域名型(DV)通配符证书
+8. 1014024 - DNSPod亚信国密-域名型(DV)多域名证书
+9. 1014020 - DNSPod亚信国密-域名型(DV)证书
+10. 1013949 - DNSPod SSL 域名型SSL证书(C1)
+11. 1013953 - DNSPod SSL域名型多域名SSL证书(C1)
+12. 1013951 - DNSPod-SSL域名型DV（泛域名）
+13. 1013955 - DNSPod 企业型SSL证书(C1)
+14. 1013959 - DNSPod 企业型多域名SSL证书(C1)
+15. 1013957 - DNSPod 企业型通配符SSL证书(C1)
+16. 1013961 - DNSPod 增强型 SSL 证书(C1)
+17. 1013963 - DNSPod 增强型多域名SSL证书(C1)
+18. 1005919 - TrustAsia-域名型DV（通配符多域名）
+19. 1013882 - SecureSite-增强型专业版EVPro（多域名）
+20. 1018559 - SecureSite-增强型专业版EVPro（单域名）
+21. 1013910 - GlobalSign-增强型EV（多域名）
+22. 1013904 - GlobalSign-增强型EV（单域名）
+23. 1013898 - TrustAsia-增强型EV（多域名）
+24. 1013888 - TrustAsia-增强型EV（单域名）
+25. 1013886 - GeoTrust-增强型EV（多域名）
+26. 1018529 - GeoTrust-增强型EV（单域名）
+27. 1013880 - SecureSite-增强型EV（多域名）
+28. 1018557 - SecureSite-增强型EV（单域名）
+29. 1018586 - TrustAsia-域名型DV（泛域名）
+30. 1018584 - TrustAsia-域名型DV（多域名）
+31. 1013878 - SecureSite-企业型专业版OV Pro（多域名）
+32. 1018582 - SecureSite-企业型专业版OV Pro（单域名）
+33. 1013908 - GlobalSign-企业型OV（通配符多域名）
+34. 1013902 - GlobalSign-企业型OV（泛域名）
+35. 1013906 - GlobalSign-企业型OV（多域名）
+36. 1013900 - GlobalSign-企业型OV（单域名）
+37. 1013896 - TrustAsia-企业型OV（通配符多域名）
+38. 1013892 - TrustAsia-企业型OV（泛域名）
+39. 1013894 - TrustAsia-企业型OV（多域名）
+40. 1013890 - TrustAsia-企业型OV（单域名）
+41. 1004360 - GeoTrust-企业型OV（泛域名）
+42. 1013884 - GeoTrust-企业型OV（单域名）
+43. 1013874 - SecureSite-企业型OV（泛域名）
+44. 1013876 - SecureSite-企业型OV（多域名）
+45. 1018580 - SecureSite-企业型OV（单域名）
+46. 1004460 - DNSPod-国密增强型证书（多域名）
+47. 1004458 - DNSPod-国密增强型证书
+48. 1004370 - DNSPod-国密企业型证书（通配符）
+49. 1004368 - DNSPod-国密企业型证书（多域名）
+50. 1004366 - DNSPod-国密企业型证书
+51. 1004362 - DNSPod-国密域名型证书（通配符）
+52. 1004364 - DNSPod-国密域名型证书（多域名）
+53. 1004358 - DNSPod-国密域名型证书
+54. 1004456 - WoTrus-增强型证书（多域名）
+55. 1004454 - WoTrus-增强型证书
+56. 1004168 - WoTrus-企业型证书（通配符）
+57. 1004166 - WoTrus-企业型证书（多域名）
+58. 1004164 - WoTrus-企业型证书
+59. 1004159 - WoTrus-域名型证书（通配符）
+60. 1004161 - WoTrus-域名型证书（多域名）
+61. 1004157 - WoTrus-域名型证书
      */
     public void setProductPid(Long ProductPid) {
         this.ProductPid = ProductPid;
@@ -262,32 +628,32 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 续费证书CSR的算法类型。 
-     * @return RenewAlgorithmType 续费证书CSR的算法类型。
+     * Get 续费证书CSR的算法类型：RSA,ECC,SM2 
+     * @return RenewAlgorithmType 续费证书CSR的算法类型：RSA,ECC,SM2
      */
     public String getRenewAlgorithmType() {
         return this.RenewAlgorithmType;
     }
 
     /**
-     * Set 续费证书CSR的算法类型。
-     * @param RenewAlgorithmType 续费证书CSR的算法类型。
+     * Set 续费证书CSR的算法类型：RSA,ECC,SM2
+     * @param RenewAlgorithmType 续费证书CSR的算法类型：RSA,ECC,SM2
      */
     public void setRenewAlgorithmType(String RenewAlgorithmType) {
         this.RenewAlgorithmType = RenewAlgorithmType;
     }
 
     /**
-     * Get 续费证书CSR的算法参数。 
-     * @return RenewAlgorithmParam 续费证书CSR的算法参数。
+     * Get 续费证书CSR的算法参数:2048,4096,prime256v1 
+     * @return RenewAlgorithmParam 续费证书CSR的算法参数:2048,4096,prime256v1
      */
     public String getRenewAlgorithmParam() {
         return this.RenewAlgorithmParam;
     }
 
     /**
-     * Set 续费证书CSR的算法参数。
-     * @param RenewAlgorithmParam 续费证书CSR的算法参数。
+     * Set 续费证书CSR的算法参数:2048,4096,prime256v1
+     * @param RenewAlgorithmParam 续费证书CSR的算法参数:2048,4096,prime256v1
      */
     public void setRenewAlgorithmParam(String RenewAlgorithmParam) {
         this.RenewAlgorithmParam = RenewAlgorithmParam;
@@ -422,16 +788,260 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 询价参数 
-     * @return PriceKey 询价参数
+     * Get 询价参数，以下是对每个询价参数及其对应的证书文字说明：
+1. sv_ssl_cost_cfca_ca_ev - CFCA-增强型(EV)SSL证书
+2. sv_ssl_cost_cfca_ca_ovwildcard - CFCA-企业型(OV) SSL证书(通配符)
+3. sv_ssl_cost_cfca_ca_ov - CFCA-企业型(OV)SSL证书
+4. sv_ssl_cost_dnspod_ca_sm2_ovwildcard - DNSPod亚信国密-企业型(OV)通配符证书
+5. sv_ssl_cost_dnspod_ca_sm2_ovmultidomain - DNSPod亚信国密-企业型(OV)多域名证书
+6. sv_ssl_cost_dnspod_ca_sm2_ov - DNSPod亚信国密-企业型(OV)证书
+7. sv_ssl_cost_dnspod_ca_sm2_dvwildcard - DNSPod亚信国密-域名型(DV)通配符证书
+8. sv_ssl_cost_dnspod_ca_sm2_dvmultidomain - DNSPod亚信国密-域名型(DV)多域名证书
+9. sv_ssl_cost_dnspod_ca_sm2_dv - DNSPod亚信国密-域名型(DV)证书
+10. sv_ssl_cost_dnspod_ca_dv - DNSPod SSL 域名型SSL证书(C1)
+11. sv_ssl_cost_dnspod_ca_dvmultidomain - DNSPod SSL域名型多域名SSL证书(C1)
+12. sv_ssl_cost_dnspod_ca_dvwildcard - DNSPod-SSL域名型DV（泛域名）
+13. sv_ssl_cost_dnspod_ca_ov - DNSPod 企业型SSL证书(C1)
+14. sv_ssl_cost_dnspod_ca_ovmultidomain - DNSPod 企业型多域名SSL证书(C1)
+15. sv_ssl_cost_dnspod_ca_ovwildcard - DNSPod 企业型通配符SSL证书(C1)
+16. sv_ssl_cost_dnspod_ca_ev - DNSPod 增强型 SSL 证书(C1)
+17. sv_ssl_cost_dnspod_ca_evmultidomain - DNSPod 增强型多域名SSL证书(C1)
+18. sv_ssl_cost_trustasia_dvwildcardmulti - TrustAsia-域名型DV（通配符多域名）
+19. sv_ssl_cost_securesiteevpromul_sh - SecureSite-增强型专业版EVPro（多域名）
+20. sv_ssl_cost_symantec_evpro - SecureSite-增强型专业版EVPro（单域名）
+21. sv_ssl_cost_globalsign_ev_mul_sh - GlobalSign-增强型EV（多域名）
+22. sv_ssl_cost_globalsign_ev - GlobalSign-增强型EV（单域名）
+23. sv_ssl_cost_trustasia_evmultidomain - TrustAsia-增强型EV（多域名）
+24. sv_ssl_cost_trustasia_ev - TrustAsia-增强型EV（单域名）
+25. sv_ssl_cost_geotrust_evmultidomain - GeoTrust-增强型EV（多域名）
+26. sv_ssl_cost_geotrust_ev - GeoTrust-增强型EV（单域名）
+27. sv_ssl_cost_symantec_evmultidomain - SecureSite-增强型EV（多域名）
+28. sv_ssl_cost_symantec_ev - SecureSite-增强型EV（单域名）
+29. sv_ssl_cost_trustasia_dvwildcard - TrustAsia-域名型DV（泛域名）
+30. sv_ssl_cost_trustasia_dvmultidomain - TrustAsia-域名型DV（多域名）
+31. sv_ssl_cost_symantec_ovpromultidomain - SecureSite-企业型专业版OV Pro（多域名）
+32. sv_ssl_cost_symantec_ovpro - SecureSite-企业型专业版OV Pro（单域名）
+33. sv_ssl_cost_globalsign_ovwildcardmulti - GlobalSign-企业型OV（通配符多域名）
+34. sv_ssl_cost_globalsign_ovwildcard - GlobalSign-企业型OV（泛域名）
+35. sv_ssl_cost_globalsign_ovmultidomain - GlobalSign-企业型OV（多域名）
+36. sv_ssl_cost_globalsign_ov - GlobalSign-企业型OV（单域名）
+37. sv_ssl_cost_trustasia_ovwildcardmulti - TrustAsia-企业型OV（通配符多域名）
+38. sv_ssl_cost_trustasia_ovwildcard - TrustAsia-企业型OV（泛域名）
+39. sv_ssl_cost_trustasia_ovmultidomain - TrustAsia-企业型OV（多域名）
+40. sv_ssl_cost_trustasia_ov - TrustAsia-企业型OV（单域名）
+41. sv_ssl_cost_geotrust_ovwildcard - GeoTrust-企业型OV（泛域名）
+42. sv_ssl_cost_geotrust_ov - GeoTrust-企业型OV（单域名）
+43. sv_ssl_cost_symantec_ovwildcard - SecureSite-企业型OV（泛域名）
+44. sv_ssl_cost_symantec_ovmultidomain - SecureSite-企业型OV（多域名）
+45. sv_ssl_cost_symantec_ov - SecureSite-企业型OV（单域名）
+46. sv_ssl_cost_dnspod_evmultidomain - DNSPod-国密增强型证书（多域名）
+47. sv_ssl_cost_dnspod_ev - DNSPod-国密增强型证书
+48. sv_ssl_cost_dnspod_ovwildcard - DNSPod-国密企业型证书（通配符）
+49. sv_ssl_cost_dnspod_ovmultidomain - DNSPod-国密企业型证书（多域名）
+50. sv_ssl_cost_dnspod_ov - DNSPod-国密企业型证书
+51. sv_ssl_cost_dnspod_dvwildcard - DNSPod-国密域名型证书（通配符）
+52. sv_ssl_cost_dnspod_dvmultidomain - DNSPod-国密域名型证书（多域名）
+53. sv_ssl_cost_dnspod_dv - DNSPod-国密域名型证书
+54. sv_ssl_cost_wotrus_evmultidomain - WoTrus-增强型证书（多域名）
+55. sv_ssl_cost_wotrus_ev - WoTrus-增强型证书
+56. sv_ssl_cost_wotrus_ovwildcard - WoTrus-企业型证书（通配符）
+57. sv_ssl_cost_wotrus_ovmultidomain - WoTrus-企业型证书（多域名）
+58. sv_ssl_cost_wotrus_ov - WoTrus-企业型证书
+59. sv_ssl_cost_wotrus_dvwildcard - WoTrus-域名型证书（通配符）
+60. sv_ssl_cost_wotrus_dvmultidomain - WoTrus-域名型证书（多域名）
+61. sv_ssl_cost_wotrus_dv - WoTrus-域名型证书 
+     * @return PriceKey 询价参数，以下是对每个询价参数及其对应的证书文字说明：
+1. sv_ssl_cost_cfca_ca_ev - CFCA-增强型(EV)SSL证书
+2. sv_ssl_cost_cfca_ca_ovwildcard - CFCA-企业型(OV) SSL证书(通配符)
+3. sv_ssl_cost_cfca_ca_ov - CFCA-企业型(OV)SSL证书
+4. sv_ssl_cost_dnspod_ca_sm2_ovwildcard - DNSPod亚信国密-企业型(OV)通配符证书
+5. sv_ssl_cost_dnspod_ca_sm2_ovmultidomain - DNSPod亚信国密-企业型(OV)多域名证书
+6. sv_ssl_cost_dnspod_ca_sm2_ov - DNSPod亚信国密-企业型(OV)证书
+7. sv_ssl_cost_dnspod_ca_sm2_dvwildcard - DNSPod亚信国密-域名型(DV)通配符证书
+8. sv_ssl_cost_dnspod_ca_sm2_dvmultidomain - DNSPod亚信国密-域名型(DV)多域名证书
+9. sv_ssl_cost_dnspod_ca_sm2_dv - DNSPod亚信国密-域名型(DV)证书
+10. sv_ssl_cost_dnspod_ca_dv - DNSPod SSL 域名型SSL证书(C1)
+11. sv_ssl_cost_dnspod_ca_dvmultidomain - DNSPod SSL域名型多域名SSL证书(C1)
+12. sv_ssl_cost_dnspod_ca_dvwildcard - DNSPod-SSL域名型DV（泛域名）
+13. sv_ssl_cost_dnspod_ca_ov - DNSPod 企业型SSL证书(C1)
+14. sv_ssl_cost_dnspod_ca_ovmultidomain - DNSPod 企业型多域名SSL证书(C1)
+15. sv_ssl_cost_dnspod_ca_ovwildcard - DNSPod 企业型通配符SSL证书(C1)
+16. sv_ssl_cost_dnspod_ca_ev - DNSPod 增强型 SSL 证书(C1)
+17. sv_ssl_cost_dnspod_ca_evmultidomain - DNSPod 增强型多域名SSL证书(C1)
+18. sv_ssl_cost_trustasia_dvwildcardmulti - TrustAsia-域名型DV（通配符多域名）
+19. sv_ssl_cost_securesiteevpromul_sh - SecureSite-增强型专业版EVPro（多域名）
+20. sv_ssl_cost_symantec_evpro - SecureSite-增强型专业版EVPro（单域名）
+21. sv_ssl_cost_globalsign_ev_mul_sh - GlobalSign-增强型EV（多域名）
+22. sv_ssl_cost_globalsign_ev - GlobalSign-增强型EV（单域名）
+23. sv_ssl_cost_trustasia_evmultidomain - TrustAsia-增强型EV（多域名）
+24. sv_ssl_cost_trustasia_ev - TrustAsia-增强型EV（单域名）
+25. sv_ssl_cost_geotrust_evmultidomain - GeoTrust-增强型EV（多域名）
+26. sv_ssl_cost_geotrust_ev - GeoTrust-增强型EV（单域名）
+27. sv_ssl_cost_symantec_evmultidomain - SecureSite-增强型EV（多域名）
+28. sv_ssl_cost_symantec_ev - SecureSite-增强型EV（单域名）
+29. sv_ssl_cost_trustasia_dvwildcard - TrustAsia-域名型DV（泛域名）
+30. sv_ssl_cost_trustasia_dvmultidomain - TrustAsia-域名型DV（多域名）
+31. sv_ssl_cost_symantec_ovpromultidomain - SecureSite-企业型专业版OV Pro（多域名）
+32. sv_ssl_cost_symantec_ovpro - SecureSite-企业型专业版OV Pro（单域名）
+33. sv_ssl_cost_globalsign_ovwildcardmulti - GlobalSign-企业型OV（通配符多域名）
+34. sv_ssl_cost_globalsign_ovwildcard - GlobalSign-企业型OV（泛域名）
+35. sv_ssl_cost_globalsign_ovmultidomain - GlobalSign-企业型OV（多域名）
+36. sv_ssl_cost_globalsign_ov - GlobalSign-企业型OV（单域名）
+37. sv_ssl_cost_trustasia_ovwildcardmulti - TrustAsia-企业型OV（通配符多域名）
+38. sv_ssl_cost_trustasia_ovwildcard - TrustAsia-企业型OV（泛域名）
+39. sv_ssl_cost_trustasia_ovmultidomain - TrustAsia-企业型OV（多域名）
+40. sv_ssl_cost_trustasia_ov - TrustAsia-企业型OV（单域名）
+41. sv_ssl_cost_geotrust_ovwildcard - GeoTrust-企业型OV（泛域名）
+42. sv_ssl_cost_geotrust_ov - GeoTrust-企业型OV（单域名）
+43. sv_ssl_cost_symantec_ovwildcard - SecureSite-企业型OV（泛域名）
+44. sv_ssl_cost_symantec_ovmultidomain - SecureSite-企业型OV（多域名）
+45. sv_ssl_cost_symantec_ov - SecureSite-企业型OV（单域名）
+46. sv_ssl_cost_dnspod_evmultidomain - DNSPod-国密增强型证书（多域名）
+47. sv_ssl_cost_dnspod_ev - DNSPod-国密增强型证书
+48. sv_ssl_cost_dnspod_ovwildcard - DNSPod-国密企业型证书（通配符）
+49. sv_ssl_cost_dnspod_ovmultidomain - DNSPod-国密企业型证书（多域名）
+50. sv_ssl_cost_dnspod_ov - DNSPod-国密企业型证书
+51. sv_ssl_cost_dnspod_dvwildcard - DNSPod-国密域名型证书（通配符）
+52. sv_ssl_cost_dnspod_dvmultidomain - DNSPod-国密域名型证书（多域名）
+53. sv_ssl_cost_dnspod_dv - DNSPod-国密域名型证书
+54. sv_ssl_cost_wotrus_evmultidomain - WoTrus-增强型证书（多域名）
+55. sv_ssl_cost_wotrus_ev - WoTrus-增强型证书
+56. sv_ssl_cost_wotrus_ovwildcard - WoTrus-企业型证书（通配符）
+57. sv_ssl_cost_wotrus_ovmultidomain - WoTrus-企业型证书（多域名）
+58. sv_ssl_cost_wotrus_ov - WoTrus-企业型证书
+59. sv_ssl_cost_wotrus_dvwildcard - WoTrus-域名型证书（通配符）
+60. sv_ssl_cost_wotrus_dvmultidomain - WoTrus-域名型证书（多域名）
+61. sv_ssl_cost_wotrus_dv - WoTrus-域名型证书
      */
     public String getPriceKey() {
         return this.PriceKey;
     }
 
     /**
-     * Set 询价参数
-     * @param PriceKey 询价参数
+     * Set 询价参数，以下是对每个询价参数及其对应的证书文字说明：
+1. sv_ssl_cost_cfca_ca_ev - CFCA-增强型(EV)SSL证书
+2. sv_ssl_cost_cfca_ca_ovwildcard - CFCA-企业型(OV) SSL证书(通配符)
+3. sv_ssl_cost_cfca_ca_ov - CFCA-企业型(OV)SSL证书
+4. sv_ssl_cost_dnspod_ca_sm2_ovwildcard - DNSPod亚信国密-企业型(OV)通配符证书
+5. sv_ssl_cost_dnspod_ca_sm2_ovmultidomain - DNSPod亚信国密-企业型(OV)多域名证书
+6. sv_ssl_cost_dnspod_ca_sm2_ov - DNSPod亚信国密-企业型(OV)证书
+7. sv_ssl_cost_dnspod_ca_sm2_dvwildcard - DNSPod亚信国密-域名型(DV)通配符证书
+8. sv_ssl_cost_dnspod_ca_sm2_dvmultidomain - DNSPod亚信国密-域名型(DV)多域名证书
+9. sv_ssl_cost_dnspod_ca_sm2_dv - DNSPod亚信国密-域名型(DV)证书
+10. sv_ssl_cost_dnspod_ca_dv - DNSPod SSL 域名型SSL证书(C1)
+11. sv_ssl_cost_dnspod_ca_dvmultidomain - DNSPod SSL域名型多域名SSL证书(C1)
+12. sv_ssl_cost_dnspod_ca_dvwildcard - DNSPod-SSL域名型DV（泛域名）
+13. sv_ssl_cost_dnspod_ca_ov - DNSPod 企业型SSL证书(C1)
+14. sv_ssl_cost_dnspod_ca_ovmultidomain - DNSPod 企业型多域名SSL证书(C1)
+15. sv_ssl_cost_dnspod_ca_ovwildcard - DNSPod 企业型通配符SSL证书(C1)
+16. sv_ssl_cost_dnspod_ca_ev - DNSPod 增强型 SSL 证书(C1)
+17. sv_ssl_cost_dnspod_ca_evmultidomain - DNSPod 增强型多域名SSL证书(C1)
+18. sv_ssl_cost_trustasia_dvwildcardmulti - TrustAsia-域名型DV（通配符多域名）
+19. sv_ssl_cost_securesiteevpromul_sh - SecureSite-增强型专业版EVPro（多域名）
+20. sv_ssl_cost_symantec_evpro - SecureSite-增强型专业版EVPro（单域名）
+21. sv_ssl_cost_globalsign_ev_mul_sh - GlobalSign-增强型EV（多域名）
+22. sv_ssl_cost_globalsign_ev - GlobalSign-增强型EV（单域名）
+23. sv_ssl_cost_trustasia_evmultidomain - TrustAsia-增强型EV（多域名）
+24. sv_ssl_cost_trustasia_ev - TrustAsia-增强型EV（单域名）
+25. sv_ssl_cost_geotrust_evmultidomain - GeoTrust-增强型EV（多域名）
+26. sv_ssl_cost_geotrust_ev - GeoTrust-增强型EV（单域名）
+27. sv_ssl_cost_symantec_evmultidomain - SecureSite-增强型EV（多域名）
+28. sv_ssl_cost_symantec_ev - SecureSite-增强型EV（单域名）
+29. sv_ssl_cost_trustasia_dvwildcard - TrustAsia-域名型DV（泛域名）
+30. sv_ssl_cost_trustasia_dvmultidomain - TrustAsia-域名型DV（多域名）
+31. sv_ssl_cost_symantec_ovpromultidomain - SecureSite-企业型专业版OV Pro（多域名）
+32. sv_ssl_cost_symantec_ovpro - SecureSite-企业型专业版OV Pro（单域名）
+33. sv_ssl_cost_globalsign_ovwildcardmulti - GlobalSign-企业型OV（通配符多域名）
+34. sv_ssl_cost_globalsign_ovwildcard - GlobalSign-企业型OV（泛域名）
+35. sv_ssl_cost_globalsign_ovmultidomain - GlobalSign-企业型OV（多域名）
+36. sv_ssl_cost_globalsign_ov - GlobalSign-企业型OV（单域名）
+37. sv_ssl_cost_trustasia_ovwildcardmulti - TrustAsia-企业型OV（通配符多域名）
+38. sv_ssl_cost_trustasia_ovwildcard - TrustAsia-企业型OV（泛域名）
+39. sv_ssl_cost_trustasia_ovmultidomain - TrustAsia-企业型OV（多域名）
+40. sv_ssl_cost_trustasia_ov - TrustAsia-企业型OV（单域名）
+41. sv_ssl_cost_geotrust_ovwildcard - GeoTrust-企业型OV（泛域名）
+42. sv_ssl_cost_geotrust_ov - GeoTrust-企业型OV（单域名）
+43. sv_ssl_cost_symantec_ovwildcard - SecureSite-企业型OV（泛域名）
+44. sv_ssl_cost_symantec_ovmultidomain - SecureSite-企业型OV（多域名）
+45. sv_ssl_cost_symantec_ov - SecureSite-企业型OV（单域名）
+46. sv_ssl_cost_dnspod_evmultidomain - DNSPod-国密增强型证书（多域名）
+47. sv_ssl_cost_dnspod_ev - DNSPod-国密增强型证书
+48. sv_ssl_cost_dnspod_ovwildcard - DNSPod-国密企业型证书（通配符）
+49. sv_ssl_cost_dnspod_ovmultidomain - DNSPod-国密企业型证书（多域名）
+50. sv_ssl_cost_dnspod_ov - DNSPod-国密企业型证书
+51. sv_ssl_cost_dnspod_dvwildcard - DNSPod-国密域名型证书（通配符）
+52. sv_ssl_cost_dnspod_dvmultidomain - DNSPod-国密域名型证书（多域名）
+53. sv_ssl_cost_dnspod_dv - DNSPod-国密域名型证书
+54. sv_ssl_cost_wotrus_evmultidomain - WoTrus-增强型证书（多域名）
+55. sv_ssl_cost_wotrus_ev - WoTrus-增强型证书
+56. sv_ssl_cost_wotrus_ovwildcard - WoTrus-企业型证书（通配符）
+57. sv_ssl_cost_wotrus_ovmultidomain - WoTrus-企业型证书（多域名）
+58. sv_ssl_cost_wotrus_ov - WoTrus-企业型证书
+59. sv_ssl_cost_wotrus_dvwildcard - WoTrus-域名型证书（通配符）
+60. sv_ssl_cost_wotrus_dvmultidomain - WoTrus-域名型证书（多域名）
+61. sv_ssl_cost_wotrus_dv - WoTrus-域名型证书
+     * @param PriceKey 询价参数，以下是对每个询价参数及其对应的证书文字说明：
+1. sv_ssl_cost_cfca_ca_ev - CFCA-增强型(EV)SSL证书
+2. sv_ssl_cost_cfca_ca_ovwildcard - CFCA-企业型(OV) SSL证书(通配符)
+3. sv_ssl_cost_cfca_ca_ov - CFCA-企业型(OV)SSL证书
+4. sv_ssl_cost_dnspod_ca_sm2_ovwildcard - DNSPod亚信国密-企业型(OV)通配符证书
+5. sv_ssl_cost_dnspod_ca_sm2_ovmultidomain - DNSPod亚信国密-企业型(OV)多域名证书
+6. sv_ssl_cost_dnspod_ca_sm2_ov - DNSPod亚信国密-企业型(OV)证书
+7. sv_ssl_cost_dnspod_ca_sm2_dvwildcard - DNSPod亚信国密-域名型(DV)通配符证书
+8. sv_ssl_cost_dnspod_ca_sm2_dvmultidomain - DNSPod亚信国密-域名型(DV)多域名证书
+9. sv_ssl_cost_dnspod_ca_sm2_dv - DNSPod亚信国密-域名型(DV)证书
+10. sv_ssl_cost_dnspod_ca_dv - DNSPod SSL 域名型SSL证书(C1)
+11. sv_ssl_cost_dnspod_ca_dvmultidomain - DNSPod SSL域名型多域名SSL证书(C1)
+12. sv_ssl_cost_dnspod_ca_dvwildcard - DNSPod-SSL域名型DV（泛域名）
+13. sv_ssl_cost_dnspod_ca_ov - DNSPod 企业型SSL证书(C1)
+14. sv_ssl_cost_dnspod_ca_ovmultidomain - DNSPod 企业型多域名SSL证书(C1)
+15. sv_ssl_cost_dnspod_ca_ovwildcard - DNSPod 企业型通配符SSL证书(C1)
+16. sv_ssl_cost_dnspod_ca_ev - DNSPod 增强型 SSL 证书(C1)
+17. sv_ssl_cost_dnspod_ca_evmultidomain - DNSPod 增强型多域名SSL证书(C1)
+18. sv_ssl_cost_trustasia_dvwildcardmulti - TrustAsia-域名型DV（通配符多域名）
+19. sv_ssl_cost_securesiteevpromul_sh - SecureSite-增强型专业版EVPro（多域名）
+20. sv_ssl_cost_symantec_evpro - SecureSite-增强型专业版EVPro（单域名）
+21. sv_ssl_cost_globalsign_ev_mul_sh - GlobalSign-增强型EV（多域名）
+22. sv_ssl_cost_globalsign_ev - GlobalSign-增强型EV（单域名）
+23. sv_ssl_cost_trustasia_evmultidomain - TrustAsia-增强型EV（多域名）
+24. sv_ssl_cost_trustasia_ev - TrustAsia-增强型EV（单域名）
+25. sv_ssl_cost_geotrust_evmultidomain - GeoTrust-增强型EV（多域名）
+26. sv_ssl_cost_geotrust_ev - GeoTrust-增强型EV（单域名）
+27. sv_ssl_cost_symantec_evmultidomain - SecureSite-增强型EV（多域名）
+28. sv_ssl_cost_symantec_ev - SecureSite-增强型EV（单域名）
+29. sv_ssl_cost_trustasia_dvwildcard - TrustAsia-域名型DV（泛域名）
+30. sv_ssl_cost_trustasia_dvmultidomain - TrustAsia-域名型DV（多域名）
+31. sv_ssl_cost_symantec_ovpromultidomain - SecureSite-企业型专业版OV Pro（多域名）
+32. sv_ssl_cost_symantec_ovpro - SecureSite-企业型专业版OV Pro（单域名）
+33. sv_ssl_cost_globalsign_ovwildcardmulti - GlobalSign-企业型OV（通配符多域名）
+34. sv_ssl_cost_globalsign_ovwildcard - GlobalSign-企业型OV（泛域名）
+35. sv_ssl_cost_globalsign_ovmultidomain - GlobalSign-企业型OV（多域名）
+36. sv_ssl_cost_globalsign_ov - GlobalSign-企业型OV（单域名）
+37. sv_ssl_cost_trustasia_ovwildcardmulti - TrustAsia-企业型OV（通配符多域名）
+38. sv_ssl_cost_trustasia_ovwildcard - TrustAsia-企业型OV（泛域名）
+39. sv_ssl_cost_trustasia_ovmultidomain - TrustAsia-企业型OV（多域名）
+40. sv_ssl_cost_trustasia_ov - TrustAsia-企业型OV（单域名）
+41. sv_ssl_cost_geotrust_ovwildcard - GeoTrust-企业型OV（泛域名）
+42. sv_ssl_cost_geotrust_ov - GeoTrust-企业型OV（单域名）
+43. sv_ssl_cost_symantec_ovwildcard - SecureSite-企业型OV（泛域名）
+44. sv_ssl_cost_symantec_ovmultidomain - SecureSite-企业型OV（多域名）
+45. sv_ssl_cost_symantec_ov - SecureSite-企业型OV（单域名）
+46. sv_ssl_cost_dnspod_evmultidomain - DNSPod-国密增强型证书（多域名）
+47. sv_ssl_cost_dnspod_ev - DNSPod-国密增强型证书
+48. sv_ssl_cost_dnspod_ovwildcard - DNSPod-国密企业型证书（通配符）
+49. sv_ssl_cost_dnspod_ovmultidomain - DNSPod-国密企业型证书（多域名）
+50. sv_ssl_cost_dnspod_ov - DNSPod-国密企业型证书
+51. sv_ssl_cost_dnspod_dvwildcard - DNSPod-国密域名型证书（通配符）
+52. sv_ssl_cost_dnspod_dvmultidomain - DNSPod-国密域名型证书（多域名）
+53. sv_ssl_cost_dnspod_dv - DNSPod-国密域名型证书
+54. sv_ssl_cost_wotrus_evmultidomain - WoTrus-增强型证书（多域名）
+55. sv_ssl_cost_wotrus_ev - WoTrus-增强型证书
+56. sv_ssl_cost_wotrus_ovwildcard - WoTrus-企业型证书（通配符）
+57. sv_ssl_cost_wotrus_ovmultidomain - WoTrus-企业型证书（多域名）
+58. sv_ssl_cost_wotrus_ov - WoTrus-企业型证书
+59. sv_ssl_cost_wotrus_dvwildcard - WoTrus-域名型证书（通配符）
+60. sv_ssl_cost_wotrus_dvmultidomain - WoTrus-域名型证书（多域名）
+61. sv_ssl_cost_wotrus_dv - WoTrus-域名型证书
      */
     public void setPriceKey(String PriceKey) {
         this.PriceKey = PriceKey;

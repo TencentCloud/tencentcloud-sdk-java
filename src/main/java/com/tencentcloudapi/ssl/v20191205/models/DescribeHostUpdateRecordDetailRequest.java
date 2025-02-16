@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeHostUpdateRecordDetailRequest extends AbstractModel {
 
     /**
-    * 一键更新记录ID,从接口UpdateCertificateInstance获得
+    * 部署记录ID，通过调用UpdateCertificateInstance接口返回的记录ID， 或者通过UpdateCertificateRecordRollback回滚接口返回的记录ID
     */
     @SerializedName("DeployRecordId")
     @Expose
     private String DeployRecordId;
 
     /**
-    * 每页数量，默认10。
+    * 每页数量，默认10。最大值为200
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * 分页偏移量，从0开始。
+    * 分页偏移量，从0开始。默认为0
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-     * Get 一键更新记录ID,从接口UpdateCertificateInstance获得 
-     * @return DeployRecordId 一键更新记录ID,从接口UpdateCertificateInstance获得
+     * Get 部署记录ID，通过调用UpdateCertificateInstance接口返回的记录ID， 或者通过UpdateCertificateRecordRollback回滚接口返回的记录ID 
+     * @return DeployRecordId 部署记录ID，通过调用UpdateCertificateInstance接口返回的记录ID， 或者通过UpdateCertificateRecordRollback回滚接口返回的记录ID
      */
     public String getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 一键更新记录ID,从接口UpdateCertificateInstance获得
-     * @param DeployRecordId 一键更新记录ID,从接口UpdateCertificateInstance获得
+     * Set 部署记录ID，通过调用UpdateCertificateInstance接口返回的记录ID， 或者通过UpdateCertificateRecordRollback回滚接口返回的记录ID
+     * @param DeployRecordId 部署记录ID，通过调用UpdateCertificateInstance接口返回的记录ID， 或者通过UpdateCertificateRecordRollback回滚接口返回的记录ID
      */
     public void setDeployRecordId(String DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get 每页数量，默认10。 
-     * @return Limit 每页数量，默认10。
+     * Get 每页数量，默认10。最大值为200 
+     * @return Limit 每页数量，默认10。最大值为200
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认10。
-     * @param Limit 每页数量，默认10。
+     * Set 每页数量，默认10。最大值为200
+     * @param Limit 每页数量，默认10。最大值为200
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，从0开始。 
-     * @return Offset 分页偏移量，从0开始。
+     * Get 分页偏移量，从0开始。默认为0 
+     * @return Offset 分页偏移量，从0开始。默认为0
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始。
-     * @param Offset 分页偏移量，从0开始。
+     * Set 分页偏移量，从0开始。默认为0
+     * @param Offset 分页偏移量，从0开始。默认为0
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;

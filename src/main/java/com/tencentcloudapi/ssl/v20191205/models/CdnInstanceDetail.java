@@ -45,7 +45,7 @@ public class CdnInstanceDetail extends AbstractModel {
     private String Status;
 
     /**
-    * 域名计费状态
+    * 域名计费状态，on表示开启，off表示关闭。
     */
     @SerializedName("HttpsBillingSwitch")
     @Expose
@@ -100,16 +100,16 @@ public class CdnInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 域名计费状态 
-     * @return HttpsBillingSwitch 域名计费状态
+     * Get 域名计费状态，on表示开启，off表示关闭。 
+     * @return HttpsBillingSwitch 域名计费状态，on表示开启，off表示关闭。
      */
     public String getHttpsBillingSwitch() {
         return this.HttpsBillingSwitch;
     }
 
     /**
-     * Set 域名计费状态
-     * @param HttpsBillingSwitch 域名计费状态
+     * Set 域名计费状态，on表示开启，off表示关闭。
+     * @param HttpsBillingSwitch 域名计费状态，on表示开启，off表示关闭。
      */
     public void setHttpsBillingSwitch(String HttpsBillingSwitch) {
         this.HttpsBillingSwitch = HttpsBillingSwitch;

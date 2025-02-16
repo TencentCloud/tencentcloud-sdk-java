@@ -25,7 +25,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
     @Expose
@@ -33,7 +32,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -43,7 +41,6 @@ public class UebaRule extends AbstractModel {
     * 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
     @Expose
@@ -56,7 +53,6 @@ public class UebaRule extends AbstractModel {
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleLevel")
     @Expose
@@ -64,7 +60,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleContent")
     @Expose
@@ -72,7 +67,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -80,7 +74,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitCount")
     @Expose
@@ -88,7 +81,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
     @Expose
@@ -96,7 +88,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberID")
     @Expose
@@ -104,7 +95,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -112,7 +102,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
     @Expose
@@ -120,7 +109,6 @@ public class UebaRule extends AbstractModel {
 
     /**
     * 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRuleDetail")
     @Expose
@@ -130,17 +118,14 @@ public class UebaRule extends AbstractModel {
     * 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-     * Get 策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id 
      * @return RuleID 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleID() {
         return this.RuleID;
@@ -148,19 +133,15 @@ aws：1
 
     /**
      * Set 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleID 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -168,9 +149,7 @@ aws：1
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
@@ -179,12 +158,10 @@ aws：1
     /**
      * Get 策略类型
 0:系统策略
-1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。 
+1:自定义策略 
      * @return RuleType 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleType() {
         return this.RuleType;
@@ -194,11 +171,9 @@ aws：1
      * Set 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleType 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -210,15 +185,13 @@ aws：1
 1:低危
 2:中危
 3:高危
-4:严重
-注意：此字段可能返回 null，表示取不到有效值。 
+4:严重 
      * @return RuleLevel 策略等级
 0:提示
 1:低危
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleLevel() {
         return this.RuleLevel;
@@ -231,24 +204,20 @@ aws：1
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleLevel 策略等级
 0:提示
 1:低危
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleLevel(Long RuleLevel) {
         this.RuleLevel = RuleLevel;
     }
 
     /**
-     * Get 策略内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略内容 
      * @return RuleContent 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleContent() {
         return this.RuleContent;
@@ -256,19 +225,15 @@ aws：1
 
     /**
      * Set 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleContent 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleContent(String RuleContent) {
         this.RuleContent = RuleContent;
     }
 
     /**
-     * Get 策略开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略开关 
      * @return RuleStatus 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRuleStatus() {
         return this.RuleStatus;
@@ -276,19 +241,15 @@ aws：1
 
     /**
      * Set 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleStatus 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleStatus(Boolean RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get 命中次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中次数 
      * @return HitCount 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHitCount() {
         return this.HitCount;
@@ -296,19 +257,15 @@ aws：1
 
     /**
      * Set 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HitCount 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitCount(Long HitCount) {
         this.HitCount = HitCount;
     }
 
     /**
-     * Get 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属账号Appid 
      * @return AppID 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppID() {
         return this.AppID;
@@ -316,19 +273,15 @@ aws：1
 
     /**
      * Set 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppID 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多账号，成员ID 
      * @return MemberID 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberID() {
         return this.MemberID;
@@ -336,19 +289,15 @@ aws：1
 
     /**
      * Set 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberID 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberID(String MemberID) {
         this.MemberID = MemberID;
     }
 
     /**
-     * Get Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Uin 
      * @return Uin Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -356,19 +305,15 @@ aws：1
 
     /**
      * Set Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称 
      * @return Nickname 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
         return this.Nickname;
@@ -376,19 +321,15 @@ aws：1
 
     /**
      * Set 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nickname 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义规则具体内容 
      * @return CustomRuleDetail 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UebaCustomRule getCustomRuleDetail() {
         return this.CustomRuleDetail;
@@ -396,9 +337,7 @@ aws：1
 
     /**
      * Set 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomRuleDetail 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRuleDetail(UebaCustomRule CustomRuleDetail) {
         this.CustomRuleDetail = CustomRuleDetail;
@@ -407,12 +346,10 @@ aws：1
     /**
      * Get 云类型
 腾讯云：0
-aws：1
-注意：此字段可能返回 null，表示取不到有效值。 
+aws：1 
      * @return CloudType 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloudType() {
         return this.CloudType;
@@ -422,11 +359,9 @@ aws：1
      * Set 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;

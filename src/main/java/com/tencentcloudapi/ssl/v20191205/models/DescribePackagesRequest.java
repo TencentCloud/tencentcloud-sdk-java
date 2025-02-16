@@ -38,14 +38,15 @@ public class DescribePackagesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 按状态筛选。
+    * 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 按过期时间升序或降序排列。
+    * 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -59,7 +60,7 @@ public class DescribePackagesRequest extends AbstractModel {
     private String PackageId;
 
     /**
-    * 按权益包类型搜索。
+    * 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
     */
     @SerializedName("Type")
     @Expose
@@ -105,32 +106,36 @@ public class DescribePackagesRequest extends AbstractModel {
     }
 
     /**
-     * Get 按状态筛选。 
-     * @return Status 按状态筛选。
+     * Get 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+ 
+     * @return Status 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 按状态筛选。
-     * @param Status 按状态筛选。
+     * Set 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
+     * @param Status 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 按过期时间升序或降序排列。 
-     * @return ExpireTime 按过期时间升序或降序排列。
+     * Get 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序) 
+     * @return ExpireTime 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 按过期时间升序或降序排列。
-     * @param ExpireTime 按过期时间升序或降序排列。
+     * Set 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
+     * @param ExpireTime 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -153,16 +158,16 @@ public class DescribePackagesRequest extends AbstractModel {
     }
 
     /**
-     * Get 按权益包类型搜索。 
-     * @return Type 按权益包类型搜索。
+     * Get 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点） 
+     * @return Type 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 按权益包类型搜索。
-     * @param Type 按权益包类型搜索。
+     * Set 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
+     * @param Type 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
      */
     public void setType(String Type) {
         this.Type = Type;

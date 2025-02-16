@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateCertificateRecordRollbackResponse extends AbstractModel {
 
     /**
-    * 回滚部署记录ID
+    * 新生成的回滚部署任务的记录ID
     */
     @SerializedName("DeployRecordId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateCertificateRecordRollbackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 回滚部署记录ID 
-     * @return DeployRecordId 回滚部署记录ID
+     * Get 新生成的回滚部署任务的记录ID 
+     * @return DeployRecordId 新生成的回滚部署任务的记录ID
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 回滚部署记录ID
-     * @param DeployRecordId 回滚部署记录ID
+     * Set 新生成的回滚部署任务的记录ID
+     * @param DeployRecordId 新生成的回滚部署任务的记录ID
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;

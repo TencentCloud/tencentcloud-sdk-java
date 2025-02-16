@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CertificateOrderSubmitRequest extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * 待提交资料的付费证书 ID。	
     */
     @SerializedName("CertId")
     @Expose
@@ -38,23 +38,26 @@ public class CertificateOrderSubmitRequest extends AbstractModel {
     private Long DeleteDnsAutoRecord;
 
     /**
-    * 域名验证方式：DNS_AUTO 自动DNS验证， DNS DNS验证， FILE 文件验证
+    * 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单见控制台页面
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-     * Get 证书 ID。 
-     * @return CertId 证书 ID。
+     * Get 待提交资料的付费证书 ID。	 
+     * @return CertId 待提交资料的付费证书 ID。	
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertId 证书 ID。
+     * Set 待提交资料的付费证书 ID。	
+     * @param CertId 待提交资料的付费证书 ID。	
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -77,16 +80,28 @@ public class CertificateOrderSubmitRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名验证方式：DNS_AUTO 自动DNS验证， DNS DNS验证， FILE 文件验证 
-     * @return VerifyType 域名验证方式：DNS_AUTO 自动DNS验证， DNS DNS验证， FILE 文件验证
+     * Get 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单见控制台页面 
+     * @return VerifyType 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单见控制台页面
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 域名验证方式：DNS_AUTO 自动DNS验证， DNS DNS验证， FILE 文件验证
-     * @param VerifyType 域名验证方式：DNS_AUTO 自动DNS验证， DNS DNS验证， FILE 文件验证
+     * Set 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单见控制台页面
+     * @param VerifyType 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单见控制台页面
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;

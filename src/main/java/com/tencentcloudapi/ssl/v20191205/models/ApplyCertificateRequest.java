@@ -24,56 +24,59 @@ import java.util.HashMap;
 public class ApplyCertificateRequest extends AbstractModel {
 
     /**
-    * 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+    * 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
     */
     @SerializedName("DvAuthMethod")
     @Expose
     private String DvAuthMethod;
 
     /**
-    * 域名。
+    * 证书绑定的域名。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 项目 ID。
+    * 证书关联的项目 ID。 默认为0（默认项目）
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+    * 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 邮箱。
+    * 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * 手机。
+    * 证书关联手机号码，  不存在则关联固定手机号码
     */
     @SerializedName("ContactPhone")
     @Expose
     private String ContactPhone;
 
     /**
-    * 有效期，默认3个月，目前仅支持3个月。
+    * 证书有效期，默认3（月），目前仅支持3个月。
     */
     @SerializedName("ValidityPeriod")
     @Expose
     private String ValidityPeriod;
 
     /**
-    * 加密算法，支持 RSA及ECC。
+    * 加密算法，取值为ECC、RSA， 默认为RSA
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
@@ -87,28 +90,28 @@ public class ApplyCertificateRequest extends AbstractModel {
     private String CsrKeyParameter;
 
     /**
-    * CSR 的加密密码。
+    * 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密
     */
     @SerializedName("CsrKeyPassword")
     @Expose
     private String CsrKeyPassword;
 
     /**
-    * 备注名称。
+    * 证书别名
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 原证书 ID，用于重新申请。
+    * 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-    * 权益包ID，用于免费证书扩容包使用
+    * 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线
     */
     @SerializedName("PackageId")
     @Expose
@@ -122,135 +125,147 @@ public class ApplyCertificateRequest extends AbstractModel {
     private Boolean DeleteDnsAutoRecord;
 
     /**
-    * 域名数组（多域名证书可以上传）。	
+    * 证书绑定的其他域名，待开放。目前不支持此参数
     */
     @SerializedName("DnsNames")
     @Expose
     private String [] DnsNames;
 
     /**
-     * Get 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
-     * @return DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+     * Get 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217 
+     * @return DvAuthMethod 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
      */
     public String getDvAuthMethod() {
         return this.DvAuthMethod;
     }
 
     /**
-     * Set 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
-     * @param DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+     * Set 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
+     * @param DvAuthMethod 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
      */
     public void setDvAuthMethod(String DvAuthMethod) {
         this.DvAuthMethod = DvAuthMethod;
     }
 
     /**
-     * Get 域名。 
-     * @return DomainName 域名。
+     * Get 证书绑定的域名。 
+     * @return DomainName 证书绑定的域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名。
-     * @param DomainName 域名。
+     * Set 证书绑定的域名。
+     * @param DomainName 证书绑定的域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 项目 ID。 
-     * @return ProjectId 项目 ID。
+     * Get 证书关联的项目 ID。 默认为0（默认项目） 
+     * @return ProjectId 证书关联的项目 ID。 默认为0（默认项目）
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID。
-     * @param ProjectId 项目 ID。
+     * Set 证书关联的项目 ID。 默认为0（默认项目）
+     * @param ProjectId 证书关联的项目 ID。 默认为0（默认项目）
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。 
-     * @return PackageType 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+     * Get 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。 
+     * @return PackageType 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
-     * @param PackageType 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+     * Set 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+     * @param PackageType 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 邮箱。 
-     * @return ContactEmail 邮箱。
+     * Get 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱 
+     * @return ContactEmail 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set 邮箱。
-     * @param ContactEmail 邮箱。
+     * Set 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱
+     * @param ContactEmail 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get 手机。 
-     * @return ContactPhone 手机。
+     * Get 证书关联手机号码，  不存在则关联固定手机号码 
+     * @return ContactPhone 证书关联手机号码，  不存在则关联固定手机号码
      */
     public String getContactPhone() {
         return this.ContactPhone;
     }
 
     /**
-     * Set 手机。
-     * @param ContactPhone 手机。
+     * Set 证书关联手机号码，  不存在则关联固定手机号码
+     * @param ContactPhone 证书关联手机号码，  不存在则关联固定手机号码
      */
     public void setContactPhone(String ContactPhone) {
         this.ContactPhone = ContactPhone;
     }
 
     /**
-     * Get 有效期，默认3个月，目前仅支持3个月。 
-     * @return ValidityPeriod 有效期，默认3个月，目前仅支持3个月。
+     * Get 证书有效期，默认3（月），目前仅支持3个月。 
+     * @return ValidityPeriod 证书有效期，默认3（月），目前仅支持3个月。
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set 有效期，默认3个月，目前仅支持3个月。
-     * @param ValidityPeriod 有效期，默认3个月，目前仅支持3个月。
+     * Set 证书有效期，默认3（月），目前仅支持3个月。
+     * @param ValidityPeriod 证书有效期，默认3（月），目前仅支持3个月。
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get 加密算法，支持 RSA及ECC。 
-     * @return CsrEncryptAlgo 加密算法，支持 RSA及ECC。
+     * Get 加密算法，取值为ECC、RSA， 默认为RSA 
+     * @return CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set 加密算法，支持 RSA及ECC。
-     * @param CsrEncryptAlgo 加密算法，支持 RSA及ECC。
+     * Set 加密算法，取值为ECC、RSA， 默认为RSA
+     * @param CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;
@@ -273,64 +288,64 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get CSR 的加密密码。 
-     * @return CsrKeyPassword CSR 的加密密码。
+     * Get 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密 
+     * @return CsrKeyPassword 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密
      */
     public String getCsrKeyPassword() {
         return this.CsrKeyPassword;
     }
 
     /**
-     * Set CSR 的加密密码。
-     * @param CsrKeyPassword CSR 的加密密码。
+     * Set 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密
+     * @param CsrKeyPassword 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密
      */
     public void setCsrKeyPassword(String CsrKeyPassword) {
         this.CsrKeyPassword = CsrKeyPassword;
     }
 
     /**
-     * Get 备注名称。 
-     * @return Alias 备注名称。
+     * Get 证书别名 
+     * @return Alias 证书别名
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 备注名称。
-     * @param Alias 备注名称。
+     * Set 证书别名
+     * @param Alias 证书别名
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 原证书 ID，用于重新申请。 
-     * @return OldCertificateId 原证书 ID，用于重新申请。
+     * Get 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书 
+     * @return OldCertificateId 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set 原证书 ID，用于重新申请。
-     * @param OldCertificateId 原证书 ID，用于重新申请。
+     * Set 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书
+     * @param OldCertificateId 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
     }
 
     /**
-     * Get 权益包ID，用于免费证书扩容包使用 
-     * @return PackageId 权益包ID，用于免费证书扩容包使用
+     * Get 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线 
+     * @return PackageId 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set 权益包ID，用于免费证书扩容包使用
-     * @param PackageId 权益包ID，用于免费证书扩容包使用
+     * Set 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线
+     * @param PackageId 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
@@ -353,16 +368,16 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名数组（多域名证书可以上传）。	 
-     * @return DnsNames 域名数组（多域名证书可以上传）。	
+     * Get 证书绑定的其他域名，待开放。目前不支持此参数 
+     * @return DnsNames 证书绑定的其他域名，待开放。目前不支持此参数
      */
     public String [] getDnsNames() {
         return this.DnsNames;
     }
 
     /**
-     * Set 域名数组（多域名证书可以上传）。	
-     * @param DnsNames 域名数组（多域名证书可以上传）。	
+     * Set 证书绑定的其他域名，待开放。目前不支持此参数
+     * @param DnsNames 证书绑定的其他域名，待开放。目前不支持此参数
      */
     public void setDnsNames(String [] DnsNames) {
         this.DnsNames = DnsNames;

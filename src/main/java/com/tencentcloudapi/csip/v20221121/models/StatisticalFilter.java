@@ -28,7 +28,6 @@ public class StatisticalFilter extends AbstractModel {
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorType")
     @Expose
@@ -36,7 +35,6 @@ public class StatisticalFilter extends AbstractModel {
 
     /**
     * 统计值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -46,13 +44,11 @@ public class StatisticalFilter extends AbstractModel {
      * Get 0:不基于统计检测
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
-3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。 
+3:发生次数高于用户平均值的百分之 
      * @return OperatorType 0:不基于统计检测
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperatorType() {
         return this.OperatorType;
@@ -63,22 +59,18 @@ public class StatisticalFilter extends AbstractModel {
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorType 0:不基于统计检测
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorType(Long OperatorType) {
         this.OperatorType = OperatorType;
     }
 
     /**
-     * Get 统计值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计值 
      * @return Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
         return this.Value;
@@ -86,9 +78,7 @@ public class StatisticalFilter extends AbstractModel {
 
     /**
      * Set 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {
         this.Value = Value;

@@ -32,7 +32,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
@@ -40,7 +39,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 应用状态 1正常 2停用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -48,7 +46,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 1试用 2轻量版 3标准版 4旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppVersion")
     @Expose
@@ -56,7 +53,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -64,7 +60,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 回调
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Callback")
     @Expose
@@ -72,7 +67,6 @@ public class AppConfig extends AbstractModel {
 
     /**
     * 回调Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -95,10 +89,8 @@ public class AppConfig extends AbstractModel {
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return AppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -106,19 +98,15 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 应用状态 1正常 2停用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用状态 1正常 2停用 
      * @return State 应用状态 1正常 2停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
         return this.State;
@@ -126,19 +114,15 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 应用状态 1正常 2停用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 应用状态 1正常 2停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 1试用 2轻量版 3标准版 4旗舰版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1试用 2轻量版 3标准版 4旗舰版 
      * @return AppVersion 1试用 2轻量版 3标准版 4旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppVersion() {
         return this.AppVersion;
@@ -146,19 +130,15 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 1试用 2轻量版 3标准版 4旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppVersion 1试用 2轻量版 3标准版 4旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppVersion(Long AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -166,19 +146,15 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 回调
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回调 
      * @return Callback 回调
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallback() {
         return this.Callback;
@@ -186,19 +162,15 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 回调
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Callback 回调
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;
     }
 
     /**
-     * Get 回调Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回调Key 
      * @return CallbackKey 回调Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackKey() {
         return this.CallbackKey;
@@ -206,9 +178,7 @@ public class AppConfig extends AbstractModel {
 
     /**
      * Set 回调Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackKey 回调Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;

@@ -102,7 +102,9 @@ public class DescribeHostLighthouseInstanceListRequest extends AbstractModel {
     /**
      * Get 部署资源类型 lighthouse 
      * @return ResourceType 部署资源类型 lighthouse
+     * @deprecated
      */
+    @Deprecated
     public String getResourceType() {
         return this.ResourceType;
     }
@@ -110,7 +112,9 @@ public class DescribeHostLighthouseInstanceListRequest extends AbstractModel {
     /**
      * Set 部署资源类型 lighthouse
      * @param ResourceType 部署资源类型 lighthouse
+     * @deprecated
      */
+    @Deprecated
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }

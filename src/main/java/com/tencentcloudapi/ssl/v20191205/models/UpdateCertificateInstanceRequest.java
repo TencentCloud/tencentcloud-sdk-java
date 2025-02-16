@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceRequest extends AbstractModel {
 
     /**
-    * 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
+    * 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
     */
     @SerializedName("OldCertificateId")
     @Expose
@@ -38,7 +38,7 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String [] ResourceTypes;
 
     /**
-    * 一键更新新证书ID，不传则证书公钥和私钥必传
+    * 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
     */
     @SerializedName("CertificateId")
     @Expose
@@ -52,21 +52,21 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String [] Regions;
 
     /**
-    * 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等
+    * 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
     */
     @SerializedName("ResourceTypesRegions")
     @Expose
     private ResourceTypeRegions [] ResourceTypesRegions;
 
     /**
-    * 证书公钥， 若上传证书公钥， 则CertificateId不用传
+    * 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
     */
     @SerializedName("CertificatePublicKey")
     @Expose
     private String CertificatePublicKey;
 
     /**
-    * 证书私钥，若上传证书公钥， 则CertificateId不用传
+    * 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
@@ -80,44 +80,44 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private Long ExpiringNotificationSwitch;
 
     /**
-    * 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数
+    * 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
     */
     @SerializedName("Repeatable")
     @Expose
     private Boolean Repeatable;
 
     /**
-    * 是否允许下载，若选择上传证书， 则可以配置该参数
+    * 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
     */
     @SerializedName("AllowDownload")
     @Expose
     private Boolean AllowDownload;
 
     /**
-    * 标签列表，若选择上传证书， 则可以配置该参数
+    * 标签列表，若选择上传公私钥证书， 则可以配置该参数
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * 项目 ID，若选择上传证书， 则可以配置该参数
+    * 项目 ID，若选择上传公私钥证书， 则可以配置该参数
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新 
-     * @return OldCertificateId 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
+     * Get 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新 
+     * @return OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
-     * @param OldCertificateId 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
+     * Set 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+     * @param OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
@@ -140,16 +140,16 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 一键更新新证书ID，不传则证书公钥和私钥必传 
-     * @return CertificateId 一键更新新证书ID，不传则证书公钥和私钥必传
+     * Get 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传 
+     * @return CertificateId 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 一键更新新证书ID，不传则证书公钥和私钥必传
-     * @param CertificateId 一键更新新证书ID，不传则证书公钥和私钥必传
+     * Set 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
+     * @param CertificateId 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
@@ -176,48 +176,48 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等 
-     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等
+     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos 
+     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
      */
     public ResourceTypeRegions [] getResourceTypesRegions() {
         return this.ResourceTypesRegions;
     }
 
     /**
-     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等
-     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等
+     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
      */
     public void setResourceTypesRegions(ResourceTypeRegions [] ResourceTypesRegions) {
         this.ResourceTypesRegions = ResourceTypesRegions;
     }
 
     /**
-     * Get 证书公钥， 若上传证书公钥， 则CertificateId不用传 
-     * @return CertificatePublicKey 证书公钥， 若上传证书公钥， 则CertificateId不用传
+     * Get 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传 
+     * @return CertificatePublicKey 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set 证书公钥， 若上传证书公钥， 则CertificateId不用传
-     * @param CertificatePublicKey 证书公钥， 若上传证书公钥， 则CertificateId不用传
+     * Set 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
+     * @param CertificatePublicKey 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
     }
 
     /**
-     * Get 证书私钥，若上传证书公钥， 则CertificateId不用传 
-     * @return CertificatePrivateKey 证书私钥，若上传证书公钥， 则CertificateId不用传
+     * Get 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传 
+     * @return CertificatePrivateKey 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set 证书私钥，若上传证书公钥， 则CertificateId不用传
-     * @param CertificatePrivateKey 证书私钥，若上传证书公钥， 则CertificateId不用传
+     * Set 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
+     * @param CertificatePrivateKey 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
@@ -240,64 +240,64 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数 
-     * @return Repeatable 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数
+     * Get 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败 
+     * @return Repeatable 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
      */
     public Boolean getRepeatable() {
         return this.Repeatable;
     }
 
     /**
-     * Set 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数
-     * @param Repeatable 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数
+     * Set 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
+     * @param Repeatable 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
      */
     public void setRepeatable(Boolean Repeatable) {
         this.Repeatable = Repeatable;
     }
 
     /**
-     * Get 是否允许下载，若选择上传证书， 则可以配置该参数 
-     * @return AllowDownload 是否允许下载，若选择上传证书， 则可以配置该参数
+     * Get 是否允许下载，若选择上传公私钥证书， 则可以配置该参数 
+     * @return AllowDownload 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
      */
     public Boolean getAllowDownload() {
         return this.AllowDownload;
     }
 
     /**
-     * Set 是否允许下载，若选择上传证书， 则可以配置该参数
-     * @param AllowDownload 是否允许下载，若选择上传证书， 则可以配置该参数
+     * Set 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
+     * @param AllowDownload 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
      */
     public void setAllowDownload(Boolean AllowDownload) {
         this.AllowDownload = AllowDownload;
     }
 
     /**
-     * Get 标签列表，若选择上传证书， 则可以配置该参数 
-     * @return Tags 标签列表，若选择上传证书， 则可以配置该参数
+     * Get 标签列表，若选择上传公私钥证书， 则可以配置该参数 
+     * @return Tags 标签列表，若选择上传公私钥证书， 则可以配置该参数
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表，若选择上传证书， 则可以配置该参数
-     * @param Tags 标签列表，若选择上传证书， 则可以配置该参数
+     * Set 标签列表，若选择上传公私钥证书， 则可以配置该参数
+     * @param Tags 标签列表，若选择上传公私钥证书， 则可以配置该参数
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 项目 ID，若选择上传证书， 则可以配置该参数 
-     * @return ProjectId 项目 ID，若选择上传证书， 则可以配置该参数
+     * Get 项目 ID，若选择上传公私钥证书， 则可以配置该参数 
+     * @return ProjectId 项目 ID，若选择上传公私钥证书， 则可以配置该参数
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID，若选择上传证书， 则可以配置该参数
-     * @param ProjectId 项目 ID，若选择上传证书， 则可以配置该参数
+     * Set 项目 ID，若选择上传公私钥证书， 则可以配置该参数
+     * @param ProjectId 项目 ID，若选择上传公私钥证书， 则可以配置该参数
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckCertificateDomainVerificationResponse extends AbstractModel {
 
     /**
-    * 域名验证结果
+    * 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerificationResults")
@@ -39,9 +39,9 @@ public class CheckCertificateDomainVerificationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名验证结果
+     * Get 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VerificationResults 域名验证结果
+     * @return VerificationResults 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainValidationResult [] getVerificationResults() {
@@ -49,9 +49,9 @@ public class CheckCertificateDomainVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Set 域名验证结果
+     * Set 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VerificationResults 域名验证结果
+     * @param VerificationResults 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerificationResults(DomainValidationResult [] VerificationResults) {

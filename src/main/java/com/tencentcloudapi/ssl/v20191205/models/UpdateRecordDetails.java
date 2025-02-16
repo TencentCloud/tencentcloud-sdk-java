@@ -24,69 +24,129 @@ import java.util.HashMap;
 public class UpdateRecordDetails extends AbstractModel {
 
     /**
-    * 部署资源类型
+    * 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 部署资源详情列表
+    * 该云资源更新详情
     */
     @SerializedName("List")
     @Expose
     private UpdateRecordDetail [] List;
 
     /**
-    * 该部署资源总数
+    * 该云资源更新资源总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 部署资源类型 
-     * @return ResourceType 部署资源类型
+     * Get 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb 
+     * @return ResourceType 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 部署资源类型
-     * @param ResourceType 部署资源类型
+     * Set 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+     * @param ResourceType 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 部署资源详情列表 
-     * @return List 部署资源详情列表
+     * Get 该云资源更新详情 
+     * @return List 该云资源更新详情
      */
     public UpdateRecordDetail [] getList() {
         return this.List;
     }
 
     /**
-     * Set 部署资源详情列表
-     * @param List 部署资源详情列表
+     * Set 该云资源更新详情
+     * @param List 该云资源更新详情
      */
     public void setList(UpdateRecordDetail [] List) {
         this.List = List;
     }
 
     /**
-     * Get 该部署资源总数 
-     * @return TotalCount 该部署资源总数
+     * Get 该云资源更新资源总数 
+     * @return TotalCount 该云资源更新资源总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 该部署资源总数
-     * @param TotalCount 该部署资源总数
+     * Set 该云资源更新资源总数
+     * @param TotalCount 该云资源更新资源总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

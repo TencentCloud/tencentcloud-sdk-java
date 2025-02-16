@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCertificatesRequest extends AbstractModel {
 
     /**
-    * 分页偏移量，从0开始。
+    * 分页偏移量，从0开始。 默认为0
     */
     @SerializedName("Offset")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+    * 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
     */
     @SerializedName("SearchKey")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 按到期时间排序：DESC = 降序， ASC = 升序。
+    * 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
     */
     @SerializedName("ExpirationSort")
     @Expose
     private String ExpirationSort;
 
     /**
-    * 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+    * 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
     */
     @SerializedName("CertificateStatus")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private String [] CertIds;
 
     /**
-     * Get 分页偏移量，从0开始。 
-     * @return Offset 分页偏移量，从0开始。
+     * Get 分页偏移量，从0开始。 默认为0 
+     * @return Offset 分页偏移量，从0开始。 默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始。
-     * @param Offset 分页偏移量，从0开始。
+     * Set 分页偏移量，从0开始。 默认为0
+     * @param Offset 分页偏移量，从0开始。 默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -175,16 +175,16 @@ public class DescribeCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。 
-     * @return SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+     * Get 搜索关键词，模糊匹配证书 ID、备注名称、证书域名 
+     * @return SearchKey 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
-     * @param SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+     * Set 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
+     * @param SearchKey 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
@@ -223,32 +223,32 @@ public class DescribeCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 按到期时间排序：DESC = 降序， ASC = 升序。 
-     * @return ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
+     * Get 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。 
+     * @return ExpirationSort 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
      */
     public String getExpirationSort() {
         return this.ExpirationSort;
     }
 
     /**
-     * Set 按到期时间排序：DESC = 降序， ASC = 升序。
-     * @param ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
+     * Set 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
+     * @param ExpirationSort 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
      */
     public void setExpirationSort(String ExpirationSort) {
         this.ExpirationSort = ExpirationSort;
     }
 
     /**
-     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。 
-     * @return CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中 
+     * @return CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
      */
     public Long [] getCertificateStatus() {
         return this.CertificateStatus;
     }
 
     /**
-     * Set 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
-     * @param CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+     * Set 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
+     * @param CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
      */
     public void setCertificateStatus(Long [] CertificateStatus) {
         this.CertificateStatus = CertificateStatus;

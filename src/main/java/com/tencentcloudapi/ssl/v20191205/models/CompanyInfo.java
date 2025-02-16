@@ -73,7 +73,9 @@ public class CompanyInfo extends AbstractModel {
     private String CompanyPhone;
 
     /**
-    * 类型
+    * 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdType")
@@ -81,7 +83,8 @@ public class CompanyInfo extends AbstractModel {
     private String IdType;
 
     /**
-    * ID号
+    * 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdNumber")
@@ -209,9 +212,13 @@ public class CompanyInfo extends AbstractModel {
     }
 
     /**
-     * Get 类型
+     * Get 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdType 类型
+     * @return IdType 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdType() {
@@ -219,9 +226,13 @@ public class CompanyInfo extends AbstractModel {
     }
 
     /**
-     * Set 类型
+     * Set 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdType 类型
+     * @param IdType 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdType(String IdType) {
@@ -229,9 +240,11 @@ public class CompanyInfo extends AbstractModel {
     }
 
     /**
-     * Get ID号
+     * Get 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdNumber ID号
+     * @return IdNumber 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdNumber() {
@@ -239,9 +252,11 @@ public class CompanyInfo extends AbstractModel {
     }
 
     /**
-     * Set ID号
+     * Set 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdNumber ID号
+     * @param IdNumber 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdNumber(String IdNumber) {

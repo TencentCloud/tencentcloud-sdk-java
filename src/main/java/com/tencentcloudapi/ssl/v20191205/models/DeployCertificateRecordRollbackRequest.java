@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeployCertificateRecordRollbackRequest extends AbstractModel {
 
     /**
-    * 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId
+    * 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId
     */
     @SerializedName("DeployRecordId")
     @Expose
     private Long DeployRecordId;
 
     /**
-     * Get 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId 
-     * @return DeployRecordId 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId
+     * Get 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId 
+     * @return DeployRecordId 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId
-     * @param DeployRecordId 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId
+     * Set 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId
+     * @param DeployRecordId 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;

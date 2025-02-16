@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DvAuths extends AbstractModel {
 
     /**
-    * DV 认证密钥。
+    * 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthKey")
@@ -32,7 +32,7 @@ public class DvAuths extends AbstractModel {
     private String DvAuthKey;
 
     /**
-    * DV 认证值。
+    * 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthValue")
@@ -40,7 +40,7 @@ public class DvAuths extends AbstractModel {
     private String DvAuthValue;
 
     /**
-    * DV 认证值域名。
+    * 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthDomain")
@@ -48,7 +48,7 @@ public class DvAuths extends AbstractModel {
     private String DvAuthDomain;
 
     /**
-    * DV 认证值路径。
+    * 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthPath")
@@ -56,7 +56,7 @@ public class DvAuths extends AbstractModel {
     private String DvAuthPath;
 
     /**
-    * DV 认证子域名，
+    * 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthSubDomain")
@@ -64,7 +64,10 @@ public class DvAuths extends AbstractModel {
     private String DvAuthSubDomain;
 
     /**
-    * DV 认证类型。
+    * 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthVerifyType")
@@ -72,9 +75,9 @@ public class DvAuths extends AbstractModel {
     private String DvAuthVerifyType;
 
     /**
-     * Get DV 认证密钥。
+     * Get 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthKey DV 认证密钥。
+     * @return DvAuthKey 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthKey() {
@@ -82,9 +85,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证密钥。
+     * Set 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthKey DV 认证密钥。
+     * @param DvAuthKey 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthKey(String DvAuthKey) {
@@ -92,9 +95,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Get DV 认证值。
+     * Get 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthValue DV 认证值。
+     * @return DvAuthValue 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthValue() {
@@ -102,9 +105,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证值。
+     * Set 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthValue DV 认证值。
+     * @param DvAuthValue 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthValue(String DvAuthValue) {
@@ -112,9 +115,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Get DV 认证值域名。
+     * Get 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthDomain DV 认证值域名。
+     * @return DvAuthDomain 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthDomain() {
@@ -122,9 +125,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证值域名。
+     * Set 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthDomain DV 认证值域名。
+     * @param DvAuthDomain 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthDomain(String DvAuthDomain) {
@@ -132,9 +135,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Get DV 认证值路径。
+     * Get 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthPath DV 认证值路径。
+     * @return DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthPath() {
@@ -142,9 +145,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证值路径。
+     * Set 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthPath DV 认证值路径。
+     * @param DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthPath(String DvAuthPath) {
@@ -152,9 +155,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Get DV 认证子域名，
+     * Get 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthSubDomain DV 认证子域名，
+     * @return DvAuthSubDomain 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthSubDomain() {
@@ -162,9 +165,9 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证子域名，
+     * Set 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthSubDomain DV 认证子域名，
+     * @param DvAuthSubDomain 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthSubDomain(String DvAuthSubDomain) {
@@ -172,9 +175,15 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Get DV 认证类型。
+     * Get 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthVerifyType DV 认证类型。
+     * @return DvAuthVerifyType 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthVerifyType() {
@@ -182,9 +191,15 @@ public class DvAuths extends AbstractModel {
     }
 
     /**
-     * Set DV 认证类型。
+     * Set 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthVerifyType DV 认证类型。
+     * @param DvAuthVerifyType 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthVerifyType(String DvAuthVerifyType) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
-    * 总数
+    * 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -71,9 +71,9 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
+     * Get 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 总数
+     * @return TotalCount 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -81,9 +81,9 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 总数
+     * Set 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 总数
+     * @param TotalCount 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeHostDeployRecordDetailRequest extends AbstractModel {
 
     /**
-    * 部署记录ID
+    * 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
     */
     @SerializedName("DeployRecordId")
     @Expose
     private String DeployRecordId;
 
     /**
-    * 分页偏移量，从0开始。
+    * 分页偏移量，从0开始。默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页数量，默认10。
+    * 每页数量，默认10。最大值为200
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 部署记录ID 
-     * @return DeployRecordId 部署记录ID
+     * Get 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID 
+     * @return DeployRecordId 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
      */
     public String getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 部署记录ID
-     * @param DeployRecordId 部署记录ID
+     * Set 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
+     * @param DeployRecordId 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
      */
     public void setDeployRecordId(String DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get 分页偏移量，从0开始。 
-     * @return Offset 分页偏移量，从0开始。
+     * Get 分页偏移量，从0开始。默认为0 
+     * @return Offset 分页偏移量，从0开始。默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始。
-     * @param Offset 分页偏移量，从0开始。
+     * Set 分页偏移量，从0开始。默认为0
+     * @param Offset 分页偏移量，从0开始。默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页数量，默认10。 
-     * @return Limit 每页数量，默认10。
+     * Get 每页数量，默认10。最大值为200 
+     * @return Limit 每页数量，默认10。最大值为200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认10。
-     * @param Limit 每页数量，默认10。
+     * Set 每页数量，默认10。最大值为200
+     * @param Limit 每页数量，默认10。最大值为200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

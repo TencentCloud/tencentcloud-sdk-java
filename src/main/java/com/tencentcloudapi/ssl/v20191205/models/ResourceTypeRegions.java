@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceTypeRegions extends AbstractModel {
 
     /**
-    * 云资源类型
+    * 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
     */
     @SerializedName("ResourceType")
     @Expose
@@ -38,16 +38,16 @@ public class ResourceTypeRegions extends AbstractModel {
     private String [] Regions;
 
     /**
-     * Get 云资源类型 
-     * @return ResourceType 云资源类型
+     * Get 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb 
+     * @return ResourceType 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 云资源类型
-     * @param ResourceType 云资源类型
+     * Set 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
+     * @param ResourceType 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

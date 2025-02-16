@@ -415,7 +415,8 @@ except TencentCloudSDKException as err:
     }
 
     /**
-     *用于上传实时文档内容。实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
+     *用于上传实时文档内容。
+实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
      * @param req UploadDocRealtimeRequest
      * @return UploadDocRealtimeResponse
      * @throws TencentCloudSDKException

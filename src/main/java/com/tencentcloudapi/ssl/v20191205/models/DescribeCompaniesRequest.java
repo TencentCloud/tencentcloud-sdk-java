@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCompaniesRequest extends AbstractModel {
 
     /**
-    * 分页偏移量
+    * 分页偏移量，默认值为0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页每页限制数
+    * 分页每页限制数，默认值为0，最大值1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCompaniesRequest extends AbstractModel {
     private Long CompanyId;
 
     /**
-     * Get 分页偏移量 
-     * @return Offset 分页偏移量
+     * Get 分页偏移量，默认值为0. 
+     * @return Offset 分页偏移量，默认值为0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量
-     * @param Offset 分页偏移量
+     * Set 分页偏移量，默认值为0.
+     * @param Offset 分页偏移量，默认值为0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页每页限制数 
-     * @return Limit 分页每页限制数
+     * Get 分页每页限制数，默认值为0，最大值1000. 
+     * @return Limit 分页每页限制数，默认值为0，最大值1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页每页限制数
-     * @param Limit 分页每页限制数
+     * Set 分页每页限制数，默认值为0，最大值1000.
+     * @param Limit 分页每页限制数，默认值为0，最大值1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

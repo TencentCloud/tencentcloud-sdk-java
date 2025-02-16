@@ -45,7 +45,7 @@ public class ReplaceCertificateRequest extends AbstractModel {
     private String CsrType;
 
     /**
-    * CSR 内容。
+    * CSR 内容，手动上传的时候需要。
     */
     @SerializedName("CsrContent")
     @Expose
@@ -129,16 +129,16 @@ public class ReplaceCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get CSR 内容。 
-     * @return CsrContent CSR 内容。
+     * Get CSR 内容，手动上传的时候需要。 
+     * @return CsrContent CSR 内容，手动上传的时候需要。
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set CSR 内容。
-     * @param CsrContent CSR 内容。
+     * Set CSR 内容，手动上传的时候需要。
+     * @param CsrContent CSR 内容，手动上传的时候需要。
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceResponse extends AbstractModel {
 
     /**
-    * 云资源部署任务ID
+    * 云资源更新任务ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployRecordId")
@@ -32,7 +32,7 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     private Long DeployRecordId;
 
     /**
-    * 部署状态，1表示部署成功，0表示部署失败
+    * 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
     */
     @SerializedName("DeployStatus")
     @Expose
@@ -54,9 +54,9 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云资源部署任务ID
+     * Get 云资源更新任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployRecordId 云资源部署任务ID
+     * @return DeployRecordId 云资源更新任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployRecordId() {
@@ -64,9 +64,9 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 云资源部署任务ID
+     * Set 云资源更新任务ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployRecordId 云资源部署任务ID
+     * @param DeployRecordId 云资源更新任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployRecordId(Long DeployRecordId) {
@@ -74,16 +74,16 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 部署状态，1表示部署成功，0表示部署失败 
-     * @return DeployStatus 部署状态，1表示部署成功，0表示部署失败
+     * Get 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID 
+     * @return DeployStatus 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
      */
     public Long getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set 部署状态，1表示部署成功，0表示部署失败
-     * @param DeployStatus 部署状态，1表示部署成功，0表示部署失败
+     * Set 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
+     * @param DeployStatus 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
      */
     public void setDeployStatus(Long DeployStatus) {
         this.DeployStatus = DeployStatus;

@@ -96,6 +96,22 @@ public class AgentProcedure extends AbstractModel {
     private Long Elapsed;
 
     /**
+    * 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplyIndex")
+    @Expose
+    private Long ReplyIndex;
+
+    /**
      * Get 索引
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 索引
@@ -275,6 +291,46 @@ public class AgentProcedure extends AbstractModel {
         this.Elapsed = Elapsed;
     }
 
+    /**
+     * Get 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeName 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeName 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplyIndex 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReplyIndex() {
+        return this.ReplyIndex;
+    }
+
+    /**
+     * Set 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplyIndex 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplyIndex(Long ReplyIndex) {
+        this.ReplyIndex = ReplyIndex;
+    }
+
     public AgentProcedure() {
     }
 
@@ -310,6 +366,12 @@ public class AgentProcedure extends AbstractModel {
         if (source.Elapsed != null) {
             this.Elapsed = new Long(source.Elapsed);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.ReplyIndex != null) {
+            this.ReplyIndex = new Long(source.ReplyIndex);
+        }
     }
 
 
@@ -326,6 +388,8 @@ public class AgentProcedure extends AbstractModel {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
         this.setParamSimple(map, prefix + "Elapsed", this.Elapsed);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
 
     }
 }

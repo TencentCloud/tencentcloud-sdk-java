@@ -59,14 +59,14 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     private String OldCertificateId;
 
     /**
-    * 分页偏移量，从0开始。	
+    * 分页偏移量，默认值为0。	
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页数量，默认10。	
+    * 每页数量，默认10，最大值为200。	
     */
     @SerializedName("Limit")
     @Expose
@@ -130,7 +130,9 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     /**
      * Get 部署资源类型cdn 
      * @return ResourceType 部署资源类型cdn
+     * @deprecated
      */
+    @Deprecated
     public String getResourceType() {
         return this.ResourceType;
     }
@@ -138,7 +140,9 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     /**
      * Set 部署资源类型cdn
      * @param ResourceType 部署资源类型cdn
+     * @deprecated
      */
+    @Deprecated
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
@@ -160,32 +164,32 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页偏移量，从0开始。	 
-     * @return Offset 分页偏移量，从0开始。	
+     * Get 分页偏移量，默认值为0。	 
+     * @return Offset 分页偏移量，默认值为0。	
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始。	
-     * @param Offset 分页偏移量，从0开始。	
+     * Set 分页偏移量，默认值为0。	
+     * @param Offset 分页偏移量，默认值为0。	
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页数量，默认10。	 
-     * @return Limit 每页数量，默认10。	
+     * Get 每页数量，默认10，最大值为200。	 
+     * @return Limit 每页数量，默认10，最大值为200。	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认10。	
-     * @param Limit 每页数量，默认10。	
+     * Set 每页数量，默认10，最大值为200。	
+     * @param Limit 每页数量，默认10，最大值为200。	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

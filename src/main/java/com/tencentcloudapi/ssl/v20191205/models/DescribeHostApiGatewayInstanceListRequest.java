@@ -59,14 +59,14 @@ public class DescribeHostApiGatewayInstanceListRequest extends AbstractModel {
     private String OldCertificateId;
 
     /**
-    * 每页数量，默认10。	
+    * 每页数量，默认10，最大值为200。	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，从0开始。	
+    * 分页偏移量，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -123,7 +123,9 @@ public class DescribeHostApiGatewayInstanceListRequest extends AbstractModel {
     /**
      * Get 部署资源类型apigateway 
      * @return ResourceType 部署资源类型apigateway
+     * @deprecated
      */
+    @Deprecated
     public String getResourceType() {
         return this.ResourceType;
     }
@@ -131,7 +133,9 @@ public class DescribeHostApiGatewayInstanceListRequest extends AbstractModel {
     /**
      * Set 部署资源类型apigateway
      * @param ResourceType 部署资源类型apigateway
+     * @deprecated
      */
+    @Deprecated
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
@@ -153,32 +157,32 @@ public class DescribeHostApiGatewayInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量，默认10。	 
-     * @return Limit 每页数量，默认10。	
+     * Get 每页数量，默认10，最大值为200。	 
+     * @return Limit 每页数量，默认10，最大值为200。	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认10。	
-     * @param Limit 每页数量，默认10。	
+     * Set 每页数量，默认10，最大值为200。	
+     * @param Limit 每页数量，默认10，最大值为200。	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，从0开始。	 
-     * @return Offset 分页偏移量，从0开始。	
+     * Get 分页偏移量，默认值为0。 
+     * @return Offset 分页偏移量，默认值为0。
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始。	
-     * @param Offset 分页偏移量，从0开始。	
+     * Set 分页偏移量，默认值为0。
+     * @param Offset 分页偏移量，默认值为0。
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;

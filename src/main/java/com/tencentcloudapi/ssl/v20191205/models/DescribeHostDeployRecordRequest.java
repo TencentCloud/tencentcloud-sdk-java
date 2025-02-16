@@ -45,7 +45,7 @@ public class DescribeHostDeployRecordRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
+    * 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
     */
     @SerializedName("ResourceType")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeHostDeployRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse 
-     * @return ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
+     * Get 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live 
+     * @return ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
-     * @param ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
+     * Set 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
+     * @param ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

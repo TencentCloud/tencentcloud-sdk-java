@@ -38,21 +38,33 @@ public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractMo
     private String Limit;
 
     /**
-    * 当前偏移量
+    * 当前偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 查询资源类型的结果详情， 不传则查询所有
+    * 查询资源类型的结果详情， 不传则查询所有，取值支持：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持
+    * 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
     */
     @SerializedName("Regions")
     @Expose
@@ -91,48 +103,96 @@ public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractMo
     }
 
     /**
-     * Get 当前偏移量 
-     * @return Offset 当前偏移量
+     * Get 当前偏移量，默认为0 
+     * @return Offset 当前偏移量，默认为0
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 当前偏移量
-     * @param Offset 当前偏移量
+     * Set 当前偏移量，默认为0
+     * @param Offset 当前偏移量，默认为0
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询资源类型的结果详情， 不传则查询所有 
-     * @return ResourceTypes 查询资源类型的结果详情， 不传则查询所有
+     * Get 查询资源类型的结果详情， 不传则查询所有，取值支持：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb 
+     * @return ResourceTypes 查询资源类型的结果详情， 不传则查询所有，取值支持：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 查询资源类型的结果详情， 不传则查询所有
-     * @param ResourceTypes 查询资源类型的结果详情， 不传则查询所有
+     * Set 查询资源类型的结果详情， 不传则查询所有，取值支持：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+     * @param ResourceTypes 查询资源类型的结果详情， 不传则查询所有，取值支持：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持 
-     * @return Regions 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持
+     * Get 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持 
+     * @return Regions 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
      */
     public String [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持
-     * @param Regions 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持
+     * Set 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+     * @param Regions 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

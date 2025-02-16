@@ -1613,6 +1613,7 @@ public class CdbClient extends AbstractClient{
 
     /**
      *该接口（ModifyProtectMode）用于修改实例的同步方式。
+说明：仅专属集群可调用，该接口即将下线。
      * @param req ModifyProtectModeRequest
      * @return ModifyProtectModeResponse
      * @throws TencentCloudSDKException
