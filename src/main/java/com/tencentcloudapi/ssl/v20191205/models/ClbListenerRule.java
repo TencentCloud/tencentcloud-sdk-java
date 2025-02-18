@@ -46,7 +46,6 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
     * 规则已绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Certificate")
     @Expose
@@ -54,7 +53,6 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
     * 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoMatchDomains")
     @Expose
@@ -62,7 +60,6 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
     * 规则绑定的路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -117,10 +114,8 @@ public class ClbListenerRule extends AbstractModel {
     }
 
     /**
-     * Get 规则已绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则已绑定的证书数据 
      * @return Certificate 规则已绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Certificate getCertificate() {
         return this.Certificate;
@@ -128,19 +123,15 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
      * Set 规则已绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 规则已绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificate(Certificate Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不匹配域名列表 
      * @return NoMatchDomains 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNoMatchDomains() {
         return this.NoMatchDomains;
@@ -148,19 +139,15 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
      * Set 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoMatchDomains 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoMatchDomains(String [] NoMatchDomains) {
         this.NoMatchDomains = NoMatchDomains;
     }
 
     /**
-     * Get 规则绑定的路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则绑定的路径 
      * @return Url 规则绑定的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -168,9 +155,7 @@ public class ClbListenerRule extends AbstractModel {
 
     /**
      * Set 规则绑定的路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 规则绑定的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

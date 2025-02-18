@@ -25,7 +25,6 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
     * 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
     * 询价信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -47,10 +45,8 @@ public class InstancePriceDetail extends AbstractModel {
     private DiscountDetail [] DiscountDetail;
 
     /**
-     * Get 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -58,19 +54,15 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
      * Set 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 询价信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 询价信息。 
      * @return InstancePrice 询价信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstancePrice getInstancePrice() {
         return this.InstancePrice;
@@ -78,9 +70,7 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
      * Set 询价信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice 询价信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePrice(InstancePrice InstancePrice) {
         this.InstancePrice = InstancePrice;

@@ -25,7 +25,6 @@ public class CertificateExtra extends AbstractModel {
 
     /**
     * 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainNumber")
     @Expose
@@ -65,7 +64,6 @@ public class CertificateExtra extends AbstractModel {
 
     /**
     * 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SMCert")
     @Expose
@@ -73,17 +71,14 @@ public class CertificateExtra extends AbstractModel {
 
     /**
     * 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompanyType")
     @Expose
     private Long CompanyType;
 
     /**
-     * Get 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书可配置域名数量。 
      * @return DomainNumber 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainNumber() {
         return this.DomainNumber;
@@ -91,9 +86,7 @@ public class CertificateExtra extends AbstractModel {
 
     /**
      * Set 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainNumber 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainNumber(String DomainNumber) {
         this.DomainNumber = DomainNumber;
@@ -180,10 +173,8 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Get 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是国密证书 
      * @return SMCert 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSMCert() {
         return this.SMCert;
@@ -191,19 +182,15 @@ public class CertificateExtra extends AbstractModel {
 
     /**
      * Set 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SMCert 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSMCert(Long SMCert) {
         this.SMCert = SMCert;
     }
 
     /**
-     * Get 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公司类型，取值：1（个人）；2（公司） 
      * @return CompanyType 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompanyType() {
         return this.CompanyType;
@@ -211,9 +198,7 @@ public class CertificateExtra extends AbstractModel {
 
     /**
      * Set 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompanyType 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompanyType(Long CompanyType) {
         this.CompanyType = CompanyType;

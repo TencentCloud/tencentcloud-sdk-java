@@ -127,7 +127,6 @@ public class Bundle extends AbstractModel {
 
     /**
     * 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleTypeDescription")
     @Expose
@@ -397,10 +396,8 @@ public class Bundle extends AbstractModel {
     }
 
     /**
-     * Get 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐类型描述信息。 
      * @return BundleTypeDescription 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleTypeDescription() {
         return this.BundleTypeDescription;
@@ -408,9 +405,7 @@ public class Bundle extends AbstractModel {
 
     /**
      * Set 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BundleTypeDescription 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleTypeDescription(String BundleTypeDescription) {
         this.BundleTypeDescription = BundleTypeDescription;

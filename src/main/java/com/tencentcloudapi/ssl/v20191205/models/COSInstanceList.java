@@ -25,7 +25,6 @@ public class COSInstanceList extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class COSInstanceList extends AbstractModel {
 
     /**
     * 实例详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -41,7 +39,6 @@ public class COSInstanceList extends AbstractModel {
 
     /**
     * 地域下总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -49,17 +46,14 @@ public class COSInstanceList extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private String Error;
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -67,19 +61,15 @@ public class COSInstanceList extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例详情 
      * @return InstanceList 实例详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -87,19 +77,15 @@ public class COSInstanceList extends AbstractModel {
 
     /**
      * Set 实例详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList 实例详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(CosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 地域下总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域下总数 
      * @return TotalCount 地域下总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -107,19 +93,15 @@ public class COSInstanceList extends AbstractModel {
 
     /**
      * Set 地域下总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 地域下总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -127,9 +109,7 @@ public class COSInstanceList extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

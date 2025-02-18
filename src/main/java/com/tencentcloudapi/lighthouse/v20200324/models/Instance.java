@@ -261,7 +261,6 @@ FAILED：表示操作失败
 
     /**
     * 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceViolationDetail")
     @Expose
@@ -840,10 +839,8 @@ FAILED：表示操作失败
     }
 
     /**
-     * Get 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例违规详情。 
      * @return InstanceViolationDetail 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceViolationDetail getInstanceViolationDetail() {
         return this.InstanceViolationDetail;
@@ -851,9 +848,7 @@ FAILED：表示操作失败
 
     /**
      * Set 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceViolationDetail 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceViolationDetail(InstanceViolationDetail InstanceViolationDetail) {
         this.InstanceViolationDetail = InstanceViolationDetail;

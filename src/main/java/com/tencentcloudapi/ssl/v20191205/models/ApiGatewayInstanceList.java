@@ -32,7 +32,6 @@ public class ApiGatewayInstanceList extends AbstractModel {
 
     /**
     * apigateway实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -47,7 +46,6 @@ public class ApiGatewayInstanceList extends AbstractModel {
 
     /**
     * 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -70,10 +68,8 @@ public class ApiGatewayInstanceList extends AbstractModel {
     }
 
     /**
-     * Get apigateway实例详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get apigateway实例详情	 
      * @return InstanceList apigateway实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiGatewayInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -81,9 +77,7 @@ public class ApiGatewayInstanceList extends AbstractModel {
 
     /**
      * Set apigateway实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList apigateway实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(ApiGatewayInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
@@ -106,10 +100,8 @@ public class ApiGatewayInstanceList extends AbstractModel {
     }
 
     /**
-     * Get 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否查询异常 
      * @return Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -117,9 +109,7 @@ public class ApiGatewayInstanceList extends AbstractModel {
 
     /**
      * Set 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

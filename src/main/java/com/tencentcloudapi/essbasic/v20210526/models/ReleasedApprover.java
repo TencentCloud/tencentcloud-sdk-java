@@ -95,7 +95,7 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
     * 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -103,7 +103,7 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
     * 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
     */
     @SerializedName("OpenId")
     @Expose
@@ -321,9 +321,9 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
      * Get 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。 
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font> 
      * @return OrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
@@ -331,9 +331,9 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
      * Set 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      * @param OrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
@@ -341,9 +341,9 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
      * Get 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。 
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font> 
      * @return OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      */
     public String getOpenId() {
         return this.OpenId;
@@ -351,9 +351,9 @@ public class ReleasedApprover extends AbstractModel {
 
     /**
      * Set 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      * @param OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

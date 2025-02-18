@@ -39,7 +39,6 @@ public class Certificate extends AbstractModel {
 
     /**
     * 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertCaId")
     @Expose
@@ -47,7 +46,6 @@ public class Certificate extends AbstractModel {
 
     /**
     * 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSLMode")
     @Expose
@@ -86,10 +84,8 @@ public class Certificate extends AbstractModel {
     }
 
     /**
-     * Get 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 根证书ID 
      * @return CertCaId 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertCaId() {
         return this.CertCaId;
@@ -97,19 +93,15 @@ public class Certificate extends AbstractModel {
 
     /**
      * Set 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertCaId 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证 
      * @return SSLMode 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSSLMode() {
         return this.SSLMode;
@@ -117,9 +109,7 @@ public class Certificate extends AbstractModel {
 
     /**
      * Set 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SSLMode 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;

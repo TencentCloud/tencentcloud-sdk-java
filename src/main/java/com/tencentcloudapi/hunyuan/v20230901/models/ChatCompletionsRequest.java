@@ -217,6 +217,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableRecommendedQuestions;
 
     /**
+    * 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+    */
+    @SerializedName("EnableDeepRead")
+    @Expose
+    private Boolean EnableDeepRead;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -760,6 +767,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.EnableRecommendedQuestions = EnableRecommendedQuestions;
     }
 
+    /**
+     * Get 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档 
+     * @return EnableDeepRead 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+     */
+    public Boolean getEnableDeepRead() {
+        return this.EnableDeepRead;
+    }
+
+    /**
+     * Set 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+     * @param EnableDeepRead 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+     */
+    public void setEnableDeepRead(Boolean EnableDeepRead) {
+        this.EnableDeepRead = EnableDeepRead;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -834,6 +857,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableRecommendedQuestions != null) {
             this.EnableRecommendedQuestions = new Boolean(source.EnableRecommendedQuestions);
         }
+        if (source.EnableDeepRead != null) {
+            this.EnableDeepRead = new Boolean(source.EnableDeepRead);
+        }
     }
 
 
@@ -860,6 +886,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
         this.setParamArraySimple(map, prefix + "Stop.", this.Stop);
         this.setParamSimple(map, prefix + "EnableRecommendedQuestions", this.EnableRecommendedQuestions);
+        this.setParamSimple(map, prefix + "EnableDeepRead", this.EnableDeepRead);
 
     }
 }

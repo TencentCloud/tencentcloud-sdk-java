@@ -32,7 +32,6 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
     * 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyType")
     @Expose
@@ -55,7 +54,6 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
     * 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalCheckFailReason")
     @Expose
@@ -63,7 +61,6 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
     * 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckValue")
     @Expose
@@ -100,10 +97,8 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Get 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY 
      * @return VerifyType 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVerifyType() {
         return this.VerifyType;
@@ -111,9 +106,7 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
      * Set 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifyType 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
@@ -156,10 +149,8 @@ public class DomainValidationResult extends AbstractModel {
     }
 
     /**
-     * Get 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查失败原因。状态LocalCheck的具体描述 
      * @return LocalCheckFailReason 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalCheckFailReason() {
         return this.LocalCheckFailReason;
@@ -167,19 +158,15 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
      * Set 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalCheckFailReason 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalCheckFailReason(String LocalCheckFailReason) {
         this.LocalCheckFailReason = LocalCheckFailReason;
     }
 
     /**
-     * Get 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查到的值。 
      * @return CheckValue 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCheckValue() {
         return this.CheckValue;
@@ -187,9 +174,7 @@ public class DomainValidationResult extends AbstractModel {
 
     /**
      * Set 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckValue 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckValue(String [] CheckValue) {
         this.CheckValue = CheckValue;

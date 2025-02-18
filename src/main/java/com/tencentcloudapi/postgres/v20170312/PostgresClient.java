@@ -94,6 +94,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建备份策略。
+     * @param req CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupPlanResponse CreateBackupPlan(CreateBackupPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBackupPlan", CreateBackupPlanResponse.class);
+    }
+
+    /**
      *本接口（CreateBaseBackup）用于创建实例的数据备份。
      * @param req CreateBaseBackupRequest
      * @return CreateBaseBackupResponse
@@ -214,6 +225,17 @@ public class PostgresClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
+     *删除备份策略
+     * @param req DeleteBackupPlanRequest
+     * @return DeleteBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupPlanResponse DeleteBackupPlan(DeleteBackupPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBackupPlan", DeleteBackupPlanResponse.class);
     }
 
     /**
@@ -472,6 +494,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询实例SSL状态
+     * @param req DescribeDBInstanceSSLConfigRequest
+     * @return DescribeDBInstanceSSLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceSSLConfigResponse DescribeDBInstanceSSLConfig(DescribeDBInstanceSSLConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceSSLConfig", DescribeDBInstanceSSLConfigResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
      * @param req DescribeDBInstanceSecurityGroupsRequest
      * @return DescribeDBInstanceSecurityGroupsResponse
@@ -714,6 +747,18 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTasks）用于查询任务列表，展示异步任务的执行进度。
+注：本接口中展示的步骤为总结性步骤，可能伴随着版本迭代进行调整，不建议作为关键逻辑使用
+     * @param req DescribeTasksRequest
+     * @return DescribeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
      *本接口 (DescribeZones) 用于查询支持的可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -936,6 +981,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口用于修改实例SSL配置，功能包含开启、关闭、修改SSL证书保护的连接地址。
+     * @param req ModifyDBInstanceSSLConfigRequest
+     * @return ModifyDBInstanceSSLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSSLConfigResponse ModifyDBInstanceSSLConfig(ModifyDBInstanceSSLConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceSSLConfig", ModifyDBInstanceSSLConfigResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBInstanceSecurityGroups）用于修改实例安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
@@ -999,6 +1055,17 @@ public class PostgresClient extends AbstractClient{
     public ModifyParameterTemplateResponse ModifyParameterTemplate(ModifyParameterTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyParameterTemplate", ModifyParameterTemplateResponse.class);
+    }
+
+    /**
+     *本接口（ModifyReadOnlyDBInstanceWeight）用于修改只读实例权重
+     * @param req ModifyReadOnlyDBInstanceWeightRequest
+     * @return ModifyReadOnlyDBInstanceWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReadOnlyDBInstanceWeightResponse ModifyReadOnlyDBInstanceWeight(ModifyReadOnlyDBInstanceWeightRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReadOnlyDBInstanceWeight", ModifyReadOnlyDBInstanceWeightResponse.class);
     }
 
     /**

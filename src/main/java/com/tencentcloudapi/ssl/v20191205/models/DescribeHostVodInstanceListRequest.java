@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostVodInstanceListRequest extends AbstractModel {
 
     /**
-    * 待部署的证书ID
+    * 待部署的证书ID,必填选项
     */
     @SerializedName("CertificateId")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeHostVodInstanceListRequest extends AbstractModel {
     private String OldCertificateId;
 
     /**
-     * Get 待部署的证书ID 
-     * @return CertificateId 待部署的证书ID
+     * Get 待部署的证书ID,必填选项 
+     * @return CertificateId 待部署的证书ID,必填选项
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 待部署的证书ID
-     * @param CertificateId 待部署的证书ID
+     * Set 待部署的证书ID,必填选项
+     * @param CertificateId 待部署的证书ID,必填选项
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

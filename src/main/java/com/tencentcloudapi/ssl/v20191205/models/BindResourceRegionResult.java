@@ -25,7 +25,6 @@ public class BindResourceRegionResult extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -40,17 +39,14 @@ public class BindResourceRegionResult extends AbstractModel {
 
     /**
     * 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private String Error;
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -58,9 +54,7 @@ public class BindResourceRegionResult extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -83,10 +77,8 @@ public class BindResourceRegionResult extends AbstractModel {
     }
 
     /**
-     * Get 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否查询异常 
      * @return Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -94,9 +86,7 @@ public class BindResourceRegionResult extends AbstractModel {
 
     /**
      * Set 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

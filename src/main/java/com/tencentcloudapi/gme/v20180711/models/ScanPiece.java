@@ -25,7 +25,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DumpUrl")
     @Expose
@@ -40,7 +39,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainType")
     @Expose
@@ -55,7 +53,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomId")
     @Expose
@@ -63,7 +60,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -71,7 +67,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -79,7 +74,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
     @Expose
@@ -87,7 +81,6 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -95,17 +88,14 @@ public class ScanPiece extends AbstractModel {
 
     /**
     * 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PieceStartTime")
     @Expose
     private Long PieceStartTime;
 
     /**
-     * Get 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流检测时返回，音频转存地址，保留30min 
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDumpUrl() {
         return this.DumpUrl;
@@ -113,9 +103,7 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DumpUrl 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDumpUrl(String DumpUrl) {
         this.DumpUrl = DumpUrl;
@@ -138,10 +126,8 @@ public class ScanPiece extends AbstractModel {
     }
 
     /**
-     * Get 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 违规主要类型 
      * @return MainType 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMainType() {
         return this.MainType;
@@ -149,9 +135,7 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainType 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainType(String MainType) {
         this.MainType = MainType;
@@ -174,10 +158,8 @@ public class ScanPiece extends AbstractModel {
     }
 
     /**
-     * Get gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get gme实时语音房间ID，透传任务传入时的RoomId 
      * @return RoomId gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoomId() {
         return this.RoomId;
@@ -185,19 +167,15 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomId gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get gme实时语音用户ID，透传任务传入时的OpenId 
      * @return OpenId gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -205,19 +183,15 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Info 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfo() {
         return this.Info;
@@ -225,19 +199,15 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(String Info) {
         this.Info = Info;
     }
 
     /**
-     * Get 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流检测时分片在流中的偏移时间，单位毫秒 
      * @return Offset 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
         return this.Offset;
@@ -245,19 +215,15 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流检测时分片时长 
      * @return Duration 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -265,19 +231,15 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片开始检测时间 
      * @return PieceStartTime 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPieceStartTime() {
         return this.PieceStartTime;
@@ -285,9 +247,7 @@ public class ScanPiece extends AbstractModel {
 
     /**
      * Set 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PieceStartTime 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPieceStartTime(Long PieceStartTime) {
         this.PieceStartTime = PieceStartTime;

@@ -46,7 +46,6 @@ public class DdosInstanceDetail extends AbstractModel {
 
     /**
     * 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -108,10 +107,8 @@ public class DdosInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书ID 
      * @return CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -119,9 +116,7 @@ public class DdosInstanceDetail extends AbstractModel {
 
     /**
      * Set 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

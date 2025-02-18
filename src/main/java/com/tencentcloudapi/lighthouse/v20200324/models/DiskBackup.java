@@ -78,7 +78,6 @@ public class DiskBackup extends AbstractModel {
 
     /**
     * 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperation")
     @Expose
@@ -86,7 +85,6 @@ public class DiskBackup extends AbstractModel {
 
     /**
     * 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
     @Expose
@@ -94,7 +92,6 @@ public class DiskBackup extends AbstractModel {
 
     /**
     * 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationRequestId")
     @Expose
@@ -237,10 +234,8 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上一次操作 
      * @return LatestOperation 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperation() {
         return this.LatestOperation;
@@ -248,19 +243,15 @@ public class DiskBackup extends AbstractModel {
 
     /**
      * Set 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperation 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
     }
 
     /**
-     * Get 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上一次操作状态 
      * @return LatestOperationState 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
@@ -268,19 +259,15 @@ public class DiskBackup extends AbstractModel {
 
     /**
      * Set 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationState 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上一次请求ID 
      * @return LatestOperationRequestId 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationRequestId() {
         return this.LatestOperationRequestId;
@@ -288,9 +275,7 @@ public class DiskBackup extends AbstractModel {
 
     /**
      * Set 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationRequestId 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
         this.LatestOperationRequestId = LatestOperationRequestId;

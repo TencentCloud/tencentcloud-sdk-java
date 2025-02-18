@@ -52,6 +52,55 @@ public class BackupPlan extends AbstractModel {
     private String MaxBackupStartTime;
 
     /**
+    * 备份计划ID
+    */
+    @SerializedName("PlanId")
+    @Expose
+    private String PlanId;
+
+    /**
+    * 备份计划自定义名称。
+    */
+    @SerializedName("PlanName")
+    @Expose
+    private String PlanName;
+
+    /**
+    * 日志备份保留时长。
+    */
+    @SerializedName("LogBackupRetentionPeriod")
+    @Expose
+    private Long LogBackupRetentionPeriod;
+
+    /**
+    * 创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * 最近一次的修改时间。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
+    * 备份计划类型。系统默认创建的为default，自定义的为custom。
+    */
+    @SerializedName("PlanType")
+    @Expose
+    private String PlanType;
+
+    /**
+    * 备份周期类型。当前支持week、month。
+    */
+    @SerializedName("BackupPeriodType")
+    @Expose
+    private String BackupPeriodType;
+
+    /**
      * Get 备份周期 
      * @return BackupPeriod 备份周期
      */
@@ -115,6 +164,118 @@ public class BackupPlan extends AbstractModel {
         this.MaxBackupStartTime = MaxBackupStartTime;
     }
 
+    /**
+     * Get 备份计划ID 
+     * @return PlanId 备份计划ID
+     */
+    public String getPlanId() {
+        return this.PlanId;
+    }
+
+    /**
+     * Set 备份计划ID
+     * @param PlanId 备份计划ID
+     */
+    public void setPlanId(String PlanId) {
+        this.PlanId = PlanId;
+    }
+
+    /**
+     * Get 备份计划自定义名称。 
+     * @return PlanName 备份计划自定义名称。
+     */
+    public String getPlanName() {
+        return this.PlanName;
+    }
+
+    /**
+     * Set 备份计划自定义名称。
+     * @param PlanName 备份计划自定义名称。
+     */
+    public void setPlanName(String PlanName) {
+        this.PlanName = PlanName;
+    }
+
+    /**
+     * Get 日志备份保留时长。 
+     * @return LogBackupRetentionPeriod 日志备份保留时长。
+     */
+    public Long getLogBackupRetentionPeriod() {
+        return this.LogBackupRetentionPeriod;
+    }
+
+    /**
+     * Set 日志备份保留时长。
+     * @param LogBackupRetentionPeriod 日志备份保留时长。
+     */
+    public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
+        this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
+    }
+
+    /**
+     * Get 创建时间。 
+     * @return CreatedTime 创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间。
+     * @param CreatedTime 创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get 最近一次的修改时间。 
+     * @return UpdatedTime 最近一次的修改时间。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 最近一次的修改时间。
+     * @param UpdatedTime 最近一次的修改时间。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
+    /**
+     * Get 备份计划类型。系统默认创建的为default，自定义的为custom。 
+     * @return PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。
+     */
+    public String getPlanType() {
+        return this.PlanType;
+    }
+
+    /**
+     * Set 备份计划类型。系统默认创建的为default，自定义的为custom。
+     * @param PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。
+     */
+    public void setPlanType(String PlanType) {
+        this.PlanType = PlanType;
+    }
+
+    /**
+     * Get 备份周期类型。当前支持week、month。 
+     * @return BackupPeriodType 备份周期类型。当前支持week、month。
+     */
+    public String getBackupPeriodType() {
+        return this.BackupPeriodType;
+    }
+
+    /**
+     * Set 备份周期类型。当前支持week、month。
+     * @param BackupPeriodType 备份周期类型。当前支持week、month。
+     */
+    public void setBackupPeriodType(String BackupPeriodType) {
+        this.BackupPeriodType = BackupPeriodType;
+    }
+
     public BackupPlan() {
     }
 
@@ -135,6 +296,27 @@ public class BackupPlan extends AbstractModel {
         if (source.MaxBackupStartTime != null) {
             this.MaxBackupStartTime = new String(source.MaxBackupStartTime);
         }
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.PlanName != null) {
+            this.PlanName = new String(source.PlanName);
+        }
+        if (source.LogBackupRetentionPeriod != null) {
+            this.LogBackupRetentionPeriod = new Long(source.LogBackupRetentionPeriod);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.PlanType != null) {
+            this.PlanType = new String(source.PlanType);
+        }
+        if (source.BackupPeriodType != null) {
+            this.BackupPeriodType = new String(source.BackupPeriodType);
+        }
     }
 
 
@@ -146,6 +328,13 @@ public class BackupPlan extends AbstractModel {
         this.setParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
         this.setParamSimple(map, prefix + "MinBackupStartTime", this.MinBackupStartTime);
         this.setParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
+        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "PlanName", this.PlanName);
+        this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "PlanType", this.PlanType);
+        this.setParamSimple(map, prefix + "BackupPeriodType", this.BackupPeriodType);
 
     }
 }

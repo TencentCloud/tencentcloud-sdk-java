@@ -53,7 +53,6 @@ public class ClbListener extends AbstractModel {
 
     /**
     * 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Certificate")
     @Expose
@@ -61,7 +60,6 @@ public class ClbListener extends AbstractModel {
 
     /**
     * 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -69,7 +67,6 @@ public class ClbListener extends AbstractModel {
 
     /**
     * 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoMatchDomains")
     @Expose
@@ -140,10 +137,8 @@ public class ClbListener extends AbstractModel {
     }
 
     /**
-     * Get 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器绑定的证书数据 
      * @return Certificate 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Certificate getCertificate() {
         return this.Certificate;
@@ -151,19 +146,15 @@ public class ClbListener extends AbstractModel {
 
     /**
      * Set 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificate(Certificate Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器规则列表 
      * @return Rules 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClbListenerRule [] getRules() {
         return this.Rules;
@@ -171,19 +162,15 @@ public class ClbListener extends AbstractModel {
 
     /**
      * Set 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(ClbListenerRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不匹配域名列表 
      * @return NoMatchDomains 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNoMatchDomains() {
         return this.NoMatchDomains;
@@ -191,9 +178,7 @@ public class ClbListener extends AbstractModel {
 
     /**
      * Set 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoMatchDomains 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoMatchDomains(String [] NoMatchDomains) {
         this.NoMatchDomains = NoMatchDomains;

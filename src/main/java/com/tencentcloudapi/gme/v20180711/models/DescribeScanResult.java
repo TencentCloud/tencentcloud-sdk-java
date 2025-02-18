@@ -60,7 +60,6 @@ public class DescribeScanResult extends AbstractModel {
 
     /**
     * 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -68,7 +67,6 @@ public class DescribeScanResult extends AbstractModel {
 
     /**
     * 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanPiece")
     @Expose
@@ -200,10 +198,8 @@ public class DescribeScanResult extends AbstractModel {
     }
 
     /**
-     * Get 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务返回描述 
      * @return Msg 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -211,19 +207,15 @@ public class DescribeScanResult extends AbstractModel {
 
     /**
      * Set 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测结果，Code 为 0 时返回 
      * @return ScanPiece 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanPiece [] getScanPiece() {
         return this.ScanPiece;
@@ -231,9 +223,7 @@ public class DescribeScanResult extends AbstractModel {
 
     /**
      * Set 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanPiece 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanPiece(ScanPiece [] ScanPiece) {
         this.ScanPiece = ScanPiece;

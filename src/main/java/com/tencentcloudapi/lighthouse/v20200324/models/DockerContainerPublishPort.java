@@ -39,7 +39,6 @@ public class DockerContainerPublishPort extends AbstractModel {
 
     /**
     * 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -47,7 +46,6 @@ public class DockerContainerPublishPort extends AbstractModel {
 
     /**
     * 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -86,10 +84,8 @@ public class DockerContainerPublishPort extends AbstractModel {
     }
 
     /**
-     * Get 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外绑定IP，默认0.0.0.0 
      * @return Ip 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -97,19 +93,15 @@ public class DockerContainerPublishPort extends AbstractModel {
 
     /**
      * Set 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议，默认tcp，支持tcp/udp/sctp 
      * @return Protocol 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -117,9 +109,7 @@ public class DockerContainerPublishPort extends AbstractModel {
 
     /**
      * Set 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

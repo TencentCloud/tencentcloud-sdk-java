@@ -31,8 +31,8 @@ public class UploadDocRequest extends AbstractModel {
     private String KnowledgeBaseId;
 
     /**
-    * 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+    * 文件名。
+**需带文件类型后缀**
     */
     @SerializedName("FileName")
     @Expose
@@ -101,20 +101,20 @@ public class UploadDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。 
-     * @return FileName 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+     * Get 文件名。
+**需带文件类型后缀** 
+     * @return FileName 文件名。
+**需带文件类型后缀**
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
-     * @param FileName 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+     * Set 文件名。
+**需带文件类型后缀**
+     * @param FileName 文件名。
+**需带文件类型后缀**
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

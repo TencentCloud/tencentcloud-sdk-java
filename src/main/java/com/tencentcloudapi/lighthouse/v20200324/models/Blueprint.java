@@ -133,7 +133,6 @@ public class Blueprint extends AbstractModel {
 
     /**
     * CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageId")
     @Expose
@@ -155,7 +154,6 @@ public class Blueprint extends AbstractModel {
 
     /**
     * 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneIdSet")
     @Expose
@@ -429,10 +427,8 @@ public class Blueprint extends AbstractModel {
     }
 
     /**
-     * Get CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。 
      * @return ImageId CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageId() {
         return this.ImageId;
@@ -440,9 +436,7 @@ public class Blueprint extends AbstractModel {
 
     /**
      * Set CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageId CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
@@ -481,10 +475,8 @@ public class Blueprint extends AbstractModel {
     }
 
     /**
-     * Get 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像关联使用场景Id列表。 
      * @return SceneIdSet 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSceneIdSet() {
         return this.SceneIdSet;
@@ -492,9 +484,7 @@ public class Blueprint extends AbstractModel {
 
     /**
      * Set 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneIdSet 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneIdSet(String [] SceneIdSet) {
         this.SceneIdSet = SceneIdSet;

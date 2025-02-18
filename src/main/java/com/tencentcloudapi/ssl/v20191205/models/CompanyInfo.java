@@ -76,7 +76,6 @@ public class CompanyInfo extends AbstractModel {
     * 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdType")
     @Expose
@@ -85,7 +84,6 @@ OTHERS（其他）
     /**
     * 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdNumber")
     @Expose
@@ -93,7 +91,6 @@ TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -214,12 +211,10 @@ TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
     /**
      * Get 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
-OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。 
+OTHERS（其他） 
      * @return IdType 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdType() {
         return this.IdType;
@@ -229,11 +224,9 @@ OTHERS（其他）
      * Set 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdType 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdType(String IdType) {
         this.IdType = IdType;
@@ -241,11 +234,9 @@ OTHERS（其他）
 
     /**
      * Get 公司证件号码，取值范围：
-TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。 
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820 
      * @return IdNumber 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdNumber() {
         return this.IdNumber;
@@ -254,20 +245,16 @@ TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
     /**
      * Set 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdNumber 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdNumber(String IdNumber) {
         this.IdNumber = IdNumber;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getTags() {
         return this.Tags;
@@ -275,9 +262,7 @@ TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;

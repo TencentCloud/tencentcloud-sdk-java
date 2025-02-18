@@ -46,7 +46,6 @@ public class DeployedResources extends AbstractModel {
 
     /**
     * 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -54,7 +53,6 @@ public class DeployedResources extends AbstractModel {
 
     /**
     * 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
     @Expose
@@ -109,10 +107,8 @@ public class DeployedResources extends AbstractModel {
     }
 
     /**
-     * Get 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不建议使用。字段返回和Resources相同。本字段后续只返回null 
      * @return ResourceIds 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
@@ -120,19 +116,15 @@ public class DeployedResources extends AbstractModel {
 
     /**
      * Set 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceIds 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联资源ID或关联域名。 
      * @return Resources 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResources() {
         return this.Resources;
@@ -140,9 +132,7 @@ public class DeployedResources extends AbstractModel {
 
     /**
      * Set 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resources 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(String [] Resources) {
         this.Resources = Resources;

@@ -32,7 +32,6 @@ public class CdnInstanceList extends AbstractModel {
 
     /**
     * cdn域名详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -40,7 +39,6 @@ public class CdnInstanceList extends AbstractModel {
 
     /**
     * 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -63,10 +61,8 @@ public class CdnInstanceList extends AbstractModel {
     }
 
     /**
-     * Get cdn域名详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdn域名详情	 
      * @return InstanceList cdn域名详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -74,19 +70,15 @@ public class CdnInstanceList extends AbstractModel {
 
     /**
      * Set cdn域名详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList cdn域名详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(CdnInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否查询异常 
      * @return Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -94,9 +86,7 @@ public class CdnInstanceList extends AbstractModel {
 
     /**
      * Set 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

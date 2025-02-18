@@ -25,7 +25,6 @@ public class BatchDeleteFail extends AbstractModel {
 
     /**
     * 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -33,17 +32,14 @@ public class BatchDeleteFail extends AbstractModel {
 
     /**
     * 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-     * Get 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败的证书ID 
      * @return CertId 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -51,19 +47,15 @@ public class BatchDeleteFail extends AbstractModel {
 
     /**
      * Set 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败的原因 
      * @return Msg 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -71,9 +63,7 @@ public class BatchDeleteFail extends AbstractModel {
 
     /**
      * Set 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

@@ -53,7 +53,6 @@ public class InstancePrice extends AbstractModel {
 
     /**
     * 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Currency")
     @Expose
@@ -124,10 +123,8 @@ public class InstancePrice extends AbstractModel {
     }
 
     /**
-     * Get 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格货币单位。取值范围CNY:人民币。USD:美元。 
      * @return Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrency() {
         return this.Currency;
@@ -135,9 +132,7 @@ public class InstancePrice extends AbstractModel {
 
     /**
      * Set 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

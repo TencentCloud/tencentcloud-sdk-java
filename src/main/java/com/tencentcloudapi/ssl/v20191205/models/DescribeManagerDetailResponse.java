@@ -168,7 +168,9 @@ public class DescribeManagerDetailResponse extends AbstractModel {
     /**
      * Get 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期 
      * @return Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
+     * @deprecated
      */
+    @Deprecated
     public String getStatus() {
         return this.Status;
     }
@@ -176,7 +178,9 @@ public class DescribeManagerDetailResponse extends AbstractModel {
     /**
      * Set 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
      * @param Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(String Status) {
         this.Status = Status;
     }

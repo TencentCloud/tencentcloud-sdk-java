@@ -46,7 +46,6 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -54,7 +53,6 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
     * 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheTime")
     @Expose
@@ -62,7 +60,6 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
     * 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domains")
     @Expose
@@ -117,10 +114,8 @@ public class DeleteTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -128,19 +123,15 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;
     }
 
     /**
-     * Get 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前结果缓存时间 
      * @return CacheTime 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCacheTime() {
         return this.CacheTime;
@@ -148,19 +139,15 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
      * Set 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheTime 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheTime(String CacheTime) {
         this.CacheTime = CacheTime;
     }
 
     /**
-     * Get 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含的域名 
      * @return Domains 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDomains() {
         return this.Domains;
@@ -168,9 +155,7 @@ public class DeleteTaskResult extends AbstractModel {
 
     /**
      * Set 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domains 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

@@ -32,7 +32,6 @@ public class DdosInstanceList extends AbstractModel {
 
     /**
     * ddos实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -40,7 +39,6 @@ public class DdosInstanceList extends AbstractModel {
 
     /**
     * 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -63,10 +61,8 @@ public class DdosInstanceList extends AbstractModel {
     }
 
     /**
-     * Get ddos实例详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ddos实例详情	 
      * @return InstanceList ddos实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -74,19 +70,15 @@ public class DdosInstanceList extends AbstractModel {
 
     /**
      * Set ddos实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList ddos实例详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(DdosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否查询异常 
      * @return Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -94,9 +86,7 @@ public class DdosInstanceList extends AbstractModel {
 
     /**
      * Set 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

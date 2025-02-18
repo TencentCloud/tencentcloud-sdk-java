@@ -25,6 +25,7 @@ public class ContainerEnv extends AbstractModel {
 
     /**
     * 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -32,14 +33,17 @@ public class ContainerEnv extends AbstractModel {
 
     /**
     * 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 环境变量Key 
+     * Get 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Key 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -47,15 +51,19 @@ public class ContainerEnv extends AbstractModel {
 
     /**
      * Set 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 环境变量值 
+     * Get 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Value 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -63,7 +71,9 @@ public class ContainerEnv extends AbstractModel {
 
     /**
      * Set 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
