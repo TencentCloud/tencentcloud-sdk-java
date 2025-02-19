@@ -39,6 +39,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *激活Ca证书
+     * @param req ActivateCaCertificateRequest
+     * @return ActivateCaCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateCaCertificateResponse ActivateCaCertificate(ActivateCaCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateCaCertificate", ActivateCaCertificateResponse.class);
+    }
+
+    /**
      *生效设备证书
      * @param req ActivateDeviceCertificateRequest
      * @return ActivateDeviceCertificateResponse
@@ -47,6 +58,17 @@ public class MqttClient extends AbstractClient{
     public ActivateDeviceCertificateResponse ActivateDeviceCertificate(ActivateDeviceCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ActivateDeviceCertificate", ActivateDeviceCertificateResponse.class);
+    }
+
+    /**
+     *申请ca注册码
+     * @param req ApplyRegistrationCodeRequest
+     * @return ApplyRegistrationCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyRegistrationCodeResponse ApplyRegistrationCode(ApplyRegistrationCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApplyRegistrationCode", ApplyRegistrationCodeResponse.class);
     }
 
     /**
@@ -128,6 +150,17 @@ public class MqttClient extends AbstractClient{
 
     /**
      *失效Ca证书
+     * @param req DeactivateCaCertificateRequest
+     * @return DeactivateCaCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeactivateCaCertificateResponse DeactivateCaCertificate(DeactivateCaCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeactivateCaCertificate", DeactivateCaCertificateResponse.class);
+    }
+
+    /**
+     *失效Ca证书
      * @param req DeactivateDeviceCertificateRequest
      * @return DeactivateDeviceCertificateResponse
      * @throws TencentCloudSDKException
@@ -157,6 +190,17 @@ public class MqttClient extends AbstractClient{
     public DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(DeleteAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAuthorizationPolicy", DeleteAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *删除Ca证书
+     * @param req DeleteCaCertificateRequest
+     * @return DeleteCaCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCaCertificateResponse DeleteCaCertificate(DeleteCaCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCaCertificate", DeleteCaCertificateResponse.class);
     }
 
     /**
@@ -234,6 +278,28 @@ public class MqttClient extends AbstractClient{
     public DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(DescribeAuthorizationPoliciesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuthorizationPolicies", DescribeAuthorizationPoliciesResponse.class);
+    }
+
+    /**
+     *查询Ca证书详情接口
+     * @param req DescribeCaCertificateRequest
+     * @return DescribeCaCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaCertificateResponse DescribeCaCertificate(DescribeCaCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCaCertificate", DescribeCaCertificateResponse.class);
+    }
+
+    /**
+     *查询集群下的ca证书信息
+     * @param req DescribeCaCertificatesRequest
+     * @return DescribeCaCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaCertificatesResponse DescribeCaCertificates(DescribeCaCertificatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCaCertificates", DescribeCaCertificatesResponse.class);
     }
 
     /**
@@ -368,6 +434,18 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *更新MQTT集群绑定证书
+参数传空，则为删除证书
+     * @param req ModifyInstanceCertBindingRequest
+     * @return ModifyInstanceCertBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceCertBindingResponse ModifyInstanceCertBinding(ModifyInstanceCertBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceCertBinding", ModifyInstanceCertBindingResponse.class);
+    }
+
+    /**
      *修改MQTT JWKS 认证器
      * @param req ModifyJWKSAuthenticatorRequest
      * @return ModifyJWKSAuthenticatorResponse
@@ -409,6 +487,17 @@ public class MqttClient extends AbstractClient{
     public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUser", ModifyUserResponse.class);
+    }
+
+    /**
+     *注册ca证书
+     * @param req RegisterCaCertificateRequest
+     * @return RegisterCaCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterCaCertificateResponse RegisterCaCertificate(RegisterCaCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterCaCertificate", RegisterCaCertificateResponse.class);
     }
 
     /**

@@ -78,7 +78,6 @@ public class Snapshot extends AbstractModel {
     /**
     * 快照的最新操作，只有创建、回滚快照时记录。
 取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperation")
     @Expose
@@ -90,7 +89,6 @@ public class Snapshot extends AbstractModel {
 <li>SUCCESS：表示操作成功</li>
 <li>OPERATING：表示操作执行中</li>
 <li>FAILED：表示操作失败</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
     @Expose
@@ -98,7 +96,6 @@ public class Snapshot extends AbstractModel {
 
     /**
     * 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationRequestId")
     @Expose
@@ -106,7 +103,6 @@ public class Snapshot extends AbstractModel {
 
     /**
     * 快照的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -238,11 +234,9 @@ public class Snapshot extends AbstractModel {
 
     /**
      * Get 快照的最新操作，只有创建、回滚快照时记录。
-取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-注意：此字段可能返回 null，表示取不到有效值。 
+取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。 
      * @return LatestOperation 快照的最新操作，只有创建、回滚快照时记录。
 取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperation() {
         return this.LatestOperation;
@@ -251,10 +245,8 @@ public class Snapshot extends AbstractModel {
     /**
      * Set 快照的最新操作，只有创建、回滚快照时记录。
 取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperation 快照的最新操作，只有创建、回滚快照时记录。
 取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
@@ -265,14 +257,12 @@ public class Snapshot extends AbstractModel {
 取值范围：
 <li>SUCCESS：表示操作成功</li>
 <li>OPERATING：表示操作执行中</li>
-<li>FAILED：表示操作失败</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>FAILED：表示操作失败</li> 
      * @return LatestOperationState 快照的最新操作状态，只有创建、回滚快照时记录。
 取值范围：
 <li>SUCCESS：表示操作成功</li>
 <li>OPERATING：表示操作执行中</li>
 <li>FAILED：表示操作失败</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
@@ -284,23 +274,19 @@ public class Snapshot extends AbstractModel {
 <li>SUCCESS：表示操作成功</li>
 <li>OPERATING：表示操作执行中</li>
 <li>FAILED：表示操作失败</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationState 快照的最新操作状态，只有创建、回滚快照时记录。
 取值范围：
 <li>SUCCESS：表示操作成功</li>
 <li>OPERATING：表示操作执行中</li>
 <li>FAILED：表示操作失败</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。 
      * @return LatestOperationRequestId 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationRequestId() {
         return this.LatestOperationRequestId;
@@ -308,19 +294,15 @@ public class Snapshot extends AbstractModel {
 
     /**
      * Set 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationRequestId 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
         this.LatestOperationRequestId = LatestOperationRequestId;
     }
 
     /**
-     * Get 快照的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照的创建时间。 
      * @return CreatedTime 快照的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -328,9 +310,7 @@ public class Snapshot extends AbstractModel {
 
     /**
      * Set 快照的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 快照的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

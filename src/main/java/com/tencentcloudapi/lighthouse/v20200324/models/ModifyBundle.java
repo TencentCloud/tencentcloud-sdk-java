@@ -49,7 +49,6 @@ public class ModifyBundle extends AbstractModel {
 
     /**
     * 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotSupportModifyMessage")
     @Expose
@@ -116,10 +115,8 @@ public class ModifyBundle extends AbstractModel {
     }
 
     /**
-     * Get 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空 
      * @return NotSupportModifyMessage 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotSupportModifyMessage() {
         return this.NotSupportModifyMessage;
@@ -127,9 +124,7 @@ public class ModifyBundle extends AbstractModel {
 
     /**
      * Set 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotSupportModifyMessage 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotSupportModifyMessage(String NotSupportModifyMessage) {
         this.NotSupportModifyMessage = NotSupportModifyMessage;

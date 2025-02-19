@@ -32,7 +32,6 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
     * 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNumber")
     @Expose
@@ -40,7 +39,6 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
     * 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserCount")
     @Expose
@@ -48,7 +46,6 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
     * sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomNumbers")
     @Expose
@@ -71,10 +68,8 @@ public class ScaleInfomation extends AbstractModel {
     }
 
     /**
-     * Get 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间人数，用户重复进入同一个房间为1次 
      * @return UserNumber 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserNumber() {
         return this.UserNumber;
@@ -82,19 +77,15 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
      * Set 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserNumber 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNumber(Long UserNumber) {
         this.UserNumber = UserNumber;
     }
 
     /**
-     * Get 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间人次，用户每次进入房间为一次 
      * @return UserCount 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserCount() {
         return this.UserCount;
@@ -102,19 +93,15 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
      * Set 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserCount 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserCount(Long UserCount) {
         this.UserCount = UserCount;
     }
 
     /**
-     * Get sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get sdkappid下一天内的房间数 
      * @return RoomNumbers sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoomNumbers() {
         return this.RoomNumbers;
@@ -122,9 +109,7 @@ public class ScaleInfomation extends AbstractModel {
 
     /**
      * Set sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomNumbers sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomNumbers(Long RoomNumbers) {
         this.RoomNumbers = RoomNumbers;

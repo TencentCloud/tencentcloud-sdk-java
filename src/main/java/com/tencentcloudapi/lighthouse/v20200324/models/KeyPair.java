@@ -46,7 +46,6 @@ public class KeyPair extends AbstractModel {
 
     /**
     * 密钥对关联的实例 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedInstanceIds")
     @Expose
@@ -117,10 +116,8 @@ public class KeyPair extends AbstractModel {
     }
 
     /**
-     * Get 密钥对关联的实例 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥对关联的实例 ID 列表。 
      * @return AssociatedInstanceIds 密钥对关联的实例 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAssociatedInstanceIds() {
         return this.AssociatedInstanceIds;
@@ -128,9 +125,7 @@ public class KeyPair extends AbstractModel {
 
     /**
      * Set 密钥对关联的实例 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociatedInstanceIds 密钥对关联的实例 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedInstanceIds(String [] AssociatedInstanceIds) {
         this.AssociatedInstanceIds = AssociatedInstanceIds;

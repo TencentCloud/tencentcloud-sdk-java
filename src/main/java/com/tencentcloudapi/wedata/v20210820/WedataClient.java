@@ -39,6 +39,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *添加项目用户角色
+     * @param req AddProjectUserRoleRequest
+     * @return AddProjectUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddProjectUserRoleResponse AddProjectUserRole(AddProjectUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddProjectUserRole", AddProjectUserRoleResponse.class);
+    }
+
+    /**
      *批量创建任务告警规则
      * @param req BatchCreateIntegrationTaskAlarmsRequest
      * @return BatchCreateIntegrationTaskAlarmsResponse

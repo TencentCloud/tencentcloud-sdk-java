@@ -177,6 +177,28 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *下载活跃设备数量统计
+     * @param req DownloadActiveDeviceCountRequest
+     * @return DownloadActiveDeviceCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(DownloadActiveDeviceCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadActiveDeviceCount", DownloadActiveDeviceCountResponse.class);
+    }
+
+    /**
+     *活跃设备数量统计
+     * @param req GetActiveDeviceCountRequest
+     * @return GetActiveDeviceCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetActiveDeviceCountResponse GetActiveDeviceCount(GetActiveDeviceCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetActiveDeviceCount", GetActiveDeviceCountResponse.class);
+    }
+
+    /**
      *通过指定设备的ID查找设备详细信息
      * @param req GetDeviceRequest
      * @return GetDeviceResponse

@@ -50,17 +50,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *确认视频转译结果
-     * @param req ConfirmVideoTranslateJobRequest
-     * @return ConfirmVideoTranslateJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(ConfirmVideoTranslateJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ConfirmVideoTranslateJob", ConfirmVideoTranslateJobResponse.class);
-    }
-
-    /**
      *用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
      * @param req DescribeImageAnimateJobRequest
      * @return DescribeImageAnimateJobResponse
@@ -95,17 +84,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *查询视频转译任务
-     * @param req DescribeVideoTranslateJobRequest
-     * @return DescribeVideoTranslateJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(DescribeVideoTranslateJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVideoTranslateJob", DescribeVideoTranslateJobResponse.class);
-    }
-
-    /**
      *用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
      * @param req SubmitImageAnimateJobRequest
      * @return SubmitImageAnimateJobResponse
@@ -137,52 +115,6 @@ public class VclmClient extends AbstractClient{
     public SubmitVideoStylizationJobResponse SubmitVideoStylizationJob(SubmitVideoStylizationJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitVideoStylizationJob", SubmitVideoStylizationJobResponse.class);
-    }
-
-    /**
-     *### 支持音色种别列表。
-每个音色都支持：英语（美国）、阿拉伯语、德语、西班牙语、法语、印尼语、意大利语、日语、韩语、马来语、葡萄牙语、俄语、泰语、土耳其语、越南语。
-
-| 音色名称    | 性别 | 音色ID |
-| ----------- | ---- | ------ |
-| Seraphina   | 女   | 701002 |
-| Ada         | 女   | 701003 |
-| Emma        | 女   | 701007 |
-| Brian       | 男   | 701008 |
-| Amanda      | 女   | 701013 |
-| Brandon     | 男   | 701014 |
-| Christopher | 男   | 701015 |
-| Davis       | 男   | 701017 |
-| Derek       | 男   | 701018 |
-| Dustin      | 男   | 701019 |
-| Evelyn      | 女   | 701020 |
-| Lewis       | 男   | 701021 |
-| Lola        | 女   | 701022 |
-| Samuel      | 男   | 701026 |
-| Steffan     | 男   | 701028 |
-| Arabella    | 女   | 701029 |
-| Isidora     | 女   | 701030 |
-| Tristan     | 男   | 701031 |
-| Vivienne    | 女   | 701034 |
-| Lucien      | 男   | 701035 |
-| Alessio     | 男   | 701036 |
-| Giuseppe    | 男   | 701037 |
-| Isabella    | 女   | 701038 |
-| Marcello    | 男   | 701039 |
-| Masaru      | 男   | 701040 |
-| Macerio     | 男   | 701042 |
-| Thalita     | 女   | 701043 |
-| 晓晓         | 女   | 701045 |
-| 晓宇         | 女   | 701046 |
-| 云逸         | 男   | 701047 |
-| Yunfan       | 男   | 701048 |
-     * @param req SubmitVideoTranslateJobRequest
-     * @return SubmitVideoTranslateJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitVideoTranslateJobResponse SubmitVideoTranslateJob(SubmitVideoTranslateJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitVideoTranslateJob", SubmitVideoTranslateJobResponse.class);
     }
 
 }

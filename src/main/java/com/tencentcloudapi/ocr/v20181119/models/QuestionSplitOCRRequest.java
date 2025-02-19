@@ -59,6 +59,13 @@ public class QuestionSplitOCRRequest extends AbstractModel {
     private Boolean EnableImageCrop;
 
     /**
+    * 是否只返回检测框，默认false
+    */
+    @SerializedName("EnableOnlyDetectBorder")
+    @Expose
+    private Boolean EnableOnlyDetectBorder;
+
+    /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -138,6 +145,22 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         this.EnableImageCrop = EnableImageCrop;
     }
 
+    /**
+     * Get 是否只返回检测框，默认false 
+     * @return EnableOnlyDetectBorder 是否只返回检测框，默认false
+     */
+    public Boolean getEnableOnlyDetectBorder() {
+        return this.EnableOnlyDetectBorder;
+    }
+
+    /**
+     * Set 是否只返回检测框，默认false
+     * @param EnableOnlyDetectBorder 是否只返回检测框，默认false
+     */
+    public void setEnableOnlyDetectBorder(Boolean EnableOnlyDetectBorder) {
+        this.EnableOnlyDetectBorder = EnableOnlyDetectBorder;
+    }
+
     public QuestionSplitOCRRequest() {
     }
 
@@ -161,6 +184,9 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         if (source.EnableImageCrop != null) {
             this.EnableImageCrop = new Boolean(source.EnableImageCrop);
         }
+        if (source.EnableOnlyDetectBorder != null) {
+            this.EnableOnlyDetectBorder = new Boolean(source.EnableOnlyDetectBorder);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
+        this.setParamSimple(map, prefix + "EnableOnlyDetectBorder", this.EnableOnlyDetectBorder);
 
     }
 }

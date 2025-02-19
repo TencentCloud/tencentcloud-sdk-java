@@ -3,11 +3,23 @@ public enum MqttErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // FailedOperation.CertificateVerificationFailed
+     FAILEDOPERATION_CERTIFICATEVERIFICATIONFAILED("FailedOperation.CertificateVerificationFailed"),
+     
     // FailedOperation.InstanceNotReady
      FAILEDOPERATION_INSTANCENOTREADY("FailedOperation.InstanceNotReady"),
      
+    // FailedOperation.InstanceRegistrationCodeEmpty
+     FAILEDOPERATION_INSTANCEREGISTRATIONCODEEMPTY("FailedOperation.InstanceRegistrationCodeEmpty"),
+     
     // FailedOperation.PublicKeyVerifyFailed
      FAILEDOPERATION_PUBLICKEYVERIFYFAILED("FailedOperation.PublicKeyVerifyFailed"),
+     
+    // FailedOperation.RegistrationCodeVerifyFailed
+     FAILEDOPERATION_REGISTRATIONCODEVERIFYFAILED("FailedOperation.RegistrationCodeVerifyFailed"),
+     
+    // RelatedDeviceCertificateExists
+     FAILEDOPERATION_RELATEDDEVICECERTIFICATEEXISTS("FailedOperation.RelatedDeviceCertificateExists"),
      
     // LimitExceeded.TopicNum
      LIMITEXCEEDED_TOPICNUM("LimitExceeded.TopicNum"),
