@@ -25,7 +25,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionName")
     @Expose
@@ -33,7 +32,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerHost")
     @Expose
@@ -41,7 +39,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -49,7 +46,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -57,7 +53,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSL")
     @Expose
@@ -65,7 +60,6 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -73,17 +67,14 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
     * 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Channels")
     @Expose
     private Long Channels;
 
     /**
-     * Get 连接名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接名称 
      * @return ConnectionName 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectionName() {
         return this.ConnectionName;
@@ -91,19 +82,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionName 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionName(String ConnectionName) {
         this.ConnectionName = ConnectionName;
     }
 
     /**
-     * Get 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端ip 
      * @return PeerHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeerHost() {
         return this.PeerHost;
@@ -111,19 +98,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerHost(String PeerHost) {
         this.PeerHost = PeerHost;
     }
 
     /**
-     * Get 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed 
      * @return State 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -131,19 +114,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接使用用户 
      * @return User 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -151,19 +130,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启ssl 
      * @return SSL 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSSL() {
         return this.SSL;
@@ -171,19 +146,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SSL 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSL(Boolean SSL) {
         this.SSL = SSL;
     }
 
     /**
-     * Get 连接协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接协议 
      * @return Protocol 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -191,19 +162,15 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接下的channel数 
      * @return Channels 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannels() {
         return this.Channels;
@@ -211,9 +178,7 @@ public class RabbitMQConnection extends AbstractModel {
 
     /**
      * Set 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Channels 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannels(Long Channels) {
         this.Channels = Channels;

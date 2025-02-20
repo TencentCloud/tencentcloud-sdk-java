@@ -25,7 +25,6 @@ public class MessageItem extends AbstractModel {
 
     /**
     * 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageType")
     @Expose
@@ -33,7 +32,6 @@ public class MessageItem extends AbstractModel {
 
     /**
     * 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextMessage")
     @Expose
@@ -41,7 +39,6 @@ public class MessageItem extends AbstractModel {
 
     /**
     * 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageMessage")
     @Expose
@@ -49,17 +46,14 @@ public class MessageItem extends AbstractModel {
 
     /**
     * 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomMessage")
     @Expose
     private CustomMsgContent CustomMessage;
 
     /**
-     * Get 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息类型。0表示文本消息，1表示图片消息 
      * @return MessageType 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageType() {
         return this.MessageType;
@@ -67,19 +61,15 @@ public class MessageItem extends AbstractModel {
 
     /**
      * Set 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageType 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageType(Long MessageType) {
         this.MessageType = MessageType;
     }
 
     /**
-     * Get 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本消息内容。message type为0时有效。 
      * @return TextMessage 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextMessage() {
         return this.TextMessage;
@@ -87,19 +77,15 @@ public class MessageItem extends AbstractModel {
 
     /**
      * Set 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextMessage 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextMessage(String TextMessage) {
         this.TextMessage = TextMessage;
     }
 
     /**
-     * Get 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 图片消息URL。 message type为1时有效。 
      * @return ImageMessage 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageMessage() {
         return this.ImageMessage;
@@ -107,19 +93,15 @@ public class MessageItem extends AbstractModel {
 
     /**
      * Set 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageMessage 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageMessage(String ImageMessage) {
         this.ImageMessage = ImageMessage;
     }
 
     /**
-     * Get 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义消息内容。message type为2时有效。 
      * @return CustomMessage 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomMsgContent getCustomMessage() {
         return this.CustomMessage;
@@ -127,9 +109,7 @@ public class MessageItem extends AbstractModel {
 
     /**
      * Set 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomMessage 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomMessage(CustomMsgContent CustomMessage) {
         this.CustomMessage = CustomMessage;

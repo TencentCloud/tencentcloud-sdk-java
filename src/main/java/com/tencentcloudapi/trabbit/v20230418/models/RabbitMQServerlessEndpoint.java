@@ -25,7 +25,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * vpc id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * subnet id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -41,7 +39,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcEndpoint")
     @Expose
@@ -49,7 +46,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcDataStreamEndpointStatus")
     @Expose
@@ -57,7 +53,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -65,7 +60,6 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessStrategy")
     @Expose
@@ -73,17 +67,14 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
     * 带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-     * Get vpc id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc id 
      * @return VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -91,19 +82,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get subnet id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get subnet id 
      * @return SubnetId subnet id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -111,19 +98,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set subnet id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId subnet id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 接入地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入地址 
      * @return VpcEndpoint 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcEndpoint() {
         return this.VpcEndpoint;
@@ -131,19 +114,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcEndpoint 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcEndpoint(String VpcEndpoint) {
         this.VpcEndpoint = VpcEndpoint;
     }
 
     /**
-     * Get 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入地址状态 
      * @return VpcDataStreamEndpointStatus 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcDataStreamEndpointStatus() {
         return this.VpcDataStreamEndpointStatus;
@@ -151,19 +130,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcDataStreamEndpointStatus 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcDataStreamEndpointStatus(String VpcDataStreamEndpointStatus) {
         this.VpcDataStreamEndpointStatus = VpcDataStreamEndpointStatus;
     }
 
     /**
-     * Get 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是公网 
      * @return PublicNetwork 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublicNetwork() {
         return this.PublicNetwork;
@@ -171,19 +146,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicNetwork 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(Boolean PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get 访问策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问策略 
      * @return AccessStrategy 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessStrategy() {
         return this.AccessStrategy;
@@ -191,19 +162,15 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessStrategy 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessStrategy(String AccessStrategy) {
         this.AccessStrategy = AccessStrategy;
     }
 
     /**
-     * Get 带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽 
      * @return Bandwidth 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
@@ -211,9 +178,7 @@ public class RabbitMQServerlessEndpoint extends AbstractModel {
 
     /**
      * Set 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bandwidth 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

@@ -25,7 +25,6 @@ public class CreateRabbitMQServerlessExchangeResponse extends AbstractModel {
 
     /**
     * exchange 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExchangeName")
     @Expose
@@ -39,10 +38,8 @@ public class CreateRabbitMQServerlessExchangeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get exchange 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get exchange 名称 
      * @return ExchangeName exchange 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExchangeName() {
         return this.ExchangeName;
@@ -50,9 +47,7 @@ public class CreateRabbitMQServerlessExchangeResponse extends AbstractModel {
 
     /**
      * Set exchange 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExchangeName exchange 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExchangeName(String ExchangeName) {
         this.ExchangeName = ExchangeName;

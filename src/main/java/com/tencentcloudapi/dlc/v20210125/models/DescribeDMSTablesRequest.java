@@ -45,7 +45,7 @@ public class DescribeDMSTablesRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 数据目录
+    * catalog类型
     */
     @SerializedName("Catalog")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeDMSTablesRequest extends AbstractModel {
     private String Keyword;
 
     /**
-    * 查询模式
+    * 查询模式，只支持填*
     */
     @SerializedName("Pattern")
     @Expose
@@ -115,6 +115,13 @@ public class DescribeDMSTablesRequest extends AbstractModel {
     private Boolean Asc;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库名称 
      * @return DbName 数据库名称
      */
@@ -163,16 +170,16 @@ public class DescribeDMSTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据目录 
-     * @return Catalog 数据目录
+     * Get catalog类型 
+     * @return Catalog catalog类型
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set 数据目录
-     * @param Catalog 数据目录
+     * Set catalog类型
+     * @param Catalog catalog类型
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
@@ -195,16 +202,16 @@ public class DescribeDMSTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询模式 
-     * @return Pattern 查询模式
+     * Get 查询模式，只支持填* 
+     * @return Pattern 查询模式，只支持填*
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set 查询模式
-     * @param Pattern 查询模式
+     * Set 查询模式，只支持填*
+     * @param Pattern 查询模式，只支持填*
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
@@ -322,6 +329,22 @@ public class DescribeDMSTablesRequest extends AbstractModel {
         this.Asc = Asc;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeDMSTablesRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeDMSTablesRequest extends AbstractModel {
         if (source.Asc != null) {
             this.Asc = new Boolean(source.Asc);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeDMSTablesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

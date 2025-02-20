@@ -25,7 +25,6 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
     * 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
     * vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -41,7 +39,6 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
     * 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindingId")
     @Expose
@@ -55,10 +52,8 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列名称 
      * @return InstanceId 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -66,19 +61,15 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
      * Set 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vhost参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vhost参数 
      * @return VirtualHost vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -86,19 +77,15 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
      * Set vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由关系Id 
      * @return BindingId 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindingId() {
         return this.BindingId;
@@ -106,9 +93,7 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
      * Set 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindingId 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindingId(Long BindingId) {
         this.BindingId = BindingId;

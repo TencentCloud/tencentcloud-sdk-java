@@ -117,6 +117,21 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个美照生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req QueryGlamPicJobRequest
+     * @return QueryGlamPicJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryGlamPicJobResponse QueryGlamPicJob(QueryGlamPicJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryGlamPicJob", QueryGlamPicJobResponse.class);
+    }
+
+    /**
      *表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
 - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
 - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -205,6 +220,21 @@ public class AiartClient extends AbstractClient{
     public SubmitDrawPortraitJobResponse SubmitDrawPortraitJob(SubmitDrawPortraitJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitDrawPortraitJob", SubmitDrawPortraitJobResponse.class);
+    }
+
+    /**
+     *AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个美照生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req SubmitGlamPicJobRequest
+     * @return SubmitGlamPicJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitGlamPicJobResponse SubmitGlamPicJob(SubmitGlamPicJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitGlamPicJob", SubmitGlamPicJobResponse.class);
     }
 
     /**

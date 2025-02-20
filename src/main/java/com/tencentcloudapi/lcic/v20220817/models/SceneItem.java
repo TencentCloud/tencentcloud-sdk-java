@@ -32,7 +32,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * logo地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogoUrl")
     @Expose
@@ -40,7 +39,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HomeUrl")
     @Expose
@@ -48,7 +46,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JSUrl")
     @Expose
@@ -56,7 +53,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CSSUrl")
     @Expose
@@ -79,10 +75,8 @@ public class SceneItem extends AbstractModel {
     }
 
     /**
-     * Get logo地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get logo地址 
      * @return LogoUrl logo地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogoUrl() {
         return this.LogoUrl;
@@ -90,19 +84,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set logo地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogoUrl logo地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogoUrl(String LogoUrl) {
         this.LogoUrl = LogoUrl;
     }
 
     /**
-     * Get 主页地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主页地址 
      * @return HomeUrl 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHomeUrl() {
         return this.HomeUrl;
@@ -110,19 +100,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HomeUrl 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHomeUrl(String HomeUrl) {
         this.HomeUrl = HomeUrl;
     }
 
     /**
-     * Get 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义的js 
      * @return JSUrl 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJSUrl() {
         return this.JSUrl;
@@ -130,19 +116,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JSUrl 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJSUrl(String JSUrl) {
         this.JSUrl = JSUrl;
     }
 
     /**
-     * Get 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义的css 
      * @return CSSUrl 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCSSUrl() {
         return this.CSSUrl;
@@ -150,9 +132,7 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CSSUrl 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCSSUrl(String CSSUrl) {
         this.CSSUrl = CSSUrl;

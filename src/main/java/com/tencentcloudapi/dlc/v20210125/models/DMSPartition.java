@@ -115,6 +115,13 @@ public class DMSPartition extends AbstractModel {
     private DMSSds Sds;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库名称 
      * @return DatabaseName 数据库名称
      */
@@ -322,6 +329,22 @@ public class DMSPartition extends AbstractModel {
         this.Sds = Sds;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DMSPartition() {
     }
 
@@ -375,6 +398,9 @@ public class DMSPartition extends AbstractModel {
         if (source.Sds != null) {
             this.Sds = new DMSSds(source.Sds);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class DMSPartition extends AbstractModel {
         this.setParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
         this.setParamArrayObj(map, prefix + "Params.", this.Params);
         this.setParamObj(map, prefix + "Sds.", this.Sds);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

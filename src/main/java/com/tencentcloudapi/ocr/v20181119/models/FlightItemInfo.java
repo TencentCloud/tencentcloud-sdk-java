@@ -87,6 +87,20 @@ public class FlightItemInfo extends AbstractModel {
     private String Allow;
 
     /**
+    * 客票生效日期
+    */
+    @SerializedName("DateStart")
+    @Expose
+    private String DateStart;
+
+    /**
+    * 有效截止日期
+    */
+    @SerializedName("DateEnd")
+    @Expose
+    private String DateEnd;
+
+    /**
      * Get 出发站 
      * @return TerminalGetOn 出发站
      */
@@ -230,6 +244,38 @@ public class FlightItemInfo extends AbstractModel {
         this.Allow = Allow;
     }
 
+    /**
+     * Get 客票生效日期 
+     * @return DateStart 客票生效日期
+     */
+    public String getDateStart() {
+        return this.DateStart;
+    }
+
+    /**
+     * Set 客票生效日期
+     * @param DateStart 客票生效日期
+     */
+    public void setDateStart(String DateStart) {
+        this.DateStart = DateStart;
+    }
+
+    /**
+     * Get 有效截止日期 
+     * @return DateEnd 有效截止日期
+     */
+    public String getDateEnd() {
+        return this.DateEnd;
+    }
+
+    /**
+     * Set 有效截止日期
+     * @param DateEnd 有效截止日期
+     */
+    public void setDateEnd(String DateEnd) {
+        this.DateEnd = DateEnd;
+    }
+
     public FlightItemInfo() {
     }
 
@@ -265,6 +311,12 @@ public class FlightItemInfo extends AbstractModel {
         if (source.Allow != null) {
             this.Allow = new String(source.Allow);
         }
+        if (source.DateStart != null) {
+            this.DateStart = new String(source.DateStart);
+        }
+        if (source.DateEnd != null) {
+            this.DateEnd = new String(source.DateEnd);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class FlightItemInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeGetOn", this.TimeGetOn);
         this.setParamSimple(map, prefix + "FareBasis", this.FareBasis);
         this.setParamSimple(map, prefix + "Allow", this.Allow);
+        this.setParamSimple(map, prefix + "DateStart", this.DateStart);
+        this.setParamSimple(map, prefix + "DateEnd", this.DateEnd);
 
     }
 }

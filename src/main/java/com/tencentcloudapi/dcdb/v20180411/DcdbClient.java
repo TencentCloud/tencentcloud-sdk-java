@@ -72,6 +72,17 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *取消 Online DDL 任务
+     * @param req CancelOnlineDDLJobRequest
+     * @return CancelOnlineDDLJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelOnlineDDLJobResponse CancelOnlineDDLJob(CancelOnlineDDLJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelOnlineDDLJob", CancelOnlineDDLJobResponse.class);
+    }
+
+    /**
      *本接口（CloneAccount）用于克隆实例账户。
      * @param req CloneAccountRequest
      * @return CloneAccountResponse
@@ -479,6 +490,17 @@ public class DcdbClient extends AbstractClient{
     public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogFileRetentionPeriod", DescribeLogFileRetentionPeriodResponse.class);
+    }
+
+    /**
+     *查询Online DDL 任务详情
+     * @param req DescribeOnlineDDLJobRequest
+     * @return DescribeOnlineDDLJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnlineDDLJobResponse DescribeOnlineDDLJob(DescribeOnlineDDLJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOnlineDDLJob", DescribeOnlineDDLJobResponse.class);
     }
 
     /**

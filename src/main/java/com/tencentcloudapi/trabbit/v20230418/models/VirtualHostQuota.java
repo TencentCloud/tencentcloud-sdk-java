@@ -25,7 +25,6 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
     * 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxVirtualHost")
     @Expose
@@ -33,17 +32,14 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
     * 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedVirtualHost")
     @Expose
     private Long UsedVirtualHost;
 
     /**
-     * Get 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大虚拟主机数 
      * @return MaxVirtualHost 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxVirtualHost() {
         return this.MaxVirtualHost;
@@ -51,19 +47,15 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
      * Set 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxVirtualHost 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxVirtualHost(Long MaxVirtualHost) {
         this.MaxVirtualHost = MaxVirtualHost;
     }
 
     /**
-     * Get 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经使用的虚拟主机数 
      * @return UsedVirtualHost 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedVirtualHost() {
         return this.UsedVirtualHost;
@@ -71,9 +63,7 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
      * Set 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedVirtualHost 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedVirtualHost(Long UsedVirtualHost) {
         this.UsedVirtualHost = UsedVirtualHost;

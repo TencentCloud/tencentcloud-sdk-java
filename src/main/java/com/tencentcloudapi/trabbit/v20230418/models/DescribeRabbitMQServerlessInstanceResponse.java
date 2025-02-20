@@ -60,7 +60,6 @@ public class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel {
 
     /**
     * 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterNetInfo")
     @Expose
@@ -68,7 +67,6 @@ public class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel {
 
     /**
     * 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterWhiteListInfo")
     @Expose
@@ -169,10 +167,8 @@ public class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络信息 
      * @return ClusterNetInfo 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQServerlessAccessInfo getClusterNetInfo() {
         return this.ClusterNetInfo;
@@ -180,19 +176,15 @@ public class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel {
 
     /**
      * Set 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterNetInfo 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterNetInfo(RabbitMQServerlessAccessInfo ClusterNetInfo) {
         this.ClusterNetInfo = ClusterNetInfo;
     }
 
     /**
-     * Get 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网白名单信息 
      * @return ClusterWhiteListInfo 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQServerlessWhiteListInfo getClusterWhiteListInfo() {
         return this.ClusterWhiteListInfo;
@@ -200,9 +192,7 @@ public class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel {
 
     /**
      * Set 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterWhiteListInfo 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterWhiteListInfo(RabbitMQServerlessWhiteListInfo ClusterWhiteListInfo) {
         this.ClusterWhiteListInfo = ClusterWhiteListInfo;

@@ -25,7 +25,6 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
     * 水印图片的url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -33,7 +32,6 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
     * 水印宽。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -41,7 +39,6 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
     * 水印高。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -49,7 +46,6 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
     * 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocationX")
     @Expose
@@ -57,17 +53,14 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
     * 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocationY")
     @Expose
     private Float LocationY;
 
     /**
-     * Get 水印图片的url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印图片的url 
      * @return Url 水印图片的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -75,19 +68,15 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
      * Set 水印图片的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 水印图片的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 水印宽。为比例值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印宽。为比例值 
      * @return Width 水印宽。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getWidth() {
         return this.Width;
@@ -95,19 +84,15 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
      * Set 水印宽。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 水印宽。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Float Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 水印高。为比例值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印高。为比例值 
      * @return Height 水印高。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getHeight() {
         return this.Height;
@@ -115,19 +100,15 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
      * Set 水印高。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 水印高。为比例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Float Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。 
      * @return LocationX 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLocationX() {
         return this.LocationX;
@@ -135,19 +116,15 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
      * Set 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocationX 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocationX(Float LocationX) {
         this.LocationX = LocationX;
     }
 
     /**
-     * Get 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。 
      * @return LocationY 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLocationY() {
         return this.LocationY;
@@ -155,9 +132,7 @@ public class WatermarkConfig extends AbstractModel {
 
     /**
      * Set 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocationY 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocationY(Float LocationY) {
         this.LocationY = LocationY;

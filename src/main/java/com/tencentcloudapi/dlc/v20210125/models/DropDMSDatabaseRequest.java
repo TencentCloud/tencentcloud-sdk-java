@@ -45,6 +45,13 @@ public class DropDMSDatabaseRequest extends AbstractModel {
     private Boolean Cascade;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库名称 
      * @return Name 数据库名称
      */
@@ -92,6 +99,22 @@ public class DropDMSDatabaseRequest extends AbstractModel {
         this.Cascade = Cascade;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DropDMSDatabaseRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DropDMSDatabaseRequest extends AbstractModel {
         if (source.Cascade != null) {
             this.Cascade = new Boolean(source.Cascade);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DropDMSDatabaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DeleteData", this.DeleteData);
         this.setParamSimple(map, prefix + "Cascade", this.Cascade);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

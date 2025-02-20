@@ -25,7 +25,6 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
     * 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomId")
     @Expose
@@ -33,7 +32,6 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -41,7 +39,6 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
     * 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
     * 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -57,17 +53,14 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
     * 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScoreMsg")
     @Expose
     private String ScoreMsg;
 
     /**
-     * Get 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课堂iD 
      * @return RoomId 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoomId() {
         return this.RoomId;
@@ -75,19 +68,15 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
      * Set 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomId 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -95,19 +84,15 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 评分时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评分时间 
      * @return CreateTime 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -115,19 +100,15 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
      * Set 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课堂评分 
      * @return Score 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -135,19 +116,15 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
      * Set 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课堂评价 
      * @return ScoreMsg 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScoreMsg() {
         return this.ScoreMsg;
@@ -155,9 +132,7 @@ public class ClassScoreItem extends AbstractModel {
 
     /**
      * Set 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScoreMsg 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScoreMsg(String ScoreMsg) {
         this.ScoreMsg = ScoreMsg;

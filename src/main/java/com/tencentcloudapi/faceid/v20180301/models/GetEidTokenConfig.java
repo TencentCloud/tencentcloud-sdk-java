@@ -70,7 +70,7 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
     * 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
     */
     @SerializedName("IntentionQuestions")
     @Expose
@@ -80,6 +80,7 @@ public class GetEidTokenConfig extends AbstractModel {
     * 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
     */
     @SerializedName("IntentionActions")
     @Expose
@@ -258,9 +259,9 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
      * Get 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。 
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。 
      * @return IntentionQuestions 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public IntentionQuestion [] getIntentionQuestions() {
         return this.IntentionQuestions;
@@ -268,9 +269,9 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
      * Set 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      * @param IntentionQuestions 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
         this.IntentionQuestions = IntentionQuestions;
@@ -279,10 +280,12 @@ public class GetEidTokenConfig extends AbstractModel {
     /**
      * Get 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 默认为空，最长可接受150的字符串长度。 
+- 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。 
      * @return IntentionActions 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public IntentionActionConfig [] getIntentionActions() {
         return this.IntentionActions;
@@ -292,9 +295,11 @@ public class GetEidTokenConfig extends AbstractModel {
      * Set 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      * @param IntentionActions 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public void setIntentionActions(IntentionActionConfig [] IntentionActions) {
         this.IntentionActions = IntentionActions;

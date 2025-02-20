@@ -160,7 +160,6 @@ public class MemberRecord extends AbstractModel {
 
     /**
     * 用户的上台状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stage")
     @Expose
@@ -168,7 +167,6 @@ public class MemberRecord extends AbstractModel {
 
     /**
     * 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentState")
     @Expose
@@ -487,10 +485,8 @@ public class MemberRecord extends AbstractModel {
     }
 
     /**
-     * Get 用户的上台状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户的上台状态 
      * @return Stage 用户的上台状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStage() {
         return this.Stage;
@@ -498,19 +494,15 @@ public class MemberRecord extends AbstractModel {
 
     /**
      * Set 用户的上台状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stage 用户的上台状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStage(Long Stage) {
         this.Stage = Stage;
     }
 
     /**
-     * Get 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线 
      * @return CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentState() {
         return this.CurrentState;
@@ -518,9 +510,7 @@ public class MemberRecord extends AbstractModel {
 
     /**
      * Set 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentState(Long CurrentState) {
         this.CurrentState = CurrentState;

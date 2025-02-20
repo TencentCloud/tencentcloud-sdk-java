@@ -52,6 +52,13 @@ public class AlterDMSDatabaseRequest extends AbstractModel {
     private Asset Asset;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 当前名称 
      * @return CurrentName 当前名称
      */
@@ -115,6 +122,22 @@ public class AlterDMSDatabaseRequest extends AbstractModel {
         this.Asset = Asset;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public AlterDMSDatabaseRequest() {
     }
 
@@ -135,6 +158,9 @@ public class AlterDMSDatabaseRequest extends AbstractModel {
         if (source.Asset != null) {
             this.Asset = new Asset(source.Asset);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class AlterDMSDatabaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamObj(map, prefix + "Asset.", this.Asset);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
 
     /**
     * 队列列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列列表信息 
      * @return QueueInfoList 队列列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQQueueListInfo [] getQueueInfoList() {
         return this.QueueInfoList;
@@ -58,19 +54,15 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
 
     /**
      * Set 队列列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueInfoList 队列列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueInfoList(RabbitMQQueueListInfo [] QueueInfoList) {
         this.QueueInfoList = QueueInfoList;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

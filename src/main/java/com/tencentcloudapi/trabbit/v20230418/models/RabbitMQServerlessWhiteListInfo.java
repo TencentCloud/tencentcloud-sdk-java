@@ -25,7 +25,6 @@ public class RabbitMQServerlessWhiteListInfo extends AbstractModel {
 
     /**
     * 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataStreamWhiteList")
     @Expose
@@ -33,17 +32,14 @@ public class RabbitMQServerlessWhiteListInfo extends AbstractModel {
 
     /**
     * 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataStreamWhiteListStatus")
     @Expose
     private String PublicDataStreamWhiteListStatus;
 
     /**
-     * Get 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网数据流白名单 
      * @return PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDataStreamWhiteList() {
         return this.PublicDataStreamWhiteList;
@@ -51,19 +47,15 @@ public class RabbitMQServerlessWhiteListInfo extends AbstractModel {
 
     /**
      * Set 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataStreamWhiteList(String PublicDataStreamWhiteList) {
         this.PublicDataStreamWhiteList = PublicDataStreamWhiteList;
     }
 
     /**
-     * Get 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网数据流白名单状态 
      * @return PublicDataStreamWhiteListStatus 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDataStreamWhiteListStatus() {
         return this.PublicDataStreamWhiteListStatus;
@@ -71,9 +63,7 @@ public class RabbitMQServerlessWhiteListInfo extends AbstractModel {
 
     /**
      * Set 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDataStreamWhiteListStatus 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataStreamWhiteListStatus(String PublicDataStreamWhiteListStatus) {
         this.PublicDataStreamWhiteListStatus = PublicDataStreamWhiteListStatus;

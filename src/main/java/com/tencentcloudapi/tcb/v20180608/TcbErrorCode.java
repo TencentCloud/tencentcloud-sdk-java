@@ -78,6 +78,9 @@ public enum TcbErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 免费套餐拒绝此操作
+     OPERATIONDENIED_FREEPACKAGEDENIED("OperationDenied.FreePackageDenied"),
+     
     // 操作失败：资源被冻结。
      OPERATIONDENIED_RESOURCEFROZEN("OperationDenied.ResourceFrozen"),
      

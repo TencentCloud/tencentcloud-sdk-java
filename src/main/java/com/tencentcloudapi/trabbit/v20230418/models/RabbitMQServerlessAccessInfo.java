@@ -25,7 +25,6 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
 
     /**
     * 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccessEndpoint")
     @Expose
@@ -33,17 +32,14 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
 
     /**
     * 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataStreamStatus")
     @Expose
     private String PublicDataStreamStatus;
 
     /**
-     * Get 公网域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网域名 
      * @return PublicAccessEndpoint 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicAccessEndpoint() {
         return this.PublicAccessEndpoint;
@@ -51,19 +47,15 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
 
     /**
      * Set 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicAccessEndpoint 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
         this.PublicAccessEndpoint = PublicAccessEndpoint;
     }
 
     /**
-     * Get 公网状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网状态 
      * @return PublicDataStreamStatus 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDataStreamStatus() {
         return this.PublicDataStreamStatus;
@@ -71,9 +63,7 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
 
     /**
      * Set 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDataStreamStatus 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataStreamStatus(String PublicDataStreamStatus) {
         this.PublicDataStreamStatus = PublicDataStreamStatus;

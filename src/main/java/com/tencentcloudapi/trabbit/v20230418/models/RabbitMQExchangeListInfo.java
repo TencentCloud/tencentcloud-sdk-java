@@ -32,7 +32,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -47,7 +46,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -55,7 +53,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExchangeCreator")
     @Expose
@@ -63,7 +60,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTimeStamp")
     @Expose
@@ -71,7 +67,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModTimeStamp")
     @Expose
@@ -79,7 +74,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageRateIn")
     @Expose
@@ -87,7 +81,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageRateOut")
     @Expose
@@ -95,7 +88,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Durable")
     @Expose
@@ -103,7 +95,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoDelete")
     @Expose
@@ -111,7 +102,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Internal")
     @Expose
@@ -119,7 +109,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -127,7 +116,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -135,7 +123,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arguments")
     @Expose
@@ -143,7 +130,6 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
     * 未调度的延时消息数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessagesDelayed")
     @Expose
@@ -166,10 +152,8 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
     }
 
     /**
-     * Get 备注说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注说明 
      * @return Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -177,9 +161,7 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -202,10 +184,8 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
     }
 
     /**
-     * Get VHost参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VHost参数 
      * @return VirtualHost VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -213,19 +193,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get exchange 创建者, "system":"系统创建", "user":"用户创建" 
      * @return ExchangeCreator exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExchangeCreator() {
         return this.ExchangeCreator;
@@ -233,19 +209,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExchangeCreator exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExchangeCreator(String ExchangeCreator) {
         this.ExchangeCreator = ExchangeCreator;
     }
 
     /**
-     * Get exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get exchange 创建时间 
      * @return CreateTimeStamp exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTimeStamp() {
         return this.CreateTimeStamp;
@@ -253,19 +225,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTimeStamp exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTimeStamp(String CreateTimeStamp) {
         this.CreateTimeStamp = CreateTimeStamp;
     }
 
     /**
-     * Get exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get exchange 修改时间 
      * @return ModTimeStamp exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModTimeStamp() {
         return this.ModTimeStamp;
@@ -273,19 +241,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModTimeStamp exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModTimeStamp(String ModTimeStamp) {
         this.ModTimeStamp = ModTimeStamp;
     }
 
     /**
-     * Get 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入消息速率 
      * @return MessageRateIn 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMessageRateIn() {
         return this.MessageRateIn;
@@ -293,19 +257,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageRateIn 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageRateIn(Float MessageRateIn) {
         this.MessageRateIn = MessageRateIn;
     }
 
     /**
-     * Get 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出消息速率 
      * @return MessageRateOut 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMessageRateOut() {
         return this.MessageRateOut;
@@ -313,19 +273,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageRateOut 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageRateOut(Float MessageRateOut) {
         this.MessageRateOut = MessageRateOut;
     }
 
     /**
-     * Get 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为持久化交换机，true 为持久化，false 为非持久化 
      * @return Durable 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDurable() {
         return this.Durable;
@@ -333,19 +289,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Durable 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurable(Boolean Durable) {
         this.Durable = Durable;
     }
 
     /**
-     * Get 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为自动删除交换机，true 为自动删除，false 为非自动删除 
      * @return AutoDelete 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoDelete() {
         return this.AutoDelete;
@@ -353,19 +305,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoDelete 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoDelete(Boolean AutoDelete) {
         this.AutoDelete = AutoDelete;
     }
 
     /**
-     * Get 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为内部交换机，true 为内部交换机 
      * @return Internal 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInternal() {
         return this.Internal;
@@ -373,19 +321,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Internal 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternal(Boolean Internal) {
         this.Internal = Internal;
     }
 
     /**
-     * Get 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交换机所属实例 ID 
      * @return InstanceId 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -393,19 +337,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效的策略名称 
      * @return Policy 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicy() {
         return this.Policy;
@@ -413,19 +353,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数 key-value 对象 
      * @return Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArguments() {
         return this.Arguments;
@@ -433,19 +369,15 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArguments(String Arguments) {
         this.Arguments = Arguments;
     }
 
     /**
-     * Get 未调度的延时消息数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未调度的延时消息数量 
      * @return MessagesDelayed 未调度的延时消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessagesDelayed() {
         return this.MessagesDelayed;
@@ -453,9 +385,7 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
      * Set 未调度的延时消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessagesDelayed 未调度的延时消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessagesDelayed(Long MessagesDelayed) {
         this.MessagesDelayed = MessagesDelayed;

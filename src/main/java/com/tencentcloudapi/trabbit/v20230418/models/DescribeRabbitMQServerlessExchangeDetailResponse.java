@@ -32,7 +32,6 @@ public class DescribeRabbitMQServerlessExchangeDetailResponse extends AbstractMo
 
     /**
     * 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -118,10 +117,8 @@ public class DescribeRabbitMQServerlessExchangeDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 备注说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注说明 
      * @return Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -129,9 +126,7 @@ public class DescribeRabbitMQServerlessExchangeDetailResponse extends AbstractMo
 
     /**
      * Set 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

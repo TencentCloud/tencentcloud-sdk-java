@@ -25,7 +25,6 @@ public class DescribeRabbitMQServerlessExchangesResponse extends AbstractModel {
 
     /**
     * 交换机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExchangeInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQServerlessExchangesResponse extends AbstractModel {
 
     /**
     * 交换机总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRabbitMQServerlessExchangesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 交换机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交换机列表 
      * @return ExchangeInfoList 交换机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQExchangeListInfo [] getExchangeInfoList() {
         return this.ExchangeInfoList;
@@ -58,19 +54,15 @@ public class DescribeRabbitMQServerlessExchangesResponse extends AbstractModel {
 
     /**
      * Set 交换机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExchangeInfoList 交换机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExchangeInfoList(RabbitMQExchangeListInfo [] ExchangeInfoList) {
         this.ExchangeInfoList = ExchangeInfoList;
     }
 
     /**
-     * Get 交换机总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交换机总数 
      * @return TotalCount 交换机总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRabbitMQServerlessExchangesResponse extends AbstractModel {
 
     /**
      * Set 交换机总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 交换机总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

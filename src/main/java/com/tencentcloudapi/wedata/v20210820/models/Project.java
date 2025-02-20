@@ -135,6 +135,14 @@ public class Project extends AbstractModel {
     private String Model;
 
     /**
+    * 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecondModuleList")
+    @Expose
+    private String [] SecondModuleList;
+
+    /**
      * Get 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TenantId 项目的所在租户ID
@@ -410,6 +418,26 @@ public class Project extends AbstractModel {
         this.Model = Model;
     }
 
+    /**
+     * Get 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecondModuleList 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecondModuleList() {
+        return this.SecondModuleList;
+    }
+
+    /**
+     * Set 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecondModuleList 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecondModuleList(String [] SecondModuleList) {
+        this.SecondModuleList = SecondModuleList;
+    }
+
     public Project() {
     }
 
@@ -466,6 +494,12 @@ public class Project extends AbstractModel {
         if (source.Model != null) {
             this.Model = new String(source.Model);
         }
+        if (source.SecondModuleList != null) {
+            this.SecondModuleList = new String[source.SecondModuleList.length];
+            for (int i = 0; i < source.SecondModuleList.length; i++) {
+                this.SecondModuleList[i] = new String(source.SecondModuleList[i]);
+            }
+        }
     }
 
 
@@ -487,6 +521,7 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "Params", this.Params);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
 
     }
 }

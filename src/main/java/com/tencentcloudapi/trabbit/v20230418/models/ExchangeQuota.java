@@ -32,7 +32,6 @@ public class ExchangeQuota extends AbstractModel {
 
     /**
     * 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedExchange")
     @Expose
@@ -55,10 +54,8 @@ public class ExchangeQuota extends AbstractModel {
     }
 
     /**
-     * Get 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已创建exchange数 
      * @return UsedExchange 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedExchange() {
         return this.UsedExchange;
@@ -66,9 +63,7 @@ public class ExchangeQuota extends AbstractModel {
 
     /**
      * Set 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedExchange 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedExchange(Long UsedExchange) {
         this.UsedExchange = UsedExchange;

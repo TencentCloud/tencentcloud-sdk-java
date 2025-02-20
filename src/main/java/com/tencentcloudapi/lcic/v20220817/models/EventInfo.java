@@ -48,7 +48,6 @@ VisibleOff: 页面不可见
 
     /**
     * 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventData")
     @Expose
@@ -123,10 +122,8 @@ VisibleOff: 页面不可见
     }
 
     /**
-     * Get 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件详细内容，包含房间号,成员类型事件包含用户Id。 
      * @return EventData 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventDataInfo getEventData() {
         return this.EventData;
@@ -134,9 +131,7 @@ VisibleOff: 页面不可见
 
     /**
      * Set 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventData 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventData(EventDataInfo EventData) {
         this.EventData = EventData;

@@ -108,6 +108,13 @@ public class DescribeDMSPartitionsRequest extends AbstractModel {
     private String Expression;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库名 
      * @return DatabaseName 数据库名
      */
@@ -299,6 +306,22 @@ public class DescribeDMSPartitionsRequest extends AbstractModel {
         this.Expression = Expression;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeDMSPartitionsRequest() {
     }
 
@@ -352,6 +375,9 @@ public class DescribeDMSPartitionsRequest extends AbstractModel {
         if (source.Expression != null) {
             this.Expression = new String(source.Expression);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -371,6 +397,7 @@ public class DescribeDMSPartitionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Expression", this.Expression);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

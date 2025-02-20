@@ -150,6 +150,13 @@ public class AlterDMSTableRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 当前名称 
      * @return CurrentName 当前名称
      */
@@ -437,6 +444,22 @@ public class AlterDMSTableRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public AlterDMSTableRequest() {
     }
 
@@ -508,6 +531,9 @@ public class AlterDMSTableRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -533,6 +559,7 @@ public class AlterDMSTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ViewExpandedText", this.ViewExpandedText);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

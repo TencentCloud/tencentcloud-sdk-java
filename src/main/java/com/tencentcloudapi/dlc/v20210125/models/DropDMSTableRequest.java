@@ -52,6 +52,13 @@ public class DropDMSTableRequest extends AbstractModel {
     private KVPair EnvProps;
 
     /**
+    * 数据目录信息
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库名称 
      * @return DbName 数据库名称
      */
@@ -115,6 +122,22 @@ public class DropDMSTableRequest extends AbstractModel {
         this.EnvProps = EnvProps;
     }
 
+    /**
+     * Get 数据目录信息 
+     * @return DatasourceConnectionName 数据目录信息
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据目录信息
+     * @param DatasourceConnectionName 数据目录信息
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DropDMSTableRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DropDMSTableRequest extends AbstractModel {
         if (source.EnvProps != null) {
             this.EnvProps = new KVPair(source.EnvProps);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DropDMSTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DeleteData", this.DeleteData);
         this.setParamObj(map, prefix + "EnvProps.", this.EnvProps);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

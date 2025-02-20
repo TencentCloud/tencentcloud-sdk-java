@@ -49,37 +49,4 @@ public class TafClient extends AbstractClient{
         return this.internalRequest(req, "ManagePortraitRisk", ManagePortraitRiskResponse.class);
     }
 
-    /**
-     *流量反欺诈-流量验准定制版
-     * @param req RecognizeCustomizedAudienceRequest
-     * @return RecognizeCustomizedAudienceResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeCustomizedAudience", RecognizeCustomizedAudienceResponse.class);
-    }
-
-    /**
-     *流量反欺诈-流量验准高级版
-     * @param req RecognizePreciseTargetAudienceRequest
-     * @return RecognizePreciseTargetAudienceResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePreciseTargetAudience", RecognizePreciseTargetAudienceResponse.class);
-    }
-
-    /**
-     *流量反欺诈-流量验准
-     * @param req RecognizeTargetAudienceRequest
-     * @return RecognizeTargetAudienceResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeTargetAudienceResponse RecognizeTargetAudience(RecognizeTargetAudienceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeTargetAudience", RecognizeTargetAudienceResponse.class);
-    }
-
 }

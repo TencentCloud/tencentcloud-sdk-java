@@ -304,6 +304,46 @@ public class DataSourceInfo extends AbstractModel {
     private DataSourceConnectStatus ConnectStatus;
 
     /**
+    * 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisplayType")
+    @Expose
+    private String DisplayType;
+
+    /**
+    * 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
+    * 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceUrn")
+    @Expose
+    private String DatasourceUrn;
+
+    /**
+    * 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
+    *  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceEnvInfos")
+    @Expose
+    private DataSourceEnvInfo [] DataSourceEnvInfos;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -1003,6 +1043,106 @@ public class DataSourceInfo extends AbstractModel {
         this.ConnectStatus = ConnectStatus;
     }
 
+    /**
+     * Get 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisplayType 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisplayType() {
+        return this.DisplayType;
+    }
+
+    /**
+     * Set 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisplayType 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisplayType(String DisplayType) {
+        this.DisplayType = DisplayType;
+    }
+
+    /**
+     * Get 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Env 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Env 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
+    /**
+     * Get 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceUrn 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceUrn() {
+        return this.DatasourceUrn;
+    }
+
+    /**
+     * Set 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceUrn 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceUrn(String DatasourceUrn) {
+        this.DatasourceUrn = DatasourceUrn;
+    }
+
+    /**
+     * Get 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Model 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Model 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
+    /**
+     * Get  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceEnvInfos  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataSourceEnvInfo [] getDataSourceEnvInfos() {
+        return this.DataSourceEnvInfos;
+    }
+
+    /**
+     * Set  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceEnvInfos  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceEnvInfos(DataSourceEnvInfo [] DataSourceEnvInfos) {
+        this.DataSourceEnvInfos = DataSourceEnvInfos;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -1116,6 +1256,24 @@ public class DataSourceInfo extends AbstractModel {
         if (source.ConnectStatus != null) {
             this.ConnectStatus = new DataSourceConnectStatus(source.ConnectStatus);
         }
+        if (source.DisplayType != null) {
+            this.DisplayType = new String(source.DisplayType);
+        }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
+        if (source.DatasourceUrn != null) {
+            this.DatasourceUrn = new String(source.DatasourceUrn);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.DataSourceEnvInfos != null) {
+            this.DataSourceEnvInfos = new DataSourceEnvInfo[source.DataSourceEnvInfos.length];
+            for (int i = 0; i < source.DataSourceEnvInfos.length; i++) {
+                this.DataSourceEnvInfos[i] = new DataSourceEnvInfo(source.DataSourceEnvInfos[i]);
+            }
+        }
     }
 
 
@@ -1158,6 +1316,11 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
         this.setParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
         this.setParamObj(map, prefix + "ConnectStatus.", this.ConnectStatus);
+        this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
+        this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "DatasourceUrn", this.DatasourceUrn);
+        this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
 
     }
 }

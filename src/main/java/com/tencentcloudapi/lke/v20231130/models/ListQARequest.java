@@ -87,6 +87,13 @@ public class ListQARequest extends AbstractModel {
     private String QueryAnswer;
 
     /**
+    * 分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
+
+    /**
     * QA业务ID列表
     */
     @SerializedName("QaBizIds")
@@ -245,6 +252,22 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
+     * Get 分类ID 
+     * @return CateBizId 分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 分类ID
+     * @param CateBizId 分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
+    }
+
+    /**
      * Get QA业务ID列表 
      * @return QaBizIds QA业务ID列表
      */
@@ -317,6 +340,9 @@ public class ListQARequest extends AbstractModel {
         if (source.QueryAnswer != null) {
             this.QueryAnswer = new String(source.QueryAnswer);
         }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
         if (source.QaBizIds != null) {
             this.QaBizIds = new String[source.QaBizIds.length];
             for (int i = 0; i < source.QaBizIds.length; i++) {
@@ -342,6 +368,7 @@ public class ListQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
 

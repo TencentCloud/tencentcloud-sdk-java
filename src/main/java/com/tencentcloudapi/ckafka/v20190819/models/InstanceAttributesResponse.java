@@ -322,6 +322,13 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String CustomCertId;
 
     /**
+    * 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+    */
+    @SerializedName("UncleanLeaderElectionEnable")
+    @Expose
+    private Long UncleanLeaderElectionEnable;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -1033,6 +1040,22 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.CustomCertId = CustomCertId;
     }
 
+    /**
+     * Get 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭 
+     * @return UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     */
+    public Long getUncleanLeaderElectionEnable() {
+        return this.UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Set 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * @param UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     */
+    public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
+        this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1173,6 +1196,9 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.CustomCertId != null) {
             this.CustomCertId = new String(source.CustomCertId);
         }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
     }
 
 
@@ -1220,6 +1246,7 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
         this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
         this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
+        this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
 
     }
 }

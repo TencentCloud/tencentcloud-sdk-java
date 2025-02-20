@@ -25,7 +25,6 @@ public class MutedAccountList extends AbstractModel {
 
     /**
     * 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberAccount")
     @Expose
@@ -33,17 +32,14 @@ public class MutedAccountList extends AbstractModel {
 
     /**
     * 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MutedUntil")
     @Expose
     private Long MutedUntil;
 
     /**
-     * Get 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 ID 
      * @return MemberAccount 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberAccount() {
         return this.MemberAccount;
@@ -51,19 +47,15 @@ public class MutedAccountList extends AbstractModel {
 
     /**
      * Set 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberAccount 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberAccount(String MemberAccount) {
         this.MemberAccount = MemberAccount;
     }
 
     /**
-     * Get 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁言到的时间（使用 UTC 时间，即世界协调时间） 
      * @return MutedUntil 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMutedUntil() {
         return this.MutedUntil;
@@ -71,9 +63,7 @@ public class MutedAccountList extends AbstractModel {
 
     /**
      * Set 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MutedUntil 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMutedUntil(Long MutedUntil) {
         this.MutedUntil = MutedUntil;

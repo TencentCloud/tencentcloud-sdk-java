@@ -52,6 +52,13 @@ public class CreateDMSDatabaseRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 基础元数据对象 
      * @return Asset 基础元数据对象
      */
@@ -115,6 +122,22 @@ public class CreateDMSDatabaseRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public CreateDMSDatabaseRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateDMSDatabaseRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateDMSDatabaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

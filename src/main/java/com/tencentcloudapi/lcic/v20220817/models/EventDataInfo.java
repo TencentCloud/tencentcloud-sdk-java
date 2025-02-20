@@ -25,7 +25,6 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 事件发生的房间号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomId")
     @Expose
@@ -33,7 +32,6 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 事件发生的用户。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -41,7 +39,6 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Device")
     @Expose
@@ -49,7 +46,6 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 录制时长。单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -57,7 +53,6 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 录制文件大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordSize")
     @Expose
@@ -65,17 +60,14 @@ public class EventDataInfo extends AbstractModel {
 
     /**
     * 录制url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
 
     /**
-     * Get 事件发生的房间号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件发生的房间号。 
      * @return RoomId 事件发生的房间号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoomId() {
         return this.RoomId;
@@ -83,19 +75,15 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 事件发生的房间号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomId 事件发生的房间号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 事件发生的用户。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件发生的用户。 
      * @return UserId 事件发生的用户。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -103,19 +91,15 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 事件发生的用户。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 事件发生的用户。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program. 
      * @return Device 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDevice() {
         return this.Device;
@@ -123,19 +107,15 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Device 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevice(Long Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 录制时长。单位：秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制时长。单位：秒 
      * @return Duration 录制时长。单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -143,19 +123,15 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 录制时长。单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 录制时长。单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 录制文件大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制文件大小 
      * @return RecordSize 录制文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordSize() {
         return this.RecordSize;
@@ -163,19 +139,15 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 录制文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordSize 录制文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordSize(Long RecordSize) {
         this.RecordSize = RecordSize;
     }
 
     /**
-     * Get 录制url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制url 
      * @return RecordUrl 录制url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordUrl() {
         return this.RecordUrl;
@@ -183,9 +155,7 @@ public class EventDataInfo extends AbstractModel {
 
     /**
      * Set 录制url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordUrl 录制url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;

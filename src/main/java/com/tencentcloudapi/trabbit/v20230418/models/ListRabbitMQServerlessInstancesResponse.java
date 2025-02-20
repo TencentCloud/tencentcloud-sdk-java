@@ -25,7 +25,6 @@ public class ListRabbitMQServerlessInstancesResponse extends AbstractModel {
 
     /**
     * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instances")
     @Expose
@@ -46,10 +45,8 @@ public class ListRabbitMQServerlessInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表 
      * @return Instances 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQServerlessInstance [] getInstances() {
         return this.Instances;
@@ -57,9 +54,7 @@ public class ListRabbitMQServerlessInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Instances 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstances(RabbitMQServerlessInstance [] Instances) {
         this.Instances = Instances;

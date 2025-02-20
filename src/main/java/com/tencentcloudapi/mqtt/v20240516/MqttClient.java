@@ -363,6 +363,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *获取产品售卖规格
+     * @param req DescribeProductSKUListRequest
+     * @return DescribeProductSKUListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductSKUListResponse DescribeProductSKUList(DescribeProductSKUListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductSKUList", DescribeProductSKUListResponse.class);
+    }
+
+    /**
      *查询mqtt主题详情
      * @param req DescribeTopicRequest
      * @return DescribeTopicResponse

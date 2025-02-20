@@ -25,7 +25,6 @@ public class MessageList extends AbstractModel {
 
     /**
     * 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,7 +32,6 @@ public class MessageList extends AbstractModel {
 
     /**
     * 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FromAccount")
     @Expose
@@ -41,7 +39,6 @@ public class MessageList extends AbstractModel {
 
     /**
     * 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seq")
     @Expose
@@ -49,17 +46,14 @@ public class MessageList extends AbstractModel {
 
     /**
     * 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageBody")
     @Expose
     private MessageItem [] MessageBody;
 
     /**
-     * Get 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息时间戳 
      * @return Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -67,19 +61,15 @@ public class MessageList extends AbstractModel {
 
     /**
      * Set 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息发送者 
      * @return FromAccount 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFromAccount() {
         return this.FromAccount;
@@ -87,19 +77,15 @@ public class MessageList extends AbstractModel {
 
     /**
      * Set 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FromAccount 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFromAccount(String FromAccount) {
         this.FromAccount = FromAccount;
     }
 
     /**
-     * Get 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息序列号，当前课堂内唯一且单调递增 
      * @return Seq 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSeq() {
         return this.Seq;
@@ -107,19 +93,15 @@ public class MessageList extends AbstractModel {
 
     /**
      * Set 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Seq 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeq(Long Seq) {
         this.Seq = Seq;
     }
 
     /**
-     * Get 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历史消息列表 
      * @return MessageBody 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MessageItem [] getMessageBody() {
         return this.MessageBody;
@@ -127,9 +109,7 @@ public class MessageList extends AbstractModel {
 
     /**
      * Set 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageBody 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageBody(MessageItem [] MessageBody) {
         this.MessageBody = MessageBody;

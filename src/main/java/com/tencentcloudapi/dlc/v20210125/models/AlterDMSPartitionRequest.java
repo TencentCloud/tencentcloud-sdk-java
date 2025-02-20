@@ -52,6 +52,13 @@ public class AlterDMSPartitionRequest extends AbstractModel {
     private DMSPartition Partition;
 
     /**
+    * 数据源连接名
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 当前名称，变更前db名称 
      * @return CurrentDbName 当前名称，变更前db名称
      */
@@ -115,6 +122,22 @@ public class AlterDMSPartitionRequest extends AbstractModel {
         this.Partition = Partition;
     }
 
+    /**
+     * Get 数据源连接名 
+     * @return DatasourceConnectionName 数据源连接名
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名
+     * @param DatasourceConnectionName 数据源连接名
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public AlterDMSPartitionRequest() {
     }
 
@@ -135,6 +158,9 @@ public class AlterDMSPartitionRequest extends AbstractModel {
         if (source.Partition != null) {
             this.Partition = new DMSPartition(source.Partition);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class AlterDMSPartitionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentTableName", this.CurrentTableName);
         this.setParamSimple(map, prefix + "CurrentValues", this.CurrentValues);
         this.setParamObj(map, prefix + "Partition.", this.Partition);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

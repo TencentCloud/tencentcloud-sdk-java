@@ -25,7 +25,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindingId")
     @Expose
@@ -33,7 +32,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -41,7 +39,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -49,7 +46,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationType")
     @Expose
@@ -57,7 +53,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Destination")
     @Expose
@@ -65,7 +60,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoutingKey")
     @Expose
@@ -73,7 +67,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceExchangeType")
     @Expose
@@ -81,7 +74,6 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,17 +81,14 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由关系id 
      * @return BindingId 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindingId() {
         return this.BindingId;
@@ -107,19 +96,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindingId 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindingId(Long BindingId) {
         this.BindingId = BindingId;
     }
 
     /**
-     * Get Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vhost参数 
      * @return VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -127,19 +112,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源exchange名称 
      * @return Source 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -147,19 +128,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标类型,queue或exchange 
      * @return DestinationType 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationType() {
         return this.DestinationType;
@@ -167,19 +144,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationType 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
     }
 
     /**
-     * Get 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标资源名称 
      * @return Destination 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestination() {
         return this.Destination;
@@ -187,19 +160,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Destination 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get 绑定key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定key 
      * @return RoutingKey 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoutingKey() {
         return this.RoutingKey;
@@ -207,19 +176,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoutingKey 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoutingKey(String RoutingKey) {
         this.RoutingKey = RoutingKey;
     }
 
     /**
-     * Get 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源exchange类型 
      * @return SourceExchangeType 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceExchangeType() {
         return this.SourceExchangeType;
@@ -227,19 +192,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceExchangeType 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceExchangeType(String SourceExchangeType) {
         this.SourceExchangeType = SourceExchangeType;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -247,19 +208,15 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -267,9 +224,7 @@ public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

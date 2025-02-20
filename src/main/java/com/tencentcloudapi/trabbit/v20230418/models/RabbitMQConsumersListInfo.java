@@ -25,7 +25,6 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
 
     /**
     * 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIp")
     @Expose
@@ -33,17 +32,14 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
 
     /**
     * 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerTag")
     @Expose
     private String ConsumerTag;
 
     /**
-     * Get 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端Ip 
      * @return ClientIp 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIp() {
         return this.ClientIp;
@@ -51,19 +47,15 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
 
     /**
      * Set 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIp 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者Tag 
      * @return ConsumerTag 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerTag() {
         return this.ConsumerTag;
@@ -71,9 +63,7 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
 
     /**
      * Set 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerTag 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerTag(String ConsumerTag) {
         this.ConsumerTag = ConsumerTag;

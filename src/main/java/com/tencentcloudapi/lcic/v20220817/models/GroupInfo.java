@@ -25,7 +25,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TeacherId")
     @Expose
@@ -51,7 +48,6 @@ public class GroupInfo extends AbstractModel {
     * 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupType")
     @Expose
@@ -66,10 +62,8 @@ public class GroupInfo extends AbstractModel {
     private String SubGroupIds;
 
     /**
-     * Get 群组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 群组ID 
      * @return GroupId 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -77,19 +71,15 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 群组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 群组名称 
      * @return GroupName 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -97,19 +87,15 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 群组主讲人ID 
      * @return TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTeacherId() {
         return this.TeacherId;
@@ -117,9 +103,7 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -128,12 +112,10 @@ public class GroupInfo extends AbstractModel {
     /**
      * Get 群组类型 
 0-基础群组 
-1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+1-组合群组，若为1时会返回子群组ID列表 
      * @return GroupType 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupType() {
         return this.GroupType;
@@ -143,11 +125,9 @@ public class GroupInfo extends AbstractModel {
      * Set 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupType 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupType(Long GroupType) {
         this.GroupType = GroupType;

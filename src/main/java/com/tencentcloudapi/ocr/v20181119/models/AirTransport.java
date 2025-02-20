@@ -164,7 +164,7 @@ public class AirTransport extends AbstractModel {
     private String DateStart;
 
     /**
-    * 有效截至日期
+    * 有效截止日期
     */
     @SerializedName("DateEnd")
     @Expose
@@ -561,16 +561,16 @@ public class AirTransport extends AbstractModel {
     }
 
     /**
-     * Get 有效截至日期 
-     * @return DateEnd 有效截至日期
+     * Get 有效截止日期 
+     * @return DateEnd 有效截止日期
      */
     public String getDateEnd() {
         return this.DateEnd;
     }
 
     /**
-     * Set 有效截至日期
-     * @param DateEnd 有效截至日期
+     * Set 有效截止日期
+     * @param DateEnd 有效截止日期
      */
     public void setDateEnd(String DateEnd) {
         this.DateEnd = DateEnd;

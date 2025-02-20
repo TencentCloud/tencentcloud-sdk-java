@@ -3419,19 +3419,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *接口已无效
-
-获取安全防护状态汇总
-     * @param req DescribeSecurityProtectionStatRequest
-     * @return DescribeSecurityProtectionStatResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(DescribeSecurityProtectionStatRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSecurityProtectionStat", DescribeSecurityProtectionStatResponse.class);
-    }
-
-    /**
      *本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
      * @param req DescribeSecurityTrendsRequest
      * @return DescribeSecurityTrendsResponse

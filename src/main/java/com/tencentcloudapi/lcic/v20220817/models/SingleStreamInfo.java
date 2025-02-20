@@ -25,7 +25,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -41,7 +39,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StopTime")
     @Expose
@@ -49,7 +46,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 总时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -57,7 +53,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileFormat")
     @Expose
@@ -65,7 +60,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 流url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordUrl")
     @Expose
@@ -73,7 +67,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 流大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordSize")
     @Expose
@@ -81,7 +74,6 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 流ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoId")
     @Expose
@@ -89,17 +81,14 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
     * 流类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -107,19 +96,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -127,19 +112,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return StopTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStopTime() {
         return this.StopTime;
@@ -147,19 +128,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StopTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStopTime(Long StopTime) {
         this.StopTime = StopTime;
     }
 
     /**
-     * Get 总时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总时长 
      * @return Duration 总时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -167,19 +144,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 总时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 总时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 文件格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件格式 
      * @return FileFormat 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileFormat() {
         return this.FileFormat;
@@ -187,19 +160,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileFormat 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileFormat(String FileFormat) {
         this.FileFormat = FileFormat;
     }
 
     /**
-     * Get 流url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流url 
      * @return RecordUrl 流url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordUrl() {
         return this.RecordUrl;
@@ -207,19 +176,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 流url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordUrl 流url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get 流大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流大小 
      * @return RecordSize 流大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordSize() {
         return this.RecordSize;
@@ -227,19 +192,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 流大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordSize 流大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordSize(Long RecordSize) {
         this.RecordSize = RecordSize;
     }
 
     /**
-     * Get 流ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流ID 
      * @return VideoId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoId() {
         return this.VideoId;
@@ -247,19 +208,15 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoId(String VideoId) {
         this.VideoId = VideoId;
     }
 
     /**
-     * Get 流类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流类型 
      * @return Role 流类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -267,9 +224,7 @@ public class SingleStreamInfo extends AbstractModel {
 
     /**
      * Set 流类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 流类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;

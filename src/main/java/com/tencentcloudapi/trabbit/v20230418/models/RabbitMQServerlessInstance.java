@@ -88,7 +88,6 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -103,7 +102,6 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
     * 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptionInformation")
     @Expose
@@ -111,7 +109,6 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
     * 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccessEndpoint")
     @Expose
@@ -119,7 +116,6 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
     * 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vpcs")
     @Expose
@@ -160,6 +156,13 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
+
+    /**
+    * 隔离时间
+    */
+    @SerializedName("IsolatedTime")
+    @Expose
+    private Long IsolatedTime;
 
     /**
      * Get 实例Id 
@@ -306,10 +309,8 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -317,9 +318,7 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -342,10 +341,8 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     }
 
     /**
-     * Get 异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常信息 
      * @return ExceptionInformation 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExceptionInformation() {
         return this.ExceptionInformation;
@@ -353,19 +350,15 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
      * Set 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptionInformation 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptionInformation(String ExceptionInformation) {
         this.ExceptionInformation = ExceptionInformation;
     }
 
     /**
-     * Get 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网接入点 
      * @return PublicAccessEndpoint 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicAccessEndpoint() {
         return this.PublicAccessEndpoint;
@@ -373,19 +366,15 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
      * Set 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicAccessEndpoint 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
         this.PublicAccessEndpoint = PublicAccessEndpoint;
     }
 
     /**
-     * Get 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络接入点 
      * @return Vpcs 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQServerlessEndpoint [] getVpcs() {
         return this.Vpcs;
@@ -393,9 +382,7 @@ public class RabbitMQServerlessInstance extends AbstractModel {
 
     /**
      * Set 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vpcs 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcs(RabbitMQServerlessEndpoint [] Vpcs) {
         this.Vpcs = Vpcs;
@@ -485,6 +472,22 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.MaxStorage = MaxStorage;
     }
 
+    /**
+     * Get 隔离时间 
+     * @return IsolatedTime 隔离时间
+     */
+    public Long getIsolatedTime() {
+        return this.IsolatedTime;
+    }
+
+    /**
+     * Set 隔离时间
+     * @param IsolatedTime 隔离时间
+     */
+    public void setIsolatedTime(Long IsolatedTime) {
+        this.IsolatedTime = IsolatedTime;
+    }
+
     public RabbitMQServerlessInstance() {
     }
 
@@ -553,6 +556,9 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         if (source.MaxStorage != null) {
             this.MaxStorage = new Long(source.MaxStorage);
         }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new Long(source.IsolatedTime);
+        }
     }
 
 
@@ -579,6 +585,7 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
+        this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
 
     }
 }

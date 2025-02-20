@@ -143,6 +143,34 @@ public class VatElectronicItemInfo extends AbstractModel {
     private String AreaUnit;
 
     /**
+    * 出行人，仅旅客运输服务发票返回
+    */
+    @SerializedName("Traveler")
+    @Expose
+    private String Traveler;
+
+    /**
+    * 有效身份证件号，仅旅客运输服务发票返回
+    */
+    @SerializedName("TravelerID")
+    @Expose
+    private String TravelerID;
+
+    /**
+    * 出行日期，仅旅客运输服务发票返回
+    */
+    @SerializedName("TravelDate")
+    @Expose
+    private String TravelDate;
+
+    /**
+    * 等级，仅旅客运输服务发票返回
+    */
+    @SerializedName("TravelLevel")
+    @Expose
+    private String TravelLevel;
+
+    /**
      * Get 项目名称 
      * @return Name 项目名称
      */
@@ -414,6 +442,70 @@ public class VatElectronicItemInfo extends AbstractModel {
         this.AreaUnit = AreaUnit;
     }
 
+    /**
+     * Get 出行人，仅旅客运输服务发票返回 
+     * @return Traveler 出行人，仅旅客运输服务发票返回
+     */
+    public String getTraveler() {
+        return this.Traveler;
+    }
+
+    /**
+     * Set 出行人，仅旅客运输服务发票返回
+     * @param Traveler 出行人，仅旅客运输服务发票返回
+     */
+    public void setTraveler(String Traveler) {
+        this.Traveler = Traveler;
+    }
+
+    /**
+     * Get 有效身份证件号，仅旅客运输服务发票返回 
+     * @return TravelerID 有效身份证件号，仅旅客运输服务发票返回
+     */
+    public String getTravelerID() {
+        return this.TravelerID;
+    }
+
+    /**
+     * Set 有效身份证件号，仅旅客运输服务发票返回
+     * @param TravelerID 有效身份证件号，仅旅客运输服务发票返回
+     */
+    public void setTravelerID(String TravelerID) {
+        this.TravelerID = TravelerID;
+    }
+
+    /**
+     * Get 出行日期，仅旅客运输服务发票返回 
+     * @return TravelDate 出行日期，仅旅客运输服务发票返回
+     */
+    public String getTravelDate() {
+        return this.TravelDate;
+    }
+
+    /**
+     * Set 出行日期，仅旅客运输服务发票返回
+     * @param TravelDate 出行日期，仅旅客运输服务发票返回
+     */
+    public void setTravelDate(String TravelDate) {
+        this.TravelDate = TravelDate;
+    }
+
+    /**
+     * Get 等级，仅旅客运输服务发票返回 
+     * @return TravelLevel 等级，仅旅客运输服务发票返回
+     */
+    public String getTravelLevel() {
+        return this.TravelLevel;
+    }
+
+    /**
+     * Set 等级，仅旅客运输服务发票返回
+     * @param TravelLevel 等级，仅旅客运输服务发票返回
+     */
+    public void setTravelLevel(String TravelLevel) {
+        this.TravelLevel = TravelLevel;
+    }
+
     public VatElectronicItemInfo() {
     }
 
@@ -473,6 +565,18 @@ public class VatElectronicItemInfo extends AbstractModel {
         if (source.AreaUnit != null) {
             this.AreaUnit = new String(source.AreaUnit);
         }
+        if (source.Traveler != null) {
+            this.Traveler = new String(source.Traveler);
+        }
+        if (source.TravelerID != null) {
+            this.TravelerID = new String(source.TravelerID);
+        }
+        if (source.TravelDate != null) {
+            this.TravelDate = new String(source.TravelDate);
+        }
+        if (source.TravelLevel != null) {
+            this.TravelLevel = new String(source.TravelLevel);
+        }
     }
 
 
@@ -497,6 +601,10 @@ public class VatElectronicItemInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BuildingName", this.BuildingName);
         this.setParamSimple(map, prefix + "EstateNumber", this.EstateNumber);
         this.setParamSimple(map, prefix + "AreaUnit", this.AreaUnit);
+        this.setParamSimple(map, prefix + "Traveler", this.Traveler);
+        this.setParamSimple(map, prefix + "TravelerID", this.TravelerID);
+        this.setParamSimple(map, prefix + "TravelDate", this.TravelDate);
+        this.setParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
 
     }
 }

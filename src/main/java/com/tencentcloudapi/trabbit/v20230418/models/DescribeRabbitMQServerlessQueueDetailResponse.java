@@ -25,7 +25,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueType")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 在线消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Consumers")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Durable")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 自动清除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoDelete")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MessageTTL参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTTL")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * AutoExpire参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoExpire")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MaxLength参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxLength")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MaxLengthBytes参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxLengthBytes")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * DeliveryLimit参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliveryLimit")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverflowBehaviour")
     @Expose
@@ -137,7 +123,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * DeadLetterExchange参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterExchange")
     @Expose
@@ -145,7 +130,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * DeadLetterRoutingKey参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterRoutingKey")
     @Expose
@@ -153,7 +137,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * SingleActiveConsumer参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SingleActiveConsumer")
     @Expose
@@ -161,7 +144,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MaximumPriority参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaximumPriority")
     @Expose
@@ -169,7 +151,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * LazyMode参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LazyMode")
     @Expose
@@ -177,7 +158,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MasterLocator参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterLocator")
     @Expose
@@ -185,7 +165,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MaxInMemoryLength参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxInMemoryLength")
     @Expose
@@ -193,7 +172,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * MaxInMemoryBytes参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxInMemoryBytes")
     @Expose
@@ -201,7 +179,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -209,7 +186,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Node")
     @Expose
@@ -217,7 +193,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 仲裁队列死信一致性策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterStrategy")
     @Expose
@@ -225,7 +200,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 仲裁队列的领导者选举策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueLeaderLocator")
     @Expose
@@ -233,7 +207,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 仲裁队列的初始副本组大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuorumInitialGroupSize")
     @Expose
@@ -241,7 +214,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exclusive")
     @Expose
@@ -249,7 +221,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 生效的策略名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -257,7 +228,6 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
     * 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arguments")
     @Expose
@@ -271,10 +241,8 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -282,19 +250,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vhost参数 
      * @return VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -302,19 +266,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 队列名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列名称 
      * @return QueueName 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueName() {
         return this.QueueName;
@@ -322,19 +282,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueName 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列类型,取值classic或quorum 
      * @return QueueType 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueType() {
         return this.QueueType;
@@ -342,19 +298,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueType 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueType(String QueueType) {
         this.QueueType = QueueType;
     }
 
     /**
-     * Get 在线消费者数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在线消费者数量 
      * @return Consumers 在线消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsumers() {
         return this.Consumers;
@@ -362,19 +314,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 在线消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Consumers 在线消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumers(Long Consumers) {
         this.Consumers = Consumers;
     }
 
     /**
-     * Get 持久标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持久标记 
      * @return Durable 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDurable() {
         return this.Durable;
@@ -382,19 +330,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Durable 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurable(Boolean Durable) {
         this.Durable = Durable;
     }
 
     /**
-     * Get 自动清除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动清除 
      * @return AutoDelete 自动清除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoDelete() {
         return this.AutoDelete;
@@ -402,19 +346,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 自动清除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoDelete 自动清除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoDelete(Boolean AutoDelete) {
         this.AutoDelete = AutoDelete;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -422,19 +362,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get MessageTTL参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MessageTTL参数,classic类型专用 
      * @return MessageTTL MessageTTL参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageTTL() {
         return this.MessageTTL;
@@ -442,19 +378,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MessageTTL参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageTTL MessageTTL参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTTL(Long MessageTTL) {
         this.MessageTTL = MessageTTL;
     }
 
     /**
-     * Get AutoExpire参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AutoExpire参数 
      * @return AutoExpire AutoExpire参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoExpire() {
         return this.AutoExpire;
@@ -462,19 +394,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set AutoExpire参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoExpire AutoExpire参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoExpire(Long AutoExpire) {
         this.AutoExpire = AutoExpire;
     }
 
     /**
-     * Get MaxLength参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaxLength参数 
      * @return MaxLength MaxLength参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxLength() {
         return this.MaxLength;
@@ -482,19 +410,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MaxLength参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxLength MaxLength参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxLength(Long MaxLength) {
         this.MaxLength = MaxLength;
     }
 
     /**
-     * Get MaxLengthBytes参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaxLengthBytes参数 
      * @return MaxLengthBytes MaxLengthBytes参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxLengthBytes() {
         return this.MaxLengthBytes;
@@ -502,19 +426,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MaxLengthBytes参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxLengthBytes MaxLengthBytes参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxLengthBytes(Long MaxLengthBytes) {
         this.MaxLengthBytes = MaxLengthBytes;
     }
 
     /**
-     * Get DeliveryLimit参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DeliveryLimit参数,quorum类型专用 
      * @return DeliveryLimit DeliveryLimit参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeliveryLimit() {
         return this.DeliveryLimit;
@@ -522,19 +442,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set DeliveryLimit参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliveryLimit DeliveryLimit参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliveryLimit(Long DeliveryLimit) {
         this.DeliveryLimit = DeliveryLimit;
     }
 
     /**
-     * Get OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx 
      * @return OverflowBehaviour OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOverflowBehaviour() {
         return this.OverflowBehaviour;
@@ -542,19 +458,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverflowBehaviour OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverflowBehaviour(String OverflowBehaviour) {
         this.OverflowBehaviour = OverflowBehaviour;
     }
 
     /**
-     * Get DeadLetterExchange参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DeadLetterExchange参数 
      * @return DeadLetterExchange DeadLetterExchange参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadLetterExchange() {
         return this.DeadLetterExchange;
@@ -562,19 +474,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set DeadLetterExchange参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterExchange DeadLetterExchange参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterExchange(String DeadLetterExchange) {
         this.DeadLetterExchange = DeadLetterExchange;
     }
 
     /**
-     * Get DeadLetterRoutingKey参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DeadLetterRoutingKey参数 
      * @return DeadLetterRoutingKey DeadLetterRoutingKey参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadLetterRoutingKey() {
         return this.DeadLetterRoutingKey;
@@ -582,19 +490,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set DeadLetterRoutingKey参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterRoutingKey DeadLetterRoutingKey参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterRoutingKey(String DeadLetterRoutingKey) {
         this.DeadLetterRoutingKey = DeadLetterRoutingKey;
     }
 
     /**
-     * Get SingleActiveConsumer参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SingleActiveConsumer参数 
      * @return SingleActiveConsumer SingleActiveConsumer参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSingleActiveConsumer() {
         return this.SingleActiveConsumer;
@@ -602,19 +506,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set SingleActiveConsumer参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SingleActiveConsumer SingleActiveConsumer参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSingleActiveConsumer(Boolean SingleActiveConsumer) {
         this.SingleActiveConsumer = SingleActiveConsumer;
     }
 
     /**
-     * Get MaximumPriority参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaximumPriority参数,classic类型专用 
      * @return MaximumPriority MaximumPriority参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaximumPriority() {
         return this.MaximumPriority;
@@ -622,19 +522,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MaximumPriority参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaximumPriority MaximumPriority参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaximumPriority(Long MaximumPriority) {
         this.MaximumPriority = MaximumPriority;
     }
 
     /**
-     * Get LazyMode参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LazyMode参数,classic类型专用 
      * @return LazyMode LazyMode参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLazyMode() {
         return this.LazyMode;
@@ -642,19 +538,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set LazyMode参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LazyMode LazyMode参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLazyMode(Boolean LazyMode) {
         this.LazyMode = LazyMode;
     }
 
     /**
-     * Get MasterLocator参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MasterLocator参数,classic类型专用 
      * @return MasterLocator MasterLocator参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterLocator() {
         return this.MasterLocator;
@@ -662,19 +554,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MasterLocator参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterLocator MasterLocator参数,classic类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterLocator(String MasterLocator) {
         this.MasterLocator = MasterLocator;
     }
 
     /**
-     * Get MaxInMemoryLength参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaxInMemoryLength参数,quorum类型专用 
      * @return MaxInMemoryLength MaxInMemoryLength参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxInMemoryLength() {
         return this.MaxInMemoryLength;
@@ -682,19 +570,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MaxInMemoryLength参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxInMemoryLength MaxInMemoryLength参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxInMemoryLength(Long MaxInMemoryLength) {
         this.MaxInMemoryLength = MaxInMemoryLength;
     }
 
     /**
-     * Get MaxInMemoryBytes参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaxInMemoryBytes参数,quorum类型专用 
      * @return MaxInMemoryBytes MaxInMemoryBytes参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxInMemoryBytes() {
         return this.MaxInMemoryBytes;
@@ -702,19 +586,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set MaxInMemoryBytes参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxInMemoryBytes MaxInMemoryBytes参数,quorum类型专用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxInMemoryBytes(Long MaxInMemoryBytes) {
         this.MaxInMemoryBytes = MaxInMemoryBytes;
     }
 
     /**
-     * Get 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间戳,单位秒 
      * @return CreateTime 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -722,19 +602,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点 
      * @return Node 节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNode() {
         return this.Node;
@@ -742,19 +618,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Node 节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNode(String Node) {
         this.Node = Node;
     }
 
     /**
-     * Get 仲裁队列死信一致性策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仲裁队列死信一致性策略 
      * @return DeadLetterStrategy 仲裁队列死信一致性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadLetterStrategy() {
         return this.DeadLetterStrategy;
@@ -762,19 +634,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 仲裁队列死信一致性策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterStrategy 仲裁队列死信一致性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterStrategy(String DeadLetterStrategy) {
         this.DeadLetterStrategy = DeadLetterStrategy;
     }
 
     /**
-     * Get 仲裁队列的领导者选举策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仲裁队列的领导者选举策略 
      * @return QueueLeaderLocator 仲裁队列的领导者选举策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueLeaderLocator() {
         return this.QueueLeaderLocator;
@@ -782,19 +650,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 仲裁队列的领导者选举策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueLeaderLocator 仲裁队列的领导者选举策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueLeaderLocator(String QueueLeaderLocator) {
         this.QueueLeaderLocator = QueueLeaderLocator;
     }
 
     /**
-     * Get 仲裁队列的初始副本组大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仲裁队列的初始副本组大小 
      * @return QuorumInitialGroupSize 仲裁队列的初始副本组大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuorumInitialGroupSize() {
         return this.QuorumInitialGroupSize;
@@ -802,19 +666,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 仲裁队列的初始副本组大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuorumInitialGroupSize 仲裁队列的初始副本组大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuorumInitialGroupSize(Long QuorumInitialGroupSize) {
         this.QuorumInitialGroupSize = QuorumInitialGroupSize;
     }
 
     /**
-     * Get 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为独占队列 
      * @return Exclusive 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExclusive() {
         return this.Exclusive;
@@ -822,19 +682,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exclusive 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusive(Boolean Exclusive) {
         this.Exclusive = Exclusive;
     }
 
     /**
-     * Get 生效的策略名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效的策略名 
      * @return Policy 生效的策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicy() {
         return this.Policy;
@@ -842,19 +698,15 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 生效的策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 生效的策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数 key-value 
      * @return Arguments 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArguments() {
         return this.Arguments;
@@ -862,9 +714,7 @@ public class DescribeRabbitMQServerlessQueueDetailResponse extends AbstractModel
 
     /**
      * Set 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Arguments 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArguments(String Arguments) {
         this.Arguments = Arguments;

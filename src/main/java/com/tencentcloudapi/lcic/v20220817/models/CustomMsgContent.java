@@ -25,7 +25,6 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
     * 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
     * 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -41,17 +39,14 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
     * 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
     @Expose
     private String Ext;
 
     /**
-     * Get 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义消息数据。 
      * @return Data 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -59,19 +54,15 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
      * Set 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义消息描述信息。 
      * @return Desc 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -79,19 +70,15 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
      * Set 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段。 
      * @return Ext 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExt() {
         return this.Ext;
@@ -99,9 +86,7 @@ public class CustomMsgContent extends AbstractModel {
 
     /**
      * Set 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ext 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(String Ext) {
         this.Ext = Ext;

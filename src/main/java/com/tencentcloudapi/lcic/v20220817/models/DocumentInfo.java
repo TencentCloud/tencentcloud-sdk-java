@@ -25,7 +25,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentId")
     @Expose
@@ -33,7 +32,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentUrl")
     @Expose
@@ -41,7 +39,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentName")
     @Expose
@@ -49,7 +46,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
     @Expose
@@ -57,7 +53,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -65,7 +60,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permission")
     @Expose
@@ -73,7 +67,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeResult")
     @Expose
@@ -81,7 +74,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeType")
     @Expose
@@ -89,7 +81,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeProgress")
     @Expose
@@ -97,7 +88,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeState")
     @Expose
@@ -105,7 +95,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeInfo")
     @Expose
@@ -113,7 +102,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentType")
     @Expose
@@ -121,7 +109,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSize")
     @Expose
@@ -129,7 +116,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -137,7 +123,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pages")
     @Expose
@@ -145,7 +130,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -153,7 +137,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -161,7 +144,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cover")
     @Expose
@@ -169,7 +151,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Preview")
     @Expose
@@ -177,7 +158,6 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resolution")
     @Expose
@@ -185,17 +165,14 @@ public class DocumentInfo extends AbstractModel {
 
     /**
     * 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinScaleResolution")
     @Expose
     private String MinScaleResolution;
 
     /**
-     * Get 文档Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档Id 
      * @return DocumentId 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentId() {
         return this.DocumentId;
@@ -203,19 +180,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentId 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
     }
 
     /**
-     * Get 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档原址url 
      * @return DocumentUrl 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentUrl() {
         return this.DocumentUrl;
@@ -223,19 +196,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentUrl 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentUrl(String DocumentUrl) {
         this.DocumentUrl = DocumentUrl;
     }
 
     /**
-     * Get 文档名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档名称 
      * @return DocumentName 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentName() {
         return this.DocumentName;
@@ -243,19 +212,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentName 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentName(String DocumentName) {
         this.DocumentName = DocumentName;
     }
 
     /**
-     * Get 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档所有者UserId 
      * @return Owner 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
         return this.Owner;
@@ -263,19 +228,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Owner 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 应用Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用Id 
      * @return SdkAppId 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
@@ -283,19 +244,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SdkAppId 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档权限，0：私有课件 1：公共课件 
      * @return Permission 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPermission() {
         return this.Permission;
@@ -303,19 +260,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Permission 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermission(Long Permission) {
         this.Permission = Permission;
     }
 
     /**
-     * Get 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码 
      * @return TranscodeResult 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranscodeResult() {
         return this.TranscodeResult;
@@ -323,19 +276,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeResult 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeResult(String TranscodeResult) {
         this.TranscodeResult = TranscodeResult;
     }
 
     /**
-     * Get 转码类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码类型 
      * @return TranscodeType 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTranscodeType() {
         return this.TranscodeType;
@@ -343,19 +292,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeType 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeType(Long TranscodeType) {
         this.TranscodeType = TranscodeType;
     }
 
     /**
-     * Get 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码进度， 0 - 100 表示（0% - 100%） 
      * @return TranscodeProgress 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTranscodeProgress() {
         return this.TranscodeProgress;
@@ -363,19 +308,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeProgress 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeProgress(Long TranscodeProgress) {
         this.TranscodeProgress = TranscodeProgress;
     }
 
     /**
-     * Get 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功 
      * @return TranscodeState 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTranscodeState() {
         return this.TranscodeState;
@@ -383,19 +324,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeState 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeState(Long TranscodeState) {
         this.TranscodeState = TranscodeState;
     }
 
     /**
-     * Get 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码失败后的错误信息 
      * @return TranscodeInfo 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranscodeInfo() {
         return this.TranscodeInfo;
@@ -403,19 +340,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeInfo 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeInfo(String TranscodeInfo) {
         this.TranscodeInfo = TranscodeInfo;
     }
 
     /**
-     * Get 文档类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档类型 
      * @return DocumentType 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentType() {
         return this.DocumentType;
@@ -423,19 +356,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentType 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentType(String DocumentType) {
         this.DocumentType = DocumentType;
     }
 
     /**
-     * Get 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档大小，单位：字节 
      * @return DocumentSize 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDocumentSize() {
         return this.DocumentSize;
@@ -443,19 +372,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSize 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSize(Long DocumentSize) {
         this.DocumentSize = DocumentSize;
     }
 
     /**
-     * Get 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新的UNIX时间戳 
      * @return UpdateTime 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -463,19 +388,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 课件页数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课件页数 
      * @return Pages 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPages() {
         return this.Pages;
@@ -483,19 +404,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pages 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPages(Long Pages) {
         this.Pages = Pages;
     }
 
     /**
-     * Get 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宽，仅在静态转码的课件有效 
      * @return Width 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -503,19 +420,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高，仅在静态转码的课件有效 
      * @return Height 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -523,19 +436,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封面，仅转码的课件会生成封面 
      * @return Cover 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCover() {
         return this.Cover;
@@ -543,19 +452,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cover 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCover(String Cover) {
         this.Cover = Cover;
     }
 
     /**
-     * Get 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课件预览地址 
      * @return Preview 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreview() {
         return this.Preview;
@@ -563,19 +468,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Preview 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreview(String Preview) {
         this.Preview = Preview;
     }
 
     /**
-     * Get 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档的分辨率 
      * @return Resolution 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResolution() {
         return this.Resolution;
@@ -583,19 +484,15 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resolution 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码后文档的最小分辨率，和创建文档时传入的参数一致。 
      * @return MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMinScaleResolution() {
         return this.MinScaleResolution;
@@ -603,9 +500,7 @@ public class DocumentInfo extends AbstractModel {
 
     /**
      * Set 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinScaleResolution(String MinScaleResolution) {
         this.MinScaleResolution = MinScaleResolution;

@@ -25,17 +25,14 @@ public class RabbitMQQueueListConsumerDetailInfo extends AbstractModel {
 
     /**
     * 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumersNumber")
     @Expose
     private Long ConsumersNumber;
 
     /**
-     * Get 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者数量 
      * @return ConsumersNumber 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsumersNumber() {
         return this.ConsumersNumber;
@@ -43,9 +40,7 @@ public class RabbitMQQueueListConsumerDetailInfo extends AbstractModel {
 
     /**
      * Set 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumersNumber 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumersNumber(Long ConsumersNumber) {
         this.ConsumersNumber = ConsumersNumber;
