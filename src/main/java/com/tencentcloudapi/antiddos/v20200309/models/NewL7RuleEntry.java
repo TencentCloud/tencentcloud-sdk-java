@@ -157,11 +157,20 @@ public class NewL7RuleEntry extends AbstractModel {
     private Long CCEnable;
 
     /**
-    * HTTPS协议的CC防护阈值
+    * HTTPS协议的CC防护阈值（已废弃）
     */
     @SerializedName("CCThreshold")
     @Expose
     private Long CCThreshold;
+
+    /**
+    * HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+    */
+    @SerializedName("CCThresholdNew")
+    @Expose
+    private Long CCThresholdNew;
 
     /**
     * HTTPS协议的CC防护等级
@@ -519,19 +528,43 @@ public class NewL7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get HTTPS协议的CC防护阈值 
-     * @return CCThreshold HTTPS协议的CC防护阈值
+     * Get HTTPS协议的CC防护阈值（已废弃） 
+     * @return CCThreshold HTTPS协议的CC防护阈值（已废弃）
      */
     public Long getCCThreshold() {
         return this.CCThreshold;
     }
 
     /**
-     * Set HTTPS协议的CC防护阈值
-     * @param CCThreshold HTTPS协议的CC防护阈值
+     * Set HTTPS协议的CC防护阈值（已废弃）
+     * @param CCThreshold HTTPS协议的CC防护阈值（已废弃）
      */
     public void setCCThreshold(Long CCThreshold) {
         this.CCThreshold = CCThreshold;
+    }
+
+    /**
+     * Get HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值 
+     * @return CCThresholdNew HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+     */
+    public Long getCCThresholdNew() {
+        return this.CCThresholdNew;
+    }
+
+    /**
+     * Set HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+     * @param CCThresholdNew HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+     */
+    public void setCCThresholdNew(Long CCThresholdNew) {
+        this.CCThresholdNew = CCThresholdNew;
     }
 
     /**
@@ -725,6 +758,9 @@ public class NewL7RuleEntry extends AbstractModel {
         if (source.CCThreshold != null) {
             this.CCThreshold = new Long(source.CCThreshold);
         }
+        if (source.CCThresholdNew != null) {
+            this.CCThresholdNew = new Long(source.CCThresholdNew);
+        }
         if (source.CCLevel != null) {
             this.CCLevel = new String(source.CCLevel);
         }
@@ -773,6 +809,7 @@ public class NewL7RuleEntry extends AbstractModel {
         this.setParamSimple(map, prefix + "CCStatus", this.CCStatus);
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
         this.setParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
+        this.setParamSimple(map, prefix + "CCThresholdNew", this.CCThresholdNew);
         this.setParamSimple(map, prefix + "CCLevel", this.CCLevel);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);

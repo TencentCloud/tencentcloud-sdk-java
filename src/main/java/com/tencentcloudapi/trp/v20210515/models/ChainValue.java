@@ -25,7 +25,6 @@ public class ChainValue extends AbstractModel {
 
     /**
     * 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class ChainValue extends AbstractModel {
 
     /**
     * 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,17 +39,14 @@ public class ChainValue extends AbstractModel {
 
     /**
     * 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 标题名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标题名字 
      * @return Label 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -59,19 +54,15 @@ public class ChainValue extends AbstractModel {
 
     /**
      * Set 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，文字："text"，图片："image" 
      * @return Type 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -79,19 +70,15 @@ public class ChainValue extends AbstractModel {
 
     /**
      * Set 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值，文字类型："abc"，图片类型：""/images/img.png" 
      * @return Value 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -99,9 +86,7 @@ public class ChainValue extends AbstractModel {
 
     /**
      * Set 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

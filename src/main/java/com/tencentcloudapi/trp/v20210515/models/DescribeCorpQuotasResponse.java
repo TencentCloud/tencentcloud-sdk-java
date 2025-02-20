@@ -25,7 +25,6 @@ public class DescribeCorpQuotasResponse extends AbstractModel {
 
     /**
     * 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpQuotas")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCorpQuotasResponse extends AbstractModel {
 
     /**
     * 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCorpQuotasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子企业额度使用情况 
      * @return CorpQuotas 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CorpQuota [] getCorpQuotas() {
         return this.CorpQuotas;
@@ -58,19 +54,15 @@ public class DescribeCorpQuotasResponse extends AbstractModel {
 
     /**
      * Set 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorpQuotas 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorpQuotas(CorpQuota [] CorpQuotas) {
         this.CorpQuotas = CorpQuotas;
     }
 
     /**
-     * Get 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录总数量 
      * @return Total 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeCorpQuotasResponse extends AbstractModel {
 
     /**
      * Set 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

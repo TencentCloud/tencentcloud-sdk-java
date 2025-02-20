@@ -25,7 +25,6 @@ public class DescribeCustomRulesResponse extends AbstractModel {
 
     /**
     * 码规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRules")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCustomRulesResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCustomRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码规则列表 
      * @return CustomRules 码规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomRule [] getCustomRules() {
         return this.CustomRules;
@@ -58,19 +54,15 @@ public class DescribeCustomRulesResponse extends AbstractModel {
 
     /**
      * Set 码规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomRules 码规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRules(CustomRule [] CustomRules) {
         this.CustomRules = CustomRules;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeCustomRulesResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

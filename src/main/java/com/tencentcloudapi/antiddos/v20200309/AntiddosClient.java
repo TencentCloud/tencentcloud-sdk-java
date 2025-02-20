@@ -680,7 +680,6 @@ public class AntiddosClient extends AbstractClient{
 
     /**
      *获取高防IP资产实例列表
-
      * @param req DescribeListBGPIPInstancesRequest
      * @return DescribeListBGPIPInstancesResponse
      * @throws TencentCloudSDKException

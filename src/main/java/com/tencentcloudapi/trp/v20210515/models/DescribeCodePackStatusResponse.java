@@ -25,7 +25,6 @@ public class DescribeCodePackStatusResponse extends AbstractModel {
 
     /**
     * 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCodePackStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败 
      * @return Status 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class DescribeCodePackStatusResponse extends AbstractModel {
 
     /**
      * Set 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

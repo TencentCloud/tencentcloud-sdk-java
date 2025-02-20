@@ -32,7 +32,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 微信小程序openid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Openid")
     @Expose
@@ -61,7 +60,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MerchantId")
     @Expose
@@ -69,7 +67,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -77,7 +74,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchId")
     @Expose
@@ -85,7 +81,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 省份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -93,7 +88,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 地市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -101,7 +95,6 @@ public class RawScanLog extends AbstractModel {
 
     /**
     * 区/县
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("District")
     @Expose
@@ -124,10 +117,8 @@ public class RawScanLog extends AbstractModel {
     }
 
     /**
-     * Get 微信小程序openid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信小程序openid 
      * @return Openid 微信小程序openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenid() {
         return this.Openid;
@@ -135,9 +126,7 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 微信小程序openid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Openid 微信小程序openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenid(String Openid) {
         this.Openid = Openid;
@@ -192,10 +181,8 @@ public class RawScanLog extends AbstractModel {
     }
 
     /**
-     * Get 商户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户ID 
      * @return MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMerchantId() {
         return this.MerchantId;
@@ -203,19 +190,15 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchantId(String MerchantId) {
         this.MerchantId = MerchantId;
     }
 
     /**
-     * Get 商品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品ID 
      * @return ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -223,19 +206,15 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 批次ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次ID 
      * @return BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchId() {
         return this.BatchId;
@@ -243,19 +222,15 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
     }
 
     /**
-     * Get 省份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份 
      * @return Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvince() {
         return this.Province;
@@ -263,19 +238,15 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 地市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地市 
      * @return City 地市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -283,19 +254,15 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 地市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 地市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 区/县
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区/县 
      * @return District 区/县
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDistrict() {
         return this.District;
@@ -303,9 +270,7 @@ public class RawScanLog extends AbstractModel {
 
     /**
      * Set 区/县
-注意：此字段可能返回 null，表示取不到有效值。
      * @param District 区/县
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistrict(String District) {
         this.District = District;

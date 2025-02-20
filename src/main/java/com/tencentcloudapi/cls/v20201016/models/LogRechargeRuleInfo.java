@@ -132,6 +132,13 @@ public class LogRechargeRuleInfo extends AbstractModel {
     private String [] Keys;
 
     /**
+    * json解析模式，开启首层数据解析
+    */
+    @SerializedName("ParseArray")
+    @Expose
+    private Boolean ParseArray;
+
+    /**
      * Get 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则 
      * @return RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
      */
@@ -395,6 +402,22 @@ public class LogRechargeRuleInfo extends AbstractModel {
         this.Keys = Keys;
     }
 
+    /**
+     * Get json解析模式，开启首层数据解析 
+     * @return ParseArray json解析模式，开启首层数据解析
+     */
+    public Boolean getParseArray() {
+        return this.ParseArray;
+    }
+
+    /**
+     * Set json解析模式，开启首层数据解析
+     * @param ParseArray json解析模式，开启首层数据解析
+     */
+    public void setParseArray(Boolean ParseArray) {
+        this.ParseArray = ParseArray;
+    }
+
     public LogRechargeRuleInfo() {
     }
 
@@ -451,6 +474,9 @@ public class LogRechargeRuleInfo extends AbstractModel {
                 this.Keys[i] = new String(source.Keys[i]);
             }
         }
+        if (source.ParseArray != null) {
+            this.ParseArray = new Boolean(source.ParseArray);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
+        this.setParamSimple(map, prefix + "ParseArray", this.ParseArray);
 
     }
 }

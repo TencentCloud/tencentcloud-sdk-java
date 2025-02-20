@@ -25,7 +25,6 @@ public class DescribeTraceCodesResponse extends AbstractModel {
 
     /**
     * 标识列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceCodes")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTraceCodesResponse extends AbstractModel {
 
     /**
     * 条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeTraceCodesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 标识列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标识列表 
      * @return TraceCodes 标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TraceCode [] getTraceCodes() {
         return this.TraceCodes;
@@ -58,19 +54,15 @@ public class DescribeTraceCodesResponse extends AbstractModel {
 
     /**
      * Set 标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceCodes 标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceCodes(TraceCode [] TraceCodes) {
         this.TraceCodes = TraceCodes;
     }
 
     /**
-     * Get 条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条数 
      * @return TotalCount 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeTraceCodesResponse extends AbstractModel {
 
     /**
      * Set 条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

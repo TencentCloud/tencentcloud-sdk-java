@@ -99,6 +99,21 @@ public class OriginInfo extends AbstractModel {
     private String VodeoBucketId;
 
     /**
+    * 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+    */
+    @SerializedName("VodOriginScope")
+    @Expose
+    private String VodOriginScope;
+
+    /**
+    * VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+    */
+    @SerializedName("VodBucketId")
+    @Expose
+    private String VodBucketId;
+
+    /**
      * Get 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6 或域名类型源站；</li>
 <li>COS：腾讯云 COS 对象存储源站；</li>
@@ -314,6 +329,42 @@ public class OriginInfo extends AbstractModel {
         this.VodeoBucketId = VodeoBucketId;
     }
 
+    /**
+     * Get 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li> 
+     * @return VodOriginScope 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+     */
+    public String getVodOriginScope() {
+        return this.VodOriginScope;
+    }
+
+    /**
+     * Set 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+     * @param VodOriginScope 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+     */
+    public void setVodOriginScope(String VodOriginScope) {
+        this.VodOriginScope = VodOriginScope;
+    }
+
+    /**
+     * Get VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。 
+     * @return VodBucketId VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+     */
+    public String getVodBucketId() {
+        return this.VodBucketId;
+    }
+
+    /**
+     * Set VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+     * @param VodBucketId VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+     */
+    public void setVodBucketId(String VodBucketId) {
+        this.VodBucketId = VodBucketId;
+    }
+
     public OriginInfo() {
     }
 
@@ -349,6 +400,12 @@ public class OriginInfo extends AbstractModel {
         if (source.VodeoBucketId != null) {
             this.VodeoBucketId = new String(source.VodeoBucketId);
         }
+        if (source.VodOriginScope != null) {
+            this.VodOriginScope = new String(source.VodOriginScope);
+        }
+        if (source.VodBucketId != null) {
+            this.VodBucketId = new String(source.VodBucketId);
+        }
     }
 
 
@@ -364,6 +421,8 @@ public class OriginInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
         this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
         this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+        this.setParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+        this.setParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
 
     }
 }

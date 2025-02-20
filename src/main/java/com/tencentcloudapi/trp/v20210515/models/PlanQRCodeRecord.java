@@ -25,7 +25,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * 二维码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -33,7 +32,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * OpenID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -41,7 +39,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTime")
     @Expose
@@ -49,7 +46,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -57,7 +53,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * 国家
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -65,7 +60,6 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * 省份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -73,17 +67,14 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
     * 城市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-     * Get 二维码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二维码 
      * @return Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -91,19 +82,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get OpenID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OpenID 
      * @return OpenId OpenID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -111,19 +98,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set OpenID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId OpenID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫码时间 
      * @return ScanTime 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanTime() {
         return this.ScanTime;
@@ -131,19 +114,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTime 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get IP 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP 地址 
      * @return Ip IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -151,19 +130,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 国家
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家 
      * @return Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountry() {
         return this.Country;
@@ -171,19 +146,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set 国家
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 省份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份 
      * @return Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvince() {
         return this.Province;
@@ -191,19 +162,15 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 城市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市 
      * @return City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -211,9 +178,7 @@ public class PlanQRCodeRecord extends AbstractModel {
 
     /**
      * Set 城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;

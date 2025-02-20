@@ -25,7 +25,6 @@ public class UpdateScanRoomsResponse extends AbstractModel {
 
     /**
     * 返回结果码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateScanRoomsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回结果码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回结果码 
      * @return ErrorCode 返回结果码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrorCode() {
         return this.ErrorCode;
@@ -50,9 +47,7 @@ public class UpdateScanRoomsResponse extends AbstractModel {
 
     /**
      * Set 返回结果码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorCode 返回结果码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;

@@ -25,7 +25,6 @@ public class DescribeScanResultListResponse extends AbstractModel {
 
     /**
     * 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScanResultListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 要查询的语音检测任务的结果 
      * @return Data 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeScanResult [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeScanResultListResponse extends AbstractModel {
 
     /**
      * Set 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeScanResult [] Data) {
         this.Data = Data;

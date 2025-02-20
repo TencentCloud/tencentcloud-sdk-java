@@ -25,7 +25,6 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
     * 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +32,6 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
     * 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,17 +39,14 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
     * 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CU")
     @Expose
     private Long CU;
 
     /**
-     * Get 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss 
      * @return StartTime 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -59,19 +54,15 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
      * Set 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss 
      * @return EndTime 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -79,19 +70,15 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
      * Set 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前统计时间段，引擎规格 
      * @return CU 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCU() {
         return this.CU;
@@ -99,9 +86,7 @@ public class DataEngineScaleInfoDetail extends AbstractModel {
 
     /**
      * Set 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CU 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCU(Long CU) {
         this.CU = CU;

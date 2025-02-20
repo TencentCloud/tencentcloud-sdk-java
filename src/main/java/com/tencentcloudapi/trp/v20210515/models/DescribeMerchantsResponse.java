@@ -25,7 +25,6 @@ public class DescribeMerchantsResponse extends AbstractModel {
 
     /**
     * 商户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Merchants")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMerchantsResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeMerchantsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 商户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户列表 
      * @return Merchants 商户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Merchant [] getMerchants() {
         return this.Merchants;
@@ -58,19 +54,15 @@ public class DescribeMerchantsResponse extends AbstractModel {
 
     /**
      * Set 商户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Merchants 商户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchants(Merchant [] Merchants) {
         this.Merchants = Merchants;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeMerchantsResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

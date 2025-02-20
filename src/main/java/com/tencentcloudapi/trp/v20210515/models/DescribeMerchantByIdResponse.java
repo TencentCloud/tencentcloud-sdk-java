@@ -25,7 +25,6 @@ public class DescribeMerchantByIdResponse extends AbstractModel {
 
     /**
     * 商户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Merchant")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeMerchantByIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 商户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户信息 
      * @return Merchant 商户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Merchant getMerchant() {
         return this.Merchant;
@@ -50,9 +47,7 @@ public class DescribeMerchantByIdResponse extends AbstractModel {
 
     /**
      * Set 商户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Merchant 商户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchant(Merchant Merchant) {
         this.Merchant = Merchant;

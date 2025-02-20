@@ -32,7 +32,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Openid")
     @Expose
@@ -40,7 +39,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
     @Expose
@@ -48,7 +46,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -56,7 +53,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -64,7 +60,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpId")
     @Expose
@@ -72,7 +67,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MerchantId")
     @Expose
@@ -80,7 +74,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -88,7 +81,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -96,7 +88,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 国家
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -104,7 +95,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 省份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -112,7 +102,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 城市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -120,7 +109,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 县/区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("District")
     @Expose
@@ -128,7 +116,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unionid")
     @Expose
@@ -136,7 +123,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("First")
     @Expose
@@ -144,7 +130,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchId")
     @Expose
@@ -159,7 +144,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MerchantName")
     @Expose
@@ -167,7 +151,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -175,7 +158,6 @@ public class ScanLog extends AbstractModel {
 
     /**
     * 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductLogo")
     @Expose
@@ -214,10 +196,8 @@ public class ScanLog extends AbstractModel {
     }
 
     /**
-     * Get 微信openid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信openid 
      * @return Openid 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenid() {
         return this.Openid;
@@ -225,19 +205,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Openid 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenid(String Openid) {
         this.Openid = Openid;
     }
 
     /**
-     * Get 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信昵称 
      * @return Nickname 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
         return this.Nickname;
@@ -245,19 +221,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nickname 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -265,19 +237,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码 
      * @return Code 码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -285,19 +253,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 企业ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业ID 
      * @return CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCorpId() {
         return this.CorpId;
@@ -305,19 +269,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorpId(Long CorpId) {
         this.CorpId = CorpId;
     }
 
     /**
-     * Get 商户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户ID 
      * @return MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMerchantId() {
         return this.MerchantId;
@@ -325,19 +285,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchantId(String MerchantId) {
         this.MerchantId = MerchantId;
     }
 
     /**
-     * Get 商品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品ID 
      * @return ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -345,19 +301,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip地址 
      * @return Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -365,19 +317,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 国家
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家 
      * @return Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountry() {
         return this.Country;
@@ -385,19 +333,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 国家
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 省份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份 
      * @return Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvince() {
         return this.Province;
@@ -405,19 +349,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 城市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市 
      * @return City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -425,19 +365,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 县/区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 县/区 
      * @return District 县/区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDistrict() {
         return this.District;
@@ -445,19 +381,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 县/区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param District 县/区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistrict(String District) {
         this.District = District;
     }
 
     /**
-     * Get 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信 unionid 
      * @return Unionid 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnionid() {
         return this.Unionid;
@@ -465,19 +397,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unionid 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnionid(String Unionid) {
         this.Unionid = Unionid;
     }
 
     /**
-     * Get 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次扫码 0:否, 1:是 
      * @return First 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirst() {
         return this.First;
@@ -485,19 +413,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param First 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirst(Long First) {
         this.First = First;
     }
 
     /**
-     * Get 批次ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次ID 
      * @return BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchId() {
         return this.BatchId;
@@ -505,9 +429,7 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
@@ -530,10 +452,8 @@ public class ScanLog extends AbstractModel {
     }
 
     /**
-     * Get 商户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户名称 
      * @return MerchantName 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMerchantName() {
         return this.MerchantName;
@@ -541,19 +461,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MerchantName 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchantName(String MerchantName) {
         this.MerchantName = MerchantName;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -561,19 +477,15 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品Logo 
      * @return ProductLogo 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductLogo() {
         return this.ProductLogo;
@@ -581,9 +493,7 @@ public class ScanLog extends AbstractModel {
 
     /**
      * Set 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductLogo 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductLogo(String ProductLogo) {
         this.ProductLogo = ProductLogo;

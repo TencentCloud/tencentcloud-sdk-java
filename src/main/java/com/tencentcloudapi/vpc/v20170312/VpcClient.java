@@ -1759,6 +1759,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询指定EIP的带宽上下限范围。
+     * @param req DescribeAddressBandwidthRangeRequest
+     * @return DescribeAddressBandwidthRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(DescribeAddressBandwidthRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAddressBandwidthRange", DescribeAddressBandwidthRangeResponse.class);
+    }
+
+    /**
      *本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
      * @param req DescribeAddressQuotaRequest
      * @return DescribeAddressQuotaResponse
@@ -1812,6 +1823,17 @@ public class VpcClient extends AbstractClient{
     public DescribeAssistantCidrResponse DescribeAssistantCidr(DescribeAssistantCidrRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssistantCidr", DescribeAssistantCidrResponse.class);
+    }
+
+    /**
+     *查询指定带宽包的带宽上下限范围
+     * @param req DescribeBandwidthPackageBandwidthRangeRequest
+     * @return DescribeBandwidthPackageBandwidthRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackageBandwidthRangeResponse DescribeBandwidthPackageBandwidthRange(DescribeBandwidthPackageBandwidthRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBandwidthPackageBandwidthRange", DescribeBandwidthPackageBandwidthRangeResponse.class);
     }
 
     /**

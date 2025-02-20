@@ -25,7 +25,6 @@ public class DeleteTraceDataResponse extends AbstractModel {
 
     /**
     * 溯源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceId")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteTraceDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 溯源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 溯源id 
      * @return TraceId 溯源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceId() {
         return this.TraceId;
@@ -50,9 +47,7 @@ public class DeleteTraceDataResponse extends AbstractModel {
 
     /**
      * Set 溯源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TraceId 溯源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

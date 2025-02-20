@@ -25,7 +25,6 @@ public class PlanQRCode extends AbstractModel {
 
     /**
     * 二维码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -33,17 +32,14 @@ public class PlanQRCode extends AbstractModel {
 
     /**
     * 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 二维码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二维码 
      * @return Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -51,19 +47,15 @@ public class PlanQRCode extends AbstractModel {
 
     /**
      * Set 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态，0:未激活 1:已激活 2:已冻结 
      * @return Status 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -71,9 +63,7 @@ public class PlanQRCode extends AbstractModel {
 
     /**
      * Set 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

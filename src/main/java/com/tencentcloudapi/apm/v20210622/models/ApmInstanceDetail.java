@@ -45,7 +45,8 @@ public class ApmInstanceDetail extends AbstractModel {
     private String Description;
 
     /**
-    * 业务系统状态
+    * 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
     */
     @SerializedName("Status")
     @Expose
@@ -276,6 +277,18 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long IsSqlInjectionAnalysis;
 
     /**
+    * 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+    */
+    @SerializedName("StopReason")
+    @Expose
+    private Long StopReason;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -324,16 +337,20 @@ public class ApmInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 业务系统状态 
-     * @return Status 业务系统状态
+     * Get 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流} 
+     * @return Status 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 业务系统状态
-     * @param Status 业务系统状态
+     * Set 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
+     * @param Status 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -851,6 +868,42 @@ public class ApmInstanceDetail extends AbstractModel {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
     }
 
+    /**
+     * Get 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+} 
+     * @return StopReason 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+     */
+    public Long getStopReason() {
+        return this.StopReason;
+    }
+
+    /**
+     * Set 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+     * @param StopReason 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+     */
+    public void setStopReason(Long StopReason) {
+        this.StopReason = StopReason;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -973,6 +1026,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.IsSqlInjectionAnalysis != null) {
             this.IsSqlInjectionAnalysis = new Long(source.IsSqlInjectionAnalysis);
         }
+        if (source.StopReason != null) {
+            this.StopReason = new Long(source.StopReason);
+        }
     }
 
 
@@ -1016,6 +1072,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
+        this.setParamSimple(map, prefix + "StopReason", this.StopReason);
 
     }
 }

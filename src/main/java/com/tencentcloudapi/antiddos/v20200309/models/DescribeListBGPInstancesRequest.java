@@ -157,8 +157,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     private Long FilterBasicPlusFlag;
 
     /**
-    * 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+    * 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
     */
     @SerializedName("FilterPlanCntFlag")
     @Expose
@@ -483,20 +482,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
- 
-     * @return FilterPlanCntFlag 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+     * Get 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0 
+     * @return FilterPlanCntFlag 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
      */
     public Long getFilterPlanCntFlag() {
         return this.FilterPlanCntFlag;
     }
 
     /**
-     * Set 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
-     * @param FilterPlanCntFlag 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+     * Set 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
+     * @param FilterPlanCntFlag 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
      */
     public void setFilterPlanCntFlag(Long FilterPlanCntFlag) {
         this.FilterPlanCntFlag = FilterPlanCntFlag;

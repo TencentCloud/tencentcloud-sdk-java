@@ -46,7 +46,6 @@ public class Merchant extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -82,7 +81,6 @@ public class Merchant extends AbstractModel {
 
     /**
     * 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeUrl")
     @Expose
@@ -137,10 +135,8 @@ public class Merchant extends AbstractModel {
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -148,9 +144,7 @@ public class Merchant extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -221,10 +215,8 @@ public class Merchant extends AbstractModel {
     }
 
     /**
-     * Get 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第三方码域名前缀 
      * @return CodeUrl 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeUrl() {
         return this.CodeUrl;
@@ -232,9 +224,7 @@ public class Merchant extends AbstractModel {
 
     /**
      * Set 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodeUrl 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeUrl(String CodeUrl) {
         this.CodeUrl = CodeUrl;

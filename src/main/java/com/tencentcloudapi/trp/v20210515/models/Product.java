@@ -60,7 +60,6 @@ public class Product extends AbstractModel {
 
     /**
     * 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Specification")
     @Expose
@@ -68,7 +67,6 @@ public class Product extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -76,7 +74,6 @@ public class Product extends AbstractModel {
 
     /**
     * 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Logo")
     @Expose
@@ -98,7 +95,6 @@ public class Product extends AbstractModel {
 
     /**
     * 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
     @Expose
@@ -113,7 +109,6 @@ public class Product extends AbstractModel {
 
     /**
     * 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertState")
     @Expose
@@ -200,10 +195,8 @@ public class Product extends AbstractModel {
     }
 
     /**
-     * Get 商品规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品规格 
      * @return Specification 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecification() {
         return this.Specification;
@@ -211,19 +204,15 @@ public class Product extends AbstractModel {
 
     /**
      * Set 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Specification 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -231,19 +220,15 @@ public class Product extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 商品图片
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品图片 
      * @return Logo 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLogo() {
         return this.Logo;
@@ -251,9 +236,7 @@ public class Product extends AbstractModel {
 
     /**
      * Set 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Logo 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogo(String [] Logo) {
         this.Logo = Logo;
@@ -292,10 +275,8 @@ public class Product extends AbstractModel {
     }
 
     /**
-     * Get 预留字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留字段 
      * @return Ext 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ext getExt() {
         return this.Ext;
@@ -303,9 +284,7 @@ public class Product extends AbstractModel {
 
     /**
      * Set 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ext 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(Ext Ext) {
         this.Ext = Ext;
@@ -328,10 +307,8 @@ public class Product extends AbstractModel {
     }
 
     /**
-     * Get 认证状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 认证状态 
      * @return CertState 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCertState() {
         return this.CertState;
@@ -339,9 +316,7 @@ public class Product extends AbstractModel {
 
     /**
      * Set 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertState 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertState(Long CertState) {
         this.CertState = CertState;

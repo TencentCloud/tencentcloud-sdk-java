@@ -25,7 +25,6 @@ public class DescribeTmpTokenResponse extends AbstractModel {
 
     /**
     * 临时token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Token")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTmpTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 临时token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时token 
      * @return Token 临时token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getToken() {
         return this.Token;
@@ -50,9 +47,7 @@ public class DescribeTmpTokenResponse extends AbstractModel {
 
     /**
      * Set 临时token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Token 临时token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToken(String Token) {
         this.Token = Token;

@@ -46,7 +46,6 @@ public class PackSpec extends AbstractModel {
 
     /**
     * 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomId")
     @Expose
@@ -54,7 +53,6 @@ public class PackSpec extends AbstractModel {
 
     /**
     * 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeParts")
     @Expose
@@ -62,7 +60,6 @@ public class PackSpec extends AbstractModel {
 
     /**
     * 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -70,7 +67,6 @@ public class PackSpec extends AbstractModel {
 
     /**
     * 场景值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneCode")
     @Expose
@@ -125,10 +121,8 @@ public class PackSpec extends AbstractModel {
     }
 
     /**
-     * Get 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码规则ID 
      * @return CustomId 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomId() {
         return this.CustomId;
@@ -136,19 +130,15 @@ public class PackSpec extends AbstractModel {
 
     /**
      * Set 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomId 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomId(String CustomId) {
         this.CustomId = CustomId;
     }
 
     /**
-     * Get 码段配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码段配置 
      * @return CodeParts 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodePart [] getCodeParts() {
         return this.CodeParts;
@@ -156,19 +146,15 @@ public class PackSpec extends AbstractModel {
 
     /**
      * Set 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodeParts 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeParts(CodePart [] CodeParts) {
         this.CodeParts = CodeParts;
     }
 
     /**
-     * Get 包装单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包装单位 
      * @return Unit 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -176,19 +162,15 @@ public class PackSpec extends AbstractModel {
 
     /**
      * Set 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 场景值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景值 
      * @return SceneCode 场景值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSceneCode() {
         return this.SceneCode;
@@ -196,9 +178,7 @@ public class PackSpec extends AbstractModel {
 
     /**
      * Set 场景值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneCode 场景值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneCode(Long SceneCode) {
         this.SceneCode = SceneCode;

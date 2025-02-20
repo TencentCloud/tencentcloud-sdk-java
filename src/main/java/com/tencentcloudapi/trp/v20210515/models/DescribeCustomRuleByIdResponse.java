@@ -25,7 +25,6 @@ public class DescribeCustomRuleByIdResponse extends AbstractModel {
 
     /**
     * 码规则信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRule")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCustomRuleByIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码规则信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码规则信息 
      * @return CustomRule 码规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomRule getCustomRule() {
         return this.CustomRule;
@@ -50,9 +47,7 @@ public class DescribeCustomRuleByIdResponse extends AbstractModel {
 
     /**
      * Set 码规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomRule 码规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRule(CustomRule CustomRule) {
         this.CustomRule = CustomRule;

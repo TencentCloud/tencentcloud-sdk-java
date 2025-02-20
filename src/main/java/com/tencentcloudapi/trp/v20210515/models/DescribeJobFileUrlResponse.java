@@ -25,7 +25,6 @@ public class DescribeJobFileUrlResponse extends AbstractModel {
 
     /**
     * 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeJobFileUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码包地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码包地址 
      * @return Url 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -50,9 +47,7 @@ public class DescribeJobFileUrlResponse extends AbstractModel {
 
     /**
      * Set 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

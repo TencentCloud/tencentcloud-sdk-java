@@ -53,7 +53,6 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
     * 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -68,7 +67,6 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
     * 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineType")
     @Expose
@@ -76,7 +74,6 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -84,7 +81,6 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
     * 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserUin")
     @Expose
@@ -155,10 +151,8 @@ public class DataEngineBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get 返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回信息 
      * @return Message 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -166,9 +160,7 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
      * Set 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -191,10 +183,8 @@ public class DataEngineBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch 
      * @return DataEngineType 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineType() {
         return this.DataEngineType;
@@ -202,19 +192,15 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
      * Set 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineType 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineType(String DataEngineType) {
         this.DataEngineType = DataEngineType;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -222,19 +208,15 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号ID 
      * @return UserUin 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserUin() {
         return this.UserUin;
@@ -242,9 +224,7 @@ public class DataEngineBasicInfo extends AbstractModel {
 
     /**
      * Set 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserUin 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserUin(String UserUin) {
         this.UserUin = UserUin;

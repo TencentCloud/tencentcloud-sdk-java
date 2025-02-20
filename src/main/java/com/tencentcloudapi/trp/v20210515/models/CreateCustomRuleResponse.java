@@ -25,7 +25,6 @@ public class CreateCustomRuleResponse extends AbstractModel {
 
     /**
     * 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCustomRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码规则ID 
      * @return CustomId 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomId() {
         return this.CustomId;
@@ -50,9 +47,7 @@ public class CreateCustomRuleResponse extends AbstractModel {
 
     /**
      * Set 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomId 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomId(String CustomId) {
         this.CustomId = CustomId;

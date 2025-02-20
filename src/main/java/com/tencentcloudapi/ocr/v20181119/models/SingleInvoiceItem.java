@@ -240,6 +240,22 @@ public class SingleInvoiceItem extends AbstractModel {
     private ElectronicFlightTicketFull ElectronicFlightTicketFull;
 
     /**
+    * 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaxPayment")
+    @Expose
+    private TaxPayment TaxPayment;
+
+    /**
+    * 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomsPaymentReceipt")
+    @Expose
+    private CustomsPaymentReceipt CustomsPaymentReceipt;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -779,6 +795,46 @@ public class SingleInvoiceItem extends AbstractModel {
         this.ElectronicFlightTicketFull = ElectronicFlightTicketFull;
     }
 
+    /**
+     * Get 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaxPayment 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaxPayment getTaxPayment() {
+        return this.TaxPayment;
+    }
+
+    /**
+     * Set 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaxPayment 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaxPayment(TaxPayment TaxPayment) {
+        this.TaxPayment = TaxPayment;
+    }
+
+    /**
+     * Get 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomsPaymentReceipt 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomsPaymentReceipt getCustomsPaymentReceipt() {
+        return this.CustomsPaymentReceipt;
+    }
+
+    /**
+     * Set 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomsPaymentReceipt 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomsPaymentReceipt(CustomsPaymentReceipt CustomsPaymentReceipt) {
+        this.CustomsPaymentReceipt = CustomsPaymentReceipt;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -868,6 +924,12 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.ElectronicFlightTicketFull != null) {
             this.ElectronicFlightTicketFull = new ElectronicFlightTicketFull(source.ElectronicFlightTicketFull);
         }
+        if (source.TaxPayment != null) {
+            this.TaxPayment = new TaxPayment(source.TaxPayment);
+        }
+        if (source.CustomsPaymentReceipt != null) {
+            this.CustomsPaymentReceipt = new CustomsPaymentReceipt(source.CustomsPaymentReceipt);
+        }
     }
 
 
@@ -902,6 +964,8 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "VatSalesList.", this.VatSalesList);
         this.setParamObj(map, prefix + "ElectronicTrainTicketFull.", this.ElectronicTrainTicketFull);
         this.setParamObj(map, prefix + "ElectronicFlightTicketFull.", this.ElectronicFlightTicketFull);
+        this.setParamObj(map, prefix + "TaxPayment.", this.TaxPayment);
+        this.setParamObj(map, prefix + "CustomsPaymentReceipt.", this.CustomsPaymentReceipt);
 
     }
 }

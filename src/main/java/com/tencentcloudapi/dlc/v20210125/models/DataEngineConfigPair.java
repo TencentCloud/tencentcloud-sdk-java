@@ -25,7 +25,6 @@ public class DataEngineConfigPair extends AbstractModel {
 
     /**
     * 配置项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigItem")
     @Expose
@@ -33,17 +32,14 @@ public class DataEngineConfigPair extends AbstractModel {
 
     /**
     * 配置值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigValue")
     @Expose
     private String ConfigValue;
 
     /**
-     * Get 配置项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项 
      * @return ConfigItem 配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigItem() {
         return this.ConfigItem;
@@ -51,19 +47,15 @@ public class DataEngineConfigPair extends AbstractModel {
 
     /**
      * Set 配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigItem 配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigItem(String ConfigItem) {
         this.ConfigItem = ConfigItem;
     }
 
     /**
-     * Get 配置值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置值 
      * @return ConfigValue 配置值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigValue() {
         return this.ConfigValue;
@@ -71,9 +63,7 @@ public class DataEngineConfigPair extends AbstractModel {
 
     /**
      * Set 配置值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigValue 配置值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigValue(String ConfigValue) {
         this.ConfigValue = ConfigValue;

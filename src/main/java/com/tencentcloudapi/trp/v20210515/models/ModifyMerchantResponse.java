@@ -25,7 +25,6 @@ public class ModifyMerchantResponse extends AbstractModel {
 
     /**
     * 商户标识码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MerchantId")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyMerchantResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 商户标识码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户标识码 
      * @return MerchantId 商户标识码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMerchantId() {
         return this.MerchantId;
@@ -50,9 +47,7 @@ public class ModifyMerchantResponse extends AbstractModel {
 
     /**
      * Set 商户标识码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MerchantId 商户标识码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMerchantId(String MerchantId) {
         this.MerchantId = MerchantId;

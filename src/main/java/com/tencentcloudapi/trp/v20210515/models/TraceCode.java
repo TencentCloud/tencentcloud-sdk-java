@@ -116,7 +116,6 @@ public class TraceCode extends AbstractModel {
 
     /**
     * 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackSpec")
     @Expose
@@ -124,7 +123,6 @@ public class TraceCode extends AbstractModel {
 
     /**
     * 场景码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneCode")
     @Expose
@@ -132,7 +130,6 @@ public class TraceCode extends AbstractModel {
 
     /**
     * 流水码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialCode")
     @Expose
@@ -347,10 +344,8 @@ public class TraceCode extends AbstractModel {
     }
 
     /**
-     * Get 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码层级详情 
      * @return PackSpec 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PackSpec [] getPackSpec() {
         return this.PackSpec;
@@ -358,19 +353,15 @@ public class TraceCode extends AbstractModel {
 
     /**
      * Set 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackSpec 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackSpec(PackSpec [] PackSpec) {
         this.PackSpec = PackSpec;
     }
 
     /**
-     * Get 场景码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景码 
      * @return SceneCode 场景码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSceneCode() {
         return this.SceneCode;
@@ -378,19 +369,15 @@ public class TraceCode extends AbstractModel {
 
     /**
      * Set 场景码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneCode 场景码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneCode(Long SceneCode) {
         this.SceneCode = SceneCode;
     }
 
     /**
-     * Get 流水码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流水码 
      * @return SerialCode 流水码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSerialCode() {
         return this.SerialCode;
@@ -398,9 +385,7 @@ public class TraceCode extends AbstractModel {
 
     /**
      * Set 流水码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SerialCode 流水码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialCode(Long SerialCode) {
         this.SerialCode = SerialCode;

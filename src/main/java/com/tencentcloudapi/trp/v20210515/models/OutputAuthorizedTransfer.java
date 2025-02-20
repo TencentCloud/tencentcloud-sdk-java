@@ -25,7 +25,6 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
     * 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
     * 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -41,17 +39,14 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
     * 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推送状态，0表示成功。 
      * @return Code 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -59,19 +54,15 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
      * Set 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 错误码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码。 
      * @return Message 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -79,19 +70,15 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
      * Set 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息描述。 
      * @return Value 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -99,9 +86,7 @@ public class OutputAuthorizedTransfer extends AbstractModel {
 
     /**
      * Set 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

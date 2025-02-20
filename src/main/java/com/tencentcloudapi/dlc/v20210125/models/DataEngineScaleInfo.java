@@ -25,7 +25,6 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
     * 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
@@ -33,7 +32,6 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
     * 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -41,17 +39,14 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
     * 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleDetail")
     @Expose
     private DataEngineScaleInfoDetail [] ScaleDetail;
 
     /**
-     * Get 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎ID 
      * @return DataEngineId 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -59,19 +54,15 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
      * Set 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎名称 
      * @return DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineName() {
         return this.DataEngineName;
@@ -79,19 +70,15 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
      * Set 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎规格详情 
      * @return ScaleDetail 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataEngineScaleInfoDetail [] getScaleDetail() {
         return this.ScaleDetail;
@@ -99,9 +86,7 @@ public class DataEngineScaleInfo extends AbstractModel {
 
     /**
      * Set 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleDetail 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleDetail(DataEngineScaleInfoDetail [] ScaleDetail) {
         this.ScaleDetail = ScaleDetail;

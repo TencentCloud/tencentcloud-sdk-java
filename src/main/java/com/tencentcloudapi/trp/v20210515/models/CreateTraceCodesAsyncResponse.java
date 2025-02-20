@@ -25,7 +25,6 @@ public class CreateTraceCodesAsyncResponse extends AbstractModel {
 
     /**
     * 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateTraceCodesAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批次ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次ID 
      * @return BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchId() {
         return this.BatchId;
@@ -50,9 +47,7 @@ public class CreateTraceCodesAsyncResponse extends AbstractModel {
 
     /**
      * Set 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;

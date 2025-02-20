@@ -25,7 +25,6 @@ public class CreateProductResponse extends AbstractModel {
 
     /**
     * 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateProductResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 商品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品ID 
      * @return ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -50,9 +47,7 @@ public class CreateProductResponse extends AbstractModel {
 
     /**
      * Set 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;

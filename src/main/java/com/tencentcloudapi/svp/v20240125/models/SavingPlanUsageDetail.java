@@ -88,7 +88,6 @@ public class SavingPlanUsageDetail extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -239,10 +238,8 @@ public class SavingPlanUsageDetail extends AbstractModel {
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegion() {
         return this.Region;
@@ -250,9 +247,7 @@ public class SavingPlanUsageDetail extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String [] Region) {
         this.Region = Region;

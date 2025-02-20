@@ -25,7 +25,6 @@ public class DescribeProductsResponse extends AbstractModel {
 
     /**
     * 商品列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Products")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeProductsResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeProductsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 商品列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品列表 
      * @return Products 商品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Product [] getProducts() {
         return this.Products;
@@ -58,19 +54,15 @@ public class DescribeProductsResponse extends AbstractModel {
 
     /**
      * Set 商品列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Products 商品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProducts(Product [] Products) {
         this.Products = Products;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeProductsResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

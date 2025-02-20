@@ -25,7 +25,6 @@ public class DescribeRecordInfoResponse extends AbstractModel {
 
     /**
     * 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordInfo")
     @Expose
@@ -53,10 +52,8 @@ public class DescribeRecordInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制信息。 
      * @return RecordInfo 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordInfo [] getRecordInfo() {
         return this.RecordInfo;
@@ -64,9 +61,7 @@ public class DescribeRecordInfoResponse extends AbstractModel {
 
     /**
      * Set 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordInfo 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordInfo(RecordInfo [] RecordInfo) {
         this.RecordInfo = RecordInfo;

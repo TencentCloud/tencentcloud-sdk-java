@@ -74,7 +74,6 @@ public class SavingPlanOverviewDetail extends AbstractModel {
 
     /**
     * 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayType")
     @Expose
@@ -82,7 +81,6 @@ public class SavingPlanOverviewDetail extends AbstractModel {
 
     /**
     * 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuyTime")
     @Expose
@@ -201,10 +199,8 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     }
 
     /**
-     * Get 支付类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付类型 
      * @return PayType 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayType() {
         return this.PayType;
@@ -212,19 +208,15 @@ public class SavingPlanOverviewDetail extends AbstractModel {
 
     /**
      * Set 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayType 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买时间 yyyy-mm-dd HH:mm:ss格式 
      * @return BuyTime 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuyTime() {
         return this.BuyTime;
@@ -232,9 +224,7 @@ public class SavingPlanOverviewDetail extends AbstractModel {
 
     /**
      * Set 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuyTime 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuyTime(String BuyTime) {
         this.BuyTime = BuyTime;

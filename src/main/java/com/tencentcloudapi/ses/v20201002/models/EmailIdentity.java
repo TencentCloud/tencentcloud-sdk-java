@@ -59,6 +59,13 @@ public class EmailIdentity extends AbstractModel {
     private Long DailyQuota;
 
     /**
+    * 域名配置的独立ip
+    */
+    @SerializedName("SendIp")
+    @Expose
+    private String [] SendIp;
+
+    /**
      * Get 发信域名 
      * @return IdentityName 发信域名
      */
@@ -138,6 +145,22 @@ public class EmailIdentity extends AbstractModel {
         this.DailyQuota = DailyQuota;
     }
 
+    /**
+     * Get 域名配置的独立ip 
+     * @return SendIp 域名配置的独立ip
+     */
+    public String [] getSendIp() {
+        return this.SendIp;
+    }
+
+    /**
+     * Set 域名配置的独立ip
+     * @param SendIp 域名配置的独立ip
+     */
+    public void setSendIp(String [] SendIp) {
+        this.SendIp = SendIp;
+    }
+
     public EmailIdentity() {
     }
 
@@ -161,6 +184,12 @@ public class EmailIdentity extends AbstractModel {
         if (source.DailyQuota != null) {
             this.DailyQuota = new Long(source.DailyQuota);
         }
+        if (source.SendIp != null) {
+            this.SendIp = new String[source.SendIp.length];
+            for (int i = 0; i < source.SendIp.length; i++) {
+                this.SendIp[i] = new String(source.SendIp[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class EmailIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
         this.setParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
         this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
+        this.setParamArraySimple(map, prefix + "SendIp.", this.SendIp);
 
     }
 }

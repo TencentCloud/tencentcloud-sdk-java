@@ -25,7 +25,6 @@ public class Chain extends AbstractModel {
 
     /**
     * 码url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,17 +32,14 @@ public class Chain extends AbstractModel {
 
     /**
     * 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private ChainValue [] Data;
 
     /**
-     * Get 码url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码url 
      * @return Code 码url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -51,19 +47,15 @@ public class Chain extends AbstractModel {
 
     /**
      * Set 码url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 码url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 上链数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上链数据 
      * @return Data 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChainValue [] getData() {
         return this.Data;
@@ -71,9 +63,7 @@ public class Chain extends AbstractModel {
 
     /**
      * Set 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ChainValue [] Data) {
         this.Data = Data;

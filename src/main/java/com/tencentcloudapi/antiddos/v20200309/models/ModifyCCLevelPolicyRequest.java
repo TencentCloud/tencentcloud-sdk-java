@@ -45,7 +45,7 @@ public class ModifyCCLevelPolicyRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 协议，可取值HTTP，HTTPS
+    * 协议，可取值http、https、http/https
     */
     @SerializedName("Protocol")
     @Expose
@@ -107,16 +107,16 @@ public class ModifyCCLevelPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 协议，可取值HTTP，HTTPS 
-     * @return Protocol 协议，可取值HTTP，HTTPS
+     * Get 协议，可取值http、https、http/https 
+     * @return Protocol 协议，可取值http、https、http/https
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，可取值HTTP，HTTPS
-     * @param Protocol 协议，可取值HTTP，HTTPS
+     * Set 协议，可取值http、https、http/https
+     * @param Protocol 协议，可取值http、https、http/https
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

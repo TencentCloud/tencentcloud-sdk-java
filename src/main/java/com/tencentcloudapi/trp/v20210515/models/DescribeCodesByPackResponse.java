@@ -25,7 +25,6 @@ public class DescribeCodesByPackResponse extends AbstractModel {
 
     /**
     * 码列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codes")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCodesByPackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码列表 
      * @return Codes 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodeItem [] getCodes() {
         return this.Codes;
@@ -50,9 +47,7 @@ public class DescribeCodesByPackResponse extends AbstractModel {
 
     /**
      * Set 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Codes 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodes(CodeItem [] Codes) {
         this.Codes = Codes;

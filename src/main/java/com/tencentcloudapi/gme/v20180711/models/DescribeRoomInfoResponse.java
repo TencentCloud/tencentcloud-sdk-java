@@ -25,7 +25,6 @@ public class DescribeRoomInfoResponse extends AbstractModel {
 
     /**
     * 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRoomInfoResponse extends AbstractModel {
 
     /**
     * 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomUsers")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRoomInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作结果, 0成功, 非0失败 
      * @return Result 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResult() {
         return this.Result;
@@ -58,19 +54,15 @@ public class DescribeRoomInfoResponse extends AbstractModel {
 
     /**
      * Set 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Long Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间用户信息 
      * @return RoomUsers 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoomUser [] getRoomUsers() {
         return this.RoomUsers;
@@ -78,9 +70,7 @@ public class DescribeRoomInfoResponse extends AbstractModel {
 
     /**
      * Set 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomUsers 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomUsers(RoomUser [] RoomUsers) {
         this.RoomUsers = RoomUsers;

@@ -45,7 +45,7 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
     private String FileName;
 
     /**
-    * 0集群维度 1节点维度
+    * 0集群维度 1节点维度 2启动脚本 3计算组维度
     */
     @SerializedName("ClusterConfigType")
     @Expose
@@ -57,6 +57,13 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
     @SerializedName("IPAddress")
     @Expose
     private String IPAddress;
+
+    /**
+    * 计算组id
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
 
     /**
      * Get 集群实例ID 
@@ -107,16 +114,16 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
     }
 
     /**
-     * Get 0集群维度 1节点维度 
-     * @return ClusterConfigType 0集群维度 1节点维度
+     * Get 0集群维度 1节点维度 2启动脚本 3计算组维度 
+     * @return ClusterConfigType 0集群维度 1节点维度 2启动脚本 3计算组维度
      */
     public Long getClusterConfigType() {
         return this.ClusterConfigType;
     }
 
     /**
-     * Set 0集群维度 1节点维度
-     * @param ClusterConfigType 0集群维度 1节点维度
+     * Set 0集群维度 1节点维度 2启动脚本 3计算组维度
+     * @param ClusterConfigType 0集群维度 1节点维度 2启动脚本 3计算组维度
      */
     public void setClusterConfigType(Long ClusterConfigType) {
         this.ClusterConfigType = ClusterConfigType;
@@ -136,6 +143,22 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
      */
     public void setIPAddress(String IPAddress) {
         this.IPAddress = IPAddress;
+    }
+
+    /**
+     * Get 计算组id 
+     * @return ComputeGroupId 计算组id
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组id
+     * @param ComputeGroupId 计算组id
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
     }
 
     public DescribeClusterConfigsRequest() {
@@ -161,6 +184,9 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
         if (source.IPAddress != null) {
             this.IPAddress = new String(source.IPAddress);
         }
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeClusterConfigsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "ClusterConfigType", this.ClusterConfigType);
         this.setParamSimple(map, prefix + "IPAddress", this.IPAddress);
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
     * 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
     * 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgUrl")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
     * 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileKey")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字码包地址 
      * @return Url 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -66,19 +61,15 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
      * Set 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 图片码包地址，可能为空 
      * @return ImgUrl 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImgUrl() {
         return this.ImgUrl;
@@ -86,19 +77,15 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
      * Set 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgUrl 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgUrl(String ImgUrl) {
         this.ImgUrl = ImgUrl;
     }
 
     /**
-     * Get 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字码包Key，用于上传导入 
      * @return FileKey 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileKey() {
         return this.FileKey;
@@ -106,9 +93,7 @@ public class DescribeCodePackUrlResponse extends AbstractModel {
 
     /**
      * Set 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileKey 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileKey(String FileKey) {
         this.FileKey = FileKey;

@@ -25,7 +25,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpId")
     @Expose
@@ -33,7 +32,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FactoryCnt")
     @Expose
@@ -41,7 +39,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCnt")
     @Expose
@@ -49,7 +46,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrackCnt")
     @Expose
@@ -57,7 +53,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SaleCnt")
     @Expose
@@ -65,7 +60,6 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChainCnt")
     @Expose
@@ -81,17 +75,14 @@ public class UsageQuota extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 企业ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业ID 
      * @return CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCorpId() {
         return this.CorpId;
@@ -99,19 +90,15 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorpId(Long CorpId) {
         this.CorpId = CorpId;
     }
 
     /**
-     * Get 商户配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商户配额 
      * @return FactoryCnt 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFactoryCnt() {
         return this.FactoryCnt;
@@ -119,19 +106,15 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FactoryCnt 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFactoryCnt(Long FactoryCnt) {
         this.FactoryCnt = FactoryCnt;
     }
 
     /**
-     * Get 商品数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品数量 
      * @return ItemCnt 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemCnt() {
         return this.ItemCnt;
@@ -139,19 +122,15 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCnt 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCnt(Long ItemCnt) {
         this.ItemCnt = ItemCnt;
     }
 
     /**
-     * Get 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 溯源码量 
      * @return TrackCnt 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrackCnt() {
         return this.TrackCnt;
@@ -159,19 +138,15 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrackCnt 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrackCnt(Long TrackCnt) {
         this.TrackCnt = TrackCnt;
     }
 
     /**
-     * Get 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 营销码额度 
      * @return SaleCnt 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSaleCnt() {
         return this.SaleCnt;
@@ -179,19 +154,15 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SaleCnt 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSaleCnt(Long SaleCnt) {
         this.SaleCnt = SaleCnt;
     }
 
     /**
-     * Get 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区块链上链次数 
      * @return ChainCnt 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChainCnt() {
         return this.ChainCnt;
@@ -199,9 +170,7 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChainCnt 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChainCnt(Long ChainCnt) {
         this.ChainCnt = ChainCnt;
@@ -232,10 +201,8 @@ public class UsageQuota extends AbstractModel {
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return UpdateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -243,9 +210,7 @@ public class UsageQuota extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

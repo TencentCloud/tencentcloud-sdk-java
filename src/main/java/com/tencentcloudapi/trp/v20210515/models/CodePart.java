@@ -25,7 +25,6 @@ public class CodePart extends AbstractModel {
 
     /**
     * 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class CodePart extends AbstractModel {
 
     /**
     * 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class CodePart extends AbstractModel {
 
     /**
     * 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -56,17 +53,14 @@ public class CodePart extends AbstractModel {
 
     /**
     * 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
     @Expose
     private String Ext;
 
     /**
-     * Get 码段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码段名称 
      * @return Name 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -74,19 +68,15 @@ public class CodePart extends AbstractModel {
 
     /**
      * Set 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 码段类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码段类型 
      * @return Type 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -94,19 +84,15 @@ public class CodePart extends AbstractModel {
 
     /**
      * Set 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 码段内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码段内容 
      * @return Value 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -114,9 +100,7 @@ public class CodePart extends AbstractModel {
 
     /**
      * Set 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
@@ -139,10 +123,8 @@ public class CodePart extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段 
      * @return Ext 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExt() {
         return this.Ext;
@@ -150,9 +132,7 @@ public class CodePart extends AbstractModel {
 
     /**
      * Set 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ext 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(String Ext) {
         this.Ext = Ext;
