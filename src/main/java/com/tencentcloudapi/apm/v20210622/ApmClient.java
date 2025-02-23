@@ -95,6 +95,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *通用查询 OpenTelemetry 调用链列表
+     * @param req DescribeGeneralOTSpanListRequest
+     * @return DescribeGeneralOTSpanListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralOTSpanListResponse DescribeGeneralOTSpanList(DescribeGeneralOTSpanListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGeneralOTSpanList", DescribeGeneralOTSpanListResponse.class);
+    }
+
+    /**
      *通用查询调用链列表
      * @param req DescribeGeneralSpanListRequest
      * @return DescribeGeneralSpanListResponse

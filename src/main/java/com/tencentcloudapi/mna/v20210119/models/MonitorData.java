@@ -32,7 +32,6 @@ public class MonitorData extends AbstractModel {
 
     /**
     * 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessMetrics")
     @Expose
@@ -40,7 +39,6 @@ public class MonitorData extends AbstractModel {
 
     /**
     * 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlotNetInfo")
     @Expose
@@ -63,10 +61,8 @@ public class MonitorData extends AbstractModel {
     }
 
     /**
-     * Get 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务指标（bps/ms/%） 
      * @return BusinessMetrics 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBusinessMetrics() {
         return this.BusinessMetrics;
@@ -74,19 +70,15 @@ public class MonitorData extends AbstractModel {
 
     /**
      * Set 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessMetrics 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessMetrics(Float BusinessMetrics) {
         this.BusinessMetrics = BusinessMetrics;
     }
 
     /**
-     * Get 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡状态信息 
      * @return SlotNetInfo 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlotNetInfo [] getSlotNetInfo() {
         return this.SlotNetInfo;
@@ -94,9 +86,7 @@ public class MonitorData extends AbstractModel {
 
     /**
      * Set 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlotNetInfo 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlotNetInfo(SlotNetInfo [] SlotNetInfo) {
         this.SlotNetInfo = SlotNetInfo;

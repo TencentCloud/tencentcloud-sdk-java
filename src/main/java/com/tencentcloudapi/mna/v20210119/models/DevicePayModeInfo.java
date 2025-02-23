@@ -48,7 +48,6 @@ public class DevicePayModeInfo extends AbstractModel {
 
     /**
     * 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -111,10 +110,8 @@ public class DevicePayModeInfo extends AbstractModel {
     }
 
     /**
-     * Get 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包ID，仅当付费模式为流量包类型时才有。 
      * @return ResourceId 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -122,9 +119,7 @@ public class DevicePayModeInfo extends AbstractModel {
 
     /**
      * Set 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -25,7 +25,6 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
     * 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetInfoName")
     @Expose
@@ -33,7 +32,6 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
     * 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIP")
     @Expose
@@ -41,17 +39,14 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
     * 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Current")
     @Expose
     private Float Current;
 
     /**
-     * Get 网卡名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡名 
      * @return NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetInfoName() {
         return this.NetInfoName;
@@ -59,19 +54,15 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
      * Set 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetInfoName(String NetInfoName) {
         this.NetInfoName = NetInfoName;
     }
 
     /**
-     * Get 公网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP 
      * @return PublicIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIP() {
         return this.PublicIP;
@@ -79,19 +70,15 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
      * Set 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
     }
 
     /**
-     * Get 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标数据（bps/ms/%） 
      * @return Current 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCurrent() {
         return this.Current;
@@ -99,9 +86,7 @@ public class SlotNetInfo extends AbstractModel {
 
     /**
      * Set 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Current 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrent(Float Current) {
         this.Current = Current;

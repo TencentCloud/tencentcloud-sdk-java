@@ -25,7 +25,6 @@ public class Hardware extends AbstractModel {
 
     /**
     * 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SN")
     @Expose
@@ -36,7 +35,6 @@ public class Hardware extends AbstractModel {
 1，租户付费
 2，厂商月付费
 3，厂商永久授权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseChargingMode")
     @Expose
@@ -44,7 +42,6 @@ public class Hardware extends AbstractModel {
 
     /**
     * 设备描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -52,17 +49,14 @@ public class Hardware extends AbstractModel {
 
     /**
     * 硬件ID，入参无需传递
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HardwareId")
     @Expose
     private String HardwareId;
 
     /**
-     * Get 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬件序列号 
      * @return SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSN() {
         return this.SN;
@@ -70,9 +64,7 @@ public class Hardware extends AbstractModel {
 
     /**
      * Set 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSN(String SN) {
         this.SN = SN;
@@ -82,13 +74,11 @@ public class Hardware extends AbstractModel {
      * Get license计费模式：
 1，租户付费
 2，厂商月付费
-3，厂商永久授权
-注意：此字段可能返回 null，表示取不到有效值。 
+3，厂商永久授权 
      * @return LicenseChargingMode license计费模式：
 1，租户付费
 2，厂商月付费
 3，厂商永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseChargingMode() {
         return this.LicenseChargingMode;
@@ -99,22 +89,18 @@ public class Hardware extends AbstractModel {
 1，租户付费
 2，厂商月付费
 3，厂商永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseChargingMode license计费模式：
 1，租户付费
 2，厂商月付费
 3，厂商永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseChargingMode(Long LicenseChargingMode) {
         this.LicenseChargingMode = LicenseChargingMode;
     }
 
     /**
-     * Get 设备描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备描述 
      * @return Description 设备描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -122,19 +108,15 @@ public class Hardware extends AbstractModel {
 
     /**
      * Set 设备描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 设备描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 硬件ID，入参无需传递
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬件ID，入参无需传递 
      * @return HardwareId 硬件ID，入参无需传递
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHardwareId() {
         return this.HardwareId;
@@ -142,9 +124,7 @@ public class Hardware extends AbstractModel {
 
     /**
      * Set 硬件ID，入参无需传递
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HardwareId 硬件ID，入参无需传递
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHardwareId(String HardwareId) {
         this.HardwareId = HardwareId;

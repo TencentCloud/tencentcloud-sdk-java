@@ -53,7 +53,6 @@ public class VendorHardware extends AbstractModel {
 
     /**
     * 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveTime")
     @Expose
@@ -83,7 +82,6 @@ public class VendorHardware extends AbstractModel {
 
     /**
     * 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastOnlineTime")
     @Expose
@@ -173,10 +171,8 @@ public class VendorHardware extends AbstractModel {
     }
 
     /**
-     * Get 激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 激活时间 
      * @return ActiveTime 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActiveTime() {
         return this.ActiveTime;
@@ -184,9 +180,7 @@ public class VendorHardware extends AbstractModel {
 
     /**
      * Set 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveTime 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveTime(String ActiveTime) {
         this.ActiveTime = ActiveTime;
@@ -245,10 +239,8 @@ public class VendorHardware extends AbstractModel {
     }
 
     /**
-     * Get 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后在线时间 
      * @return LastOnlineTime 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastOnlineTime() {
         return this.LastOnlineTime;
@@ -256,9 +248,7 @@ public class VendorHardware extends AbstractModel {
 
     /**
      * Set 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastOnlineTime 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastOnlineTime(String LastOnlineTime) {
         this.LastOnlineTime = LastOnlineTime;

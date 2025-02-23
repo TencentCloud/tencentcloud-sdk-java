@@ -108,6 +108,13 @@ public class AccessPoint extends AbstractModel {
     private PortSpecification [] AvailablePortInfo;
 
     /**
+    * 接入点地址。
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -299,6 +306,22 @@ public class AccessPoint extends AbstractModel {
         this.AvailablePortInfo = AvailablePortInfo;
     }
 
+    /**
+     * Get 接入点地址。 
+     * @return Address 接入点地址。
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set 接入点地址。
+     * @param Address 接入点地址。
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
     public AccessPoint() {
     }
 
@@ -352,6 +375,9 @@ public class AccessPoint extends AbstractModel {
                 this.AvailablePortInfo[i] = new PortSpecification(source.AvailablePortInfo[i]);
             }
         }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
     }
 
 
@@ -371,6 +397,7 @@ public class AccessPoint extends AbstractModel {
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
+        this.setParamSimple(map, prefix + "Address", this.Address);
 
     }
 }

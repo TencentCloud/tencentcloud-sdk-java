@@ -134,12 +134,57 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private String MeasureMethod;
 
     /**
+    * 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SoftDeployDesc")
+    @Expose
+    private String [] SoftDeployDesc;
+
+    /**
+    * 启动进程列表，例如["NodeManager"]。
+    */
+    @SerializedName("ServiceNodeDesc")
+    @Expose
+    private String ServiceNodeDesc;
+
+    /**
+    * 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceNodeInfo")
+    @Expose
+    private Long [] ServiceNodeInfo;
+
+    /**
+    * 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SoftDeployInfo")
+    @Expose
+    private Long [] SoftDeployInfo;
+
+    /**
     * 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadMetricsConditions")
     @Expose
     private LoadMetricsConditions LoadMetricsConditions;
+
+    /**
+    * 伸缩组Id
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+    * soft例如yarn
+    */
+    @SerializedName("Soft")
+    @Expose
+    private String Soft;
 
     /**
      * Get 规则ID。 
@@ -402,6 +447,82 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
+     * Get 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SoftDeployDesc 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSoftDeployDesc() {
+        return this.SoftDeployDesc;
+    }
+
+    /**
+     * Set 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SoftDeployDesc 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSoftDeployDesc(String [] SoftDeployDesc) {
+        this.SoftDeployDesc = SoftDeployDesc;
+    }
+
+    /**
+     * Get 启动进程列表，例如["NodeManager"]。 
+     * @return ServiceNodeDesc 启动进程列表，例如["NodeManager"]。
+     */
+    public String getServiceNodeDesc() {
+        return this.ServiceNodeDesc;
+    }
+
+    /**
+     * Set 启动进程列表，例如["NodeManager"]。
+     * @param ServiceNodeDesc 启动进程列表，例如["NodeManager"]。
+     */
+    public void setServiceNodeDesc(String ServiceNodeDesc) {
+        this.ServiceNodeDesc = ServiceNodeDesc;
+    }
+
+    /**
+     * Get 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceNodeInfo 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getServiceNodeInfo() {
+        return this.ServiceNodeInfo;
+    }
+
+    /**
+     * Set 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceNodeInfo 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
+        this.ServiceNodeInfo = ServiceNodeInfo;
+    }
+
+    /**
+     * Get 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getSoftDeployInfo() {
+        return this.SoftDeployInfo;
+    }
+
+    /**
+     * Set 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSoftDeployInfo(Long [] SoftDeployInfo) {
+        this.SoftDeployInfo = SoftDeployInfo;
+    }
+
+    /**
      * Get 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadMetricsConditions 多指标触发条件
@@ -419,6 +540,38 @@ public class LoadAutoScaleStrategy extends AbstractModel {
      */
     public void setLoadMetricsConditions(LoadMetricsConditions LoadMetricsConditions) {
         this.LoadMetricsConditions = LoadMetricsConditions;
+    }
+
+    /**
+     * Get 伸缩组Id 
+     * @return GroupId 伸缩组Id
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 伸缩组Id
+     * @param GroupId 伸缩组Id
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get soft例如yarn 
+     * @return Soft soft例如yarn
+     */
+    public String getSoft() {
+        return this.Soft;
+    }
+
+    /**
+     * Set soft例如yarn
+     * @param Soft soft例如yarn
+     */
+    public void setSoft(String Soft) {
+        this.Soft = Soft;
     }
 
     public LoadAutoScaleStrategy() {
@@ -477,8 +630,35 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         if (source.MeasureMethod != null) {
             this.MeasureMethod = new String(source.MeasureMethod);
         }
+        if (source.SoftDeployDesc != null) {
+            this.SoftDeployDesc = new String[source.SoftDeployDesc.length];
+            for (int i = 0; i < source.SoftDeployDesc.length; i++) {
+                this.SoftDeployDesc[i] = new String(source.SoftDeployDesc[i]);
+            }
+        }
+        if (source.ServiceNodeDesc != null) {
+            this.ServiceNodeDesc = new String(source.ServiceNodeDesc);
+        }
+        if (source.ServiceNodeInfo != null) {
+            this.ServiceNodeInfo = new Long[source.ServiceNodeInfo.length];
+            for (int i = 0; i < source.ServiceNodeInfo.length; i++) {
+                this.ServiceNodeInfo[i] = new Long(source.ServiceNodeInfo[i]);
+            }
+        }
+        if (source.SoftDeployInfo != null) {
+            this.SoftDeployInfo = new Long[source.SoftDeployInfo.length];
+            for (int i = 0; i < source.SoftDeployInfo.length; i++) {
+                this.SoftDeployInfo[i] = new Long(source.SoftDeployInfo[i]);
+            }
+        }
         if (source.LoadMetricsConditions != null) {
             this.LoadMetricsConditions = new LoadMetricsConditions(source.LoadMetricsConditions);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Soft != null) {
+            this.Soft = new String(source.Soft);
         }
     }
 
@@ -502,7 +682,13 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
         this.setParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
+        this.setParamArraySimple(map, prefix + "SoftDeployDesc.", this.SoftDeployDesc);
+        this.setParamSimple(map, prefix + "ServiceNodeDesc", this.ServiceNodeDesc);
+        this.setParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
+        this.setParamArraySimple(map, prefix + "SoftDeployInfo.", this.SoftDeployInfo);
         this.setParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Soft", this.Soft);
 
     }
 }

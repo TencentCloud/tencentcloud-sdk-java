@@ -25,7 +25,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,7 +32,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -41,7 +39,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveTime")
     @Expose
@@ -49,7 +46,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastOnlineTime")
     @Expose
@@ -57,7 +53,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -65,7 +60,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VendorDescription")
     @Expose
@@ -74,7 +68,6 @@ public class HardwareInfo extends AbstractModel {
     /**
     * license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseChargingMode")
     @Expose
@@ -82,7 +75,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -90,7 +82,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SN")
     @Expose
@@ -100,7 +91,6 @@ public class HardwareInfo extends AbstractModel {
     * license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicensePayMode")
     @Expose
@@ -110,7 +100,6 @@ public class HardwareInfo extends AbstractModel {
     * 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Payer")
     @Expose
@@ -118,7 +107,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -126,7 +114,6 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -134,17 +121,14 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowTrunc")
     @Expose
     private Long FlowTrunc;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -152,19 +136,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -172,19 +152,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 激活时间 
      * @return ActiveTime 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActiveTime() {
         return this.ActiveTime;
@@ -192,19 +168,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveTime 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveTime(String ActiveTime) {
         this.ActiveTime = ActiveTime;
     }
 
     /**
-     * Get 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后在线时间 
      * @return LastOnlineTime 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastOnlineTime() {
         return this.LastOnlineTime;
@@ -212,19 +184,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastOnlineTime 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastOnlineTime(String LastOnlineTime) {
         this.LastOnlineTime = LastOnlineTime;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -232,19 +200,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 厂商备注 
      * @return VendorDescription 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVendorDescription() {
         return this.VendorDescription;
@@ -252,9 +216,7 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VendorDescription 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVendorDescription(String VendorDescription) {
         this.VendorDescription = VendorDescription;
@@ -262,11 +224,9 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Get license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
-注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。 
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer 
      * @return LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseChargingMode() {
         return this.LicenseChargingMode;
@@ -275,20 +235,16 @@ public class HardwareInfo extends AbstractModel {
     /**
      * Set license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseChargingMode(Long LicenseChargingMode) {
         this.LicenseChargingMode = LicenseChargingMode;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -296,19 +252,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬件序列号 
      * @return SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSN() {
         return this.SN;
@@ -316,9 +268,7 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSN(String SN) {
         this.SN = SN;
@@ -327,12 +277,10 @@ public class HardwareInfo extends AbstractModel {
     /**
      * Get license授权有效期 
 0：月度授权 
-1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。 
+1：永久授权 
      * @return LicensePayMode license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
@@ -342,11 +290,9 @@ public class HardwareInfo extends AbstractModel {
      * Set license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicensePayMode license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;
@@ -355,12 +301,10 @@ public class HardwareInfo extends AbstractModel {
     /**
      * Get 付费方 
 0：客户付费 
-1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。 
+1：厂商付费 
      * @return Payer 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayer() {
         return this.Payer;
@@ -370,21 +314,17 @@ public class HardwareInfo extends AbstractModel {
      * Set 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Payer 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayer(Long Payer) {
         this.Payer = Payer;
     }
 
     /**
-     * Get 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备分组ID 
      * @return GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -392,19 +332,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备分组名称 
      * @return GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -412,19 +348,15 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速	 
      * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowTrunc() {
         return this.FlowTrunc;
@@ -432,9 +364,7 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowTrunc(Long FlowTrunc) {
         this.FlowTrunc = FlowTrunc;

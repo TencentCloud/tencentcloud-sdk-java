@@ -61,7 +61,6 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
     /**
     * 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -227,10 +226,8 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     }
 
     /**
-     * Get 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买时间，Unix时间戳格式，单位：秒 
      * @return CreateTime 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -238,9 +235,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
     /**
      * Set 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
