@@ -80,7 +80,7 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     private String Remark;
 
     /**
-    * 创建时间，时间格式示例"2024-05-05 12:10:15"
+    * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -88,7 +88,7 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间，时间格式示例"2024-05-05 12:10:15"
+    * 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -244,9 +244,9 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -254,9 +254,9 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     }
 
     /**
-     * Set 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -264,9 +264,9 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     }
 
     /**
-     * Get 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -274,9 +274,9 @@ public class OutputDescribeNameListDetail extends AbstractModel {
     }
 
     /**
-     * Set 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {

@@ -240,6 +240,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询DAG信息
+     * @param req DescribeDAGInfoRequest
+     * @return DescribeDAGInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDAGInfoResponse DescribeDAGInfo(DescribeDAGInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDAGInfo", DescribeDAGInfoResponse.class);
+    }
+
+    /**
      *yarn application 统计接口查询
      * @param req DescribeEmrApplicationStaticsRequest
      * @return DescribeEmrApplicationStaticsResponse

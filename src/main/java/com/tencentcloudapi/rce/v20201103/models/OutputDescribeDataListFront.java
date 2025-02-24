@@ -52,16 +52,14 @@ public class OutputDescribeDataListFront extends AbstractModel {
     private Long DataSource;
 
     /**
-    * 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+    * 名单数据开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+    * 名单数据结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -76,21 +74,20 @@ public class OutputDescribeDataListFront extends AbstractModel {
 
     /**
     * 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
+    * 名单数据创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+    * 名单数据更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -98,7 +95,6 @@ public class OutputDescribeDataListFront extends AbstractModel {
 
     /**
     * 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptDataContent")
     @Expose
@@ -169,40 +165,32 @@ public class OutputDescribeDataListFront extends AbstractModel {
     }
 
     /**
-     * Get 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 名单数据开始时间 
+     * @return StartTime 名单数据开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 名单数据开始时间
+     * @param StartTime 名单数据开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 名单数据结束时间 
+     * @return EndTime 名单数据结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 名单数据结束时间
+     * @param EndTime 名单数据结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -225,10 +213,8 @@ public class OutputDescribeDataListFront extends AbstractModel {
     }
 
     /**
-     * Get 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名单数据描述 
      * @return Remark 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -236,51 +222,47 @@ public class OutputDescribeDataListFront extends AbstractModel {
 
     /**
      * Set 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 名单数据创建时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return CreateTime 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 名单数据创建时间 
+     * @return CreateTime 名单数据创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
-     * @param CreateTime 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 名单数据创建时间
+     * @param CreateTime 名单数据创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 名单数据更新时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return UpdateTime 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 名单数据更新时间 
+     * @return UpdateTime 名单数据更新时间
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
-     * @param UpdateTime 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 名单数据更新时间
+     * @param UpdateTime 名单数据更新时间
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密名单数据内容 
      * @return EncryptDataContent 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptDataContent() {
         return this.EncryptDataContent;
@@ -288,9 +270,7 @@ public class OutputDescribeDataListFront extends AbstractModel {
 
     /**
      * Set 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptDataContent 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptDataContent(String EncryptDataContent) {
         this.EncryptDataContent = EncryptDataContent;

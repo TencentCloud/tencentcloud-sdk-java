@@ -25,8 +25,6 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
     * 数据委托方、需求方：客户主体名称。
-
-示例值：某某有限公司。
     */
     @SerializedName("DataProviderName")
     @Expose
@@ -36,8 +34,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     * 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
-
-示例值：腾讯云计算（北京）有限责任公司
     */
     @SerializedName("DataRecipientName")
     @Expose
@@ -55,8 +51,6 @@ public class DataAuthorizationInfo extends AbstractModel {
 4-IP地址；
 
 999-其它；
-
-示例值：[1, 4]
     */
     @SerializedName("UserDataType")
     @Expose
@@ -65,7 +59,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
     * 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-示例值：1
     */
     @SerializedName("IsAuthorize")
     @Expose
@@ -74,7 +67,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
     * 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
 1-已授权；其它值为未授权。
-示例值：1
     */
     @SerializedName("IsOrderHandling")
     @Expose
@@ -84,8 +76,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     * 客户获得的用户授权期限时间戳（单位秒）。
 
 不填默认无固定期限。
-
-示例值：1719805604
     */
     @SerializedName("AuthorizationTerm")
     @Expose
@@ -94,8 +84,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
     * 	
 客户获得用户授权所依赖的协议地址。
-
-示例值：https://www.*****.com/*
     */
     @SerializedName("PrivacyPolicyLink")
     @Expose
@@ -105,20 +93,14 @@ public class DataAuthorizationInfo extends AbstractModel {
     * 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
-
-示例值：1
     */
     @SerializedName("IsPersonalData")
     @Expose
     private Long IsPersonalData;
 
     /**
-     * Get 数据委托方、需求方：客户主体名称。
-
-示例值：某某有限公司。 
+     * Get 数据委托方、需求方：客户主体名称。 
      * @return DataProviderName 数据委托方、需求方：客户主体名称。
-
-示例值：某某有限公司。
      */
     public String getDataProviderName() {
         return this.DataProviderName;
@@ -126,11 +108,7 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Set 数据委托方、需求方：客户主体名称。
-
-示例值：某某有限公司。
      * @param DataProviderName 数据委托方、需求方：客户主体名称。
-
-示例值：某某有限公司。
      */
     public void setDataProviderName(String DataProviderName) {
         this.DataProviderName = DataProviderName;
@@ -139,14 +117,10 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Get 数据受托方、提供方：腾讯云主体名称。
 
-固定填：腾讯云计算（北京）有限责任公司
-
-示例值：腾讯云计算（北京）有限责任公司 
+固定填：腾讯云计算（北京）有限责任公司 
      * @return DataRecipientName 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
-
-示例值：腾讯云计算（北京）有限责任公司
      */
     public String getDataRecipientName() {
         return this.DataRecipientName;
@@ -156,13 +130,9 @@ public class DataAuthorizationInfo extends AbstractModel {
      * Set 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
-
-示例值：腾讯云计算（北京）有限责任公司
      * @param DataRecipientName 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
-
-示例值：腾讯云计算（北京）有限责任公司
      */
     public void setDataRecipientName(String DataRecipientName) {
         this.DataRecipientName = DataRecipientName;
@@ -179,9 +149,7 @@ public class DataAuthorizationInfo extends AbstractModel {
 
 4-IP地址；
 
-999-其它；
-
-示例值：[1, 4] 
+999-其它； 
      * @return UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
@@ -193,8 +161,6 @@ public class DataAuthorizationInfo extends AbstractModel {
 4-IP地址；
 
 999-其它；
-
-示例值：[1, 4]
      */
     public Long [] getUserDataType() {
         return this.UserDataType;
@@ -212,8 +178,6 @@ public class DataAuthorizationInfo extends AbstractModel {
 4-IP地址；
 
 999-其它；
-
-示例值：[1, 4]
      * @param UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
@@ -225,8 +189,6 @@ public class DataAuthorizationInfo extends AbstractModel {
 4-IP地址；
 
 999-其它；
-
-示例值：[1, 4]
      */
     public void setUserDataType(Long [] UserDataType) {
         this.UserDataType = UserDataType;
@@ -234,11 +196,9 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Get 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
-1-已授权；其它值为未授权。
-示例值：1 
+1-已授权；其它值为未授权。 
      * @return IsAuthorize 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-示例值：1
      */
     public Long getIsAuthorize() {
         return this.IsAuthorize;
@@ -247,10 +207,8 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Set 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-示例值：1
      * @param IsAuthorize 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-示例值：1
      */
     public void setIsAuthorize(Long IsAuthorize) {
         this.IsAuthorize = IsAuthorize;
@@ -258,11 +216,9 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Get 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
-1-已授权；其它值为未授权。
-示例值：1 
+1-已授权；其它值为未授权。 
      * @return IsOrderHandling 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
 1-已授权；其它值为未授权。
-示例值：1
      */
     public Long getIsOrderHandling() {
         return this.IsOrderHandling;
@@ -271,10 +227,8 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Set 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
 1-已授权；其它值为未授权。
-示例值：1
      * @param IsOrderHandling 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
 1-已授权；其它值为未授权。
-示例值：1
      */
     public void setIsOrderHandling(Long IsOrderHandling) {
         this.IsOrderHandling = IsOrderHandling;
@@ -283,14 +237,10 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Get 客户获得的用户授权期限时间戳（单位秒）。
 
-不填默认无固定期限。
-
-示例值：1719805604 
+不填默认无固定期限。 
      * @return AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。
 
 不填默认无固定期限。
-
-示例值：1719805604
      */
     public Long getAuthorizationTerm() {
         return this.AuthorizationTerm;
@@ -300,13 +250,9 @@ public class DataAuthorizationInfo extends AbstractModel {
      * Set 客户获得的用户授权期限时间戳（单位秒）。
 
 不填默认无固定期限。
-
-示例值：1719805604
      * @param AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。
 
 不填默认无固定期限。
-
-示例值：1719805604
      */
     public void setAuthorizationTerm(Long AuthorizationTerm) {
         this.AuthorizationTerm = AuthorizationTerm;
@@ -314,13 +260,9 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Get 	
-客户获得用户授权所依赖的协议地址。
-
-示例值：https://www.*****.com/* 
+客户获得用户授权所依赖的协议地址。 
      * @return PrivacyPolicyLink 	
 客户获得用户授权所依赖的协议地址。
-
-示例值：https://www.*****.com/*
      */
     public String getPrivacyPolicyLink() {
         return this.PrivacyPolicyLink;
@@ -329,12 +271,8 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Set 	
 客户获得用户授权所依赖的协议地址。
-
-示例值：https://www.*****.com/*
      * @param PrivacyPolicyLink 	
 客户获得用户授权所依赖的协议地址。
-
-示例值：https://www.*****.com/*
      */
     public void setPrivacyPolicyLink(String PrivacyPolicyLink) {
         this.PrivacyPolicyLink = PrivacyPolicyLink;
@@ -343,14 +281,10 @@ public class DataAuthorizationInfo extends AbstractModel {
     /**
      * Get 是否是用户个人敏感数据（不推荐使用）。
 
-固定填：1。
-
-示例值：1 
+固定填：1。 
      * @return IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
-
-示例值：1
      */
     public Long getIsPersonalData() {
         return this.IsPersonalData;
@@ -360,13 +294,9 @@ public class DataAuthorizationInfo extends AbstractModel {
      * Set 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
-
-示例值：1
      * @param IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
-
-示例值：1
      */
     public void setIsPersonalData(Long IsPersonalData) {
         this.IsPersonalData = IsPersonalData;

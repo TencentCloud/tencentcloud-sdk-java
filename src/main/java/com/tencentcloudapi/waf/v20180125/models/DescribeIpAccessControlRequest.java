@@ -108,7 +108,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private String Ip;
 
     /**
-    * 生效状态
+    * 生效状态，1表示生效中，2表示过期，0表示全部
     */
     @SerializedName("ValidStatus")
     @Expose
@@ -136,7 +136,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private Long RuleId;
 
     /**
-    * 定时任务类型筛选0 1 2 3 4
+    * 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
     */
     @SerializedName("TimerType")
     @Expose
@@ -343,16 +343,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 生效状态 
-     * @return ValidStatus 生效状态
+     * Get 生效状态，1表示生效中，2表示过期，0表示全部 
+     * @return ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
      */
     public Long getValidStatus() {
         return this.ValidStatus;
     }
 
     /**
-     * Set 生效状态
-     * @param ValidStatus 生效状态
+     * Set 生效状态，1表示生效中，2表示过期，0表示全部
+     * @param ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
      */
     public void setValidStatus(Long ValidStatus) {
         this.ValidStatus = ValidStatus;
@@ -407,16 +407,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务类型筛选0 1 2 3 4 
-     * @return TimerType 定时任务类型筛选0 1 2 3 4
+     * Get 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效 
+     * @return TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
      */
     public Long getTimerType() {
         return this.TimerType;
     }
 
     /**
-     * Set 定时任务类型筛选0 1 2 3 4
-     * @param TimerType 定时任务类型筛选0 1 2 3 4
+     * Set 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+     * @param TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
      */
     public void setTimerType(Long TimerType) {
         this.TimerType = TimerType;

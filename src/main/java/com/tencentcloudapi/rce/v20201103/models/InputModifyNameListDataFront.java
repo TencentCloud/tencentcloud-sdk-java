@@ -38,14 +38,14 @@ public class InputModifyNameListDataFront extends AbstractModel {
     private String DataContent;
 
     /**
-    * 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
+    * 名单数据开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+    * 名单数据结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -98,32 +98,32 @@ public class InputModifyNameListDataFront extends AbstractModel {
     }
 
     /**
-     * Get 名单数据开始时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 名单数据开始时间 
+     * @return StartTime 名单数据开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-     * @param StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 名单数据开始时间
+     * @param StartTime 名单数据开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 名单数据结束时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 名单数据结束时间 
+     * @return EndTime 名单数据结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-     * @param EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 名单数据结束时间
+     * @param EndTime 名单数据结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

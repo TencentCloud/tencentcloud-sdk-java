@@ -426,6 +426,22 @@ https：使用https协议回源
     private Long ProbeStatus;
 
     /**
+    * 回源策略。
+0：负载均衡回源
+1：分流回源
+    */
+    @SerializedName("UpstreamPolicy")
+    @Expose
+    private Long UpstreamPolicy;
+
+    /**
+    * 分流回源策略
+    */
+    @SerializedName("UpstreamRules")
+    @Expose
+    private UpstreamRule [] UpstreamRules;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1421,6 +1437,46 @@ https：使用https协议回源
         this.ProbeStatus = ProbeStatus;
     }
 
+    /**
+     * Get 回源策略。
+0：负载均衡回源
+1：分流回源 
+     * @return UpstreamPolicy 回源策略。
+0：负载均衡回源
+1：分流回源
+     */
+    public Long getUpstreamPolicy() {
+        return this.UpstreamPolicy;
+    }
+
+    /**
+     * Set 回源策略。
+0：负载均衡回源
+1：分流回源
+     * @param UpstreamPolicy 回源策略。
+0：负载均衡回源
+1：分流回源
+     */
+    public void setUpstreamPolicy(Long UpstreamPolicy) {
+        this.UpstreamPolicy = UpstreamPolicy;
+    }
+
+    /**
+     * Get 分流回源策略 
+     * @return UpstreamRules 分流回源策略
+     */
+    public UpstreamRule [] getUpstreamRules() {
+        return this.UpstreamRules;
+    }
+
+    /**
+     * Set 分流回源策略
+     * @param UpstreamRules 分流回源策略
+     */
+    public void setUpstreamRules(UpstreamRule [] UpstreamRules) {
+        this.UpstreamRules = UpstreamRules;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1600,6 +1656,15 @@ https：使用https协议回源
         if (source.ProbeStatus != null) {
             this.ProbeStatus = new Long(source.ProbeStatus);
         }
+        if (source.UpstreamPolicy != null) {
+            this.UpstreamPolicy = new Long(source.UpstreamPolicy);
+        }
+        if (source.UpstreamRules != null) {
+            this.UpstreamRules = new UpstreamRule[source.UpstreamRules.length];
+            for (int i = 0; i < source.UpstreamRules.length; i++) {
+                this.UpstreamRules[i] = new UpstreamRule(source.UpstreamRules[i]);
+            }
+        }
     }
 
 
@@ -1658,6 +1723,8 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
+        this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
+        this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
 
     }
 }

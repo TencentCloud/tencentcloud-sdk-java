@@ -78,6 +78,13 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
     private Boolean NeedMonitor;
 
     /**
+    * 导播台pvw pgm的cdn流id
+    */
+    @SerializedName("CdnStreamId")
+    @Expose
+    private String CdnStreamId;
+
+    /**
      * Get 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InputStreamName 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
@@ -209,6 +216,22 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         this.NeedMonitor = NeedMonitor;
     }
 
+    /**
+     * Get 导播台pvw pgm的cdn流id 
+     * @return CdnStreamId 导播台pvw pgm的cdn流id
+     */
+    public String getCdnStreamId() {
+        return this.CdnStreamId;
+    }
+
+    /**
+     * Set 导播台pvw pgm的cdn流id
+     * @param CdnStreamId 导播台pvw pgm的cdn流id
+     */
+    public void setCdnStreamId(String CdnStreamId) {
+        this.CdnStreamId = CdnStreamId;
+    }
+
     public LiveStreamMonitorInputInfo() {
     }
 
@@ -238,6 +261,9 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         if (source.NeedMonitor != null) {
             this.NeedMonitor = new Boolean(source.NeedMonitor);
         }
+        if (source.CdnStreamId != null) {
+            this.CdnStreamId = new String(source.CdnStreamId);
+        }
     }
 
 
@@ -252,6 +278,7 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CasterInputIndex", this.CasterInputIndex);
         this.setParamSimple(map, prefix + "NeedMonitor", this.NeedMonitor);
+        this.setParamSimple(map, prefix + "CdnStreamId", this.CdnStreamId);
 
     }
 }

@@ -56,7 +56,6 @@ public class SystemDisk extends AbstractModel {
 
     /**
     * 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -66,7 +65,6 @@ public class SystemDisk extends AbstractModel {
     * 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskName")
     @Expose
@@ -161,10 +159,8 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Get 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属的独享集群ID。 
      * @return CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -172,9 +168,7 @@ public class SystemDisk extends AbstractModel {
 
     /**
      * Set 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
@@ -183,12 +177,10 @@ public class SystemDisk extends AbstractModel {
     /**
      * Get 磁盘名称，长度不超过128 个字符。
 
-该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+该参数正在邀测中，暂未开放使用。 
      * @return DiskName 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskName() {
         return this.DiskName;
@@ -198,11 +190,9 @@ public class SystemDisk extends AbstractModel {
      * Set 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskName 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

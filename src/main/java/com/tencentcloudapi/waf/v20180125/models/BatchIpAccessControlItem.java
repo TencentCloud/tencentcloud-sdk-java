@@ -52,7 +52,7 @@ public class BatchIpAccessControlItem extends AbstractModel {
     private String Note;
 
     /**
-    * 添加路径
+    * batch为批量域名，batch-group为防护对象组
     */
     @SerializedName("Source")
     @Expose
@@ -129,9 +129,18 @@ public class BatchIpAccessControlItem extends AbstractModel {
     private Long ValidStatus;
 
     /**
+    * 防护对象组ID列表，如果绑定的是防护对象组
+    */
+    @SerializedName("GroupIds")
+    @Expose
+    private Long [] GroupIds;
+
+    /**
      * Get mongo表自增Id 
      * @return Id mongo表自增Id
+     * @deprecated
      */
+    @Deprecated
     public String getId() {
         return this.Id;
     }
@@ -139,7 +148,9 @@ public class BatchIpAccessControlItem extends AbstractModel {
     /**
      * Set mongo表自增Id
      * @param Id mongo表自增Id
+     * @deprecated
      */
+    @Deprecated
     public void setId(String Id) {
         this.Id = Id;
     }
@@ -163,7 +174,9 @@ public class BatchIpAccessControlItem extends AbstractModel {
     /**
      * Get 黑白名单的IP 
      * @return Ip 黑白名单的IP
+     * @deprecated
      */
+    @Deprecated
     public String getIp() {
         return this.Ip;
     }
@@ -171,7 +184,9 @@ public class BatchIpAccessControlItem extends AbstractModel {
     /**
      * Set 黑白名单的IP
      * @param Ip 黑白名单的IP
+     * @deprecated
      */
+    @Deprecated
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
@@ -193,16 +208,16 @@ public class BatchIpAccessControlItem extends AbstractModel {
     }
 
     /**
-     * Get 添加路径 
-     * @return Source 添加路径
+     * Get batch为批量域名，batch-group为防护对象组 
+     * @return Source batch为批量域名，batch-group为防护对象组
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 添加路径
-     * @param Source 添加路径
+     * Set batch为批量域名，batch-group为防护对象组
+     * @param Source batch为批量域名，batch-group为防护对象组
      */
     public void setSource(String Source) {
         this.Source = Source;
@@ -368,6 +383,22 @@ public class BatchIpAccessControlItem extends AbstractModel {
         this.ValidStatus = ValidStatus;
     }
 
+    /**
+     * Get 防护对象组ID列表，如果绑定的是防护对象组 
+     * @return GroupIds 防护对象组ID列表，如果绑定的是防护对象组
+     */
+    public Long [] getGroupIds() {
+        return this.GroupIds;
+    }
+
+    /**
+     * Set 防护对象组ID列表，如果绑定的是防护对象组
+     * @param GroupIds 防护对象组ID列表，如果绑定的是防护对象组
+     */
+    public void setGroupIds(Long [] GroupIds) {
+        this.GroupIds = GroupIds;
+    }
+
     public BatchIpAccessControlItem() {
     }
 
@@ -427,6 +458,12 @@ public class BatchIpAccessControlItem extends AbstractModel {
         if (source.ValidStatus != null) {
             this.ValidStatus = new Long(source.ValidStatus);
         }
+        if (source.GroupIds != null) {
+            this.GroupIds = new Long[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new Long(source.GroupIds[i]);
+            }
+        }
     }
 
 
@@ -449,6 +486,7 @@ public class BatchIpAccessControlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CronType", this.CronType);
         this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
 
     }
 }

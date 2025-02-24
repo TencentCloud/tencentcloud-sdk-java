@@ -69,14 +69,14 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
     private String Remark;
 
     /**
-    * 创建时间，时间格式示例"2024-05-05 12:10:15"
+    * 创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间，时间格式示例"2024-05-05 12:10:15"
+    * 更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -214,32 +214,32 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return CreateTime 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 创建时间 
+     * @return CreateTime 创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，时间格式示例"2024-05-05 12:10:15"
-     * @param CreateTime 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 创建时间
+     * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，时间格式示例"2024-05-05 12:10:15" 
-     * @return UpdateTime 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Get 更新时间 
+     * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间，时间格式示例"2024-05-05 12:10:15"
-     * @param UpdateTime 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * Set 更新时间
+     * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

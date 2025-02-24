@@ -164,6 +164,13 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     private String Domain;
 
     /**
+    * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
+
+    /**
      * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
      * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
@@ -483,6 +490,22 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.Domain = Domain;
     }
 
+    /**
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -554,6 +577,9 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

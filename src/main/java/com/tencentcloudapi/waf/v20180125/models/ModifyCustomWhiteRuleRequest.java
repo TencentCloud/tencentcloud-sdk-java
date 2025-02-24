@@ -59,7 +59,7 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
     private Long SortId;
 
     /**
-    * 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+    * 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -167,16 +167,16 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。 
-     * @return ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+     * Get 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒） 
+     * @return ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
-     * @param ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+     * Set 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+     * @param ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

@@ -379,6 +379,20 @@ cdn-waf：CDN上的Web防护能力
     private String GmSSLId;
 
     /**
+    * 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+    */
+    @SerializedName("UpstreamPolicy")
+    @Expose
+    private Long UpstreamPolicy;
+
+    /**
+    * 分流回源时生效，分流回源的规则。
+    */
+    @SerializedName("UpstreamRules")
+    @Expose
+    private UpstreamRule [] UpstreamRules;
+
+    /**
      * Get 需要防护的域名 
      * @return Domain 需要防护的域名
      */
@@ -1258,6 +1272,38 @@ cdn-waf：CDN上的Web防护能力
         this.GmSSLId = GmSSLId;
     }
 
+    /**
+     * Get 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源 
+     * @return UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     */
+    public Long getUpstreamPolicy() {
+        return this.UpstreamPolicy;
+    }
+
+    /**
+     * Set 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * @param UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     */
+    public void setUpstreamPolicy(Long UpstreamPolicy) {
+        this.UpstreamPolicy = UpstreamPolicy;
+    }
+
+    /**
+     * Get 分流回源时生效，分流回源的规则。 
+     * @return UpstreamRules 分流回源时生效，分流回源的规则。
+     */
+    public UpstreamRule [] getUpstreamRules() {
+        return this.UpstreamRules;
+    }
+
+    /**
+     * Set 分流回源时生效，分流回源的规则。
+     * @param UpstreamRules 分流回源时生效，分流回源的规则。
+     */
+    public void setUpstreamRules(UpstreamRule [] UpstreamRules) {
+        this.UpstreamRules = UpstreamRules;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -1419,6 +1465,15 @@ cdn-waf：CDN上的Web防护能力
         if (source.GmSSLId != null) {
             this.GmSSLId = new String(source.GmSSLId);
         }
+        if (source.UpstreamPolicy != null) {
+            this.UpstreamPolicy = new Long(source.UpstreamPolicy);
+        }
+        if (source.UpstreamRules != null) {
+            this.UpstreamRules = new UpstreamRule[source.UpstreamRules.length];
+            for (int i = 0; i < source.UpstreamRules.length; i++) {
+                this.UpstreamRules[i] = new UpstreamRule(source.UpstreamRules[i]);
+            }
+        }
     }
 
 
@@ -1471,6 +1526,8 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
         this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
         this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
+        this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
+        this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
 
     }
 }

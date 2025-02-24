@@ -25,7 +25,6 @@ public class OuntputDescribeDataListInfo extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -40,10 +39,8 @@ public class OuntputDescribeDataListInfo extends AbstractModel {
     private OutputDescribeDataListFront [] List;
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -51,9 +48,7 @@ public class OuntputDescribeDataListInfo extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

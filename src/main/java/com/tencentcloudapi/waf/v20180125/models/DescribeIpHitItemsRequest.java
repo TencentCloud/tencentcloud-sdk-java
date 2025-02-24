@@ -80,7 +80,7 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     private Long Skip;
 
     /**
-    * 限制数目
+    * 限制数目，category不等于threat_intelligence时，该值需要必传
     */
     @SerializedName("Limit")
     @Expose
@@ -101,7 +101,7 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     private String Sort;
 
     /**
-    * IP
+    * IP,category传threat_intelligence的时候，该值必传
     */
     @SerializedName("Ip")
     @Expose
@@ -258,16 +258,16 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get 限制数目，category不等于threat_intelligence时，该值需要必传 
+     * @return Limit 限制数目，category不等于threat_intelligence时，该值需要必传
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set 限制数目，category不等于threat_intelligence时，该值需要必传
+     * @param Limit 限制数目，category不等于threat_intelligence时，该值需要必传
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -306,16 +306,16 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get IP,category传threat_intelligence的时候，该值必传 
+     * @return Ip IP,category传threat_intelligence的时候，该值必传
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set IP,category传threat_intelligence的时候，该值必传
+     * @param Ip IP,category传threat_intelligence的时候，该值必传
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

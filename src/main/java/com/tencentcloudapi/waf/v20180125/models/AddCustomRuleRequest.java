@@ -136,6 +136,13 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String PageId;
 
     /**
+    * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -266,7 +273,9 @@ public class AddCustomRuleRequest extends AbstractModel {
     /**
      * Get 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage" 
      * @return Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
+     * @deprecated
      */
+    @Deprecated
     public String getBypass() {
         return this.Bypass;
     }
@@ -274,7 +283,9 @@ public class AddCustomRuleRequest extends AbstractModel {
     /**
      * Set 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      * @param Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
+     * @deprecated
      */
+    @Deprecated
     public void setBypass(String Bypass) {
         this.Bypass = Bypass;
     }
@@ -391,6 +402,22 @@ public class AddCustomRuleRequest extends AbstractModel {
         this.PageId = PageId;
     }
 
+    /**
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public AddCustomRuleRequest() {
     }
 
@@ -450,6 +477,9 @@ public class AddCustomRuleRequest extends AbstractModel {
         if (source.PageId != null) {
             this.PageId = new String(source.PageId);
         }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -473,6 +503,7 @@ public class AddCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

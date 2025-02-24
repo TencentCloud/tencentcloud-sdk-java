@@ -83,6 +83,13 @@ public class StartAIConversationRequest extends AbstractModel {
     private String TTSConfig;
 
     /**
+    * 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+    */
+    @SerializedName("AvatarConfig")
+    @Expose
+    private String AvatarConfig;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      */
@@ -222,6 +229,22 @@ public class StartAIConversationRequest extends AbstractModel {
         this.TTSConfig = TTSConfig;
     }
 
+    /**
+     * Get 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用** 
+     * @return AvatarConfig 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+     */
+    public String getAvatarConfig() {
+        return this.AvatarConfig;
+    }
+
+    /**
+     * Set 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+     * @param AvatarConfig 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+     */
+    public void setAvatarConfig(String AvatarConfig) {
+        this.AvatarConfig = AvatarConfig;
+    }
+
     public StartAIConversationRequest() {
     }
 
@@ -254,6 +277,9 @@ public class StartAIConversationRequest extends AbstractModel {
         if (source.TTSConfig != null) {
             this.TTSConfig = new String(source.TTSConfig);
         }
+        if (source.AvatarConfig != null) {
+            this.AvatarConfig = new String(source.AvatarConfig);
+        }
     }
 
 
@@ -269,6 +295,7 @@ public class StartAIConversationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "STTConfig.", this.STTConfig);
         this.setParamSimple(map, prefix + "LLMConfig", this.LLMConfig);
         this.setParamSimple(map, prefix + "TTSConfig", this.TTSConfig);
+        this.setParamSimple(map, prefix + "AvatarConfig", this.AvatarConfig);
 
     }
 }
