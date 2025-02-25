@@ -53,7 +53,6 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
     * 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Externals")
     @Expose
@@ -110,7 +109,6 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
     * 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoldOutReason")
     @Expose
@@ -185,7 +183,6 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCategory")
     @Expose
@@ -256,10 +253,8 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展属性。 
      * @return Externals 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Externals getExternals() {
         return this.Externals;
@@ -267,9 +262,7 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
      * Set 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Externals 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;
@@ -388,10 +381,8 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 售罄原因。 
      * @return SoldOutReason 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSoldOutReason() {
         return this.SoldOutReason;
@@ -399,9 +390,7 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
      * Set 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoldOutReason 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoldOutReason(String SoldOutReason) {
         this.SoldOutReason = SoldOutReason;
@@ -556,14 +545,12 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 <li> EnoughStock：表示对应库存非常充足</li> 
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>WithoutStock：表示对应库存已经售罄</li> 
      * @return StatusCategory 描述库存情况。取值范围：
 <li> EnoughStock：表示对应库存非常充足</li> 
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusCategory() {
         return this.StatusCategory;
@@ -575,13 +562,11 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusCategory 描述库存情况。取值范围：
 <li> EnoughStock：表示对应库存非常充足</li> 
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCategory(String StatusCategory) {
         this.StatusCategory = StatusCategory;

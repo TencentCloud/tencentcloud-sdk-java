@@ -32,7 +32,6 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
     * 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListName")
     @Expose
@@ -40,7 +39,6 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
     * 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListType")
     @Expose
@@ -62,7 +60,6 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -91,7 +88,6 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
     * 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptionType")
     @Expose
@@ -99,7 +95,6 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
     * 场景Code，all_scene代表全部场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneCode")
     @Expose
@@ -122,10 +117,8 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
     }
 
     /**
-     * Get 名单名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名单名称 
      * @return ListName 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListName() {
         return this.ListName;
@@ -133,19 +126,15 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
      * Set 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListName 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListName(String ListName) {
         this.ListName = ListName;
     }
 
     /**
-     * Get 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名单类型 [1 黑名单 2 白名单] 
      * @return ListType 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getListType() {
         return this.ListType;
@@ -153,9 +142,7 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
      * Set 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListType 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListType(Long ListType) {
         this.ListType = ListType;
@@ -194,10 +181,8 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -205,9 +190,7 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -262,10 +245,8 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
     }
 
     /**
-     * Get 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密类型[0 无需加密 1 MD5加密 2 SHA256加密] 
      * @return EncryptionType 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncryptionType() {
         return this.EncryptionType;
@@ -273,19 +254,15 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
      * Set 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptionType 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptionType(Long EncryptionType) {
         this.EncryptionType = EncryptionType;
     }
 
     /**
-     * Get 场景Code，all_scene代表全部场景
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景Code，all_scene代表全部场景 
      * @return SceneCode 场景Code，all_scene代表全部场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneCode() {
         return this.SceneCode;
@@ -293,9 +270,7 @@ public class OutputDescribeNameListFrontFix extends AbstractModel {
 
     /**
      * Set 场景Code，all_scene代表全部场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneCode 场景Code，all_scene代表全部场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneCode(String SceneCode) {
         this.SceneCode = SceneCode;

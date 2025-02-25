@@ -25,7 +25,6 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
     * 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -41,17 +39,14 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
     * 黑白名单数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private OuntputDescribeDataListInfo Value;
 
     /**
-     * Get 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误 
      * @return Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -59,19 +54,15 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
      * Set 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -79,19 +70,15 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 黑白名单数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 黑白名单数据信息 
      * @return Value 黑白名单数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OuntputDescribeDataListInfo getValue() {
         return this.Value;
@@ -99,9 +86,7 @@ public class OutputDescribeDataListFrontData extends AbstractModel {
 
     /**
      * Set 黑白名单数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 黑白名单数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(OuntputDescribeDataListInfo Value) {
         this.Value = Value;

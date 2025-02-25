@@ -25,7 +25,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -33,7 +32,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AfterPayModeThisMonthUsedCnt")
     @Expose
@@ -41,7 +39,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -57,7 +53,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AfterPayModeLastMonthUsedCnt")
     @Expose
@@ -65,7 +60,6 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeforePayModeTotalUsedCnt")
     @Expose
@@ -73,17 +67,14 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
     * 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeforePayModeRemainUsedCnt")
     @Expose
     private Long BeforePayModeRemainUsedCnt;
 
     /**
-     * Get 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前付费模式，0 后付费 1 预付费 
      * @return PayMode 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -91,19 +82,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费本月使用量 
      * @return AfterPayModeThisMonthUsedCnt 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAfterPayModeThisMonthUsedCnt() {
         return this.AfterPayModeThisMonthUsedCnt;
@@ -111,19 +98,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AfterPayModeThisMonthUsedCnt 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAfterPayModeThisMonthUsedCnt(Long AfterPayModeThisMonthUsedCnt) {
         this.AfterPayModeThisMonthUsedCnt = AfterPayModeThisMonthUsedCnt;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -131,19 +114,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 超出时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超出时间 
      * @return ExpireTime 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -151,19 +130,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费上月使用量 
      * @return AfterPayModeLastMonthUsedCnt 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAfterPayModeLastMonthUsedCnt() {
         return this.AfterPayModeLastMonthUsedCnt;
@@ -171,19 +146,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AfterPayModeLastMonthUsedCnt 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAfterPayModeLastMonthUsedCnt(Long AfterPayModeLastMonthUsedCnt) {
         this.AfterPayModeLastMonthUsedCnt = AfterPayModeLastMonthUsedCnt;
     }
 
     /**
-     * Get 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费总量 
      * @return BeforePayModeTotalUsedCnt 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeforePayModeTotalUsedCnt() {
         return this.BeforePayModeTotalUsedCnt;
@@ -191,19 +162,15 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeforePayModeTotalUsedCnt 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeforePayModeTotalUsedCnt(Long BeforePayModeTotalUsedCnt) {
         this.BeforePayModeTotalUsedCnt = BeforePayModeTotalUsedCnt;
     }
 
     /**
-     * Get 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费剩余用量 
      * @return BeforePayModeRemainUsedCnt 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeforePayModeRemainUsedCnt() {
         return this.BeforePayModeRemainUsedCnt;
@@ -211,9 +178,7 @@ public class OutputDescribeUserUsageCnt extends AbstractModel {
 
     /**
      * Set 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeforePayModeRemainUsedCnt 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeforePayModeRemainUsedCnt(Long BeforePayModeRemainUsedCnt) {
         this.BeforePayModeRemainUsedCnt = BeforePayModeRemainUsedCnt;

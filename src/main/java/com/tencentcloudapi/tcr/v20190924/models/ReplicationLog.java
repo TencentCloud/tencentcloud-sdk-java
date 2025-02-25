@@ -25,7 +25,6 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -33,7 +32,6 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 源资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -41,7 +39,6 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 目的资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Destination")
     @Expose
@@ -49,7 +46,6 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 同步状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,17 +60,14 @@ public class ReplicationLog extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -83,19 +75,15 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 源资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源资源 
      * @return Source 源资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -103,19 +91,15 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 源资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 源资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目的资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的资源 
      * @return Destination 目的资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestination() {
         return this.Destination;
@@ -123,19 +107,15 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 目的资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Destination 目的资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get 同步状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步状态 
      * @return Status 同步状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -143,19 +123,15 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 同步状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 同步状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -163,19 +139,15 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -183,9 +155,7 @@ public class ReplicationLog extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

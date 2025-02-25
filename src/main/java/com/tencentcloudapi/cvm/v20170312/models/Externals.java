@@ -25,7 +25,6 @@ public class Externals extends AbstractModel {
 
     /**
     * 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseAddress")
     @Expose
@@ -33,7 +32,6 @@ public class Externals extends AbstractModel {
 
     /**
     * 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnsupportNetworks")
     @Expose
@@ -41,17 +39,14 @@ public class Externals extends AbstractModel {
 
     /**
     * HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageBlockAttr")
     @Expose
     private StorageBlock StorageBlockAttr;
 
     /**
-     * Get 释放地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 释放地址 
      * @return ReleaseAddress 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReleaseAddress() {
         return this.ReleaseAddress;
@@ -59,19 +54,15 @@ public class Externals extends AbstractModel {
 
     /**
      * Set 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseAddress 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseAddress(Boolean ReleaseAddress) {
         this.ReleaseAddress = ReleaseAddress;
     }
 
     /**
-     * Get 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li> 
      * @return UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUnsupportNetworks() {
         return this.UnsupportNetworks;
@@ -79,19 +70,15 @@ public class Externals extends AbstractModel {
 
     /**
      * Set 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnsupportNetworks(String [] UnsupportNetworks) {
         this.UnsupportNetworks = UnsupportNetworks;
     }
 
     /**
-     * Get HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDD本地存储属性 
      * @return StorageBlockAttr HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageBlock getStorageBlockAttr() {
         return this.StorageBlockAttr;
@@ -99,9 +86,7 @@ public class Externals extends AbstractModel {
 
     /**
      * Set HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageBlockAttr HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageBlockAttr(StorageBlock StorageBlockAttr) {
         this.StorageBlockAttr = StorageBlockAttr;

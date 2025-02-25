@@ -25,7 +25,6 @@ public class StorageBlock extends AbstractModel {
 
     /**
     * HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class StorageBlock extends AbstractModel {
 
     /**
     * HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinSize")
     @Expose
@@ -41,17 +39,14 @@ public class StorageBlock extends AbstractModel {
 
     /**
     * HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDD本地存储类型，值为：LOCAL_PRO. 
      * @return Type HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -59,19 +54,15 @@ public class StorageBlock extends AbstractModel {
 
     /**
      * Set HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDD本地存储的最小容量 
      * @return MinSize HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinSize() {
         return this.MinSize;
@@ -79,19 +70,15 @@ public class StorageBlock extends AbstractModel {
 
     /**
      * Set HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinSize HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HDD本地存储的最大容量 
      * @return MaxSize HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSize() {
         return this.MaxSize;
@@ -99,9 +86,7 @@ public class StorageBlock extends AbstractModel {
 
     /**
      * Set HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSize HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
