@@ -25,7 +25,6 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
     * 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -33,7 +32,6 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
     * 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -41,7 +39,6 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
     * 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -49,17 +46,14 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
     * 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-     * Get 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志投递开启状态，开启：true，关闭：false 
      * @return Enabled 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -67,19 +61,15 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集ID。 
      * @return LogsetId 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -87,19 +77,15 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetId 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID。 
      * @return TopicId 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -107,19 +93,15 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集所在地域 
      * @return LogRegion 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogRegion() {
         return this.LogRegion;
@@ -127,9 +109,7 @@ public class LogDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogRegion 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;

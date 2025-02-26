@@ -256,6 +256,22 @@ public class ListDocItem extends AbstractModel {
     private Boolean IsAllowRetry;
 
     /**
+    * 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Processing")
+    @Expose
+    private Long [] Processing;
+
+    /**
+    * 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -835,6 +851,46 @@ public class ListDocItem extends AbstractModel {
         this.IsAllowRetry = IsAllowRetry;
     }
 
+    /**
+     * Get 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Processing 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getProcessing() {
+        return this.Processing;
+    }
+
+    /**
+     * Set 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Processing 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessing(Long [] Processing) {
+        this.Processing = Processing;
+    }
+
+    /**
+     * Get 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public ListDocItem() {
     }
 
@@ -933,6 +989,15 @@ public class ListDocItem extends AbstractModel {
         if (source.IsAllowRetry != null) {
             this.IsAllowRetry = new Boolean(source.IsAllowRetry);
         }
+        if (source.Processing != null) {
+            this.Processing = new Long[source.Processing.length];
+            for (int i = 0; i < source.Processing.length; i++) {
+                this.Processing[i] = new Long(source.Processing[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -969,6 +1034,8 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
+        this.setParamArraySimple(map, prefix + "Processing.", this.Processing);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

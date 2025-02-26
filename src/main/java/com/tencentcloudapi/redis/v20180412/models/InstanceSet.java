@@ -271,7 +271,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTags")
     @Expose
@@ -279,7 +278,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
@@ -287,7 +285,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoAuth")
     @Expose
@@ -295,7 +292,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimit")
     @Expose
@@ -303,7 +299,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DtsStatus")
     @Expose
@@ -311,7 +306,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetLimit")
     @Expose
@@ -319,7 +313,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PasswordFree")
     @Expose
@@ -327,7 +320,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
@@ -335,7 +327,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv6")
     @Expose
@@ -343,7 +334,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -351,7 +341,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainBandwidthDuration")
     @Expose
@@ -359,7 +348,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -367,7 +355,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorVersion")
     @Expose
@@ -375,7 +362,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMin")
     @Expose
@@ -383,7 +369,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMax")
     @Expose
@@ -391,7 +376,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeSet")
     @Expose
@@ -399,7 +383,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -407,7 +390,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanAddress")
     @Expose
@@ -415,7 +397,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolarisServer")
     @Expose
@@ -423,7 +404,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * CDC Redis集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedisClusterId")
     @Expose
@@ -431,7 +411,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * CDC 集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -439,7 +418,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductVersion")
     @Expose
@@ -447,7 +425,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
@@ -455,7 +432,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
@@ -463,7 +439,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
@@ -471,7 +446,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
@@ -479,7 +453,6 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupMode")
     @Expose
@@ -1074,10 +1047,8 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例关联的标签信息。 
      * @return InstanceTags 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
@@ -1085,19 +1056,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTags 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称。 
      * @return ProjectName 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -1105,19 +1072,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul> 
      * @return NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
@@ -1125,19 +1088,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端连接数。 
      * @return ClientLimit 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimit() {
         return this.ClientLimit;
@@ -1145,19 +1104,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientLimit 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;
     }
 
     /**
-     * Get DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DTS状态（内部参数，用户可忽略）。 
      * @return DtsStatus DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDtsStatus() {
         return this.DtsStatus;
@@ -1165,19 +1120,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DtsStatus DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDtsStatus(Long DtsStatus) {
         this.DtsStatus = DtsStatus;
     }
 
     /**
-     * Get 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片带宽上限，单位MB。 
      * @return NetLimit 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetLimit() {
         return this.NetLimit;
@@ -1185,19 +1136,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetLimit 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetLimit(Long NetLimit) {
         this.NetLimit = NetLimit;
     }
 
     /**
-     * Get 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免密实例标识（内部参数，用户可忽略）。 
      * @return PasswordFree 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPasswordFree() {
         return this.PasswordFree;
@@ -1205,19 +1152,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PasswordFree 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPasswordFree(Long PasswordFree) {
         this.PasswordFree = PasswordFree;
     }
 
     /**
-     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。 
      * @return Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
         return this.Vip6;
@@ -1225,19 +1168,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部参数，用户可忽略。 
      * @return IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPv6() {
         return this.IPv6;
@@ -1245,19 +1184,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;
     }
 
     /**
-     * Get 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例只读标识（内部参数，用户可忽略）。 
      * @return ReadOnly 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadOnly() {
         return this.ReadOnly;
@@ -1265,19 +1200,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部参数，用户可忽略。 
      * @return RemainBandwidthDuration 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemainBandwidthDuration() {
         return this.RemainBandwidthDuration;
@@ -1285,19 +1216,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainBandwidthDuration 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
         this.RemainBandwidthDuration = RemainBandwidthDuration;
     }
 
     /**
-     * Get Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Redis实例请忽略该参数。 
      * @return DiskSize Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -1305,19 +1232,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul> 
      * @return MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
@@ -1325,19 +1248,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端最大连接数可设置的最小值。 
      * @return ClientLimitMin 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMin() {
         return this.ClientLimitMin;
@@ -1345,19 +1264,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientLimitMin 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMin(Long ClientLimitMin) {
         this.ClientLimitMin = ClientLimitMin;
     }
 
     /**
-     * Get 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端最大连接数可设置的最大值。 
      * @return ClientLimitMax 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMax() {
         return this.ClientLimitMax;
@@ -1365,19 +1280,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientLimitMax 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMax(Long ClientLimitMax) {
         this.ClientLimitMax = ClientLimitMax;
     }
 
     /**
-     * Get 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的节点详细信息。 
      * @return NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
@@ -1385,19 +1296,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所在的地域信息，比如ap-guangzhou。 
      * @return Region 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -1405,19 +1312,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网地址。 
      * @return WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanAddress() {
         return this.WanAddress;
@@ -1425,19 +1328,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 北极星服务地址，内部使用。 
      * @return PolarisServer 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolarisServer() {
         return this.PolarisServer;
@@ -1445,19 +1344,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolarisServer 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolarisServer(String PolarisServer) {
         this.PolarisServer = PolarisServer;
     }
 
     /**
-     * Get CDC Redis集群ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC Redis集群ID。 
      * @return RedisClusterId CDC Redis集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRedisClusterId() {
         return this.RedisClusterId;
@@ -1465,19 +1360,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set CDC Redis集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RedisClusterId CDC Redis集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedisClusterId(String RedisClusterId) {
         this.RedisClusterId = RedisClusterId;
     }
 
     /**
-     * Get CDC 集群ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC 集群ID。 
      * @return DedicatedClusterId CDC 集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -1485,19 +1376,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set CDC 集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId CDC 集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul> 
      * @return ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductVersion() {
         return this.ProductVersion;
@@ -1505,19 +1392,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例当前Proxy版本。 
      * @return CurrentProxyVersion 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
@@ -1525,19 +1408,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentProxyVersion 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。 
      * @return CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
@@ -1545,19 +1424,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例可升级Proxy版本。 
      * @return UpgradeProxyVersion 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
@@ -1565,19 +1440,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeProxyVersion 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例可升级Cache小版本。 
      * @return UpgradeRedisVersion 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
@@ -1585,19 +1456,15 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeRedisVersion 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     /**
-     * Get 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份 
      * @return BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupMode() {
         return this.BackupMode;
@@ -1605,9 +1472,7 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;

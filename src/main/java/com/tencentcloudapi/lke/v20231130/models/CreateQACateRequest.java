@@ -31,7 +31,7 @@ public class CreateQACateRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 父级业务ID
+    * 父级业务ID，创建顶级分类时传字符串"0"
     */
     @SerializedName("ParentBizId")
     @Expose
@@ -62,16 +62,16 @@ public class CreateQACateRequest extends AbstractModel {
     }
 
     /**
-     * Get 父级业务ID 
-     * @return ParentBizId 父级业务ID
+     * Get 父级业务ID，创建顶级分类时传字符串"0" 
+     * @return ParentBizId 父级业务ID，创建顶级分类时传字符串"0"
      */
     public String getParentBizId() {
         return this.ParentBizId;
     }
 
     /**
-     * Set 父级业务ID
-     * @param ParentBizId 父级业务ID
+     * Set 父级业务ID，创建顶级分类时传字符串"0"
+     * @param ParentBizId 父级业务ID，创建顶级分类时传字符串"0"
      */
     public void setParentBizId(String ParentBizId) {
         this.ParentBizId = ParentBizId;

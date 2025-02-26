@@ -25,7 +25,6 @@ public class CreateGroupResponse extends AbstractModel {
 
     /**
     * groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get groupId， null表示创建失败 
      * @return Result groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateGroupResponse extends AbstractModel {
 
     /**
      * Set groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

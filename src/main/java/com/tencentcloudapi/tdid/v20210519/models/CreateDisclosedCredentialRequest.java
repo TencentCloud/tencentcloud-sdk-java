@@ -52,6 +52,13 @@ public class CreateDisclosedCredentialRequest extends AbstractModel {
     private Long DAPId;
 
     /**
+    * 用户应用ID
+    */
+    @SerializedName("UAPId")
+    @Expose
+    private Long UAPId;
+
+    /**
      * Get 披露策略id，PolicyJson和PolicyId任选其一 
      * @return PolicyId 披露策略id，PolicyJson和PolicyId任选其一
      */
@@ -115,6 +122,22 @@ public class CreateDisclosedCredentialRequest extends AbstractModel {
         this.DAPId = DAPId;
     }
 
+    /**
+     * Get 用户应用ID 
+     * @return UAPId 用户应用ID
+     */
+    public Long getUAPId() {
+        return this.UAPId;
+    }
+
+    /**
+     * Set 用户应用ID
+     * @param UAPId 用户应用ID
+     */
+    public void setUAPId(Long UAPId) {
+        this.UAPId = UAPId;
+    }
+
     public CreateDisclosedCredentialRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateDisclosedCredentialRequest extends AbstractModel {
         if (source.DAPId != null) {
             this.DAPId = new Long(source.DAPId);
         }
+        if (source.UAPId != null) {
+            this.UAPId = new Long(source.UAPId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateDisclosedCredentialRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CredentialData", this.CredentialData);
         this.setParamSimple(map, prefix + "PolicyJson", this.PolicyJson);
         this.setParamSimple(map, prefix + "DAPId", this.DAPId);
+        this.setParamSimple(map, prefix + "UAPId", this.UAPId);
 
     }
 }

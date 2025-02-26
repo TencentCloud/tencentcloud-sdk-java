@@ -24,69 +24,99 @@ import java.util.HashMap;
 public class GetWeChatBillDetailsRequest extends AbstractModel {
 
     /**
-    * 拉取的日期（YYYY-MM-DD）。最大可追溯到365天前。当天6点后才能拉取前一天的数据。
+    * 拉取的日期（YYYY-MM-DD）。
+- 最大可追溯到365天前。
+- 当天6点后才能拉取前一天的数据。
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 游标。用于分页，取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
+    * 游标。
+- 用于分页。
+- 取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
     */
     @SerializedName("Cursor")
     @Expose
     private Long Cursor;
 
     /**
-    * 需要拉取账单详情业务对应的RuleId。不传会返回所有RuleId数据。默认为空字符串。
+    * 需要拉取账单详情业务对应的RuleId。
+- 不传会返回所有RuleId数据。
+- 默认为空字符串。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 拉取的日期（YYYY-MM-DD）。最大可追溯到365天前。当天6点后才能拉取前一天的数据。 
-     * @return Date 拉取的日期（YYYY-MM-DD）。最大可追溯到365天前。当天6点后才能拉取前一天的数据。
+     * Get 拉取的日期（YYYY-MM-DD）。
+- 最大可追溯到365天前。
+- 当天6点后才能拉取前一天的数据。 
+     * @return Date 拉取的日期（YYYY-MM-DD）。
+- 最大可追溯到365天前。
+- 当天6点后才能拉取前一天的数据。
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 拉取的日期（YYYY-MM-DD）。最大可追溯到365天前。当天6点后才能拉取前一天的数据。
-     * @param Date 拉取的日期（YYYY-MM-DD）。最大可追溯到365天前。当天6点后才能拉取前一天的数据。
+     * Set 拉取的日期（YYYY-MM-DD）。
+- 最大可追溯到365天前。
+- 当天6点后才能拉取前一天的数据。
+     * @param Date 拉取的日期（YYYY-MM-DD）。
+- 最大可追溯到365天前。
+- 当天6点后才能拉取前一天的数据。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 游标。用于分页，取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。 
-     * @return Cursor 游标。用于分页，取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
+     * Get 游标。
+- 用于分页。
+- 取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。 
+     * @return Cursor 游标。
+- 用于分页。
+- 取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
      */
     public Long getCursor() {
         return this.Cursor;
     }
 
     /**
-     * Set 游标。用于分页，取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
-     * @param Cursor 游标。用于分页，取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
+     * Set 游标。
+- 用于分页。
+- 取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
+     * @param Cursor 游标。
+- 用于分页。
+- 取第一页时传0，取后续页面时，传入本接口响应中返回的NextCursor字段的值。
      */
     public void setCursor(Long Cursor) {
         this.Cursor = Cursor;
     }
 
     /**
-     * Get 需要拉取账单详情业务对应的RuleId。不传会返回所有RuleId数据。默认为空字符串。 
-     * @return RuleId 需要拉取账单详情业务对应的RuleId。不传会返回所有RuleId数据。默认为空字符串。
+     * Get 需要拉取账单详情业务对应的RuleId。
+- 不传会返回所有RuleId数据。
+- 默认为空字符串。 
+     * @return RuleId 需要拉取账单详情业务对应的RuleId。
+- 不传会返回所有RuleId数据。
+- 默认为空字符串。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 需要拉取账单详情业务对应的RuleId。不传会返回所有RuleId数据。默认为空字符串。
-     * @param RuleId 需要拉取账单详情业务对应的RuleId。不传会返回所有RuleId数据。默认为空字符串。
+     * Set 需要拉取账单详情业务对应的RuleId。
+- 不传会返回所有RuleId数据。
+- 默认为空字符串。
+     * @param RuleId 需要拉取账单详情业务对应的RuleId。
+- 不传会返回所有RuleId数据。
+- 默认为空字符串。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

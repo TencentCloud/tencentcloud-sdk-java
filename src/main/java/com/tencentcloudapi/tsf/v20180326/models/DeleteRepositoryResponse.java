@@ -25,7 +25,6 @@ public class DeleteRepositoryResponse extends AbstractModel {
 
     /**
     * 删除仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteRepositoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除仓库是否成功 
      * @return Result 删除仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DeleteRepositoryResponse extends AbstractModel {
 
     /**
      * Set 删除仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 删除仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

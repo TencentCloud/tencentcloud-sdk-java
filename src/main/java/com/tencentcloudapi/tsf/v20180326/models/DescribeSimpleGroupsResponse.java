@@ -25,7 +25,6 @@ public class DescribeSimpleGroupsResponse extends AbstractModel {
 
     /**
     * 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSimpleGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 简单部署组列表 
      * @return Result 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageSimpleGroup getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeSimpleGroupsResponse extends AbstractModel {
 
     /**
      * Set 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageSimpleGroup Result) {
         this.Result = Result;

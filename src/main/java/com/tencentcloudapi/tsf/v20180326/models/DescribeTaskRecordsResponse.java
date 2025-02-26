@@ -25,7 +25,6 @@ public class DescribeTaskRecordsResponse extends AbstractModel {
 
     /**
     * 任务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTaskRecordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务记录列表 
      * @return Result 任务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskRecordPage getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeTaskRecordsResponse extends AbstractModel {
 
     /**
      * Set 任务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TaskRecordPage Result) {
         this.Result = Result;

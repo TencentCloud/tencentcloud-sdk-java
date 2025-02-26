@@ -25,7 +25,6 @@ public class DescribeRepositoryResponse extends AbstractModel {
 
     /**
     * 查询的仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRepositoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询的仓库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询的仓库信息 
      * @return Result 查询的仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RepositoryInfo getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeRepositoryResponse extends AbstractModel {
 
     /**
      * Set 查询的仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 查询的仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(RepositoryInfo Result) {
         this.Result = Result;

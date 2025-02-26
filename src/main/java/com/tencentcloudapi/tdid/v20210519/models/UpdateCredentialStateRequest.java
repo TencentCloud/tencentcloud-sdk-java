@@ -31,11 +31,25 @@ public class UpdateCredentialStateRequest extends AbstractModel {
     private Long DAPId;
 
     /**
-    * 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内
+    * 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内
     */
     @SerializedName("OperateCredential")
     @Expose
     private String OperateCredential;
+
+    /**
+    * 待更新凭证状态的原始凭证内容
+    */
+    @SerializedName("OriginCredential")
+    @Expose
+    private String OriginCredential;
+
+    /**
+    * 凭证状态信息
+    */
+    @SerializedName("CredentialStatus")
+    @Expose
+    private CredentialStatusInfo CredentialStatus;
 
     /**
      * Get DID应用Id 
@@ -54,19 +68,51 @@ public class UpdateCredentialStateRequest extends AbstractModel {
     }
 
     /**
-     * Get 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内 
-     * @return OperateCredential 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内
+     * Get 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内 
+     * @return OperateCredential 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内
      */
     public String getOperateCredential() {
         return this.OperateCredential;
     }
 
     /**
-     * Set 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内
-     * @param OperateCredential 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内
+     * Set 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内
+     * @param OperateCredential 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内
      */
     public void setOperateCredential(String OperateCredential) {
         this.OperateCredential = OperateCredential;
+    }
+
+    /**
+     * Get 待更新凭证状态的原始凭证内容 
+     * @return OriginCredential 待更新凭证状态的原始凭证内容
+     */
+    public String getOriginCredential() {
+        return this.OriginCredential;
+    }
+
+    /**
+     * Set 待更新凭证状态的原始凭证内容
+     * @param OriginCredential 待更新凭证状态的原始凭证内容
+     */
+    public void setOriginCredential(String OriginCredential) {
+        this.OriginCredential = OriginCredential;
+    }
+
+    /**
+     * Get 凭证状态信息 
+     * @return CredentialStatus 凭证状态信息
+     */
+    public CredentialStatusInfo getCredentialStatus() {
+        return this.CredentialStatus;
+    }
+
+    /**
+     * Set 凭证状态信息
+     * @param CredentialStatus 凭证状态信息
+     */
+    public void setCredentialStatus(CredentialStatusInfo CredentialStatus) {
+        this.CredentialStatus = CredentialStatus;
     }
 
     public UpdateCredentialStateRequest() {
@@ -83,6 +129,12 @@ public class UpdateCredentialStateRequest extends AbstractModel {
         if (source.OperateCredential != null) {
             this.OperateCredential = new String(source.OperateCredential);
         }
+        if (source.OriginCredential != null) {
+            this.OriginCredential = new String(source.OriginCredential);
+        }
+        if (source.CredentialStatus != null) {
+            this.CredentialStatus = new CredentialStatusInfo(source.CredentialStatus);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class UpdateCredentialStateRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DAPId", this.DAPId);
         this.setParamSimple(map, prefix + "OperateCredential", this.OperateCredential);
+        this.setParamSimple(map, prefix + "OriginCredential", this.OriginCredential);
+        this.setParamObj(map, prefix + "CredentialStatus.", this.CredentialStatus);
 
     }
 }

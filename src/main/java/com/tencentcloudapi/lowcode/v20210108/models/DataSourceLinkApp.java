@@ -32,7 +32,6 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -40,7 +39,6 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
     * 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditStatusUse")
     @Expose
@@ -48,7 +46,6 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
     * 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewStatusUse")
     @Expose
@@ -56,11 +53,17 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
     * 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineStatusUse")
     @Expose
     private Long OnlineStatusUse;
+
+    /**
+    * 数据源ID
+    */
+    @SerializedName("DataSourceId")
+    @Expose
+    private String DataSourceId;
 
     /**
      * Get 应用Id 
@@ -79,10 +82,8 @@ public class DataSourceLinkApp extends AbstractModel {
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return Title 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -90,19 +91,15 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否编辑状态使用 
      * @return EditStatusUse 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEditStatusUse() {
         return this.EditStatusUse;
@@ -110,19 +107,15 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
      * Set 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EditStatusUse 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditStatusUse(Long EditStatusUse) {
         this.EditStatusUse = EditStatusUse;
     }
 
     /**
-     * Get 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否预览状态使用 
      * @return PreviewStatusUse 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPreviewStatusUse() {
         return this.PreviewStatusUse;
@@ -130,19 +123,15 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
      * Set 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewStatusUse 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewStatusUse(Long PreviewStatusUse) {
         this.PreviewStatusUse = PreviewStatusUse;
     }
 
     /**
-     * Get 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否正式状态使用 
      * @return OnlineStatusUse 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnlineStatusUse() {
         return this.OnlineStatusUse;
@@ -150,12 +139,26 @@ public class DataSourceLinkApp extends AbstractModel {
 
     /**
      * Set 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnlineStatusUse 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineStatusUse(Long OnlineStatusUse) {
         this.OnlineStatusUse = OnlineStatusUse;
+    }
+
+    /**
+     * Get 数据源ID 
+     * @return DataSourceId 数据源ID
+     */
+    public String getDataSourceId() {
+        return this.DataSourceId;
+    }
+
+    /**
+     * Set 数据源ID
+     * @param DataSourceId 数据源ID
+     */
+    public void setDataSourceId(String DataSourceId) {
+        this.DataSourceId = DataSourceId;
     }
 
     public DataSourceLinkApp() {
@@ -181,6 +184,9 @@ public class DataSourceLinkApp extends AbstractModel {
         if (source.OnlineStatusUse != null) {
             this.OnlineStatusUse = new Long(source.OnlineStatusUse);
         }
+        if (source.DataSourceId != null) {
+            this.DataSourceId = new String(source.DataSourceId);
+        }
     }
 
 
@@ -193,6 +199,7 @@ public class DataSourceLinkApp extends AbstractModel {
         this.setParamSimple(map, prefix + "EditStatusUse", this.EditStatusUse);
         this.setParamSimple(map, prefix + "PreviewStatusUse", this.PreviewStatusUse);
         this.setParamSimple(map, prefix + "OnlineStatusUse", this.OnlineStatusUse);
+        this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
 
     }
 }

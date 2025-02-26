@@ -39,6 +39,39 @@ public class LowcodeClient extends AbstractClient{
     }
 
     /**
+     *创建知识库
+     * @param req CreateKnowledgeSetRequest
+     * @return CreateKnowledgeSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKnowledgeSetResponse CreateKnowledgeSet(CreateKnowledgeSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateKnowledgeSet", CreateKnowledgeSetResponse.class);
+    }
+
+    /**
+     *删除知识库下文档
+     * @param req DeleteKnowledgeDocumentSetRequest
+     * @return DeleteKnowledgeDocumentSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKnowledgeDocumentSetResponse DeleteKnowledgeDocumentSet(DeleteKnowledgeDocumentSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteKnowledgeDocumentSet", DeleteKnowledgeDocumentSetResponse.class);
+    }
+
+    /**
+     *删除知识库
+     * @param req DeleteKnowledgeSetRequest
+     * @return DeleteKnowledgeSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKnowledgeSetResponse DeleteKnowledgeSet(DeleteKnowledgeSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteKnowledgeSet", DeleteKnowledgeSetResponse.class);
+    }
+
+    /**
      *获取数据源详情列表
      * @param req DescribeDataSourceListRequest
      * @return DescribeDataSourceListResponse
@@ -47,6 +80,72 @@ public class LowcodeClient extends AbstractClient{
     public DescribeDataSourceListResponse DescribeDataSourceList(DescribeDataSourceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataSourceList", DescribeDataSourceListResponse.class);
+    }
+
+    /**
+     *获取知识库下文档详情
+     * @param req DescribeKnowledgeDocumentSetDetailRequest
+     * @return DescribeKnowledgeDocumentSetDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeDocumentSetDetailResponse DescribeKnowledgeDocumentSetDetail(DescribeKnowledgeDocumentSetDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeDocumentSetDetail", DescribeKnowledgeDocumentSetDetailResponse.class);
+    }
+
+    /**
+     *查询知识库下文件集合
+     * @param req DescribeKnowledgeDocumentSetListRequest
+     * @return DescribeKnowledgeDocumentSetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeDocumentSetListResponse DescribeKnowledgeDocumentSetList(DescribeKnowledgeDocumentSetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeDocumentSetList", DescribeKnowledgeDocumentSetListResponse.class);
+    }
+
+    /**
+     *查询知识库
+     * @param req DescribeKnowledgeSetListRequest
+     * @return DescribeKnowledgeSetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeSetListResponse DescribeKnowledgeSetList(DescribeKnowledgeSetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeSetList", DescribeKnowledgeSetListResponse.class);
+    }
+
+    /**
+     *知识库文档搜索接口
+     * @param req SearchDocListRequest
+     * @return SearchDocListResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchDocListResponse SearchDocList(SearchDocListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchDocList", SearchDocListResponse.class);
+    }
+
+    /**
+     *更新知识库
+     * @param req UpdateKnowledgeSetRequest
+     * @return UpdateKnowledgeSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateKnowledgeSetResponse UpdateKnowledgeSet(UpdateKnowledgeSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateKnowledgeSet", UpdateKnowledgeSetResponse.class);
+    }
+
+    /**
+     *更新知识库
+     * @param req UploadKnowledgeDocumentSetRequest
+     * @return UploadKnowledgeDocumentSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadKnowledgeDocumentSetResponse UploadKnowledgeDocumentSet(UploadKnowledgeDocumentSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadKnowledgeDocumentSet", UploadKnowledgeDocumentSetResponse.class);
     }
 
 }

@@ -32,8 +32,7 @@ public class DescribeCorpResponse extends AbstractModel {
     private String CorpBizId;
 
     /**
-    * 机器人配额
-
+    * 应用配额
     */
     @SerializedName("RobotQuota")
     @Expose
@@ -46,6 +45,34 @@ public class DescribeCorpResponse extends AbstractModel {
     @SerializedName("FullName")
     @Expose
     private String FullName;
+
+    /**
+    * 是否试用
+    */
+    @SerializedName("IsTrial")
+    @Expose
+    private Boolean IsTrial;
+
+    /**
+    * 是否试用过期
+    */
+    @SerializedName("IsTrialExpired")
+    @Expose
+    private Boolean IsTrialExpired;
+
+    /**
+    * 可用应用数量
+    */
+    @SerializedName("AvailableAppQuota")
+    @Expose
+    private Long AvailableAppQuota;
+
+    /**
+    * 是否支持自定义模型配置
+    */
+    @SerializedName("IsSupportCustomModel")
+    @Expose
+    private Boolean IsSupportCustomModel;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -75,20 +102,16 @@ public class DescribeCorpResponse extends AbstractModel {
     }
 
     /**
-     * Get 机器人配额
- 
-     * @return RobotQuota 机器人配额
-
+     * Get 应用配额 
+     * @return RobotQuota 应用配额
      */
     public Long getRobotQuota() {
         return this.RobotQuota;
     }
 
     /**
-     * Set 机器人配额
-
-     * @param RobotQuota 机器人配额
-
+     * Set 应用配额
+     * @param RobotQuota 应用配额
      */
     public void setRobotQuota(Long RobotQuota) {
         this.RobotQuota = RobotQuota;
@@ -112,6 +135,70 @@ public class DescribeCorpResponse extends AbstractModel {
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
+    }
+
+    /**
+     * Get 是否试用 
+     * @return IsTrial 是否试用
+     */
+    public Boolean getIsTrial() {
+        return this.IsTrial;
+    }
+
+    /**
+     * Set 是否试用
+     * @param IsTrial 是否试用
+     */
+    public void setIsTrial(Boolean IsTrial) {
+        this.IsTrial = IsTrial;
+    }
+
+    /**
+     * Get 是否试用过期 
+     * @return IsTrialExpired 是否试用过期
+     */
+    public Boolean getIsTrialExpired() {
+        return this.IsTrialExpired;
+    }
+
+    /**
+     * Set 是否试用过期
+     * @param IsTrialExpired 是否试用过期
+     */
+    public void setIsTrialExpired(Boolean IsTrialExpired) {
+        this.IsTrialExpired = IsTrialExpired;
+    }
+
+    /**
+     * Get 可用应用数量 
+     * @return AvailableAppQuota 可用应用数量
+     */
+    public Long getAvailableAppQuota() {
+        return this.AvailableAppQuota;
+    }
+
+    /**
+     * Set 可用应用数量
+     * @param AvailableAppQuota 可用应用数量
+     */
+    public void setAvailableAppQuota(Long AvailableAppQuota) {
+        this.AvailableAppQuota = AvailableAppQuota;
+    }
+
+    /**
+     * Get 是否支持自定义模型配置 
+     * @return IsSupportCustomModel 是否支持自定义模型配置
+     */
+    public Boolean getIsSupportCustomModel() {
+        return this.IsSupportCustomModel;
+    }
+
+    /**
+     * Set 是否支持自定义模型配置
+     * @param IsSupportCustomModel 是否支持自定义模型配置
+     */
+    public void setIsSupportCustomModel(Boolean IsSupportCustomModel) {
+        this.IsSupportCustomModel = IsSupportCustomModel;
     }
 
     /**
@@ -147,6 +234,18 @@ public class DescribeCorpResponse extends AbstractModel {
         if (source.FullName != null) {
             this.FullName = new String(source.FullName);
         }
+        if (source.IsTrial != null) {
+            this.IsTrial = new Boolean(source.IsTrial);
+        }
+        if (source.IsTrialExpired != null) {
+            this.IsTrialExpired = new Boolean(source.IsTrialExpired);
+        }
+        if (source.AvailableAppQuota != null) {
+            this.AvailableAppQuota = new Long(source.AvailableAppQuota);
+        }
+        if (source.IsSupportCustomModel != null) {
+            this.IsSupportCustomModel = new Boolean(source.IsSupportCustomModel);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -160,6 +259,10 @@ public class DescribeCorpResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CorpBizId", this.CorpBizId);
         this.setParamSimple(map, prefix + "RobotQuota", this.RobotQuota);
         this.setParamSimple(map, prefix + "FullName", this.FullName);
+        this.setParamSimple(map, prefix + "IsTrial", this.IsTrial);
+        this.setParamSimple(map, prefix + "IsTrialExpired", this.IsTrialExpired);
+        this.setParamSimple(map, prefix + "AvailableAppQuota", this.AvailableAppQuota);
+        this.setParamSimple(map, prefix + "IsSupportCustomModel", this.IsSupportCustomModel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

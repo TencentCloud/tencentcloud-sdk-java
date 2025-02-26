@@ -31,6 +31,13 @@ public class CreatePresentationRequest extends AbstractModel {
     private Long DAPId;
 
     /**
+    * 用户应用id
+    */
+    @SerializedName("UAPId")
+    @Expose
+    private Long UAPId;
+
+    /**
     * 凭证列表
     */
     @SerializedName("Credentials")
@@ -86,6 +93,22 @@ public class CreatePresentationRequest extends AbstractModel {
      */
     public void setDAPId(Long DAPId) {
         this.DAPId = DAPId;
+    }
+
+    /**
+     * Get 用户应用id 
+     * @return UAPId 用户应用id
+     */
+    public Long getUAPId() {
+        return this.UAPId;
+    }
+
+    /**
+     * Set 用户应用id
+     * @param UAPId 用户应用id
+     */
+    public void setUAPId(Long UAPId) {
+        this.UAPId = UAPId;
     }
 
     /**
@@ -195,6 +218,9 @@ public class CreatePresentationRequest extends AbstractModel {
         if (source.DAPId != null) {
             this.DAPId = new Long(source.DAPId);
         }
+        if (source.UAPId != null) {
+            this.UAPId = new Long(source.UAPId);
+        }
         if (source.Credentials != null) {
             this.Credentials = new String[source.Credentials.length];
             for (int i = 0; i < source.Credentials.length; i++) {
@@ -227,6 +253,7 @@ public class CreatePresentationRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DAPId", this.DAPId);
+        this.setParamSimple(map, prefix + "UAPId", this.UAPId);
         this.setParamArraySimple(map, prefix + "Credentials.", this.Credentials);
         this.setParamSimple(map, prefix + "Did", this.Did);
         this.setParamSimple(map, prefix + "VerifyCode", this.VerifyCode);

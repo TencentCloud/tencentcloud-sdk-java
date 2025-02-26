@@ -53,6 +53,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
+    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 标签。
     */
     @SerializedName("Tags")
@@ -140,6 +147,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
+     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。 
+     * @return Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     * @param Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get 标签。 
      * @return Tags 标签。
      */
@@ -214,6 +237,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
                 this.TargetGroupInstances[i] = new TargetGroupInstance(source.TargetGroupInstances[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Tags != null) {
             this.Tags = new TagInfo[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -234,6 +260,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
 

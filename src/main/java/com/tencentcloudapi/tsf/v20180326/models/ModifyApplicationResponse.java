@@ -26,7 +26,6 @@ public class ModifyApplicationResponse extends AbstractModel {
     /**
     * true：操作成功
 false：操作失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -41,11 +40,9 @@ false：操作失败
 
     /**
      * Get true：操作成功
-false：操作失败
-注意：此字段可能返回 null，表示取不到有效值。 
+false：操作失败 
      * @return Result true：操作成功
 false：操作失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -54,10 +51,8 @@ false：操作失败
     /**
      * Set true：操作成功
 false：操作失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result true：操作成功
 false：操作失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

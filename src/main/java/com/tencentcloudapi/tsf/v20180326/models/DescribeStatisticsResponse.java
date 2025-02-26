@@ -25,7 +25,6 @@ public class DescribeStatisticsResponse extends AbstractModel {
 
     /**
     * 查询服务统计结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询服务统计结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询服务统计结果 
      * @return Result 查询服务统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceStatisticsResults getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeStatisticsResponse extends AbstractModel {
 
     /**
      * Set 查询服务统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 查询服务统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ServiceStatisticsResults Result) {
         this.Result = Result;

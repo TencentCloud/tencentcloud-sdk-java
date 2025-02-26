@@ -25,7 +25,6 @@ public class GetAppSummaryResponse extends AbstractModel {
 
     /**
     * 用户参与应用的统计指标 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppCounter")
     @Expose
@@ -33,7 +32,6 @@ public class GetAppSummaryResponse extends AbstractModel {
 
     /**
     * 用户创建资源的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserCounter")
     @Expose
@@ -47,10 +45,8 @@ public class GetAppSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户参与应用的统计指标 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户参与应用的统计指标  
      * @return AppCounter 用户参与应用的统计指标 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceCounterData getAppCounter() {
         return this.AppCounter;
@@ -58,19 +54,15 @@ public class GetAppSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户参与应用的统计指标 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppCounter 用户参与应用的统计指标 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppCounter(ResourceCounterData AppCounter) {
         this.AppCounter = AppCounter;
     }
 
     /**
-     * Get 用户创建资源的统计指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户创建资源的统计指标 
      * @return UserCounter 用户创建资源的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceCounterData getUserCounter() {
         return this.UserCounter;
@@ -78,9 +70,7 @@ public class GetAppSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户创建资源的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserCounter 用户创建资源的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserCounter(ResourceCounterData UserCounter) {
         this.UserCounter = UserCounter;

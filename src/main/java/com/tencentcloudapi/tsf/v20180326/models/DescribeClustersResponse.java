@@ -25,7 +25,6 @@ public class DescribeClustersResponse extends AbstractModel {
 
     /**
     * Cluster分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Cluster分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cluster分页信息 
      * @return Result Cluster分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageClusterV2 getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeClustersResponse extends AbstractModel {
 
     /**
      * Set Cluster分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result Cluster分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageClusterV2 Result) {
         this.Result = Result;

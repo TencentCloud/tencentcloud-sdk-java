@@ -25,7 +25,6 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
 
     /**
     * 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群机器实例分页信息 
      * @return Result 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageInstance getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
 
     /**
      * Set 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageInstance Result) {
         this.Result = Result;

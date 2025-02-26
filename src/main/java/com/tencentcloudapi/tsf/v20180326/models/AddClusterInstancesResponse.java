@@ -25,7 +25,6 @@ public class AddClusterInstancesResponse extends AbstractModel {
 
     /**
     * 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class AddClusterInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加云主机的返回列表 
      * @return Result 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddInstanceResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class AddClusterInstancesResponse extends AbstractModel {
 
     /**
      * Set 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(AddInstanceResult Result) {
         this.Result = Result;

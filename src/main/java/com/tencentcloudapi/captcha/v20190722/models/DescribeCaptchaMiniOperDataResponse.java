@@ -32,7 +32,6 @@ public class DescribeCaptchaMiniOperDataResponse extends AbstractModel {
 
     /**
     * 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeCaptchaMiniOperDataResponse extends AbstractModel {
 
     /**
     * 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeCaptchaMiniOperDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回信息 
      * @return CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -81,19 +77,15 @@ public class DescribeCaptchaMiniOperDataResponse extends AbstractModel {
 
     /**
      * Set 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;
     }
 
     /**
-     * Get 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户操作数据 
      * @return Data 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CaptchaOperDataRes getData() {
         return this.Data;
@@ -101,9 +93,7 @@ public class DescribeCaptchaMiniOperDataResponse extends AbstractModel {
 
     /**
      * Set 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CaptchaOperDataRes Data) {
         this.Data = Data;

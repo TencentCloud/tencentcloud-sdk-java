@@ -29,7 +29,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -37,7 +36,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 
     /**
     * 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostTime")
     @Expose
@@ -45,7 +43,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 
     /**
     * 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociateAccount")
     @Expose
@@ -53,7 +50,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 
     /**
     * 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIp")
     @Expose
@@ -64,7 +60,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -90,7 +85,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -98,7 +92,6 @@ reject：高风险，建议拦截
 
     /**
     * 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConstId")
     @Expose
@@ -106,7 +99,6 @@ reject：高风险，建议拦截
 
     /**
     * 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskInformation")
     @Expose
@@ -117,14 +109,12 @@ reject：高风险，建议拦截
 当AccountType为1时，对应QQ的OpenId；
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
-当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。 
+当AccountType为10005时，对应手机号的SHA256值。 
      * @return UserId 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId；
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -136,23 +126,19 @@ reject：高风险，建议拦截
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId；
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作时间戳，单位秒（对应输入参数）。 
      * @return PostTime 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPostTime() {
         return this.PostTime;
@@ -160,19 +146,15 @@ reject：高风险，建议拦截
 
     /**
      * Set 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostTime 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostTime(Long PostTime) {
         this.PostTime = PostTime;
     }
 
     /**
-     * Get 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务参数。 
      * @return AssociateAccount 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociateAccount() {
         return this.AssociateAccount;
@@ -180,19 +162,15 @@ reject：高风险，建议拦截
 
     /**
      * Set 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociateAccount 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociateAccount(String AssociateAccount) {
         this.AssociateAccount = AssociateAccount;
     }
 
     /**
-     * Get 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作来源的外网IP（对应输入参数）。 
      * @return UserIp 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserIp() {
         return this.UserIp;
@@ -200,9 +178,7 @@ reject：高风险，建议拦截
 
     /**
      * Set 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIp 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
@@ -212,13 +188,11 @@ reject：高风险，建议拦截
      * Get 风险等级
 pass：无恶意
 review：低风险，需要人工审核
-reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。 
+reject：高风险，建议拦截 
      * @return RiskLevel 风险等级
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -229,12 +203,10 @@ reject：高风险，建议拦截
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
@@ -259,8 +231,7 @@ reject：高风险，建议拦截
 201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
-205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。 
      * @return RiskType 风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
 11: 疑似低活跃账号，账号活跃度与正常用户有差异。
@@ -280,7 +251,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRiskType() {
         return this.RiskType;
@@ -306,7 +276,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
 11: 疑似低活跃账号，账号活跃度与正常用户有差异。
@@ -326,17 +295,14 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(Long [] RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。 
      * @return ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConstId() {
         return this.ConstId;
@@ -344,19 +310,15 @@ reject：高风险，建议拦截
 
     /**
      * Set 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstId(String ConstId) {
         this.ConstId = ConstId;
     }
 
     /**
-     * Get 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险扩展数据。 
      * @return RiskInformation 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskInformation() {
         return this.RiskInformation;
@@ -364,9 +326,7 @@ reject：高风险，建议拦截
 
     /**
      * Set 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskInformation 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskInformation(String RiskInformation) {
         this.RiskInformation = RiskInformation;

@@ -108,11 +108,46 @@ public class DescribeDataSourceListRequest extends AbstractModel {
     private Long QueryConnector;
 
     /**
-    * 查询数据源黑名单机制，比如不想要系统数据源["system"]
+    * 废弃中
     */
     @SerializedName("NotQuerySubTypeList")
     @Expose
     private String [] NotQuerySubTypeList;
+
+    /**
+    * 查询channelList
+    */
+    @SerializedName("ChannelList")
+    @Expose
+    private String [] ChannelList;
+
+    /**
+    * 是否查询数据源关联关系
+    */
+    @SerializedName("QueryDataSourceRelationList")
+    @Expose
+    private Boolean QueryDataSourceRelationList;
+
+    /**
+    * db实例类型
+    */
+    @SerializedName("DbInstanceType")
+    @Expose
+    private String DbInstanceType;
+
+    /**
+    * 数据库表名列表
+    */
+    @SerializedName("DatabaseTableNames")
+    @Expose
+    private String [] DatabaseTableNames;
+
+    /**
+    * 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+    */
+    @SerializedName("QuerySystemModel")
+    @Expose
+    private Boolean QuerySystemModel;
 
     /**
      * Get 每页条数 
@@ -307,19 +342,99 @@ public class DescribeDataSourceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询数据源黑名单机制，比如不想要系统数据源["system"] 
-     * @return NotQuerySubTypeList 查询数据源黑名单机制，比如不想要系统数据源["system"]
+     * Get 废弃中 
+     * @return NotQuerySubTypeList 废弃中
      */
     public String [] getNotQuerySubTypeList() {
         return this.NotQuerySubTypeList;
     }
 
     /**
-     * Set 查询数据源黑名单机制，比如不想要系统数据源["system"]
-     * @param NotQuerySubTypeList 查询数据源黑名单机制，比如不想要系统数据源["system"]
+     * Set 废弃中
+     * @param NotQuerySubTypeList 废弃中
      */
     public void setNotQuerySubTypeList(String [] NotQuerySubTypeList) {
         this.NotQuerySubTypeList = NotQuerySubTypeList;
+    }
+
+    /**
+     * Get 查询channelList 
+     * @return ChannelList 查询channelList
+     */
+    public String [] getChannelList() {
+        return this.ChannelList;
+    }
+
+    /**
+     * Set 查询channelList
+     * @param ChannelList 查询channelList
+     */
+    public void setChannelList(String [] ChannelList) {
+        this.ChannelList = ChannelList;
+    }
+
+    /**
+     * Get 是否查询数据源关联关系 
+     * @return QueryDataSourceRelationList 是否查询数据源关联关系
+     */
+    public Boolean getQueryDataSourceRelationList() {
+        return this.QueryDataSourceRelationList;
+    }
+
+    /**
+     * Set 是否查询数据源关联关系
+     * @param QueryDataSourceRelationList 是否查询数据源关联关系
+     */
+    public void setQueryDataSourceRelationList(Boolean QueryDataSourceRelationList) {
+        this.QueryDataSourceRelationList = QueryDataSourceRelationList;
+    }
+
+    /**
+     * Get db实例类型 
+     * @return DbInstanceType db实例类型
+     */
+    public String getDbInstanceType() {
+        return this.DbInstanceType;
+    }
+
+    /**
+     * Set db实例类型
+     * @param DbInstanceType db实例类型
+     */
+    public void setDbInstanceType(String DbInstanceType) {
+        this.DbInstanceType = DbInstanceType;
+    }
+
+    /**
+     * Get 数据库表名列表 
+     * @return DatabaseTableNames 数据库表名列表
+     */
+    public String [] getDatabaseTableNames() {
+        return this.DatabaseTableNames;
+    }
+
+    /**
+     * Set 数据库表名列表
+     * @param DatabaseTableNames 数据库表名列表
+     */
+    public void setDatabaseTableNames(String [] DatabaseTableNames) {
+        this.DatabaseTableNames = DatabaseTableNames;
+    }
+
+    /**
+     * Get 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型 
+     * @return QuerySystemModel 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+     */
+    public Boolean getQuerySystemModel() {
+        return this.QuerySystemModel;
+    }
+
+    /**
+     * Set 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+     * @param QuerySystemModel 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+     */
+    public void setQuerySystemModel(Boolean QuerySystemModel) {
+        this.QuerySystemModel = QuerySystemModel;
     }
 
     public DescribeDataSourceListRequest() {
@@ -384,6 +499,27 @@ public class DescribeDataSourceListRequest extends AbstractModel {
                 this.NotQuerySubTypeList[i] = new String(source.NotQuerySubTypeList[i]);
             }
         }
+        if (source.ChannelList != null) {
+            this.ChannelList = new String[source.ChannelList.length];
+            for (int i = 0; i < source.ChannelList.length; i++) {
+                this.ChannelList[i] = new String(source.ChannelList[i]);
+            }
+        }
+        if (source.QueryDataSourceRelationList != null) {
+            this.QueryDataSourceRelationList = new Boolean(source.QueryDataSourceRelationList);
+        }
+        if (source.DbInstanceType != null) {
+            this.DbInstanceType = new String(source.DbInstanceType);
+        }
+        if (source.DatabaseTableNames != null) {
+            this.DatabaseTableNames = new String[source.DatabaseTableNames.length];
+            for (int i = 0; i < source.DatabaseTableNames.length; i++) {
+                this.DatabaseTableNames[i] = new String(source.DatabaseTableNames[i]);
+            }
+        }
+        if (source.QuerySystemModel != null) {
+            this.QuerySystemModel = new Boolean(source.QuerySystemModel);
+        }
     }
 
 
@@ -404,6 +540,11 @@ public class DescribeDataSourceListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QueryBindToApp", this.QueryBindToApp);
         this.setParamSimple(map, prefix + "QueryConnector", this.QueryConnector);
         this.setParamArraySimple(map, prefix + "NotQuerySubTypeList.", this.NotQuerySubTypeList);
+        this.setParamArraySimple(map, prefix + "ChannelList.", this.ChannelList);
+        this.setParamSimple(map, prefix + "QueryDataSourceRelationList", this.QueryDataSourceRelationList);
+        this.setParamSimple(map, prefix + "DbInstanceType", this.DbInstanceType);
+        this.setParamArraySimple(map, prefix + "DatabaseTableNames.", this.DatabaseTableNames);
+        this.setParamSimple(map, prefix + "QuerySystemModel", this.QuerySystemModel);
 
     }
 }

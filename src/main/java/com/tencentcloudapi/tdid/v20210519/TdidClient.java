@@ -204,7 +204,10 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *更新凭证的链上状态
+     *1. 首次更新凭证状态基于不同场景参数有所差异，分以下两种场景：
+(1)  颁发凭证的DID是本腾讯云账号创建
+(2) 颁发凭证的DID是非本腾讯云账号创建(此调用方式也适用于场景1)
+2. 首次更新过凭证状态后，凭证状态已绑定该账号的链上用户，后续更新凭证状态只需参数CredentialStatus即可, OperateCredential和OriginCredential参数均不需要
      * @param req UpdateCredentialStateRequest
      * @return UpdateCredentialStateResponse
      * @throws TencentCloudSDKException

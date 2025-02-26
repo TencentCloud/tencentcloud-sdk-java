@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class GetWeChatBillDetailsResponse extends AbstractModel {
 
     /**
-    * 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
+    * 是否还有下一页。
+- 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
     */
     @SerializedName("HasNextPage")
     @Expose
     private Boolean HasNextPage;
 
     /**
-    * 下一页的游标。用于分页。
+    * 下一页的游标，用于分页。
     */
     @SerializedName("NextCursor")
     @Expose
     private Long NextCursor;
 
     /**
-    * 数据
+    * 数据。
     */
     @SerializedName("WeChatBillDetails")
     @Expose
@@ -52,48 +53,52 @@ public class GetWeChatBillDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。 
-     * @return HasNextPage 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
+     * Get 是否还有下一页。
+- 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。 
+     * @return HasNextPage 是否还有下一页。
+- 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
      */
     public Boolean getHasNextPage() {
         return this.HasNextPage;
     }
 
     /**
-     * Set 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
-     * @param HasNextPage 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
+     * Set 是否还有下一页。
+- 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
+     * @param HasNextPage 是否还有下一页。
+- 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
      */
     public void setHasNextPage(Boolean HasNextPage) {
         this.HasNextPage = HasNextPage;
     }
 
     /**
-     * Get 下一页的游标。用于分页。 
-     * @return NextCursor 下一页的游标。用于分页。
+     * Get 下一页的游标，用于分页。 
+     * @return NextCursor 下一页的游标，用于分页。
      */
     public Long getNextCursor() {
         return this.NextCursor;
     }
 
     /**
-     * Set 下一页的游标。用于分页。
-     * @param NextCursor 下一页的游标。用于分页。
+     * Set 下一页的游标，用于分页。
+     * @param NextCursor 下一页的游标，用于分页。
      */
     public void setNextCursor(Long NextCursor) {
         this.NextCursor = NextCursor;
     }
 
     /**
-     * Get 数据 
-     * @return WeChatBillDetails 数据
+     * Get 数据。 
+     * @return WeChatBillDetails 数据。
      */
     public WeChatBillDetail [] getWeChatBillDetails() {
         return this.WeChatBillDetails;
     }
 
     /**
-     * Set 数据
-     * @param WeChatBillDetails 数据
+     * Set 数据。
+     * @param WeChatBillDetails 数据。
      */
     public void setWeChatBillDetails(WeChatBillDetail [] WeChatBillDetails) {
         this.WeChatBillDetails = WeChatBillDetails;

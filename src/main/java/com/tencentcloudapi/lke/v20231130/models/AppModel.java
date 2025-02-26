@@ -104,6 +104,14 @@ public class AppModel extends AbstractModel {
     private String TopP;
 
     /**
+    * 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceStatus")
+    @Expose
+    private Long ResourceStatus;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 模型名称
@@ -303,6 +311,26 @@ public class AppModel extends AbstractModel {
         this.TopP = TopP;
     }
 
+    /**
+     * Get 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceStatus 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceStatus() {
+        return this.ResourceStatus;
+    }
+
+    /**
+     * Set 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceStatus 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceStatus(Long ResourceStatus) {
+        this.ResourceStatus = ResourceStatus;
+    }
+
     public AppModel() {
     }
 
@@ -341,6 +369,9 @@ public class AppModel extends AbstractModel {
         if (source.TopP != null) {
             this.TopP = new String(source.TopP);
         }
+        if (source.ResourceStatus != null) {
+            this.ResourceStatus = new Long(source.ResourceStatus);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class AppModel extends AbstractModel {
         this.setParamSimple(map, prefix + "UsageType", this.UsageType);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
+        this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
 
     }
 }

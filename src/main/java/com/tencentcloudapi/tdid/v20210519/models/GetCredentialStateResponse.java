@@ -25,7 +25,6 @@ public class GetCredentialStateResponse extends AbstractModel {
 
     /**
     * 凭证状态信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CredentialState")
     @Expose
@@ -39,10 +38,8 @@ public class GetCredentialStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 凭证状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 凭证状态信息 
      * @return CredentialState 凭证状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CredentialState getCredentialState() {
         return this.CredentialState;
@@ -50,9 +47,7 @@ public class GetCredentialStateResponse extends AbstractModel {
 
     /**
      * Set 凭证状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CredentialState 凭证状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCredentialState(CredentialState CredentialState) {
         this.CredentialState = CredentialState;

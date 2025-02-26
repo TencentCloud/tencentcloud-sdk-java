@@ -25,7 +25,6 @@ public class AvailableRegion extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,17 +32,14 @@ public class AvailableRegion extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableZones")
     @Expose
     private String [] AvailableZones;
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -51,19 +47,15 @@ public class AvailableRegion extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return AvailableZones 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAvailableZones() {
         return this.AvailableZones;
@@ -71,9 +63,7 @@ public class AvailableRegion extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableZones 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableZones(String [] AvailableZones) {
         this.AvailableZones = AvailableZones;

@@ -96,6 +96,45 @@ public class InstanceNode extends AbstractModel {
     private Boolean IsCHProxy;
 
     /**
+    * 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UUID")
+    @Expose
+    private String UUID;
+
+    /**
+    * 区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneDesc")
+    @Expose
+    private String ZoneDesc;
+
+    /**
+    * 真实资源id
+    */
+    @SerializedName("RealResourceId")
+    @Expose
+    private String RealResourceId;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -263,6 +302,102 @@ public class InstanceNode extends AbstractModel {
         this.IsCHProxy = IsCHProxy;
     }
 
+    /**
+     * Get 节点状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UUID 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUUID() {
+        return this.UUID;
+    }
+
+    /**
+     * Set 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UUID 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUUID(String UUID) {
+        this.UUID = UUID;
+    }
+
+    /**
+     * Get 区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 区描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneDesc 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneDesc() {
+        return this.ZoneDesc;
+    }
+
+    /**
+     * Set 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneDesc 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneDesc(String ZoneDesc) {
+        this.ZoneDesc = ZoneDesc;
+    }
+
+    /**
+     * Get 真实资源id 
+     * @return RealResourceId 真实资源id
+     */
+    public String getRealResourceId() {
+        return this.RealResourceId;
+    }
+
+    /**
+     * Set 真实资源id
+     * @param RealResourceId 真实资源id
+     */
+    public void setRealResourceId(String RealResourceId) {
+        this.RealResourceId = RealResourceId;
+    }
+
     public InstanceNode() {
     }
 
@@ -304,6 +439,21 @@ public class InstanceNode extends AbstractModel {
         if (source.IsCHProxy != null) {
             this.IsCHProxy = new Boolean(source.IsCHProxy);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.UUID != null) {
+            this.UUID = new String(source.UUID);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneDesc != null) {
+            this.ZoneDesc = new String(source.ZoneDesc);
+        }
+        if (source.RealResourceId != null) {
+            this.RealResourceId = new String(source.RealResourceId);
+        }
     }
 
 
@@ -321,6 +471,11 @@ public class InstanceNode extends AbstractModel {
         this.setParamArrayObj(map, prefix + "NodeGroups.", this.NodeGroups);
         this.setParamSimple(map, prefix + "Rip", this.Rip);
         this.setParamSimple(map, prefix + "IsCHProxy", this.IsCHProxy);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UUID", this.UUID);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneDesc", this.ZoneDesc);
+        this.setParamSimple(map, prefix + "RealResourceId", this.RealResourceId);
 
     }
 }

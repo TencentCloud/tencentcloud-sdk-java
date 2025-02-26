@@ -25,7 +25,6 @@ public class DescribeSimpleClustersResponse extends AbstractModel {
 
     /**
     * TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSimpleClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TSF集群分页对象 
      * @return Result TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageCluster getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeSimpleClustersResponse extends AbstractModel {
 
     /**
      * Set TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageCluster Result) {
         this.Result = Result;

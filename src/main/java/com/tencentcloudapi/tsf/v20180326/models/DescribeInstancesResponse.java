@@ -25,7 +25,6 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
     * 机器列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 机器列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器列表信息 
      * @return Result 机器列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceEnrichedInfoPage getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Set 机器列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 机器列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(InstanceEnrichedInfoPage Result) {
         this.Result = Result;

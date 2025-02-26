@@ -25,7 +25,6 @@ public class CreateRepositoryResponse extends AbstractModel {
 
     /**
     * 创建仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateRepositoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建仓库是否成功 
      * @return Result 创建仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateRepositoryResponse extends AbstractModel {
 
     /**
      * Set 创建仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 创建仓库是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

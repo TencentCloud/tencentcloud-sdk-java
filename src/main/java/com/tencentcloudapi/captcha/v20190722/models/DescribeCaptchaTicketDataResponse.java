@@ -32,7 +32,6 @@ public class DescribeCaptchaTicketDataResponse extends AbstractModel {
 
     /**
     * 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeCaptchaTicketDataResponse extends AbstractModel {
 
     /**
     * 验证码票据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeCaptchaTicketDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回信息 
      * @return CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -81,19 +77,15 @@ public class DescribeCaptchaTicketDataResponse extends AbstractModel {
 
     /**
      * Set 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;
     }
 
     /**
-     * Get 验证码票据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 验证码票据信息 
      * @return Data 验证码票据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CaptchaTicketDataRes getData() {
         return this.Data;
@@ -101,9 +93,7 @@ public class DescribeCaptchaTicketDataResponse extends AbstractModel {
 
     /**
      * Set 验证码票据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 验证码票据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CaptchaTicketDataRes Data) {
         this.Data = Data;

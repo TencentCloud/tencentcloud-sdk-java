@@ -81,7 +81,6 @@ public class Instances extends AbstractModel {
 
     /**
     * 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -110,7 +109,6 @@ public class Instances extends AbstractModel {
 
     /**
     * 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
@@ -118,7 +116,6 @@ public class Instances extends AbstractModel {
 
     /**
     * 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv6")
     @Expose
@@ -312,10 +309,8 @@ public class Instances extends AbstractModel {
     }
 
     /**
-     * Get 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的磁盘大小。 
      * @return DiskSize 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -323,9 +318,7 @@ public class Instances extends AbstractModel {
 
     /**
      * Set 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -380,10 +373,8 @@ public class Instances extends AbstractModel {
     }
 
     /**
-     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。 
      * @return Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
         return this.Vip6;
@@ -391,19 +382,15 @@ public class Instances extends AbstractModel {
 
     /**
      * Set 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部参数，用户可忽略。 
      * @return IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPv6() {
         return this.IPv6;
@@ -411,9 +398,7 @@ public class Instances extends AbstractModel {
 
     /**
      * Set 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;

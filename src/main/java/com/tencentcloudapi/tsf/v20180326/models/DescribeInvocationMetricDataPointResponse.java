@@ -25,7 +25,6 @@ public class DescribeInvocationMetricDataPointResponse extends AbstractModel {
 
     /**
     * 单值指标列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInvocationMetricDataPointResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 单值指标列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单值指标列表 
      * @return Result 单值指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricDataSingleValue [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeInvocationMetricDataPointResponse extends AbstractModel {
 
     /**
      * Set 单值指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 单值指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(MetricDataSingleValue [] Result) {
         this.Result = Result;

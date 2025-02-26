@@ -1297,6 +1297,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *支持TopN查询，对于给定的监控指标和时间区间，按照指标大小按序返回不同维度组合及数据。
+     * @param req GetTopNMonitorDataRequest
+     * @return GetTopNMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTopNMonitorDataResponse GetTopNMonitorData(GetTopNMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTopNMonitorData", GetTopNMonitorDataResponse.class);
+    }
+
+    /**
      *安装 Grafana Plugin
      * @param req InstallPluginsRequest
      * @return InstallPluginsResponse

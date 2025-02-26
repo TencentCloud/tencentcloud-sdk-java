@@ -25,7 +25,6 @@ public class ModifyNamespaceResponse extends AbstractModel {
 
     /**
     * Result
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyNamespaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Result
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Result 
      * @return Result Result
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class ModifyNamespaceResponse extends AbstractModel {
 
     /**
      * Set Result
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result Result
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

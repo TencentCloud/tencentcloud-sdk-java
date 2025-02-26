@@ -53,6 +53,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -74,7 +75,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgId")
     @Expose
@@ -90,7 +90,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorId")
     @Expose
@@ -114,7 +113,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -138,7 +136,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishedAt")
     @Expose
@@ -162,7 +159,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfStatus")
     @Expose
@@ -170,7 +166,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Methods")
     @Expose
@@ -186,7 +181,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewDataSource")
     @Expose
@@ -242,7 +236,6 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
     * 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -263,6 +256,60 @@ public class DataSourceDetail extends AbstractModel {
     @SerializedName("AuthInfo")
     @Expose
     private TicketAuthInfo AuthInfo;
+
+    /**
+    * 1发布0未发布
+    */
+    @SerializedName("PublishStatus")
+    @Expose
+    private Long PublishStatus;
+
+    /**
+    * 更新版本
+    */
+    @SerializedName("UpdateVersion")
+    @Expose
+    private Long UpdateVersion;
+
+    /**
+    * 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelationFieldList")
+    @Expose
+    private RelationField [] RelationFieldList;
+
+    /**
+    * db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbInstanceType")
+    @Expose
+    private String DbInstanceType;
+
+    /**
+    * 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreviewTableName")
+    @Expose
+    private String PreviewTableName;
+
+    /**
+    * 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublishedTableName")
+    @Expose
+    private String PublishedTableName;
+
+    /**
+    * DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbSourceType")
+    @Expose
+    private String DbSourceType;
 
     /**
      * Get 数据源 ID 
@@ -329,8 +376,10 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据源描述 
+     * Get 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -338,7 +387,9 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -377,10 +428,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前为环境 id 
      * @return PkgId 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgId() {
         return this.PkgId;
@@ -388,9 +437,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
@@ -417,10 +464,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者用户 ID 
      * @return CreatorId 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorId() {
         return this.CreatorId;
@@ -428,9 +473,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorId 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
@@ -477,10 +520,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 环境 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境 id 
      * @return EnvId 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -488,9 +529,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
@@ -537,10 +576,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 发布时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布时间 
      * @return PublishedAt 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublishedAt() {
         return this.PublishedAt;
@@ -548,9 +585,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishedAt 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishedAt(String PublishedAt) {
         this.PublishedAt = PublishedAt;
@@ -597,10 +632,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut 
      * @return ScfStatus 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScfStatus() {
         return this.ScfStatus;
@@ -608,19 +641,15 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfStatus 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfStatus(Long ScfStatus) {
         this.ScfStatus = ScfStatus;
     }
 
     /**
-     * Get 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义方法 
      * @return Methods 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethods() {
         return this.Methods;
@@ -628,9 +657,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Methods 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethods(String Methods) {
         this.Methods = Methods;
@@ -657,10 +684,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否旧数据源 1 新 0 旧 
      * @return IsNewDataSource 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewDataSource() {
         return this.IsNewDataSource;
@@ -668,9 +693,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewDataSource 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewDataSource(Long IsNewDataSource) {
         this.IsNewDataSource = IsNewDataSource;
@@ -761,7 +784,9 @@ public class DataSourceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublishVersion 发布版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getPublishVersion() {
         return this.PublishVersion;
     }
@@ -771,7 +796,9 @@ public class DataSourceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishVersion 发布版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setPublishVersion(String PublishVersion) {
         this.PublishVersion = PublishVersion;
     }
@@ -797,10 +824,8 @@ public class DataSourceDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源 
      * @return SubType 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -808,9 +833,7 @@ public class DataSourceDetail extends AbstractModel {
 
     /**
      * Set 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
@@ -854,6 +877,138 @@ public class DataSourceDetail extends AbstractModel {
      */
     public void setAuthInfo(TicketAuthInfo AuthInfo) {
         this.AuthInfo = AuthInfo;
+    }
+
+    /**
+     * Get 1发布0未发布 
+     * @return PublishStatus 1发布0未发布
+     */
+    public Long getPublishStatus() {
+        return this.PublishStatus;
+    }
+
+    /**
+     * Set 1发布0未发布
+     * @param PublishStatus 1发布0未发布
+     */
+    public void setPublishStatus(Long PublishStatus) {
+        this.PublishStatus = PublishStatus;
+    }
+
+    /**
+     * Get 更新版本 
+     * @return UpdateVersion 更新版本
+     */
+    public Long getUpdateVersion() {
+        return this.UpdateVersion;
+    }
+
+    /**
+     * Set 更新版本
+     * @param UpdateVersion 更新版本
+     */
+    public void setUpdateVersion(Long UpdateVersion) {
+        this.UpdateVersion = UpdateVersion;
+    }
+
+    /**
+     * Get 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelationFieldList 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RelationField [] getRelationFieldList() {
+        return this.RelationFieldList;
+    }
+
+    /**
+     * Set 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelationFieldList 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelationFieldList(RelationField [] RelationFieldList) {
+        this.RelationFieldList = RelationFieldList;
+    }
+
+    /**
+     * Get db实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbInstanceType db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbInstanceType() {
+        return this.DbInstanceType;
+    }
+
+    /**
+     * Set db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbInstanceType db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbInstanceType(String DbInstanceType) {
+        this.DbInstanceType = DbInstanceType;
+    }
+
+    /**
+     * Get 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreviewTableName 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreviewTableName() {
+        return this.PreviewTableName;
+    }
+
+    /**
+     * Set 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreviewTableName 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreviewTableName(String PreviewTableName) {
+        this.PreviewTableName = PreviewTableName;
+    }
+
+    /**
+     * Get 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublishedTableName 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublishedTableName() {
+        return this.PublishedTableName;
+    }
+
+    /**
+     * Set 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublishedTableName 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublishedTableName(String PublishedTableName) {
+        this.PublishedTableName = PublishedTableName;
+    }
+
+    /**
+     * Get DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbSourceType DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbSourceType() {
+        return this.DbSourceType;
+    }
+
+    /**
+     * Set DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbSourceType DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbSourceType(String DbSourceType) {
+        this.DbSourceType = DbSourceType;
     }
 
     public DataSourceDetail() {
@@ -966,6 +1121,30 @@ public class DataSourceDetail extends AbstractModel {
         if (source.AuthInfo != null) {
             this.AuthInfo = new TicketAuthInfo(source.AuthInfo);
         }
+        if (source.PublishStatus != null) {
+            this.PublishStatus = new Long(source.PublishStatus);
+        }
+        if (source.UpdateVersion != null) {
+            this.UpdateVersion = new Long(source.UpdateVersion);
+        }
+        if (source.RelationFieldList != null) {
+            this.RelationFieldList = new RelationField[source.RelationFieldList.length];
+            for (int i = 0; i < source.RelationFieldList.length; i++) {
+                this.RelationFieldList[i] = new RelationField(source.RelationFieldList[i]);
+            }
+        }
+        if (source.DbInstanceType != null) {
+            this.DbInstanceType = new String(source.DbInstanceType);
+        }
+        if (source.PreviewTableName != null) {
+            this.PreviewTableName = new String(source.PreviewTableName);
+        }
+        if (source.PublishedTableName != null) {
+            this.PublishedTableName = new String(source.PublishedTableName);
+        }
+        if (source.DbSourceType != null) {
+            this.DbSourceType = new String(source.DbSourceType);
+        }
     }
 
 
@@ -1004,6 +1183,13 @@ public class DataSourceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SubType", this.SubType);
         this.setParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
         this.setParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+        this.setParamSimple(map, prefix + "PublishStatus", this.PublishStatus);
+        this.setParamSimple(map, prefix + "UpdateVersion", this.UpdateVersion);
+        this.setParamArrayObj(map, prefix + "RelationFieldList.", this.RelationFieldList);
+        this.setParamSimple(map, prefix + "DbInstanceType", this.DbInstanceType);
+        this.setParamSimple(map, prefix + "PreviewTableName", this.PreviewTableName);
+        this.setParamSimple(map, prefix + "PublishedTableName", this.PublishedTableName);
+        this.setParamSimple(map, prefix + "DbSourceType", this.DbSourceType);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 地域 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 仓库ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetId")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 可用区ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 实例类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 实例访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -81,17 +74,14 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * 状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 地域 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 ID。 
      * @return RegionId 地域 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -99,19 +89,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 地域 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例 ID。 
      * @return InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -119,19 +105,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 仓库ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库ID。 
      * @return SetId 仓库ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSetId() {
         return this.SetId;
@@ -139,19 +121,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 仓库ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetId 仓库ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetId(Long SetId) {
         this.SetId = SetId;
     }
 
     /**
-     * Get 可用区ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区ID。 
      * @return ZoneId 可用区ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -159,19 +137,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 可用区ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型。 
      * @return Type 实例类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -179,19 +153,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 实例类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -199,19 +169,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例访问地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例访问地址。 
      * @return Vip 实例访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -219,19 +185,15 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 实例访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态。 
      * @return Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -239,9 +201,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
      * Set 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

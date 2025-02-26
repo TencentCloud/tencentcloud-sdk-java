@@ -124,7 +124,6 @@ public class DescribeCaptchaAppIdInfoResponse extends AbstractModel {
 
     /**
     * 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -366,10 +365,8 @@ public class DescribeCaptchaAppIdInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回操作信息 
      * @return CaptchaMsg 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -377,9 +374,7 @@ public class DescribeCaptchaAppIdInfoResponse extends AbstractModel {
 
     /**
      * Set 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;

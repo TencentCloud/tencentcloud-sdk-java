@@ -25,7 +25,6 @@ public class GetTDidByObjectIdResponse extends AbstractModel {
 
     /**
     * DID标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Did")
     @Expose
@@ -39,10 +38,8 @@ public class GetTDidByObjectIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get DID标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DID标识 
      * @return Did DID标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDid() {
         return this.Did;
@@ -50,9 +47,7 @@ public class GetTDidByObjectIdResponse extends AbstractModel {
 
     /**
      * Set DID标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Did DID标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDid(String Did) {
         this.Did = Did;

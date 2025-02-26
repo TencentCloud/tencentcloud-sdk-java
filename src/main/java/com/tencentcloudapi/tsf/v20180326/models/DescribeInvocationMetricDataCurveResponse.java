@@ -25,7 +25,6 @@ public class DescribeInvocationMetricDataCurveResponse extends AbstractModel {
 
     /**
     * 指标监控数据曲线集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInvocationMetricDataCurveResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标监控数据曲线集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标监控数据曲线集合 
      * @return Result 指标监控数据曲线集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricDataCurve [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeInvocationMetricDataCurveResponse extends AbstractModel {
 
     /**
      * Set 指标监控数据曲线集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 指标监控数据曲线集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(MetricDataCurve [] Result) {
         this.Result = Result;

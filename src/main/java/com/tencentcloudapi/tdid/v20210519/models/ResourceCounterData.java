@@ -25,7 +25,6 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
     * DID总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DidCnt")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
     * VC总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VCCnt")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
     * CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPTCnt")
     @Expose
@@ -49,7 +46,6 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
     *  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyCnt")
     @Expose
@@ -57,17 +53,14 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
     * 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthCnt")
     @Expose
     private Long AuthCnt;
 
     /**
-     * Get DID总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DID总数 
      * @return DidCnt DID总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDidCnt() {
         return this.DidCnt;
@@ -75,19 +68,15 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
      * Set DID总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DidCnt DID总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDidCnt(Long DidCnt) {
         this.DidCnt = DidCnt;
     }
 
     /**
-     * Get VC总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VC总数 
      * @return VCCnt VC总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVCCnt() {
         return this.VCCnt;
@@ -95,19 +84,15 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
      * Set VC总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VCCnt VC总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVCCnt(Long VCCnt) {
         this.VCCnt = VCCnt;
     }
 
     /**
-     * Get CPT总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPT总数 
      * @return CPTCnt CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCPTCnt() {
         return this.CPTCnt;
@@ -115,19 +100,15 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
      * Set CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPTCnt CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPTCnt(Long CPTCnt) {
         this.CPTCnt = CPTCnt;
     }
 
     /**
-     * Get  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  VC验证总数  
      * @return VerifyCnt  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVerifyCnt() {
         return this.VerifyCnt;
@@ -135,19 +116,15 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
      * Set  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifyCnt  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyCnt(Long VerifyCnt) {
         this.VerifyCnt = VerifyCnt;
     }
 
     /**
-     * Get 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权威机构数量 
      * @return AuthCnt 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthCnt() {
         return this.AuthCnt;
@@ -155,9 +132,7 @@ public class ResourceCounterData extends AbstractModel {
 
     /**
      * Set 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthCnt 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthCnt(Long AuthCnt) {
         this.AuthCnt = AuthCnt;

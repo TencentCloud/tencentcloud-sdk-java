@@ -25,7 +25,6 @@ public class DescribeSimpleNamespacesResponse extends AbstractModel {
 
     /**
     * 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSimpleNamespacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间分页列表 
      * @return Result 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageNamespace getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeSimpleNamespacesResponse extends AbstractModel {
 
     /**
      * Set 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageNamespace Result) {
         this.Result = Result;

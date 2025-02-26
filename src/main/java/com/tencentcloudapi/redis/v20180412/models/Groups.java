@@ -62,7 +62,6 @@ public class Groups extends AbstractModel {
 
     /**
     * 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -89,7 +88,6 @@ public class Groups extends AbstractModel {
 
     /**
     * 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instances")
     @Expose
@@ -97,7 +95,6 @@ public class Groups extends AbstractModel {
 
     /**
     * 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -216,10 +213,8 @@ public class Groups extends AbstractModel {
     }
 
     /**
-     * Get 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复制组名称。 
      * @return GroupName 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -227,9 +222,7 @@ public class Groups extends AbstractModel {
 
     /**
      * Set 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -288,10 +281,8 @@ public class Groups extends AbstractModel {
     }
 
     /**
-     * Get 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复制组中的实例信息。 
      * @return Instances 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instances [] getInstances() {
         return this.Instances;
@@ -299,19 +290,15 @@ public class Groups extends AbstractModel {
 
     /**
      * Set 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Instances 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstances(Instances [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息。 
      * @return Remark 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -319,9 +306,7 @@ public class Groups extends AbstractModel {
 
     /**
      * Set 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

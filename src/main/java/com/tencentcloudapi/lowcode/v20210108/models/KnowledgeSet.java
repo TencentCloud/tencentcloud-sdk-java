@@ -1,0 +1,246 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.lowcode.v20210108.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class KnowledgeSet extends AbstractModel {
+
+    /**
+    * 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
+    * 状态，
+NOT_ENABLED未启用
+ENABLED 已启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Active")
+    @Expose
+    private String Active;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Title 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Title 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Desc 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Desc 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
+    /**
+     * Get 状态，
+NOT_ENABLED未启用
+ENABLED 已启用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Active 状态，
+NOT_ENABLED未启用
+ENABLED 已启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActive() {
+        return this.Active;
+    }
+
+    /**
+     * Set 状态，
+NOT_ENABLED未启用
+ENABLED 已启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Active 状态，
+NOT_ENABLED未启用
+ENABLED 已启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActive(String Active) {
+        this.Active = Active;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    public KnowledgeSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KnowledgeSet(KnowledgeSet source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.Active != null) {
+            this.Active = new String(source.Active);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Active", this.Active);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+
+    }
+}
+

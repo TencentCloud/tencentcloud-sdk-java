@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class GetReconstructDocumentResultResponse extends AbstractModel {
 
     /**
-    * 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+    * 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
     */
     @SerializedName("Status")
     @Expose
@@ -52,16 +57,36 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行 
-     * @return Status 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+     * Get 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行 
+     * @return Status 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
-     * @param Status 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+     * Set 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
+     * @param Status 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -25,7 +25,6 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
     * 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeApplicationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用分页列表信息 
      * @return Result 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageApplication getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
      * Set 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageApplication Result) {
         this.Result = Result;

@@ -25,7 +25,6 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
     * 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟机部署组分页信息 
      * @return Result 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageVmGroup getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
      * Set 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageVmGroup Result) {
         this.Result = Result;

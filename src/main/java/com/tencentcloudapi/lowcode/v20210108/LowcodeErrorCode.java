@@ -1,5 +1,8 @@
 package com.tencentcloudapi.lowcode.v20210108;
 public enum LowcodeErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
