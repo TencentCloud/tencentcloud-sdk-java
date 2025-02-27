@@ -42,7 +42,7 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
     private Long PostTime;
 
     /**
-    * 业务参数。
+    * 业务预留参数（暂无实际业务含义， 无需关注返回值）
     */
     @SerializedName("AssociateAccount")
     @Expose
@@ -153,16 +153,16 @@ reject：高风险，建议拦截
     }
 
     /**
-     * Get 业务参数。 
-     * @return AssociateAccount 业务参数。
+     * Get 业务预留参数（暂无实际业务含义， 无需关注返回值） 
+     * @return AssociateAccount 业务预留参数（暂无实际业务含义， 无需关注返回值）
      */
     public String getAssociateAccount() {
         return this.AssociateAccount;
     }
 
     /**
-     * Set 业务参数。
-     * @param AssociateAccount 业务参数。
+     * Set 业务预留参数（暂无实际业务含义， 无需关注返回值）
+     * @param AssociateAccount 业务预留参数（暂无实际业务含义， 无需关注返回值）
      */
     public void setAssociateAccount(String AssociateAccount) {
         this.AssociateAccount = AssociateAccount;

@@ -150,6 +150,13 @@ public class OrgMember extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 腾讯云昵称
+    */
+    @SerializedName("NickName")
+    @Expose
+    private String NickName;
+
+    /**
      * Get 成员Uin 
      * @return MemberUin 成员Uin
      */
@@ -437,6 +444,22 @@ public class OrgMember extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 腾讯云昵称 
+     * @return NickName 腾讯云昵称
+     */
+    public String getNickName() {
+        return this.NickName;
+    }
+
+    /**
+     * Set 腾讯云昵称
+     * @param NickName 腾讯云昵称
+     */
+    public void setNickName(String NickName) {
+        this.NickName = NickName;
+    }
+
     public OrgMember() {
     }
 
@@ -508,6 +531,9 @@ public class OrgMember extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
     }
 
 
@@ -533,6 +559,7 @@ public class OrgMember extends AbstractModel {
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NickName", this.NickName);
 
     }
 }

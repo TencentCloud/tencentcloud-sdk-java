@@ -75,7 +75,6 @@ public class DescribeClusterSecurityResponse extends AbstractModel {
 
     /**
     * 集群Kubeconfig文件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kubeconfig")
     @Expose
@@ -213,10 +212,8 @@ public class DescribeClusterSecurityResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群Kubeconfig文件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Kubeconfig文件 
      * @return Kubeconfig 集群Kubeconfig文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKubeconfig() {
         return this.Kubeconfig;
@@ -224,9 +221,7 @@ public class DescribeClusterSecurityResponse extends AbstractModel {
 
     /**
      * Set 集群Kubeconfig文件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kubeconfig 集群Kubeconfig文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeconfig(String Kubeconfig) {
         this.Kubeconfig = Kubeconfig;

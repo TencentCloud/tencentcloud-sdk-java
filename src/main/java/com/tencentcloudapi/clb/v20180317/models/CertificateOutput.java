@@ -31,6 +31,13 @@ public class CertificateOutput extends AbstractModel {
     private String SSLMode;
 
     /**
+    * 是否开启客户端证书验证，只在双向认证时生效。
+    */
+    @SerializedName("SSLVerifyClient")
+    @Expose
+    private String SSLVerifyClient;
+
+    /**
     * 服务端证书的ID。
     */
     @SerializedName("CertId")
@@ -67,6 +74,22 @@ public class CertificateOutput extends AbstractModel {
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
+    }
+
+    /**
+     * Get 是否开启客户端证书验证，只在双向认证时生效。 
+     * @return SSLVerifyClient 是否开启客户端证书验证，只在双向认证时生效。
+     */
+    public String getSSLVerifyClient() {
+        return this.SSLVerifyClient;
+    }
+
+    /**
+     * Set 是否开启客户端证书验证，只在双向认证时生效。
+     * @param SSLVerifyClient 是否开启客户端证书验证，只在双向认证时生效。
+     */
+    public void setSSLVerifyClient(String SSLVerifyClient) {
+        this.SSLVerifyClient = SSLVerifyClient;
     }
 
     /**
@@ -136,6 +159,9 @@ public class CertificateOutput extends AbstractModel {
         if (source.SSLMode != null) {
             this.SSLMode = new String(source.SSLMode);
         }
+        if (source.SSLVerifyClient != null) {
+            this.SSLVerifyClient = new String(source.SSLVerifyClient);
+        }
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
         }
@@ -156,6 +182,7 @@ public class CertificateOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
+        this.setParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
         this.setParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);

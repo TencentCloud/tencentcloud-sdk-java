@@ -25,17 +25,14 @@ public class SaveDeviceGroupRes extends AbstractModel {
 
     /**
     * 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保存or修改设备分组回包信息 
      * @return Id 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -43,9 +40,7 @@ public class SaveDeviceGroupRes extends AbstractModel {
 
     /**
      * Set 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;

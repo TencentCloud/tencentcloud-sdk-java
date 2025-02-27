@@ -69,7 +69,6 @@ public class CasterLayoutParam extends AbstractModel {
 
     /**
     * 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsePortraitSegment")
     @Expose
@@ -192,10 +191,8 @@ public class CasterLayoutParam extends AbstractModel {
     }
 
     /**
-     * Get 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用抠图。 
      * @return UsePortraitSegment 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUsePortraitSegment() {
         return this.UsePortraitSegment;
@@ -203,9 +200,7 @@ public class CasterLayoutParam extends AbstractModel {
 
     /**
      * Set 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsePortraitSegment 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsePortraitSegment(Boolean UsePortraitSegment) {
         this.UsePortraitSegment = UsePortraitSegment;

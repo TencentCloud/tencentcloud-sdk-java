@@ -25,7 +25,6 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
 
     /**
     * 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedResources")
     @Expose
@@ -36,7 +35,6 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -64,10 +62,8 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败资源列表 
      * @return FailedResources 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FailedResource [] getFailedResources() {
         return this.FailedResources;
@@ -75,9 +71,7 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
 
     /**
      * Set 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedResources 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedResources(FailedResource [] FailedResources) {
         this.FailedResources = FailedResources;
@@ -87,13 +81,11 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
      * Get 任务状态：
 - running 运行中
 - failed 失败
-- done 成功
-注意：此字段可能返回 null，表示取不到有效值。 
+- done 成功 
      * @return Status 任务状态：
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -104,12 +96,10 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态：
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

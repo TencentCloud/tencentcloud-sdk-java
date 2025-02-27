@@ -25,7 +25,6 @@ public class DescribeClusterVirtualNodePoolsResponse extends AbstractModel {
 
     /**
     * 节点池总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClusterVirtualNodePoolsResponse extends AbstractModel {
 
     /**
     * 虚拟节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeClusterVirtualNodePoolsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点池总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池总数 
      * @return TotalCount 节点池总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeClusterVirtualNodePoolsResponse extends AbstractModel {
 
     /**
      * Set 节点池总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 节点池总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 虚拟节点池列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟节点池列表 
      * @return NodePoolSet 虚拟节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VirtualNodePool [] getNodePoolSet() {
         return this.NodePoolSet;
@@ -78,9 +70,7 @@ public class DescribeClusterVirtualNodePoolsResponse extends AbstractModel {
 
     /**
      * Set 虚拟节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePoolSet 虚拟节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolSet(VirtualNodePool [] NodePoolSet) {
         this.NodePoolSet = NodePoolSet;

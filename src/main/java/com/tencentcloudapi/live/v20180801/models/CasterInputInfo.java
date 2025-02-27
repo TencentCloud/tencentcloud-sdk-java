@@ -49,7 +49,6 @@ public class CasterInputInfo extends AbstractModel {
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputUrl")
     @Expose
@@ -58,7 +57,6 @@ public class CasterInputInfo extends AbstractModel {
     /**
     * 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -69,7 +67,6 @@ public class CasterInputInfo extends AbstractModel {
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputUrls")
     @Expose
@@ -78,7 +75,6 @@ public class CasterInputInfo extends AbstractModel {
     /**
     * 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoopEnable")
     @Expose
@@ -90,7 +86,6 @@ public class CasterInputInfo extends AbstractModel {
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoopNumber")
     @Expose
@@ -99,7 +94,6 @@ public class CasterInputInfo extends AbstractModel {
     /**
     * 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullPushEnable")
     @Expose
@@ -109,7 +103,6 @@ public class CasterInputInfo extends AbstractModel {
     * 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volume")
     @Expose
@@ -179,13 +172,11 @@ public class CasterInputInfo extends AbstractModel {
      * Get 输入源的源地址。
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return InputUrl 输入源的源地址。
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputUrl() {
         return this.InputUrl;
@@ -196,12 +187,10 @@ public class CasterInputInfo extends AbstractModel {
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputUrl 输入源的源地址。
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputUrl(String InputUrl) {
         this.InputUrl = InputUrl;
@@ -209,11 +198,9 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
      * Get 输入源描述。
-最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+最大允许长度256字符。 
      * @return Description 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -222,10 +209,8 @@ public class CasterInputInfo extends AbstractModel {
     /**
      * Set 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -235,13 +220,11 @@ public class CasterInputInfo extends AbstractModel {
      * Get 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：此时需保持InputUrl字段为空。 
      * @return InputUrls 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInputUrls() {
         return this.InputUrls;
@@ -252,12 +235,10 @@ public class CasterInputInfo extends AbstractModel {
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputUrls 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputUrls(String [] InputUrls) {
         this.InputUrls = InputUrls;
@@ -265,11 +246,9 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
      * Get 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：当前该字段未生效，默认为True。 
      * @return LoopEnable 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLoopEnable() {
         return this.LoopEnable;
@@ -278,10 +257,8 @@ public class CasterInputInfo extends AbstractModel {
     /**
      * Set 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoopEnable 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoopEnable(Boolean LoopEnable) {
         this.LoopEnable = LoopEnable;
@@ -292,14 +269,12 @@ public class CasterInputInfo extends AbstractModel {
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该字段暂未生效。 
      * @return LoopNumber 点播循环次数。
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLoopNumber() {
         return this.LoopNumber;
@@ -311,13 +286,11 @@ public class CasterInputInfo extends AbstractModel {
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoopNumber 点播循环次数。
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoopNumber(Long LoopNumber) {
         this.LoopNumber = LoopNumber;
@@ -325,11 +298,9 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
      * Get 是否启用拉取到导播台。
-注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该字段默认强制为true。 
      * @return PullPushEnable 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPullPushEnable() {
         return this.PullPushEnable;
@@ -338,10 +309,8 @@ public class CasterInputInfo extends AbstractModel {
     /**
      * Set 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PullPushEnable 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullPushEnable(Boolean PullPushEnable) {
         this.PullPushEnable = PullPushEnable;
@@ -350,12 +319,10 @@ public class CasterInputInfo extends AbstractModel {
     /**
      * Get 输入源音量百分比。
 默认为100。表示音量为原始大小。
-允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。 
+允许值[0,200]。 
      * @return Volume 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolume() {
         return this.Volume;
@@ -365,11 +332,9 @@ public class CasterInputInfo extends AbstractModel {
      * Set 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Volume 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;

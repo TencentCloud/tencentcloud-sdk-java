@@ -25,7 +25,6 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
     * 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResumeTime")
     @Expose
@@ -33,7 +32,6 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
     * 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuspendTime")
     @Expose
@@ -41,17 +39,14 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
     * 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuspendStrategy")
     @Expose
     private Long SuspendStrategy;
 
     /**
-     * Get 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时拉起时间：如：周一&周三8点 
      * @return ResumeTime 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResumeTime() {
         return this.ResumeTime;
@@ -59,19 +54,15 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
      * Set 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResumeTime 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResumeTime(String ResumeTime) {
         this.ResumeTime = ResumeTime;
     }
 
     /**
-     * Get 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时挂起时间：如：周一&周三20点 
      * @return SuspendTime 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuspendTime() {
         return this.SuspendTime;
@@ -79,19 +70,15 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
      * Set 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuspendTime 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuspendTime(String SuspendTime) {
         this.SuspendTime = SuspendTime;
     }
 
     /**
-     * Get 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起 
      * @return SuspendStrategy 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuspendStrategy() {
         return this.SuspendStrategy;
@@ -99,9 +86,7 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
      * Set 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuspendStrategy 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuspendStrategy(Long SuspendStrategy) {
         this.SuspendStrategy = SuspendStrategy;

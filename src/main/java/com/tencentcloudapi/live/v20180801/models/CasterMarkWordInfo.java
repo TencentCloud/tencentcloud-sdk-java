@@ -32,7 +32,6 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
     * 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordText")
     @Expose
@@ -41,7 +40,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
     * 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordFontSize")
     @Expose
@@ -49,7 +47,6 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
     * 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordFontColor")
     @Expose
@@ -60,7 +57,6 @@ public class CasterMarkWordInfo extends AbstractModel {
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordFontType")
     @Expose
@@ -70,7 +66,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     * 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordLocationX")
     @Expose
@@ -80,7 +75,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     * 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordLocationY")
     @Expose
@@ -89,7 +83,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
     * 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordRollEnable")
     @Expose
@@ -99,7 +92,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     * 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordRollOnceTime")
     @Expose
@@ -111,7 +103,6 @@ public class CasterMarkWordInfo extends AbstractModel {
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordRollDirection")
     @Expose
@@ -120,7 +111,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
     * 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordRollStartLocationX")
     @Expose
@@ -129,7 +119,6 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
     * 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordRollEndLocationX")
     @Expose
@@ -152,10 +141,8 @@ public class CasterMarkWordInfo extends AbstractModel {
     }
 
     /**
-     * Get 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印内容。 
      * @return MarkWordText 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarkWordText() {
         return this.MarkWordText;
@@ -163,9 +150,7 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Set 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordText 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordText(String MarkWordText) {
         this.MarkWordText = MarkWordText;
@@ -173,11 +158,9 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Get 文字水印的字号。
-范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。 
+范围[16, 60] 
      * @return MarkWordFontSize 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMarkWordFontSize() {
         return this.MarkWordFontSize;
@@ -186,20 +169,16 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Set 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordFontSize 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordFontSize(Long MarkWordFontSize) {
         this.MarkWordFontSize = MarkWordFontSize;
     }
 
     /**
-     * Get 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印的颜色，值为HEX颜色代码 
      * @return MarkWordFontColor 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarkWordFontColor() {
         return this.MarkWordFontColor;
@@ -207,9 +186,7 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Set 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordFontColor 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordFontColor(String MarkWordFontColor) {
         this.MarkWordFontColor = MarkWordFontColor;
@@ -219,13 +196,11 @@ public class CasterMarkWordInfo extends AbstractModel {
      * Get 文字水印的字体类型。
 范围[1,2]。
 1. 宋体
-2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。 
+2. 黑体 
      * @return MarkWordFontType 文字水印的字体类型。
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMarkWordFontType() {
         return this.MarkWordFontType;
@@ -236,12 +211,10 @@ public class CasterMarkWordInfo extends AbstractModel {
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordFontType 文字水印的字体类型。
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordFontType(Long MarkWordFontType) {
         this.MarkWordFontType = MarkWordFontType;
@@ -250,12 +223,10 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Get 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return MarkWordLocationX 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMarkWordLocationX() {
         return this.MarkWordLocationX;
@@ -265,11 +236,9 @@ public class CasterMarkWordInfo extends AbstractModel {
      * Set 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordLocationX 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordLocationX(Float MarkWordLocationX) {
         this.MarkWordLocationX = MarkWordLocationX;
@@ -278,12 +247,10 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Get 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return MarkWordLocationY 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMarkWordLocationY() {
         return this.MarkWordLocationY;
@@ -293,11 +260,9 @@ public class CasterMarkWordInfo extends AbstractModel {
      * Set 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordLocationY 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordLocationY(Float MarkWordLocationY) {
         this.MarkWordLocationY = MarkWordLocationY;
@@ -305,11 +270,9 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Get 是否开启文字跑马灯功能。
-默认为false。
-注意：此字段可能返回 null，表示取不到有效值。 
+默认为false。 
      * @return MarkWordRollEnable 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMarkWordRollEnable() {
         return this.MarkWordRollEnable;
@@ -318,10 +281,8 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Set 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordRollEnable 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordRollEnable(Boolean MarkWordRollEnable) {
         this.MarkWordRollEnable = MarkWordRollEnable;
@@ -330,12 +291,10 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Get 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
-范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。 
+范围[5, 600]。 
      * @return MarkWordRollOnceTime 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMarkWordRollOnceTime() {
         return this.MarkWordRollOnceTime;
@@ -345,11 +304,9 @@ public class CasterMarkWordInfo extends AbstractModel {
      * Set 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordRollOnceTime 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordRollOnceTime(Long MarkWordRollOnceTime) {
         this.MarkWordRollOnceTime = MarkWordRollOnceTime;
@@ -360,14 +317,12 @@ public class CasterMarkWordInfo extends AbstractModel {
 默认值为0。
 范围[0,1]。
 0 从左到右
-1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。 
+1 从右到左 
      * @return MarkWordRollDirection 跑马灯文字的方向。
 默认值为0。
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMarkWordRollDirection() {
         return this.MarkWordRollDirection;
@@ -379,13 +334,11 @@ public class CasterMarkWordInfo extends AbstractModel {
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordRollDirection 跑马灯文字的方向。
 默认值为0。
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordRollDirection(Long MarkWordRollDirection) {
         this.MarkWordRollDirection = MarkWordRollDirection;
@@ -393,11 +346,9 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Get 跑马灯文字显示的起始x坐标，单位百分比。
-范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。 
+范围[0.0, 1.0] 
      * @return MarkWordRollStartLocationX 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMarkWordRollStartLocationX() {
         return this.MarkWordRollStartLocationX;
@@ -406,10 +357,8 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Set 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordRollStartLocationX 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordRollStartLocationX(Float MarkWordRollStartLocationX) {
         this.MarkWordRollStartLocationX = MarkWordRollStartLocationX;
@@ -417,11 +366,9 @@ public class CasterMarkWordInfo extends AbstractModel {
 
     /**
      * Get 跑马灯文字显示的截止x坐标，单位百分比。
-范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。 
+范围[0.0, 1.0] 
      * @return MarkWordRollEndLocationX 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMarkWordRollEndLocationX() {
         return this.MarkWordRollEndLocationX;
@@ -430,10 +377,8 @@ public class CasterMarkWordInfo extends AbstractModel {
     /**
      * Set 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordRollEndLocationX 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordRollEndLocationX(Float MarkWordRollEndLocationX) {
         this.MarkWordRollEndLocationX = MarkWordRollEndLocationX;

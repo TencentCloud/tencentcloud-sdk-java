@@ -25,7 +25,6 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
     * 地域的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionInstanceSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地域的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域的数量 
      * @return TotalCount 地域的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
      * Set 地域的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 地域的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionInstanceSet 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionInstance [] getRegionInstanceSet() {
         return this.RegionInstanceSet;
@@ -78,9 +70,7 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionInstanceSet 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionInstanceSet(RegionInstance [] RegionInstanceSet) {
         this.RegionInstanceSet = RegionInstanceSet;

@@ -27,7 +27,6 @@ public class CasterDisplayInfo extends AbstractModel {
     * 布局Index。
 如果使用自定义布局，为自定义布局下标。
 如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayoutIndex")
     @Expose
@@ -36,7 +35,6 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
     * 使用的水印Index列表。
 注：当作为入参使用时，列表中的水印Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkPicIndexList")
     @Expose
@@ -45,7 +43,6 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
     * 使用的文字水印Index列表。
 注：作为入参使用时，列表中的Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordIndexList")
     @Expose
@@ -54,7 +51,6 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
     * 使用的转场类型。
 注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransitionType")
     @Expose
@@ -63,7 +59,6 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
     * 使用的音频输入Index列表。
 注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioIndexList")
     @Expose
@@ -75,7 +70,6 @@ public class CasterDisplayInfo extends AbstractModel {
 有效值，0,1。
 0代表不从头播放
 1代表从头播放
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputStartType")
     @Expose
@@ -87,7 +81,6 @@ public class CasterDisplayInfo extends AbstractModel {
 可选值[0,1]
 0:默认类型，代表普通布局
 1:单输入类型，代表单输入布局
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayoutIndexType")
     @Expose
@@ -96,12 +89,10 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
      * Get 布局Index。
 如果使用自定义布局，为自定义布局下标。
-如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。 
      * @return LayoutIndex 布局Index。
 如果使用自定义布局，为自定义布局下标。
 如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLayoutIndex() {
         return this.LayoutIndex;
@@ -111,11 +102,9 @@ public class CasterDisplayInfo extends AbstractModel {
      * Set 布局Index。
 如果使用自定义布局，为自定义布局下标。
 如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayoutIndex 布局Index。
 如果使用自定义布局，为自定义布局下标。
 如果使用单输入布局，如使用输入1，则LayoutIndexType=1， 且LayoutIndex=1，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayoutIndex(Long LayoutIndex) {
         this.LayoutIndex = LayoutIndex;
@@ -123,11 +112,9 @@ public class CasterDisplayInfo extends AbstractModel {
 
     /**
      * Get 使用的水印Index列表。
-注：当作为入参使用时，列表中的水印Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：当作为入参使用时，列表中的水印Index需要已经存在。 
      * @return MarkPicIndexList 使用的水印Index列表。
 注：当作为入参使用时，列表中的水印Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMarkPicIndexList() {
         return this.MarkPicIndexList;
@@ -136,10 +123,8 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
      * Set 使用的水印Index列表。
 注：当作为入参使用时，列表中的水印Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkPicIndexList 使用的水印Index列表。
 注：当作为入参使用时，列表中的水印Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkPicIndexList(Long [] MarkPicIndexList) {
         this.MarkPicIndexList = MarkPicIndexList;
@@ -147,11 +132,9 @@ public class CasterDisplayInfo extends AbstractModel {
 
     /**
      * Get 使用的文字水印Index列表。
-注：作为入参使用时，列表中的Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：作为入参使用时，列表中的Index需要已经存在。 
      * @return MarkWordIndexList 使用的文字水印Index列表。
 注：作为入参使用时，列表中的Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMarkWordIndexList() {
         return this.MarkWordIndexList;
@@ -160,10 +143,8 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
      * Set 使用的文字水印Index列表。
 注：作为入参使用时，列表中的Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordIndexList 使用的文字水印Index列表。
 注：作为入参使用时，列表中的Index需要已经存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordIndexList(Long [] MarkWordIndexList) {
         this.MarkWordIndexList = MarkWordIndexList;
@@ -171,11 +152,9 @@ public class CasterDisplayInfo extends AbstractModel {
 
     /**
      * Get 使用的转场类型。
-注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。 
      * @return TransitionType 使用的转场类型。
 注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransitionType() {
         return this.TransitionType;
@@ -184,10 +163,8 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
      * Set 使用的转场类型。
 注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransitionType 使用的转场类型。
 注：支持的转场类型可通过DescribeCasterTransitionTypes接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransitionType(String TransitionType) {
         this.TransitionType = TransitionType;
@@ -195,11 +172,9 @@ public class CasterDisplayInfo extends AbstractModel {
 
     /**
      * Get 使用的音频输入Index列表。
-注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。 
      * @return AudioIndexList 使用的音频输入Index列表。
 注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getAudioIndexList() {
         return this.AudioIndexList;
@@ -208,10 +183,8 @@ public class CasterDisplayInfo extends AbstractModel {
     /**
      * Set 使用的音频输入Index列表。
 注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioIndexList 使用的音频输入Index列表。
 注：当该字段非空时，表示使用布局中对应的输入源的视频，AudioIndexList中对应的输入源的音频。且这些输入源需已存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioIndexList(Long [] AudioIndexList) {
         this.AudioIndexList = AudioIndexList;
@@ -222,14 +195,12 @@ public class CasterDisplayInfo extends AbstractModel {
 默认为0。
 有效值，0,1。
 0代表不从头播放
-1代表从头播放
-注意：此字段可能返回 null，表示取不到有效值。 
+1代表从头播放 
      * @return InputStartType 作为入参时，表示使用点播输入源，单画面输入时，点播文件是否从头开始播放。
 默认为0。
 有效值，0,1。
 0代表不从头播放
 1代表从头播放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputStartType() {
         return this.InputStartType;
@@ -241,13 +212,11 @@ public class CasterDisplayInfo extends AbstractModel {
 有效值，0,1。
 0代表不从头播放
 1代表从头播放
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputStartType 作为入参时，表示使用点播输入源，单画面输入时，点播文件是否从头开始播放。
 默认为0。
 有效值，0,1。
 0代表不从头播放
 1代表从头播放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputStartType(Long InputStartType) {
         this.InputStartType = InputStartType;
@@ -258,14 +227,12 @@ public class CasterDisplayInfo extends AbstractModel {
 默认值:0
 可选值[0,1]
 0:默认类型，代表普通布局
-1:单输入类型，代表单输入布局
-注意：此字段可能返回 null，表示取不到有效值。 
+1:单输入类型，代表单输入布局 
      * @return LayoutIndexType LayoutIndex类型，
 默认值:0
 可选值[0,1]
 0:默认类型，代表普通布局
 1:单输入类型，代表单输入布局
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLayoutIndexType() {
         return this.LayoutIndexType;
@@ -277,13 +244,11 @@ public class CasterDisplayInfo extends AbstractModel {
 可选值[0,1]
 0:默认类型，代表普通布局
 1:单输入类型，代表单输入布局
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayoutIndexType LayoutIndex类型，
 默认值:0
 可选值[0,1]
 0:默认类型，代表普通布局
 1:单输入类型，代表单输入布局
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayoutIndexType(Long LayoutIndexType) {
         this.LayoutIndexType = LayoutIndexType;

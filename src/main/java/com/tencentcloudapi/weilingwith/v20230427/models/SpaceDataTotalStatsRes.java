@@ -25,7 +25,6 @@ public class SpaceDataTotalStatsRes extends AbstractModel {
 
     /**
     * 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingCount")
     @Expose
@@ -33,17 +32,14 @@ public class SpaceDataTotalStatsRes extends AbstractModel {
 
     /**
     * 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingArea")
     @Expose
     private Float BuildingArea;
 
     /**
-     * Get 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总楼栋数量 
      * @return BuildingCount 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBuildingCount() {
         return this.BuildingCount;
@@ -51,19 +47,15 @@ public class SpaceDataTotalStatsRes extends AbstractModel {
 
     /**
      * Set 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingCount 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingCount(Long BuildingCount) {
         this.BuildingCount = BuildingCount;
     }
 
     /**
-     * Get 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总建筑面积 
      * @return BuildingArea 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBuildingArea() {
         return this.BuildingArea;
@@ -71,9 +63,7 @@ public class SpaceDataTotalStatsRes extends AbstractModel {
 
     /**
      * Set 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingArea 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingArea(Float BuildingArea) {
         this.BuildingArea = BuildingArea;

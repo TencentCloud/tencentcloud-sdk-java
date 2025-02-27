@@ -32,7 +32,6 @@ public class DescribeClusterEndpointVipStatusResponse extends AbstractModel {
 
     /**
     * 操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeClusterEndpointVipStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作失败的原因 
      * @return ErrorMsg 操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -73,9 +70,7 @@ public class DescribeClusterEndpointVipStatusResponse extends AbstractModel {
 
     /**
      * Set 操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

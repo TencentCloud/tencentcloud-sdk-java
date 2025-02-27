@@ -25,7 +25,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -41,7 +39,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterDesc")
     @Expose
@@ -49,7 +46,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterLevel")
     @Expose
@@ -57,7 +53,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
@@ -65,7 +60,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QGPUShareEnable")
     @Expose
@@ -73,7 +67,6 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
     * 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterProperty")
     @Expose
@@ -87,10 +80,8 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属项目 
      * @return ProjectId 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -98,19 +89,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -118,19 +105,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群描述 
      * @return ClusterDesc 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterDesc() {
         return this.ClusterDesc;
@@ -138,19 +121,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterDesc 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterDesc(String ClusterDesc) {
         this.ClusterDesc = ClusterDesc;
     }
 
     /**
-     * Get 集群等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群等级 
      * @return ClusterLevel 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
@@ -158,19 +137,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterLevel 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动变配集群等级 
      * @return AutoUpgradeClusterLevel 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
@@ -178,19 +153,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoUpgradeClusterLevel 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
     /**
-     * Get 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启QGPU共享 
      * @return QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
@@ -198,19 +169,15 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
     /**
-     * Get 集群属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群属性 
      * @return ClusterProperty 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterProperty getClusterProperty() {
         return this.ClusterProperty;
@@ -218,9 +185,7 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
 
     /**
      * Set 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterProperty 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterProperty(ClusterProperty ClusterProperty) {
         this.ClusterProperty = ClusterProperty;

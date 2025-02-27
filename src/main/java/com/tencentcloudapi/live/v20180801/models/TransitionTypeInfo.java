@@ -25,7 +25,6 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
     * 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransitionType")
     @Expose
@@ -33,7 +32,6 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
     * 素材url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceUrl")
     @Expose
@@ -41,17 +39,14 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
     * 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get 转场名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转场名称 
      * @return TransitionType 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransitionType() {
         return this.TransitionType;
@@ -59,19 +54,15 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
      * Set 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransitionType 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransitionType(String TransitionType) {
         this.TransitionType = TransitionType;
     }
 
     /**
-     * Get 素材url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 素材url 
      * @return SourceUrl 素材url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceUrl() {
         return this.SourceUrl;
@@ -79,19 +70,15 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
      * Set 素材url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceUrl 素材url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceUrl(String SourceUrl) {
         this.SourceUrl = SourceUrl;
     }
 
     /**
-     * Get 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转场的下标，可用来排序，从1开始递增 
      * @return Index 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndex() {
         return this.Index;
@@ -99,9 +86,7 @@ public class TransitionTypeInfo extends AbstractModel {
 
     /**
      * Set 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long Index) {
         this.Index = Index;

@@ -25,7 +25,6 @@ public class DescribeNodePoolsResponse extends AbstractModel {
 
     /**
     * 节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePools")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeNodePoolsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点池列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池列表 
      * @return NodePools 节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodePool [] getNodePools() {
         return this.NodePools;
@@ -57,9 +54,7 @@ public class DescribeNodePoolsResponse extends AbstractModel {
 
     /**
      * Set 节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePools 节点池列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePools(NodePool [] NodePools) {
         this.NodePools = NodePools;

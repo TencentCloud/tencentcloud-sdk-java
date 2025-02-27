@@ -25,7 +25,6 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
     * 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
     * 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
     * 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfigs")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeLogConfigsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查找时返回采集规则总数 
      * @return Total 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -66,19 +61,15 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
      * Set 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因 
      * @return Message 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -86,19 +77,15 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
      * Set 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采集规则查询结果 
      * @return LogConfigs 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogConfigs() {
         return this.LogConfigs;
@@ -106,9 +93,7 @@ public class DescribeLogConfigsResponse extends AbstractModel {
 
     /**
      * Set 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogConfigs 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfigs(String LogConfigs) {
         this.LogConfigs = LogConfigs;

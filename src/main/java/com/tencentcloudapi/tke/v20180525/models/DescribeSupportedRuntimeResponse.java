@@ -25,7 +25,6 @@ public class DescribeSupportedRuntimeResponse extends AbstractModel {
 
     /**
     * 可选运行时列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionalRuntimes")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSupportedRuntimeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可选运行时列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可选运行时列表 
      * @return OptionalRuntimes 可选运行时列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OptionalRuntimes [] getOptionalRuntimes() {
         return this.OptionalRuntimes;
@@ -50,9 +47,7 @@ public class DescribeSupportedRuntimeResponse extends AbstractModel {
 
     /**
      * Set 可选运行时列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OptionalRuntimes 可选运行时列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionalRuntimes(OptionalRuntimes [] OptionalRuntimes) {
         this.OptionalRuntimes = OptionalRuntimes;

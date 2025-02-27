@@ -25,7 +25,6 @@ public class DescribeVersionsResponse extends AbstractModel {
 
     /**
     * 版本数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVersionsResponse extends AbstractModel {
 
     /**
     * 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionInstanceSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本数量 
      * @return TotalCount 版本数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeVersionsResponse extends AbstractModel {
 
     /**
      * Set 版本数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 版本数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 版本列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本列表 
      * @return VersionInstanceSet 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VersionInstance [] getVersionInstanceSet() {
         return this.VersionInstanceSet;
@@ -78,9 +70,7 @@ public class DescribeVersionsResponse extends AbstractModel {
 
     /**
      * Set 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionInstanceSet 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionInstanceSet(VersionInstance [] VersionInstanceSet) {
         this.VersionInstanceSet = VersionInstanceSet;

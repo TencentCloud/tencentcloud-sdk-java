@@ -25,7 +25,6 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
     * ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceAccounts")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
     * 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
     * OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OIDCConfig")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ServiceAccount认证配置 
      * @return ServiceAccounts ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceAccountAuthenticationOptions getServiceAccounts() {
         return this.ServiceAccounts;
@@ -66,19 +61,15 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
      * Set ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceAccounts ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceAccounts(ServiceAccountAuthenticationOptions ServiceAccounts) {
         this.ServiceAccounts = ServiceAccounts;
     }
 
     /**
-     * Get 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut 
      * @return LatestOperationState 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
@@ -86,19 +77,15 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
      * Set 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationState 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OIDC认证配置 
      * @return OIDCConfig OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OIDCConfigAuthenticationOptions getOIDCConfig() {
         return this.OIDCConfig;
@@ -106,9 +93,7 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel 
 
     /**
      * Set OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OIDCConfig OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOIDCConfig(OIDCConfigAuthenticationOptions OIDCConfig) {
         this.OIDCConfig = OIDCConfig;

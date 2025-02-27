@@ -63,6 +63,8 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 15：非税发票
 16：全电发票
 17：医疗发票
+18：完税凭证
+19：海关缴款书
 -1：其他发票
     */
     @SerializedName("Types")
@@ -196,6 +198,8 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 15：非税发票
 16：全电发票
 17：医疗发票
+18：完税凭证
+19：海关缴款书
 -1：其他发票 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -213,6 +217,8 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 15：非税发票
 16：全电发票
 17：医疗发票
+18：完税凭证
+19：海关缴款书
 -1：其他发票
      */
     public Long [] getTypes() {
@@ -236,6 +242,8 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 15：非税发票
 16：全电发票
 17：医疗发票
+18：完税凭证
+19：海关缴款书
 -1：其他发票
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -253,6 +261,8 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 15：非税发票
 16：全电发票
 17：医疗发票
+18：完税凭证
+19：海关缴款书
 -1：其他发票
      */
     public void setTypes(Long [] Types) {

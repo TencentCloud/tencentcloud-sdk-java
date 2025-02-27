@@ -25,7 +25,6 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
     * 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
     * 开启访问入口失败信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启） 
      * @return Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -58,19 +54,15 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
      * Set 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 开启访问入口失败信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启访问入口失败信息 
      * @return ErrorMsg 开启访问入口失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -78,9 +70,7 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
      * Set 开启访问入口失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 开启访问入口失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

@@ -33,7 +33,6 @@ public class DescribeAvailableClusterVersionResponse extends AbstractModel {
 
     /**
     * 集群信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clusters")
     @Expose
@@ -67,10 +66,8 @@ public class DescribeAvailableClusterVersionResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群信息 
      * @return Clusters 集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterVersion [] getClusters() {
         return this.Clusters;
@@ -78,9 +75,7 @@ public class DescribeAvailableClusterVersionResponse extends AbstractModel {
 
     /**
      * Set 集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clusters 集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusters(ClusterVersion [] Clusters) {
         this.Clusters = Clusters;

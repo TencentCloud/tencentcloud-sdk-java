@@ -25,7 +25,6 @@ public class DescribeVpcCniPodLimitsResponse extends AbstractModel {
 
     /**
     * 机型数据数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVpcCniPodLimitsResponse extends AbstractModel {
 
     /**
     * 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodLimitsInstanceSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeVpcCniPodLimitsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 机型数据数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型数据数量 
      * @return TotalCount 机型数据数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeVpcCniPodLimitsResponse extends AbstractModel {
 
     /**
      * Set 机型数据数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 机型数据数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型信息及其可支持的最大VPC-CNI模式Pod数量信息 
      * @return PodLimitsInstanceSet 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PodLimitsInstance [] getPodLimitsInstanceSet() {
         return this.PodLimitsInstanceSet;
@@ -78,9 +70,7 @@ public class DescribeVpcCniPodLimitsResponse extends AbstractModel {
 
     /**
      * Set 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodLimitsInstanceSet 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodLimitsInstanceSet(PodLimitsInstance [] PodLimitsInstanceSet) {
         this.PodLimitsInstanceSet = PodLimitsInstanceSet;

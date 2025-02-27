@@ -38,6 +38,13 @@ public class MultiCertInfo extends AbstractModel {
     private CertInfo [] CertList;
 
     /**
+    * 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+    */
+    @SerializedName("SSLVerifyClient")
+    @Expose
+    private String SSLVerifyClient;
+
+    /**
      * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证 
      * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
@@ -69,6 +76,22 @@ public class MultiCertInfo extends AbstractModel {
         this.CertList = CertList;
     }
 
+    /**
+     * Get 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON 
+     * @return SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+     */
+    public String getSSLVerifyClient() {
+        return this.SSLVerifyClient;
+    }
+
+    /**
+     * Set 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+     * @param SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+     */
+    public void setSSLVerifyClient(String SSLVerifyClient) {
+        this.SSLVerifyClient = SSLVerifyClient;
+    }
+
     public MultiCertInfo() {
     }
 
@@ -86,6 +109,9 @@ public class MultiCertInfo extends AbstractModel {
                 this.CertList[i] = new CertInfo(source.CertList[i]);
             }
         }
+        if (source.SSLVerifyClient != null) {
+            this.SSLVerifyClient = new String(source.SSLVerifyClient);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class MultiCertInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
         this.setParamArrayObj(map, prefix + "CertList.", this.CertList);
+        this.setParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
 
     }
 }

@@ -25,7 +25,6 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel {
 
     /**
     * 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SucceedInstanceIds")
     @Expose
@@ -47,10 +46,8 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功设置的节点id 
      * @return SucceedInstanceIds 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSucceedInstanceIds() {
         return this.SucceedInstanceIds;
@@ -58,9 +55,7 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel {
 
     /**
      * Set 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SucceedInstanceIds 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSucceedInstanceIds(String [] SucceedInstanceIds) {
         this.SucceedInstanceIds = SucceedInstanceIds;

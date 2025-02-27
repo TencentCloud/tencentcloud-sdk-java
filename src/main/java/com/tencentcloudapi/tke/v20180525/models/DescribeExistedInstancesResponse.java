@@ -25,7 +25,6 @@ public class DescribeExistedInstancesResponse extends AbstractModel {
 
     /**
     * 已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExistedInstanceSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeExistedInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经存在的实例信息数组。 
      * @return ExistedInstanceSet 已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExistedInstance [] getExistedInstanceSet() {
         return this.ExistedInstanceSet;
@@ -57,9 +54,7 @@ public class DescribeExistedInstancesResponse extends AbstractModel {
 
     /**
      * Set 已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExistedInstanceSet 已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExistedInstanceSet(ExistedInstance [] ExistedInstanceSet) {
         this.ExistedInstanceSet = ExistedInstanceSet;

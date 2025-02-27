@@ -39,7 +39,6 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel {
 
     /**
     * 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeAbleInstances")
     @Expose
@@ -47,7 +46,6 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -101,10 +99,8 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel {
     }
 
     /**
-     * Get 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可升级节点列表 
      * @return UpgradeAbleInstances 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpgradeAbleInstancesItem [] getUpgradeAbleInstances() {
         return this.UpgradeAbleInstances;
@@ -112,19 +108,15 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel {
 
     /**
      * Set 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeAbleInstances 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeAbleInstances(UpgradeAbleInstancesItem [] UpgradeAbleInstances) {
         this.UpgradeAbleInstances = UpgradeAbleInstances;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -132,9 +124,7 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

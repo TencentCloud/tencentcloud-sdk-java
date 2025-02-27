@@ -67,6 +67,13 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
     private String [] ConfigFileNames;
 
     /**
+    * 需要查询的计算组列表
+    */
+    @SerializedName("ComputeGroupIds")
+    @Expose
+    private String [] ComputeGroupIds;
+
+    /**
      * Get 集群id名称 
      * @return InstanceId 集群id名称
      */
@@ -166,6 +173,22 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
         this.ConfigFileNames = ConfigFileNames;
     }
 
+    /**
+     * Get 需要查询的计算组列表 
+     * @return ComputeGroupIds 需要查询的计算组列表
+     */
+    public String [] getComputeGroupIds() {
+        return this.ComputeGroupIds;
+    }
+
+    /**
+     * Set 需要查询的计算组列表
+     * @param ComputeGroupIds 需要查询的计算组列表
+     */
+    public void setComputeGroupIds(String [] ComputeGroupIds) {
+        this.ComputeGroupIds = ComputeGroupIds;
+    }
+
     public DescribeClusterConfigsHistoryRequest() {
     }
 
@@ -195,6 +218,12 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
                 this.ConfigFileNames[i] = new String(source.ConfigFileNames[i]);
             }
         }
+        if (source.ComputeGroupIds != null) {
+            this.ComputeGroupIds = new String[source.ComputeGroupIds.length];
+            for (int i = 0; i < source.ComputeGroupIds.length; i++) {
+                this.ComputeGroupIds[i] = new String(source.ComputeGroupIds[i]);
+            }
+        }
     }
 
 
@@ -208,6 +237,7 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "ConfigFileNames.", this.ConfigFileNames);
+        this.setParamArraySimple(map, prefix + "ComputeGroupIds.", this.ComputeGroupIds);
 
     }
 }

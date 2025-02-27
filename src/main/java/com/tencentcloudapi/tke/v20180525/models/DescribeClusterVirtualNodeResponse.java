@@ -25,7 +25,6 @@ public class DescribeClusterVirtualNodeResponse extends AbstractModel {
 
     /**
     * 节点列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nodes")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClusterVirtualNodeResponse extends AbstractModel {
 
     /**
     * 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeClusterVirtualNodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点列表 
      * @return Nodes 节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VirtualNode [] getNodes() {
         return this.Nodes;
@@ -58,19 +54,15 @@ public class DescribeClusterVirtualNodeResponse extends AbstractModel {
 
     /**
      * Set 节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nodes 节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodes(VirtualNode [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 节点总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点总数 
      * @return TotalCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeClusterVirtualNodeResponse extends AbstractModel {
 
     /**
      * Set 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

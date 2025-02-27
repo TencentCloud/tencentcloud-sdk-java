@@ -32,7 +32,6 @@ public class CasterMarkPicInfo extends AbstractModel {
 
     /**
     * 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkPicId")
     @Expose
@@ -77,7 +76,6 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
     * 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkPicUrl")
     @Expose
@@ -86,7 +84,6 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
     * 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -95,7 +92,6 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
     * 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEqualProportion")
     @Expose
@@ -118,10 +114,8 @@ public class CasterMarkPicInfo extends AbstractModel {
     }
 
     /**
-     * Get 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注：该字段已废弃。 
      * @return MarkPicId 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMarkPicId() {
         return this.MarkPicId;
@@ -129,9 +123,7 @@ public class CasterMarkPicInfo extends AbstractModel {
 
     /**
      * Set 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkPicId 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkPicId(Long MarkPicId) {
         this.MarkPicId = MarkPicId;
@@ -235,11 +227,9 @@ public class CasterMarkPicInfo extends AbstractModel {
 
     /**
      * Get 水印地址。
-最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。 
+最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。 
      * @return MarkPicUrl 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarkPicUrl() {
         return this.MarkPicUrl;
@@ -248,10 +238,8 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
      * Set 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkPicUrl 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkPicUrl(String MarkPicUrl) {
         this.MarkPicUrl = MarkPicUrl;
@@ -259,11 +247,9 @@ public class CasterMarkPicInfo extends AbstractModel {
 
     /**
      * Get 水印描述。
-最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。 
+最大允许长度为256。 
      * @return Description 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -272,10 +258,8 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
      * Set 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -283,11 +267,9 @@ public class CasterMarkPicInfo extends AbstractModel {
 
     /**
      * Get 是否启用了等比例缩放。
-注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该字段仅做状态保存，无实际效果。 
      * @return IsEqualProportion 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsEqualProportion() {
         return this.IsEqualProportion;
@@ -296,10 +278,8 @@ public class CasterMarkPicInfo extends AbstractModel {
     /**
      * Set 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsEqualProportion 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEqualProportion(Boolean IsEqualProportion) {
         this.IsEqualProportion = IsEqualProportion;

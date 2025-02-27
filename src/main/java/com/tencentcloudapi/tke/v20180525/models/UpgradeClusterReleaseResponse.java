@@ -25,7 +25,6 @@ public class UpgradeClusterReleaseResponse extends AbstractModel {
 
     /**
     * 应用详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Release")
     @Expose
@@ -39,10 +38,8 @@ public class UpgradeClusterReleaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用详情 
      * @return Release 应用详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PendingRelease getRelease() {
         return this.Release;
@@ -50,9 +47,7 @@ public class UpgradeClusterReleaseResponse extends AbstractModel {
 
     /**
      * Set 应用详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Release 应用详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelease(PendingRelease Release) {
         this.Release = Release;

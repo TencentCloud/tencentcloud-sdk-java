@@ -55,7 +55,6 @@ public class StreamOnlineInfo extends AbstractModel {
     * 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushToDelay")
     @Expose
@@ -128,12 +127,10 @@ public class StreamOnlineInfo extends AbstractModel {
     /**
      * Get 流是否推送到延播。
 0 - 无延播，
-1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。 
+1 - 有延播。 
      * @return PushToDelay 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPushToDelay() {
         return this.PushToDelay;
@@ -143,11 +140,9 @@ public class StreamOnlineInfo extends AbstractModel {
      * Set 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushToDelay 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushToDelay(Long PushToDelay) {
         this.PushToDelay = PushToDelay;

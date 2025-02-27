@@ -32,7 +32,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableCustomizedPodCidr")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisableVpcCniMode")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phase")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -72,7 +68,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClaimExpiredDuration")
     @Expose
@@ -80,7 +75,6 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
     * 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTrunkingENI")
     @Expose
@@ -110,10 +104,8 @@ public class DescribeIPAMDResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义 
      * @return EnableCustomizedPodCidr 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableCustomizedPodCidr() {
         return this.EnableCustomizedPodCidr;
@@ -121,19 +113,15 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableCustomizedPodCidr 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableCustomizedPodCidr(Boolean EnableCustomizedPodCidr) {
         this.EnableCustomizedPodCidr = EnableCustomizedPodCidr;
     }
 
     /**
-     * Get 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义 
      * @return DisableVpcCniMode 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDisableVpcCniMode() {
         return this.DisableVpcCniMode;
@@ -141,19 +129,15 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisableVpcCniMode 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisableVpcCniMode(Boolean DisableVpcCniMode) {
         this.DisableVpcCniMode = DisableVpcCniMode;
     }
 
     /**
-     * Get 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件状态，已安装eniipamd组件才会有值 
      * @return Phase 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhase() {
         return this.Phase;
@@ -161,19 +145,15 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phase 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
     }
 
     /**
-     * Get 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息，已安装eniipamd组件且状态为非running才会有错误信息 
      * @return Reason 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -181,9 +161,7 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
@@ -210,10 +188,8 @@ public class DescribeIPAMDResponse extends AbstractModel {
     }
 
     /**
-     * Get 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固定ip回收时间，已安装eniipamd组件才会有值 
      * @return ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClaimExpiredDuration() {
         return this.ClaimExpiredDuration;
@@ -221,19 +197,15 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClaimExpiredDuration(String ClaimExpiredDuration) {
         this.ClaimExpiredDuration = ClaimExpiredDuration;
     }
 
     /**
-     * Get 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启了中继网卡模式 
      * @return EnableTrunkingENI 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableTrunkingENI() {
         return this.EnableTrunkingENI;
@@ -241,9 +213,7 @@ public class DescribeIPAMDResponse extends AbstractModel {
 
     /**
      * Set 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableTrunkingENI 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTrunkingENI(Boolean EnableTrunkingENI) {
         this.EnableTrunkingENI = EnableTrunkingENI;

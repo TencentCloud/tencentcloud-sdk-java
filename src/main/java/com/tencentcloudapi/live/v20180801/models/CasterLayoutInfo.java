@@ -59,7 +59,6 @@ public class CasterLayoutInfo extends AbstractModel {
     * 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayoutWidth")
     @Expose
@@ -68,7 +67,6 @@ public class CasterLayoutInfo extends AbstractModel {
     /**
     * 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayoutHeight")
     @Expose
@@ -157,12 +155,10 @@ public class CasterLayoutInfo extends AbstractModel {
     /**
      * Get 布局输出的宽度，单位为像素。
 默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该值仅在画中画布局，且未设置PgmWidth时生效。 
      * @return LayoutWidth 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLayoutWidth() {
         return this.LayoutWidth;
@@ -172,11 +168,9 @@ public class CasterLayoutInfo extends AbstractModel {
      * Set 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayoutWidth 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayoutWidth(Long LayoutWidth) {
         this.LayoutWidth = LayoutWidth;
@@ -184,11 +178,9 @@ public class CasterLayoutInfo extends AbstractModel {
 
     /**
      * Get 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该参数仅在画中画布局，且未设置PgmHeight时生效。 
      * @return LayoutHeight 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLayoutHeight() {
         return this.LayoutHeight;
@@ -197,10 +189,8 @@ public class CasterLayoutInfo extends AbstractModel {
     /**
      * Set 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayoutHeight 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayoutHeight(Long LayoutHeight) {
         this.LayoutHeight = LayoutHeight;

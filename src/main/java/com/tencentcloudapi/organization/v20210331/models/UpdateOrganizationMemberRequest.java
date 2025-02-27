@@ -74,6 +74,13 @@ public class UpdateOrganizationMemberRequest extends AbstractModel {
     private String PayUin;
 
     /**
+    * 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+    */
+    @SerializedName("IsModifyNickName")
+    @Expose
+    private Long IsModifyNickName;
+
+    /**
      * Get 成员Uin。 
      * @return MemberUin 成员Uin。
      */
@@ -189,6 +196,22 @@ public class UpdateOrganizationMemberRequest extends AbstractModel {
         this.PayUin = PayUin;
     }
 
+    /**
+     * Get 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步 
+     * @return IsModifyNickName 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+     */
+    public Long getIsModifyNickName() {
+        return this.IsModifyNickName;
+    }
+
+    /**
+     * Set 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+     * @param IsModifyNickName 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+     */
+    public void setIsModifyNickName(Long IsModifyNickName) {
+        this.IsModifyNickName = IsModifyNickName;
+    }
+
     public UpdateOrganizationMemberRequest() {
     }
 
@@ -221,6 +244,9 @@ public class UpdateOrganizationMemberRequest extends AbstractModel {
         if (source.PayUin != null) {
             this.PayUin = new String(source.PayUin);
         }
+        if (source.IsModifyNickName != null) {
+            this.IsModifyNickName = new Long(source.IsModifyNickName);
+        }
     }
 
 
@@ -235,6 +261,7 @@ public class UpdateOrganizationMemberRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
         this.setParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
+        this.setParamSimple(map, prefix + "IsModifyNickName", this.IsModifyNickName);
 
     }
 }

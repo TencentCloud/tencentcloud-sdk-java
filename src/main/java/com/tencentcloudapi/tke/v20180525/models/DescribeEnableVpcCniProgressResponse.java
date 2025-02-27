@@ -32,7 +32,6 @@ public class DescribeEnableVpcCniProgressResponse extends AbstractModel {
 
     /**
     * 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeEnableVpcCniProgressResponse extends AbstractModel {
     }
 
     /**
-     * Get 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败 
      * @return ErrorMessage 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -73,9 +70,7 @@ public class DescribeEnableVpcCniProgressResponse extends AbstractModel {
 
     /**
      * Set 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

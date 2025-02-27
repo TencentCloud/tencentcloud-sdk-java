@@ -42,7 +42,6 @@ public class CasterOutputInfo extends AbstractModel {
 
     /**
     * 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -52,7 +51,6 @@ public class CasterOutputInfo extends AbstractModel {
     * 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStreamId")
     @Expose
@@ -72,7 +70,6 @@ public class CasterOutputInfo extends AbstractModel {
     * 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputDomainName")
     @Expose
@@ -82,7 +79,6 @@ public class CasterOutputInfo extends AbstractModel {
     * 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputAppName")
     @Expose
@@ -92,7 +88,6 @@ public class CasterOutputInfo extends AbstractModel {
     * 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputParam")
     @Expose
@@ -143,10 +138,8 @@ public class CasterOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述信息。 
      * @return Description 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -154,9 +147,7 @@ public class CasterOutputInfo extends AbstractModel {
 
     /**
      * Set 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -165,12 +156,10 @@ public class CasterOutputInfo extends AbstractModel {
     /**
      * Get 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
-最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+最大允许128字符。 
      * @return OutputStreamId 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputStreamId() {
         return this.OutputStreamId;
@@ -180,11 +169,9 @@ public class CasterOutputInfo extends AbstractModel {
      * Set 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStreamId 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStreamId(String OutputStreamId) {
         this.OutputStreamId = OutputStreamId;
@@ -221,12 +208,10 @@ public class CasterOutputInfo extends AbstractModel {
     /**
      * Get 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
-仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+仅在OutputType为1时生效。 
      * @return OutputDomainName 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputDomainName() {
         return this.OutputDomainName;
@@ -236,11 +221,9 @@ public class CasterOutputInfo extends AbstractModel {
      * Set 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputDomainName 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputDomainName(String OutputDomainName) {
         this.OutputDomainName = OutputDomainName;
@@ -249,12 +232,10 @@ public class CasterOutputInfo extends AbstractModel {
     /**
      * Get 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
-仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+仅在OutputType为1时生效。 
      * @return OutputAppName 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputAppName() {
         return this.OutputAppName;
@@ -264,11 +245,9 @@ public class CasterOutputInfo extends AbstractModel {
      * Set 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputAppName 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputAppName(String OutputAppName) {
         this.OutputAppName = OutputAppName;
@@ -277,12 +256,10 @@ public class CasterOutputInfo extends AbstractModel {
     /**
      * Get 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
-仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+仅在OutputType为1时生效。 
      * @return OutputParam 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputParam() {
         return this.OutputParam;
@@ -292,11 +269,9 @@ public class CasterOutputInfo extends AbstractModel {
      * Set 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputParam 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputParam(String OutputParam) {
         this.OutputParam = OutputParam;

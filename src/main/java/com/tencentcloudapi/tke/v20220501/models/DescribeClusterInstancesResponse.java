@@ -39,7 +39,6 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
 
     /**
     * 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息集合 
      * @return Errors 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getErrors() {
         return this.Errors;
@@ -96,9 +93,7 @@ public class DescribeClusterInstancesResponse extends AbstractModel {
 
     /**
      * Set 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errors 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(String [] Errors) {
         this.Errors = Errors;

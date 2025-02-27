@@ -25,7 +25,6 @@ public class DescribeClusterReleaseHistoryResponse extends AbstractModel {
 
     /**
     * 已安装应用版本历史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseHistorySet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeClusterReleaseHistoryResponse extends AbstractModel {
 
     /**
     * 总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeClusterReleaseHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已安装应用版本历史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已安装应用版本历史 
      * @return ReleaseHistorySet 已安装应用版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReleaseHistory [] getReleaseHistorySet() {
         return this.ReleaseHistorySet;
@@ -58,19 +54,15 @@ public class DescribeClusterReleaseHistoryResponse extends AbstractModel {
 
     /**
      * Set 已安装应用版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseHistorySet 已安装应用版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseHistorySet(ReleaseHistory [] ReleaseHistorySet) {
         this.ReleaseHistorySet = ReleaseHistorySet;
     }
 
     /**
-     * Get 总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量 
      * @return Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeClusterReleaseHistoryResponse extends AbstractModel {
 
     /**
      * Set 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -25,7 +25,6 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
     * 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -33,7 +32,6 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
     * 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceName")
     @Expose
@@ -41,7 +39,6 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
     * 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingCount")
     @Expose
@@ -49,17 +46,14 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
     * 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingArea")
     @Expose
     private Float BuildingArea;
 
     /**
-     * Get 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间ID 
      * @return WorkspaceId 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
@@ -67,19 +61,15 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
      * Set 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间名称 
      * @return WorkspaceName 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceName() {
         return this.WorkspaceName;
@@ -87,19 +77,15 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
      * Set 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceName 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceName(String WorkspaceName) {
         this.WorkspaceName = WorkspaceName;
     }
 
     /**
-     * Get 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 楼栋数量 
      * @return BuildingCount 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBuildingCount() {
         return this.BuildingCount;
@@ -107,19 +93,15 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
      * Set 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingCount 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingCount(Long BuildingCount) {
         this.BuildingCount = BuildingCount;
     }
 
     /**
-     * Get 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑面积 
      * @return BuildingArea 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBuildingArea() {
         return this.BuildingArea;
@@ -127,9 +109,7 @@ public class SpaceDataStats extends AbstractModel {
 
     /**
      * Set 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingArea 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingArea(Float BuildingArea) {
         this.BuildingArea = BuildingArea;

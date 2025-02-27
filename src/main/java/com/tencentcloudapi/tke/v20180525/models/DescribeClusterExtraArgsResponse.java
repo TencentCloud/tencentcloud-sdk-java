@@ -25,7 +25,6 @@ public class DescribeClusterExtraArgsResponse extends AbstractModel {
 
     /**
     * 集群自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterExtraArgs")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeClusterExtraArgsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群自定义参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群自定义参数 
      * @return ClusterExtraArgs 集群自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterExtraArgs getClusterExtraArgs() {
         return this.ClusterExtraArgs;
@@ -50,9 +47,7 @@ public class DescribeClusterExtraArgsResponse extends AbstractModel {
 
     /**
      * Set 集群自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterExtraArgs 集群自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterExtraArgs(ClusterExtraArgs ClusterExtraArgs) {
         this.ClusterExtraArgs = ClusterExtraArgs;

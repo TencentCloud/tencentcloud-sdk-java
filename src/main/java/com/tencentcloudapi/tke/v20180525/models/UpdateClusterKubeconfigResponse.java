@@ -25,7 +25,6 @@ public class UpdateClusterKubeconfigResponse extends AbstractModel {
 
     /**
     * 已更新的子账户Uin列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedSubAccounts")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateClusterKubeconfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已更新的子账户Uin列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已更新的子账户Uin列表 
      * @return UpdatedSubAccounts 已更新的子账户Uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUpdatedSubAccounts() {
         return this.UpdatedSubAccounts;
@@ -50,9 +47,7 @@ public class UpdateClusterKubeconfigResponse extends AbstractModel {
 
     /**
      * Set 已更新的子账户Uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedSubAccounts 已更新的子账户Uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedSubAccounts(String [] UpdatedSubAccounts) {
         this.UpdatedSubAccounts = UpdatedSubAccounts;

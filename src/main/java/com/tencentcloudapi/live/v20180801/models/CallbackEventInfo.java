@@ -35,21 +35,21 @@ public class CallbackEventInfo extends AbstractModel {
     private String EventTime;
 
     /**
-    * 事件类型
+    * 事件类型。
     */
     @SerializedName("EventType")
     @Expose
     private Long EventType;
 
     /**
-    * 回调请求
+    * 回调请求。
     */
     @SerializedName("Request")
     @Expose
     private String Request;
 
     /**
-    * 回调响应
+    * 回调响应。
     */
     @SerializedName("Response")
     @Expose
@@ -67,14 +67,14 @@ public class CallbackEventInfo extends AbstractModel {
     private String ResponseTime;
 
     /**
-    * 回调结果
+    * 回调结果。
     */
     @SerializedName("ResultCode")
     @Expose
     private Long ResultCode;
 
     /**
-    * 流名称
+    * 流名称。
     */
     @SerializedName("StreamId")
     @Expose
@@ -113,48 +113,48 @@ public class CallbackEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 事件类型 
-     * @return EventType 事件类型
+     * Get 事件类型。 
+     * @return EventType 事件类型。
      */
     public Long getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 事件类型
-     * @param EventType 事件类型
+     * Set 事件类型。
+     * @param EventType 事件类型。
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 回调请求 
-     * @return Request 回调请求
+     * Get 回调请求。 
+     * @return Request 回调请求。
      */
     public String getRequest() {
         return this.Request;
     }
 
     /**
-     * Set 回调请求
-     * @param Request 回调请求
+     * Set 回调请求。
+     * @param Request 回调请求。
      */
     public void setRequest(String Request) {
         this.Request = Request;
     }
 
     /**
-     * Get 回调响应 
-     * @return Response 回调响应
+     * Get 回调响应。 
+     * @return Response 回调响应。
      */
     public String getResponse() {
         return this.Response;
     }
 
     /**
-     * Set 回调响应
-     * @param Response 回调响应
+     * Set 回调响应。
+     * @param Response 回调响应。
      */
     public void setResponse(String Response) {
         this.Response = Response;
@@ -193,32 +193,32 @@ public class CallbackEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 回调结果 
-     * @return ResultCode 回调结果
+     * Get 回调结果。 
+     * @return ResultCode 回调结果。
      */
     public Long getResultCode() {
         return this.ResultCode;
     }
 
     /**
-     * Set 回调结果
-     * @param ResultCode 回调结果
+     * Set 回调结果。
+     * @param ResultCode 回调结果。
      */
     public void setResultCode(Long ResultCode) {
         this.ResultCode = ResultCode;
     }
 
     /**
-     * Get 流名称 
-     * @return StreamId 流名称
+     * Get 流名称。 
+     * @return StreamId 流名称。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set 流名称
-     * @param StreamId 流名称
+     * Set 流名称。
+     * @param StreamId 流名称。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

@@ -51,8 +51,10 @@ public class GetEidResultResponse extends AbstractModel {
 
     /**
     * Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EidInfo")
@@ -163,12 +165,16 @@ public class GetEidResultResponse extends AbstractModel {
 
     /**
      * Get Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EidInfo Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EidInfo getEidInfo() {
@@ -177,12 +183,16 @@ public class GetEidResultResponse extends AbstractModel {
 
     /**
      * Set Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EidInfo Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEidInfo(EidInfo EidInfo) {

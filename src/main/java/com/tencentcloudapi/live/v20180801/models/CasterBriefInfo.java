@@ -32,7 +32,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 导播台名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CasterName")
     @Expose
@@ -40,7 +39,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 导播台的描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -48,7 +46,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 开始计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartBillingTime")
     @Expose
@@ -56,7 +53,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 结束计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StopBillingTime")
     @Expose
@@ -64,7 +60,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 创建时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -76,7 +71,6 @@ public class CasterBriefInfo extends AbstractModel {
 1：无预监，有主监
 2：有预监，无主监
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -86,7 +80,6 @@ public class CasterBriefInfo extends AbstractModel {
     * 导播台的过期时间，值为-1或unix时间戳。
 当值为-1时，代表永不过期。
 当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -94,7 +87,6 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
     * 计费字段，该字段暂无作用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeType")
     @Expose
@@ -117,10 +109,8 @@ public class CasterBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get 导播台名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导播台名称 
      * @return CasterName 导播台名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCasterName() {
         return this.CasterName;
@@ -128,19 +118,15 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 导播台名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CasterName 导播台名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCasterName(String CasterName) {
         this.CasterName = CasterName;
     }
 
     /**
-     * Get 导播台的描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导播台的描述 
      * @return Description 导播台的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -148,19 +134,15 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 导播台的描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 导播台的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 开始计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始计费时间，值为unix时间戳 
      * @return StartBillingTime 开始计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartBillingTime() {
         return this.StartBillingTime;
@@ -168,19 +150,15 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 开始计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartBillingTime 开始计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartBillingTime(Long StartBillingTime) {
         this.StartBillingTime = StartBillingTime;
     }
 
     /**
-     * Get 结束计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束计费时间，值为unix时间戳 
      * @return StopBillingTime 结束计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStopBillingTime() {
         return this.StopBillingTime;
@@ -188,19 +166,15 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 结束计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StopBillingTime 结束计费时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStopBillingTime(Long StopBillingTime) {
         this.StopBillingTime = StopBillingTime;
     }
 
     /**
-     * Get 创建时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，值为unix时间戳 
      * @return CreateTime 创建时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -208,9 +182,7 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 创建时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，值为unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -221,14 +193,12 @@ public class CasterBriefInfo extends AbstractModel {
 0：停止状态，无预监，无主监
 1：无预监，有主监
 2：有预监，无主监
-3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。 
+3：有预监，有主监 
      * @return Status 导播台状态
 0：停止状态，无预监，无主监
 1：无预监，有主监
 2：有预监，无主监
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -240,13 +210,11 @@ public class CasterBriefInfo extends AbstractModel {
 1：无预监，有主监
 2：有预监，无主监
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 导播台状态
 0：停止状态，无预监，无主监
 1：无预监，有主监
 2：有预监，无主监
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -255,12 +223,10 @@ public class CasterBriefInfo extends AbstractModel {
     /**
      * Get 导播台的过期时间，值为-1或unix时间戳。
 当值为-1时，代表永不过期。
-当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-注意：此字段可能返回 null，表示取不到有效值。 
+当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。 
      * @return ExpireTime 导播台的过期时间，值为-1或unix时间戳。
 当值为-1时，代表永不过期。
 当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -270,21 +236,17 @@ public class CasterBriefInfo extends AbstractModel {
      * Set 导播台的过期时间，值为-1或unix时间戳。
 当值为-1时，代表永不过期。
 当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 导播台的过期时间，值为-1或unix时间戳。
 当值为-1时，代表永不过期。
 当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 计费字段，该字段暂无作用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费字段，该字段暂无作用 
      * @return FeeType 计费字段，该字段暂无作用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFeeType() {
         return this.FeeType;
@@ -292,9 +254,7 @@ public class CasterBriefInfo extends AbstractModel {
 
     /**
      * Set 计费字段，该字段暂无作用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeType 计费字段，该字段暂无作用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeType(Long FeeType) {
         this.FeeType = FeeType;

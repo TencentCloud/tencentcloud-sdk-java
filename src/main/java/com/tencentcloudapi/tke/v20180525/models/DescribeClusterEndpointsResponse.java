@@ -46,7 +46,6 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
     * 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterDomain")
     @Expose
@@ -62,7 +61,6 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
     * 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterExternalDomain")
     @Expose
@@ -70,7 +68,6 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
     * 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIntranetDomain")
     @Expose
@@ -78,7 +75,6 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
     * 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -86,7 +82,6 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
     * 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIntranetSubnetId")
     @Expose
@@ -148,10 +143,8 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群APIServer的域名 
      * @return ClusterDomain 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterDomain() {
         return this.ClusterDomain;
@@ -159,9 +152,7 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
      * Set 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterDomain 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterDomain(String ClusterDomain) {
         this.ClusterDomain = ClusterDomain;
@@ -188,10 +179,8 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     }
 
     /**
-     * Get 外网域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网域名 
      * @return ClusterExternalDomain 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterExternalDomain() {
         return this.ClusterExternalDomain;
@@ -199,19 +188,15 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
      * Set 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterExternalDomain 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterExternalDomain(String ClusterExternalDomain) {
         this.ClusterExternalDomain = ClusterExternalDomain;
     }
 
     /**
-     * Get 内网域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网域名 
      * @return ClusterIntranetDomain 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterIntranetDomain() {
         return this.ClusterIntranetDomain;
@@ -219,19 +204,15 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
      * Set 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIntranetDomain 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIntranetDomain(String ClusterIntranetDomain) {
         this.ClusterIntranetDomain = ClusterIntranetDomain;
     }
 
     /**
-     * Get 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网安全组 
      * @return SecurityGroup 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
@@ -239,19 +220,15 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
      * Set 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroup 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网访问所属子网 
      * @return ClusterIntranetSubnetId 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterIntranetSubnetId() {
         return this.ClusterIntranetSubnetId;
@@ -259,9 +236,7 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
 
     /**
      * Set 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIntranetSubnetId 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIntranetSubnetId(String ClusterIntranetSubnetId) {
         this.ClusterIntranetSubnetId = ClusterIntranetSubnetId;

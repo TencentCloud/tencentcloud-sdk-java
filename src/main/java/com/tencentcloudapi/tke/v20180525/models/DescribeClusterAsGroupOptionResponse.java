@@ -25,7 +25,6 @@ public class DescribeClusterAsGroupOptionResponse extends AbstractModel {
 
     /**
     * 集群弹性伸缩属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterAsGroupOption")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeClusterAsGroupOptionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群弹性伸缩属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群弹性伸缩属性 
      * @return ClusterAsGroupOption 集群弹性伸缩属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterAsGroupOption getClusterAsGroupOption() {
         return this.ClusterAsGroupOption;
@@ -50,9 +47,7 @@ public class DescribeClusterAsGroupOptionResponse extends AbstractModel {
 
     /**
      * Set 集群弹性伸缩属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterAsGroupOption 集群弹性伸缩属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterAsGroupOption(ClusterAsGroupOption ClusterAsGroupOption) {
         this.ClusterAsGroupOption = ClusterAsGroupOption;
