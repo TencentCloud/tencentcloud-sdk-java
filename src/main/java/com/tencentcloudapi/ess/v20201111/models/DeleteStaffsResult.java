@@ -25,7 +25,6 @@ public class DeleteStaffsResult extends AbstractModel {
 
     /**
     * 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessEmployeeData")
     @Expose
@@ -33,17 +32,14 @@ public class DeleteStaffsResult extends AbstractModel {
 
     /**
     * 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedEmployeeData")
     @Expose
     private FailedDeleteStaffData [] FailedEmployeeData;
 
     /**
-     * Get 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除员工的成功数据 
      * @return SuccessEmployeeData 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SuccessDeleteStaffData [] getSuccessEmployeeData() {
         return this.SuccessEmployeeData;
@@ -51,19 +47,15 @@ public class DeleteStaffsResult extends AbstractModel {
 
     /**
      * Set 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessEmployeeData 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessEmployeeData(SuccessDeleteStaffData [] SuccessEmployeeData) {
         this.SuccessEmployeeData = SuccessEmployeeData;
     }
 
     /**
-     * Get 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除员工的失败数据 
      * @return FailedEmployeeData 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FailedDeleteStaffData [] getFailedEmployeeData() {
         return this.FailedEmployeeData;
@@ -71,9 +63,7 @@ public class DeleteStaffsResult extends AbstractModel {
 
     /**
      * Set 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedEmployeeData 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedEmployeeData(FailedDeleteStaffData [] FailedEmployeeData) {
         this.FailedEmployeeData = FailedEmployeeData;

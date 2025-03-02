@@ -32,7 +32,6 @@ public class SyncFailReason extends AbstractModel {
 
     /**
     * 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -55,10 +54,8 @@ public class SyncFailReason extends AbstractModel {
     }
 
     /**
-     * Get 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因 
      * @return Message 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -66,9 +63,7 @@ public class SyncFailReason extends AbstractModel {
 
     /**
      * Set 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

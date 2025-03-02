@@ -25,9 +25,7 @@ public class InputCryptoManageMarketingRisk extends AbstractModel {
 
     /**
     * 是否授权：1已授权，否则未授权。
- 调用全栈式风控引擎接口服务时，客户需先明确授权
-
-
+ 调用全栈式风控引擎接口服务时，客户需先明确授权。
     */
     @SerializedName("IsAuthorized")
     @Expose
@@ -35,7 +33,6 @@ public class InputCryptoManageMarketingRisk extends AbstractModel {
 
     /**
     * 加密类型：1AES加密
-
     */
     @SerializedName("CryptoType")
     @Expose
@@ -50,13 +47,9 @@ public class InputCryptoManageMarketingRisk extends AbstractModel {
 
     /**
      * Get 是否授权：1已授权，否则未授权。
- 调用全栈式风控引擎接口服务时，客户需先明确授权
-
- 
+ 调用全栈式风控引擎接口服务时，客户需先明确授权。 
      * @return IsAuthorized 是否授权：1已授权，否则未授权。
- 调用全栈式风控引擎接口服务时，客户需先明确授权
-
-
+ 调用全栈式风控引擎接口服务时，客户需先明确授权。
      */
     public String getIsAuthorized() {
         return this.IsAuthorized;
@@ -64,23 +57,17 @@ public class InputCryptoManageMarketingRisk extends AbstractModel {
 
     /**
      * Set 是否授权：1已授权，否则未授权。
- 调用全栈式风控引擎接口服务时，客户需先明确授权
-
-
+ 调用全栈式风控引擎接口服务时，客户需先明确授权。
      * @param IsAuthorized 是否授权：1已授权，否则未授权。
- 调用全栈式风控引擎接口服务时，客户需先明确授权
-
-
+ 调用全栈式风控引擎接口服务时，客户需先明确授权。
      */
     public void setIsAuthorized(String IsAuthorized) {
         this.IsAuthorized = IsAuthorized;
     }
 
     /**
-     * Get 加密类型：1AES加密
- 
+     * Get 加密类型：1AES加密 
      * @return CryptoType 加密类型：1AES加密
-
      */
     public String getCryptoType() {
         return this.CryptoType;
@@ -88,9 +75,7 @@ public class InputCryptoManageMarketingRisk extends AbstractModel {
 
     /**
      * Set 加密类型：1AES加密
-
      * @param CryptoType 加密类型：1AES加密
-
      */
     public void setCryptoType(String CryptoType) {
         this.CryptoType = CryptoType;

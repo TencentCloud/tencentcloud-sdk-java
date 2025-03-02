@@ -67,7 +67,6 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
     * 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -96,7 +95,6 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
     * 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedUsers")
     @Expose
@@ -104,7 +102,6 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
     * 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendScene")
     @Expose
@@ -207,10 +204,8 @@ public class OccupiedSeal extends AbstractModel {
     }
 
     /**
-     * Get 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核失败原因 
      * @return FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -218,9 +213,7 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
      * Set 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
@@ -275,10 +268,8 @@ public class OccupiedSeal extends AbstractModel {
     }
 
     /**
-     * Get 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权人列表 
      * @return AuthorizedUsers 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuthorizedUser [] getAuthorizedUsers() {
         return this.AuthorizedUsers;
@@ -286,19 +277,15 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
      * Set 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedUsers 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedUsers(AuthorizedUser [] AuthorizedUsers) {
         this.AuthorizedUsers = AuthorizedUsers;
     }
 
     /**
-     * Get 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章扩展数据信息 
      * @return ExtendScene 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtendScene getExtendScene() {
         return this.ExtendScene;
@@ -306,9 +293,7 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
      * Set 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendScene 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendScene(ExtendScene ExtendScene) {
         this.ExtendScene = ExtendScene;

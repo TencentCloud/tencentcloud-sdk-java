@@ -104,6 +104,20 @@ public class ImageResultsResultDetail extends AbstractModel {
     private String SubLabelCode;
 
     /**
+    * 子标签
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
+    * Ocr文本命中信息
+    */
+    @SerializedName("OcrHitInfos")
+    @Expose
+    private OcrHitInfo [] OcrHitInfos;
+
+    /**
      * Get 任务名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 任务名称
@@ -303,6 +317,38 @@ public class ImageResultsResultDetail extends AbstractModel {
         this.SubLabelCode = SubLabelCode;
     }
 
+    /**
+     * Get 子标签 
+     * @return SubLabel 子标签
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 子标签
+     * @param SubLabel 子标签
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
+    /**
+     * Get Ocr文本命中信息 
+     * @return OcrHitInfos Ocr文本命中信息
+     */
+    public OcrHitInfo [] getOcrHitInfos() {
+        return this.OcrHitInfos;
+    }
+
+    /**
+     * Set Ocr文本命中信息
+     * @param OcrHitInfos Ocr文本命中信息
+     */
+    public void setOcrHitInfos(OcrHitInfo [] OcrHitInfos) {
+        this.OcrHitInfos = OcrHitInfos;
+    }
+
     public ImageResultsResultDetail() {
     }
 
@@ -344,6 +390,15 @@ public class ImageResultsResultDetail extends AbstractModel {
         if (source.SubLabelCode != null) {
             this.SubLabelCode = new String(source.SubLabelCode);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
+        if (source.OcrHitInfos != null) {
+            this.OcrHitInfos = new OcrHitInfo[source.OcrHitInfos.length];
+            for (int i = 0; i < source.OcrHitInfos.length; i++) {
+                this.OcrHitInfos[i] = new OcrHitInfo(source.OcrHitInfos[i]);
+            }
+        }
     }
 
 
@@ -361,6 +416,8 @@ public class ImageResultsResultDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "OcrHitInfos.", this.OcrHitInfos);
 
     }
 }

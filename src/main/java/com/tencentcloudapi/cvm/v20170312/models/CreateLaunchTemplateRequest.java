@@ -218,6 +218,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     private Boolean DisableApiTermination;
 
     /**
+    * 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
+    */
+    @SerializedName("LaunchTemplateTagSpecification")
+    @Expose
+    private TagSpecification [] LaunchTemplateTagSpecification;
+
+    /**
      * Get 实例启动模板名称。长度为2~128个英文或中文字符。 
      * @return LaunchTemplateName 实例启动模板名称。长度为2~128个英文或中文字符。
      */
@@ -669,6 +676,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         this.DisableApiTermination = DisableApiTermination;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。 
+     * @return LaunchTemplateTagSpecification 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
+     */
+    public TagSpecification [] getLaunchTemplateTagSpecification() {
+        return this.LaunchTemplateTagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
+     * @param LaunchTemplateTagSpecification 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
+     */
+    public void setLaunchTemplateTagSpecification(TagSpecification [] LaunchTemplateTagSpecification) {
+        this.LaunchTemplateTagSpecification = LaunchTemplateTagSpecification;
+    }
+
     public CreateLaunchTemplateRequest() {
     }
 
@@ -770,6 +793,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.LaunchTemplateTagSpecification != null) {
+            this.LaunchTemplateTagSpecification = new TagSpecification[source.LaunchTemplateTagSpecification.length];
+            for (int i = 0; i < source.LaunchTemplateTagSpecification.length; i++) {
+                this.LaunchTemplateTagSpecification[i] = new TagSpecification(source.LaunchTemplateTagSpecification[i]);
+            }
+        }
     }
 
 
@@ -804,6 +833,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
 
     }
 }

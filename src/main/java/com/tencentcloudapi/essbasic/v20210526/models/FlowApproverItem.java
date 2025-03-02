@@ -25,7 +25,6 @@ public class FlowApproverItem extends AbstractModel {
 
     /**
     * 合同编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,17 +32,14 @@ public class FlowApproverItem extends AbstractModel {
 
     /**
     * 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approvers")
     @Expose
     private ApproverItem [] Approvers;
 
     /**
-     * Get 合同编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同编号 
      * @return FlowId 合同编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -51,19 +47,15 @@ public class FlowApproverItem extends AbstractModel {
 
     /**
      * Set 合同编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 合同编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方信息，如角色ID、角色名称等 
      * @return Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
@@ -71,9 +63,7 @@ public class FlowApproverItem extends AbstractModel {
 
     /**
      * Set 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;

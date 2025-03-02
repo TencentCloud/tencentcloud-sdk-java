@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例组ID
+    * 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID（InstanceId与InstanceGroupId必须任选一个传入） 
+     * @return InstanceId 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
      * @deprecated
      */
     @Deprecated
@@ -48,8 +48,8 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * @param InstanceId 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
      * @deprecated
      */
     @Deprecated
@@ -58,16 +58,16 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例组ID 
-     * @return InstanceGroupId 实例组ID
+     * Get 实例组ID（InstanceId与InstanceGroupId必须任选一个传入） 
+     * @return InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例组ID
-     * @param InstanceGroupId 实例组ID
+     * Set 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * @param InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;

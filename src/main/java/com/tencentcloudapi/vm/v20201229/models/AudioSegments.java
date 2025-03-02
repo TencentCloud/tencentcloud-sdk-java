@@ -25,7 +25,6 @@ public class AudioSegments extends AbstractModel {
 
     /**
     * 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetTime")
     @Expose
@@ -33,17 +32,21 @@ public class AudioSegments extends AbstractModel {
 
     /**
     * 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
     private AudioResult Result;
 
     /**
-     * Get 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 创建时间
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+     * Get 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。 
      * @return OffsetTime 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOffsetTime() {
         return this.OffsetTime;
@@ -51,19 +54,15 @@ public class AudioSegments extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetTime 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetTime(String OffsetTime) {
         this.OffsetTime = OffsetTime;
     }
 
     /**
-     * Get 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。 
      * @return Result 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResult getResult() {
         return this.Result;
@@ -71,12 +70,26 @@ public class AudioSegments extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(AudioResult Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreatedAt 创建时间
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedAt 创建时间
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
     }
 
     public AudioSegments() {
@@ -93,6 +106,9 @@ public class AudioSegments extends AbstractModel {
         if (source.Result != null) {
             this.Result = new AudioResult(source.Result);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
     }
 
 
@@ -102,6 +118,7 @@ public class AudioSegments extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
 
     }
 }

@@ -25,17 +25,14 @@ public class IntentionActionResultDetail extends AbstractModel {
 
     /**
     * 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Video")
     @Expose
     private String Video;
 
     /**
-     * Get 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频base64编码（其中包含全程提示文本和点头音频，mp4格式） 
      * @return Video 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideo() {
         return this.Video;
@@ -43,9 +40,7 @@ public class IntentionActionResultDetail extends AbstractModel {
 
     /**
      * Set 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Video 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideo(String Video) {
         this.Video = Video;

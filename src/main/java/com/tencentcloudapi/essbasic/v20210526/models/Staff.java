@@ -48,7 +48,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工邮箱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
     @Expose
@@ -56,7 +55,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工在第三方应用平台的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -64,7 +62,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Roles")
     @Expose
@@ -72,7 +69,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工部门
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -163,10 +159,8 @@ public class Staff extends AbstractModel {
     }
 
     /**
-     * Get 员工邮箱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工邮箱 
      * @return Email 员工邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
         return this.Email;
@@ -174,19 +168,15 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Email 员工邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 员工在第三方应用平台的用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工在第三方应用平台的用户ID 
      * @return OpenId 员工在第三方应用平台的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -194,19 +184,15 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工在第三方应用平台的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 员工在第三方应用平台的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 员工角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工角色 
      * @return Roles 员工角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StaffRole [] getRoles() {
         return this.Roles;
@@ -214,19 +200,15 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Roles 员工角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoles(StaffRole [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 员工部门
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工部门 
      * @return Department 员工部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Department getDepartment() {
         return this.Department;
@@ -234,9 +216,7 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 员工部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(Department Department) {
         this.Department = Department;

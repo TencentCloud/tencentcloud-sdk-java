@@ -25,7 +25,6 @@ public class FailedCreateRoleData extends AbstractModel {
 
     /**
     * 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,17 +32,14 @@ public class FailedCreateRoleData extends AbstractModel {
 
     /**
     * 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleIds")
     @Expose
     private String [] RoleIds;
 
     /**
-     * Get 用户userId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户userId 
      * @return UserId 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -51,19 +47,15 @@ public class FailedCreateRoleData extends AbstractModel {
 
     /**
      * Set 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色id列表 
      * @return RoleIds 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRoleIds() {
         return this.RoleIds;
@@ -71,9 +63,7 @@ public class FailedCreateRoleData extends AbstractModel {
 
     /**
      * Set 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleIds 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;

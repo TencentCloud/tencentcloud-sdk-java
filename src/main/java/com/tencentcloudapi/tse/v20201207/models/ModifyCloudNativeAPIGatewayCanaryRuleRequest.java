@@ -52,6 +52,13 @@ public class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
     private CloudNativeAPIGatewayCanaryRule CanaryRule;
 
     /**
+    * 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+    */
+    @SerializedName("CanaryRuleList")
+    @Expose
+    private CanaryPriorityRule [] CanaryRuleList;
+
+    /**
      * Get 网关 ID 
      * @return GatewayId 网关 ID
      */
@@ -115,6 +122,22 @@ public class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         this.CanaryRule = CanaryRule;
     }
 
+    /**
+     * Get 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数 
+     * @return CanaryRuleList 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+     */
+    public CanaryPriorityRule [] getCanaryRuleList() {
+        return this.CanaryRuleList;
+    }
+
+    /**
+     * Set 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+     * @param CanaryRuleList 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+     */
+    public void setCanaryRuleList(CanaryPriorityRule [] CanaryRuleList) {
+        this.CanaryRuleList = CanaryRuleList;
+    }
+
     public ModifyCloudNativeAPIGatewayCanaryRuleRequest() {
     }
 
@@ -135,6 +158,12 @@ public class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         if (source.CanaryRule != null) {
             this.CanaryRule = new CloudNativeAPIGatewayCanaryRule(source.CanaryRule);
         }
+        if (source.CanaryRuleList != null) {
+            this.CanaryRuleList = new CanaryPriorityRule[source.CanaryRuleList.length];
+            for (int i = 0; i < source.CanaryRuleList.length; i++) {
+                this.CanaryRuleList[i] = new CanaryPriorityRule(source.CanaryRuleList[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamObj(map, prefix + "CanaryRule.", this.CanaryRule);
+        this.setParamArrayObj(map, prefix + "CanaryRuleList.", this.CanaryRuleList);
 
     }
 }

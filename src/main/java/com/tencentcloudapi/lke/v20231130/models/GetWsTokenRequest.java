@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetWsTokenRequest extends AbstractModel {
 
     /**
-    * 接入类型
+    * 接入类型，当前请填写5
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+    * 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -52,32 +52,32 @@ public class GetWsTokenRequest extends AbstractModel {
     private GetWsTokenReq_Label [] VisitorLabels;
 
     /**
-     * Get 接入类型 
-     * @return Type 接入类型
+     * Get 接入类型，当前请填写5 
+     * @return Type 接入类型，当前请填写5
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 接入类型
-     * @param Type 接入类型
+     * Set 接入类型，当前请填写5
+     * @param Type 接入类型，当前请填写5
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取） 
-     * @return BotAppKey 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * Get 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取） 
+     * @return BotAppKey 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
-     * @param BotAppKey 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * Set 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * @param BotAppKey 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

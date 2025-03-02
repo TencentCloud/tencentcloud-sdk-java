@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class OutputDescribeNameListFrontFixListData extends AbstractModel {
 
     /**
-    * 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
+    * 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 错误信息
+    * 错误信息。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 黑白名单列表信息
+    * 黑白名单列表信息。
     */
     @SerializedName("Value")
     @Expose
     private OutputDescribeNameListInfo Value;
 
     /**
-     * Get 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
- 
-     * @return Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
+     * Get 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。 
+     * @return Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
-     * @param Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
+     * Set 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
+     * @param Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 错误信息 
-     * @return Message 错误信息
+     * Get 错误信息。 
+     * @return Message 错误信息。
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息
-     * @param Message 错误信息
+     * Set 错误信息。
+     * @param Message 错误信息。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 黑白名单列表信息 
-     * @return Value 黑白名单列表信息
+     * Get 黑白名单列表信息。 
+     * @return Value 黑白名单列表信息。
      */
     public OutputDescribeNameListInfo getValue() {
         return this.Value;
     }
 
     /**
-     * Set 黑白名单列表信息
-     * @param Value 黑白名单列表信息
+     * Set 黑白名单列表信息。
+     * @param Value 黑白名单列表信息。
      */
     public void setValue(OutputDescribeNameListInfo Value) {
         this.Value = Value;

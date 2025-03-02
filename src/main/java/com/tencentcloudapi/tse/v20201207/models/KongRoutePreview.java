@@ -158,6 +158,13 @@ public class KongRoutePreview extends AbstractModel {
     private Boolean ResponseBuffering;
 
     /**
+    * 正则优先级
+    */
+    @SerializedName("RegexPriority")
+    @Expose
+    private Long RegexPriority;
+
+    /**
      * Get 服务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID 服务ID
@@ -493,6 +500,22 @@ public class KongRoutePreview extends AbstractModel {
         this.ResponseBuffering = ResponseBuffering;
     }
 
+    /**
+     * Get 正则优先级 
+     * @return RegexPriority 正则优先级
+     */
+    public Long getRegexPriority() {
+        return this.RegexPriority;
+    }
+
+    /**
+     * Set 正则优先级
+     * @param RegexPriority 正则优先级
+     */
+    public void setRegexPriority(Long RegexPriority) {
+        this.RegexPriority = RegexPriority;
+    }
+
     public KongRoutePreview() {
     }
 
@@ -570,6 +593,9 @@ public class KongRoutePreview extends AbstractModel {
         if (source.ResponseBuffering != null) {
             this.ResponseBuffering = new Boolean(source.ResponseBuffering);
         }
+        if (source.RegexPriority != null) {
+            this.RegexPriority = new Long(source.RegexPriority);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class KongRoutePreview extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
+        this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
 
     }
 }

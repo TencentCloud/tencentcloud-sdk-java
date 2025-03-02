@@ -25,7 +25,6 @@ public class UserFlowType extends AbstractModel {
 
     /**
     * 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserFlowTypeId")
     @Expose
@@ -33,7 +32,6 @@ public class UserFlowType extends AbstractModel {
 
     /**
     * 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class UserFlowType extends AbstractModel {
 
     /**
     * 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同类型ID 
      * @return UserFlowTypeId 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserFlowTypeId() {
         return this.UserFlowTypeId;
@@ -59,19 +54,15 @@ public class UserFlowType extends AbstractModel {
 
     /**
      * Set 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserFlowTypeId 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserFlowTypeId(String UserFlowTypeId) {
         this.UserFlowTypeId = UserFlowTypeId;
     }
 
     /**
-     * Get 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同类型名称 
      * @return Name 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class UserFlowType extends AbstractModel {
 
     /**
      * Set 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同类型说明 
      * @return Description 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -99,9 +86,7 @@ public class UserFlowType extends AbstractModel {
 
     /**
      * Set 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -27,7 +27,6 @@ public class ArchiveDynamicApproverData extends AbstractModel {
     * 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignId")
     @Expose
@@ -38,7 +37,6 @@ public class ArchiveDynamicApproverData extends AbstractModel {
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -47,12 +45,10 @@ public class ArchiveDynamicApproverData extends AbstractModel {
     /**
      * Get 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
-可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。 
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。 
      * @return SignId 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignId() {
         return this.SignId;
@@ -62,11 +58,9 @@ public class ArchiveDynamicApproverData extends AbstractModel {
      * Set 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignId 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignId(String SignId) {
         this.SignId = SignId;
@@ -76,13 +70,11 @@ public class ArchiveDynamicApproverData extends AbstractModel {
      * Get 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return RecipientId 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -93,12 +85,10 @@ public class ArchiveDynamicApproverData extends AbstractModel {
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;

@@ -25,17 +25,14 @@ public class IntentionActionResult extends AbstractModel {
 
     /**
     * 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
     private IntentionActionResultDetail [] Details;
 
     /**
-     * Get 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 意愿核身结果详细数据，与每段点头确认过程一一对应 
      * @return Details 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionActionResultDetail [] getDetails() {
         return this.Details;
@@ -43,9 +40,7 @@ public class IntentionActionResult extends AbstractModel {
 
     /**
      * Set 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(IntentionActionResultDetail [] Details) {
         this.Details = Details;

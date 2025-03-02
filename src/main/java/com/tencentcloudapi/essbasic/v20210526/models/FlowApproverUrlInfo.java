@@ -64,7 +64,6 @@ public class FlowApproverUrlInfo extends AbstractModel {
 1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
 2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
 3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LongUrl")
     @Expose
@@ -164,15 +163,13 @@ public class FlowApproverUrlInfo extends AbstractModel {
 注意:
 1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
 2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。 
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
      * @return LongUrl 签署长链接。
 
 注意:
 1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
 2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
 3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLongUrl() {
         return this.LongUrl;
@@ -185,14 +182,12 @@ public class FlowApproverUrlInfo extends AbstractModel {
 1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
 2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
 3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LongUrl 签署长链接。
 
 注意:
 1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
 2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
 3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongUrl(String LongUrl) {
         this.LongUrl = LongUrl;

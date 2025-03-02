@@ -25,7 +25,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentId")
     @Expose
@@ -33,7 +32,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentName")
     @Expose
@@ -41,7 +39,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentFillStatus")
     @Expose
@@ -49,7 +46,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentValue")
     @Expose
@@ -57,7 +53,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentRecipientId")
     @Expose
@@ -65,17 +60,14 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-     * Get 控件Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件Id 
      * @return ComponentId 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentId() {
         return this.ComponentId;
@@ -83,19 +75,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentId 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get 控件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件名称 
      * @return ComponentName 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -103,19 +91,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentName 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件填写状态；0-未填写；1-已填写 
      * @return ComponentFillStatus 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentFillStatus() {
         return this.ComponentFillStatus;
@@ -123,19 +107,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentFillStatus 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentFillStatus(String ComponentFillStatus) {
         this.ComponentFillStatus = ComponentFillStatus;
     }
 
     /**
-     * Get 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件填写内容 
      * @return ComponentValue 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentValue() {
         return this.ComponentValue;
@@ -143,19 +123,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentValue 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentValue(String ComponentValue) {
         this.ComponentValue = ComponentValue;
     }
 
     /**
-     * Get 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件所属参与方Id 
      * @return ComponentRecipientId 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentRecipientId() {
         return this.ComponentRecipientId;
@@ -163,19 +139,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentRecipientId 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentRecipientId(String ComponentRecipientId) {
         this.ComponentRecipientId = ComponentRecipientId;
     }
 
     /**
-     * Get 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。 
      * @return ImageUrl 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -183,9 +155,7 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

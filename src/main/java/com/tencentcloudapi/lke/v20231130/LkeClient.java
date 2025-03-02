@@ -1031,6 +1031,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *文档重命名
+     * @param req RenameDocRequest
+     * @return RenameDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenameDocResponse RenameDoc(RenameDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenameDoc", RenameDocResponse.class);
+    }
+
+    /**
      *重置会话
      * @param req ResetSessionRequest
      * @return ResetSessionResponse

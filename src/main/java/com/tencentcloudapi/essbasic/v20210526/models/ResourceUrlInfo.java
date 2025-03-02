@@ -25,7 +25,6 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
     * 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源链接地址，过期时间5分钟 
      * @return Url 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -59,19 +54,15 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
      * Set 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return Name 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return Type 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -99,9 +86,7 @@ public class ResourceUrlInfo extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -27,7 +27,6 @@ public class IntentionQuestionResult extends AbstractModel {
     * 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Video")
     @Expose
@@ -35,7 +34,6 @@ public class IntentionQuestionResult extends AbstractModel {
 
     /**
     *  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultCode")
     @Expose
@@ -43,7 +41,6 @@ public class IntentionQuestionResult extends AbstractModel {
 
     /**
     * 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrResult")
     @Expose
@@ -52,12 +49,10 @@ public class IntentionQuestionResult extends AbstractModel {
     /**
      * Get 视频base64（其中包含全程问题和回答音频，mp4格式）
 
-注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`需进行base64解码获取视频文件` 
      * @return Video 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideo() {
         return this.Video;
@@ -67,21 +62,17 @@ public class IntentionQuestionResult extends AbstractModel {
      * Set 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Video 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideo(String Video) {
         this.Video = Video;
     }
 
     /**
-     * Get  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  和答案匹配结果列表 
      * @return ResultCode  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResultCode() {
         return this.ResultCode;
@@ -89,19 +80,15 @@ public class IntentionQuestionResult extends AbstractModel {
 
     /**
      * Set  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultCode  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultCode(String [] ResultCode) {
         this.ResultCode = ResultCode;
     }
 
     /**
-     * Get 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回答问题语音识别结果列表 
      * @return AsrResult 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAsrResult() {
         return this.AsrResult;
@@ -109,9 +96,7 @@ public class IntentionQuestionResult extends AbstractModel {
 
     /**
      * Set 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrResult 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrResult(String [] AsrResult) {
         this.AsrResult = AsrResult;

@@ -25,7 +25,6 @@ public class InstanceMarketOptionsRequest extends AbstractModel {
 
     /**
     * 竞价相关选项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpotOptions")
     @Expose
@@ -33,17 +32,14 @@ public class InstanceMarketOptionsRequest extends AbstractModel {
 
     /**
     * 市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarketType")
     @Expose
     private String MarketType;
 
     /**
-     * Get 竞价相关选项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价相关选项 
      * @return SpotOptions 竞价相关选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpotMarketOptions getSpotOptions() {
         return this.SpotOptions;
@@ -51,19 +47,15 @@ public class InstanceMarketOptionsRequest extends AbstractModel {
 
     /**
      * Set 竞价相关选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpotOptions 竞价相关选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpotOptions(SpotMarketOptions SpotOptions) {
         this.SpotOptions = SpotOptions;
     }
 
     /**
-     * Get 市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 市场选项类型，当前只支持取值：spot 
      * @return MarketType 市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarketType() {
         return this.MarketType;
@@ -71,9 +63,7 @@ public class InstanceMarketOptionsRequest extends AbstractModel {
 
     /**
      * Set 市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarketType 市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarketType(String MarketType) {
         this.MarketType = MarketType;

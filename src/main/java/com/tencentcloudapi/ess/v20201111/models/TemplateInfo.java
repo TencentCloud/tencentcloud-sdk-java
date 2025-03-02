@@ -182,7 +182,6 @@ public class TemplateInfo extends AbstractModel {
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -195,7 +194,6 @@ public class TemplateInfo extends AbstractModel {
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserFlowType")
     @Expose
@@ -203,7 +201,6 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateVersion")
     @Expose
@@ -214,7 +211,6 @@ public class TemplateInfo extends AbstractModel {
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Published")
     @Expose
@@ -222,7 +218,6 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareTemplateId")
     @Expose
@@ -230,7 +225,6 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateSeals")
     @Expose
@@ -648,13 +642,11 @@ public class TemplateInfo extends AbstractModel {
      * Get 模板的 H5 预览链接，有效期为 5 分钟。
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
-注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。 
      * @return PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
@@ -665,12 +657,10 @@ public class TemplateInfo extends AbstractModel {
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;
@@ -682,15 +672,13 @@ public class TemplateInfo extends AbstractModel {
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return UserFlowType 用户自定义合同类型。
 
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserFlowType getUserFlowType() {
         return this.UserFlowType;
@@ -703,24 +691,20 @@ public class TemplateInfo extends AbstractModel {
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserFlowType 用户自定义合同类型。
 
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserFlowType(UserFlowType UserFlowType) {
         this.UserFlowType = UserFlowType;
     }
 
     /**
-     * Get 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成 
      * @return TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateVersion() {
         return this.TemplateVersion;
@@ -728,9 +712,7 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateVersion(String TemplateVersion) {
         this.TemplateVersion = TemplateVersion;
@@ -740,13 +722,11 @@ public class TemplateInfo extends AbstractModel {
      * Get 模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
-<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。 
      * @return Published 模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublished() {
         return this.Published;
@@ -757,22 +737,18 @@ public class TemplateInfo extends AbstractModel {
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Published 模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublished(Boolean Published) {
         this.Published = Published;
     }
 
     /**
-     * Get <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。 
      * @return ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShareTemplateId() {
         return this.ShareTemplateId;
@@ -780,19 +756,15 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareTemplateId(String ShareTemplateId) {
         this.ShareTemplateId = ShareTemplateId;
     }
 
     /**
-     * Get 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此模板配置的预填印章列表（包括自动签署指定的印章） 
      * @return TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SealInfo [] getTemplateSeals() {
         return this.TemplateSeals;
@@ -800,9 +772,7 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateSeals(SealInfo [] TemplateSeals) {
         this.TemplateSeals = TemplateSeals;

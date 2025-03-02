@@ -56,7 +56,6 @@ public class ExtentServiceAuthInfo extends AbstractModel {
 
     /**
     * 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorOpenId")
     @Expose
@@ -64,7 +63,6 @@ public class ExtentServiceAuthInfo extends AbstractModel {
 
     /**
     * 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateOn")
     @Expose
@@ -159,10 +157,8 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     }
 
     /**
-     * Get 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作扩展服务的操作人第三方应用平台的用户openid 
      * @return OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorOpenId() {
         return this.OperatorOpenId;
@@ -170,19 +166,15 @@ public class ExtentServiceAuthInfo extends AbstractModel {
 
     /**
      * Set 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorOpenId(String OperatorOpenId) {
         this.OperatorOpenId = OperatorOpenId;
     }
 
     /**
-     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	 
      * @return OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateOn() {
         return this.OperateOn;
@@ -190,9 +182,7 @@ public class ExtentServiceAuthInfo extends AbstractModel {
 
     /**
      * Set 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateOn(Long OperateOn) {
         this.OperateOn = OperateOn;

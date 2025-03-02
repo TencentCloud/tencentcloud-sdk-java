@@ -25,7 +25,6 @@ public class PermissionGroup extends AbstractModel {
 
     /**
     * 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -33,7 +32,6 @@ public class PermissionGroup extends AbstractModel {
 
     /**
     * 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupKey")
     @Expose
@@ -41,7 +39,6 @@ public class PermissionGroup extends AbstractModel {
 
     /**
     * 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hide")
     @Expose
@@ -49,17 +46,14 @@ public class PermissionGroup extends AbstractModel {
 
     /**
     * 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permissions")
     @Expose
     private Permission [] Permissions;
 
     /**
-     * Get 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限组名称 
      * @return GroupName 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -67,19 +61,15 @@ public class PermissionGroup extends AbstractModel {
 
     /**
      * Set 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 权限组key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限组key 
      * @return GroupKey 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupKey() {
         return this.GroupKey;
@@ -87,19 +77,15 @@ public class PermissionGroup extends AbstractModel {
 
     /**
      * Set 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupKey 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupKey(String GroupKey) {
         this.GroupKey = GroupKey;
     }
 
     /**
-     * Get 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否隐藏分组，0否1是 
      * @return Hide 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHide() {
         return this.Hide;
@@ -107,19 +93,15 @@ public class PermissionGroup extends AbstractModel {
 
     /**
      * Set 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hide 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHide(Long Hide) {
         this.Hide = Hide;
     }
 
     /**
-     * Get 权限集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限集合 
      * @return Permissions 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Permission [] getPermissions() {
         return this.Permissions;
@@ -127,9 +109,7 @@ public class PermissionGroup extends AbstractModel {
 
     /**
      * Set 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Permissions 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissions(Permission [] Permissions) {
         this.Permissions = Permissions;

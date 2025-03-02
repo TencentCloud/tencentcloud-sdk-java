@@ -25,7 +25,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 权限名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 权限key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -41,7 +39,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 权限类型 1前端，2后端
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 是否隐藏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hide")
     @Expose
@@ -57,7 +53,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 数据权限标签 1:表示根节点，2:表示叶子结点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataLabel")
     @Expose
@@ -65,7 +60,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataType")
     @Expose
@@ -73,7 +67,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataRange")
     @Expose
@@ -81,7 +74,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 关联权限, 表示这个功能权限要受哪个数据权限管控
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTo")
     @Expose
@@ -89,7 +81,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 父级权限key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentKey")
     @Expose
@@ -97,7 +88,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 是否选中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsChecked")
     @Expose
@@ -105,17 +95,14 @@ public class Permission extends AbstractModel {
 
     /**
     * 子权限集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
     @Expose
     private Permission [] Children;
 
     /**
-     * Get 权限名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限名称 
      * @return Name 权限名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -123,19 +110,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 权限名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 权限名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 权限key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限key 
      * @return Key 权限key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -143,19 +126,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 权限key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 权限key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 权限类型 1前端，2后端
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限类型 1前端，2后端 
      * @return Type 权限类型 1前端，2后端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -163,19 +142,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 权限类型 1前端，2后端
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 权限类型 1前端，2后端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否隐藏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否隐藏 
      * @return Hide 是否隐藏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHide() {
         return this.Hide;
@@ -183,19 +158,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 是否隐藏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hide 是否隐藏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHide(Long Hide) {
         this.Hide = Hide;
     }
 
     /**
-     * Get 数据权限标签 1:表示根节点，2:表示叶子结点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据权限标签 1:表示根节点，2:表示叶子结点 
      * @return DataLabel 数据权限标签 1:表示根节点，2:表示叶子结点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataLabel() {
         return this.DataLabel;
@@ -203,19 +174,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 数据权限标签 1:表示根节点，2:表示叶子结点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataLabel 数据权限标签 1:表示根节点，2:表示叶子结点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataLabel(Long DataLabel) {
         this.DataLabel = DataLabel;
     }
 
     /**
-     * Get 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权 
      * @return DataType 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataType() {
         return this.DataType;
@@ -223,19 +190,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataType 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataType(Long DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己 
      * @return DataRange 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataRange() {
         return this.DataRange;
@@ -243,19 +206,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataRange 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataRange(Long DataRange) {
         this.DataRange = DataRange;
     }
 
     /**
-     * Get 关联权限, 表示这个功能权限要受哪个数据权限管控
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联权限, 表示这个功能权限要受哪个数据权限管控 
      * @return DataTo 关联权限, 表示这个功能权限要受哪个数据权限管控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataTo() {
         return this.DataTo;
@@ -263,19 +222,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 关联权限, 表示这个功能权限要受哪个数据权限管控
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTo 关联权限, 表示这个功能权限要受哪个数据权限管控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTo(String DataTo) {
         this.DataTo = DataTo;
     }
 
     /**
-     * Get 父级权限key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级权限key 
      * @return ParentKey 父级权限key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentKey() {
         return this.ParentKey;
@@ -283,19 +238,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 父级权限key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentKey 父级权限key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentKey(String ParentKey) {
         this.ParentKey = ParentKey;
     }
 
     /**
-     * Get 是否选中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否选中 
      * @return IsChecked 是否选中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsChecked() {
         return this.IsChecked;
@@ -303,19 +254,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 是否选中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsChecked 是否选中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsChecked(Boolean IsChecked) {
         this.IsChecked = IsChecked;
     }
 
     /**
-     * Get 子权限集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子权限集合 
      * @return Children 子权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Permission [] getChildren() {
         return this.Children;
@@ -323,9 +270,7 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 子权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Children 子权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(Permission [] Children) {
         this.Children = Children;

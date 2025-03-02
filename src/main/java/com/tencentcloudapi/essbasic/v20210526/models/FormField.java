@@ -49,7 +49,6 @@ public class FormField extends AbstractModel {
 CreateFlowsByTemplates 接口不使用此字段。
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentId")
     @Expose
@@ -59,7 +58,6 @@ CreateFlowsByTemplates 接口不使用此字段。
     * 控件的名字，跟ComponentId二选一，不能全为空
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentName")
     @Expose
@@ -67,7 +65,6 @@ CreateFlowsByTemplates 接口不使用此字段。
 
     /**
     * 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockComponentValue")
     @Expose
@@ -149,13 +146,11 @@ CreateFlowsByTemplates 接口不使用此字段。
      * Get 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。 
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a> 
      * @return ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentId() {
         return this.ComponentId;
@@ -166,12 +161,10 @@ CreateFlowsByTemplates 接口不使用此字段。
 CreateFlowsByTemplates 接口不使用此字段。
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
@@ -180,12 +173,10 @@ CreateFlowsByTemplates 接口不使用此字段。
     /**
      * Get 控件的名字，跟ComponentId二选一，不能全为空
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。 
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a> 
      * @return ComponentName 控件的名字，跟ComponentId二选一，不能全为空
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -195,21 +186,17 @@ CreateFlowsByTemplates 接口不使用此字段。
      * Set 控件的名字，跟ComponentId二选一，不能全为空
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentName 控件的名字，跟ComponentId二选一，不能全为空
 
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定 
      * @return LockComponentValue 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLockComponentValue() {
         return this.LockComponentValue;
@@ -217,9 +204,7 @@ CreateFlowsByTemplates 接口不使用此字段。
 
     /**
      * Set 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockComponentValue 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockComponentValue(Boolean LockComponentValue) {
         this.LockComponentValue = LockComponentValue;

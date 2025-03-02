@@ -408,7 +408,6 @@ ChildrenComponent结构体定义:
     /**
     * 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Placeholder")
     @Expose
@@ -418,7 +417,6 @@ ChildrenComponent结构体定义:
     * **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockComponentValue")
     @Expose
@@ -428,7 +426,6 @@ ChildrenComponent结构体定义:
     * **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForbidMoveAndDelete")
     @Expose
@@ -1676,11 +1673,9 @@ ChildrenComponent结构体定义:
 
     /**
      * Get 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
-注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`签署控件设置此字段无效` 
      * @return Placeholder 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlaceholder() {
         return this.Placeholder;
@@ -1689,10 +1684,8 @@ ChildrenComponent结构体定义:
     /**
      * Set 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Placeholder 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlaceholder(String Placeholder) {
         this.Placeholder = Placeholder;
@@ -1701,12 +1694,10 @@ ChildrenComponent结构体定义:
     /**
      * Get **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>true：锁定控件值，在页面编辑控件值</li></ul> 
      * @return LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLockComponentValue() {
         return this.LockComponentValue;
@@ -1716,11 +1707,9 @@ ChildrenComponent结构体定义:
      * Set **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockComponentValue(Boolean LockComponentValue) {
         this.LockComponentValue = LockComponentValue;
@@ -1729,12 +1718,10 @@ ChildrenComponent结构体定义:
     /**
      * Get **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> <b>true</b> : 可以移动和删除控件</li></ul> 
      * @return ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getForbidMoveAndDelete() {
         return this.ForbidMoveAndDelete;
@@ -1744,11 +1731,9 @@ ChildrenComponent结构体定义:
      * Set **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForbidMoveAndDelete(Boolean ForbidMoveAndDelete) {
         this.ForbidMoveAndDelete = ForbidMoveAndDelete;

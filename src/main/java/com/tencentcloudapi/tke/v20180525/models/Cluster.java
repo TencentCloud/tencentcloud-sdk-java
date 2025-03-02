@@ -103,7 +103,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Property")
     @Expose
@@ -118,7 +117,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageId")
     @Expose
@@ -126,7 +124,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsCustomizeType")
     @Expose
@@ -134,7 +131,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerRuntime")
     @Expose
@@ -142,7 +138,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -150,7 +145,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeletionProtection")
     @Expose
@@ -158,7 +152,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableExternalNode")
     @Expose
@@ -166,7 +159,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterLevel")
     @Expose
@@ -174,7 +166,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
@@ -182,7 +173,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QGPUShareEnable")
     @Expose
@@ -190,7 +180,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeVersion")
     @Expose
@@ -198,7 +187,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterEtcdNodeNum")
     @Expose
@@ -206,7 +194,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -393,10 +380,8 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式)) 
      * @return Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProperty() {
         return this.Property;
@@ -404,9 +389,7 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperty(String Property) {
         this.Property = Property;
@@ -429,10 +412,8 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群使用镜像id 
      * @return ImageId 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageId() {
         return this.ImageId;
@@ -440,19 +421,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageId 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OsCustomizeType 系统定制类型 
      * @return OsCustomizeType OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
@@ -460,19 +437,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsCustomizeType OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群运行环境docker或container 
      * @return ContainerRuntime 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerRuntime() {
         return this.ContainerRuntime;
@@ -480,19 +453,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerRuntime 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerRuntime(String ContainerRuntime) {
         this.ContainerRuntime = ContainerRuntime;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -500,19 +469,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除保护开关 
      * @return DeletionProtection 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
@@ -520,19 +485,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeletionProtection 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群是否开启第三方节点支持 
      * @return EnableExternalNode 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableExternalNode() {
         return this.EnableExternalNode;
@@ -540,19 +501,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableExternalNode 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableExternalNode(Boolean EnableExternalNode) {
         this.EnableExternalNode = EnableExternalNode;
     }
 
     /**
-     * Get 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群等级，针对托管集群生效 
      * @return ClusterLevel 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
@@ -560,19 +517,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterLevel 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动变配集群等级，针对托管集群生效 
      * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
@@ -580,19 +533,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
     /**
-     * Get 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启QGPU共享 
      * @return QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
@@ -600,19 +549,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
     /**
-     * Get 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时版本 
      * @return RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
@@ -620,19 +565,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群当前etcd数量 
      * @return ClusterEtcdNodeNum 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterEtcdNodeNum() {
         return this.ClusterEtcdNodeNum;
@@ -640,19 +581,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterEtcdNodeNum 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterEtcdNodeNum(Long ClusterEtcdNodeNum) {
         this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
     }
 
     /**
-     * Get 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地专用集群Id 
      * @return CdcId 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -660,9 +597,7 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

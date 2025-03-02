@@ -25,7 +25,6 @@ public class TaskInfo extends AbstractModel {
 
     /**
     * 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,17 +32,14 @@ public class TaskInfo extends AbstractModel {
 
     /**
     * 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-     * Get 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息 
      * @return TaskId 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -51,19 +47,15 @@ public class TaskInfo extends AbstractModel {
 
     /**
      * Set 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态：READY - 任务已完成；NOTREADY - 任务未完成； 
      * @return TaskStatus 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -71,9 +63,7 @@ public class TaskInfo extends AbstractModel {
 
     /**
      * Set 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

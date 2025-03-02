@@ -25,7 +25,6 @@ public class ExtendScene extends AbstractModel {
 
     /**
     * 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GenerateType")
     @Expose
@@ -33,7 +32,6 @@ public class ExtendScene extends AbstractModel {
 
     /**
     * 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GenerateTypeDesc")
     @Expose
@@ -41,17 +39,14 @@ public class ExtendScene extends AbstractModel {
 
     /**
     * 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GenerateTypeLogo")
     @Expose
     private String GenerateTypeLogo;
 
     /**
-     * Get 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章来源类型 
      * @return GenerateType 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGenerateType() {
         return this.GenerateType;
@@ -59,19 +54,15 @@ public class ExtendScene extends AbstractModel {
 
     /**
      * Set 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GenerateType 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章来源类型描述 
      * @return GenerateTypeDesc 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGenerateTypeDesc() {
         return this.GenerateTypeDesc;
@@ -79,19 +70,15 @@ public class ExtendScene extends AbstractModel {
 
     /**
      * Set 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GenerateTypeDesc 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGenerateTypeDesc(String GenerateTypeDesc) {
         this.GenerateTypeDesc = GenerateTypeDesc;
     }
 
     /**
-     * Get 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章来源logo 
      * @return GenerateTypeLogo 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGenerateTypeLogo() {
         return this.GenerateTypeLogo;
@@ -99,9 +86,7 @@ public class ExtendScene extends AbstractModel {
 
     /**
      * Set 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GenerateTypeLogo 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGenerateTypeLogo(String GenerateTypeLogo) {
         this.GenerateTypeLogo = GenerateTypeLogo;

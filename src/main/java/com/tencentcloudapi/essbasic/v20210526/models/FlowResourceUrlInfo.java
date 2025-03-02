@@ -25,7 +25,6 @@ public class FlowResourceUrlInfo extends AbstractModel {
 
     /**
     * 合同流程的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,17 +32,14 @@ public class FlowResourceUrlInfo extends AbstractModel {
 
     /**
     * 对应的合同流程的PDF下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceUrlInfos")
     @Expose
     private ResourceUrlInfo [] ResourceUrlInfos;
 
     /**
-     * Get 合同流程的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程的ID 
      * @return FlowId 合同流程的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -51,19 +47,15 @@ public class FlowResourceUrlInfo extends AbstractModel {
 
     /**
      * Set 合同流程的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 合同流程的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 对应的合同流程的PDF下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应的合同流程的PDF下载链接 
      * @return ResourceUrlInfos 对应的合同流程的PDF下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceUrlInfo [] getResourceUrlInfos() {
         return this.ResourceUrlInfos;
@@ -71,9 +63,7 @@ public class FlowResourceUrlInfo extends AbstractModel {
 
     /**
      * Set 对应的合同流程的PDF下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceUrlInfos 对应的合同流程的PDF下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceUrlInfos(ResourceUrlInfo [] ResourceUrlInfos) {
         this.ResourceUrlInfos = ResourceUrlInfos;

@@ -185,7 +185,6 @@ public class InputManageMarketingRisk extends AbstractModel {
 2：iOS
 3：H5
 4：小程序
-
     */
     @SerializedName("Platform")
     @Expose
@@ -578,13 +577,11 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Get 1：Android
 2：iOS
 3：H5
-4：小程序
- 
+4：小程序 
      * @return Platform 1：Android
 2：iOS
 3：H5
 4：小程序
-
      */
     public String getPlatform() {
         return this.Platform;
@@ -595,12 +592,10 @@ public class InputManageMarketingRisk extends AbstractModel {
 2：iOS
 3：H5
 4：小程序
-
      * @param Platform 1：Android
 2：iOS
 3：H5
 4：小程序
-
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

@@ -25,7 +25,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Usable")
     @Expose
@@ -33,7 +32,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnusableReason")
     @Expose
@@ -41,7 +39,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlreadyInCluster")
     @Expose
@@ -56,7 +53,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -81,7 +77,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -89,7 +84,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPU")
     @Expose
@@ -97,7 +91,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -105,7 +98,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsName")
     @Expose
@@ -113,7 +105,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -121,7 +112,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoscalingGroupId")
     @Expose
@@ -129,7 +119,6 @@ public class ExistedInstance extends AbstractModel {
 
     /**
     * 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -145,10 +134,8 @@ public class ExistedInstance extends AbstractModel {
     private String [] IPv6Addresses;
 
     /**
-     * Get 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。 
      * @return Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUsable() {
         return this.Usable;
@@ -156,19 +143,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsable(Boolean Usable) {
         this.Usable = Usable;
     }
 
     /**
-     * Get 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例不支持加入的原因。 
      * @return UnusableReason 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnusableReason() {
         return this.UnusableReason;
@@ -176,19 +159,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnusableReason 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnusableReason(String UnusableReason) {
         this.UnusableReason = UnusableReason;
     }
 
     /**
-     * Get 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例已经所在的集群ID。 
      * @return AlreadyInCluster 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlreadyInCluster() {
         return this.AlreadyInCluster;
@@ -196,9 +175,7 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlreadyInCluster 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlreadyInCluster(String AlreadyInCluster) {
         this.AlreadyInCluster = AlreadyInCluster;
@@ -221,10 +198,8 @@ public class ExistedInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -232,9 +207,7 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -285,10 +258,8 @@ public class ExistedInstance extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
      * @return CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -296,19 +267,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的CPU核数，单位：核。 
      * @return CPU 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCPU() {
         return this.CPU;
@@ -316,19 +283,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPU 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例内存容量，单位：GB。 
      * @return Memory 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemory() {
         return this.Memory;
@@ -336,19 +299,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作系统名称。 
      * @return OsName 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsName() {
         return this.OsName;
@@ -356,19 +315,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsName 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例机型。 
      * @return InstanceType 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -376,19 +331,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩组ID 
      * @return AutoscalingGroupId 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoscalingGroupId() {
         return this.AutoscalingGroupId;
@@ -396,19 +347,15 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoscalingGroupId 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoscalingGroupId(String AutoscalingGroupId) {
         this.AutoscalingGroupId = AutoscalingGroupId;
     }
 
     /**
-     * Get 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。 
      * @return InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -416,9 +363,7 @@ public class ExistedInstance extends AbstractModel {
 
     /**
      * Set 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

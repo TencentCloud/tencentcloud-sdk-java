@@ -39,7 +39,6 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
     * 合同流程的类别分类（如销售合同/入职合同等）。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowType")
     @Expose
@@ -54,7 +53,6 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
     * 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMessage")
     @Expose
@@ -62,7 +60,6 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
     * 合同流程描述信息。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowDescription")
     @Expose
@@ -91,7 +88,6 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
     * 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -130,10 +126,8 @@ public class FlowDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的类别分类（如销售合同/入职合同等）。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程的类别分类（如销售合同/入职合同等）。	 
      * @return FlowType 合同流程的类别分类（如销售合同/入职合同等）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowType() {
         return this.FlowType;
@@ -141,9 +135,7 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
      * Set 合同流程的类别分类（如销售合同/入职合同等）。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowType 合同流程的类别分类（如销售合同/入职合同等）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
@@ -166,10 +158,8 @@ public class FlowDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	 
      * @return FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMessage() {
         return this.FlowMessage;
@@ -177,19 +167,15 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
      * Set 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMessage(String FlowMessage) {
         this.FlowMessage = FlowMessage;
     }
 
     /**
-     * Get 合同流程描述信息。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程描述信息。	 
      * @return FlowDescription 合同流程描述信息。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowDescription() {
         return this.FlowDescription;
@@ -197,9 +183,7 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
      * Set 合同流程描述信息。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowDescription 合同流程描述信息。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
@@ -254,10 +238,8 @@ public class FlowDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	 
      * @return Creator 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -265,9 +247,7 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
      * Set 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;

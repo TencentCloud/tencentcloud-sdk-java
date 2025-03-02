@@ -25,7 +25,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 成员企业名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 成员企业别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -41,7 +39,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationId")
     @Expose
@@ -49,7 +46,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 记录更新时间， unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -64,7 +60,6 @@ public class GroupOrganization extends AbstractModel {
 <li> **5**：已加入</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -72,7 +67,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 是否为集团主企业
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMainOrganization")
     @Expose
@@ -80,7 +74,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 企业社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCardNumber")
     @Expose
@@ -88,7 +81,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 企业超管信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminInfo")
     @Expose
@@ -96,7 +88,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 企业许可证Id，此字段暂时不需要关注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("License")
     @Expose
@@ -104,7 +95,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 企业许可证过期时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseExpireTime")
     @Expose
@@ -112,7 +102,6 @@ public class GroupOrganization extends AbstractModel {
 
     /**
     * 成员企业加入集团时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinTime")
     @Expose
@@ -122,17 +111,14 @@ public class GroupOrganization extends AbstractModel {
     * 是否使用自建审批流引擎（即不是企微审批流引擎）
 <ul><li> **true**：是</li>
 <li> **false**：否</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowEngineEnable")
     @Expose
     private Boolean FlowEngineEnable;
 
     /**
-     * Get 成员企业名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员企业名 
      * @return Name 成员企业名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -140,19 +126,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 成员企业名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 成员企业名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 成员企业别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员企业别名 
      * @return Alias 成员企业别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -160,19 +142,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 成员企业别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 成员企业别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取 
      * @return OrganizationId 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationId() {
         return this.OrganizationId;
@@ -180,19 +158,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationId 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 记录更新时间， unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录更新时间， unix时间戳，单位秒 
      * @return UpdateTime 记录更新时间， unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -200,9 +174,7 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 记录更新时间， unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 记录更新时间， unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -216,8 +188,7 @@ public class GroupOrganization extends AbstractModel {
 <li> **4**：已解除</li>
 <li> **5**：已加入</li>
 </ul>
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Status 成员企业加入集团的当前状态
 <ul><li> **1**：待授权</li>
 <li> **2**：已授权待激活</li>
@@ -226,7 +197,6 @@ public class GroupOrganization extends AbstractModel {
 <li> **5**：已加入</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -241,7 +211,6 @@ public class GroupOrganization extends AbstractModel {
 <li> **5**：已加入</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 成员企业加入集团的当前状态
 <ul><li> **1**：待授权</li>
 <li> **2**：已授权待激活</li>
@@ -250,17 +219,14 @@ public class GroupOrganization extends AbstractModel {
 <li> **5**：已加入</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否为集团主企业
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为集团主企业 
      * @return IsMainOrganization 是否为集团主企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsMainOrganization() {
         return this.IsMainOrganization;
@@ -268,19 +234,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 是否为集团主企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsMainOrganization 是否为集团主企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMainOrganization(Boolean IsMainOrganization) {
         this.IsMainOrganization = IsMainOrganization;
     }
 
     /**
-     * Get 企业社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业社会信用代码 
      * @return IdCardNumber 企业社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
@@ -288,19 +250,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 企业社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCardNumber 企业社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 企业超管信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业超管信息 
      * @return AdminInfo 企业超管信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Admin getAdminInfo() {
         return this.AdminInfo;
@@ -308,19 +266,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 企业超管信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminInfo 企业超管信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminInfo(Admin AdminInfo) {
         this.AdminInfo = AdminInfo;
     }
 
     /**
-     * Get 企业许可证Id，此字段暂时不需要关注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业许可证Id，此字段暂时不需要关注 
      * @return License 企业许可证Id，此字段暂时不需要关注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLicense() {
         return this.License;
@@ -328,19 +282,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 企业许可证Id，此字段暂时不需要关注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param License 企业许可证Id，此字段暂时不需要关注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicense(String License) {
         this.License = License;
     }
 
     /**
-     * Get 企业许可证过期时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业许可证过期时间，unix时间戳，单位秒 
      * @return LicenseExpireTime 企业许可证过期时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseExpireTime() {
         return this.LicenseExpireTime;
@@ -348,19 +298,15 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 企业许可证过期时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseExpireTime 企业许可证过期时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseExpireTime(Long LicenseExpireTime) {
         this.LicenseExpireTime = LicenseExpireTime;
     }
 
     /**
-     * Get 成员企业加入集团时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员企业加入集团时间，unix时间戳，单位秒 
      * @return JoinTime 成员企业加入集团时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJoinTime() {
         return this.JoinTime;
@@ -368,9 +314,7 @@ public class GroupOrganization extends AbstractModel {
 
     /**
      * Set 成员企业加入集团时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinTime 成员企业加入集团时间，unix时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinTime(Long JoinTime) {
         this.JoinTime = JoinTime;
@@ -379,12 +323,10 @@ public class GroupOrganization extends AbstractModel {
     /**
      * Get 是否使用自建审批流引擎（即不是企微审批流引擎）
 <ul><li> **true**：是</li>
-<li> **false**：否</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> **false**：否</li></ul> 
      * @return FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎）
 <ul><li> **true**：是</li>
 <li> **false**：否</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFlowEngineEnable() {
         return this.FlowEngineEnable;
@@ -394,11 +336,9 @@ public class GroupOrganization extends AbstractModel {
      * Set 是否使用自建审批流引擎（即不是企微审批流引擎）
 <ul><li> **true**：是</li>
 <li> **false**：否</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎）
 <ul><li> **true**：是</li>
 <li> **false**：否</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowEngineEnable(Boolean FlowEngineEnable) {
         this.FlowEngineEnable = FlowEngineEnable;

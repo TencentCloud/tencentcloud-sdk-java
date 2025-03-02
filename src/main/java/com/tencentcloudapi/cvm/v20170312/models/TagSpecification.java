@@ -25,7 +25,6 @@ public class TagSpecification extends AbstractModel {
 
     /**
     * 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -33,17 +32,14 @@ public class TagSpecification extends AbstractModel {
 
     /**
     * 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair” 
      * @return ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -51,19 +47,15 @@ public class TagSpecification extends AbstractModel {
 
     /**
      * Set 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签对列表 
      * @return Tags 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -71,9 +63,7 @@ public class TagSpecification extends AbstractModel {
 
     /**
      * Set 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

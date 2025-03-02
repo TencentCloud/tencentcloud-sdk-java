@@ -55,7 +55,6 @@ public class QQAccountInfo extends AbstractModel {
 
     /**
     * 用户设备号（已不推荐使用）。
-
     */
     @SerializedName("DeviceId")
     @Expose
@@ -134,10 +133,8 @@ public class QQAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户设备号（已不推荐使用）。
- 
+     * Get 用户设备号（已不推荐使用）。 
      * @return DeviceId 用户设备号（已不推荐使用）。
-
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -145,9 +142,7 @@ public class QQAccountInfo extends AbstractModel {
 
     /**
      * Set 用户设备号（已不推荐使用）。
-
      * @param DeviceId 用户设备号（已不推荐使用）。
-
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

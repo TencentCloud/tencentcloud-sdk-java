@@ -53,7 +53,6 @@ public class DataDisk extends AbstractModel {
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -61,7 +60,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -75,7 +73,6 @@ public class DataDisk extends AbstractModel {
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -85,7 +82,6 @@ public class DataDisk extends AbstractModel {
     * 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsKeyId")
     @Expose
@@ -93,7 +89,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThroughputPerformance")
     @Expose
@@ -101,7 +96,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -111,7 +105,6 @@ public class DataDisk extends AbstractModel {
     * 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BurstPerformance")
     @Expose
@@ -185,8 +178,7 @@ public class DataDisk extends AbstractModel {
   false：子机销毁时，保留数据盘<br />
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
-</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+</li> 
      * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：
 <li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
 <li>
@@ -194,7 +186,6 @@ public class DataDisk extends AbstractModel {
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
@@ -208,7 +199,6 @@ public class DataDisk extends AbstractModel {
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：
 <li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
 <li>
@@ -216,17 +206,14 @@ public class DataDisk extends AbstractModel {
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。 
      * @return SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotId() {
         return this.SnapshotId;
@@ -234,9 +221,7 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -249,8 +234,7 @@ public class DataDisk extends AbstractModel {
   false：不加密<br />
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
-</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+</li> 
      * @return Encrypt 数据盘是加密。取值范围：
 <li>true：加密</li>
 <li>
@@ -258,7 +242,6 @@ public class DataDisk extends AbstractModel {
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
@@ -272,7 +255,6 @@ public class DataDisk extends AbstractModel {
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encrypt 数据盘是加密。取值范围：
 <li>true：加密</li>
 <li>
@@ -280,7 +262,6 @@ public class DataDisk extends AbstractModel {
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -289,12 +270,10 @@ public class DataDisk extends AbstractModel {
     /**
      * Get 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
-该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。 
+该参数目前仅用于 `RunInstances` 接口。 
      * @return KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
@@ -304,21 +283,17 @@ public class DataDisk extends AbstractModel {
      * Set 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘性能，单位：MB/s 
      * @return ThroughputPerformance 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
@@ -326,19 +301,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThroughputPerformance 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属的独享集群ID。 
      * @return CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -346,9 +317,7 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
@@ -357,12 +326,10 @@ public class DataDisk extends AbstractModel {
     /**
      * Get 突发性能
 
- <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。 
+ <b>注：内测中。</b> 
      * @return BurstPerformance 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBurstPerformance() {
         return this.BurstPerformance;
@@ -372,11 +339,9 @@ public class DataDisk extends AbstractModel {
      * Set 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BurstPerformance 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBurstPerformance(Boolean BurstPerformance) {
         this.BurstPerformance = BurstPerformance;

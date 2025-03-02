@@ -25,7 +25,6 @@ public class HasAuthUser extends AbstractModel {
 
     /**
     * 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -35,7 +34,6 @@ public class HasAuthUser extends AbstractModel {
     * 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongTo")
     @Expose
@@ -43,17 +41,14 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
 
     /**
     * 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainOrganizationId")
     @Expose
     private String MainOrganizationId;
 
     /**
-     * Get 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工在腾讯电子签平台的唯一身份标识，为32位字符串。 
      * @return UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -61,9 +56,7 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
 
     /**
      * Set 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -72,12 +65,10 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
     /**
      * Get 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
-CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。 
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业 
      * @return BelongTo 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBelongTo() {
         return this.BelongTo;
@@ -87,21 +78,17 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
      * Set 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BelongTo 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongTo(String BelongTo) {
         this.BelongTo = BelongTo;
     }
 
     /**
-     * Get 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团主企业id，当前企业为集团子企业时，该字段有值 
      * @return MainOrganizationId 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMainOrganizationId() {
         return this.MainOrganizationId;
@@ -109,9 +96,7 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
 
     /**
      * Set 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainOrganizationId 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainOrganizationId(String MainOrganizationId) {
         this.MainOrganizationId = MainOrganizationId;

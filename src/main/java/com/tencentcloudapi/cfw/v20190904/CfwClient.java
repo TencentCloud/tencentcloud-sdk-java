@@ -182,7 +182,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *创建入侵防御规则白名单接口
+     *CreateIdsWhiteRule
+
+创建入侵防御规则白名单接口
      * @param req CreateIdsWhiteRuleRequest
      * @return CreateIdsWhiteRuleResponse
      * @throws TencentCloudSDKException
@@ -292,7 +294,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *删除入侵防御规则白名单接口
+     *历史方案，业务已迁移，接口不再适用
+
+删除入侵防御规则白名单接口
      * @param req DeleteIdsWhiteRuleRequest
      * @return DeleteIdsWhiteRuleResponse
      * @throws TencentCloudSDKException
@@ -556,7 +560,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *查询入侵防御规则白名单接口
+     *历史方案，业务已迁移，接口不再适用
+
+查询入侵防御规则白名单接口
      * @param req DescribeIdsWhiteRuleRequest
      * @return DescribeIdsWhiteRuleResponse
      * @throws TencentCloudSDKException

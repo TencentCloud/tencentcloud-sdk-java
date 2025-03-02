@@ -27,7 +27,6 @@ public class DetectInfoVideoData extends AbstractModel {
     * 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveNessVideo")
     @Expose
@@ -36,12 +35,10 @@ public class DetectInfoVideoData extends AbstractModel {
     /**
      * Get 活体视频的base64编码，mp4格式
 
-注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。 
+注:`需进行base64解码获取活体视频文件` 
      * @return LiveNessVideo 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLiveNessVideo() {
         return this.LiveNessVideo;
@@ -51,11 +48,9 @@ public class DetectInfoVideoData extends AbstractModel {
      * Set 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveNessVideo 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveNessVideo(String LiveNessVideo) {
         this.LiveNessVideo = LiveNessVideo;

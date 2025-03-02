@@ -31,9 +31,7 @@ public class DataAuthorizationInfo extends AbstractModel {
     private String DataProviderName;
 
     /**
-    * 数据受托方、提供方：腾讯云主体名称。
-
-固定填：腾讯云计算（北京）有限责任公司
+    * 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
     */
     @SerializedName("DataRecipientName")
     @Expose
@@ -41,15 +39,10 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
     * 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-
 1-手机号；
-
 2-微信开放账号；
-
 3-QQ开放账号；
-
 4-IP地址；
-
 999-其它；
     */
     @SerializedName("UserDataType")
@@ -73,26 +66,21 @@ public class DataAuthorizationInfo extends AbstractModel {
     private Long IsOrderHandling;
 
     /**
-    * 客户获得的用户授权期限时间戳（单位秒）。
-
-不填默认无固定期限。
+    * 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
     */
     @SerializedName("AuthorizationTerm")
     @Expose
     private Long AuthorizationTerm;
 
     /**
-    * 	
-客户获得用户授权所依赖的协议地址。
+    * 客户获得用户授权所依赖的协议地址。
     */
     @SerializedName("PrivacyPolicyLink")
     @Expose
     private String PrivacyPolicyLink;
 
     /**
-    * 是否是用户个人敏感数据（不推荐使用）。
-
-固定填：1。
+    * 是否是用户个人敏感数据（不推荐使用）。固定填：1。
     */
     @SerializedName("IsPersonalData")
     @Expose
@@ -115,24 +103,16 @@ public class DataAuthorizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据受托方、提供方：腾讯云主体名称。
-
-固定填：腾讯云计算（北京）有限责任公司 
-     * @return DataRecipientName 数据受托方、提供方：腾讯云主体名称。
-
-固定填：腾讯云计算（北京）有限责任公司
+     * Get 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司 
+     * @return DataRecipientName 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
      */
     public String getDataRecipientName() {
         return this.DataRecipientName;
     }
 
     /**
-     * Set 数据受托方、提供方：腾讯云主体名称。
-
-固定填：腾讯云计算（北京）有限责任公司
-     * @param DataRecipientName 数据受托方、提供方：腾讯云主体名称。
-
-固定填：腾讯云计算（北京）有限责任公司
+     * Set 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
+     * @param DataRecipientName 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
      */
     public void setDataRecipientName(String DataRecipientName) {
         this.DataRecipientName = DataRecipientName;
@@ -140,26 +120,16 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Get 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-
 1-手机号；
-
 2-微信开放账号；
-
 3-QQ开放账号；
-
 4-IP地址；
-
 999-其它； 
      * @return UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-
 1-手机号；
-
 2-微信开放账号；
-
 3-QQ开放账号；
-
 4-IP地址；
-
 999-其它；
      */
     public Long [] getUserDataType() {
@@ -168,26 +138,16 @@ public class DataAuthorizationInfo extends AbstractModel {
 
     /**
      * Set 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-
 1-手机号；
-
 2-微信开放账号；
-
 3-QQ开放账号；
-
 4-IP地址；
-
 999-其它；
      * @param UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-
 1-手机号；
-
 2-微信开放账号；
-
 3-QQ开放账号；
-
 4-IP地址；
-
 999-其它；
      */
     public void setUserDataType(Long [] UserDataType) {
@@ -235,68 +195,48 @@ public class DataAuthorizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 客户获得的用户授权期限时间戳（单位秒）。
-
-不填默认无固定期限。 
-     * @return AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。
-
-不填默认无固定期限。
+     * Get 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。 
+     * @return AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
      */
     public Long getAuthorizationTerm() {
         return this.AuthorizationTerm;
     }
 
     /**
-     * Set 客户获得的用户授权期限时间戳（单位秒）。
-
-不填默认无固定期限。
-     * @param AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。
-
-不填默认无固定期限。
+     * Set 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
+     * @param AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
      */
     public void setAuthorizationTerm(Long AuthorizationTerm) {
         this.AuthorizationTerm = AuthorizationTerm;
     }
 
     /**
-     * Get 	
-客户获得用户授权所依赖的协议地址。 
-     * @return PrivacyPolicyLink 	
-客户获得用户授权所依赖的协议地址。
+     * Get 客户获得用户授权所依赖的协议地址。 
+     * @return PrivacyPolicyLink 客户获得用户授权所依赖的协议地址。
      */
     public String getPrivacyPolicyLink() {
         return this.PrivacyPolicyLink;
     }
 
     /**
-     * Set 	
-客户获得用户授权所依赖的协议地址。
-     * @param PrivacyPolicyLink 	
-客户获得用户授权所依赖的协议地址。
+     * Set 客户获得用户授权所依赖的协议地址。
+     * @param PrivacyPolicyLink 客户获得用户授权所依赖的协议地址。
      */
     public void setPrivacyPolicyLink(String PrivacyPolicyLink) {
         this.PrivacyPolicyLink = PrivacyPolicyLink;
     }
 
     /**
-     * Get 是否是用户个人敏感数据（不推荐使用）。
-
-固定填：1。 
-     * @return IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
-
-固定填：1。
+     * Get 是否是用户个人敏感数据（不推荐使用）。固定填：1。 
+     * @return IsPersonalData 是否是用户个人敏感数据（不推荐使用）。固定填：1。
      */
     public Long getIsPersonalData() {
         return this.IsPersonalData;
     }
 
     /**
-     * Set 是否是用户个人敏感数据（不推荐使用）。
-
-固定填：1。
-     * @param IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
-
-固定填：1。
+     * Set 是否是用户个人敏感数据（不推荐使用）。固定填：1。
+     * @param IsPersonalData 是否是用户个人敏感数据（不推荐使用）。固定填：1。
      */
     public void setIsPersonalData(Long IsPersonalData) {
         this.IsPersonalData = IsPersonalData;

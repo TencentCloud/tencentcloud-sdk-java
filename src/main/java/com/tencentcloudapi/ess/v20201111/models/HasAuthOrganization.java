@@ -25,7 +25,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationId")
     @Expose
@@ -33,7 +32,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -41,7 +39,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 被授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedOrganizationId")
     @Expose
@@ -49,7 +46,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 被授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedOrganizationName")
     @Expose
@@ -57,7 +53,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权模板id（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -65,7 +60,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权模板名称（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -73,17 +67,14 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权时间，格式为时间戳，单位s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizeTime")
     @Expose
     private Long AuthorizeTime;
 
     /**
-     * Get 授权企业id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业id 
      * @return OrganizationId 授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationId() {
         return this.OrganizationId;
@@ -91,19 +82,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationId 授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业名称 
      * @return OrganizationName 授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -111,19 +98,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 被授权企业id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被授权企业id 
      * @return AuthorizedOrganizationId 被授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthorizedOrganizationId() {
         return this.AuthorizedOrganizationId;
@@ -131,19 +114,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 被授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedOrganizationId 被授权企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
         this.AuthorizedOrganizationId = AuthorizedOrganizationId;
     }
 
     /**
-     * Get 被授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被授权企业名称 
      * @return AuthorizedOrganizationName 被授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthorizedOrganizationName() {
         return this.AuthorizedOrganizationName;
@@ -151,19 +130,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 被授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedOrganizationName 被授权企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedOrganizationName(String AuthorizedOrganizationName) {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
 
     /**
-     * Get 授权模板id（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权模板id（仅当授权方式为模板授权时有值） 
      * @return TemplateId 授权模板id（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -171,19 +146,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权模板id（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 授权模板id（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 授权模板名称（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权模板名称（仅当授权方式为模板授权时有值） 
      * @return TemplateName 授权模板名称（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -191,19 +162,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权模板名称（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 授权模板名称（仅当授权方式为模板授权时有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 授权时间，格式为时间戳，单位s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权时间，格式为时间戳，单位s 
      * @return AuthorizeTime 授权时间，格式为时间戳，单位s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizeTime() {
         return this.AuthorizeTime;
@@ -211,9 +178,7 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权时间，格式为时间戳，单位s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizeTime 授权时间，格式为时间戳，单位s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizeTime(Long AuthorizeTime) {
         this.AuthorizeTime = AuthorizeTime;

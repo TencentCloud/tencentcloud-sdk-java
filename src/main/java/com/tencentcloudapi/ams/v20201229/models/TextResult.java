@@ -97,6 +97,13 @@ public class TextResult extends AbstractModel {
     private String SubLabel;
 
     /**
+    * 该字段用于返回违规文本命中信息
+    */
+    @SerializedName("HitInfos")
+    @Expose
+    private HitInfo [] HitInfos;
+
+    /**
      * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
@@ -292,6 +299,22 @@ public class TextResult extends AbstractModel {
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get 该字段用于返回违规文本命中信息 
+     * @return HitInfos 该字段用于返回违规文本命中信息
+     */
+    public HitInfo [] getHitInfos() {
+        return this.HitInfos;
+    }
+
+    /**
+     * Set 该字段用于返回违规文本命中信息
+     * @param HitInfos 该字段用于返回违规文本命中信息
+     */
+    public void setHitInfos(HitInfo [] HitInfos) {
+        this.HitInfos = HitInfos;
+    }
+
     public TextResult() {
     }
 
@@ -327,6 +350,12 @@ public class TextResult extends AbstractModel {
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.HitInfos != null) {
+            this.HitInfos = new HitInfo[source.HitInfos.length];
+            for (int i = 0; i < source.HitInfos.length; i++) {
+                this.HitInfos[i] = new HitInfo(source.HitInfos[i]);
+            }
+        }
     }
 
 
@@ -342,6 +371,7 @@ public class TextResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "LibType", this.LibType);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
 
     }
 }

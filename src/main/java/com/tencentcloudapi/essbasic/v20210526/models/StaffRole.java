@@ -25,7 +25,6 @@ public class StaffRole extends AbstractModel {
 
     /**
     * 角色id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleId")
     @Expose
@@ -33,17 +32,14 @@ public class StaffRole extends AbstractModel {
 
     /**
     * 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-     * Get 角色id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色id 
      * @return RoleId 角色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleId() {
         return this.RoleId;
@@ -51,19 +47,15 @@ public class StaffRole extends AbstractModel {
 
     /**
      * Set 角色id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleId 角色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 角色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色名称 
      * @return RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleName() {
         return this.RoleName;
@@ -71,9 +63,7 @@ public class StaffRole extends AbstractModel {
 
     /**
      * Set 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;

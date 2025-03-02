@@ -27,7 +27,6 @@ public class SignUrlInfo extends AbstractModel {
     * 签署链接，过期时间为90天
 
 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUrl")
     @Expose
@@ -35,7 +34,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 合同过期时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
     @Expose
@@ -43,7 +41,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignOrder")
     @Expose
@@ -51,7 +48,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 签署人编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignId")
     @Expose
@@ -67,7 +63,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 用户姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -75,7 +70,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 用户手机号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mobile")
     @Expose
@@ -83,7 +77,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 签署参与者机构名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -93,7 +86,6 @@ public class SignUrlInfo extends AbstractModel {
     * 参与者类型, 类型如下:
 **ORGANIZATION**:企业经办人
 **PERSON**: 自然人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -101,7 +93,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 经办人身份证号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCardNumber")
     @Expose
@@ -109,7 +100,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 签署链接对应流程Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -117,7 +107,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 企业经办人 用户在渠道的编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -125,7 +114,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 合同组签署链接对应的合同组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -133,7 +121,6 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 二维码，在生成动态签署人跳转封面页链接时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignQrcodeUrl")
     @Expose
@@ -142,12 +129,10 @@ public class SignUrlInfo extends AbstractModel {
     /**
      * Get 签署链接，过期时间为90天
 
-注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。 
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
      * @return SignUrl 签署链接，过期时间为90天
 
 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignUrl() {
         return this.SignUrl;
@@ -157,21 +142,17 @@ public class SignUrlInfo extends AbstractModel {
      * Set 签署链接，过期时间为90天
 
 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignUrl 签署链接，过期时间为90天
 
 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
     }
 
     /**
-     * Get 合同过期时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同过期时间戳，单位秒 
      * @return Deadline 合同过期时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
         return this.Deadline;
@@ -179,19 +160,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 合同过期时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deadline 合同过期时间戳，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选 
      * @return SignOrder 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSignOrder() {
         return this.SignOrder;
@@ -199,19 +176,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignOrder 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignOrder(Long SignOrder) {
         this.SignOrder = SignOrder;
     }
 
     /**
-     * Get 签署人编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人编号 
      * @return SignId 签署人编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignId() {
         return this.SignId;
@@ -219,9 +192,7 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 签署人编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignId 签署人编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignId(String SignId) {
         this.SignId = SignId;
@@ -252,10 +223,8 @@ public class SignUrlInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户姓名 
      * @return Name 用户姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -263,19 +232,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 用户姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 用户姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户手机号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户手机号码 
      * @return Mobile 用户手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMobile() {
         return this.Mobile;
@@ -283,19 +248,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 用户手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mobile 用户手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 签署参与者机构名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署参与者机构名字 
      * @return OrganizationName 签署参与者机构名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -303,9 +264,7 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 签署参与者机构名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 签署参与者机构名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
@@ -314,12 +273,10 @@ public class SignUrlInfo extends AbstractModel {
     /**
      * Get 参与者类型, 类型如下:
 **ORGANIZATION**:企业经办人
-**PERSON**: 自然人
-注意：此字段可能返回 null，表示取不到有效值。 
+**PERSON**: 自然人 
      * @return ApproverType 参与者类型, 类型如下:
 **ORGANIZATION**:企业经办人
 **PERSON**: 自然人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverType() {
         return this.ApproverType;
@@ -329,21 +286,17 @@ public class SignUrlInfo extends AbstractModel {
      * Set 参与者类型, 类型如下:
 **ORGANIZATION**:企业经办人
 **PERSON**: 自然人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverType 参与者类型, 类型如下:
 **ORGANIZATION**:企业经办人
 **PERSON**: 自然人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
     }
 
     /**
-     * Get 经办人身份证号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人身份证号 
      * @return IdCardNumber 经办人身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
@@ -351,19 +304,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 经办人身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCardNumber 经办人身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 签署链接对应流程Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署链接对应流程Id 
      * @return FlowId 签署链接对应流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -371,19 +320,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 签署链接对应流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 签署链接对应流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 企业经办人 用户在渠道的编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业经办人 用户在渠道的编号 
      * @return OpenId 企业经办人 用户在渠道的编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -391,19 +336,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 企业经办人 用户在渠道的编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 企业经办人 用户在渠道的编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 合同组签署链接对应的合同组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同组签署链接对应的合同组id 
      * @return FlowGroupId 合同组签署链接对应的合同组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
@@ -411,19 +352,15 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 合同组签署链接对应的合同组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowGroupId 合同组签署链接对应的合同组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 二维码，在生成动态签署人跳转封面页链接时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二维码，在生成动态签署人跳转封面页链接时返回 
      * @return SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignQrcodeUrl() {
         return this.SignQrcodeUrl;
@@ -431,9 +368,7 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 二维码，在生成动态签署人跳转封面页链接时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignQrcodeUrl(String SignQrcodeUrl) {
         this.SignQrcodeUrl = SignQrcodeUrl;

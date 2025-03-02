@@ -25,7 +25,6 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DesiredPodNumber")
     @Expose
@@ -41,7 +40,6 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreStartUserScript")
     @Expose
@@ -58,7 +56,6 @@ public class InstanceAdvancedSettings extends AbstractModel {
     /**
     * 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
     @Expose
@@ -66,7 +63,6 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DockerGraphPath")
     @Expose
@@ -74,7 +70,6 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserScript")
     @Expose
@@ -105,17 +100,14 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
 
     /**
-     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限 
      * @return DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDesiredPodNumber() {
         return this.DesiredPodNumber;
@@ -123,9 +115,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Set 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesiredPodNumber(Long DesiredPodNumber) {
         this.DesiredPodNumber = DesiredPodNumber;
@@ -152,10 +142,8 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效 
      * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreStartUserScript() {
         return this.PreStartUserScript;
@@ -163,9 +151,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Set base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreStartUserScript(String PreStartUserScript) {
         this.PreStartUserScript = PreStartUserScript;
@@ -193,11 +179,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。 
      * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -206,20 +190,16 @@ public class InstanceAdvancedSettings extends AbstractModel {
     /**
      * Set 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
     }
 
     /**
-     * Get dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get dockerd --graph 指定值, 默认为 /var/lib/docker 
      * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDockerGraphPath() {
         return this.DockerGraphPath;
@@ -227,19 +207,15 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Set dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDockerGraphPath(String DockerGraphPath) {
         this.DockerGraphPath = DockerGraphPath;
     }
 
     /**
-     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度 
      * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserScript() {
         return this.UserScript;
@@ -247,9 +223,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;
@@ -312,10 +286,8 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点相关的自定义参数信息 
      * @return ExtraArgs 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceExtraArgs getExtraArgs() {
         return this.ExtraArgs;
@@ -323,9 +295,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
      * Set 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraArgs 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;

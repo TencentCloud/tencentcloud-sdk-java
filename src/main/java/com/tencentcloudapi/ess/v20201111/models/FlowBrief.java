@@ -39,7 +39,6 @@ public class FlowBrief extends AbstractModel {
 
     /**
     * 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowDescription")
     @Expose
@@ -66,7 +65,6 @@ public class FlowBrief extends AbstractModel {
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowStatus")
     @Expose
@@ -74,7 +72,6 @@ public class FlowBrief extends AbstractModel {
 
     /**
     * 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -82,7 +79,6 @@ public class FlowBrief extends AbstractModel {
 
     /**
     * 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMessage")
     @Expose
@@ -90,7 +86,6 @@ public class FlowBrief extends AbstractModel {
 
     /**
     *  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -98,7 +93,6 @@ public class FlowBrief extends AbstractModel {
 
     /**
     * 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
     @Expose
@@ -137,10 +131,8 @@ public class FlowBrief extends AbstractModel {
     }
 
     /**
-     * Get 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程描述信息。 
      * @return FlowDescription 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowDescription() {
         return this.FlowDescription;
@@ -148,9 +140,7 @@ public class FlowBrief extends AbstractModel {
 
     /**
      * Set 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowDescription 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
@@ -185,8 +175,7 @@ public class FlowBrief extends AbstractModel {
 <li> **8** : 等待填写</li>
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
-<li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> **21** : 已解除</li></ul> 
      * @return FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
 <li> **1** : 待签署</li>
@@ -200,7 +189,6 @@ public class FlowBrief extends AbstractModel {
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowStatus() {
         return this.FlowStatus;
@@ -220,7 +208,6 @@ public class FlowBrief extends AbstractModel {
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
 <li> **1** : 待签署</li>
@@ -234,17 +221,14 @@ public class FlowBrief extends AbstractModel {
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowStatus(Long FlowStatus) {
         this.FlowStatus = FlowStatus;
     }
 
     /**
-     * Get 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程创建时间，格式为Unix标准时间戳（秒）。 
      * @return CreatedOn 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
@@ -252,19 +236,15 @@ public class FlowBrief extends AbstractModel {
 
     /**
      * Set 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedOn 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。 
      * @return FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMessage() {
         return this.FlowMessage;
@@ -272,19 +252,15 @@ public class FlowBrief extends AbstractModel {
 
     /**
      * Set 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMessage(String FlowMessage) {
         this.FlowMessage = FlowMessage;
     }
 
     /**
-     * Get  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。 
      * @return Creator  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -292,19 +268,15 @@ public class FlowBrief extends AbstractModel {
 
     /**
      * Set  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。 
      * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
         return this.Deadline;
@@ -312,9 +284,7 @@ public class FlowBrief extends AbstractModel {
 
     /**
      * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;

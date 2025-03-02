@@ -74,7 +74,6 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
     * service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeProxyMode")
     @Expose
@@ -82,7 +81,6 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
     * 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCIDR")
     @Expose
@@ -98,7 +96,6 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
     * 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreServiceCIDRConflict")
     @Expose
@@ -106,7 +103,6 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
     * 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDualStack")
     @Expose
@@ -114,7 +110,6 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
     * 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6ServiceCIDR")
     @Expose
@@ -123,7 +118,6 @@ public class ClusterNetworkSettings extends AbstractModel {
     /**
     * 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CiliumMode")
     @Expose
@@ -242,10 +236,8 @@ public class ClusterNetworkSettings extends AbstractModel {
     }
 
     /**
-     * Get service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get service的网络模式，当前参数只适用于ipvs+bpf模式 
      * @return KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
@@ -253,19 +245,15 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Set service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;
     }
 
     /**
-     * Get 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceCIDR() {
         return this.ServiceCIDR;
@@ -273,9 +261,7 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Set 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCIDR(String ServiceCIDR) {
         this.ServiceCIDR = ServiceCIDR;
@@ -302,10 +288,8 @@ public class ClusterNetworkSettings extends AbstractModel {
     }
 
     /**
-     * Get 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略 
      * @return IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIgnoreServiceCIDRConflict() {
         return this.IgnoreServiceCIDRConflict;
@@ -313,19 +297,15 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Set 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreServiceCIDRConflict(Boolean IgnoreServiceCIDRConflict) {
         this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
     }
 
     /**
-     * Get 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。 
      * @return IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDualStack() {
         return this.IsDualStack;
@@ -333,19 +313,15 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Set 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDualStack(Boolean IsDualStack) {
         this.IsDualStack = IsDualStack;
     }
 
     /**
-     * Get 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于分配service的IP range，由系统自动分配 
      * @return Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpv6ServiceCIDR() {
         return this.Ipv6ServiceCIDR;
@@ -353,9 +329,7 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Set 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6ServiceCIDR(String Ipv6ServiceCIDR) {
         this.Ipv6ServiceCIDR = Ipv6ServiceCIDR;
@@ -363,11 +337,9 @@ public class ClusterNetworkSettings extends AbstractModel {
 
     /**
      * Get 集群Cilium Mode配置
-- clusterIP
-注意：此字段可能返回 null，表示取不到有效值。 
+- clusterIP 
      * @return CiliumMode 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCiliumMode() {
         return this.CiliumMode;
@@ -376,10 +348,8 @@ public class ClusterNetworkSettings extends AbstractModel {
     /**
      * Set 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CiliumMode 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiliumMode(String CiliumMode) {
         this.CiliumMode = CiliumMode;

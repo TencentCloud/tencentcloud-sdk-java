@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBlueprintsRequest extends AbstractModel {
 
     /**
-    * 镜像 ID 列表。
+    * 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
     */
     @SerializedName("BlueprintIds")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeBlueprintsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 镜像 ID 列表。 
-     * @return BlueprintIds 镜像 ID 列表。
+     * Get 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。 
+     * @return BlueprintIds 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      */
     public String [] getBlueprintIds() {
         return this.BlueprintIds;
     }
 
     /**
-     * Set 镜像 ID 列表。
-     * @param BlueprintIds 镜像 ID 列表。
+     * Set 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
+     * @param BlueprintIds 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      */
     public void setBlueprintIds(String [] BlueprintIds) {
         this.BlueprintIds = BlueprintIds;

@@ -27,7 +27,6 @@ public class ApproverItem extends AbstractModel {
     * 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignId")
     @Expose
@@ -37,7 +36,6 @@ public class ApproverItem extends AbstractModel {
     * 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -45,7 +43,6 @@ public class ApproverItem extends AbstractModel {
 
     /**
     * 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverRoleName")
     @Expose
@@ -54,12 +51,10 @@ public class ApproverItem extends AbstractModel {
     /**
      * Get 签署方唯一编号
 
-在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。 
+在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方 
      * @return SignId 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignId() {
         return this.SignId;
@@ -69,11 +64,9 @@ public class ApproverItem extends AbstractModel {
      * Set 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignId 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignId(String SignId) {
         this.SignId = SignId;
@@ -82,12 +75,10 @@ public class ApproverItem extends AbstractModel {
     /**
      * Get 签署方角色编号
 
-在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。 
+在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方 
      * @return RecipientId 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -97,21 +88,17 @@ public class ApproverItem extends AbstractModel {
      * Set 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方角色名称 
      * @return ApproverRoleName 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverRoleName() {
         return this.ApproverRoleName;
@@ -119,9 +106,7 @@ public class ApproverItem extends AbstractModel {
 
     /**
      * Set 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverRoleName 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverRoleName(String ApproverRoleName) {
         this.ApproverRoleName = ApproverRoleName;

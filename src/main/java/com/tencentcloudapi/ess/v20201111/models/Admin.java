@@ -25,7 +25,6 @@ public class Admin extends AbstractModel {
 
     /**
     * 超管名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -35,17 +34,14 @@ public class Admin extends AbstractModel {
     * 超管手机号，打码显示
 示例值：138****1569
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-     * Get 超管名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超管名 
      * @return Name 超管名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -53,9 +49,7 @@ public class Admin extends AbstractModel {
 
     /**
      * Set 超管名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 超管名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -64,12 +58,10 @@ public class Admin extends AbstractModel {
     /**
      * Get 超管手机号，打码显示
 示例值：138****1569
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Mobile 超管手机号，打码显示
 示例值：138****1569
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMobile() {
         return this.Mobile;
@@ -79,11 +71,9 @@ public class Admin extends AbstractModel {
      * Set 超管手机号，打码显示
 示例值：138****1569
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mobile 超管手机号，打码显示
 示例值：138****1569
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

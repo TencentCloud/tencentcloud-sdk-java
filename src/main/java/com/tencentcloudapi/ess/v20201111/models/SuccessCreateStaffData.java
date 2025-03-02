@@ -46,7 +46,6 @@ public class SuccessCreateStaffData extends AbstractModel {
 
     /**
     * 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -115,10 +114,8 @@ public class SuccessCreateStaffData extends AbstractModel {
     }
 
     /**
-     * Get 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提示，当创建已存在未实名用户时，该字段有值 
      * @return Note 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -126,9 +123,7 @@ public class SuccessCreateStaffData extends AbstractModel {
 
     /**
      * Set 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;

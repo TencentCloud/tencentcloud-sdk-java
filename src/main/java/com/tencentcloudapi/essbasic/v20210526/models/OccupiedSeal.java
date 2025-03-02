@@ -67,7 +67,6 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
     * 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -204,10 +203,8 @@ public class OccupiedSeal extends AbstractModel {
     }
 
     /**
-     * Get 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核失败原因 
      * @return FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -215,9 +212,7 @@ public class OccupiedSeal extends AbstractModel {
 
     /**
      * Set 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;

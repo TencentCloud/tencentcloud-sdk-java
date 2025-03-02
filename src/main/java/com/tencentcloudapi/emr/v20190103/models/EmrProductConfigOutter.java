@@ -136,7 +136,7 @@ public class EmrProductConfigOutter extends AbstractModel {
     private Boolean SecurityOn;
 
     /**
-    * 安全组名称
+    * 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroup")
@@ -160,7 +160,7 @@ public class EmrProductConfigOutter extends AbstractModel {
     private String ApplicationRole;
 
     /**
-    * 安全组
+    * 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroups")
@@ -456,9 +456,9 @@ public class EmrProductConfigOutter extends AbstractModel {
     }
 
     /**
-     * Get 安全组名称
+     * Get 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroup 安全组名称
+     * @return SecurityGroup 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroup() {
@@ -466,9 +466,9 @@ public class EmrProductConfigOutter extends AbstractModel {
     }
 
     /**
-     * Set 安全组名称
+     * Set 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroup 安全组名称
+     * @param SecurityGroup 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroup(String SecurityGroup) {
@@ -516,9 +516,9 @@ public class EmrProductConfigOutter extends AbstractModel {
     }
 
     /**
-     * Get 安全组
+     * Get 安全组id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroups 安全组
+     * @return SecurityGroups 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroups() {
@@ -526,9 +526,9 @@ public class EmrProductConfigOutter extends AbstractModel {
     }
 
     /**
-     * Set 安全组
+     * Set 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroups 安全组
+     * @param SecurityGroups 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroups(String [] SecurityGroups) {

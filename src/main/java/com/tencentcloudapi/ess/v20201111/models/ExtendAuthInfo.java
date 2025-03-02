@@ -61,7 +61,6 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
     * 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUserId")
     @Expose
@@ -69,7 +68,6 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
     * 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateOn")
     @Expose
@@ -77,7 +75,6 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
     * 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthUserList")
     @Expose
@@ -192,10 +189,8 @@ public class ExtendAuthInfo extends AbstractModel {
     }
 
     /**
-     * Get 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。 
      * @return OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUserId() {
         return this.OperatorUserId;
@@ -203,19 +198,15 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
      * Set 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUserId(String OperatorUserId) {
         this.OperatorUserId = OperatorUserId;
     }
 
     /**
-     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。 
      * @return OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateOn() {
         return this.OperateOn;
@@ -223,19 +214,15 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
      * Set 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateOn(Long OperateOn) {
         this.OperateOn = OperateOn;
     }
 
     /**
-     * Get 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该扩展服务若可以授权，此参数对应授权人员的列表 
      * @return HasAuthUserList 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HasAuthUser [] getHasAuthUserList() {
         return this.HasAuthUserList;
@@ -243,9 +230,7 @@ public class ExtendAuthInfo extends AbstractModel {
 
     /**
      * Set 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasAuthUserList 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthUserList(HasAuthUser [] HasAuthUserList) {
         this.HasAuthUserList = HasAuthUserList;

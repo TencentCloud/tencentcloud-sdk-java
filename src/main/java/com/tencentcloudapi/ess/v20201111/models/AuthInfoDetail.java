@@ -25,7 +25,6 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthUserList")
     @Expose
@@ -49,7 +46,6 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthOrganizationList")
     @Expose
@@ -57,7 +53,6 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthUserTotal")
     @Expose
@@ -65,17 +60,14 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
     * 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthOrganizationTotal")
     @Expose
     private Long AuthOrganizationTotal;
 
     /**
-     * Get 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展服务类型，和入参一致 
      * @return Type 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -83,19 +75,15 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展服务名称 
      * @return Name 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -103,19 +91,15 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权员工列表 
      * @return HasAuthUserList 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HasAuthUser [] getHasAuthUserList() {
         return this.HasAuthUserList;
@@ -123,19 +107,15 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasAuthUserList 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthUserList(HasAuthUser [] HasAuthUserList) {
         this.HasAuthUserList = HasAuthUserList;
     }
 
     /**
-     * Get 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业列表（企业自动签时，该字段有值） 
      * @return HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HasAuthOrganization [] getHasAuthOrganizationList() {
         return this.HasAuthOrganizationList;
@@ -143,19 +123,15 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthOrganizationList(HasAuthOrganization [] HasAuthOrganizationList) {
         this.HasAuthOrganizationList = HasAuthOrganizationList;
     }
 
     /**
-     * Get 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权员工列表总数 
      * @return AuthUserTotal 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthUserTotal() {
         return this.AuthUserTotal;
@@ -163,19 +139,15 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthUserTotal 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthUserTotal(Long AuthUserTotal) {
         this.AuthUserTotal = AuthUserTotal;
     }
 
     /**
-     * Get 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业列表总数 
      * @return AuthOrganizationTotal 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthOrganizationTotal() {
         return this.AuthOrganizationTotal;
@@ -183,9 +155,7 @@ public class AuthInfoDetail extends AbstractModel {
 
     /**
      * Set 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthOrganizationTotal 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthOrganizationTotal(Long AuthOrganizationTotal) {
         this.AuthOrganizationTotal = AuthOrganizationTotal;

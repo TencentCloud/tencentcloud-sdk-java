@@ -154,6 +154,13 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     private Boolean ResponseBuffering;
 
     /**
+    * 增加优先级
+    */
+    @SerializedName("RegexPriority")
+    @Expose
+    private Long RegexPriority;
+
+    /**
      * Get 网关ID 
      * @return GatewayId 网关ID
      */
@@ -485,6 +492,22 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.ResponseBuffering = ResponseBuffering;
     }
 
+    /**
+     * Get 增加优先级 
+     * @return RegexPriority 增加优先级
+     */
+    public Long getRegexPriority() {
+        return this.RegexPriority;
+    }
+
+    /**
+     * Set 增加优先级
+     * @param RegexPriority 增加优先级
+     */
+    public void setRegexPriority(Long RegexPriority) {
+        this.RegexPriority = RegexPriority;
+    }
+
     public ModifyCloudNativeAPIGatewayRouteRequest() {
     }
 
@@ -559,6 +582,9 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         if (source.ResponseBuffering != null) {
             this.ResponseBuffering = new Boolean(source.ResponseBuffering);
         }
+        if (source.RegexPriority != null) {
+            this.RegexPriority = new Long(source.RegexPriority);
+        }
     }
 
 
@@ -582,6 +608,7 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
+        this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
 
     }
 }

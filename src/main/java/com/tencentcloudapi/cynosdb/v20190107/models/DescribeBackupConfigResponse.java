@@ -69,6 +69,14 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private String LogicCrossRegionsConfigUpdateTime;
 
     /**
+    * 自动逻辑备份配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogicBackupConfig")
+    @Expose
+    private LogicBackupConfigInfo LogicBackupConfig;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -184,6 +192,26 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 自动逻辑备份配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogicBackupConfig 自动逻辑备份配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogicBackupConfigInfo getLogicBackupConfig() {
+        return this.LogicBackupConfig;
+    }
+
+    /**
+     * Set 自动逻辑备份配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogicBackupConfig 自动逻辑备份配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
+        this.LogicBackupConfig = LogicBackupConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -228,6 +256,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         if (source.LogicCrossRegionsConfigUpdateTime != null) {
             this.LogicCrossRegionsConfigUpdateTime = new String(source.LogicCrossRegionsConfigUpdateTime);
         }
+        if (source.LogicBackupConfig != null) {
+            this.LogicBackupConfig = new LogicBackupConfigInfo(source.LogicBackupConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -244,6 +275,7 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
+        this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

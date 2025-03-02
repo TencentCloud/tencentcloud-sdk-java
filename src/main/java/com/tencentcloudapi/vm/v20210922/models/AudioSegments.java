@@ -27,7 +27,6 @@ public class AudioSegments extends AbstractModel {
     * 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetTime")
     @Expose
@@ -35,21 +34,25 @@ public class AudioSegments extends AbstractModel {
 
     /**
     * 结果集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
     private AudioResult Result;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
      * Get 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。 
+直播流：该值为时间戳，例如：1594650717 
      * @return OffsetTime 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOffsetTime() {
         return this.OffsetTime;
@@ -59,21 +62,17 @@ public class AudioSegments extends AbstractModel {
      * Set 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetTime 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetTime(String OffsetTime) {
         this.OffsetTime = OffsetTime;
     }
 
     /**
-     * Get 结果集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果集 
      * @return Result 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResult getResult() {
         return this.Result;
@@ -81,12 +80,26 @@ public class AudioSegments extends AbstractModel {
 
     /**
      * Set 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(AudioResult Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreatedAt 创建时间
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedAt 创建时间
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
     }
 
     public AudioSegments() {
@@ -103,6 +116,9 @@ public class AudioSegments extends AbstractModel {
         if (source.Result != null) {
             this.Result = new AudioResult(source.Result);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
     }
 
 
@@ -112,6 +128,7 @@ public class AudioSegments extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
 
     }
 }

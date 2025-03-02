@@ -25,7 +25,6 @@ public class ChannelRole extends AbstractModel {
 
     /**
     * 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleId")
     @Expose
@@ -33,7 +32,6 @@ public class ChannelRole extends AbstractModel {
 
     /**
     * 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleName")
     @Expose
@@ -50,17 +48,14 @@ public class ChannelRole extends AbstractModel {
 
     /**
     * 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PermissionGroups")
     @Expose
     private PermissionGroup [] PermissionGroups;
 
     /**
-     * Get 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色ID,为32位字符串 
      * @return RoleId 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleId() {
         return this.RoleId;
@@ -68,19 +63,15 @@ public class ChannelRole extends AbstractModel {
 
     /**
      * Set 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleId 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色的名称 
      * @return RoleName 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleName() {
         return this.RoleName;
@@ -88,9 +79,7 @@ public class ChannelRole extends AbstractModel {
 
     /**
      * Set 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleName 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
@@ -121,10 +110,8 @@ public class ChannelRole extends AbstractModel {
     }
 
     /**
-     * Get 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此角色对应的权限列表 
      * @return PermissionGroups 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PermissionGroup [] getPermissionGroups() {
         return this.PermissionGroups;
@@ -132,9 +119,7 @@ public class ChannelRole extends AbstractModel {
 
     /**
      * Set 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PermissionGroups 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissionGroups(PermissionGroup [] PermissionGroups) {
         this.PermissionGroups = PermissionGroups;

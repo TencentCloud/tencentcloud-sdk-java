@@ -33,7 +33,6 @@ public class ClusterAsGroupOption extends AbstractModel {
 
     /**
     * 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expander")
     @Expose
@@ -148,10 +147,8 @@ public class ClusterAsGroupOption extends AbstractModel {
     }
 
     /**
-     * Get 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random) 
      * @return Expander 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpander() {
         return this.Expander;
@@ -159,9 +156,7 @@ public class ClusterAsGroupOption extends AbstractModel {
 
     /**
      * Set 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expander 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpander(String Expander) {
         this.Expander = Expander;

@@ -32,7 +32,6 @@ public class ManagePortraitRiskOutput extends AbstractModel {
 
     /**
     * 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -63,10 +62,8 @@ public class ManagePortraitRiskOutput extends AbstractModel {
     }
 
     /**
-     * Get 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回码对应的信息 
      * @return Message 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -74,9 +71,7 @@ public class ManagePortraitRiskOutput extends AbstractModel {
 
     /**
      * Set 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

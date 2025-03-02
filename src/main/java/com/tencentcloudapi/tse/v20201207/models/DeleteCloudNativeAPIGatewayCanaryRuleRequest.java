@@ -45,6 +45,13 @@ public class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
     private Long Priority;
 
     /**
+    * 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+    */
+    @SerializedName("PriorityList")
+    @Expose
+    private Long [] PriorityList;
+
+    /**
      * Get 网关 ID 
      * @return GatewayId 网关 ID
      */
@@ -92,6 +99,22 @@ public class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         this.Priority = Priority;
     }
 
+    /**
+     * Get 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数 
+     * @return PriorityList 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+     */
+    public Long [] getPriorityList() {
+        return this.PriorityList;
+    }
+
+    /**
+     * Set 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+     * @param PriorityList 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+     */
+    public void setPriorityList(Long [] PriorityList) {
+        this.PriorityList = PriorityList;
+    }
+
     public DeleteCloudNativeAPIGatewayCanaryRuleRequest() {
     }
 
@@ -109,6 +132,12 @@ public class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
         }
+        if (source.PriorityList != null) {
+            this.PriorityList = new Long[source.PriorityList.length];
+            for (int i = 0; i < source.PriorityList.length; i++) {
+                this.PriorityList[i] = new Long(source.PriorityList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamArraySimple(map, prefix + "PriorityList.", this.PriorityList);
 
     }
 }

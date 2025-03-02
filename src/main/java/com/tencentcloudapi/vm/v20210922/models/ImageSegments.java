@@ -40,6 +40,20 @@ public class ImageSegments extends AbstractModel {
     private ImageResult Result;
 
     /**
+    * 时间
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+    * 截帧毫秒时间
+    */
+    @SerializedName("OffsetusTime")
+    @Expose
+    private String OffsetusTime;
+
+    /**
      * Get 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717 
@@ -79,6 +93,38 @@ public class ImageSegments extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 时间 
+     * @return CreatedAt 时间
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 时间
+     * @param CreatedAt 时间
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get 截帧毫秒时间 
+     * @return OffsetusTime 截帧毫秒时间
+     */
+    public String getOffsetusTime() {
+        return this.OffsetusTime;
+    }
+
+    /**
+     * Set 截帧毫秒时间
+     * @param OffsetusTime 截帧毫秒时间
+     */
+    public void setOffsetusTime(String OffsetusTime) {
+        this.OffsetusTime = OffsetusTime;
+    }
+
     public ImageSegments() {
     }
 
@@ -93,6 +139,12 @@ public class ImageSegments extends AbstractModel {
         if (source.Result != null) {
             this.Result = new ImageResult(source.Result);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.OffsetusTime != null) {
+            this.OffsetusTime = new String(source.OffsetusTime);
+        }
     }
 
 
@@ -102,6 +154,8 @@ public class ImageSegments extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "OffsetusTime", this.OffsetusTime);
 
     }
 }

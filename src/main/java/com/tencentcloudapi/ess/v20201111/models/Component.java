@@ -334,7 +334,6 @@ ChildrenComponent结构体定义:
     /**
     * **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetX")
     @Expose
@@ -343,7 +342,6 @@ ChildrenComponent结构体定义:
     /**
     * **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetY")
     @Expose
@@ -393,7 +391,6 @@ ChildrenComponent结构体定义:
     * **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockComponentValue")
     @Expose
@@ -403,7 +400,6 @@ ChildrenComponent结构体定义:
     * **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForbidMoveAndDelete")
     @Expose
@@ -1486,11 +1482,9 @@ ChildrenComponent结构体定义:
 
     /**
      * Get **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
-注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。 
+注意： `向左调整设置为负数， 向右调整设置成正数` 
      * @return OffsetX **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOffsetX() {
         return this.OffsetX;
@@ -1499,10 +1493,8 @@ ChildrenComponent结构体定义:
     /**
      * Set **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetX **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetX(Float OffsetX) {
         this.OffsetX = OffsetX;
@@ -1510,11 +1502,9 @@ ChildrenComponent结构体定义:
 
     /**
      * Get **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
-注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。 
+注意： `向上调整设置为负数， 向下调整设置成正数` 
      * @return OffsetY **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOffsetY() {
         return this.OffsetY;
@@ -1523,10 +1513,8 @@ ChildrenComponent结构体定义:
     /**
      * Set **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetY **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;
@@ -1647,12 +1635,10 @@ ChildrenComponent结构体定义:
     /**
      * Get **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>true：锁定控件值，在页面编辑控件值</li></ul> 
      * @return LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLockComponentValue() {
         return this.LockComponentValue;
@@ -1662,11 +1648,9 @@ ChildrenComponent结构体定义:
      * Set **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockComponentValue(Boolean LockComponentValue) {
         this.LockComponentValue = LockComponentValue;
@@ -1675,12 +1659,10 @@ ChildrenComponent结构体定义:
     /**
      * Get **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> <b>true</b> : 可以移动和删除控件</li></ul> 
      * @return ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getForbidMoveAndDelete() {
         return this.ForbidMoveAndDelete;
@@ -1690,11 +1672,9 @@ ChildrenComponent结构体定义:
      * Set **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForbidMoveAndDelete(Boolean ForbidMoveAndDelete) {
         this.ForbidMoveAndDelete = ForbidMoveAndDelete;

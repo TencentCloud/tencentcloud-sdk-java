@@ -25,7 +25,6 @@ public class SealInfo extends AbstractModel {
 
     /**
     * 印章ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SealId")
     @Expose
@@ -36,7 +35,6 @@ public class SealInfo extends AbstractModel {
 ORGANIZATIONSEAL：企业印章；
 OFFICIAL：企业公章；
 CONTRACT：合同专用章
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SealType")
     @Expose
@@ -44,17 +42,14 @@ CONTRACT：合同专用章
 
     /**
     * 印章名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-     * Get 印章ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章ID 
      * @return SealId 印章ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSealId() {
         return this.SealId;
@@ -62,9 +57,7 @@ CONTRACT：合同专用章
 
     /**
      * Set 印章ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SealId 印章ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
@@ -74,13 +67,11 @@ CONTRACT：合同专用章
      * Get 印章类型。LEGAL_PERSON_SEAL: 法定代表人章；
 ORGANIZATIONSEAL：企业印章；
 OFFICIAL：企业公章；
-CONTRACT：合同专用章
-注意：此字段可能返回 null，表示取不到有效值。 
+CONTRACT：合同专用章 
      * @return SealType 印章类型。LEGAL_PERSON_SEAL: 法定代表人章；
 ORGANIZATIONSEAL：企业印章；
 OFFICIAL：企业公章；
 CONTRACT：合同专用章
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSealType() {
         return this.SealType;
@@ -91,22 +82,18 @@ CONTRACT：合同专用章
 ORGANIZATIONSEAL：企业印章；
 OFFICIAL：企业公章；
 CONTRACT：合同专用章
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SealType 印章类型。LEGAL_PERSON_SEAL: 法定代表人章；
 ORGANIZATIONSEAL：企业印章；
 OFFICIAL：企业公章；
 CONTRACT：合同专用章
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
     }
 
     /**
-     * Get 印章名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 印章名称 
      * @return SealName 印章名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSealName() {
         return this.SealName;
@@ -114,9 +101,7 @@ CONTRACT：合同专用章
 
     /**
      * Set 印章名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SealName 印章名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;

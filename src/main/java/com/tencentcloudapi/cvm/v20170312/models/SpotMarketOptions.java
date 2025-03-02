@@ -25,7 +25,6 @@ public class SpotMarketOptions extends AbstractModel {
 
     /**
     * 竞价出价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPrice")
     @Expose
@@ -33,17 +32,14 @@ public class SpotMarketOptions extends AbstractModel {
 
     /**
     * 竞价请求类型，当前仅支持类型：one-time
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpotInstanceType")
     @Expose
     private String SpotInstanceType;
 
     /**
-     * Get 竞价出价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价出价 
      * @return MaxPrice 竞价出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxPrice() {
         return this.MaxPrice;
@@ -51,19 +47,15 @@ public class SpotMarketOptions extends AbstractModel {
 
     /**
      * Set 竞价出价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPrice 竞价出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPrice(String MaxPrice) {
         this.MaxPrice = MaxPrice;
     }
 
     /**
-     * Get 竞价请求类型，当前仅支持类型：one-time
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价请求类型，当前仅支持类型：one-time 
      * @return SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpotInstanceType() {
         return this.SpotInstanceType;
@@ -71,9 +63,7 @@ public class SpotMarketOptions extends AbstractModel {
 
     /**
      * Set 竞价请求类型，当前仅支持类型：one-time
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpotInstanceType(String SpotInstanceType) {
         this.SpotInstanceType = SpotInstanceType;

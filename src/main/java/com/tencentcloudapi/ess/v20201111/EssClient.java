@@ -372,6 +372,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *生成员工信息变更链接，当前仅支持变更手机号
+
+注: 
+1. 目前仅支持修改员工手机号，待修改员工必须已经实名且在职
+2. 仅支持返回小程序链接
+     * @param req CreateEmployeeChangeUrlRequest
+     * @return CreateEmployeeChangeUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmployeeChangeUrlResponse CreateEmployeeChangeUrl(CreateEmployeeChangeUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEmployeeChangeUrl", CreateEmployeeChangeUrlResponse.class);
+    }
+
+    /**
      *该接口用于获取个人授权执业章给企业的微信二维码，需要个人用户通过微信扫码。
 
 扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。

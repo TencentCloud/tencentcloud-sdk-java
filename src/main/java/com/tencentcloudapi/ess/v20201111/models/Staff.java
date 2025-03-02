@@ -47,7 +47,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 用户邮箱。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
     @Expose
@@ -56,7 +55,6 @@ public class Staff extends AbstractModel {
     /**
     * 用户在第三方平台ID。
 注：`如需在此接口提醒员工实名，该参数不传。`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -65,7 +63,6 @@ public class Staff extends AbstractModel {
     /**
     * 员工角色信息。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Roles")
     @Expose
@@ -73,7 +70,6 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工部门信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -98,7 +94,6 @@ public class Staff extends AbstractModel {
     /**
     * 员工实名时间戳，单位秒。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifiedOn")
     @Expose
@@ -108,7 +103,6 @@ public class Staff extends AbstractModel {
     * 员工是否离职：
 <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuiteJob")
     @Expose
@@ -133,7 +127,6 @@ public class Staff extends AbstractModel {
     /**
     * 企业微信用户账号ID。
 注：`仅企微类型的企业创建员工接口支持该字段。`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeworkOpenId")
     @Expose
@@ -192,10 +185,8 @@ public class Staff extends AbstractModel {
     }
 
     /**
-     * Get 用户邮箱。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户邮箱。 
      * @return Email 用户邮箱。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
         return this.Email;
@@ -203,9 +194,7 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 用户邮箱。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Email 用户邮箱。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
         this.Email = Email;
@@ -213,11 +202,9 @@ public class Staff extends AbstractModel {
 
     /**
      * Get 用户在第三方平台ID。
-注：`如需在此接口提醒员工实名，该参数不传。`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`如需在此接口提醒员工实名，该参数不传。` 
      * @return OpenId 用户在第三方平台ID。
 注：`如需在此接口提醒员工实名，该参数不传。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -226,10 +213,8 @@ public class Staff extends AbstractModel {
     /**
      * Set 用户在第三方平台ID。
 注：`如需在此接口提醒员工实名，该参数不传。`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 用户在第三方平台ID。
 注：`如需在此接口提醒员工实名，该参数不传。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
@@ -237,11 +222,9 @@ public class Staff extends AbstractModel {
 
     /**
      * Get 员工角色信息。
-注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`创建和更新场景无需填写。` 
      * @return Roles 员工角色信息。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StaffRole [] getRoles() {
         return this.Roles;
@@ -250,20 +233,16 @@ public class Staff extends AbstractModel {
     /**
      * Set 员工角色信息。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Roles 员工角色信息。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoles(StaffRole [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 员工部门信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工部门信息。 
      * @return Department 员工部门信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Department getDepartment() {
         return this.Department;
@@ -271,9 +250,7 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工部门信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 员工部门信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
@@ -321,11 +298,9 @@ public class Staff extends AbstractModel {
 
     /**
      * Get 员工实名时间戳，单位秒。
-注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`创建和更新场景无需填写。` 
      * @return VerifiedOn 员工实名时间戳，单位秒。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVerifiedOn() {
         return this.VerifiedOn;
@@ -334,10 +309,8 @@ public class Staff extends AbstractModel {
     /**
      * Set 员工实名时间戳，单位秒。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifiedOn 员工实名时间戳，单位秒。
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifiedOn(Long VerifiedOn) {
         this.VerifiedOn = VerifiedOn;
@@ -346,12 +319,10 @@ public class Staff extends AbstractModel {
     /**
      * Get 员工是否离职：
 <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
-注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`创建和更新场景无需填写。` 
      * @return QuiteJob 员工是否离职：
 <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuiteJob() {
         return this.QuiteJob;
@@ -361,11 +332,9 @@ public class Staff extends AbstractModel {
      * Set 员工是否离职：
 <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuiteJob 员工是否离职：
 <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
 注：`创建和更新场景无需填写。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuiteJob(Long QuiteJob) {
         this.QuiteJob = QuiteJob;
@@ -413,11 +382,9 @@ public class Staff extends AbstractModel {
 
     /**
      * Get 企业微信用户账号ID。
-注：`仅企微类型的企业创建员工接口支持该字段。`
-注意：此字段可能返回 null，表示取不到有效值。 
+注：`仅企微类型的企业创建员工接口支持该字段。` 
      * @return WeworkOpenId 企业微信用户账号ID。
 注：`仅企微类型的企业创建员工接口支持该字段。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeworkOpenId() {
         return this.WeworkOpenId;
@@ -426,10 +393,8 @@ public class Staff extends AbstractModel {
     /**
      * Set 企业微信用户账号ID。
 注：`仅企微类型的企业创建员工接口支持该字段。`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WeworkOpenId 企业微信用户账号ID。
 注：`仅企微类型的企业创建员工接口支持该字段。`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeworkOpenId(String WeworkOpenId) {
         this.WeworkOpenId = WeworkOpenId;

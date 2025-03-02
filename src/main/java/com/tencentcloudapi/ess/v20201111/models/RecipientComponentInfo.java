@@ -25,7 +25,6 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
     * 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -38,7 +37,6 @@ public class RecipientComponentInfo extends AbstractModel {
 <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
 <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientFillStatus")
     @Expose
@@ -48,7 +46,6 @@ public class RecipientComponentInfo extends AbstractModel {
     * 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPromoter")
     @Expose
@@ -56,17 +53,14 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
     * 改参与方填写控件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
     @Expose
     private FilledComponent [] Components;
 
     /**
-     * Get 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方 
      * @return RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -74,9 +68,7 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Set 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -88,15 +80,13 @@ public class RecipientComponentInfo extends AbstractModel {
 <li>**空值** : 此参与方没有填写控件</li>
 <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
 <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return RecipientFillStatus 参与方填写状态
 <ul>
 <li>**空值** : 此参与方没有填写控件</li>
 <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
 <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientFillStatus() {
         return this.RecipientFillStatus;
@@ -109,14 +99,12 @@ public class RecipientComponentInfo extends AbstractModel {
 <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
 <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientFillStatus 参与方填写状态
 <ul>
 <li>**空值** : 此参与方没有填写控件</li>
 <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
 <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientFillStatus(String RecipientFillStatus) {
         this.RecipientFillStatus = RecipientFillStatus;
@@ -125,12 +113,10 @@ public class RecipientComponentInfo extends AbstractModel {
     /**
      * Get 是否为发起方
 <ul><li>true-发起方</li>
-<li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>false-参与方</li></ul> 
      * @return IsPromoter 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPromoter() {
         return this.IsPromoter;
@@ -140,21 +126,17 @@ public class RecipientComponentInfo extends AbstractModel {
      * Set 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPromoter 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPromoter(Boolean IsPromoter) {
         this.IsPromoter = IsPromoter;
     }
 
     /**
-     * Get 改参与方填写控件信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 改参与方填写控件信息列表 
      * @return Components 改参与方填写控件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilledComponent [] getComponents() {
         return this.Components;
@@ -162,9 +144,7 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Set 改参与方填写控件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Components 改参与方填写控件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(FilledComponent [] Components) {
         this.Components = Components;

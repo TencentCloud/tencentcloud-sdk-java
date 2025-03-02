@@ -32,7 +32,6 @@ public class UsageDetail extends AbstractModel {
 
     /**
     * 子客企业名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
@@ -40,7 +39,6 @@ public class UsageDetail extends AbstractModel {
 
     /**
     * 对应的消耗日期, **如果是汇总数据则为1970-01-01**
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -55,7 +53,6 @@ public class UsageDetail extends AbstractModel {
 
     /**
     * 撤回合同数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cancel")
     @Expose
@@ -63,7 +60,6 @@ public class UsageDetail extends AbstractModel {
 
     /**
     * 消耗渠道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowChannel")
     @Expose
@@ -86,10 +82,8 @@ public class UsageDetail extends AbstractModel {
     }
 
     /**
-     * Get 子客企业名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子客企业名 
      * @return ProxyOrganizationName 子客企业名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
@@ -97,19 +91,15 @@ public class UsageDetail extends AbstractModel {
 
     /**
      * Set 子客企业名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyOrganizationName 子客企业名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;
     }
 
     /**
-     * Get 对应的消耗日期, **如果是汇总数据则为1970-01-01**
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应的消耗日期, **如果是汇总数据则为1970-01-01** 
      * @return Date 对应的消耗日期, **如果是汇总数据则为1970-01-01**
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -117,9 +107,7 @@ public class UsageDetail extends AbstractModel {
 
     /**
      * Set 对应的消耗日期, **如果是汇总数据则为1970-01-01**
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 对应的消耗日期, **如果是汇总数据则为1970-01-01**
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -142,10 +130,8 @@ public class UsageDetail extends AbstractModel {
     }
 
     /**
-     * Get 撤回合同数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 撤回合同数量 
      * @return Cancel 撤回合同数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCancel() {
         return this.Cancel;
@@ -153,19 +139,15 @@ public class UsageDetail extends AbstractModel {
 
     /**
      * Set 撤回合同数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cancel 撤回合同数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCancel(Long Cancel) {
         this.Cancel = Cancel;
     }
 
     /**
-     * Get 消耗渠道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗渠道 
      * @return FlowChannel 消耗渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowChannel() {
         return this.FlowChannel;
@@ -173,9 +155,7 @@ public class UsageDetail extends AbstractModel {
 
     /**
      * Set 消耗渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowChannel 消耗渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowChannel(String FlowChannel) {
         this.FlowChannel = FlowChannel;

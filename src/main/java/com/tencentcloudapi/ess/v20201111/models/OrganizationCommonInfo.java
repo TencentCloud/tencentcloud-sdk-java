@@ -27,7 +27,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     * 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -36,7 +35,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniformSocialCreditCode")
     @Expose
@@ -45,7 +43,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalName")
     @Expose
@@ -53,7 +50,6 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
     * 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalIdCardType")
     @Expose
@@ -61,7 +57,6 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
     * 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalIdCardNumber")
     @Expose
@@ -70,7 +65,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminName")
     @Expose
@@ -79,7 +73,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminMobile")
     @Expose
@@ -88,7 +81,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminIdCardType")
     @Expose
@@ -97,7 +89,6 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
     * 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminIdCardNumber")
     @Expose
@@ -105,7 +96,6 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
     * 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldAdminName")
     @Expose
@@ -113,7 +103,6 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
     * 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldAdminMobile")
     @Expose
@@ -136,12 +125,10 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Get 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果名称中包含英文括号()，请使用中文括号（）代替。 
      * @return OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -151,11 +138,9 @@ public class OrganizationCommonInfo extends AbstractModel {
      * Set 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
@@ -163,11 +148,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。 
      * @return UniformSocialCreditCode 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniformSocialCreditCode() {
         return this.UniformSocialCreditCode;
@@ -176,10 +159,8 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniformSocialCreditCode 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
         this.UniformSocialCreditCode = UniformSocialCreditCode;
@@ -187,11 +168,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。 
      * @return LegalName 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalName() {
         return this.LegalName;
@@ -200,20 +179,16 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalName 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalName(String LegalName) {
         this.LegalName = LegalName;
     }
 
     /**
-     * Get 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织机构法人的证件类型 
      * @return LegalIdCardType 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalIdCardType() {
         return this.LegalIdCardType;
@@ -221,19 +196,15 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Set 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalIdCardType 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalIdCardType(String LegalIdCardType) {
         this.LegalIdCardType = LegalIdCardType;
     }
 
     /**
-     * Get 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织机构法人的证件号码 
      * @return LegalIdCardNumber 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalIdCardNumber() {
         return this.LegalIdCardNumber;
@@ -241,9 +212,7 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Set 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalIdCardNumber 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalIdCardNumber(String LegalIdCardNumber) {
         this.LegalIdCardNumber = LegalIdCardNumber;
@@ -251,11 +220,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构超管姓名。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AdminName 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminName() {
         return this.AdminName;
@@ -264,10 +231,8 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminName 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;
@@ -275,11 +240,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构超管手机号。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AdminMobile 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminMobile() {
         return this.AdminMobile;
@@ -288,10 +251,8 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminMobile 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminMobile(String AdminMobile) {
         this.AdminMobile = AdminMobile;
@@ -299,11 +260,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构超管证件类型
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AdminIdCardType 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminIdCardType() {
         return this.AdminIdCardType;
@@ -312,10 +271,8 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminIdCardType 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminIdCardType(String AdminIdCardType) {
         this.AdminIdCardType = AdminIdCardType;
@@ -323,11 +280,9 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Get 组织机构超管证件号码
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AdminIdCardNumber 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminIdCardNumber() {
         return this.AdminIdCardNumber;
@@ -336,20 +291,16 @@ public class OrganizationCommonInfo extends AbstractModel {
     /**
      * Set 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminIdCardNumber 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminIdCardNumber(String AdminIdCardNumber) {
         this.AdminIdCardNumber = AdminIdCardNumber;
     }
 
     /**
-     * Get 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原超管姓名 
      * @return OldAdminName 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldAdminName() {
         return this.OldAdminName;
@@ -357,19 +308,15 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Set 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldAdminName 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldAdminName(String OldAdminName) {
         this.OldAdminName = OldAdminName;
     }
 
     /**
-     * Get 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原超管手机号 
      * @return OldAdminMobile 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldAdminMobile() {
         return this.OldAdminMobile;
@@ -377,9 +324,7 @@ public class OrganizationCommonInfo extends AbstractModel {
 
     /**
      * Set 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldAdminMobile 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldAdminMobile(String OldAdminMobile) {
         this.OldAdminMobile = OldAdminMobile;

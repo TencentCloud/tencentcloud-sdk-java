@@ -25,7 +25,6 @@ public class FillError extends AbstractModel {
 
     /**
     * 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -33,7 +32,6 @@ public class FillError extends AbstractModel {
 
     /**
     * 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMessage")
     @Expose
@@ -41,17 +39,14 @@ public class FillError extends AbstractModel {
 
     /**
     * 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。 
      * @return RecipientId 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -59,19 +54,15 @@ public class FillError extends AbstractModel {
 
     /**
      * Set 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 补充失败错误说明 
      * @return ErrMessage 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMessage() {
         return this.ErrMessage;
@@ -79,19 +70,15 @@ public class FillError extends AbstractModel {
 
     /**
      * Set 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMessage 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMessage(String ErrMessage) {
         this.ErrMessage = ErrMessage;
     }
 
     /**
-     * Get 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程ID，为32位字符串。	 
      * @return FlowId 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -99,9 +86,7 @@ public class FillError extends AbstractModel {
 
     /**
      * Set 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

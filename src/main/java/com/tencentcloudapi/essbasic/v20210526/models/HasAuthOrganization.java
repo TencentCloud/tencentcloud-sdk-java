@@ -25,7 +25,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -33,7 +32,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -41,7 +39,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedOrganizationOpenId")
     @Expose
@@ -49,7 +46,6 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedOrganizationName")
     @Expose
@@ -57,17 +53,14 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
     * 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizeTime")
     @Expose
     private Long AuthorizeTime;
 
     /**
-     * Get 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业openid， 
      * @return OrganizationOpenId 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
@@ -75,19 +68,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationOpenId 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权企业名称	 
      * @return OrganizationName 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -95,19 +84,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被授权企业openid， 
      * @return AuthorizedOrganizationOpenId 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthorizedOrganizationOpenId() {
         return this.AuthorizedOrganizationOpenId;
@@ -115,19 +100,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedOrganizationOpenId 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedOrganizationOpenId(String AuthorizedOrganizationOpenId) {
         this.AuthorizedOrganizationOpenId = AuthorizedOrganizationOpenId;
     }
 
     /**
-     * Get 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被授权企业名称	 
      * @return AuthorizedOrganizationName 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthorizedOrganizationName() {
         return this.AuthorizedOrganizationName;
@@ -135,19 +116,15 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedOrganizationName 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedOrganizationName(String AuthorizedOrganizationName) {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
 
     /**
-     * Get 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权时间，格式为时间戳，单位s	 
      * @return AuthorizeTime 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizeTime() {
         return this.AuthorizeTime;
@@ -155,9 +132,7 @@ public class HasAuthOrganization extends AbstractModel {
 
     /**
      * Set 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizeTime 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizeTime(Long AuthorizeTime) {
         this.AuthorizeTime = AuthorizeTime;

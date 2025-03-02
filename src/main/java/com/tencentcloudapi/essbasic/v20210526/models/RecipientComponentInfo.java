@@ -45,7 +45,6 @@ public class RecipientComponentInfo extends AbstractModel {
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPromoter")
     @Expose
@@ -53,7 +52,6 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
     * 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
     @Expose
@@ -107,13 +105,11 @@ public class RecipientComponentInfo extends AbstractModel {
      * Get 此角色是否是发起方角色
 
 <ul><li> **true** : 是发起方角色</li>
-<li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> **false** : 不是发起方角色</li></ul> 
      * @return IsPromoter 此角色是否是发起方角色
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPromoter() {
         return this.IsPromoter;
@@ -124,22 +120,18 @@ public class RecipientComponentInfo extends AbstractModel {
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPromoter 此角色是否是发起方角色
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPromoter(Boolean IsPromoter) {
         this.IsPromoter = IsPromoter;
     }
 
     /**
-     * Get 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此角色的填写控件列表 
      * @return Components 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilledComponent [] getComponents() {
         return this.Components;
@@ -147,9 +139,7 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Set 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Components 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(FilledComponent [] Components) {
         this.Components = Components;
