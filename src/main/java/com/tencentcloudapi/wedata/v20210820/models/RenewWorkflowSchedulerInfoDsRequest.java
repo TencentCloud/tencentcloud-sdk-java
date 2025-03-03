@@ -158,6 +158,13 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
     private String CalendarId;
 
     /**
+    * 时区
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -465,6 +472,22 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.CalendarId = CalendarId;
     }
 
+    /**
+     * Get 时区 
+     * @return ScheduleTimeZone 时区
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区
+     * @param ScheduleTimeZone 时区
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public RenewWorkflowSchedulerInfoDsRequest() {
     }
 
@@ -530,6 +553,9 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         if (source.CalendarId != null) {
             this.CalendarId = new String(source.CalendarId);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -556,6 +582,7 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

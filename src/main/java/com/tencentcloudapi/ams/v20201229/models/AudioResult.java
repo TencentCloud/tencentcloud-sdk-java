@@ -145,6 +145,20 @@ public class AudioResult extends AbstractModel {
     private TravelResults [] TravelResults;
 
     /**
+    * 三级标签
+    */
+    @SerializedName("SubTag")
+    @Expose
+    private String SubTag;
+
+    /**
+    * 三级标签码
+    */
+    @SerializedName("SubTagCode")
+    @Expose
+    private String SubTagCode;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
@@ -436,6 +450,38 @@ public class AudioResult extends AbstractModel {
         this.TravelResults = TravelResults;
     }
 
+    /**
+     * Get 三级标签 
+     * @return SubTag 三级标签
+     */
+    public String getSubTag() {
+        return this.SubTag;
+    }
+
+    /**
+     * Set 三级标签
+     * @param SubTag 三级标签
+     */
+    public void setSubTag(String SubTag) {
+        this.SubTag = SubTag;
+    }
+
+    /**
+     * Get 三级标签码 
+     * @return SubTagCode 三级标签码
+     */
+    public String getSubTagCode() {
+        return this.SubTagCode;
+    }
+
+    /**
+     * Set 三级标签码
+     * @param SubTagCode 三级标签码
+     */
+    public void setSubTagCode(String SubTagCode) {
+        this.SubTagCode = SubTagCode;
+    }
+
     public AudioResult() {
     }
 
@@ -513,6 +559,12 @@ public class AudioResult extends AbstractModel {
                 this.TravelResults[i] = new TravelResults(source.TravelResults[i]);
             }
         }
+        if (source.SubTag != null) {
+            this.SubTag = new String(source.SubTag);
+        }
+        if (source.SubTagCode != null) {
+            this.SubTagCode = new String(source.SubTagCode);
+        }
     }
 
 
@@ -536,6 +588,8 @@ public class AudioResult extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
         this.setParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
         this.setParamArrayObj(map, prefix + "TravelResults.", this.TravelResults);
+        this.setParamSimple(map, prefix + "SubTag", this.SubTag);
+        this.setParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
 
     }
 }

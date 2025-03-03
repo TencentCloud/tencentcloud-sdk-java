@@ -25,7 +25,6 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
     * 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamBrokenResults")
     @Expose
@@ -33,7 +32,6 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
     * 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LowFrameRateResults")
     @Expose
@@ -41,17 +39,14 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
     * 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamFormatResults")
     @Expose
     private String [] StreamFormatResults;
 
     /**
-     * Get 断流信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 断流信息 
      * @return StreamBrokenResults 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStreamBrokenResults() {
         return this.StreamBrokenResults;
@@ -59,19 +54,15 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
      * Set 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamBrokenResults 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamBrokenResults(String [] StreamBrokenResults) {
         this.StreamBrokenResults = StreamBrokenResults;
     }
 
     /**
-     * Get 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 低帧率信息 
      * @return LowFrameRateResults 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLowFrameRateResults() {
         return this.LowFrameRateResults;
@@ -79,19 +70,15 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
      * Set 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LowFrameRateResults 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLowFrameRateResults(String [] LowFrameRateResults) {
         this.LowFrameRateResults = LowFrameRateResults;
     }
 
     /**
-     * Get 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流格式诊断信息 
      * @return StreamFormatResults 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStreamFormatResults() {
         return this.StreamFormatResults;
@@ -99,9 +86,7 @@ public class DiagnoseResult extends AbstractModel {
 
     /**
      * Set 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamFormatResults 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamFormatResults(String [] StreamFormatResults) {
         this.StreamFormatResults = StreamFormatResults;

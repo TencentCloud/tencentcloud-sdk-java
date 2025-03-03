@@ -25,7 +25,6 @@ public class MPSResult extends AbstractModel {
 
     /**
     * 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiAsrResults")
     @Expose
@@ -33,7 +32,6 @@ public class MPSResult extends AbstractModel {
 
     /**
     * 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiOcrResults")
     @Expose
@@ -41,17 +39,14 @@ public class MPSResult extends AbstractModel {
 
     /**
     * 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamQuaCtrlResults")
     @Expose
     private String [] StreamQuaCtrlResults;
 
     /**
-     * Get 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 智能语音识别结果。 
      * @return AiAsrResults 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAiAsrResults() {
         return this.AiAsrResults;
@@ -59,19 +54,15 @@ public class MPSResult extends AbstractModel {
 
     /**
      * Set 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAsrResults 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiAsrResults(String [] AiAsrResults) {
         this.AiAsrResults = AiAsrResults;
     }
 
     /**
-     * Get 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 智能文字识别结果。 
      * @return AiOcrResults 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAiOcrResults() {
         return this.AiOcrResults;
@@ -79,19 +70,15 @@ public class MPSResult extends AbstractModel {
 
     /**
      * Set 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiOcrResults 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiOcrResults(String [] AiOcrResults) {
         this.AiOcrResults = AiOcrResults;
     }
 
     /**
-     * Get 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容质检结果。 
      * @return StreamQuaCtrlResults 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStreamQuaCtrlResults() {
         return this.StreamQuaCtrlResults;
@@ -99,9 +86,7 @@ public class MPSResult extends AbstractModel {
 
     /**
      * Set 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamQuaCtrlResults 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamQuaCtrlResults(String [] StreamQuaCtrlResults) {
         this.StreamQuaCtrlResults = StreamQuaCtrlResults;

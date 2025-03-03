@@ -25,7 +25,6 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
     * 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStreamWidth")
     @Expose
@@ -33,7 +32,6 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
     * 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStreamHeight")
     @Expose
@@ -43,7 +41,6 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
     * 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStreamName")
     @Expose
@@ -51,7 +48,6 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
     * 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputDomain")
     @Expose
@@ -59,17 +55,14 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
     * 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputApp")
     @Expose
     private String OutputApp;
 
     /**
-     * Get 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。 
      * @return OutputStreamWidth 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputStreamWidth() {
         return this.OutputStreamWidth;
@@ -77,19 +70,15 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
      * Set 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStreamWidth 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStreamWidth(Long OutputStreamWidth) {
         this.OutputStreamWidth = OutputStreamWidth;
     }
 
     /**
-     * Get 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。 
      * @return OutputStreamHeight 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputStreamHeight() {
         return this.OutputStreamHeight;
@@ -97,9 +86,7 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
      * Set 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStreamHeight 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStreamHeight(Long OutputStreamHeight) {
         this.OutputStreamHeight = OutputStreamHeight;
@@ -108,12 +95,10 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
     /**
      * Get 监播任务输出流名称。
 不填时，系统会自动生成。
-256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。 
      * @return OutputStreamName 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputStreamName() {
         return this.OutputStreamName;
@@ -123,21 +108,17 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
      * Set 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStreamName 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStreamName(String OutputStreamName) {
         this.OutputStreamName = OutputStreamName;
     }
 
     /**
-     * Get 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。 
      * @return OutputDomain 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputDomain() {
         return this.OutputDomain;
@@ -145,19 +126,15 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
      * Set 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputDomain 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputDomain(String OutputDomain) {
         this.OutputDomain = OutputDomain;
     }
 
     /**
-     * Get 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。 
      * @return OutputApp 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputApp() {
         return this.OutputApp;
@@ -165,9 +142,7 @@ public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
      * Set 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputApp 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputApp(String OutputApp) {
         this.OutputApp = OutputApp;

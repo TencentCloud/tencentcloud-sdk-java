@@ -25,7 +25,6 @@ public class FailedDeleteStaffData extends AbstractModel {
 
     /**
     * 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ public class FailedDeleteStaffData extends AbstractModel {
 
     /**
     * 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -47,10 +45,8 @@ public class FailedDeleteStaffData extends AbstractModel {
     private String Reason;
 
     /**
-     * Get 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工在电子签的userId 
      * @return UserId 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -58,19 +54,15 @@ public class FailedDeleteStaffData extends AbstractModel {
 
     /**
      * Set 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 员工在第三方平台的openId 
      * @return OpenId 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -78,9 +70,7 @@ public class FailedDeleteStaffData extends AbstractModel {
 
     /**
      * Set 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

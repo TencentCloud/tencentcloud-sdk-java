@@ -66,14 +66,14 @@ public class RegisterEventRequest extends AbstractModel {
     private String Owner;
 
     /**
-    * 事件类型，默认值：TIME_SERIES
+    * 必填，事件类型，默认值：TIME_SERIES
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
+    * 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
     */
     @SerializedName("DimensionFormat")
     @Expose
@@ -190,32 +190,32 @@ public class RegisterEventRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件类型，默认值：TIME_SERIES 
-     * @return EventType 事件类型，默认值：TIME_SERIES
+     * Get 必填，事件类型，默认值：TIME_SERIES 
+     * @return EventType 必填，事件类型，默认值：TIME_SERIES
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 事件类型，默认值：TIME_SERIES
-     * @param EventType 事件类型，默认值：TIME_SERIES
+     * Set 必填，事件类型，默认值：TIME_SERIES
+     * @param EventType 必填，事件类型，默认值：TIME_SERIES
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss 
-     * @return DimensionFormat 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
+     * Get 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd 
+     * @return DimensionFormat 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
      */
     public String getDimensionFormat() {
         return this.DimensionFormat;
     }
 
     /**
-     * Set 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
-     * @param DimensionFormat 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
+     * Set 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
+     * @param DimensionFormat 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
      */
     public void setDimensionFormat(String DimensionFormat) {
         this.DimensionFormat = DimensionFormat;

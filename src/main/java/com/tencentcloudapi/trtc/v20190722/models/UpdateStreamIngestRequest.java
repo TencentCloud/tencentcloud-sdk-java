@@ -52,6 +52,13 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     private Long Volume;
 
     /**
+    * 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+    */
+    @SerializedName("IsPause")
+    @Expose
+    private Boolean IsPause;
+
+    /**
      * Get TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同 
      * @return SdkAppId TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同
      */
@@ -115,6 +122,22 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.Volume = Volume;
     }
 
+    /**
+     * Get 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。 
+     * @return IsPause 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     */
+    public Boolean getIsPause() {
+        return this.IsPause;
+    }
+
+    /**
+     * Set 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     * @param IsPause 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     */
+    public void setIsPause(Boolean IsPause) {
+        this.IsPause = IsPause;
+    }
+
     public UpdateStreamIngestRequest() {
     }
 
@@ -135,6 +158,9 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
+        if (source.IsPause != null) {
+            this.IsPause = new Boolean(source.IsPause);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "IsPause", this.IsPause);
 
     }
 }

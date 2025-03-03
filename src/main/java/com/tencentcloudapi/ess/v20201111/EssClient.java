@@ -637,6 +637,24 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *该接口用于将合同中本企业当前经办人转为本企业其他员工进行操作。
+
+注意：
+1. 转交的目标经办人需要已经加入企业，且完成实名。
+2. 仅企业拥有`超管`、`法人`或者`合同管理员`角色的员工才有调用本接口的权限。如果使用主带子方式调用，请确保您已经加入子企业，且账号在子企业中担任任一上述角色。
+3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
+4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+     * @param req CreateFlowForwardsRequest
+     * @return CreateFlowForwardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowForwardsResponse CreateFlowForwards(CreateFlowForwardsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFlowForwards", CreateFlowForwardsResponse.class);
+    }
+
+    /**
      *此接口（CreateFlowGroupByFiles）可用于通过多个文件创建合同组签署流程。使用该接口需要先依赖[多文件上传](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口返回的FileIds。
 
 - 该接口允许通过PDF资源ID一次性创建多个合同，这些合同被组织在一个合同组中。

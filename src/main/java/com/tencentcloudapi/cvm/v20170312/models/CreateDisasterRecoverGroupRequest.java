@@ -45,6 +45,13 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Long Affinity;
+
+    /**
      * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
      * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
@@ -92,6 +99,22 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1 
+     * @return Affinity 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+     */
+    public Long getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+     * @param Affinity 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+     */
+    public void setAffinity(Long Affinity) {
+        this.Affinity = Affinity;
+    }
+
     public CreateDisasterRecoverGroupRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.Affinity != null) {
+            this.Affinity = new Long(source.Affinity);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
 
     }
 }

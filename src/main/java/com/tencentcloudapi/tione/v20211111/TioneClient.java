@@ -248,7 +248,9 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *查询推理镜像模板
+     *已废弃，收敛到统一接口
+
+查询推理镜像模板
      * @param req DescribeInferTemplatesRequest
      * @return DescribeInferTemplatesResponse
      * @throws TencentCloudSDKException

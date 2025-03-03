@@ -87,6 +87,13 @@ public class OcrTextDetail extends AbstractModel {
     private String SubLabel;
 
     /**
+    * 关键词命中位置信息
+    */
+    @SerializedName("HitInfos")
+    @Expose
+    private OcrHitInfo [] HitInfos;
+
+    /**
      * Get 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。 
      * @return Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
      */
@@ -230,6 +237,22 @@ public class OcrTextDetail extends AbstractModel {
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get 关键词命中位置信息 
+     * @return HitInfos 关键词命中位置信息
+     */
+    public OcrHitInfo [] getHitInfos() {
+        return this.HitInfos;
+    }
+
+    /**
+     * Set 关键词命中位置信息
+     * @param HitInfos 关键词命中位置信息
+     */
+    public void setHitInfos(OcrHitInfo [] HitInfos) {
+        this.HitInfos = HitInfos;
+    }
+
     public OcrTextDetail() {
     }
 
@@ -268,6 +291,12 @@ public class OcrTextDetail extends AbstractModel {
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.HitInfos != null) {
+            this.HitInfos = new OcrHitInfo[source.HitInfos.length];
+            for (int i = 0; i < source.HitInfos.length; i++) {
+                this.HitInfos[i] = new OcrHitInfo(source.HitInfos[i]);
+            }
+        }
     }
 
 
@@ -284,6 +313,7 @@ public class OcrTextDetail extends AbstractModel {
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
 
     }
 }
