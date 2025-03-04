@@ -52,6 +52,13 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     private Long Affinity;
 
     /**
+    * 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
      * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
@@ -115,6 +122,22 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.Affinity = Affinity;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以绑定标签到置放群组。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateDisasterRecoverGroupRequest() {
     }
 
@@ -135,6 +158,12 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         if (source.Affinity != null) {
             this.Affinity = new Long(source.Affinity);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "Affinity", this.Affinity);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

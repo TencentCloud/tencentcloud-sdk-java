@@ -728,6 +728,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *serverless hbase修改实例名称
+     * @param req ModifySLInstanceBasicRequest
+     * @return ModifySLInstanceBasicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySLInstanceBasicResponse ModifySLInstanceBasic(ModifySLInstanceBasicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySLInstanceBasic", ModifySLInstanceBasicResponse.class);
+    }
+
+    /**
      *修改用户密码（用户管理）
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse

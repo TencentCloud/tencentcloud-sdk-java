@@ -48,7 +48,7 @@ public class ModifyZoneRequest extends AbstractModel {
     private VanityNameServers VanityNameServers;
 
     /**
-    * 站点别名。数字、英文、-和_组合，限制20个字符。
+    * 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
     */
     @SerializedName("AliasZoneName")
     @Expose
@@ -132,16 +132,16 @@ public class ModifyZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点别名。数字、英文、-和_组合，限制20个字符。 
-     * @return AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     * Get 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。 
+     * @return AliasZoneName 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set 站点别名。数字、英文、-和_组合，限制20个字符。
-     * @param AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     * Set 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
+     * @param AliasZoneName 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
