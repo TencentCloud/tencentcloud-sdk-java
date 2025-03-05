@@ -38,14 +38,14 @@ public class TranscodeTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 溯源水印，该功能已不再支持使用。
+    * 溯源水印。
     */
     @SerializedName("TraceWatermark")
     @Expose
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * 版权水印，该功能已不再支持使用。
+    * 版权水印。
     */
     @SerializedName("CopyRightWatermark")
     @Expose
@@ -118,32 +118,32 @@ public class TranscodeTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 溯源水印，该功能已不再支持使用。 
-     * @return TraceWatermark 溯源水印，该功能已不再支持使用。
+     * Get 溯源水印。 
+     * @return TraceWatermark 溯源水印。
      */
     public TraceWatermarkInput getTraceWatermark() {
         return this.TraceWatermark;
     }
 
     /**
-     * Set 溯源水印，该功能已不再支持使用。
-     * @param TraceWatermark 溯源水印，该功能已不再支持使用。
+     * Set 溯源水印。
+     * @param TraceWatermark 溯源水印。
      */
     public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
         this.TraceWatermark = TraceWatermark;
     }
 
     /**
-     * Get 版权水印，该功能已不再支持使用。 
-     * @return CopyRightWatermark 版权水印，该功能已不再支持使用。
+     * Get 版权水印。 
+     * @return CopyRightWatermark 版权水印。
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set 版权水印，该功能已不再支持使用。
-     * @param CopyRightWatermark 版权水印，该功能已不再支持使用。
+     * Set 版权水印。
+     * @param CopyRightWatermark 版权水印。
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;

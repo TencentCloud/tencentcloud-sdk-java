@@ -39,7 +39,6 @@ public class Job extends AbstractModel {
 
     /**
     * 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -78,10 +77,8 @@ public class Job extends AbstractModel {
     }
 
     /**
-     * Get 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务错误信息 
      * @return ErrorMessage 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -89,9 +86,7 @@ public class Job extends AbstractModel {
 
     /**
      * Set 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

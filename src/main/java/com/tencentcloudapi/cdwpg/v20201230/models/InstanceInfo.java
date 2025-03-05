@@ -144,22 +144,6 @@ public class InstanceInfo extends AbstractModel {
     private String Charset;
 
     /**
-    * 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("EngineVersion")
-    @Expose
-    private String EngineVersion;
-
-    /**
-    * GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("GTMNodes")
-    @Expose
-    private InstanceNodeGroup [] GTMNodes;
-
-    /**
     * CN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -176,20 +160,76 @@ public class InstanceInfo extends AbstractModel {
     private InstanceNodeGroup [] DNNodes;
 
     /**
-    * 备份存储
+    * 1
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BackupStorage")
+    @SerializedName("RegionId")
     @Expose
-    private InstanceNodeGroup [] BackupStorage;
+    private Long RegionId;
 
     /**
-    * FN节点列表
+    * 1
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FNNodes")
+    @SerializedName("ZoneId")
     @Expose
-    private InstanceNodeGroup [] FNNodes;
+    private Long ZoneId;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Boolean RenewFlag;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessDetails")
+    @Expose
+    private AccessInfo [] AccessDetails;
 
     /**
      * Get ID值
@@ -492,46 +532,6 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineVersion 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getEngineVersion() {
-        return this.EngineVersion;
-    }
-
-    /**
-     * Set 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineVersion 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setEngineVersion(String EngineVersion) {
-        this.EngineVersion = EngineVersion;
-    }
-
-    /**
-     * Get GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GTMNodes GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public InstanceNodeGroup [] getGTMNodes() {
-        return this.GTMNodes;
-    }
-
-    /**
-     * Set GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GTMNodes GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setGTMNodes(InstanceNodeGroup [] GTMNodes) {
-        this.GTMNodes = GTMNodes;
-    }
-
-    /**
      * Get CN节点列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CNNodes CN节点列表
@@ -572,43 +572,183 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份存储
+     * Get 1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupStorage 备份存储
+     * @return RegionId 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public InstanceNodeGroup [] getBackupStorage() {
-        return this.BackupStorage;
+    public Long getRegionId() {
+        return this.RegionId;
     }
 
     /**
-     * Set 备份存储
+     * Set 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupStorage 备份存储
+     * @param RegionId 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBackupStorage(InstanceNodeGroup [] BackupStorage) {
-        this.BackupStorage = BackupStorage;
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
     }
 
     /**
-     * Get FN节点列表
+     * Get 1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FNNodes FN节点列表
+     * @return ZoneId 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public InstanceNodeGroup [] getFNNodes() {
-        return this.FNNodes;
+    public Long getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set FN节点列表
+     * Set 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FNNodes FN节点列表
+     * @param ZoneId 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFNNodes(InstanceNodeGroup [] FNNodes) {
-        this.FNNodes = FNNodes;
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Boolean RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 访问信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessDetails 访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccessInfo [] getAccessDetails() {
+        return this.AccessDetails;
+    }
+
+    /**
+     * Set 访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessDetails 访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessDetails(AccessInfo [] AccessDetails) {
+        this.AccessDetails = AccessDetails;
     }
 
     public InstanceInfo() {
@@ -667,15 +807,6 @@ public class InstanceInfo extends AbstractModel {
         if (source.Charset != null) {
             this.Charset = new String(source.Charset);
         }
-        if (source.EngineVersion != null) {
-            this.EngineVersion = new String(source.EngineVersion);
-        }
-        if (source.GTMNodes != null) {
-            this.GTMNodes = new InstanceNodeGroup[source.GTMNodes.length];
-            for (int i = 0; i < source.GTMNodes.length; i++) {
-                this.GTMNodes[i] = new InstanceNodeGroup(source.GTMNodes[i]);
-            }
-        }
         if (source.CNNodes != null) {
             this.CNNodes = new InstanceNodeGroup[source.CNNodes.length];
             for (int i = 0; i < source.CNNodes.length; i++) {
@@ -688,16 +819,34 @@ public class InstanceInfo extends AbstractModel {
                 this.DNNodes[i] = new InstanceNodeGroup(source.DNNodes[i]);
             }
         }
-        if (source.BackupStorage != null) {
-            this.BackupStorage = new InstanceNodeGroup[source.BackupStorage.length];
-            for (int i = 0; i < source.BackupStorage.length; i++) {
-                this.BackupStorage[i] = new InstanceNodeGroup(source.BackupStorage[i]);
-            }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
         }
-        if (source.FNNodes != null) {
-            this.FNNodes = new InstanceNodeGroup[source.FNNodes.length];
-            for (int i = 0; i < source.FNNodes.length; i++) {
-                this.FNNodes[i] = new InstanceNodeGroup(source.FNNodes[i]);
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Boolean(source.RenewFlag);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AccessDetails != null) {
+            this.AccessDetails = new AccessInfo[source.AccessDetails.length];
+            for (int i = 0; i < source.AccessDetails.length; i++) {
+                this.AccessDetails[i] = new AccessInfo(source.AccessDetails[i]);
             }
         }
     }
@@ -722,12 +871,17 @@ public class InstanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Charset", this.Charset);
-        this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-        this.setParamArrayObj(map, prefix + "GTMNodes.", this.GTMNodes);
         this.setParamArrayObj(map, prefix + "CNNodes.", this.CNNodes);
         this.setParamArrayObj(map, prefix + "DNNodes.", this.DNNodes);
-        this.setParamArrayObj(map, prefix + "BackupStorage.", this.BackupStorage);
-        this.setParamArrayObj(map, prefix + "FNNodes.", this.FNNodes);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "AccessDetails.", this.AccessDetails);
 
     }
 }

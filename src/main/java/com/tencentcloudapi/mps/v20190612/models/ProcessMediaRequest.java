@@ -133,6 +133,13 @@ public class ProcessMediaRequest extends AbstractModel {
     private String TaskType;
 
     /**
+    * 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 媒体处理的文件输入信息。 
      * @return InputInfo 媒体处理的文件输入信息。
      */
@@ -400,6 +407,22 @@ public class ProcessMediaRequest extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。 
+     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -450,6 +473,9 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -471,6 +497,7 @@ public class ProcessMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

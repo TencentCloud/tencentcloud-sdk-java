@@ -50,6 +50,50 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *获取云原生实例对应的账号列表
+     * @param req DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
+    }
+
+    /**
+     *DescribeDBConfigHistory1
+     * @param req DescribeDBConfigHistoryRequest
+     * @return DescribeDBConfigHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBConfigHistoryResponse DescribeDBConfigHistory(DescribeDBConfigHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBConfigHistory", DescribeDBConfigHistoryResponse.class);
+    }
+
+    /**
+     *配置描述
+     * @param req DescribeDBParamsRequest
+     * @return DescribeDBParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBParamsResponse DescribeDBParams(DescribeDBParamsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBParams", DescribeDBParamsResponse.class);
+    }
+
+    /**
+     *查询错误日志
+     * @param req DescribeErrorLogRequest
+     * @return DescribeErrorLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeErrorLogResponse DescribeErrorLog(DescribeErrorLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeErrorLog", DescribeErrorLogResponse.class);
+    }
+
+    /**
      *根据实例ID查询某个实例的具体信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -69,6 +113,28 @@ public class CdwpgClient extends AbstractClient{
     public DescribeInstanceInfoResponse DescribeInstanceInfo(DescribeInstanceInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceInfo", DescribeInstanceInfoResponse.class);
+    }
+
+    /**
+     *节点list
+     * @param req DescribeInstanceNodesRequest
+     * @return DescribeInstanceNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodesResponse DescribeInstanceNodes(DescribeInstanceNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceNodes", DescribeInstanceNodesResponse.class);
+    }
+
+    /**
+     *在集群详情页面，拉取该集群的操作
+     * @param req DescribeInstanceOperationsRequest
+     * @return DescribeInstanceOperationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOperationsResponse DescribeInstanceOperations(DescribeInstanceOperationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceOperations", DescribeInstanceOperationsResponse.class);
     }
 
     /**
@@ -105,6 +171,39 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *查询慢SQL日志
+     * @param req DescribeSlowLogRequest
+     * @return DescribeSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSlowLog", DescribeSlowLogResponse.class);
+    }
+
+    /**
+     *升级记录
+     * @param req DescribeUpgradeListRequest
+     * @return DescribeUpgradeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeListResponse DescribeUpgradeList(DescribeUpgradeListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgradeList", DescribeUpgradeListResponse.class);
+    }
+
+    /**
+     *user_hba
+     * @param req DescribeUserHbaConfigRequest
+     * @return DescribeUserHbaConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserHbaConfigResponse DescribeUserHbaConfig(DescribeUserHbaConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserHbaConfig", DescribeUserHbaConfigResponse.class);
+    }
+
+    /**
      *销毁集群
      * @param req DestroyInstanceByApiRequest
      * @return DestroyInstanceByApiResponse
@@ -116,6 +215,17 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *集群配置下发
+     * @param req ModifyDBParametersRequest
+     * @return ModifyDBParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBParameters", ModifyDBParametersResponse.class);
+    }
+
+    /**
      *修改实例信息，目前为实例名称
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -124,6 +234,72 @@ public class CdwpgClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
+    }
+
+    /**
+     *修改用户Hba配置
+     * @param req ModifyUserHbaRequest
+     * @return ModifyUserHbaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserHbaResponse ModifyUserHba(ModifyUserHbaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserHba", ModifyUserHbaResponse.class);
+    }
+
+    /**
+     *修改账号密码
+     * @param req ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetAccountPassword", ResetAccountPasswordResponse.class);
+    }
+
+    /**
+     *用户在控制台主动发起重启实例
+     * @param req RestartInstanceRequest
+     * @return RestartInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartInstance", RestartInstanceResponse.class);
+    }
+
+    /**
+     *水平扩容
+     * @param req ScaleOutInstanceRequest
+     * @return ScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
+    }
+
+    /**
+     *控制台垂直变配集群
+     * @param req ScaleUpInstanceRequest
+     * @return ScaleUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleUpInstance", ScaleUpInstanceResponse.class);
+    }
+
+    /**
+     *在线升级
+     * @param req UpgradeInstanceRequest
+     * @return UpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeInstance", UpgradeInstanceResponse.class);
     }
 
 }

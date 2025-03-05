@@ -26,6 +26,9 @@ public class DrmInfo extends AbstractModel {
     /**
     * 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -43,9 +46,15 @@ public class DrmInfo extends AbstractModel {
     /**
      * Get 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -55,9 +64,15 @@ public class DrmInfo extends AbstractModel {
     /**
      * Set 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

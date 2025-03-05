@@ -23,6 +23,90 @@ import java.util.HashMap;
 
 public class InstanceNodeGroup extends AbstractModel {
 
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecName")
+    @Expose
+    private String SpecName;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDisk")
+    @Expose
+    private DiskSpecPlus DataDisk;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvmCount")
+    @Expose
+    private Long CvmCount;
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecName() {
+        return this.SpecName;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecName(String SpecName) {
+        this.SpecName = SpecName;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDisk 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiskSpecPlus getDataDisk() {
+        return this.DataDisk;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDisk 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDisk(DiskSpecPlus DataDisk) {
+        this.DataDisk = DataDisk;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvmCount 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCvmCount() {
+        return this.CvmCount;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvmCount 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvmCount(Long CvmCount) {
+        this.CvmCount = CvmCount;
+    }
+
     public InstanceNodeGroup() {
     }
 
@@ -31,6 +115,15 @@ public class InstanceNodeGroup extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InstanceNodeGroup(InstanceNodeGroup source) {
+        if (source.SpecName != null) {
+            this.SpecName = new String(source.SpecName);
+        }
+        if (source.DataDisk != null) {
+            this.DataDisk = new DiskSpecPlus(source.DataDisk);
+        }
+        if (source.CvmCount != null) {
+            this.CvmCount = new Long(source.CvmCount);
+        }
     }
 
 
@@ -38,6 +131,9 @@ public class InstanceNodeGroup extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamObj(map, prefix + "DataDisk.", this.DataDisk);
+        this.setParamSimple(map, prefix + "CvmCount", this.CvmCount);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeCodePacksResponse extends AbstractModel {
 
     /**
     * 码列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodePacks")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCodePacksResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCodePacksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 码列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码列表 
      * @return CodePacks 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodePack [] getCodePacks() {
         return this.CodePacks;
@@ -58,19 +54,15 @@ public class DescribeCodePacksResponse extends AbstractModel {
 
     /**
      * Set 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodePacks 码列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodePacks(CodePack [] CodePacks) {
         this.CodePacks = CodePacks;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeCodePacksResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
