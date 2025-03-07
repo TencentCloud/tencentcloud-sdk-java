@@ -171,6 +171,13 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String Payload;
 
     /**
+    * 端口
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get 影响资产 
      * @return AffectAsset 影响资产
      */
@@ -506,6 +513,22 @@ public class AssetViewWeakPassRisk extends AbstractModel {
         this.Payload = Payload;
     }
 
+    /**
+     * Get 端口 
+     * @return Port 端口
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口
+     * @param Port 端口
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public AssetViewWeakPassRisk() {
     }
 
@@ -577,6 +600,9 @@ public class AssetViewWeakPassRisk extends AbstractModel {
         if (source.Payload != null) {
             this.Payload = new String(source.Payload);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -605,6 +631,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "VULURL", this.VULURL);
         this.setParamSimple(map, prefix + "Fix", this.Fix);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

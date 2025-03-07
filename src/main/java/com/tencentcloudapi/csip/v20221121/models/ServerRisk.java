@@ -122,7 +122,7 @@ public class ServerRisk extends AbstractModel {
     private String Suggestion;
 
     /**
-    * 状态，0未处理、1已处置、2已忽略
+    * 状态，0未处理、1已处置、2已忽略、3云防已防护
     */
     @SerializedName("Status")
     @Expose
@@ -197,6 +197,20 @@ public class ServerRisk extends AbstractModel {
     @SerializedName("StatusCode")
     @Expose
     private String StatusCode;
+
+    /**
+    * 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+    */
+    @SerializedName("NewLevel")
+    @Expose
+    private String NewLevel;
+
+    /**
+    * 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+    */
+    @SerializedName("XspmStatus")
+    @Expose
+    private Long XspmStatus;
 
     /**
      * Get 测绘标签 
@@ -423,16 +437,16 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get 状态，0未处理、1已处置、2已忽略 
-     * @return Status 状态，0未处理、1已处置、2已忽略
+     * Get 状态，0未处理、1已处置、2已忽略、3云防已防护 
+     * @return Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0未处理、1已处置、2已忽略
-     * @param Status 状态，0未处理、1已处置、2已忽略
+     * Set 状态，0未处理、1已处置、2已忽略、3云防已防护
+     * @param Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -598,6 +612,38 @@ public class ServerRisk extends AbstractModel {
         this.StatusCode = StatusCode;
     }
 
+    /**
+     * Get 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险 
+     * @return NewLevel 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     */
+    public String getNewLevel() {
+        return this.NewLevel;
+    }
+
+    /**
+     * Set 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     * @param NewLevel 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     */
+    public void setNewLevel(String NewLevel) {
+        this.NewLevel = NewLevel;
+    }
+
+    /**
+     * Get 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理 
+     * @return XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public Long getXspmStatus() {
+        return this.XspmStatus;
+    }
+
+    /**
+     * Set 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     * @param XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public void setXspmStatus(Long XspmStatus) {
+        this.XspmStatus = XspmStatus;
+    }
+
     public ServerRisk() {
     }
 
@@ -687,6 +733,12 @@ public class ServerRisk extends AbstractModel {
         if (source.StatusCode != null) {
             this.StatusCode = new String(source.StatusCode);
         }
+        if (source.NewLevel != null) {
+            this.NewLevel = new String(source.NewLevel);
+        }
+        if (source.XspmStatus != null) {
+            this.XspmStatus = new Long(source.XspmStatus);
+        }
     }
 
 
@@ -719,6 +771,8 @@ public class ServerRisk extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RiskList.", this.RiskList);
         this.setParamArrayObj(map, prefix + "SuggestionList.", this.SuggestionList);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
+        this.setParamSimple(map, prefix + "NewLevel", this.NewLevel);
+        this.setParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
 
     }
 }

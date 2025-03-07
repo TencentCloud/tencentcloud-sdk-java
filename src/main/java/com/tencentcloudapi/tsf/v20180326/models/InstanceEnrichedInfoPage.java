@@ -25,7 +25,6 @@ public class InstanceEnrichedInfoPage extends AbstractModel {
 
     /**
     * 总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class InstanceEnrichedInfoPage extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private InstanceEnrichedInfo [] Content;
 
     /**
-     * Get 总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量 
      * @return TotalCount 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class InstanceEnrichedInfoPage extends AbstractModel {
 
     /**
      * Set 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Content 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceEnrichedInfo [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class InstanceEnrichedInfoPage extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(InstanceEnrichedInfo [] Content) {
         this.Content = Content;

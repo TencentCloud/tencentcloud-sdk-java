@@ -137,7 +137,6 @@ public class AllocationMonthOverviewDetail extends AbstractModel {
 
     /**
     * 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trend")
     @Expose
@@ -148,7 +147,6 @@ public class AllocationMonthOverviewDetail extends AbstractModel {
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrendType")
     @Expose
@@ -411,10 +409,8 @@ none - 平稳
     }
 
     /**
-     * Get 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100% 
      * @return Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrend() {
         return this.Trend;
@@ -422,9 +418,7 @@ none - 平稳
 
     /**
      * Set 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrend(String Trend) {
         this.Trend = Trend;
@@ -434,13 +428,11 @@ none - 平稳
      * Get 环比箭头
 upward -上升
 downward - 下降
-none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。 
+none - 平稳 
      * @return TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrendType() {
         return this.TrendType;
@@ -451,12 +443,10 @@ none - 平稳
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrendType(String TrendType) {
         this.TrendType = TrendType;

@@ -25,7 +25,6 @@ public class CreateImageResponse extends AbstractModel {
 
     /**
     * 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像ID 
      * @return ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageId() {
         return this.ImageId;
@@ -50,9 +47,7 @@ public class CreateImageResponse extends AbstractModel {
 
     /**
      * Set 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

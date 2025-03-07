@@ -76,7 +76,6 @@ public class UserStore extends AbstractModel {
 
     /**
     * 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastStatus")
     @Expose
@@ -84,7 +83,6 @@ public class UserStore extends AbstractModel {
 
     /**
     * 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultStatus")
     @Expose
@@ -92,7 +90,6 @@ public class UserStore extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateDate")
     @Expose
@@ -235,10 +232,8 @@ public class UserStore extends AbstractModel {
     }
 
     /**
-     * Get 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次切换的用户池 
      * @return LastStatus 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLastStatus() {
         return this.LastStatus;
@@ -246,19 +241,15 @@ public class UserStore extends AbstractModel {
 
     /**
      * Set 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastStatus 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastStatus(Boolean LastStatus) {
         this.LastStatus = LastStatus;
     }
 
     /**
-     * Get 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认用户池 
      * @return DefaultStatus 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDefaultStatus() {
         return this.DefaultStatus;
@@ -266,19 +257,15 @@ public class UserStore extends AbstractModel {
 
     /**
      * Set 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultStatus 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultStatus(Boolean DefaultStatus) {
         this.DefaultStatus = DefaultStatus;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateDate() {
         return this.CreateDate;
@@ -286,9 +273,7 @@ public class UserStore extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateDate(Long CreateDate) {
         this.CreateDate = CreateDate;

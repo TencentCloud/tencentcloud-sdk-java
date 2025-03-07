@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class DescribeLiveStreamEventListRequest extends AbstractModel {
 
     /**
-    * 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
+    * 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+    * 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
     */
     @SerializedName("EndTime")
     @Expose
@@ -112,48 +108,32 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     private Long IsAsc;
 
     /**
-     * Get 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。 
-     * @return StartTime 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
+     * Get 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。 
+     * @return StartTime 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
-     * @param StartTime 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
+     * Set 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
+     * @param StartTime 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。 
-     * @return EndTime 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+     * Get 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。 
+     * @return EndTime 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
-     * @param EndTime 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+     * Set 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
+     * @param EndTime 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

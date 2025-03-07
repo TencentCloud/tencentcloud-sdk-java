@@ -39,7 +39,6 @@ public class ListLogMessageByConditionResponse extends AbstractModel {
 
     /**
     * 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -85,10 +84,8 @@ public class ListLogMessageByConditionResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志列表 
      * @return Content 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogMessage [] getContent() {
         return this.Content;
@@ -96,9 +93,7 @@ public class ListLogMessageByConditionResponse extends AbstractModel {
 
     /**
      * Set 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(LogMessage [] Content) {
         this.Content = Content;

@@ -40,6 +40,13 @@ public class ServerlessIndexSettingsField extends AbstractModel {
     private String RefreshInterval;
 
     /**
+    * 自定义参数
+    */
+    @SerializedName("CustomSetting")
+    @Expose
+    private String CustomSetting;
+
+    /**
      * Get 索引主分片数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NumberOfShards 索引主分片数
@@ -79,6 +86,22 @@ public class ServerlessIndexSettingsField extends AbstractModel {
         this.RefreshInterval = RefreshInterval;
     }
 
+    /**
+     * Get 自定义参数 
+     * @return CustomSetting 自定义参数
+     */
+    public String getCustomSetting() {
+        return this.CustomSetting;
+    }
+
+    /**
+     * Set 自定义参数
+     * @param CustomSetting 自定义参数
+     */
+    public void setCustomSetting(String CustomSetting) {
+        this.CustomSetting = CustomSetting;
+    }
+
     public ServerlessIndexSettingsField() {
     }
 
@@ -93,6 +116,9 @@ public class ServerlessIndexSettingsField extends AbstractModel {
         if (source.RefreshInterval != null) {
             this.RefreshInterval = new String(source.RefreshInterval);
         }
+        if (source.CustomSetting != null) {
+            this.CustomSetting = new String(source.CustomSetting);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class ServerlessIndexSettingsField extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
         this.setParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
+        this.setParamSimple(map, prefix + "CustomSetting", this.CustomSetting);
 
     }
 }

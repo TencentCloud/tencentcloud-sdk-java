@@ -25,7 +25,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgId")
     @Expose
@@ -33,7 +32,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgName")
     @Expose
@@ -41,7 +39,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgType")
     @Expose
@@ -49,7 +46,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgVersion")
     @Expose
@@ -57,7 +53,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgDesc")
     @Expose
@@ -65,7 +60,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadTime")
     @Expose
@@ -73,7 +67,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
@@ -81,7 +74,6 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgPubStatus")
     @Expose
@@ -89,17 +81,14 @@ public class PkgInfo extends AbstractModel {
 
     /**
     * 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgBindInfo")
     @Expose
     private PkgBind [] PkgBindInfo;
 
     /**
-     * Get 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包ID 
      * @return PkgId 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgId() {
         return this.PkgId;
@@ -107,19 +96,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 程序包名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包名 
      * @return PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgName() {
         return this.PkgName;
@@ -127,19 +112,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgName(String PkgName) {
         this.PkgName = PkgName;
     }
 
     /**
-     * Get 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包类型 
      * @return PkgType 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgType() {
         return this.PkgType;
@@ -147,19 +128,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgType 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgType(String PkgType) {
         this.PkgType = PkgType;
     }
 
     /**
-     * Get 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包版本 
      * @return PkgVersion 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgVersion() {
         return this.PkgVersion;
@@ -167,19 +144,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgVersion 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgVersion(String PkgVersion) {
         this.PkgVersion = PkgVersion;
     }
 
     /**
-     * Get 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包描述 
      * @return PkgDesc 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgDesc() {
         return this.PkgDesc;
@@ -187,19 +160,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgDesc 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgDesc(String PkgDesc) {
         this.PkgDesc = PkgDesc;
     }
 
     /**
-     * Get 上传时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传时间 
      * @return UploadTime 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadTime() {
         return this.UploadTime;
@@ -207,19 +176,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadTime 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadTime(String UploadTime) {
         this.UploadTime = UploadTime;
     }
 
     /**
-     * Get 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包MD5 
      * @return Md5 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
         return this.Md5;
@@ -227,19 +192,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包状态 
      * @return PkgPubStatus 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPkgPubStatus() {
         return this.PkgPubStatus;
@@ -247,19 +208,15 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgPubStatus 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgPubStatus(Long PkgPubStatus) {
         this.PkgPubStatus = PkgPubStatus;
     }
 
     /**
-     * Get 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包关联关系 
      * @return PkgBindInfo 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PkgBind [] getPkgBindInfo() {
         return this.PkgBindInfo;
@@ -267,9 +224,7 @@ public class PkgInfo extends AbstractModel {
 
     /**
      * Set 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgBindInfo 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgBindInfo(PkgBind [] PkgBindInfo) {
         this.PkgBindInfo = PkgBindInfo;

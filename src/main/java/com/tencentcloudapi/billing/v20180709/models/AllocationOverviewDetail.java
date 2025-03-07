@@ -25,7 +25,6 @@ public class AllocationOverviewDetail extends AbstractModel {
 
     /**
     * 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -33,7 +32,6 @@ public class AllocationOverviewDetail extends AbstractModel {
 
     /**
     * 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKeyName")
     @Expose
@@ -41,7 +39,6 @@ public class AllocationOverviewDetail extends AbstractModel {
 
     /**
     * 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillDate")
     @Expose
@@ -161,7 +158,6 @@ public class AllocationOverviewDetail extends AbstractModel {
 
     /**
     * 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trend")
     @Expose
@@ -172,17 +168,14 @@ public class AllocationOverviewDetail extends AbstractModel {
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrendType")
     @Expose
     private String TrendType;
 
     /**
-     * Get 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元唯一标识 
      * @return TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
@@ -190,19 +183,15 @@ none - 平稳
 
     /**
      * Set 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元名称 
      * @return TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKeyName() {
         return this.TreeNodeUniqKeyName;
@@ -210,19 +199,15 @@ none - 平稳
 
     /**
      * Set 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
         this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;
     }
 
     /**
-     * Get 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期：结算日期 
      * @return BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillDate() {
         return this.BillDate;
@@ -230,9 +215,7 @@ none - 平稳
 
     /**
      * Set 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillDate(String BillDate) {
         this.BillDate = BillDate;
@@ -495,10 +478,8 @@ none - 平稳
     }
 
     /**
-     * Get 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100% 
      * @return Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrend() {
         return this.Trend;
@@ -506,9 +487,7 @@ none - 平稳
 
     /**
      * Set 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrend(String Trend) {
         this.Trend = Trend;
@@ -518,13 +497,11 @@ none - 平稳
      * Get 环比箭头
 upward -上升
 downward - 下降
-none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。 
+none - 平稳 
      * @return TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrendType() {
         return this.TrendType;
@@ -535,12 +512,10 @@ none - 平稳
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrendType(String TrendType) {
         this.TrendType = TrendType;

@@ -25,7 +25,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Product")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Item")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Project")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateUin")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
     * 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -119,10 +108,8 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品筛选列表 
      * @return Business 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillBusinessLink [] getBusiness() {
         return this.Business;
@@ -130,19 +117,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(BillBusinessLink [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品筛选列表 
      * @return Product 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillProduct [] getProduct() {
         return this.Product;
@@ -150,19 +133,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Product 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduct(BillProduct [] Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称筛选列表 
      * @return Item 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillItem [] getItem() {
         return this.Item;
@@ -170,19 +149,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Item 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItem(BillItem [] Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域筛选列表 
      * @return Region 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillRegion [] getRegion() {
         return this.Region;
@@ -190,19 +165,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(BillRegion [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型筛选列表 
      * @return InstanceType 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillInstanceType [] getInstanceType() {
         return this.InstanceType;
@@ -210,19 +181,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(BillInstanceType [] InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式筛选列表 
      * @return PayMode 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillPayMode [] getPayMode() {
         return this.PayMode;
@@ -230,19 +197,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(BillPayMode [] PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目筛选列表 
      * @return Project 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillProject [] getProject() {
         return this.Project;
@@ -250,19 +213,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Project 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProject(BillProject [] Project) {
         this.Project = Project;
     }
 
     /**
-     * Get 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签筛选列表 
      * @return Tag 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTag [] getTag() {
         return this.Tag;
@@ -270,19 +229,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(BillTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用者 UIN 筛选列表 
      * @return OwnerUin 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillOwnerUin [] getOwnerUin() {
         return this.OwnerUin;
@@ -290,19 +245,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(BillOwnerUin [] OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者 UIN 筛选列表 
      * @return OperateUin 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillOperateUin [] getOperateUin() {
         return this.OperateUin;
@@ -310,19 +261,15 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUin 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateUin(BillOperateUin [] OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型筛选列表 
      * @return ActionType 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillActionType [] getActionType() {
         return this.ActionType;
@@ -330,9 +277,7 @@ public class DescribeAllocateConditionsResponse extends AbstractModel {
 
     /**
      * Set 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(BillActionType [] ActionType) {
         this.ActionType = ActionType;

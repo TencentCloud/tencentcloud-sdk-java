@@ -176,6 +176,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *创建变量
+     * @param req CreateVarRequest
+     * @return CreateVarResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVarResponse CreateVar(CreateVarRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVar", CreateVarResponse.class);
+    }
+
+    /**
      *删除应用
      * @param req DeleteAppRequest
      * @return DeleteAppResponse
@@ -614,6 +625,17 @@ public class LkeClient extends AbstractClient{
     public GetTaskStatusResponse GetTaskStatus(GetTaskStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTaskStatus", GetTaskStatusResponse.class);
+    }
+
+    /**
+     *查询自定义变量列表
+     * @param req GetVarListRequest
+     * @return GetVarListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVarListResponse GetVarList(GetVarListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVarList", GetVarListResponse.class);
     }
 
     /**

@@ -25,7 +25,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigId")
     @Expose
@@ -33,7 +32,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigName")
     @Expose
@@ -41,7 +39,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CollectPath")
     @Expose
@@ -49,7 +46,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaVIp")
     @Expose
@@ -65,7 +61,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -73,7 +68,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineRule")
     @Expose
@@ -81,7 +75,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableAuth")
     @Expose
@@ -105,7 +98,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaInfos")
     @Expose
@@ -113,7 +105,6 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
     * 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableGlobalLineRule")
     @Expose
@@ -136,10 +127,8 @@ public class KafkaDeliveryConfig extends AbstractModel {
     private String KafkaAddress;
 
     /**
-     * Get 配置项id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项id 
      * @return ConfigId 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -147,19 +136,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置名称 
      * @return ConfigName 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigName() {
         return this.ConfigName;
@@ -167,19 +152,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get 采集路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采集路径 
      * @return CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCollectPath() {
         return this.CollectPath;
@@ -187,19 +168,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollectPath(String [] CollectPath) {
         this.CollectPath = CollectPath;
     }
 
     /**
-     * Get kafka vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka vip 
      * @return KafkaVIp kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaVIp() {
         return this.KafkaVIp;
@@ -207,9 +184,7 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaVIp kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaVIp(String KafkaVIp) {
         this.KafkaVIp = KafkaVIp;
@@ -236,10 +211,8 @@ public class KafkaDeliveryConfig extends AbstractModel {
     }
 
     /**
-     * Get kafka topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka topic 
      * @return Topic kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -247,19 +220,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 换行规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 换行规则 
      * @return LineRule 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLineRule() {
         return this.LineRule;
@@ -267,19 +236,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LineRule 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineRule(String LineRule) {
         this.LineRule = LineRule;
     }
 
     /**
-     * Get 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否需要认证 
      * @return EnableAuth 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
@@ -287,9 +252,7 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableAuth 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;
@@ -336,10 +299,8 @@ public class KafkaDeliveryConfig extends AbstractModel {
     }
 
     /**
-     * Get 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递的topic和path 
      * @return KafkaInfos 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeliveryKafkaInfo [] getKafkaInfos() {
         return this.KafkaInfos;
@@ -347,19 +308,15 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaInfos 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaInfos(DeliveryKafkaInfo [] KafkaInfos) {
         this.KafkaInfos = KafkaInfos;
     }
 
     /**
-     * Get 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否应用单行规则 
      * @return EnableGlobalLineRule 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableGlobalLineRule() {
         return this.EnableGlobalLineRule;
@@ -367,9 +324,7 @@ public class KafkaDeliveryConfig extends AbstractModel {
 
     /**
      * Set 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableGlobalLineRule 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableGlobalLineRule(Boolean EnableGlobalLineRule) {
         this.EnableGlobalLineRule = EnableGlobalLineRule;

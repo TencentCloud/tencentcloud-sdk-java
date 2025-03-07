@@ -81,7 +81,6 @@ public class KeyPair extends AbstractModel {
 
     /**
     * 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -216,10 +215,8 @@ public class KeyPair extends AbstractModel {
     }
 
     /**
-     * Get 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥关联的标签列表。 
      * @return Tags 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -227,9 +224,7 @@ public class KeyPair extends AbstractModel {
 
     /**
      * Set 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

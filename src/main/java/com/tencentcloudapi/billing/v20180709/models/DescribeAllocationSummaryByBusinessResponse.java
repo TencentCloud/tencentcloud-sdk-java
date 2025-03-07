@@ -25,7 +25,6 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordNum")
     @Expose
@@ -34,7 +33,6 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
     /**
     * 分账账单概览金额汇总
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -42,7 +40,6 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
 
     /**
     * 分账账单按产品汇总明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -56,10 +53,8 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return RecordNum 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordNum() {
         return this.RecordNum;
@@ -67,9 +62,7 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordNum 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;
@@ -77,11 +70,9 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
 
     /**
      * Get 分账账单概览金额汇总
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Total 分账账单概览金额汇总
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationOverviewTotal getTotal() {
         return this.Total;
@@ -90,20 +81,16 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
     /**
      * Set 分账账单概览金额汇总
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 分账账单概览金额汇总
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(AllocationOverviewTotal Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 分账账单按产品汇总明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账账单按产品汇总明细 
      * @return Detail 分账账单按产品汇总明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationSummaryByBusiness [] getDetail() {
         return this.Detail;
@@ -111,9 +98,7 @@ public class DescribeAllocationSummaryByBusinessResponse extends AbstractModel {
 
     /**
      * Set 分账账单按产品汇总明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 分账账单按产品汇总明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(AllocationSummaryByBusiness [] Detail) {
         this.Detail = Detail;

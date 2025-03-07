@@ -25,7 +25,6 @@ public class DeliveryKafkaInfo extends AbstractModel {
 
     /**
     * 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -33,7 +32,6 @@ public class DeliveryKafkaInfo extends AbstractModel {
 
     /**
     * 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -43,7 +41,6 @@ public class DeliveryKafkaInfo extends AbstractModel {
     * default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineRule")
     @Expose
@@ -51,17 +48,14 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
 
     /**
     * 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRule")
     @Expose
     private String CustomRule;
 
     /**
-     * Get 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递kafka的topic 
      * @return Topic 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -69,19 +63,15 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
 
     /**
      * Set 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采集日志的path 
      * @return Path 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPath() {
         return this.Path;
@@ -89,9 +79,7 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
 
     /**
      * Set 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String [] Path) {
         this.Path = Path;
@@ -100,12 +88,10 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
     /**
      * Get default，默认换行符分行
 time，按时间分行
-custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。 
+custom, 选了custom那么CustomRule就要填入具体的自定义值 
      * @return LineRule default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLineRule() {
         return this.LineRule;
@@ -115,21 +101,17 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
      * Set default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LineRule default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineRule(String LineRule) {
         this.LineRule = LineRule;
     }
 
     /**
-     * Get 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义的分行值 
      * @return CustomRule 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomRule() {
         return this.CustomRule;
@@ -137,9 +119,7 @@ custom, 选了custom那么CustomRule就要填入具体的自定义值
 
     /**
      * Set 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomRule 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRule(String CustomRule) {
         this.CustomRule = CustomRule;

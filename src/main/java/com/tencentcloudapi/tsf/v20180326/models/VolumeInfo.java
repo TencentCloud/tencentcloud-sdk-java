@@ -46,7 +46,6 @@ public class VolumeInfo extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigMapOptions")
     @Expose
@@ -54,7 +53,6 @@ public class VolumeInfo extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmptyDirOption")
     @Expose
@@ -109,10 +107,8 @@ public class VolumeInfo extends AbstractModel {
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return ConfigMapOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigMapOption [] getConfigMapOptions() {
         return this.ConfigMapOptions;
@@ -120,19 +116,15 @@ public class VolumeInfo extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigMapOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigMapOptions(ConfigMapOption [] ConfigMapOptions) {
         this.ConfigMapOptions = ConfigMapOptions;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return EmptyDirOption -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmptyDirOption getEmptyDirOption() {
         return this.EmptyDirOption;
@@ -140,9 +132,7 @@ public class VolumeInfo extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyDirOption -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmptyDirOption(EmptyDirOption EmptyDirOption) {
         this.EmptyDirOption = EmptyDirOption;

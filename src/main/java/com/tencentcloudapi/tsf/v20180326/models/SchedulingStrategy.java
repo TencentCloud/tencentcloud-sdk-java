@@ -25,7 +25,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeScheduleStrategyType")
     @Expose
@@ -41,7 +39,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeScheduleOptions")
     @Expose
@@ -49,7 +46,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrongAffinityList")
     @Expose
@@ -57,7 +53,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeakAffinityList")
     @Expose
@@ -65,7 +60,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeakAffinityWeight")
     @Expose
@@ -73,7 +67,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableZoneScatterScheduleType")
     @Expose
@@ -81,7 +74,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableZoneScatterScheduleRules")
     @Expose
@@ -89,7 +81,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodScheduleStrategyType")
     @Expose
@@ -97,7 +88,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomPodSchedule")
     @Expose
@@ -105,7 +95,6 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TolerateScheduleType")
     @Expose
@@ -113,17 +102,14 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomTolerateSchedules")
     @Expose
     private CustomTolerateSchedule [] CustomTolerateSchedules;
 
     /**
-     * Get NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NONE：不使用调度策略；CROSS_AZ：跨可用区部署 
      * @return Type NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -131,19 +117,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return NodeScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeScheduleStrategyType() {
         return this.NodeScheduleStrategyType;
@@ -151,19 +133,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeScheduleStrategyType(String NodeScheduleStrategyType) {
         this.NodeScheduleStrategyType = NodeScheduleStrategyType;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return NodeScheduleOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonOption [] getNodeScheduleOptions() {
         return this.NodeScheduleOptions;
@@ -171,19 +149,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeScheduleOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeScheduleOptions(CommonOption [] NodeScheduleOptions) {
         this.NodeScheduleOptions = NodeScheduleOptions;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return StrongAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonOption [] getStrongAffinityList() {
         return this.StrongAffinityList;
@@ -191,19 +165,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrongAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrongAffinityList(CommonOption [] StrongAffinityList) {
         this.StrongAffinityList = StrongAffinityList;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return WeakAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonOption [] getWeakAffinityList() {
         return this.WeakAffinityList;
@@ -211,19 +181,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WeakAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeakAffinityList(CommonOption [] WeakAffinityList) {
         this.WeakAffinityList = WeakAffinityList;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return WeakAffinityWeight -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeakAffinityWeight() {
         return this.WeakAffinityWeight;
@@ -231,19 +197,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WeakAffinityWeight -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeakAffinityWeight(Long WeakAffinityWeight) {
         this.WeakAffinityWeight = WeakAffinityWeight;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return AvailableZoneScatterScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvailableZoneScatterScheduleType() {
         return this.AvailableZoneScatterScheduleType;
@@ -251,19 +213,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableZoneScatterScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableZoneScatterScheduleType(String AvailableZoneScatterScheduleType) {
         this.AvailableZoneScatterScheduleType = AvailableZoneScatterScheduleType;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return AvailableZoneScatterScheduleRules -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AvailableZoneScatterScheduleRule [] getAvailableZoneScatterScheduleRules() {
         return this.AvailableZoneScatterScheduleRules;
@@ -271,19 +229,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableZoneScatterScheduleRules -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableZoneScatterScheduleRules(AvailableZoneScatterScheduleRule [] AvailableZoneScatterScheduleRules) {
         this.AvailableZoneScatterScheduleRules = AvailableZoneScatterScheduleRules;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return PodScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodScheduleStrategyType() {
         return this.PodScheduleStrategyType;
@@ -291,19 +245,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodScheduleStrategyType(String PodScheduleStrategyType) {
         this.PodScheduleStrategyType = PodScheduleStrategyType;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return CustomPodSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomPodSchedule getCustomPodSchedule() {
         return this.CustomPodSchedule;
@@ -311,19 +261,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomPodSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomPodSchedule(CustomPodSchedule CustomPodSchedule) {
         this.CustomPodSchedule = CustomPodSchedule;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return TolerateScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTolerateScheduleType() {
         return this.TolerateScheduleType;
@@ -331,19 +277,15 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TolerateScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTolerateScheduleType(String TolerateScheduleType) {
         this.TolerateScheduleType = TolerateScheduleType;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return CustomTolerateSchedules -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomTolerateSchedule [] getCustomTolerateSchedules() {
         return this.CustomTolerateSchedules;
@@ -351,9 +293,7 @@ public class SchedulingStrategy extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomTolerateSchedules -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomTolerateSchedules(CustomTolerateSchedule [] CustomTolerateSchedules) {
         this.CustomTolerateSchedules = CustomTolerateSchedules;

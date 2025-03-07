@@ -25,7 +25,6 @@ public class UpdateUserResponse extends AbstractModel {
 
     /**
     * 更新之后的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 更新之后的用户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新之后的用户信息 
      * @return User 更新之后的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public User getUser() {
         return this.User;
@@ -50,9 +47,7 @@ public class UpdateUserResponse extends AbstractModel {
 
     /**
      * Set 更新之后的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 更新之后的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(User User) {
         this.User = User;

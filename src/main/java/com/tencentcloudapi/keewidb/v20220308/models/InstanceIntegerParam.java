@@ -88,7 +88,6 @@ public class InstanceIntegerParam extends AbstractModel {
 
     /**
     * 参数单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -239,10 +238,8 @@ public class InstanceIntegerParam extends AbstractModel {
     }
 
     /**
-     * Get 参数单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数单位 
      * @return Unit 参数单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -250,9 +247,7 @@ public class InstanceIntegerParam extends AbstractModel {
 
     /**
      * Set 参数单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 参数单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

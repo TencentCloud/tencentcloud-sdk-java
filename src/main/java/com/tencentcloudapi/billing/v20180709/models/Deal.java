@@ -137,7 +137,6 @@ public class Deal extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -159,7 +158,6 @@ public class Deal extends AbstractModel {
 
     /**
     * 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Formula")
     @Expose
@@ -167,7 +165,6 @@ public class Deal extends AbstractModel {
 
     /**
     * 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefReturnDeals")
     @Expose
@@ -194,7 +191,6 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -202,7 +198,6 @@ postMoveIn 按量计费迁入资源
 
     /**
     * 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -210,7 +205,6 @@ postMoveIn 按量计费迁入资源
 
     /**
     * 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductName")
     @Expose
@@ -481,10 +475,8 @@ postMoveIn 按量计费迁入资源
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -492,9 +484,7 @@ postMoveIn 按量计费迁入资源
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -533,10 +523,8 @@ postMoveIn 按量计费迁入资源
     }
 
     /**
-     * Get 退费公式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退费公式 
      * @return Formula 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormula() {
         return this.Formula;
@@ -544,19 +532,15 @@ postMoveIn 按量计费迁入资源
 
     /**
      * Set 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Formula 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退费涉及订单信息 
      * @return RefReturnDeals 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRefReturnDeals() {
         return this.RefReturnDeals;
@@ -564,9 +548,7 @@ postMoveIn 按量计费迁入资源
 
     /**
      * Set 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefReturnDeals 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefReturnDeals(String RefReturnDeals) {
         this.RefReturnDeals = RefReturnDeals;
@@ -601,8 +583,7 @@ preMoveOut 包年包月迁出资源
 preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
-postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。 
+postMoveIn 按量计费迁入资源 
      * @return Action 交易类型
 modifyNetworkMode 调整带宽模式
 modifyNetworkSize 调整带宽大小
@@ -616,7 +597,6 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -636,7 +616,6 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 交易类型
 modifyNetworkMode 调整带宽模式
 modifyNetworkSize 调整带宽大小
@@ -650,17 +629,14 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码中文名称 
      * @return ProductName 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -668,19 +644,15 @@ postMoveIn 按量计费迁入资源
 
     /**
      * Set 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码中文名称 
      * @return SubProductName 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductName() {
         return this.SubProductName;
@@ -688,9 +660,7 @@ postMoveIn 按量计费迁入资源
 
     /**
      * Set 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductName 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;

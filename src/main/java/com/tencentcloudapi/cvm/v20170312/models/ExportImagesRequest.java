@@ -31,7 +31,7 @@ public class ExportImagesRequest extends AbstractModel {
     private String BucketName;
 
     /**
-    * 镜像ID列表
+    * 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
     */
     @SerializedName("ImageIds")
     @Expose
@@ -89,16 +89,16 @@ public class ExportImagesRequest extends AbstractModel {
     }
 
     /**
-     * Get 镜像ID列表 
-     * @return ImageIds 镜像ID列表
+     * Get 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。 
+     * @return ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
      */
     public String [] getImageIds() {
         return this.ImageIds;
     }
 
     /**
-     * Set 镜像ID列表
-     * @param ImageIds 镜像ID列表
+     * Set 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+     * @param ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;

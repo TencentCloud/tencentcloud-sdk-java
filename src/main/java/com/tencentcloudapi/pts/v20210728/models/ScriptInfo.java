@@ -81,6 +81,14 @@ public class ScriptInfo extends AbstractModel {
     private String FileId;
 
     /**
+    * 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+    */
+    @SerializedName("Uploaded")
+    @Expose
+    private Boolean Uploaded;
+
+    /**
      * Get 文件名 
      * @return Name 文件名
      */
@@ -212,6 +220,26 @@ public class ScriptInfo extends AbstractModel {
         this.FileId = FileId;
     }
 
+    /**
+     * Get 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。 
+     * @return Uploaded 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+     */
+    public Boolean getUploaded() {
+        return this.Uploaded;
+    }
+
+    /**
+     * Set 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+     * @param Uploaded 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+     */
+    public void setUploaded(Boolean Uploaded) {
+        this.Uploaded = Uploaded;
+    }
+
     public ScriptInfo() {
     }
 
@@ -244,6 +272,9 @@ public class ScriptInfo extends AbstractModel {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Uploaded != null) {
+            this.Uploaded = new Boolean(source.Uploaded);
+        }
     }
 
 
@@ -259,6 +290,7 @@ public class ScriptInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EncodedHttpArchive", this.EncodedHttpArchive);
         this.setParamSimple(map, prefix + "LoadWeight", this.LoadWeight);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Uploaded", this.Uploaded);
 
     }
 }

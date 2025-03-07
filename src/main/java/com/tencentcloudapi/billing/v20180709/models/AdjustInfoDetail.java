@@ -25,7 +25,6 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
     * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUin")
     @Expose
@@ -33,7 +32,6 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
     * 账单月份，格式：yyyy-MM
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Month")
     @Expose
@@ -44,7 +42,6 @@ public class AdjustInfoDetail extends AbstractModel {
 调账：manualAdjustment
 补结算：supplementarySettlement
 重结算：reSettlement
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdjustType")
     @Expose
@@ -52,7 +49,6 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
     * 调整单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdjustNum")
     @Expose
@@ -60,7 +56,6 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
     * 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdjustCompletionTime")
     @Expose
@@ -68,17 +63,14 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
     * 调整金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdjustAmount")
     @Expose
     private Float AdjustAmount;
 
     /**
-     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
      * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUin() {
         return this.PayerUin;
@@ -86,19 +78,15 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
      * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 账单月份，格式：yyyy-MM
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单月份，格式：yyyy-MM 
      * @return Month 账单月份，格式：yyyy-MM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonth() {
         return this.Month;
@@ -106,9 +94,7 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
      * Set 账单月份，格式：yyyy-MM
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Month 账单月份，格式：yyyy-MM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonth(String Month) {
         this.Month = Month;
@@ -118,13 +104,11 @@ public class AdjustInfoDetail extends AbstractModel {
      * Get 调整类型
 调账：manualAdjustment
 补结算：supplementarySettlement
-重结算：reSettlement
-注意：此字段可能返回 null，表示取不到有效值。 
+重结算：reSettlement 
      * @return AdjustType 调整类型
 调账：manualAdjustment
 补结算：supplementarySettlement
 重结算：reSettlement
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdjustType() {
         return this.AdjustType;
@@ -135,22 +119,18 @@ public class AdjustInfoDetail extends AbstractModel {
 调账：manualAdjustment
 补结算：supplementarySettlement
 重结算：reSettlement
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdjustType 调整类型
 调账：manualAdjustment
 补结算：supplementarySettlement
 重结算：reSettlement
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdjustType(String AdjustType) {
         this.AdjustType = AdjustType;
     }
 
     /**
-     * Get 调整单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调整单号 
      * @return AdjustNum 调整单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdjustNum() {
         return this.AdjustNum;
@@ -158,19 +138,15 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
      * Set 调整单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdjustNum 调整单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdjustNum(String AdjustNum) {
         this.AdjustNum = AdjustNum;
     }
 
     /**
-     * Get 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss 
      * @return AdjustCompletionTime 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdjustCompletionTime() {
         return this.AdjustCompletionTime;
@@ -178,19 +154,15 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
      * Set 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdjustCompletionTime 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdjustCompletionTime(String AdjustCompletionTime) {
         this.AdjustCompletionTime = AdjustCompletionTime;
     }
 
     /**
-     * Get 调整金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调整金额 
      * @return AdjustAmount 调整金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAdjustAmount() {
         return this.AdjustAmount;
@@ -198,9 +170,7 @@ public class AdjustInfoDetail extends AbstractModel {
 
     /**
      * Set 调整金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdjustAmount 调整金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdjustAmount(Float AdjustAmount) {
         this.AdjustAmount = AdjustAmount;

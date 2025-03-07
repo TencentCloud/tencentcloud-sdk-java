@@ -45,7 +45,7 @@ public class CCPrecisionPlyRecord extends AbstractModel {
     private String Value;
 
     /**
-    * 配置项值比对方式，可取值equal ，not_equal， include
+    * 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
     */
     @SerializedName("ValueOperator")
     @Expose
@@ -100,16 +100,16 @@ public class CCPrecisionPlyRecord extends AbstractModel {
     }
 
     /**
-     * Get 配置项值比对方式，可取值equal ，not_equal， include 
-     * @return ValueOperator 配置项值比对方式，可取值equal ，not_equal， include
+     * Get 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含 
+     * @return ValueOperator 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
      */
     public String getValueOperator() {
         return this.ValueOperator;
     }
 
     /**
-     * Set 配置项值比对方式，可取值equal ，not_equal， include
-     * @param ValueOperator 配置项值比对方式，可取值equal ，not_equal， include
+     * Set 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
+     * @param ValueOperator 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
      */
     public void setValueOperator(String ValueOperator) {
         this.ValueOperator = ValueOperator;

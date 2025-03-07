@@ -25,7 +25,6 @@ public class InternetChargeTypeConfig extends AbstractModel {
 
     /**
     * 网络计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetChargeType")
     @Expose
@@ -33,17 +32,14 @@ public class InternetChargeTypeConfig extends AbstractModel {
 
     /**
     * 网络计费模式描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 网络计费模式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络计费模式。 
      * @return InternetChargeType 网络计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
@@ -51,19 +47,15 @@ public class InternetChargeTypeConfig extends AbstractModel {
 
     /**
      * Set 网络计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetChargeType 网络计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
     }
 
     /**
-     * Get 网络计费模式描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络计费模式描述信息。 
      * @return Description 网络计费模式描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -71,9 +63,7 @@ public class InternetChargeTypeConfig extends AbstractModel {
 
     /**
      * Set 网络计费模式描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 网络计费模式描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

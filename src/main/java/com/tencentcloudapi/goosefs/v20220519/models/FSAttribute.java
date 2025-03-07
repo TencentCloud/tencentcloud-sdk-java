@@ -46,7 +46,6 @@ public class FSAttribute extends AbstractModel {
 
     /**
     * GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GooseFSxAttribute")
     @Expose
@@ -96,7 +95,6 @@ public class FSAttribute extends AbstractModel {
 
     /**
     * Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -111,7 +109,6 @@ public class FSAttribute extends AbstractModel {
 
     /**
     * 文件系统付费信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeAttribute")
     @Expose
@@ -166,10 +163,8 @@ public class FSAttribute extends AbstractModel {
     }
 
     /**
-     * Get GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GooseFSx文件系统属性 
      * @return GooseFSxAttribute GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFSxAttribute getGooseFSxAttribute() {
         return this.GooseFSxAttribute;
@@ -177,9 +172,7 @@ public class FSAttribute extends AbstractModel {
 
     /**
      * Set GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GooseFSxAttribute GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGooseFSxAttribute(GooseFSxAttribute GooseFSxAttribute) {
         this.GooseFSxAttribute = GooseFSxAttribute;
@@ -282,10 +275,8 @@ public class FSAttribute extends AbstractModel {
     }
 
     /**
-     * Get Tag数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Tag数组 
      * @return Tag Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -293,9 +284,7 @@ public class FSAttribute extends AbstractModel {
 
     /**
      * Set Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
@@ -318,10 +307,8 @@ public class FSAttribute extends AbstractModel {
     }
 
     /**
-     * Get 文件系统付费信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统付费信息 
      * @return ChargeAttribute 文件系统付费信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChargeAttribute getChargeAttribute() {
         return this.ChargeAttribute;
@@ -329,9 +316,7 @@ public class FSAttribute extends AbstractModel {
 
     /**
      * Set 文件系统付费信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeAttribute 文件系统付费信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeAttribute(ChargeAttribute ChargeAttribute) {
         this.ChargeAttribute = ChargeAttribute;

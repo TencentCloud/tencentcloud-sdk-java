@@ -25,7 +25,6 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
 
     /**
     * 分账账单月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
 
     /**
     * 分账账单概览金额汇总
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分账账单月概览详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账账单月概览详情 
      * @return Detail 分账账单月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationOverviewNode [] getDetail() {
         return this.Detail;
@@ -58,19 +54,15 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
 
     /**
      * Set 分账账单月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 分账账单月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(AllocationOverviewNode [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 分账账单概览金额汇总
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账账单概览金额汇总 
      * @return Total 分账账单概览金额汇总
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationOverviewTotal getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
 
     /**
      * Set 分账账单概览金额汇总
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 分账账单概览金额汇总
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(AllocationOverviewTotal Total) {
         this.Total = Total;

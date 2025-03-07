@@ -25,7 +25,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceCode")
     @Expose
@@ -41,7 +39,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -49,7 +46,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCode")
     @Expose
@@ -57,7 +53,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceAction")
     @Expose
@@ -65,7 +60,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdField")
     @Expose
@@ -73,7 +67,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameField")
     @Expose
@@ -81,7 +74,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectIdsField")
     @Expose
@@ -89,7 +81,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTime")
     @Expose
@@ -97,7 +88,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -105,7 +95,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteFlag")
     @Expose
@@ -113,7 +102,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceDesc")
     @Expose
@@ -121,7 +109,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanSelectAll")
     @Expose
@@ -129,7 +116,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchWordField")
     @Expose
@@ -137,17 +123,14 @@ public class Resource extends AbstractModel {
 
     /**
     * 排序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get 资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID 
      * @return ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -155,19 +138,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源编码 
      * @return ResourceCode 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceCode() {
         return this.ResourceCode;
@@ -175,19 +154,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceCode 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceCode(String ResourceCode) {
         this.ResourceCode = ResourceCode;
     }
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -195,19 +170,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属产品编码 
      * @return ServiceCode 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceCode() {
         return this.ServiceCode;
@@ -215,19 +186,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceCode 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCode(String ServiceCode) {
         this.ServiceCode = ServiceCode;
     }
 
     /**
-     * Get 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选取资源使用的Action 
      * @return ResourceAction 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceAction() {
         return this.ResourceAction;
@@ -235,19 +202,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceAction 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceAction(String ResourceAction) {
         this.ResourceAction = ResourceAction;
     }
 
     /**
-     * Get 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数据查询的ID字段名 
      * @return IdField 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdField() {
         return this.IdField;
@@ -255,19 +218,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdField 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdField(String IdField) {
         this.IdField = IdField;
     }
 
     /**
-     * Get 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数据查询的名称字段名 
      * @return NameField 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameField() {
         return this.NameField;
@@ -275,19 +234,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameField 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameField(String NameField) {
         this.NameField = NameField;
     }
 
     /**
-     * Get 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数据查询的ID过滤字段名 
      * @return SelectIdsField 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelectIdsField() {
         return this.SelectIdsField;
@@ -295,19 +250,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelectIdsField 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectIdsField(String SelectIdsField) {
         this.SelectIdsField = SelectIdsField;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreationTime() {
         return this.CreationTime;
@@ -315,19 +266,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
@@ -335,19 +282,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 删除标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除标识 
      * @return DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteFlag() {
         return this.DeleteFlag;
@@ -355,19 +298,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteFlag(Boolean DeleteFlag) {
         this.DeleteFlag = DeleteFlag;
     }
 
     /**
-     * Get 资源描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源描述 
      * @return ResourceDesc 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceDesc() {
         return this.ResourceDesc;
@@ -375,19 +314,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDesc 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceDesc(String ResourceDesc) {
         this.ResourceDesc = ResourceDesc;
     }
 
     /**
-     * Get 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以选择全部 
      * @return CanSelectAll 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanSelectAll() {
         return this.CanSelectAll;
@@ -395,19 +330,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanSelectAll 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanSelectAll(Boolean CanSelectAll) {
         this.CanSelectAll = CanSelectAll;
     }
 
     /**
-     * Get 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数据查询的模糊查询字段名 
      * @return SearchWordField 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSearchWordField() {
         return this.SearchWordField;
@@ -415,19 +346,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchWordField 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchWordField(String SearchWordField) {
         this.SearchWordField = SearchWordField;
     }
 
     /**
-     * Get 排序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排序 
      * @return Index 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndex() {
         return this.Index;
@@ -435,9 +362,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long Index) {
         this.Index = Index;

@@ -93,7 +93,6 @@ public class DomainCertInfo extends AbstractModel {
     /**
     * 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertDomains")
     @Expose
@@ -101,7 +100,6 @@ public class DomainCertInfo extends AbstractModel {
 
     /**
     * 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudCertId")
     @Expose
@@ -269,11 +267,9 @@ public class DomainCertInfo extends AbstractModel {
 
     /**
      * Get 证书本身标识的域名列表。
-比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。 
+比如: ["*.x.com"] 
      * @return CertDomains 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCertDomains() {
         return this.CertDomains;
@@ -282,20 +278,16 @@ public class DomainCertInfo extends AbstractModel {
     /**
      * Set 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertDomains 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertDomains(String [] CertDomains) {
         this.CertDomains = CertDomains;
     }
 
     /**
-     * Get 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯云ssl的证书Id 
      * @return CloudCertId 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudCertId() {
         return this.CloudCertId;
@@ -303,9 +295,7 @@ public class DomainCertInfo extends AbstractModel {
 
     /**
      * Set 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudCertId 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;

@@ -25,7 +25,6 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
     * minos类型。是使用腾讯云的minios，还是客户自己的minios。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniOsType")
     @Expose
@@ -33,7 +32,6 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
     * 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BootType")
     @Expose
@@ -41,7 +39,6 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
     * PXE使用的引导文件。默认为pxelinux.0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BootFile")
     @Expose
@@ -49,17 +46,14 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
     * tftp服务器的ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextServerAddress")
     @Expose
     private String NextServerAddress;
 
     /**
-     * Get minos类型。是使用腾讯云的minios，还是客户自己的minios。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get minos类型。是使用腾讯云的minios，还是客户自己的minios。 
      * @return MiniOsType minos类型。是使用腾讯云的minios，还是客户自己的minios。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniOsType() {
         return this.MiniOsType;
@@ -67,19 +61,15 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
      * Set minos类型。是使用腾讯云的minios，还是客户自己的minios。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniOsType minos类型。是使用腾讯云的minios，还是客户自己的minios。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniOsType(String MiniOsType) {
         this.MiniOsType = MiniOsType;
     }
 
     /**
-     * Get 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。 
      * @return BootType 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBootType() {
         return this.BootType;
@@ -87,19 +77,15 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
      * Set 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BootType 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBootType(String BootType) {
         this.BootType = BootType;
     }
 
     /**
-     * Get PXE使用的引导文件。默认为pxelinux.0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PXE使用的引导文件。默认为pxelinux.0。 
      * @return BootFile PXE使用的引导文件。默认为pxelinux.0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBootFile() {
         return this.BootFile;
@@ -107,19 +93,15 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
      * Set PXE使用的引导文件。默认为pxelinux.0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BootFile PXE使用的引导文件。默认为pxelinux.0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBootFile(String BootFile) {
         this.BootFile = BootFile;
     }
 
     /**
-     * Get tftp服务器的ip地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tftp服务器的ip地址。 
      * @return NextServerAddress tftp服务器的ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextServerAddress() {
         return this.NextServerAddress;
@@ -127,9 +109,7 @@ public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
      * Set tftp服务器的ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextServerAddress tftp服务器的ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextServerAddress(String NextServerAddress) {
         this.NextServerAddress = NextServerAddress;

@@ -25,7 +25,6 @@ public class Metric extends AbstractModel {
 
     /**
     * 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class Metric extends AbstractModel {
 
     /**
     * 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Function")
     @Expose
     private String Function;
 
     /**
-     * Get 指标名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标名称 
      * @return Name 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class Metric extends AbstractModel {
 
     /**
      * Set 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标计算方式 
      * @return Function 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunction() {
         return this.Function;
@@ -71,9 +63,7 @@ public class Metric extends AbstractModel {
 
     /**
      * Set 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Function 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunction(String Function) {
         this.Function = Function;

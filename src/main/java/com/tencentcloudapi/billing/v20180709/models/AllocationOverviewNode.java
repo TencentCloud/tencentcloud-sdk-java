@@ -25,7 +25,6 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
     * 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
     * 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
     * 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -53,7 +50,6 @@ public class AllocationOverviewNode extends AbstractModel {
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Symbol")
     @Expose
@@ -61,7 +57,6 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
     * 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
     @Expose
@@ -69,17 +64,14 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
     * 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
     private AllocationMonthOverviewDetail Detail;
 
     /**
-     * Get 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元ID 
      * @return Id 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -87,19 +79,15 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
      * Set 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元名称 
      * @return Name 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -107,19 +95,15 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
      * Set 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元唯一标识 
      * @return TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
@@ -127,9 +111,7 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
      * Set 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
@@ -140,14 +122,12 @@ public class AllocationOverviewNode extends AbstractModel {
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
-3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。 
+3 - 仅存在公摊规则 
      * @return Symbol 分账单元包含规则标志
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSymbol() {
         return this.Symbol;
@@ -159,23 +139,19 @@ public class AllocationOverviewNode extends AbstractModel {
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Symbol 分账单元包含规则标志
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymbol(Long Symbol) {
         this.Symbol = Symbol;
     }
 
     /**
-     * Get 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子单元月概览详情 
      * @return Children 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationOverviewNode [] getChildren() {
         return this.Children;
@@ -183,19 +159,15 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
      * Set 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Children 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(AllocationOverviewNode [] Children) {
         this.Children = Children;
     }
 
     /**
-     * Get 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账账单月概览金额明细 
      * @return Detail 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationMonthOverviewDetail getDetail() {
         return this.Detail;
@@ -203,9 +175,7 @@ public class AllocationOverviewNode extends AbstractModel {
 
     /**
      * Set 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(AllocationMonthOverviewDetail Detail) {
         this.Detail = Detail;

@@ -25,7 +25,6 @@ public class CreateHpcClusterResponse extends AbstractModel {
 
     /**
     * 高性能计算集群信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HpcClusterSet")
     @Expose
@@ -39,10 +38,8 @@ public class CreateHpcClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 高性能计算集群信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群信息。 
      * @return HpcClusterSet 高性能计算集群信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HpcClusterInfo [] getHpcClusterSet() {
         return this.HpcClusterSet;
@@ -50,9 +47,7 @@ public class CreateHpcClusterResponse extends AbstractModel {
 
     /**
      * Set 高性能计算集群信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HpcClusterSet 高性能计算集群信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHpcClusterSet(HpcClusterInfo [] HpcClusterSet) {
         this.HpcClusterSet = HpcClusterSet;

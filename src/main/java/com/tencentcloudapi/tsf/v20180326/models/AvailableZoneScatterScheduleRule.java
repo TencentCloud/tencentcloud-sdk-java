@@ -25,7 +25,6 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScatterDimension")
     @Expose
@@ -33,7 +32,6 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxUnbalanceQuantity")
     @Expose
@@ -41,17 +39,14 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsForceSchedule")
     @Expose
     private Boolean IsForceSchedule;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return ScatterDimension -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScatterDimension() {
         return this.ScatterDimension;
@@ -59,19 +54,15 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScatterDimension -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScatterDimension(String ScatterDimension) {
         this.ScatterDimension = ScatterDimension;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return MaxUnbalanceQuantity -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxUnbalanceQuantity() {
         return this.MaxUnbalanceQuantity;
@@ -79,19 +70,15 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxUnbalanceQuantity -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxUnbalanceQuantity(Long MaxUnbalanceQuantity) {
         this.MaxUnbalanceQuantity = MaxUnbalanceQuantity;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return IsForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsForceSchedule() {
         return this.IsForceSchedule;
@@ -99,9 +86,7 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsForceSchedule(Boolean IsForceSchedule) {
         this.IsForceSchedule = IsForceSchedule;

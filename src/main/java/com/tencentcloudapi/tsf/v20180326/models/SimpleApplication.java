@@ -25,7 +25,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -33,7 +32,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -41,7 +39,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -49,7 +46,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -57,7 +53,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationDesc")
     @Expose
@@ -65,7 +60,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgLang")
     @Expose
@@ -73,7 +67,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationResourceType")
     @Expose
@@ -81,7 +74,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,7 +81,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -97,7 +88,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApigatewayServiceId")
     @Expose
@@ -105,7 +95,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationRuntimeType")
     @Expose
@@ -113,7 +102,6 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * Apm业务系统id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AmpInstanceId")
     @Expose
@@ -121,17 +109,14 @@ public class SimpleApplication extends AbstractModel {
 
     /**
     * Apm业务系统Name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApmInstanceName")
     @Expose
     private String ApmInstanceName;
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -139,19 +124,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -159,19 +140,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -179,19 +156,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用微服务类型 
      * @return MicroserviceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
@@ -199,19 +172,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ApplicationDesc 
      * @return ApplicationDesc ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationDesc() {
         return this.ApplicationDesc;
@@ -219,19 +188,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationDesc ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationDesc(String ApplicationDesc) {
         this.ApplicationDesc = ApplicationDesc;
     }
 
     /**
-     * Get ProgLang
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ProgLang 
      * @return ProgLang ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgLang() {
         return this.ProgLang;
@@ -239,19 +204,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgLang ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgLang(String ProgLang) {
         this.ProgLang = ProgLang;
     }
 
     /**
-     * Get ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ApplicationResourceType 
      * @return ApplicationResourceType ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationResourceType() {
         return this.ApplicationResourceType;
@@ -259,19 +220,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationResourceType ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationResourceType(String ApplicationResourceType) {
         this.ApplicationResourceType = ApplicationResourceType;
     }
 
     /**
-     * Get CreateTime
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CreateTime 
      * @return CreateTime CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -279,19 +236,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UpdateTime 
      * @return UpdateTime UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -299,19 +252,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ApigatewayServiceId 
      * @return ApigatewayServiceId ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApigatewayServiceId() {
         return this.ApigatewayServiceId;
@@ -319,19 +268,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApigatewayServiceId ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApigatewayServiceId(String ApigatewayServiceId) {
         this.ApigatewayServiceId = ApigatewayServiceId;
     }
 
     /**
-     * Get ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ApplicationRuntimeType 
      * @return ApplicationRuntimeType ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationRuntimeType() {
         return this.ApplicationRuntimeType;
@@ -339,19 +284,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationRuntimeType ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationRuntimeType(String ApplicationRuntimeType) {
         this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
     /**
-     * Get Apm业务系统id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Apm业务系统id 
      * @return AmpInstanceId Apm业务系统id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAmpInstanceId() {
         return this.AmpInstanceId;
@@ -359,19 +300,15 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set Apm业务系统id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AmpInstanceId Apm业务系统id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmpInstanceId(String AmpInstanceId) {
         this.AmpInstanceId = AmpInstanceId;
     }
 
     /**
-     * Get Apm业务系统Name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Apm业务系统Name 
      * @return ApmInstanceName Apm业务系统Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApmInstanceName() {
         return this.ApmInstanceName;
@@ -379,9 +316,7 @@ public class SimpleApplication extends AbstractModel {
 
     /**
      * Set Apm业务系统Name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApmInstanceName Apm业务系统Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApmInstanceName(String ApmInstanceName) {
         this.ApmInstanceName = ApmInstanceName;

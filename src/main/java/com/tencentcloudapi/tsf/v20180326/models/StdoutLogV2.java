@@ -25,7 +25,6 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
     * 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -41,7 +39,6 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
     * 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -49,17 +46,14 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
     * 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIp")
     @Expose
     private String InstanceIp;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -67,19 +61,15 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 日志内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志内容 
      * @return Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -87,19 +77,15 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
      * Set 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志时间戳 
      * @return Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -107,19 +93,15 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
      * Set 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 实例IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例IP 
      * @return InstanceIp 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceIp() {
         return this.InstanceIp;
@@ -127,9 +109,7 @@ public class StdoutLogV2 extends AbstractModel {
 
     /**
      * Set 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIp 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIp(String InstanceIp) {
         this.InstanceIp = InstanceIp;

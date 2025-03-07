@@ -248,6 +248,13 @@ public class InstanceApiOpsRequest extends AbstractModel {
     private Boolean OnlyRerun;
 
     /**
+    * 时区
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 单个查询条件 
      * @return Instance 单个查询条件
      */
@@ -759,6 +766,22 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.OnlyRerun = OnlyRerun;
     }
 
+    /**
+     * Get 时区 
+     * @return ScheduleTimeZone 时区
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区
+     * @param ScheduleTimeZone 时区
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public InstanceApiOpsRequest() {
     }
 
@@ -899,6 +922,9 @@ public class InstanceApiOpsRequest extends AbstractModel {
         if (source.OnlyRerun != null) {
             this.OnlyRerun = new Boolean(source.OnlyRerun);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -938,6 +964,7 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
         this.setParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
         this.setParamSimple(map, prefix + "OnlyRerun", this.OnlyRerun);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

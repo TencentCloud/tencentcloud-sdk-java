@@ -45,6 +45,13 @@ public class TriggerDsEventRequest extends AbstractModel {
     private EventBatchCaseDTO [] EventBatchCaseList;
 
     /**
+    * 触发时区
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -92,6 +99,22 @@ public class TriggerDsEventRequest extends AbstractModel {
         this.EventBatchCaseList = EventBatchCaseList;
     }
 
+    /**
+     * Get 触发时区 
+     * @return ScheduleTimeZone 触发时区
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 触发时区
+     * @param ScheduleTimeZone 触发时区
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public TriggerDsEventRequest() {
     }
 
@@ -115,6 +138,9 @@ public class TriggerDsEventRequest extends AbstractModel {
                 this.EventBatchCaseList[i] = new EventBatchCaseDTO(source.EventBatchCaseList[i]);
             }
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class TriggerDsEventRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "EventCaseList.", this.EventCaseList);
         this.setParamArrayObj(map, prefix + "EventBatchCaseList.", this.EventBatchCaseList);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

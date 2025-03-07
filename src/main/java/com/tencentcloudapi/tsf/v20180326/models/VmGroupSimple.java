@@ -25,7 +25,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -49,7 +46,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupDesc")
     @Expose
@@ -57,7 +53,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -65,7 +60,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -73,7 +67,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupParameters")
     @Expose
@@ -81,7 +74,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -89,7 +81,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -97,7 +88,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -105,7 +95,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -113,7 +102,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -121,7 +109,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -129,7 +116,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -137,7 +123,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -145,7 +130,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -153,7 +137,6 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署应用描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployDesc")
     @Expose
@@ -161,17 +144,14 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
     * 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -179,19 +159,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组名称 
      * @return GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -199,19 +175,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -219,19 +191,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组描述 
      * @return GroupDesc 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupDesc() {
         return this.GroupDesc;
@@ -239,19 +207,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupDesc 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupDesc(String GroupDesc) {
         this.GroupDesc = GroupDesc;
     }
 
     /**
-     * Get 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组更新时间 
      * @return UpdateTime 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -259,19 +223,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -279,19 +239,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组启动参数 
      * @return StartupParameters 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartupParameters() {
         return this.StartupParameters;
@@ -299,19 +255,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartupParameters 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupParameters(String StartupParameters) {
         this.StartupParameters = StartupParameters;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -319,19 +271,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组创建时间 
      * @return CreateTime 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -339,19 +287,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -359,19 +303,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -379,19 +319,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -399,19 +335,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -419,19 +351,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用微服务类型 
      * @return MicroserviceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
@@ -439,19 +367,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组资源类型 
      * @return GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
@@ -459,19 +383,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
     }
 
     /**
-     * Get 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组更新时间戳 
      * @return UpdatedTime 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdatedTime() {
         return this.UpdatedTime;
@@ -479,19 +399,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(Long UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 部署应用描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署应用描述信息 
      * @return DeployDesc 部署应用描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployDesc() {
         return this.DeployDesc;
@@ -499,19 +415,15 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署应用描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployDesc 部署应用描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployDesc(String DeployDesc) {
         this.DeployDesc = DeployDesc;
     }
 
     /**
-     * Get 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组备注 
      * @return Alias 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -519,9 +431,7 @@ public class VmGroupSimple extends AbstractModel {
 
     /**
      * Set 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

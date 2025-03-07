@@ -49,7 +49,6 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
     * 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationSuccessDistribution")
     @Expose
@@ -57,7 +56,6 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
     * 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationFailedDistribution")
     @Expose
@@ -65,7 +63,6 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
     * 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationStatusDistribution")
     @Expose
@@ -73,7 +70,6 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
     * 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationDurationDistribution")
     @Expose
@@ -81,7 +77,6 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
     * 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationQuantityDistribution")
     @Expose
@@ -148,10 +143,8 @@ public class InvocationIndicator extends AbstractModel {
     }
 
     /**
-     * Get 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功请求数时间分布 
      * @return InvocationSuccessDistribution 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorCoord [] getInvocationSuccessDistribution() {
         return this.InvocationSuccessDistribution;
@@ -159,19 +152,15 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
      * Set 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationSuccessDistribution 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationSuccessDistribution(IndicatorCoord [] InvocationSuccessDistribution) {
         this.InvocationSuccessDistribution = InvocationSuccessDistribution;
     }
 
     /**
-     * Get 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败请求数时间分布 
      * @return InvocationFailedDistribution 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorCoord [] getInvocationFailedDistribution() {
         return this.InvocationFailedDistribution;
@@ -179,19 +168,15 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
      * Set 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationFailedDistribution 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationFailedDistribution(IndicatorCoord [] InvocationFailedDistribution) {
         this.InvocationFailedDistribution = InvocationFailedDistribution;
     }
 
     /**
-     * Get 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态码分布 
      * @return InvocationStatusDistribution 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorCoord [] getInvocationStatusDistribution() {
         return this.InvocationStatusDistribution;
@@ -199,19 +184,15 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
      * Set 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationStatusDistribution 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationStatusDistribution(IndicatorCoord [] InvocationStatusDistribution) {
         this.InvocationStatusDistribution = InvocationStatusDistribution;
     }
 
     /**
-     * Get 时延分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时延分布 
      * @return InvocationDurationDistribution 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorCoord [] getInvocationDurationDistribution() {
         return this.InvocationDurationDistribution;
@@ -219,19 +200,15 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
      * Set 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationDurationDistribution 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationDurationDistribution(IndicatorCoord [] InvocationDurationDistribution) {
         this.InvocationDurationDistribution = InvocationDurationDistribution;
     }
 
     /**
-     * Get 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 并发请求次数时间分布 
      * @return InvocationQuantityDistribution 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorCoord [] getInvocationQuantityDistribution() {
         return this.InvocationQuantityDistribution;
@@ -239,9 +216,7 @@ public class InvocationIndicator extends AbstractModel {
 
     /**
      * Set 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationQuantityDistribution 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationQuantityDistribution(IndicatorCoord [] InvocationQuantityDistribution) {
         this.InvocationQuantityDistribution = InvocationQuantityDistribution;

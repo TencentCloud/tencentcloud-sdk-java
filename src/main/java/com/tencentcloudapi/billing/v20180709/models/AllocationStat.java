@@ -25,17 +25,14 @@ public class AllocationStat extends AbstractModel {
 
     /**
     * 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Average")
     @Expose
     private AllocationAverageData Average;
 
     /**
-     * Get 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用平均信息 
      * @return Average 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationAverageData getAverage() {
         return this.Average;
@@ -43,9 +40,7 @@ public class AllocationStat extends AbstractModel {
 
     /**
      * Set 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Average 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAverage(AllocationAverageData Average) {
         this.Average = Average;

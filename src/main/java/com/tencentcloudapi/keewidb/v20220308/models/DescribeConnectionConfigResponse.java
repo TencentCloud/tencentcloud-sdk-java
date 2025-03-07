@@ -46,7 +46,6 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
 
     /**
     * 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMin")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
 
     /**
     * 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMax")
     @Expose
@@ -116,10 +114,8 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单分片连接数限制最小值。 
      * @return ClientLimitMin 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMin() {
         return this.ClientLimitMin;
@@ -127,19 +123,15 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
 
     /**
      * Set 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientLimitMin 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMin(Long ClientLimitMin) {
         this.ClientLimitMin = ClientLimitMin;
     }
 
     /**
-     * Get 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单分片连接数限制最大值。 
      * @return ClientLimitMax 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMax() {
         return this.ClientLimitMax;
@@ -147,9 +139,7 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
 
     /**
      * Set 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientLimitMax 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMax(Long ClientLimitMax) {
         this.ClientLimitMax = ClientLimitMax;

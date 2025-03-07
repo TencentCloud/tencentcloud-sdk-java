@@ -25,7 +25,6 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
 
     /**
     * 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportTargetOSList")
     @Expose
@@ -33,7 +32,6 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
 
     /**
     * 操作系统转换的任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。 
      * @return SupportTargetOSList 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetOS [] getSupportTargetOSList() {
         return this.SupportTargetOSList;
@@ -58,19 +54,15 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
 
     /**
      * Set 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportTargetOSList 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportTargetOSList(TargetOS [] SupportTargetOSList) {
         this.SupportTargetOSList = SupportTargetOSList;
     }
 
     /**
-     * Get 操作系统转换的任务 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作系统转换的任务 ID 
      * @return TaskId 操作系统转换的任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -78,9 +70,7 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
 
     /**
      * Set 操作系统转换的任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 操作系统转换的任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

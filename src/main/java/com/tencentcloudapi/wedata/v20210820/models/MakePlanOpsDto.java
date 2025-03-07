@@ -253,6 +253,20 @@ REVERSE： 实例数据时间逆序
     private String MakeDataTimeOrder;
 
     /**
+    * 补录时间范围的时区
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
+    * 执行应用参数
+    */
+    @SerializedName("AppParam")
+    @Expose
+    private String AppParam;
+
+    /**
      * Get 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 补录计划ID
@@ -832,6 +846,38 @@ REVERSE： 实例数据时间逆序
         this.MakeDataTimeOrder = MakeDataTimeOrder;
     }
 
+    /**
+     * Get 补录时间范围的时区 
+     * @return ScheduleTimeZone 补录时间范围的时区
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 补录时间范围的时区
+     * @param ScheduleTimeZone 补录时间范围的时区
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
+    /**
+     * Get 执行应用参数 
+     * @return AppParam 执行应用参数
+     */
+    public String getAppParam() {
+        return this.AppParam;
+    }
+
+    /**
+     * Set 执行应用参数
+     * @param AppParam 执行应用参数
+     */
+    public void setAppParam(String AppParam) {
+        this.AppParam = AppParam;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -933,6 +979,12 @@ REVERSE： 实例数据时间逆序
         if (source.MakeDataTimeOrder != null) {
             this.MakeDataTimeOrder = new String(source.MakeDataTimeOrder);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
+        if (source.AppParam != null) {
+            this.AppParam = new String(source.AppParam);
+        }
     }
 
 
@@ -968,6 +1020,8 @@ REVERSE： 实例数据时间逆序
         this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
         this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
         this.setParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "AppParam", this.AppParam);
 
     }
 }

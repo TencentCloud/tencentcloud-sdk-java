@@ -25,7 +25,6 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
     * 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainName")
     @Expose
@@ -33,7 +32,6 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
     * 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
@@ -42,7 +40,6 @@ public class BackupStreamDetailData extends AbstractModel {
     /**
     *  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishTime")
     @Expose
@@ -50,7 +47,6 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
     * 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamSequence")
     @Expose
@@ -62,7 +58,6 @@ public class BackupStreamDetailData extends AbstractModel {
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceFrom")
     @Expose
@@ -72,17 +67,14 @@ public class BackupStreamDetailData extends AbstractModel {
     * 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterFlag")
     @Expose
     private Long MasterFlag;
 
     /**
-     * Get 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流域名。 
      * @return DomainName 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -90,19 +82,15 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
      * Set 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainName 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流路径。 
      * @return AppName 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -110,9 +98,7 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
      * Set 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -120,11 +106,9 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
      * Get  UTC 格式，例如：2018-06-29T19:00:00Z。
-注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：和北京时间相差8小时。 
      * @return PublishTime  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublishTime() {
         return this.PublishTime;
@@ -133,20 +117,16 @@ public class BackupStreamDetailData extends AbstractModel {
     /**
      * Set  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishTime  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishTime(String PublishTime) {
         this.PublishTime = PublishTime;
     }
 
     /**
-     * Get 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流唯一标识。 
      * @return UpstreamSequence 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamSequence() {
         return this.UpstreamSequence;
@@ -154,9 +134,7 @@ public class BackupStreamDetailData extends AbstractModel {
 
     /**
      * Set 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamSequence 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamSequence(String UpstreamSequence) {
         this.UpstreamSequence = UpstreamSequence;
@@ -167,14 +145,12 @@ public class BackupStreamDetailData extends AbstractModel {
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
- ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+ ID。 
      * @return SourceFrom 推流来源。示例：
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceFrom() {
         return this.SourceFrom;
@@ -186,13 +162,11 @@ public class BackupStreamDetailData extends AbstractModel {
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceFrom 推流来源。示例：
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceFrom(String SourceFrom) {
         this.SourceFrom = SourceFrom;
@@ -201,12 +175,10 @@ public class BackupStreamDetailData extends AbstractModel {
     /**
      * Get 主备标识。
 当前流为主流：1，
-当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。 
+当前流为备流: 0。 
      * @return MasterFlag 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMasterFlag() {
         return this.MasterFlag;
@@ -216,11 +188,9 @@ public class BackupStreamDetailData extends AbstractModel {
      * Set 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterFlag 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterFlag(Long MasterFlag) {
         this.MasterFlag = MasterFlag;

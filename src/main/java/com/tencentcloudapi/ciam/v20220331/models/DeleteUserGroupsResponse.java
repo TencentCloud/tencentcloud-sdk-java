@@ -25,7 +25,6 @@ public class DeleteUserGroupsResponse extends AbstractModel {
 
     /**
     * 删除的用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroupDeletedInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteUserGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除的用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除的用户组关联的应用信息 
      * @return UserGroupDeletedInfo 删除的用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserGroupDeleteResp getUserGroupDeletedInfo() {
         return this.UserGroupDeletedInfo;
@@ -50,9 +47,7 @@ public class DeleteUserGroupsResponse extends AbstractModel {
 
     /**
      * Set 删除的用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserGroupDeletedInfo 删除的用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroupDeletedInfo(UserGroupDeleteResp UserGroupDeletedInfo) {
         this.UserGroupDeletedInfo = UserGroupDeletedInfo;

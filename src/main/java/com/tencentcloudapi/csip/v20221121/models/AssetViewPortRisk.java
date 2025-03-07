@@ -94,7 +94,7 @@ public class AssetViewPortRisk extends AbstractModel {
     private Long Suggestion;
 
     /**
-    * 状态，0未处理、1已处置、2已忽略
+    * 状态，0未处理、1已处置、2已忽略、3云防已防护
     */
     @SerializedName("Status")
     @Expose
@@ -155,6 +155,20 @@ public class AssetViewPortRisk extends AbstractModel {
     @SerializedName("From")
     @Expose
     private String From;
+
+    /**
+    * 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+    */
+    @SerializedName("ServiceJudge")
+    @Expose
+    private String ServiceJudge;
+
+    /**
+    * 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+    */
+    @SerializedName("XspmStatus")
+    @Expose
+    private Long XspmStatus;
 
     /**
      * Get 端口 
@@ -317,16 +331,16 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get 状态，0未处理、1已处置、2已忽略 
-     * @return Status 状态，0未处理、1已处置、2已忽略
+     * Get 状态，0未处理、1已处置、2已忽略、3云防已防护 
+     * @return Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0未处理、1已处置、2已忽略
-     * @param Status 状态，0未处理、1已处置、2已忽略
+     * Set 状态，0未处理、1已处置、2已忽略、3云防已防护
+     * @param Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -460,6 +474,38 @@ public class AssetViewPortRisk extends AbstractModel {
         this.From = From;
     }
 
+    /**
+     * Get 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务 
+     * @return ServiceJudge 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+     */
+    public String getServiceJudge() {
+        return this.ServiceJudge;
+    }
+
+    /**
+     * Set 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+     * @param ServiceJudge 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+     */
+    public void setServiceJudge(String ServiceJudge) {
+        this.ServiceJudge = ServiceJudge;
+    }
+
+    /**
+     * Get 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理 
+     * @return XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public Long getXspmStatus() {
+        return this.XspmStatus;
+    }
+
+    /**
+     * Set 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     * @param XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public void setXspmStatus(Long XspmStatus) {
+        this.XspmStatus = XspmStatus;
+    }
+
     public AssetViewPortRisk() {
     }
 
@@ -525,6 +571,12 @@ public class AssetViewPortRisk extends AbstractModel {
         if (source.From != null) {
             this.From = new String(source.From);
         }
+        if (source.ServiceJudge != null) {
+            this.ServiceJudge = new String(source.ServiceJudge);
+        }
+        if (source.XspmStatus != null) {
+            this.XspmStatus = new Long(source.XspmStatus);
+        }
     }
 
 
@@ -551,6 +603,8 @@ public class AssetViewPortRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "From", this.From);
+        this.setParamSimple(map, prefix + "ServiceJudge", this.ServiceJudge);
+        this.setParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
 
     }
 }

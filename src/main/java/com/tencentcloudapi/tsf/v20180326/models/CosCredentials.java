@@ -25,7 +25,6 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionToken")
     @Expose
@@ -33,7 +32,6 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpAppId")
     @Expose
@@ -41,7 +39,6 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretId")
     @Expose
@@ -49,7 +46,6 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretKey")
     @Expose
@@ -57,7 +53,6 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -65,17 +60,14 @@ public class CosCredentials extends AbstractModel {
 
     /**
     * 所在域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 会话Token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话Token 
      * @return SessionToken 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionToken() {
         return this.SessionToken;
@@ -83,19 +75,15 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionToken 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionToken(String SessionToken) {
         this.SessionToken = SessionToken;
     }
 
     /**
-     * Get 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时应用ID 
      * @return TmpAppId 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpAppId() {
         return this.TmpAppId;
@@ -103,19 +91,15 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpAppId 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpAppId(String TmpAppId) {
         this.TmpAppId = TmpAppId;
     }
 
     /**
-     * Get 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时调用者身份ID 
      * @return TmpSecretId 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
@@ -123,19 +107,15 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretId 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时密钥 
      * @return TmpSecretKey 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
@@ -143,19 +123,15 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretKey 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpiredTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
@@ -163,19 +139,15 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 所在域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所在域 
      * @return Domain 所在域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -183,9 +155,7 @@ public class CosCredentials extends AbstractModel {
 
     /**
      * Set 所在域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 所在域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

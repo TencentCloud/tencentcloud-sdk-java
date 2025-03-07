@@ -25,7 +25,6 @@ public class ErrorDetails extends AbstractModel {
 
     /**
     * 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -39,10 +38,8 @@ public class ErrorDetails extends AbstractModel {
     private String Error;
 
     /**
-     * Get 用户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户信息 
      * @return UserId 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -50,9 +47,7 @@ public class ErrorDetails extends AbstractModel {
 
     /**
      * Set 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

@@ -304,6 +304,13 @@ public class AssetViewVULRiskData extends AbstractModel {
     private Long IsOneClick;
 
     /**
+    * 是否POC扫描，0-非POC，1-POC
+    */
+    @SerializedName("IsPOC")
+    @Expose
+    private Long IsPOC;
+
+    /**
      * Get 影响资产 
      * @return AffectAsset 影响资产
      */
@@ -943,6 +950,22 @@ public class AssetViewVULRiskData extends AbstractModel {
         this.IsOneClick = IsOneClick;
     }
 
+    /**
+     * Get 是否POC扫描，0-非POC，1-POC 
+     * @return IsPOC 是否POC扫描，0-非POC，1-POC
+     */
+    public Long getIsPOC() {
+        return this.IsPOC;
+    }
+
+    /**
+     * Set 是否POC扫描，0-非POC，1-POC
+     * @param IsPOC 是否POC扫描，0-非POC，1-POC
+     */
+    public void setIsPOC(Long IsPOC) {
+        this.IsPOC = IsPOC;
+    }
+
     public AssetViewVULRiskData() {
     }
 
@@ -1074,6 +1097,9 @@ public class AssetViewVULRiskData extends AbstractModel {
         if (source.IsOneClick != null) {
             this.IsOneClick = new Long(source.IsOneClick);
         }
+        if (source.IsPOC != null) {
+            this.IsPOC = new Long(source.IsPOC);
+        }
     }
 
 
@@ -1121,6 +1147,7 @@ public class AssetViewVULRiskData extends AbstractModel {
         this.setParamSimple(map, prefix + "VulRiskId", this.VulRiskId);
         this.setParamSimple(map, prefix + "TvdID", this.TvdID);
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
+        this.setParamSimple(map, prefix + "IsPOC", this.IsPOC);
 
     }
 }

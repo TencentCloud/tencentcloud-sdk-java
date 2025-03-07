@@ -25,7 +25,6 @@ public class ClusterV2 extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -313,17 +312,14 @@ public class ClusterV2 extends AbstractModel {
 
     /**
     * 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableLogCollection")
     @Expose
     private Boolean EnableLogCollection;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -331,9 +327,7 @@ public class ClusterV2 extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -1040,10 +1034,8 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启cls日志功能 
      * @return EnableLogCollection 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableLogCollection() {
         return this.EnableLogCollection;
@@ -1051,9 +1043,7 @@ public class ClusterV2 extends AbstractModel {
 
     /**
      * Set 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableLogCollection 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableLogCollection(Boolean EnableLogCollection) {
         this.EnableLogCollection = EnableLogCollection;

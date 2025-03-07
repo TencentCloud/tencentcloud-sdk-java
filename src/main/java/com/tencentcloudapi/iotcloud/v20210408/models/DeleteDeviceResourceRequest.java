@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DeleteDeviceResourceRequest extends AbstractModel {
 
     /**
-    * 产品ID
-    */
-    @SerializedName("ProductID")
-    @Expose
-    private String ProductID;
-
-    /**
     * 资源名称
     */
     @SerializedName("Name")
@@ -45,20 +38,11 @@ public class DeleteDeviceResourceRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-     * Get 产品ID 
-     * @return ProductID 产品ID
-     */
-    public String getProductID() {
-        return this.ProductID;
-    }
-
-    /**
-     * Set 产品ID
-     * @param ProductID 产品ID
-     */
-    public void setProductID(String ProductID) {
-        this.ProductID = ProductID;
-    }
+    * 产品ID
+    */
+    @SerializedName("ProductID")
+    @Expose
+    private String ProductID;
 
     /**
      * Get 资源名称 
@@ -92,6 +76,22 @@ public class DeleteDeviceResourceRequest extends AbstractModel {
         this.DeviceName = DeviceName;
     }
 
+    /**
+     * Get 产品ID 
+     * @return ProductID 产品ID
+     */
+    public String getProductID() {
+        return this.ProductID;
+    }
+
+    /**
+     * Set 产品ID
+     * @param ProductID 产品ID
+     */
+    public void setProductID(String ProductID) {
+        this.ProductID = ProductID;
+    }
+
     public DeleteDeviceResourceRequest() {
     }
 
@@ -100,14 +100,14 @@ public class DeleteDeviceResourceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteDeviceResourceRequest(DeleteDeviceResourceRequest source) {
-        if (source.ProductID != null) {
-            this.ProductID = new String(source.ProductID);
-        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
         }
     }
 
@@ -116,9 +116,9 @@ public class DeleteDeviceResourceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductID", this.ProductID);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ProductID", this.ProductID);
 
     }
 }

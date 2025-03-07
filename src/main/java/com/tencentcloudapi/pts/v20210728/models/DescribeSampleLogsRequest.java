@@ -45,7 +45,7 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     private String JobId;
 
     /**
-    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
     */
     @SerializedName("Context")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     private String SeverityText;
 
     /**
-    * ap-shanghai, ap-guangzhou
+    * 地域
     */
     @SerializedName("InstanceRegion")
     @Expose
@@ -87,11 +87,18 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     private String Instance;
 
     /**
-    * request 代表采样日志,可为不填
+    * request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
+
+    /**
+    * 日志偏移量，不与Context 参数同时使用
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 返回日志条数，最大100
@@ -184,16 +191,16 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时 
-     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用 
+     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
-     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
+     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
      */
     public void setContext(String Context) {
         this.Context = Context;
@@ -248,16 +255,16 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get ap-shanghai, ap-guangzhou 
-     * @return InstanceRegion ap-shanghai, ap-guangzhou
+     * Get 地域 
+     * @return InstanceRegion 地域
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set ap-shanghai, ap-guangzhou
-     * @param InstanceRegion ap-shanghai, ap-guangzhou
+     * Set 地域
+     * @param InstanceRegion 地域
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
@@ -280,19 +287,35 @@ public class DescribeSampleLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get request 代表采样日志,可为不填 
-     * @return LogType request 代表采样日志,可为不填
+     * Get request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志 
+     * @return LogType request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set request 代表采样日志,可为不填
-     * @param LogType request 代表采样日志,可为不填
+     * Set request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
+     * @param LogType request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
+    }
+
+    /**
+     * Get 日志偏移量，不与Context 参数同时使用 
+     * @return Offset 日志偏移量，不与Context 参数同时使用
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 日志偏移量，不与Context 参数同时使用
+     * @param Offset 日志偏移量，不与Context 参数同时使用
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -429,6 +452,9 @@ public class DescribeSampleLogsRequest extends AbstractModel {
         if (source.LogType != null) {
             this.LogType = new String(source.LogType);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -464,6 +490,7 @@ public class DescribeSampleLogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "Instance", this.Instance);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "ReactionTimeRange.", this.ReactionTimeRange);
         this.setParamSimple(map, prefix + "Status", this.Status);

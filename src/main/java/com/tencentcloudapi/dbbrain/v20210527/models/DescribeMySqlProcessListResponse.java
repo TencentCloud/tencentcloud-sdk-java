@@ -32,7 +32,6 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
 
     /**
     * sql会话统计信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
     }
 
     /**
-     * Get sql会话统计信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get sql会话统计信息。 
      * @return Statistics sql会话统计信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatisticInfo [] getStatistics() {
         return this.Statistics;
@@ -73,9 +70,7 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
 
     /**
      * Set sql会话统计信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics sql会话统计信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(StatisticInfo [] Statistics) {
         this.Statistics = Statistics;

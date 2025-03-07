@@ -25,7 +25,6 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 配置中心类型[Registration、Configuration]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CenterType")
     @Expose
@@ -33,7 +32,6 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 实例类型[Polaris]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -49,7 +46,6 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -57,7 +53,6 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 实例地域id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -65,17 +60,14 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
     * 实例命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNamespaceId")
     @Expose
     private String InstanceNamespaceId;
 
     /**
-     * Get 配置中心类型[Registration、Configuration]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置中心类型[Registration、Configuration] 
      * @return CenterType 配置中心类型[Registration、Configuration]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCenterType() {
         return this.CenterType;
@@ -83,19 +75,15 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 配置中心类型[Registration、Configuration]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CenterType 配置中心类型[Registration、Configuration]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCenterType(String CenterType) {
         this.CenterType = CenterType;
     }
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -103,19 +91,15 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例类型[Polaris]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型[Polaris] 
      * @return InstanceType 实例类型[Polaris]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -123,19 +107,15 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 实例类型[Polaris]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型[Polaris]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -143,19 +123,15 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例地域id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例地域id 
      * @return RegionId 实例地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -163,19 +139,15 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 实例地域id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 实例地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例命名空间ID 
      * @return InstanceNamespaceId 实例命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceNamespaceId() {
         return this.InstanceNamespaceId;
@@ -183,9 +155,7 @@ public class ExclusiveInstance extends AbstractModel {
 
     /**
      * Set 实例命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNamespaceId 实例命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNamespaceId(String InstanceNamespaceId) {
         this.InstanceNamespaceId = InstanceNamespaceId;

@@ -25,7 +25,6 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
     * API 路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiPath")
     @Expose
@@ -33,7 +32,6 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
     * 服务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -41,7 +39,6 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
     * 统计值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,17 +46,14 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
     * API ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiId")
     @Expose
     private String ApiId;
 
     /**
-     * Get API 路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API 路径 
      * @return ApiPath API 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiPath() {
         return this.ApiPath;
@@ -67,19 +61,15 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
      * Set API 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiPath API 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiPath(String ApiPath) {
         this.ApiPath = ApiPath;
     }
 
     /**
-     * Get 服务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名 
      * @return ServiceName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -87,19 +77,15 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
      * Set 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 统计值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计值 
      * @return Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,19 +93,15 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
      * Set 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get API ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API ID 
      * @return ApiId API ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiId() {
         return this.ApiId;
@@ -127,9 +109,7 @@ public class GroupUseStatisticsEntity extends AbstractModel {
 
     /**
      * Set API ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiId API ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiId(String ApiId) {
         this.ApiId = ApiId;

@@ -50,7 +50,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（BindDevices）用于网关设备批量绑定子设备 
+     *本接口（BindDevices）用于网关设备批量绑定子设备
      * @param req BindDevicesRequest
      * @return BindDevicesResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateProduct）用于创建一个新的物联网通信产品 
+     *本接口（CreateProduct）用于创建一个新的物联网通信产品
      * @param req CreateProductRequest
      * @return CreateProductResponse
      * @throws TencentCloudSDKException
@@ -127,7 +127,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateTopicPolicy）用于创建一个Topic 
+     *本接口（CreateTopicPolicy）用于创建一个Topic
      * @param req CreateTopicPolicyRequest
      * @return CreateTopicPolicyResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateTopicRule）用于创建一个规则 
+     *本接口（CreateTopicRule）用于创建一个规则
      * @param req CreateTopicRuleRequest
      * @return CreateTopicRuleResponse
      * @throws TencentCloudSDKException
@@ -171,7 +171,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteDeviceShadow）用于删除设备影子 
+     *本接口（DeleteDeviceShadow）用于删除设备影子
      * @param req DeleteDeviceShadowRequest
      * @return DeleteDeviceShadowResponse
      * @throws TencentCloudSDKException
@@ -237,7 +237,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
+     *获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
      * @param req DescribeDeviceClientKeyRequest
      * @return DescribeDeviceClientKeyResponse
      * @throws TencentCloudSDKException
@@ -358,7 +358,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表 
+     *本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表
      * @param req DescribeGatewayBindDevicesRequest
      * @return DescribeGatewayBindDevicesResponse
      * @throws TencentCloudSDKException
@@ -435,7 +435,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeProductResources）用于查询产品资源列表。 
+     *本接口（DescribeProductResources）用于查询产品资源列表。
      * @param req DescribeProductResourcesRequest
      * @return DescribeProductResourcesResponse
      * @throws TencentCloudSDKException
@@ -545,7 +545,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（GetAllVersion）用于获取所有的版本列表 
+     *本接口（GetAllVersion）用于获取所有的版本列表
      * @param req GetAllVersionRequest
      * @return GetAllVersionResponse
      * @throws TencentCloudSDKException
@@ -556,7 +556,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（GetCOSURL）用于获取固件存储在COS的URL 
+     *本接口（GetCOSURL）用于获取固件存储在COS的URL
      * @param req GetCOSURLRequest
      * @return GetCOSURLResponse
      * @throws TencentCloudSDKException
@@ -677,7 +677,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *重置设备的连接状态 
+     *重置设备的连接状态
      * @param req ResetDeviceStateRequest
      * @return ResetDeviceStateResponse
      * @throws TencentCloudSDKException
@@ -710,7 +710,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（UnbindDevices）用于网关设备批量解绑子设备 
+     *本接口（UnbindDevices）用于网关设备批量解绑子设备
      * @param req UnbindDevicesRequest
      * @return UnbindDevicesResponse
      * @throws TencentCloudSDKException
@@ -732,7 +732,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *设置设备上报的日志级别  
+     *设置设备上报的日志级别
      * @param req UpdateDeviceLogLevelRequest
      * @return UpdateDeviceLogLevelResponse
      * @throws TencentCloudSDKException
@@ -743,7 +743,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpdateDevicePSK）用于更新设备的PSK 
+     *本接口（UpdateDevicePSK）用于更新设备的PSK
      * @param req UpdateDevicePSKRequest
      * @return UpdateDevicePSKResponse
      * @throws TencentCloudSDKException
@@ -798,7 +798,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *更新产品动态注册的配置 
+     *更新产品动态注册的配置
      * @param req UpdateProductDynamicRegisterRequest
      * @return UpdateProductDynamicRegisterResponse
      * @throws TencentCloudSDKException

@@ -25,7 +25,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanIp")
     @Expose
@@ -49,7 +46,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器外网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIp")
     @Expose
@@ -57,7 +53,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器所在VPC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -65,7 +60,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -73,7 +67,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器可用状态（表示机器上的Agent在线）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAvailableStatus")
     @Expose
@@ -81,7 +74,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -89,7 +81,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -97,7 +88,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -105,7 +95,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -113,7 +102,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -121,7 +109,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -129,7 +116,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -137,7 +123,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -145,7 +130,6 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 机器所在部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -153,17 +137,14 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
     * 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get 机器ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器ID 
      * @return InstanceId 机器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -171,19 +152,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 机器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 机器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器名称 
      * @return InstanceName 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -191,19 +168,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 机器内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器内网IP 
      * @return LanIp 机器内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanIp() {
         return this.LanIp;
@@ -211,19 +184,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIp 机器内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanIp(String LanIp) {
         this.LanIp = LanIp;
     }
 
     /**
-     * Get 机器外网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器外网IP 
      * @return WanIp 机器外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIp() {
         return this.WanIp;
@@ -231,19 +200,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIp 机器外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get 机器所在VPC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器所在VPC 
      * @return VpcId 机器所在VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -251,19 +216,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器所在VPC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 机器所在VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown 
      * @return InstanceStatus 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
@@ -271,19 +232,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 机器可用状态（表示机器上的Agent在线）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器可用状态（表示机器上的Agent在线） 
      * @return InstanceAvailableStatus 机器可用状态（表示机器上的Agent在线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceAvailableStatus() {
         return this.InstanceAvailableStatus;
@@ -291,19 +248,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器可用状态（表示机器上的Agent在线）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAvailableStatus 机器可用状态（表示机器上的Agent在线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAvailableStatus(String InstanceAvailableStatus) {
         this.InstanceAvailableStatus = InstanceAvailableStatus;
     }
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -311,19 +264,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -331,19 +280,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -351,19 +296,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -371,19 +312,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -391,19 +328,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -411,19 +344,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -431,19 +360,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -451,19 +376,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 机器所在部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器所在部署组ID 
      * @return GroupId 机器所在部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -471,19 +392,15 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 机器所在部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 机器所在部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组名称 
      * @return GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -491,9 +408,7 @@ public class InstanceEnrichedInfo extends AbstractModel {
 
     /**
      * Set 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

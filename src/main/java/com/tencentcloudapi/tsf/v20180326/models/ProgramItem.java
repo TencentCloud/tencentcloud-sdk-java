@@ -25,7 +25,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramItemId")
     @Expose
@@ -33,7 +32,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -41,7 +39,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueList")
     @Expose
@@ -49,7 +46,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAll")
     @Expose
@@ -57,7 +53,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTime")
     @Expose
@@ -65,7 +60,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -73,7 +67,6 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteFlag")
     @Expose
@@ -81,17 +74,14 @@ public class ProgramItem extends AbstractModel {
 
     /**
     * 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramId")
     @Expose
     private String ProgramId;
 
     /**
-     * Get 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据项ID 
      * @return ProgramItemId 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramItemId() {
         return this.ProgramItemId;
@@ -99,19 +89,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramItemId 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramItemId(String ProgramItemId) {
         this.ProgramItemId = ProgramItemId;
     }
 
     /**
-     * Get 资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源 
      * @return Resource 资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource getResource() {
         return this.Resource;
@@ -119,19 +105,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据值列表 
      * @return ValueList 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValueList() {
         return this.ValueList;
@@ -139,19 +121,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueList 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueList(String [] ValueList) {
         this.ValueList = ValueList;
     }
 
     /**
-     * Get 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全选标识，true: 全选；false: 非全选 
      * @return IsAll 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAll() {
         return this.IsAll;
@@ -159,19 +137,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAll 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAll(Boolean IsAll) {
         this.IsAll = IsAll;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreationTime() {
         return this.CreationTime;
@@ -179,19 +153,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
@@ -199,19 +169,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除标识，true: 可删除；false: 不可删除 
      * @return DeleteFlag 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteFlag() {
         return this.DeleteFlag;
@@ -219,19 +185,15 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteFlag(Boolean DeleteFlag) {
         this.DeleteFlag = DeleteFlag;
     }
 
     /**
-     * Get 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据集ID 
      * @return ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramId() {
         return this.ProgramId;
@@ -239,9 +201,7 @@ public class ProgramItem extends AbstractModel {
 
     /**
      * Set 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;

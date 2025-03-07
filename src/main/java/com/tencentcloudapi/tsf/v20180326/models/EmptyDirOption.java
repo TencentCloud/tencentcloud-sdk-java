@@ -25,7 +25,6 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableMemory")
     @Expose
@@ -33,7 +32,6 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageCapacity")
     @Expose
@@ -41,7 +39,6 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageUnit")
     @Expose
@@ -49,17 +46,14 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeLimit")
     @Expose
     private String SizeLimit;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return EnableMemory -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableMemory() {
         return this.EnableMemory;
@@ -67,19 +61,15 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableMemory -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableMemory(Boolean EnableMemory) {
         this.EnableMemory = EnableMemory;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return StorageCapacity -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageCapacity() {
         return this.StorageCapacity;
@@ -87,19 +77,15 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageCapacity -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageCapacity(Long StorageCapacity) {
         this.StorageCapacity = StorageCapacity;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return StorageUnit -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageUnit() {
         return this.StorageUnit;
@@ -107,19 +93,15 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageUnit -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageUnit(String StorageUnit) {
         this.StorageUnit = StorageUnit;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return SizeLimit -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSizeLimit() {
         return this.SizeLimit;
@@ -127,9 +109,7 @@ public class EmptyDirOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SizeLimit -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeLimit(String SizeLimit) {
         this.SizeLimit = SizeLimit;

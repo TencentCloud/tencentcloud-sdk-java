@@ -25,7 +25,6 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
     * 桶名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
@@ -33,7 +32,6 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -41,7 +39,6 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
     * 路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -49,17 +46,14 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
     * 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Credentials")
     @Expose
     private CosCredentials Credentials;
 
     /**
-     * Get 桶名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶名称 
      * @return Bucket 桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -67,19 +61,15 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
      * Set 桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -87,19 +77,15 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径 
      * @return Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -107,19 +93,15 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
      * Set 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鉴权信息 
      * @return Credentials 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosCredentials getCredentials() {
         return this.Credentials;
@@ -127,9 +109,7 @@ public class CosDownloadInfo extends AbstractModel {
 
     /**
      * Set 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Credentials 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCredentials(CosCredentials Credentials) {
         this.Credentials = Credentials;

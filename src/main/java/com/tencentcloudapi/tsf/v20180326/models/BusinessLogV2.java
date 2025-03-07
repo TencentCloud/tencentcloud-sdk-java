@@ -25,7 +25,6 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -41,7 +39,6 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -49,7 +46,6 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIp")
     @Expose
@@ -57,7 +53,6 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogId")
     @Expose
@@ -65,17 +60,14 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -83,19 +75,15 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 日志内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志内容 
      * @return Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -103,19 +91,15 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志时间戳 
      * @return Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -123,19 +107,15 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 实例IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例IP 
      * @return InstanceIp 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceIp() {
         return this.InstanceIp;
@@ -143,19 +123,15 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIp 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIp(String InstanceIp) {
         this.InstanceIp = InstanceIp;
     }
 
     /**
-     * Get 日志ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志ID 
      * @return LogId 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogId() {
         return this.LogId;
@@ -163,19 +139,15 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogId 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
     }
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -183,9 +155,7 @@ public class BusinessLogV2 extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyResourcesTagValueRequest extends AbstractModel {
 
     /**
-    * 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+    * 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
     */
     @SerializedName("ServiceType")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyResourcesTagValueRequest extends AbstractModel {
     private String ResourcePrefix;
 
     /**
-     * Get 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段） 
-     * @return ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * Get 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段） 
+     * @return ServiceType 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
-     * @param ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * Set 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
+     * @param ServiceType 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

@@ -25,7 +25,6 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
     * 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -41,17 +40,14 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
     * 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private ImageRepository [] Content;
 
     /**
-     * Get 总记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总记录数 
      * @return TotalCount 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -59,9 +55,7 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
      * Set 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -88,10 +82,8 @@ public class ImageRepositoryResult extends AbstractModel {
     }
 
     /**
-     * Get 列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表信息 
      * @return Content 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageRepository [] getContent() {
         return this.Content;
@@ -99,9 +91,7 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
      * Set 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(ImageRepository [] Content) {
         this.Content = Content;

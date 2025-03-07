@@ -136,6 +136,14 @@ TEZ-TezTaskGC:TasksGC
     private String JobConf;
 
     /**
+    * 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
      * Get 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID 
      * @return ID 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
      */
@@ -439,6 +447,26 @@ TEZ-TezTaskGC:TasksGC
         this.JobConf = JobConf;
     }
 
+    /**
+     * Get 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Context 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Context 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
     public InsightResult() {
     }
 
@@ -483,6 +511,9 @@ TEZ-TezTaskGC:TasksGC
         if (source.JobConf != null) {
             this.JobConf = new String(source.JobConf);
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
     }
 
 
@@ -502,6 +533,7 @@ TEZ-TezTaskGC:TasksGC
         this.setParamSimple(map, prefix + "ScheduleFlowName", this.ScheduleFlowName);
         this.setParamSimple(map, prefix + "ScheduleTaskName", this.ScheduleTaskName);
         this.setParamSimple(map, prefix + "JobConf", this.JobConf);
+        this.setParamSimple(map, prefix + "Context", this.Context);
 
     }
 }

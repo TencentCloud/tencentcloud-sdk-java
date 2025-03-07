@@ -46,7 +46,6 @@ public class MappedBucket extends AbstractModel {
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataRepositoryTaskAutoStrategy")
     @Expose
@@ -139,8 +138,7 @@ public class MappedBucket extends AbstractModel {
 周期加载(PeriodImport)
 
 周期沉降(PeriodExport)
-立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。 
+立即沉降(ImmediateExport) 
      * @return DataRepositoryTaskAutoStrategy 数据流动的自动策略, 包含加载与沉降。策略可以是多种的组合
 按需加载(OnDemandImport)
 自动加载元数据(AutoImportMeta)
@@ -149,7 +147,6 @@ public class MappedBucket extends AbstractModel {
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDataRepositoryTaskAutoStrategy() {
         return this.DataRepositoryTaskAutoStrategy;
@@ -164,7 +161,6 @@ public class MappedBucket extends AbstractModel {
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataRepositoryTaskAutoStrategy 数据流动的自动策略, 包含加载与沉降。策略可以是多种的组合
 按需加载(OnDemandImport)
 自动加载元数据(AutoImportMeta)
@@ -173,7 +169,6 @@ public class MappedBucket extends AbstractModel {
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataRepositoryTaskAutoStrategy(String [] DataRepositoryTaskAutoStrategy) {
         this.DataRepositoryTaskAutoStrategy = DataRepositoryTaskAutoStrategy;

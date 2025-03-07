@@ -1132,6 +1132,17 @@ RabbitMQ专享版查询虚拟主机列表
     }
 
     /**
+     *用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+     * @param req DescribeRocketMQTopUsagesRequest
+     * @return DescribeRocketMQTopUsagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopUsages", DescribeRocketMQTopUsagesResponse.class);
+    }
+
+    /**
      *rocketmq 消息查询
      * @param req DescribeRocketMQTopicMsgsRequest
      * @return DescribeRocketMQTopicMsgsResponse

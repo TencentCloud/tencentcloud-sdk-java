@@ -25,7 +25,6 @@ public class BillZoneId extends AbstractModel {
 
     /**
     * 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -33,17 +32,14 @@ public class BillZoneId extends AbstractModel {
 
     /**
     * 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -51,19 +47,15 @@ public class BillZoneId extends AbstractModel {
 
     /**
      * Set 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区：资源所属可用区 
      * @return ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -71,9 +63,7 @@ public class BillZoneId extends AbstractModel {
 
     /**
      * Set 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

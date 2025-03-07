@@ -25,7 +25,6 @@ public class Affinity extends AbstractModel {
 
     /**
     * 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
     @Expose
@@ -33,7 +32,6 @@ public class Affinity extends AbstractModel {
 
     /**
     * 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -41,17 +39,14 @@ public class Affinity extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paths")
     @Expose
     private CommonOption [] Paths;
 
     /**
-     * Get 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 亲和性范围 
      * @return Scope 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScope() {
         return this.Scope;
@@ -59,19 +54,15 @@ public class Affinity extends AbstractModel {
 
     /**
      * Set 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scope 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 亲和规则的权重 
      * @return Weight 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeight() {
         return this.Weight;
@@ -79,19 +70,15 @@ public class Affinity extends AbstractModel {
 
     /**
      * Set 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(String Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Paths -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonOption [] getPaths() {
         return this.Paths;
@@ -99,9 +86,7 @@ public class Affinity extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paths -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaths(CommonOption [] Paths) {
         this.Paths = Paths;

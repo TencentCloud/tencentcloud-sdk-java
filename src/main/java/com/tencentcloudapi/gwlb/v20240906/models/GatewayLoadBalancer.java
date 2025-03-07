@@ -109,11 +109,18 @@ public class GatewayLoadBalancer extends AbstractModel {
     private Long Isolation;
 
     /**
-    * 负载均衡实例被隔离的时间
+    * 网关负载均衡实例被隔离的时间
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
+
+    /**
+    * 是否开启配置修改保护功能。
+    */
+    @SerializedName("OperateProtect")
+    @Expose
+    private Boolean OperateProtect;
 
     /**
      * Get 网关负载均衡实例 ID。 
@@ -312,19 +319,35 @@ public class GatewayLoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡实例被隔离的时间 
-     * @return IsolatedTime 负载均衡实例被隔离的时间
+     * Get 网关负载均衡实例被隔离的时间 
+     * @return IsolatedTime 网关负载均衡实例被隔离的时间
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 负载均衡实例被隔离的时间
-     * @param IsolatedTime 负载均衡实例被隔离的时间
+     * Set 网关负载均衡实例被隔离的时间
+     * @param IsolatedTime 网关负载均衡实例被隔离的时间
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get 是否开启配置修改保护功能。 
+     * @return OperateProtect 是否开启配置修改保护功能。
+     */
+    public Boolean getOperateProtect() {
+        return this.OperateProtect;
+    }
+
+    /**
+     * Set 是否开启配置修改保护功能。
+     * @param OperateProtect 是否开启配置修改保护功能。
+     */
+    public void setOperateProtect(Boolean OperateProtect) {
+        this.OperateProtect = OperateProtect;
     }
 
     public GatewayLoadBalancer() {
@@ -380,6 +403,9 @@ public class GatewayLoadBalancer extends AbstractModel {
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
+        if (source.OperateProtect != null) {
+            this.OperateProtect = new Boolean(source.OperateProtect);
+        }
     }
 
 
@@ -400,6 +426,7 @@ public class GatewayLoadBalancer extends AbstractModel {
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "Isolation", this.Isolation);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "OperateProtect", this.OperateProtect);
 
     }
 }

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeTagValuesRequest extends AbstractModel {
 
     /**
-    * 维度名
-    */
-    @SerializedName("TagKey")
-    @Expose
-    private String TagKey;
-
-    /**
     * 业务系统 ID
     */
     @SerializedName("InstanceId")
@@ -38,11 +31,11 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 过滤条件
+    * 维度名
     */
-    @SerializedName("Filters")
+    @SerializedName("TagKey")
     @Expose
-    private Filter [] Filters;
+    private String TagKey;
 
     /**
     * 开始时间（单位为秒）
@@ -59,6 +52,13 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * 过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * Or 过滤条件
     */
     @SerializedName("OrFilters")
@@ -71,22 +71,6 @@ public class DescribeTagValuesRequest extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
-
-    /**
-     * Get 维度名 
-     * @return TagKey 维度名
-     */
-    public String getTagKey() {
-        return this.TagKey;
-    }
-
-    /**
-     * Set 维度名
-     * @param TagKey 维度名
-     */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
-    }
 
     /**
      * Get 业务系统 ID 
@@ -105,19 +89,19 @@ public class DescribeTagValuesRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 维度名 
+     * @return TagKey 维度名
      */
-    public Filter [] getFilters() {
-        return this.Filters;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 维度名
+     * @param TagKey 维度名
      */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
@@ -150,6 +134,22 @@ public class DescribeTagValuesRequest extends AbstractModel {
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 过滤条件 
+     * @return Filters 过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param Filters 过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -192,23 +192,23 @@ public class DescribeTagValuesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTagValuesRequest(DescribeTagValuesRequest source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Filters != null) {
-            this.Filters = new Filter[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new Filter(source.Filters[i]);
-            }
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
         }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.OrFilters != null) {
             this.OrFilters = new Filter[source.OrFilters.length];
@@ -226,11 +226,11 @@ public class DescribeTagValuesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
         this.setParamSimple(map, prefix + "Type", this.Type);
 

@@ -124,7 +124,6 @@ IMPORTFAILED-导入失败
 
     /**
     * 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportCloudinit")
     @Expose
@@ -132,7 +131,6 @@ IMPORTFAILED-导入失败
 
     /**
     * 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotSet")
     @Expose
@@ -140,7 +138,6 @@ IMPORTFAILED-导入失败
 
     /**
     * 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -155,7 +152,6 @@ IMPORTFAILED-导入失败
 
     /**
     * 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageFamily")
     @Expose
@@ -409,10 +405,8 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像是否支持cloud-init 
      * @return IsSupportCloudinit 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSupportCloudinit() {
         return this.IsSupportCloudinit;
@@ -420,19 +414,15 @@ IMPORTFAILED-导入失败
 
     /**
      * Set 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportCloudinit 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportCloudinit(Boolean IsSupportCloudinit) {
         this.IsSupportCloudinit = IsSupportCloudinit;
     }
 
     /**
-     * Get 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像关联的快照信息 
      * @return SnapshotSet 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Snapshot [] getSnapshotSet() {
         return this.SnapshotSet;
@@ -440,19 +430,15 @@ IMPORTFAILED-导入失败
 
     /**
      * Set 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotSet 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotSet(Snapshot [] SnapshotSet) {
         this.SnapshotSet = SnapshotSet;
     }
 
     /**
-     * Get 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像关联的标签列表。 
      * @return Tags 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -460,9 +446,7 @@ IMPORTFAILED-导入失败
 
     /**
      * Set 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -485,10 +469,8 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像族
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像族 
      * @return ImageFamily 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageFamily() {
         return this.ImageFamily;
@@ -496,9 +478,7 @@ IMPORTFAILED-导入失败
 
     /**
      * Set 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageFamily 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;

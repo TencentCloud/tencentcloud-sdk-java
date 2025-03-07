@@ -25,7 +25,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -41,7 +39,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterDesc")
     @Expose
@@ -49,7 +46,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -57,7 +53,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -65,7 +60,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -73,7 +67,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterCIDR")
     @Expose
@@ -81,7 +74,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterTotalCpu")
     @Expose
@@ -89,7 +81,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterTotalMem")
     @Expose
@@ -97,7 +88,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterUsedCpu")
     @Expose
@@ -105,7 +95,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterUsedMem")
     @Expose
@@ -113,7 +102,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -121,7 +109,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunInstanceCount")
     @Expose
@@ -129,7 +116,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalInstanceCount")
     @Expose
@@ -137,7 +123,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteFlag")
     @Expose
@@ -145,7 +130,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -153,7 +137,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -161,7 +144,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsfRegionId")
     @Expose
@@ -169,7 +151,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsfRegionName")
     @Expose
@@ -177,7 +158,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsfZoneId")
     @Expose
@@ -185,7 +165,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsfZoneName")
     @Expose
@@ -193,7 +172,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteFlagReason")
     @Expose
@@ -201,7 +179,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterLimitCpu")
     @Expose
@@ -209,7 +186,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterLimitMem")
     @Expose
@@ -217,7 +193,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunServiceInstanceCount")
     @Expose
@@ -225,7 +200,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -233,7 +207,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationInfo")
     @Expose
@@ -241,17 +214,14 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -259,19 +229,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -279,19 +245,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群描述 
      * @return ClusterDesc 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterDesc() {
         return this.ClusterDesc;
@@ -299,19 +261,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterDesc 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterDesc(String ClusterDesc) {
         this.ClusterDesc = ClusterDesc;
     }
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -319,19 +277,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属私有网络ID 
      * @return VpcId 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -339,19 +293,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 集群状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态 
      * @return ClusterStatus 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
@@ -359,19 +309,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterStatus 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群CIDR 
      * @return ClusterCIDR 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterCIDR() {
         return this.ClusterCIDR;
@@ -379,19 +325,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterCIDR 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterCIDR(String ClusterCIDR) {
         this.ClusterCIDR = ClusterCIDR;
     }
 
     /**
-     * Get 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群总CPU，单位: 核 
      * @return ClusterTotalCpu 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterTotalCpu() {
         return this.ClusterTotalCpu;
@@ -399,19 +341,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterTotalCpu 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterTotalCpu(Float ClusterTotalCpu) {
         this.ClusterTotalCpu = ClusterTotalCpu;
     }
 
     /**
-     * Get 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群总内存，单位: G 
      * @return ClusterTotalMem 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterTotalMem() {
         return this.ClusterTotalMem;
@@ -419,19 +357,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterTotalMem 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterTotalMem(Float ClusterTotalMem) {
         this.ClusterTotalMem = ClusterTotalMem;
     }
 
     /**
-     * Get 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群已使用CPU，单位: 核 
      * @return ClusterUsedCpu 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterUsedCpu() {
         return this.ClusterUsedCpu;
@@ -439,19 +373,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterUsedCpu 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterUsedCpu(Float ClusterUsedCpu) {
         this.ClusterUsedCpu = ClusterUsedCpu;
     }
 
     /**
-     * Get 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群已使用内存，单位: G 
      * @return ClusterUsedMem 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterUsedMem() {
         return this.ClusterUsedMem;
@@ -459,19 +389,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterUsedMem 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterUsedMem(Float ClusterUsedMem) {
         this.ClusterUsedMem = ClusterUsedMem;
     }
 
     /**
-     * Get 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群机器实例数量 
      * @return InstanceCount 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
@@ -479,19 +405,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群可用的机器实例数量 
      * @return RunInstanceCount 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunInstanceCount() {
         return this.RunInstanceCount;
@@ -499,19 +421,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunInstanceCount 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
         this.RunInstanceCount = RunInstanceCount;
     }
 
     /**
-     * Get 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群正常状态的机器实例数量 
      * @return NormalInstanceCount 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNormalInstanceCount() {
         return this.NormalInstanceCount;
@@ -519,19 +437,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalInstanceCount 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalInstanceCount(Long NormalInstanceCount) {
         this.NormalInstanceCount = NormalInstanceCount;
     }
 
     /**
-     * Get 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除标记：true：可以删除；false：不可删除 
      * @return DeleteFlag 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteFlag() {
         return this.DeleteFlag;
@@ -539,19 +453,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteFlag(Boolean DeleteFlag) {
         this.DeleteFlag = DeleteFlag;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -559,19 +469,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -579,19 +485,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属TSF地域ID 
      * @return TsfRegionId 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTsfRegionId() {
         return this.TsfRegionId;
@@ -599,19 +501,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TsfRegionId 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsfRegionId(String TsfRegionId) {
         this.TsfRegionId = TsfRegionId;
     }
 
     /**
-     * Get 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属TSF地域名称 
      * @return TsfRegionName 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTsfRegionName() {
         return this.TsfRegionName;
@@ -619,19 +517,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TsfRegionName 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsfRegionName(String TsfRegionName) {
         this.TsfRegionName = TsfRegionName;
     }
 
     /**
-     * Get 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属TSF可用区ID 
      * @return TsfZoneId 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTsfZoneId() {
         return this.TsfZoneId;
@@ -639,19 +533,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TsfZoneId 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsfZoneId(String TsfZoneId) {
         this.TsfZoneId = TsfZoneId;
     }
 
     /**
-     * Get 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属TSF可用区名称 
      * @return TsfZoneName 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTsfZoneName() {
         return this.TsfZoneName;
@@ -659,19 +549,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TsfZoneName 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsfZoneName(String TsfZoneName) {
         this.TsfZoneName = TsfZoneName;
     }
 
     /**
-     * Get 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群不可删除的原因 
      * @return DeleteFlagReason 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeleteFlagReason() {
         return this.DeleteFlagReason;
@@ -679,19 +565,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlagReason 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteFlagReason(String DeleteFlagReason) {
         this.DeleteFlagReason = DeleteFlagReason;
     }
 
     /**
-     * Get 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群最大CPU限制，单位：核 
      * @return ClusterLimitCpu 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterLimitCpu() {
         return this.ClusterLimitCpu;
@@ -699,19 +581,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterLimitCpu 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterLimitCpu(Float ClusterLimitCpu) {
         this.ClusterLimitCpu = ClusterLimitCpu;
     }
 
     /**
-     * Get 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群最大内存限制，单位：G 
      * @return ClusterLimitMem 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getClusterLimitMem() {
         return this.ClusterLimitMem;
@@ -719,19 +597,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterLimitMem 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterLimitMem(Float ClusterLimitMem) {
         this.ClusterLimitMem = ClusterLimitMem;
     }
 
     /**
-     * Get 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群可用的服务实例数量 
      * @return RunServiceInstanceCount 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunServiceInstanceCount() {
         return this.RunServiceInstanceCount;
@@ -739,19 +613,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunServiceInstanceCount 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunServiceInstanceCount(Long RunServiceInstanceCount) {
         this.RunServiceInstanceCount = RunServiceInstanceCount;
     }
 
     /**
-     * Get 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所属子网ID 
      * @return SubnetId 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -759,19 +629,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回给前端的控制信息 
      * @return OperationInfo 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OperationInfo getOperationInfo() {
         return this.OperationInfo;
@@ -779,19 +645,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationInfo 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationInfo(OperationInfo OperationInfo) {
         this.OperationInfo = OperationInfo;
     }
 
     /**
-     * Get 集群版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群版本 
      * @return ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
@@ -799,9 +661,7 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;

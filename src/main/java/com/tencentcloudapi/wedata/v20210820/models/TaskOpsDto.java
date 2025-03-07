@@ -736,6 +736,16 @@ public class TaskOpsDto extends AbstractModel {
     private AiopsSimpleTaskDto [] NewParentTaskInfos;
 
     /**
+    * 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfWorkFlowDependType")
+    @Expose
+    private String SelfWorkFlowDependType;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2515,6 +2525,34 @@ public class TaskOpsDto extends AbstractModel {
         this.NewParentTaskInfos = NewParentTaskInfos;
     }
 
+    /**
+     * Get 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfWorkFlowDependType 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSelfWorkFlowDependType() {
+        return this.SelfWorkFlowDependType;
+    }
+
+    /**
+     * Set 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfWorkFlowDependType 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfWorkFlowDependType(String SelfWorkFlowDependType) {
+        this.SelfWorkFlowDependType = SelfWorkFlowDependType;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2796,6 +2834,9 @@ public class TaskOpsDto extends AbstractModel {
                 this.NewParentTaskInfos[i] = new AiopsSimpleTaskDto(source.NewParentTaskInfos[i]);
             }
         }
+        if (source.SelfWorkFlowDependType != null) {
+            this.SelfWorkFlowDependType = new String(source.SelfWorkFlowDependType);
+        }
     }
 
 
@@ -2892,6 +2933,7 @@ public class TaskOpsDto extends AbstractModel {
         this.setParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
         this.setParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
         this.setParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
+        this.setParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
 
     }
 }

@@ -25,7 +25,6 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
     * 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationCount")
     @Expose
@@ -33,7 +32,6 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
     * 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceCount")
     @Expose
@@ -41,7 +39,6 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
     * 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupCount")
     @Expose
@@ -49,7 +46,6 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
     * 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageSpaceUsed")
     @Expose
@@ -57,17 +53,14 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
     * 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsulInstanceCount")
     @Expose
     private Long ConsulInstanceCount;
 
     /**
-     * Get 应用总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用总数 
      * @return ApplicationCount 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationCount() {
         return this.ApplicationCount;
@@ -75,19 +68,15 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
      * Set 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationCount 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationCount(Long ApplicationCount) {
         this.ApplicationCount = ApplicationCount;
     }
 
     /**
-     * Get 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间总数 
      * @return NamespaceCount 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNamespaceCount() {
         return this.NamespaceCount;
@@ -95,19 +84,15 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
      * Set 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceCount 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceCount(Long NamespaceCount) {
         this.NamespaceCount = NamespaceCount;
     }
 
     /**
-     * Get 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组个数 
      * @return GroupCount 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupCount() {
         return this.GroupCount;
@@ -115,19 +100,15 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
      * Set 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupCount 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupCount(Long GroupCount) {
         this.GroupCount = GroupCount;
     }
 
     /**
-     * Get 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包存储空间用量，单位字节 
      * @return PackageSpaceUsed 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPackageSpaceUsed() {
         return this.PackageSpaceUsed;
@@ -135,19 +116,15 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
      * Set 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageSpaceUsed 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageSpaceUsed(Long PackageSpaceUsed) {
         this.PackageSpaceUsed = PackageSpaceUsed;
     }
 
     /**
-     * Get 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已注册实例数 
      * @return ConsulInstanceCount 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsulInstanceCount() {
         return this.ConsulInstanceCount;
@@ -155,9 +132,7 @@ public class OverviewBasicResourceUsage extends AbstractModel {
 
     /**
      * Set 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsulInstanceCount 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsulInstanceCount(Long ConsulInstanceCount) {
         this.ConsulInstanceCount = ConsulInstanceCount;

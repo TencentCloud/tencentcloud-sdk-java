@@ -25,7 +25,6 @@ public class ListJobsResponse extends AbstractModel {
 
     /**
     * 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobSet")
     @Expose
@@ -39,10 +38,8 @@ public class ListJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务列表 
      * @return JobSet 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Job [] getJobSet() {
         return this.JobSet;
@@ -50,9 +47,7 @@ public class ListJobsResponse extends AbstractModel {
 
     /**
      * Set 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobSet 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobSet(Job [] JobSet) {
         this.JobSet = JobSet;

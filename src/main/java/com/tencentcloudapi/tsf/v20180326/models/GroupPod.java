@@ -25,7 +25,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
     @Expose
@@ -33,7 +32,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodId")
     @Expose
@@ -41,7 +39,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -57,7 +53,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeIp")
     @Expose
@@ -65,7 +60,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -73,7 +67,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestartCount")
     @Expose
@@ -81,7 +74,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadyCount")
     @Expose
@@ -89,7 +81,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 运行时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Runtime")
     @Expose
@@ -97,7 +88,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -105,7 +95,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceInstanceStatus")
     @Expose
@@ -113,7 +102,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAvailableStatus")
     @Expose
@@ -121,7 +109,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -129,7 +116,6 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 节点实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeInstanceId")
     @Expose
@@ -137,17 +123,14 @@ public class GroupPod extends AbstractModel {
 
     /**
     * 预期副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecTotalCount")
     @Expose
     private String SpecTotalCount;
 
     /**
-     * Get 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称(对应到kubernetes的pod名称) 
      * @return PodName 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
         return this.PodName;
@@ -155,19 +138,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodName 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID(对应到kubernetes的pod id) 
      * @return PodId 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodId() {
         return this.PodId;
@@ -175,19 +154,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodId 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodId(String PodId) {
         this.PodId = PodId;
     }
 
     /**
-     * Get 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped； 
      * @return Status 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -195,19 +170,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例处于当前状态的原因，例如容器下载镜像失败 
      * @return Reason 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -215,19 +186,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 主机IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机IP 
      * @return NodeIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeIp() {
         return this.NodeIp;
@@ -235,19 +202,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeIp(String NodeIp) {
         this.NodeIp = NodeIp;
     }
 
     /**
-     * Get 实例IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例IP 
      * @return Ip 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -255,19 +218,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例中容器的重启次数 
      * @return RestartCount 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRestartCount() {
         return this.RestartCount;
@@ -275,19 +234,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RestartCount 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestartCount(Long RestartCount) {
         this.RestartCount = RestartCount;
     }
 
     /**
-     * Get 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例中已就绪容器的个数 
      * @return ReadyCount 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadyCount() {
         return this.ReadyCount;
@@ -295,19 +250,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadyCount 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadyCount(Long ReadyCount) {
         this.ReadyCount = ReadyCount;
     }
 
     /**
-     * Get 运行时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时长 
      * @return Runtime 运行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntime() {
         return this.Runtime;
@@ -315,19 +266,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 运行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Runtime 运行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
     }
 
     /**
-     * Get 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动时间 
      * @return CreatedAt 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -335,19 +282,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务实例状态 
      * @return ServiceInstanceStatus 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceInstanceStatus() {
         return this.ServiceInstanceStatus;
@@ -355,19 +298,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceInstanceStatus 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceInstanceStatus(String ServiceInstanceStatus) {
         this.ServiceInstanceStatus = ServiceInstanceStatus;
     }
 
     /**
-     * Get 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例可使用状态 
      * @return InstanceAvailableStatus 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceAvailableStatus() {
         return this.InstanceAvailableStatus;
@@ -375,19 +314,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAvailableStatus 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAvailableStatus(String InstanceAvailableStatus) {
         this.InstanceAvailableStatus = InstanceAvailableStatus;
     }
 
     /**
-     * Get 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例状态 
      * @return InstanceStatus 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
@@ -395,19 +330,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 节点实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点实例id 
      * @return NodeInstanceId 节点实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeInstanceId() {
         return this.NodeInstanceId;
@@ -415,19 +346,15 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 节点实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeInstanceId 节点实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeInstanceId(String NodeInstanceId) {
         this.NodeInstanceId = NodeInstanceId;
     }
 
     /**
-     * Get 预期副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预期副本数 
      * @return SpecTotalCount 预期副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecTotalCount() {
         return this.SpecTotalCount;
@@ -435,9 +362,7 @@ public class GroupPod extends AbstractModel {
 
     /**
      * Set 预期副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecTotalCount 预期副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecTotalCount(String SpecTotalCount) {
         this.SpecTotalCount = SpecTotalCount;

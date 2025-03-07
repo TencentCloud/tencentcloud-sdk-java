@@ -25,17 +25,14 @@ public class ProxyNodeInfo extends AbstractModel {
 
     /**
     * 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-     * Get 节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点ID 
      * @return NodeId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeId() {
         return this.NodeId;
@@ -43,9 +40,7 @@ public class ProxyNodeInfo extends AbstractModel {
 
     /**
      * Set 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;

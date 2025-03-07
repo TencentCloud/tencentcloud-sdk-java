@@ -25,7 +25,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -41,7 +39,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
@@ -49,7 +46,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -57,7 +53,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -65,7 +60,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -73,7 +67,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -81,7 +74,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -89,7 +81,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -97,17 +88,14 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 操作者用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUin")
     @Expose
     private String OperatorUin;
 
     /**
-     * Get 任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务Id 
      * @return TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -115,19 +103,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -135,19 +119,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型 
      * @return TaskType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
         return this.TaskType;
@@ -155,19 +135,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -175,19 +151,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例Id 
      * @return InstanceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -195,19 +167,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 项目Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目Id 
      * @return ProjectId 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -215,19 +183,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务进度 
      * @return Progress 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
         return this.Progress;
@@ -235,19 +199,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -255,19 +215,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态 
      * @return Result 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResult() {
         return this.Result;
@@ -275,19 +231,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Long Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 操作者用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者用户uin 
      * @return OperatorUin 操作者用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUin() {
         return this.OperatorUin;
@@ -295,9 +247,7 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 操作者用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorUin 操作者用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUin(String OperatorUin) {
         this.OperatorUin = OperatorUin;

@@ -134,7 +134,6 @@ public class ProductConf extends AbstractModel {
     * 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableReplicaReadOnly")
     @Expose
@@ -415,12 +414,10 @@ public class ProductConf extends AbstractModel {
     /**
      * Get 是否支持副本只读。
 - true：支持副本只读。
-- false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。 
+- false：不支持。 
      * @return EnableReplicaReadOnly 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableReplicaReadOnly() {
         return this.EnableReplicaReadOnly;
@@ -430,11 +427,9 @@ public class ProductConf extends AbstractModel {
      * Set 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableReplicaReadOnly 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableReplicaReadOnly(Boolean EnableReplicaReadOnly) {
         this.EnableReplicaReadOnly = EnableReplicaReadOnly;

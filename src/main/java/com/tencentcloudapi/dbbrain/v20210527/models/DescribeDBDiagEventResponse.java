@@ -88,7 +88,6 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
 
     /**
     * 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
     @Expose
@@ -253,10 +252,8 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留字段。 
      * @return Metric 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
         return this.Metric;
@@ -264,9 +261,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
 
     /**
      * Set 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

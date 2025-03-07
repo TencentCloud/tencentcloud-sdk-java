@@ -25,7 +25,6 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
     * 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowBatchId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
     * 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowBatchLogId")
     @Expose
@@ -41,17 +39,14 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
     * 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get 批次ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次ID 
      * @return FlowBatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowBatchId() {
         return this.FlowBatchId;
@@ -59,19 +54,15 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
      * Set 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowBatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowBatchId(String FlowBatchId) {
         this.FlowBatchId = FlowBatchId;
     }
 
     /**
-     * Get 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次历史ID 
      * @return FlowBatchLogId 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowBatchLogId() {
         return this.FlowBatchLogId;
@@ -79,19 +70,15 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
      * Set 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowBatchLogId 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowBatchLogId(String FlowBatchLogId) {
         this.FlowBatchLogId = FlowBatchLogId;
     }
 
     /**
-     * Get 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING 
      * @return State 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -99,9 +86,7 @@ public class TaskFlowLastBatchState extends AbstractModel {
 
     /**
      * Set 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;

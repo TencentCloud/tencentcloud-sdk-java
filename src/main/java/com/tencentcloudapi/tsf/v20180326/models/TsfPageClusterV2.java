@@ -25,7 +25,6 @@ public class TsfPageClusterV2 extends AbstractModel {
 
     /**
     * 集群总数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageClusterV2 extends AbstractModel {
 
     /**
     * 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private ClusterV2 [] Content;
 
     /**
-     * Get 集群总数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群总数目 
      * @return TotalCount 集群总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageClusterV2 extends AbstractModel {
 
     /**
      * Set 集群总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 集群总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 集群列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群列表 
      * @return Content 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterV2 [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageClusterV2 extends AbstractModel {
 
     /**
      * Set 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(ClusterV2 [] Content) {
         this.Content = Content;

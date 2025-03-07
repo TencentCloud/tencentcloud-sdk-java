@@ -25,7 +25,6 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -41,7 +40,6 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
     * 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -55,10 +53,8 @@ public class DescribeUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return Total 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -66,9 +62,7 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
@@ -95,10 +89,8 @@ public class DescribeUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户列表 
      * @return Content 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public User [] getContent() {
         return this.Content;
@@ -106,9 +98,7 @@ public class DescribeUserResponse extends AbstractModel {
 
     /**
      * Set 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(User [] Content) {
         this.Content = Content;

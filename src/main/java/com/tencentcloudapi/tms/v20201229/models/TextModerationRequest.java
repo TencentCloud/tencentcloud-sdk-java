@@ -59,6 +59,13 @@ public class TextModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
+    * Content的原始语种，比如en,zh
+    */
+    @SerializedName("SourceLanguage")
+    @Expose
+    private String SourceLanguage;
+
+    /**
      * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密 
      * @return Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
      */
@@ -138,6 +145,22 @@ public class TextModerationRequest extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get Content的原始语种，比如en,zh 
+     * @return SourceLanguage Content的原始语种，比如en,zh
+     */
+    public String getSourceLanguage() {
+        return this.SourceLanguage;
+    }
+
+    /**
+     * Set Content的原始语种，比如en,zh
+     * @param SourceLanguage Content的原始语种，比如en,zh
+     */
+    public void setSourceLanguage(String SourceLanguage) {
+        this.SourceLanguage = SourceLanguage;
+    }
+
     public TextModerationRequest() {
     }
 
@@ -161,6 +184,9 @@ public class TextModerationRequest extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.SourceLanguage != null) {
+            this.SourceLanguage = new String(source.SourceLanguage);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class TextModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
 
     }
 }

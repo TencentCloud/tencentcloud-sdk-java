@@ -25,7 +25,6 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
     * 当月费用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Current")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
     * 之前月份费用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Previous")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
     * 费用统计信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stat")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当月费用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当月费用信息 
      * @return Current 当月费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationBillTrendDetail getCurrent() {
         return this.Current;
@@ -66,19 +61,15 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
      * Set 当月费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Current 当月费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrent(AllocationBillTrendDetail Current) {
         this.Current = Current;
     }
 
     /**
-     * Get 之前月份费用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 之前月份费用信息 
      * @return Previous 之前月份费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationBillTrendDetail [] getPrevious() {
         return this.Previous;
@@ -86,19 +77,15 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
      * Set 之前月份费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Previous 之前月份费用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrevious(AllocationBillTrendDetail [] Previous) {
         this.Previous = Previous;
     }
 
     /**
-     * Get 费用统计信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用统计信息 
      * @return Stat 费用统计信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationStat getStat() {
         return this.Stat;
@@ -106,9 +93,7 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
      * Set 费用统计信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stat 费用统计信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStat(AllocationStat Stat) {
         this.Stat = Stat;

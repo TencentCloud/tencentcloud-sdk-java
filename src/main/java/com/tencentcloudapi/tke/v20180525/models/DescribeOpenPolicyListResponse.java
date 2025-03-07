@@ -25,7 +25,6 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
 
     /**
     * 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenPolicyInfoList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略信息列表 
      * @return OpenPolicyInfoList 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OpenPolicyInfo [] getOpenPolicyInfoList() {
         return this.OpenPolicyInfoList;
@@ -57,9 +54,7 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
 
     /**
      * Set 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenPolicyInfoList 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenPolicyInfoList(OpenPolicyInfo [] OpenPolicyInfoList) {
         this.OpenPolicyInfoList = OpenPolicyInfoList;

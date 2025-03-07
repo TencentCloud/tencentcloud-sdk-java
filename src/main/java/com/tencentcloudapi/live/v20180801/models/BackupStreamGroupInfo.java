@@ -25,7 +25,6 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
     * 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamName")
     @Expose
@@ -33,7 +32,6 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
     * 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupList")
     @Expose
@@ -43,7 +41,6 @@ public class BackupStreamGroupInfo extends AbstractModel {
     * 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptimalEnable")
     @Expose
@@ -51,17 +48,14 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
     * 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostGroupName")
     @Expose
     private String HostGroupName;
 
     /**
-     * Get 流名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流名称。 
      * @return StreamName 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamName() {
         return this.StreamName;
@@ -69,19 +63,15 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
      * Set 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamName 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主备流信息。 
      * @return BackupList 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupStreamDetailData [] getBackupList() {
         return this.BackupList;
@@ -89,9 +79,7 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
      * Set 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupList 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupList(BackupStreamDetailData [] BackupList) {
         this.BackupList = BackupList;
@@ -100,12 +88,10 @@ public class BackupStreamGroupInfo extends AbstractModel {
     /**
      * Get 是否对该流开启了择优调度。
 0 - 未开启。
-1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+1 - 已开启。 
      * @return OptimalEnable 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOptimalEnable() {
         return this.OptimalEnable;
@@ -115,21 +101,17 @@ public class BackupStreamGroupInfo extends AbstractModel {
      * Set 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OptimalEnable 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptimalEnable(Long OptimalEnable) {
         this.OptimalEnable = OptimalEnable;
     }
 
     /**
-     * Get 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名分组的分组名称。 
      * @return HostGroupName 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostGroupName() {
         return this.HostGroupName;
@@ -137,9 +119,7 @@ public class BackupStreamGroupInfo extends AbstractModel {
 
     /**
      * Set 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostGroupName 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostGroupName(String HostGroupName) {
         this.HostGroupName = HostGroupName;

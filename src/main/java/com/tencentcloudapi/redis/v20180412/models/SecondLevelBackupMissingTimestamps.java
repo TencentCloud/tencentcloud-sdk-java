@@ -25,7 +25,6 @@ public class SecondLevelBackupMissingTimestamps extends AbstractModel {
 
     /**
     * 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeStamp")
     @Expose
@@ -33,17 +32,14 @@ public class SecondLevelBackupMissingTimestamps extends AbstractModel {
 
     /**
     * 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeStamp")
     @Expose
     private Long EndTimeStamp;
 
     /**
-     * Get 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间戳 
      * @return StartTimeStamp 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
@@ -51,19 +47,15 @@ public class SecondLevelBackupMissingTimestamps extends AbstractModel {
 
     /**
      * Set 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeStamp 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间戳 
      * @return EndTimeStamp 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
@@ -71,9 +63,7 @@ public class SecondLevelBackupMissingTimestamps extends AbstractModel {
 
     /**
      * Set 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeStamp 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;

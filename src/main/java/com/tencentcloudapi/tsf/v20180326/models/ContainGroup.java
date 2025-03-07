@@ -25,7 +25,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Server")
     @Expose
@@ -57,7 +53,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoName")
     @Expose
@@ -65,7 +60,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagName")
     @Expose
@@ -73,7 +67,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -81,7 +74,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -89,7 +81,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -97,7 +88,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -105,7 +95,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuRequest")
     @Expose
@@ -113,7 +102,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuLimit")
     @Expose
@@ -121,7 +109,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemRequest")
     @Expose
@@ -129,7 +116,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemLimit")
     @Expose
@@ -137,7 +123,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -145,7 +130,6 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeInjectEnable")
     @Expose
@@ -153,17 +137,14 @@ public class ContainGroup extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -171,19 +152,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 分组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组名称 
      * @return GroupName 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -191,19 +168,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -211,19 +184,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 镜像server
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像server 
      * @return Server 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServer() {
         return this.Server;
@@ -231,19 +200,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Server 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServer(String Server) {
         this.Server = Server;
     }
 
     /**
-     * Get 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像名，如/tsf/nginx 
      * @return RepoName 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoName() {
         return this.RepoName;
@@ -251,19 +216,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoName 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;
     }
 
     /**
-     * Get 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像版本名称 
      * @return TagName 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagName() {
         return this.TagName;
@@ -271,19 +232,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagName 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagName(String TagName) {
         this.TagName = TagName;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -291,19 +248,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -311,19 +264,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -331,19 +280,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -351,19 +296,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 初始分配的 CPU 核数，对应 K8S request 
      * @return CpuRequest 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuRequest() {
         return this.CpuRequest;
@@ -371,19 +312,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuRequest 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuRequest(String CpuRequest) {
         this.CpuRequest = CpuRequest;
     }
 
     /**
-     * Get 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大分配的 CPU 核数，对应 K8S limit 
      * @return CpuLimit 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuLimit() {
         return this.CpuLimit;
@@ -391,19 +328,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLimit 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuLimit(String CpuLimit) {
         this.CpuLimit = CpuLimit;
     }
 
     /**
-     * Get 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 初始分配的内存 MiB 数，对应 K8S request 
      * @return MemRequest 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemRequest() {
         return this.MemRequest;
@@ -411,19 +344,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemRequest 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemRequest(String MemRequest) {
         this.MemRequest = MemRequest;
     }
 
     /**
-     * Get 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大分配的内存 MiB 数，对应 K8S limit 
      * @return MemLimit 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemLimit() {
         return this.MemLimit;
@@ -431,19 +360,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemLimit 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemLimit(String MemLimit) {
         this.MemLimit = MemLimit;
     }
 
     /**
-     * Get 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组备注 
      * @return Alias 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -451,19 +376,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 部署组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KubeInjectEnable值 
      * @return KubeInjectEnable KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getKubeInjectEnable() {
         return this.KubeInjectEnable;
@@ -471,19 +392,15 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeInjectEnable KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeInjectEnable(Boolean KubeInjectEnable) {
         this.KubeInjectEnable = KubeInjectEnable;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -491,9 +408,7 @@ public class ContainGroup extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

@@ -165,6 +165,13 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 是否自动清理不支持的任务链接
+    */
+    @SerializedName("ClearLink")
+    @Expose
+    private Boolean ClearLink;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -488,6 +495,22 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 是否自动清理不支持的任务链接 
+     * @return ClearLink 是否自动清理不支持的任务链接
+     */
+    public Boolean getClearLink() {
+        return this.ClearLink;
+    }
+
+    /**
+     * Set 是否自动清理不支持的任务链接
+     * @param ClearLink 是否自动清理不支持的任务链接
+     */
+    public void setClearLink(Boolean ClearLink) {
+        this.ClearLink = ClearLink;
+    }
+
     public RenewWorkflowSchedulerInfoDsRequest() {
     }
 
@@ -556,6 +579,9 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.ClearLink != null) {
+            this.ClearLink = new Boolean(source.ClearLink);
+        }
     }
 
 
@@ -583,6 +609,7 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "ClearLink", this.ClearLink);
 
     }
 }

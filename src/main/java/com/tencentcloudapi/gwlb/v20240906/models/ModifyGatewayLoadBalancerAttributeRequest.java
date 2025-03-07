@@ -38,6 +38,13 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     private String LoadBalancerName;
 
     /**
+    * 是否开启删除保护。
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get 网关负载均衡的唯一ID。 
      * @return LoadBalancerId 网关负载均衡的唯一ID。
      */
@@ -69,6 +76,22 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
         this.LoadBalancerName = LoadBalancerName;
     }
 
+    /**
+     * Get 是否开启删除保护。 
+     * @return DeleteProtect 是否开启删除保护。
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 是否开启删除保护。
+     * @param DeleteProtect 是否开启删除保护。
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public ModifyGatewayLoadBalancerAttributeRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
         if (source.LoadBalancerName != null) {
             this.LoadBalancerName = new String(source.LoadBalancerName);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

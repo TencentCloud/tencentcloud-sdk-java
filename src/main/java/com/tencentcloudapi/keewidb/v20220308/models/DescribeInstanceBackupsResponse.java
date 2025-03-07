@@ -32,7 +32,6 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
 
     /**
     * 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupSet")
     @Expose
@@ -69,10 +68,8 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃字段。 
      * @return BackupSet 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BinlogInfo [] getBackupSet() {
         return this.BackupSet;
@@ -80,9 +77,7 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
 
     /**
      * Set 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSet 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupSet(BinlogInfo [] BackupSet) {
         this.BackupSet = BackupSet;

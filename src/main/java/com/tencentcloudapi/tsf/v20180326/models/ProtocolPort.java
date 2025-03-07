@@ -46,7 +46,6 @@ public class ProtocolPort extends AbstractModel {
 
     /**
     * 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePort")
     @Expose
@@ -54,7 +53,6 @@ public class ProtocolPort extends AbstractModel {
 
     /**
     * 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -109,10 +107,8 @@ public class ProtocolPort extends AbstractModel {
     }
 
     /**
-     * Get 主机端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机端口 
      * @return NodePort 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodePort() {
         return this.NodePort;
@@ -120,19 +116,15 @@ public class ProtocolPort extends AbstractModel {
 
     /**
      * Set 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePort 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePort(Long NodePort) {
         this.NodePort = NodePort;
     }
 
     /**
-     * Get 端口名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口名称 
      * @return Name 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -140,9 +132,7 @@ public class ProtocolPort extends AbstractModel {
 
     /**
      * Set 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

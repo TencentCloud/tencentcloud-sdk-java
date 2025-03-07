@@ -25,7 +25,6 @@ public class BusinessSummaryOverviewItem extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -95,10 +94,8 @@ public class BusinessSummaryOverviewItem extends AbstractModel {
     private String TotalCost;
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -106,9 +103,7 @@ public class BusinessSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;

@@ -501,6 +501,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *发布 MQTT 消息到消息主题或客户端
+     * @param req PublishMessageRequest
+     * @return PublishMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishMessageResponse PublishMessage(PublishMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PublishMessage", PublishMessageResponse.class);
+    }
+
+    /**
      *注册ca证书
      * @param req RegisterCaCertificateRequest
      * @return RegisterCaCertificateResponse

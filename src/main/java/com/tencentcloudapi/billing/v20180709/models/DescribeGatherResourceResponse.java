@@ -25,7 +25,6 @@ public class DescribeGatherResourceResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordNum")
     @Expose
@@ -55,10 +54,8 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return RecordNum 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordNum() {
         return this.RecordNum;
@@ -66,9 +63,7 @@ public class DescribeGatherResourceResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordNum 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

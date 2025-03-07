@@ -25,7 +25,6 @@ public class DescribeIndexRecommendAggregationSlowLogsResponse extends AbstractM
 
     /**
     * 查询实例慢查询聚合结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Aggregation")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeIndexRecommendAggregationSlowLogsResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 查询实例慢查询聚合结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询实例慢查询聚合结果。 
      * @return Aggregation 查询实例慢查询聚合结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Aggregation getAggregation() {
         return this.Aggregation;
@@ -50,9 +47,7 @@ public class DescribeIndexRecommendAggregationSlowLogsResponse extends AbstractM
 
     /**
      * Set 查询实例慢查询聚合结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Aggregation 查询实例慢查询聚合结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggregation(Aggregation Aggregation) {
         this.Aggregation = Aggregation;

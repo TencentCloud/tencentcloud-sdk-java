@@ -32,7 +32,6 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
 
     /**
     * 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -56,7 +55,6 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
 
     /**
     * 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -86,10 +84,8 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗详情 
      * @return Total 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumptionSummaryTotal getTotal() {
         return this.Total;
@@ -97,9 +93,7 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
 
     /**
      * Set 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(ConsumptionSummaryTotal Total) {
         this.Total = Total;
@@ -146,10 +140,8 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源消耗详情 
      * @return Data 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumptionResourceSummaryDataItem [] getData() {
         return this.Data;
@@ -157,9 +149,7 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
 
     /**
      * Set 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ConsumptionResourceSummaryDataItem [] Data) {
         this.Data = Data;

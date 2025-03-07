@@ -69,7 +69,6 @@ public class ParameterDetail extends AbstractModel {
 
     /**
     * 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
     @Expose
@@ -77,7 +76,6 @@ public class ParameterDetail extends AbstractModel {
 
     /**
     * 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
     @Expose
@@ -85,7 +83,6 @@ public class ParameterDetail extends AbstractModel {
 
     /**
     * 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnumValue")
     @Expose
@@ -196,10 +193,8 @@ public class ParameterDetail extends AbstractModel {
     }
 
     /**
-     * Get 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数允许的最大值。 
      * @return Max 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMax() {
         return this.Max;
@@ -207,19 +202,15 @@ public class ParameterDetail extends AbstractModel {
 
     /**
      * Set 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Max 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数允许的最小值。 
      * @return Min 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMin() {
         return this.Min;
@@ -227,19 +218,15 @@ public class ParameterDetail extends AbstractModel {
 
     /**
      * Set 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Min 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数可选枚举值。如果为非枚举参数，则为空。 
      * @return EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEnumValue() {
         return this.EnumValue;
@@ -247,9 +234,7 @@ public class ParameterDetail extends AbstractModel {
 
     /**
      * Set 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;

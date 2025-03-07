@@ -25,7 +25,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -49,7 +46,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -57,7 +53,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -65,7 +60,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -73,7 +67,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -81,7 +74,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -89,7 +81,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -97,7 +88,6 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组所属集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -105,17 +95,14 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
     * 部署组关联日志配置时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedTime")
     @Expose
     private String AssociatedTime;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -123,19 +110,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组名称 
      * @return GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -143,19 +126,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 部署组所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属应用ID 
      * @return ApplicationId 部署组所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -163,19 +142,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 部署组所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 部署组所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属应用名称 
      * @return ApplicationName 部署组所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -183,19 +158,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 部署组所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 部署组所属应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属应用类型 
      * @return ApplicationType 部署组所属应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -203,19 +174,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 部署组所属应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 部署组所属命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属命名空间ID 
      * @return NamespaceId 部署组所属命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -223,19 +190,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 部署组所属命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 部署组所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属命名空间名称 
      * @return NamespaceName 部署组所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -243,19 +206,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 部署组所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 部署组所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属集群ID 
      * @return ClusterId 部署组所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -263,19 +222,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 部署组所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 部署组所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属集群名称 
      * @return ClusterName 部署组所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -283,19 +238,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 部署组所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 部署组所属集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组所属集群类型 
      * @return ClusterType 部署组所属集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -303,19 +254,15 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组所属集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 部署组所属集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 部署组关联日志配置时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组关联日志配置时间 
      * @return AssociatedTime 部署组关联日志配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociatedTime() {
         return this.AssociatedTime;
@@ -323,9 +270,7 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
 
     /**
      * Set 部署组关联日志配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociatedTime 部署组关联日志配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedTime(String AssociatedTime) {
         this.AssociatedTime = AssociatedTime;

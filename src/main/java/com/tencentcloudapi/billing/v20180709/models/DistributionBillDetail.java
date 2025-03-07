@@ -144,7 +144,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -152,7 +151,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -160,7 +158,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -168,7 +165,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -176,7 +172,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -191,7 +186,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceInfo")
     @Expose
@@ -199,7 +193,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedOrder")
     @Expose
@@ -207,7 +200,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Formula")
     @Expose
@@ -215,7 +207,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormulaUrl")
     @Expose
@@ -223,7 +214,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillMonth")
     @Expose
@@ -231,7 +221,6 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillDay")
     @Expose
@@ -510,10 +499,8 @@ public class DistributionBillDetail extends AbstractModel {
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
@@ -521,19 +508,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -541,19 +524,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -561,19 +540,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型编码 
      * @return ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -581,19 +556,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -601,9 +572,7 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
@@ -626,10 +595,8 @@ public class DistributionBillDetail extends AbstractModel {
     }
 
     /**
-     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息 
      * @return PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPriceInfo() {
         return this.PriceInfo;
@@ -637,19 +604,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceInfo(String [] PriceInfo) {
         this.PriceInfo = PriceInfo;
     }
 
     /**
-     * Get 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号 
      * @return AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillDetailAssociatedOrder getAssociatedOrder() {
         return this.AssociatedOrder;
@@ -657,19 +620,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedOrder(BillDetailAssociatedOrder AssociatedOrder) {
         this.AssociatedOrder = AssociatedOrder;
     }
 
     /**
-     * Get 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配 
      * @return Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormula() {
         return this.Formula;
@@ -677,19 +636,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费规则：各产品详细的计费规则官网说明链接 
      * @return FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormulaUrl() {
         return this.FormulaUrl;
@@ -697,19 +652,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormulaUrl(String FormulaUrl) {
         this.FormulaUrl = FormulaUrl;
     }
 
     /**
-     * Get 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单归属月 
      * @return BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillMonth() {
         return this.BillMonth;
@@ -717,19 +668,15 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;
     }
 
     /**
-     * Get 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单归属日 
      * @return BillDay 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillDay() {
         return this.BillDay;
@@ -737,9 +684,7 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
      * Set 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDay 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillDay(String BillDay) {
         this.BillDay = BillDay;

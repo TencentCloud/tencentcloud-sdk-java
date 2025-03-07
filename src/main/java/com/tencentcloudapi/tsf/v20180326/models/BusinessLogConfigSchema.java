@@ -56,7 +56,6 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
     * 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaCreateTime")
     @Expose
@@ -147,10 +146,8 @@ public class BusinessLogConfigSchema extends AbstractModel {
     }
 
     /**
-     * Get 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析规则创建时间 
      * @return SchemaCreateTime 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaCreateTime() {
         return this.SchemaCreateTime;
@@ -158,9 +155,7 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
      * Set 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaCreateTime 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaCreateTime(String SchemaCreateTime) {
         this.SchemaCreateTime = SchemaCreateTime;

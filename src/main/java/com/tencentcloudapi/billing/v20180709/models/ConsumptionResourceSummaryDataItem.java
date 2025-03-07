@@ -116,7 +116,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 折前价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealCost")
     @Expose
@@ -124,7 +123,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeBeginTime")
     @Expose
@@ -132,7 +130,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeEndTime")
     @Expose
@@ -140,7 +137,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DayDiff")
     @Expose
@@ -148,7 +144,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DailyTotalCost")
     @Expose
@@ -156,7 +151,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
     @Expose
@@ -164,7 +158,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 代金券
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -172,7 +165,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -180,7 +172,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 分成金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -188,7 +179,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUin")
     @Expose
@@ -196,7 +186,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -204,7 +193,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateUin")
     @Expose
@@ -212,7 +200,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -220,7 +207,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -228,7 +214,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionType")
     @Expose
@@ -236,7 +221,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionTypeName")
     @Expose
@@ -244,7 +228,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend1")
     @Expose
@@ -252,7 +235,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend2")
     @Expose
@@ -260,7 +242,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend3")
     @Expose
@@ -268,7 +249,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend4")
     @Expose
@@ -276,7 +256,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend5")
     @Expose
@@ -284,7 +263,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -292,7 +270,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeName")
     @Expose
@@ -300,7 +277,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayTime")
     @Expose
@@ -308,7 +284,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -316,7 +291,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentConfig")
     @Expose
@@ -324,7 +298,6 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -539,10 +512,8 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
     }
 
     /**
-     * Get 折前价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折前价 
      * @return RealCost 折前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealCost() {
         return this.RealCost;
@@ -550,19 +521,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 折前价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealCost 折前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用起始时间 
      * @return FeeBeginTime 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
@@ -570,19 +537,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeBeginTime 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用结束时间 
      * @return FeeEndTime 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
@@ -590,19 +553,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeEndTime 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 天数 
      * @return DayDiff 天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDayDiff() {
         return this.DayDiff;
@@ -610,19 +569,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DayDiff 天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDayDiff(String DayDiff) {
         this.DayDiff = DayDiff;
     }
 
     /**
-     * Get 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每日消耗 
      * @return DailyTotalCost 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDailyTotalCost() {
         return this.DailyTotalCost;
@@ -630,19 +585,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DailyTotalCost 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDailyTotalCost(String DailyTotalCost) {
         this.DailyTotalCost = DailyTotalCost;
     }
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号 
      * @return OrderId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
         return this.OrderId;
@@ -650,19 +601,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 代金券
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券 
      * @return VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
@@ -670,19 +617,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 赠送金 
      * @return IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -690,19 +633,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 分成金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金 
      * @return TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -710,19 +649,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
      * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUin() {
         return this.PayerUin;
@@ -730,19 +665,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用者UIN：实际使用资源的账号 ID 
      * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -750,19 +681,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
      * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateUin() {
         return this.OperateUin;
@@ -770,19 +697,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -790,19 +713,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1 
      * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -810,19 +729,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 地域类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域类型 
      * @return RegionType 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionType() {
         return this.RegionType;
@@ -830,19 +745,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionType 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * Get 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域类型名称 
      * @return RegionTypeName 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionTypeName() {
         return this.RegionTypeName;
@@ -850,19 +761,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionTypeName 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionTypeName(String RegionTypeName) {
         this.RegionTypeName = RegionTypeName;
     }
 
     /**
-     * Get 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段1 
      * @return Extend1 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend1() {
         return this.Extend1;
@@ -870,19 +777,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend1 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend1(String Extend1) {
         this.Extend1 = Extend1;
     }
 
     /**
-     * Get 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段2 
      * @return Extend2 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend2() {
         return this.Extend2;
@@ -890,19 +793,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend2 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend2(String Extend2) {
         this.Extend2 = Extend2;
     }
 
     /**
-     * Get 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段3 
      * @return Extend3 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend3() {
         return this.Extend3;
@@ -910,19 +809,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend3 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend3(String Extend3) {
         this.Extend3 = Extend3;
     }
 
     /**
-     * Get 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段4 
      * @return Extend4 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend4() {
         return this.Extend4;
@@ -930,19 +825,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend4 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend4(String Extend4) {
         this.Extend4 = Extend4;
     }
 
     /**
-     * Get 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展字段5 
      * @return Extend5 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend5() {
         return this.Extend5;
@@ -950,19 +841,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend5 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend5(String Extend5) {
         this.Extend5 = Extend5;
     }
 
     /**
-     * Get 实例类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型 
      * @return InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -970,19 +857,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型名称 
      * @return InstanceTypeName 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
@@ -990,19 +873,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeName 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
     }
 
     /**
-     * Get 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扣费时间：结算扣费时间 
      * @return PayTime 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayTime() {
         return this.PayTime;
@@ -1010,19 +889,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayTime 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区：资源所属可用区，如广州三区 
      * @return ZoneName 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -1030,19 +905,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 配置描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置描述 
      * @return ComponentConfig 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentConfig() {
         return this.ComponentConfig;
@@ -1050,19 +921,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentConfig 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentConfig(String ComponentConfig) {
         this.ComponentConfig = ComponentConfig;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTags() {
         return this.Tags;
@@ -1070,9 +937,7 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String Tags) {
         this.Tags = Tags;

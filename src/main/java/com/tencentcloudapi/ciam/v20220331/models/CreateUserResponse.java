@@ -25,7 +25,6 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
     * 创建的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -39,10 +38,8 @@ public class CreateUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的用户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的用户信息 
      * @return User 创建的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public User getUser() {
         return this.User;
@@ -50,9 +47,7 @@ public class CreateUserResponse extends AbstractModel {
 
     /**
      * Set 创建的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 创建的用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(User User) {
         this.User = User;

@@ -25,7 +25,6 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
     * 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoordX")
     @Expose
@@ -33,7 +32,6 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
     * 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoordY")
     @Expose
@@ -41,17 +39,14 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
     * 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoordTag")
     @Expose
     private String CoordTag;
 
     /**
-     * Get 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标横坐标值 
      * @return CoordX 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoordX() {
         return this.CoordX;
@@ -59,19 +54,15 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
      * Set 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoordX 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoordX(String CoordX) {
         this.CoordX = CoordX;
     }
 
     /**
-     * Get 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标纵坐标值 
      * @return CoordY 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoordY() {
         return this.CoordY;
@@ -79,19 +70,15 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
      * Set 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoordY 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoordY(String CoordY) {
         this.CoordY = CoordY;
     }
 
     /**
-     * Get 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标标签，用于标识附加信息 
      * @return CoordTag 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoordTag() {
         return this.CoordTag;
@@ -99,9 +86,7 @@ public class IndicatorCoord extends AbstractModel {
 
     /**
      * Set 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoordTag 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoordTag(String CoordTag) {
         this.CoordTag = CoordTag;

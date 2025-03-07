@@ -25,7 +25,6 @@ public class ListUserByPropertyResponse extends AbstractModel {
 
     /**
     * 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -39,10 +38,8 @@ public class ListUserByPropertyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户列表 
      * @return Users 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public User [] getUsers() {
         return this.Users;
@@ -50,9 +47,7 @@ public class ListUserByPropertyResponse extends AbstractModel {
 
     /**
      * Set 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(User [] Users) {
         this.Users = Users;

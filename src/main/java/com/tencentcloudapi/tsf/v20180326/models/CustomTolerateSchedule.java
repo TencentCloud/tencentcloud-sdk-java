@@ -25,7 +25,6 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -41,7 +39,6 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,7 +46,6 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Effect")
     @Expose
@@ -57,17 +53,14 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TolerationSeconds")
     @Expose
     private Long TolerationSeconds;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Key -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -75,19 +68,15 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Operator -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -95,19 +84,15 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Value -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -115,19 +100,15 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Effect -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffect() {
         return this.Effect;
@@ -135,19 +116,15 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Effect -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return TolerationSeconds -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTolerationSeconds() {
         return this.TolerationSeconds;
@@ -155,9 +132,7 @@ public class CustomTolerateSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TolerationSeconds -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTolerationSeconds(Long TolerationSeconds) {
         this.TolerationSeconds = TolerationSeconds;

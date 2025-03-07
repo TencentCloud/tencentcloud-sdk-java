@@ -81,7 +81,6 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
     * 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -89,7 +88,6 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
     * 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamName")
     @Expose
@@ -97,7 +95,6 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
     * AppId。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -232,10 +229,8 @@ public class XP2PDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，分live和vod两种。 
      * @return Type 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -243,19 +238,15 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
      * Set 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 流ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流ID。 
      * @return StreamName 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamName() {
         return this.StreamName;
@@ -263,19 +254,15 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
      * Set 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamName 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get AppId。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AppId。 
      * @return AppId AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -283,9 +270,7 @@ public class XP2PDetailInfo extends AbstractModel {
 
     /**
      * Set AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

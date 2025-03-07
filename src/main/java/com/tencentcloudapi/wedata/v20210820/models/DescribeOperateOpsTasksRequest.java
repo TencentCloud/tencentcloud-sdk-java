@@ -206,6 +206,20 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private String [] ProjectIds;
 
     /**
+    * 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+    */
+    @SerializedName("BlackTaskIdList")
+    @Expose
+    private String [] BlackTaskIdList;
+
+    /**
+    * 时区
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -621,6 +635,38 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.ProjectIds = ProjectIds;
     }
 
+    /**
+     * Get 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除 
+     * @return BlackTaskIdList 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+     */
+    public String [] getBlackTaskIdList() {
+        return this.BlackTaskIdList;
+    }
+
+    /**
+     * Set 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+     * @param BlackTaskIdList 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+     */
+    public void setBlackTaskIdList(String [] BlackTaskIdList) {
+        this.BlackTaskIdList = BlackTaskIdList;
+    }
+
+    /**
+     * Get 时区 
+     * @return ScheduleTimeZone 时区
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区
+     * @param ScheduleTimeZone 时区
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -716,6 +762,15 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
                 this.ProjectIds[i] = new String(source.ProjectIds[i]);
             }
         }
+        if (source.BlackTaskIdList != null) {
+            this.BlackTaskIdList = new String[source.BlackTaskIdList.length];
+            for (int i = 0; i < source.BlackTaskIdList.length; i++) {
+                this.BlackTaskIdList[i] = new String(source.BlackTaskIdList[i]);
+            }
+        }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -749,6 +804,8 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
         this.setParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+        this.setParamArraySimple(map, prefix + "BlackTaskIdList.", this.BlackTaskIdList);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

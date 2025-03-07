@@ -25,7 +25,6 @@ public class TsfPageInstance extends AbstractModel {
 
     /**
     * 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageInstance extends AbstractModel {
 
     /**
     * 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private Instance [] Content;
 
     /**
-     * Get 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例总数目 
      * @return TotalCount 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageInstance extends AbstractModel {
 
     /**
      * Set 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例列表 
      * @return Content 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instance [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageInstance extends AbstractModel {
 
     /**
      * Set 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(Instance [] Content) {
         this.Content = Content;

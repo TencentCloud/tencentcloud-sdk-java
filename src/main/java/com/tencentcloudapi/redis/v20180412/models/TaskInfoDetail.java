@@ -25,7 +25,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -96,7 +94,6 @@ public class TaskInfoDetail extends AbstractModel {
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
@@ -104,7 +101,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -112,7 +108,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -120,7 +115,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -128,7 +122,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -136,7 +129,6 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
     * 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -149,17 +141,14 @@ public class TaskInfoDetail extends AbstractModel {
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
 
     /**
-     * Get 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务 ID。 
      * @return TaskId 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -167,19 +156,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始时间。 
      * @return StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -187,9 +172,7 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -251,8 +234,7 @@ public class TaskInfoDetail extends AbstractModel {
 - FLOW_MIGRATION_INSTANCE_ZONE："066"，实例可用区迁移中。
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
-- FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。 
+- FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。 
      * @return TaskType 任务类型。
 - FLOW_CREATE: "001"，新建实例
 - FLOW_RESIZE ： "002"，配置变更
@@ -309,7 +291,6 @@ public class TaskInfoDetail extends AbstractModel {
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
         return this.TaskType;
@@ -372,7 +353,6 @@ public class TaskInfoDetail extends AbstractModel {
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 任务类型。
 - FLOW_CREATE: "001"，新建实例
 - FLOW_RESIZE ： "002"，配置变更
@@ -429,17 +409,14 @@ public class TaskInfoDetail extends AbstractModel {
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -447,19 +424,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例 ID。 
      * @return InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -467,19 +440,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目 ID。 
      * @return ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -487,19 +456,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务进度。 
      * @return Progress 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
         return this.Progress;
@@ -507,19 +472,15 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务执行结束时间。 
      * @return EndTime 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -527,9 +488,7 @@ public class TaskInfoDetail extends AbstractModel {
 
     /**
      * Set 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -541,15 +500,13 @@ public class TaskInfoDetail extends AbstractModel {
 0：任务初始化。
 1：执行中。
 2：完成。
-4：失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+4：失败。 
      * @return Result 任务执行状态。
 
 0：任务初始化。
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResult() {
         return this.Result;
@@ -562,14 +519,12 @@ public class TaskInfoDetail extends AbstractModel {
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务执行状态。
 
 0：任务初始化。
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Long Result) {
         this.Result = Result;

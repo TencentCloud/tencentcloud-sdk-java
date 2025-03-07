@@ -25,7 +25,6 @@ public class TsfPageNamespace extends AbstractModel {
 
     /**
     * 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageNamespace extends AbstractModel {
 
     /**
     * 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private Namespace [] Content;
 
     /**
-     * Get 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间总条数 
      * @return TotalCount 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageNamespace extends AbstractModel {
 
     /**
      * Set 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间列表 
      * @return Content 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Namespace [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageNamespace extends AbstractModel {
 
     /**
      * Set 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(Namespace [] Content) {
         this.Content = Content;

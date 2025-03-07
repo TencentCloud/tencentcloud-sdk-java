@@ -32,7 +32,6 @@ public class DescribeAllUserGroupResponse extends AbstractModel {
 
     /**
     * 组信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Groups")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAllUserGroupResponse extends AbstractModel {
     }
 
     /**
-     * Get 组信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组信息。 
      * @return Groups 组信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupItem [] getGroups() {
         return this.Groups;
@@ -73,9 +70,7 @@ public class DescribeAllUserGroupResponse extends AbstractModel {
 
     /**
      * Set 组信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Groups 组信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroups(GroupItem [] Groups) {
         this.Groups = Groups;

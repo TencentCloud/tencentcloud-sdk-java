@@ -116,7 +116,6 @@ public class DomainInfo extends AbstractModel {
     /**
     * 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMiniProgramLive")
     @Expose
@@ -352,11 +351,9 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Get 0: 标准直播。
-1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。 
+1: 小程序直播。 
      * @return IsMiniProgramLive 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsMiniProgramLive() {
         return this.IsMiniProgramLive;
@@ -365,10 +362,8 @@ public class DomainInfo extends AbstractModel {
     /**
      * Set 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsMiniProgramLive 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMiniProgramLive(Long IsMiniProgramLive) {
         this.IsMiniProgramLive = IsMiniProgramLive;

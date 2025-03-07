@@ -69,7 +69,7 @@ public class ProbeTask extends AbstractModel {
     private Long NodeIpType;
 
     /**
-    * 拨测间隔
+    * 拨测间隔，单位为分钟
     */
     @SerializedName("Interval")
     @Expose
@@ -295,16 +295,16 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 拨测间隔 
-     * @return Interval 拨测间隔
+     * Get 拨测间隔，单位为分钟 
+     * @return Interval 拨测间隔，单位为分钟
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 拨测间隔
-     * @param Interval 拨测间隔
+     * Set 拨测间隔，单位为分钟
+     * @param Interval 拨测间隔，单位为分钟
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

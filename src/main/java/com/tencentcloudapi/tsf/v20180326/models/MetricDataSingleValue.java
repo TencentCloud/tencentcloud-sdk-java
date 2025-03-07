@@ -25,7 +25,6 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
     * 指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
     @Expose
@@ -33,7 +32,6 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
     * 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricFunction")
     @Expose
@@ -41,7 +39,6 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
     * 指标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricDataValue")
     @Expose
@@ -49,17 +46,14 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
     * 日环比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DailyPercent")
     @Expose
     private Float DailyPercent;
 
     /**
-     * Get 指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标 
      * @return MetricName 指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
         return this.MetricName;
@@ -67,19 +61,15 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
      * Set 指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricName 指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 统计方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计方式 
      * @return MetricFunction 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricFunction() {
         return this.MetricFunction;
@@ -87,19 +77,15 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
      * Set 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricFunction 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricFunction(String MetricFunction) {
         this.MetricFunction = MetricFunction;
     }
 
     /**
-     * Get 指标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标值 
      * @return MetricDataValue 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricDataValue() {
         return this.MetricDataValue;
@@ -107,19 +93,15 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
      * Set 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricDataValue 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricDataValue(String MetricDataValue) {
         this.MetricDataValue = MetricDataValue;
     }
 
     /**
-     * Get 日环比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日环比 
      * @return DailyPercent 日环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDailyPercent() {
         return this.DailyPercent;
@@ -127,9 +109,7 @@ public class MetricDataSingleValue extends AbstractModel {
 
     /**
      * Set 日环比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DailyPercent 日环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDailyPercent(Float DailyPercent) {
         this.DailyPercent = DailyPercent;

@@ -216,6 +216,14 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CalendarId;
 
     /**
+    * 时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 项目ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
@@ -695,6 +703,26 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.CalendarId = CalendarId;
     }
 
+    /**
+     * Get 时区配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTimeZone 时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTimeZone 时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public WorkflowScheduleDtoDs() {
     }
 
@@ -775,6 +803,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         if (source.CalendarId != null) {
             this.CalendarId = new String(source.CalendarId);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -806,6 +837,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

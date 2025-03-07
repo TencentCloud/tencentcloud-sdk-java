@@ -25,7 +25,6 @@ public class InstanceRefund extends AbstractModel {
 
     /**
     * 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceRefund extends AbstractModel {
 
     /**
     * 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Refunds")
     @Expose
@@ -41,17 +39,14 @@ public class InstanceRefund extends AbstractModel {
 
     /**
     * 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceDetail")
     @Expose
     private String PriceDetail;
 
     /**
-     * Get 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例Id。 
      * @return InstanceId 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -59,19 +54,15 @@ public class InstanceRefund extends AbstractModel {
 
     /**
      * Set 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款数额。 
      * @return Refunds 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRefunds() {
         return this.Refunds;
@@ -79,19 +70,15 @@ public class InstanceRefund extends AbstractModel {
 
     /**
      * Set 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Refunds 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefunds(Float Refunds) {
         this.Refunds = Refunds;
     }
 
     /**
-     * Get 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款详情。 
      * @return PriceDetail 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPriceDetail() {
         return this.PriceDetail;
@@ -99,9 +86,7 @@ public class InstanceRefund extends AbstractModel {
 
     /**
      * Set 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceDetail 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceDetail(String PriceDetail) {
         this.PriceDetail = PriceDetail;

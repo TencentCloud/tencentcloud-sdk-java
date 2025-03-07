@@ -73,6 +73,13 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
     private String [] GroupBy;
 
     /**
+    * 返回的最大数据点个数
+    */
+    @SerializedName("MaxPoint")
+    @Expose
+    private Long MaxPoint;
+
+    /**
      * Get 任务ID 
      * @return JobId 任务ID
      */
@@ -184,6 +191,22 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
         this.GroupBy = GroupBy;
     }
 
+    /**
+     * Get 返回的最大数据点个数 
+     * @return MaxPoint 返回的最大数据点个数
+     */
+    public Long getMaxPoint() {
+        return this.MaxPoint;
+    }
+
+    /**
+     * Set 返回的最大数据点个数
+     * @param MaxPoint 返回的最大数据点个数
+     */
+    public void setMaxPoint(Long MaxPoint) {
+        this.MaxPoint = MaxPoint;
+    }
+
     public DescribeSampleMatrixQueryRequest() {
     }
 
@@ -219,6 +242,9 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.MaxPoint != null) {
+            this.MaxPoint = new Long(source.MaxPoint);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Aggregation", this.Aggregation);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamSimple(map, prefix + "MaxPoint", this.MaxPoint);
 
     }
 }

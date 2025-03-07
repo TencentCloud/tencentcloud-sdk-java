@@ -25,7 +25,6 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
     * 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
     @Expose
@@ -33,7 +32,6 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
     * 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricFunction")
     @Expose
@@ -41,17 +39,14 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
     * 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricDataPoints")
     @Expose
     private MetricDataPoint [] MetricDataPoints;
 
     /**
-     * Get 指标名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标名称 
      * @return MetricName 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
         return this.MetricName;
@@ -59,19 +54,15 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
      * Set 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricName 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标计算方式 
      * @return MetricFunction 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricFunction() {
         return this.MetricFunction;
@@ -79,19 +70,15 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
      * Set 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricFunction 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricFunction(String MetricFunction) {
         this.MetricFunction = MetricFunction;
     }
 
     /**
-     * Get 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标数据点集合 
      * @return MetricDataPoints 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricDataPoint [] getMetricDataPoints() {
         return this.MetricDataPoints;
@@ -99,9 +86,7 @@ public class MetricDataCurve extends AbstractModel {
 
     /**
      * Set 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricDataPoints 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricDataPoints(MetricDataPoint [] MetricDataPoints) {
         this.MetricDataPoints = MetricDataPoints;

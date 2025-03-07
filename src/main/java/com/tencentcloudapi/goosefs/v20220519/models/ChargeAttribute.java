@@ -33,7 +33,6 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
     * 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -76,10 +75,8 @@ public class ChargeAttribute extends AbstractModel {
     }
 
     /**
-     * Get 付费方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费方式 
      * @return PayMode 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -87,9 +84,7 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
      * Set 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;

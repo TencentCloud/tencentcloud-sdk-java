@@ -31,19 +31,14 @@ public class DescribeLiveStreamPublishedListRequest extends AbstractModel {
     private String DomainName;
 
     /**
-    * 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+    * 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+    * 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
     */
     @SerializedName("StartTime")
     @Expose
@@ -98,52 +93,32 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * Get 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。 
-     * @return EndTime 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+     * Get 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。 
+     * @return EndTime 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
-     * @param EndTime 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+     * Set 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
+     * @param EndTime 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。 
-     * @return StartTime 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+     * Get 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。 
+     * @return StartTime 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
-     * @param StartTime 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+     * Set 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
+     * @param StartTime 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

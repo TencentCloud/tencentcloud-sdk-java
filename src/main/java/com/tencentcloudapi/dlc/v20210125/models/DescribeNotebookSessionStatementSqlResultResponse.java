@@ -85,6 +85,14 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
     private Long DataAmount;
 
     /**
+    * spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UiUrl")
+    @Expose
+    private String UiUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -240,6 +248,26 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
     }
 
     /**
+     * Get spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UiUrl spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUiUrl() {
+        return this.UiUrl;
+    }
+
+    /**
+     * Set spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UiUrl spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUiUrl(String UiUrl) {
+        this.UiUrl = UiUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -290,6 +318,9 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
         if (source.DataAmount != null) {
             this.DataAmount = new Long(source.DataAmount);
         }
+        if (source.UiUrl != null) {
+            this.UiUrl = new String(source.UiUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -308,6 +339,7 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
         this.setParamSimple(map, prefix + "UseTime", this.UseTime);
         this.setParamSimple(map, prefix + "AffectRows", this.AffectRows);
         this.setParamSimple(map, prefix + "DataAmount", this.DataAmount);
+        this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -32,7 +32,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proxy")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Redis")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tendis")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeeWiDBCount")
     @Expose
@@ -78,7 +74,6 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
     * KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeeWiDB")
     @Expose
@@ -108,10 +103,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Proxy 节点信息。 
      * @return Proxy Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyNodeInfo [] getProxy() {
         return this.Proxy;
@@ -119,9 +112,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Proxy Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxy(ProxyNodeInfo [] Proxy) {
         this.Proxy = Proxy;
@@ -144,10 +135,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。 
      * @return Redis Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RedisNodeInfo [] getRedis() {
         return this.Redis;
@@ -155,9 +144,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Redis Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedis(RedisNodeInfo [] Redis) {
         this.Redis = Redis;
@@ -180,10 +167,8 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。 
      * @return Tendis Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNodeInfo [] getTendis() {
         return this.Tendis;
@@ -191,19 +176,15 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tendis Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTendis(InstanceNodeInfo [] Tendis) {
         this.Tendis = Tendis;
     }
 
     /**
-     * Get KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KeewiDB 节点数量。 
      * @return KeeWiDBCount KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKeeWiDBCount() {
         return this.KeeWiDBCount;
@@ -211,19 +192,15 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeeWiDBCount KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeeWiDBCount(Long KeeWiDBCount) {
         this.KeeWiDBCount = KeeWiDBCount;
     }
 
     /**
-     * Get KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KeewiDB 节点信息。 
      * @return KeeWiDB KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNodeInfo [] getKeeWiDB() {
         return this.KeeWiDB;
@@ -231,9 +208,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
 
     /**
      * Set KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeeWiDB KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeeWiDB(InstanceNodeInfo [] KeeWiDB) {
         this.KeeWiDB = KeeWiDB;

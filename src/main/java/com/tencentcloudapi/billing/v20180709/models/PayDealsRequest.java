@@ -52,6 +52,20 @@ public class PayDealsRequest extends AbstractModel {
     private String [] BigDealIds;
 
     /**
+    * 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+    */
+    @SerializedName("AgentPay")
+    @Expose
+    private Long AgentPay;
+
+    /**
+    * 推荐者，用于返利
+    */
+    @SerializedName("CpsUin")
+    @Expose
+    private String CpsUin;
+
+    /**
      * Get 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数 
      * @return OrderIds 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      */
@@ -115,6 +129,38 @@ public class PayDealsRequest extends AbstractModel {
         this.BigDealIds = BigDealIds;
     }
 
+    /**
+     * Get 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0 
+     * @return AgentPay 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+     */
+    public Long getAgentPay() {
+        return this.AgentPay;
+    }
+
+    /**
+     * Set 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+     * @param AgentPay 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+     */
+    public void setAgentPay(Long AgentPay) {
+        this.AgentPay = AgentPay;
+    }
+
+    /**
+     * Get 推荐者，用于返利 
+     * @return CpsUin 推荐者，用于返利
+     */
+    public String getCpsUin() {
+        return this.CpsUin;
+    }
+
+    /**
+     * Set 推荐者，用于返利
+     * @param CpsUin 推荐者，用于返利
+     */
+    public void setCpsUin(String CpsUin) {
+        this.CpsUin = CpsUin;
+    }
+
     public PayDealsRequest() {
     }
 
@@ -144,6 +190,12 @@ public class PayDealsRequest extends AbstractModel {
                 this.BigDealIds[i] = new String(source.BigDealIds[i]);
             }
         }
+        if (source.AgentPay != null) {
+            this.AgentPay = new Long(source.AgentPay);
+        }
+        if (source.CpsUin != null) {
+            this.CpsUin = new String(source.CpsUin);
+        }
     }
 
 
@@ -155,6 +207,8 @@ public class PayDealsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+        this.setParamSimple(map, prefix + "AgentPay", this.AgentPay);
+        this.setParamSimple(map, prefix + "CpsUin", this.CpsUin);
 
     }
 }

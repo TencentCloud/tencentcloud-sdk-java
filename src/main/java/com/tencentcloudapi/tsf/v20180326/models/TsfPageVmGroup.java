@@ -25,7 +25,6 @@ public class TsfPageVmGroup extends AbstractModel {
 
     /**
     * 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageVmGroup extends AbstractModel {
 
     /**
     * 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private VmGroupSimple [] Content;
 
     /**
-     * Get 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟机部署组总数目 
      * @return TotalCount 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageVmGroup extends AbstractModel {
 
     /**
      * Set 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟机部署组列表信息 
      * @return Content 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VmGroupSimple [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageVmGroup extends AbstractModel {
 
     /**
      * Set 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(VmGroupSimple [] Content) {
         this.Content = Content;

@@ -25,7 +25,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUin")
     @Expose
@@ -33,7 +32,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -41,7 +39,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateUin")
     @Expose
@@ -49,7 +46,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -57,7 +53,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeName")
     @Expose
@@ -65,7 +60,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -73,7 +67,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -81,7 +74,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -89,7 +81,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKeyName")
     @Expose
@@ -97,7 +88,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 资源命中公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -105,7 +95,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 资源命中公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -113,7 +102,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -121,7 +109,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCodeName")
     @Expose
@@ -129,7 +116,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCode")
     @Expose
@@ -137,7 +123,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCodeName")
     @Expose
@@ -145,7 +130,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -153,7 +137,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -161,7 +144,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -169,7 +151,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -177,7 +158,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CashPayAmount")
     @Expose
@@ -185,7 +165,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -193,7 +172,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -201,7 +179,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -212,7 +189,6 @@ public class GatherResourceSummary extends AbstractModel {
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllocationType")
     @Expose
@@ -220,7 +196,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 当前归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongTreeNodeUniqKey")
     @Expose
@@ -228,7 +203,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 当前资源命中公摊规则信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongRule")
     @Expose
@@ -236,7 +210,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 其它归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherTreeNodeUniqKeys")
     @Expose
@@ -244,7 +217,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 其他命中规则信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherRules")
     @Expose
@@ -252,7 +224,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -260,7 +231,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
@@ -268,7 +238,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -276,7 +245,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -284,7 +252,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -292,7 +259,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayModeName")
     @Expose
@@ -300,7 +266,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -308,7 +273,6 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
     * 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTypeName")
     @Expose
@@ -331,10 +295,8 @@ public class GatherResourceSummary extends AbstractModel {
     private String SplitItemName;
 
     /**
-     * Get 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
      * @return PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUin() {
         return this.PayerUin;
@@ -342,19 +304,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用者 UIN：实际使用资源的账号 ID 
      * @return OwnerUin 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -362,19 +320,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID） 
      * @return OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateUin() {
         return this.OperateUin;
@@ -382,19 +336,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型编码 
      * @return InstanceType 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -402,19 +352,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-” 
      * @return InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
@@ -422,19 +368,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
     }
 
     /**
-     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名 
      * @return ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -442,19 +384,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名 
      * @return ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -462,19 +400,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元唯一标识 
      * @return TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
@@ -482,19 +416,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元名称 
      * @return TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKeyName() {
         return this.TreeNodeUniqKeyName;
@@ -502,19 +432,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
         this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;
     }
 
     /**
-     * Get 资源命中公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源命中公摊规则ID 
      * @return RuleId 资源命中公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -522,19 +448,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 资源命中公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 资源命中公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 资源命中公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源命中公摊规则名称 
      * @return RuleName 资源命中公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -542,19 +464,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 资源命中公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 资源命中公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -562,19 +480,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称：用户所采购的各类云产品 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
@@ -582,19 +496,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称编码 
      * @return ItemCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCode() {
         return this.ItemCode;
@@ -602,19 +512,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称：用户购买的产品或服务，所包含的具体组件 
      * @return ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
@@ -622,19 +528,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -642,19 +544,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称：资源所属地域 
      * @return RegionName 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -662,19 +560,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账标签：资源绑定的标签 
      * @return Tag 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTag [] getTag() {
         return this.Tag;
@@ -682,19 +576,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(BillTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率 
      * @return RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -702,19 +592,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现金账户支出(元)：通过现金账户支付的金额 
      * @return CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
@@ -722,19 +608,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额 
      * @return VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
@@ -742,19 +624,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 赠送账户支出(元)：使用赠送金支付的金额 
      * @return IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -762,19 +640,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成账户支出(元)：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -782,9 +656,7 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
@@ -794,13 +666,11 @@ public class GatherResourceSummary extends AbstractModel {
      * Get 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。 
+-1 - 未分配 
      * @return AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllocationType() {
         return this.AllocationType;
@@ -811,22 +681,18 @@ public class GatherResourceSummary extends AbstractModel {
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllocationType(Long AllocationType) {
         this.AllocationType = AllocationType;
     }
 
     /**
-     * Get 当前归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前归属单元信息 
      * @return BelongTreeNodeUniqKey 当前归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationTreeNode getBelongTreeNodeUniqKey() {
         return this.BelongTreeNodeUniqKey;
@@ -834,19 +700,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 当前归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BelongTreeNodeUniqKey 当前归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongTreeNodeUniqKey(AllocationTreeNode BelongTreeNodeUniqKey) {
         this.BelongTreeNodeUniqKey = BelongTreeNodeUniqKey;
     }
 
     /**
-     * Get 当前资源命中公摊规则信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前资源命中公摊规则信息 
      * @return BelongRule 当前资源命中公摊规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationRule getBelongRule() {
         return this.BelongRule;
@@ -854,19 +716,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 当前资源命中公摊规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BelongRule 当前资源命中公摊规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongRule(AllocationRule BelongRule) {
         this.BelongRule = BelongRule;
     }
 
     /**
-     * Get 其它归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其它归属单元信息 
      * @return OtherTreeNodeUniqKeys 其它归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationTreeNode [] getOtherTreeNodeUniqKeys() {
         return this.OtherTreeNodeUniqKeys;
@@ -874,19 +732,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 其它归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherTreeNodeUniqKeys 其它归属单元信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherTreeNodeUniqKeys(AllocationTreeNode [] OtherTreeNodeUniqKeys) {
         this.OtherTreeNodeUniqKeys = OtherTreeNodeUniqKeys;
     }
 
     /**
-     * Get 其他命中规则信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他命中规则信息 
      * @return OtherRules 其他命中规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllocationRule [] getOtherRules() {
         return this.OtherRules;
@@ -894,19 +748,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 其他命中规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherRules 其他命中规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherRules(AllocationRule [] OtherRules) {
         this.OtherRules = OtherRules;
     }
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -914,19 +764,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
      * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -934,19 +780,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -954,19 +796,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称：用户采购的具体产品细分类型 
      * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -974,19 +812,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式编码 
      * @return PayMode 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -994,19 +828,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
      * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayModeName() {
         return this.PayModeName;
@@ -1014,19 +844,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型编码 
      * @return ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -1034,19 +860,15 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型：明细交易类型 
      * @return ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
@@ -1054,9 +876,7 @@ public class GatherResourceSummary extends AbstractModel {
 
     /**
      * Set 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;

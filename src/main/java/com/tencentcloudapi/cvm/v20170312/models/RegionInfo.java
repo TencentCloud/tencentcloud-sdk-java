@@ -25,7 +25,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 地域名称，例如，ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 地域描述，例如，华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -41,17 +39,14 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 地域是否可用状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionState")
     @Expose
     private String RegionState;
 
     /**
-     * Get 地域名称，例如，ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称，例如，ap-guangzhou 
      * @return Region 地域名称，例如，ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -59,19 +54,15 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 地域名称，例如，ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域名称，例如，ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 地域描述，例如，华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域描述，例如，华南地区(广州) 
      * @return RegionName 地域描述，例如，华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -79,19 +70,15 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 地域描述，例如，华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域描述，例如，华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 地域是否可用状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域是否可用状态 
      * @return RegionState 地域是否可用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionState() {
         return this.RegionState;
@@ -99,9 +86,7 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 地域是否可用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionState 地域是否可用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionState(String RegionState) {
         this.RegionState = RegionState;

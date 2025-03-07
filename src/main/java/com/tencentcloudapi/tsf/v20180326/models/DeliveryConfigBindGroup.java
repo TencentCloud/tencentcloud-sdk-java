@@ -39,7 +39,6 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
     * 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CollectPath")
     @Expose
@@ -47,7 +46,6 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
     * 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Groups")
     @Expose
@@ -55,7 +53,6 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +84,6 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
     * Topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -119,7 +115,6 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
     * EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableAuth")
     @Expose
@@ -182,10 +177,8 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get 采集路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采集路径 
      * @return CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCollectPath() {
         return this.CollectPath;
@@ -193,19 +186,15 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
      * Set 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollectPath(String [] CollectPath) {
         this.CollectPath = CollectPath;
     }
 
     /**
-     * Get 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联部署组信息 
      * @return Groups 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfo [] getGroups() {
         return this.Groups;
@@ -213,19 +202,15 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
      * Set 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Groups 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroups(GroupInfo [] Groups) {
         this.Groups = Groups;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -233,9 +218,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -302,10 +285,8 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get Topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic 
      * @return Topic Topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -313,9 +294,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
      * Set Topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -382,10 +361,8 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EnableAuth 
      * @return EnableAuth EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
@@ -393,9 +370,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
 
     /**
      * Set EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableAuth EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;

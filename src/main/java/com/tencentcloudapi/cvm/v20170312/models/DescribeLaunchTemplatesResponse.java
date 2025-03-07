@@ -25,7 +25,6 @@ public class DescribeLaunchTemplatesResponse extends AbstractModel {
 
     /**
     * 符合条件的实例模板数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLaunchTemplatesResponse extends AbstractModel {
 
     /**
     * 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeLaunchTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的实例模板数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的实例模板数量。 
      * @return TotalCount 符合条件的实例模板数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeLaunchTemplatesResponse extends AbstractModel {
 
     /**
      * Set 符合条件的实例模板数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的实例模板数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例详细信息列表。 
      * @return LaunchTemplateSet 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LaunchTemplateInfo [] getLaunchTemplateSet() {
         return this.LaunchTemplateSet;
@@ -78,9 +70,7 @@ public class DescribeLaunchTemplatesResponse extends AbstractModel {
 
     /**
      * Set 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateSet 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateSet(LaunchTemplateInfo [] LaunchTemplateSet) {
         this.LaunchTemplateSet = LaunchTemplateSet;

@@ -25,7 +25,6 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
     * 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
     * 应用id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -41,17 +39,14 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-     * Get 用户组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户组id 
      * @return UserGroupId 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserGroupId() {
         return this.UserGroupId;
@@ -59,19 +54,15 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
      * Set 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserGroupId 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroupId(String UserGroupId) {
         this.UserGroupId = UserGroupId;
     }
 
     /**
-     * Get 应用id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用id 
      * @return ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -79,19 +70,15 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
      * Set 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -99,9 +86,7 @@ public class AppAssociatedUserGroupIds extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;

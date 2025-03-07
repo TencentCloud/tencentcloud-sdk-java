@@ -25,7 +25,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -33,7 +32,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceCode")
     @Expose
@@ -41,7 +39,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -49,7 +46,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceDesc")
     @Expose
@@ -57,7 +53,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
@@ -65,7 +60,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceStatus")
     @Expose
@@ -73,7 +67,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteFlag")
     @Expose
@@ -81,7 +74,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,7 +81,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -97,7 +88,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterList")
     @Expose
@@ -105,7 +95,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -113,7 +102,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceResourceType")
     @Expose
@@ -121,7 +109,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceType")
     @Expose
@@ -129,7 +116,6 @@ public class Namespace extends AbstractModel {
 
     /**
     * 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsHaEnable")
     @Expose
@@ -137,17 +123,14 @@ public class Namespace extends AbstractModel {
 
     /**
     * KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeInjectEnable")
     @Expose
     private Boolean KubeInjectEnable;
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -155,19 +138,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间编码 
      * @return NamespaceCode 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceCode() {
         return this.NamespaceCode;
@@ -175,19 +154,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceCode 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceCode(String NamespaceCode) {
         this.NamespaceCode = NamespaceCode;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -195,19 +170,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间描述 
      * @return NamespaceDesc 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceDesc() {
         return this.NamespaceDesc;
@@ -215,19 +186,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceDesc 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceDesc(String NamespaceDesc) {
         this.NamespaceDesc = NamespaceDesc;
     }
 
     /**
-     * Get 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认命名空间 
      * @return IsDefault 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsDefault() {
         return this.IsDefault;
@@ -235,19 +202,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间状态 
      * @return NamespaceStatus 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceStatus() {
         return this.NamespaceStatus;
@@ -255,19 +218,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceStatus 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceStatus(String NamespaceStatus) {
         this.NamespaceStatus = NamespaceStatus;
     }
 
     /**
-     * Get 删除标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除标识 
      * @return DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteFlag() {
         return this.DeleteFlag;
@@ -275,19 +234,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteFlag(Boolean DeleteFlag) {
         this.DeleteFlag = DeleteFlag;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -295,19 +250,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -315,19 +266,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。 
      * @return ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Cluster [] getClusterList() {
         return this.ClusterList;
@@ -335,19 +282,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterList(Cluster [] ClusterList) {
         this.ClusterList = ClusterList;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -355,19 +298,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群资源类型 
      * @return NamespaceResourceType 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceResourceType() {
         return this.NamespaceResourceType;
@@ -375,19 +314,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceResourceType 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceResourceType(String NamespaceResourceType) {
         this.NamespaceResourceType = NamespaceResourceType;
     }
 
     /**
-     * Get 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间类型 
      * @return NamespaceType 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceType() {
         return this.NamespaceType;
@@ -395,19 +330,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceType 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceType(String NamespaceType) {
         this.NamespaceType = NamespaceType;
     }
 
     /**
-     * Get 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启高可用 
      * @return IsHaEnable 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsHaEnable() {
         return this.IsHaEnable;
@@ -415,19 +346,15 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsHaEnable 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsHaEnable(String IsHaEnable) {
         this.IsHaEnable = IsHaEnable;
     }
 
     /**
-     * Get KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KubeInjectEnable值 
      * @return KubeInjectEnable KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getKubeInjectEnable() {
         return this.KubeInjectEnable;
@@ -435,9 +362,7 @@ public class Namespace extends AbstractModel {
 
     /**
      * Set KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeInjectEnable KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeInjectEnable(Boolean KubeInjectEnable) {
         this.KubeInjectEnable = KubeInjectEnable;

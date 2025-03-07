@@ -25,7 +25,6 @@ public class BaselineConfigItem extends AbstractModel {
 
     /**
     * 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
     @Expose
@@ -33,17 +32,14 @@ public class BaselineConfigItem extends AbstractModel {
 
     /**
     * 账号工厂基线项配置，不同基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Configuration")
     @Expose
     private String Configuration;
 
     /**
-     * Get 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。 
      * @return Identifier 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
         return this.Identifier;
@@ -51,19 +47,15 @@ public class BaselineConfigItem extends AbstractModel {
 
     /**
      * Set 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Identifier 账号工厂基线项唯一标识,只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 账号工厂基线项配置，不同基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号工厂基线项配置，不同基线项配置参数不同。 
      * @return Configuration 账号工厂基线项配置，不同基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfiguration() {
         return this.Configuration;
@@ -71,9 +63,7 @@ public class BaselineConfigItem extends AbstractModel {
 
     /**
      * Set 账号工厂基线项配置，不同基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Configuration 账号工厂基线项配置，不同基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;

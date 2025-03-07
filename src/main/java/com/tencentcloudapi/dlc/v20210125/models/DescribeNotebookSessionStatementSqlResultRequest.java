@@ -45,6 +45,13 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
     private String NextToken;
 
     /**
+    * 批次Id
+    */
+    @SerializedName("BatchId")
+    @Expose
+    private String BatchId;
+
+    /**
      * Get 任务唯一ID 
      * @return TaskId 任务唯一ID
      */
@@ -92,6 +99,22 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         this.NextToken = NextToken;
     }
 
+    /**
+     * Get 批次Id 
+     * @return BatchId 批次Id
+     */
+    public String getBatchId() {
+        return this.BatchId;
+    }
+
+    /**
+     * Set 批次Id
+     * @param BatchId 批次Id
+     */
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
+    }
+
     public DescribeNotebookSessionStatementSqlResultRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         if (source.NextToken != null) {
             this.NextToken = new String(source.NextToken);
         }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
 
     }
 }

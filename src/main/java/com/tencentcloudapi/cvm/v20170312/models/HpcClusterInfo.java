@@ -32,7 +32,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -69,7 +67,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -77,7 +74,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -85,7 +81,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HpcClusterType")
     @Expose
@@ -93,7 +88,6 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
     * 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HpcClusterBusinessId")
     @Expose
@@ -130,10 +124,8 @@ public class HpcClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群名 
      * @return Name 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -141,19 +133,15 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群备注 
      * @return Remark 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -161,9 +149,7 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -218,10 +204,8 @@ public class HpcClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群创建时间 
      * @return CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -229,19 +213,15 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群内实例ID列表 
      * @return InstanceIds 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -249,19 +229,15 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群类型。 
      * @return HpcClusterType 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHpcClusterType() {
         return this.HpcClusterType;
@@ -269,19 +245,15 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HpcClusterType 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHpcClusterType(String HpcClusterType) {
         this.HpcClusterType = HpcClusterType;
     }
 
     /**
-     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。	 
      * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHpcClusterBusinessId() {
         return this.HpcClusterBusinessId;
@@ -289,9 +261,7 @@ public class HpcClusterInfo extends AbstractModel {
 
     /**
      * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
         this.HpcClusterBusinessId = HpcClusterBusinessId;

@@ -32,7 +32,6 @@ public class DescribeAllUserContactResponse extends AbstractModel {
 
     /**
     * 联系人的信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contacts")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAllUserContactResponse extends AbstractModel {
     }
 
     /**
-     * Get 联系人的信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联系人的信息。 
      * @return Contacts 联系人的信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContactItem [] getContacts() {
         return this.Contacts;
@@ -73,9 +70,7 @@ public class DescribeAllUserContactResponse extends AbstractModel {
 
     /**
      * Set 联系人的信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contacts 联系人的信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContacts(ContactItem [] Contacts) {
         this.Contacts = Contacts;

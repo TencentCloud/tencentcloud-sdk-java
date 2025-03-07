@@ -25,7 +25,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyCategory")
     @Expose
@@ -33,7 +32,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -41,7 +39,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDesc")
     @Expose
@@ -49,7 +46,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnforcementAction")
     @Expose
@@ -57,7 +53,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventNums")
     @Expose
@@ -65,7 +60,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -73,7 +67,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kind")
     @Expose
@@ -81,7 +74,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnabledStatus")
     @Expose
@@ -89,7 +81,6 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
     * 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConstraintYamlExample")
     @Expose
@@ -104,10 +95,8 @@ public class OpenPolicyInfo extends AbstractModel {
     private OpenConstraintInfo [] OpenConstraintInfoList;
 
     /**
-     * Get 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略 
      * @return PolicyCategory 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyCategory() {
         return this.PolicyCategory;
@@ -115,19 +104,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyCategory 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyCategory(String PolicyCategory) {
         this.PolicyCategory = PolicyCategory;
     }
 
     /**
-     * Get 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略中文名称 
      * @return PolicyName 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -135,19 +120,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return PolicyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDesc() {
         return this.PolicyDesc;
@@ -155,19 +136,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDesc(String PolicyDesc) {
         this.PolicyDesc = PolicyDesc;
     }
 
     /**
-     * Get 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略运行模式：dryrun空跑不生效，deny拦截生效 
      * @return EnforcementAction 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnforcementAction() {
         return this.EnforcementAction;
@@ -175,19 +152,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnforcementAction 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnforcementAction(String EnforcementAction) {
         this.EnforcementAction = EnforcementAction;
     }
 
     /**
-     * Get 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的事件数量(最近7d) 
      * @return EventNums 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventNums() {
         return this.EventNums;
@@ -195,19 +168,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventNums 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventNums(Long EventNums) {
         this.EventNums = EventNums;
     }
 
     /**
-     * Get 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略英文名称 
      * @return Name 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -215,19 +184,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略模板类型 
      * @return Kind 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKind() {
         return this.Kind;
@@ -235,19 +200,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kind 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略开关状态：open打开，close关闭 
      * @return EnabledStatus 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnabledStatus() {
         return this.EnabledStatus;
@@ -255,19 +216,15 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnabledStatus 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabledStatus(String EnabledStatus) {
         this.EnabledStatus = EnabledStatus;
     }
 
     /**
-     * Get 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略的实例的yaml示例base64编码 
      * @return ConstraintYamlExample 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConstraintYamlExample() {
         return this.ConstraintYamlExample;
@@ -275,9 +232,7 @@ public class OpenPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConstraintYamlExample 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstraintYamlExample(String ConstraintYamlExample) {
         this.ConstraintYamlExample = ConstraintYamlExample;

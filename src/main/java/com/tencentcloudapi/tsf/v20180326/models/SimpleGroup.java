@@ -25,7 +25,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -49,7 +46,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -57,7 +53,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -65,7 +60,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -73,7 +67,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -81,7 +74,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -89,7 +81,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -97,7 +88,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -105,7 +95,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 启动参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupParameters")
     @Expose
@@ -113,7 +102,6 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -121,17 +109,14 @@ public class SimpleGroup extends AbstractModel {
 
     /**
     * 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppMicroServiceType")
     @Expose
     private String AppMicroServiceType;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -139,19 +124,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组名称 
      * @return GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -159,19 +140,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -179,19 +156,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -199,19 +172,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -219,19 +188,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -239,19 +204,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -259,19 +220,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -279,19 +236,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -299,19 +252,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -319,19 +268,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 启动参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动参数 
      * @return StartupParameters 启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartupParameters() {
         return this.StartupParameters;
@@ -339,19 +284,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartupParameters 启动参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupParameters(String StartupParameters) {
         this.StartupParameters = StartupParameters;
     }
 
     /**
-     * Get 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组资源类型 
      * @return GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
@@ -359,19 +300,15 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
     }
 
     /**
-     * Get 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用微服务类型 
      * @return AppMicroServiceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppMicroServiceType() {
         return this.AppMicroServiceType;
@@ -379,9 +316,7 @@ public class SimpleGroup extends AbstractModel {
 
     /**
      * Set 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppMicroServiceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppMicroServiceType(String AppMicroServiceType) {
         this.AppMicroServiceType = AppMicroServiceType;

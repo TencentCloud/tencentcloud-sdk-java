@@ -25,7 +25,6 @@ public class CommonOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelName")
     @Expose
@@ -33,7 +32,6 @@ public class CommonOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -41,17 +39,14 @@ public class CommonOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelValue")
     @Expose
     private String LabelValue;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return LabelName -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelName() {
         return this.LabelName;
@@ -59,19 +54,15 @@ public class CommonOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelName -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelName(String LabelName) {
         this.LabelName = LabelName;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Operator -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -79,19 +70,15 @@ public class CommonOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return LabelValue -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelValue() {
         return this.LabelValue;
@@ -99,9 +86,7 @@ public class CommonOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelValue -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelValue(String LabelValue) {
         this.LabelValue = LabelValue;

@@ -46,7 +46,6 @@ id,地域,简称信息如下：
 - 17,  法兰克福,eu-frankfurt
 - 18,  首尔,ap-seoul
 - 19,  重庆,ap-chongqing
-- 21,  孟买,ap-mumbai
 - 22,  弗吉尼亚,na-ashburn
 - 23,  曼谷,ap-bangkok
 - 25,  东京,ap-tokyo
@@ -91,7 +90,6 @@ id,地域,简称信息如下：
 - 17,  法兰克福,eu-frankfurt
 - 18,  首尔,ap-seoul
 - 19,  重庆,ap-chongqing
-- 21,  孟买,ap-mumbai
 - 22,  弗吉尼亚,na-ashburn
 - 23,  曼谷,ap-bangkok
 - 25,  东京,ap-tokyo
@@ -114,7 +112,6 @@ id,地域,简称信息如下：
 - 17,  法兰克福,eu-frankfurt
 - 18,  首尔,ap-seoul
 - 19,  重庆,ap-chongqing
-- 21,  孟买,ap-mumbai
 - 22,  弗吉尼亚,na-ashburn
 - 23,  曼谷,ap-bangkok
 - 25,  东京,ap-tokyo
@@ -143,7 +140,6 @@ id,地域,简称信息如下：
 - 17,  法兰克福,eu-frankfurt
 - 18,  首尔,ap-seoul
 - 19,  重庆,ap-chongqing
-- 21,  孟买,ap-mumbai
 - 22,  弗吉尼亚,na-ashburn
 - 23,  曼谷,ap-bangkok
 - 25,  东京,ap-tokyo
@@ -166,7 +162,6 @@ id,地域,简称信息如下：
 - 17,  法兰克福,eu-frankfurt
 - 18,  首尔,ap-seoul
 - 19,  重庆,ap-chongqing
-- 21,  孟买,ap-mumbai
 - 22,  弗吉尼亚,na-ashburn
 - 23,  曼谷,ap-bangkok
 - 25,  东京,ap-tokyo

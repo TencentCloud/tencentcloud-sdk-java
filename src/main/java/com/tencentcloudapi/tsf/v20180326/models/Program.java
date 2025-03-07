@@ -25,7 +25,6 @@ public class Program extends AbstractModel {
 
     /**
     * 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramId")
     @Expose
@@ -33,7 +32,6 @@ public class Program extends AbstractModel {
 
     /**
     * 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramName")
     @Expose
@@ -57,7 +55,6 @@ public class Program extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTime")
     @Expose
@@ -65,7 +62,6 @@ public class Program extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -73,17 +69,14 @@ public class Program extends AbstractModel {
 
     /**
     * 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramItemList")
     @Expose
     private ProgramItem [] ProgramItemList;
 
     /**
-     * Get 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据集ID 
      * @return ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramId() {
         return this.ProgramId;
@@ -91,19 +84,15 @@ public class Program extends AbstractModel {
 
     /**
      * Set 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;
     }
 
     /**
-     * Get 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据集名称 
      * @return ProgramName 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramName() {
         return this.ProgramName;
@@ -111,9 +100,7 @@ public class Program extends AbstractModel {
 
     /**
      * Set 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramName 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramName(String ProgramName) {
         this.ProgramName = ProgramName;
@@ -160,10 +147,8 @@ public class Program extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreationTime() {
         return this.CreationTime;
@@ -171,19 +156,15 @@ public class Program extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
@@ -191,19 +172,15 @@ public class Program extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据项列表，无值时返回空数组 
      * @return ProgramItemList 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProgramItem [] getProgramItemList() {
         return this.ProgramItemList;
@@ -211,9 +188,7 @@ public class Program extends AbstractModel {
 
     /**
      * Set 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramItemList 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramItemList(ProgramItem [] ProgramItemList) {
         this.ProgramItemList = ProgramItemList;

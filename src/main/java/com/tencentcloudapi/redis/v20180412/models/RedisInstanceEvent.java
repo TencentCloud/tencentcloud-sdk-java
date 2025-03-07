@@ -25,7 +25,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -61,7 +57,6 @@ public class RedisInstanceEvent extends AbstractModel {
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Grade")
     @Expose
@@ -69,7 +64,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionDate")
     @Expose
@@ -77,7 +71,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -85,7 +78,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -93,7 +85,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestExecutionDate")
     @Expose
@@ -105,7 +96,6 @@ public class RedisInstanceEvent extends AbstractModel {
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -113,7 +103,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskEndTime")
     @Expose
@@ -121,7 +110,6 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectInfo")
     @Expose
@@ -129,17 +117,14 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialExecutionDate")
     @Expose
     private String InitialExecutionDate;
 
     /**
-     * Get 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件 ID。 
      * @return ID 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
         return this.ID;
@@ -147,19 +132,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例 ID。 
      * @return InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -167,19 +148,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -187,19 +164,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。 
      * @return Type 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -207,9 +180,7 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -220,14 +191,12 @@ public class RedisInstanceEvent extends AbstractModel {
 - Critical：关键
 - High：重要
 - Middle：中等
-- Low：一般
-注意：此字段可能返回 null，表示取不到有效值。 
+- Low：一般 
      * @return Grade 事件等级根据其影响严重程度和紧急程度进行分级，由重至轻依次为关键、重要、中等、一般。
 - Critical：关键
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrade() {
         return this.Grade;
@@ -239,23 +208,19 @@ public class RedisInstanceEvent extends AbstractModel {
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Grade 事件等级根据其影响严重程度和紧急程度进行分级，由重至轻依次为关键、重要、中等、一般。
 - Critical：关键
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrade(String Grade) {
         this.Grade = Grade;
     }
 
     /**
-     * Get 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件计划执行日期。 
      * @return ExecutionDate 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionDate() {
         return this.ExecutionDate;
@@ -263,19 +228,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionDate 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionDate(String ExecutionDate) {
         this.ExecutionDate = ExecutionDate;
     }
 
     /**
-     * Get 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件计划执行开始时间。 
      * @return StartTime 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -283,19 +244,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件计划执行结束时间。 
      * @return EndTime 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -303,19 +260,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。 
      * @return LatestExecutionDate 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestExecutionDate() {
         return this.LatestExecutionDate;
@@ -323,9 +276,7 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestExecutionDate 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestExecutionDate(String LatestExecutionDate) {
         this.LatestExecutionDate = LatestExecutionDate;
@@ -336,14 +287,12 @@ public class RedisInstanceEvent extends AbstractModel {
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
-- Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。 
+- Canceled：已取消执行的事件。 
      * @return Status 事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -355,23 +304,19 @@ public class RedisInstanceEvent extends AbstractModel {
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件执行任务完成时间。 
      * @return TaskEndTime 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskEndTime() {
         return this.TaskEndTime;
@@ -379,19 +324,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskEndTime 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskEndTime(String TaskEndTime) {
         this.TaskEndTime = TaskEndTime;
     }
 
     /**
-     * Get 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件影响信息。 
      * @return EffectInfo 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffectInfo() {
         return this.EffectInfo;
@@ -399,19 +340,15 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectInfo 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectInfo(String EffectInfo) {
         this.EffectInfo = EffectInfo;
     }
 
     /**
-     * Get 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件最初计划执行日期。 
      * @return InitialExecutionDate 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitialExecutionDate() {
         return this.InitialExecutionDate;
@@ -419,9 +356,7 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
      * Set 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitialExecutionDate 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialExecutionDate(String InitialExecutionDate) {
         this.InitialExecutionDate = InitialExecutionDate;

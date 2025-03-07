@@ -25,7 +25,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * RuleId值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * Name值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * ExpandVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpandVmCountLimit")
     @Expose
@@ -49,7 +46,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * ShrinkVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShrinkVmCountLimit")
     @Expose
@@ -57,7 +53,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * GroupCount值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupCount")
     @Expose
@@ -65,7 +60,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -73,7 +67,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -81,7 +74,6 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisableMetricAS")
     @Expose
@@ -89,17 +81,14 @@ public class ScalableRule extends AbstractModel {
 
     /**
     * 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableCronAS")
     @Expose
     private Long EnableCronAS;
 
     /**
-     * Get RuleId值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RuleId值 
      * @return RuleId RuleId值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -107,19 +96,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set RuleId值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId RuleId值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Name值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Name值 
      * @return Name Name值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -127,19 +112,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set Name值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name Name值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get ExpandVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ExpandVmCountLimit值 
      * @return ExpandVmCountLimit ExpandVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpandVmCountLimit() {
         return this.ExpandVmCountLimit;
@@ -147,19 +128,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set ExpandVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpandVmCountLimit ExpandVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpandVmCountLimit(Long ExpandVmCountLimit) {
         this.ExpandVmCountLimit = ExpandVmCountLimit;
     }
 
     /**
-     * Get ShrinkVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ShrinkVmCountLimit值 
      * @return ShrinkVmCountLimit ShrinkVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShrinkVmCountLimit() {
         return this.ShrinkVmCountLimit;
@@ -167,19 +144,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set ShrinkVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShrinkVmCountLimit ShrinkVmCountLimit值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShrinkVmCountLimit(Long ShrinkVmCountLimit) {
         this.ShrinkVmCountLimit = ShrinkVmCountLimit;
     }
 
     /**
-     * Get GroupCount值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GroupCount值 
      * @return GroupCount GroupCount值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupCount() {
         return this.GroupCount;
@@ -187,19 +160,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set GroupCount值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupCount GroupCount值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupCount(Long GroupCount) {
         this.GroupCount = GroupCount;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Desc 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -207,19 +176,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -227,19 +192,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩 
      * @return DisableMetricAS 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisableMetricAS() {
         return this.DisableMetricAS;
@@ -247,19 +208,15 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisableMetricAS 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisableMetricAS(Long DisableMetricAS) {
         this.DisableMetricAS = DisableMetricAS;
     }
 
     /**
-     * Get 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩 
      * @return EnableCronAS 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableCronAS() {
         return this.EnableCronAS;
@@ -267,9 +224,7 @@ public class ScalableRule extends AbstractModel {
 
     /**
      * Set 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableCronAS 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableCronAS(Long EnableCronAS) {
         this.EnableCronAS = EnableCronAS;

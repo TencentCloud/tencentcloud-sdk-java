@@ -25,7 +25,6 @@ public class UserGroupDeleteResp extends AbstractModel {
 
     /**
     * 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -33,17 +32,14 @@ public class UserGroupDeleteResp extends AbstractModel {
 
     /**
     * 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppAssociatedUserGroupIds")
     @Expose
     private AppAssociatedUserGroupIds [] AppAssociatedUserGroupIds;
 
     /**
-     * Get 错误详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误详情 
      * @return ErrorMessage 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -51,19 +47,15 @@ public class UserGroupDeleteResp extends AbstractModel {
 
     /**
      * Set 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户组关联的应用信息 
      * @return AppAssociatedUserGroupIds 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppAssociatedUserGroupIds [] getAppAssociatedUserGroupIds() {
         return this.AppAssociatedUserGroupIds;
@@ -71,9 +63,7 @@ public class UserGroupDeleteResp extends AbstractModel {
 
     /**
      * Set 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppAssociatedUserGroupIds 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppAssociatedUserGroupIds(AppAssociatedUserGroupIds [] AppAssociatedUserGroupIds) {
         this.AppAssociatedUserGroupIds = AppAssociatedUserGroupIds;

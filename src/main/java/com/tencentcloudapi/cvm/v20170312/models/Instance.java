@@ -227,7 +227,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
@@ -251,7 +250,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HpcClusterId")
     @Expose
@@ -267,7 +265,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -275,7 +272,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedSource")
     @Expose
@@ -283,7 +279,6 @@ public class Instance extends AbstractModel {
 
     /**
     * GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUInfo")
     @Expose
@@ -798,10 +793,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分散置放群组ID。 
      * @return DisasterRecoverGroupId 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
@@ -809,9 +802,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisasterRecoverGroupId 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
@@ -858,10 +849,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高性能计算集群`ID`。 
      * @return HpcClusterId 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
@@ -869,9 +858,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HpcClusterId 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
@@ -898,10 +885,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所在的专用集群`ID`。 
      * @return DedicatedClusterId 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -909,19 +894,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li> 
      * @return IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedSource() {
         return this.IsolatedSource;
@@ -929,19 +910,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedSource(String IsolatedSource) {
         this.IsolatedSource = IsolatedSource;
     }
 
     /**
-     * Get GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。 
      * @return GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GPUInfo getGPUInfo() {
         return this.GPUInfo;
@@ -949,9 +926,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUInfo(GPUInfo GPUInfo) {
         this.GPUInfo = GPUInfo;

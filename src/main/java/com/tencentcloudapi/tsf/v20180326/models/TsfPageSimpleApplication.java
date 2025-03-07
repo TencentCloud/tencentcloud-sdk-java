@@ -25,7 +25,6 @@ public class TsfPageSimpleApplication extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageSimpleApplication extends AbstractModel {
 
     /**
     * 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private SimpleApplication [] Content;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageSimpleApplication extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 简单应用列表 
      * @return Content 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SimpleApplication [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageSimpleApplication extends AbstractModel {
 
     /**
      * Set 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(SimpleApplication [] Content) {
         this.Content = Content;

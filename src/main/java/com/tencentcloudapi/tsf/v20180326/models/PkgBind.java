@@ -25,7 +25,6 @@ public class PkgBind extends AbstractModel {
 
     /**
     * 应用id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -33,17 +32,14 @@ public class PkgBind extends AbstractModel {
 
     /**
     * 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 应用id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用id 
      * @return ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -51,19 +47,15 @@ public class PkgBind extends AbstractModel {
 
     /**
      * Set 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 部署组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组id 
      * @return GroupId 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -71,9 +63,7 @@ public class PkgBind extends AbstractModel {
 
     /**
      * Set 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -46,7 +46,6 @@ public class DescribeCostSummaryByRegionResponse extends AbstractModel {
 
     /**
     * 记录数量，NeedRecordNum为0时返回null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordNum")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeCostSummaryByRegionResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录数量，NeedRecordNum为0时返回null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录数量，NeedRecordNum为0时返回null 
      * @return RecordNum 记录数量，NeedRecordNum为0时返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordNum() {
         return this.RecordNum;
@@ -119,9 +116,7 @@ public class DescribeCostSummaryByRegionResponse extends AbstractModel {
 
     /**
      * Set 记录数量，NeedRecordNum为0时返回null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordNum 记录数量，NeedRecordNum为0时返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

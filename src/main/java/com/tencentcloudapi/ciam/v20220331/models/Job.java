@@ -80,7 +80,6 @@ public class Job extends AbstractModel {
 
     /**
     * 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorDetails")
     @Expose
@@ -243,10 +242,8 @@ public class Job extends AbstractModel {
     }
 
     /**
-     * Get 失败详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败详情 
      * @return ErrorDetails 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorDetails [] getErrorDetails() {
         return this.ErrorDetails;
@@ -254,9 +251,7 @@ public class Job extends AbstractModel {
 
     /**
      * Set 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorDetails 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorDetails(ErrorDetails [] ErrorDetails) {
         this.ErrorDetails = ErrorDetails;

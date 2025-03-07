@@ -25,7 +25,6 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
     * 用户组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -33,7 +32,6 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -41,7 +39,6 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
     * 分页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pageable")
     @Expose
@@ -55,10 +52,8 @@ public class ListUserGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户组列表 
      * @return Content 用户组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserGroup [] getContent() {
         return this.Content;
@@ -66,19 +61,15 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
      * Set 用户组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 用户组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(UserGroup [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return Total 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -86,19 +77,15 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 分页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页 
      * @return Pageable 分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Pageable getPageable() {
         return this.Pageable;
@@ -106,9 +93,7 @@ public class ListUserGroupsResponse extends AbstractModel {
 
     /**
      * Set 分页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pageable 分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageable(Pageable Pageable) {
         this.Pageable = Pageable;

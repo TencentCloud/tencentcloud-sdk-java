@@ -50,6 +50,7 @@ public class ReplaceBackgroundRequest extends AbstractModel {
 
     /**
     * 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
     */
     @SerializedName("Product")
@@ -176,8 +177,10 @@ public class ReplaceBackgroundRequest extends AbstractModel {
 
     /**
      * Get 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。 
      * @return Product 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
      */
     public String getProduct() {
@@ -186,8 +189,10 @@ public class ReplaceBackgroundRequest extends AbstractModel {
 
     /**
      * Set 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
      * @param Product 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
      */
     public void setProduct(String Product) {

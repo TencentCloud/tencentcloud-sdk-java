@@ -25,7 +25,6 @@ public class ServiceGovernanceConfig extends AbstractModel {
 
     /**
     * 是否开启服务注册治理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableGovernance")
     @Expose
@@ -33,7 +32,6 @@ public class ServiceGovernanceConfig extends AbstractModel {
 
     /**
     * 服务治理类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GovernanceType")
     @Expose
@@ -48,10 +46,8 @@ public class ServiceGovernanceConfig extends AbstractModel {
     private ExclusiveInstance [] ExclusiveInstances;
 
     /**
-     * Get 是否开启服务注册治理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启服务注册治理 
      * @return EnableGovernance 是否开启服务注册治理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableGovernance() {
         return this.EnableGovernance;
@@ -59,19 +55,15 @@ public class ServiceGovernanceConfig extends AbstractModel {
 
     /**
      * Set 是否开启服务注册治理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableGovernance 是否开启服务注册治理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableGovernance(Boolean EnableGovernance) {
         this.EnableGovernance = EnableGovernance;
     }
 
     /**
-     * Get 服务治理类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务治理类型 
      * @return GovernanceType 服务治理类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGovernanceType() {
         return this.GovernanceType;
@@ -79,9 +71,7 @@ public class ServiceGovernanceConfig extends AbstractModel {
 
     /**
      * Set 服务治理类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GovernanceType 服务治理类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGovernanceType(String GovernanceType) {
         this.GovernanceType = GovernanceType;

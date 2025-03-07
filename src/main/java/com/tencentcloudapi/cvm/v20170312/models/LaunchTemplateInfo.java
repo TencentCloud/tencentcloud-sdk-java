@@ -25,7 +25,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestVersionNumber")
     @Expose
@@ -33,7 +32,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateId")
     @Expose
@@ -41,7 +39,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateName")
     @Expose
@@ -49,7 +46,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultVersionNumber")
     @Expose
@@ -57,7 +53,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateVersionCount")
     @Expose
@@ -65,7 +60,6 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedBy")
     @Expose
@@ -73,17 +67,14 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
     * 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-     * Get 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模版本号。 
      * @return LatestVersionNumber 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLatestVersionNumber() {
         return this.LatestVersionNumber;
@@ -91,19 +82,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestVersionNumber 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestVersionNumber(Long LatestVersionNumber) {
         this.LatestVersionNumber = LatestVersionNumber;
     }
 
     /**
-     * Get 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板ID。 
      * @return LaunchTemplateId 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
@@ -111,19 +98,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateId 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;
     }
 
     /**
-     * Get 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板名。 
      * @return LaunchTemplateName 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaunchTemplateName() {
         return this.LaunchTemplateName;
@@ -131,19 +114,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateName 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateName(String LaunchTemplateName) {
         this.LaunchTemplateName = LaunchTemplateName;
     }
 
     /**
-     * Get 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板默认版本号。 
      * @return DefaultVersionNumber 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultVersionNumber() {
         return this.DefaultVersionNumber;
@@ -151,19 +130,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultVersionNumber 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultVersionNumber(Long DefaultVersionNumber) {
         this.DefaultVersionNumber = DefaultVersionNumber;
     }
 
     /**
-     * Get 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板包含的版本总数量。 
      * @return LaunchTemplateVersionCount 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLaunchTemplateVersionCount() {
         return this.LaunchTemplateVersionCount;
@@ -171,19 +146,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateVersionCount 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateVersionCount(Long LaunchTemplateVersionCount) {
         this.LaunchTemplateVersionCount = LaunchTemplateVersionCount;
     }
 
     /**
-     * Get 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建该模板的用户UIN。 
      * @return CreatedBy 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedBy() {
         return this.CreatedBy;
@@ -191,19 +162,15 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedBy 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建该模板的时间。 
      * @return CreationTime 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreationTime() {
         return this.CreationTime;
@@ -211,9 +178,7 @@ public class LaunchTemplateInfo extends AbstractModel {
 
     /**
      * Set 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
