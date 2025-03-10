@@ -52,7 +52,7 @@ public class RegisterInstanceInfo extends AbstractModel {
     private String MachineId;
 
     /**
-    * 系统名。
+    * 系统名。取值：Linux | Windows。
     */
     @SerializedName("SystemName")
     @Expose
@@ -88,18 +88,25 @@ public class RegisterInstanceInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 创建时间。
+    * 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 上次更新时间。
+    * 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
+
+    /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 注册码ID。 
@@ -166,16 +173,16 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 系统名。 
-     * @return SystemName 系统名。
+     * Get 系统名。取值：Linux | Windows。 
+     * @return SystemName 系统名。取值：Linux | Windows。
      */
     public String getSystemName() {
         return this.SystemName;
     }
 
     /**
-     * Set 系统名。
-     * @param SystemName 系统名。
+     * Set 系统名。取值：Linux | Windows。
+     * @param SystemName 系统名。取值：Linux | Windows。
      */
     public void setSystemName(String SystemName) {
         this.SystemName = SystemName;
@@ -250,35 +257,51 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 上次更新时间。 
-     * @return UpdatedTime 上次更新时间。
+     * Get 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return UpdatedTime 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 上次更新时间。
-     * @param UpdatedTime 上次更新时间。
+     * Set 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param UpdatedTime 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
+    }
+
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public RegisterInstanceInfo() {
@@ -322,6 +345,12 @@ public class RegisterInstanceInfo extends AbstractModel {
         if (source.UpdatedTime != null) {
             this.UpdatedTime = new String(source.UpdatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -340,6 +369,7 @@ public class RegisterInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

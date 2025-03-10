@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribeScenesRequest extends AbstractModel {
 
     /**
-    * 场景 ID 数组
+    * 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
     */
     @SerializedName("SceneIds")
     @Expose
@@ -32,9 +35,10 @@ public class DescribeScenesRequest extends AbstractModel {
 
     /**
     * 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
     */
@@ -57,16 +61,28 @@ public class DescribeScenesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 场景 ID 数组 
-     * @return SceneIds 场景 ID 数组
+     * Get 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+ 
+     * @return SceneIds 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
      */
     public String [] getSceneIds() {
         return this.SceneIds;
     }
 
     /**
-     * Set 场景 ID 数组
-     * @param SceneIds 场景 ID 数组
+     * Set 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
+     * @param SceneIds 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
      */
     public void setSceneIds(String [] SceneIds) {
         this.SceneIds = SceneIds;
@@ -74,15 +90,17 @@ public class DescribeScenesRequest extends AbstractModel {
 
     /**
      * Get 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。 
      * @return Filters 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
      */
@@ -92,15 +110,17 @@ public class DescribeScenesRequest extends AbstractModel {
 
     /**
      * Set 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
      * @param Filters 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
      */

@@ -24,56 +24,81 @@ import java.util.HashMap;
 public class CancelInvocationRequest extends AbstractModel {
 
     /**
-    * 执行活动ID
+    * 执行活动ID。
+
+可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
     */
     @SerializedName("InvocationId")
     @Expose
     private String InvocationId;
 
     /**
-    * 实例ID列表，上限100。支持实例类型：
-<li> CVM </li>
-<li> LIGHTHOUSE </li>
+    * 实例ID列表，上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 执行活动ID 
-     * @return InvocationId 执行活动ID
+     * Get 执行活动ID。
+
+可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。 
+     * @return InvocationId 执行活动ID。
+
+可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
      */
     public String getInvocationId() {
         return this.InvocationId;
     }
 
     /**
-     * Set 执行活动ID
-     * @param InvocationId 执行活动ID
+     * Set 执行活动ID。
+
+可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+     * @param InvocationId 执行活动ID。
+
+可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;
     }
 
     /**
-     * Get 实例ID列表，上限100。支持实例类型：
-<li> CVM </li>
-<li> LIGHTHOUSE </li> 
-     * @return InstanceIds 实例ID列表，上限100。支持实例类型：
-<li> CVM </li>
-<li> LIGHTHOUSE </li>
+     * Get 实例ID列表，上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例 
+     * @return InstanceIds 实例ID列表，上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，上限100。支持实例类型：
-<li> CVM </li>
-<li> LIGHTHOUSE </li>
-     * @param InstanceIds 实例ID列表，上限100。支持实例类型：
-<li> CVM </li>
-<li> LIGHTHOUSE </li>
+     * Set 实例ID列表，上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
+     * @param InstanceIds 实例ID列表，上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

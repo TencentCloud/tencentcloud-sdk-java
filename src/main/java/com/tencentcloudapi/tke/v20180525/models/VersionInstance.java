@@ -25,7 +25,6 @@ public class VersionInstance extends AbstractModel {
 
     /**
     * 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class VersionInstance extends AbstractModel {
 
     /**
     * 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,17 +39,14 @@ public class VersionInstance extends AbstractModel {
 
     /**
     * Remark
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称 
      * @return Name 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class VersionInstance extends AbstractModel {
 
     /**
      * Set 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息 
      * @return Version 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -79,19 +70,15 @@ public class VersionInstance extends AbstractModel {
 
     /**
      * Set 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Remark
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Remark 
      * @return Remark Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -99,9 +86,7 @@ public class VersionInstance extends AbstractModel {
 
     /**
      * Set Remark
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

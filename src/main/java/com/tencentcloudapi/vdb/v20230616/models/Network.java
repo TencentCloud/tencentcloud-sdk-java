@@ -25,7 +25,6 @@ public class Network extends AbstractModel {
 
     /**
     * VpcId(VPC网络下有效)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class Network extends AbstractModel {
 
     /**
     * 子网Id(VPC网络下有效)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -41,7 +39,6 @@ public class Network extends AbstractModel {
 
     /**
     * 内网访问IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -49,7 +46,6 @@ public class Network extends AbstractModel {
 
     /**
     * 内网访问Port。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -70,10 +66,8 @@ public class Network extends AbstractModel {
     private String ExpireTime;
 
     /**
-     * Get VpcId(VPC网络下有效)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VpcId(VPC网络下有效) 
      * @return VpcId VpcId(VPC网络下有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -81,19 +75,15 @@ public class Network extends AbstractModel {
 
     /**
      * Set VpcId(VPC网络下有效)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VpcId(VPC网络下有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网Id(VPC网络下有效)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网Id(VPC网络下有效)。 
      * @return SubnetId 子网Id(VPC网络下有效)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -101,19 +91,15 @@ public class Network extends AbstractModel {
 
     /**
      * Set 子网Id(VPC网络下有效)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网Id(VPC网络下有效)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 内网访问IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网访问IP。 
      * @return Vip 内网访问IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -121,19 +107,15 @@ public class Network extends AbstractModel {
 
     /**
      * Set 内网访问IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 内网访问IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 内网访问Port。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网访问Port。 
      * @return Port 内网访问Port。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -141,9 +123,7 @@ public class Network extends AbstractModel {
 
     /**
      * Set 内网访问Port。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 内网访问Port。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;

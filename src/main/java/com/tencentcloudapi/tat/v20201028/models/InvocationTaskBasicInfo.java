@@ -32,19 +32,20 @@ public class InvocationTaskBasicInfo extends AbstractModel {
 
     /**
     * 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -75,33 +76,35 @@ public class InvocationTaskBasicInfo extends AbstractModel {
 
     /**
      * Get 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消） 
+
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消） 
      * @return TaskStatus 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -109,33 +112,35 @@ public class InvocationTaskBasicInfo extends AbstractModel {
 
     /**
      * Set 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
      * @param TaskStatus 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

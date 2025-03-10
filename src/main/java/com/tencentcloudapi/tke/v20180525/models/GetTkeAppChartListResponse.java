@@ -25,7 +25,6 @@ public class GetTkeAppChartListResponse extends AbstractModel {
 
     /**
     * 所支持的chart列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppCharts")
     @Expose
@@ -39,10 +38,8 @@ public class GetTkeAppChartListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 所支持的chart列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所支持的chart列表 
      * @return AppCharts 所支持的chart列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppChart [] getAppCharts() {
         return this.AppCharts;
@@ -50,9 +47,7 @@ public class GetTkeAppChartListResponse extends AbstractModel {
 
     /**
      * Set 所支持的chart列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppCharts 所支持的chart列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppCharts(AppChart [] AppCharts) {
         this.AppCharts = AppCharts;

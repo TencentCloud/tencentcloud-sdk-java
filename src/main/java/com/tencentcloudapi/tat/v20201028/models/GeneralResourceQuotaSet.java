@@ -25,6 +25,11 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
     * 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
     */
     @SerializedName("ResourceName")
     @Expose
@@ -45,8 +50,18 @@ public class GeneralResourceQuotaSet extends AbstractModel {
     private Long ResourceQuotaTotal;
 
     /**
-     * Get 资源名称 
+     * Get 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码 
      * @return ResourceName 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -54,7 +69,17 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
      * Set 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      * @param ResourceName 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;

@@ -32,7 +32,6 @@ public class Step extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartAt")
     @Expose
@@ -40,7 +39,6 @@ public class Step extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndAt")
     @Expose
@@ -48,7 +46,6 @@ public class Step extends AbstractModel {
 
     /**
     * 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -56,7 +53,6 @@ public class Step extends AbstractModel {
 
     /**
     * 执行信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -79,10 +75,8 @@ public class Step extends AbstractModel {
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartAt 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartAt() {
         return this.StartAt;
@@ -90,19 +84,15 @@ public class Step extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartAt 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndAt 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndAt() {
         return this.EndAt;
@@ -110,19 +100,15 @@ public class Step extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndAt 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndAt(String EndAt) {
         this.EndAt = EndAt;
     }
 
     /**
-     * Get 当前状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前状态 
      * @return Status 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -130,19 +116,15 @@ public class Step extends AbstractModel {
 
     /**
      * Set 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 执行信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行信息 
      * @return Message 执行信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -150,9 +132,7 @@ public class Step extends AbstractModel {
 
     /**
      * Set 执行信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 执行信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

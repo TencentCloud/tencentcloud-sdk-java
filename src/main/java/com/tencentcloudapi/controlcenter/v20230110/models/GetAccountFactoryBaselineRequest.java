@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.controlcenter.v20230110.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryParseDocResultRequest extends AbstractModel {
+public class GetAccountFactoryBaselineRequest extends AbstractModel {
 
-    /**
-    * 任务ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务ID
-     * @param TaskId 任务ID
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    public QueryParseDocResultRequest() {
+    public GetAccountFactoryBaselineRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryParseDocResultRequest(QueryParseDocResultRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
+    public GetAccountFactoryBaselineRequest(GetAccountFactoryBaselineRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class QueryParseDocResultRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

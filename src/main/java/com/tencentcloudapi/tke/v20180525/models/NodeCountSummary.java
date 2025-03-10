@@ -25,7 +25,6 @@ public class NodeCountSummary extends AbstractModel {
 
     /**
     * 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManuallyAdded")
     @Expose
@@ -33,17 +32,14 @@ public class NodeCountSummary extends AbstractModel {
 
     /**
     * 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoscalingAdded")
     @Expose
     private AutoscalingAdded AutoscalingAdded;
 
     /**
-     * Get 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手动管理的节点 
      * @return ManuallyAdded 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ManuallyAdded getManuallyAdded() {
         return this.ManuallyAdded;
@@ -51,19 +47,15 @@ public class NodeCountSummary extends AbstractModel {
 
     /**
      * Set 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManuallyAdded 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManuallyAdded(ManuallyAdded ManuallyAdded) {
         this.ManuallyAdded = ManuallyAdded;
     }
 
     /**
-     * Get 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动管理的节点 
      * @return AutoscalingAdded 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoscalingAdded getAutoscalingAdded() {
         return this.AutoscalingAdded;
@@ -71,9 +63,7 @@ public class NodeCountSummary extends AbstractModel {
 
     /**
      * Set 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoscalingAdded 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoscalingAdded(AutoscalingAdded AutoscalingAdded) {
         this.AutoscalingAdded = AutoscalingAdded;

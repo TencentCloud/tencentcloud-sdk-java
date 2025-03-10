@@ -74,7 +74,6 @@ public class ClusterStatus extends AbstractModel {
 
     /**
     * 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterClosedNodeNum")
     @Expose
@@ -82,7 +81,6 @@ public class ClusterStatus extends AbstractModel {
 
     /**
     * 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterClosingNodeNum")
     @Expose
@@ -90,7 +88,6 @@ public class ClusterStatus extends AbstractModel {
 
     /**
     * 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterDeletionProtection")
     @Expose
@@ -98,7 +95,6 @@ public class ClusterStatus extends AbstractModel {
 
     /**
     * 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterAuditEnabled")
     @Expose
@@ -217,10 +213,8 @@ public class ClusterStatus extends AbstractModel {
     }
 
     /**
-     * Get 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败 
      * @return ClusterClosedNodeNum 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterClosedNodeNum() {
         return this.ClusterClosedNodeNum;
@@ -228,19 +222,15 @@ public class ClusterStatus extends AbstractModel {
 
     /**
      * Set 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterClosedNodeNum 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterClosedNodeNum(Long ClusterClosedNodeNum) {
         this.ClusterClosedNodeNum = ClusterClosedNodeNum;
     }
 
     /**
-     * Get 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败 
      * @return ClusterClosingNodeNum 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterClosingNodeNum() {
         return this.ClusterClosingNodeNum;
@@ -248,19 +238,15 @@ public class ClusterStatus extends AbstractModel {
 
     /**
      * Set 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterClosingNodeNum 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterClosingNodeNum(Long ClusterClosingNodeNum) {
         this.ClusterClosingNodeNum = ClusterClosingNodeNum;
     }
 
     /**
-     * Get 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群是否开启删除保护 
      * @return ClusterDeletionProtection 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getClusterDeletionProtection() {
         return this.ClusterDeletionProtection;
@@ -268,19 +254,15 @@ public class ClusterStatus extends AbstractModel {
 
     /**
      * Set 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterDeletionProtection 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterDeletionProtection(Boolean ClusterDeletionProtection) {
         this.ClusterDeletionProtection = ClusterDeletionProtection;
     }
 
     /**
-     * Get 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群是否可审计 
      * @return ClusterAuditEnabled 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getClusterAuditEnabled() {
         return this.ClusterAuditEnabled;
@@ -288,9 +270,7 @@ public class ClusterStatus extends AbstractModel {
 
     /**
      * Set 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterAuditEnabled 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterAuditEnabled(Boolean ClusterAuditEnabled) {
         this.ClusterAuditEnabled = ClusterAuditEnabled;

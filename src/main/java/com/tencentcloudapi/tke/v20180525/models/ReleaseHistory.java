@@ -39,7 +39,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Revision")
     @Expose
@@ -47,7 +46,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -55,7 +53,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Chart")
     @Expose
@@ -63,7 +60,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppVersion")
     @Expose
@@ -71,7 +67,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -79,7 +74,6 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
     * 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -118,10 +112,8 @@ public class ReleaseHistory extends AbstractModel {
     }
 
     /**
-     * Get 应用版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用版本 
      * @return Revision 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRevision() {
         return this.Revision;
@@ -129,19 +121,15 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Revision 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRevision(Long Revision) {
         this.Revision = Revision;
     }
 
     /**
-     * Get 应用状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用状态 
      * @return Status 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -149,19 +137,15 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用制品名称 
      * @return Chart 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChart() {
         return this.Chart;
@@ -169,19 +153,15 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Chart 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChart(String Chart) {
         this.Chart = Chart;
     }
 
     /**
-     * Get 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用制品版本 
      * @return AppVersion 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppVersion() {
         return this.AppVersion;
@@ -189,19 +169,15 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppVersion 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 应用更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用更新时间 
      * @return UpdatedTime 应用更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -209,19 +185,15 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 应用更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 应用描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用描述 
      * @return Description 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -229,9 +201,7 @@ public class ReleaseHistory extends AbstractModel {
 
     /**
      * Set 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

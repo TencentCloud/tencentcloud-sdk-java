@@ -25,6 +25,8 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
     * 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
     */
     @SerializedName("InvokerId")
     @Expose
@@ -46,6 +48,8 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
     * 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
     */
     @SerializedName("CommandId")
     @Expose
@@ -60,6 +64,8 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
     * 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
     */
     @SerializedName("Parameters")
     @Expose
@@ -67,6 +73,10 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
     * 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -80,8 +90,12 @@ public class ModifyInvokerRequest extends AbstractModel {
     private ScheduleSettings ScheduleSettings;
 
     /**
-     * Get 待修改的执行器ID。 
+     * Get 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。 
      * @return InvokerId 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public String getInvokerId() {
         return this.InvokerId;
@@ -89,7 +103,11 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
      * Set 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      * @param InvokerId 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;
@@ -128,8 +146,12 @@ public class ModifyInvokerRequest extends AbstractModel {
     }
 
     /**
-     * Get 待修改的命令ID。 
+     * Get 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。 
      * @return CommandId 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public String getCommandId() {
         return this.CommandId;
@@ -137,7 +159,11 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
      * Set 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      * @param CommandId 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
@@ -160,8 +186,12 @@ public class ModifyInvokerRequest extends AbstractModel {
     }
 
     /**
-     * Get 待修改的自定义参数。 
+     * Get 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。 
      * @return Parameters 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
     public String getParameters() {
         return this.Parameters;
@@ -169,15 +199,27 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
      * Set 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      * @param Parameters 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 待修改的实例ID列表。列表长度上限100。 
+     * Get 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。 
      * @return InstanceIds 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -185,7 +227,15 @@ public class ModifyInvokerRequest extends AbstractModel {
 
     /**
      * Set 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      * @param InstanceIds 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

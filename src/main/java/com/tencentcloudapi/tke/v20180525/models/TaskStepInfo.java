@@ -43,7 +43,6 @@ failed: 步骤失败
 
     /**
     * 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartAt")
     @Expose
@@ -51,7 +50,6 @@ failed: 步骤失败
 
     /**
     * 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndAt")
     @Expose
@@ -59,7 +57,6 @@ failed: 步骤失败
 
     /**
     * 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedMsg")
     @Expose
@@ -114,10 +111,8 @@ failed: 步骤失败
     }
 
     /**
-     * Get 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤开始时间 
      * @return StartAt 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartAt() {
         return this.StartAt;
@@ -125,19 +120,15 @@ failed: 步骤失败
 
     /**
      * Set 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartAt 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;
     }
 
     /**
-     * Get 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤结束时间 
      * @return EndAt 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndAt() {
         return this.EndAt;
@@ -145,19 +136,15 @@ failed: 步骤失败
 
     /**
      * Set 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndAt 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndAt(String EndAt) {
         this.EndAt = EndAt;
     }
 
     /**
-     * Get 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 若步骤生命周期为failed,则此字段显示错误信息 
      * @return FailedMsg 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedMsg() {
         return this.FailedMsg;
@@ -165,9 +152,7 @@ failed: 步骤失败
 
     /**
      * Set 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedMsg 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedMsg(String FailedMsg) {
         this.FailedMsg = FailedMsg;

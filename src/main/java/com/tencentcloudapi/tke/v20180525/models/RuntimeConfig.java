@@ -25,7 +25,6 @@ public class RuntimeConfig extends AbstractModel {
 
     /**
     * 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeType")
     @Expose
@@ -33,17 +32,14 @@ public class RuntimeConfig extends AbstractModel {
 
     /**
     * 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-     * Get 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时类型 
      * @return RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeType() {
         return this.RuntimeType;
@@ -51,19 +47,15 @@ public class RuntimeConfig extends AbstractModel {
 
     /**
      * Set 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时版本 
      * @return RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
@@ -71,9 +63,7 @@ public class RuntimeConfig extends AbstractModel {
 
     /**
      * Set 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;

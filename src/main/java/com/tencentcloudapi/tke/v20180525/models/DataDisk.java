@@ -25,7 +25,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -33,7 +32,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystem")
     @Expose
@@ -41,7 +39,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -49,7 +46,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoFormatAndMount")
     @Expose
@@ -57,7 +53,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
     @Expose
@@ -65,17 +60,14 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskPartition")
     @Expose
     private String DiskPartition;
 
     /**
-     * Get 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘类型 
      * @return DiskType 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -83,19 +75,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统(ext3/ext4/xfs) 
      * @return FileSystem 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSystem() {
         return this.FileSystem;
@@ -103,19 +91,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSystem 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystem(String FileSystem) {
         this.FileSystem = FileSystem;
     }
 
     /**
-     * Get 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘大小(G） 
      * @return DiskSize 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -123,19 +107,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动化格式盘并挂载 
      * @return AutoFormatAndMount 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoFormatAndMount() {
         return this.AutoFormatAndMount;
@@ -143,19 +123,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoFormatAndMount 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoFormatAndMount(Boolean AutoFormatAndMount) {
         this.AutoFormatAndMount = AutoFormatAndMount;
     }
 
     /**
-     * Get 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载目录 
      * @return MountTarget 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -163,19 +139,15 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountTarget 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
     }
 
     /**
-     * Get 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载设备名或分区名，当且仅当添加已有节点时需要 
      * @return DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskPartition() {
         return this.DiskPartition;
@@ -183,9 +155,7 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskPartition(String DiskPartition) {
         this.DiskPartition = DiskPartition;

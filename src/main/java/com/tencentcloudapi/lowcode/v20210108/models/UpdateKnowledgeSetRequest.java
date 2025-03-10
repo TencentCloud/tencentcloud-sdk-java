@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class UpdateKnowledgeSetRequest extends AbstractModel {
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 知识库标识
     */
     @SerializedName("Name")
@@ -50,6 +57,29 @@ public class UpdateKnowledgeSetRequest extends AbstractModel {
     @SerializedName("Active")
     @Expose
     private String Active;
+
+    /**
+    * 知识库的meta信息
+    */
+    @SerializedName("Meta")
+    @Expose
+    private String Meta;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
 
     /**
      * Get 知识库标识 
@@ -115,6 +145,22 @@ public class UpdateKnowledgeSetRequest extends AbstractModel {
         this.Active = Active;
     }
 
+    /**
+     * Get 知识库的meta信息 
+     * @return Meta 知识库的meta信息
+     */
+    public String getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set 知识库的meta信息
+     * @param Meta 知识库的meta信息
+     */
+    public void setMeta(String Meta) {
+        this.Meta = Meta;
+    }
+
     public UpdateKnowledgeSetRequest() {
     }
 
@@ -123,6 +169,9 @@ public class UpdateKnowledgeSetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateKnowledgeSetRequest(UpdateKnowledgeSetRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -135,6 +184,9 @@ public class UpdateKnowledgeSetRequest extends AbstractModel {
         if (source.Active != null) {
             this.Active = new String(source.Active);
         }
+        if (source.Meta != null) {
+            this.Meta = new String(source.Meta);
+        }
     }
 
 
@@ -142,10 +194,12 @@ public class UpdateKnowledgeSetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Active", this.Active);
+        this.setParamSimple(map, prefix + "Meta", this.Meta);
 
     }
 }

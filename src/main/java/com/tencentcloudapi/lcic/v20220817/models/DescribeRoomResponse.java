@@ -121,7 +121,6 @@ video 纯视频
 
     /**
     * 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Assistants")
     @Expose
@@ -129,7 +128,6 @@ video 纯视频
 
     /**
     * 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordUrl")
     @Expose
@@ -137,7 +135,6 @@ video 纯视频
 
     /**
     * 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -145,7 +142,6 @@ video 纯视频
 
     /**
     * 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -265,6 +261,13 @@ video 纯视频
     @SerializedName("RecordLayout")
     @Expose
     private Long RecordLayout;
+
+    /**
+    * 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+    */
+    @SerializedName("WhiteBoardSnapshotMode")
+    @Expose
+    private Long WhiteBoardSnapshotMode;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -514,10 +517,8 @@ video 纯视频
     }
 
     /**
-     * Get 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 助教UserId列表。 
      * @return Assistants 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAssistants() {
         return this.Assistants;
@@ -525,19 +526,15 @@ video 纯视频
 
     /**
      * Set 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Assistants 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
     }
 
     /**
-     * Get 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制地址（协议为https)。仅在房间结束后存在。 
      * @return RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordUrl() {
         return this.RecordUrl;
@@ -545,19 +542,15 @@ video 纯视频
 
     /**
      * Set 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。 
      * @return Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -565,19 +558,15 @@ video 纯视频
 
     /**
      * Set 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间绑定的群组ID 
      * @return GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -585,9 +574,7 @@ video 纯视频
 
     /**
      * Set 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -862,6 +849,22 @@ video 纯视频
     }
 
     /**
+     * Get 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式 
+     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public Long getWhiteBoardSnapshotMode() {
+        return this.WhiteBoardSnapshotMode;
+    }
+
+    /**
+     * Set 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public void setWhiteBoardSnapshotMode(Long WhiteBoardSnapshotMode) {
+        this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -984,6 +987,9 @@ video 纯视频
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
         }
+        if (source.WhiteBoardSnapshotMode != null) {
+            this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1026,6 +1032,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+        this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

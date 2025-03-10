@@ -225,6 +225,13 @@ video 纯视频
     private String RecordLang;
 
     /**
+    * 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+    */
+    @SerializedName("WhiteBoardSnapshotMode")
+    @Expose
+    private Long WhiteBoardSnapshotMode;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -720,6 +727,22 @@ video 纯视频
         this.RecordLang = RecordLang;
     }
 
+    /**
+     * Get 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式 
+     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public Long getWhiteBoardSnapshotMode() {
+        return this.WhiteBoardSnapshotMode;
+    }
+
+    /**
+     * Set 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public void setWhiteBoardSnapshotMode(Long WhiteBoardSnapshotMode) {
+        this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -809,6 +832,9 @@ video 纯视频
         if (source.RecordLang != null) {
             this.RecordLang = new String(source.RecordLang);
         }
+        if (source.WhiteBoardSnapshotMode != null) {
+            this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
+        }
     }
 
 
@@ -842,6 +868,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
+        this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
 
     }
 }

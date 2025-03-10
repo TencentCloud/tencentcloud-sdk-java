@@ -32,7 +32,6 @@ public class ExternalNodePoolInfo extends AbstractModel {
 
     /**
     * 节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodesNum")
     @Expose
@@ -55,10 +54,8 @@ public class ExternalNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点数 
      * @return NodesNum 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodesNum() {
         return this.NodesNum;
@@ -66,9 +63,7 @@ public class ExternalNodePoolInfo extends AbstractModel {
 
     /**
      * Set 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodesNum 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodesNum(Long NodesNum) {
         this.NodesNum = NodesNum;

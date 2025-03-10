@@ -25,14 +25,20 @@ public class DisableInvokerRequest extends AbstractModel {
 
     /**
     * 待停止的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
     */
     @SerializedName("InvokerId")
     @Expose
     private String InvokerId;
 
     /**
-     * Get 待停止的执行器ID。 
+     * Get 待停止的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。 
      * @return InvokerId 待停止的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public String getInvokerId() {
         return this.InvokerId;
@@ -40,7 +46,11 @@ public class DisableInvokerRequest extends AbstractModel {
 
     /**
      * Set 待停止的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      * @param InvokerId 待停止的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;

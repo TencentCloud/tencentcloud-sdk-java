@@ -404,6 +404,13 @@ pausing
     private SlaveZoneAttrItem [] SlaveZoneAttr;
 
     /**
+    * 版本标签
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1323,6 +1330,22 @@ pausing
         this.SlaveZoneAttr = SlaveZoneAttr;
     }
 
+    /**
+     * Get 版本标签 
+     * @return CynosVersionTag 版本标签
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set 版本标签
+     * @param CynosVersionTag 版本标签
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1502,6 +1525,9 @@ pausing
                 this.SlaveZoneAttr[i] = new SlaveZoneAttrItem(source.SlaveZoneAttr[i]);
             }
         }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
+        }
     }
 
 
@@ -1559,6 +1585,7 @@ pausing
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
 
     }
 }

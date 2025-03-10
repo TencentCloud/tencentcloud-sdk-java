@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DeleteKnowledgeSetRequest extends AbstractModel {
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 知识库标识
     */
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
 
     /**
      * Get 知识库标识 
@@ -54,6 +77,9 @@ public class DeleteKnowledgeSetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteKnowledgeSetRequest(DeleteKnowledgeSetRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -64,6 +90,7 @@ public class DeleteKnowledgeSetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Name", this.Name);
 
     }

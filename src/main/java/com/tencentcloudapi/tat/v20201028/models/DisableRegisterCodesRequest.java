@@ -25,14 +25,20 @@ public class DisableRegisterCodesRequest extends AbstractModel {
 
     /**
     * 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
     */
     @SerializedName("RegisterCodeIds")
     @Expose
     private String [] RegisterCodeIds;
 
     /**
-     * Get 注册码ID。 
+     * Get 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。 
      * @return RegisterCodeIds 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     public String [] getRegisterCodeIds() {
         return this.RegisterCodeIds;
@@ -40,7 +46,11 @@ public class DisableRegisterCodesRequest extends AbstractModel {
 
     /**
      * Set 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      * @param RegisterCodeIds 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     public void setRegisterCodeIds(String [] RegisterCodeIds) {
         this.RegisterCodeIds = RegisterCodeIds;

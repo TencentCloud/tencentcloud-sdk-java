@@ -49,4 +49,48 @@ public class ControlcenterClient extends AbstractClient{
         return this.internalRequest(req, "BatchApplyAccountBaselines", BatchApplyAccountBaselinesResponse.class);
     }
 
+    /**
+     *获取用户基线配置数据
+     * @param req GetAccountFactoryBaselineRequest
+     * @return GetAccountFactoryBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAccountFactoryBaselineResponse GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAccountFactoryBaseline", GetAccountFactoryBaselineResponse.class);
+    }
+
+    /**
+     *获取账号工厂系统基线项
+     * @param req ListAccountFactoryBaselineItemsRequest
+     * @return ListAccountFactoryBaselineItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccountFactoryBaselineItemsResponse ListAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAccountFactoryBaselineItems", ListAccountFactoryBaselineItemsResponse.class);
+    }
+
+    /**
+     *获取某个基线项历史应用信息
+     * @param req ListDeployStepTasksRequest
+     * @return ListDeployStepTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDeployStepTasksResponse ListDeployStepTasks(ListDeployStepTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDeployStepTasks", ListDeployStepTasksResponse.class);
+    }
+
+    /**
+     *更新用户当前基线项配置，基线配置会覆盖更新为当前配置。新增基线项时需要将新增的基线配置加到现有配置，删除基线项时需要将删除的基线配置从现有配置移除，然后保存最新基线配置。
+     * @param req UpdateAccountFactoryBaselineRequest
+     * @return UpdateAccountFactoryBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccountFactoryBaseline", UpdateAccountFactoryBaselineResponse.class);
+    }
+
 }

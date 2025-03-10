@@ -25,7 +25,6 @@ public class GPUArgs extends AbstractModel {
 
     /**
     * 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MIGEnable")
     @Expose
@@ -40,7 +39,6 @@ public class GPUArgs extends AbstractModel {
 
     /**
     * CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CUDA")
     @Expose
@@ -48,7 +46,6 @@ public class GPUArgs extends AbstractModel {
 
     /**
     * cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CUDNN")
     @Expose
@@ -56,17 +53,14 @@ public class GPUArgs extends AbstractModel {
 
     /**
     * 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomDriver")
     @Expose
     private CustomDriver CustomDriver;
 
     /**
-     * Get 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用MIG特性 
      * @return MIGEnable 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMIGEnable() {
         return this.MIGEnable;
@@ -74,9 +68,7 @@ public class GPUArgs extends AbstractModel {
 
     /**
      * Set 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MIGEnable 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMIGEnable(Boolean MIGEnable) {
         this.MIGEnable = MIGEnable;
@@ -99,10 +91,8 @@ public class GPUArgs extends AbstractModel {
     }
 
     /**
-     * Get CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CUDA版本信息 
      * @return CUDA CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DriverVersion getCUDA() {
         return this.CUDA;
@@ -110,19 +100,15 @@ public class GPUArgs extends AbstractModel {
 
     /**
      * Set CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CUDA CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCUDA(DriverVersion CUDA) {
         this.CUDA = CUDA;
     }
 
     /**
-     * Get cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cuDNN版本信息 
      * @return CUDNN cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CUDNN getCUDNN() {
         return this.CUDNN;
@@ -130,19 +116,15 @@ public class GPUArgs extends AbstractModel {
 
     /**
      * Set cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CUDNN cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCUDNN(CUDNN CUDNN) {
         this.CUDNN = CUDNN;
     }
 
     /**
-     * Get 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义GPU驱动信息 
      * @return CustomDriver 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomDriver getCustomDriver() {
         return this.CustomDriver;
@@ -150,9 +132,7 @@ public class GPUArgs extends AbstractModel {
 
     /**
      * Set 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomDriver 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomDriver(CustomDriver CustomDriver) {
         this.CustomDriver = CustomDriver;

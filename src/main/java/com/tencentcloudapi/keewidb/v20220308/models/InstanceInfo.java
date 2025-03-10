@@ -340,7 +340,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeSet")
     @Expose
@@ -1109,10 +1108,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的节点详细信息。 
      * @return NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getNodeSet() {
         return this.NodeSet;
@@ -1120,9 +1117,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeSet(NodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;

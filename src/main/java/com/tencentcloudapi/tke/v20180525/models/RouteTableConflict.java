@@ -32,7 +32,6 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
     * 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableCidrBlock")
     @Expose
@@ -40,7 +39,6 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
     * 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableName")
     @Expose
@@ -48,7 +46,6 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
     * 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableId")
     @Expose
@@ -71,10 +68,8 @@ public class RouteTableConflict extends AbstractModel {
     }
 
     /**
-     * Get 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表CIDR。 
      * @return RouteTableCidrBlock 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableCidrBlock() {
         return this.RouteTableCidrBlock;
@@ -82,19 +77,15 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
      * Set 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableCidrBlock 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableCidrBlock(String RouteTableCidrBlock) {
         this.RouteTableCidrBlock = RouteTableCidrBlock;
     }
 
     /**
-     * Get 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableName() {
         return this.RouteTableName;
@@ -102,19 +93,15 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
      * Set 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableName 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
     }
 
     /**
-     * Get 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表ID。 
      * @return RouteTableId 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableId() {
         return this.RouteTableId;
@@ -122,9 +109,7 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
      * Set 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableId 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

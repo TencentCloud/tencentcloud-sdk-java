@@ -25,7 +25,6 @@ public class UnavailableReason extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,17 +32,14 @@ public class UnavailableReason extends AbstractModel {
 
     /**
     * 原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -51,19 +47,15 @@ public class UnavailableReason extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原因 
      * @return Reason 原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -71,9 +63,7 @@ public class UnavailableReason extends AbstractModel {
 
     /**
      * Set 原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

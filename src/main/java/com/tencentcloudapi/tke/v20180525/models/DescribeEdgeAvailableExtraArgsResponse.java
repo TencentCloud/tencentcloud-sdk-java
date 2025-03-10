@@ -25,7 +25,6 @@ public class DescribeEdgeAvailableExtraArgsResponse extends AbstractModel {
 
     /**
     * 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterVersion")
     @Expose
@@ -47,10 +46,8 @@ public class DescribeEdgeAvailableExtraArgsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群版本 
      * @return ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
@@ -58,9 +55,7 @@ public class DescribeEdgeAvailableExtraArgsResponse extends AbstractModel {
 
     /**
      * Set 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;

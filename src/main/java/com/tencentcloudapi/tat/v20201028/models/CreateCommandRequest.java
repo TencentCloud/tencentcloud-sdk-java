@@ -45,7 +45,7 @@ public class CreateCommandRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+    * 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
     */
     @SerializedName("CommandType")
     @Expose
@@ -78,6 +78,8 @@ public class CreateCommandRequest extends AbstractModel {
     * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
     */
@@ -88,6 +90,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
     * 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
     */
     @SerializedName("DefaultParameterConfs")
@@ -175,16 +179,16 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。 
-     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+     * Get 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。 
+     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
-     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+     * Set 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
+     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
@@ -250,11 +254,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
      * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
@@ -266,11 +274,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
@@ -281,9 +293,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Get 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。 
      * @return DefaultParameterConfs 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
      */
     public DefaultParameterConf [] getDefaultParameterConfs() {
@@ -293,9 +309,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Set 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
      * @param DefaultParameterConfs 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
      */
     public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {

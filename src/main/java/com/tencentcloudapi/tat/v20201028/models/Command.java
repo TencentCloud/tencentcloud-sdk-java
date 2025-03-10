@@ -52,7 +52,7 @@ public class Command extends AbstractModel {
     private String Content;
 
     /**
-    * 命令类型。
+    * 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
     */
     @SerializedName("CommandType")
     @Expose
@@ -73,14 +73,14 @@ public class Command extends AbstractModel {
     private Long Timeout;
 
     /**
-    * 命令创建时间。
+    * 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 命令更新时间。
+    * 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -221,16 +221,16 @@ public class Command extends AbstractModel {
     }
 
     /**
-     * Get 命令类型。 
-     * @return CommandType 命令类型。
+     * Get 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。 
+     * @return CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型。
-     * @param CommandType 命令类型。
+     * Set 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * @param CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
@@ -269,32 +269,32 @@ public class Command extends AbstractModel {
     }
 
     /**
-     * Get 命令创建时间。 
-     * @return CreatedTime 命令创建时间。
+     * Get 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 命令创建时间。
-     * @param CreatedTime 命令创建时间。
+     * Set 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 命令更新时间。 
-     * @return UpdatedTime 命令更新时间。
+     * Get 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 命令更新时间。
-     * @param UpdatedTime 命令更新时间。
+     * Set 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

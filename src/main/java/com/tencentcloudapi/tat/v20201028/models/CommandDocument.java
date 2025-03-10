@@ -31,14 +31,14 @@ public class CommandDocument extends AbstractModel {
     private String Content;
 
     /**
-    * 命令类型。
+    * 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 超时时间。
+    * 超时时间。单位：秒。
     */
     @SerializedName("Timeout")
     @Expose
@@ -89,32 +89,32 @@ public class CommandDocument extends AbstractModel {
     }
 
     /**
-     * Get 命令类型。 
-     * @return CommandType 命令类型。
+     * Get 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。 
+     * @return CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型。
-     * @param CommandType 命令类型。
+     * Set 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * @param CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 超时时间。 
-     * @return Timeout 超时时间。
+     * Get 超时时间。单位：秒。 
+     * @return Timeout 超时时间。单位：秒。
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时时间。
-     * @param Timeout 超时时间。
+     * Set 超时时间。单位：秒。
+     * @param Timeout 超时时间。单位：秒。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

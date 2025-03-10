@@ -34,14 +34,19 @@ public class ResponseSpeedLimitParameters extends AbstractModel {
     private String Mode;
 
     /**
-    * 限速值，单位为：KB/s，填写数值，指定限速大小。
+    * 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
     */
     @SerializedName("MaxSpeed")
     @Expose
     private String MaxSpeed;
 
     /**
-    * 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+    * 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
     */
     @SerializedName("StartAt")
     @Expose
@@ -76,32 +81,52 @@ public class ResponseSpeedLimitParameters extends AbstractModel {
     }
 
     /**
-     * Get 限速值，单位为：KB/s，填写数值，指定限速大小。 
-     * @return MaxSpeed 限速值，单位为：KB/s，填写数值，指定限速大小。
+     * Get 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。 
+     * @return MaxSpeed 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
      */
     public String getMaxSpeed() {
         return this.MaxSpeed;
     }
 
     /**
-     * Set 限速值，单位为：KB/s，填写数值，指定限速大小。
-     * @param MaxSpeed 限速值，单位为：KB/s，填写数值，指定限速大小。
+     * Set 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
+     * @param MaxSpeed 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
      */
     public void setMaxSpeed(String MaxSpeed) {
         this.MaxSpeed = MaxSpeed;
     }
 
     /**
-     * Get 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。 
-     * @return StartAt 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+     * Get 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+ 
+     * @return StartAt 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
      */
     public String getStartAt() {
         return this.StartAt;
     }
 
     /**
-     * Set 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
-     * @param StartAt 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+     * Set 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
+     * @param StartAt 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;

@@ -25,7 +25,6 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
     * kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeAPIServer")
     @Expose
@@ -33,7 +32,6 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
     * kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeControllerManager")
     @Expose
@@ -41,7 +39,6 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
     * kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeScheduler")
     @Expose
@@ -49,17 +46,14 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
     * kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kubelet")
     @Expose
     private EdgeArgsFlag [] Kubelet;
 
     /**
-     * Get kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kube-apiserver可用的自定义参数 
      * @return KubeAPIServer kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EdgeArgsFlag [] getKubeAPIServer() {
         return this.KubeAPIServer;
@@ -67,19 +61,15 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
      * Set kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeAPIServer kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeAPIServer(EdgeArgsFlag [] KubeAPIServer) {
         this.KubeAPIServer = KubeAPIServer;
     }
 
     /**
-     * Get kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kube-controller-manager可用的自定义参数 
      * @return KubeControllerManager kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EdgeArgsFlag [] getKubeControllerManager() {
         return this.KubeControllerManager;
@@ -87,19 +77,15 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
      * Set kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeControllerManager kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeControllerManager(EdgeArgsFlag [] KubeControllerManager) {
         this.KubeControllerManager = KubeControllerManager;
     }
 
     /**
-     * Get kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kube-scheduler可用的自定义参数 
      * @return KubeScheduler kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EdgeArgsFlag [] getKubeScheduler() {
         return this.KubeScheduler;
@@ -107,19 +93,15 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
      * Set kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KubeScheduler kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeScheduler(EdgeArgsFlag [] KubeScheduler) {
         this.KubeScheduler = KubeScheduler;
     }
 
     /**
-     * Get kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kubelet可用的自定义参数 
      * @return Kubelet kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EdgeArgsFlag [] getKubelet() {
         return this.Kubelet;
@@ -127,9 +109,7 @@ public class EdgeAvailableExtraArgs extends AbstractModel {
 
     /**
      * Set kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kubelet kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubelet(EdgeArgsFlag [] Kubelet) {
         this.Kubelet = Kubelet;

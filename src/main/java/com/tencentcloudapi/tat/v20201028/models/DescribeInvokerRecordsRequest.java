@@ -25,6 +25,8 @@ public class DescribeInvokerRecordsRequest extends AbstractModel {
 
     /**
     * 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
     */
     @SerializedName("InvokerIds")
     @Expose
@@ -45,8 +47,12 @@ public class DescribeInvokerRecordsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 执行器ID列表。列表上限 100。 
+     * Get 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。 
      * @return InvokerIds 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public String [] getInvokerIds() {
         return this.InvokerIds;
@@ -54,7 +60,11 @@ public class DescribeInvokerRecordsRequest extends AbstractModel {
 
     /**
      * Set 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      * @param InvokerIds 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public void setInvokerIds(String [] InvokerIds) {
         this.InvokerIds = InvokerIds;

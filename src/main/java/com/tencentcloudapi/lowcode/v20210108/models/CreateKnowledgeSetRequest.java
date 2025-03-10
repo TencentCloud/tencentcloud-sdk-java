@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateKnowledgeSetRequest extends AbstractModel {
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 知识库标识
     */
     @SerializedName("Name")
@@ -43,6 +50,29 @@ public class CreateKnowledgeSetRequest extends AbstractModel {
     @SerializedName("Desc")
     @Expose
     private String Desc;
+
+    /**
+    * 知识库的meta信息
+    */
+    @SerializedName("Meta")
+    @Expose
+    private String Meta;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
 
     /**
      * Get 知识库标识 
@@ -92,6 +122,22 @@ public class CreateKnowledgeSetRequest extends AbstractModel {
         this.Desc = Desc;
     }
 
+    /**
+     * Get 知识库的meta信息 
+     * @return Meta 知识库的meta信息
+     */
+    public String getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set 知识库的meta信息
+     * @param Meta 知识库的meta信息
+     */
+    public void setMeta(String Meta) {
+        this.Meta = Meta;
+    }
+
     public CreateKnowledgeSetRequest() {
     }
 
@@ -100,6 +146,9 @@ public class CreateKnowledgeSetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateKnowledgeSetRequest(CreateKnowledgeSetRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -109,6 +158,9 @@ public class CreateKnowledgeSetRequest extends AbstractModel {
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Meta != null) {
+            this.Meta = new String(source.Meta);
+        }
     }
 
 
@@ -116,9 +168,11 @@ public class CreateKnowledgeSetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Meta", this.Meta);
 
     }
 }

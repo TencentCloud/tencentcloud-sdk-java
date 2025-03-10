@@ -39,20 +39,22 @@ public class Scene extends AbstractModel {
 
     /**
     * 场景创建者。
+
+- TAT：公共场景
     */
     @SerializedName("CreatedBy")
     @Expose
     private String CreatedBy;
 
     /**
-    * 创建时间。
+    * 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 更新时间。
+    * 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -91,8 +93,12 @@ public class Scene extends AbstractModel {
     }
 
     /**
-     * Get 场景创建者。 
+     * Get 场景创建者。
+
+- TAT：公共场景 
      * @return CreatedBy 场景创建者。
+
+- TAT：公共场景
      */
     public String getCreatedBy() {
         return this.CreatedBy;
@@ -100,39 +106,43 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 场景创建者。
+
+- TAT：公共场景
      * @param CreatedBy 场景创建者。
+
+- TAT：公共场景
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdatedTime 更新时间。
+     * Get 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return UpdatedTime 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdatedTime 更新时间。
+     * Set 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param UpdatedTime 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

@@ -32,7 +32,6 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel {
 
     /**
     * 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EdgeVersionLatest")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel {
 
     /**
     * 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EdgeVersionCurrent")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel {
     }
 
     /**
-     * Get 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 边缘集群最新版本 
      * @return EdgeVersionLatest 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEdgeVersionLatest() {
         return this.EdgeVersionLatest;
@@ -81,19 +77,15 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel {
 
     /**
      * Set 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EdgeVersionLatest 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdgeVersionLatest(String EdgeVersionLatest) {
         this.EdgeVersionLatest = EdgeVersionLatest;
     }
 
     /**
-     * Get 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 边缘集群当前版本 
      * @return EdgeVersionCurrent 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEdgeVersionCurrent() {
         return this.EdgeVersionCurrent;
@@ -101,9 +93,7 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel {
 
     /**
      * Set 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EdgeVersionCurrent 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdgeVersionCurrent(String EdgeVersionCurrent) {
         this.EdgeVersionCurrent = EdgeVersionCurrent;

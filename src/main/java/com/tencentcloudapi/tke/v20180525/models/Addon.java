@@ -39,7 +39,6 @@ public class Addon extends AbstractModel {
 
     /**
     * addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawValues")
     @Expose
@@ -47,7 +46,6 @@ public class Addon extends AbstractModel {
 
     /**
     * addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phase")
     @Expose
@@ -55,7 +53,6 @@ public class Addon extends AbstractModel {
 
     /**
     * addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -101,10 +98,8 @@ public class Addon extends AbstractModel {
     }
 
     /**
-     * Get addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get addon的参数，是一个json格式的base64转码后的字符串 
      * @return RawValues addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRawValues() {
         return this.RawValues;
@@ -112,19 +107,15 @@ public class Addon extends AbstractModel {
 
     /**
      * Set addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RawValues addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawValues(String RawValues) {
         this.RawValues = RawValues;
     }
 
     /**
-     * Get addon的状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get addon的状态 
      * @return Phase addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhase() {
         return this.Phase;
@@ -132,19 +123,15 @@ public class Addon extends AbstractModel {
 
     /**
      * Set addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phase addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
     }
 
     /**
-     * Get addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get addon失败的原因 
      * @return Reason addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -152,9 +139,7 @@ public class Addon extends AbstractModel {
 
     /**
      * Set addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

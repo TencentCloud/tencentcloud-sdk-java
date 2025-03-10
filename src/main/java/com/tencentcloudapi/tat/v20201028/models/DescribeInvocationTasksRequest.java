@@ -33,7 +33,12 @@ public class DescribeInvocationTasksRequest extends AbstractModel {
     /**
     * 过滤条件。<br>
 
-<li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
+- invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。
+- invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+- instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型： CVM、Lighthouse、TAT 托管实例
+- command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+
+每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
     */
     @SerializedName("Filters")
     @Expose
@@ -54,9 +59,12 @@ public class DescribeInvocationTasksRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 是否隐藏输出，取值范围：
+    * 是否隐藏命令输出结果，取值范围：
 
-<ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。
+- true：隐藏输出
+- false：不隐藏
+ 
+默认为 true。
     */
     @SerializedName("HideOutput")
     @Expose
@@ -81,10 +89,20 @@ public class DescribeInvocationTasksRequest extends AbstractModel {
     /**
      * Get 过滤条件。<br>
 
-<li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。 
+- invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。
+- invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+- instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型： CVM、Lighthouse、TAT 托管实例
+- command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+
+每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。 
      * @return Filters 过滤条件。<br>
 
-<li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
+- invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。
+- invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+- instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型： CVM、Lighthouse、TAT 托管实例
+- command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+
+每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -93,10 +111,20 @@ public class DescribeInvocationTasksRequest extends AbstractModel {
     /**
      * Set 过滤条件。<br>
 
-<li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
+- invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。
+- invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+- instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型： CVM、Lighthouse、TAT 托管实例
+- command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+
+每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
      * @param Filters 过滤条件。<br>
 
-<li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
+- invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。
+- invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。可通过 [DescribeInvocations(查询执行活动)](https://cloud.tencent.com/document/api/1340/52679) 接口获取。
+- instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型： CVM、Lighthouse、TAT 托管实例
+- command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+
+每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -135,24 +163,36 @@ public class DescribeInvocationTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否隐藏输出，取值范围：
+     * Get 是否隐藏命令输出结果，取值范围：
 
-<ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。 
-     * @return HideOutput 是否隐藏输出，取值范围：
+- true：隐藏输出
+- false：不隐藏
+ 
+默认为 true。 
+     * @return HideOutput 是否隐藏命令输出结果，取值范围：
 
-<ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。
+- true：隐藏输出
+- false：不隐藏
+ 
+默认为 true。
      */
     public Boolean getHideOutput() {
         return this.HideOutput;
     }
 
     /**
-     * Set 是否隐藏输出，取值范围：
+     * Set 是否隐藏命令输出结果，取值范围：
 
-<ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。
-     * @param HideOutput 是否隐藏输出，取值范围：
+- true：隐藏输出
+- false：不隐藏
+ 
+默认为 true。
+     * @param HideOutput 是否隐藏命令输出结果，取值范围：
 
-<ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。
+- true：隐藏输出
+- false：不隐藏
+ 
+默认为 true。
      */
     public void setHideOutput(Boolean HideOutput) {
         this.HideOutput = HideOutput;

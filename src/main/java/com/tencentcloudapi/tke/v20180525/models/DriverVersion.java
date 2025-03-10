@@ -25,7 +25,6 @@ public class DriverVersion extends AbstractModel {
 
     /**
     * GPU驱动或者CUDA的版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -33,17 +32,14 @@ public class DriverVersion extends AbstractModel {
 
     /**
     * GPU驱动或者CUDA的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get GPU驱动或者CUDA的版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GPU驱动或者CUDA的版本 
      * @return Version GPU驱动或者CUDA的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -51,19 +47,15 @@ public class DriverVersion extends AbstractModel {
 
     /**
      * Set GPU驱动或者CUDA的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version GPU驱动或者CUDA的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get GPU驱动或者CUDA的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GPU驱动或者CUDA的名字 
      * @return Name GPU驱动或者CUDA的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class DriverVersion extends AbstractModel {
 
     /**
      * Set GPU驱动或者CUDA的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name GPU驱动或者CUDA的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

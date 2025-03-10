@@ -25,7 +25,6 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
     * 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,7 +32,6 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
     * 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceFamily")
     @Expose
@@ -41,7 +39,6 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
     * 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -49,17 +46,14 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
     * 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodLimits")
     @Expose
     private PodLimitsByType PodLimits;
 
     /**
-     * Get 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型所在可用区 
      * @return Zone 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -67,19 +61,15 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
      * Set 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型所属机型族 
      * @return InstanceFamily 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceFamily() {
         return this.InstanceFamily;
@@ -87,19 +77,15 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
      * Set 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceFamily 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;
     }
 
     /**
-     * Get 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例机型名称 
      * @return InstanceType 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -107,19 +93,15 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
      * Set 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型可支持的最大VPC-CNI模式Pod数量信息 
      * @return PodLimits 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PodLimitsByType getPodLimits() {
         return this.PodLimits;
@@ -127,9 +109,7 @@ public class PodLimitsInstance extends AbstractModel {
 
     /**
      * Set 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodLimits 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodLimits(PodLimitsByType PodLimits) {
         this.PodLimits = PodLimits;

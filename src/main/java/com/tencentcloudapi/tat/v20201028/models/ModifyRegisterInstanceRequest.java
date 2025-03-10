@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ModifyRegisterInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +40,24 @@ public class ModifyRegisterInstanceRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。 
+     * @return InstanceId 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
+     * @param InstanceId 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -25,7 +25,6 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
     * 流程编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowNo")
     @Expose
@@ -47,7 +46,6 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
     * 流程状态描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowStateDesc")
     @Expose
@@ -55,7 +53,6 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
     * 流程启动时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -63,17 +60,14 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
     * 流程完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 流程编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程编号 
      * @return FlowNo 流程编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowNo() {
         return this.FlowNo;
@@ -81,9 +75,7 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
      * Set 流程编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowNo 流程编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowNo(String FlowNo) {
         this.FlowNo = FlowNo;
@@ -122,10 +114,8 @@ public class TaskFlowStepsInfo extends AbstractModel {
     }
 
     /**
-     * Get 流程状态描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程状态描述 
      * @return FlowStateDesc 流程状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowStateDesc() {
         return this.FlowStateDesc;
@@ -133,19 +123,15 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
      * Set 流程状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowStateDesc 流程状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowStateDesc(String FlowStateDesc) {
         this.FlowStateDesc = FlowStateDesc;
     }
 
     /**
-     * Get 流程启动时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程启动时间 
      * @return StartTime 流程启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -153,19 +139,15 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
      * Set 流程启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 流程启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 流程完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程完成时间 
      * @return EndTime 流程完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -173,9 +155,7 @@ public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
      * Set 流程完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 流程完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

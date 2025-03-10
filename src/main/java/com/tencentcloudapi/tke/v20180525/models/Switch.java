@@ -32,7 +32,6 @@ public class Switch extends AbstractModel {
 
     /**
     * 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Audit")
     @Expose
@@ -40,7 +39,6 @@ public class Switch extends AbstractModel {
 
     /**
     * 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Event")
     @Expose
@@ -48,7 +46,6 @@ public class Switch extends AbstractModel {
 
     /**
     * 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Log")
     @Expose
@@ -56,7 +53,6 @@ public class Switch extends AbstractModel {
 
     /**
     * master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterLog")
     @Expose
@@ -79,10 +75,8 @@ public class Switch extends AbstractModel {
     }
 
     /**
-     * Get 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计开关的详细信息 
      * @return Audit 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchInfo getAudit() {
         return this.Audit;
@@ -90,19 +84,15 @@ public class Switch extends AbstractModel {
 
     /**
      * Set 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Audit 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudit(SwitchInfo Audit) {
         this.Audit = Audit;
     }
 
     /**
-     * Get 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件开关的详细信息 
      * @return Event 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchInfo getEvent() {
         return this.Event;
@@ -110,19 +100,15 @@ public class Switch extends AbstractModel {
 
     /**
      * Set 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Event 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvent(SwitchInfo Event) {
         this.Event = Event;
     }
 
     /**
-     * Get 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 普通日志的详细信息 
      * @return Log 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchInfo getLog() {
         return this.Log;
@@ -130,19 +116,15 @@ public class Switch extends AbstractModel {
 
     /**
      * Set 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Log 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLog(SwitchInfo Log) {
         this.Log = Log;
     }
 
     /**
-     * Get master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get master 日志详细信息 
      * @return MasterLog master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchInfo getMasterLog() {
         return this.MasterLog;
@@ -150,9 +132,7 @@ public class Switch extends AbstractModel {
 
     /**
      * Set master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterLog master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterLog(SwitchInfo MasterLog) {
         this.MasterLog = MasterLog;

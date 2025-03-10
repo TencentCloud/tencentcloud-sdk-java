@@ -196,6 +196,17 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *查询合作伙伴名下客户的参与增量激励考核信息列表
+     * @param req DescribeClientJoinIncreaseListRequest
+     * @return DescribeClientJoinIncreaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientJoinIncreaseListResponse DescribeClientJoinIncreaseList(DescribeClientJoinIncreaseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClientJoinIncreaseList", DescribeClientJoinIncreaseListResponse.class);
+    }
+
+    /**
      *【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息
      * @param req DescribeRebateInfosRequest
      * @return DescribeRebateInfosResponse

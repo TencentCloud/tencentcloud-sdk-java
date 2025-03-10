@@ -32,7 +32,6 @@ public class AppChart extends AbstractModel {
 
     /**
     * chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -62,10 +61,8 @@ public class AppChart extends AbstractModel {
     }
 
     /**
-     * Get chart的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get chart的标签 
      * @return Label chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -73,9 +70,7 @@ public class AppChart extends AbstractModel {
 
     /**
      * Set chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;

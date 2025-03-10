@@ -39,7 +39,6 @@ public class UpgradeAbleInstancesItem extends AbstractModel {
 
     /**
     * 当前版本的最新小版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestVersion")
     @Expose
@@ -92,10 +91,8 @@ public class UpgradeAbleInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 当前版本的最新小版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前版本的最新小版本 
      * @return LatestVersion 当前版本的最新小版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestVersion() {
         return this.LatestVersion;
@@ -103,9 +100,7 @@ public class UpgradeAbleInstancesItem extends AbstractModel {
 
     /**
      * Set 当前版本的最新小版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestVersion 当前版本的最新小版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestVersion(String LatestVersion) {
         this.LatestVersion = LatestVersion;

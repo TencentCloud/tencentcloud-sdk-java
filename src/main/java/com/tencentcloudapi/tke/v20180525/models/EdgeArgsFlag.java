@@ -25,7 +25,6 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
     * 参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
     * 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
     * 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Usage")
     @Expose
@@ -49,7 +46,6 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
     * 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
     @Expose
@@ -57,17 +53,14 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
     * 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Constraint")
     @Expose
     private String Constraint;
 
     /**
-     * Get 参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名 
      * @return Name 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,19 +68,15 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
      * Set 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数类型 
      * @return Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -95,19 +84,15 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
      * Set 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 参数描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数描述 
      * @return Usage 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsage() {
         return this.Usage;
@@ -115,19 +100,15 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
      * Set 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usage 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsage(String Usage) {
         this.Usage = Usage;
     }
 
     /**
-     * Get 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数默认值 
      * @return Default 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefault() {
         return this.Default;
@@ -135,19 +116,15 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
      * Set 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Default 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验） 
      * @return Constraint 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConstraint() {
         return this.Constraint;
@@ -155,9 +132,7 @@ public class EdgeArgsFlag extends AbstractModel {
 
     /**
      * Set 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Constraint 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstraint(String Constraint) {
         this.Constraint = Constraint;

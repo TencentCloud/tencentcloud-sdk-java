@@ -53,7 +53,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrainStatus")
     @Expose
@@ -61,7 +60,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -76,7 +74,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanIP")
     @Expose
@@ -84,7 +81,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolId")
     @Expose
@@ -92,7 +88,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoscalingGroupId")
     @Expose
@@ -163,10 +158,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否封锁状态 
      * @return DrainStatus 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDrainStatus() {
         return this.DrainStatus;
@@ -174,19 +167,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrainStatus 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrainStatus(String DrainStatus) {
         this.DrainStatus = DrainStatus;
     }
 
     /**
-     * Get 节点配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点配置 
      * @return InstanceAdvancedSettings 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
@@ -194,9 +183,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAdvancedSettings 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
@@ -219,10 +206,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点内网IP 
      * @return LanIP 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanIP() {
         return this.LanIP;
@@ -230,19 +215,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIP 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanIP(String LanIP) {
         this.LanIP = LanIP;
     }
 
     /**
-     * Get 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源池ID 
      * @return NodePoolId 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodePoolId() {
         return this.NodePoolId;
@@ -250,19 +231,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePoolId 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动伸缩组ID 
      * @return AutoscalingGroupId 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoscalingGroupId() {
         return this.AutoscalingGroupId;
@@ -270,9 +247,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoscalingGroupId 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoscalingGroupId(String AutoscalingGroupId) {
         this.AutoscalingGroupId = AutoscalingGroupId;

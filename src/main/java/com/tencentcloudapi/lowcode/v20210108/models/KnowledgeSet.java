@@ -74,6 +74,13 @@ ENABLED 已启用
     private String UpdateTime;
 
     /**
+    * 知识库的meta信息
+    */
+    @SerializedName("Meta")
+    @Expose
+    private String Meta;
+
+    /**
      * Get 知识库标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 知识库标识
@@ -201,6 +208,22 @@ ENABLED 已启用
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 知识库的meta信息 
+     * @return Meta 知识库的meta信息
+     */
+    public String getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set 知识库的meta信息
+     * @param Meta 知识库的meta信息
+     */
+    public void setMeta(String Meta) {
+        this.Meta = Meta;
+    }
+
     public KnowledgeSet() {
     }
 
@@ -227,6 +250,9 @@ ENABLED 已启用
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Meta != null) {
+            this.Meta = new String(source.Meta);
+        }
     }
 
 
@@ -240,6 +266,7 @@ ENABLED 已启用
         this.setParamSimple(map, prefix + "Active", this.Active);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Meta", this.Meta);
 
     }
 }

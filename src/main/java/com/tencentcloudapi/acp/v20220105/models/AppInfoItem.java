@@ -32,7 +32,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
@@ -40,7 +39,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppVersion")
     @Expose
@@ -55,7 +53,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
     @Expose
@@ -63,7 +60,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportTitle")
     @Expose
@@ -71,7 +67,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BehaviorUrl")
     @Expose
@@ -79,7 +74,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * App诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BehaviorTitle")
     @Expose
@@ -87,7 +81,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * 诊断高风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighRiskCount")
     @Expose
@@ -95,7 +88,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivacyTextName")
     @Expose
@@ -103,7 +95,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftwareMD5")
     @Expose
@@ -111,7 +102,6 @@ public class AppInfoItem extends AbstractModel {
 
     /**
     * 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivacyTextMD5")
     @Expose
@@ -134,10 +124,8 @@ public class AppInfoItem extends AbstractModel {
     }
 
     /**
-     * Get App名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App名称 
      * @return AppName App名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -145,19 +133,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName App名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get App版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App版本 
      * @return AppVersion App版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppVersion() {
         return this.AppVersion;
@@ -165,9 +149,7 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppVersion App版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
@@ -190,10 +172,8 @@ public class AppInfoItem extends AbstractModel {
     }
 
     /**
-     * Get App隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App隐私诊断报告下载链接 
      * @return ReportUrl App隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
         return this.ReportUrl;
@@ -201,19 +181,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportUrl App隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
         this.ReportUrl = ReportUrl;
     }
 
     /**
-     * Get App隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App隐私诊断报告名称 
      * @return ReportTitle App隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportTitle() {
         return this.ReportTitle;
@@ -221,19 +197,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportTitle App隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportTitle(String ReportTitle) {
         this.ReportTitle = ReportTitle;
     }
 
     /**
-     * Get App诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App诊断堆栈报告下载链接 
      * @return BehaviorUrl App诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBehaviorUrl() {
         return this.BehaviorUrl;
@@ -241,19 +213,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BehaviorUrl App诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBehaviorUrl(String BehaviorUrl) {
         this.BehaviorUrl = BehaviorUrl;
     }
 
     /**
-     * Get App诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App诊断堆栈报告名称 
      * @return BehaviorTitle App诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBehaviorTitle() {
         return this.BehaviorTitle;
@@ -261,19 +229,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set App诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BehaviorTitle App诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBehaviorTitle(String BehaviorTitle) {
         this.BehaviorTitle = BehaviorTitle;
     }
 
     /**
-     * Get 诊断高风险项数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断高风险项数量 
      * @return HighRiskCount 诊断高风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHighRiskCount() {
         return this.HighRiskCount;
@@ -281,19 +245,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set 诊断高风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighRiskCount 诊断高风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighRiskCount(Long HighRiskCount) {
         this.HighRiskCount = HighRiskCount;
     }
 
     /**
-     * Get 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隐私申明文件名称 
      * @return PrivacyTextName 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivacyTextName() {
         return this.PrivacyTextName;
@@ -301,19 +261,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivacyTextName 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivacyTextName(String PrivacyTextName) {
         this.PrivacyTextName = PrivacyTextName;
     }
 
     /**
-     * Get 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 软件MD5 
      * @return SoftwareMD5 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSoftwareMD5() {
         return this.SoftwareMD5;
@@ -321,19 +277,15 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoftwareMD5 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftwareMD5(String SoftwareMD5) {
         this.SoftwareMD5 = SoftwareMD5;
     }
 
     /**
-     * Get 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隐私文本MD5 
      * @return PrivacyTextMD5 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivacyTextMD5() {
         return this.PrivacyTextMD5;
@@ -341,9 +293,7 @@ public class AppInfoItem extends AbstractModel {
 
     /**
      * Set 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivacyTextMD5 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivacyTextMD5(String PrivacyTextMD5) {
         this.PrivacyTextMD5 = PrivacyTextMD5;

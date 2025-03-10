@@ -231,6 +231,13 @@ public class RoomInfo extends AbstractModel {
     private Long RecordStream;
 
     /**
+    * 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+    */
+    @SerializedName("WhiteBoardSnapshotMode")
+    @Expose
+    private Long WhiteBoardSnapshotMode;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -718,6 +725,22 @@ public class RoomInfo extends AbstractModel {
         this.RecordStream = RecordStream;
     }
 
+    /**
+     * Get 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式 
+     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public Long getWhiteBoardSnapshotMode() {
+        return this.WhiteBoardSnapshotMode;
+    }
+
+    /**
+     * Set 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public void setWhiteBoardSnapshotMode(Long WhiteBoardSnapshotMode) {
+        this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
+    }
+
     public RoomInfo() {
     }
 
@@ -816,6 +839,9 @@ public class RoomInfo extends AbstractModel {
         if (source.RecordStream != null) {
             this.RecordStream = new Long(source.RecordStream);
         }
+        if (source.WhiteBoardSnapshotMode != null) {
+            this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
+        }
     }
 
 
@@ -852,6 +878,7 @@ public class RoomInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
+        this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
 
     }
 }

@@ -25,7 +25,6 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
     * TKE共享网卡非固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TKERouteENINonStaticIP")
     @Expose
@@ -33,7 +32,6 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
     * TKE共享网卡固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TKERouteENIStaticIP")
     @Expose
@@ -41,7 +39,6 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
     * TKE独立网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TKEDirectENI")
     @Expose
@@ -49,17 +46,14 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
     * TKE中继网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TKESubENI")
     @Expose
     private Long TKESubENI;
 
     /**
-     * Get TKE共享网卡非固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TKE共享网卡非固定IP模式可支持的Pod数量 
      * @return TKERouteENINonStaticIP TKE共享网卡非固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTKERouteENINonStaticIP() {
         return this.TKERouteENINonStaticIP;
@@ -67,19 +61,15 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
      * Set TKE共享网卡非固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TKERouteENINonStaticIP TKE共享网卡非固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTKERouteENINonStaticIP(Long TKERouteENINonStaticIP) {
         this.TKERouteENINonStaticIP = TKERouteENINonStaticIP;
     }
 
     /**
-     * Get TKE共享网卡固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TKE共享网卡固定IP模式可支持的Pod数量 
      * @return TKERouteENIStaticIP TKE共享网卡固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTKERouteENIStaticIP() {
         return this.TKERouteENIStaticIP;
@@ -87,19 +77,15 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
      * Set TKE共享网卡固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TKERouteENIStaticIP TKE共享网卡固定IP模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTKERouteENIStaticIP(Long TKERouteENIStaticIP) {
         this.TKERouteENIStaticIP = TKERouteENIStaticIP;
     }
 
     /**
-     * Get TKE独立网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TKE独立网卡模式可支持的Pod数量 
      * @return TKEDirectENI TKE独立网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTKEDirectENI() {
         return this.TKEDirectENI;
@@ -107,19 +93,15 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
      * Set TKE独立网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TKEDirectENI TKE独立网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTKEDirectENI(Long TKEDirectENI) {
         this.TKEDirectENI = TKEDirectENI;
     }
 
     /**
-     * Get TKE中继网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TKE中继网卡模式可支持的Pod数量 
      * @return TKESubENI TKE中继网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTKESubENI() {
         return this.TKESubENI;
@@ -127,9 +109,7 @@ public class PodLimitsByType extends AbstractModel {
 
     /**
      * Set TKE中继网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TKESubENI TKE中继网卡模式可支持的Pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTKESubENI(Long TKESubENI) {
         this.TKESubENI = TKESubENI;

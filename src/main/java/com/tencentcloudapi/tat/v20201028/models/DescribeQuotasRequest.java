@@ -24,23 +24,48 @@ import java.util.HashMap;
 public class DescribeQuotasRequest extends AbstractModel {
 
     /**
-    * 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+    * 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
     */
     @SerializedName("ResourceNames")
     @Expose
     private String [] ResourceNames;
 
     /**
-     * Get 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标 
-     * @return ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+     * Get 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码 
+     * @return ResourceNames 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
     }
 
     /**
-     * Set 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
-     * @param ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+     * Set 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
+     * @param ResourceNames 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteCommandsRequest extends AbstractModel {
 
     /**
-    * 待删除命令id
+    * 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
     */
     @SerializedName("CommandIds")
     @Expose
     private String [] CommandIds;
 
     /**
-     * Get 待删除命令id 
-     * @return CommandIds 待删除命令id
+     * Get 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。 
+     * @return CommandIds 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public String [] getCommandIds() {
         return this.CommandIds;
     }
 
     /**
-     * Set 待删除命令id
-     * @param CommandIds 待删除命令id
+     * Set 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+     * @param CommandIds 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public void setCommandIds(String [] CommandIds) {
         this.CommandIds = CommandIds;

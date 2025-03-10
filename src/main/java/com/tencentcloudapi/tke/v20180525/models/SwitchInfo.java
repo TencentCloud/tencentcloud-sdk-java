@@ -25,7 +25,6 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * 开启标识符 true代表开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -33,7 +32,6 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -41,7 +39,6 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * CLS日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -49,7 +46,6 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * 当前log-agent版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -57,7 +53,6 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * 是否可升级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeAble")
     @Expose
@@ -65,17 +60,14 @@ public class SwitchInfo extends AbstractModel {
 
     /**
     * CLS日志主题所属region
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicRegion")
     @Expose
     private String TopicRegion;
 
     /**
-     * Get 开启标识符 true代表开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启标识符 true代表开启 
      * @return Enable 开启标识符 true代表开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
         return this.Enable;
@@ -83,19 +75,15 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set 开启标识符 true代表开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 开启标识符 true代表开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLS日志集ID 
      * @return LogsetId CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -103,19 +91,15 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetId CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get CLS日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLS日志主题ID 
      * @return TopicId CLS日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -123,19 +107,15 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set CLS日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId CLS日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 当前log-agent版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前log-agent版本 
      * @return Version 当前log-agent版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -143,19 +123,15 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set 当前log-agent版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 当前log-agent版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 是否可升级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可升级 
      * @return UpgradeAble 是否可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUpgradeAble() {
         return this.UpgradeAble;
@@ -163,19 +139,15 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set 是否可升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeAble 是否可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeAble(Boolean UpgradeAble) {
         this.UpgradeAble = UpgradeAble;
     }
 
     /**
-     * Get CLS日志主题所属region
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLS日志主题所属region 
      * @return TopicRegion CLS日志主题所属region
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicRegion() {
         return this.TopicRegion;
@@ -183,9 +155,7 @@ public class SwitchInfo extends AbstractModel {
 
     /**
      * Set CLS日志主题所属region
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicRegion CLS日志主题所属region
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicRegion(String TopicRegion) {
         this.TopicRegion = TopicRegion;

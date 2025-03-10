@@ -25,7 +25,6 @@ public class FailedResource extends AbstractModel {
 
     /**
     * 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,17 +32,14 @@ public class FailedResource extends AbstractModel {
 
     /**
     * 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private String Error;
 
     /**
-     * Get 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源六段式 
      * @return Resource 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -51,19 +47,15 @@ public class FailedResource extends AbstractModel {
 
     /**
      * Set 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行失败的原因 
      * @return Error 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getError() {
         return this.Error;
@@ -71,9 +63,7 @@ public class FailedResource extends AbstractModel {
 
     /**
      * Set 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(String Error) {
         this.Error = Error;

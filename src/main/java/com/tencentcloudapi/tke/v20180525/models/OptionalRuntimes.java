@@ -25,7 +25,6 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
     * 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeType")
     @Expose
@@ -33,7 +32,6 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
     * 运行时版本列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeVersions")
     @Expose
@@ -41,17 +39,14 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
     * 该类型的默认运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultVersion")
     @Expose
     private String DefaultVersion;
 
     /**
-     * Get 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时类型 
      * @return RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeType() {
         return this.RuntimeType;
@@ -59,19 +54,15 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
      * Set 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时版本列表 
      * @return RuntimeVersions 运行时版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRuntimeVersions() {
         return this.RuntimeVersions;
@@ -79,19 +70,15 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
      * Set 运行时版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeVersions 运行时版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeVersions(String [] RuntimeVersions) {
         this.RuntimeVersions = RuntimeVersions;
     }
 
     /**
-     * Get 该类型的默认运行时版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该类型的默认运行时版本 
      * @return DefaultVersion 该类型的默认运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultVersion() {
         return this.DefaultVersion;
@@ -99,9 +86,7 @@ public class OptionalRuntimes extends AbstractModel {
 
     /**
      * Set 该类型的默认运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultVersion 该类型的默认运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultVersion(String DefaultVersion) {
         this.DefaultVersion = DefaultVersion;

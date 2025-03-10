@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InvokeCommandRequest extends AbstractModel {
 
     /**
-    * 待触发的命令ID。
+    * 待触发的命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
     */
     @SerializedName("CommandId")
     @Expose
@@ -32,6 +32,11 @@ public class InvokeCommandRequest extends AbstractModel {
 
     /**
     * 待执行命令的实例ID列表，上限200。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -40,7 +45,8 @@ public class InvokeCommandRequest extends AbstractModel {
     /**
     * Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
+仅在命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+如果未提供该参数取值，将使用 Command 的 DefaultParameters 或 DefaultParameterConfs 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
     */
@@ -88,24 +94,34 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get 待触发的命令ID。 
-     * @return CommandId 待触发的命令ID。
+     * Get 待触发的命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。 
+     * @return CommandId 待触发的命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set 待触发的命令ID。
-     * @param CommandId 待触发的命令ID。
+     * Set 待触发的命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+     * @param CommandId 待触发的命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get 待执行命令的实例ID列表，上限200。 
+     * Get 待执行命令的实例ID列表，上限200。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例 
      * @return InstanceIds 待执行命令的实例ID列表，上限200。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -113,7 +129,17 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 待执行命令的实例ID列表，上限200。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
      * @param InstanceIds 待执行命令的实例ID列表，上限200。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+- CVM
+- Lighthouse
+- TAT 托管实例
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -122,12 +148,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Get Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
+仅在命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+如果未提供该参数取值，将使用 Command 的 DefaultParameters 或 DefaultParameterConfs 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
      * @return Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
+仅在命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+如果未提供该参数取值，将使用 Command 的 DefaultParameters 或 DefaultParameterConfs 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
@@ -138,12 +166,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Set Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
+仅在命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+如果未提供该参数取值，将使用 Command 的 DefaultParameters 或 DefaultParameterConfs 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      * @param Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
+仅在命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+如果未提供该参数取值，将使用 Command 的 DefaultParameters 或 DefaultParameterConfs 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */

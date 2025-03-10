@@ -31,7 +31,7 @@ public class CreateAccountRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+    * 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_-
     */
     @SerializedName("UserName")
     @Expose
@@ -45,7 +45,7 @@ public class CreateAccountRequest extends AbstractModel {
     private String Host;
 
     /**
-    * 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
+    * 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
     */
     @SerializedName("Password")
     @Expose
@@ -59,7 +59,7 @@ public class CreateAccountRequest extends AbstractModel {
     private Long ReadOnly;
 
     /**
-    * 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+    * 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符
     */
     @SerializedName("Description")
     @Expose
@@ -110,16 +110,16 @@ public class CreateAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。 
-     * @return UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * Get 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_- 
+     * @return UserName 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_-
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
-     * @param UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * Set 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_-
+     * @param UserName 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_-
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -142,16 +142,16 @@ public class CreateAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。 
-     * @return Password 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
+     * Get 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项 
+     * @return Password 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
-     * @param Password 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
+     * Set 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
+     * @param Password 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -174,16 +174,16 @@ public class CreateAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符 
-     * @return Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+     * Get 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符 
+     * @return Description 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
-     * @param Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+     * Set 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符
+     * @param Description 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;

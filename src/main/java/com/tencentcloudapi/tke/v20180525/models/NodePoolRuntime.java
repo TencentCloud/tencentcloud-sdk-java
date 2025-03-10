@@ -25,7 +25,6 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
     * 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolId")
     @Expose
@@ -33,7 +32,6 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
     * 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeType")
     @Expose
@@ -41,7 +39,6 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
     * 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeVersion")
     @Expose
@@ -49,17 +46,14 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
     * 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolName")
     @Expose
     private String NodePoolName;
 
     /**
-     * Get 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池ID 
      * @return NodePoolId 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodePoolId() {
         return this.NodePoolId;
@@ -67,19 +61,15 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
      * Set 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePoolId 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时类型 
      * @return RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeType() {
         return this.RuntimeType;
@@ -87,19 +77,15 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
      * Set 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时版本 
      * @return RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
@@ -107,19 +93,15 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
      * Set 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池名称 
      * @return NodePoolName 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodePoolName() {
         return this.NodePoolName;
@@ -127,9 +109,7 @@ public class NodePoolRuntime extends AbstractModel {
 
     /**
      * Set 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePoolName 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolName(String NodePoolName) {
         this.NodePoolName = NodePoolName;

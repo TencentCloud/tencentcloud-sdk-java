@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeKnowledgeSetListRequest extends AbstractModel {
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 知识库标识，精准查询
     */
     @SerializedName("Name")
@@ -38,6 +45,13 @@ public class DescribeKnowledgeSetListRequest extends AbstractModel {
     private String Title;
 
     /**
+    * 分页起始位
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * 查询条数
     */
     @SerializedName("Limit")
@@ -50,6 +64,22 @@ public class DescribeKnowledgeSetListRequest extends AbstractModel {
     @SerializedName("QueryMode")
     @Expose
     private String QueryMode;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
 
     /**
      * Get 知识库标识，精准查询 
@@ -81,6 +111,22 @@ public class DescribeKnowledgeSetListRequest extends AbstractModel {
      */
     public void setTitle(String Title) {
         this.Title = Title;
+    }
+
+    /**
+     * Get 分页起始位 
+     * @return Offset 分页起始位
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页起始位
+     * @param Offset 分页起始位
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -123,11 +169,17 @@ public class DescribeKnowledgeSetListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeKnowledgeSetListRequest(DescribeKnowledgeSetListRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
         if (source.Title != null) {
             this.Title = new String(source.Title);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -142,8 +194,10 @@ public class DescribeKnowledgeSetListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "QueryMode", this.QueryMode);
 

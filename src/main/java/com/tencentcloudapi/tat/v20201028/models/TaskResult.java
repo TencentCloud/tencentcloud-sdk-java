@@ -38,7 +38,7 @@ public class TaskResult extends AbstractModel {
     private String Output;
 
     /**
-    * 命令执行开始时间。
+    * 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecStartTime")
@@ -46,7 +46,7 @@ public class TaskResult extends AbstractModel {
     private String ExecStartTime;
 
     /**
-    * 命令执行结束时间。
+    * 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecEndTime")
@@ -107,9 +107,9 @@ public class TaskResult extends AbstractModel {
     }
 
     /**
-     * Get 命令执行开始时间。
+     * Get 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecStartTime 命令执行开始时间。
+     * @return ExecStartTime 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecStartTime() {
@@ -117,9 +117,9 @@ public class TaskResult extends AbstractModel {
     }
 
     /**
-     * Set 命令执行开始时间。
+     * Set 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecStartTime 命令执行开始时间。
+     * @param ExecStartTime 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecStartTime(String ExecStartTime) {
@@ -127,9 +127,9 @@ public class TaskResult extends AbstractModel {
     }
 
     /**
-     * Get 命令执行结束时间。
+     * Get 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecEndTime 命令执行结束时间。
+     * @return ExecEndTime 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecEndTime() {
@@ -137,9 +137,9 @@ public class TaskResult extends AbstractModel {
     }
 
     /**
-     * Set 命令执行结束时间。
+     * Set 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecEndTime 命令执行结束时间。
+     * @param ExecEndTime 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecEndTime(String ExecEndTime) {

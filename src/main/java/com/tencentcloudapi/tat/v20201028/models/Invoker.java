@@ -38,7 +38,7 @@ public class Invoker extends AbstractModel {
     private String Name;
 
     /**
-    * 执行器类型。
+    * 执行器类型。目前仅支持 SCHEDULE 一种。
     */
     @SerializedName("Type")
     @Expose
@@ -88,14 +88,14 @@ public class Invoker extends AbstractModel {
     private ScheduleSettings ScheduleSettings;
 
     /**
-    * 创建时间。
+    * 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 修改时间。
+    * 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -134,16 +134,16 @@ public class Invoker extends AbstractModel {
     }
 
     /**
-     * Get 执行器类型。 
-     * @return Type 执行器类型。
+     * Get 执行器类型。目前仅支持 SCHEDULE 一种。 
+     * @return Type 执行器类型。目前仅支持 SCHEDULE 一种。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 执行器类型。
-     * @param Type 执行器类型。
+     * Set 执行器类型。目前仅支持 SCHEDULE 一种。
+     * @param Type 执行器类型。目前仅支持 SCHEDULE 一种。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -250,32 +250,32 @@ public class Invoker extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 修改时间。 
-     * @return UpdatedTime 修改时间。
+     * Get 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return UpdatedTime 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 修改时间。
-     * @param UpdatedTime 修改时间。
+     * Set 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param UpdatedTime 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

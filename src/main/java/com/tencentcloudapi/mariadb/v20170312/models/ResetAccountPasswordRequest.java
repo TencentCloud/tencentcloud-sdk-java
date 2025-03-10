@@ -45,7 +45,7 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     private String Host;
 
     /**
-    * 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+    * 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
     */
     @SerializedName("Password")
     @Expose
@@ -107,16 +107,16 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。 
-     * @return Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Get 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项 
+     * @return Password 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
-     * @param Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Set 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
+     * @param Password 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      */
     public void setPassword(String Password) {
         this.Password = Password;

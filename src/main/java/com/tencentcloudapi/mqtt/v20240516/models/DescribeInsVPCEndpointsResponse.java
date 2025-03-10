@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.mqtt.v20240516.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParseDocResponse extends AbstractModel {
+public class DescribeInsVPCEndpointsResponse extends AbstractModel {
 
     /**
-    * 任务ID
+    * 接入点
     */
-    @SerializedName("TaskId")
+    @SerializedName("Endpoints")
     @Expose
-    private String TaskId;
+    private MQTTEndpointItem [] Endpoints;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ParseDocResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 接入点 
+     * @return Endpoints 接入点
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public MQTTEndpointItem [] getEndpoints() {
+        return this.Endpoints;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 接入点
+     * @param Endpoints 接入点
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setEndpoints(MQTTEndpointItem [] Endpoints) {
+        this.Endpoints = Endpoints;
     }
 
     /**
@@ -69,16 +69,19 @@ public class ParseDocResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ParseDocResponse() {
+    public DescribeInsVPCEndpointsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ParseDocResponse(ParseDocResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeInsVPCEndpointsResponse(DescribeInsVPCEndpointsResponse source) {
+        if (source.Endpoints != null) {
+            this.Endpoints = new MQTTEndpointItem[source.Endpoints.length];
+            for (int i = 0; i < source.Endpoints.length; i++) {
+                this.Endpoints[i] = new MQTTEndpointItem(source.Endpoints[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class ParseDocResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

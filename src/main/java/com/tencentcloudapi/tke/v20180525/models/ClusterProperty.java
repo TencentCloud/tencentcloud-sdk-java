@@ -25,17 +25,14 @@ public class ClusterProperty extends AbstractModel {
 
     /**
     * 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeNameType")
     @Expose
     private String NodeNameType;
 
     /**
-     * Get 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点hostname命名模式 
      * @return NodeNameType 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeNameType() {
         return this.NodeNameType;
@@ -43,9 +40,7 @@ public class ClusterProperty extends AbstractModel {
 
     /**
      * Set 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeNameType 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeNameType(String NodeNameType) {
         this.NodeNameType = NodeNameType;

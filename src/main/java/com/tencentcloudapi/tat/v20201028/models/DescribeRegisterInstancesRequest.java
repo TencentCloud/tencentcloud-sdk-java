@@ -24,30 +24,34 @@ import java.util.HashMap;
 public class DescribeRegisterInstancesRequest extends AbstractModel {
 
     /**
-    * 实例id。
+    * 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 过滤器列表。
+    * 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -78,39 +82,52 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 实例id。 
-     * @return InstanceIds 实例id。
+     * Get 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+ 
+     * @return InstanceIds 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例id。
-     * @param InstanceIds 实例id。
+     * Set 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+     * @param InstanceIds 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 过滤器列表。
+     * Get 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -121,23 +138,24 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 必选：否
 
  
-     * @return Filters 过滤器列表。
+     * @return Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -154,23 +172,24 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 过滤器列表。
+     * Set 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -181,23 +200,24 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 必选：否
 
 
-     * @param Filters 过滤器列表。
+     * @param Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 

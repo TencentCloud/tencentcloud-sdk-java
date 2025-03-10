@@ -25,8 +25,10 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
     * 执行策略：
-<br><li>ONCE：单次执行
-<br><li>RECURRENCE：周期执行
+- ONCE：单次执行
+- RECURRENCE：周期执行
+
+只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
     */
     @SerializedName("Policy")
     @Expose
@@ -41,6 +43,8 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
     * 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+
+时间格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("InvokeTime")
     @Expose
@@ -48,11 +52,15 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
      * Get 执行策略：
-<br><li>ONCE：单次执行
-<br><li>RECURRENCE：周期执行 
+- ONCE：单次执行
+- RECURRENCE：周期执行
+
+只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填 
      * @return Policy 执行策略：
-<br><li>ONCE：单次执行
-<br><li>RECURRENCE：周期执行
+- ONCE：单次执行
+- RECURRENCE：周期执行
+
+只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      */
     public String getPolicy() {
         return this.Policy;
@@ -60,11 +68,15 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
      * Set 执行策略：
-<br><li>ONCE：单次执行
-<br><li>RECURRENCE：周期执行
+- ONCE：单次执行
+- RECURRENCE：周期执行
+
+只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      * @param Policy 执行策略：
-<br><li>ONCE：单次执行
-<br><li>RECURRENCE：周期执行
+- ONCE：单次执行
+- RECURRENCE：周期执行
+
+只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
@@ -87,8 +99,12 @@ public class ScheduleSettings extends AbstractModel {
     }
 
     /**
-     * Get 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。 
+     * Get 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+
+时间格式为：YYYY-MM-DDThh:mm:ssZ 
      * @return InvokeTime 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+
+时间格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getInvokeTime() {
         return this.InvokeTime;
@@ -96,7 +112,11 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
      * Set 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+
+时间格式为：YYYY-MM-DDThh:mm:ssZ
      * @param InvokeTime 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+
+时间格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setInvokeTime(String InvokeTime) {
         this.InvokeTime = InvokeTime;

@@ -25,7 +25,6 @@ public class DescribeEdgeLogSwitchesResponse extends AbstractModel {
 
     /**
     * 集群日志开关集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEdgeLogSwitchesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群日志开关集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群日志开关集合 
      * @return SwitchSet 集群日志开关集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSwitchSet() {
         return this.SwitchSet;
@@ -50,9 +47,7 @@ public class DescribeEdgeLogSwitchesResponse extends AbstractModel {
 
     /**
      * Set 集群日志开关集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchSet 集群日志开关集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchSet(String [] SwitchSet) {
         this.SwitchSet = SwitchSet;

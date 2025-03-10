@@ -25,7 +25,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterCIDR")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 是否开启第三方节点专线连接支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 节点所属交换机的BGP AS 号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AS")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 节点所属交换机的交换机 IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchIP")
     @Expose
@@ -80,7 +74,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 如果开启失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReason")
     @Expose
@@ -88,7 +81,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Master")
     @Expose
@@ -96,7 +88,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 镜像仓库代理地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proxy")
     @Expose
@@ -126,7 +117,6 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
     * 注册节点公网版自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicCustomDomain")
     @Expose
@@ -140,10 +130,8 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterCIDR() {
         return this.ClusterCIDR;
@@ -151,19 +139,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterCIDR(String ClusterCIDR) {
         this.ClusterCIDR = ClusterCIDR;
     }
 
     /**
-     * Get 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群网络插件类型，支持：CiliumBGP、CiliumVXLan 
      * @return NetworkType 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkType() {
         return this.NetworkType;
@@ -171,19 +155,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkType 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -191,19 +171,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 是否开启第三方节点专线连接支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启第三方节点专线连接支持 
      * @return Enabled 是否开启第三方节点专线连接支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -211,19 +187,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 是否开启第三方节点专线连接支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启第三方节点专线连接支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 节点所属交换机的BGP AS 号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所属交换机的BGP AS 号 
      * @return AS 节点所属交换机的BGP AS 号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAS() {
         return this.AS;
@@ -231,19 +203,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 节点所属交换机的BGP AS 号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AS 节点所属交换机的BGP AS 号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAS(String AS) {
         this.AS = AS;
     }
 
     /**
-     * Get 节点所属交换机的交换机 IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点所属交换机的交换机 IP 
      * @return SwitchIP 节点所属交换机的交换机 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchIP() {
         return this.SwitchIP;
@@ -251,9 +219,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 节点所属交换机的交换机 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchIP 节点所属交换机的交换机 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchIP(String SwitchIP) {
         this.SwitchIP = SwitchIP;
@@ -276,10 +242,8 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 如果开启失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果开启失败原因 
      * @return FailedReason 如果开启失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedReason() {
         return this.FailedReason;
@@ -287,19 +251,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 如果开启失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedReason 如果开启失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReason(String FailedReason) {
         this.FailedReason = FailedReason;
     }
 
     /**
-     * Get 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网访问地址 
      * @return Master 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaster() {
         return this.Master;
@@ -307,19 +267,15 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Master 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaster(String Master) {
         this.Master = Master;
     }
 
     /**
-     * Get 镜像仓库代理地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像仓库代理地址 
      * @return Proxy 镜像仓库代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxy() {
         return this.Proxy;
@@ -327,9 +283,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 镜像仓库代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Proxy 镜像仓库代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxy(String Proxy) {
         this.Proxy = Proxy;
@@ -388,10 +342,8 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 注册节点公网版自定义域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册节点公网版自定义域名 
      * @return PublicCustomDomain 注册节点公网版自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicCustomDomain() {
         return this.PublicCustomDomain;
@@ -399,9 +351,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
 
     /**
      * Set 注册节点公网版自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicCustomDomain 注册节点公网版自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicCustomDomain(String PublicCustomDomain) {
         this.PublicCustomDomain = PublicCustomDomain;

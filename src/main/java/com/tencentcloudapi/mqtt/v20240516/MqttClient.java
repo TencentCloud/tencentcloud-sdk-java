@@ -336,6 +336,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询MQTT实例公网接入点
+     * @param req DescribeInsVPCEndpointsRequest
+     * @return DescribeInsVPCEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInsVPCEndpointsResponse DescribeInsVPCEndpoints(DescribeInsVPCEndpointsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInsVPCEndpoints", DescribeInsVPCEndpointsResponse.class);
+    }
+
+    /**
      *查询实例信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse

@@ -31,7 +31,7 @@ public class InvokerRecord extends AbstractModel {
     private String InvokerId;
 
     /**
-    * 执行时间。
+    * 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("InvokeTime")
     @Expose
@@ -53,6 +53,16 @@ public class InvokerRecord extends AbstractModel {
 
     /**
     * 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
     */
     @SerializedName("Result")
     @Expose
@@ -75,16 +85,16 @@ public class InvokerRecord extends AbstractModel {
     }
 
     /**
-     * Get 执行时间。 
-     * @return InvokeTime 执行时间。
+     * Get 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return InvokeTime 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getInvokeTime() {
         return this.InvokeTime;
     }
 
     /**
-     * Set 执行时间。
-     * @param InvokeTime 执行时间。
+     * Set 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param InvokeTime 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setInvokeTime(String InvokeTime) {
         this.InvokeTime = InvokeTime;
@@ -123,8 +133,28 @@ public class InvokerRecord extends AbstractModel {
     }
 
     /**
-     * Get 触发结果。 
+     * Get 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消 
      * @return Result 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      */
     public String getResult() {
         return this.Result;
@@ -132,7 +162,27 @@ public class InvokerRecord extends AbstractModel {
 
     /**
      * Set 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      * @param Result 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      */
     public void setResult(String Result) {
         this.Result = Result;

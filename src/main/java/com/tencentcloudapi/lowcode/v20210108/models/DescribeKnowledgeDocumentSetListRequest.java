@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeKnowledgeDocumentSetListRequest extends AbstractModel {
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 知识库标识
     */
     @SerializedName("CollectionView")
@@ -36,6 +43,22 @@ public class DescribeKnowledgeDocumentSetListRequest extends AbstractModel {
     @SerializedName("Query")
     @Expose
     private PageQuery Query;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
 
     /**
      * Get 知识库标识 
@@ -77,6 +100,9 @@ public class DescribeKnowledgeDocumentSetListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeKnowledgeDocumentSetListRequest(DescribeKnowledgeDocumentSetListRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.CollectionView != null) {
             this.CollectionView = new String(source.CollectionView);
         }
@@ -90,6 +116,7 @@ public class DescribeKnowledgeDocumentSetListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "CollectionView", this.CollectionView);
         this.setParamObj(map, prefix + "Query.", this.Query);
 
