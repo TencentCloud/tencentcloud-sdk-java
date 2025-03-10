@@ -180,6 +180,18 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     }
 
     /**
+     *将图像变清晰，增强图像细节。变清晰后的图片将保持原图比例，长边为2048。
+默认提供1个并发，代表最多能同时处理1个已提交的任务。
+     * @param req RefineImageRequest
+     * @return RefineImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefineImageResponse RefineImage(RefineImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefineImage", RefineImageResponse.class);
+    }
+
+    /**
      *商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
 
 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。

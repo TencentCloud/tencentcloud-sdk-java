@@ -32,7 +32,6 @@ public class CreateAppScanTaskResponse extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskID")
     @Expose
@@ -62,10 +61,8 @@ public class CreateAppScanTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskID 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskID() {
         return this.TaskID;
@@ -73,9 +70,7 @@ public class CreateAppScanTaskResponse extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskID 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;

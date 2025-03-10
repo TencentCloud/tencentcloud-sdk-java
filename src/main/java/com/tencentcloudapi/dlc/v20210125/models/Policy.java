@@ -155,6 +155,14 @@ public class Policy extends AbstractModel {
     private Long Id;
 
     /**
+    * 引擎类型
+
+    */
+    @SerializedName("EngineGeneration")
+    @Expose
+    private String EngineGeneration;
+
+    /**
      * Get 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
      * @return Database 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      */
@@ -474,6 +482,26 @@ public class Policy extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 引擎类型
+ 
+     * @return EngineGeneration 引擎类型
+
+     */
+    public String getEngineGeneration() {
+        return this.EngineGeneration;
+    }
+
+    /**
+     * Set 引擎类型
+
+     * @param EngineGeneration 引擎类型
+
+     */
+    public void setEngineGeneration(String EngineGeneration) {
+        this.EngineGeneration = EngineGeneration;
+    }
+
     public Policy() {
     }
 
@@ -533,6 +561,9 @@ public class Policy extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.EngineGeneration != null) {
+            this.EngineGeneration = new String(source.EngineGeneration);
+        }
     }
 
 
@@ -557,6 +588,7 @@ public class Policy extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceId", this.SourceId);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
 
     }
 }

@@ -179,6 +179,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     * 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
     */
     @SerializedName("SignBeanTag")
     @Expose
@@ -673,10 +675,14 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
      * Get 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul> 
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5 
      * @return SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
      */
     public Long getSignBeanTag() {
         return this.SignBeanTag;
@@ -686,9 +692,13 @@ public class CreateFlowByFilesRequest extends AbstractModel {
      * Set 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
      * @param SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
      */
     public void setSignBeanTag(Long SignBeanTag) {
         this.SignBeanTag = SignBeanTag;

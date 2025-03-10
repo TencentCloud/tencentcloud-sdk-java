@@ -379,6 +379,13 @@ HoaiMy
     private AICallExtractConfigElement [] ExtractConfig;
 
     /**
+    * 模型温度控制
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private Float Temperature;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1474,6 +1481,22 @@ HoaiMy
         this.ExtractConfig = ExtractConfig;
     }
 
+    /**
+     * Get 模型温度控制 
+     * @return Temperature 模型温度控制
+     */
+    public Float getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set 模型温度控制
+     * @param Temperature 模型温度控制
+     */
+    public void setTemperature(Float Temperature) {
+        this.Temperature = Temperature;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1578,6 +1601,9 @@ HoaiMy
                 this.ExtractConfig[i] = new AICallExtractConfigElement(source.ExtractConfig[i]);
             }
         }
+        if (source.Temperature != null) {
+            this.Temperature = new Float(source.Temperature);
+        }
     }
 
 
@@ -1612,6 +1638,7 @@ HoaiMy
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
         this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
+        this.setParamSimple(map, prefix + "Temperature", this.Temperature);
 
     }
 }

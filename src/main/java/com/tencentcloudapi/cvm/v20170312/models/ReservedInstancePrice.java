@@ -53,7 +53,6 @@ public class ReservedInstancePrice extends AbstractModel {
 
     /**
     * 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixedPriceDiscount")
     @Expose
@@ -61,7 +60,6 @@ public class ReservedInstancePrice extends AbstractModel {
 
     /**
     * 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsagePriceDiscount")
     @Expose
@@ -132,10 +130,8 @@ public class ReservedInstancePrice extends AbstractModel {
     }
 
     /**
-     * Get 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FixedPriceDiscount 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFixedPriceDiscount() {
         return this.FixedPriceDiscount;
@@ -143,19 +139,15 @@ public class ReservedInstancePrice extends AbstractModel {
 
     /**
      * Set 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixedPriceDiscount 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixedPriceDiscount(Float FixedPriceDiscount) {
         this.FixedPriceDiscount = FixedPriceDiscount;
     }
 
     /**
-     * Get 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UsagePriceDiscount 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUsagePriceDiscount() {
         return this.UsagePriceDiscount;
@@ -163,9 +155,7 @@ public class ReservedInstancePrice extends AbstractModel {
 
     /**
      * Set 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsagePriceDiscount 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsagePriceDiscount(Float UsagePriceDiscount) {
         this.UsagePriceDiscount = UsagePriceDiscount;

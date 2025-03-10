@@ -25,7 +25,6 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
 
     /**
     * 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateVersion")
     @Expose
@@ -61,7 +60,6 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
 
     /**
     * 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchTemplateVersionDescription")
     @Expose
@@ -75,10 +73,8 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
     private String CreatedBy;
 
     /**
-     * Get 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板版本号。 
      * @return LaunchTemplateVersion 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLaunchTemplateVersion() {
         return this.LaunchTemplateVersion;
@@ -86,9 +82,7 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateVersion 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateVersion(Long LaunchTemplateVersion) {
         this.LaunchTemplateVersion = LaunchTemplateVersion;
@@ -159,10 +153,8 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例启动模板版本描述信息。 
      * @return LaunchTemplateVersionDescription 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaunchTemplateVersionDescription() {
         return this.LaunchTemplateVersionDescription;
@@ -170,9 +162,7 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
 
     /**
      * Set 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateVersionDescription 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchTemplateVersionDescription(String LaunchTemplateVersionDescription) {
         this.LaunchTemplateVersionDescription = LaunchTemplateVersionDescription;

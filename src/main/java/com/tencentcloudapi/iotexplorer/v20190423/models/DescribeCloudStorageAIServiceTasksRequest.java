@@ -88,6 +88,38 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     private Long ChannelId;
 
     /**
+    * 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+    */
+    @SerializedName("DeviceNames")
+    @Expose
+    private String [] DeviceNames;
+
+    /**
+    * 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+    */
+    @SerializedName("FileURLExpireTime")
+    @Expose
+    private Long FileURLExpireTime;
+
+    /**
      * Get 产品 ID 
      * @return ProductId 产品 ID
      */
@@ -247,6 +279,86 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
         this.ChannelId = ChannelId;
     }
 
+    /**
+     * Get 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName` 
+     * @return DeviceNames 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     */
+    public String [] getDeviceNames() {
+        return this.DeviceNames;
+    }
+
+    /**
+     * Set 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     * @param DeviceNames 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     */
+    public void setDeviceNames(String [] DeviceNames) {
+        this.DeviceNames = DeviceNames;
+    }
+
+    /**
+     * Get 查询任务时间范围的起始时间（秒级 UNIX 时间戳） 
+     * @return StartTime 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     * @param StartTime 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 查询任务时间范围的结束时间（秒级 UNIX 时间戳） 
+     * @return EndTime 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     * @param EndTime 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL 
+     * @return FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public Long getFileURLExpireTime() {
+        return this.FileURLExpireTime;
+    }
+
+    /**
+     * Set 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     * @param FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public void setFileURLExpireTime(Long FileURLExpireTime) {
+        this.FileURLExpireTime = FileURLExpireTime;
+    }
+
     public DescribeCloudStorageAIServiceTasksRequest() {
     }
 
@@ -279,6 +391,21 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
+        if (source.DeviceNames != null) {
+            this.DeviceNames = new String[source.DeviceNames.length];
+            for (int i = 0; i < source.DeviceNames.length; i++) {
+                this.DeviceNames[i] = new String(source.DeviceNames[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.FileURLExpireTime != null) {
+            this.FileURLExpireTime = new Long(source.FileURLExpireTime);
+        }
     }
 
 
@@ -294,6 +421,10 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
 
     }
 }

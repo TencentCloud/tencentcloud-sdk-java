@@ -98,6 +98,13 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     private String [] Files;
 
     /**
+    * 任务输出文件信息列表
+    */
+    @SerializedName("FilesInfo")
+    @Expose
+    private CloudStorageAIServiceTaskFileInfo [] FilesInfo;
+
+    /**
     * 创建时间
     */
     @SerializedName("CreateTime")
@@ -295,6 +302,22 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     }
 
     /**
+     * Get 任务输出文件信息列表 
+     * @return FilesInfo 任务输出文件信息列表
+     */
+    public CloudStorageAIServiceTaskFileInfo [] getFilesInfo() {
+        return this.FilesInfo;
+    }
+
+    /**
+     * Set 任务输出文件信息列表
+     * @param FilesInfo 任务输出文件信息列表
+     */
+    public void setFilesInfo(CloudStorageAIServiceTaskFileInfo [] FilesInfo) {
+        this.FilesInfo = FilesInfo;
+    }
+
+    /**
      * Get 创建时间 
      * @return CreateTime 创建时间
      */
@@ -383,6 +406,12 @@ public class CloudStorageAIServiceTask extends AbstractModel {
                 this.Files[i] = new String(source.Files[i]);
             }
         }
+        if (source.FilesInfo != null) {
+            this.FilesInfo = new CloudStorageAIServiceTaskFileInfo[source.FilesInfo.length];
+            for (int i = 0; i < source.FilesInfo.length; i++) {
+                this.FilesInfo[i] = new CloudStorageAIServiceTaskFileInfo(source.FilesInfo[i]);
+            }
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
@@ -409,6 +438,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);
+        this.setParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);

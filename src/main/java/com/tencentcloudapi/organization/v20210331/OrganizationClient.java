@@ -160,6 +160,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *绑定成员访问授权策略和组织管理员子账号
+     * @param req BindOrganizationPolicySubAccountRequest
+     * @return BindOrganizationPolicySubAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccount(BindOrganizationPolicySubAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindOrganizationPolicySubAccount", BindOrganizationPolicySubAccountResponse.class);
+    }
+
+    /**
      *取消组织成员和组织管理员子账号的授权关系
      * @param req CancelOrganizationMemberAuthAccountRequest
      * @return CancelOrganizationMemberAuthAccountResponse
@@ -168,6 +179,17 @@ public class OrganizationClient extends AbstractClient{
     public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CancelOrganizationMemberAuthAccount", CancelOrganizationMemberAuthAccountResponse.class);
+    }
+
+    /**
+     *解绑成员访问授权策略和组织管理员子账号
+     * @param req CancelOrganizationPolicySubAccountRequest
+     * @return CancelOrganizationPolicySubAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccount(CancelOrganizationPolicySubAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelOrganizationPolicySubAccount", CancelOrganizationPolicySubAccountResponse.class);
     }
 
     /**

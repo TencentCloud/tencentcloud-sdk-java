@@ -303,6 +303,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询 MQTT 客户端详情
+     * @param req DescribeClientListRequest
+     * @return DescribeClientListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientListResponse DescribeClientList(DescribeClientListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClientList", DescribeClientListResponse.class);
+    }
+
+    /**
      *查询设备证书详情接口
      * @param req DescribeDeviceCertificateRequest
      * @return DescribeDeviceCertificateResponse
@@ -374,6 +385,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询消息列表，如查询死信，请设置ConsumerGroup参数
+     * @param req DescribeMessageListRequest
+     * @return DescribeMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageListResponse DescribeMessageList(DescribeMessageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageList", DescribeMessageListResponse.class);
+    }
+
+    /**
      *获取产品售卖规格
      * @param req DescribeProductSKUListRequest
      * @return DescribeProductSKUListResponse
@@ -382,6 +404,17 @@ public class MqttClient extends AbstractClient{
     public DescribeProductSKUListResponse DescribeProductSKUList(DescribeProductSKUListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProductSKUList", DescribeProductSKUListResponse.class);
+    }
+
+    /**
+     *查询共享订阅消息堆积量
+     * @param req DescribeSharedSubscriptionLagRequest
+     * @return DescribeSharedSubscriptionLagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(DescribeSharedSubscriptionLagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptionLag", DescribeSharedSubscriptionLagResponse.class);
     }
 
     /**
