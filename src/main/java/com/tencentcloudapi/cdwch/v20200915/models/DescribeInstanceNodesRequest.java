@@ -31,7 +31,7 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 集群角色类型，默认为 "data"数据节点
+    * 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
     */
     @SerializedName("NodeRole")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群角色类型，默认为 "data"数据节点 
-     * @return NodeRole 集群角色类型，默认为 "data"数据节点
+     * Get 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。 
+     * @return NodeRole 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
      */
     public String getNodeRole() {
         return this.NodeRole;
     }
 
     /**
-     * Set 集群角色类型，默认为 "data"数据节点
-     * @param NodeRole 集群角色类型，默认为 "data"数据节点
+     * Set 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
+     * @param NodeRole 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
      */
     public void setNodeRole(String NodeRole) {
         this.NodeRole = NodeRole;

@@ -25,7 +25,6 @@ public class DescribeMessageListResponse extends AbstractModel {
 
     /**
     * 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMessageListResponse extends AbstractModel {
 
     /**
     * 消息记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -54,10 +52,8 @@ public class DescribeMessageListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询总数 
      * @return TotalCount 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -65,19 +61,15 @@ public class DescribeMessageListResponse extends AbstractModel {
 
     /**
      * Set 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 消息记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息记录列表 
      * @return Data 消息记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MQTTMessageItem [] getData() {
         return this.Data;
@@ -85,9 +77,7 @@ public class DescribeMessageListResponse extends AbstractModel {
 
     /**
      * Set 消息记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 消息记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(MQTTMessageItem [] Data) {
         this.Data = Data;

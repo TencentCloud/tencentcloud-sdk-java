@@ -83,6 +83,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *创建一个HTTP的认证器
+     * @param req CreateHttpAuthenticatorRequest
+     * @return CreateHttpAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHttpAuthenticatorResponse CreateHttpAuthenticator(CreateHttpAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHttpAuthenticator", CreateHttpAuthenticatorResponse.class);
+    }
+
+    /**
      *为MQTT实例创建公网接入点
      * @param req CreateInsPublicEndpointRequest
      * @return CreateInsPublicEndpointResponse
@@ -464,6 +475,17 @@ public class MqttClient extends AbstractClient{
     public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(ModifyAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuthorizationPolicy", ModifyAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *修改MQTT HTTP 认证器
+     * @param req ModifyHttpAuthenticatorRequest
+     * @return ModifyHttpAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHttpAuthenticatorResponse ModifyHttpAuthenticator(ModifyHttpAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHttpAuthenticator", ModifyHttpAuthenticatorResponse.class);
     }
 
     /**

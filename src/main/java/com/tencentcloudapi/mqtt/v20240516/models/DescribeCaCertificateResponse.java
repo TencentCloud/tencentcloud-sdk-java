@@ -95,7 +95,6 @@ public class DescribeCaCertificateResponse extends AbstractModel {
 
     /**
     * Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaIssuerCn")
     @Expose
@@ -276,10 +275,8 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ca证书颁发者CN 
      * @return CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaIssuerCn() {
         return this.CaIssuerCn;
@@ -287,9 +284,7 @@ public class DescribeCaCertificateResponse extends AbstractModel {
 
     /**
      * Set Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaIssuerCn(String CaIssuerCn) {
         this.CaIssuerCn = CaIssuerCn;

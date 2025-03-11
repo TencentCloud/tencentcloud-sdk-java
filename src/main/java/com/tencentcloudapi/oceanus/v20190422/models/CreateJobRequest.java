@@ -101,6 +101,13 @@ public class CreateJobRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 开启默认告警
+    */
+    @SerializedName("OpenJobDefaultAlarm")
+    @Expose
+    private Long OpenJobDefaultAlarm;
+
+    /**
      * Get 作业名称，允许输入长度小于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名 
      * @return Name 作业名称，允许输入长度小于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      */
@@ -276,6 +283,22 @@ public class CreateJobRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 开启默认告警 
+     * @return OpenJobDefaultAlarm 开启默认告警
+     */
+    public Long getOpenJobDefaultAlarm() {
+        return this.OpenJobDefaultAlarm;
+    }
+
+    /**
+     * Set 开启默认告警
+     * @param OpenJobDefaultAlarm 开启默认告警
+     */
+    public void setOpenJobDefaultAlarm(Long OpenJobDefaultAlarm) {
+        this.OpenJobDefaultAlarm = OpenJobDefaultAlarm;
+    }
+
     public CreateJobRequest() {
     }
 
@@ -320,6 +343,9 @@ public class CreateJobRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.OpenJobDefaultAlarm != null) {
+            this.OpenJobDefaultAlarm = new Long(source.OpenJobDefaultAlarm);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class CreateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
 
     }
 }

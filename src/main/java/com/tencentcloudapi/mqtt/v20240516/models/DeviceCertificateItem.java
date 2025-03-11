@@ -25,7 +25,6 @@ public class DeviceCertificateItem extends AbstractModel {
 
     /**
     * 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientId")
     @Expose
@@ -78,8 +77,14 @@ public class DeviceCertificateItem extends AbstractModel {
     private String Status;
 
     /**
+    * 组织单位
+    */
+    @SerializedName("OrganizationalUnit")
+    @Expose
+    private String OrganizationalUnit;
+
+    /**
     * 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastActivationTime")
     @Expose
@@ -87,7 +92,6 @@ public class DeviceCertificateItem extends AbstractModel {
 
     /**
     * 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastInactivationTime")
     @Expose
@@ -102,7 +106,6 @@ public class DeviceCertificateItem extends AbstractModel {
 
     /**
     * 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -112,7 +115,6 @@ public class DeviceCertificateItem extends AbstractModel {
     * 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateSource")
     @Expose
@@ -120,7 +122,6 @@ JITP 自动注册
 
     /**
     * 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotAfterTime")
     @Expose
@@ -128,17 +129,14 @@ JITP 自动注册
 
     /**
     * 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotBeforeTime")
     @Expose
     private Long NotBeforeTime;
 
     /**
-     * Get 客户端id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端id 
      * @return ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientId() {
         return this.ClientId;
@@ -146,9 +144,7 @@ JITP 自动注册
 
     /**
      * Set 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
@@ -267,10 +263,24 @@ JITP 自动注册
     }
 
     /**
-     * Get 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织单位 
+     * @return OrganizationalUnit 组织单位
+     */
+    public String getOrganizationalUnit() {
+        return this.OrganizationalUnit;
+    }
+
+    /**
+     * Set 组织单位
+     * @param OrganizationalUnit 组织单位
+     */
+    public void setOrganizationalUnit(String OrganizationalUnit) {
+        this.OrganizationalUnit = OrganizationalUnit;
+    }
+
+    /**
+     * Get 上次激活时间 
      * @return LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastActivationTime() {
         return this.LastActivationTime;
@@ -278,19 +288,15 @@ JITP 自动注册
 
     /**
      * Set 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastActivationTime(Long LastActivationTime) {
         this.LastActivationTime = LastActivationTime;
     }
 
     /**
-     * Get 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次取消激活时间 
      * @return LastInactivationTime 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastInactivationTime() {
         return this.LastInactivationTime;
@@ -298,9 +304,7 @@ JITP 自动注册
 
     /**
      * Set 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastInactivationTime 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastInactivationTime(Long LastInactivationTime) {
         this.LastInactivationTime = LastInactivationTime;
@@ -323,10 +327,8 @@ JITP 自动注册
     }
 
     /**
-     * Get 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预销毁时间 
      * @return UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -334,9 +336,7 @@ JITP 自动注册
 
     /**
      * Set 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -345,12 +345,10 @@ JITP 自动注册
     /**
      * Get 证书来源：
 API, 手动注册   
-JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。 
+JITP 自动注册 
      * @return CertificateSource 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateSource() {
         return this.CertificateSource;
@@ -360,21 +358,17 @@ JITP 自动注册
      * Set 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateSource 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateSource(String CertificateSource) {
         this.CertificateSource = CertificateSource;
     }
 
     /**
-     * Get 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书失效日期 
      * @return NotAfterTime 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotAfterTime() {
         return this.NotAfterTime;
@@ -382,19 +376,15 @@ JITP 自动注册
 
     /**
      * Set 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotAfterTime 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotAfterTime(Long NotAfterTime) {
         this.NotAfterTime = NotAfterTime;
     }
 
     /**
-     * Get 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书生效开始日期 
      * @return NotBeforeTime 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotBeforeTime() {
         return this.NotBeforeTime;
@@ -402,9 +392,7 @@ JITP 自动注册
 
     /**
      * Set 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotBeforeTime 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotBeforeTime(Long NotBeforeTime) {
         this.NotBeforeTime = NotBeforeTime;
@@ -438,6 +426,9 @@ JITP 自动注册
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.OrganizationalUnit != null) {
+            this.OrganizationalUnit = new String(source.OrganizationalUnit);
         }
         if (source.LastActivationTime != null) {
             this.LastActivationTime = new Long(source.LastActivationTime);
@@ -474,6 +465,7 @@ JITP 自动注册
         this.setParamSimple(map, prefix + "CaSn", this.CaSn);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "OrganizationalUnit", this.OrganizationalUnit);
         this.setParamSimple(map, prefix + "LastActivationTime", this.LastActivationTime);
         this.setParamSimple(map, prefix + "LastInactivationTime", this.LastInactivationTime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);

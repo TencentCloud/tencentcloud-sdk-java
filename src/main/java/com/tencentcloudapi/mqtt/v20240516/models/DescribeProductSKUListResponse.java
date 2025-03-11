@@ -25,7 +25,6 @@ public class DescribeProductSKUListResponse extends AbstractModel {
 
     /**
     * 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeProductSKUListResponse extends AbstractModel {
 
     /**
     * mqtt商品配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MQTTProductSkuList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeProductSKUListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询总数 
      * @return TotalCount 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeProductSKUListResponse extends AbstractModel {
 
     /**
      * Set 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get mqtt商品配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mqtt商品配置信息 
      * @return MQTTProductSkuList mqtt商品配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProductSkuItem [] getMQTTProductSkuList() {
         return this.MQTTProductSkuList;
@@ -78,9 +70,7 @@ public class DescribeProductSKUListResponse extends AbstractModel {
 
     /**
      * Set mqtt商品配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MQTTProductSkuList mqtt商品配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMQTTProductSkuList(ProductSkuItem [] MQTTProductSkuList) {
         this.MQTTProductSkuList = MQTTProductSkuList;

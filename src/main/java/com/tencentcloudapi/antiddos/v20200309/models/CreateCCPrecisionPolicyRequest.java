@@ -52,7 +52,7 @@ public class CreateCCPrecisionPolicyRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 策略方式，可取值alg表示验证码，drop表示丢弃
+    * 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
     */
     @SerializedName("PolicyAction")
     @Expose
@@ -130,16 +130,16 @@ public class CreateCCPrecisionPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 策略方式，可取值alg表示验证码，drop表示丢弃 
-     * @return PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃
+     * Get 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行 
+     * @return PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
      */
     public String getPolicyAction() {
         return this.PolicyAction;
     }
 
     /**
-     * Set 策略方式，可取值alg表示验证码，drop表示丢弃
-     * @param PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃
+     * Set 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
+     * @param PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
      */
     public void setPolicyAction(String PolicyAction) {
         this.PolicyAction = PolicyAction;

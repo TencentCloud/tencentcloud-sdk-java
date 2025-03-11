@@ -81,7 +81,6 @@ DELETING，删除中
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -103,7 +102,6 @@ DELETING，删除中
 
     /**
     * 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TpsLimit")
     @Expose
@@ -111,7 +109,6 @@ DELETING，删除中
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -119,7 +116,6 @@ DELETING，删除中
 
     /**
     * 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSubscriptionPerClient")
     @Expose
@@ -127,7 +123,6 @@ DELETING，删除中
 
     /**
     * 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientNumLimit")
     @Expose
@@ -135,7 +130,6 @@ DELETING，删除中
 
     /**
     * 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -143,7 +137,6 @@ DELETING，删除中
 
     /**
     * 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -151,7 +144,6 @@ DELETING，删除中
 
     /**
     * 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiryTime")
     @Expose
@@ -159,7 +151,6 @@ DELETING，删除中
 
     /**
     * 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestroyTime")
     @Expose
@@ -167,7 +158,6 @@ DELETING，删除中
 
     /**
     * 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizationPolicyLimit")
     @Expose
@@ -175,7 +165,6 @@ DELETING，删除中
 
     /**
     * 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxCaNum")
     @Expose
@@ -183,7 +172,6 @@ DELETING，删除中
 
     /**
     * 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSubscription")
     @Expose
@@ -342,10 +330,8 @@ DELETING，删除中
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -353,9 +339,7 @@ DELETING，删除中
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -394,10 +378,8 @@ DELETING，删除中
     }
 
     /**
-     * Get 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性TPS限流值 
      * @return TpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
@@ -405,19 +387,15 @@ DELETING，删除中
 
     /**
      * Set 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -425,19 +403,15 @@ DELETING，删除中
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单客户端最大订阅数量 
      * @return MaxSubscriptionPerClient 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSubscriptionPerClient() {
         return this.MaxSubscriptionPerClient;
@@ -445,19 +419,15 @@ DELETING，删除中
 
     /**
      * Set 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSubscriptionPerClient 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSubscriptionPerClient(Long MaxSubscriptionPerClient) {
         this.MaxSubscriptionPerClient = MaxSubscriptionPerClient;
     }
 
     /**
-     * Get 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端连接数上线 
      * @return ClientNumLimit 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientNumLimit() {
         return this.ClientNumLimit;
@@ -465,19 +435,15 @@ DELETING，删除中
 
     /**
      * Set 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientNumLimit 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientNumLimit(Long ClientNumLimit) {
         this.ClientNumLimit = ClientNumLimit;
     }
 
     /**
-     * Get 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动续费 
      * @return RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -485,19 +451,15 @@ DELETING，删除中
 
     /**
      * Set 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式， POSTPAID，按量计费 PREPAID，包年包月 
      * @return PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -505,19 +467,15 @@ DELETING，删除中
 
     /**
      * Set 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间，秒为单位 
      * @return ExpiryTime 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
@@ -525,19 +483,15 @@ DELETING，删除中
 
     /**
      * Set 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiryTime 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
     }
 
     /**
-     * Get 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预销毁时间 
      * @return DestroyTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
@@ -545,19 +499,15 @@ DELETING，删除中
 
     /**
      * Set 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestroyTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;
     }
 
     /**
-     * Get 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权规则条数限制 
      * @return AuthorizationPolicyLimit 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizationPolicyLimit() {
         return this.AuthorizationPolicyLimit;
@@ -565,19 +515,15 @@ DELETING，删除中
 
     /**
      * Set 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizationPolicyLimit 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizationPolicyLimit(Long AuthorizationPolicyLimit) {
         this.AuthorizationPolicyLimit = AuthorizationPolicyLimit;
     }
 
     /**
-     * Get 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大ca配额 
      * @return MaxCaNum 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxCaNum() {
         return this.MaxCaNum;
@@ -585,19 +531,15 @@ DELETING，删除中
 
     /**
      * Set 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxCaNum 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxCaNum(Long MaxCaNum) {
         this.MaxCaNum = MaxCaNum;
     }
 
     /**
-     * Get 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大订阅数 
      * @return MaxSubscription 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSubscription() {
         return this.MaxSubscription;
@@ -605,9 +547,7 @@ DELETING，删除中
 
     /**
      * Set 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSubscription 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSubscription(Long MaxSubscription) {
         this.MaxSubscription = MaxSubscription;

@@ -27,7 +27,6 @@ public class ProductSkuItem extends AbstractModel {
     * 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -35,7 +34,6 @@ PRO ：专业版
 
     /**
     * 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkuCode")
     @Expose
@@ -43,7 +41,6 @@ PRO ：专业版
 
     /**
     * 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnSale")
     @Expose
@@ -51,7 +48,6 @@ PRO ：专业版
 
     /**
     * topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNumLimit")
     @Expose
@@ -59,7 +55,6 @@ PRO ：专业版
 
     /**
     * tps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TpsLimit")
     @Expose
@@ -67,7 +62,6 @@ PRO ：专业版
 
     /**
     * 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientNumLimit")
     @Expose
@@ -75,7 +69,6 @@ PRO ：专业版
 
     /**
     * 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSubscriptionPerClient")
     @Expose
@@ -83,7 +76,6 @@ PRO ：专业版
 
     /**
     * 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizationPolicyLimit")
     @Expose
@@ -91,7 +83,6 @@ PRO ：专业版
 
     /**
     * 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceTags")
     @Expose
@@ -100,12 +91,10 @@ PRO ：专业版
     /**
      * Get 规格类型
 BASIC：基础版
-PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。 
+PRO ：专业版 
      * @return InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -115,21 +104,17 @@ PRO ：专业版
      * Set 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 规格代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格代码 
      * @return SkuCode 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSkuCode() {
         return this.SkuCode;
@@ -137,19 +122,15 @@ PRO ：专业版
 
     /**
      * Set 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkuCode 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
     }
 
     /**
-     * Get 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否售卖 
      * @return OnSale 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOnSale() {
         return this.OnSale;
@@ -157,19 +138,15 @@ PRO ：专业版
 
     /**
      * Set 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnSale 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnSale(Boolean OnSale) {
         this.OnSale = OnSale;
     }
 
     /**
-     * Get topic num限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get topic num限制 
      * @return TopicNumLimit topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicNumLimit() {
         return this.TopicNumLimit;
@@ -177,19 +154,15 @@ PRO ：专业版
 
     /**
      * Set topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNumLimit topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNumLimit(Long TopicNumLimit) {
         this.TopicNumLimit = TopicNumLimit;
     }
 
     /**
-     * Get tps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tps 
      * @return TpsLimit tps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
@@ -197,19 +170,15 @@ PRO ：专业版
 
     /**
      * Set tps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpsLimit tps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端连接数 
      * @return ClientNumLimit 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientNumLimit() {
         return this.ClientNumLimit;
@@ -217,19 +186,15 @@ PRO ：专业版
 
     /**
      * Set 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientNumLimit 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientNumLimit(Long ClientNumLimit) {
         this.ClientNumLimit = ClientNumLimit;
     }
 
     /**
-     * Get 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单客户端最大订阅数 
      * @return MaxSubscriptionPerClient 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSubscriptionPerClient() {
         return this.MaxSubscriptionPerClient;
@@ -237,19 +202,15 @@ PRO ：专业版
 
     /**
      * Set 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSubscriptionPerClient 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSubscriptionPerClient(Long MaxSubscriptionPerClient) {
         this.MaxSubscriptionPerClient = MaxSubscriptionPerClient;
     }
 
     /**
-     * Get 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权规则条数 
      * @return AuthorizationPolicyLimit 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizationPolicyLimit() {
         return this.AuthorizationPolicyLimit;
@@ -257,19 +218,15 @@ PRO ：专业版
 
     /**
      * Set 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizationPolicyLimit 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizationPolicyLimit(Long AuthorizationPolicyLimit) {
         this.AuthorizationPolicyLimit = AuthorizationPolicyLimit;
     }
 
     /**
-     * Get 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费项信息 
      * @return PriceTags 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PriceTag [] getPriceTags() {
         return this.PriceTags;
@@ -277,9 +234,7 @@ PRO ：专业版
 
     /**
      * Set 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceTags 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceTags(PriceTag [] PriceTags) {
         this.PriceTags = PriceTags;

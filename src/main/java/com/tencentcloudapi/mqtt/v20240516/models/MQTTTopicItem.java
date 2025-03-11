@@ -39,7 +39,6 @@ public class MQTTTopicItem extends AbstractModel {
 
     /**
     * 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -78,10 +77,8 @@ public class MQTTTopicItem extends AbstractModel {
     }
 
     /**
-     * Get 主题描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题描述 
      * @return Remark 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -89,9 +86,7 @@ public class MQTTTopicItem extends AbstractModel {
 
     /**
      * Set 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

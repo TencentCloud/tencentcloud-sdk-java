@@ -25,7 +25,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgId")
     @Expose
@@ -33,7 +32,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -41,7 +39,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -49,7 +46,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProducerAddr")
     @Expose
@@ -57,7 +53,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProduceTime")
     @Expose
@@ -65,7 +60,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterResendTimes")
     @Expose
@@ -73,7 +67,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterResendSuccessTimes")
     @Expose
@@ -81,7 +74,6 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 子topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubTopic")
     @Expose
@@ -89,17 +81,14 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-     * Get 消息ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息ID 
      * @return MsgId 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgId() {
         return this.MsgId;
@@ -107,19 +96,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgId 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
     }
 
     /**
-     * Get 消息tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息tag 
      * @return Tags 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTags() {
         return this.Tags;
@@ -127,19 +112,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 消息key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息key 
      * @return Keys 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeys() {
         return this.Keys;
@@ -147,19 +128,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(String Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端地址	 
      * @return ProducerAddr 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProducerAddr() {
         return this.ProducerAddr;
@@ -167,19 +144,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProducerAddr 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProducerAddr(String ProducerAddr) {
         this.ProducerAddr = ProducerAddr;
     }
 
     /**
-     * Get 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息发送时间	 
      * @return ProduceTime 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduceTime() {
         return this.ProduceTime;
@@ -187,19 +160,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProduceTime 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduceTime(String ProduceTime) {
         this.ProduceTime = ProduceTime;
     }
 
     /**
-     * Get 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信重发次数	 
      * @return DeadLetterResendTimes 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadLetterResendTimes() {
         return this.DeadLetterResendTimes;
@@ -207,19 +176,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterResendTimes 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterResendTimes(Long DeadLetterResendTimes) {
         this.DeadLetterResendTimes = DeadLetterResendTimes;
     }
 
     /**
-     * Get 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信重发成功次数 
      * @return DeadLetterResendSuccessTimes 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadLetterResendSuccessTimes() {
         return this.DeadLetterResendSuccessTimes;
@@ -227,19 +192,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterResendSuccessTimes 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterResendSuccessTimes(Long DeadLetterResendSuccessTimes) {
         this.DeadLetterResendSuccessTimes = DeadLetterResendSuccessTimes;
     }
 
     /**
-     * Get 子topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子topic 
      * @return SubTopic 子topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubTopic() {
         return this.SubTopic;
@@ -247,19 +208,15 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 子topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubTopic 子topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubTopic(String SubTopic) {
         this.SubTopic = SubTopic;
     }
 
     /**
-     * Get 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息质量等级 
      * @return Qos 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQos() {
         return this.Qos;
@@ -267,9 +224,7 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qos 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQos(String Qos) {
         this.Qos = Qos;

@@ -39,7 +39,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 规则名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -47,7 +46,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 规则语法版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -55,7 +53,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 越小越优先
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -63,7 +60,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * allow/deny
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Effect")
     @Expose
@@ -71,7 +67,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * connect、pub、sub
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
     @Expose
@@ -79,7 +74,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
     @Expose
@@ -87,7 +81,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * client
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientId")
     @Expose
@@ -95,7 +88,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Username")
     @Expose
@@ -103,7 +95,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * IP地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -111,7 +102,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 0，1，2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qos")
     @Expose
@@ -121,7 +111,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
     * 1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retain")
     @Expose
@@ -129,7 +118,6 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -182,10 +170,8 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get 规则名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名 
      * @return PolicyName 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -193,19 +179,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 规则语法版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则语法版本 
      * @return Version 规则语法版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
         return this.Version;
@@ -213,19 +195,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 规则语法版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 规则语法版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 越小越优先
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 越小越优先 
      * @return Priority 越小越优先
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -233,19 +211,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 越小越优先
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 越小越优先
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get allow/deny
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get allow/deny 
      * @return Effect allow/deny
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffect() {
         return this.Effect;
@@ -253,19 +227,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set allow/deny
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Effect allow/deny
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get connect、pub、sub
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get connect、pub、sub 
      * @return Actions connect、pub、sub
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActions() {
         return this.Actions;
@@ -273,19 +243,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set connect、pub、sub
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Actions connect、pub、sub
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源 
      * @return Resources 资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResources() {
         return this.Resources;
@@ -293,19 +259,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resources 资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(String Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get client
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get client 
      * @return ClientId client
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientId() {
         return this.ClientId;
@@ -313,19 +275,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set client
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientId client
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return Username 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsername() {
         return this.Username;
@@ -333,19 +291,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Username 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get IP地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP地址 
      * @return Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -353,19 +307,15 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 0，1，2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0，1，2 
      * @return Qos 0，1，2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQos() {
         return this.Qos;
@@ -373,9 +323,7 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 0，1，2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qos 0，1，2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
@@ -384,12 +332,10 @@ public class AuthorizationPolicyItem extends AbstractModel {
     /**
      * Get 1：表示匹配retain消息
 2：表示匹配非retain消息
-3：表示匹配retain和非retain消息
-注意：此字段可能返回 null，表示取不到有效值。 
+3：表示匹配retain和非retain消息 
      * @return Retain 1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetain() {
         return this.Retain;
@@ -399,21 +345,17 @@ public class AuthorizationPolicyItem extends AbstractModel {
      * Set 1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Retain 1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetain(Long Retain) {
         this.Retain = Retain;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -421,9 +363,7 @@ public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

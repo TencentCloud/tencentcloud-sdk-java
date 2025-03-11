@@ -321,6 +321,22 @@ public class JobV1 extends AbstractModel {
     private Float RunningMem;
 
     /**
+    * 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenJobDefaultAlarm")
+    @Expose
+    private Long OpenJobDefaultAlarm;
+
+    /**
+    * 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProgressDesc")
+    @Expose
+    private String ProgressDesc;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -1064,6 +1080,46 @@ public class JobV1 extends AbstractModel {
         this.RunningMem = RunningMem;
     }
 
+    /**
+     * Get 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpenJobDefaultAlarm 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOpenJobDefaultAlarm() {
+        return this.OpenJobDefaultAlarm;
+    }
+
+    /**
+     * Set 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenJobDefaultAlarm 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenJobDefaultAlarm(Long OpenJobDefaultAlarm) {
+        this.OpenJobDefaultAlarm = OpenJobDefaultAlarm;
+    }
+
+    /**
+     * Get 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProgressDesc 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProgressDesc() {
+        return this.ProgressDesc;
+    }
+
+    /**
+     * Set 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProgressDesc 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgressDesc(String ProgressDesc) {
+        this.ProgressDesc = ProgressDesc;
+    }
+
     public JobV1() {
     }
 
@@ -1186,6 +1242,12 @@ public class JobV1 extends AbstractModel {
         if (source.RunningMem != null) {
             this.RunningMem = new Float(source.RunningMem);
         }
+        if (source.OpenJobDefaultAlarm != null) {
+            this.OpenJobDefaultAlarm = new Long(source.OpenJobDefaultAlarm);
+        }
+        if (source.ProgressDesc != null) {
+            this.ProgressDesc = new String(source.ProgressDesc);
+        }
     }
 
 
@@ -1230,6 +1292,8 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "ScalingType", this.ScalingType);
         this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
+        this.setParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
+        this.setParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
 
     }
 }

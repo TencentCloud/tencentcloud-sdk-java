@@ -25,7 +25,6 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
     * ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpRule")
     @Expose
@@ -33,7 +32,6 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
     * 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Allow")
     @Expose
@@ -41,17 +39,14 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip网段信息 
      * @return IpRule ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpRule() {
         return this.IpRule;
@@ -59,19 +54,15 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
      * Set ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpRule ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpRule(String IpRule) {
         this.IpRule = IpRule;
     }
 
     /**
-     * Get 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 允许或者拒绝 
      * @return Allow 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllow() {
         return this.Allow;
@@ -79,19 +70,15 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
      * Set 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Allow 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllow(Boolean Allow) {
         this.Allow = Allow;
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -99,9 +86,7 @@ public class PublicAccessRule extends AbstractModel {
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

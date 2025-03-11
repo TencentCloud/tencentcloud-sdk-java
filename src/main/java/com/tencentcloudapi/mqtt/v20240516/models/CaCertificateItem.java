@@ -60,7 +60,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * ca状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -68,7 +67,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastActivationTime")
     @Expose
@@ -76,7 +74,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -84,7 +81,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -92,7 +88,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastInactivationTime")
     @Expose
@@ -100,7 +95,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaIssuerCn")
     @Expose
@@ -108,7 +102,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotBeforeTime")
     @Expose
@@ -116,7 +109,6 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
     * 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotAfterTime")
     @Expose
@@ -203,10 +195,8 @@ public class CaCertificateItem extends AbstractModel {
     }
 
     /**
-     * Get ca状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ca状态 
      * @return Status ca状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -214,19 +204,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set ca状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status ca状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次激活时间 
      * @return LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastActivationTime() {
         return this.LastActivationTime;
@@ -234,19 +220,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastActivationTime(Long LastActivationTime) {
         this.LastActivationTime = LastActivationTime;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
@@ -254,19 +236,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预销毁时间 
      * @return UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -274,19 +252,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次去激活时间 
      * @return LastInactivationTime 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastInactivationTime() {
         return this.LastInactivationTime;
@@ -294,19 +268,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastInactivationTime 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastInactivationTime(Long LastInactivationTime) {
         this.LastInactivationTime = LastInactivationTime;
     }
 
     /**
-     * Get Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ca证书颁发者CN 
      * @return CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaIssuerCn() {
         return this.CaIssuerCn;
@@ -314,19 +284,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaIssuerCn(String CaIssuerCn) {
         this.CaIssuerCn = CaIssuerCn;
     }
 
     /**
-     * Get 生效时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效时间 
      * @return NotBeforeTime 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotBeforeTime() {
         return this.NotBeforeTime;
@@ -334,19 +300,15 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotBeforeTime 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotBeforeTime(Long NotBeforeTime) {
         this.NotBeforeTime = NotBeforeTime;
     }
 
     /**
-     * Get 失效时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失效时间 
      * @return NotAfterTime 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotAfterTime() {
         return this.NotAfterTime;
@@ -354,9 +316,7 @@ public class CaCertificateItem extends AbstractModel {
 
     /**
      * Set 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotAfterTime 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotAfterTime(Long NotAfterTime) {
         this.NotAfterTime = NotAfterTime;

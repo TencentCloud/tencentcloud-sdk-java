@@ -25,7 +25,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientId")
     @Expose
@@ -33,7 +32,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientAddress")
     @Expose
@@ -41,7 +39,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolVersion")
     @Expose
@@ -49,7 +46,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keepalive")
     @Expose
@@ -57,7 +53,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionStatus")
     @Expose
@@ -65,7 +60,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectTime")
     @Expose
@@ -81,7 +74,6 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisconnectTime")
     @Expose
@@ -89,17 +81,14 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
     * 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MQTTClientSubscriptions")
     @Expose
     private MQTTClientSubscription [] MQTTClientSubscriptions;
 
     /**
-     * Get 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端唯一标识 
      * @return ClientId 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientId() {
         return this.ClientId;
@@ -107,19 +96,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientId 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端网络地址 
      * @return ClientAddress 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientAddress() {
         return this.ClientAddress;
@@ -127,19 +112,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientAddress 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientAddress(String ClientAddress) {
         this.ClientAddress = ClientAddress;
     }
 
     /**
-     * Get MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT 协议版本，4 表示 MQTT 3.1.1 
      * @return ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtocolVersion() {
         return this.ProtocolVersion;
@@ -147,19 +128,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolVersion(Long ProtocolVersion) {
         this.ProtocolVersion = ProtocolVersion;
     }
 
     /**
-     * Get 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保持连接时间，单位：秒 
      * @return Keepalive 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKeepalive() {
         return this.Keepalive;
@@ -167,19 +144,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keepalive 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepalive(Long Keepalive) {
         this.Keepalive = Keepalive;
     }
 
     /**
-     * Get 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接状态，CONNECTED 已连接，DISCONNECTED 未连接 
      * @return ConnectionStatus 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectionStatus() {
         return this.ConnectionStatus;
@@ -187,19 +160,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionStatus 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionStatus(String ConnectionStatus) {
         this.ConnectionStatus = ConnectionStatus;
     }
 
     /**
-     * Get 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端创建时间 
      * @return CreateTime 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -207,19 +176,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次建立连接时间 
      * @return ConnectTime 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectTime() {
         return this.ConnectTime;
@@ -227,19 +192,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectTime 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectTime(Long ConnectTime) {
         this.ConnectTime = ConnectTime;
     }
 
     /**
-     * Get 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义 
      * @return DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisconnectTime() {
         return this.DisconnectTime;
@@ -247,19 +208,15 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisconnectTime(Long DisconnectTime) {
         this.DisconnectTime = DisconnectTime;
     }
 
     /**
-     * Get 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端的订阅列表 
      * @return MQTTClientSubscriptions 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MQTTClientSubscription [] getMQTTClientSubscriptions() {
         return this.MQTTClientSubscriptions;
@@ -267,9 +224,7 @@ public class MQTTClientInfo extends AbstractModel {
 
     /**
      * Set 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MQTTClientSubscriptions 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMQTTClientSubscriptions(MQTTClientSubscription [] MQTTClientSubscriptions) {
         this.MQTTClientSubscriptions = MQTTClientSubscriptions;

@@ -102,7 +102,6 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
 
     /**
     * 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientId")
     @Expose
@@ -122,6 +121,13 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
     @SerializedName("NotBeforeTime")
     @Expose
     private Long NotBeforeTime;
+
+    /**
+    * 组织单位
+    */
+    @SerializedName("OrganizationalUnit")
+    @Expose
+    private String OrganizationalUnit;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -307,10 +313,8 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 客户端id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端id 
      * @return ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientId() {
         return this.ClientId;
@@ -318,9 +322,7 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
 
     /**
      * Set 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
@@ -360,6 +362,22 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
      */
     public void setNotBeforeTime(Long NotBeforeTime) {
         this.NotBeforeTime = NotBeforeTime;
+    }
+
+    /**
+     * Get 组织单位 
+     * @return OrganizationalUnit 组织单位
+     */
+    public String getOrganizationalUnit() {
+        return this.OrganizationalUnit;
+    }
+
+    /**
+     * Set 组织单位
+     * @param OrganizationalUnit 组织单位
+     */
+    public void setOrganizationalUnit(String OrganizationalUnit) {
+        this.OrganizationalUnit = OrganizationalUnit;
     }
 
     /**
@@ -428,6 +446,9 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
         if (source.NotBeforeTime != null) {
             this.NotBeforeTime = new Long(source.NotBeforeTime);
         }
+        if (source.OrganizationalUnit != null) {
+            this.OrganizationalUnit = new String(source.OrganizationalUnit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -452,6 +473,7 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "CertificateSource", this.CertificateSource);
         this.setParamSimple(map, prefix + "NotBeforeTime", this.NotBeforeTime);
+        this.setParamSimple(map, prefix + "OrganizationalUnit", this.OrganizationalUnit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

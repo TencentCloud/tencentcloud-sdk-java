@@ -74,6 +74,7 @@ public class TreeJobSets extends AbstractModel {
 
     /**
     * RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCpu")
     @Expose
@@ -81,10 +82,19 @@ public class TreeJobSets extends AbstractModel {
 
     /**
     * RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningMem")
     @Expose
     private Float RunningMem;
+
+    /**
+    * sql
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DecodeSqlCode")
+    @Expose
+    private String DecodeSqlCode;
 
     /**
      * Get 作业Id
@@ -211,8 +221,10 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get RunningCpu 
+     * Get RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunningCpu RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningCpu() {
         return this.RunningCpu;
@@ -220,15 +232,19 @@ public class TreeJobSets extends AbstractModel {
 
     /**
      * Set RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningCpu RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCpu(Float RunningCpu) {
         this.RunningCpu = RunningCpu;
     }
 
     /**
-     * Get RunningMem 
+     * Get RunningMem
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunningMem RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningMem() {
         return this.RunningMem;
@@ -236,10 +252,32 @@ public class TreeJobSets extends AbstractModel {
 
     /**
      * Set RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningMem RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningMem(Float RunningMem) {
         this.RunningMem = RunningMem;
+    }
+
+    /**
+     * Get sql
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DecodeSqlCode sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDecodeSqlCode() {
+        return this.DecodeSqlCode;
+    }
+
+    /**
+     * Set sql
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DecodeSqlCode sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDecodeSqlCode(String DecodeSqlCode) {
+        this.DecodeSqlCode = DecodeSqlCode;
     }
 
     public TreeJobSets() {
@@ -274,6 +312,9 @@ public class TreeJobSets extends AbstractModel {
         if (source.RunningMem != null) {
             this.RunningMem = new Float(source.RunningMem);
         }
+        if (source.DecodeSqlCode != null) {
+            this.DecodeSqlCode = new String(source.DecodeSqlCode);
+        }
     }
 
 
@@ -289,6 +330,7 @@ public class TreeJobSets extends AbstractModel {
         this.setParamSimple(map, prefix + "ScalingType", this.ScalingType);
         this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
+        this.setParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
 
     }
 }

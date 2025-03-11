@@ -25,7 +25,6 @@ public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
     * 策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
     * 优先级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get 策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id 
      * @return Id 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
      * Set 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 优先级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先级 
      * @return Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -71,9 +63,7 @@ public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
      * Set 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

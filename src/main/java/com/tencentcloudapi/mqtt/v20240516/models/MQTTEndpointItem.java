@@ -25,7 +25,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 接入点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -41,7 +39,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -49,7 +46,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -57,7 +53,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -65,7 +60,6 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -73,17 +67,14 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
     * 接入点ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -91,19 +82,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 接入点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入点 
      * @return Url 接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -111,19 +98,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc信息 
      * @return VpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -131,19 +114,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网信息 
      * @return SubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -151,19 +130,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机 
      * @return Host 主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -171,19 +146,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -191,19 +162,15 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 接入点ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入点ip 
      * @return Ip 接入点ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -211,9 +178,7 @@ public class MQTTEndpointItem extends AbstractModel {
 
     /**
      * Set 接入点ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 接入点ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

@@ -25,7 +25,6 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -41,7 +39,6 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,17 +53,14 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器 
      * @return Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -75,19 +68,15 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 认证器配置 
      * @return Config 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfig() {
         return this.Config;
@@ -95,19 +84,15 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 认证器状态 
      * @return Status 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -115,19 +100,15 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -135,19 +116,15 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 说明 
      * @return Remark 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -155,9 +132,7 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

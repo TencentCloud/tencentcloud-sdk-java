@@ -46,7 +46,6 @@ public class PriceTag extends AbstractModel {
 
     /**
     * 步长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Step")
     @Expose
@@ -101,10 +100,8 @@ public class PriceTag extends AbstractModel {
     }
 
     /**
-     * Get 步长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步长 
      * @return Step 步长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStep() {
         return this.Step;
@@ -112,9 +109,7 @@ public class PriceTag extends AbstractModel {
 
     /**
      * Set 步长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Step 步长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStep(Long Step) {
         this.Step = Step;
