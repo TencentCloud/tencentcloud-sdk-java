@@ -25,7 +25,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepName")
     @Expose
@@ -33,7 +32,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepId")
     @Expose
@@ -41,7 +39,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNo")
     @Expose
@@ -49,7 +46,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -65,7 +60,6 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
     @Expose
@@ -73,17 +67,14 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
     * 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warnings")
     @Expose
     private SubscribeCheckStepTip [] Warnings;
 
     /**
-     * Get 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤名称 
      * @return StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepName() {
         return this.StepName;
@@ -91,19 +82,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepName(String StepName) {
         this.StepName = StepName;
     }
 
     /**
-     * Get 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤Id 
      * @return StepId 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepId() {
         return this.StepId;
@@ -111,19 +98,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepId 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepId(String StepId) {
         this.StepId = StepId;
     }
 
     /**
-     * Get 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤编号，从 1 开始 
      * @return StepNo 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNo() {
         return this.StepNo;
@@ -131,19 +114,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNo 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
     /**
-     * Get 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤状态，可能值为 notStarted,running,finished,failed 
      * @return Status 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -151,19 +130,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤进度 
      * @return Percent 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -171,19 +146,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 错误提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误提示 
      * @return Errors 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubscribeCheckStepTip [] getErrors() {
         return this.Errors;
@@ -191,19 +162,15 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errors 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(SubscribeCheckStepTip [] Errors) {
         this.Errors = Errors;
     }
 
     /**
-     * Get 告警提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警提示 
      * @return Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubscribeCheckStepTip [] getWarnings() {
         return this.Warnings;
@@ -211,9 +178,7 @@ public class SubscribeCheckStepInfo extends AbstractModel {
 
     /**
      * Set 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnings(SubscribeCheckStepTip [] Warnings) {
         this.Warnings = Warnings;

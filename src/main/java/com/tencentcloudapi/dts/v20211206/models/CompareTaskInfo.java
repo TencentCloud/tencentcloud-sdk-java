@@ -25,7 +25,6 @@ public class CompareTaskInfo extends AbstractModel {
 
     /**
     * 一致性校验任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareTaskId")
     @Expose
@@ -33,17 +32,14 @@ public class CompareTaskInfo extends AbstractModel {
 
     /**
     * 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 一致性校验任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验任务Id 
      * @return CompareTaskId 一致性校验任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
@@ -51,19 +47,15 @@ public class CompareTaskInfo extends AbstractModel {
 
     /**
      * Set 一致性校验任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareTaskId 一致性校验任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务) 
      * @return Status 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -71,9 +63,7 @@ public class CompareTaskInfo extends AbstractModel {
 
     /**
      * Set 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 一致性校验结果，包括：unstart(未启动)、running(校验中)、canceled(已终止)、failed(校验任务失败)、inconsistent(不一致)、consistent(一致)、notexist(不存在校验任务)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -25,7 +25,6 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
     * 数据库所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
     * 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessType")
     @Expose
@@ -41,7 +39,6 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
     * 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseType")
     @Expose
@@ -56,10 +53,8 @@ public class SyncDBEndpointInfos extends AbstractModel {
     private Endpoint [] Info;
 
     /**
-     * Get 数据库所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库所在地域 
      * @return Region 数据库所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -67,19 +62,15 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
      * Set 数据库所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 数据库所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路 
      * @return AccessType 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessType() {
         return this.AccessType;
@@ -87,19 +78,15 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
      * Set 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessType 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等 
      * @return DatabaseType 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseType() {
         return this.DatabaseType;
@@ -107,9 +94,7 @@ public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
      * Set 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseType 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseType(String DatabaseType) {
         this.DatabaseType = DatabaseType;

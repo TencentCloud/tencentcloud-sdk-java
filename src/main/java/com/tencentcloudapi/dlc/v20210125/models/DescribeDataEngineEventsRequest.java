@@ -45,6 +45,13 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 资源组id
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get 虚拟集群名称 
      * @return DataEngineName 虚拟集群名称
      */
@@ -92,6 +99,22 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 资源组id 
+     * @return SessionId 资源组id
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 资源组id
+     * @param SessionId 资源组id
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public DescribeDataEngineEventsRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

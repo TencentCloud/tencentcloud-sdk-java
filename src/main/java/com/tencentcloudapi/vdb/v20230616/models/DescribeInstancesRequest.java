@@ -188,7 +188,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Get 按照引擎筛选实例。 
      * @return EngineNames 按照引擎筛选实例。
+     * @deprecated
      */
+    @Deprecated
     public String [] getEngineNames() {
         return this.EngineNames;
     }
@@ -196,7 +198,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Set 按照引擎筛选实例。
      * @param EngineNames 按照引擎筛选实例。
+     * @deprecated
      */
+    @Deprecated
     public void setEngineNames(String [] EngineNames) {
         this.EngineNames = EngineNames;
     }
@@ -252,7 +256,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Get 按照可用区筛选实例。 
      * @return Zones 按照可用区筛选实例。
+     * @deprecated
      */
+    @Deprecated
     public String [] getZones() {
         return this.Zones;
     }
@@ -260,7 +266,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Set 按照可用区筛选实例。
      * @param Zones 按照可用区筛选实例。
+     * @deprecated
      */
+    @Deprecated
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }

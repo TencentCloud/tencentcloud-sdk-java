@@ -25,7 +25,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -33,7 +32,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 内核版本，针对mariadb的不同内核版本等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbKernel")
     @Expose
@@ -41,7 +39,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -49,7 +46,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -57,7 +53,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 实例的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -65,7 +60,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 实例的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -73,7 +67,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvmInstanceId")
     @Expose
@@ -81,7 +74,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpnGwId")
     @Expose
@@ -89,7 +81,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqDcgId")
     @Expose
@@ -97,7 +88,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -105,7 +95,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnGwId")
     @Expose
@@ -113,7 +102,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -121,7 +109,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -129,7 +116,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -137,7 +123,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 实例所属账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Account")
     @Expose
@@ -145,7 +130,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountRole")
     @Expose
@@ -153,7 +137,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountMode")
     @Expose
@@ -161,7 +144,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretId")
     @Expose
@@ -169,7 +151,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretKey")
     @Expose
@@ -177,7 +158,6 @@ public class DBInfo extends AbstractModel {
 
     /**
     * 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpToken")
     @Expose
@@ -185,17 +165,14 @@ public class DBInfo extends AbstractModel {
 
     /**
     * tdsql的分片id。如节点类型为set必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetId")
     @Expose
     private String SetId;
 
     /**
-     * Get 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。 
      * @return Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -203,19 +180,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 内核版本，针对mariadb的不同内核版本等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核版本，针对mariadb的不同内核版本等 
      * @return DbKernel 内核版本，针对mariadb的不同内核版本等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbKernel() {
         return this.DbKernel;
@@ -223,19 +196,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 内核版本，针对mariadb的不同内核版本等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbKernel 内核版本，针对mariadb的不同内核版本等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbKernel(String DbKernel) {
         this.DbKernel = DbKernel;
     }
 
     /**
-     * Get 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填 
      * @return Host 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -243,19 +212,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填 
      * @return Port 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -263,19 +228,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 实例的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的用户名 
      * @return User 实例的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -283,19 +244,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 实例的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 实例的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 实例的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的密码 
      * @return Password 实例的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -303,19 +260,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 实例的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password 实例的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填 
      * @return CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCvmInstanceId() {
         return this.CvmInstanceId;
@@ -323,19 +276,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvmInstanceId(String CvmInstanceId) {
         this.CvmInstanceId = CvmInstanceId;
     }
 
     /**
-     * Get VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填 
      * @return UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpnGwId() {
         return this.UniqVpnGwId;
@@ -343,19 +292,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpnGwId(String UniqVpnGwId) {
         this.UniqVpnGwId = UniqVpnGwId;
     }
 
     /**
-     * Get 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填 
      * @return UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqDcgId() {
         return this.UniqDcgId;
@@ -363,19 +308,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqDcgId(String UniqDcgId) {
         this.UniqDcgId = UniqDcgId;
     }
 
     /**
-     * Get 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填 
      * @return InstanceId 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -383,19 +324,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CcnGwId 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnGwId() {
         return this.CcnGwId;
@@ -403,19 +340,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnGwId 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnGwId(String CcnGwId) {
         this.CcnGwId = CcnGwId;
     }
 
     /**
-     * Get 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填 
      * @return VpcId 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -423,19 +356,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填 
      * @return SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -443,19 +372,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6 
      * @return EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
@@ -463,19 +388,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 实例所属账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所属账号 
      * @return Account 实例所属账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccount() {
         return this.Account;
@@ -483,19 +404,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 实例所属账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Account 实例所属账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+ 
      * @return AccountRole 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountRole() {
         return this.AccountRole;
@@ -503,19 +420,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountRole 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountRole(String AccountRole) {
         this.AccountRole = AccountRole;
     }
 
     /**
-     * Get 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源) 
      * @return AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountMode() {
         return this.AccountMode;
@@ -523,19 +436,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountMode(String AccountMode) {
         this.AccountMode = AccountMode;
     }
 
     /**
-     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。 
      * @return TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
@@ -543,19 +452,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。 
      * @return TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
@@ -563,19 +468,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。 
      * @return TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpToken() {
         return this.TmpToken;
@@ -583,19 +484,15 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpToken(String TmpToken) {
         this.TmpToken = TmpToken;
     }
 
     /**
-     * Get tdsql的分片id。如节点类型为set必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tdsql的分片id。如节点类型为set必填。 
      * @return SetId tdsql的分片id。如节点类型为set必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetId() {
         return this.SetId;
@@ -603,9 +500,7 @@ public class DBInfo extends AbstractModel {
 
     /**
      * Set tdsql的分片id。如节点类型为set必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetId tdsql的分片id。如节点类型为set必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetId(String SetId) {
         this.SetId = SetId;

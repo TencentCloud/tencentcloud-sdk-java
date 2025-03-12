@@ -25,7 +25,6 @@ public class StatementInformation extends AbstractModel {
 
     /**
     * SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,17 +32,14 @@ public class StatementInformation extends AbstractModel {
 
     /**
     * SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQL")
     @Expose
     private String SQL;
 
     /**
-     * Get SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQL任务唯一ID 
      * @return TaskId SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -51,19 +47,15 @@ public class StatementInformation extends AbstractModel {
 
     /**
      * Set SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get SQL内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQL内容 
      * @return SQL SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSQL() {
         return this.SQL;
@@ -71,9 +63,7 @@ public class StatementInformation extends AbstractModel {
 
     /**
      * Set SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SQL SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQL(String SQL) {
         this.SQL = SQL;

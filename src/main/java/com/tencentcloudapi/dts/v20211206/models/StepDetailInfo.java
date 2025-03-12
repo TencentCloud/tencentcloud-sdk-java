@@ -25,7 +25,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNo")
     @Expose
@@ -33,7 +32,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepName")
     @Expose
@@ -41,7 +39,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepId")
     @Expose
@@ -49,7 +46,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,7 +60,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepMessage")
     @Expose
@@ -73,7 +67,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -81,7 +74,6 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
     @Expose
@@ -89,17 +81,14 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
     * 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warnings")
     @Expose
     private ProcessStepTip [] Warnings;
 
     /**
-     * Get 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤序列 
      * @return StepNo 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNo() {
         return this.StepNo;
@@ -107,19 +96,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNo 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
     /**
-     * Get 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤展现名称 
      * @return StepName 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepName() {
         return this.StepName;
@@ -127,19 +112,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepName 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepName(String StepName) {
         this.StepName = StepName;
     }
 
     /**
-     * Get 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤英文标识 
      * @return StepId 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepId() {
         return this.StepId;
@@ -147,19 +128,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepId 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepId(String StepId) {
         this.StepId = StepId;
     }
 
     /**
-     * Get 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted 
      * @return Status 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -167,19 +144,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -187,19 +160,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤错误信息 
      * @return StepMessage 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepMessage() {
         return this.StepMessage;
@@ -207,19 +176,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepMessage 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepMessage(String StepMessage) {
         this.StepMessage = StepMessage;
     }
 
     /**
-     * Get 执行进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行进度 
      * @return Percent 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -227,19 +192,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Errors 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessStepTip [] getErrors() {
         return this.Errors;
@@ -247,19 +208,15 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errors 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(ProcessStepTip [] Errors) {
         this.Errors = Errors;
     }
 
     /**
-     * Get 告警提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警提示 
      * @return Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessStepTip [] getWarnings() {
         return this.Warnings;
@@ -267,9 +224,7 @@ public class StepDetailInfo extends AbstractModel {
 
     /**
      * Set 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnings(ProcessStepTip [] Warnings) {
         this.Warnings = Warnings;

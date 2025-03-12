@@ -25,7 +25,6 @@ public class KVPair extends AbstractModel {
 
     /**
     * 配置的key值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class KVPair extends AbstractModel {
 
     /**
     * 配置的value值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 配置的key值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置的key值 
      * @return Key 配置的key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class KVPair extends AbstractModel {
 
     /**
      * Set 配置的key值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 配置的key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 配置的value值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置的value值 
      * @return Value 配置的value值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class KVPair extends AbstractModel {
 
     /**
      * Set 配置的value值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 配置的value值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -25,7 +25,6 @@ public class SubscribeCheckStepTip extends AbstractModel {
 
     /**
     * 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -33,17 +32,14 @@ public class SubscribeCheckStepTip extends AbstractModel {
 
     /**
     * 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HelpDoc")
     @Expose
     private String HelpDoc;
 
     /**
-     * Get 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误或告警的详细信息 
      * @return Message 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -51,19 +47,15 @@ public class SubscribeCheckStepTip extends AbstractModel {
 
     /**
      * Set 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 帮助文档 
      * @return HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHelpDoc() {
         return this.HelpDoc;
@@ -71,9 +63,7 @@ public class SubscribeCheckStepTip extends AbstractModel {
 
     /**
      * Set 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHelpDoc(String HelpDoc) {
         this.HelpDoc = HelpDoc;

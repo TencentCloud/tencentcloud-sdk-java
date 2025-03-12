@@ -25,7 +25,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Group")
     @Expose
@@ -57,7 +53,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -65,7 +60,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -73,7 +67,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -81,7 +74,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -89,7 +81,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -97,7 +88,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -105,7 +95,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateBy")
     @Expose
@@ -113,7 +102,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -121,7 +109,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyBy")
     @Expose
@@ -129,7 +116,6 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseTime")
     @Expose
@@ -137,17 +123,28 @@ public class ConfigFile extends AbstractModel {
 
     /**
     * 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseBy")
     @Expose
     private String ReleaseBy;
 
     /**
-     * Get 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 配置文件类型
+    */
+    @SerializedName("ConfigFileSupportedClient")
+    @Expose
+    private Long ConfigFileSupportedClient;
+
+    /**
+    * 配置文件持久化
+    */
+    @SerializedName("ConfigFilePersistent")
+    @Expose
+    private ConfigFilePersistent ConfigFilePersistent;
+
+    /**
+     * Get 配置文件id 
      * @return Id 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -155,19 +152,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件名称 
      * @return Name 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -175,19 +168,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件命名空间 
      * @return Namespace 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -195,19 +184,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件组 
      * @return Group 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroup() {
         return this.Group;
@@ -215,19 +200,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Group 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件内容 
      * @return Content 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -235,19 +216,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件格式 
      * @return Format 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -255,19 +232,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件注释 
      * @return Comment 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -275,19 +248,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件状态 
      * @return Status 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -295,19 +264,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件标签数组 
      * @return Tags 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigFileTag [] getTags() {
         return this.Tags;
@@ -315,19 +280,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(ConfigFileTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件创建时间 
      * @return CreateTime 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -335,19 +296,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件创建者 
      * @return CreateBy 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateBy() {
         return this.CreateBy;
@@ -355,19 +312,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateBy 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件修改时间 
      * @return ModifyTime 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -375,19 +328,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件修改者 
      * @return ModifyBy 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyBy() {
         return this.ModifyBy;
@@ -395,19 +344,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyBy 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;
     }
 
     /**
-     * Get 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布时间 
      * @return ReleaseTime 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseTime() {
         return this.ReleaseTime;
@@ -415,19 +360,15 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseTime 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseTime(String ReleaseTime) {
         this.ReleaseTime = ReleaseTime;
     }
 
     /**
-     * Get 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布者 
      * @return ReleaseBy 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseBy() {
         return this.ReleaseBy;
@@ -435,12 +376,42 @@ public class ConfigFile extends AbstractModel {
 
     /**
      * Set 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseBy 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseBy(String ReleaseBy) {
         this.ReleaseBy = ReleaseBy;
+    }
+
+    /**
+     * Get 配置文件类型 
+     * @return ConfigFileSupportedClient 配置文件类型
+     */
+    public Long getConfigFileSupportedClient() {
+        return this.ConfigFileSupportedClient;
+    }
+
+    /**
+     * Set 配置文件类型
+     * @param ConfigFileSupportedClient 配置文件类型
+     */
+    public void setConfigFileSupportedClient(Long ConfigFileSupportedClient) {
+        this.ConfigFileSupportedClient = ConfigFileSupportedClient;
+    }
+
+    /**
+     * Get 配置文件持久化 
+     * @return ConfigFilePersistent 配置文件持久化
+     */
+    public ConfigFilePersistent getConfigFilePersistent() {
+        return this.ConfigFilePersistent;
+    }
+
+    /**
+     * Set 配置文件持久化
+     * @param ConfigFilePersistent 配置文件持久化
+     */
+    public void setConfigFilePersistent(ConfigFilePersistent ConfigFilePersistent) {
+        this.ConfigFilePersistent = ConfigFilePersistent;
     }
 
     public ConfigFile() {
@@ -499,6 +470,12 @@ public class ConfigFile extends AbstractModel {
         if (source.ReleaseBy != null) {
             this.ReleaseBy = new String(source.ReleaseBy);
         }
+        if (source.ConfigFileSupportedClient != null) {
+            this.ConfigFileSupportedClient = new Long(source.ConfigFileSupportedClient);
+        }
+        if (source.ConfigFilePersistent != null) {
+            this.ConfigFilePersistent = new ConfigFilePersistent(source.ConfigFilePersistent);
+        }
     }
 
 
@@ -521,6 +498,8 @@ public class ConfigFile extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyBy", this.ModifyBy);
         this.setParamSimple(map, prefix + "ReleaseTime", this.ReleaseTime);
         this.setParamSimple(map, prefix + "ReleaseBy", this.ReleaseBy);
+        this.setParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
+        this.setParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
 
     }
 }

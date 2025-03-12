@@ -46,7 +46,6 @@ public class HealthStatus extends AbstractModel {
 
     /**
     * 扣分详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScoreDetails")
     @Expose
@@ -101,10 +100,8 @@ public class HealthStatus extends AbstractModel {
     }
 
     /**
-     * Get 扣分详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扣分详情。 
      * @return ScoreDetails 扣分详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScoreDetail [] getScoreDetails() {
         return this.ScoreDetails;
@@ -112,9 +109,7 @@ public class HealthStatus extends AbstractModel {
 
     /**
      * Set 扣分详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScoreDetails 扣分详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScoreDetails(ScoreDetail [] ScoreDetails) {
         this.ScoreDetails = ScoreDetails;

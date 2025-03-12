@@ -33,7 +33,6 @@ public class CmqDeadLetterSource extends AbstractModel {
 
     /**
     * 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueName")
     @Expose
@@ -60,10 +59,8 @@ public class CmqDeadLetterSource extends AbstractModel {
     }
 
     /**
-     * Get 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息队列名字。 
      * @return QueueName 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueName() {
         return this.QueueName;
@@ -71,9 +68,7 @@ public class CmqDeadLetterSource extends AbstractModel {
 
     /**
      * Set 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueName 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

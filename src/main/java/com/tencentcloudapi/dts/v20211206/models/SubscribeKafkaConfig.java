@@ -25,7 +25,6 @@ public class SubscribeKafkaConfig extends AbstractModel {
 
     /**
     * kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberOfPartitions")
     @Expose
@@ -33,7 +32,6 @@ public class SubscribeKafkaConfig extends AbstractModel {
 
     /**
     * 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DistributeRules")
     @Expose
@@ -43,17 +41,14 @@ public class SubscribeKafkaConfig extends AbstractModel {
     * 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultRuleType")
     @Expose
     private String DefaultRuleType;
 
     /**
-     * Get kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka分区数量，枚举值为1，4，8 
      * @return NumberOfPartitions kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumberOfPartitions() {
         return this.NumberOfPartitions;
@@ -61,19 +56,15 @@ public class SubscribeKafkaConfig extends AbstractModel {
 
     /**
      * Set kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumberOfPartitions kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberOfPartitions(Long NumberOfPartitions) {
         this.NumberOfPartitions = NumberOfPartitions;
     }
 
     /**
-     * Get 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分区规则。当NumberOfPartitions > 1时，该项必填。 
      * @return DistributeRules 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DistributeRule [] getDistributeRules() {
         return this.DistributeRules;
@@ -81,9 +72,7 @@ public class SubscribeKafkaConfig extends AbstractModel {
 
     /**
      * Set 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DistributeRules 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistributeRules(DistributeRule [] DistributeRules) {
         this.DistributeRules = DistributeRules;
@@ -92,12 +81,10 @@ public class SubscribeKafkaConfig extends AbstractModel {
     /**
      * Get 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
-该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。 
+该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。 
      * @return DefaultRuleType 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultRuleType() {
         return this.DefaultRuleType;
@@ -107,11 +94,9 @@ public class SubscribeKafkaConfig extends AbstractModel {
      * Set 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultRuleType 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultRuleType(String DefaultRuleType) {
         this.DefaultRuleType = DefaultRuleType;

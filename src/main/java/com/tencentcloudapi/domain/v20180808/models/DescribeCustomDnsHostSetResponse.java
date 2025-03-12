@@ -25,7 +25,6 @@ public class DescribeCustomDnsHostSetResponse extends AbstractModel {
 
     /**
     * 自定义DNS Host 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DnsHostSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeCustomDnsHostSetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自定义DNS Host 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义DNS Host 列表 
      * @return DnsHostSet 自定义DNS Host 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomDnsHost [] getDnsHostSet() {
         return this.DnsHostSet;
@@ -57,9 +54,7 @@ public class DescribeCustomDnsHostSetResponse extends AbstractModel {
 
     /**
      * Set 自定义DNS Host 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DnsHostSet 自定义DNS Host 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDnsHostSet(CustomDnsHost [] DnsHostSet) {
         this.DnsHostSet = DnsHostSet;

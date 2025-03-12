@@ -25,7 +25,6 @@ public class KnowledgeSet extends AbstractModel {
 
     /**
     * 知识库标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class KnowledgeSet extends AbstractModel {
 
     /**
     * 知识库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -41,7 +39,6 @@ public class KnowledgeSet extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -51,7 +48,6 @@ public class KnowledgeSet extends AbstractModel {
     * 状态，
 NOT_ENABLED未启用
 ENABLED 已启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Active")
     @Expose
@@ -59,7 +55,6 @@ ENABLED 已启用
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -67,7 +62,6 @@ ENABLED 已启用
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -81,10 +75,8 @@ ENABLED 已启用
     private String Meta;
 
     /**
-     * Get 知识库标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 知识库标识 
      * @return Name 知识库标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -92,19 +84,15 @@ ENABLED 已启用
 
     /**
      * Set 知识库标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 知识库标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 知识库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 知识库名称 
      * @return Title 知识库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -112,19 +100,15 @@ ENABLED 已启用
 
     /**
      * Set 知识库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 知识库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -132,9 +116,7 @@ ENABLED 已启用
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
@@ -143,12 +125,10 @@ ENABLED 已启用
     /**
      * Get 状态，
 NOT_ENABLED未启用
-ENABLED 已启用
-注意：此字段可能返回 null，表示取不到有效值。 
+ENABLED 已启用 
      * @return Active 状态，
 NOT_ENABLED未启用
 ENABLED 已启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActive() {
         return this.Active;
@@ -158,21 +138,17 @@ ENABLED 已启用
      * Set 状态，
 NOT_ENABLED未启用
 ENABLED 已启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Active 状态，
 NOT_ENABLED未启用
 ENABLED 已启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActive(String Active) {
         this.Active = Active;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -180,19 +156,15 @@ ENABLED 已启用
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -200,9 +172,7 @@ ENABLED 已启用
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

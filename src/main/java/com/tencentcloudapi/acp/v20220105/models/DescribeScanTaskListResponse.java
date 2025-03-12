@@ -39,7 +39,6 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
     * 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeScanTaskListResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断任务数据列表 
      * @return Data 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppTaskData [] getData() {
         return this.Data;
@@ -96,9 +93,7 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
      * Set 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AppTaskData [] Data) {
         this.Data = Data;

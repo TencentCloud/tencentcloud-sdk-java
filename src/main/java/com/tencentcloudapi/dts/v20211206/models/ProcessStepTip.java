@@ -25,7 +25,6 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
     * 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -33,7 +32,6 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Solution")
     @Expose
@@ -41,17 +39,14 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
     * 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HelpDoc")
     @Expose
     private String HelpDoc;
 
     /**
-     * Get 提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提示信息 
      * @return Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -59,19 +54,15 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
      * Set 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolution() {
         return this.Solution;
@@ -79,19 +70,15 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 文档提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档提示 
      * @return HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHelpDoc() {
         return this.HelpDoc;
@@ -99,9 +86,7 @@ public class ProcessStepTip extends AbstractModel {
 
     /**
      * Set 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHelpDoc(String HelpDoc) {
         this.HelpDoc = HelpDoc;

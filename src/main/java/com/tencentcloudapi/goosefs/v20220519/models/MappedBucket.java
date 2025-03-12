@@ -53,7 +53,6 @@ public class MappedBucket extends AbstractModel {
 
     /**
     * 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -61,7 +60,6 @@ public class MappedBucket extends AbstractModel {
 
     /**
     * 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleDescription")
     @Expose
@@ -76,7 +74,6 @@ public class MappedBucket extends AbstractModel {
 
     /**
     * 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccelerateFlag")
     @Expose
@@ -84,7 +81,6 @@ public class MappedBucket extends AbstractModel {
 
     /**
     * 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -92,7 +88,6 @@ public class MappedBucket extends AbstractModel {
 
     /**
     * 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endpoint")
     @Expose
@@ -175,10 +170,8 @@ public class MappedBucket extends AbstractModel {
     }
 
     /**
-     * Get 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定bucket的数据流动策略ID 
      * @return RuleId 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -186,19 +179,15 @@ public class MappedBucket extends AbstractModel {
 
     /**
      * Set 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则备注与描述 
      * @return RuleDescription 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleDescription() {
         return this.RuleDescription;
@@ -206,9 +195,7 @@ public class MappedBucket extends AbstractModel {
 
     /**
      * Set 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleDescription 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleDescription(String RuleDescription) {
         this.RuleDescription = RuleDescription;
@@ -231,10 +218,8 @@ public class MappedBucket extends AbstractModel {
     }
 
     /**
-     * Get 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用全球加速域名 
      * @return AccelerateFlag 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAccelerateFlag() {
         return this.AccelerateFlag;
@@ -242,19 +227,15 @@ public class MappedBucket extends AbstractModel {
 
     /**
      * Set 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccelerateFlag 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccelerateFlag(Boolean AccelerateFlag) {
         this.AccelerateFlag = AccelerateFlag;
     }
 
     /**
-     * Get 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶所在的园区 
      * @return BucketRegion 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketRegion() {
         return this.BucketRegion;
@@ -262,19 +243,15 @@ public class MappedBucket extends AbstractModel {
 
     /**
      * Set 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketRegion 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义Endpoint 
      * @return Endpoint 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -282,9 +259,7 @@ public class MappedBucket extends AbstractModel {
 
     /**
      * Set 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoint 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

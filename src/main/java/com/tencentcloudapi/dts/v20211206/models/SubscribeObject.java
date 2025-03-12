@@ -25,7 +25,6 @@ public class SubscribeObject extends AbstractModel {
 
     /**
     * 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
     @Expose
@@ -33,7 +32,6 @@ public class SubscribeObject extends AbstractModel {
 
     /**
     * 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -48,10 +46,8 @@ public class SubscribeObject extends AbstractModel {
     private String [] Tables;
 
     /**
-     * Get 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合) 
      * @return ObjectType 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -59,19 +55,15 @@ public class SubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectType 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的数据库名称 
      * @return Database 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -79,9 +71,7 @@ public class SubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;

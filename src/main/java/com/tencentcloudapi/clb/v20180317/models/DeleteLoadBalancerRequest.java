@@ -31,6 +31,13 @@ public class DeleteLoadBalancerRequest extends AbstractModel {
     private String [] LoadBalancerIds;
 
     /**
+    * 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+    */
+    @SerializedName("ForceDelete")
+    @Expose
+    private Boolean ForceDelete;
+
+    /**
      * Get 要删除的负载均衡实例 ID数组，数组大小最大支持20。 
      * @return LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
      */
@@ -44,6 +51,22 @@ public class DeleteLoadBalancerRequest extends AbstractModel {
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
+    }
+
+    /**
+     * Get 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。 
+     * @return ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     */
+    public Boolean getForceDelete() {
+        return this.ForceDelete;
+    }
+
+    /**
+     * Set 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     * @param ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     */
+    public void setForceDelete(Boolean ForceDelete) {
+        this.ForceDelete = ForceDelete;
     }
 
     public DeleteLoadBalancerRequest() {
@@ -60,6 +83,9 @@ public class DeleteLoadBalancerRequest extends AbstractModel {
                 this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
             }
         }
+        if (source.ForceDelete != null) {
+            this.ForceDelete = new Boolean(source.ForceDelete);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DeleteLoadBalancerRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+        this.setParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
 
     }
 }

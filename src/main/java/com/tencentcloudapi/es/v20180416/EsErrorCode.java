@@ -51,6 +51,9 @@ public enum EsErrorCode {
     // 用户未实名认证。
      FAILEDOPERATION_NOTAUTHENTICATED("FailedOperation.NotAuthenticated"),
      
+    // 当前集群已开启销毁保护，无法直接销毁，请解除该保护后再尝试销毁
+     FAILEDOPERATION_OPENDESTROYPROTECTION("FailedOperation.OpenDestroyProtection"),
+     
     // 解码Password时出错。
      FAILEDOPERATION_PASSWORD("FailedOperation.Password"),
      
@@ -533,6 +536,9 @@ public enum EsErrorCode {
      
     // 不支持这个长度的editList的操作。
      UNSUPPORTEDOPERATION_EDITLISTLENGTH("UnsupportedOperation.EditListLength"),
+     
+    // 存在未完成的异构扩缩容流程
+     UNSUPPORTEDOPERATION_HETEROSCALINGEXECUTING("UnsupportedOperation.HeteroScalingExecuting"),
      
     // 集群有索引设置index.routing.allocation.require._name,or _ip, or _id
      UNSUPPORTEDOPERATION_INDEXSETTINGSREQUIRESET("UnsupportedOperation.IndexSettingsRequireSet"),

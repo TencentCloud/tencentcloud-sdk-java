@@ -1438,6 +1438,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询上报任务详情
+     * @param req DescribeReportTaskDetailRequest
+     * @return DescribeReportTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportTaskDetailResponse DescribeReportTaskDetail(DescribeReportTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportTaskDetail", DescribeReportTaskDetailResponse.class);
+    }
+
+    /**
+     *查询上报任务列表
+     * @param req DescribeReportTaskListRequest
+     * @return DescribeReportTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportTaskListResponse DescribeReportTaskList(DescribeReportTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportTaskList", DescribeReportTaskListResponse.class);
+    }
+
+    /**
      *获取资源管理目录树
      * @param req DescribeResourceManagePathTreesRequest
      * @return DescribeResourceManagePathTreesResponse

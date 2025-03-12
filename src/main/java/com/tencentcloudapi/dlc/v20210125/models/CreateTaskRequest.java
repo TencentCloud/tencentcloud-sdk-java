@@ -59,6 +59,13 @@ public class CreateTaskRequest extends AbstractModel {
     private String ResourceGroupName;
 
     /**
+    * 任务来源信息
+    */
+    @SerializedName("SourceInfo")
+    @Expose
+    private KVPair [] SourceInfo;
+
+    /**
      * Get 计算任务，该参数中包含任务类型及其相关配置信息 
      * @return Task 计算任务，该参数中包含任务类型及其相关配置信息
      */
@@ -138,6 +145,22 @@ public class CreateTaskRequest extends AbstractModel {
         this.ResourceGroupName = ResourceGroupName;
     }
 
+    /**
+     * Get 任务来源信息 
+     * @return SourceInfo 任务来源信息
+     */
+    public KVPair [] getSourceInfo() {
+        return this.SourceInfo;
+    }
+
+    /**
+     * Set 任务来源信息
+     * @param SourceInfo 任务来源信息
+     */
+    public void setSourceInfo(KVPair [] SourceInfo) {
+        this.SourceInfo = SourceInfo;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -161,6 +184,12 @@ public class CreateTaskRequest extends AbstractModel {
         if (source.ResourceGroupName != null) {
             this.ResourceGroupName = new String(source.ResourceGroupName);
         }
+        if (source.SourceInfo != null) {
+            this.SourceInfo = new KVPair[source.SourceInfo.length];
+            for (int i = 0; i < source.SourceInfo.length; i++) {
+                this.SourceInfo[i] = new KVPair(source.SourceInfo[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class CreateTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
 
     }
 }

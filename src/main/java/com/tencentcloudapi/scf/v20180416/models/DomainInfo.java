@@ -59,6 +59,13 @@ public class DomainInfo extends AbstractModel {
     private WafConf WafConfig;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 域名，不支持泛域名 
      * @return Domain 域名，不支持泛域名
      */
@@ -138,6 +145,22 @@ public class DomainInfo extends AbstractModel {
         this.WafConfig = WafConfig;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DomainInfo() {
     }
 
@@ -164,6 +187,12 @@ public class DomainInfo extends AbstractModel {
         if (source.WafConfig != null) {
             this.WafConfig = new WafConf(source.WafConfig);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -176,6 +205,7 @@ public class DomainInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EndpointsConfig.", this.EndpointsConfig);
         this.setParamObj(map, prefix + "CertConfig.", this.CertConfig);
         this.setParamObj(map, prefix + "WafConfig.", this.WafConfig);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

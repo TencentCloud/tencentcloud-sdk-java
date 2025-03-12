@@ -25,7 +25,6 @@ public class DistributeRule extends AbstractModel {
 
     /**
     * 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
     @Expose
@@ -33,7 +32,6 @@ public class DistributeRule extends AbstractModel {
 
     /**
     * 库名匹配规则，请填写正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbPattern")
     @Expose
@@ -41,7 +39,6 @@ public class DistributeRule extends AbstractModel {
 
     /**
     * 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TablePattern")
     @Expose
@@ -56,10 +53,8 @@ public class DistributeRule extends AbstractModel {
     private String [] Columns;
 
     /**
-     * Get 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。 
      * @return RuleType 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
         return this.RuleType;
@@ -67,19 +62,15 @@ public class DistributeRule extends AbstractModel {
 
     /**
      * Set 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleType 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get 库名匹配规则，请填写正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 库名匹配规则，请填写正则表达式 
      * @return DbPattern 库名匹配规则，请填写正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbPattern() {
         return this.DbPattern;
@@ -87,19 +78,15 @@ public class DistributeRule extends AbstractModel {
 
     /**
      * Set 库名匹配规则，请填写正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbPattern 库名匹配规则，请填写正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbPattern(String DbPattern) {
         this.DbPattern = DbPattern;
     }
 
     /**
-     * Get 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名 
      * @return TablePattern 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTablePattern() {
         return this.TablePattern;
@@ -107,9 +94,7 @@ public class DistributeRule extends AbstractModel {
 
     /**
      * Set 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TablePattern 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTablePattern(String TablePattern) {
         this.TablePattern = TablePattern;

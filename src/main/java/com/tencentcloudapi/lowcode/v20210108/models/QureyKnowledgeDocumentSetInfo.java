@@ -25,7 +25,6 @@ public class QureyKnowledgeDocumentSetInfo extends AbstractModel {
 
     /**
     * 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextLength")
     @Expose
@@ -33,7 +32,6 @@ public class QureyKnowledgeDocumentSetInfo extends AbstractModel {
 
     /**
     * 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ByteLength")
     @Expose
@@ -41,7 +39,6 @@ public class QureyKnowledgeDocumentSetInfo extends AbstractModel {
 
     /**
     * 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedProgress")
     @Expose
@@ -54,7 +51,6 @@ Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedStatus")
     @Expose
@@ -62,7 +58,6 @@ Ready：文件解析、写入完成。
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedErrorMsg")
     @Expose
@@ -70,7 +65,6 @@ Ready：文件解析、写入完成。
 
     /**
     * 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -78,7 +72,6 @@ Ready：文件解析、写入完成。
 
     /**
     * 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -86,17 +79,14 @@ Ready：文件解析、写入完成。
 
     /**
     * 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
     @Expose
     private String Keywords;
 
     /**
-     * Get 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件的字符数。 
      * @return TextLength 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTextLength() {
         return this.TextLength;
@@ -104,19 +94,15 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextLength 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextLength(Long TextLength) {
         this.TextLength = TextLength;
     }
 
     /**
-     * Get 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件的字节数。 
      * @return ByteLength 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getByteLength() {
         return this.ByteLength;
@@ -124,19 +110,15 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ByteLength 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setByteLength(Long ByteLength) {
         this.ByteLength = ByteLength;
     }
 
     /**
-     * Get 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件被预处理、Embedding 向量化的进度。 
      * @return IndexedProgress 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndexedProgress() {
         return this.IndexedProgress;
@@ -144,9 +126,7 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexedProgress 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedProgress(Long IndexedProgress) {
         this.IndexedProgress = IndexedProgress;
@@ -158,15 +138,13 @@ New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return IndexedStatus 文件预处理、Embedding 向量化的状态。
 New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedStatus() {
         return this.IndexedStatus;
@@ -179,24 +157,20 @@ Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexedStatus 文件预处理、Embedding 向量化的状态。
 New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedStatus(String IndexedStatus) {
         this.IndexedStatus = IndexedStatus;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return IndexedErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedErrorMsg() {
         return this.IndexedErrorMsg;
@@ -204,19 +178,15 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexedErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedErrorMsg(String IndexedErrorMsg) {
         this.IndexedErrorMsg = IndexedErrorMsg;
     }
 
     /**
-     * Get 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件创建时间。 
      * @return CreateTime 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -224,19 +194,15 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件最后更新时间。 
      * @return LastUpdateTime 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdateTime() {
         return this.LastUpdateTime;
@@ -244,19 +210,15 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(String LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件关键字。 
      * @return Keywords 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeywords() {
         return this.Keywords;
@@ -264,9 +226,7 @@ Ready：文件解析、写入完成。
 
     /**
      * Set 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keywords 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String Keywords) {
         this.Keywords = Keywords;

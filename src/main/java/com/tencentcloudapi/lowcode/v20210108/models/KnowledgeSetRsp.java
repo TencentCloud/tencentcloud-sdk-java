@@ -25,7 +25,6 @@ public class KnowledgeSetRsp extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,17 +32,14 @@ public class KnowledgeSetRsp extends AbstractModel {
 
     /**
     * 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KnowledgeSets")
     @Expose
     private KnowledgeSet [] KnowledgeSets;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -51,19 +47,15 @@ public class KnowledgeSetRsp extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 知识库列表 
      * @return KnowledgeSets 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KnowledgeSet [] getKnowledgeSets() {
         return this.KnowledgeSets;
@@ -71,9 +63,7 @@ public class KnowledgeSetRsp extends AbstractModel {
 
     /**
      * Set 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeSets 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKnowledgeSets(KnowledgeSet [] KnowledgeSets) {
         this.KnowledgeSets = KnowledgeSets;

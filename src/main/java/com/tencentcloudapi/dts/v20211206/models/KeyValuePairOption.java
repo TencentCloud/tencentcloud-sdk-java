@@ -25,7 +25,6 @@ public class KeyValuePairOption extends AbstractModel {
 
     /**
     * 选项key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class KeyValuePairOption extends AbstractModel {
 
     /**
     * 选项value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 选项key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选项key 
      * @return Key 选项key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class KeyValuePairOption extends AbstractModel {
 
     /**
      * Set 选项key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 选项key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 选项value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选项value 
      * @return Value 选项value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class KeyValuePairOption extends AbstractModel {
 
     /**
      * Set 选项value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 选项value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

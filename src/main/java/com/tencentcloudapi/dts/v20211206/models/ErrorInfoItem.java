@@ -25,7 +25,6 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
     * 错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Solution")
     @Expose
@@ -41,7 +39,6 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
     * 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorLog")
     @Expose
@@ -49,17 +46,14 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
     * 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HelpDoc")
     @Expose
     private String HelpDoc;
 
     /**
-     * Get 错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码 
      * @return Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -67,19 +61,15 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
      * Set 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolution() {
         return this.Solution;
@@ -87,19 +77,15 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误日志信息 
      * @return ErrorLog 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorLog() {
         return this.ErrorLog;
@@ -107,19 +93,15 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
      * Set 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorLog 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorLog(String ErrorLog) {
         this.ErrorLog = ErrorLog;
     }
 
     /**
-     * Get 文档提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档提示 
      * @return HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHelpDoc() {
         return this.HelpDoc;
@@ -127,9 +109,7 @@ public class ErrorInfoItem extends AbstractModel {
 
     /**
      * Set 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHelpDoc(String HelpDoc) {
         this.HelpDoc = HelpDoc;

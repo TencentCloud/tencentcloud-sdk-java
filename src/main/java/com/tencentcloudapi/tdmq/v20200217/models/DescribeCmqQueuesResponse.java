@@ -32,7 +32,6 @@ public class DescribeCmqQueuesResponse extends AbstractModel {
 
     /**
     * 队列列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeCmqQueuesResponse extends AbstractModel {
     }
 
     /**
-     * Get 队列列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列列表 
      * @return QueueList 队列列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CmqQueue [] getQueueList() {
         return this.QueueList;
@@ -73,9 +70,7 @@ public class DescribeCmqQueuesResponse extends AbstractModel {
 
     /**
      * Set 队列列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueList 队列列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueList(CmqQueue [] QueueList) {
         this.QueueList = QueueList;

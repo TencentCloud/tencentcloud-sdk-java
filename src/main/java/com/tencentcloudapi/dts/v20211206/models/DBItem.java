@@ -25,7 +25,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -33,7 +32,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewDbName")
     @Expose
@@ -41,7 +39,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -49,7 +46,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewSchemaName")
     @Expose
@@ -57,7 +53,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBMode")
     @Expose
@@ -65,7 +60,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaMode")
     @Expose
@@ -73,7 +67,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableMode")
     @Expose
@@ -81,7 +74,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tables")
     @Expose
@@ -89,7 +81,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewMode")
     @Expose
@@ -97,7 +88,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Views")
     @Expose
@@ -105,7 +95,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleMode")
     @Expose
@@ -113,7 +102,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Roles")
     @Expose
@@ -121,7 +109,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FunctionMode")
     @Expose
@@ -129,7 +116,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMode")
     @Expose
@@ -137,7 +123,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventMode")
     @Expose
@@ -145,7 +130,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureMode")
     @Expose
@@ -153,7 +137,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * FunctionMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Functions")
     @Expose
@@ -161,7 +144,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * ProcedureMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Procedures")
     @Expose
@@ -169,7 +151,6 @@ public class DBItem extends AbstractModel {
 
     /**
     * EventMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -177,17 +158,14 @@ public class DBItem extends AbstractModel {
 
     /**
     * TriggerMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Triggers")
     @Expose
     private String [] Triggers;
 
     /**
-     * Get 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要迁移或同步的库名，当ObjectMode为partial时，此项必填 
      * @return DbName 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -195,19 +173,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步后的库名，默认与源库相同 
      * @return NewDbName 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewDbName() {
         return this.NewDbName;
@@ -215,19 +189,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewDbName 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewDbName(String NewDbName) {
         this.NewDbName = NewDbName;
     }
 
     /**
-     * Get 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步的 schema 
      * @return SchemaName 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -235,19 +205,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步后的 schema name 
      * @return NewSchemaName 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewSchemaName() {
         return this.NewSchemaName;
@@ -255,19 +221,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewSchemaName 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewSchemaName(String NewSchemaName) {
         this.NewSchemaName = NewSchemaName;
     }
 
     /**
-     * Get DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填 
      * @return DBMode DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBMode() {
         return this.DBMode;
@@ -275,19 +237,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBMode DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBMode(String DBMode) {
         this.DBMode = DBMode;
     }
 
     /**
-     * Get schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get schema选择模式: all(为当前对象下的所有对象)，partial(部分对象) 
      * @return SchemaMode schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaMode() {
         return this.SchemaMode;
@@ -295,19 +253,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaMode schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaMode(String SchemaMode) {
         this.SchemaMode = SchemaMode;
     }
 
     /**
-     * Get 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填 
      * @return TableMode 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableMode() {
         return this.TableMode;
@@ -315,19 +269,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableMode 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableMode(String TableMode) {
         this.TableMode = TableMode;
     }
 
     /**
-     * Get 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表图对象集合，当 TableMode 为 partial 时，此项需要填写 
      * @return Tables 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TableItem [] getTables() {
         return this.Tables;
@@ -335,19 +285,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tables 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTables(TableItem [] Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象 
      * @return ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewMode() {
         return this.ViewMode;
@@ -355,19 +301,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写 
      * @return Views 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ViewItem [] getViews() {
         return this.Views;
@@ -375,19 +317,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Views 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViews(ViewItem [] Views) {
         this.Views = Views;
     }
 
     /**
-     * Get postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象 
      * @return RoleMode postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleMode() {
         return this.RoleMode;
@@ -395,19 +333,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleMode postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleMode(String RoleMode) {
         this.RoleMode = RoleMode;
     }
 
     /**
-     * Get postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写 
      * @return Roles postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoleItem [] getRoles() {
         return this.Roles;
@@ -415,19 +349,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Roles postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoles(RoleItem [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，partial为部分，all为整选 
      * @return FunctionMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunctionMode() {
         return this.FunctionMode;
@@ -435,19 +365,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FunctionMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctionMode(String FunctionMode) {
         this.FunctionMode = FunctionMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，partial为部分，all为整选 
      * @return TriggerMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerMode() {
         return this.TriggerMode;
@@ -455,19 +381,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，partial为部分，all为整选 
      * @return EventMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventMode() {
         return this.EventMode;
@@ -475,19 +397,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventMode(String EventMode) {
         this.EventMode = EventMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，partial为部分，all为整选 
      * @return ProcedureMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcedureMode() {
         return this.ProcedureMode;
@@ -495,19 +413,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureMode 选择要同步的模式，partial为部分，all为整选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureMode(String ProcedureMode) {
         this.ProcedureMode = ProcedureMode;
     }
 
     /**
-     * Get FunctionMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FunctionMode取值为partial时需要填写 
      * @return Functions FunctionMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFunctions() {
         return this.Functions;
@@ -515,19 +429,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set FunctionMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Functions FunctionMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctions(String [] Functions) {
         this.Functions = Functions;
     }
 
     /**
-     * Get ProcedureMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ProcedureMode取值为partial时需要填写 
      * @return Procedures ProcedureMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProcedures() {
         return this.Procedures;
@@ -535,19 +445,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set ProcedureMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Procedures ProcedureMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedures(String [] Procedures) {
         this.Procedures = Procedures;
     }
 
     /**
-     * Get EventMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EventMode取值为partial时需要填写 
      * @return Events EventMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEvents() {
         return this.Events;
@@ -555,19 +461,15 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set EventMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events EventMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(String [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get TriggerMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TriggerMode取值为partial时需要填写 
      * @return Triggers TriggerMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTriggers() {
         return this.Triggers;
@@ -575,9 +477,7 @@ public class DBItem extends AbstractModel {
 
     /**
      * Set TriggerMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Triggers TriggerMode取值为partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggers(String [] Triggers) {
         this.Triggers = Triggers;

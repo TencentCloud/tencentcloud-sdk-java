@@ -25,7 +25,6 @@ public class DescribeKnowledgeDocumentSetDetailRsp extends AbstractModel {
 
     /**
     * 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeKnowledgeDocumentSetDetailRsp extends AbstractModel {
 
     /**
     * 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSet")
     @Expose
     private KnowledgeDocumentSet DocumentSet;
 
     /**
-     * Get 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取的数量。 
      * @return Count 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -51,19 +47,15 @@ public class DescribeKnowledgeDocumentSetDetailRsp extends AbstractModel {
 
     /**
      * Set 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 文档信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文档信息 
      * @return DocumentSet 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KnowledgeDocumentSet getDocumentSet() {
         return this.DocumentSet;
@@ -71,9 +63,7 @@ public class DescribeKnowledgeDocumentSetDetailRsp extends AbstractModel {
 
     /**
      * Set 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSet 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSet(KnowledgeDocumentSet DocumentSet) {
         this.DocumentSet = DocumentSet;

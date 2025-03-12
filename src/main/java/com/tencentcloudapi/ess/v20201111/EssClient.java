@@ -1775,6 +1775,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询用户模版类型，分为两种模式：
+<ul>
+<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
+<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+</ul>
+     * @param req DescribeUserFlowTypeRequest
+     * @return DescribeUserFlowTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserFlowTypeResponse DescribeUserFlowType(DescribeUserFlowTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserFlowType", DescribeUserFlowTypeResponse.class);
+    }
+
+    /**
      *检测个人用户是否已经实名。
 
 在调用生成C端用户实名链接（[CreateUserVerifyUrl](https://qian.tencent.com/developers/companyApis/users/CreateUserVerifyUrl)）接口之前，客户企业应首先调用本接口判断C端用户是否已经完成实名认证。如果用户已经实名，那么无需再次调用（[CreateUserVerifyUrl](https://qian.tencent.com/developers/companyApis/users/CreateUserVerifyUrl)）生成链接并走实名认证流程。

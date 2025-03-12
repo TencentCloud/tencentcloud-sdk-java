@@ -25,7 +25,6 @@ public class MigrateAction extends AbstractModel {
 
     /**
     * 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllAction")
     @Expose
@@ -33,17 +32,14 @@ public class MigrateAction extends AbstractModel {
 
     /**
     * 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowedAction")
     @Expose
     private String [] AllowedAction;
 
     /**
-     * Get 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的所有操作列表 
      * @return AllAction 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllAction() {
         return this.AllAction;
@@ -51,19 +47,15 @@ public class MigrateAction extends AbstractModel {
 
     /**
      * Set 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllAction 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllAction(String [] AllAction) {
         this.AllAction = AllAction;
     }
 
     /**
-     * Get 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务在当前状态下允许的操作列表 
      * @return AllowedAction 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllowedAction() {
         return this.AllowedAction;
@@ -71,9 +63,7 @@ public class MigrateAction extends AbstractModel {
 
     /**
      * Set 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowedAction 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowedAction(String [] AllowedAction) {
         this.AllowedAction = AllowedAction;

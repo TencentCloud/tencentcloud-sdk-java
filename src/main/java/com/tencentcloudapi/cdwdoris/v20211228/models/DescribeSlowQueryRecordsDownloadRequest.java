@@ -122,6 +122,13 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
     private String SortOrder;
 
     /**
+    * user
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -345,6 +352,22 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.SortOrder = SortOrder;
     }
 
+    /**
+     * Get user 
+     * @return UserName user
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set user
+     * @param UserName user
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
     public DescribeSlowQueryRecordsDownloadRequest() {
     }
 
@@ -401,6 +424,9 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         if (source.SortOrder != null) {
             this.SortOrder = new String(source.SortOrder);
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

@@ -25,7 +25,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -33,7 +32,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionId")
     @Expose
@@ -49,7 +47,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 该订阅待投递的消息数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgCount")
     @Expose
@@ -57,7 +54,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTime")
     @Expose
@@ -65,7 +61,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +76,6 @@ public class CmqSubscription extends AbstractModel {
 
     /**
     * 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endpoint")
     @Expose
@@ -91,7 +85,6 @@ public class CmqSubscription extends AbstractModel {
     * 描述用户创建订阅时选择的过滤策略：
 filterType = 1表示用户使用 filterTag 标签过滤
 filterType = 2表示用户使用 bindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterTags")
     @Expose
@@ -99,7 +92,6 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
     * 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -109,7 +101,6 @@ filterType = 2表示用户使用 bindingKey 过滤。
     * 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
 （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
 （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyStrategy")
     @Expose
@@ -117,7 +108,6 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
     * 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyContentFormat")
     @Expose
@@ -125,17 +115,14 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
     * 订阅所属的主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。 
      * @return SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
@@ -143,19 +130,15 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;
     }
 
     /**
-     * Get 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅 ID。订阅 ID 在拉取监控数据时会用到。 
      * @return SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscriptionId() {
         return this.SubscriptionId;
@@ -163,9 +146,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionId(String SubscriptionId) {
         this.SubscriptionId = SubscriptionId;
@@ -192,10 +173,8 @@ filterType = 2表示用户使用 bindingKey 过滤。
     }
 
     /**
-     * Get 该订阅待投递的消息数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该订阅待投递的消息数。 
      * @return MsgCount 该订阅待投递的消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgCount() {
         return this.MsgCount;
@@ -203,19 +182,15 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 该订阅待投递的消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgCount 该订阅待投递的消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgCount(Long MsgCount) {
         this.MsgCount = MsgCount;
     }
 
     /**
-     * Get 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。 
      * @return LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
@@ -223,19 +198,15 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。 
      * @return CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -243,9 +214,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -272,10 +241,8 @@ filterType = 2表示用户使用 bindingKey 过滤。
     }
 
     /**
-     * Get 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。 
      * @return Endpoint 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -283,9 +250,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoint 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
@@ -294,12 +259,10 @@ filterType = 2表示用户使用 bindingKey 过滤。
     /**
      * Get 描述用户创建订阅时选择的过滤策略：
 filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。 
+filterType = 2表示用户使用 bindingKey 过滤。 
      * @return FilterTags 描述用户创建订阅时选择的过滤策略：
 filterType = 1表示用户使用 filterTag 标签过滤
 filterType = 2表示用户使用 bindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFilterTags() {
         return this.FilterTags;
@@ -309,21 +272,17 @@ filterType = 2表示用户使用 bindingKey 过滤。
      * Set 描述用户创建订阅时选择的过滤策略：
 filterType = 1表示用户使用 filterTag 标签过滤
 filterType = 2表示用户使用 bindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterTags 描述用户创建订阅时选择的过滤策略：
 filterType = 1表示用户使用 filterTag 标签过滤
 filterType = 2表示用户使用 bindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterTags(String [] FilterTags) {
         this.FilterTags = FilterTags;
     }
 
     /**
-     * Get 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。 
      * @return Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -331,9 +290,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -342,12 +299,10 @@ filterType = 2表示用户使用 bindingKey 过滤。
     /**
      * Get 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
 （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
-（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
-注意：此字段可能返回 null，表示取不到有效值。 
+（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。 
      * @return NotifyStrategy 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
 （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
 （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotifyStrategy() {
         return this.NotifyStrategy;
@@ -357,21 +312,17 @@ filterType = 2表示用户使用 bindingKey 过滤。
      * Set 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
 （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
 （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotifyStrategy 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
 （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
 （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyStrategy(String NotifyStrategy) {
         this.NotifyStrategy = NotifyStrategy;
     }
 
     /**
-     * Get 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。 
      * @return NotifyContentFormat 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotifyContentFormat() {
         return this.NotifyContentFormat;
@@ -379,19 +330,15 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotifyContentFormat 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyContentFormat(String NotifyContentFormat) {
         this.NotifyContentFormat = NotifyContentFormat;
     }
 
     /**
-     * Get 订阅所属的主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅所属的主题名称 
      * @return TopicName 订阅所属的主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -399,9 +346,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
     /**
      * Set 订阅所属的主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 订阅所属的主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

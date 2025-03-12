@@ -110,6 +110,13 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
     private String CustomKey;
 
     /**
+    * 任务来源信息
+    */
+    @SerializedName("SourceInfo")
+    @Expose
+    private KVPair [] SourceInfo;
+
+    /**
      * Get DLC Spark作业引擎名称 
      * @return DataEngineName DLC Spark作业引擎名称
      */
@@ -309,6 +316,22 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         this.CustomKey = CustomKey;
     }
 
+    /**
+     * Get 任务来源信息 
+     * @return SourceInfo 任务来源信息
+     */
+    public KVPair [] getSourceInfo() {
+        return this.SourceInfo;
+    }
+
+    /**
+     * Set 任务来源信息
+     * @param SourceInfo 任务来源信息
+     */
+    public void setSourceInfo(KVPair [] SourceInfo) {
+        this.SourceInfo = SourceInfo;
+    }
+
     public CreateSparkSessionBatchSQLRequest() {
     }
 
@@ -356,6 +379,12 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         if (source.CustomKey != null) {
             this.CustomKey = new String(source.CustomKey);
         }
+        if (source.SourceInfo != null) {
+            this.SourceInfo = new KVPair[source.SourceInfo.length];
+            for (int i = 0; i < source.SourceInfo.length; i++) {
+                this.SourceInfo[i] = new KVPair(source.SourceInfo[i]);
+            }
+        }
     }
 
 
@@ -375,6 +404,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
         this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
+        this.setParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
 
     }
 }

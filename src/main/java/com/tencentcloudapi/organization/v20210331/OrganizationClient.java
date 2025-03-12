@@ -1315,6 +1315,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *修改组织成员访问策略
+     * @param req UpdateOrganizationMembersPolicyRequest
+     * @return UpdateOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMembersPolicyResponse UpdateOrganizationMembersPolicy(UpdateOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationMembersPolicy", UpdateOrganizationMembersPolicyResponse.class);
+    }
+
+    /**
      *更新企业组织节点
      * @param req UpdateOrganizationNodeRequest
      * @return UpdateOrganizationNodeResponse

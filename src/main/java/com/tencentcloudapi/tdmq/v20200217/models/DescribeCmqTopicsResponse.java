@@ -25,7 +25,6 @@ public class DescribeCmqTopicsResponse extends AbstractModel {
 
     /**
     * 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeCmqTopicsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主题列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题列表 
      * @return TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CmqTopic [] getTopicList() {
         return this.TopicList;
@@ -57,9 +54,7 @@ public class DescribeCmqTopicsResponse extends AbstractModel {
 
     /**
      * Set 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(CmqTopic [] TopicList) {
         this.TopicList = TopicList;

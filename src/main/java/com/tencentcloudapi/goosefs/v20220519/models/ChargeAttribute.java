@@ -25,7 +25,6 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
     * 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
@@ -40,7 +39,6 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
     * 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -48,17 +46,14 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
     * 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-     * Get 到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间 
      * @return CurDeadline 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -66,9 +61,7 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
      * Set 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
@@ -91,10 +84,8 @@ public class ChargeAttribute extends AbstractModel {
     }
 
     /**
-     * Get 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费 
      * @return AutoRenewFlag 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -102,19 +93,15 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
      * Set 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID 
      * @return ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -122,9 +109,7 @@ public class ChargeAttribute extends AbstractModel {
 
     /**
      * Set 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

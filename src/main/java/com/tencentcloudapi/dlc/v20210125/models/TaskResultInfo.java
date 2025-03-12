@@ -32,7 +32,6 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
     * 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
@@ -40,7 +39,6 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
     * 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -119,7 +117,6 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
     * 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultSet")
     @Expose
@@ -162,7 +159,6 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
     * 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryResultTime")
     @Expose
@@ -185,10 +181,8 @@ public class TaskResultInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称，当前任务执行时候选中的默认数据源 
      * @return DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
@@ -196,19 +190,15 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
      * Set 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;
     }
 
     /**
-     * Get 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称，当前任务执行时候选中的默认数据库 
      * @return DatabaseName 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -216,9 +206,7 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
      * Set 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
@@ -389,10 +377,8 @@ public class TaskResultInfo extends AbstractModel {
     }
 
     /**
-     * Get 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果信息，反转义后，外层数组的每个元素为一行数据 
      * @return ResultSet 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultSet() {
         return this.ResultSet;
@@ -400,9 +386,7 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
      * Set 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultSet 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultSet(String ResultSet) {
         this.ResultSet = ResultSet;
@@ -489,10 +473,8 @@ public class TaskResultInfo extends AbstractModel {
     }
 
     /**
-     * Get 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取结果消耗的时间 
      * @return QueryResultTime 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQueryResultTime() {
         return this.QueryResultTime;
@@ -500,9 +482,7 @@ public class TaskResultInfo extends AbstractModel {
 
     /**
      * Set 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryResultTime 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryResultTime(Float QueryResultTime) {
         this.QueryResultTime = QueryResultTime;

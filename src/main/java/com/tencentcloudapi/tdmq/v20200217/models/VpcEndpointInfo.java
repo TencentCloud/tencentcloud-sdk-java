@@ -45,8 +45,7 @@ public class VpcEndpointInfo extends AbstractModel {
     private String VpcEndpoint;
 
     /**
-    * vpc接入点状态
-OFF/ON/CREATING/DELETING
+    * vpc接入点状态 OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcDataStreamEndpointStatus")
@@ -102,11 +101,9 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Get vpc接入点状态
-OFF/ON/CREATING/DELETING
+     * Get vpc接入点状态 OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcDataStreamEndpointStatus vpc接入点状态
-OFF/ON/CREATING/DELETING
+     * @return VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcDataStreamEndpointStatus() {
@@ -114,11 +111,9 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Set vpc接入点状态
-OFF/ON/CREATING/DELETING
+     * Set vpc接入点状态 OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcDataStreamEndpointStatus vpc接入点状态
-OFF/ON/CREATING/DELETING
+     * @param VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcDataStreamEndpointStatus(String VpcDataStreamEndpointStatus) {

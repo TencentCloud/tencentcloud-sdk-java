@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeColumnLineageRequest extends AbstractModel {
 
     /**
-    * 查询方向，INPUT,OUTPUT,BOTH枚举值
+    * 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
     */
     @SerializedName("Direction")
     @Expose
@@ -66,16 +70,32 @@ public class DescribeColumnLineageRequest extends AbstractModel {
     private Boolean IgnoreTemp;
 
     /**
-     * Get 查询方向，INPUT,OUTPUT,BOTH枚举值 
-     * @return Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * Get 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH 
+     * @return Direction 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 查询方向，INPUT,OUTPUT,BOTH枚举值
-     * @param Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * Set 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
+     * @param Direction 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

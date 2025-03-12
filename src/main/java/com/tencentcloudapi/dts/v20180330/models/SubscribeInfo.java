@@ -116,7 +116,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -188,7 +187,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeVersion")
     @Expose
@@ -403,10 +401,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费 
      * @return AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -414,9 +410,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -571,10 +565,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅 
      * @return SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
@@ -582,9 +574,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;

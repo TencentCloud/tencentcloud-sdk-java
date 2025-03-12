@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,74 +21,90 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RabbitMQPrivateVirtualHost extends AbstractModel {
+public class UserFlowType extends AbstractModel {
 
     /**
-    * 虚拟主机的名字
-注意：此字段可能返回 null，表示取不到有效值。
+    * 用户合同类型id
     */
-    @SerializedName("VirtualHostName")
+    @SerializedName("UserFlowTypeId")
     @Expose
-    private String VirtualHostName;
+    private String UserFlowTypeId;
 
     /**
-    * 虚拟主机的描述
-注意：此字段可能返回 null，表示取不到有效值。
+    * 用户合同类型名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 用户合同类型的描述信息
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 虚拟主机的名字
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualHostName 虚拟主机的名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户合同类型id 
+     * @return UserFlowTypeId 用户合同类型id
      */
-    public String getVirtualHostName() {
-        return this.VirtualHostName;
+    public String getUserFlowTypeId() {
+        return this.UserFlowTypeId;
     }
 
     /**
-     * Set 虚拟主机的名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualHostName 虚拟主机的名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 用户合同类型id
+     * @param UserFlowTypeId 用户合同类型id
      */
-    public void setVirtualHostName(String VirtualHostName) {
-        this.VirtualHostName = VirtualHostName;
+    public void setUserFlowTypeId(String UserFlowTypeId) {
+        this.UserFlowTypeId = UserFlowTypeId;
     }
 
     /**
-     * Get 虚拟主机的描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 虚拟主机的描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户合同类型名称 
+     * @return Name 用户合同类型名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 用户合同类型名称
+     * @param Name 用户合同类型名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 用户合同类型的描述信息 
+     * @return Description 用户合同类型的描述信息
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 虚拟主机的描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 虚拟主机的描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 用户合同类型的描述信息
+     * @param Description 用户合同类型的描述信息
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
-    public RabbitMQPrivateVirtualHost() {
+    public UserFlowType() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RabbitMQPrivateVirtualHost(RabbitMQPrivateVirtualHost source) {
-        if (source.VirtualHostName != null) {
-            this.VirtualHostName = new String(source.VirtualHostName);
+    public UserFlowType(UserFlowType source) {
+        if (source.UserFlowTypeId != null) {
+            this.UserFlowTypeId = new String(source.UserFlowTypeId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -100,7 +116,8 @@ public class RabbitMQPrivateVirtualHost extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VirtualHostName", this.VirtualHostName);
+        this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

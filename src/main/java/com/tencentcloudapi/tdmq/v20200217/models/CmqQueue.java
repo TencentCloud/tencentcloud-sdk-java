@@ -39,7 +39,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
     @Expose
@@ -47,7 +46,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bps")
     @Expose
@@ -55,7 +53,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 飞行消息最大保留时间，需要小于消息保留周期。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDelaySeconds")
     @Expose
@@ -70,7 +67,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PollingWaitSeconds")
     @Expose
@@ -78,7 +74,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
@@ -86,7 +81,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VisibilityTimeout")
     @Expose
@@ -94,7 +88,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -102,7 +95,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewindSeconds")
     @Expose
@@ -110,7 +102,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -118,7 +109,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTime")
     @Expose
@@ -126,7 +116,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveMsgNum")
     @Expose
@@ -134,7 +123,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InactiveMsgNum")
     @Expose
@@ -222,7 +210,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 租户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
     @Expose
@@ -230,7 +217,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -238,7 +224,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -246,7 +231,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 最大未确认消息数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxUnackedMsgNum")
     @Expose
@@ -254,7 +238,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 最大消息堆积大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgBacklogSize")
     @Expose
@@ -262,7 +245,6 @@ public class CmqQueue extends AbstractModel {
 
     /**
     * 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionSizeInMB")
     @Expose
@@ -301,10 +283,8 @@ public class CmqQueue extends AbstractModel {
     }
 
     /**
-     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。 
      * @return Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQps() {
         return this.Qps;
@@ -312,19 +292,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽限制。 
      * @return Bps 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBps() {
         return this.Bps;
@@ -332,19 +308,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bps 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBps(Long Bps) {
         this.Bps = Bps;
     }
 
     /**
-     * Get 飞行消息最大保留时间，需要小于消息保留周期。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 飞行消息最大保留时间，需要小于消息保留周期。 
      * @return MaxDelaySeconds 飞行消息最大保留时间，需要小于消息保留周期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDelaySeconds() {
         return this.MaxDelaySeconds;
@@ -352,9 +324,7 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 飞行消息最大保留时间，需要小于消息保留周期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDelaySeconds 飞行消息最大保留时间，需要小于消息保留周期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDelaySeconds(Long MaxDelaySeconds) {
         this.MaxDelaySeconds = MaxDelaySeconds;
@@ -377,10 +347,8 @@ public class CmqQueue extends AbstractModel {
     }
 
     /**
-     * Get 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。 
      * @return PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPollingWaitSeconds() {
         return this.PollingWaitSeconds;
@@ -388,19 +356,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPollingWaitSeconds(Long PollingWaitSeconds) {
         this.PollingWaitSeconds = PollingWaitSeconds;
     }
 
     /**
-     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。 
      * @return MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
@@ -408,19 +372,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。 
      * @return VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVisibilityTimeout() {
         return this.VisibilityTimeout;
@@ -428,19 +388,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVisibilityTimeout(Long VisibilityTimeout) {
         this.VisibilityTimeout = VisibilityTimeout;
     }
 
     /**
-     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。 
      * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
@@ -448,19 +404,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。 
      * @return RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRewindSeconds() {
         return this.RewindSeconds;
@@ -468,19 +420,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewindSeconds(Long RewindSeconds) {
         this.RewindSeconds = RewindSeconds;
     }
 
     /**
-     * Get 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列的创建时间。返回 Unix 时间戳，精确到毫秒。 
      * @return CreateTime 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -488,19 +436,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。 
      * @return LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
@@ -508,19 +452,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。 
      * @return ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActiveMsgNum() {
         return this.ActiveMsgNum;
@@ -528,19 +468,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveMsgNum(Long ActiveMsgNum) {
         this.ActiveMsgNum = ActiveMsgNum;
     }
 
     /**
-     * Get 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。 
      * @return InactiveMsgNum 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInactiveMsgNum() {
         return this.InactiveMsgNum;
@@ -548,9 +484,7 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InactiveMsgNum 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInactiveMsgNum(Long InactiveMsgNum) {
         this.InactiveMsgNum = InactiveMsgNum;
@@ -757,10 +691,8 @@ public class CmqQueue extends AbstractModel {
     }
 
     /**
-     * Get 租户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户id 
      * @return TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
         return this.TenantId;
@@ -768,19 +700,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -788,19 +716,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败 
      * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -808,19 +732,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 最大未确认消息数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大未确认消息数量 
      * @return MaxUnackedMsgNum 最大未确认消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxUnackedMsgNum() {
         return this.MaxUnackedMsgNum;
@@ -828,19 +748,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 最大未确认消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxUnackedMsgNum 最大未确认消息数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
         this.MaxUnackedMsgNum = MaxUnackedMsgNum;
     }
 
     /**
-     * Get 最大消息堆积大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大消息堆积大小（字节） 
      * @return MaxMsgBacklogSize 最大消息堆积大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgBacklogSize() {
         return this.MaxMsgBacklogSize;
@@ -848,19 +764,15 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 最大消息堆积大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMsgBacklogSize 最大消息堆积大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgBacklogSize(Long MaxMsgBacklogSize) {
         this.MaxMsgBacklogSize = MaxMsgBacklogSize;
     }
 
     /**
-     * Get 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启 
      * @return RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionSizeInMB() {
         return this.RetentionSizeInMB;
@@ -868,9 +780,7 @@ public class CmqQueue extends AbstractModel {
 
     /**
      * Set 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionSizeInMB(Long RetentionSizeInMB) {
         this.RetentionSizeInMB = RetentionSizeInMB;

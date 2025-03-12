@@ -38,6 +38,13 @@ public class CreateSparkAppTaskRequest extends AbstractModel {
     private String CmdArgs;
 
     /**
+    * 任务来源信息
+    */
+    @SerializedName("SourceInfo")
+    @Expose
+    private KVPair [] SourceInfo;
+
+    /**
      * Get spark作业名 
      * @return JobName spark作业名
      */
@@ -69,6 +76,22 @@ public class CreateSparkAppTaskRequest extends AbstractModel {
         this.CmdArgs = CmdArgs;
     }
 
+    /**
+     * Get 任务来源信息 
+     * @return SourceInfo 任务来源信息
+     */
+    public KVPair [] getSourceInfo() {
+        return this.SourceInfo;
+    }
+
+    /**
+     * Set 任务来源信息
+     * @param SourceInfo 任务来源信息
+     */
+    public void setSourceInfo(KVPair [] SourceInfo) {
+        this.SourceInfo = SourceInfo;
+    }
+
     public CreateSparkAppTaskRequest() {
     }
 
@@ -83,6 +106,12 @@ public class CreateSparkAppTaskRequest extends AbstractModel {
         if (source.CmdArgs != null) {
             this.CmdArgs = new String(source.CmdArgs);
         }
+        if (source.SourceInfo != null) {
+            this.SourceInfo = new KVPair[source.SourceInfo.length];
+            for (int i = 0; i < source.SourceInfo.length; i++) {
+                this.SourceInfo[i] = new KVPair(source.SourceInfo[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateSparkAppTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+        this.setParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
 
     }
 }

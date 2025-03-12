@@ -153,6 +153,13 @@ public class DescribeTemplatesRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
+    * 用户合同类型id
+    */
+    @SerializedName("UserFlowTypeId")
+    @Expose
+    private String UserFlowTypeId;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -528,6 +535,22 @@ public class DescribeTemplatesRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 用户合同类型id 
+     * @return UserFlowTypeId 用户合同类型id
+     */
+    public String getUserFlowTypeId() {
+        return this.UserFlowTypeId;
+    }
+
+    /**
+     * Set 用户合同类型id
+     * @param UserFlowTypeId 用户合同类型id
+     */
+    public void setUserFlowTypeId(String UserFlowTypeId) {
+        this.UserFlowTypeId = UserFlowTypeId;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -575,6 +598,9 @@ public class DescribeTemplatesRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.UserFlowTypeId != null) {
+            this.UserFlowTypeId = new String(source.UserFlowTypeId);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         this.setParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
 
     }
 }

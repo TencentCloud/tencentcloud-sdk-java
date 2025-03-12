@@ -25,7 +25,6 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
     * 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表。 
      * @return Items 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceInfo [] getItems() {
         return this.Items;
@@ -57,9 +54,7 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(InstanceInfo [] Items) {
         this.Items = Items;

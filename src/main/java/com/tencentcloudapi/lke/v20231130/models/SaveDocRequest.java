@@ -52,14 +52,14 @@ public class SaveDocRequest extends AbstractModel {
     private String CosUrl;
 
     /**
-    * ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
+    * ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
     */
     @SerializedName("ETag")
     @Expose
     private String ETag;
 
     /**
-    * cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+    * cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
     */
     @SerializedName("CosHash")
     @Expose
@@ -73,7 +73,7 @@ public class SaveDocRequest extends AbstractModel {
     private String Size;
 
     /**
-    * 标签适用范围 1：全部，2：按条件范围
+    * 标签适用范围，默认填0即可
     */
     @SerializedName("AttrRange")
     @Expose
@@ -130,7 +130,7 @@ public class SaveDocRequest extends AbstractModel {
     private Boolean IsRefer;
 
     /**
-    * 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+    * 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
     */
     @SerializedName("Opt")
     @Expose
@@ -208,32 +208,32 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 
-     * @return ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
+     * Get ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取 
+     * @return ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
      */
     public String getETag() {
         return this.ETag;
     }
 
     /**
-     * Set ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
-     * @param ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
+     * Set ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
+     * @param ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
      */
     public void setETag(String ETag) {
         this.ETag = ETag;
     }
 
     /**
-     * Get cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性 
-     * @return CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+     * Get cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取 
+     * @return CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
      */
     public String getCosHash() {
         return this.CosHash;
     }
 
     /**
-     * Set cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
-     * @param CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+     * Set cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
+     * @param CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
      */
     public void setCosHash(String CosHash) {
         this.CosHash = CosHash;
@@ -256,16 +256,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签适用范围 1：全部，2：按条件范围 
-     * @return AttrRange 标签适用范围 1：全部，2：按条件范围
+     * Get 标签适用范围，默认填0即可 
+     * @return AttrRange 标签适用范围，默认填0即可
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 标签适用范围 1：全部，2：按条件范围
-     * @param AttrRange 标签适用范围 1：全部，2：按条件范围
+     * Set 标签适用范围，默认填0即可
+     * @param AttrRange 标签适用范围，默认填0即可
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -388,16 +388,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 
-     * @return Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * Get 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板 
+     * @return Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
      */
     public Long getOpt() {
         return this.Opt;
     }
 
     /**
-     * Set 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
-     * @param Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * Set 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
+     * @param Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
      */
     public void setOpt(Long Opt) {
         this.Opt = Opt;

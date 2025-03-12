@@ -25,7 +25,6 @@ public class DescribeTaskPolicyTriggerLogResponse extends AbstractModel {
 
     /**
     * 触发日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerLogs")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTaskPolicyTriggerLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 触发日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发日志 
      * @return TriggerLogs 触发日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PolicyTriggerLog [] getTriggerLogs() {
         return this.TriggerLogs;
@@ -50,9 +47,7 @@ public class DescribeTaskPolicyTriggerLogResponse extends AbstractModel {
 
     /**
      * Set 触发日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerLogs 触发日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerLogs(PolicyTriggerLog [] TriggerLogs) {
         this.TriggerLogs = TriggerLogs;

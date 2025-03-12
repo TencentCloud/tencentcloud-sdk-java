@@ -25,7 +25,6 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 进度信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -41,7 +39,6 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 总的步骤数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepAll")
     @Expose
@@ -49,7 +46,6 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 当前进行的步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNow")
     @Expose
@@ -57,7 +53,6 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 当前步骤输出提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -65,17 +60,14 @@ public class ProcessProgress extends AbstractModel {
 
     /**
     * 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Steps")
     @Expose
     private StepDetailInfo [] Steps;
 
     /**
-     * Get 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等 
      * @return Status 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -83,19 +75,15 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 步骤的状态， 包括：notStarted(未开始)、running(运行中)、success(成功)、failed(失败)等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 进度信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度信息 
      * @return Percent 进度信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -103,19 +91,15 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 进度信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 进度信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 总的步骤数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的步骤数 
      * @return StepAll 总的步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepAll() {
         return this.StepAll;
@@ -123,19 +107,15 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 总的步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepAll 总的步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepAll(Long StepAll) {
         this.StepAll = StepAll;
     }
 
     /**
-     * Get 当前进行的步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前进行的步骤 
      * @return StepNow 当前进行的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNow() {
         return this.StepNow;
@@ -143,19 +123,15 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 当前进行的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNow 当前进行的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNow(Long StepNow) {
         this.StepNow = StepNow;
     }
 
     /**
-     * Get 当前步骤输出提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤输出提示信息 
      * @return Message 当前步骤输出提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -163,19 +139,15 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 当前步骤输出提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 当前步骤输出提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤信息 
      * @return Steps 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StepDetailInfo [] getSteps() {
         return this.Steps;
@@ -183,9 +155,7 @@ public class ProcessProgress extends AbstractModel {
 
     /**
      * Set 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Steps 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSteps(StepDetailInfo [] Steps) {
         this.Steps = Steps;

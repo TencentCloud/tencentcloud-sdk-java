@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeInstanceRequest extends AbstractModel {
 
     /**
-    * 待变更实例 ID。
+    * 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,25 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private RedisNodeInfo [] NodeSet;
 
     /**
-     * Get 待变更实例 ID。 
-     * @return InstanceId 待变更实例 ID。
+    * 切换时间。 
+- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+    */
+    @SerializedName("SwitchOption")
+    @Expose
+    private Long SwitchOption;
+
+    /**
+     * Get 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待变更实例 ID。
-     * @param InstanceId 待变更实例 ID。
+     * Set 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -138,6 +147,30 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.NodeSet = NodeSet;
     }
 
+    /**
+     * Get 切换时间。 
+- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。 
+     * @return SwitchOption 切换时间。 
+- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+     */
+    public Long getSwitchOption() {
+        return this.SwitchOption;
+    }
+
+    /**
+     * Set 切换时间。 
+- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+     * @param SwitchOption 切换时间。 
+- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+     */
+    public void setSwitchOption(Long SwitchOption) {
+        this.SwitchOption = SwitchOption;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -164,6 +197,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
                 this.NodeSet[i] = new RedisNodeInfo(source.NodeSet[i]);
             }
         }
+        if (source.SwitchOption != null) {
+            this.SwitchOption = new Long(source.SwitchOption);
+        }
     }
 
 
@@ -176,6 +212,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
         this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+        this.setParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
 
     }
 }

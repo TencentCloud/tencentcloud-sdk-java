@@ -25,7 +25,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
     @Expose
@@ -33,7 +32,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastDealName")
     @Expose
@@ -41,7 +39,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -49,7 +46,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeStatus")
     @Expose
@@ -57,7 +53,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -65,7 +60,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -73,7 +67,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -81,7 +74,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineReason")
     @Expose
@@ -89,7 +81,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateReason")
     @Expose
@@ -97,7 +88,6 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayType")
     @Expose
@@ -105,17 +95,14 @@ public class TradeInfo extends AbstractModel {
 
     /**
     * 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingType")
     @Expose
     private String BillingType;
 
     /**
-     * Get 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易订单号 
      * @return DealName 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
         return this.DealName;
@@ -123,19 +110,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealName 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上一次交易订单号 
      * @return LastDealName 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastDealName() {
         return this.LastDealName;
@@ -143,19 +126,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastDealName 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastDealName(String LastDealName) {
         this.LastDealName = LastDealName;
     }
 
     /**
-     * Get 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等 
      * @return InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceClass() {
         return this.InstanceClass;
@@ -163,19 +142,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费) 
      * @return TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTradeStatus() {
         return this.TradeStatus;
@@ -183,19 +158,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeStatus(String TradeStatus) {
         this.TradeStatus = TradeStatus;
     }
 
     /**
-     * Get 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间，格式为"yyyy-mm-dd hh:mm:ss" 
      * @return ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -203,19 +174,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下线时间，格式为"yyyy-mm-dd hh:mm:ss" 
      * @return OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -223,19 +190,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间，格式为"yyyy-mm-dd hh:mm:ss" 
      * @return IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -243,19 +206,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 下线原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下线原因 
      * @return OfflineReason 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineReason() {
         return this.OfflineReason;
@@ -263,19 +222,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineReason 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineReason(String OfflineReason) {
         this.OfflineReason = OfflineReason;
     }
 
     /**
-     * Get 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离原因 
      * @return IsolateReason 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateReason() {
         return this.IsolateReason;
@@ -283,19 +238,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateReason 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费类型，包括：postpay(后付费)、prepay(预付费) 
      * @return PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayType() {
         return this.PayType;
@@ -303,19 +254,15 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中) 
      * @return BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingType() {
         return this.BillingType;
@@ -323,9 +270,7 @@ public class TradeInfo extends AbstractModel {
 
     /**
      * Set 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingType(String BillingType) {
         this.BillingType = BillingType;

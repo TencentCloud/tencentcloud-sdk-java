@@ -32,7 +32,6 @@ public class DescribeCmqSubscriptionDetailResponse extends AbstractModel {
 
     /**
     * Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeCmqSubscriptionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Subscription属性集合 
      * @return SubscriptionSet Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CmqSubscription [] getSubscriptionSet() {
         return this.SubscriptionSet;
@@ -73,9 +70,7 @@ public class DescribeCmqSubscriptionDetailResponse extends AbstractModel {
 
     /**
      * Set Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionSet Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionSet(CmqSubscription [] SubscriptionSet) {
         this.SubscriptionSet = SubscriptionSet;

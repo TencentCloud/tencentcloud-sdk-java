@@ -25,17 +25,14 @@ public class CompareColumnItem extends AbstractModel {
 
     /**
     * 列名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnName")
     @Expose
     private String ColumnName;
 
     /**
-     * Get 列名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列名 
      * @return ColumnName 列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnName() {
         return this.ColumnName;
@@ -43,9 +40,7 @@ public class CompareColumnItem extends AbstractModel {
 
     /**
      * Set 列名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnName 列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnName(String ColumnName) {
         this.ColumnName = ColumnName;

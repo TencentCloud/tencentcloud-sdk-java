@@ -28,7 +28,6 @@ public class KnowledgeSplitterPreprocess extends AbstractModel {
 false：不追加。
 true：将段落 Title 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppendTitleToChunk")
     @Expose
@@ -39,7 +38,6 @@ true：将段落 Title 追加到切分后的段落。
 false：不追加。
 true：将全文的 keywords 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppendKeywordsToChunk")
     @Expose
@@ -49,13 +47,11 @@ true：将全文的 keywords 追加到切分后的段落。
      * Get 在对文件拆分时，配置是否将 Title 追加到切分后的段落后面一并 Embedding。取值如下所示：
 false：不追加。
 true：将段落 Title 追加到切分后的段落。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AppendTitleToChunk 在对文件拆分时，配置是否将 Title 追加到切分后的段落后面一并 Embedding。取值如下所示：
 false：不追加。
 true：将段落 Title 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAppendTitleToChunk() {
         return this.AppendTitleToChunk;
@@ -66,12 +62,10 @@ true：将段落 Title 追加到切分后的段落。
 false：不追加。
 true：将段落 Title 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppendTitleToChunk 在对文件拆分时，配置是否将 Title 追加到切分后的段落后面一并 Embedding。取值如下所示：
 false：不追加。
 true：将段落 Title 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppendTitleToChunk(Boolean AppendTitleToChunk) {
         this.AppendTitleToChunk = AppendTitleToChunk;
@@ -81,13 +75,11 @@ true：将段落 Title 追加到切分后的段落。
      * Get 在对文件拆分时，配置是否将关键字 keywords 追加到切分后的段落一并 Embedding。取值如下所示：
 false：不追加。
 true：将全文的 keywords 追加到切分后的段落。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AppendKeywordsToChunk 在对文件拆分时，配置是否将关键字 keywords 追加到切分后的段落一并 Embedding。取值如下所示：
 false：不追加。
 true：将全文的 keywords 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAppendKeywordsToChunk() {
         return this.AppendKeywordsToChunk;
@@ -98,12 +90,10 @@ true：将全文的 keywords 追加到切分后的段落。
 false：不追加。
 true：将全文的 keywords 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppendKeywordsToChunk 在对文件拆分时，配置是否将关键字 keywords 追加到切分后的段落一并 Embedding。取值如下所示：
 false：不追加。
 true：将全文的 keywords 追加到切分后的段落。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppendKeywordsToChunk(Boolean AppendKeywordsToChunk) {
         this.AppendKeywordsToChunk = AppendKeywordsToChunk;

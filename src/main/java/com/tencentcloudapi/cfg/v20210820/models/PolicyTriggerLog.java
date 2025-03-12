@@ -25,7 +25,6 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
     * 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -64,10 +63,8 @@ public class PolicyTriggerLog extends AbstractModel {
     private String CreatTime;
 
     /**
-     * Get 演练ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 演练ID 
      * @return TaskId 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -75,9 +72,7 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
      * Set 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

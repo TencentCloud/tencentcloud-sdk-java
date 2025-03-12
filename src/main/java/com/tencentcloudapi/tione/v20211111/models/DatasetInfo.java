@@ -272,6 +272,22 @@ public class DatasetInfo extends AbstractModel {
     private Boolean AnnotationSchemaConfigured;
 
     /**
+    * 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorNickname")
+    @Expose
+    private String CreatorNickname;
+
+    /**
+    * cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCfsUpdated")
+    @Expose
+    private Boolean IsCfsUpdated;
+
+    /**
      * Get 数据集id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasetId 数据集id
@@ -891,6 +907,46 @@ public class DatasetInfo extends AbstractModel {
         this.AnnotationSchemaConfigured = AnnotationSchemaConfigured;
     }
 
+    /**
+     * Get 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorNickname 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorNickname() {
+        return this.CreatorNickname;
+    }
+
+    /**
+     * Set 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorNickname 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorNickname(String CreatorNickname) {
+        this.CreatorNickname = CreatorNickname;
+    }
+
+    /**
+     * Get cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCfsUpdated cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsCfsUpdated() {
+        return this.IsCfsUpdated;
+    }
+
+    /**
+     * Set cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCfsUpdated cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCfsUpdated(Boolean IsCfsUpdated) {
+        this.IsCfsUpdated = IsCfsUpdated;
+    }
+
     public DatasetInfo() {
     }
 
@@ -998,6 +1054,12 @@ public class DatasetInfo extends AbstractModel {
         if (source.AnnotationSchemaConfigured != null) {
             this.AnnotationSchemaConfigured = new Boolean(source.AnnotationSchemaConfigured);
         }
+        if (source.CreatorNickname != null) {
+            this.CreatorNickname = new String(source.CreatorNickname);
+        }
+        if (source.IsCfsUpdated != null) {
+            this.IsCfsUpdated = new Boolean(source.IsCfsUpdated);
+        }
     }
 
 
@@ -1036,6 +1098,8 @@ public class DatasetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NumAnnotated", this.NumAnnotated);
         this.setParamSimple(map, prefix + "AnnotationSpecification", this.AnnotationSpecification);
         this.setParamSimple(map, prefix + "AnnotationSchemaConfigured", this.AnnotationSchemaConfigured);
+        this.setParamSimple(map, prefix + "CreatorNickname", this.CreatorNickname);
+        this.setParamSimple(map, prefix + "IsCfsUpdated", this.IsCfsUpdated);
 
     }
 }

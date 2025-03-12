@@ -25,7 +25,6 @@ public class RoleItem extends AbstractModel {
 
     /**
     * 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleName")
     @Expose
@@ -33,17 +32,14 @@ public class RoleItem extends AbstractModel {
 
     /**
     * 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewRoleName")
     @Expose
     private String NewRoleName;
 
     /**
-     * Get 角色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色名称 
      * @return RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleName() {
         return this.RoleName;
@@ -51,19 +47,15 @@ public class RoleItem extends AbstractModel {
 
     /**
      * Set 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移后的角色名称 
      * @return NewRoleName 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewRoleName() {
         return this.NewRoleName;
@@ -71,9 +63,7 @@ public class RoleItem extends AbstractModel {
 
     /**
      * Set 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewRoleName 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewRoleName(String NewRoleName) {
         this.NewRoleName = NewRoleName;

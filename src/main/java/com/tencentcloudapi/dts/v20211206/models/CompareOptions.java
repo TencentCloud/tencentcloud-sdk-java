@@ -25,7 +25,6 @@ public class CompareOptions extends AbstractModel {
 
     /**
     * 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -33,7 +32,6 @@ public class CompareOptions extends AbstractModel {
 
     /**
     * 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleRate")
     @Expose
@@ -41,17 +39,14 @@ public class CompareOptions extends AbstractModel {
 
     /**
     * 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThreadCount")
     @Expose
     private Long ThreadCount;
 
     /**
-     * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck 
      * @return Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -59,19 +54,15 @@ public class CompareOptions extends AbstractModel {
 
     /**
      * Set 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抽样比例;范围0,100。默认为100 
      * @return SampleRate 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSampleRate() {
         return this.SampleRate;
@@ -79,19 +70,15 @@ public class CompareOptions extends AbstractModel {
 
     /**
      * Set 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleRate 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 线程数，取值1-5，默认为1 
      * @return ThreadCount 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThreadCount() {
         return this.ThreadCount;
@@ -99,9 +86,7 @@ public class CompareOptions extends AbstractModel {
 
     /**
      * Set 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThreadCount 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThreadCount(Long ThreadCount) {
         this.ThreadCount = ThreadCount;

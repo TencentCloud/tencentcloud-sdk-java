@@ -60,12 +60,8 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
     * 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
     */
     @SerializedName("Certificate")
     @Expose
@@ -130,12 +126,8 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
     * 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
     */
     @SerializedName("MultiCertInfo")
     @Expose
@@ -189,6 +181,13 @@ public class CreateListenerRequest extends AbstractModel {
     @SerializedName("SslCloseSwitch")
     @Expose
     private Boolean SslCloseSwitch;
+
+    /**
+    * 数据压缩模式
+    */
+    @SerializedName("DataCompressMode")
+    @Expose
+    private String DataCompressMode;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -272,19 +271,11 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
      * Get 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li> 
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li> 
      * @return Certificate 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
@@ -292,19 +283,11 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
      * Set 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      * @param Certificate 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -444,19 +427,11 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
      * Get 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li> 
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li> 
      * @return MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
      */
     public MultiCertInfo getMultiCertInfo() {
         return this.MultiCertInfo;
@@ -464,19 +439,11 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
      * Set 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
      * @param MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
      */
     public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
         this.MultiCertInfo = MultiCertInfo;
@@ -594,6 +561,22 @@ public class CreateListenerRequest extends AbstractModel {
         this.SslCloseSwitch = SslCloseSwitch;
     }
 
+    /**
+     * Get 数据压缩模式 
+     * @return DataCompressMode 数据压缩模式
+     */
+    public String getDataCompressMode() {
+        return this.DataCompressMode;
+    }
+
+    /**
+     * Set 数据压缩模式
+     * @param DataCompressMode 数据压缩模式
+     */
+    public void setDataCompressMode(String DataCompressMode) {
+        this.DataCompressMode = DataCompressMode;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -677,6 +660,9 @@ public class CreateListenerRequest extends AbstractModel {
         if (source.SslCloseSwitch != null) {
             this.SslCloseSwitch = new Boolean(source.SslCloseSwitch);
         }
+        if (source.DataCompressMode != null) {
+            this.DataCompressMode = new String(source.DataCompressMode);
+        }
     }
 
 
@@ -706,6 +692,7 @@ public class CreateListenerRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
         this.setParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
         this.setParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
+        this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
 
     }
 }

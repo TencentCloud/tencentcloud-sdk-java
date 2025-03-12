@@ -117,6 +117,13 @@ public class TriggerInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+    */
+    @SerializedName("BoundResources")
+    @Expose
+    private String BoundResources;
+
+    /**
      * Get 使能开关 
      * @return Enable 使能开关
      */
@@ -344,6 +351,22 @@ public class TriggerInfo extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回 
+     * @return BoundResources 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+     */
+    public String getBoundResources() {
+        return this.BoundResources;
+    }
+
+    /**
+     * Set 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+     * @param BoundResources 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+     */
+    public void setBoundResources(String BoundResources) {
+        this.BoundResources = BoundResources;
+    }
+
     public TriggerInfo() {
     }
 
@@ -391,6 +414,9 @@ public class TriggerInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.BoundResources != null) {
+            this.BoundResources = new String(source.BoundResources);
+        }
     }
 
 
@@ -411,6 +437,7 @@ public class TriggerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "BoundResources", this.BoundResources);
 
     }
 }

@@ -25,7 +25,6 @@ public class TableItem extends AbstractModel {
 
     /**
     * 迁移的表名，大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -33,7 +32,6 @@ public class TableItem extends AbstractModel {
 
     /**
     * 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewTableName")
     @Expose
@@ -41,7 +39,6 @@ public class TableItem extends AbstractModel {
 
     /**
     * 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpTables")
     @Expose
@@ -49,17 +46,14 @@ public class TableItem extends AbstractModel {
 
     /**
     * 编辑表类型，rename(表映射)，pt(同步附加表)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableEditMode")
     @Expose
     private String TableEditMode;
 
     /**
-     * Get 迁移的表名，大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移的表名，大小写敏感 
      * @return TableName 迁移的表名，大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -67,19 +61,15 @@ public class TableItem extends AbstractModel {
 
     /**
      * Set 迁移的表名，大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 迁移的表名，大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种 
      * @return NewTableName 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewTableName() {
         return this.NewTableName;
@@ -87,19 +77,15 @@ public class TableItem extends AbstractModel {
 
     /**
      * Set 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewTableName 迁移后的表名，当TableEditMode为rename时此项必填，注意此配置与TmpTables互斥，只能使用其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewTableName(String NewTableName) {
         this.NewTableName = NewTableName;
     }
 
     /**
-     * Get 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。 
      * @return TmpTables 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTmpTables() {
         return this.TmpTables;
@@ -107,19 +93,15 @@ public class TableItem extends AbstractModel {
 
     /**
      * Set 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpTables 迁移临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在迁移过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpTables(String [] TmpTables) {
         this.TmpTables = TmpTables;
     }
 
     /**
-     * Get 编辑表类型，rename(表映射)，pt(同步附加表)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编辑表类型，rename(表映射)，pt(同步附加表) 
      * @return TableEditMode 编辑表类型，rename(表映射)，pt(同步附加表)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableEditMode() {
         return this.TableEditMode;
@@ -127,9 +109,7 @@ public class TableItem extends AbstractModel {
 
     /**
      * Set 编辑表类型，rename(表映射)，pt(同步附加表)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableEditMode 编辑表类型，rename(表映射)，pt(同步附加表)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableEditMode(String TableEditMode) {
         this.TableEditMode = TableEditMode;

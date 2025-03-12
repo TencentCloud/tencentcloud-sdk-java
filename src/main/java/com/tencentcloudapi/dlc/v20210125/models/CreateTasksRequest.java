@@ -66,6 +66,13 @@ public class CreateTasksRequest extends AbstractModel {
     private Boolean IsMultiStatement;
 
     /**
+    * 任务来源信息
+    */
+    @SerializedName("SourceInfo")
+    @Expose
+    private KVPair [] SourceInfo;
+
+    /**
      * Get 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。 
      * @return DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
@@ -161,6 +168,22 @@ public class CreateTasksRequest extends AbstractModel {
         this.IsMultiStatement = IsMultiStatement;
     }
 
+    /**
+     * Get 任务来源信息 
+     * @return SourceInfo 任务来源信息
+     */
+    public KVPair [] getSourceInfo() {
+        return this.SourceInfo;
+    }
+
+    /**
+     * Set 任务来源信息
+     * @param SourceInfo 任务来源信息
+     */
+    public void setSourceInfo(KVPair [] SourceInfo) {
+        this.SourceInfo = SourceInfo;
+    }
+
     public CreateTasksRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateTasksRequest extends AbstractModel {
         if (source.IsMultiStatement != null) {
             this.IsMultiStatement = new Boolean(source.IsMultiStatement);
         }
+        if (source.SourceInfo != null) {
+            this.SourceInfo = new KVPair[source.SourceInfo.length];
+            for (int i = 0; i < source.SourceInfo.length; i++) {
+                this.SourceInfo[i] = new KVPair(source.SourceInfo[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamSimple(map, prefix + "IsMultiStatement", this.IsMultiStatement);
+        this.setParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
 
     }
 }

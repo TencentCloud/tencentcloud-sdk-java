@@ -25,17 +25,14 @@ public class CompareViewItem extends AbstractModel {
 
     /**
     * 视图名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-     * Get 视图名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图名 
      * @return ViewName 视图名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewName() {
         return this.ViewName;
@@ -43,9 +40,7 @@ public class CompareViewItem extends AbstractModel {
 
     /**
      * Set 视图名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewName 视图名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;

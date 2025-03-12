@@ -52,6 +52,13 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
     private String BatchId;
 
     /**
+    * 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+    */
+    @SerializedName("DataFieldCutLen")
+    @Expose
+    private Long DataFieldCutLen;
+
+    /**
      * Get 任务唯一ID 
      * @return TaskId 任务唯一ID
      */
@@ -115,6 +122,22 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 返回结果集中字段值长度截取，如果超过该长度则截取到该长度 
+     * @return DataFieldCutLen 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+     */
+    public Long getDataFieldCutLen() {
+        return this.DataFieldCutLen;
+    }
+
+    /**
+     * Set 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+     * @param DataFieldCutLen 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+     */
+    public void setDataFieldCutLen(Long DataFieldCutLen) {
+        this.DataFieldCutLen = DataFieldCutLen;
+    }
+
     public DescribeNotebookSessionStatementSqlResultRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.DataFieldCutLen != null) {
+            this.DataFieldCutLen = new Long(source.DataFieldCutLen);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeNotebookSessionStatementSqlResultRequest extends AbstractMo
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "DataFieldCutLen", this.DataFieldCutLen);
 
     }
 }

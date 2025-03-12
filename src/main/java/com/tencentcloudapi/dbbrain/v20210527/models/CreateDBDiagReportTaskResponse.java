@@ -25,7 +25,6 @@ public class CreateDBDiagReportTaskResponse extends AbstractModel {
 
     /**
     * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateDBDiagReportTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。 
      * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncRequestId() {
         return this.AsyncRequestId;
@@ -50,9 +47,7 @@ public class CreateDBDiagReportTaskResponse extends AbstractModel {
 
     /**
      * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(Long AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

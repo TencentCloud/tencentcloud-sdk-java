@@ -38,6 +38,13 @@ public class DescribeBackupFilesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 下载链接前缀
+    */
+    @SerializedName("UrlPrefix")
+    @Expose
+    private String UrlPrefix;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeBackupFilesResponse extends AbstractModel {
     }
 
     /**
+     * Get 下载链接前缀 
+     * @return UrlPrefix 下载链接前缀
+     */
+    public String getUrlPrefix() {
+        return this.UrlPrefix;
+    }
+
+    /**
+     * Set 下载链接前缀
+     * @param UrlPrefix 下载链接前缀
+     */
+    public void setUrlPrefix(String UrlPrefix) {
+        this.UrlPrefix = UrlPrefix;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeBackupFilesResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.UrlPrefix != null) {
+            this.UrlPrefix = new String(source.UrlPrefix);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeBackupFilesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Files.", this.Files);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "UrlPrefix", this.UrlPrefix);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

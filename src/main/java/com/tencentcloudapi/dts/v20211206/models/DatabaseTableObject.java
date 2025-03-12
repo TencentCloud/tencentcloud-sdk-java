@@ -25,7 +25,6 @@ public class DatabaseTableObject extends AbstractModel {
 
     /**
     * 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectMode")
     @Expose
@@ -33,7 +32,6 @@ public class DatabaseTableObject extends AbstractModel {
 
     /**
     * 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Databases")
     @Expose
@@ -48,10 +46,8 @@ public class DatabaseTableObject extends AbstractModel {
     private String [] AdvancedObjects;
 
     /**
-     * Get 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移对象类型 all(全实例)，partial(部分对象) 
      * @return ObjectMode 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectMode() {
         return this.ObjectMode;
@@ -59,19 +55,15 @@ public class DatabaseTableObject extends AbstractModel {
 
     /**
      * Set 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectMode 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectMode(String ObjectMode) {
         this.ObjectMode = ObjectMode;
     }
 
     /**
-     * Get 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移对象，当 ObjectMode 为 partial 时，不为空 
      * @return Databases 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBItem [] getDatabases() {
         return this.Databases;
@@ -79,9 +71,7 @@ public class DatabaseTableObject extends AbstractModel {
 
     /**
      * Set 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Databases 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabases(DBItem [] Databases) {
         this.Databases = Databases;

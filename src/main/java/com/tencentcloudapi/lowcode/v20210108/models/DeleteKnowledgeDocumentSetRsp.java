@@ -25,17 +25,14 @@ public class DeleteKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
     * 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectedCount")
     @Expose
     private Long AffectedCount;
 
     /**
-     * Get 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除文档数量。 
      * @return AffectedCount 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAffectedCount() {
         return this.AffectedCount;
@@ -43,9 +40,7 @@ public class DeleteKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
      * Set 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectedCount 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectedCount(Long AffectedCount) {
         this.AffectedCount = AffectedCount;

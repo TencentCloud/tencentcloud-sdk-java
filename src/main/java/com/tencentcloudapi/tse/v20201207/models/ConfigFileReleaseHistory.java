@@ -25,7 +25,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史记录id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Group")
     @Expose
@@ -57,7 +53,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -65,7 +60,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -73,7 +67,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -81,7 +74,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史注释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -89,7 +81,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史Md5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
@@ -97,7 +88,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -105,7 +95,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -113,7 +102,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布历史标签组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -121,7 +109,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -129,7 +116,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateBy")
     @Expose
@@ -137,7 +123,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -145,7 +130,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyBy")
     @Expose
@@ -153,7 +137,6 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseDescription")
     @Expose
@@ -161,17 +144,29 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
     * 原因，用于失败时原因展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseReason")
     @Expose
     private String ReleaseReason;
 
     /**
-     * Get 配置文件发布历史记录id
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 配置文件类型
+
+    */
+    @SerializedName("ConfigFileSupportedClient")
+    @Expose
+    private Long ConfigFileSupportedClient;
+
+    /**
+    * 配置文件持久化
+    */
+    @SerializedName("ConfigFilePersistent")
+    @Expose
+    private ConfigFilePersistent ConfigFilePersistent;
+
+    /**
+     * Get 配置文件发布历史记录id 
      * @return Id 配置文件发布历史记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -179,19 +174,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史记录id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置文件发布历史记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史名称 
      * @return Name 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -199,19 +190,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件发布历史命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史命名空间 
      * @return Namespace 配置文件发布历史命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -219,19 +206,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 配置文件发布历史命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置文件发布历史组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史组 
      * @return Group 配置文件发布历史组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroup() {
         return this.Group;
@@ -239,19 +222,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Group 配置文件发布历史组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史名称 
      * @return FileName 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -259,19 +238,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 配置文件发布历史名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 配置文件发布历史内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史内容 
      * @return Content 配置文件发布历史内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -279,19 +254,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 配置文件发布历史内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件发布历史格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史格式 
      * @return Format 配置文件发布历史格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -299,19 +270,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 配置文件发布历史格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件发布历史注释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史注释 
      * @return Comment 配置文件发布历史注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -319,19 +286,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 配置文件发布历史注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件发布历史Md5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史Md5 
      * @return Md5 配置文件发布历史Md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
         return this.Md5;
@@ -339,19 +302,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史Md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 配置文件发布历史Md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 配置文件发布历史类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史类型 
      * @return Type 配置文件发布历史类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -359,19 +318,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 配置文件发布历史类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 配置文件发布历史状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史状态 
      * @return Status 配置文件发布历史状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -379,19 +334,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 配置文件发布历史状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 配置文件发布历史标签组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布历史标签组 
      * @return Tags 配置文件发布历史标签组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigFileTag [] getTags() {
         return this.Tags;
@@ -399,19 +350,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布历史标签组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 配置文件发布历史标签组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(ConfigFileTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布创建时间 
      * @return CreateTime 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -419,19 +366,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布创建者 
      * @return CreateBy 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateBy() {
         return this.CreateBy;
@@ -439,19 +382,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateBy 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布修改时间 
      * @return ModifyTime 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -459,19 +398,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布修改者 
      * @return ModifyBy 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyBy() {
         return this.ModifyBy;
@@ -479,19 +414,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyBy 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;
     }
 
     /**
-     * Get 发布描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布描述 
      * @return ReleaseDescription 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseDescription() {
         return this.ReleaseDescription;
@@ -499,19 +430,15 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseDescription 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseDescription(String ReleaseDescription) {
         this.ReleaseDescription = ReleaseDescription;
     }
 
     /**
-     * Get 原因，用于失败时原因展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原因，用于失败时原因展示 
      * @return ReleaseReason 原因，用于失败时原因展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseReason() {
         return this.ReleaseReason;
@@ -519,12 +446,46 @@ public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
      * Set 原因，用于失败时原因展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseReason 原因，用于失败时原因展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseReason(String ReleaseReason) {
         this.ReleaseReason = ReleaseReason;
+    }
+
+    /**
+     * Get 配置文件类型
+ 
+     * @return ConfigFileSupportedClient 配置文件类型
+
+     */
+    public Long getConfigFileSupportedClient() {
+        return this.ConfigFileSupportedClient;
+    }
+
+    /**
+     * Set 配置文件类型
+
+     * @param ConfigFileSupportedClient 配置文件类型
+
+     */
+    public void setConfigFileSupportedClient(Long ConfigFileSupportedClient) {
+        this.ConfigFileSupportedClient = ConfigFileSupportedClient;
+    }
+
+    /**
+     * Get 配置文件持久化 
+     * @return ConfigFilePersistent 配置文件持久化
+     */
+    public ConfigFilePersistent getConfigFilePersistent() {
+        return this.ConfigFilePersistent;
+    }
+
+    /**
+     * Set 配置文件持久化
+     * @param ConfigFilePersistent 配置文件持久化
+     */
+    public void setConfigFilePersistent(ConfigFilePersistent ConfigFilePersistent) {
+        this.ConfigFilePersistent = ConfigFilePersistent;
     }
 
     public ConfigFileReleaseHistory() {
@@ -592,6 +553,12 @@ public class ConfigFileReleaseHistory extends AbstractModel {
         if (source.ReleaseReason != null) {
             this.ReleaseReason = new String(source.ReleaseReason);
         }
+        if (source.ConfigFileSupportedClient != null) {
+            this.ConfigFileSupportedClient = new Long(source.ConfigFileSupportedClient);
+        }
+        if (source.ConfigFilePersistent != null) {
+            this.ConfigFilePersistent = new ConfigFilePersistent(source.ConfigFilePersistent);
+        }
     }
 
 
@@ -617,6 +584,8 @@ public class ConfigFileReleaseHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyBy", this.ModifyBy);
         this.setParamSimple(map, prefix + "ReleaseDescription", this.ReleaseDescription);
         this.setParamSimple(map, prefix + "ReleaseReason", this.ReleaseReason);
+        this.setParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
+        this.setParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
 
     }
 }

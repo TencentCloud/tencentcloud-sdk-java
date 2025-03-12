@@ -25,7 +25,6 @@ public class PipelineInfo extends AbstractModel {
 
     /**
     * 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AggOp")
     @Expose
@@ -33,17 +32,14 @@ public class PipelineInfo extends AbstractModel {
 
     /**
     * 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AggCmd")
     @Expose
     private String AggCmd;
 
     /**
-     * Get 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。 
      * @return AggOp 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAggOp() {
         return this.AggOp;
@@ -51,19 +47,15 @@ public class PipelineInfo extends AbstractModel {
 
     /**
      * Set 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AggOp 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggOp(String AggOp) {
         this.AggOp = AggOp;
     }
 
     /**
-     * Get 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 聚合表达式。必须是json格式 
      * @return AggCmd 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAggCmd() {
         return this.AggCmd;
@@ -71,9 +63,7 @@ public class PipelineInfo extends AbstractModel {
 
     /**
      * Set 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AggCmd 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggCmd(String AggCmd) {
         this.AggCmd = AggCmd;

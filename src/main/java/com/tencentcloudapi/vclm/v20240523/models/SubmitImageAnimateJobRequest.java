@@ -60,7 +60,11 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableAudio;
 
     /**
-    * 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+    * 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
     */
     @SerializedName("EnableBodyJoins")
     @Expose
@@ -93,6 +97,15 @@ false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的�
     @SerializedName("LogoParam")
     @Expose
     private LogoParam LogoParam;
+
+    /**
+    * 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+    */
+    @SerializedName("EnableFace")
+    @Expose
+    private Boolean EnableFace;
 
     /**
      * Get 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
@@ -191,16 +204,32 @@ false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的�
     }
 
     /**
-     * Get 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。 
-     * @return EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     * Get 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。 
+     * @return EnableBodyJoins 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
      */
     public Boolean getEnableBodyJoins() {
         return this.EnableBodyJoins;
     }
 
     /**
-     * Set 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
-     * @param EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     * Set 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
+     * @param EnableBodyJoins 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
      */
     public void setEnableBodyJoins(Boolean EnableBodyJoins) {
         this.EnableBodyJoins = EnableBodyJoins;
@@ -282,6 +311,30 @@ false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的�
         this.LogoParam = LogoParam;
     }
 
+    /**
+     * Get 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。 
+     * @return EnableFace 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+     */
+    public Boolean getEnableFace() {
+        return this.EnableFace;
+    }
+
+    /**
+     * Set 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+     * @param EnableFace 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+     */
+    public void setEnableFace(Boolean EnableFace) {
+        this.EnableFace = EnableFace;
+    }
+
     public SubmitImageAnimateJobRequest() {
     }
 
@@ -314,6 +367,9 @@ false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的�
         if (source.LogoParam != null) {
             this.LogoParam = new LogoParam(source.LogoParam);
         }
+        if (source.EnableFace != null) {
+            this.EnableFace = new Boolean(source.EnableFace);
+        }
     }
 
 
@@ -329,6 +385,7 @@ false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的�
         this.setParamSimple(map, prefix + "EnableSegment", this.EnableSegment);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
+        this.setParamSimple(map, prefix + "EnableFace", this.EnableFace);
 
     }
 }

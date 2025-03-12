@@ -52,6 +52,13 @@ public class DescribeTaskResultRequest extends AbstractModel {
     private Boolean IsTransformDataType;
 
     /**
+    * 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+    */
+    @SerializedName("DataFieldCutLen")
+    @Expose
+    private Long DataFieldCutLen;
+
+    /**
      * Get 任务唯一ID，仅支持30天内的任务 
      * @return TaskId 任务唯一ID，仅支持30天内的任务
      */
@@ -115,6 +122,22 @@ public class DescribeTaskResultRequest extends AbstractModel {
         this.IsTransformDataType = IsTransformDataType;
     }
 
+    /**
+     * Get 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度 
+     * @return DataFieldCutLen 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+     */
+    public Long getDataFieldCutLen() {
+        return this.DataFieldCutLen;
+    }
+
+    /**
+     * Set 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+     * @param DataFieldCutLen 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+     */
+    public void setDataFieldCutLen(Long DataFieldCutLen) {
+        this.DataFieldCutLen = DataFieldCutLen;
+    }
+
     public DescribeTaskResultRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeTaskResultRequest extends AbstractModel {
         if (source.IsTransformDataType != null) {
             this.IsTransformDataType = new Boolean(source.IsTransformDataType);
         }
+        if (source.DataFieldCutLen != null) {
+            this.DataFieldCutLen = new Long(source.DataFieldCutLen);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeTaskResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "IsTransformDataType", this.IsTransformDataType);
+        this.setParamSimple(map, prefix + "DataFieldCutLen", this.DataFieldCutLen);
 
     }
 }

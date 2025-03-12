@@ -39,7 +39,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -96,7 +95,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionAssignment")
     @Expose
@@ -135,10 +133,8 @@ public class GroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者组备注 
      * @return Description 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -146,9 +142,7 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -267,10 +261,8 @@ public class GroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个消费者正在消费的分区 
      * @return PartitionAssignment 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PartitionAssignment [] getPartitionAssignment() {
         return this.PartitionAssignment;
@@ -278,9 +270,7 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionAssignment 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionAssignment(PartitionAssignment [] PartitionAssignment) {
         this.PartitionAssignment = PartitionAssignment;

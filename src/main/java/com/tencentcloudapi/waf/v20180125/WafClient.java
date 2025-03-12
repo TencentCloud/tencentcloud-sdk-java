@@ -1516,6 +1516,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *切换Tiga引擎规则类型的生效开关
+     * @param req ModifyUserSignatureClassRequest
+     * @return ModifyUserSignatureClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserSignatureClassResponse ModifyUserSignatureClass(ModifyUserSignatureClassRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserSignatureClass", ModifyUserSignatureClassResponse.class);
+    }
+
+    /**
      *修改用户防护规则，开启关闭具体的某条规则
      * @param req ModifyUserSignatureRuleRequest
      * @return ModifyUserSignatureRuleResponse
@@ -1634,6 +1645,17 @@ public class WafClient extends AbstractClient{
     public SwitchElasticModeResponse SwitchElasticMode(SwitchElasticModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchElasticMode", SwitchElasticModeResponse.class);
+    }
+
+    /**
+     *更新Tiga引擎下大类规则的防护模式
+     * @param req UpdateProtectionModesRequest
+     * @return UpdateProtectionModesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProtectionModesResponse UpdateProtectionModes(UpdateProtectionModesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProtectionModes", UpdateProtectionModesResponse.class);
     }
 
     /**

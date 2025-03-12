@@ -39,7 +39,6 @@ public class DescribeScanTaskStatusResponse extends AbstractModel {
 
     /**
     * 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeScanTaskStatusResponse extends AbstractModel {
 
     /**
     * 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowSteps")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeScanTaskStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断失败的错误信息 
      * @return ErrMsg 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -104,19 +100,15 @@ public class DescribeScanTaskStatusResponse extends AbstractModel {
 
     /**
      * Set 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
     }
 
     /**
-     * Get 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务流详情 
      * @return FlowSteps 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskFlowStepsInfo [] getFlowSteps() {
         return this.FlowSteps;
@@ -124,9 +116,7 @@ public class DescribeScanTaskStatusResponse extends AbstractModel {
 
     /**
      * Set 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowSteps 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowSteps(TaskFlowStepsInfo [] FlowSteps) {
         this.FlowSteps = FlowSteps;

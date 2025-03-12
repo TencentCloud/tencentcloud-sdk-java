@@ -52,6 +52,13 @@ public class DescribeTasksOverviewRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
+    * DataEngine-dm8bjs29
+    */
+    @SerializedName("HouseIds")
+    @Expose
+    private String [] HouseIds;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -115,6 +122,22 @@ public class DescribeTasksOverviewRequest extends AbstractModel {
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get DataEngine-dm8bjs29 
+     * @return HouseIds DataEngine-dm8bjs29
+     */
+    public String [] getHouseIds() {
+        return this.HouseIds;
+    }
+
+    /**
+     * Set DataEngine-dm8bjs29
+     * @param HouseIds DataEngine-dm8bjs29
+     */
+    public void setHouseIds(String [] HouseIds) {
+        this.HouseIds = HouseIds;
+    }
+
     public DescribeTasksOverviewRequest() {
     }
 
@@ -138,6 +161,12 @@ public class DescribeTasksOverviewRequest extends AbstractModel {
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.HouseIds != null) {
+            this.HouseIds = new String[source.HouseIds.length];
+            for (int i = 0; i < source.HouseIds.length; i++) {
+                this.HouseIds[i] = new String(source.HouseIds[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class DescribeTasksOverviewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamArraySimple(map, prefix + "HouseIds.", this.HouseIds);
 
     }
 }

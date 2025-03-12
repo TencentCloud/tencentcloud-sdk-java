@@ -25,7 +25,6 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
     * 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSetId")
     @Expose
@@ -33,7 +32,6 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSetName")
     @Expose
@@ -41,7 +39,6 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
     * 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTitle")
     @Expose
@@ -49,17 +46,14 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
     * 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMetaData")
     @Expose
     private String FileMetaData;
 
     /**
-     * Get 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 给文件分配的 ID 信息。 
      * @return DocumentSetId 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentSetId() {
         return this.DocumentSetId;
@@ -67,19 +61,15 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
      * Set 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSetId 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSetId(String DocumentSetId) {
         this.DocumentSetId = DocumentSetId;
     }
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentSetName() {
         return this.DocumentSetName;
@@ -87,19 +77,15 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSetName(String DocumentSetName) {
         this.DocumentSetName = DocumentSetName;
     }
 
     /**
-     * Get 文件标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件标题 
      * @return FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileTitle() {
         return this.FileTitle;
@@ -107,19 +93,15 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
      * Set 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTitle(String FileTitle) {
         this.FileTitle = FileTitle;
     }
 
     /**
-     * Get 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件元信息，为jsonstring 
      * @return FileMetaData 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMetaData() {
         return this.FileMetaData;
@@ -127,9 +109,7 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
 
     /**
      * Set 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMetaData 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMetaData(String FileMetaData) {
         this.FileMetaData = FileMetaData;

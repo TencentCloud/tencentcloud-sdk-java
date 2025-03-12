@@ -25,7 +25,6 @@ public class SubscribeObject extends AbstractModel {
 
     /**
     * 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectsType")
     @Expose
@@ -33,7 +32,6 @@ public class SubscribeObject extends AbstractModel {
 
     /**
     * 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -41,17 +39,14 @@ public class SubscribeObject extends AbstractModel {
 
     /**
     * 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNames")
     @Expose
     private String [] TableNames;
 
     /**
-     * Get 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据订阅对象的类型，0-数据库，1-数据库内的表 
      * @return ObjectsType 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectsType() {
         return this.ObjectsType;
@@ -59,19 +54,15 @@ public class SubscribeObject extends AbstractModel {
 
     /**
      * Set 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectsType 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectsType(Long ObjectsType) {
         this.ObjectsType = ObjectsType;
     }
 
     /**
-     * Get 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据库的名称 
      * @return DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -79,19 +70,15 @@ public class SubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据库中表名称数组 
      * @return TableNames 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTableNames() {
         return this.TableNames;
@@ -99,9 +86,7 @@ public class SubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNames 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNames(String [] TableNames) {
         this.TableNames = TableNames;

@@ -59,6 +59,13 @@ public class GetCustomDomainResponse extends AbstractModel {
     private WafConf WafConfig;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class GetCustomDomainResponse extends AbstractModel {
     }
 
     /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +210,12 @@ public class GetCustomDomainResponse extends AbstractModel {
         if (source.WafConfig != null) {
             this.WafConfig = new WafConf(source.WafConfig);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +231,7 @@ public class GetCustomDomainResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EndpointsConfig.", this.EndpointsConfig);
         this.setParamObj(map, prefix + "CertConfig.", this.CertConfig);
         this.setParamObj(map, prefix + "WafConfig.", this.WafConfig);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

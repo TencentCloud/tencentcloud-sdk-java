@@ -25,7 +25,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -33,7 +32,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -41,7 +39,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
@@ -49,7 +46,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -57,7 +53,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
     @Expose
@@ -67,7 +62,6 @@ public class CmqTopic extends AbstractModel {
     * 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterType")
     @Expose
@@ -75,7 +69,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -83,7 +76,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTime")
     @Expose
@@ -91,7 +83,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgCount")
     @Expose
@@ -123,7 +114,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 租户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
     @Expose
@@ -131,7 +121,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -139,7 +128,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -147,7 +135,6 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerType")
     @Expose
@@ -155,17 +142,14 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
     * 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionCount")
     @Expose
     private Long SubscriptionCount;
 
     /**
-     * Get 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题的 ID。 
      * @return TopicId 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -173,19 +157,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名称。 
      * @return TopicName 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -193,19 +173,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。 
      * @return MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
@@ -213,19 +189,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。 
      * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
@@ -233,19 +205,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每秒钟发布消息的条数。 
      * @return Qps 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQps() {
         return this.Qps;
@@ -253,9 +221,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qps 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
@@ -264,12 +230,10 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     /**
      * Get 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
-FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。 
+FilterType = 2表示用户使用 BindingKey 过滤。 
      * @return FilterType 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFilterType() {
         return this.FilterType;
@@ -279,21 +243,17 @@ FilterType = 2表示用户使用 BindingKey 过滤。
      * Set 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterType 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterType(Long FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题的创建时间。返回 Unix 时间戳，精确到毫秒。 
      * @return CreateTime 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -301,19 +261,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。 
      * @return LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
@@ -321,19 +277,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前该主题中消息数目（消息堆积数）。 
      * @return MsgCount 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgCount() {
         return this.MsgCount;
@@ -341,9 +293,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgCount 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgCount(Long MsgCount) {
         this.MsgCount = MsgCount;
@@ -410,10 +360,8 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     }
 
     /**
-     * Get 租户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户id 
      * @return TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
         return this.TenantId;
@@ -421,19 +369,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -441,19 +385,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败 
      * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -461,19 +401,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0表示pulsar，1表示rocketmq 
      * @return BrokerType 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBrokerType() {
         return this.BrokerType;
@@ -481,19 +417,15 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerType 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerType(Long BrokerType) {
         this.BrokerType = BrokerType;
     }
 
     /**
-     * Get 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数量 
      * @return SubscriptionCount 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubscriptionCount() {
         return this.SubscriptionCount;
@@ -501,9 +433,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * Set 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionCount 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionCount(Long SubscriptionCount) {
         this.SubscriptionCount = SubscriptionCount;

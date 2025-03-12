@@ -39,7 +39,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 订阅实例发送数据的kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -54,7 +53,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -62,7 +60,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -84,7 +81,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 上次修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -92,7 +88,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -100,7 +95,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -108,7 +102,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -116,7 +109,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -145,7 +137,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessType")
     @Expose
@@ -153,7 +144,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 数据库节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endpoints")
     @Expose
@@ -161,7 +151,6 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
     * 数据订阅版本, 当前只支持 kafka 版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeVersion")
     @Expose
@@ -216,10 +205,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 订阅实例发送数据的kafka topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅实例发送数据的kafka topic 
      * @return Topic 订阅实例发送数据的kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -227,9 +214,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 订阅实例发送数据的kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic 订阅实例发送数据的kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -252,10 +237,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。 
      * @return InstanceId 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -263,19 +246,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空 
      * @return InstanceStatus 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
@@ -283,9 +262,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -324,10 +301,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 上次修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次修改时间，时间格式如：Y-m-d h:m:s 
      * @return ModifyTime 上次修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -335,19 +310,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 上次修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 上次修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，时间格式如：Y-m-d h:m:s 
      * @return CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -355,19 +326,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -375,19 +342,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -395,19 +358,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -415,9 +374,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
@@ -472,10 +429,8 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc) 
      * @return AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessType() {
         return this.AccessType;
@@ -483,19 +438,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 数据库节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库节点信息 
      * @return Endpoints 数据库节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EndpointItem [] getEndpoints() {
         return this.Endpoints;
@@ -503,19 +454,15 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 数据库节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoints 数据库节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpoints(EndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get 数据订阅版本, 当前只支持 kafka 版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据订阅版本, 当前只支持 kafka 版本。 
      * @return SubscribeVersion 数据订阅版本, 当前只支持 kafka 版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
@@ -523,9 +470,7 @@ public class SubscribeInfo extends AbstractModel {
 
     /**
      * Set 数据订阅版本, 当前只支持 kafka 版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeVersion 数据订阅版本, 当前只支持 kafka 版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;

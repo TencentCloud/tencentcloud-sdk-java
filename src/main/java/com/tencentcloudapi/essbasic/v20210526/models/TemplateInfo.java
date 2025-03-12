@@ -164,6 +164,13 @@ public class TemplateInfo extends AbstractModel {
     private Long Available;
 
     /**
+    * 模版的用户合同类型
+    */
+    @SerializedName("UserFlowType")
+    @Expose
+    private UserFlowType UserFlowType;
+
+    /**
      * Get 模板ID，模板的唯一标识 
      * @return TemplateId 模板ID，模板的唯一标识
      */
@@ -523,6 +530,22 @@ public class TemplateInfo extends AbstractModel {
         this.Available = Available;
     }
 
+    /**
+     * Get 模版的用户合同类型 
+     * @return UserFlowType 模版的用户合同类型
+     */
+    public UserFlowType getUserFlowType() {
+        return this.UserFlowType;
+    }
+
+    /**
+     * Set 模版的用户合同类型
+     * @param UserFlowType 模版的用户合同类型
+     */
+    public void setUserFlowType(UserFlowType UserFlowType) {
+        this.UserFlowType = UserFlowType;
+    }
+
     public TemplateInfo() {
     }
 
@@ -591,6 +614,9 @@ public class TemplateInfo extends AbstractModel {
         if (source.Available != null) {
             this.Available = new Long(source.Available);
         }
+        if (source.UserFlowType != null) {
+            this.UserFlowType = new UserFlowType(source.UserFlowType);
+        }
     }
 
 
@@ -615,6 +641,7 @@ public class TemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         this.setParamSimple(map, prefix + "Available", this.Available);
+        this.setParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
 
     }
 }

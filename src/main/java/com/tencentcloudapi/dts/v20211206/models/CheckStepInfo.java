@@ -25,7 +25,6 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
     * 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartAt")
     @Expose
@@ -33,7 +32,6 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
     * 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndAt")
     @Expose
@@ -41,17 +39,14 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
     * 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
     private ProcessProgress Progress;
 
     /**
-     * Get 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始时间 
      * @return StartAt 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartAt() {
         return this.StartAt;
@@ -59,19 +54,15 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
      * Set 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartAt 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;
     }
 
     /**
-     * Get 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间 
      * @return EndAt 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndAt() {
         return this.EndAt;
@@ -79,19 +70,15 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
      * Set 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndAt 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndAt(String EndAt) {
         this.EndAt = EndAt;
     }
 
     /**
-     * Get 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务步骤信息 
      * @return Progress 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessProgress getProgress() {
         return this.Progress;
@@ -99,9 +86,7 @@ public class CheckStepInfo extends AbstractModel {
 
     /**
      * Set 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(ProcessProgress Progress) {
         this.Progress = Progress;

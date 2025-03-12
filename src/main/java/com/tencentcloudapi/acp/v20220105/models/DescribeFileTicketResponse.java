@@ -39,7 +39,6 @@ public class DescribeFileTicketResponse extends AbstractModel {
 
     /**
     * 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadSign")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeFileTicketResponse extends AbstractModel {
 
     /**
     * 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FildID")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeFileTicketResponse extends AbstractModel {
     }
 
     /**
-     * Get 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值) 
      * @return UploadSign 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadSign() {
         return this.UploadSign;
@@ -104,19 +100,15 @@ public class DescribeFileTicketResponse extends AbstractModel {
 
     /**
      * Set 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadSign 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadSign(String UploadSign) {
         this.UploadSign = UploadSign;
     }
 
     /**
-     * Get 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传文件ID(任务来源为1时提交诊断任务需要) 
      * @return FildID 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFildID() {
         return this.FildID;
@@ -124,9 +116,7 @@ public class DescribeFileTicketResponse extends AbstractModel {
 
     /**
      * Set 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FildID 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFildID(String FildID) {
         this.FildID = FildID;

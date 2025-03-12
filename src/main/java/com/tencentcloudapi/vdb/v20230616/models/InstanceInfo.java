@@ -25,7 +25,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -49,7 +46,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,7 +53,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -65,7 +60,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 产品。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Product")
     @Expose
@@ -73,7 +67,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Networks")
     @Expose
@@ -81,7 +74,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardNum")
     @Expose
@@ -89,7 +81,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicaNum")
     @Expose
@@ -97,7 +88,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * CPU.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -105,7 +95,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 内存。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -113,7 +102,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disk")
     @Expose
@@ -145,7 +133,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -153,7 +140,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -161,7 +147,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -169,7 +154,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
     @Expose
@@ -177,7 +161,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -185,7 +168,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * api版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiVersion")
     @Expose
@@ -193,7 +175,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -201,7 +182,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend")
     @Expose
@@ -209,7 +189,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredAt")
     @Expose
@@ -217,7 +196,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNoExpired")
     @Expose
@@ -225,7 +203,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanAddress")
     @Expose
@@ -233,7 +210,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateAt")
     @Expose
@@ -241,17 +217,14 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-     * Get 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -259,19 +232,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例自定义名称。 
      * @return Name 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -279,19 +248,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户APPID。 
      * @return AppId 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -299,19 +264,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域。 
      * @return Region 地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -319,19 +280,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区。 
      * @return Zone 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -339,19 +296,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 产品。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品。 
      * @return Product 产品。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduct() {
         return this.Product;
@@ -359,19 +312,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 产品。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Product 产品。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络信息。 
      * @return Networks 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Network [] getNetworks() {
         return this.Networks;
@@ -379,19 +328,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Networks 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworks(Network [] Networks) {
         this.Networks = Networks;
     }
 
     /**
-     * Get 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片信息。 
      * @return ShardNum 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShardNum() {
         return this.ShardNum;
@@ -399,19 +344,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardNum 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get 副本数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 副本数。 
      * @return ReplicaNum 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
@@ -419,19 +360,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplicaNum 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get CPU.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU. 
      * @return Cpu CPU.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpu() {
         return this.Cpu;
@@ -439,19 +376,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set CPU.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存。 
      * @return Memory 内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemory() {
         return this.Memory;
@@ -459,19 +392,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘。 
      * @return Disk 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisk() {
         return this.Disk;
@@ -479,9 +408,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Disk 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisk(Long Disk) {
         this.Disk = Disk;
@@ -560,10 +487,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属标签。 
      * @return ResourceTags 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
@@ -571,19 +496,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceTags 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedAt 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -591,19 +512,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源状态。 
      * @return Status 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -611,19 +528,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎名称。 
      * @return EngineName 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
         return this.EngineName;
@@ -631,19 +544,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineName 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎版本。 
      * @return EngineVersion 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
@@ -651,19 +560,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineVersion 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get api版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get api版本 
      * @return ApiVersion api版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiVersion() {
         return this.ApiVersion;
@@ -671,19 +576,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set api版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiVersion api版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiVersion(String ApiVersion) {
         this.ApiVersion = ApiVersion;
     }
 
     /**
-     * Get 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式。 
      * @return PayMode 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -691,19 +592,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 差异化扩展信息, json格式。 
      * @return Extend 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend() {
         return this.Extend;
@@ -711,19 +608,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间。 
      * @return ExpiredAt 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredAt() {
         return this.ExpiredAt;
@@ -731,19 +624,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredAt 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredAt(String ExpiredAt) {
         this.ExpiredAt = ExpiredAt;
     }
 
     /**
-     * Get 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否不过期(永久)。 
      * @return IsNoExpired 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNoExpired() {
         return this.IsNoExpired;
@@ -751,19 +640,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNoExpired 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNoExpired(Boolean IsNoExpired) {
         this.IsNoExpired = IsNoExpired;
     }
 
     /**
-     * Get 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网地址。 
      * @return WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanAddress() {
         return this.WanAddress;
@@ -771,19 +656,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间 
      * @return IsolateAt 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateAt() {
         return this.IsolateAt;
@@ -791,19 +672,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateAt 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateAt(String IsolateAt) {
         this.IsolateAt = IsolateAt;
     }
 
     /**
-     * Get 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费. 
      * @return AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
@@ -811,9 +688,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;

@@ -25,7 +25,6 @@ public class OffsetTimeMap extends AbstractModel {
 
     /**
     * kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionNo")
     @Expose
@@ -33,17 +32,14 @@ public class OffsetTimeMap extends AbstractModel {
 
     /**
     * kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka分区编号 
      * @return PartitionNo kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitionNo() {
         return this.PartitionNo;
@@ -51,19 +47,15 @@ public class OffsetTimeMap extends AbstractModel {
 
     /**
      * Set kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionNo kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionNo(Long PartitionNo) {
         this.PartitionNo = PartitionNo;
     }
 
     /**
-     * Get kafka offset
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka offset 
      * @return Offset kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
         return this.Offset;
@@ -71,9 +63,7 @@ public class OffsetTimeMap extends AbstractModel {
 
     /**
      * Set kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

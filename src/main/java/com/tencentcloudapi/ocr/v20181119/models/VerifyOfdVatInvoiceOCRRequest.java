@@ -31,8 +31,7 @@ public class VerifyOfdVatInvoiceOCRRequest extends AbstractModel {
     private String OfdFileUrl;
 
     /**
-    * OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+    * OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
     */
     @SerializedName("OfdFileBase64")
     @Expose
@@ -62,20 +61,16 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
     }
 
     /**
-     * Get OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。 
-     * @return OfdFileBase64 OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+     * Get OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。 
+     * @return OfdFileBase64 OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
      */
     public String getOfdFileBase64() {
         return this.OfdFileBase64;
     }
 
     /**
-     * Set OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
-     * @param OfdFileBase64 OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+     * Set OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
+     * @param OfdFileBase64 OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
      */
     public void setOfdFileBase64(String OfdFileBase64) {
         this.OfdFileBase64 = OfdFileBase64;

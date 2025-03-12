@@ -25,7 +25,6 @@ public class StatementOutput extends AbstractModel {
 
     /**
     * 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionCount")
     @Expose
@@ -41,7 +40,6 @@ public class StatementOutput extends AbstractModel {
 
     /**
     * Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +47,6 @@ public class StatementOutput extends AbstractModel {
 
     /**
     * 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorName")
     @Expose
@@ -73,17 +70,14 @@ public class StatementOutput extends AbstractModel {
 
     /**
     * SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQLResult")
     @Expose
     private String SQLResult;
 
     /**
-     * Get 执行总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行总数 
      * @return ExecutionCount 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutionCount() {
         return this.ExecutionCount;
@@ -91,9 +85,7 @@ public class StatementOutput extends AbstractModel {
 
     /**
      * Set 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionCount 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionCount(Long ExecutionCount) {
         this.ExecutionCount = ExecutionCount;
@@ -120,10 +112,8 @@ public class StatementOutput extends AbstractModel {
     }
 
     /**
-     * Get Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Statement状态:ok,error 
      * @return Status Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -131,19 +121,15 @@ public class StatementOutput extends AbstractModel {
 
     /**
      * Set Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误名称 
      * @return ErrorName 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorName() {
         return this.ErrorName;
@@ -151,9 +137,7 @@ public class StatementOutput extends AbstractModel {
 
     /**
      * Set 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorName 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorName(String ErrorName) {
         this.ErrorName = ErrorName;
@@ -200,10 +184,8 @@ public class StatementOutput extends AbstractModel {
     }
 
     /**
-     * Get SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQL类型任务结果返回 
      * @return SQLResult SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSQLResult() {
         return this.SQLResult;
@@ -211,9 +193,7 @@ public class StatementOutput extends AbstractModel {
 
     /**
      * Set SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SQLResult SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQLResult(String SQLResult) {
         this.SQLResult = SQLResult;

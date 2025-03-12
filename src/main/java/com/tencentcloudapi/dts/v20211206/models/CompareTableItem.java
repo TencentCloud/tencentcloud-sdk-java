@@ -25,7 +25,6 @@ public class CompareTableItem extends AbstractModel {
 
     /**
     * 表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -33,7 +32,6 @@ public class CompareTableItem extends AbstractModel {
 
     /**
     * column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnMode")
     @Expose
@@ -41,17 +39,14 @@ public class CompareTableItem extends AbstractModel {
 
     /**
     * 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Columns")
     @Expose
     private CompareColumnItem [] Columns;
 
     /**
-     * Get 表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名称 
      * @return TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -59,19 +54,15 @@ public class CompareTableItem extends AbstractModel {
 
     /**
      * Set 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效) 
      * @return ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnMode() {
         return this.ColumnMode;
@@ -79,19 +70,15 @@ public class CompareTableItem extends AbstractModel {
 
     /**
      * Set column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnMode(String ColumnMode) {
         this.ColumnMode = ColumnMode;
     }
 
     /**
-     * Get 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效) 
      * @return Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareColumnItem [] getColumns() {
         return this.Columns;
@@ -99,9 +86,7 @@ public class CompareTableItem extends AbstractModel {
 
     /**
      * Set 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumns(CompareColumnItem [] Columns) {
         this.Columns = Columns;

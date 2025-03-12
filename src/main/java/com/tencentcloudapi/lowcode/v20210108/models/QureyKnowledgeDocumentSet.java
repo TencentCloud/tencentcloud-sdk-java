@@ -25,7 +25,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSetId")
     @Expose
@@ -33,7 +32,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSetName")
     @Expose
@@ -41,7 +39,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextPrefix")
     @Expose
@@ -49,7 +46,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitterPreprocess")
     @Expose
@@ -57,7 +53,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSetInfo")
     @Expose
@@ -65,7 +60,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTitle")
     @Expose
@@ -73,7 +67,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMetaData")
     @Expose
@@ -81,7 +74,6 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -89,17 +81,14 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
     * 作者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Author")
     @Expose
     private String Author;
 
     /**
-     * Get 文件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件id 
      * @return DocumentSetId 文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentSetId() {
         return this.DocumentSetId;
@@ -107,19 +96,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSetId 文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSetId(String DocumentSetId) {
         this.DocumentSetId = DocumentSetId;
     }
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocumentSetName() {
         return this.DocumentSetName;
@@ -127,19 +112,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSetName(String DocumentSetName) {
         this.DocumentSetName = DocumentSetName;
     }
 
     /**
-     * Get 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件内容前 200个字符。 
      * @return TextPrefix 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextPrefix() {
         return this.TextPrefix;
@@ -147,19 +128,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextPrefix 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextPrefix(String TextPrefix) {
         this.TextPrefix = TextPrefix;
     }
 
     /**
-     * Get 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件拆分信息 
      * @return SplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KnowledgeSplitterPreprocess getSplitterPreprocess() {
         return this.SplitterPreprocess;
@@ -167,19 +144,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSplitterPreprocess(KnowledgeSplitterPreprocess SplitterPreprocess) {
         this.SplitterPreprocess = SplitterPreprocess;
     }
 
     /**
-     * Get 文件详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件详情 
      * @return DocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QureyKnowledgeDocumentSetInfo getDocumentSetInfo() {
         return this.DocumentSetInfo;
@@ -187,19 +160,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSetInfo(QureyKnowledgeDocumentSetInfo DocumentSetInfo) {
         this.DocumentSetInfo = DocumentSetInfo;
     }
 
     /**
-     * Get 文件标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件标题 
      * @return FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileTitle() {
         return this.FileTitle;
@@ -207,19 +176,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTitle(String FileTitle) {
         this.FileTitle = FileTitle;
     }
 
     /**
-     * Get 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件元信息，必须为jsonstring 
      * @return FileMetaData 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMetaData() {
         return this.FileMetaData;
@@ -227,19 +192,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMetaData 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMetaData(String FileMetaData) {
         this.FileMetaData = FileMetaData;
     }
 
     /**
-     * Get name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get name 
      * @return Name name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -247,19 +208,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 作者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作者 
      * @return Author 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthor() {
         return this.Author;
@@ -267,9 +224,7 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
 
     /**
      * Set 作者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Author 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthor(String Author) {
         this.Author = Author;

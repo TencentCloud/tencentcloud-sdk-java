@@ -25,7 +25,6 @@ public class DescribeKnowledgeDocumentSetListRsp extends AbstractModel {
 
     /**
     * 文件集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocumentSets")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeKnowledgeDocumentSetListRsp extends AbstractModel {
 
     /**
     * 条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 文件集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件集 
      * @return DocumentSets 文件集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QureyKnowledgeDocumentSet [] getDocumentSets() {
         return this.DocumentSets;
@@ -51,19 +47,15 @@ public class DescribeKnowledgeDocumentSetListRsp extends AbstractModel {
 
     /**
      * Set 文件集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DocumentSets 文件集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocumentSets(QureyKnowledgeDocumentSet [] DocumentSets) {
         this.DocumentSets = DocumentSets;
     }
 
     /**
-     * Get 条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条数 
      * @return Count 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -71,9 +63,7 @@ public class DescribeKnowledgeDocumentSetListRsp extends AbstractModel {
 
     /**
      * Set 条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

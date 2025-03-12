@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,22 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRabbitMQVirtualHostListResponse extends AbstractModel {
-
-    /**
-    * 集群列表数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("VirtualHostList")
-    @Expose
-    private RabbitMQPrivateVirtualHost [] VirtualHostList;
+public class UpdateOrganizationMembersPolicyResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,42 +29,6 @@ public class DescribeRabbitMQVirtualHostListResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 集群列表数量 
-     * @return TotalCount 集群列表数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 集群列表数量
-     * @param TotalCount 集群列表数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 集群列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualHostList 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RabbitMQPrivateVirtualHost [] getVirtualHostList() {
-        return this.VirtualHostList;
-    }
-
-    /**
-     * Set 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualHostList 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVirtualHostList(RabbitMQPrivateVirtualHost [] VirtualHostList) {
-        this.VirtualHostList = VirtualHostList;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -97,23 +46,14 @@ public class DescribeRabbitMQVirtualHostListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeRabbitMQVirtualHostListResponse() {
+    public UpdateOrganizationMembersPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRabbitMQVirtualHostListResponse(DescribeRabbitMQVirtualHostListResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.VirtualHostList != null) {
-            this.VirtualHostList = new RabbitMQPrivateVirtualHost[source.VirtualHostList.length];
-            for (int i = 0; i < source.VirtualHostList.length; i++) {
-                this.VirtualHostList[i] = new RabbitMQPrivateVirtualHost(source.VirtualHostList[i]);
-            }
-        }
+    public UpdateOrganizationMembersPolicyResponse(UpdateOrganizationMembersPolicyResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,8 +64,6 @@ public class DescribeRabbitMQVirtualHostListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "VirtualHostList.", this.VirtualHostList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

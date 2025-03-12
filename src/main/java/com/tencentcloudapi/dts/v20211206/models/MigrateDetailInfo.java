@@ -25,7 +25,6 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
     * 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepAll")
     @Expose
@@ -33,7 +32,6 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
     * 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNow")
     @Expose
@@ -41,7 +39,6 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
     * 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
@@ -49,7 +46,6 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
     * 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
@@ -57,17 +53,14 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
     * 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepInfo")
     @Expose
     private StepDetailInfo [] StepInfo;
 
     /**
-     * Get 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总步骤数 
      * @return StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepAll() {
         return this.StepAll;
@@ -75,19 +68,15 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
      * Set 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepAll(Long StepAll) {
         this.StepAll = StepAll;
     }
 
     /**
-     * Get 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤 
      * @return StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNow() {
         return this.StepNow;
@@ -95,19 +84,15 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
      * Set 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNow(Long StepNow) {
         this.StepNow = StepNow;
     }
 
     /**
-     * Get 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1 
      * @return MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
@@ -115,19 +100,15 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
      * Set 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterSlaveDistance(Long MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
     /**
-     * Get 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1 
      * @return SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
@@ -135,19 +116,15 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
      * Set 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondsBehindMaster(Long SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;
     }
 
     /**
-     * Get 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤信息 
      * @return StepInfo 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StepDetailInfo [] getStepInfo() {
         return this.StepInfo;
@@ -155,9 +132,7 @@ public class MigrateDetailInfo extends AbstractModel {
 
     /**
      * Set 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepInfo 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepInfo(StepDetailInfo [] StepInfo) {
         this.StepInfo = StepInfo;

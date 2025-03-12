@@ -26,7 +26,6 @@ public class ModifiedSubscribeObject extends AbstractModel {
     /**
     * 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectsType")
     @Expose
@@ -34,7 +33,6 @@ public class ModifiedSubscribeObject extends AbstractModel {
 
     /**
     * 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -42,7 +40,6 @@ public class ModifiedSubscribeObject extends AbstractModel {
 
     /**
     * 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNames")
     @Expose
@@ -50,11 +47,9 @@ public class ModifiedSubscribeObject extends AbstractModel {
 
     /**
      * Get 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
-注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。 
      * @return ObjectsType 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectsType() {
         return this.ObjectsType;
@@ -63,20 +58,16 @@ public class ModifiedSubscribeObject extends AbstractModel {
     /**
      * Set 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectsType 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectsType(Long ObjectsType) {
         this.ObjectsType = ObjectsType;
     }
 
     /**
-     * Get 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据库的名称 
      * @return DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -84,19 +75,15 @@ public class ModifiedSubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空； 
      * @return TableNames 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTableNames() {
         return this.TableNames;
@@ -104,9 +91,7 @@ public class ModifiedSubscribeObject extends AbstractModel {
 
     /**
      * Set 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNames 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNames(String [] TableNames) {
         this.TableNames = TableNames;

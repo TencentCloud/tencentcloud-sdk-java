@@ -32,6 +32,13 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
     private ErrorLogItemExport [] ErrorLogItems;
 
     /**
+    * 错误日志字符串
+    */
+    @SerializedName("FileContent")
+    @Expose
+    private String FileContent;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +63,22 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
      */
     public void setErrorLogItems(ErrorLogItemExport [] ErrorLogItems) {
         this.ErrorLogItems = ErrorLogItems;
+    }
+
+    /**
+     * Get 错误日志字符串 
+     * @return FileContent 错误日志字符串
+     */
+    public String getFileContent() {
+        return this.FileContent;
+    }
+
+    /**
+     * Set 错误日志字符串
+     * @param FileContent 错误日志字符串
+     */
+    public void setFileContent(String FileContent) {
+        this.FileContent = FileContent;
     }
 
     /**
@@ -88,6 +111,9 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
                 this.ErrorLogItems[i] = new ErrorLogItemExport(source.ErrorLogItems[i]);
             }
         }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +125,7 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ErrorLogItems.", this.ErrorLogItems);
+        this.setParamSimple(map, prefix + "FileContent", this.FileContent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

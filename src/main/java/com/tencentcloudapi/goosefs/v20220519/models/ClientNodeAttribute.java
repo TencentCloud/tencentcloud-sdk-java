@@ -67,7 +67,6 @@ public class ClientNodeAttribute extends AbstractModel {
 
     /**
     * 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPoint")
     @Expose
@@ -170,10 +169,8 @@ public class ClientNodeAttribute extends AbstractModel {
     }
 
     /**
-     * Get 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义挂载点 
      * @return MountPoint 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPoint() {
         return this.MountPoint;
@@ -181,9 +178,7 @@ public class ClientNodeAttribute extends AbstractModel {
 
     /**
      * Set 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPoint 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPoint(String MountPoint) {
         this.MountPoint = MountPoint;
