@@ -285,6 +285,13 @@ public class Task extends AbstractModel {
     private String TaskRegionName;
 
     /**
+    * 架构ID
+    */
+    @SerializedName("TaskArchId")
+    @Expose
+    private String TaskArchId;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -920,6 +927,22 @@ public class Task extends AbstractModel {
         this.TaskRegionName = TaskRegionName;
     }
 
+    /**
+     * Get 架构ID 
+     * @return TaskArchId 架构ID
+     */
+    public String getTaskArchId() {
+        return this.TaskArchId;
+    }
+
+    /**
+     * Set 架构ID
+     * @param TaskArchId 架构ID
+     */
+    public void setTaskArchId(String TaskArchId) {
+        this.TaskArchId = TaskArchId;
+    }
+
     public Task() {
     }
 
@@ -1048,6 +1071,9 @@ public class Task extends AbstractModel {
         if (source.TaskRegionName != null) {
             this.TaskRegionName = new String(source.TaskRegionName);
         }
+        if (source.TaskArchId != null) {
+            this.TaskArchId = new String(source.TaskArchId);
+        }
     }
 
 
@@ -1089,6 +1115,7 @@ public class Task extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
         this.setParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
         this.setParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
+        this.setParamSimple(map, prefix + "TaskArchId", this.TaskArchId);
 
     }
 }

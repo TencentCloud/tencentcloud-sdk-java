@@ -46,7 +46,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -76,7 +74,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -84,7 +81,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -92,7 +88,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -100,7 +95,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -108,7 +102,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -137,7 +130,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -145,7 +137,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * Kafka服务Broker地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Broker")
     @Expose
@@ -153,7 +144,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeMode")
     @Expose
@@ -161,7 +151,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -169,7 +158,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 订阅的数据库表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeObjects")
     @Expose
@@ -177,7 +165,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * kafka配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaConfig")
     @Expose
@@ -185,7 +172,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 订阅内置kafka的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -193,7 +179,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessType")
     @Expose
@@ -201,7 +186,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 接入类型信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endpoints")
     @Expose
@@ -209,7 +193,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * mongo输出聚合设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PipelineInfo")
     @Expose
@@ -217,7 +200,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -235,7 +217,6 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
     * 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraAttr")
     @Expose
@@ -297,10 +278,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
-     * Get 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的云数据库实例ID，只有订阅云数据库该值才有意义 
      * @return InstanceId 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -308,19 +287,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline 
      * @return InstanceStatus 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
@@ -328,9 +303,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -369,10 +342,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
-     * Get 修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间，时间格式如：Y-m-d h:m:s 
      * @return ModifyTime 修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -380,19 +351,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，时间格式如：Y-m-d h:m:s 
      * @return CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -400,19 +367,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -420,19 +383,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -440,19 +399,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
      * @return OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -460,9 +415,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
@@ -517,10 +470,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
-     * Get Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kafka topic 
      * @return Topic Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -528,19 +479,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Kafka服务Broker地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kafka服务Broker地址 
      * @return Broker Kafka服务Broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBroker() {
         return this.Broker;
@@ -548,19 +495,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set Kafka服务Broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Broker Kafka服务Broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBroker(String Broker) {
         this.Broker = Broker;
     }
 
     /**
-     * Get 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合 
      * @return SubscribeMode 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscribeMode() {
         return this.SubscribeMode;
@@ -568,19 +511,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeMode 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeMode(String SubscribeMode) {
         this.SubscribeMode = SubscribeMode;
     }
 
     /**
-     * Get 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档 
      * @return Protocol 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -588,19 +527,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 订阅的数据库表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅的数据库表信息 
      * @return SubscribeObjects 订阅的数据库表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubscribeObject [] getSubscribeObjects() {
         return this.SubscribeObjects;
@@ -608,19 +543,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 订阅的数据库表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeObjects 订阅的数据库表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeObjects(SubscribeObject [] SubscribeObjects) {
         this.SubscribeObjects = SubscribeObjects;
     }
 
     /**
-     * Get kafka配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka配置信息 
      * @return KafkaConfig kafka配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubscribeKafkaConfig getKafkaConfig() {
         return this.KafkaConfig;
@@ -628,19 +559,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set kafka配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaConfig kafka配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaConfig(SubscribeKafkaConfig KafkaConfig) {
         this.KafkaConfig = KafkaConfig;
     }
 
     /**
-     * Get 订阅内置kafka的版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅内置kafka的版本信息 
      * @return KafkaVersion 订阅内置kafka的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
@@ -648,19 +575,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 订阅内置kafka的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaVersion 订阅内置kafka的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力 
      * @return AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessType() {
         return this.AccessType;
@@ -668,19 +591,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 接入类型信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入类型信息 
      * @return Endpoints 接入类型信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EndpointItem [] getEndpoints() {
         return this.Endpoints;
@@ -688,19 +607,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 接入类型信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoints 接入类型信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpoints(EndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get mongo输出聚合设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo输出聚合设置 
      * @return PipelineInfo mongo输出聚合设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PipelineInfo [] getPipelineInfo() {
         return this.PipelineInfo;
@@ -708,19 +623,15 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set mongo输出聚合设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PipelineInfo mongo输出聚合设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPipelineInfo(PipelineInfo [] PipelineInfo) {
         this.PipelineInfo = PipelineInfo;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
         return this.Tags;
@@ -728,9 +639,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
@@ -759,12 +668,10 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     /**
      * Get 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-注意：此字段可能返回 null，表示取不到有效值。 
+mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。 
      * @return ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValuePairOption [] getExtraAttr() {
         return this.ExtraAttr;
@@ -774,11 +681,9 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
      * Set 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraAttr(KeyValuePairOption [] ExtraAttr) {
         this.ExtraAttr = ExtraAttr;

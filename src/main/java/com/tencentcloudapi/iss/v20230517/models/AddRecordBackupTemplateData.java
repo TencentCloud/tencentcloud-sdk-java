@@ -25,7 +25,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -41,7 +39,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSections")
     @Expose
@@ -49,7 +46,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevTimeSections")
     @Expose
@@ -57,7 +53,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scale")
     @Expose
@@ -65,7 +60,6 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateAt")
     @Expose
@@ -73,17 +67,14 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateAt")
     @Expose
     private String UpdateAt;
 
     /**
-     * Get 模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板ID 
      * @return TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -91,19 +82,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名称 
      * @return TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -111,19 +98,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
      * @return TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordTemplateTimeSections [] getTimeSections() {
         return this.TimeSections;
@@ -131,19 +114,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSections(RecordTemplateTimeSections [] TimeSections) {
         this.TimeSections = TimeSections;
     }
 
     /**
-     * Get 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
      * @return DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordTemplateTimeSections [] getDevTimeSections() {
         return this.DevTimeSections;
@@ -151,19 +130,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevTimeSections(RecordTemplateTimeSections [] DevTimeSections) {
         this.DevTimeSections = DevTimeSections;
     }
 
     /**
-     * Get 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上云倍速（支持1，2，4倍速） 
      * @return Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScale() {
         return this.Scale;
@@ -171,19 +146,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateAt() {
         return this.CreateAt;
@@ -191,19 +162,15 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateAt() {
         return this.UpdateAt;
@@ -211,9 +178,7 @@ public class AddRecordBackupTemplateData extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateAt(String UpdateAt) {
         this.UpdateAt = UpdateAt;

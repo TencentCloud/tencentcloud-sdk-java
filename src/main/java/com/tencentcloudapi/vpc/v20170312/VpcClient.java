@@ -402,6 +402,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
+     * @param req CheckGatewayFlowMonitorRequest
+     * @return CheckGatewayFlowMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitor(CheckGatewayFlowMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckGatewayFlowMonitor", CheckGatewayFlowMonitorResponse.class);
+    }
+
+    /**
      *本接口（CheckNetDetectState）用于验证网络探测。
      * @param req CheckNetDetectStateRequest
      * @return CheckNetDetectStateResponse

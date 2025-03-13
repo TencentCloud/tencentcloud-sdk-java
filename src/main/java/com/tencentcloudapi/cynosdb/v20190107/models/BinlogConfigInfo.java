@@ -25,7 +25,6 @@ public class BinlogConfigInfo extends AbstractModel {
 
     /**
     * binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogSaveDays")
     @Expose
@@ -33,7 +32,6 @@ public class BinlogConfigInfo extends AbstractModel {
 
     /**
     * binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogCrossRegionsEnable")
     @Expose
@@ -48,10 +46,8 @@ public class BinlogConfigInfo extends AbstractModel {
     private String [] BinlogCrossRegions;
 
     /**
-     * Get binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get binlog保留时间 
      * @return BinlogSaveDays binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
@@ -59,19 +55,15 @@ public class BinlogConfigInfo extends AbstractModel {
 
     /**
      * Set binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BinlogSaveDays binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
     }
 
     /**
-     * Get binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get binlog异地地域备份是否开启 
      * @return BinlogCrossRegionsEnable binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBinlogCrossRegionsEnable() {
         return this.BinlogCrossRegionsEnable;
@@ -79,9 +71,7 @@ public class BinlogConfigInfo extends AbstractModel {
 
     /**
      * Set binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BinlogCrossRegionsEnable binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogCrossRegionsEnable(String BinlogCrossRegionsEnable) {
         this.BinlogCrossRegionsEnable = BinlogCrossRegionsEnable;

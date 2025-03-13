@@ -32,7 +32,6 @@ public class UserHostPrivilege extends AbstractModel {
 
     /**
     * 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbHost")
     @Expose
@@ -40,7 +39,6 @@ public class UserHostPrivilege extends AbstractModel {
 
     /**
     * 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbPrivilege")
     @Expose
@@ -63,10 +61,8 @@ public class UserHostPrivilege extends AbstractModel {
     }
 
     /**
-     * Get 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端ip 
      * @return DbHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbHost() {
         return this.DbHost;
@@ -74,19 +70,15 @@ public class UserHostPrivilege extends AbstractModel {
 
     /**
      * Set 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbHost(String DbHost) {
         this.DbHost = DbHost;
     }
 
     /**
-     * Get 用户权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户权限 
      * @return DbPrivilege 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbPrivilege() {
         return this.DbPrivilege;
@@ -94,9 +86,7 @@ public class UserHostPrivilege extends AbstractModel {
 
     /**
      * Set 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbPrivilege 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbPrivilege(String DbPrivilege) {
         this.DbPrivilege = DbPrivilege;

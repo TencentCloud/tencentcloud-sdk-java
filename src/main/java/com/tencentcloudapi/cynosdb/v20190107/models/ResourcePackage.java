@@ -25,7 +25,6 @@ public class ResourcePackage extends AbstractModel {
 
     /**
     * 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -34,7 +33,6 @@ public class ResourcePackage extends AbstractModel {
     /**
     * 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -42,17 +40,14 @@ DISK：存储资源包
 
     /**
     * 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductionPriority")
     @Expose
     private Long DeductionPriority;
 
     /**
-     * Get 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包的唯一ID 
      * @return PackageId 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -60,9 +55,7 @@ DISK：存储资源包
 
     /**
      * Set 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
@@ -70,11 +63,9 @@ DISK：存储资源包
 
     /**
      * Get 资源包类型：CCU：计算资源包
-DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。 
+DISK：存储资源包 
      * @return PackageType 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -83,20 +74,16 @@ DISK：存储资源包
     /**
      * Set 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前资源包绑定在当前实例下的抵扣优先级 
      * @return DeductionPriority 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeductionPriority() {
         return this.DeductionPriority;
@@ -104,9 +91,7 @@ DISK：存储资源包
 
     /**
      * Set 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductionPriority 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductionPriority(Long DeductionPriority) {
         this.DeductionPriority = DeductionPriority;

@@ -25,7 +25,6 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
     * 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionColumn")
     @Expose
@@ -33,7 +32,6 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
     * 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionOperator")
     @Expose
@@ -41,17 +39,14 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
     * 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionOrderInSrcAndDst")
     @Expose
     private String ConditionOrderInSrcAndDst;
 
     /**
-     * Get 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件覆盖的列 
      * @return ConditionColumn 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionColumn() {
         return this.ConditionColumn;
@@ -59,19 +54,15 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
      * Set 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionColumn 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionColumn(String ConditionColumn) {
         this.ConditionColumn = ConditionColumn;
     }
 
     /**
-     * Get 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件覆盖操作 
      * @return ConditionOperator 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionOperator() {
         return this.ConditionOperator;
@@ -79,19 +70,15 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
      * Set 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionOperator 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionOperator(String ConditionOperator) {
         this.ConditionOperator = ConditionOperator;
     }
 
     /**
-     * Get 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件覆盖优先级处理 
      * @return ConditionOrderInSrcAndDst 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionOrderInSrcAndDst() {
         return this.ConditionOrderInSrcAndDst;
@@ -99,9 +86,7 @@ public class ConflictHandleOption extends AbstractModel {
 
     /**
      * Set 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionOrderInSrcAndDst 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionOrderInSrcAndDst(String ConditionOrderInSrcAndDst) {
         this.ConditionOrderInSrcAndDst = ConditionOrderInSrcAndDst;

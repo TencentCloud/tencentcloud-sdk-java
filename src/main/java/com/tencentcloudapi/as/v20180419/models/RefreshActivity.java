@@ -39,7 +39,6 @@ public class RefreshActivity extends AbstractModel {
 
     /**
     * 原始刷新活动ID，仅在回滚刷新活动中存在。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginRefreshActivityId")
     @Expose
@@ -92,7 +91,6 @@ public class RefreshActivity extends AbstractModel {
 
     /**
     * 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentRefreshBatchNum")
     @Expose
@@ -116,7 +114,6 @@ public class RefreshActivity extends AbstractModel {
 
     /**
     * 刷新活动创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -155,10 +152,8 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 原始刷新活动ID，仅在回滚刷新活动中存在。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始刷新活动ID，仅在回滚刷新活动中存在。 
      * @return OriginRefreshActivityId 原始刷新活动ID，仅在回滚刷新活动中存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginRefreshActivityId() {
         return this.OriginRefreshActivityId;
@@ -166,9 +161,7 @@ public class RefreshActivity extends AbstractModel {
 
     /**
      * Set 原始刷新活动ID，仅在回滚刷新活动中存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginRefreshActivityId 原始刷新活动ID，仅在回滚刷新活动中存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginRefreshActivityId(String OriginRefreshActivityId) {
         this.OriginRefreshActivityId = OriginRefreshActivityId;
@@ -295,10 +288,8 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。 
      * @return CurrentRefreshBatchNum 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentRefreshBatchNum() {
         return this.CurrentRefreshBatchNum;
@@ -306,9 +297,7 @@ public class RefreshActivity extends AbstractModel {
 
     /**
      * Set 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentRefreshBatchNum 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentRefreshBatchNum(Long CurrentRefreshBatchNum) {
         this.CurrentRefreshBatchNum = CurrentRefreshBatchNum;
@@ -355,10 +344,8 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 刷新活动创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 刷新活动创建时间。 
      * @return CreatedTime 刷新活动创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -366,9 +353,7 @@ public class RefreshActivity extends AbstractModel {
 
     /**
      * Set 刷新活动创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 刷新活动创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

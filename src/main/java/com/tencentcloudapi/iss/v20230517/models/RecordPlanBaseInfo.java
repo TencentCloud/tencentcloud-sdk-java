@@ -46,7 +46,6 @@ public class RecordPlanBaseInfo extends AbstractModel {
 
     /**
     * 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describe")
     @Expose
@@ -54,7 +53,6 @@ public class RecordPlanBaseInfo extends AbstractModel {
 
     /**
     * 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamType")
     @Expose
@@ -137,10 +135,8 @@ public class RecordPlanBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上云计划描述 
      * @return Describe 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribe() {
         return this.Describe;
@@ -148,19 +144,15 @@ public class RecordPlanBaseInfo extends AbstractModel {
 
     /**
      * Set 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Describe 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;
     }
 
     /**
-     * Get 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义 
      * @return StreamType 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamType() {
         return this.StreamType;
@@ -168,9 +160,7 @@ public class RecordPlanBaseInfo extends AbstractModel {
 
     /**
      * Set 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamType 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamType(String StreamType) {
         this.StreamType = StreamType;

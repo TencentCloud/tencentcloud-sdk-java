@@ -25,7 +25,6 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
     * 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeCode")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
     * 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,17 +39,21 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
     * 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 协议值文本
+    */
+    @SerializedName("ValueText")
+    @Expose
+    private String ValueText;
+
+    /**
+     * Get 接入协议的字典码 
      * @return TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTypeCode() {
         return this.TypeCode;
@@ -59,19 +61,15 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
      * Set 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeCode(String TypeCode) {
         this.TypeCode = TypeCode;
     }
 
     /**
-     * Get 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入协议类型值 
      * @return Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -79,19 +77,15 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
      * Set 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入协议的类型描述 
      * @return Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -99,12 +93,26 @@ public class DescribeGatewayProtocolData extends AbstractModel {
 
     /**
      * Set 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
+    }
+
+    /**
+     * Get 协议值文本 
+     * @return ValueText 协议值文本
+     */
+    public String getValueText() {
+        return this.ValueText;
+    }
+
+    /**
+     * Set 协议值文本
+     * @param ValueText 协议值文本
+     */
+    public void setValueText(String ValueText) {
+        this.ValueText = ValueText;
     }
 
     public DescribeGatewayProtocolData() {
@@ -124,6 +132,9 @@ public class DescribeGatewayProtocolData extends AbstractModel {
         if (source.Label != null) {
             this.Label = new String(source.Label);
         }
+        if (source.ValueText != null) {
+            this.ValueText = new String(source.ValueText);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class DescribeGatewayProtocolData extends AbstractModel {
         this.setParamSimple(map, prefix + "TypeCode", this.TypeCode);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "ValueText", this.ValueText);
 
     }
 }

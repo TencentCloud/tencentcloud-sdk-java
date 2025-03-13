@@ -95,7 +95,6 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
     * 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFunc")
     @Expose
@@ -103,7 +102,6 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
     * 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Func")
     @Expose
@@ -111,7 +109,6 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
     * 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FuncPattern")
     @Expose
@@ -278,10 +275,8 @@ public class ParamItemDetail extends AbstractModel {
     }
 
     /**
-     * Get 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型是否为公式 
      * @return IsFunc 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
@@ -289,19 +284,15 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
      * Set 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFunc 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数配置公式 
      * @return Func 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunc() {
         return this.Func;
@@ -309,19 +300,15 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
      * Set 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Func 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持公式的参数的默认公式样式 
      * @return FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFuncPattern() {
         return this.FuncPattern;
@@ -329,9 +316,7 @@ public class ParamItemDetail extends AbstractModel {
 
     /**
      * Set 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFuncPattern(String FuncPattern) {
         this.FuncPattern = FuncPattern;

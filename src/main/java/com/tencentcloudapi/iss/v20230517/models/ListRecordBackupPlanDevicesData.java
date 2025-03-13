@@ -25,7 +25,6 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
     * 第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNumber")
     @Expose
@@ -33,7 +32,6 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
     * 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
     @Expose
@@ -41,7 +39,6 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
     * 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -56,10 +53,8 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
     private RecordPlanChannelInfo [] List;
 
     /**
-     * Get 第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第几页 
      * @return PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNumber() {
         return this.PageNumber;
@@ -67,19 +62,15 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
      * Set 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前页的设备数量 
      * @return PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -87,19 +78,15 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
      * Set 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本次查询的设备通道总数 
      * @return TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -107,9 +94,7 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel {
 
     /**
      * Set 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.svp.v20240125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,29 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTWeCallPkgListResponse extends AbstractModel {
+public class DescribeSavingPlanCoverageResponse extends AbstractModel {
 
     /**
-    * 激活状态
+    * 节省计划覆盖率明细数据
     */
-    @SerializedName("TWeCallPkgList")
+    @SerializedName("DetailSet")
     @Expose
-    private TWeCallPkgInfo [] TWeCallPkgList;
+    private SavingPlanCoverageDetail [] DetailSet;
 
     /**
-    * 总数
+    * 节省计划覆盖率聚合数据
     */
-    @SerializedName("Total")
+    @SerializedName("RateSet")
     @Expose
-    private Long Total;
+    private SavingPlanCoverageRate [] RateSet;
 
     /**
-    * 分类统计
-注意：此字段可能返回 null，表示取不到有效值。
+    * 查询命中的节省计划覆盖率明细数据总条数
     */
-    @SerializedName("TWeCallCategoryPkgList")
+    @SerializedName("TotalCount")
     @Expose
-    private TWeCallCategoryPkgInfo [] TWeCallCategoryPkgList;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,55 +52,51 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 激活状态 
-     * @return TWeCallPkgList 激活状态
+     * Get 节省计划覆盖率明细数据 
+     * @return DetailSet 节省计划覆盖率明细数据
      */
-    public TWeCallPkgInfo [] getTWeCallPkgList() {
-        return this.TWeCallPkgList;
+    public SavingPlanCoverageDetail [] getDetailSet() {
+        return this.DetailSet;
     }
 
     /**
-     * Set 激活状态
-     * @param TWeCallPkgList 激活状态
+     * Set 节省计划覆盖率明细数据
+     * @param DetailSet 节省计划覆盖率明细数据
      */
-    public void setTWeCallPkgList(TWeCallPkgInfo [] TWeCallPkgList) {
-        this.TWeCallPkgList = TWeCallPkgList;
+    public void setDetailSet(SavingPlanCoverageDetail [] DetailSet) {
+        this.DetailSet = DetailSet;
     }
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get 节省计划覆盖率聚合数据 
+     * @return RateSet 节省计划覆盖率聚合数据
      */
-    public Long getTotal() {
-        return this.Total;
+    public SavingPlanCoverageRate [] getRateSet() {
+        return this.RateSet;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set 节省计划覆盖率聚合数据
+     * @param RateSet 节省计划覆盖率聚合数据
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setRateSet(SavingPlanCoverageRate [] RateSet) {
+        this.RateSet = RateSet;
     }
 
     /**
-     * Get 分类统计
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TWeCallCategoryPkgList 分类统计
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 查询命中的节省计划覆盖率明细数据总条数 
+     * @return TotalCount 查询命中的节省计划覆盖率明细数据总条数
      */
-    public TWeCallCategoryPkgInfo [] getTWeCallCategoryPkgList() {
-        return this.TWeCallCategoryPkgList;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 分类统计
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TWeCallCategoryPkgList 分类统计
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 查询命中的节省计划覆盖率明细数据总条数
+     * @param TotalCount 查询命中的节省计划覆盖率明细数据总条数
      */
-    public void setTWeCallCategoryPkgList(TWeCallCategoryPkgInfo [] TWeCallCategoryPkgList) {
-        this.TWeCallCategoryPkgList = TWeCallCategoryPkgList;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -120,28 +115,28 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public GetTWeCallPkgListResponse() {
+    public DescribeSavingPlanCoverageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetTWeCallPkgListResponse(GetTWeCallPkgListResponse source) {
-        if (source.TWeCallPkgList != null) {
-            this.TWeCallPkgList = new TWeCallPkgInfo[source.TWeCallPkgList.length];
-            for (int i = 0; i < source.TWeCallPkgList.length; i++) {
-                this.TWeCallPkgList[i] = new TWeCallPkgInfo(source.TWeCallPkgList[i]);
+    public DescribeSavingPlanCoverageResponse(DescribeSavingPlanCoverageResponse source) {
+        if (source.DetailSet != null) {
+            this.DetailSet = new SavingPlanCoverageDetail[source.DetailSet.length];
+            for (int i = 0; i < source.DetailSet.length; i++) {
+                this.DetailSet[i] = new SavingPlanCoverageDetail(source.DetailSet[i]);
             }
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.TWeCallCategoryPkgList != null) {
-            this.TWeCallCategoryPkgList = new TWeCallCategoryPkgInfo[source.TWeCallCategoryPkgList.length];
-            for (int i = 0; i < source.TWeCallCategoryPkgList.length; i++) {
-                this.TWeCallCategoryPkgList[i] = new TWeCallCategoryPkgInfo(source.TWeCallCategoryPkgList[i]);
+        if (source.RateSet != null) {
+            this.RateSet = new SavingPlanCoverageRate[source.RateSet.length];
+            for (int i = 0; i < source.RateSet.length; i++) {
+                this.RateSet[i] = new SavingPlanCoverageRate(source.RateSet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -153,9 +148,9 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TWeCallPkgList.", this.TWeCallPkgList);
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "TWeCallCategoryPkgList.", this.TWeCallCategoryPkgList);
+        this.setParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
+        this.setParamArrayObj(map, prefix + "RateSet.", this.RateSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

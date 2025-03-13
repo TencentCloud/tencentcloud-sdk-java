@@ -25,7 +25,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * AppId账户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -33,7 +32,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -41,7 +39,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,7 +46,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 成功抵扣容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessDeductSpec")
     @Expose
@@ -57,7 +53,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 截止当前，资源包已使用的容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageTotalUsedSpec")
     @Expose
@@ -65,7 +60,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 抵扣开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -73,7 +67,6 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 抵扣结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,17 +74,14 @@ public class PackageDetail extends AbstractModel {
 
     /**
     * 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendInfo")
     @Expose
     private String ExtendInfo;
 
     /**
-     * Get AppId账户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AppId账户ID 
      * @return AppId AppId账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -99,19 +89,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set AppId账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId AppId账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包唯一ID 
      * @return PackageId 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -119,19 +105,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -139,19 +121,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 成功抵扣容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功抵扣容量 
      * @return SuccessDeductSpec 成功抵扣容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSuccessDeductSpec() {
         return this.SuccessDeductSpec;
@@ -159,19 +137,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 成功抵扣容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessDeductSpec 成功抵扣容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessDeductSpec(Float SuccessDeductSpec) {
         this.SuccessDeductSpec = SuccessDeductSpec;
     }
 
     /**
-     * Get 截止当前，资源包已使用的容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 截止当前，资源包已使用的容量 
      * @return PackageTotalUsedSpec 截止当前，资源包已使用的容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPackageTotalUsedSpec() {
         return this.PackageTotalUsedSpec;
@@ -179,19 +153,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 截止当前，资源包已使用的容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageTotalUsedSpec 截止当前，资源包已使用的容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageTotalUsedSpec(Float PackageTotalUsedSpec) {
         this.PackageTotalUsedSpec = PackageTotalUsedSpec;
     }
 
     /**
-     * Get 抵扣开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣开始时间 
      * @return StartTime 抵扣开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -199,19 +169,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 抵扣开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 抵扣开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 抵扣结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣结束时间 
      * @return EndTime 抵扣结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -219,19 +185,15 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 抵扣结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 抵扣结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展信息 
      * @return ExtendInfo 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtendInfo() {
         return this.ExtendInfo;
@@ -239,9 +201,7 @@ public class PackageDetail extends AbstractModel {
 
     /**
      * Set 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendInfo 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendInfo(String ExtendInfo) {
         this.ExtendInfo = ExtendInfo;

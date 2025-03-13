@@ -25,7 +25,6 @@ public class Package extends AbstractModel {
 
     /**
     * AppID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -33,7 +32,6 @@ public class Package extends AbstractModel {
 
     /**
     * 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -41,7 +39,6 @@ public class Package extends AbstractModel {
 
     /**
     * 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
     @Expose
@@ -50,7 +47,6 @@ public class Package extends AbstractModel {
     /**
     * 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -59,7 +55,6 @@ CCU-计算资源包，DISK-存储资源包
     /**
     * 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageRegion")
     @Expose
@@ -73,7 +68,6 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -81,7 +75,6 @@ refund-已退费。
 
     /**
     * 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageTotalSpec")
     @Expose
@@ -89,7 +82,6 @@ refund-已退费。
 
     /**
     * 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageUsedSpec")
     @Expose
@@ -97,7 +89,6 @@ refund-已退费。
 
     /**
     * 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasQuota")
     @Expose
@@ -105,7 +96,6 @@ refund-已退费。
 
     /**
     * 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindInstanceInfos")
     @Expose
@@ -113,7 +103,6 @@ refund-已退费。
 
     /**
     * 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -121,7 +110,6 @@ refund-已退费。
 
     /**
     * 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -129,17 +117,14 @@ refund-已退费。
 
     /**
     * 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistoryBindResourceInfos")
     @Expose
     private BindInstanceInfo [] HistoryBindResourceInfos;
 
     /**
-     * Get AppID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AppID 
      * @return AppId AppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -147,19 +132,15 @@ refund-已退费。
 
     /**
      * Set AppID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId AppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包唯一ID 
      * @return PackageId 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -167,19 +148,15 @@ refund-已退费。
 
     /**
      * Set 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包名称 
      * @return PackageName 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
         return this.PackageName;
@@ -187,9 +164,7 @@ refund-已退费。
 
     /**
      * Set 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageName 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
@@ -197,11 +172,9 @@ refund-已退费。
 
     /**
      * Get 资源包类型
-CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。 
+CCU-计算资源包，DISK-存储资源包 
      * @return PackageType 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -210,10 +183,8 @@ CCU-计算资源包，DISK-存储资源包
     /**
      * Set 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -221,11 +192,9 @@ CCU-计算资源包，DISK-存储资源包
 
     /**
      * Get 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。 
+china-中国内地通用，overseas-港澳台及海外通用 
      * @return PackageRegion 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageRegion() {
         return this.PackageRegion;
@@ -234,10 +203,8 @@ china-中国内地通用，overseas-港澳台及海外通用
     /**
      * Set 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageRegion 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
@@ -250,8 +217,7 @@ using-使用中；
 expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
-refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。 
+refund-已退费。 
      * @return Status 资源包状态
 creating-创建中；
 using-使用中；
@@ -259,7 +225,6 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -273,7 +238,6 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 资源包状态
 creating-创建中；
 using-使用中；
@@ -281,17 +245,14 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包总量 
      * @return PackageTotalSpec 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPackageTotalSpec() {
         return this.PackageTotalSpec;
@@ -299,19 +260,15 @@ refund-已退费。
 
     /**
      * Set 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageTotalSpec 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageTotalSpec(Float PackageTotalSpec) {
         this.PackageTotalSpec = PackageTotalSpec;
     }
 
     /**
-     * Get 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包已使用量 
      * @return PackageUsedSpec 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPackageUsedSpec() {
         return this.PackageUsedSpec;
@@ -319,19 +276,15 @@ refund-已退费。
 
     /**
      * Set 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageUsedSpec 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageUsedSpec(Float PackageUsedSpec) {
         this.PackageUsedSpec = PackageUsedSpec;
     }
 
     /**
-     * Get 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否还有库存余量 
      * @return HasQuota 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasQuota() {
         return this.HasQuota;
@@ -339,19 +292,15 @@ refund-已退费。
 
     /**
      * Set 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasQuota 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasQuota(Boolean HasQuota) {
         this.HasQuota = HasQuota;
     }
 
     /**
-     * Get 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定实例信息 
      * @return BindInstanceInfos 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BindInstanceInfo [] getBindInstanceInfos() {
         return this.BindInstanceInfos;
@@ -359,19 +308,15 @@ refund-已退费。
 
     /**
      * Set 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindInstanceInfos 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindInstanceInfos(BindInstanceInfo [] BindInstanceInfos) {
         this.BindInstanceInfos = BindInstanceInfos;
     }
 
     /**
-     * Get 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效时间：2022-07-01 00:00:00 
      * @return StartTime 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -379,19 +324,15 @@ refund-已退费。
 
     /**
      * Set 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失效时间：2022-08-01 00:00:00 
      * @return ExpireTime 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -399,19 +340,15 @@ refund-已退费。
 
     /**
      * Set 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包历史绑定（已解绑）实例信息 
      * @return HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BindInstanceInfo [] getHistoryBindResourceInfos() {
         return this.HistoryBindResourceInfos;
@@ -419,9 +356,7 @@ refund-已退费。
 
     /**
      * Set 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistoryBindResourceInfos(BindInstanceInfo [] HistoryBindResourceInfos) {
         this.HistoryBindResourceInfos = HistoryBindResourceInfos;

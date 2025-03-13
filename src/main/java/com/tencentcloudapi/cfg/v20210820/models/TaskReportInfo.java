@@ -53,7 +53,6 @@ public class TaskReportInfo extends AbstractModel {
 
     /**
     * 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosUrl")
     @Expose
@@ -83,7 +82,6 @@ public class TaskReportInfo extends AbstractModel {
 
     /**
     * 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchiveUuid")
     @Expose
@@ -154,10 +152,8 @@ public class TaskReportInfo extends AbstractModel {
     }
 
     /**
-     * Get 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 演练报告cos文件地址 
      * @return CosUrl 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosUrl() {
         return this.CosUrl;
@@ -165,9 +161,7 @@ public class TaskReportInfo extends AbstractModel {
 
     /**
      * Set 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosUrl 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosUrl(String CosUrl) {
         this.CosUrl = CosUrl;
@@ -226,10 +220,8 @@ public class TaskReportInfo extends AbstractModel {
     }
 
     /**
-     * Get 归档ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归档ID 
      * @return ArchiveUuid 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchiveUuid() {
         return this.ArchiveUuid;
@@ -237,9 +229,7 @@ public class TaskReportInfo extends AbstractModel {
 
     /**
      * Set 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ArchiveUuid 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchiveUuid(String ArchiveUuid) {
         this.ArchiveUuid = ArchiveUuid;

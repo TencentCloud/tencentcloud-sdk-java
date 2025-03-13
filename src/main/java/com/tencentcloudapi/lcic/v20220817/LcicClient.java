@@ -301,6 +301,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除白板板书截图
+     * @param req DeleteWhiteBoardSnapshotRequest
+     * @return DeleteWhiteBoardSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWhiteBoardSnapshotResponse DeleteWhiteBoardSnapshot(DeleteWhiteBoardSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWhiteBoardSnapshot", DeleteWhiteBoardSnapshotResponse.class);
+    }
+
+    /**
      *获取房间答题详情
      * @param req DescribeAnswerListRequest
      * @return DescribeAnswerListResponse
@@ -542,6 +553,17 @@ public class LcicClient extends AbstractClient{
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
+    }
+
+    /**
+     *查询白板板书截图
+     * @param req DescribeWhiteBoardSnapshotRequest
+     * @return DescribeWhiteBoardSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoardSnapshotResponse DescribeWhiteBoardSnapshot(DescribeWhiteBoardSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWhiteBoardSnapshot", DescribeWhiteBoardSnapshotResponse.class);
     }
 
     /**

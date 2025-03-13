@@ -31,7 +31,7 @@ public class ServiceGovernanceConfig extends AbstractModel {
     private Boolean EnableGovernance;
 
     /**
-    * 服务治理类型
+    * 服务治理类型（枚举：SHARE、EXCLUSIVE）
     */
     @SerializedName("GovernanceType")
     @Expose
@@ -62,16 +62,16 @@ public class ServiceGovernanceConfig extends AbstractModel {
     }
 
     /**
-     * Get 服务治理类型 
-     * @return GovernanceType 服务治理类型
+     * Get 服务治理类型（枚举：SHARE、EXCLUSIVE） 
+     * @return GovernanceType 服务治理类型（枚举：SHARE、EXCLUSIVE）
      */
     public String getGovernanceType() {
         return this.GovernanceType;
     }
 
     /**
-     * Set 服务治理类型
-     * @param GovernanceType 服务治理类型
+     * Set 服务治理类型（枚举：SHARE、EXCLUSIVE）
+     * @param GovernanceType 服务治理类型（枚举：SHARE、EXCLUSIVE）
      */
     public void setGovernanceType(String GovernanceType) {
         this.GovernanceType = GovernanceType;

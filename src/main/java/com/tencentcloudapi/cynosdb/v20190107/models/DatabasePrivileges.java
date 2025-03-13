@@ -25,7 +25,6 @@ public class DatabasePrivileges extends AbstractModel {
 
     /**
     * 数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Db")
     @Expose
@@ -33,17 +32,14 @@ public class DatabasePrivileges extends AbstractModel {
 
     /**
     * 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
 
     /**
-     * Get 数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库 
      * @return Db 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDb() {
         return this.Db;
@@ -51,19 +47,15 @@ public class DatabasePrivileges extends AbstractModel {
 
     /**
      * Set 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Db 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get 权限列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限列表 
      * @return Privileges 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivileges() {
         return this.Privileges;
@@ -71,9 +63,7 @@ public class DatabasePrivileges extends AbstractModel {
 
     /**
      * Set 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Privileges 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;

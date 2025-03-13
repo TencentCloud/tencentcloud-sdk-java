@@ -216,6 +216,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
+     * @param req DescribeDBInstanceNamespaceRequest
+     * @return DescribeDBInstanceNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespace(DescribeDBInstanceNamespaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceNamespace", DescribeDBInstanceNamespaceResponse.class);
+    }
+
+    /**
      *本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
      * @param req DescribeDBInstanceNodePropertyRequest
      * @return DescribeDBInstanceNodePropertyResponse

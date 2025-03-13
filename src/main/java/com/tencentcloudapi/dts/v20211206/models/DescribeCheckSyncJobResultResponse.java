@@ -25,7 +25,6 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepCur")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -71,10 +67,8 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功) 
      * @return Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -82,19 +76,15 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤总数 
      * @return StepCount 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepCount() {
         return this.StepCount;
@@ -102,19 +92,15 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepCount 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepCount(Long StepCount) {
         this.StepCount = StepCount;
     }
 
     /**
-     * Get 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前所在步骤 
      * @return StepCur 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepCur() {
         return this.StepCur;
@@ -122,19 +108,15 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepCur 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepCur(Long StepCur) {
         this.StepCur = StepCur;
     }
 
     /**
-     * Get 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总体进度，范围为[0,100] 
      * @return Progress 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -142,9 +124,7 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

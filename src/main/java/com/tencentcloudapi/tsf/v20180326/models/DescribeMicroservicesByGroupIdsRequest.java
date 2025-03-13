@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.fmu.v20191213.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryBeautifyVideoJobRequest extends AbstractModel {
+public class DescribeMicroservicesByGroupIdsRequest extends AbstractModel {
 
     /**
-    * 视频美颜Job id
+    * 部署组ID列表
     */
-    @SerializedName("JobId")
+    @SerializedName("GroupIds")
     @Expose
-    private String JobId;
+    private String [] GroupIds;
 
     /**
-     * Get 视频美颜Job id 
-     * @return JobId 视频美颜Job id
+     * Get 部署组ID列表 
+     * @return GroupIds 部署组ID列表
      */
-    public String getJobId() {
-        return this.JobId;
+    public String [] getGroupIds() {
+        return this.GroupIds;
     }
 
     /**
-     * Set 视频美颜Job id
-     * @param JobId 视频美颜Job id
+     * Set 部署组ID列表
+     * @param GroupIds 部署组ID列表
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setGroupIds(String [] GroupIds) {
+        this.GroupIds = GroupIds;
     }
 
-    public QueryBeautifyVideoJobRequest() {
+    public DescribeMicroservicesByGroupIdsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryBeautifyVideoJobRequest(QueryBeautifyVideoJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DescribeMicroservicesByGroupIdsRequest(DescribeMicroservicesByGroupIdsRequest source) {
+        if (source.GroupIds != null) {
+            this.GroupIds = new String[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new String(source.GroupIds[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class QueryBeautifyVideoJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
 
     }
 }

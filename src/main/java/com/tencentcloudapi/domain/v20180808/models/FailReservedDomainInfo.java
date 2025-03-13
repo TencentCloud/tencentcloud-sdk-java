@@ -25,7 +25,6 @@ public class FailReservedDomainInfo extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,17 +32,14 @@ public class FailReservedDomainInfo extends AbstractModel {
 
     /**
     * 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -51,19 +47,15 @@ public class FailReservedDomainInfo extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预约失败原因 
      * @return FailReason 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -71,9 +63,7 @@ public class FailReservedDomainInfo extends AbstractModel {
 
     /**
      * Set 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;

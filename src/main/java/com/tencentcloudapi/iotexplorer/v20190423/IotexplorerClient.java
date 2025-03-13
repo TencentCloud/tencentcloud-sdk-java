@@ -50,19 +50,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *微信VOIP功能调整下线
-
-分配License
-     * @param req AssignTWeCallLicenseRequest
-     * @return AssignTWeCallLicenseResponse
-     * @throws TencentCloudSDKException
-     */
-    public AssignTWeCallLicenseResponse AssignTWeCallLicense(AssignTWeCallLicenseRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AssignTWeCallLicense", AssignTWeCallLicenseResponse.class);
-    }
-
-    /**
      *绑定云存用户
      * @param req BindCloudStorageUserRequest
      * @return BindCloudStorageUserResponse
@@ -1270,19 +1257,6 @@ public class IotexplorerClient extends AbstractClient{
     public GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(GetTWeCallActiveStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTWeCallActiveStatus", GetTWeCallActiveStatusResponse.class);
-    }
-
-    /**
-     *微信VOIP功能调整下线
-
-查询TWeCall包列表
-     * @param req GetTWeCallPkgListRequest
-     * @return GetTWeCallPkgListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetTWeCallPkgListResponse GetTWeCallPkgList(GetTWeCallPkgListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetTWeCallPkgList", GetTWeCallPkgListResponse.class);
     }
 
     /**

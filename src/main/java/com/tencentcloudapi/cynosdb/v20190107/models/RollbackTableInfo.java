@@ -25,7 +25,6 @@ public class RollbackTableInfo extends AbstractModel {
 
     /**
     * 旧表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldTable")
     @Expose
@@ -33,17 +32,14 @@ public class RollbackTableInfo extends AbstractModel {
 
     /**
     * 新表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewTable")
     @Expose
     private String NewTable;
 
     /**
-     * Get 旧表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧表名称 
      * @return OldTable 旧表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldTable() {
         return this.OldTable;
@@ -51,19 +47,15 @@ public class RollbackTableInfo extends AbstractModel {
 
     /**
      * Set 旧表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldTable 旧表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldTable(String OldTable) {
         this.OldTable = OldTable;
     }
 
     /**
-     * Get 新表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新表名称 
      * @return NewTable 新表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewTable() {
         return this.NewTable;
@@ -71,9 +63,7 @@ public class RollbackTableInfo extends AbstractModel {
 
     /**
      * Set 新表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewTable 新表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewTable(String NewTable) {
         this.NewTable = NewTable;

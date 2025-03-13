@@ -25,7 +25,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,7 +32,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 网关接入协议类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolType")
     @Expose
@@ -41,7 +39,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 网关接入协议名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolTypeName")
     @Expose
@@ -49,7 +46,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -57,7 +53,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -73,7 +67,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -81,7 +74,6 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备下通道数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelNum")
     @Expose
@@ -89,17 +81,14 @@ public class GatewayDevice extends AbstractModel {
 
     /**
     * 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -107,19 +96,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 网关接入协议类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关接入协议类型 
      * @return ProtocolType 网关接入协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtocolType() {
         return this.ProtocolType;
@@ -127,19 +112,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 网关接入协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolType 网关接入协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 网关接入协议名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关接入协议名称 
      * @return ProtocolTypeName 网关接入协议名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocolTypeName() {
         return this.ProtocolTypeName;
@@ -147,19 +128,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 网关接入协议名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolTypeName 网关接入协议名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolTypeName(String ProtocolTypeName) {
         this.ProtocolTypeName = ProtocolTypeName;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return Name 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -167,19 +144,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型 
      * @return Type 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -187,19 +160,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 设备内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备内网IP 
      * @return Ip 设备内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -207,19 +176,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 设备内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 设备端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备端口 
      * @return Port 设备端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -227,19 +192,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 设备端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 设备下通道数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备下通道数 
      * @return ChannelNum 设备下通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelNum() {
         return this.ChannelNum;
@@ -247,19 +208,15 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备下通道数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelNum 设备下通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelNum(Long ChannelNum) {
         this.ChannelNum = ChannelNum;
     }
 
     /**
-     * Get 设备状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备状态 
      * @return Status 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -267,9 +224,7 @@ public class GatewayDevice extends AbstractModel {
 
     /**
      * Set 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

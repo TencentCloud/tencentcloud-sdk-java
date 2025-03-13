@@ -25,7 +25,6 @@ public class AuctionInfo extends AbstractModel {
 
     /**
     * 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bidder")
     @Expose
@@ -33,7 +32,6 @@ public class AuctionInfo extends AbstractModel {
 
     /**
     * 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuctionTime")
     @Expose
@@ -41,7 +39,6 @@ public class AuctionInfo extends AbstractModel {
 
     /**
     * 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuctionPrice")
     @Expose
@@ -49,17 +46,14 @@ public class AuctionInfo extends AbstractModel {
 
     /**
     * 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞拍人 
      * @return Bidder 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBidder() {
         return this.Bidder;
@@ -67,19 +61,15 @@ public class AuctionInfo extends AbstractModel {
 
     /**
      * Set 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bidder 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBidder(String Bidder) {
         this.Bidder = Bidder;
     }
 
     /**
-     * Get 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞拍时间 
      * @return AuctionTime 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuctionTime() {
         return this.AuctionTime;
@@ -87,19 +77,15 @@ public class AuctionInfo extends AbstractModel {
 
     /**
      * Set 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuctionTime 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuctionTime(String AuctionTime) {
         this.AuctionTime = AuctionTime;
     }
 
     /**
-     * Get 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞拍价格 
      * @return AuctionPrice 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAuctionPrice() {
         return this.AuctionPrice;
@@ -107,19 +93,15 @@ public class AuctionInfo extends AbstractModel {
 
     /**
      * Set 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuctionPrice 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuctionPrice(Float AuctionPrice) {
         this.AuctionPrice = AuctionPrice;
     }
 
     /**
-     * Get 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 up: 领先 down: 落后 
      * @return Status 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -127,9 +109,7 @@ public class AuctionInfo extends AbstractModel {
 
     /**
      * Set 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

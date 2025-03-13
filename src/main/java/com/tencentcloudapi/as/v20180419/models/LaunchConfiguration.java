@@ -160,7 +160,6 @@ public class LaunchConfiguration extends AbstractModel {
 
     /**
     * 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -246,7 +245,6 @@ public class LaunchConfiguration extends AbstractModel {
 
     /**
     * 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageFamily")
     @Expose
@@ -572,10 +570,8 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表。 
      * @return Tags 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -583,9 +579,7 @@ public class LaunchConfiguration extends AbstractModel {
 
     /**
      * Set 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -772,10 +766,8 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像族名称。 
      * @return ImageFamily 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageFamily() {
         return this.ImageFamily;
@@ -783,9 +775,7 @@ public class LaunchConfiguration extends AbstractModel {
 
     /**
      * Set 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageFamily 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;

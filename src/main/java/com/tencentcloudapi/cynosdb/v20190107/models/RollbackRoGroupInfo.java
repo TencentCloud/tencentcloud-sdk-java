@@ -25,7 +25,6 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
     * 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
     * vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -41,7 +39,6 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
     * 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -49,7 +46,6 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
     * vip信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -57,17 +53,14 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
     * vport信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-     * Get 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例组ID 
      * @return InstanceGroupId 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
@@ -75,19 +68,15 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
      * Set 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceGroupId 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc信息 
      * @return UniqVpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -95,19 +84,15 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
      * Set vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网信息 
      * @return UniqSubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -115,19 +100,15 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
      * Set 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get vip信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vip信息 
      * @return Vip vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -135,19 +116,15 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
      * Set vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vport信息 
      * @return Vport vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -155,9 +132,7 @@ public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
      * Set vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;

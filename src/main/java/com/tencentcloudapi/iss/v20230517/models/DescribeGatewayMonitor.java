@@ -25,7 +25,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTotal")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceOnline")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceOffline")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelTotal")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelOnline")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelOffline")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpFlow")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelPull")
     @Expose
@@ -89,17 +81,14 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
     * 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelUnPull")
     @Expose
     private Long ChannelUnPull;
 
     /**
-     * Get 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备接入总数 
      * @return DeviceTotal 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceTotal() {
         return this.DeviceTotal;
@@ -107,19 +96,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTotal 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTotal(Long DeviceTotal) {
         this.DeviceTotal = DeviceTotal;
     }
 
     /**
-     * Get 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备在线数 
      * @return DeviceOnline 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceOnline() {
         return this.DeviceOnline;
@@ -127,19 +112,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceOnline 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceOnline(Long DeviceOnline) {
         this.DeviceOnline = DeviceOnline;
     }
 
     /**
-     * Get 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备离线数 
      * @return DeviceOffline 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceOffline() {
         return this.DeviceOffline;
@@ -147,19 +128,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceOffline 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceOffline(Long DeviceOffline) {
         this.DeviceOffline = DeviceOffline;
     }
 
     /**
-     * Get 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频通道总数 
      * @return ChannelTotal 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelTotal() {
         return this.ChannelTotal;
@@ -167,19 +144,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelTotal 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelTotal(Long ChannelTotal) {
         this.ChannelTotal = ChannelTotal;
     }
 
     /**
-     * Get 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频通道在线数 
      * @return ChannelOnline 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelOnline() {
         return this.ChannelOnline;
@@ -187,19 +160,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelOnline 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelOnline(Long ChannelOnline) {
         this.ChannelOnline = ChannelOnline;
     }
 
     /**
-     * Get 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频通道离线数 
      * @return ChannelOffline 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelOffline() {
         return this.ChannelOffline;
@@ -207,19 +176,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelOffline 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelOffline(Long ChannelOffline) {
         this.ChannelOffline = ChannelOffline;
     }
 
     /**
-     * Get 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关上行流量,单位kbps 
      * @return UpFlow 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpFlow() {
         return this.UpFlow;
@@ -227,19 +192,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpFlow 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpFlow(Long UpFlow) {
         this.UpFlow = UpFlow;
     }
 
     /**
-     * Get 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流在传输中的通道数 
      * @return ChannelPull 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelPull() {
         return this.ChannelPull;
@@ -247,19 +208,15 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelPull 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelPull(Long ChannelPull) {
         this.ChannelPull = ChannelPull;
     }
 
     /**
-     * Get 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流未传输中的通道数 
      * @return ChannelUnPull 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelUnPull() {
         return this.ChannelUnPull;
@@ -267,9 +224,7 @@ public class DescribeGatewayMonitor extends AbstractModel {
 
     /**
      * Set 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelUnPull 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelUnPull(Long ChannelUnPull) {
         this.ChannelUnPull = ChannelUnPull;

@@ -87,6 +87,20 @@ public class GetServiceStatusResponse extends AbstractModel {
     private String SubscriptionInfo;
 
     /**
+    * 返回KMS用户密钥使用数量
+    */
+    @SerializedName("CmkUserCount")
+    @Expose
+    private Long CmkUserCount;
+
+    /**
+    * 返回KMS用户密钥规格数量
+    */
+    @SerializedName("CmkLimit")
+    @Expose
+    private Long CmkLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +252,38 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 返回KMS用户密钥使用数量 
+     * @return CmkUserCount 返回KMS用户密钥使用数量
+     */
+    public Long getCmkUserCount() {
+        return this.CmkUserCount;
+    }
+
+    /**
+     * Set 返回KMS用户密钥使用数量
+     * @param CmkUserCount 返回KMS用户密钥使用数量
+     */
+    public void setCmkUserCount(Long CmkUserCount) {
+        this.CmkUserCount = CmkUserCount;
+    }
+
+    /**
+     * Get 返回KMS用户密钥规格数量 
+     * @return CmkLimit 返回KMS用户密钥规格数量
+     */
+    public Long getCmkLimit() {
+        return this.CmkLimit;
+    }
+
+    /**
+     * Set 返回KMS用户密钥规格数量
+     * @param CmkLimit 返回KMS用户密钥规格数量
+     */
+    public void setCmkLimit(Long CmkLimit) {
+        this.CmkLimit = CmkLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +334,12 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.SubscriptionInfo != null) {
             this.SubscriptionInfo = new String(source.SubscriptionInfo);
         }
+        if (source.CmkUserCount != null) {
+            this.CmkUserCount = new Long(source.CmkUserCount);
+        }
+        if (source.CmkLimit != null) {
+            this.CmkLimit = new Long(source.CmkLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +359,8 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
         this.setParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
         this.setParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
+        this.setParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
+        this.setParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

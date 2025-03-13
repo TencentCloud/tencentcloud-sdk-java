@@ -25,7 +25,6 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
     * 对象类型,可能得值有：account,index,shardkey,schema
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
     @Expose
@@ -33,7 +32,6 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
     * 源端分块
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcChunk")
     @Expose
@@ -41,7 +39,6 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
     * 目标端分块
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstChunk")
     @Expose
@@ -49,7 +46,6 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
     * 源端值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcItem")
     @Expose
@@ -57,17 +53,14 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
     * 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstItem")
     @Expose
     private String DstItem;
 
     /**
-     * Get 对象类型,可能得值有：account,index,shardkey,schema
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象类型,可能得值有：account,index,shardkey,schema 
      * @return ObjectType 对象类型,可能得值有：account,index,shardkey,schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -75,19 +68,15 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
      * Set 对象类型,可能得值有：account,index,shardkey,schema
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectType 对象类型,可能得值有：account,index,shardkey,schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 源端分块
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端分块 
      * @return SrcChunk 源端分块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcChunk() {
         return this.SrcChunk;
@@ -95,19 +84,15 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
      * Set 源端分块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcChunk 源端分块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcChunk(String SrcChunk) {
         this.SrcChunk = SrcChunk;
     }
 
     /**
-     * Get 目标端分块
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端分块 
      * @return DstChunk 目标端分块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstChunk() {
         return this.DstChunk;
@@ -115,19 +100,15 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
      * Set 目标端分块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstChunk 目标端分块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstChunk(String DstChunk) {
         this.DstChunk = DstChunk;
     }
 
     /**
-     * Get 源端值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端值 
      * @return SrcItem 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcItem() {
         return this.SrcItem;
@@ -135,19 +116,15 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
      * Set 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcItem 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcItem(String SrcItem) {
         this.SrcItem = SrcItem;
     }
 
     /**
-     * Get 目标端值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端值 
      * @return DstItem 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstItem() {
         return this.DstItem;
@@ -155,9 +132,7 @@ public class AdvancedObjectsItem extends AbstractModel {
 
     /**
      * Set 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstItem 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstItem(String DstItem) {
         this.DstItem = DstItem;

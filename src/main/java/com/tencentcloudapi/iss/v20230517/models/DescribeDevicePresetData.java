@@ -25,7 +25,6 @@ public class DescribeDevicePresetData extends AbstractModel {
 
     /**
     * 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeDevicePresetData extends AbstractModel {
 
     /**
     * 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预置位索引    只支持1-10的索引 
      * @return Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndex() {
         return this.Index;
@@ -51,19 +47,15 @@ public class DescribeDevicePresetData extends AbstractModel {
 
     /**
      * Set 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预置位名称 
      * @return Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class DescribeDevicePresetData extends AbstractModel {
 
     /**
      * Set 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

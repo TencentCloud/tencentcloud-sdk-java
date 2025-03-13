@@ -25,7 +25,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 设备 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelCode")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 流状态（0:未传输,1:传输中）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 是否可控 Ptz（0:不可控,1:可控）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTZType")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道厂商
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manufacturer")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480））
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resolution")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 通道在离线状态（0:离线,1:在线）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -97,17 +88,14 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
     * 所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get 设备 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备 ID 
      * @return DeviceId 设备 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -115,19 +103,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 设备 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道 ID 
      * @return ChannelId 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
         return this.ChannelId;
@@ -135,19 +119,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelId 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 通道编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道编码 
      * @return ChannelCode 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelCode() {
         return this.ChannelCode;
@@ -155,19 +135,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelCode 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelCode(String ChannelCode) {
         this.ChannelCode = ChannelCode;
     }
 
     /**
-     * Get 通道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道名称 
      * @return Name 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -175,19 +151,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 流状态（0:未传输,1:传输中）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流状态（0:未传输,1:传输中） 
      * @return Status 流状态（0:未传输,1:传输中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -195,19 +167,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 流状态（0:未传输,1:传输中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 流状态（0:未传输,1:传输中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否可控 Ptz（0:不可控,1:可控）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可控 Ptz（0:不可控,1:可控） 
      * @return PTZType 是否可控 Ptz（0:不可控,1:可控）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPTZType() {
         return this.PTZType;
@@ -215,19 +183,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 是否可控 Ptz（0:不可控,1:可控）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PTZType 是否可控 Ptz（0:不可控,1:可控）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTZType(Long PTZType) {
         this.PTZType = PTZType;
     }
 
     /**
-     * Get 通道厂商
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道厂商 
      * @return Manufacturer 通道厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getManufacturer() {
         return this.Manufacturer;
@@ -235,19 +199,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manufacturer 通道厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480））
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480）） 
      * @return Resolution 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480））
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResolution() {
         return this.Resolution;
@@ -255,19 +215,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480））
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resolution 通道支持分辨率（分辨率列表由‘/’隔开，国标协议样例（6/3），自定义样例（12800960/640480））
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 通道在离线状态（0:离线,1:在线）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道在离线状态（0:离线,1:在线） 
      * @return State 通道在离线状态（0:离线,1:在线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
         return this.State;
@@ -275,19 +231,15 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 通道在离线状态（0:离线,1:在线）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 通道在离线状态（0:离线,1:在线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所在地域 
      * @return Region 所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -295,9 +247,7 @@ public class DescribeDeviceChannelData extends AbstractModel {
 
     /**
      * Set 所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

@@ -31,7 +31,7 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在
+    * 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li>
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -40,7 +40,6 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
     /**
     * 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
 需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastActivityId")
     @Expose
@@ -48,7 +47,6 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
 
     /**
     * 实例刷新状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatusMessage")
     @Expose
@@ -71,16 +69,16 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
     }
 
     /**
-     * Get 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在 
-     * @return InstanceStatus 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在
+     * Get 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li> 
+     * @return InstanceStatus 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在
-     * @param InstanceStatus 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在
+     * Set 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li>
+     * @param InstanceStatus 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -88,11 +86,9 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
 
     /**
      * Get 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
-需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-注意：此字段可能返回 null，表示取不到有效值。 
+需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。 
      * @return LastActivityId 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
 需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastActivityId() {
         return this.LastActivityId;
@@ -101,20 +97,16 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
     /**
      * Set 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
 需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastActivityId 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
 需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastActivityId(String LastActivityId) {
         this.LastActivityId = LastActivityId;
     }
 
     /**
-     * Get 实例刷新状态信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例刷新状态信息。 
      * @return InstanceStatusMessage 实例刷新状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStatusMessage() {
         return this.InstanceStatusMessage;
@@ -122,9 +114,7 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
 
     /**
      * Set 实例刷新状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatusMessage 实例刷新状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatusMessage(String InstanceStatusMessage) {
         this.InstanceStatusMessage = InstanceStatusMessage;

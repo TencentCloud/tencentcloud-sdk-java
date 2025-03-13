@@ -638,6 +638,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *设置巡检任务配置
+     * @param req ModifyInspectionSettingsRequest
+     * @return ModifyInspectionSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInspectionSettingsResponse ModifyInspectionSettings(ModifyInspectionSettingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInspectionSettings", ModifyInspectionSettingsResponse.class);
+    }
+
+    /**
      *修改集群名称
      * @param req ModifyInstanceBasicRequest
      * @return ModifyInstanceBasicResponse

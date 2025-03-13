@@ -40,6 +40,14 @@ public class ServerlessIndexMetaField extends AbstractModel {
     private String IndexName;
 
     /**
+    * 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexMetaJson")
+    @Expose
+    private String IndexMetaJson;
+
+    /**
     * 索引文档数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -204,6 +212,26 @@ public class ServerlessIndexMetaField extends AbstractModel {
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
+    }
+
+    /**
+     * Get 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexMetaJson 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexMetaJson() {
+        return this.IndexMetaJson;
+    }
+
+    /**
+     * Set 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexMetaJson 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexMetaJson(String IndexMetaJson) {
+        this.IndexMetaJson = IndexMetaJson;
     }
 
     /**
@@ -536,6 +564,9 @@ public class ServerlessIndexMetaField extends AbstractModel {
         if (source.IndexName != null) {
             this.IndexName = new String(source.IndexName);
         }
+        if (source.IndexMetaJson != null) {
+            this.IndexMetaJson = new String(source.IndexMetaJson);
+        }
         if (source.IndexDocs != null) {
             this.IndexDocs = new Long(source.IndexDocs);
         }
@@ -596,6 +627,7 @@ public class ServerlessIndexMetaField extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
         this.setParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
         this.setParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
         this.setParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);

@@ -25,7 +25,6 @@ public class RefreshSettings extends AbstractModel {
 
     /**
     * 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RollingUpdateSettings")
     @Expose
@@ -39,10 +38,8 @@ public class RefreshSettings extends AbstractModel {
     private Boolean CheckInstanceTargetHealth;
 
     /**
-     * Get 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。 
      * @return RollingUpdateSettings 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollingUpdateSettings getRollingUpdateSettings() {
         return this.RollingUpdateSettings;
@@ -50,9 +47,7 @@ public class RefreshSettings extends AbstractModel {
 
     /**
      * Set 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollingUpdateSettings 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRollingUpdateSettings(RollingUpdateSettings RollingUpdateSettings) {
         this.RollingUpdateSettings = RollingUpdateSettings;

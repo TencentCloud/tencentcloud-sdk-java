@@ -25,7 +25,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupType")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupId")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -49,7 +46,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -57,7 +53,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetType")
     @Expose
@@ -65,7 +60,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 私有网络IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -73,7 +67,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 私有网络端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
@@ -81,7 +74,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanDomain")
     @Expose
@@ -89,7 +81,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIP")
     @Expose
@@ -97,7 +88,6 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 外网端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanPort")
     @Expose
@@ -105,17 +95,14 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
     * 外网开启状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-     * Get 网络类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络类型 
      * @return InstanceGroupType 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupType() {
         return this.InstanceGroupType;
@@ -123,19 +110,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceGroupType 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupType(String InstanceGroupType) {
         this.InstanceGroupType = InstanceGroupType;
     }
 
     /**
-     * Get 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例组ID 
      * @return InstanceGroupId 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
@@ -143,19 +126,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceGroupId 实例组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -163,19 +142,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -183,19 +158,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络 
      * @return NetType 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetType() {
         return this.NetType;
@@ -203,19 +174,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetType 网络类型, 0-基础网络, 1-vpc网络, 2-黑石网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 私有网络IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络IP 
      * @return Vip 私有网络IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -223,19 +190,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 私有网络IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 私有网络IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 私有网络端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络端口 
      * @return Vport 私有网络端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -243,19 +206,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 私有网络端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport 私有网络端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 外网域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网域名 
      * @return WanDomain 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanDomain() {
         return this.WanDomain;
@@ -263,19 +222,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanDomain 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get 外网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网IP 
      * @return WanIP 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIP() {
         return this.WanIP;
@@ -283,19 +238,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIP 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get 外网端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网端口 
      * @return WanPort 外网端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWanPort() {
         return this.WanPort;
@@ -303,19 +254,15 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 外网端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanPort 外网端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get 外网开启状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网开启状态 
      * @return WanStatus 外网开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanStatus() {
         return this.WanStatus;
@@ -323,9 +270,7 @@ public class InstanceNetInfo extends AbstractModel {
 
     /**
      * Set 外网开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanStatus 外网开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;

@@ -56,7 +56,6 @@ success  操作成功。
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -78,7 +77,6 @@ success  操作成功。
 
     /**
     * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealId")
     @Expose
@@ -161,10 +159,8 @@ success  操作成功。
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -172,9 +168,7 @@ success  操作成功。
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
@@ -213,10 +207,8 @@ success  操作成功。
     }
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号 
      * @return BigDealId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBigDealId() {
         return this.BigDealId;
@@ -224,9 +216,7 @@ success  操作成功。
 
     /**
      * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;

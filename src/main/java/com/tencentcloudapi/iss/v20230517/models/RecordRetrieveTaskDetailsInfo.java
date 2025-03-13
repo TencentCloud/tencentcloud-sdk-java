@@ -81,7 +81,6 @@ public class RecordRetrieveTaskDetailsInfo extends AbstractModel {
 
     /**
     * 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describe")
     @Expose
@@ -223,10 +222,8 @@ public class RecordRetrieveTaskDetailsInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务描述 
      * @return Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribe() {
         return this.Describe;
@@ -234,9 +231,7 @@ public class RecordRetrieveTaskDetailsInfo extends AbstractModel {
 
     /**
      * Set 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;

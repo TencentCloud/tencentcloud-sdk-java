@@ -71,7 +71,6 @@ public class SaleZone extends AbstractModel {
 
     /**
     * 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasPermission")
     @Expose
@@ -204,10 +203,8 @@ public class SaleZone extends AbstractModel {
     }
 
     /**
-     * Get 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户是否有可用区权限 
      * @return HasPermission 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasPermission() {
         return this.HasPermission;
@@ -215,9 +212,7 @@ public class SaleZone extends AbstractModel {
 
     /**
      * Set 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasPermission 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasPermission(Boolean HasPermission) {
         this.HasPermission = HasPermission;

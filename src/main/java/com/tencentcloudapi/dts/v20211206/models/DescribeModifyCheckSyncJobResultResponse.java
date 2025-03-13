@@ -32,7 +32,6 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 校验的步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepCount")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepCur")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 总体进度，范围为[0,100]	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -86,10 +83,8 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 校验的步骤总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验的步骤总数 
      * @return StepCount 校验的步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepCount() {
         return this.StepCount;
@@ -97,19 +92,15 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 校验的步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepCount 校验的步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepCount(Long StepCount) {
         this.StepCount = StepCount;
     }
 
     /**
-     * Get 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前所在步骤 
      * @return StepCur 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepCur() {
         return this.StepCur;
@@ -117,19 +108,15 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepCur 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepCur(Long StepCur) {
         this.StepCur = StepCur;
     }
 
     /**
-     * Get 总体进度，范围为[0,100]	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总体进度，范围为[0,100]	 
      * @return Progress 总体进度，范围为[0,100]	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -137,9 +124,7 @@ public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
      * Set 总体进度，范围为[0,100]	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 总体进度，范围为[0,100]	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

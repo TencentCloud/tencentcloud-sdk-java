@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignTWeCallLicenseResponse extends AbstractModel {
+public class CheckGatewayFlowMonitorResponse extends AbstractModel {
+
+    /**
+    * 网关是否启用了流控。true为启用，false未启用。
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
+
+    /**
+    * 网关的带宽。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +43,38 @@ public class AssignTWeCallLicenseResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 网关是否启用了流控。true为启用，false未启用。 
+     * @return Enabled 网关是否启用了流控。true为启用，false未启用。
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 网关是否启用了流控。true为启用，false未启用。
+     * @param Enabled 网关是否启用了流控。true为启用，false未启用。
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
+    }
+
+    /**
+     * Get 网关的带宽。 
+     * @return Bandwidth 网关的带宽。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 网关的带宽。
+     * @param Bandwidth 网关的带宽。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +92,20 @@ public class AssignTWeCallLicenseResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public AssignTWeCallLicenseResponse() {
+    public CheckGatewayFlowMonitorResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AssignTWeCallLicenseResponse(AssignTWeCallLicenseResponse source) {
+    public CheckGatewayFlowMonitorResponse(CheckGatewayFlowMonitorResponse source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +116,8 @@ public class AssignTWeCallLicenseResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

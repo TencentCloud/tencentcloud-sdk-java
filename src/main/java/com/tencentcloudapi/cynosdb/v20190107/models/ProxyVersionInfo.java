@@ -25,7 +25,6 @@ public class ProxyVersionInfo extends AbstractModel {
 
     /**
     * proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyVersion")
     @Expose
@@ -33,17 +32,14 @@ public class ProxyVersionInfo extends AbstractModel {
 
     /**
     * 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyVersionType")
     @Expose
     private String ProxyVersionType;
 
     /**
-     * Get proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get proxy版本号 
      * @return ProxyVersion proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
@@ -51,19 +47,15 @@ public class ProxyVersionInfo extends AbstractModel {
 
     /**
      * Set proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyVersion proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧， 
      * @return ProxyVersionType 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyVersionType() {
         return this.ProxyVersionType;
@@ -71,9 +63,7 @@ public class ProxyVersionInfo extends AbstractModel {
 
     /**
      * Set 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyVersionType 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyVersionType(String ProxyVersionType) {
         this.ProxyVersionType = ProxyVersionType;

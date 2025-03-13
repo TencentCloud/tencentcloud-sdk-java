@@ -25,7 +25,6 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
     * 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterQueue")
     @Expose
@@ -33,7 +32,6 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
     * 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterQueueName")
     @Expose
@@ -41,7 +39,6 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
     * 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxTimeToLive")
     @Expose
@@ -49,7 +46,6 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
     * 死信队列策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -57,17 +53,14 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
     * 最大接收次数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReceiveCount")
     @Expose
     private Long MaxReceiveCount;
 
     /**
-     * Get 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信队列。 
      * @return DeadLetterQueue 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadLetterQueue() {
         return this.DeadLetterQueue;
@@ -75,19 +68,15 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
      * Set 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterQueue 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterQueue(String DeadLetterQueue) {
         this.DeadLetterQueue = DeadLetterQueue;
     }
 
     /**
-     * Get 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信队列名字。 
      * @return DeadLetterQueueName 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadLetterQueueName() {
         return this.DeadLetterQueueName;
@@ -95,19 +84,15 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
      * Set 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterQueueName 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterQueueName(String DeadLetterQueueName) {
         this.DeadLetterQueueName = DeadLetterQueueName;
     }
 
     /**
-     * Get 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。 
      * @return MaxTimeToLive 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxTimeToLive() {
         return this.MaxTimeToLive;
@@ -115,19 +100,15 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
      * Set 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxTimeToLive 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxTimeToLive(Long MaxTimeToLive) {
         this.MaxTimeToLive = MaxTimeToLive;
     }
 
     /**
-     * Get 死信队列策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信队列策略。 
      * @return Policy 死信队列策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicy() {
         return this.Policy;
@@ -135,19 +116,15 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
      * Set 死信队列策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 死信队列策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(Long Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 最大接收次数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大接收次数。 
      * @return MaxReceiveCount 最大接收次数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReceiveCount() {
         return this.MaxReceiveCount;
@@ -155,9 +132,7 @@ public class DeadLetterPolicy extends AbstractModel {
 
     /**
      * Set 最大接收次数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReceiveCount 最大接收次数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReceiveCount(Long MaxReceiveCount) {
         this.MaxReceiveCount = MaxReceiveCount;

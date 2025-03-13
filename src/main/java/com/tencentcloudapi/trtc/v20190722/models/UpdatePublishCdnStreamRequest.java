@@ -46,6 +46,7 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel {
 
     /**
     * 是否转码，0表示无需转码，1表示需要转码。
+注：混流是必须转码，这个参数需设置为1。
     */
     @SerializedName("WithTranscoding")
     @Expose
@@ -142,8 +143,10 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否转码，0表示无需转码，1表示需要转码。 
+     * Get 是否转码，0表示无需转码，1表示需要转码。
+注：混流是必须转码，这个参数需设置为1。 
      * @return WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
+注：混流是必须转码，这个参数需设置为1。
      */
     public Long getWithTranscoding() {
         return this.WithTranscoding;
@@ -151,7 +154,9 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel {
 
     /**
      * Set 是否转码，0表示无需转码，1表示需要转码。
+注：混流是必须转码，这个参数需设置为1。
      * @param WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
+注：混流是必须转码，这个参数需设置为1。
      */
     public void setWithTranscoding(Long WithTranscoding) {
         this.WithTranscoding = WithTranscoding;

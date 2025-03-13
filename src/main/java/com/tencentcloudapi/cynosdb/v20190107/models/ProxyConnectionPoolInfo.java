@@ -25,7 +25,6 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
     * 连接池保持阈值：单位（秒）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -33,7 +32,6 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
     * 是否开启了连接池
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenConnectionPool")
     @Expose
@@ -41,17 +39,14 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
     * 连接池类型：SessionConnectionPool（会话级别连接池）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-     * Get 连接池保持阈值：单位（秒）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接池保持阈值：单位（秒） 
      * @return ConnectionPoolTimeOut 连接池保持阈值：单位（秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
@@ -59,19 +54,15 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
      * Set 连接池保持阈值：单位（秒）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPoolTimeOut 连接池保持阈值：单位（秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get 是否开启了连接池
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启了连接池 
      * @return OpenConnectionPool 是否开启了连接池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
@@ -79,19 +70,15 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
      * Set 是否开启了连接池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenConnectionPool 是否开启了连接池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get 连接池类型：SessionConnectionPool（会话级别连接池）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接池类型：SessionConnectionPool（会话级别连接池） 
      * @return ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
@@ -99,9 +86,7 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
      * Set 连接池类型：SessionConnectionPool（会话级别连接池）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;

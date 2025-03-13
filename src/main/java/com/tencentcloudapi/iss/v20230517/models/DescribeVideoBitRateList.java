@@ -25,17 +25,14 @@ public class DescribeVideoBitRateList extends AbstractModel {
 
     /**
     * 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BitRates")
     @Expose
     private BitRateInfo [] BitRates;
 
     /**
-     * Get 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道码率列表 
      * @return BitRates 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BitRateInfo [] getBitRates() {
         return this.BitRates;
@@ -43,9 +40,7 @@ public class DescribeVideoBitRateList extends AbstractModel {
 
     /**
      * Set 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BitRates 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitRates(BitRateInfo [] BitRates) {
         this.BitRates = BitRates;

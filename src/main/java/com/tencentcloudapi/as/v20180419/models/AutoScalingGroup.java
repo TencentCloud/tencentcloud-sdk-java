@@ -261,7 +261,6 @@ public class AutoScalingGroup extends AbstractModel {
 
     /**
     * 实例名称序号相关设置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNameIndexSettings")
     @Expose
@@ -840,10 +839,8 @@ public class AutoScalingGroup extends AbstractModel {
     }
 
     /**
-     * Get 实例名称序号相关设置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称序号相关设置。 
      * @return InstanceNameIndexSettings 实例名称序号相关设置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNameIndexSettings getInstanceNameIndexSettings() {
         return this.InstanceNameIndexSettings;
@@ -851,9 +848,7 @@ public class AutoScalingGroup extends AbstractModel {
 
     /**
      * Set 实例名称序号相关设置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNameIndexSettings 实例名称序号相关设置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
         this.InstanceNameIndexSettings = InstanceNameIndexSettings;

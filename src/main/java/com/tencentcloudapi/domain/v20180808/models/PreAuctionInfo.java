@@ -25,7 +25,6 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,7 +32,6 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingTime")
     @Expose
@@ -41,7 +39,6 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BidCount")
     @Expose
@@ -49,7 +46,6 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -57,7 +53,6 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Op")
     @Expose
@@ -65,17 +60,14 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessId")
     @Expose
     private String BusinessId;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -83,19 +75,15 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价倒计时 
      * @return BiddingTime 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBiddingTime() {
         return this.BiddingTime;
@@ -103,19 +91,15 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingTime 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingTime(String BiddingTime) {
         this.BiddingTime = BiddingTime;
     }
 
     /**
-     * Get 出价次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出价次数 
      * @return BidCount 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBidCount() {
         return this.BidCount;
@@ -123,19 +107,15 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BidCount 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBidCount(Long BidCount) {
         this.BidCount = BidCount;
     }
 
     /**
-     * Get 当前价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前价格 
      * @return Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPrice() {
         return this.Price;
@@ -143,19 +123,15 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户操作 bid：出价 "noAction"：无法操作 
      * @return Op 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOp() {
         return this.Op;
@@ -163,19 +139,15 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Op 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOp(String Op) {
         this.Op = Op;
     }
 
     /**
-     * Get 业务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务ID 
      * @return BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -183,9 +155,7 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
      * Set 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

@@ -25,7 +25,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepAll")
     @Expose
@@ -33,7 +32,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNow")
     @Expose
@@ -41,7 +39,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -49,7 +46,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -57,7 +53,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
@@ -65,7 +60,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
@@ -73,7 +67,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -89,7 +82,6 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CauseOfCompareDisable")
     @Expose
@@ -97,17 +89,14 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
     * 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrInfo")
     @Expose
     private ErrInfo ErrInfo;
 
     /**
-     * Get 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总步骤数 
      * @return StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepAll() {
         return this.StepAll;
@@ -115,19 +104,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepAll(Long StepAll) {
         this.StepAll = StepAll;
     }
 
     /**
-     * Get 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤 
      * @return StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNow() {
         return this.StepNow;
@@ -135,19 +120,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNow(Long StepNow) {
         this.StepNow = StepNow;
     }
 
     /**
-     * Get 总体进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总体进度 
      * @return Progress 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -155,19 +136,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度 
      * @return CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentStepProgress() {
         return this.CurrentStepProgress;
@@ -175,19 +152,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;
     }
 
     /**
-     * Get 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步两端数据量差距 
      * @return MasterSlaveDistance 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
@@ -195,19 +168,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterSlaveDistance 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterSlaveDistance(Long MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
     /**
-     * Get 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步两端时间差距 
      * @return SecondsBehindMaster 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
@@ -215,19 +184,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondsBehindMaster 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondsBehindMaster(Long SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;
     }
 
     /**
-     * Get 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总体描述信息 
      * @return Message 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -235,9 +200,7 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -264,10 +227,8 @@ public class SyncDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不能发起一致性校验的原因 
      * @return CauseOfCompareDisable 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCauseOfCompareDisable() {
         return this.CauseOfCompareDisable;
@@ -275,19 +236,15 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CauseOfCompareDisable 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCauseOfCompareDisable(String CauseOfCompareDisable) {
         this.CauseOfCompareDisable = CauseOfCompareDisable;
     }
 
     /**
-     * Get 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的错误和解决方案信息 
      * @return ErrInfo 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrInfo getErrInfo() {
         return this.ErrInfo;
@@ -295,9 +252,7 @@ public class SyncDetailInfo extends AbstractModel {
 
     /**
      * Set 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrInfo 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrInfo(ErrInfo ErrInfo) {
         this.ErrInfo = ErrInfo;

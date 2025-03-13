@@ -108,12 +108,7 @@ public class CreateApplicationRequest extends AbstractModel {
     private String ApmInstanceId;
 
     /**
-    * 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+    * 编程语言:  Java；C/C++；Python；Go；Other
     */
     @SerializedName("ProgramLanguage")
     @Expose
@@ -333,36 +328,16 @@ O - Other；
     }
 
     /**
-     * Get 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other； 
-     * @return ProgramLanguage 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+     * Get 编程语言:  Java；C/C++；Python；Go；Other 
+     * @return ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
      */
     public String getProgramLanguage() {
         return this.ProgramLanguage;
     }
 
     /**
-     * Set 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
-     * @param ProgramLanguage 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+     * Set 编程语言:  Java；C/C++；Python；Go；Other
+     * @param ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
      */
     public void setProgramLanguage(String ProgramLanguage) {
         this.ProgramLanguage = ProgramLanguage;

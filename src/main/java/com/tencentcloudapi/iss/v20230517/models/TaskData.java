@@ -39,7 +39,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -138,7 +137,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -146,7 +144,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -154,7 +151,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
     @Expose
@@ -162,7 +158,6 @@ public class TaskData extends AbstractModel {
 
     /**
     *  通道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelName")
     @Expose
@@ -201,10 +196,8 @@ public class TaskData extends AbstractModel {
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FailReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -212,9 +205,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
@@ -429,10 +420,8 @@ public class TaskData extends AbstractModel {
     }
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -440,19 +429,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -460,19 +445,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 通道ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道ID 
      * @return ChannelId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
         return this.ChannelId;
@@ -480,19 +461,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get  通道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  通道名称 
      * @return ChannelName  通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelName() {
         return this.ChannelName;
@@ -500,9 +477,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set  通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelName  通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

@@ -25,7 +25,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayDomain")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalDomain")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaveCert")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -89,17 +81,14 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
     * 域名类型 0:拉流域名 1:推流域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-     * Get 域名ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名ID 
      * @return Id 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -107,19 +96,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 播放域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 播放域名 
      * @return PlayDomain 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlayDomain() {
         return this.PlayDomain;
@@ -127,19 +112,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayDomain 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayDomain(String PlayDomain) {
         this.PlayDomain = PlayDomain;
     }
 
     /**
-     * Get CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CNAME 记录值 
      * @return InternalDomain CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternalDomain() {
         return this.InternalDomain;
@@ -147,19 +128,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalDomain CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalDomain(String InternalDomain) {
         this.InternalDomain = InternalDomain;
     }
 
     /**
-     * Get 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否上传证书（0：否，1：是） 
      * @return HaveCert 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHaveCert() {
         return this.HaveCert;
@@ -167,19 +144,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaveCert 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaveCert(Long HaveCert) {
         this.HaveCert = HaveCert;
     }
 
     /**
-     * Get 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务节点 ID 
      * @return ClusterId 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -187,19 +160,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务节点名称 
      * @return ClusterName 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -207,19 +176,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -227,19 +192,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书ID 
      * @return CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -247,19 +208,15 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 域名类型 0:拉流域名 1:推流域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名类型 0:拉流域名 1:推流域名 
      * @return DomainType 域名类型 0:拉流域名 1:推流域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDomainType() {
         return this.DomainType;
@@ -267,9 +224,7 @@ public class DescribeDomainData extends AbstractModel {
 
     /**
      * Set 域名类型 0:拉流域名 1:推流域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainType 域名类型 0:拉流域名 1:推流域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;

@@ -25,7 +25,6 @@ public class DynamicOptions extends AbstractModel {
 
     /**
     * 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpTypes")
     @Expose
@@ -33,7 +32,6 @@ public class DynamicOptions extends AbstractModel {
 
     /**
     * DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlOptions")
     @Expose
@@ -41,7 +39,6 @@ public class DynamicOptions extends AbstractModel {
 
     /**
     * 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConflictHandleType")
     @Expose
@@ -49,17 +46,14 @@ public class DynamicOptions extends AbstractModel {
 
     /**
     * 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConflictHandleOption")
     @Expose
     private ConflictHandleOption ConflictHandleOption;
 
     /**
-     * Get 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值 
      * @return OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOpTypes() {
         return this.OpTypes;
@@ -67,19 +61,15 @@ public class DynamicOptions extends AbstractModel {
 
     /**
      * Set 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpTypes(String [] OpTypes) {
         this.OpTypes = OpTypes;
     }
 
     /**
-     * Get DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值 
      * @return DdlOptions DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdlOption [] getDdlOptions() {
         return this.DdlOptions;
@@ -87,19 +77,15 @@ public class DynamicOptions extends AbstractModel {
 
     /**
      * Set DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DdlOptions DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlOptions(DdlOption [] DdlOptions) {
         this.DdlOptions = DdlOptions;
     }
 
     /**
-     * Get 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置 
      * @return ConflictHandleType 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConflictHandleType() {
         return this.ConflictHandleType;
@@ -107,19 +93,15 @@ public class DynamicOptions extends AbstractModel {
 
     /**
      * Set 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleType 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConflictHandleType(String ConflictHandleType) {
         this.ConflictHandleType = ConflictHandleType;
     }
 
     /**
-     * Get 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段 
      * @return ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConflictHandleOption getConflictHandleOption() {
         return this.ConflictHandleOption;
@@ -127,9 +109,7 @@ public class DynamicOptions extends AbstractModel {
 
     /**
      * Set 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConflictHandleOption(ConflictHandleOption ConflictHandleOption) {
         this.ConflictHandleOption = ConflictHandleOption;

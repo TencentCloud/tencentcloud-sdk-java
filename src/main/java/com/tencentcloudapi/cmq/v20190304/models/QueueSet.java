@@ -32,7 +32,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewindSeconds")
     @Expose
@@ -40,7 +39,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUin")
     @Expose
@@ -48,7 +46,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTime")
     @Expose
@@ -56,7 +53,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VisibilityTimeout")
     @Expose
@@ -71,7 +67,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trace")
     @Expose
@@ -79,7 +74,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -87,7 +81,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewindMsgNum")
     @Expose
@@ -95,7 +88,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDelaySeconds")
     @Expose
@@ -111,7 +103,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
@@ -119,7 +110,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayMsgNum")
     @Expose
@@ -127,7 +117,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgHeapNum")
     @Expose
@@ -135,7 +124,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PollingWaitSeconds")
     @Expose
@@ -143,7 +131,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bps")
     @Expose
@@ -151,7 +138,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InactiveMsgNum")
     @Expose
@@ -167,7 +153,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveMsgNum")
     @Expose
@@ -175,7 +160,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -183,7 +167,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinMsgTime")
     @Expose
@@ -191,7 +174,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterSource")
     @Expose
@@ -207,7 +189,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
     @Expose
@@ -215,7 +196,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -223,7 +203,6 @@ public class QueueSet extends AbstractModel {
 
     /**
     * 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Migrate")
     @Expose
@@ -246,10 +225,8 @@ public class QueueSet extends AbstractModel {
     }
 
     /**
-     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。 
      * @return RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRewindSeconds() {
         return this.RewindSeconds;
@@ -257,19 +234,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewindSeconds(Long RewindSeconds) {
         this.RewindSeconds = RewindSeconds;
     }
 
     /**
-     * Get 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者Uin。 
      * @return CreateUin 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateUin() {
         return this.CreateUin;
@@ -277,19 +250,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUin 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。 
      * @return LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
@@ -297,19 +266,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。 
      * @return VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVisibilityTimeout() {
         return this.VisibilityTimeout;
@@ -317,9 +282,7 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVisibilityTimeout(Long VisibilityTimeout) {
         this.VisibilityTimeout = VisibilityTimeout;
@@ -342,10 +305,8 @@ public class QueueSet extends AbstractModel {
     }
 
     /**
-     * Get 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息轨迹。true表示开启，false表示不开启。 
      * @return Trace 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTrace() {
         return this.Trace;
@@ -353,19 +314,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trace 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrace(Boolean Trace) {
         this.Trace = Trace;
     }
 
     /**
-     * Get 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的标签。 
      * @return Tags 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -373,19 +330,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。 
      * @return RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRewindMsgNum() {
         return this.RewindMsgNum;
@@ -393,19 +346,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewindMsgNum(Long RewindMsgNum) {
         this.RewindMsgNum = RewindMsgNum;
     }
 
     /**
-     * Get 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 飞行消息最大保留时间。 
      * @return MaxDelaySeconds 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDelaySeconds() {
         return this.MaxDelaySeconds;
@@ -413,9 +362,7 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDelaySeconds 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDelaySeconds(Long MaxDelaySeconds) {
         this.MaxDelaySeconds = MaxDelaySeconds;
@@ -442,10 +389,8 @@ public class QueueSet extends AbstractModel {
     }
 
     /**
-     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。 
      * @return MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
@@ -453,19 +398,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延迟消息数。 
      * @return DelayMsgNum 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayMsgNum() {
         return this.DelayMsgNum;
@@ -473,19 +414,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayMsgNum 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayMsgNum(Long DelayMsgNum) {
         this.DelayMsgNum = DelayMsgNum;
     }
 
     /**
-     * Get 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。 
      * @return MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgHeapNum() {
         return this.MaxMsgHeapNum;
@@ -493,19 +430,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgHeapNum(Long MaxMsgHeapNum) {
         this.MaxMsgHeapNum = MaxMsgHeapNum;
     }
 
     /**
-     * Get 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。 
      * @return PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPollingWaitSeconds() {
         return this.PollingWaitSeconds;
@@ -513,19 +446,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPollingWaitSeconds(Long PollingWaitSeconds) {
         this.PollingWaitSeconds = PollingWaitSeconds;
     }
 
     /**
-     * Get 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽限制。 
      * @return Bps 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBps() {
         return this.Bps;
@@ -533,19 +462,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bps 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBps(Long Bps) {
         this.Bps = Bps;
     }
 
     /**
-     * Get 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。 
      * @return InactiveMsgNum 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInactiveMsgNum() {
         return this.InactiveMsgNum;
@@ -553,9 +478,7 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InactiveMsgNum 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInactiveMsgNum(Long InactiveMsgNum) {
         this.InactiveMsgNum = InactiveMsgNum;
@@ -582,10 +505,8 @@ public class QueueSet extends AbstractModel {
     }
 
     /**
-     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。 
      * @return ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActiveMsgNum() {
         return this.ActiveMsgNum;
@@ -593,19 +514,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveMsgNum(Long ActiveMsgNum) {
         this.ActiveMsgNum = ActiveMsgNum;
     }
 
     /**
-     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。 
      * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
@@ -613,19 +530,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息最小未消费时间，单位为秒。 
      * @return MinMsgTime 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinMsgTime() {
         return this.MinMsgTime;
@@ -633,19 +546,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinMsgTime 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinMsgTime(Long MinMsgTime) {
         this.MinMsgTime = MinMsgTime;
     }
 
     /**
-     * Get 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死信队列。 
      * @return DeadLetterSource 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeadLetterSource [] getDeadLetterSource() {
         return this.DeadLetterSource;
@@ -653,9 +562,7 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterSource 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterSource(DeadLetterSource [] DeadLetterSource) {
         this.DeadLetterSource = DeadLetterSource;
@@ -682,10 +589,8 @@ public class QueueSet extends AbstractModel {
     }
 
     /**
-     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。 
      * @return Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQps() {
         return this.Qps;
@@ -693,19 +598,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列的创建时间。返回 Unix 时间戳，精确到秒。 
      * @return CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -713,19 +614,15 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。 
      * @return Migrate 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMigrate() {
         return this.Migrate;
@@ -733,9 +630,7 @@ public class QueueSet extends AbstractModel {
 
     /**
      * Set 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Migrate 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrate(Long Migrate) {
         this.Migrate = Migrate;

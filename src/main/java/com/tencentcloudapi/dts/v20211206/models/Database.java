@@ -25,7 +25,6 @@ public class Database extends AbstractModel {
 
     /**
     * 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -33,7 +32,6 @@ public class Database extends AbstractModel {
 
     /**
     * 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewDbName")
     @Expose
@@ -41,7 +39,6 @@ public class Database extends AbstractModel {
 
     /**
     * DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbMode")
     @Expose
@@ -49,7 +46,6 @@ public class Database extends AbstractModel {
 
     /**
     * 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -57,7 +53,6 @@ public class Database extends AbstractModel {
 
     /**
     * 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewSchemaName")
     @Expose
@@ -65,7 +60,6 @@ public class Database extends AbstractModel {
 
     /**
     * 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableMode")
     @Expose
@@ -73,7 +67,6 @@ public class Database extends AbstractModel {
 
     /**
     * 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tables")
     @Expose
@@ -81,7 +74,6 @@ public class Database extends AbstractModel {
 
     /**
     * 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewMode")
     @Expose
@@ -89,7 +81,6 @@ public class Database extends AbstractModel {
 
     /**
     * 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Views")
     @Expose
@@ -97,7 +88,6 @@ public class Database extends AbstractModel {
 
     /**
     * 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FunctionMode")
     @Expose
@@ -105,7 +95,6 @@ public class Database extends AbstractModel {
 
     /**
     * FunctionMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Functions")
     @Expose
@@ -113,7 +102,6 @@ public class Database extends AbstractModel {
 
     /**
     * 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureMode")
     @Expose
@@ -121,7 +109,6 @@ public class Database extends AbstractModel {
 
     /**
     * ProcedureMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Procedures")
     @Expose
@@ -129,7 +116,6 @@ public class Database extends AbstractModel {
 
     /**
     * 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMode")
     @Expose
@@ -137,7 +123,6 @@ public class Database extends AbstractModel {
 
     /**
     * 当TriggerMode为partial，指定要迁移的触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Triggers")
     @Expose
@@ -145,7 +130,6 @@ public class Database extends AbstractModel {
 
     /**
     * 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventMode")
     @Expose
@@ -153,17 +137,14 @@ public class Database extends AbstractModel {
 
     /**
     * 当EventMode为partial，指定要迁移的事件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
     private String [] Events;
 
     /**
-     * Get 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填 
      * @return DbName 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -171,19 +152,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步后的库名，默认与源库相同 
      * @return NewDbName 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewDbName() {
         return this.NewDbName;
@@ -191,19 +168,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewDbName 迁移或同步后的库名，默认与源库相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewDbName(String NewDbName) {
         this.NewDbName = NewDbName;
     }
 
     /**
-     * Get DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。 
      * @return DbMode DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbMode() {
         return this.DbMode;
@@ -211,19 +184,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbMode DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步的 schema 
      * @return SchemaName 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -231,19 +200,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName 迁移或同步的 schema
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移或同步后的 schema name 
      * @return NewSchemaName 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewSchemaName() {
         return this.NewSchemaName;
@@ -251,19 +216,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewSchemaName 迁移或同步后的 schema name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewSchemaName(String NewSchemaName) {
         this.NewSchemaName = NewSchemaName;
     }
 
     /**
-     * Get 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。 
      * @return TableMode 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableMode() {
         return this.TableMode;
@@ -271,19 +232,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableMode 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableMode(String TableMode) {
         this.TableMode = TableMode;
     }
 
     /**
-     * Get 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表图对象集合，当 TableMode 为 Partial 时，此项需要填写 
      * @return Tables 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Table [] getTables() {
         return this.Tables;
@@ -291,19 +248,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tables 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTables(Table [] Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。 
      * @return ViewMode 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewMode() {
         return this.ViewMode;
@@ -311,19 +264,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewMode 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写 
      * @return Views 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public View [] getViews() {
         return this.Views;
@@ -331,19 +280,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Views 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViews(View [] Views) {
         this.Views = Views;
     }
 
     /**
-     * Get 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。 
      * @return FunctionMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunctionMode() {
         return this.FunctionMode;
@@ -351,19 +296,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FunctionMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctionMode(String FunctionMode) {
         this.FunctionMode = FunctionMode;
     }
 
     /**
-     * Get FunctionMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FunctionMode取值为Partial时需要填写 
      * @return Functions FunctionMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFunctions() {
         return this.Functions;
@@ -371,19 +312,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set FunctionMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Functions FunctionMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctions(String [] Functions) {
         this.Functions = Functions;
     }
 
     /**
-     * Get 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。 
      * @return ProcedureMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcedureMode() {
         return this.ProcedureMode;
@@ -391,19 +328,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureMode(String ProcedureMode) {
         this.ProcedureMode = ProcedureMode;
     }
 
     /**
-     * Get ProcedureMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ProcedureMode取值为Partial时需要填写 
      * @return Procedures ProcedureMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProcedures() {
         return this.Procedures;
@@ -411,19 +344,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set ProcedureMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Procedures ProcedureMode取值为Partial时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedures(String [] Procedures) {
         this.Procedures = Procedures;
     }
 
     /**
-     * Get 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。 
      * @return TriggerMode 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerMode() {
         return this.TriggerMode;
@@ -431,19 +360,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerMode 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
     }
 
     /**
-     * Get 当TriggerMode为partial，指定要迁移的触发器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当TriggerMode为partial，指定要迁移的触发器名称 
      * @return Triggers 当TriggerMode为partial，指定要迁移的触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTriggers() {
         return this.Triggers;
@@ -451,19 +376,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 当TriggerMode为partial，指定要迁移的触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Triggers 当TriggerMode为partial，指定要迁移的触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggers(String [] Triggers) {
         this.Triggers = Triggers;
     }
 
     /**
-     * Get 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。 
      * @return EventMode 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventMode() {
         return this.EventMode;
@@ -471,19 +392,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventMode 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventMode(String EventMode) {
         this.EventMode = EventMode;
     }
 
     /**
-     * Get 当EventMode为partial，指定要迁移的事件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当EventMode为partial，指定要迁移的事件名称 
      * @return Events 当EventMode为partial，指定要迁移的事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEvents() {
         return this.Events;
@@ -491,9 +408,7 @@ public class Database extends AbstractModel {
 
     /**
      * Set 当EventMode为partial，指定要迁移的事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 当EventMode为partial，指定要迁移的事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(String [] Events) {
         this.Events = Events;

@@ -95,7 +95,6 @@ public class LifecycleHook extends AbstractModel {
 
     /**
     * 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifecycleCommand")
     @Expose
@@ -262,10 +261,8 @@ public class LifecycleHook extends AbstractModel {
     }
 
     /**
-     * Get 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 远程命令执行对象 
      * @return LifecycleCommand 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LifecycleCommand getLifecycleCommand() {
         return this.LifecycleCommand;
@@ -273,9 +270,7 @@ public class LifecycleHook extends AbstractModel {
 
     /**
      * Set 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LifecycleCommand 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
         this.LifecycleCommand = LifecycleCommand;

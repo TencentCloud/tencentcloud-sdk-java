@@ -25,7 +25,6 @@ public class CrossRegionBackupItem extends AbstractModel {
 
     /**
     * 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossRegion")
     @Expose
@@ -33,25 +32,21 @@ public class CrossRegionBackupItem extends AbstractModel {
 
     /**
     * 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupId")
     @Expose
-    private String BackupId;
+    private Long BackupId;
 
     /**
     * 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupStatus")
     @Expose
     private String BackupStatus;
 
     /**
-     * Get 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份的目标地域 
      * @return CrossRegion 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrossRegion() {
         return this.CrossRegion;
@@ -59,39 +54,31 @@ public class CrossRegionBackupItem extends AbstractModel {
 
     /**
      * Set 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrossRegion 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossRegion(String CrossRegion) {
         this.CrossRegion = CrossRegion;
     }
 
     /**
-     * Get 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标地域的备份任务ID 
      * @return BackupId 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getBackupId() {
+    public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
      * Set 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupId 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBackupId(String BackupId) {
+    public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标地域的备份状态 
      * @return BackupStatus 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupStatus() {
         return this.BackupStatus;
@@ -99,9 +86,7 @@ public class CrossRegionBackupItem extends AbstractModel {
 
     /**
      * Set 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupStatus 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupStatus(String BackupStatus) {
         this.BackupStatus = BackupStatus;
@@ -119,7 +104,7 @@ public class CrossRegionBackupItem extends AbstractModel {
             this.CrossRegion = new String(source.CrossRegion);
         }
         if (source.BackupId != null) {
-            this.BackupId = new String(source.BackupId);
+            this.BackupId = new Long(source.BackupId);
         }
         if (source.BackupStatus != null) {
             this.BackupStatus = new String(source.BackupStatus);

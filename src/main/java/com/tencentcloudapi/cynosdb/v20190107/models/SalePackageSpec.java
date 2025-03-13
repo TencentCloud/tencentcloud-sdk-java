@@ -25,7 +25,6 @@ public class SalePackageSpec extends AbstractModel {
 
     /**
     * 资源包使用地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageRegion")
     @Expose
@@ -35,7 +34,6 @@ public class SalePackageSpec extends AbstractModel {
     * 资源包类型
 CCU-计算资源包
 DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -44,7 +42,6 @@ DISK-存储资源包
     /**
     * 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageVersion")
     @Expose
@@ -52,7 +49,6 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
     * 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinPackageSpec")
     @Expose
@@ -60,7 +56,6 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
     * 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPackageSpec")
     @Expose
@@ -68,17 +63,14 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
     * 资源包有效期，单位:天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireDay")
     @Expose
     private Long ExpireDay;
 
     /**
-     * Get 资源包使用地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包使用地域 
      * @return PackageRegion 资源包使用地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageRegion() {
         return this.PackageRegion;
@@ -86,9 +78,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
      * Set 资源包使用地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageRegion 资源包使用地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
@@ -97,12 +87,10 @@ base-基础版本，common-通用版本，enterprise-企业版本
     /**
      * Get 资源包类型
 CCU-计算资源包
-DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。 
+DISK-存储资源包 
      * @return PackageType 资源包类型
 CCU-计算资源包
 DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -112,11 +100,9 @@ DISK-存储资源包
      * Set 资源包类型
 CCU-计算资源包
 DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 资源包类型
 CCU-计算资源包
 DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -124,11 +110,9 @@ DISK-存储资源包
 
     /**
      * Get 资源包版本
-base-基础版本，common-通用版本，enterprise-企业版本
-注意：此字段可能返回 null，表示取不到有效值。 
+base-基础版本，common-通用版本，enterprise-企业版本 
      * @return PackageVersion 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageVersion() {
         return this.PackageVersion;
@@ -137,20 +121,16 @@ base-基础版本，common-通用版本，enterprise-企业版本
     /**
      * Set 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageVersion 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
 
     /**
-     * Get 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB 
      * @return MinPackageSpec 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMinPackageSpec() {
         return this.MinPackageSpec;
@@ -158,19 +138,15 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
      * Set 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinPackageSpec 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinPackageSpec(Float MinPackageSpec) {
         this.MinPackageSpec = MinPackageSpec;
     }
 
     /**
-     * Get 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB 
      * @return MaxPackageSpec 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMaxPackageSpec() {
         return this.MaxPackageSpec;
@@ -178,19 +154,15 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
      * Set 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPackageSpec 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPackageSpec(Float MaxPackageSpec) {
         this.MaxPackageSpec = MaxPackageSpec;
     }
 
     /**
-     * Get 资源包有效期，单位:天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包有效期，单位:天 
      * @return ExpireDay 资源包有效期，单位:天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireDay() {
         return this.ExpireDay;
@@ -198,9 +170,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
 
     /**
      * Set 资源包有效期，单位:天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireDay 资源包有效期，单位:天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireDay(Long ExpireDay) {
         this.ExpireDay = ExpireDay;

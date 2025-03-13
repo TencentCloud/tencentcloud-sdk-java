@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.fmu.v20191213.models;
+package com.tencentcloudapi.bh.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BeautifyVideoResponse extends AbstractModel {
+public class AccessDevicesResponse extends AbstractModel {
 
     /**
-    * 视频美颜任务的Job id
+    * 认证信息
     */
-    @SerializedName("JobId")
+    @SerializedName("AccessInfo")
     @Expose
-    private String JobId;
-
-    /**
-    * 预估处理时间，粒度为秒
-    */
-    @SerializedName("EstimatedProcessTime")
-    @Expose
-    private Long EstimatedProcessTime;
+    private AccessInfo AccessInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class BeautifyVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 视频美颜任务的Job id 
-     * @return JobId 视频美颜任务的Job id
+     * Get 认证信息 
+     * @return AccessInfo 认证信息
      */
-    public String getJobId() {
-        return this.JobId;
+    public AccessInfo getAccessInfo() {
+        return this.AccessInfo;
     }
 
     /**
-     * Set 视频美颜任务的Job id
-     * @param JobId 视频美颜任务的Job id
+     * Set 认证信息
+     * @param AccessInfo 认证信息
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
-
-    /**
-     * Get 预估处理时间，粒度为秒 
-     * @return EstimatedProcessTime 预估处理时间，粒度为秒
-     */
-    public Long getEstimatedProcessTime() {
-        return this.EstimatedProcessTime;
-    }
-
-    /**
-     * Set 预估处理时间，粒度为秒
-     * @param EstimatedProcessTime 预估处理时间，粒度为秒
-     */
-    public void setEstimatedProcessTime(Long EstimatedProcessTime) {
-        this.EstimatedProcessTime = EstimatedProcessTime;
+    public void setAccessInfo(AccessInfo AccessInfo) {
+        this.AccessInfo = AccessInfo;
     }
 
     /**
@@ -92,19 +69,16 @@ public class BeautifyVideoResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public BeautifyVideoResponse() {
+    public AccessDevicesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public BeautifyVideoResponse(BeautifyVideoResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
-        if (source.EstimatedProcessTime != null) {
-            this.EstimatedProcessTime = new Long(source.EstimatedProcessTime);
+    public AccessDevicesResponse(AccessDevicesResponse source) {
+        if (source.AccessInfo != null) {
+            this.AccessInfo = new AccessInfo(source.AccessInfo);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +90,7 @@ public class BeautifyVideoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
-        this.setParamSimple(map, prefix + "EstimatedProcessTime", this.EstimatedProcessTime);
+        this.setParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

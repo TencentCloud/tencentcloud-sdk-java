@@ -25,7 +25,6 @@ public class LifecycleCommand extends AbstractModel {
 
     /**
     * 远程命令ID。若选择执行命令，则此项必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommandId")
     @Expose
@@ -36,17 +35,14 @@ public class LifecycleCommand extends AbstractModel {
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-     * Get 远程命令ID。若选择执行命令，则此项必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 远程命令ID。若选择执行命令，则此项必填。 
      * @return CommandId 远程命令ID。若选择执行命令，则此项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommandId() {
         return this.CommandId;
@@ -54,9 +50,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 远程命令ID。若选择执行命令，则此项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommandId 远程命令ID。若选择执行命令，则此项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
@@ -66,13 +60,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * Get 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
-自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-注意：此字段可能返回 null，表示取不到有效值。 
+自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
      * @return Parameters 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameters() {
         return this.Parameters;
@@ -83,12 +75,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Parameters 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;

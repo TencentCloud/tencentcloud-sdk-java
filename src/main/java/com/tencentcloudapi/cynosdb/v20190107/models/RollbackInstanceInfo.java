@@ -25,7 +25,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -41,7 +39,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -49,7 +46,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -57,7 +53,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * vip信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -65,7 +60,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * vport信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
@@ -73,7 +67,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -81,7 +74,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -89,7 +81,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -97,7 +88,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -105,7 +95,6 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mem")
     @Expose
@@ -113,17 +102,14 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
     * 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -131,19 +117,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -151,19 +133,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc信息 
      * @return UniqVpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -171,19 +149,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网信息 
      * @return UniqSubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -191,19 +165,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get vip信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vip信息 
      * @return Vip vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -211,19 +181,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip vip信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vport信息 
      * @return Vport vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -231,19 +197,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport vport信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -251,19 +213,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -271,19 +229,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -291,19 +245,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get cpu大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu大小 
      * @return Cpu cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -311,19 +261,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小 
      * @return Mem 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMem() {
         return this.Mem;
@@ -331,19 +277,15 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mem 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 存储大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储大小 
      * @return StorageLimit 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
@@ -351,9 +293,7 @@ public class RollbackInstanceInfo extends AbstractModel {
 
     /**
      * Set 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageLimit 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;

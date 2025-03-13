@@ -25,7 +25,6 @@ public class ListGatewayDevicesData extends AbstractModel {
 
     /**
     * 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,17 +32,14 @@ public class ListGatewayDevicesData extends AbstractModel {
 
     /**
     * 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关下设备列表 
      * @return List 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayDevice [] getList() {
         return this.List;
@@ -51,19 +47,15 @@ public class ListGatewayDevicesData extends AbstractModel {
 
     /**
      * Set 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(GatewayDevice [] List) {
         this.List = List;
     }
 
     /**
-     * Get 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关下设备总数 
      * @return TotalCount 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class ListGatewayDevicesData extends AbstractModel {
 
     /**
      * Set 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

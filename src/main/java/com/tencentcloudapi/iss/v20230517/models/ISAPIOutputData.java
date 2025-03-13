@@ -25,17 +25,14 @@ public class ISAPIOutputData extends AbstractModel {
 
     /**
     * 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputData")
     @Expose
     private String OutputData;
 
     /**
-     * Get 输出参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出参数 
      * @return OutputData 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputData() {
         return this.OutputData;
@@ -43,9 +40,7 @@ public class ISAPIOutputData extends AbstractModel {
 
     /**
      * Set 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputData 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputData(String OutputData) {
         this.OutputData = OutputData;

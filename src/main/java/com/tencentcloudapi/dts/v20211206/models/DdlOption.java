@@ -25,7 +25,6 @@ public class DdlOption extends AbstractModel {
 
     /**
     * ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlObject")
     @Expose
@@ -40,10 +39,8 @@ public class DdlOption extends AbstractModel {
     private String [] DdlValue;
 
     /**
-     * Get ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ddl类型，如Database,Table,View,Index等 
      * @return DdlObject ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDdlObject() {
         return this.DdlObject;
@@ -51,9 +48,7 @@ public class DdlOption extends AbstractModel {
 
     /**
      * Set ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DdlObject ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlObject(String DdlObject) {
         this.DdlObject = DdlObject;

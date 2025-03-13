@@ -25,17 +25,14 @@ public class BatchOperateDeviceData extends AbstractModel {
 
     /**
     * 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度） 
      * @return TaskId 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -43,9 +40,7 @@ public class BatchOperateDeviceData extends AbstractModel {
 
     /**
      * Set 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

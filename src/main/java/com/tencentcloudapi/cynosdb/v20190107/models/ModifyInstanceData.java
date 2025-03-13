@@ -67,7 +67,6 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
     * 变配前实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldDeviceType")
     @Expose
@@ -75,7 +74,6 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
     * 变配后实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -185,10 +183,8 @@ public class ModifyInstanceData extends AbstractModel {
     }
 
     /**
-     * Get 变配前实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变配前实例机器类型 
      * @return OldDeviceType 变配前实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldDeviceType() {
         return this.OldDeviceType;
@@ -196,19 +192,15 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
      * Set 变配前实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldDeviceType 变配前实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldDeviceType(String OldDeviceType) {
         this.OldDeviceType = OldDeviceType;
     }
 
     /**
-     * Get 变配后实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变配后实例机器类型 
      * @return DeviceType 变配后实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -216,9 +208,7 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
      * Set 变配后实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 变配后实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -25,7 +25,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationId")
     @Expose
@@ -33,7 +32,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -49,7 +46,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -57,7 +53,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -65,7 +60,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentIds")
     @Expose
@@ -73,7 +67,6 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -81,17 +74,14 @@ public class AddOrgData extends AbstractModel {
 
     /**
     * 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Online")
     @Expose
     private Long Online;
 
     /**
-     * Get 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织 ID 
      * @return OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationId() {
         return this.OrganizationId;
@@ -99,19 +89,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 组织名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织名称 
      * @return Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -119,19 +105,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织父节点 ID 
      * @return ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentId() {
         return this.ParentId;
@@ -139,19 +121,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(String ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 组织层级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织层级 
      * @return Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -159,19 +137,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -179,19 +153,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 组织结构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织结构 
      * @return ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentIds() {
         return this.ParentIds;
@@ -199,19 +169,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentIds(String ParentIds) {
         this.ParentIds = ParentIds;
     }
 
     /**
-     * Get 设备总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备总数 
      * @return Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -219,19 +185,15 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备在线数量 
      * @return Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnline() {
         return this.Online;
@@ -239,9 +201,7 @@ public class AddOrgData extends AbstractModel {
 
     /**
      * Set 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnline(Long Online) {
         this.Online = Online;

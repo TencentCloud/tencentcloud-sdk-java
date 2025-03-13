@@ -25,7 +25,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationId")
     @Expose
@@ -41,7 +39,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvocationTaskId")
     @Expose
@@ -49,7 +46,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommandId")
     @Expose
@@ -57,7 +53,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -65,17 +60,14 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-     * Get 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -83,19 +75,15 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvocationId() {
         return this.InvocationId;
@@ -103,19 +91,15 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationId 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;
     }
 
     /**
-     * Get 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行任务ID。 
      * @return InvocationTaskId 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvocationTaskId() {
         return this.InvocationTaskId;
@@ -123,19 +107,15 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvocationTaskId 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvocationTaskId(String InvocationTaskId) {
         this.InvocationTaskId = InvocationTaskId;
     }
 
     /**
-     * Get 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令ID。 
      * @return CommandId 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommandId() {
         return this.CommandId;
@@ -143,19 +123,15 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommandId 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行任务状态。 
      * @return TaskStatus 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -163,19 +139,15 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行异常信息。 
      * @return ErrorMessage 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -183,9 +155,7 @@ public class InvocationResult extends AbstractModel {
 
     /**
      * Set 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

@@ -25,7 +25,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * business_id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessID")
     @Expose
@@ -33,7 +32,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -41,7 +39,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppointPrice")
     @Expose
@@ -49,7 +46,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppointBondPrice")
     @Expose
@@ -57,7 +53,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppointEndTime")
     @Expose
@@ -65,7 +60,6 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppointNum")
     @Expose
@@ -73,17 +67,14 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
     * 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get business_id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get business_id 
      * @return BusinessID business_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessID() {
         return this.BusinessID;
@@ -91,19 +82,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set business_id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessID business_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -111,19 +98,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 预定价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预定价格 
      * @return AppointPrice 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppointPrice() {
         return this.AppointPrice;
@@ -131,19 +114,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppointPrice 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppointPrice(Long AppointPrice) {
         this.AppointPrice = AppointPrice;
     }
 
     /**
-     * Get 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预约保证金 
      * @return AppointBondPrice 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppointBondPrice() {
         return this.AppointBondPrice;
@@ -151,19 +130,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppointBondPrice 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppointBondPrice(Long AppointBondPrice) {
         this.AppointBondPrice = AppointBondPrice;
     }
 
     /**
-     * Get 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预约结束时间 
      * @return AppointEndTime 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppointEndTime() {
         return this.AppointEndTime;
@@ -171,19 +146,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppointEndTime 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppointEndTime(String AppointEndTime) {
         this.AppointEndTime = AppointEndTime;
     }
 
     /**
-     * Get 预约人数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预约人数 
      * @return AppointNum 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppointNum() {
         return this.AppointNum;
@@ -191,19 +162,15 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppointNum 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppointNum(Long AppointNum) {
         this.AppointNum = AppointNum;
     }
 
     /**
-     * Get 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约 
      * @return Status 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -211,9 +178,7 @@ public class BiddingAppointResult extends AbstractModel {
 
     /**
      * Set 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

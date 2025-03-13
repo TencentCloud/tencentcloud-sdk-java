@@ -51,7 +51,6 @@ NoAudit: 无需实名认证
 
     /**
     * 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealNameAuditUnpassReason")
     @Expose
@@ -71,7 +70,6 @@ Rejected：域名命名审核拒绝
 
     /**
     * 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainNameAuditUnpassReason")
     @Expose
@@ -269,10 +267,8 @@ NoAudit: 无需实名认证
     }
 
     /**
-     * Get 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名实名认证不通过原因。 
      * @return RealNameAuditUnpassReason 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealNameAuditUnpassReason() {
         return this.RealNameAuditUnpassReason;
@@ -280,9 +276,7 @@ NoAudit: 无需实名认证
 
     /**
      * Set 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealNameAuditUnpassReason 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealNameAuditUnpassReason(String RealNameAuditUnpassReason) {
         this.RealNameAuditUnpassReason = RealNameAuditUnpassReason;
@@ -325,10 +319,8 @@ Rejected：域名命名审核拒绝
     }
 
     /**
-     * Get 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名命名审核不通过原因。 
      * @return DomainNameAuditUnpassReason 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainNameAuditUnpassReason() {
         return this.DomainNameAuditUnpassReason;
@@ -336,9 +328,7 @@ Rejected：域名命名审核拒绝
 
     /**
      * Set 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainNameAuditUnpassReason 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainNameAuditUnpassReason(String DomainNameAuditUnpassReason) {
         this.DomainNameAuditUnpassReason = DomainNameAuditUnpassReason;

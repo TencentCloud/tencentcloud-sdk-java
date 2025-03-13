@@ -67,7 +67,6 @@ public class ProxyGroup extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -75,7 +74,6 @@ public class ProxyGroup extends AbstractModel {
 
     /**
     * 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -83,7 +81,6 @@ public class ProxyGroup extends AbstractModel {
 
     /**
     * 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenRw")
     @Expose
@@ -186,10 +183,8 @@ public class ProxyGroup extends AbstractModel {
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -197,19 +192,15 @@ public class ProxyGroup extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户AppId 
      * @return AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -217,19 +208,15 @@ public class ProxyGroup extends AbstractModel {
 
     /**
      * Set 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读写节点开通数据库代理 
      * @return OpenRw 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenRw() {
         return this.OpenRw;
@@ -237,9 +224,7 @@ public class ProxyGroup extends AbstractModel {
 
     /**
      * Set 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenRw 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

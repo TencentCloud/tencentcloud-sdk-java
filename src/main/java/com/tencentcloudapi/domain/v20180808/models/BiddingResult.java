@@ -25,7 +25,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * business_id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessID")
     @Expose
@@ -33,7 +32,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -41,7 +39,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentPrice")
     @Expose
@@ -49,7 +46,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 当前用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentNickname")
     @Expose
@@ -57,7 +53,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 我的出价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingPrice")
     @Expose
@@ -65,7 +60,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 竞价保证金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingBondPrice")
     @Expose
@@ -73,7 +67,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 竞价结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingEndTime")
     @Expose
@@ -81,7 +74,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 竞价标识，1 领先，2 落后
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingFlag")
     @Expose
@@ -89,7 +81,6 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiddingNum")
     @Expose
@@ -97,17 +88,14 @@ public class BiddingResult extends AbstractModel {
 
     /**
     * 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get business_id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get business_id 
      * @return BusinessID business_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessID() {
         return this.BusinessID;
@@ -115,19 +103,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set business_id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessID business_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -135,19 +119,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 当前价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前价格 
      * @return CurrentPrice 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentPrice() {
         return this.CurrentPrice;
@@ -155,19 +135,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentPrice 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentPrice(Long CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
     }
 
     /**
-     * Get 当前用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前用户昵称 
      * @return CurrentNickname 当前用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentNickname() {
         return this.CurrentNickname;
@@ -175,19 +151,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 当前用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentNickname 当前用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentNickname(String CurrentNickname) {
         this.CurrentNickname = CurrentNickname;
     }
 
     /**
-     * Get 我的出价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 我的出价 
      * @return BiddingPrice 我的出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBiddingPrice() {
         return this.BiddingPrice;
@@ -195,19 +167,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 我的出价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingPrice 我的出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingPrice(Long BiddingPrice) {
         this.BiddingPrice = BiddingPrice;
     }
 
     /**
-     * Get 竞价保证金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价保证金 
      * @return BiddingBondPrice 竞价保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBiddingBondPrice() {
         return this.BiddingBondPrice;
@@ -215,19 +183,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 竞价保证金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingBondPrice 竞价保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingBondPrice(Long BiddingBondPrice) {
         this.BiddingBondPrice = BiddingBondPrice;
     }
 
     /**
-     * Get 竞价结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价结束时间 
      * @return BiddingEndTime 竞价结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBiddingEndTime() {
         return this.BiddingEndTime;
@@ -235,19 +199,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 竞价结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingEndTime 竞价结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingEndTime(String BiddingEndTime) {
         this.BiddingEndTime = BiddingEndTime;
     }
 
     /**
-     * Get 竞价标识，1 领先，2 落后
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 竞价标识，1 领先，2 落后 
      * @return BiddingFlag 竞价标识，1 领先，2 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBiddingFlag() {
         return this.BiddingFlag;
@@ -255,19 +215,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 竞价标识，1 领先，2 落后
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingFlag 竞价标识，1 领先，2 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingFlag(Long BiddingFlag) {
         this.BiddingFlag = BiddingFlag;
     }
 
     /**
-     * Get 出价次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出价次数 
      * @return BiddingNum 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBiddingNum() {
         return this.BiddingNum;
@@ -275,19 +231,15 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiddingNum 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiddingNum(Long BiddingNum) {
         this.BiddingNum = BiddingNum;
     }
 
     /**
-     * Get 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回 
      * @return Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -295,9 +247,7 @@ public class BiddingResult extends AbstractModel {
 
     /**
      * Set 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

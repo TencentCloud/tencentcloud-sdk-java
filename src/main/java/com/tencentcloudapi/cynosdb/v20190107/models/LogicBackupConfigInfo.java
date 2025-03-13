@@ -25,7 +25,6 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 是否开启自动逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicBackupEnable")
     @Expose
@@ -33,7 +32,6 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 自动逻辑备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicBackupTimeBeg")
     @Expose
@@ -41,7 +39,6 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 自动逻辑备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicBackupTimeEnd")
     @Expose
@@ -49,7 +46,6 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 自动逻辑备份保留时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicReserveDuration")
     @Expose
@@ -57,7 +53,6 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 是否开启跨地域逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicCrossRegionsEnable")
     @Expose
@@ -72,10 +67,8 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String [] LogicCrossRegions;
 
     /**
-     * Get 是否开启自动逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启自动逻辑备份 
      * @return LogicBackupEnable 是否开启自动逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogicBackupEnable() {
         return this.LogicBackupEnable;
@@ -83,19 +76,15 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 是否开启自动逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicBackupEnable 是否开启自动逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicBackupEnable(String LogicBackupEnable) {
         this.LogicBackupEnable = LogicBackupEnable;
     }
 
     /**
-     * Get 自动逻辑备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动逻辑备份开始时间 
      * @return LogicBackupTimeBeg 自动逻辑备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogicBackupTimeBeg() {
         return this.LogicBackupTimeBeg;
@@ -103,19 +92,15 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 自动逻辑备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicBackupTimeBeg 自动逻辑备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicBackupTimeBeg(Long LogicBackupTimeBeg) {
         this.LogicBackupTimeBeg = LogicBackupTimeBeg;
     }
 
     /**
-     * Get 自动逻辑备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动逻辑备份结束时间 
      * @return LogicBackupTimeEnd 自动逻辑备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogicBackupTimeEnd() {
         return this.LogicBackupTimeEnd;
@@ -123,19 +108,15 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 自动逻辑备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicBackupTimeEnd 自动逻辑备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicBackupTimeEnd(Long LogicBackupTimeEnd) {
         this.LogicBackupTimeEnd = LogicBackupTimeEnd;
     }
 
     /**
-     * Get 自动逻辑备份保留时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动逻辑备份保留时间 
      * @return LogicReserveDuration 自动逻辑备份保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogicReserveDuration() {
         return this.LogicReserveDuration;
@@ -143,19 +124,15 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 自动逻辑备份保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicReserveDuration 自动逻辑备份保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicReserveDuration(Long LogicReserveDuration) {
         this.LogicReserveDuration = LogicReserveDuration;
     }
 
     /**
-     * Get 是否开启跨地域逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启跨地域逻辑备份 
      * @return LogicCrossRegionsEnable 是否开启跨地域逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogicCrossRegionsEnable() {
         return this.LogicCrossRegionsEnable;
@@ -163,9 +140,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 是否开启跨地域逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicCrossRegionsEnable 是否开启跨地域逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicCrossRegionsEnable(String LogicCrossRegionsEnable) {
         this.LogicCrossRegionsEnable = LogicCrossRegionsEnable;

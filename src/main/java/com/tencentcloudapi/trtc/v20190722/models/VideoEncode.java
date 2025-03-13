@@ -31,7 +31,7 @@ public class VideoEncode extends AbstractModel {
     private Long Width;
 
     /**
-    * 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+    * 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
     */
     @SerializedName("Height")
     @Expose
@@ -75,16 +75,16 @@ public class VideoEncode extends AbstractModel {
     }
 
     /**
-     * Get 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。 
-     * @return Height 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+     * Get 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。 
+     * @return Height 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
-     * @param Height 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+     * Set 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
+     * @param Height 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

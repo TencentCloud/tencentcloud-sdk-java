@@ -25,7 +25,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -34,7 +33,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -43,7 +41,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -51,7 +48,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -60,7 +56,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -69,7 +64,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -78,7 +72,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -87,7 +80,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -95,17 +87,14 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -113,9 +102,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -123,11 +110,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 实例name
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return InstanceName 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -136,10 +121,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -147,11 +130,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 日志主题id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return TopicId 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -160,20 +141,16 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题name 
      * @return TopicName 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -181,9 +158,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -191,11 +166,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 日志集id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return GroupId 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -204,10 +177,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -215,11 +186,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 日志集name
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return GroupName 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -228,10 +197,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -239,11 +206,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 日志投递地域
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Region 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -252,10 +217,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -263,11 +226,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get 投递状态creating,running,offlining,offlined
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Status 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -276,20 +237,16 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 日志类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志类型 
      * @return LogType 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogType() {
         return this.LogType;
@@ -297,9 +254,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogType 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

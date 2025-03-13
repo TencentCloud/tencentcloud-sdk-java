@@ -25,7 +25,6 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
     * flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flv")
     @Expose
@@ -33,7 +32,6 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
     * hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hls")
     @Expose
@@ -41,17 +39,14 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
     * rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rtmp")
     @Expose
     private String Rtmp;
 
     /**
-     * Get flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get flv 流地址 
      * @return Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlv() {
         return this.Flv;
@@ -59,19 +54,15 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
      * Set flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlv(String Flv) {
         this.Flv = Flv;
     }
 
     /**
-     * Get hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get hls 流地址 
      * @return Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHls() {
         return this.Hls;
@@ -79,19 +70,15 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
      * Set hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHls(String Hls) {
         this.Hls = Hls;
     }
 
     /**
-     * Get rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rtmp 流地址 
      * @return Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRtmp() {
         return this.Rtmp;
@@ -99,9 +86,7 @@ public class ControlDeviceStreamData extends AbstractModel {
 
     /**
      * Set rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRtmp(String Rtmp) {
         this.Rtmp = Rtmp;

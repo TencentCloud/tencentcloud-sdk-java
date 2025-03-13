@@ -39,7 +39,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -47,7 +46,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChangeOwnerTime")
     @Expose
@@ -55,7 +53,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegTime")
     @Expose
@@ -63,7 +60,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -71,7 +67,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -79,7 +74,6 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
     * 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -118,10 +112,8 @@ public class ReservedPreDomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名预定失败原因 
      * @return FailReason 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -129,19 +121,15 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预计变更所有权时间（仅用于参考，实际时间会存在误差） 
      * @return ChangeOwnerTime 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChangeOwnerTime() {
         return this.ChangeOwnerTime;
@@ -149,19 +137,15 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChangeOwnerTime 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChangeOwnerTime(String ChangeOwnerTime) {
         this.ChangeOwnerTime = ChangeOwnerTime;
     }
 
     /**
-     * Get 注册时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册时间 
      * @return RegTime 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegTime() {
         return this.RegTime;
@@ -169,19 +153,15 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegTime 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间 
      * @return ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -189,19 +169,15 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID，用于删除资源信息 
      * @return ResourceId 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -209,19 +185,15 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 业务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务ID 
      * @return BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -229,9 +201,7 @@ public class ReservedPreDomainInfo extends AbstractModel {
 
     /**
      * Set 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

@@ -103,7 +103,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncReadCountRemote")
     @Expose
@@ -112,7 +111,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncReadBytesRemote")
     @Expose
@@ -121,7 +119,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncReadTimeRemote")
     @Expose
@@ -130,7 +127,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncWriteCountRemote")
     @Expose
@@ -139,7 +135,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncWriteBytesRemote")
     @Expose
@@ -148,7 +143,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncWriteTimeRemote")
     @Expose
@@ -157,7 +151,6 @@ public class SlowQueriesItem extends AbstractModel {
     /**
     * 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrxCommitDelay")
     @Expose
@@ -341,11 +334,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程读取次数
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncReadCountRemote 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncReadCountRemote() {
         return this.SyncReadCountRemote;
@@ -354,10 +345,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncReadCountRemote 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncReadCountRemote(Long SyncReadCountRemote) {
         this.SyncReadCountRemote = SyncReadCountRemote;
@@ -365,11 +354,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程读取的字节数
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncReadBytesRemote 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncReadBytesRemote() {
         return this.SyncReadBytesRemote;
@@ -378,10 +365,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncReadBytesRemote 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncReadBytesRemote(Long SyncReadBytesRemote) {
         this.SyncReadBytesRemote = SyncReadBytesRemote;
@@ -389,11 +374,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程读取所花费的时间（微秒）
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncReadTimeRemote 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncReadTimeRemote() {
         return this.SyncReadTimeRemote;
@@ -402,10 +385,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncReadTimeRemote 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncReadTimeRemote(Long SyncReadTimeRemote) {
         this.SyncReadTimeRemote = SyncReadTimeRemote;
@@ -413,11 +394,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程写入次数
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncWriteCountRemote 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncWriteCountRemote() {
         return this.SyncWriteCountRemote;
@@ -426,10 +405,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncWriteCountRemote 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncWriteCountRemote(Long SyncWriteCountRemote) {
         this.SyncWriteCountRemote = SyncWriteCountRemote;
@@ -437,11 +414,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程写入的字节数。
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncWriteBytesRemote 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncWriteBytesRemote() {
         return this.SyncWriteBytesRemote;
@@ -450,10 +425,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncWriteBytesRemote 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncWriteBytesRemote(Long SyncWriteBytesRemote) {
         this.SyncWriteBytesRemote = SyncWriteBytesRemote;
@@ -461,11 +434,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 远程写入所花费的时间（微秒）。
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return SyncWriteTimeRemote 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncWriteTimeRemote() {
         return this.SyncWriteTimeRemote;
@@ -474,10 +445,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncWriteTimeRemote 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncWriteTimeRemote(Long SyncWriteTimeRemote) {
         this.SyncWriteTimeRemote = SyncWriteTimeRemote;
@@ -485,11 +454,9 @@ public class SlowQueriesItem extends AbstractModel {
 
     /**
      * Get 事务提交延迟（微秒）
-数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。 
+数据库内核版本大于3.1.12 
      * @return TrxCommitDelay 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrxCommitDelay() {
         return this.TrxCommitDelay;
@@ -498,10 +465,8 @@ public class SlowQueriesItem extends AbstractModel {
     /**
      * Set 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrxCommitDelay 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrxCommitDelay(Long TrxCommitDelay) {
         this.TrxCommitDelay = TrxCommitDelay;

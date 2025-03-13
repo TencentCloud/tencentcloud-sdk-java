@@ -39,7 +39,6 @@ public class RecordTimeLine extends AbstractModel {
 
     /**
     * 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HlsUrl")
     @Expose
@@ -78,10 +77,8 @@ public class RecordTimeLine extends AbstractModel {
     }
 
     /**
-     * Get 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应时间片段的播放url 
      * @return HlsUrl 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHlsUrl() {
         return this.HlsUrl;
@@ -89,9 +86,7 @@ public class RecordTimeLine extends AbstractModel {
 
     /**
      * Set 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HlsUrl 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHlsUrl(String HlsUrl) {
         this.HlsUrl = HlsUrl;

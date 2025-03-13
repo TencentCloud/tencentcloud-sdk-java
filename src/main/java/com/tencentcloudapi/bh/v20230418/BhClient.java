@@ -39,6 +39,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *外部客户访问资产
+     * @param req AccessDevicesRequest
+     * @return AccessDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AccessDevicesResponse AccessDevices(AccessDevicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AccessDevices", AccessDevicesResponse.class);
+    }
+
+    /**
      *添加资产组成员
      * @param req AddDeviceGroupMembersRequest
      * @return AddDeviceGroupMembersResponse

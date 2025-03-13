@@ -39,7 +39,6 @@ public class ModifyParamItem extends AbstractModel {
 
     /**
     * 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldValue")
     @Expose
@@ -78,10 +77,8 @@ public class ModifyParamItem extends AbstractModel {
     }
 
     /**
-     * Get 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数旧值（只在出参时有用） 
      * @return OldValue 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldValue() {
         return this.OldValue;
@@ -89,9 +86,7 @@ public class ModifyParamItem extends AbstractModel {
 
     /**
      * Set 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldValue 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;

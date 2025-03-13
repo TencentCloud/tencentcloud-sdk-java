@@ -63,7 +63,9 @@ public class DescribeBindDBListRequest extends AbstractModel {
     /**
      * Get 数据源类型 
      * @return DataSourceType 数据源类型
+     * @deprecated
      */
+    @Deprecated
     public String getDataSourceType() {
         return this.DataSourceType;
     }
@@ -71,7 +73,9 @@ public class DescribeBindDBListRequest extends AbstractModel {
     /**
      * Set 数据源类型
      * @param DataSourceType 数据源类型
+     * @deprecated
      */
+    @Deprecated
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
     }
@@ -79,7 +83,9 @@ public class DescribeBindDBListRequest extends AbstractModel {
     /**
      * Get 数据源ID 
      * @return DataSourceId 数据源ID
+     * @deprecated
      */
+    @Deprecated
     public String getDataSourceId() {
         return this.DataSourceId;
     }
@@ -87,7 +93,9 @@ public class DescribeBindDBListRequest extends AbstractModel {
     /**
      * Set 数据源ID
      * @param DataSourceId 数据源ID
+     * @deprecated
      */
+    @Deprecated
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }

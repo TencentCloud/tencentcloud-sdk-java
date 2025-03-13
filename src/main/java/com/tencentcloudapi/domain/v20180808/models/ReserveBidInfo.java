@@ -25,7 +25,6 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
     * 用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -33,7 +32,6 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
     * 出价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -41,7 +39,6 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
     * 出价时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BidTime")
     @Expose
@@ -49,17 +46,14 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
     * 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BidStatus")
     @Expose
     private String BidStatus;
 
     /**
-     * Get 用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 
      * @return User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -67,19 +61,15 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
      * Set 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 出价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出价 
      * @return Price 出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrice() {
         return this.Price;
@@ -87,19 +77,15 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
      * Set 出价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 出价时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出价时间 
      * @return BidTime 出价时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBidTime() {
         return this.BidTime;
@@ -107,19 +93,15 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
      * Set 出价时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BidTime 出价时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBidTime(String BidTime) {
         this.BidTime = BidTime;
     }
 
     /**
-     * Get 当前状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前状态 
      * @return BidStatus 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBidStatus() {
         return this.BidStatus;
@@ -127,9 +109,7 @@ public class ReserveBidInfo extends AbstractModel {
 
     /**
      * Set 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BidStatus 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBidStatus(String BidStatus) {
         this.BidStatus = BidStatus;

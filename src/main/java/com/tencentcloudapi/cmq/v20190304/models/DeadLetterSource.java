@@ -25,7 +25,6 @@ public class DeadLetterSource extends AbstractModel {
 
     /**
     * 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueId")
     @Expose
@@ -33,17 +32,14 @@ public class DeadLetterSource extends AbstractModel {
 
     /**
     * 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-     * Get 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息队列ID。 
      * @return QueueId 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueId() {
         return this.QueueId;
@@ -51,19 +47,15 @@ public class DeadLetterSource extends AbstractModel {
 
     /**
      * Set 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueId 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueId(String QueueId) {
         this.QueueId = QueueId;
     }
 
     /**
-     * Get 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息队列名字。 
      * @return QueueName 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueName() {
         return this.QueueName;
@@ -71,9 +63,7 @@ public class DeadLetterSource extends AbstractModel {
 
     /**
      * Set 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueName 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

@@ -32,7 +32,6 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
     * 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -47,7 +46,6 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
     * 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelName")
     @Expose
@@ -55,7 +53,6 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
     * 所属组织名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -85,10 +82,8 @@ public class RecordPlanChannelInfo extends AbstractModel {
     }
 
     /**
-     * Get 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备通道所属的设备名称 
      * @return DeviceName 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -96,9 +91,7 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
      * Set 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
@@ -121,10 +114,8 @@ public class RecordPlanChannelInfo extends AbstractModel {
     }
 
     /**
-     * Get 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备通道名称 
      * @return ChannelName 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelName() {
         return this.ChannelName;
@@ -132,19 +123,15 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
      * Set 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelName 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 所属组织名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属组织名称 
      * @return OrganizationName 所属组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -152,9 +139,7 @@ public class RecordPlanChannelInfo extends AbstractModel {
 
     /**
      * Set 所属组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 所属组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;

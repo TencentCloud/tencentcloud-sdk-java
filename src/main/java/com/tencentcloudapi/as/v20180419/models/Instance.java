@@ -52,26 +52,26 @@ public class Instance extends AbstractModel {
     private String LaunchConfigurationName;
 
     /**
-    * 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+    * 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -135,10 +135,10 @@ public class Instance extends AbstractModel {
 
     /**
     * 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
     */
     @SerializedName("WarmupStatus")
     @Expose
@@ -146,7 +146,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -217,92 +216,92 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中 
-     * @return LifeCycleState 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+     * Get 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li> 
+     * @return LifeCycleState 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
-     * @param LifeCycleState 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+     * Set 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
+     * @param LifeCycleState 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
@@ -438,15 +437,15 @@ public class Instance extends AbstractModel {
 
     /**
      * Get 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热 
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li> 
      * @return WarmupStatus 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
      */
     public String getWarmupStatus() {
         return this.WarmupStatus;
@@ -454,25 +453,23 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
      * @param WarmupStatus 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
      */
     public void setWarmupStatus(String WarmupStatus) {
         this.WarmupStatus = WarmupStatus;
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置放群组id，仅支持指定一个。 
      * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
@@ -480,9 +477,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;

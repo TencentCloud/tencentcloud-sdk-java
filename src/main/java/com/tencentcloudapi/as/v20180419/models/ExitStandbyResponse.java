@@ -25,7 +25,6 @@ public class ExitStandbyResponse extends AbstractModel {
 
     /**
     * 伸缩活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityId")
     @Expose
@@ -39,10 +38,8 @@ public class ExitStandbyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 伸缩活动ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩活动ID。 
      * @return ActivityId 伸缩活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityId() {
         return this.ActivityId;
@@ -50,9 +47,7 @@ public class ExitStandbyResponse extends AbstractModel {
 
     /**
      * Set 伸缩活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityId 伸缩活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityId(String ActivityId) {
         this.ActivityId = ActivityId;

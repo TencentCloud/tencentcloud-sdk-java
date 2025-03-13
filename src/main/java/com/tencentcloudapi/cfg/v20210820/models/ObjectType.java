@@ -91,6 +91,13 @@ public class ObjectType extends AbstractModel {
     private Long ArchLayer;
 
     /**
+    * 是否支持演练生图
+    */
+    @SerializedName("IsArchSvg")
+    @Expose
+    private Boolean IsArchSvg;
+
+    /**
      * Get 对象类型ID 
      * @return ObjectTypeId 对象类型ID
      */
@@ -250,6 +257,22 @@ public class ObjectType extends AbstractModel {
         this.ArchLayer = ArchLayer;
     }
 
+    /**
+     * Get 是否支持演练生图 
+     * @return IsArchSvg 是否支持演练生图
+     */
+    public Boolean getIsArchSvg() {
+        return this.IsArchSvg;
+    }
+
+    /**
+     * Set 是否支持演练生图
+     * @param IsArchSvg 是否支持演练生图
+     */
+    public void setIsArchSvg(Boolean IsArchSvg) {
+        this.IsArchSvg = IsArchSvg;
+    }
+
     public ObjectType() {
     }
 
@@ -285,6 +308,9 @@ public class ObjectType extends AbstractModel {
         if (source.ArchLayer != null) {
             this.ArchLayer = new Long(source.ArchLayer);
         }
+        if (source.IsArchSvg != null) {
+            this.IsArchSvg = new Boolean(source.IsArchSvg);
+        }
     }
 
 
@@ -301,6 +327,7 @@ public class ObjectType extends AbstractModel {
         this.setParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
         this.setParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
         this.setParamSimple(map, prefix + "ArchLayer", this.ArchLayer);
+        this.setParamSimple(map, prefix + "IsArchSvg", this.IsArchSvg);
 
     }
 }

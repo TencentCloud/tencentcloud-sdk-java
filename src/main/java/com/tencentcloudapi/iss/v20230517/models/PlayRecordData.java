@@ -25,17 +25,14 @@ public class PlayRecordData extends AbstractModel {
 
     /**
     * 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flv")
     @Expose
     private String Flv;
 
     /**
-     * Get 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像播放地址 
      * @return Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlv() {
         return this.Flv;
@@ -43,9 +40,7 @@ public class PlayRecordData extends AbstractModel {
 
     /**
      * Set 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlv(String Flv) {
         this.Flv = Flv;

@@ -25,7 +25,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步任务id，如：sync-btso140
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -33,7 +32,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步任务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobName")
     @Expose
@@ -41,7 +39,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 付款方式，PostPay(按量付费)、PrePay(包年包月)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -49,7 +46,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunMode")
     @Expose
@@ -57,7 +53,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpectRunTime")
     @Expose
@@ -65,7 +60,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 支持的所有操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllActions")
     @Expose
@@ -73,7 +67,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 当前状态能进行的操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
     @Expose
@@ -81,7 +74,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步选项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Options")
     @Expose
@@ -89,7 +81,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步库表对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Objects")
     @Expose
@@ -97,7 +88,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 任务规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Specification")
     @Expose
@@ -105,7 +95,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 过期时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -113,7 +102,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 源端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcRegion")
     @Expose
@@ -121,7 +109,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcDatabaseType")
     @Expose
@@ -129,7 +116,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcAccessType")
     @Expose
@@ -137,7 +123,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 源端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInfo")
     @Expose
@@ -145,7 +130,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcNodeType")
     @Expose
@@ -153,7 +137,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 源端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInfos")
     @Expose
@@ -161,7 +144,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 目标端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstRegion")
     @Expose
@@ -169,7 +151,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -177,7 +158,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstAccessType")
     @Expose
@@ -185,7 +165,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 目标端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInfo")
     @Expose
@@ -193,7 +172,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstNodeType")
     @Expose
@@ -201,7 +179,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 目标端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInfos")
     @Expose
@@ -209,7 +186,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 创建时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -217,7 +193,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 开始时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -225,7 +200,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -233,7 +207,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -241,7 +214,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 标签相关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -249,7 +221,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步任务运行步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -257,7 +228,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeStatus")
     @Expose
@@ -265,7 +235,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 同步链路规格，如micro,small,medium,large
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -273,7 +242,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -281,7 +249,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 下线时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -289,7 +256,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 动态修改对象，修改任务的状态等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptObjStatus")
     @Expose
@@ -297,7 +263,6 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 自动重试时间段设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
@@ -305,17 +270,14 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DumperResumeCtrl")
     @Expose
     private String DumperResumeCtrl;
 
     /**
-     * Get 同步任务id，如：sync-btso140
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步任务id，如：sync-btso140 
      * @return JobId 同步任务id，如：sync-btso140
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -323,19 +285,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步任务id，如：sync-btso140
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 同步任务id，如：sync-btso140
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 同步任务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步任务名 
      * @return JobName 同步任务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobName() {
         return this.JobName;
@@ -343,19 +301,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步任务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobName 同步任务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 付款方式，PostPay(按量付费)、PrePay(包年包月)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付款方式，PostPay(按量付费)、PrePay(包年包月) 
      * @return PayMode 付款方式，PostPay(按量付费)、PrePay(包年包月)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -363,19 +317,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 付款方式，PostPay(按量付费)、PrePay(包年包月)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 付款方式，PostPay(按量付费)、PrePay(包年包月)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行) 
      * @return RunMode 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunMode() {
         return this.RunMode;
@@ -383,19 +333,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunMode 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return ExpectRunTime 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpectRunTime() {
         return this.ExpectRunTime;
@@ -403,19 +349,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpectRunTime 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpectRunTime(String ExpectRunTime) {
         this.ExpectRunTime = ExpectRunTime;
     }
 
     /**
-     * Get 支持的所有操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的所有操作 
      * @return AllActions 支持的所有操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllActions() {
         return this.AllActions;
@@ -423,19 +365,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 支持的所有操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllActions 支持的所有操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllActions(String [] AllActions) {
         this.AllActions = AllActions;
     }
 
     /**
-     * Get 当前状态能进行的操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前状态能进行的操作 
      * @return Actions 当前状态能进行的操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActions() {
         return this.Actions;
@@ -443,19 +381,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 当前状态能进行的操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Actions 当前状态能进行的操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String [] Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 同步选项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步选项 
      * @return Options 同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Options getOptions() {
         return this.Options;
@@ -463,19 +397,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Options 同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptions(Options Options) {
         this.Options = Options;
     }
 
     /**
-     * Get 同步库表对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步库表对象 
      * @return Objects 同步库表对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Objects getObjects() {
         return this.Objects;
@@ -483,19 +413,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步库表对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Objects 同步库表对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjects(Objects Objects) {
         this.Objects = Objects;
     }
 
     /**
-     * Get 任务规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务规格 
      * @return Specification 任务规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecification() {
         return this.Specification;
@@ -503,19 +429,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 任务规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Specification 任务规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 过期时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return ExpireTime 过期时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -523,19 +445,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 过期时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 源端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端地域，如：ap-guangzhou等 
      * @return SrcRegion 源端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcRegion() {
         return this.SrcRegion;
@@ -543,19 +461,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 源端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcRegion 源端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcRegion(String SrcRegion) {
         this.SrcRegion = SrcRegion;
     }
 
     /**
-     * Get 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等 
      * @return SrcDatabaseType 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcDatabaseType() {
         return this.SrcDatabaseType;
@@ -563,19 +477,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcDatabaseType 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
     }
 
     /**
-     * Get 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云) 
      * @return SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcAccessType() {
         return this.SrcAccessType;
@@ -583,19 +493,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcAccessType(String SrcAccessType) {
         this.SrcAccessType = SrcAccessType;
     }
 
     /**
-     * Get 源端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端信息，单节点数据库使用 
      * @return SrcInfo 源端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endpoint getSrcInfo() {
         return this.SrcInfo;
@@ -603,19 +509,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 源端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInfo 源端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInfo(Endpoint SrcInfo) {
         this.SrcInfo = SrcInfo;
     }
 
     /**
-     * Get 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster 
      * @return SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcNodeType() {
         return this.SrcNodeType;
@@ -623,19 +525,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcNodeType(String SrcNodeType) {
         this.SrcNodeType = SrcNodeType;
     }
 
     /**
-     * Get 源端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端信息，多节点数据库使用 
      * @return SrcInfos 源端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncDBEndpointInfos getSrcInfos() {
         return this.SrcInfos;
@@ -643,19 +541,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 源端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInfos 源端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
         this.SrcInfos = SrcInfos;
     }
 
     /**
-     * Get 目标端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端地域，如：ap-guangzhou等 
      * @return DstRegion 目标端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstRegion() {
         return this.DstRegion;
@@ -663,19 +557,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 目标端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstRegion 目标端地域，如：ap-guangzhou等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstRegion(String DstRegion) {
         this.DstRegion = DstRegion;
     }
 
     /**
-     * Get 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等 
      * @return DstDatabaseType 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
@@ -683,19 +573,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstDatabaseType 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;
     }
 
     /**
-     * Get 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云) 
      * @return DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstAccessType() {
         return this.DstAccessType;
@@ -703,19 +589,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstAccessType(String DstAccessType) {
         this.DstAccessType = DstAccessType;
     }
 
     /**
-     * Get 目标端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端信息，单节点数据库使用 
      * @return DstInfo 目标端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endpoint getDstInfo() {
         return this.DstInfo;
@@ -723,19 +605,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 目标端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInfo 目标端信息，单节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInfo(Endpoint DstInfo) {
         this.DstInfo = DstInfo;
     }
 
     /**
-     * Get 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster 
      * @return DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstNodeType() {
         return this.DstNodeType;
@@ -743,19 +621,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstNodeType(String DstNodeType) {
         this.DstNodeType = DstNodeType;
     }
 
     /**
-     * Get 目标端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端信息，多节点数据库使用 
      * @return DstInfos 目标端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncDBEndpointInfos getDstInfos() {
         return this.DstInfos;
@@ -763,19 +637,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 目标端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInfos 目标端信息，多节点数据库使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInfos(SyncDBEndpointInfos DstInfos) {
         this.DstInfos = DstInfos;
     }
 
     /**
-     * Get 创建时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return CreateTime 创建时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -783,19 +653,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 创建时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 开始时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return StartTime 开始时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -803,19 +669,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 开始时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知) 
      * @return Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -823,19 +685,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return EndTime 结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -843,19 +701,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 标签相关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签相关信息 
      * @return Tags 标签相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
         return this.Tags;
@@ -863,19 +717,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 标签相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 同步任务运行步骤信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步任务运行步骤信息 
      * @return Detail 同步任务运行步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncDetailInfo getDetail() {
         return this.Detail;
@@ -883,19 +733,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步任务运行步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 同步任务运行步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(SyncDetailInfo Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中) 
      * @return TradeStatus 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTradeStatus() {
         return this.TradeStatus;
@@ -903,19 +749,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeStatus 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeStatus(String TradeStatus) {
         this.TradeStatus = TradeStatus;
     }
 
     /**
-     * Get 同步链路规格，如micro,small,medium,large
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步链路规格，如micro,small,medium,large 
      * @return InstanceClass 同步链路规格，如micro,small,medium,large
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceClass() {
         return this.InstanceClass;
@@ -923,19 +765,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 同步链路规格，如micro,small,medium,large
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceClass 同步链路规格，如micro,small,medium,large
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费） 
      * @return AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
@@ -943,19 +781,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 下线时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下线时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return OfflineTime 下线时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -963,19 +797,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 下线时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 下线时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 动态修改对象，修改任务的状态等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动态修改对象，修改任务的状态等 
      * @return OptObjStatus 动态修改对象，修改任务的状态等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOptObjStatus() {
         return this.OptObjStatus;
@@ -983,19 +813,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 动态修改对象，修改任务的状态等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OptObjStatus 动态修改对象，修改任务的状态等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptObjStatus(String OptObjStatus) {
         this.OptObjStatus = OptObjStatus;
     }
 
     /**
-     * Get 自动重试时间段设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动重试时间段设置 
      * @return AutoRetryTimeRangeMinutes 自动重试时间段设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
@@ -1003,19 +829,15 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 自动重试时间段设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRetryTimeRangeMinutes 自动重试时间段设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传 
      * @return DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDumperResumeCtrl() {
         return this.DumperResumeCtrl;
@@ -1023,9 +845,7 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDumperResumeCtrl(String DumperResumeCtrl) {
         this.DumperResumeCtrl = DumperResumeCtrl;

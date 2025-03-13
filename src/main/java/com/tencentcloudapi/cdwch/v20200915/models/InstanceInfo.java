@@ -443,6 +443,13 @@ Modify 集群变更中；
     private String [] BindSGs;
 
     /**
+    * 是否开启公网clb
+    */
+    @SerializedName("HasPublicCloudClb")
+    @Expose
+    private Boolean HasPublicCloudClb;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1494,6 +1501,22 @@ Modify 集群变更中；
         this.BindSGs = BindSGs;
     }
 
+    /**
+     * Get 是否开启公网clb 
+     * @return HasPublicCloudClb 是否开启公网clb
+     */
+    public Boolean getHasPublicCloudClb() {
+        return this.HasPublicCloudClb;
+    }
+
+    /**
+     * Set 是否开启公网clb
+     * @param HasPublicCloudClb 是否开启公网clb
+     */
+    public void setHasPublicCloudClb(Boolean HasPublicCloudClb) {
+        this.HasPublicCloudClb = HasPublicCloudClb;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1667,6 +1690,9 @@ Modify 集群变更中；
                 this.BindSGs[i] = new String(source.BindSGs[i]);
             }
         }
+        if (source.HasPublicCloudClb != null) {
+            this.HasPublicCloudClb = new Boolean(source.HasPublicCloudClb);
+        }
     }
 
 
@@ -1726,6 +1752,7 @@ Modify 集群变更中；
         this.setParamObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
         this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
+        this.setParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
 
     }
 }

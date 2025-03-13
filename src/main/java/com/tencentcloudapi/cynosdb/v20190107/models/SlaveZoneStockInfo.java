@@ -25,7 +25,6 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
     * 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZone")
     @Expose
@@ -33,7 +32,6 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
     * 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StockCount")
     @Expose
@@ -41,17 +39,14 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
     * 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-     * Get 备可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区 
      * @return SlaveZone 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaveZone() {
         return this.SlaveZone;
@@ -59,19 +54,15 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
      * Set 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZone 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区的库存数量	 
      * @return StockCount 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStockCount() {
         return this.StockCount;
@@ -79,19 +70,15 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
      * Set 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StockCount 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区是否有库存	 
      * @return HasStock 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasStock() {
         return this.HasStock;
@@ -99,9 +86,7 @@ public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
      * Set 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasStock 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;

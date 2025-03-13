@@ -1410,6 +1410,17 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *通过部署组ID获取微服务
+     * @param req DescribeMicroservicesByGroupIdsRequest
+     * @return DescribeMicroservicesByGroupIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIds(DescribeMicroservicesByGroupIdsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMicroservicesByGroupIds", DescribeMicroservicesByGroupIdsResponse.class);
+    }
+
+    /**
      *查询服务API列表
      * @param req DescribeMsApiListRequest
      * @return DescribeMsApiListResponse

@@ -32,7 +32,6 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
 
     /**
     * 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -68,7 +67,6 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
 
     /**
     * 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Steps")
     @Expose
@@ -98,10 +96,8 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败或者报错提示，成功则提示success。 
      * @return Message 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -109,9 +105,7 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
 
     /**
      * Set 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -182,10 +176,8 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各个步骤运行状态 
      * @return Steps 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubscribeCheckStepInfo [] getSteps() {
         return this.Steps;
@@ -193,9 +185,7 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
 
     /**
      * Set 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Steps 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSteps(SubscribeCheckStepInfo [] Steps) {
         this.Steps = Steps;

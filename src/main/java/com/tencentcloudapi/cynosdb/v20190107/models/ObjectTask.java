@@ -25,7 +25,6 @@ public class ObjectTask extends AbstractModel {
 
     /**
     * 任务自增ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class ObjectTask extends AbstractModel {
 
     /**
     * 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
@@ -41,7 +39,6 @@ public class ObjectTask extends AbstractModel {
 
     /**
     * 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -49,7 +46,6 @@ public class ObjectTask extends AbstractModel {
 
     /**
     * 任务ID（集群ID|实例组ID|实例ID）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectId")
     @Expose
@@ -57,17 +53,14 @@ public class ObjectTask extends AbstractModel {
 
     /**
     * 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
     @Expose
     private String ObjectType;
 
     /**
-     * Get 任务自增ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务自增ID 
      * @return TaskId 任务自增ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -75,19 +68,15 @@ public class ObjectTask extends AbstractModel {
 
     /**
      * Set 任务自增ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务自增ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型 
      * @return TaskType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
         return this.TaskType;
@@ -95,19 +84,15 @@ public class ObjectTask extends AbstractModel {
 
     /**
      * Set 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态 
      * @return TaskStatus 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -115,19 +100,15 @@ public class ObjectTask extends AbstractModel {
 
     /**
      * Set 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 任务ID（集群ID|实例组ID|实例ID）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID（集群ID|实例组ID|实例ID） 
      * @return ObjectId 任务ID（集群ID|实例组ID|实例ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectId() {
         return this.ObjectId;
@@ -135,19 +116,15 @@ public class ObjectTask extends AbstractModel {
 
     /**
      * Set 任务ID（集群ID|实例组ID|实例ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectId 任务ID（集群ID|实例组ID|实例ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get 任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型 
      * @return ObjectType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -155,9 +132,7 @@ public class ObjectTask extends AbstractModel {
 
     /**
      * Set 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;

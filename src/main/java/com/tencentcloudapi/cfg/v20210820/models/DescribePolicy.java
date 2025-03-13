@@ -46,7 +46,6 @@ public class DescribePolicy extends AbstractModel {
 
     /**
     * 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskPolicyDealType")
     @Expose
@@ -101,10 +100,8 @@ public class DescribePolicy extends AbstractModel {
     }
 
     /**
-     * Get 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 护栏策略生效处理策略 1:顺序执行，2:暂停 
      * @return TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskPolicyDealType() {
         return this.TaskPolicyDealType;
@@ -112,9 +109,7 @@ public class DescribePolicy extends AbstractModel {
 
     /**
      * Set 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskPolicyDealType(Long TaskPolicyDealType) {
         this.TaskPolicyDealType = TaskPolicyDealType;

@@ -25,7 +25,6 @@ public class CreateSubscribeResponse extends AbstractModel {
 
     /**
     * 数据订阅实例的ID数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeIds")
     @Expose
@@ -39,10 +38,8 @@ public class CreateSubscribeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据订阅实例的ID数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据订阅实例的ID数组 
      * @return SubscribeIds 数据订阅实例的ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubscribeIds() {
         return this.SubscribeIds;
@@ -50,9 +47,7 @@ public class CreateSubscribeResponse extends AbstractModel {
 
     /**
      * Set 数据订阅实例的ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeIds 数据订阅实例的ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeIds(String [] SubscribeIds) {
         this.SubscribeIds = SubscribeIds;

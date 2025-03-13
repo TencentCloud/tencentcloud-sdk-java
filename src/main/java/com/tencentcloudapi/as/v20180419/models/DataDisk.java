@@ -33,7 +33,6 @@ public class DataDisk extends AbstractModel {
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -41,7 +40,6 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -103,8 +101,7 @@ public class DataDisk extends AbstractModel {
 <li>CLOUD_SSD：SSD云硬盘</li>
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
-默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+默认取值与系统盘类型（SystemDisk.DiskType）保持一致。 
      * @return DiskType 数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：
 <li>LOCAL_BASIC：本地硬盘</li>
 <li>LOCAL_SSD：本地SSD硬盘</li>
@@ -114,7 +111,6 @@ public class DataDisk extends AbstractModel {
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -130,7 +126,6 @@ public class DataDisk extends AbstractModel {
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：
 <li>LOCAL_BASIC：本地硬盘</li>
 <li>LOCAL_SSD：本地SSD硬盘</li>
@@ -140,17 +135,14 @@ public class DataDisk extends AbstractModel {
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
      * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -158,9 +150,7 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

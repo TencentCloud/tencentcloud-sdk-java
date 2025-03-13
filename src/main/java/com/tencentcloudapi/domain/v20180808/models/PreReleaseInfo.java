@@ -25,7 +25,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,7 +32,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservationTime")
     @Expose
@@ -41,7 +39,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegTime")
     @Expose
@@ -49,7 +46,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelTime")
     @Expose
@@ -57,7 +53,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentPeople")
     @Expose
@@ -65,7 +60,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -73,7 +67,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFollow")
     @Expose
@@ -81,7 +74,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAppoint")
     @Expose
@@ -89,7 +81,6 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -97,17 +88,14 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDomainUser")
     @Expose
     private Boolean IsDomainUser;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -115,19 +103,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预订倒计时 
      * @return ReservationTime 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReservationTime() {
         return this.ReservationTime;
@@ -135,19 +119,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservationTime 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservationTime(String ReservationTime) {
         this.ReservationTime = ReservationTime;
     }
 
     /**
-     * Get 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名注册时间 
      * @return RegTime 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegTime() {
         return this.RegTime;
@@ -155,19 +135,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegTime 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名删除时间 
      * @return DelTime 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelTime() {
         return this.DelTime;
@@ -175,19 +151,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DelTime 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelTime(String DelTime) {
         this.DelTime = DelTime;
     }
 
     /**
-     * Get 当前人数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前人数 
      * @return CurrentPeople 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentPeople() {
         return this.CurrentPeople;
@@ -195,19 +167,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentPeople 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentPeople(Long CurrentPeople) {
         this.CurrentPeople = CurrentPeople;
     }
 
     /**
-     * Get 当前价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前价格 
      * @return Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPrice() {
         return this.Price;
@@ -215,19 +183,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否收藏 
      * @return IsFollow 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFollow() {
         return this.IsFollow;
@@ -235,19 +199,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFollow 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFollow(Boolean IsFollow) {
         this.IsFollow = IsFollow;
     }
 
     /**
-     * Get 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已经预约 
      * @return IsAppoint 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAppoint() {
         return this.IsAppoint;
@@ -255,19 +215,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAppoint 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAppoint(Boolean IsAppoint) {
         this.IsAppoint = IsAppoint;
     }
 
     /**
-     * Get 业务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务ID 
      * @return BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -275,19 +231,15 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为原持有者 
      * @return IsDomainUser 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDomainUser() {
         return this.IsDomainUser;
@@ -295,9 +247,7 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDomainUser 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDomainUser(Boolean IsDomainUser) {
         this.IsDomainUser = IsDomainUser;

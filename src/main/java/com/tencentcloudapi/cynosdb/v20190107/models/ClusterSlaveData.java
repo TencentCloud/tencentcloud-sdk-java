@@ -25,7 +25,6 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
     * 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldMasterZone")
     @Expose
@@ -41,7 +40,6 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
     * 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewMasterZone")
     @Expose
@@ -57,7 +55,6 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
     * 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewSlaveZoneAttr")
     @Expose
@@ -65,17 +62,14 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
     * 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldSlaveZoneAttr")
     @Expose
     private SlaveZoneAttrItem [] OldSlaveZoneAttr;
 
     /**
-     * Get 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧主可用区 
      * @return OldMasterZone 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldMasterZone() {
         return this.OldMasterZone;
@@ -83,9 +77,7 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
      * Set 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldMasterZone 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldMasterZone(String OldMasterZone) {
         this.OldMasterZone = OldMasterZone;
@@ -112,10 +104,8 @@ public class ClusterSlaveData extends AbstractModel {
     }
 
     /**
-     * Get 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新主可用区 
      * @return NewMasterZone 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewMasterZone() {
         return this.NewMasterZone;
@@ -123,9 +113,7 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
      * Set 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewMasterZone 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewMasterZone(String NewMasterZone) {
         this.NewMasterZone = NewMasterZone;
@@ -152,10 +140,8 @@ public class ClusterSlaveData extends AbstractModel {
     }
 
     /**
-     * Get 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新从可用区属性 
      * @return NewSlaveZoneAttr 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveZoneAttrItem [] getNewSlaveZoneAttr() {
         return this.NewSlaveZoneAttr;
@@ -163,19 +149,15 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
      * Set 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewSlaveZoneAttr 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewSlaveZoneAttr(SlaveZoneAttrItem [] NewSlaveZoneAttr) {
         this.NewSlaveZoneAttr = NewSlaveZoneAttr;
     }
 
     /**
-     * Get 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧可用区属性 
      * @return OldSlaveZoneAttr 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveZoneAttrItem [] getOldSlaveZoneAttr() {
         return this.OldSlaveZoneAttr;
@@ -183,9 +165,7 @@ public class ClusterSlaveData extends AbstractModel {
 
     /**
      * Set 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldSlaveZoneAttr 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldSlaveZoneAttr(SlaveZoneAttrItem [] OldSlaveZoneAttr) {
         this.OldSlaveZoneAttr = OldSlaveZoneAttr;

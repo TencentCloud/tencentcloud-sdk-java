@@ -25,7 +25,6 @@ public class DeliverSummary extends AbstractModel {
 
     /**
     * 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliverType")
     @Expose
@@ -33,17 +32,14 @@ public class DeliverSummary extends AbstractModel {
 
     /**
     * 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliverSubType")
     @Expose
     private String DeliverSubType;
 
     /**
-     * Get 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递类型，store（存储类），mq（消息通道） 
      * @return DeliverType 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeliverType() {
         return this.DeliverType;
@@ -51,19 +47,15 @@ public class DeliverSummary extends AbstractModel {
 
     /**
      * Set 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliverType 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliverType(String DeliverType) {
         this.DeliverType = DeliverType;
     }
 
     /**
-     * Get 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递子类型：cls，ckafka。 
      * @return DeliverSubType 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeliverSubType() {
         return this.DeliverSubType;
@@ -71,9 +63,7 @@ public class DeliverSummary extends AbstractModel {
 
     /**
      * Set 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliverSubType 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliverSubType(String DeliverSubType) {
         this.DeliverSubType = DeliverSubType;

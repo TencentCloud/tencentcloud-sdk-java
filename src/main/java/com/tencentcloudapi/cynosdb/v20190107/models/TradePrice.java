@@ -25,7 +25,6 @@ public class TradePrice extends AbstractModel {
 
     /**
     * 预付费模式下资源总价，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPrice")
     @Expose
@@ -40,7 +39,6 @@ public class TradePrice extends AbstractModel {
 
     /**
     * 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPriceDiscount")
     @Expose
@@ -48,7 +46,6 @@ public class TradePrice extends AbstractModel {
 
     /**
     * 后付费模式下的单位资源价格，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -56,7 +53,6 @@ public class TradePrice extends AbstractModel {
 
     /**
     * 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
@@ -70,10 +66,8 @@ public class TradePrice extends AbstractModel {
     private String ChargeUnit;
 
     /**
-     * Get 预付费模式下资源总价，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费模式下资源总价，不包含优惠，单位:分 
      * @return TotalPrice 预付费模式下资源总价，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPrice() {
         return this.TotalPrice;
@@ -81,9 +75,7 @@ public class TradePrice extends AbstractModel {
 
     /**
      * Set 预付费模式下资源总价，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPrice 预付费模式下资源总价，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPrice(Long TotalPrice) {
         this.TotalPrice = TotalPrice;
@@ -106,10 +98,8 @@ public class TradePrice extends AbstractModel {
     }
 
     /**
-     * Get 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount 
      * @return TotalPriceDiscount 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPriceDiscount() {
         return this.TotalPriceDiscount;
@@ -117,19 +107,15 @@ public class TradePrice extends AbstractModel {
 
     /**
      * Set 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPriceDiscount 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPriceDiscount(Long TotalPriceDiscount) {
         this.TotalPriceDiscount = TotalPriceDiscount;
     }
 
     /**
-     * Get 后付费模式下的单位资源价格，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费模式下的单位资源价格，不包含优惠，单位:分 
      * @return UnitPrice 后付费模式下的单位资源价格，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnitPrice() {
         return this.UnitPrice;
@@ -137,19 +123,15 @@ public class TradePrice extends AbstractModel {
 
     /**
      * Set 后付费模式下的单位资源价格，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 后付费模式下的单位资源价格，不包含优惠，单位:分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Long UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount 
      * @return UnitPriceDiscount 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
@@ -157,9 +139,7 @@ public class TradePrice extends AbstractModel {
 
     /**
      * Set 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPriceDiscount 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPriceDiscount(Long UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;

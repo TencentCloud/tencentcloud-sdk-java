@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.fmu.v20191213.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,29 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryBeautifyVideoJobResponse extends AbstractModel {
+public class TriggerManualTasksResponse extends AbstractModel {
 
     /**
-    * 当前任务状态：排队中、处理中、处理失败或者处理完成
-    */
-    @SerializedName("JobStatus")
-    @Expose
-    private String JobStatus;
-
-    /**
-    * 视频美颜输出的结果信息
+    * 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BeautifyVideoOutput")
+    @SerializedName("RequestFromSource")
     @Expose
-    private BeautifyVideoOutput BeautifyVideoOutput;
+    private String RequestFromSource;
 
     /**
-    * 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+    * 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("JobStatusCode")
+    @SerializedName("Data")
     @Expose
-    private Long JobStatusCode;
+    private ManualTriggerRecordOpsDto Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,55 +47,43 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前任务状态：排队中、处理中、处理失败或者处理完成 
-     * @return JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
-     */
-    public String getJobStatus() {
-        return this.JobStatus;
-    }
-
-    /**
-     * Set 当前任务状态：排队中、处理中、处理失败或者处理完成
-     * @param JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
-     */
-    public void setJobStatus(String JobStatus) {
-        this.JobStatus = JobStatus;
-    }
-
-    /**
-     * Get 视频美颜输出的结果信息
+     * Get 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BeautifyVideoOutput 视频美颜输出的结果信息
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public BeautifyVideoOutput getBeautifyVideoOutput() {
-        return this.BeautifyVideoOutput;
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
     }
 
     /**
-     * Set 视频美颜输出的结果信息
+     * Set 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BeautifyVideoOutput 视频美颜输出的结果信息
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBeautifyVideoOutput(BeautifyVideoOutput BeautifyVideoOutput) {
-        this.BeautifyVideoOutput = BeautifyVideoOutput;
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
     }
 
     /**
-     * Get 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成 
-     * @return JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     * Get 详情结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getJobStatusCode() {
-        return this.JobStatusCode;
+    public ManualTriggerRecordOpsDto getData() {
+        return this.Data;
     }
 
     /**
-     * Set 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
-     * @param JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     * Set 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setJobStatusCode(Long JobStatusCode) {
-        this.JobStatusCode = JobStatusCode;
+    public void setData(ManualTriggerRecordOpsDto Data) {
+        this.Data = Data;
     }
 
     /**
@@ -120,22 +102,19 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public QueryBeautifyVideoJobResponse() {
+    public TriggerManualTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryBeautifyVideoJobResponse(QueryBeautifyVideoJobResponse source) {
-        if (source.JobStatus != null) {
-            this.JobStatus = new String(source.JobStatus);
+    public TriggerManualTasksResponse(TriggerManualTasksResponse source) {
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
         }
-        if (source.BeautifyVideoOutput != null) {
-            this.BeautifyVideoOutput = new BeautifyVideoOutput(source.BeautifyVideoOutput);
-        }
-        if (source.JobStatusCode != null) {
-            this.JobStatusCode = new Long(source.JobStatusCode);
+        if (source.Data != null) {
+            this.Data = new ManualTriggerRecordOpsDto(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -147,9 +126,8 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
-        this.setParamObj(map, prefix + "BeautifyVideoOutput.", this.BeautifyVideoOutput);
-        this.setParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

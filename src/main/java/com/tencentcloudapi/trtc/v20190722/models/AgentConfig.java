@@ -96,6 +96,19 @@ public class AgentConfig extends AbstractModel {
     private Long WelcomeMessagePriority;
 
     /**
+    * 用于过滤LLM返回内容，不播放括号中的内容。
+1：中文括号（）
+2：英文括号()
+3：中文方括号【】
+4：英文方括号[]
+5：英文花括号{}
+默认值为空，表示不进行过滤。
+    */
+    @SerializedName("FilterBracketsContent")
+    @Expose
+    private Long FilterBracketsContent;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -263,6 +276,46 @@ public class AgentConfig extends AbstractModel {
         this.WelcomeMessagePriority = WelcomeMessagePriority;
     }
 
+    /**
+     * Get 用于过滤LLM返回内容，不播放括号中的内容。
+1：中文括号（）
+2：英文括号()
+3：中文方括号【】
+4：英文方括号[]
+5：英文花括号{}
+默认值为空，表示不进行过滤。 
+     * @return FilterBracketsContent 用于过滤LLM返回内容，不播放括号中的内容。
+1：中文括号（）
+2：英文括号()
+3：中文方括号【】
+4：英文方括号[]
+5：英文花括号{}
+默认值为空，表示不进行过滤。
+     */
+    public Long getFilterBracketsContent() {
+        return this.FilterBracketsContent;
+    }
+
+    /**
+     * Set 用于过滤LLM返回内容，不播放括号中的内容。
+1：中文括号（）
+2：英文括号()
+3：中文方括号【】
+4：英文方括号[]
+5：英文花括号{}
+默认值为空，表示不进行过滤。
+     * @param FilterBracketsContent 用于过滤LLM返回内容，不播放括号中的内容。
+1：中文括号（）
+2：英文括号()
+3：中文方括号【】
+4：英文方括号[]
+5：英文花括号{}
+默认值为空，表示不进行过滤。
+     */
+    public void setFilterBracketsContent(Long FilterBracketsContent) {
+        this.FilterBracketsContent = FilterBracketsContent;
+    }
+
     public AgentConfig() {
     }
 
@@ -301,6 +354,9 @@ public class AgentConfig extends AbstractModel {
         if (source.WelcomeMessagePriority != null) {
             this.WelcomeMessagePriority = new Long(source.WelcomeMessagePriority);
         }
+        if (source.FilterBracketsContent != null) {
+            this.FilterBracketsContent = new Long(source.FilterBracketsContent);
+        }
     }
 
 
@@ -318,6 +374,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
         this.setParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
         this.setParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
+        this.setParamSimple(map, prefix + "FilterBracketsContent", this.FilterBracketsContent);
 
     }
 }

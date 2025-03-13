@@ -50,6 +50,17 @@ public class SvpClient extends AbstractClient{
     }
 
     /**
+     *查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+     * @param req DescribeSavingPlanCoverageRequest
+     * @return DescribeSavingPlanCoverageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverage(DescribeSavingPlanCoverageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanCoverage", DescribeSavingPlanCoverageResponse.class);
+    }
+
+    /**
      *查询节省计划抵扣明细
      * @param req DescribeSavingPlanDeductRequest
      * @return DescribeSavingPlanDeductResponse

@@ -25,7 +25,6 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
     * 执行开始时间(距离0点的秒数)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainStartTime")
     @Expose
@@ -33,7 +32,6 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
     * 持续的时间(单位：秒)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainDuration")
     @Expose
@@ -41,17 +39,14 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
     * 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-     * Get 执行开始时间(距离0点的秒数)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行开始时间(距离0点的秒数) 
      * @return MaintainStartTime 执行开始时间(距离0点的秒数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
@@ -59,19 +54,15 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
      * Set 执行开始时间(距离0点的秒数)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainStartTime 执行开始时间(距离0点的秒数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get 持续的时间(单位：秒)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持续的时间(单位：秒) 
      * @return MaintainDuration 持续的时间(单位：秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
@@ -79,19 +70,15 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
      * Set 持续的时间(单位：秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainDuration 持续的时间(单位：秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"] 
      * @return MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
@@ -99,9 +86,7 @@ public class TaskMaintainInfo extends AbstractModel {
 
     /**
      * Set 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

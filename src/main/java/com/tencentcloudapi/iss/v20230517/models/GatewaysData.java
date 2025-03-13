@@ -25,7 +25,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,7 +32,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GwId")
     @Expose
@@ -41,7 +39,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -57,7 +53,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关所属服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -65,7 +60,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关所属服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -73,7 +67,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -81,7 +74,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -89,7 +81,6 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 网关激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -97,17 +88,14 @@ public class GatewaysData extends AbstractModel {
 
     /**
     * 所属网关设备数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceNum")
     @Expose
     private Long DeviceNum;
 
     /**
-     * Get 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关索引ID 
      * @return GatewayId 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -115,19 +103,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关编码 
      * @return GwId 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGwId() {
         return this.GwId;
@@ -135,19 +119,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GwId 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGwId(String GwId) {
         this.GwId = GwId;
     }
 
     /**
-     * Get 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符 
      * @return Name 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,19 +135,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符 
      * @return Description 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -175,19 +151,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 网关所属服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关所属服务节点ID 
      * @return ClusterId 网关所属服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -195,19 +167,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关所属服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 网关所属服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 网关所属服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关所属服务节点名称 
      * @return ClusterName 网关所属服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -215,19 +183,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关所属服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 网关所属服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 网关所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关所属地域 
      * @return Region 网关所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -235,19 +199,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 网关所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关状态，0：离线，1:在线 
      * @return Status 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -255,19 +215,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 网关激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关激活时间 
      * @return CreatedAt 网关激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -275,19 +231,15 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 网关激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 网关激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 所属网关设备数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属网关设备数量 
      * @return DeviceNum 所属网关设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceNum() {
         return this.DeviceNum;
@@ -295,9 +247,7 @@ public class GatewaysData extends AbstractModel {
 
     /**
      * Set 所属网关设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceNum 所属网关设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceNum(Long DeviceNum) {
         this.DeviceNum = DeviceNum;

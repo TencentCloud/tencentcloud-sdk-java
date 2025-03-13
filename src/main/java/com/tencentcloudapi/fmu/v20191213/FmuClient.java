@@ -50,32 +50,6 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *产品不再维护，准备下线。
-
-视频美颜(此接口目前已下线)
-     * @param req BeautifyVideoRequest
-     * @return BeautifyVideoResponse
-     * @throws TencentCloudSDKException
-     */
-    public BeautifyVideoResponse BeautifyVideo(BeautifyVideoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BeautifyVideo", BeautifyVideoResponse.class);
-    }
-
-    /**
-     *产品不再维护，准备下线。
-
-撤销视频美颜任务请求
-     * @param req CancelBeautifyVideoJobRequest
-     * @return CancelBeautifyVideoJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CancelBeautifyVideoJob", CancelBeautifyVideoJobResponse.class);
-    }
-
-    /**
      *在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
 
 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
@@ -108,19 +82,6 @@ public class FmuClient extends AbstractClient{
     public GetModelListResponse GetModelList(GetModelListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetModelList", GetModelListResponse.class);
-    }
-
-    /**
-     *产品不再维护，准备下线。
-
-查询视频美颜处理进度
-     * @param req QueryBeautifyVideoJobRequest
-     * @return QueryBeautifyVideoJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "QueryBeautifyVideoJob", QueryBeautifyVideoJobResponse.class);
     }
 
     /**

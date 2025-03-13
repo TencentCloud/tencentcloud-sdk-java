@@ -25,7 +25,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullState")
     @Expose
@@ -41,7 +39,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullSecret")
     @Expose
@@ -49,7 +46,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullExpired")
     @Expose
@@ -57,7 +53,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushState")
     @Expose
@@ -65,7 +60,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushSecret")
     @Expose
@@ -73,7 +67,6 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushExpired")
     @Expose
@@ -81,17 +74,14 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-     * Get 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鉴权配置ID（uuid） 
      * @return Id 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -99,19 +89,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开播放鉴权（1:开启,0:关闭） 
      * @return PullState 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPullState() {
         return this.PullState;
@@ -119,19 +105,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PullState 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullState(Long PullState) {
         this.PullState = PullState;
     }
 
     /**
-     * Get 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 播放密钥（仅支持字母数字，长度0-10位） 
      * @return PullSecret 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPullSecret() {
         return this.PullSecret;
@@ -139,19 +121,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PullSecret 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullSecret(String PullSecret) {
         this.PullSecret = PullSecret;
     }
 
     /**
-     * Get 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 播放过期时间（单位：分钟） 
      * @return PullExpired 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPullExpired() {
         return this.PullExpired;
@@ -159,19 +137,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PullExpired 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullExpired(Long PullExpired) {
         this.PullExpired = PullExpired;
     }
 
     /**
-     * Get 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启推流鉴权（1:开启,0:关闭） 
      * @return PushState 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPushState() {
         return this.PushState;
@@ -179,19 +153,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushState 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushState(Long PushState) {
         this.PushState = PushState;
     }
 
     /**
-     * Get 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流密钥（仅支持字母数字，长度0-10位） 
      * @return PushSecret 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPushSecret() {
         return this.PushSecret;
@@ -199,19 +169,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushSecret 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushSecret(String PushSecret) {
         this.PushSecret = PushSecret;
     }
 
     /**
-     * Get 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流过期时间（单位：分钟） 
      * @return PushExpired 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPushExpired() {
         return this.PushExpired;
@@ -219,19 +185,15 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushExpired 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushExpired(Long PushExpired) {
         this.PushExpired = PushExpired;
     }
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -239,9 +201,7 @@ public class AddStreamAuthData extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;

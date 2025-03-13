@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.fmu.v20191213.models;
+package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelBeautifyVideoJobRequest extends AbstractModel {
+public class DescribeWhiteBoardSnapshotRequest extends AbstractModel {
 
     /**
-    * 美颜视频的Job id
+    * 房间ID
     */
-    @SerializedName("JobId")
+    @SerializedName("RoomId")
     @Expose
-    private String JobId;
+    private Long RoomId;
 
     /**
-     * Get 美颜视频的Job id 
-     * @return JobId 美颜视频的Job id
+     * Get 房间ID 
+     * @return RoomId 房间ID
      */
-    public String getJobId() {
-        return this.JobId;
+    public Long getRoomId() {
+        return this.RoomId;
     }
 
     /**
-     * Set 美颜视频的Job id
-     * @param JobId 美颜视频的Job id
+     * Set 房间ID
+     * @param RoomId 房间ID
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setRoomId(Long RoomId) {
+        this.RoomId = RoomId;
     }
 
-    public CancelBeautifyVideoJobRequest() {
+    public DescribeWhiteBoardSnapshotRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CancelBeautifyVideoJobRequest(CancelBeautifyVideoJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DescribeWhiteBoardSnapshotRequest(DescribeWhiteBoardSnapshotRequest source) {
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
         }
     }
 
@@ -64,7 +64,7 @@ public class CancelBeautifyVideoJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
 
     }
 }

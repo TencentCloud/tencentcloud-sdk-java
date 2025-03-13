@@ -25,7 +25,6 @@ public class InstanceAbility extends AbstractModel {
 
     /**
     * 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportForceRestart")
     @Expose
@@ -33,17 +32,14 @@ public class InstanceAbility extends AbstractModel {
 
     /**
     * 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NonsupportForceRestartReason")
     @Expose
     private String NonsupportForceRestartReason;
 
     /**
-     * Get 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否支持强制重启，可选值：yes：支持，no：不支持 
      * @return IsSupportForceRestart 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsSupportForceRestart() {
         return this.IsSupportForceRestart;
@@ -51,19 +47,15 @@ public class InstanceAbility extends AbstractModel {
 
     /**
      * Set 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportForceRestart 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportForceRestart(String IsSupportForceRestart) {
         this.IsSupportForceRestart = IsSupportForceRestart;
     }
 
     /**
-     * Get 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持强制重启的原因 
      * @return NonsupportForceRestartReason 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNonsupportForceRestartReason() {
         return this.NonsupportForceRestartReason;
@@ -71,9 +63,7 @@ public class InstanceAbility extends AbstractModel {
 
     /**
      * Set 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NonsupportForceRestartReason 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNonsupportForceRestartReason(String NonsupportForceRestartReason) {
         this.NonsupportForceRestartReason = NonsupportForceRestartReason;

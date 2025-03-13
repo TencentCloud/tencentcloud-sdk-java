@@ -144,7 +144,6 @@ public class RumProject extends AbstractModel {
 
     /**
     * kafka旁路配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kafka")
     @Expose
@@ -423,10 +422,8 @@ public class RumProject extends AbstractModel {
     }
 
     /**
-     * Get kafka旁路配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka旁路配置信息 
      * @return Kafka kafka旁路配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Kafka getKafka() {
         return this.Kafka;
@@ -434,9 +431,7 @@ public class RumProject extends AbstractModel {
 
     /**
      * Set kafka旁路配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kafka kafka旁路配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafka(Kafka Kafka) {
         this.Kafka = Kafka;

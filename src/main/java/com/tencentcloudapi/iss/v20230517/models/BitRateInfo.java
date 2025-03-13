@@ -25,7 +25,6 @@ public class BitRateInfo extends AbstractModel {
 
     /**
     * 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
     @Expose
@@ -33,17 +32,14 @@ public class BitRateInfo extends AbstractModel {
 
     /**
     * 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
     private Float Bitrate;
 
     /**
-     * Get 通道Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道Id 
      * @return ChannelId 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
         return this.ChannelId;
@@ -51,19 +47,15 @@ public class BitRateInfo extends AbstractModel {
 
     /**
      * Set 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelId 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 码率,单位:kbps 
      * @return Bitrate 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBitrate() {
         return this.Bitrate;
@@ -71,9 +63,7 @@ public class BitRateInfo extends AbstractModel {
 
     /**
      * Set 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Float Bitrate) {
         this.Bitrate = Bitrate;

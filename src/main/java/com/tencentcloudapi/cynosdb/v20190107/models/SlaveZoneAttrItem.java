@@ -25,7 +25,6 @@ public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,17 +32,14 @@ public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
     * binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogSyncWay")
     @Expose
     private String BinlogSyncWay;
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -51,19 +47,15 @@ public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get binlog同步方式 
      * @return BinlogSyncWay binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBinlogSyncWay() {
         return this.BinlogSyncWay;
@@ -71,9 +63,7 @@ public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
      * Set binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BinlogSyncWay binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogSyncWay(String BinlogSyncWay) {
         this.BinlogSyncWay = BinlogSyncWay;

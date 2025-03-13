@@ -25,7 +25,6 @@ public class SkipCheckItemResponse extends AbstractModel {
 
     /**
     * 跳过的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -39,10 +38,8 @@ public class SkipCheckItemResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 跳过的提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过的提示信息 
      * @return Message 跳过的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -50,9 +47,7 @@ public class SkipCheckItemResponse extends AbstractModel {
 
     /**
      * Set 跳过的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 跳过的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

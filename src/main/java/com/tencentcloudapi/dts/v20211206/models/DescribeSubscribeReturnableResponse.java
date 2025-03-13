@@ -32,7 +32,6 @@ public class DescribeSubscribeReturnableResponse extends AbstractModel {
 
     /**
     * 不支持退还的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnFailMessage")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeSubscribeReturnableResponse extends AbstractModel {
     }
 
     /**
-     * Get 不支持退还的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持退还的原因 
      * @return ReturnFailMessage 不支持退还的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnFailMessage() {
         return this.ReturnFailMessage;
@@ -73,9 +70,7 @@ public class DescribeSubscribeReturnableResponse extends AbstractModel {
 
     /**
      * Set 不支持退还的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnFailMessage 不支持退还的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnFailMessage(String ReturnFailMessage) {
         this.ReturnFailMessage = ReturnFailMessage;

@@ -2685,6 +2685,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *手动任务触发运行
+     * @param req TriggerManualTasksRequest
+     * @return TriggerManualTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerManualTasksResponse TriggerManualTasks(TriggerManualTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TriggerManualTasks", TriggerManualTasksResponse.class);
+    }
+
+    /**
      *解锁集成任务
      * @param req UnlockIntegrationTaskRequest
      * @return UnlockIntegrationTaskResponse

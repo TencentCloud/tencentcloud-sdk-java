@@ -25,7 +25,6 @@ public class ListTasksData extends AbstractModel {
 
     /**
     * 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,17 +32,14 @@ public class ListTasksData extends AbstractModel {
 
     /**
     * 任务数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务列表 
      * @return List 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskData [] getList() {
         return this.List;
@@ -51,19 +47,15 @@ public class ListTasksData extends AbstractModel {
 
     /**
      * Set 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(TaskData [] List) {
         this.List = List;
     }
 
     /**
-     * Get 任务数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务数量 
      * @return TotalCount 任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class ListTasksData extends AbstractModel {
 
     /**
      * Set 任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

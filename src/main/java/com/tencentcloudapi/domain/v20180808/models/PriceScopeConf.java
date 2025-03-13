@@ -25,7 +25,6 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
     * 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPrice")
     @Expose
@@ -33,7 +32,6 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
     * 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinPrice")
     @Expose
@@ -41,7 +39,6 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
     * 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -49,17 +46,14 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
     * 保证金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepositPrice")
     @Expose
     private Float DepositPrice;
 
     /**
-     * Get 最高价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最高价格 
      * @return MaxPrice 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMaxPrice() {
         return this.MaxPrice;
@@ -67,19 +61,15 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
      * Set 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPrice 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPrice(Float MaxPrice) {
         this.MaxPrice = MaxPrice;
     }
 
     /**
-     * Get 最低价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最低价格 
      * @return MinPrice 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMinPrice() {
         return this.MinPrice;
@@ -87,19 +77,15 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
      * Set 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinPrice 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinPrice(Float MinPrice) {
         this.MinPrice = MinPrice;
     }
 
     /**
-     * Get 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格幅度 
      * @return Price 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPrice() {
         return this.Price;
@@ -107,19 +93,15 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
      * Set 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 保证金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保证金 
      * @return DepositPrice 保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDepositPrice() {
         return this.DepositPrice;
@@ -127,9 +109,7 @@ public class PriceScopeConf extends AbstractModel {
 
     /**
      * Set 保证金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepositPrice 保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepositPrice(Float DepositPrice) {
         this.DepositPrice = DepositPrice;

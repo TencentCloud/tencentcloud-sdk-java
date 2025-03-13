@@ -25,7 +25,6 @@ public class Options extends AbstractModel {
 
     /**
     * 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitType")
     @Expose
@@ -33,7 +32,6 @@ public class Options extends AbstractModel {
 
     /**
     * 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealOfExistSameTable")
     @Expose
@@ -41,7 +39,6 @@ public class Options extends AbstractModel {
 
     /**
     * 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConflictHandleType")
     @Expose
@@ -49,7 +46,6 @@ public class Options extends AbstractModel {
 
     /**
     * 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddAdditionalColumn")
     @Expose
@@ -65,7 +61,6 @@ public class Options extends AbstractModel {
 
     /**
     * 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConflictHandleOption")
     @Expose
@@ -81,7 +76,6 @@ public class Options extends AbstractModel {
 
     /**
     * kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaOption")
     @Expose
@@ -89,7 +83,6 @@ public class Options extends AbstractModel {
 
     /**
     * 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitOption")
     @Expose
@@ -97,7 +90,6 @@ public class Options extends AbstractModel {
 
     /**
     * 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
@@ -105,7 +97,6 @@ public class Options extends AbstractModel {
 
     /**
     * 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartPosition")
     @Expose
@@ -113,7 +104,6 @@ public class Options extends AbstractModel {
 
     /**
     * 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterBeginCommit")
     @Expose
@@ -121,17 +111,14 @@ public class Options extends AbstractModel {
 
     /**
     * 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterCheckpoint")
     @Expose
     private Boolean FilterCheckpoint;
 
     /**
-     * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量) 
      * @return InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitType() {
         return this.InitType;
@@ -139,19 +126,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitType(String InitType) {
         this.InitType = InitType;
     }
 
     /**
-     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行) 
      * @return DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealOfExistSameTable() {
         return this.DealOfExistSameTable;
@@ -159,19 +142,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealOfExistSameTable(String DealOfExistSameTable) {
         this.DealOfExistSameTable = DealOfExistSameTable;
     }
 
     /**
-     * Get 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖) 
      * @return ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConflictHandleType() {
         return this.ConflictHandleType;
@@ -179,19 +158,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConflictHandleType(String ConflictHandleType) {
         this.ConflictHandleType = ConflictHandleType;
     }
 
     /**
-     * Get 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否添加附加列 
      * @return AddAdditionalColumn 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAddAdditionalColumn() {
         return this.AddAdditionalColumn;
@@ -199,9 +174,7 @@ public class Options extends AbstractModel {
 
     /**
      * Set 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddAdditionalColumn 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddAdditionalColumn(Boolean AddAdditionalColumn) {
         this.AddAdditionalColumn = AddAdditionalColumn;
@@ -228,10 +201,8 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冲突处理的详细选项，如条件覆盖中的条件行和条件操作 
      * @return ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConflictHandleOption getConflictHandleOption() {
         return this.ConflictHandleOption;
@@ -239,9 +210,7 @@ public class Options extends AbstractModel {
 
     /**
      * Set 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConflictHandleOption(ConflictHandleOption ConflictHandleOption) {
         this.ConflictHandleOption = ConflictHandleOption;
@@ -268,10 +237,8 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka同步选项 
      * @return KafkaOption kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KafkaOption getKafkaOption() {
         return this.KafkaOption;
@@ -279,19 +246,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaOption kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaOption(KafkaOption KafkaOption) {
         this.KafkaOption = KafkaOption;
     }
 
     /**
-     * Get 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务限速信息 
      * @return RateLimitOption 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitOption getRateLimitOption() {
         return this.RateLimitOption;
@@ -299,19 +262,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitOption 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {
         this.RateLimitOption = RateLimitOption;
     }
 
     /**
-     * Get 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动重试的时间窗口设置 
      * @return AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
@@ -319,19 +278,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Get 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。 
      * @return StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartPosition() {
         return this.StartPosition;
@@ -339,19 +294,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartPosition(String StartPosition) {
         this.StartPosition = StartPosition;
     }
 
     /**
-     * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持 
      * @return FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFilterBeginCommit() {
         return this.FilterBeginCommit;
@@ -359,19 +310,15 @@ public class Options extends AbstractModel {
 
     /**
      * Set 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterBeginCommit(Boolean FilterBeginCommit) {
         this.FilterBeginCommit = FilterBeginCommit;
     }
 
     /**
-     * Get 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持 
      * @return FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFilterCheckpoint() {
         return this.FilterCheckpoint;
@@ -379,9 +326,7 @@ public class Options extends AbstractModel {
 
     /**
      * Set 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterCheckpoint(Boolean FilterCheckpoint) {
         this.FilterCheckpoint = FilterCheckpoint;
