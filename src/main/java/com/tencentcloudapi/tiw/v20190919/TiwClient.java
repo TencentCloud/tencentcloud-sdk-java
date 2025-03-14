@@ -39,28 +39,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *申请互动白板试用，默认15天
-     * @param req ApplyTiwTrialRequest
-     * @return ApplyTiwTrialResponse
-     * @throws TencentCloudSDKException
-     */
-    public ApplyTiwTrialResponse ApplyTiwTrial(ApplyTiwTrialRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ApplyTiwTrial", ApplyTiwTrialResponse.class);
-    }
-
-    /**
-     *创建白板应用
-     * @param req CreateApplicationRequest
-     * @return CreateApplicationResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateApplication", CreateApplicationResponse.class);
-    }
-
-    /**
      *检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
      * @param req CreatePPTCheckTaskRequest
      * @return CreatePPTCheckTaskResponse
@@ -102,61 +80,6 @@ public class TiwClient extends AbstractClient{
     public CreateVideoGenerationTaskResponse CreateVideoGenerationTask(CreateVideoGenerationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateVideoGenerationTask", CreateVideoGenerationTaskResponse.class);
-    }
-
-    /**
-     *通过服务角色调用其他云产品API接口获取信息
-     * @param req DescribeAPIServiceRequest
-     * @return DescribeAPIServiceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAPIServiceResponse DescribeAPIService(DescribeAPIServiceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAPIService", DescribeAPIServiceResponse.class);
-    }
-
-    /**
-     *查询白板应用详情
-     * @param req DescribeApplicationInfosRequest
-     * @return DescribeApplicationInfosResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationInfosResponse DescribeApplicationInfos(DescribeApplicationInfosRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationInfos", DescribeApplicationInfosResponse.class);
-    }
-
-    /**
-     *查询互动白板各个子产品用量
-     * @param req DescribeApplicationUsageRequest
-     * @return DescribeApplicationUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationUsageResponse DescribeApplicationUsage(DescribeApplicationUsageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationUsage", DescribeApplicationUsageResponse.class);
-    }
-
-    /**
-     *查询客户端白板日志
-     * @param req DescribeBoardSDKLogRequest
-     * @return DescribeBoardSDKLogResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBoardSDKLogResponse DescribeBoardSDKLog(DescribeBoardSDKLogRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBoardSDKLog", DescribeBoardSDKLogResponse.class);
-    }
-
-    /**
-     *查询可用于创建白板应用的IM应用列表
-     * @param req DescribeIMApplicationsRequest
-     * @return DescribeIMApplicationsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeIMApplicationsResponse DescribeIMApplications(DescribeIMApplicationsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeIMApplications", DescribeIMApplicationsResponse.class);
     }
 
     /**
@@ -204,50 +127,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询用户后付费用量
-     * @param req DescribePostpaidUsageRequest
-     * @return DescribePostpaidUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePostpaidUsageResponse DescribePostpaidUsage(DescribePostpaidUsageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribePostpaidUsage", DescribePostpaidUsageResponse.class);
-    }
-
-    /**
-     *查询互动白板质量数据
-     * @param req DescribeQualityMetricsRequest
-     * @return DescribeQualityMetricsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeQualityMetricsResponse DescribeQualityMetrics(DescribeQualityMetricsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeQualityMetrics", DescribeQualityMetricsResponse.class);
-    }
-
-    /**
-     *根据房间号搜索实时录制任务
-     * @param req DescribeRecordSearchRequest
-     * @return DescribeRecordSearchResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecordSearchResponse DescribeRecordSearch(DescribeRecordSearchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRecordSearch", DescribeRecordSearchResponse.class);
-    }
-
-    /**
-     *查询白板房间列表
-     * @param req DescribeRoomListRequest
-     * @return DescribeRoomListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRoomListResponse DescribeRoomList(DescribeRoomListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRoomList", DescribeRoomListResponse.class);
-    }
-
-    /**
      *根据指定的任务类型，获取当前正在执行中的任务列表。只能查询最近3天内创建的任务。
      * @param req DescribeRunningTasksRequest
      * @return DescribeRunningTasksResponse
@@ -270,34 +149,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询互动白板天维度计费用量。
-1. 单次查询统计区间最多不能超过31天。
-2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-
-     * @param req DescribeTIWDailyUsageRequest
-     * @return DescribeTIWDailyUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTIWDailyUsageResponse DescribeTIWDailyUsage(DescribeTIWDailyUsageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTIWDailyUsage", DescribeTIWDailyUsageResponse.class);
-    }
-
-    /**
-     *查询互动白板房间维度每天计费用量。
-1. 单次查询统计区间最多不能超过31天。
-2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-
-     * @param req DescribeTIWRoomDailyUsageRequest
-     * @return DescribeTIWRoomDailyUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTIWRoomDailyUsageResponse DescribeTIWRoomDailyUsage(DescribeTIWRoomDailyUsageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTIWRoomDailyUsage", DescribeTIWRoomDailyUsageResponse.class);
-    }
-
-    /**
      *查询文档转码任务的执行进度与转码结果
      * @param req DescribeTranscodeRequest
      * @return DescribeTranscodeResponse
@@ -309,7 +160,7 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *通过文档URL查询转码任务，返回最近一次的转码任务状态
+     *通过文档URL查询转码任务，返回最近一天内最新的转码任务状态
      * @param req DescribeTranscodeByUrlRequest
      * @return DescribeTranscodeByUrlResponse
      * @throws TencentCloudSDKException
@@ -328,62 +179,6 @@ public class TiwClient extends AbstractClient{
     public DescribeTranscodeCallbackResponse DescribeTranscodeCallback(DescribeTranscodeCallbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTranscodeCallback", DescribeTranscodeCallbackResponse.class);
-    }
-
-    /**
-     *按文档名称搜索转码任务
-     * @param req DescribeTranscodeSearchRequest
-     * @return DescribeTranscodeSearchResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTranscodeSearchResponse DescribeTranscodeSearch(DescribeTranscodeSearchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTranscodeSearch", DescribeTranscodeSearchResponse.class);
-    }
-
-    /**
-     *查询指定时间段内子产品的用量汇总
-     * @param req DescribeUsageSummaryRequest
-     * @return DescribeUsageSummaryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUsageSummaryResponse DescribeUsageSummary(DescribeUsageSummaryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeUsageSummary", DescribeUsageSummaryResponse.class);
-    }
-
-    /**
-     *查询白板用户列表
-     * @param req DescribeUserListRequest
-     * @return DescribeUserListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserListResponse DescribeUserList(DescribeUserListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeUserList", DescribeUserListResponse.class);
-    }
-
-    /**
-     *查询客户资源列表
-     * @param req DescribeUserResourcesRequest
-     * @return DescribeUserResourcesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserResourcesResponse DescribeUserResources(DescribeUserResourcesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeUserResources", DescribeUserResourcesResponse.class);
-    }
-
-    /**
-     *查询互动白板用户详情，包括是否开通了互动白板，当前互动白板服务有效期等信息
-
-     * @param req DescribeUserStatusRequest
-     * @return DescribeUserStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserStatusResponse DescribeUserStatus(DescribeUserStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeUserStatus", DescribeUserStatusResponse.class);
     }
 
     /**
@@ -420,28 +215,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询白板应用任务相关的配置，包括存储桶、回调等
-     * @param req DescribeWhiteboardApplicationConfigRequest
-     * @return DescribeWhiteboardApplicationConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWhiteboardApplicationConfigResponse DescribeWhiteboardApplicationConfig(DescribeWhiteboardApplicationConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWhiteboardApplicationConfig", DescribeWhiteboardApplicationConfigResponse.class);
-    }
-
-    /**
-     *查询文档转码，实时录制存储桶的配置
-     * @param req DescribeWhiteboardBucketConfigRequest
-     * @return DescribeWhiteboardBucketConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWhiteboardBucketConfigResponse DescribeWhiteboardBucketConfig(DescribeWhiteboardBucketConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWhiteboardBucketConfig", DescribeWhiteboardBucketConfigResponse.class);
-    }
-
-    /**
      *查询推流任务状态与结果
      * @param req DescribeWhiteboardPushRequest
      * @return DescribeWhiteboardPushResponse
@@ -461,61 +234,6 @@ public class TiwClient extends AbstractClient{
     public DescribeWhiteboardPushCallbackResponse DescribeWhiteboardPushCallback(DescribeWhiteboardPushCallbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWhiteboardPushCallback", DescribeWhiteboardPushCallbackResponse.class);
-    }
-
-    /**
-     *根据房间号搜索白板推流任务
-     * @param req DescribeWhiteboardPushSearchRequest
-     * @return DescribeWhiteboardPushSearchResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWhiteboardPushSearchResponse DescribeWhiteboardPushSearch(DescribeWhiteboardPushSearchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWhiteboardPushSearch", DescribeWhiteboardPushSearchResponse.class);
-    }
-
-    /**
-     *修改白板应用
-     * @param req ModifyApplicationRequest
-     * @return ModifyApplicationResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyApplication", ModifyApplicationResponse.class);
-    }
-
-    /**
-     *设置白板月功能费自动续费
-     * @param req ModifyAutoRenewFlagRequest
-     * @return ModifyAutoRenewFlagResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
-    }
-
-    /**
-     *修改白板应用任务相关的配置，包括存储桶、回调等
-     * @param req ModifyWhiteboardApplicationConfigRequest
-     * @return ModifyWhiteboardApplicationConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyWhiteboardApplicationConfigResponse ModifyWhiteboardApplicationConfig(ModifyWhiteboardApplicationConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyWhiteboardApplicationConfig", ModifyWhiteboardApplicationConfigResponse.class);
-    }
-
-    /**
-     *设置文档转码，实时录制存储桶的配置
-     * @param req ModifyWhiteboardBucketConfigRequest
-     * @return ModifyWhiteboardBucketConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyWhiteboardBucketConfigResponse ModifyWhiteboardBucketConfig(ModifyWhiteboardBucketConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyWhiteboardBucketConfig", ModifyWhiteboardBucketConfigResponse.class);
     }
 
     /**

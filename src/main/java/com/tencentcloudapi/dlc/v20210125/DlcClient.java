@@ -1040,6 +1040,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询任务监控指标信息
+     * @param req DescribeTaskMonitorInfosRequest
+     * @return DescribeTaskMonitorInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskMonitorInfosResponse DescribeTaskMonitorInfos(DescribeTaskMonitorInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskMonitorInfos", DescribeTaskMonitorInfosResponse.class);
+    }
+
+    /**
      *查询任务结果，仅支持30天以内的任务查询结果，且返回数据大小超过近50M会进行截断。
      * @param req DescribeTaskResultRequest
      * @return DescribeTaskResultResponse

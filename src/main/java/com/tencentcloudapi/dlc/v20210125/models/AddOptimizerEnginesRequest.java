@@ -23,6 +23,98 @@ import java.util.HashMap;
 
 public class AddOptimizerEnginesRequest extends AbstractModel {
 
+    /**
+    * 数据目录名称
+    */
+    @SerializedName("Catalog")
+    @Expose
+    private String Catalog;
+
+    /**
+    * 引擎信息列表
+    */
+    @SerializedName("Engines")
+    @Expose
+    private OptimizerEngineInfo [] Engines;
+
+    /**
+    * 数据库名称
+    */
+    @SerializedName("Database")
+    @Expose
+    private String Database;
+
+    /**
+    * 数据表名称
+    */
+    @SerializedName("Table")
+    @Expose
+    private String Table;
+
+    /**
+     * Get 数据目录名称 
+     * @return Catalog 数据目录名称
+     */
+    public String getCatalog() {
+        return this.Catalog;
+    }
+
+    /**
+     * Set 数据目录名称
+     * @param Catalog 数据目录名称
+     */
+    public void setCatalog(String Catalog) {
+        this.Catalog = Catalog;
+    }
+
+    /**
+     * Get 引擎信息列表 
+     * @return Engines 引擎信息列表
+     */
+    public OptimizerEngineInfo [] getEngines() {
+        return this.Engines;
+    }
+
+    /**
+     * Set 引擎信息列表
+     * @param Engines 引擎信息列表
+     */
+    public void setEngines(OptimizerEngineInfo [] Engines) {
+        this.Engines = Engines;
+    }
+
+    /**
+     * Get 数据库名称 
+     * @return Database 数据库名称
+     */
+    public String getDatabase() {
+        return this.Database;
+    }
+
+    /**
+     * Set 数据库名称
+     * @param Database 数据库名称
+     */
+    public void setDatabase(String Database) {
+        this.Database = Database;
+    }
+
+    /**
+     * Get 数据表名称 
+     * @return Table 数据表名称
+     */
+    public String getTable() {
+        return this.Table;
+    }
+
+    /**
+     * Set 数据表名称
+     * @param Table 数据表名称
+     */
+    public void setTable(String Table) {
+        this.Table = Table;
+    }
+
     public AddOptimizerEnginesRequest() {
     }
 
@@ -31,6 +123,21 @@ public class AddOptimizerEnginesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddOptimizerEnginesRequest(AddOptimizerEnginesRequest source) {
+        if (source.Catalog != null) {
+            this.Catalog = new String(source.Catalog);
+        }
+        if (source.Engines != null) {
+            this.Engines = new OptimizerEngineInfo[source.Engines.length];
+            for (int i = 0; i < source.Engines.length; i++) {
+                this.Engines[i] = new OptimizerEngineInfo(source.Engines[i]);
+            }
+        }
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
     }
 
 
@@ -38,6 +145,10 @@ public class AddOptimizerEnginesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Catalog", this.Catalog);
+        this.setParamArrayObj(map, prefix + "Engines.", this.Engines);
+        this.setParamSimple(map, prefix + "Database", this.Database);
+        this.setParamSimple(map, prefix + "Table", this.Table);
 
     }
 }

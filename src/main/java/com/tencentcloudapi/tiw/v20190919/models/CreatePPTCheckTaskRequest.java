@@ -92,6 +92,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
     */
     @SerializedName("AutoHandleUnsupportedElementTypes")
     @Expose
@@ -204,7 +207,10 @@ false -- 不开启
 -- 自动处理方式： 不支持处理
 
 12: 存在不兼容的多倍行距设置
--- 自动处理方式： 不支持处理 
+-- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本 
      * @return AutoHandleUnsupportedElementTypes 此参数仅在`AutoHandleUnsupportedElement`参数为`true`的情况下有效。
 
 指定需要自动处理的不兼容元素类型，默认对所有不兼容的元素进行自动处理。
@@ -248,6 +254,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
      */
     public Long [] getAutoHandleUnsupportedElementTypes() {
         return this.AutoHandleUnsupportedElementTypes;
@@ -297,6 +306,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
      * @param AutoHandleUnsupportedElementTypes 此参数仅在`AutoHandleUnsupportedElement`参数为`true`的情况下有效。
 
 指定需要自动处理的不兼容元素类型，默认对所有不兼容的元素进行自动处理。
@@ -340,6 +352,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
      */
     public void setAutoHandleUnsupportedElementTypes(Long [] AutoHandleUnsupportedElementTypes) {
         this.AutoHandleUnsupportedElementTypes = AutoHandleUnsupportedElementTypes;
