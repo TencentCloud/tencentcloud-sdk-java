@@ -47,28 +47,28 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+    * 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+    * 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
+    * 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+    * 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
     */
     @SerializedName("TopicName")
     @Expose
@@ -152,64 +152,64 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。 
-     * @return LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+     * Get 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。 
+     * @return LogsetId 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
-     * @param LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+     * Set 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
+     * @param LogsetId 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。 
-     * @return TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+     * Get 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。 
+     * @return TopicId 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
-     * @param TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+     * Set 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
+     * @param TopicId 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。 
-     * @return LogsetName 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
+     * Get 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。 
+     * @return LogsetName 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
-     * @param LogsetName 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
+     * Set 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
+     * @param LogsetName 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。 
-     * @return TopicName 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+     * Get 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。 
+     * @return TopicName 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
-     * @param TopicName 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+     * Set 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
+     * @param TopicName 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

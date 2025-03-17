@@ -25,7 +25,6 @@ public class InstanceSpec extends AbstractModel {
 
     /**
     * 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Machine")
     @Expose
@@ -33,17 +32,14 @@ public class InstanceSpec extends AbstractModel {
 
     /**
     * 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecInfos")
     @Expose
     private SpecConfigInfo [] SpecInfos;
 
     /**
-     * Get 设备型号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备型号 
      * @return Machine 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachine() {
         return this.Machine;
@@ -51,19 +47,15 @@ public class InstanceSpec extends AbstractModel {
 
     /**
      * Set 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Machine 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachine(String Machine) {
         this.Machine = Machine;
     }
 
     /**
-     * Get 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该机型对应的可售卖规格列表 
      * @return SpecInfos 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpecConfigInfo [] getSpecInfos() {
         return this.SpecInfos;
@@ -71,9 +63,7 @@ public class InstanceSpec extends AbstractModel {
 
     /**
      * Set 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecInfos 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecInfos(SpecConfigInfo [] SpecInfos) {
         this.SpecInfos = SpecInfos;

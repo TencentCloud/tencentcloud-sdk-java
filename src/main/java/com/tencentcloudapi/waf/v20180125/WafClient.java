@@ -193,6 +193,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *创建CLS投递流任务
+     * @param req CreatePostCLSFlowRequest
+     * @return CreatePostCLSFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePostCLSFlowResponse CreatePostCLSFlow(CreatePostCLSFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePostCLSFlow", CreatePostCLSFlowResponse.class);
+    }
+
+    /**
      *本接口用于删除访问日志导出
      * @param req DeleteAccessExportRequest
      * @return DeleteAccessExportResponse
@@ -842,6 +853,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取CLS投递流任务列表
+     * @param req DescribePostCLSFlowsRequest
+     * @return DescribePostCLSFlowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostCLSFlowsResponse DescribePostCLSFlows(DescribePostCLSFlowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePostCLSFlows", DescribePostCLSFlowsResponse.class);
+    }
+
+    /**
      *查询Tiga引擎大类规则及其防护模式
      * @param req DescribeProtectionModesRequest
      * @return DescribeProtectionModesResponse
@@ -1050,6 +1072,17 @@ public class WafClient extends AbstractClient{
     public DescribeWebshellStatusResponse DescribeWebshellStatus(DescribeWebshellStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWebshellStatus", DescribeWebshellStatusResponse.class);
+    }
+
+    /**
+     *销毁CLS投递流任务
+     * @param req DestroyPostCLSFlowRequest
+     * @return DestroyPostCLSFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPostCLSFlowResponse DestroyPostCLSFlow(DestroyPostCLSFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyPostCLSFlow", DestroyPostCLSFlowResponse.class);
     }
 
     /**

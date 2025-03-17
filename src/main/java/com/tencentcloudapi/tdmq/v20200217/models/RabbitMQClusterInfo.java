@@ -53,7 +53,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 集群说明信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -68,7 +67,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -154,7 +152,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -162,7 +159,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 是否开启镜像队列策略。1表示开启，0表示没开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MirrorQueuePolicyFlag")
     @Expose
@@ -170,7 +166,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 每秒消费消息数 单位：条/秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageConsumeRate")
     @Expose
@@ -178,7 +173,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 集群版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterVersion")
     @Expose
@@ -186,7 +180,6 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
     * 计费模式，0-后付费，1-预付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -264,10 +257,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群说明信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群说明信息 
      * @return Remark 集群说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -275,9 +266,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 集群说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 集群说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -300,10 +289,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return ZoneIds 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
@@ -311,9 +298,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneIds 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -500,10 +485,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置) 
      * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -511,19 +494,15 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 是否开启镜像队列策略。1表示开启，0表示没开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启镜像队列策略。1表示开启，0表示没开启。 
      * @return MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMirrorQueuePolicyFlag() {
         return this.MirrorQueuePolicyFlag;
@@ -531,19 +510,15 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 是否开启镜像队列策略。1表示开启，0表示没开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMirrorQueuePolicyFlag(Long MirrorQueuePolicyFlag) {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
     }
 
     /**
-     * Get 每秒消费消息数 单位：条/秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每秒消费消息数 单位：条/秒 
      * @return MessageConsumeRate 每秒消费消息数 单位：条/秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMessageConsumeRate() {
         return this.MessageConsumeRate;
@@ -551,19 +526,15 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 每秒消费消息数 单位：条/秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageConsumeRate 每秒消费消息数 单位：条/秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageConsumeRate(Float MessageConsumeRate) {
         this.MessageConsumeRate = MessageConsumeRate;
     }
 
     /**
-     * Get 集群版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群版本信息 
      * @return ClusterVersion 集群版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
@@ -571,19 +542,15 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 集群版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterVersion 集群版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 计费模式，0-后付费，1-预付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式，0-后付费，1-预付费 
      * @return PayMode 计费模式，0-后付费，1-预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -591,9 +558,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
      * Set 计费模式，0-后付费，1-预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式，0-后付费，1-预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;

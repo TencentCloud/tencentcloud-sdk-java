@@ -25,7 +25,6 @@ public class DescribeDedicatedClusterHostsResponse extends AbstractModel {
 
     /**
     * 宿主机信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostInfoSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDedicatedClusterHostsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 宿主机信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宿主机信息 
      * @return HostInfoSet 宿主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostInfo [] getHostInfoSet() {
         return this.HostInfoSet;
@@ -57,9 +54,7 @@ public class DescribeDedicatedClusterHostsResponse extends AbstractModel {
 
     /**
      * Set 宿主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostInfoSet 宿主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostInfoSet(HostInfo [] HostInfoSet) {
         this.HostInfoSet = HostInfoSet;

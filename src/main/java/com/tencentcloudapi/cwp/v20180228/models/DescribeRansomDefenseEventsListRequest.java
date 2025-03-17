@@ -62,6 +62,20 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
     private String By;
 
     /**
+    * 事件创建起始时间
+    */
+    @SerializedName("CreateBeginTime")
+    @Expose
+    private String CreateBeginTime;
+
+    /**
+    * 事件创建结束时间
+    */
+    @SerializedName("CreateEndTime")
+    @Expose
+    private String CreateEndTime;
+
+    /**
      * Get 分页参数 最大100条 
      * @return Limit 分页参数 最大100条
      */
@@ -153,6 +167,38 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get 事件创建起始时间 
+     * @return CreateBeginTime 事件创建起始时间
+     */
+    public String getCreateBeginTime() {
+        return this.CreateBeginTime;
+    }
+
+    /**
+     * Set 事件创建起始时间
+     * @param CreateBeginTime 事件创建起始时间
+     */
+    public void setCreateBeginTime(String CreateBeginTime) {
+        this.CreateBeginTime = CreateBeginTime;
+    }
+
+    /**
+     * Get 事件创建结束时间 
+     * @return CreateEndTime 事件创建结束时间
+     */
+    public String getCreateEndTime() {
+        return this.CreateEndTime;
+    }
+
+    /**
+     * Set 事件创建结束时间
+     * @param CreateEndTime 事件创建结束时间
+     */
+    public void setCreateEndTime(String CreateEndTime) {
+        this.CreateEndTime = CreateEndTime;
+    }
+
     public DescribeRansomDefenseEventsListRequest() {
     }
 
@@ -179,6 +225,12 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.CreateBeginTime != null) {
+            this.CreateBeginTime = new String(source.CreateBeginTime);
+        }
+        if (source.CreateEndTime != null) {
+            this.CreateEndTime = new String(source.CreateEndTime);
+        }
     }
 
 
@@ -191,6 +243,8 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "CreateBeginTime", this.CreateBeginTime);
+        this.setParamSimple(map, prefix + "CreateEndTime", this.CreateEndTime);
 
     }
 }

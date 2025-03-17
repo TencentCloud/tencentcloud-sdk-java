@@ -39,7 +39,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpnConnectionState")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpngwBandwidthData")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalNetInfo")
     @Expose
@@ -63,7 +60,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpnConnectionBandwidthData")
     @Expose
@@ -130,10 +126,8 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpn通道状态 
      * @return VpnConnectionState vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpnConnectionState() {
         return this.VpnConnectionState;
@@ -141,19 +135,15 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpnConnectionState vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpnConnectionState(String VpnConnectionState) {
         this.VpnConnectionState = VpnConnectionState;
     }
 
     /**
-     * Get vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpn网关监控数据 
      * @return VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpngwBandwidthData getVpngwBandwidthData() {
         return this.VpngwBandwidthData;
@@ -161,19 +151,15 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpngwBandwidthData(VpngwBandwidthData VpngwBandwidthData) {
         this.VpngwBandwidthData = VpngwBandwidthData;
     }
 
     /**
-     * Get 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地网关信息 
      * @return LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LocalNetInfo getLocalNetInfo() {
         return this.LocalNetInfo;
@@ -181,19 +167,15 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalNetInfo(LocalNetInfo LocalNetInfo) {
         this.LocalNetInfo = LocalNetInfo;
     }
 
     /**
-     * Get vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpn网关通道监控数据 
      * @return VpnConnectionBandwidthData vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpngwBandwidthData [] getVpnConnectionBandwidthData() {
         return this.VpnConnectionBandwidthData;
@@ -201,9 +183,7 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpnConnectionBandwidthData vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpnConnectionBandwidthData(VpngwBandwidthData [] VpnConnectionBandwidthData) {
         this.VpnConnectionBandwidthData = VpnConnectionBandwidthData;

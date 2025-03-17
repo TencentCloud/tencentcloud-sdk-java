@@ -25,7 +25,6 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
 
     /**
     * 路由关系列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindingInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 路由关系列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由关系列表 
      * @return BindingInfoList 路由关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQBindingListInfo [] getBindingInfoList() {
         return this.BindingInfoList;
@@ -58,19 +54,15 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
 
     /**
      * Set 路由关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindingInfoList 路由关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindingInfoList(RabbitMQBindingListInfo [] BindingInfoList) {
         this.BindingInfoList = BindingInfoList;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -165,11 +165,18 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     private Long BackupSuccessCount;
 
     /**
-    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
     */
     @SerializedName("HostVersion")
     @Expose
     private Long HostVersion;
+
+    /**
+    * 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get 主机Uuid 
@@ -496,19 +503,35 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
-     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版 
+     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public Long getHostVersion() {
         return this.HostVersion;
     }
 
     /**
-     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
+    }
+
+    /**
+     * Get 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区 
+     * @return MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * @param MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public RansomDefenseStrategyMachineBackupInfo() {
@@ -588,6 +611,9 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
         if (source.HostVersion != null) {
             this.HostVersion = new Long(source.HostVersion);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -616,6 +642,7 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RollBackStatus", this.RollBackStatus);
         this.setParamSimple(map, prefix + "BackupSuccessCount", this.BackupSuccessCount);
         this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

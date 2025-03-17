@@ -25,7 +25,6 @@ public class DescribeDomainNameListResponse extends AbstractModel {
 
     /**
     * 域名信息集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDomainNameListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名信息集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名信息集合 
      * @return DomainSet 域名信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainList [] getDomainSet() {
         return this.DomainSet;
@@ -57,9 +54,7 @@ public class DescribeDomainNameListResponse extends AbstractModel {
 
     /**
      * Set 域名信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainSet 域名信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainSet(DomainList [] DomainSet) {
         this.DomainSet = DomainSet;

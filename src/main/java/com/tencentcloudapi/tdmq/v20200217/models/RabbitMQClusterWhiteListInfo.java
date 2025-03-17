@@ -25,7 +25,6 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
     * 废弃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WhiteList")
     @Expose
@@ -33,7 +32,6 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
     * 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicControlConsoleWhiteList")
     @Expose
@@ -41,7 +39,6 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
     * 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataStreamWhiteList")
     @Expose
@@ -64,10 +61,8 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
     private String PublicDataStreamWhiteListStatus;
 
     /**
-     * Get 废弃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃 
      * @return WhiteList 废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWhiteList() {
         return this.WhiteList;
@@ -75,19 +70,15 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
      * Set 废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WhiteList 废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWhiteList(String WhiteList) {
         this.WhiteList = WhiteList;
     }
 
     /**
-     * Get 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网管控台白名单 
      * @return PublicControlConsoleWhiteList 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicControlConsoleWhiteList() {
         return this.PublicControlConsoleWhiteList;
@@ -95,19 +86,15 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
      * Set 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicControlConsoleWhiteList 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicControlConsoleWhiteList(String PublicControlConsoleWhiteList) {
         this.PublicControlConsoleWhiteList = PublicControlConsoleWhiteList;
     }
 
     /**
-     * Get 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网数据流白名单 
      * @return PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDataStreamWhiteList() {
         return this.PublicDataStreamWhiteList;
@@ -115,9 +102,7 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
 
     /**
      * Set 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataStreamWhiteList(String PublicDataStreamWhiteList) {
         this.PublicDataStreamWhiteList = PublicDataStreamWhiteList;

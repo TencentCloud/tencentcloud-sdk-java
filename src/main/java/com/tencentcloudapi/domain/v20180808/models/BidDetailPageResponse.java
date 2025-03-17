@@ -25,7 +25,6 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,7 +32,6 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
     * 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentPrice")
     @Expose
@@ -41,7 +39,6 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
     * 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BidPrice")
     @Expose
@@ -49,7 +46,6 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
     * 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentPriceScope")
     @Expose
@@ -65,7 +61,6 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
     * 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepositPrice")
     @Expose
@@ -79,10 +74,8 @@ public class BidDetailPageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -90,19 +83,15 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前域名价格 
      * @return CurrentPrice 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCurrentPrice() {
         return this.CurrentPrice;
@@ -110,19 +99,15 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
      * Set 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentPrice 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentPrice(Float CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
     }
 
     /**
-     * Get 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户上次出价 
      * @return BidPrice 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBidPrice() {
         return this.BidPrice;
@@ -130,19 +115,15 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
      * Set 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BidPrice 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBidPrice(Float BidPrice) {
         this.BidPrice = BidPrice;
     }
 
     /**
-     * Get 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前加价幅度 
      * @return CurrentPriceScope 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCurrentPriceScope() {
         return this.CurrentPriceScope;
@@ -150,9 +131,7 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
      * Set 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentPriceScope 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentPriceScope(Float CurrentPriceScope) {
         this.CurrentPriceScope = CurrentPriceScope;
@@ -179,10 +158,8 @@ public class BidDetailPageResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户当前已经支付了的保证金 
      * @return DepositPrice 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDepositPrice() {
         return this.DepositPrice;
@@ -190,9 +167,7 @@ public class BidDetailPageResponse extends AbstractModel {
 
     /**
      * Set 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepositPrice 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepositPrice(Float DepositPrice) {
         this.DepositPrice = DepositPrice;

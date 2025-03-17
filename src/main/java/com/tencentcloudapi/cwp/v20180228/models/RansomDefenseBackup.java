@@ -38,7 +38,7 @@ public class RansomDefenseBackup extends AbstractModel {
     private Long EventStatus;
 
     /**
-    * 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+    * 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -119,16 +119,16 @@ public class RansomDefenseBackup extends AbstractModel {
     }
 
     /**
-     * Get 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除 
-     * @return BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+     * Get 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除 
+     * @return BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
      */
     public Long getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
-     * @param BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+     * Set 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
+     * @param BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
      */
     public void setBackupStatus(Long BackupStatus) {
         this.BackupStatus = BackupStatus;

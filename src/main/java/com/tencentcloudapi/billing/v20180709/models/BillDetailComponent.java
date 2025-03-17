@@ -74,7 +74,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalMeasure")
     @Expose
@@ -82,7 +81,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductedMeasure")
     @Expose
@@ -153,7 +151,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -161,7 +158,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCode")
     @Expose
@@ -169,7 +165,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
     @Expose
@@ -177,7 +172,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContractPrice")
     @Expose
@@ -185,7 +179,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -193,7 +186,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiTimeSpan")
     @Expose
@@ -201,7 +193,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithRI")
     @Expose
@@ -209,7 +200,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeductionRate")
     @Expose
@@ -225,7 +215,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithSP")
     @Expose
@@ -233,7 +222,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlendedDiscount")
     @Expose
@@ -241,7 +229,6 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
     * 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentConfig")
     @Expose
@@ -364,10 +351,8 @@ public class BillDetailComponent extends AbstractModel {
     }
 
     /**
-     * Get 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始用量/时长：组件被资源包抵扣前的原始用量/时长 
      * @return RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalMeasure() {
         return this.RealTotalMeasure;
@@ -375,19 +360,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalMeasure(String RealTotalMeasure) {
         this.RealTotalMeasure = RealTotalMeasure;
     }
 
     /**
-     * Get 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长 
      * @return DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductedMeasure() {
         return this.DeductedMeasure;
@@ -395,9 +376,7 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductedMeasure(String DeductedMeasure) {
         this.DeductedMeasure = DeductedMeasure;
@@ -548,10 +527,8 @@ public class BillDetailComponent extends AbstractModel {
     }
 
     /**
-     * Get 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金账户支出：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -559,19 +536,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型编码 
      * @return ItemCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCode() {
         return this.ItemCode;
@@ -579,19 +552,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称编码 
      * @return ComponentCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
         return this.ComponentCode;
@@ -599,19 +568,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣 
      * @return ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContractPrice() {
         return this.ContractPrice;
@@ -619,19 +584,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContractPrice(String ContractPrice) {
         this.ContractPrice = ContractPrice;
     }
 
     /**
-     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示 
      * @return InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -639,19 +600,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长 
      * @return RiTimeSpan 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiTimeSpan() {
         return this.RiTimeSpan;
@@ -659,19 +616,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiTimeSpan 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiTimeSpan(String RiTimeSpan) {
         this.RiTimeSpan = RiTimeSpan;
     }
 
     /**
-     * Get 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额 
      * @return OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithRI() {
         return this.OriginalCostWithRI;
@@ -679,19 +632,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
         this.OriginalCostWithRI = OriginalCostWithRI;
     }
 
     /**
-     * Get 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率 
      * @return SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeductionRate() {
         return this.SPDeductionRate;
@@ -699,9 +648,7 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeductionRate(String SPDeductionRate) {
         this.SPDeductionRate = SPDeductionRate;
@@ -732,10 +679,8 @@ public class BillDetailComponent extends AbstractModel {
     }
 
     /**
-     * Get 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率 
      * @return OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithSP() {
         return this.OriginalCostWithSP;
@@ -743,19 +688,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
         this.OriginalCostWithSP = OriginalCostWithSP;
     }
 
     /**
-     * Get 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价 
      * @return BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBlendedDiscount() {
         return this.BlendedDiscount;
@@ -763,19 +704,15 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlendedDiscount(String BlendedDiscount) {
         this.BlendedDiscount = BlendedDiscount;
     }
 
     /**
-     * Get 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置描述：资源配置规格信息 
      * @return ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillDetailComponentConfig [] getComponentConfig() {
         return this.ComponentConfig;
@@ -783,9 +720,7 @@ public class BillDetailComponent extends AbstractModel {
 
     /**
      * Set 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentConfig(BillDetailComponentConfig [] ComponentConfig) {
         this.ComponentConfig = ComponentConfig;

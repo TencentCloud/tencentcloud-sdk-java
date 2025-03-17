@@ -125,6 +125,9 @@ public class InvocationTask extends AbstractModel {
 
     /**
     * 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
     */
     @SerializedName("InvocationSource")
     @Expose
@@ -387,8 +390,14 @@ public class InvocationTask extends AbstractModel {
     }
 
     /**
-     * Get 调用来源。 
+     * Get 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。 
      * @return InvocationSource 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      */
     public String getInvocationSource() {
         return this.InvocationSource;
@@ -396,7 +405,13 @@ public class InvocationTask extends AbstractModel {
 
     /**
      * Set 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      * @param InvocationSource 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      */
     public void setInvocationSource(String InvocationSource) {
         this.InvocationSource = InvocationSource;

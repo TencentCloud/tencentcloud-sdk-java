@@ -25,7 +25,6 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
     * 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
     * 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Header")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
     * 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
     * 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalDetail")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
     * 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionValue")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据条数 
      * @return Total 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -82,19 +75,15 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
      * Set 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 表头信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表头信息 
      * @return Header 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseHeaderDetail getHeader() {
         return this.Header;
@@ -102,19 +91,15 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
      * Set 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Header 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeader(AnalyseHeaderDetail Header) {
         this.Header = Header;
     }
 
     /**
-     * Get 数据明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据明细 
      * @return Detail 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseDetail [] getDetail() {
         return this.Detail;
@@ -122,19 +107,15 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
      * Set 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(AnalyseDetail [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 数据总计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据总计 
      * @return TotalDetail 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseDetail getTotalDetail() {
         return this.TotalDetail;
@@ -142,19 +123,15 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
      * Set 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalDetail 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalDetail(AnalyseDetail TotalDetail) {
         this.TotalDetail = TotalDetail;
     }
 
     /**
-     * Get 筛选框
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 筛选框 
      * @return ConditionValue 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseConditionDetail getConditionValue() {
         return this.ConditionValue;
@@ -162,9 +139,7 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
      * Set 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionValue 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionValue(AnalyseConditionDetail ConditionValue) {
         this.ConditionValue = ConditionValue;

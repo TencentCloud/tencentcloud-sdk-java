@@ -81,7 +81,6 @@ public class Invoker extends AbstractModel {
 
     /**
     * 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleSettings")
     @Expose
@@ -230,10 +229,8 @@ public class Invoker extends AbstractModel {
     }
 
     /**
-     * Get 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行器周期计划。周期执行器会返回此字段。 
      * @return ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleSettings getScheduleSettings() {
         return this.ScheduleSettings;
@@ -241,9 +238,7 @@ public class Invoker extends AbstractModel {
 
     /**
      * Set 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleSettings(ScheduleSettings ScheduleSettings) {
         this.ScheduleSettings = ScheduleSettings;

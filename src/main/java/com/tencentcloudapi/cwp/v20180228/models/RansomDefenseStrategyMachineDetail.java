@@ -109,7 +109,7 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     private String DiskInfo;
 
     /**
-    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
     */
     @SerializedName("HostVersion")
     @Expose
@@ -121,6 +121,13 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
+
+    /**
+    * 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get 主机Uuid 
@@ -319,16 +326,16 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
-     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版 
+     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public Long getHostVersion() {
         return this.HostVersion;
     }
 
     /**
-     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
@@ -348,6 +355,22 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
+    }
+
+    /**
+     * Get 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区 
+     * @return MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * @param MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public RansomDefenseStrategyMachineDetail() {
@@ -406,6 +429,9 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
         if (source.StrategyName != null) {
             this.StrategyName = new String(source.StrategyName);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -427,6 +453,7 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskInfo", this.DiskInfo);
         this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

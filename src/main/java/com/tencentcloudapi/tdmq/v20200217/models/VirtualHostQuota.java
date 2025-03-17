@@ -32,7 +32,6 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
     * 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedVirtualHost")
     @Expose
@@ -55,10 +54,8 @@ public class VirtualHostQuota extends AbstractModel {
     }
 
     /**
-     * Get 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已创建vhost数 
      * @return UsedVirtualHost 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedVirtualHost() {
         return this.UsedVirtualHost;
@@ -66,9 +63,7 @@ public class VirtualHostQuota extends AbstractModel {
 
     /**
      * Set 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedVirtualHost 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedVirtualHost(Long UsedVirtualHost) {
         this.UsedVirtualHost = UsedVirtualHost;

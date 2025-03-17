@@ -25,7 +25,6 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 新购订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepayPurchase")
     @Expose
@@ -33,7 +32,6 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 续费订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepayRenew")
     @Expose
@@ -41,7 +39,6 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 升配订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepayModifyUp")
     @Expose
@@ -49,7 +46,6 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 冲销订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReverseOrder")
     @Expose
@@ -57,7 +53,6 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 优惠调整后订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewOrder")
     @Expose
@@ -65,17 +60,14 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
     * 优惠调整前订单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Original")
     @Expose
     private String Original;
 
     /**
-     * Get 新购订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新购订单 
      * @return PrepayPurchase 新购订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrepayPurchase() {
         return this.PrepayPurchase;
@@ -83,19 +75,15 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 新购订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrepayPurchase 新购订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepayPurchase(String PrepayPurchase) {
         this.PrepayPurchase = PrepayPurchase;
     }
 
     /**
-     * Get 续费订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费订单 
      * @return PrepayRenew 续费订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrepayRenew() {
         return this.PrepayRenew;
@@ -103,19 +91,15 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 续费订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrepayRenew 续费订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepayRenew(String PrepayRenew) {
         this.PrepayRenew = PrepayRenew;
     }
 
     /**
-     * Get 升配订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 升配订单 
      * @return PrepayModifyUp 升配订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrepayModifyUp() {
         return this.PrepayModifyUp;
@@ -123,19 +107,15 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 升配订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrepayModifyUp 升配订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepayModifyUp(String PrepayModifyUp) {
         this.PrepayModifyUp = PrepayModifyUp;
     }
 
     /**
-     * Get 冲销订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冲销订单 
      * @return ReverseOrder 冲销订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReverseOrder() {
         return this.ReverseOrder;
@@ -143,19 +123,15 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 冲销订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReverseOrder 冲销订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReverseOrder(String ReverseOrder) {
         this.ReverseOrder = ReverseOrder;
     }
 
     /**
-     * Get 优惠调整后订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠调整后订单 
      * @return NewOrder 优惠调整后订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewOrder() {
         return this.NewOrder;
@@ -163,19 +139,15 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 优惠调整后订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewOrder 优惠调整后订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewOrder(String NewOrder) {
         this.NewOrder = NewOrder;
     }
 
     /**
-     * Get 优惠调整前订单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠调整前订单 
      * @return Original 优惠调整前订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginal() {
         return this.Original;
@@ -183,9 +155,7 @@ public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
      * Set 优惠调整前订单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Original 优惠调整前订单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginal(String Original) {
         this.Original = Original;

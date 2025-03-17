@@ -25,7 +25,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 产品
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -33,7 +32,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Project")
     @Expose
@@ -41,7 +39,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -49,7 +46,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -57,7 +53,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -65,7 +60,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -73,7 +67,6 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -81,17 +74,14 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
     * 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
     @Expose
     private AnalyseAmountDetail [] Amount;
 
     /**
-     * Get 产品
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品 
      * @return Business 产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseBusinessDetail [] getBusiness() {
         return this.Business;
@@ -99,19 +89,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(AnalyseBusinessDetail [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目 
      * @return Project 项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseProjectDetail [] getProject() {
         return this.Project;
@@ -119,19 +105,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Project 项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProject(AnalyseProjectDetail [] Project) {
         this.Project = Project;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseRegionDetail [] getRegion() {
         return this.Region;
@@ -139,19 +121,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(AnalyseRegionDetail [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 计费模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式 
      * @return PayMode 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalysePayModeDetail [] getPayMode() {
         return this.PayMode;
@@ -159,19 +137,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(AnalysePayModeDetail [] PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 交易类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型 
      * @return ActionType 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseActionTypeDetail [] getActionType() {
         return this.ActionType;
@@ -179,19 +153,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(AnalyseActionTypeDetail [] ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseZoneDetail [] getZone() {
         return this.Zone;
@@ -199,19 +169,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(AnalyseZoneDetail [] Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所有者Uin 
      * @return OwnerUin 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseOwnerUinDetail [] getOwnerUin() {
         return this.OwnerUin;
@@ -219,19 +185,15 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(AnalyseOwnerUinDetail [] OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 费用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用类型 
      * @return Amount 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseAmountDetail [] getAmount() {
         return this.Amount;
@@ -239,9 +201,7 @@ public class AnalyseConditionDetail extends AbstractModel {
 
     /**
      * Set 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Amount 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(AnalyseAmountDetail [] Amount) {
         this.Amount = Amount;

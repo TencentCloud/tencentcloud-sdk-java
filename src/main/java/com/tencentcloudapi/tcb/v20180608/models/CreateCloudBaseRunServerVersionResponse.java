@@ -25,7 +25,6 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
     * 状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -33,7 +32,6 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
     * 版本名称（只有Result为succ的时候，才会返回VersionName)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -41,7 +39,6 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
     * 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunId")
     @Expose
@@ -55,10 +52,8 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态(creating/succ) 
      * @return Result 状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -66,19 +61,15 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
      * Set 状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 版本名称（只有Result为succ的时候，才会返回VersionName)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称（只有Result为succ的时候，才会返回VersionName) 
      * @return VersionName 版本名称（只有Result为succ的时候，才会返回VersionName)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -86,19 +77,15 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
      * Set 版本名称（只有Result为succ的时候，才会返回VersionName)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名称（只有Result为succ的时候，才会返回VersionName)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作记录id 
      * @return RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunId() {
         return this.RunId;
@@ -106,9 +93,7 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
      * Set 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;

@@ -144,7 +144,6 @@ public class SlowLogData extends AbstractModel {
 
     /**
     * 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExampleSql")
     @Expose
@@ -430,10 +429,8 @@ public class SlowLogData extends AbstractModel {
     }
 
     /**
-     * Get 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 样例Sql 
      * @return ExampleSql 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExampleSql() {
         return this.ExampleSql;
@@ -441,9 +438,7 @@ public class SlowLogData extends AbstractModel {
 
     /**
      * Set 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExampleSql 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExampleSql(String ExampleSql) {
         this.ExampleSql = ExampleSql;

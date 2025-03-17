@@ -25,7 +25,6 @@ public class CreateDedicatedClusterOrderResponse extends AbstractModel {
 
     /**
     * 专用集群订单id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterOrderId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateDedicatedClusterOrderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 专用集群订单id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专用集群订单id 
      * @return DedicatedClusterOrderId 专用集群订单id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterOrderId() {
         return this.DedicatedClusterOrderId;
@@ -50,9 +47,7 @@ public class CreateDedicatedClusterOrderResponse extends AbstractModel {
 
     /**
      * Set 专用集群订单id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterOrderId 专用集群订单id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterOrderId(String DedicatedClusterOrderId) {
         this.DedicatedClusterOrderId = DedicatedClusterOrderId;

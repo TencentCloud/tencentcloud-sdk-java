@@ -104,6 +104,14 @@ public class SecurityConfig extends AbstractModel {
     private SlowPostConfig SlowPostConfig;
 
     /**
+    * 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetectLengthLimitConfig")
+    @Expose
+    private DetectLengthLimitConfig DetectLengthLimitConfig;
+
+    /**
      * Get 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
@@ -303,6 +311,26 @@ public class SecurityConfig extends AbstractModel {
         this.SlowPostConfig = SlowPostConfig;
     }
 
+    /**
+     * Get 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DetectLengthLimitConfig getDetectLengthLimitConfig() {
+        return this.DetectLengthLimitConfig;
+    }
+
+    /**
+     * Set 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetectLengthLimitConfig(DetectLengthLimitConfig DetectLengthLimitConfig) {
+        this.DetectLengthLimitConfig = DetectLengthLimitConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -341,6 +369,9 @@ public class SecurityConfig extends AbstractModel {
         if (source.SlowPostConfig != null) {
             this.SlowPostConfig = new SlowPostConfig(source.SlowPostConfig);
         }
+        if (source.DetectLengthLimitConfig != null) {
+            this.DetectLengthLimitConfig = new DetectLengthLimitConfig(source.DetectLengthLimitConfig);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class SecurityConfig extends AbstractModel {
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
         this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
         this.setParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
+        this.setParamObj(map, prefix + "DetectLengthLimitConfig.", this.DetectLengthLimitConfig);
 
     }
 }

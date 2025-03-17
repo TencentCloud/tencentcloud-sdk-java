@@ -136,7 +136,7 @@ public class VulDefenceEvent extends AbstractModel {
     private Long Status;
 
     /**
-    * 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+    * 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -420,16 +420,16 @@ public class VulDefenceEvent extends AbstractModel {
     }
 
     /**
-     * Get 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用） 
-     * @return UpgradeType 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+     * Get 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用） 
+     * @return UpgradeType 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
      */
     public Long getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
-     * @param UpgradeType 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+     * Set 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
+     * @param UpgradeType 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
      */
     public void setUpgradeType(Long UpgradeType) {
         this.UpgradeType = UpgradeType;

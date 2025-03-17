@@ -690,4 +690,15 @@ TopicName，主题名称过滤
         return this.internalRequest(req, "ResendDeadLetterMessage", ResendDeadLetterMessageResponse.class);
     }
 
+    /**
+     *重置消费位点
+     * @param req ResetConsumerGroupOffsetRequest
+     * @return ResetConsumerGroupOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetConsumerGroupOffset", ResetConsumerGroupOffsetResponse.class);
+    }
+
 }

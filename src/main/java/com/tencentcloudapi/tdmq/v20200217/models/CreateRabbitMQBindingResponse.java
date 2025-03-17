@@ -25,7 +25,6 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
     * vhost名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -41,7 +39,6 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
     * 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindingId")
     @Expose
@@ -55,10 +52,8 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceId 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -66,19 +61,15 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vhost名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vhost名称 
      * @return VirtualHost vhost名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -86,19 +77,15 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
      * Set vhost名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost vhost名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由关系Id 
      * @return BindingId 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindingId() {
         return this.BindingId;
@@ -106,9 +93,7 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
      * Set 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindingId 路由关系Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindingId(Long BindingId) {
         this.BindingId = BindingId;

@@ -31,14 +31,14 @@ public class RegisterInstanceInfo extends AbstractModel {
     private String RegisterCodeId;
 
     /**
-    * 实例ID。
+    * 托管实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名。
+    * 托管实例名。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -125,32 +125,32 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 托管实例ID。 
+     * @return InstanceId 托管实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 托管实例ID。
+     * @param InstanceId 托管实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名。 
-     * @return InstanceName 实例名。
+     * Get 托管实例名。 
+     * @return InstanceName 托管实例名。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名。
-     * @param InstanceName 实例名。
+     * Set 托管实例名。
+     * @param InstanceName 托管实例名。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

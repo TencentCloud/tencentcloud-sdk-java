@@ -75,6 +75,20 @@ done 执行完成。
     private Long Failed;
 
     /**
+    * 是否付费
+    */
+    @SerializedName("PayStatus")
+    @Expose
+    private Boolean PayStatus;
+
+    /**
+    * 大订单ID
+    */
+    @SerializedName("BigDealId")
+    @Expose
+    private String BigDealId;
+
+    /**
      * Get 日志ID 
      * @return LogId 日志ID
      */
@@ -194,6 +208,38 @@ done 执行完成。
         this.Failed = Failed;
     }
 
+    /**
+     * Get 是否付费 
+     * @return PayStatus 是否付费
+     */
+    public Boolean getPayStatus() {
+        return this.PayStatus;
+    }
+
+    /**
+     * Set 是否付费
+     * @param PayStatus 是否付费
+     */
+    public void setPayStatus(Boolean PayStatus) {
+        this.PayStatus = PayStatus;
+    }
+
+    /**
+     * Get 大订单ID 
+     * @return BigDealId 大订单ID
+     */
+    public String getBigDealId() {
+        return this.BigDealId;
+    }
+
+    /**
+     * Set 大订单ID
+     * @param BigDealId 大订单ID
+     */
+    public void setBigDealId(String BigDealId) {
+        this.BigDealId = BigDealId;
+    }
+
     public DomainBatchLogSet() {
     }
 
@@ -223,6 +269,12 @@ done 执行完成。
         if (source.Failed != null) {
             this.Failed = new Long(source.Failed);
         }
+        if (source.PayStatus != null) {
+            this.PayStatus = new Boolean(source.PayStatus);
+        }
+        if (source.BigDealId != null) {
+            this.BigDealId = new String(source.BigDealId);
+        }
     }
 
 
@@ -237,6 +289,8 @@ done 执行完成。
         this.setParamSimple(map, prefix + "Success", this.Success);
         this.setParamSimple(map, prefix + "Doing", this.Doing);
         this.setParamSimple(map, prefix + "Failed", this.Failed);
+        this.setParamSimple(map, prefix + "PayStatus", this.PayStatus);
+        this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
 
     }
 }

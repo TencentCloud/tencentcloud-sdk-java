@@ -143,7 +143,7 @@ public class NetAttackEventInfo extends AbstractModel {
     private Long Count;
 
     /**
-    * 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+    * 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
     */
     @SerializedName("PayVersion")
     @Expose
@@ -457,16 +457,16 @@ public class NetAttackEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版 
-     * @return PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * Get 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版 
+     * @return PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      */
     public Long getPayVersion() {
         return this.PayVersion;
     }
 
     /**
-     * Set 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
-     * @param PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * Set 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
+     * @param PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      */
     public void setPayVersion(Long PayVersion) {
         this.PayVersion = PayVersion;

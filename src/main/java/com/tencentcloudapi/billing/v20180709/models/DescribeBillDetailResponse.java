@@ -32,7 +32,6 @@ public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
     * 总记录数，24小时缓存一次，可能比实际总记录数少
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
     * 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeBillDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 总记录数，24小时缓存一次，可能比实际总记录数少
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总记录数，24小时缓存一次，可能比实际总记录数少 
      * @return Total 总记录数，24小时缓存一次，可能比实际总记录数少
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -81,19 +77,15 @@ public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
      * Set 总记录数，24小时缓存一次，可能比实际总记录数少
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总记录数，24小时缓存一次，可能比实际总记录数少
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度 
      * @return Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -101,9 +93,7 @@ public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
      * Set 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;

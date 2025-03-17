@@ -39,7 +39,6 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
     * 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -110,7 +109,6 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -149,7 +147,6 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
     * VPC 接入点列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vpcs")
     @Expose
@@ -157,7 +154,6 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
     * 创建时间，毫秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -203,10 +199,8 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例版本 
      * @return InstanceVersion 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
@@ -214,9 +208,7 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
      * Set 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceVersion 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
@@ -367,10 +359,8 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -378,9 +368,7 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -463,10 +451,8 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get VPC 接入点列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 接入点列表 
      * @return Vpcs VPC 接入点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
@@ -474,19 +460,15 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
      * Set VPC 接入点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vpcs VPC 接入点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
     }
 
     /**
-     * Get 创建时间，毫秒为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，毫秒为单位 
      * @return CreateTime 创建时间，毫秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -494,9 +476,7 @@ public class RabbitMQVipInstance extends AbstractModel {
 
     /**
      * Set 创建时间，毫秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，毫秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

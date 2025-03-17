@@ -53,7 +53,6 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
     * 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
     * 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadHeaders")
     @Expose
@@ -69,7 +67,6 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
     * 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutDate")
     @Expose
@@ -147,10 +144,8 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
     }
 
     /**
-     * Get 下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载链接 
      * @return DownloadUrl 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -158,19 +153,15 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
      * Set 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载Httpheader 
      * @return DownloadHeaders 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KVPair [] getDownloadHeaders() {
         return this.DownloadHeaders;
@@ -178,19 +169,15 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
      * Set 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadHeaders 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadHeaders(KVPair [] DownloadHeaders) {
         this.DownloadHeaders = DownloadHeaders;
     }
 
     /**
-     * Get 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载链接是否过期 
      * @return OutDate 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOutDate() {
         return this.OutDate;
@@ -198,9 +185,7 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
 
     /**
      * Set 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutDate 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutDate(Boolean OutDate) {
         this.OutDate = OutDate;

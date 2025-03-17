@@ -46,7 +46,6 @@ public class DescribeCloudBaseRunPodListResponse extends AbstractModel {
 
     /**
     * 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodList")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeCloudBaseRunPodListResponse extends AbstractModel {
     }
 
     /**
-     * Get 容器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器列表 
      * @return PodList 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseRunVersionPod [] getPodList() {
         return this.PodList;
@@ -119,9 +116,7 @@ public class DescribeCloudBaseRunPodListResponse extends AbstractModel {
 
     /**
      * Set 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodList 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodList(CloudBaseRunVersionPod [] PodList) {
         this.PodList = PodList;

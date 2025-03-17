@@ -25,7 +25,6 @@ public class DescribeRabbitMQExchangesResponse extends AbstractModel {
 
     /**
     * 策略列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExchangeInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQExchangesResponse extends AbstractModel {
 
     /**
     * 策略结果总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRabbitMQExchangesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表信息 
      * @return ExchangeInfoList 策略列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQExchangeListInfo [] getExchangeInfoList() {
         return this.ExchangeInfoList;
@@ -58,19 +54,15 @@ public class DescribeRabbitMQExchangesResponse extends AbstractModel {
 
     /**
      * Set 策略列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExchangeInfoList 策略列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExchangeInfoList(RabbitMQExchangeListInfo [] ExchangeInfoList) {
         this.ExchangeInfoList = ExchangeInfoList;
     }
 
     /**
-     * Get 策略结果总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略结果总数 
      * @return TotalCount 策略结果总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRabbitMQExchangesResponse extends AbstractModel {
 
     /**
      * Set 策略结果总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 策略结果总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

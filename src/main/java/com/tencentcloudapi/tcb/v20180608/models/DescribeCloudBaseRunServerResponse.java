@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionItems")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPublic")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageRepo")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficType")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
     * 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -95,10 +87,8 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 个数 
      * @return TotalCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -106,19 +96,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 版本列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本列表 
      * @return VersionItems 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseRunServerVersionItem [] getVersionItems() {
         return this.VersionItems;
@@ -126,19 +112,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionItems 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionItems(CloudBaseRunServerVersionItem [] VersionItems) {
         this.VersionItems = VersionItems;
     }
 
     /**
-     * Get 服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称 
      * @return ServerName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerName() {
         return this.ServerName;
@@ -146,19 +128,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否对于外网开放 
      * @return IsPublic 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPublic() {
         return this.IsPublic;
@@ -166,19 +144,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPublic 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPublic(Boolean IsPublic) {
         this.IsPublic = IsPublic;
     }
 
     /**
-     * Get 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像仓库 
      * @return ImageRepo 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageRepo() {
         return this.ImageRepo;
@@ -186,19 +160,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageRepo 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageRepo(String ImageRepo) {
         this.ImageRepo = ImageRepo;
     }
 
     /**
-     * Get 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量配置的类型（FLOW,URL_PARAMS) 
      * @return TrafficType 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficType() {
         return this.TrafficType;
@@ -206,19 +176,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficType 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务创建类型，默认为空，一键部署为oneclick 
      * @return SourceType 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceType() {
         return this.SourceType;
@@ -226,19 +192,15 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务标签, function: 托管函数 
      * @return Tag 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -246,9 +208,7 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
 
     /**
      * Set 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

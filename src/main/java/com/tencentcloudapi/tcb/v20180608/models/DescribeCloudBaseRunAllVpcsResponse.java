@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunAllVpcsResponse extends AbstractModel {
 
     /**
     * 所有vpcid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vpcs")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudBaseRunAllVpcsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 所有vpcid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所有vpcid 
      * @return Vpcs 所有vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVpcs() {
         return this.Vpcs;
@@ -50,9 +47,7 @@ public class DescribeCloudBaseRunAllVpcsResponse extends AbstractModel {
 
     /**
      * Set 所有vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vpcs 所有vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcs(String [] Vpcs) {
         this.Vpcs = Vpcs;

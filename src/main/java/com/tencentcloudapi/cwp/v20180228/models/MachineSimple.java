@@ -127,7 +127,7 @@ https://cloud.tencent.com/document/api/213/15753#Instance
     private String KernelVersion;
 
     /**
-    * 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+    * 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
     */
     @SerializedName("ProtectType")
     @Expose
@@ -399,16 +399,16 @@ https://cloud.tencent.com/document/api/213/15753#Instance
     }
 
     /**
-     * Get 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版. 
-     * @return ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * Get 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版. 
+     * @return ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
-     * @param ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * Set 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
+     * @param ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;

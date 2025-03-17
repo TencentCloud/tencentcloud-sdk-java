@@ -32,7 +32,6 @@ public class QueueQuota extends AbstractModel {
 
     /**
     * 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedQueue")
     @Expose
@@ -55,10 +54,8 @@ public class QueueQuota extends AbstractModel {
     }
 
     /**
-     * Get 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已创建Queue数 
      * @return UsedQueue 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedQueue() {
         return this.UsedQueue;
@@ -66,9 +63,7 @@ public class QueueQuota extends AbstractModel {
 
     /**
      * Set 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedQueue 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedQueue(Long UsedQueue) {
         this.UsedQueue = UsedQueue;

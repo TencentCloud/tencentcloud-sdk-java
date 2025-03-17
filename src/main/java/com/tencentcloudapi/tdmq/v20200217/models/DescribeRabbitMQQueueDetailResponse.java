@@ -25,7 +25,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueType")
     @Expose
@@ -65,7 +61,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Durable")
     @Expose
@@ -201,7 +196,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -241,7 +235,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exclusive")
     @Expose
@@ -257,7 +250,6 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
     * 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arguments")
     @Expose
@@ -271,10 +263,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceId 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -282,19 +272,15 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vhost参数 
      * @return VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -302,19 +288,15 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 队列名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列名称 
      * @return QueueName 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueName() {
         return this.QueueName;
@@ -322,19 +304,15 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueName 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列类型,取值classic或quorum 
      * @return QueueType 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueType() {
         return this.QueueType;
@@ -342,9 +320,7 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueType 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueType(String QueueType) {
         this.QueueType = QueueType;
@@ -371,10 +347,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 持久标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持久标记 
      * @return Durable 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDurable() {
         return this.Durable;
@@ -382,9 +356,7 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Durable 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurable(Boolean Durable) {
         this.Durable = Durable;
@@ -711,10 +683,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间戳,单位秒 
      * @return CreateTime 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -722,9 +692,7 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -811,10 +779,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为独占队列 
      * @return Exclusive 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExclusive() {
         return this.Exclusive;
@@ -822,9 +788,7 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exclusive 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusive(Boolean Exclusive) {
         this.Exclusive = Exclusive;
@@ -851,10 +815,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数 key-value 
      * @return Arguments 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArguments() {
         return this.Arguments;
@@ -862,9 +824,7 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
 
     /**
      * Set 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Arguments 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArguments(String Arguments) {
         this.Arguments = Arguments;

@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel {
 
     /**
     * 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel {
 
     /**
     * 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerName")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作类型 
      * @return Action 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAction() {
         return this.Action;
@@ -58,19 +54,15 @@ public class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel {
 
     /**
      * Set 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String [] Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名列表 
      * @return ServerName 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getServerName() {
         return this.ServerName;
@@ -78,9 +70,7 @@ public class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel {
 
     /**
      * Set 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerName 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerName(String [] ServerName) {
         this.ServerName = ServerName;

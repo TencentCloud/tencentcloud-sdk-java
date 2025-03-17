@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunVersionSnapshotResponse extends AbstractModel {
 
     /**
     * 版本历史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Snapshots")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudBaseRunVersionSnapshotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本历史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本历史 
      * @return Snapshots 版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudRunServiceSimpleVersionSnapshot [] getSnapshots() {
         return this.Snapshots;
@@ -50,9 +47,7 @@ public class DescribeCloudBaseRunVersionSnapshotResponse extends AbstractModel {
 
     /**
      * Set 版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Snapshots 版本历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshots(CloudRunServiceSimpleVersionSnapshot [] Snapshots) {
         this.Snapshots = Snapshots;

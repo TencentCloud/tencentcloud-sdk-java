@@ -46,7 +46,6 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
     * 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigRegexp")
     @Expose
@@ -54,7 +53,6 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
     * 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteRegexp")
     @Expose
@@ -62,7 +60,6 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
     * 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadRegexp")
     @Expose
@@ -70,7 +67,6 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -78,7 +74,6 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -133,10 +128,8 @@ public class RabbitMQPermission extends AbstractModel {
     }
 
     /**
-     * Get 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式 
      * @return ConfigRegexp 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigRegexp() {
         return this.ConfigRegexp;
@@ -144,19 +137,15 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
      * Set 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigRegexp 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigRegexp(String ConfigRegexp) {
         this.ConfigRegexp = ConfigRegexp;
     }
 
     /**
-     * Get 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式 
      * @return WriteRegexp 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWriteRegexp() {
         return this.WriteRegexp;
@@ -164,19 +153,15 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
      * Set 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteRegexp 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteRegexp(String WriteRegexp) {
         this.WriteRegexp = WriteRegexp;
     }
 
     /**
-     * Get 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式 
      * @return ReadRegexp 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadRegexp() {
         return this.ReadRegexp;
@@ -184,19 +169,15 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
      * Set 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadRegexp 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadRegexp(String ReadRegexp) {
         this.ReadRegexp = ReadRegexp;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -204,19 +185,15 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -224,9 +201,7 @@ public class RabbitMQPermission extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

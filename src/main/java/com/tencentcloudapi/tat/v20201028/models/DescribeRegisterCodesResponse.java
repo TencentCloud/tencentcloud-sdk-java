@@ -32,7 +32,6 @@ public class DescribeRegisterCodesResponse extends AbstractModel {
 
     /**
     * 注册码信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisterCodeSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeRegisterCodesResponse extends AbstractModel {
     }
 
     /**
-     * Get 注册码信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册码信息列表。 
      * @return RegisterCodeSet 注册码信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegisterCodeInfo [] getRegisterCodeSet() {
         return this.RegisterCodeSet;
@@ -73,9 +70,7 @@ public class DescribeRegisterCodesResponse extends AbstractModel {
 
     /**
      * Set 注册码信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisterCodeSet 注册码信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisterCodeSet(RegisterCodeInfo [] RegisterCodeSet) {
         this.RegisterCodeSet = RegisterCodeSet;

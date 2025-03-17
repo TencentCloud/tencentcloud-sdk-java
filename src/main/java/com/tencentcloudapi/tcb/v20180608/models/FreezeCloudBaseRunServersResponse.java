@@ -29,7 +29,6 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
 失败：fail
 部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -37,7 +36,6 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
 
     /**
     * 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailServerList")
@@ -56,13 +54,11 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
@@ -75,12 +71,10 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
 失败：fail
 部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
@@ -89,10 +83,8 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
 
     /**
      * Get 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FailServerList 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailServerList() {
@@ -102,9 +94,7 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel {
     /**
      * Set 冻结失败服务列表
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailServerList 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailServerList(String [] FailServerList) {

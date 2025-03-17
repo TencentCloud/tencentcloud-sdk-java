@@ -39,7 +39,6 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterNetInfo")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterWhiteListInfo")
     @Expose
@@ -114,10 +112,8 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群访问 
      * @return ClusterNetInfo 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQClusterAccessInfo getClusterNetInfo() {
         return this.ClusterNetInfo;
@@ -125,19 +121,15 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
      * Set 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterNetInfo 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterNetInfo(RabbitMQClusterAccessInfo ClusterNetInfo) {
         this.ClusterNetInfo = ClusterNetInfo;
     }
 
     /**
-     * Get 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群白名单 
      * @return ClusterWhiteListInfo 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQClusterWhiteListInfo getClusterWhiteListInfo() {
         return this.ClusterWhiteListInfo;
@@ -145,9 +137,7 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
      * Set 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterWhiteListInfo 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterWhiteListInfo(RabbitMQClusterWhiteListInfo ClusterWhiteListInfo) {
         this.ClusterWhiteListInfo = ClusterWhiteListInfo;

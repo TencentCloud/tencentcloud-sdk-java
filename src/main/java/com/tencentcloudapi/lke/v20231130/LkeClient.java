@@ -85,7 +85,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *创建属性
+     *创建标签
      * @param req CreateAttributeLabelRequest
      * @return CreateAttributeLabelResponse
      * @throws TencentCloudSDKException

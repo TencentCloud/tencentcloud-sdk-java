@@ -32,7 +32,6 @@ public class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
     * 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -40,7 +39,6 @@ public class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
     * 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunId")
     @Expose
@@ -70,10 +68,8 @@ public class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel {
     }
 
     /**
-     * Get 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动更新的VersionName 
      * @return VersionName 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -81,19 +77,15 @@ public class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
      * Set 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作记录id 
      * @return RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunId() {
         return this.RunId;
@@ -101,9 +93,7 @@ public class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel {
 
     /**
      * Set 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;

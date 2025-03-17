@@ -25,7 +25,6 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -47,10 +45,8 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号Id 
      * @return TranId 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranId() {
         return this.TranId;
@@ -58,19 +54,15 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
      * Set 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranId 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例Id 
      * @return InstanceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -78,9 +70,7 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
      * Set 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

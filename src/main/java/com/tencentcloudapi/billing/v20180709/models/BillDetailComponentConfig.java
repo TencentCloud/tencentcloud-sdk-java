@@ -25,7 +25,6 @@ public class BillDetailComponentConfig extends AbstractModel {
 
     /**
     * 配置描述名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class BillDetailComponentConfig extends AbstractModel {
 
     /**
     * 配置描述值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 配置描述名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置描述名称 
      * @return Name 配置描述名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class BillDetailComponentConfig extends AbstractModel {
 
     /**
      * Set 配置描述名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置描述名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置描述值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置描述值 
      * @return Value 配置描述值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class BillDetailComponentConfig extends AbstractModel {
 
     /**
      * Set 配置描述值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 配置描述值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

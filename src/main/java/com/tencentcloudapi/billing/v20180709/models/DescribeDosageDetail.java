@@ -25,7 +25,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageType")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
     @Expose
@@ -66,7 +61,6 @@ public class DescribeDosageDetail extends AbstractModel {
     /**
     * 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingItemCode")
     @Expose
@@ -74,7 +68,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubBillingItemCode")
     @Expose
@@ -82,7 +75,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -90,7 +82,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCodeName")
     @Expose
@@ -98,7 +89,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingItemCodeName")
     @Expose
@@ -106,7 +96,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubBillingItemCodeName")
     @Expose
@@ -114,7 +103,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageUnit")
     @Expose
@@ -122,7 +110,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageBeginTime")
     @Expose
@@ -130,7 +117,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageEndTime")
     @Expose
@@ -138,7 +124,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageValue")
     @Expose
@@ -146,7 +131,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductValue")
     @Expose
@@ -154,7 +138,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainValue")
     @Expose
@@ -162,7 +145,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -170,7 +152,6 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttrStr")
     @Expose
@@ -178,17 +159,14 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
     * 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SheetName")
     @Expose
     private String [] SheetName;
 
     /**
-     * Get 日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期 
      * @return Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -196,19 +174,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号 ID 是用户在腾讯云的唯一账号标识 
      * @return Uin 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -216,19 +190,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量统计类型 
      * @return DosageType 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDosageType() {
         return this.DosageType;
@@ -236,19 +206,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageType 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageType(String DosageType) {
         this.DosageType = DosageType;
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -256,19 +222,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return SubProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
         return this.SubProductCode;
@@ -276,9 +238,7 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
@@ -286,11 +246,9 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Get 组件类型编码
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return BillingItemCode 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingItemCode() {
         return this.BillingItemCode;
@@ -299,20 +257,16 @@ public class DescribeDosageDetail extends AbstractModel {
     /**
      * Set 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingItemCode 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingItemCode(String BillingItemCode) {
         this.BillingItemCode = BillingItemCode;
     }
 
     /**
-     * Get 组件编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件编码 
      * @return SubBillingItemCode 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubBillingItemCode() {
         return this.SubBillingItemCode;
@@ -320,19 +274,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubBillingItemCode 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubBillingItemCode(String SubBillingItemCode) {
         this.SubBillingItemCode = SubBillingItemCode;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -340,19 +290,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称 
      * @return SubProductCodeName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCodeName() {
         return this.SubProductCodeName;
@@ -360,19 +306,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCodeName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCodeName(String SubProductCodeName) {
         this.SubProductCodeName = SubProductCodeName;
     }
 
     /**
-     * Get 组件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型 
      * @return BillingItemCodeName 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingItemCodeName() {
         return this.BillingItemCodeName;
@@ -380,19 +322,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingItemCodeName 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingItemCodeName(String BillingItemCodeName) {
         this.BillingItemCodeName = BillingItemCodeName;
     }
 
     /**
-     * Get 组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件 
      * @return SubBillingItemCodeName 组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubBillingItemCodeName() {
         return this.SubBillingItemCodeName;
@@ -400,19 +338,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubBillingItemCodeName 组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubBillingItemCodeName(String SubBillingItemCodeName) {
         this.SubBillingItemCodeName = SubBillingItemCodeName;
     }
 
     /**
-     * Get 用量单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量单位 
      * @return DosageUnit 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDosageUnit() {
         return this.DosageUnit;
@@ -420,19 +354,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageUnit 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageUnit(String DosageUnit) {
         this.DosageUnit = DosageUnit;
     }
 
     /**
-     * Get 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量起始时间 
      * @return DosageBeginTime 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDosageBeginTime() {
         return this.DosageBeginTime;
@@ -440,19 +370,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageBeginTime 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageBeginTime(String DosageBeginTime) {
         this.DosageBeginTime = DosageBeginTime;
     }
 
     /**
-     * Get 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量截止时间 
      * @return DosageEndTime 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDosageEndTime() {
         return this.DosageEndTime;
@@ -460,19 +386,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageEndTime 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageEndTime(String DosageEndTime) {
         this.DosageEndTime = DosageEndTime;
     }
 
     /**
-     * Get 标准用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准用量 
      * @return DosageValue 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDosageValue() {
         return this.DosageValue;
@@ -480,19 +402,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageValue 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageValue(Float DosageValue) {
         this.DosageValue = DosageValue;
     }
 
     /**
-     * Get 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣用量 
      * @return DeductValue 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDeductValue() {
         return this.DeductValue;
@@ -500,19 +418,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductValue 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductValue(Float DeductValue) {
         this.DeductValue = DeductValue;
     }
 
     /**
-     * Get 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣余量 
      * @return RemainValue 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRemainValue() {
         return this.RemainValue;
@@ -520,19 +434,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainValue 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainValue(Float RemainValue) {
         this.RemainValue = RemainValue;
     }
 
     /**
-     * Get sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get sdkAppId 
      * @return SdkAppId sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSdkAppId() {
         return this.SdkAppId;
@@ -540,19 +450,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SdkAppId sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 其他信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他信息 
      * @return AttrStr 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JsonObject [] getAttrStr() {
         return this.AttrStr;
@@ -560,19 +466,15 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttrStr 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttrStr(JsonObject [] AttrStr) {
         this.AttrStr = AttrStr;
     }
 
     /**
-     * Get 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用量模板名称 
      * @return SheetName 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSheetName() {
         return this.SheetName;
@@ -580,9 +482,7 @@ public class DescribeDosageDetail extends AbstractModel {
 
     /**
      * Set 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SheetName 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSheetName(String [] SheetName) {
         this.SheetName = SheetName;

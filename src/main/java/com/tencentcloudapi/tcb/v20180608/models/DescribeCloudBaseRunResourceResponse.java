@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
     * 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
     * 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualClusterId")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
     * vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
     * 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -71,10 +67,8 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态(creating/succ) 
      * @return ClusterStatus 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
@@ -82,19 +76,15 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
      * Set 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterStatus 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟集群ID 
      * @return VirtualClusterId 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualClusterId() {
         return this.VirtualClusterId;
@@ -102,19 +92,15 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
      * Set 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualClusterId 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualClusterId(String VirtualClusterId) {
         this.VirtualClusterId = VirtualClusterId;
     }
 
     /**
-     * Get vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc id信息 
      * @return VpcId vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -122,19 +108,15 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
      * Set vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域信息 
      * @return Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -142,9 +124,7 @@ public class DescribeCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
      * Set 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

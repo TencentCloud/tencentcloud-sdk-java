@@ -40,7 +40,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerDetail")
     @Expose
@@ -48,7 +47,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueType")
     @Expose
@@ -80,7 +78,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -88,7 +85,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -96,7 +92,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Durable")
     @Expose
@@ -104,7 +99,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoDelete")
     @Expose
@@ -112,7 +106,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -120,7 +113,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -128,7 +120,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Node")
     @Expose
@@ -144,7 +135,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arguments")
     @Expose
@@ -152,7 +142,6 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
     * 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exclusive")
     @Expose
@@ -195,10 +184,8 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     }
 
     /**
-     * Get 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者信息 
      * @return ConsumerDetail 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQQueueListConsumerDetailInfo getConsumerDetail() {
         return this.ConsumerDetail;
@@ -206,19 +193,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerDetail 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerDetail(RabbitMQQueueListConsumerDetailInfo ConsumerDetail) {
         this.ConsumerDetail = ConsumerDetail;
     }
 
     /**
-     * Get 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列类型，取值 "classic"，"quorum" 
      * @return QueueType 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueType() {
         return this.QueueType;
@@ -226,9 +209,7 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueType 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueType(String QueueType) {
         this.QueueType = QueueType;
@@ -295,10 +276,8 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -306,19 +285,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -326,19 +301,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列是否持久化，true 为持久化，false 为非持久化 
      * @return Durable 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDurable() {
         return this.Durable;
@@ -346,19 +317,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Durable 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurable(Boolean Durable) {
         this.Durable = Durable;
     }
 
     /**
-     * Get 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列是否为自动删除队列，true 为自动删除，false 为非自动删除 
      * @return AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoDelete() {
         return this.AutoDelete;
@@ -366,19 +333,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoDelete(Boolean AutoDelete) {
         this.AutoDelete = AutoDelete;
     }
 
     /**
-     * Get 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列所属实例 ID 
      * @return InstanceId 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -386,19 +349,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列所属虚拟主机名称 
      * @return VirtualHost 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
@@ -406,19 +365,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHost 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列所在主节点名称 
      * @return Node 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNode() {
         return this.Node;
@@ -426,9 +381,7 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Node 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNode(String Node) {
         this.Node = Node;
@@ -455,10 +408,8 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     }
 
     /**
-     * Get 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数 key-value 对象 
      * @return Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArguments() {
         return this.Arguments;
@@ -466,19 +417,15 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArguments(String Arguments) {
         this.Arguments = Arguments;
     }
 
     /**
-     * Get 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否独占队列 
      * @return Exclusive 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExclusive() {
         return this.Exclusive;
@@ -486,9 +433,7 @@ public class RabbitMQQueueListInfo extends AbstractModel {
 
     /**
      * Set 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exclusive 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusive(Boolean Exclusive) {
         this.Exclusive = Exclusive;

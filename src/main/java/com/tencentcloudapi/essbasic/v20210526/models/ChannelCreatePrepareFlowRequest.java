@@ -110,6 +110,15 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
+    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+    */
+    @SerializedName("SignComponentConfig")
+    @Expose
+    private SignComponentConfig SignComponentConfig;
+
+    /**
      * Get 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul> 
@@ -345,6 +354,30 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期. 
+     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+     */
+    public SignComponentConfig getSignComponentConfig() {
+        return this.SignComponentConfig;
+    }
+
+    /**
+     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+     */
+    public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
+        this.SignComponentConfig = SignComponentConfig;
+    }
+
     public ChannelCreatePrepareFlowRequest() {
     }
 
@@ -386,6 +419,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.SignComponentConfig != null) {
+            this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
+        }
     }
 
 
@@ -403,6 +439,7 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
 
     }
 }

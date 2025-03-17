@@ -42,7 +42,6 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
     /**
     * 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -50,7 +49,6 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
 
     /**
     * 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManageMarketingRiskValue")
@@ -118,10 +116,8 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
 
     /**
      * Get 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
@@ -131,9 +127,7 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
     /**
      * Set 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
@@ -142,10 +136,8 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
 
     /**
      * Get 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ManageMarketingRiskValue 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutputManageMarketingRiskValue getManageMarketingRiskValue() {
@@ -155,9 +147,7 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel {
     /**
      * Set 拦截策略返回信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManageMarketingRiskValue 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManageMarketingRiskValue(OutputManageMarketingRiskValue ManageMarketingRiskValue) {

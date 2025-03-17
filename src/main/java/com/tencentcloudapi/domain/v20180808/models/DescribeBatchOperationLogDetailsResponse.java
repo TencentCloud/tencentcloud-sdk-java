@@ -32,7 +32,6 @@ public class DescribeBatchOperationLogDetailsResponse extends AbstractModel {
 
     /**
     * 日志详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainBatchDetailSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeBatchOperationLogDetailsResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志详情列表。 
      * @return DomainBatchDetailSet 日志详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainBatchDetailSet [] getDomainBatchDetailSet() {
         return this.DomainBatchDetailSet;
@@ -73,9 +70,7 @@ public class DescribeBatchOperationLogDetailsResponse extends AbstractModel {
 
     /**
      * Set 日志详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainBatchDetailSet 日志详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainBatchDetailSet(DomainBatchDetailSet [] DomainBatchDetailSet) {
         this.DomainBatchDetailSet = DomainBatchDetailSet;

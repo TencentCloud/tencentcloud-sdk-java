@@ -25,7 +25,6 @@ public class SummaryDetail extends AbstractModel {
 
     /**
     * 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupKey")
     @Expose
@@ -33,7 +32,6 @@ public class SummaryDetail extends AbstractModel {
 
     /**
     * 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupValue")
     @Expose
@@ -76,7 +74,6 @@ public class SummaryDetail extends AbstractModel {
 
     /**
     * 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -84,17 +81,14 @@ public class SummaryDetail extends AbstractModel {
 
     /**
     * 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
     private BusinessSummaryInfo [] Business;
 
     /**
-     * Get 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单维度编码 
      * @return GroupKey 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupKey() {
         return this.GroupKey;
@@ -102,19 +96,15 @@ public class SummaryDetail extends AbstractModel {
 
     /**
      * Set 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupKey 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupKey(String GroupKey) {
         this.GroupKey = GroupKey;
     }
 
     /**
-     * Get 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单维度值 
      * @return GroupValue 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupValue() {
         return this.GroupValue;
@@ -122,9 +112,7 @@ public class SummaryDetail extends AbstractModel {
 
     /**
      * Set 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupValue 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupValue(String GroupValue) {
         this.GroupValue = GroupValue;
@@ -211,10 +199,8 @@ public class SummaryDetail extends AbstractModel {
     }
 
     /**
-     * Get 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金账户支出：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -222,19 +208,15 @@ public class SummaryDetail extends AbstractModel {
 
     /**
      * Set 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品汇总信息 
      * @return Business 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BusinessSummaryInfo [] getBusiness() {
         return this.Business;
@@ -242,9 +224,7 @@ public class SummaryDetail extends AbstractModel {
 
     /**
      * Set 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(BusinessSummaryInfo [] Business) {
         this.Business = Business;

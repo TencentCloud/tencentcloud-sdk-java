@@ -82,7 +82,6 @@ public class RabbitMQClusterAccessInfo extends AbstractModel {
 
     /**
     * 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicWebConsoleSwitchStatus")
     @Expose
@@ -91,7 +90,6 @@ public class RabbitMQClusterAccessInfo extends AbstractModel {
     /**
     * Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcWebConsoleSwitchStatus")
     @Expose
@@ -99,7 +97,6 @@ OFF/ON/CREATING/DELETING
 
     /**
     * 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataStreamStatus")
     @Expose
@@ -107,7 +104,6 @@ OFF/ON/CREATING/DELETING
 
     /**
     * Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrometheusEndpointInfo")
     @Expose
@@ -115,11 +111,17 @@ OFF/ON/CREATING/DELETING
 
     /**
     * 公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebConsoleDomainEndpoint")
     @Expose
     private String WebConsoleDomainEndpoint;
+
+    /**
+    * 控制面所使用的VPC信息
+    */
+    @SerializedName("ControlPlaneEndpointInfo")
+    @Expose
+    private VpcEndpointInfo ControlPlaneEndpointInfo;
 
     /**
      * Get 集群公网接入地址
@@ -254,10 +256,8 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING 
      * @return PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicWebConsoleSwitchStatus() {
         return this.PublicWebConsoleSwitchStatus;
@@ -265,9 +265,7 @@ OFF/ON/CREATING/DELETING
 
     /**
      * Set 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicWebConsoleSwitchStatus(String PublicWebConsoleSwitchStatus) {
         this.PublicWebConsoleSwitchStatus = PublicWebConsoleSwitchStatus;
@@ -275,11 +273,9 @@ OFF/ON/CREATING/DELETING
 
     /**
      * Get Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。 
+OFF/ON/CREATING/DELETING 
      * @return VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcWebConsoleSwitchStatus() {
         return this.VpcWebConsoleSwitchStatus;
@@ -288,20 +284,16 @@ OFF/ON/CREATING/DELETING
     /**
      * Set Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcWebConsoleSwitchStatus(String VpcWebConsoleSwitchStatus) {
         this.VpcWebConsoleSwitchStatus = VpcWebConsoleSwitchStatus;
     }
 
     /**
-     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING 
      * @return PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDataStreamStatus() {
         return this.PublicDataStreamStatus;
@@ -309,19 +301,15 @@ OFF/ON/CREATING/DELETING
 
     /**
      * Set 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataStreamStatus(String PublicDataStreamStatus) {
         this.PublicDataStreamStatus = PublicDataStreamStatus;
     }
 
     /**
-     * Get Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Prometheus信息 
      * @return PrometheusEndpointInfo Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusEndpointInfo getPrometheusEndpointInfo() {
         return this.PrometheusEndpointInfo;
@@ -329,19 +317,15 @@ OFF/ON/CREATING/DELETING
 
     /**
      * Set Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrometheusEndpointInfo Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrometheusEndpointInfo(PrometheusEndpointInfo PrometheusEndpointInfo) {
         this.PrometheusEndpointInfo = PrometheusEndpointInfo;
     }
 
     /**
-     * Get 公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网域名接入点 
      * @return WebConsoleDomainEndpoint 公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebConsoleDomainEndpoint() {
         return this.WebConsoleDomainEndpoint;
@@ -349,12 +333,26 @@ OFF/ON/CREATING/DELETING
 
     /**
      * Set 公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebConsoleDomainEndpoint 公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebConsoleDomainEndpoint(String WebConsoleDomainEndpoint) {
         this.WebConsoleDomainEndpoint = WebConsoleDomainEndpoint;
+    }
+
+    /**
+     * Get 控制面所使用的VPC信息 
+     * @return ControlPlaneEndpointInfo 控制面所使用的VPC信息
+     */
+    public VpcEndpointInfo getControlPlaneEndpointInfo() {
+        return this.ControlPlaneEndpointInfo;
+    }
+
+    /**
+     * Set 控制面所使用的VPC信息
+     * @param ControlPlaneEndpointInfo 控制面所使用的VPC信息
+     */
+    public void setControlPlaneEndpointInfo(VpcEndpointInfo ControlPlaneEndpointInfo) {
+        this.ControlPlaneEndpointInfo = ControlPlaneEndpointInfo;
     }
 
     public RabbitMQClusterAccessInfo() {
@@ -404,6 +402,9 @@ OFF/ON/CREATING/DELETING
         if (source.WebConsoleDomainEndpoint != null) {
             this.WebConsoleDomainEndpoint = new String(source.WebConsoleDomainEndpoint);
         }
+        if (source.ControlPlaneEndpointInfo != null) {
+            this.ControlPlaneEndpointInfo = new VpcEndpointInfo(source.ControlPlaneEndpointInfo);
+        }
     }
 
 
@@ -424,6 +425,7 @@ OFF/ON/CREATING/DELETING
         this.setParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
         this.setParamObj(map, prefix + "PrometheusEndpointInfo.", this.PrometheusEndpointInfo);
         this.setParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
+        this.setParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
 
     }
 }

@@ -141,21 +141,21 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     private Long MongosNum;
 
     /**
-    * 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+    * 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
     */
     @SerializedName("ConfigServerCpu")
     @Expose
     private Long ConfigServerCpu;
 
     /**
-    * 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+    * 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
     */
     @SerializedName("ConfigServerMemory")
     @Expose
     private Long ConfigServerMemory;
 
     /**
-    * 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+    * 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
     */
     @SerializedName("ConfigServerVolume")
     @Expose
@@ -462,48 +462,48 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。 
-     * @return ConfigServerCpu 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+     * Get 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。 
+     * @return ConfigServerCpu 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
      */
     public Long getConfigServerCpu() {
         return this.ConfigServerCpu;
     }
 
     /**
-     * Set 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
-     * @param ConfigServerCpu 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+     * Set 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
+     * @param ConfigServerCpu 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
      */
     public void setConfigServerCpu(Long ConfigServerCpu) {
         this.ConfigServerCpu = ConfigServerCpu;
     }
 
     /**
-     * Get 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。 
-     * @return ConfigServerMemory 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * Get 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。 
+     * @return ConfigServerMemory 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
     }
 
     /**
-     * Set 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
-     * @param ConfigServerMemory 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * Set 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
+     * @param ConfigServerMemory 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。 
-     * @return ConfigServerVolume 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * Get 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。 
+     * @return ConfigServerVolume 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
     }
 
     /**
-     * Set 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
-     * @param ConfigServerVolume 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * Set 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
+     * @param ConfigServerVolume 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;

@@ -46,7 +46,6 @@ public class InstanceBackupFileItem extends AbstractModel {
 
     /**
     * 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardId")
     @Expose
@@ -157,10 +156,8 @@ public class InstanceBackupFileItem extends AbstractModel {
     }
 
     /**
-     * Get 分片ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片ID 
      * @return ShardId 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShardId() {
         return this.ShardId;
@@ -168,9 +165,7 @@ public class InstanceBackupFileItem extends AbstractModel {
 
     /**
      * Set 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardId 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardId(String ShardId) {
         this.ShardId = ShardId;

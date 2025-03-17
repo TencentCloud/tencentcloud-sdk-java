@@ -25,7 +25,6 @@ public class DescribeCloudBaseRunConfForGateWayResponse extends AbstractModel {
 
     /**
     * 最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpTime")
     @Expose
@@ -47,10 +46,8 @@ public class DescribeCloudBaseRunConfForGateWayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近更新时间 
      * @return LastUpTime 最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpTime() {
         return this.LastUpTime;
@@ -58,9 +55,7 @@ public class DescribeCloudBaseRunConfForGateWayResponse extends AbstractModel {
 
     /**
      * Set 最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpTime 最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpTime(String LastUpTime) {
         this.LastUpTime = LastUpTime;

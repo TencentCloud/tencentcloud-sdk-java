@@ -39,7 +39,6 @@ public class AnalyseDetail extends AbstractModel {
 
     /**
     * 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeDetail")
     @Expose
@@ -78,10 +77,8 @@ public class AnalyseDetail extends AbstractModel {
     }
 
     /**
-     * Get 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期明细金额 
      * @return TimeDetail 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseTimeDetail [] getTimeDetail() {
         return this.TimeDetail;
@@ -89,9 +86,7 @@ public class AnalyseDetail extends AbstractModel {
 
     /**
      * Set 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeDetail 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeDetail(AnalyseTimeDetail [] TimeDetail) {
         this.TimeDetail = TimeDetail;

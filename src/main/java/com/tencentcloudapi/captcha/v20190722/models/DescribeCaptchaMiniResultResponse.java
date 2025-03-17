@@ -42,7 +42,6 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel {
 
     /**
     * 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -112,10 +111,8 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态描述及验证错误信息 
      * @return CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -123,9 +120,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel {
 
     /**
      * Set 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;

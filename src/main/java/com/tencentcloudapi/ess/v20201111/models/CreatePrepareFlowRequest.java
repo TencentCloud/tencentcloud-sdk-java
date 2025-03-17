@@ -204,6 +204,15 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
+    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+    */
+    @SerializedName("SignComponentConfig")
+    @Expose
+    private SignComponentConfig SignComponentConfig;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -683,6 +692,30 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期. 
+     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+     */
+    public SignComponentConfig getSignComponentConfig() {
+        return this.SignComponentConfig;
+    }
+
+    /**
+     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+     */
+    public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
+        this.SignComponentConfig = SignComponentConfig;
+    }
+
     public CreatePrepareFlowRequest() {
     }
 
@@ -760,6 +793,9 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.SignComponentConfig != null) {
+            this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
+        }
     }
 
 
@@ -787,6 +823,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
 
     }
 }

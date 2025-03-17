@@ -32,7 +32,6 @@ public class DescribePreReleaseListResponse extends AbstractModel {
 
     /**
     * 预释放列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreReleaseList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribePreReleaseListResponse extends AbstractModel {
     }
 
     /**
-     * Get 预释放列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预释放列表 
      * @return PreReleaseList 预释放列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PreReleaseInfo [] getPreReleaseList() {
         return this.PreReleaseList;
@@ -73,9 +70,7 @@ public class DescribePreReleaseListResponse extends AbstractModel {
 
     /**
      * Set 预释放列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreReleaseList 预释放列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreReleaseList(PreReleaseInfo [] PreReleaseList) {
         this.PreReleaseList = PreReleaseList;

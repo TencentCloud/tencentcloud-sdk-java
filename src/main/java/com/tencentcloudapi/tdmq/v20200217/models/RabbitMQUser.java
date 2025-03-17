@@ -46,7 +46,6 @@ public class RabbitMQUser extends AbstractModel {
 
     /**
     * 用户描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -54,7 +53,6 @@ public class RabbitMQUser extends AbstractModel {
 
     /**
     * 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -146,10 +144,8 @@ public class RabbitMQUser extends AbstractModel {
     }
 
     /**
-     * Get 用户描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户描述 
      * @return Description 用户描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -157,19 +153,15 @@ public class RabbitMQUser extends AbstractModel {
 
     /**
      * Set 用户描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 用户描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户标签，用于决定改用户访问RabbitMQ Management的权限范围 
      * @return Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -177,9 +169,7 @@ public class RabbitMQUser extends AbstractModel {
 
     /**
      * Set 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

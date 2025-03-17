@@ -80,7 +80,7 @@ public class RansomDefenseStrategy extends AbstractModel {
     private String ExcludeDir;
 
     /**
-    * 备份模式： 0按周，1按天
+    * 备份模式： 0按周，1按天，2不备份
     */
     @SerializedName("BackupType")
     @Expose
@@ -257,16 +257,16 @@ public class RansomDefenseStrategy extends AbstractModel {
     }
 
     /**
-     * Get 备份模式： 0按周，1按天 
-     * @return BackupType 备份模式： 0按周，1按天
+     * Get 备份模式： 0按周，1按天，2不备份 
+     * @return BackupType 备份模式： 0按周，1按天，2不备份
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份模式： 0按周，1按天
-     * @param BackupType 备份模式： 0按周，1按天
+     * Set 备份模式： 0按周，1按天，2不备份
+     * @param BackupType 备份模式： 0按周，1按天，2不备份
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;

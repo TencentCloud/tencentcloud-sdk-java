@@ -25,7 +25,6 @@ public class CreateDomainBatchResponse extends AbstractModel {
 
     /**
     * 批量日志ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateDomainBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量日志ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批量日志ID 
      * @return LogId 批量日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogId() {
         return this.LogId;
@@ -50,9 +47,7 @@ public class CreateDomainBatchResponse extends AbstractModel {
 
     /**
      * Set 批量日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogId 批量日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogId(Long LogId) {
         this.LogId = LogId;

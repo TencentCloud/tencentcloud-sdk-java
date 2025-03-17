@@ -25,7 +25,6 @@ public class ModifyRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyRabbitMQVipInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -50,9 +47,7 @@ public class ModifyRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

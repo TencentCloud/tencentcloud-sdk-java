@@ -94,7 +94,7 @@ public class VulEffectHostList extends AbstractModel {
     private String Description;
 
     /**
-    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
     */
     @SerializedName("HostVersion")
     @Expose
@@ -310,16 +310,16 @@ public class VulEffectHostList extends AbstractModel {
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
-     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版 
+     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public Long getHostVersion() {
         return this.HostVersion;
     }
 
     /**
-     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;

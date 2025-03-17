@@ -108,6 +108,13 @@ public class HostTagInfo extends AbstractModel {
     private String InstanceID;
 
     /**
+    * 主机类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 主机Quuid 
      * @return Quuid 主机Quuid
      */
@@ -299,6 +306,22 @@ public class HostTagInfo extends AbstractModel {
         this.InstanceID = InstanceID;
     }
 
+    /**
+     * Get 主机类型 
+     * @return MachineType 主机类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机类型
+     * @param MachineType 主机类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public HostTagInfo() {
     }
 
@@ -349,6 +372,9 @@ public class HostTagInfo extends AbstractModel {
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -368,6 +394,7 @@ public class HostTagInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

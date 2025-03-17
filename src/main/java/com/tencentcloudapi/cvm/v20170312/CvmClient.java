@@ -503,6 +503,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *获取指定实例的属性，目前支持查询实例自定义数据User-Data。
+     * @param req DescribeInstancesAttributesRequest
+     * @return DescribeInstancesAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesAttributesResponse DescribeInstancesAttributes(DescribeInstancesAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesAttributes", DescribeInstancesAttributesResponse.class);
+    }
+
+    /**
      *本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
      * @param req DescribeInstancesModificationRequest
      * @return DescribeInstancesModificationResponse

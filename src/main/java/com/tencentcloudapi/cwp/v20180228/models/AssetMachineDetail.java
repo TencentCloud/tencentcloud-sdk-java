@@ -122,7 +122,7 @@ public class AssetMachineDetail extends AbstractModel {
     private String CpuLoad;
 
     /**
-    * 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+    * 防护级别：0基础版，1专业版，2旗舰版，3轻量版
     */
     @SerializedName("ProtectLevel")
     @Expose
@@ -514,16 +514,16 @@ public class AssetMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get 防护级别：0基础版，1专业版，2旗舰版，3普惠版 
-     * @return ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * Get 防护级别：0基础版，1专业版，2旗舰版，3轻量版 
+     * @return ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      */
     public Long getProtectLevel() {
         return this.ProtectLevel;
     }
 
     /**
-     * Set 防护级别：0基础版，1专业版，2旗舰版，3普惠版
-     * @param ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * Set 防护级别：0基础版，1专业版，2旗舰版，3轻量版
+     * @param ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      */
     public void setProtectLevel(Long ProtectLevel) {
         this.ProtectLevel = ProtectLevel;

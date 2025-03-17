@@ -32,7 +32,6 @@ public class DescribeTaskInfoResponse extends AbstractModel {
 
     /**
     * 查询返回的维修任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepairTaskInfoSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeTaskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询返回的维修任务列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询返回的维修任务列表。 
      * @return RepairTaskInfoSet 查询返回的维修任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RepairTaskInfo [] getRepairTaskInfoSet() {
         return this.RepairTaskInfoSet;
@@ -73,9 +70,7 @@ public class DescribeTaskInfoResponse extends AbstractModel {
 
     /**
      * Set 查询返回的维修任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepairTaskInfoSet 查询返回的维修任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepairTaskInfoSet(RepairTaskInfo [] RepairTaskInfoSet) {
         this.RepairTaskInfoSet = RepairTaskInfoSet;

@@ -45,11 +45,18 @@ public class EnterRescueModeRequest extends AbstractModel {
     private String Username;
 
     /**
-    * 是否强制关机
+    * 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
     */
     @SerializedName("ForceStop")
     @Expose
     private Boolean ForceStop;
+
+    /**
+    * 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+    */
+    @SerializedName("StopType")
+    @Expose
+    private String StopType;
 
     /**
      * Get 需要进入救援模式的实例id 
@@ -100,19 +107,39 @@ public class EnterRescueModeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否强制关机 
-     * @return ForceStop 是否强制关机
+     * Get 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。 
+     * @return ForceStop 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceStop() {
         return this.ForceStop;
     }
 
     /**
-     * Set 是否强制关机
-     * @param ForceStop 是否强制关机
+     * Set 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+     * @param ForceStop 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+     * @deprecated
      */
+    @Deprecated
     public void setForceStop(Boolean ForceStop) {
         this.ForceStop = ForceStop;
+    }
+
+    /**
+     * Get 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。 
+     * @return StopType 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+     */
+    public String getStopType() {
+        return this.StopType;
+    }
+
+    /**
+     * Set 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+     * @param StopType 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+     */
+    public void setStopType(String StopType) {
+        this.StopType = StopType;
     }
 
     public EnterRescueModeRequest() {
@@ -135,6 +162,9 @@ public class EnterRescueModeRequest extends AbstractModel {
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
     }
 
 
@@ -146,6 +176,7 @@ public class EnterRescueModeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamSimple(map, prefix + "StopType", this.StopType);
 
     }
 }
