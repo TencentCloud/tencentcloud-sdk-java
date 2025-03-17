@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReportTaskListInfo extends AbstractModel {
 
     /**
-    * 1
+    * 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rows")
@@ -32,7 +32,7 @@ public class ReportTaskListInfo extends AbstractModel {
     private TaskInfoVo [] Rows;
 
     /**
-    * 1
+    * 页码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNum")
@@ -40,7 +40,7 @@ public class ReportTaskListInfo extends AbstractModel {
     private Long PageNum;
 
     /**
-    * 1
+    * 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
@@ -48,7 +48,7 @@ public class ReportTaskListInfo extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 1
+    * 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -56,7 +56,7 @@ public class ReportTaskListInfo extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 1
+    * 总页数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPageNumber")
@@ -64,9 +64,9 @@ public class ReportTaskListInfo extends AbstractModel {
     private Long TotalPageNumber;
 
     /**
-     * Get 1
+     * Get 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rows 1
+     * @return Rows 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskInfoVo [] getRows() {
@@ -74,9 +74,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rows 1
+     * @param Rows 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRows(TaskInfoVo [] Rows) {
@@ -84,9 +84,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 页码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNum 1
+     * @return PageNum 页码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNum() {
@@ -94,9 +94,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 页码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNum 1
+     * @param PageNum 页码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNum(Long PageNum) {
@@ -104,9 +104,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 每页条数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 1
+     * @return PageSize 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
@@ -114,9 +114,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 1
+     * @param PageSize 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
@@ -124,9 +124,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 总记录数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 1
+     * @return TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -134,9 +134,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 1
+     * @param TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -144,9 +144,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 总页数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalPageNumber 1
+     * @return TotalPageNumber 总页数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPageNumber() {
@@ -154,9 +154,9 @@ public class ReportTaskListInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 总页数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalPageNumber 1
+     * @param TotalPageNumber 总页数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPageNumber(Long TotalPageNumber) {

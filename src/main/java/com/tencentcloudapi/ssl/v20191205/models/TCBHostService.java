@@ -25,7 +25,6 @@ public class TCBHostService extends AbstractModel {
 
     /**
     * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -33,17 +32,14 @@ public class TCBHostService extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表 
      * @return InstanceList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TCBHostInstance [] getInstanceList() {
         return this.InstanceList;
@@ -51,19 +47,15 @@ public class TCBHostService extends AbstractModel {
 
     /**
      * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(TCBHostInstance [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class TCBHostService extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -25,7 +25,6 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
     * 是否可以交换vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVipSwitchable")
     @Expose
@@ -33,7 +32,6 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
     * vip可交换时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipSwitchableTime")
     @Expose
@@ -57,7 +55,6 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
     * 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStep")
     @Expose
@@ -65,7 +62,6 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
     * 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -73,17 +69,14 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
     * 当前步骤剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStepRemainingTime")
     @Expose
     private String CurrentStepRemainingTime;
 
     /**
-     * Get 是否可以交换vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以交换vip 
      * @return IsVipSwitchable 是否可以交换vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVipSwitchable() {
         return this.IsVipSwitchable;
@@ -91,19 +84,15 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
      * Set 是否可以交换vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVipSwitchable 是否可以交换vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVipSwitchable(Boolean IsVipSwitchable) {
         this.IsVipSwitchable = IsVipSwitchable;
     }
 
     /**
-     * Get vip可交换时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vip可交换时间 
      * @return VipSwitchableTime vip可交换时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipSwitchableTime() {
         return this.VipSwitchableTime;
@@ -111,9 +100,7 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
      * Set vip可交换时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VipSwitchableTime vip可交换时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipSwitchableTime(String VipSwitchableTime) {
         this.VipSwitchableTime = VipSwitchableTime;
@@ -160,10 +147,8 @@ public class RollbackProcessInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤 
      * @return CurrentStep 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentStep() {
         return this.CurrentStep;
@@ -171,19 +156,15 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
      * Set 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStep 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
     }
 
     /**
-     * Get 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤进度 
      * @return CurrentStepProgress 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentStepProgress() {
         return this.CurrentStepProgress;
@@ -191,19 +172,15 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
      * Set 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStepProgress 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;
     }
 
     /**
-     * Get 当前步骤剩余时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤剩余时间 
      * @return CurrentStepRemainingTime 当前步骤剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentStepRemainingTime() {
         return this.CurrentStepRemainingTime;
@@ -211,9 +188,7 @@ public class RollbackProcessInfo extends AbstractModel {
 
     /**
      * Set 当前步骤剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStepRemainingTime 当前步骤剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStepRemainingTime(String CurrentStepRemainingTime) {
         this.CurrentStepRemainingTime = CurrentStepRemainingTime;

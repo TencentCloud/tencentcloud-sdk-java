@@ -66,6 +66,13 @@ public class DescribeInstancesNewRequest extends AbstractModel {
     private Boolean IsSimple;
 
     /**
+    * vip列表
+    */
+    @SerializedName("Vips")
+    @Expose
+    private String [] Vips;
+
+    /**
      * Get 搜索的集群id名称 
      * @return SearchInstanceId 搜索的集群id名称
      */
@@ -161,6 +168,22 @@ public class DescribeInstancesNewRequest extends AbstractModel {
         this.IsSimple = IsSimple;
     }
 
+    /**
+     * Get vip列表 
+     * @return Vips vip列表
+     */
+    public String [] getVips() {
+        return this.Vips;
+    }
+
+    /**
+     * Set vip列表
+     * @param Vips vip列表
+     */
+    public void setVips(String [] Vips) {
+        this.Vips = Vips;
+    }
+
     public DescribeInstancesNewRequest() {
     }
 
@@ -190,6 +213,12 @@ public class DescribeInstancesNewRequest extends AbstractModel {
         if (source.IsSimple != null) {
             this.IsSimple = new Boolean(source.IsSimple);
         }
+        if (source.Vips != null) {
+            this.Vips = new String[source.Vips.length];
+            for (int i = 0; i < source.Vips.length; i++) {
+                this.Vips[i] = new String(source.Vips[i]);
+            }
+        }
     }
 
 
@@ -203,6 +232,7 @@ public class DescribeInstancesNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
         this.setParamSimple(map, prefix + "IsSimple", this.IsSimple);
+        this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
 
     }
 }

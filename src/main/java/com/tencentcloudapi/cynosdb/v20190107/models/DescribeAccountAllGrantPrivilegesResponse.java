@@ -25,7 +25,6 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
     * 权限语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivilegeStatements")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
     * 全局权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalPrivileges")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
     * 数据库权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabasePrivileges")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
     * 数据库表权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TablePrivileges")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 权限语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限语句 
      * @return PrivilegeStatements 权限语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivilegeStatements() {
         return this.PrivilegeStatements;
@@ -74,19 +68,15 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
      * Set 权限语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivilegeStatements 权限语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivilegeStatements(String [] PrivilegeStatements) {
         this.PrivilegeStatements = PrivilegeStatements;
     }
 
     /**
-     * Get 全局权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全局权限 
      * @return GlobalPrivileges 全局权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGlobalPrivileges() {
         return this.GlobalPrivileges;
@@ -94,19 +84,15 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
      * Set 全局权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GlobalPrivileges 全局权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
         this.GlobalPrivileges = GlobalPrivileges;
     }
 
     /**
-     * Get 数据库权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库权限 
      * @return DatabasePrivileges 数据库权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabasePrivileges [] getDatabasePrivileges() {
         return this.DatabasePrivileges;
@@ -114,19 +100,15 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
      * Set 数据库权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabasePrivileges 数据库权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabasePrivileges(DatabasePrivileges [] DatabasePrivileges) {
         this.DatabasePrivileges = DatabasePrivileges;
     }
 
     /**
-     * Get 数据库表权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库表权限 
      * @return TablePrivileges 数据库表权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TablePrivileges [] getTablePrivileges() {
         return this.TablePrivileges;
@@ -134,9 +116,7 @@ public class DescribeAccountAllGrantPrivilegesResponse extends AbstractModel {
 
     /**
      * Set 数据库表权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TablePrivileges 数据库表权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTablePrivileges(TablePrivileges [] TablePrivileges) {
         this.TablePrivileges = TablePrivileges;

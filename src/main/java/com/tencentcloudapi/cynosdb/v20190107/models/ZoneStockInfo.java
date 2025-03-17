@@ -46,7 +46,6 @@ public class ZoneStockInfo extends AbstractModel {
 
     /**
     * 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZoneStockInfos")
     @Expose
@@ -101,10 +100,8 @@ public class ZoneStockInfo extends AbstractModel {
     }
 
     /**
-     * Get 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区库存信息 
      * @return SlaveZoneStockInfos 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
         return this.SlaveZoneStockInfos;
@@ -112,9 +109,7 @@ public class ZoneStockInfo extends AbstractModel {
 
     /**
      * Set 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZoneStockInfos 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
         this.SlaveZoneStockInfos = SlaveZoneStockInfos;

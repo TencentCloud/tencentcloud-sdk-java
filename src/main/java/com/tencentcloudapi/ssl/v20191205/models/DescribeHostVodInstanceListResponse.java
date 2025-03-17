@@ -25,7 +25,6 @@ public class DescribeHostVodInstanceListResponse extends AbstractModel {
 
     /**
     * Vod实例列表，如果取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostVodInstanceListResponse extends AbstractModel {
 
     /**
     * 总数,如果取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeHostVodInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Vod实例列表，如果取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vod实例列表，如果取不到值返回空数组 
      * @return InstanceList Vod实例列表，如果取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VodInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -58,19 +54,15 @@ public class DescribeHostVodInstanceListResponse extends AbstractModel {
 
     /**
      * Set Vod实例列表，如果取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList Vod实例列表，如果取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(VodInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 总数,如果取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数,如果取不到值返回0 
      * @return TotalCount 总数,如果取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeHostVodInstanceListResponse extends AbstractModel {
 
     /**
      * Set 总数,如果取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数,如果取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

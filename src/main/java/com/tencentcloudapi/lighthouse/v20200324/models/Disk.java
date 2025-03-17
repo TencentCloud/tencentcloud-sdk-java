@@ -53,6 +53,10 @@ public class Disk extends AbstractModel {
 
     /**
     * 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -60,6 +64,10 @@ public class Disk extends AbstractModel {
 
     /**
     * 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
     */
     @SerializedName("DiskType")
     @Expose
@@ -67,13 +75,15 @@ public class Disk extends AbstractModel {
 
     /**
     * 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
     */
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
 
     /**
-    * 磁盘大小
+    * 磁盘大小, 单位GB
     */
     @SerializedName("DiskSize")
     @Expose
@@ -89,7 +99,7 @@ public class Disk extends AbstractModel {
     /**
     * 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -244,8 +254,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘类型 
+     * Get 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+ 
      * @return DiskUsage 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
      */
     public String getDiskUsage() {
         return this.DiskUsage;
@@ -253,15 +271,31 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
      * @param DiskUsage 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get 磁盘介质类型 
+     * Get 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li> 
      * @return DiskType 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
      */
     public String getDiskType() {
         return this.DiskType;
@@ -269,15 +303,27 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
      * @param DiskType 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 磁盘付费类型 
+     * Get 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li> 
      * @return DiskChargeType 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
@@ -285,23 +331,27 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      * @param DiskChargeType 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
     }
 
     /**
-     * Get 磁盘大小 
-     * @return DiskSize 磁盘大小
+     * Get 磁盘大小, 单位GB 
+     * @return DiskSize 磁盘大小, 单位GB
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小
-     * @param DiskSize 磁盘大小
+     * Set 磁盘大小, 单位GB
+     * @param DiskSize 磁盘大小, 单位GB
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -326,7 +376,7 @@ public class Disk extends AbstractModel {
     /**
      * Get 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -337,7 +387,7 @@ public class Disk extends AbstractModel {
 <li> FREEZING：冻结中。</li> 
      * @return DiskState 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -354,7 +404,7 @@ public class Disk extends AbstractModel {
     /**
      * Set 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -365,7 +415,7 @@ public class Disk extends AbstractModel {
 <li> FREEZING：冻结中。</li>
      * @param DiskState 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>

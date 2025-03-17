@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class FirewallRuleInfo extends AbstractModel {
 
     /**
-    * 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+    * 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * 协议，取值：TCP，UDP，ICMP，ALL。
+    * 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
     */
     @SerializedName("Protocol")
     @Expose
@@ -79,32 +79,32 @@ public class FirewallRuleInfo extends AbstractModel {
     private String FirewallRuleDescription;
 
     /**
-     * Get 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。 
-     * @return AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+     * Get 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。 
+     * @return AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
-     * @param AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+     * Set 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
+     * @param AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get 协议，取值：TCP，UDP，ICMP，ALL。 
-     * @return Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * Get 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。 
+     * @return Protocol 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，取值：TCP，UDP，ICMP，ALL。
-     * @param Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * Set 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
+     * @param Protocol 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

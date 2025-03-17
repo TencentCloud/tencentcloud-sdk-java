@@ -197,7 +197,6 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
     * 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvId")
     @Expose
@@ -205,7 +204,6 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
     * TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TCBType")
     @Expose
@@ -213,7 +211,6 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
     * 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -668,10 +665,8 @@ public class UpdateRecordDetail extends AbstractModel {
     }
 
     /**
-     * Get 环境ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境ID 
      * @return EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvId() {
         return this.EnvId;
@@ -679,19 +674,15 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
      * Set 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TCB部署类型 
      * @return TCBType TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTCBType() {
         return this.TCBType;
@@ -699,19 +690,15 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
      * Set TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TCBType TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTCBType(String TCBType) {
         this.TCBType = TCBType;
     }
 
     /**
-     * Get 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器Url(clb专属) 
      * @return Url 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -719,9 +706,7 @@ public class UpdateRecordDetail extends AbstractModel {
 
     /**
      * Set 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

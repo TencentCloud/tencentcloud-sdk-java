@@ -25,7 +25,6 @@ public class DescribeAccountsResponse extends AbstractModel {
 
     /**
     * 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库账号列表 
      * @return AccountSet 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Account [] getAccountSet() {
         return this.AccountSet;
@@ -57,9 +54,7 @@ public class DescribeAccountsResponse extends AbstractModel {
 
     /**
      * Set 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountSet 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountSet(Account [] AccountSet) {
         this.AccountSet = AccountSet;

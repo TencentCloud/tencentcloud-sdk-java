@@ -25,7 +25,6 @@ public class RevokeCertificateResponse extends AbstractModel {
 
     /**
     * 吊销证书域名验证信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RevokeDomainValidateAuths")
     @Expose
@@ -39,10 +38,8 @@ public class RevokeCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 吊销证书域名验证信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 吊销证书域名验证信息。 
      * @return RevokeDomainValidateAuths 吊销证书域名验证信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RevokeDomainValidateAuths [] getRevokeDomainValidateAuths() {
         return this.RevokeDomainValidateAuths;
@@ -50,9 +47,7 @@ public class RevokeCertificateResponse extends AbstractModel {
 
     /**
      * Set 吊销证书域名验证信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RevokeDomainValidateAuths 吊销证书域名验证信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRevokeDomainValidateAuths(RevokeDomainValidateAuths [] RevokeDomainValidateAuths) {
         this.RevokeDomainValidateAuths = RevokeDomainValidateAuths;

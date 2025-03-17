@@ -32,7 +32,6 @@ public class SyncTaskBindResourceResult extends AbstractModel {
 
     /**
     * 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindResourceResult")
     @Expose
@@ -77,10 +76,8 @@ public class SyncTaskBindResourceResult extends AbstractModel {
     }
 
     /**
-     * Get 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联云资源结果 
      * @return BindResourceResult 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BindResourceResult [] getBindResourceResult() {
         return this.BindResourceResult;
@@ -88,9 +85,7 @@ public class SyncTaskBindResourceResult extends AbstractModel {
 
     /**
      * Set 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindResourceResult 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindResourceResult(BindResourceResult [] BindResourceResult) {
         this.BindResourceResult = BindResourceResult;

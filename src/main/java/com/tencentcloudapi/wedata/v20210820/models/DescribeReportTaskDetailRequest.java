@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class DescribeReportTaskDetailRequest extends AbstractModel {
 
     /**
-    * 页码
-    */
-    @SerializedName("PageNum")
-    @Expose
-    private Long PageNum;
-
-    /**
-    * 每页条数
-    */
-    @SerializedName("PageSize")
-    @Expose
-    private Long PageSize;
-
-    /**
     * 租户id
     */
     @SerializedName("TenantId")
@@ -45,99 +31,11 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
     private String TenantId;
 
     /**
-    * 项目id
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
-    * 任务id
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
-    * 实例id
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * 作业id
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
-
-    /**
     * 引擎任务id
     */
     @SerializedName("EngineTaskId")
     @Expose
     private String EngineTaskId;
-
-    /**
-    * 产品模块
-    */
-    @SerializedName("ProductSource")
-    @Expose
-    private String ProductSource;
-
-    /**
-    * 主账号
-    */
-    @SerializedName("OnwerUid")
-    @Expose
-    private String OnwerUid;
-
-    /**
-    * 开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
-
-    /**
-    * 结束时间
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
-
-    /**
-     * Get 页码 
-     * @return PageNum 页码
-     */
-    public Long getPageNum() {
-        return this.PageNum;
-    }
-
-    /**
-     * Set 页码
-     * @param PageNum 页码
-     */
-    public void setPageNum(Long PageNum) {
-        this.PageNum = PageNum;
-    }
-
-    /**
-     * Get 每页条数 
-     * @return PageSize 每页条数
-     */
-    public Long getPageSize() {
-        return this.PageSize;
-    }
-
-    /**
-     * Set 每页条数
-     * @param PageSize 每页条数
-     */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
-    }
 
     /**
      * Get 租户id 
@@ -156,70 +54,6 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目id
-     * @param ProjectId 项目id
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 任务id 
-     * @return TaskId 任务id
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务id
-     * @param TaskId 任务id
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    /**
-     * Get 实例id 
-     * @return InstanceId 实例id
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例id
-     * @param InstanceId 实例id
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 作业id 
-     * @return JobId 作业id
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 作业id
-     * @param JobId 作业id
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
-
-    /**
      * Get 引擎任务id 
      * @return EngineTaskId 引擎任务id
      */
@@ -235,70 +69,6 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
         this.EngineTaskId = EngineTaskId;
     }
 
-    /**
-     * Get 产品模块 
-     * @return ProductSource 产品模块
-     */
-    public String getProductSource() {
-        return this.ProductSource;
-    }
-
-    /**
-     * Set 产品模块
-     * @param ProductSource 产品模块
-     */
-    public void setProductSource(String ProductSource) {
-        this.ProductSource = ProductSource;
-    }
-
-    /**
-     * Get 主账号 
-     * @return OnwerUid 主账号
-     */
-    public String getOnwerUid() {
-        return this.OnwerUid;
-    }
-
-    /**
-     * Set 主账号
-     * @param OnwerUid 主账号
-     */
-    public void setOnwerUid(String OnwerUid) {
-        this.OnwerUid = OnwerUid;
-    }
-
-    /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 开始时间
-     * @param StartTime 开始时间
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 结束时间
-     * @param EndTime 结束时间
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
-    }
-
     public DescribeReportTaskDetailRequest() {
     }
 
@@ -307,41 +77,11 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeReportTaskDetailRequest(DescribeReportTaskDetailRequest source) {
-        if (source.PageNum != null) {
-            this.PageNum = new Long(source.PageNum);
-        }
-        if (source.PageSize != null) {
-            this.PageSize = new Long(source.PageSize);
-        }
         if (source.TenantId != null) {
             this.TenantId = new String(source.TenantId);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
-        }
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
         if (source.EngineTaskId != null) {
             this.EngineTaskId = new String(source.EngineTaskId);
-        }
-        if (source.ProductSource != null) {
-            this.ProductSource = new String(source.ProductSource);
-        }
-        if (source.OnwerUid != null) {
-            this.OnwerUid = new String(source.OnwerUid);
-        }
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
         }
     }
 
@@ -350,18 +90,8 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "EngineTaskId", this.EngineTaskId);
-        this.setParamSimple(map, prefix + "ProductSource", this.ProductSource);
-        this.setParamSimple(map, prefix + "OnwerUid", this.OnwerUid);
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

@@ -251,7 +251,7 @@ video 纯视频
     private Long RecordStream;
 
     /**
-    * 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+    * 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
     */
     @SerializedName("WhiteBoardSnapshotMode")
     @Expose
@@ -814,16 +814,16 @@ video 纯视频
     }
 
     /**
-     * Get 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式 
-     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * Get 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式 
+     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      */
     public Long getWhiteBoardSnapshotMode() {
         return this.WhiteBoardSnapshotMode;
     }
 
     /**
-     * Set 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
-     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * Set 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      */
     public void setWhiteBoardSnapshotMode(Long WhiteBoardSnapshotMode) {
         this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;

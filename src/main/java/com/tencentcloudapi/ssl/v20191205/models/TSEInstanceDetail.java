@@ -25,7 +25,6 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
     * 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,7 +32,6 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
     * 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayName")
     @Expose
@@ -41,17 +39,14 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
     * 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateList")
     @Expose
     private GatewayCertificate [] CertificateList;
 
     /**
-     * Get 网关ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关ID 
      * @return GatewayId 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -59,19 +54,15 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
      * Set 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关名称 
      * @return GatewayName 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayName() {
         return this.GatewayName;
@@ -79,19 +70,15 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
      * Set 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayName 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关证书列表 
      * @return CertificateList 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayCertificate [] getCertificateList() {
         return this.CertificateList;
@@ -99,9 +86,7 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
      * Set 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateList 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateList(GatewayCertificate [] CertificateList) {
         this.CertificateList = CertificateList;

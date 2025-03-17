@@ -32,7 +32,6 @@ public class DescribeBinlogsResponse extends AbstractModel {
 
     /**
     * Binlog列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Binlogs")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeBinlogsResponse extends AbstractModel {
     }
 
     /**
-     * Get Binlog列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Binlog列表 
      * @return Binlogs Binlog列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BinlogItem [] getBinlogs() {
         return this.Binlogs;
@@ -73,9 +70,7 @@ public class DescribeBinlogsResponse extends AbstractModel {
 
     /**
      * Set Binlog列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Binlogs Binlog列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogs(BinlogItem [] Binlogs) {
         this.Binlogs = Binlogs;

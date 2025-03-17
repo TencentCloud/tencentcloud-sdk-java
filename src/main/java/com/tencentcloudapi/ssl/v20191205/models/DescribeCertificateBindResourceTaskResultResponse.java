@@ -25,7 +25,6 @@ public class DescribeCertificateBindResourceTaskResultResponse extends AbstractM
 
     /**
     * 异步任务绑定关联云资源结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncTaskBindResourceResult")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCertificateBindResourceTaskResultResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 异步任务绑定关联云资源结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步任务绑定关联云资源结果列表 
      * @return SyncTaskBindResourceResult 异步任务绑定关联云资源结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncTaskBindResourceResult [] getSyncTaskBindResourceResult() {
         return this.SyncTaskBindResourceResult;
@@ -50,9 +47,7 @@ public class DescribeCertificateBindResourceTaskResultResponse extends AbstractM
 
     /**
      * Set 异步任务绑定关联云资源结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncTaskBindResourceResult 异步任务绑定关联云资源结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncTaskBindResourceResult(SyncTaskBindResourceResult [] SyncTaskBindResourceResult) {
         this.SyncTaskBindResourceResult = SyncTaskBindResourceResult;

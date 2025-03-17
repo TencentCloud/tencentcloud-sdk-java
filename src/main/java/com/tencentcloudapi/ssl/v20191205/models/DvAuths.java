@@ -25,7 +25,6 @@ public class DvAuths extends AbstractModel {
 
     /**
     * 证书域名验证记录Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthKey")
     @Expose
@@ -33,7 +32,6 @@ public class DvAuths extends AbstractModel {
 
     /**
     * 证书域名验证记录值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthValue")
     @Expose
@@ -41,7 +39,6 @@ public class DvAuths extends AbstractModel {
 
     /**
     * 证书域名验证域名值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthDomain")
     @Expose
@@ -49,7 +46,6 @@ public class DvAuths extends AbstractModel {
 
     /**
     * 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthPath")
     @Expose
@@ -57,7 +53,6 @@ public class DvAuths extends AbstractModel {
 
     /**
     * 证书域名验证子域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthSubDomain")
     @Expose
@@ -68,17 +63,14 @@ public class DvAuths extends AbstractModel {
 TXT：DNS域名验证添加TXT记录
 FILE：域名文件验证
 CNAME：DNS域名验证添加CNAME记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthVerifyType")
     @Expose
     private String DvAuthVerifyType;
 
     /**
-     * Get 证书域名验证记录Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书域名验证记录Key 
      * @return DvAuthKey 证书域名验证记录Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthKey() {
         return this.DvAuthKey;
@@ -86,19 +78,15 @@ CNAME：DNS域名验证添加CNAME记录
 
     /**
      * Set 证书域名验证记录Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthKey 证书域名验证记录Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthKey(String DvAuthKey) {
         this.DvAuthKey = DvAuthKey;
     }
 
     /**
-     * Get 证书域名验证记录值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书域名验证记录值 
      * @return DvAuthValue 证书域名验证记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthValue() {
         return this.DvAuthValue;
@@ -106,19 +94,15 @@ CNAME：DNS域名验证添加CNAME记录
 
     /**
      * Set 证书域名验证记录值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthValue 证书域名验证记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthValue(String DvAuthValue) {
         this.DvAuthValue = DvAuthValue;
     }
 
     /**
-     * Get 证书域名验证域名值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书域名验证域名值 
      * @return DvAuthDomain 证书域名验证域名值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthDomain() {
         return this.DvAuthDomain;
@@ -126,19 +110,15 @@ CNAME：DNS域名验证添加CNAME记录
 
     /**
      * Set 证书域名验证域名值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthDomain 证书域名验证域名值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthDomain(String DvAuthDomain) {
         this.DvAuthDomain = DvAuthDomain;
     }
 
     /**
-     * Get 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书域名验证文件路径， 仅FILE、FILE_PROXY使用 
      * @return DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthPath() {
         return this.DvAuthPath;
@@ -146,19 +126,15 @@ CNAME：DNS域名验证添加CNAME记录
 
     /**
      * Set 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthPath(String DvAuthPath) {
         this.DvAuthPath = DvAuthPath;
     }
 
     /**
-     * Get 证书域名验证子域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书域名验证子域名 
      * @return DvAuthSubDomain 证书域名验证子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthSubDomain() {
         return this.DvAuthSubDomain;
@@ -166,9 +142,7 @@ CNAME：DNS域名验证添加CNAME记录
 
     /**
      * Set 证书域名验证子域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthSubDomain 证书域名验证子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthSubDomain(String DvAuthSubDomain) {
         this.DvAuthSubDomain = DvAuthSubDomain;
@@ -178,13 +152,11 @@ CNAME：DNS域名验证添加CNAME记录
      * Get 证书域名验证类型，取值：
 TXT：DNS域名验证添加TXT记录
 FILE：域名文件验证
-CNAME：DNS域名验证添加CNAME记录
-注意：此字段可能返回 null，表示取不到有效值。 
+CNAME：DNS域名验证添加CNAME记录 
      * @return DvAuthVerifyType 证书域名验证类型，取值：
 TXT：DNS域名验证添加TXT记录
 FILE：域名文件验证
 CNAME：DNS域名验证添加CNAME记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthVerifyType() {
         return this.DvAuthVerifyType;
@@ -195,12 +167,10 @@ CNAME：DNS域名验证添加CNAME记录
 TXT：DNS域名验证添加TXT记录
 FILE：域名文件验证
 CNAME：DNS域名验证添加CNAME记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DvAuthVerifyType 证书域名验证类型，取值：
 TXT：DNS域名验证添加TXT记录
 FILE：域名文件验证
 CNAME：DNS域名验证添加CNAME记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthVerifyType(String DvAuthVerifyType) {
         this.DvAuthVerifyType = DvAuthVerifyType;

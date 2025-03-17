@@ -25,7 +25,6 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
 
     /**
     * Lighthouse实例列表,如取不到返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
 
     /**
     * 总数，如取不到返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Lighthouse实例列表,如取不到返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Lighthouse实例列表,如取不到返回空数组 
      * @return InstanceList Lighthouse实例列表,如取不到返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LighthouseInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -58,19 +54,15 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
 
     /**
      * Set Lighthouse实例列表,如取不到返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList Lighthouse实例列表,如取不到返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(LighthouseInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 总数，如取不到返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数，如取不到返回0 
      * @return TotalCount 总数，如取不到返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
 
     /**
      * Set 总数，如取不到返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数，如取不到返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

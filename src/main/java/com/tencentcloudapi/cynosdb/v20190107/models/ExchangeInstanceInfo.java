@@ -25,7 +25,6 @@ public class ExchangeInstanceInfo extends AbstractModel {
 
     /**
     * 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInstanceInfo")
     @Expose
@@ -33,17 +32,14 @@ public class ExchangeInstanceInfo extends AbstractModel {
 
     /**
     * 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInstanceInfo")
     @Expose
     private RollbackInstanceInfo DstInstanceInfo;
 
     /**
-     * Get 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源实例信息 
      * @return SrcInstanceInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackInstanceInfo getSrcInstanceInfo() {
         return this.SrcInstanceInfo;
@@ -51,19 +47,15 @@ public class ExchangeInstanceInfo extends AbstractModel {
 
     /**
      * Set 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInstanceInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInstanceInfo(RollbackInstanceInfo SrcInstanceInfo) {
         this.SrcInstanceInfo = SrcInstanceInfo;
     }
 
     /**
-     * Get 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标实例信息 
      * @return DstInstanceInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackInstanceInfo getDstInstanceInfo() {
         return this.DstInstanceInfo;
@@ -71,9 +63,7 @@ public class ExchangeInstanceInfo extends AbstractModel {
 
     /**
      * Set 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInstanceInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInstanceInfo(RollbackInstanceInfo DstInstanceInfo) {
         this.DstInstanceInfo = DstInstanceInfo;

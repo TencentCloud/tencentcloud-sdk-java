@@ -46,7 +46,6 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
     * 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupFreq")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
     * 备份方式，logic-逻辑备份，snapshot-快照备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupType")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
     * 跨地域逻辑备份配置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicCrossRegionsConfigUpdateTime")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
     * 自动逻辑备份配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicBackupConfig")
     @Expose
@@ -132,10 +128,8 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份 
      * @return BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
@@ -143,19 +137,15 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
      * Set 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get 备份方式，logic-逻辑备份，snapshot-快照备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份方式，logic-逻辑备份，snapshot-快照备份 
      * @return BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupType() {
         return this.BackupType;
@@ -163,19 +153,15 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
      * Set 备份方式，logic-逻辑备份，snapshot-快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 跨地域逻辑备份配置修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨地域逻辑备份配置修改时间 
      * @return LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogicCrossRegionsConfigUpdateTime() {
         return this.LogicCrossRegionsConfigUpdateTime;
@@ -183,19 +169,15 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
      * Set 跨地域逻辑备份配置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicCrossRegionsConfigUpdateTime(String LogicCrossRegionsConfigUpdateTime) {
         this.LogicCrossRegionsConfigUpdateTime = LogicCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Get 自动逻辑备份配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动逻辑备份配置 
      * @return LogicBackupConfig 自动逻辑备份配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogicBackupConfigInfo getLogicBackupConfig() {
         return this.LogicBackupConfig;
@@ -203,9 +185,7 @@ public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
      * Set 自动逻辑备份配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicBackupConfig 自动逻辑备份配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
         this.LogicBackupConfig = LogicBackupConfig;

@@ -32,7 +32,6 @@ public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
     * 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterParamList")
     @Expose
@@ -40,7 +39,6 @@ public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
     * 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyInstanceParams")
     @Expose
@@ -63,10 +61,8 @@ public class BizTaskModifyParamsData extends AbstractModel {
     }
 
     /**
-     * Get 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群参数修改数据 
      * @return ClusterParamList 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyParamItem [] getClusterParamList() {
         return this.ClusterParamList;
@@ -74,19 +70,15 @@ public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
      * Set 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterParamList 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterParamList(ModifyParamItem [] ClusterParamList) {
         this.ClusterParamList = ClusterParamList;
     }
 
     /**
-     * Get 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例参数修改数据 
      * @return ModifyInstanceParams 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BizTaskModifyInstanceParam [] getModifyInstanceParams() {
         return this.ModifyInstanceParams;
@@ -94,9 +86,7 @@ public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
      * Set 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyInstanceParams 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyInstanceParams(BizTaskModifyInstanceParam [] ModifyInstanceParams) {
         this.ModifyInstanceParams = ModifyInstanceParams;

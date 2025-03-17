@@ -25,7 +25,6 @@ public class Error extends AbstractModel {
 
     /**
     * 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,17 +32,14 @@ public class Error extends AbstractModel {
 
     /**
     * 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常错误码 
      * @return Code 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -51,19 +47,15 @@ public class Error extends AbstractModel {
 
     /**
      * Set 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常错误信息 
      * @return Message 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -71,9 +63,7 @@ public class Error extends AbstractModel {
 
     /**
      * Set 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

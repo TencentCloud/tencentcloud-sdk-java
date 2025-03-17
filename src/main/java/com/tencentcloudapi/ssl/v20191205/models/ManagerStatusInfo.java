@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ManagerStatusInfo extends AbstractModel {
 
     /**
-    * 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+    * 审核类型，枚举值：ov,ev
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
     * 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,37 +46,30 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 审核类型，枚举值：ov,ev 
+     * @return Type 审核类型，枚举值：ov,ev
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 审核类型，枚举值：ov,ev
+     * @param Type 审核类型，枚举值：ov,ev
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired 
      * @return Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -87,19 +77,15 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
      * Set 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -107,19 +93,15 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -127,9 +109,7 @@ public class ManagerStatusInfo extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

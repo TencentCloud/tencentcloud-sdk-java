@@ -32,7 +32,6 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
 
     /**
     * 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyInstanceParamList")
     @Expose
@@ -55,10 +54,8 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
     }
 
     /**
-     * Get 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例参数修改任务详情 
      * @return ModifyInstanceParamList 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyParamItem [] getModifyInstanceParamList() {
         return this.ModifyInstanceParamList;
@@ -66,9 +63,7 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
 
     /**
      * Set 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyInstanceParamList 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyInstanceParamList(ModifyParamItem [] ModifyInstanceParamList) {
         this.ModifyInstanceParamList = ModifyInstanceParamList;

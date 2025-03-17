@@ -25,7 +25,6 @@ public class DownloadCertificateResponse extends AbstractModel {
 
     /**
     * ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -33,7 +32,6 @@ public class DownloadCertificateResponse extends AbstractModel {
 
     /**
     * MIME 类型：application/zip = ZIP 压缩文件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentType")
     @Expose
@@ -47,10 +45,8 @@ public class DownloadCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。 
      * @return Content ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -58,19 +54,15 @@ public class DownloadCertificateResponse extends AbstractModel {
 
     /**
      * Set ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get MIME 类型：application/zip = ZIP 压缩文件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MIME 类型：application/zip = ZIP 压缩文件。 
      * @return ContentType MIME 类型：application/zip = ZIP 压缩文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentType() {
         return this.ContentType;
@@ -78,9 +70,7 @@ public class DownloadCertificateResponse extends AbstractModel {
 
     /**
      * Set MIME 类型：application/zip = ZIP 压缩文件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContentType MIME 类型：application/zip = ZIP 压缩文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;

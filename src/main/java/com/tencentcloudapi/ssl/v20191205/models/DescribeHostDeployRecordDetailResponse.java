@@ -25,7 +25,6 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
     * 部署记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
     * 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployRecordDetailList")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
     * 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessTotalCount")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
     * 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedTotalCount")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
     * 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningTotalCount")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 部署记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署记录总数 
      * @return TotalCount 部署记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -82,19 +75,15 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 部署记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 部署记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书部署记录列表 
      * @return DeployRecordDetailList 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployRecordDetail [] getDeployRecordDetailList() {
         return this.DeployRecordDetailList;
@@ -102,19 +91,15 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployRecordDetailList 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployRecordDetailList(DeployRecordDetail [] DeployRecordDetailList) {
         this.DeployRecordDetailList = DeployRecordDetailList;
     }
 
     /**
-     * Get 成功总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功总数 
      * @return SuccessTotalCount 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessTotalCount() {
         return this.SuccessTotalCount;
@@ -122,19 +107,15 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessTotalCount 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessTotalCount(Long SuccessTotalCount) {
         this.SuccessTotalCount = SuccessTotalCount;
     }
 
     /**
-     * Get 失败总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败总数 
      * @return FailedTotalCount 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedTotalCount() {
         return this.FailedTotalCount;
@@ -142,19 +123,15 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedTotalCount 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedTotalCount(Long FailedTotalCount) {
         this.FailedTotalCount = FailedTotalCount;
     }
 
     /**
-     * Get 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署中总数 
      * @return RunningTotalCount 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningTotalCount() {
         return this.RunningTotalCount;
@@ -162,9 +139,7 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningTotalCount 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningTotalCount(Long RunningTotalCount) {
         this.RunningTotalCount = RunningTotalCount;

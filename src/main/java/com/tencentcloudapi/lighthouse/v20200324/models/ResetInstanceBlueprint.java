@@ -31,7 +31,10 @@ public class ResetInstanceBlueprint extends AbstractModel {
     private Blueprint BlueprintInfo;
 
     /**
-    * 实例镜像是否可重置为目标镜像
+    * 实例镜像是否可重置为目标镜像。
+取值：
+true（允许）
+false（不允许）
     */
     @SerializedName("IsResettable")
     @Expose
@@ -61,16 +64,28 @@ public class ResetInstanceBlueprint extends AbstractModel {
     }
 
     /**
-     * Get 实例镜像是否可重置为目标镜像 
-     * @return IsResettable 实例镜像是否可重置为目标镜像
+     * Get 实例镜像是否可重置为目标镜像。
+取值：
+true（允许）
+false（不允许） 
+     * @return IsResettable 实例镜像是否可重置为目标镜像。
+取值：
+true（允许）
+false（不允许）
      */
     public Boolean getIsResettable() {
         return this.IsResettable;
     }
 
     /**
-     * Set 实例镜像是否可重置为目标镜像
-     * @param IsResettable 实例镜像是否可重置为目标镜像
+     * Set 实例镜像是否可重置为目标镜像。
+取值：
+true（允许）
+false（不允许）
+     * @param IsResettable 实例镜像是否可重置为目标镜像。
+取值：
+true（允许）
+false（不允许）
      */
     public void setIsResettable(Boolean IsResettable) {
         this.IsResettable = IsResettable;

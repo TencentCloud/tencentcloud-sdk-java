@@ -39,7 +39,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -74,6 +73,13 @@ public class DedicatedCluster extends AbstractModel {
     private String SiteId;
 
     /**
+    * 专用集群的运营状态
+    */
+    @SerializedName("RunningStatus")
+    @Expose
+    private String RunningStatus;
+
+    /**
      * Get 专用集群id。如"cluster-xxxxx"。 
      * @return DedicatedClusterId 专用集群id。如"cluster-xxxxx"。
      */
@@ -106,10 +112,8 @@ public class DedicatedCluster extends AbstractModel {
     }
 
     /**
-     * Get 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专用集群的描述。 
      * @return Description 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -117,9 +121,7 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -189,6 +191,22 @@ public class DedicatedCluster extends AbstractModel {
         this.SiteId = SiteId;
     }
 
+    /**
+     * Get 专用集群的运营状态 
+     * @return RunningStatus 专用集群的运营状态
+     */
+    public String getRunningStatus() {
+        return this.RunningStatus;
+    }
+
+    /**
+     * Set 专用集群的运营状态
+     * @param RunningStatus 专用集群的运营状态
+     */
+    public void setRunningStatus(String RunningStatus) {
+        this.RunningStatus = RunningStatus;
+    }
+
     public DedicatedCluster() {
     }
 
@@ -218,6 +236,9 @@ public class DedicatedCluster extends AbstractModel {
         if (source.SiteId != null) {
             this.SiteId = new String(source.SiteId);
         }
+        if (source.RunningStatus != null) {
+            this.RunningStatus = new String(source.RunningStatus);
+        }
     }
 
 
@@ -232,6 +253,7 @@ public class DedicatedCluster extends AbstractModel {
         this.setParamSimple(map, prefix + "LifecycleStatus", this.LifecycleStatus);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SiteId", this.SiteId);
+        this.setParamSimple(map, prefix + "RunningStatus", this.RunningStatus);
 
     }
 }

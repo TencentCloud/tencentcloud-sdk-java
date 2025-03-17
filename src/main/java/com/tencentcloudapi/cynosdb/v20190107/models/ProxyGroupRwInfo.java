@@ -67,7 +67,6 @@ public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
     * 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenRw")
     @Expose
@@ -191,10 +190,8 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通读写节点，yse-是，no-否 
      * @return OpenRw 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenRw() {
         return this.OpenRw;
@@ -202,9 +199,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
      * Set 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenRw 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

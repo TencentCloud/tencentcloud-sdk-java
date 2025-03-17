@@ -25,7 +25,6 @@ public class DescribeCloudDedicatedZoneResourceSummaryResponse extends AbstractM
 
     /**
     * 资源水位详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceSummarySet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudDedicatedZoneResourceSummaryResponse extends AbstractM
 
     /**
     * 资源水位扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCloudDedicatedZoneResourceSummaryResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 资源水位详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源水位详情 
      * @return ResourceSummarySet 资源水位详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudDedicatedZoneResourceSummaryInfo [] getResourceSummarySet() {
         return this.ResourceSummarySet;
@@ -58,19 +54,15 @@ public class DescribeCloudDedicatedZoneResourceSummaryResponse extends AbstractM
 
     /**
      * Set 资源水位详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceSummarySet 资源水位详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceSummarySet(CloudDedicatedZoneResourceSummaryInfo [] ResourceSummarySet) {
         this.ResourceSummarySet = ResourceSummarySet;
     }
 
     /**
-     * Get 资源水位扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源水位扩展信息 
      * @return ExtraInfo 资源水位扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtraInfo getExtraInfo() {
         return this.ExtraInfo;
@@ -78,9 +70,7 @@ public class DescribeCloudDedicatedZoneResourceSummaryResponse extends AbstractM
 
     /**
      * Set 资源水位扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo 资源水位扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;

@@ -25,14 +25,17 @@ public class TerminateDisksRequest extends AbstractModel {
 
     /**
     * 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+每次批量请求云硬盘的上限数量为100。
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
 
     /**
-     * Get 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。 
+     * Get 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+每次批量请求云硬盘的上限数量为100。 
      * @return DiskIds 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+每次批量请求云硬盘的上限数量为100。
      */
     public String [] getDiskIds() {
         return this.DiskIds;
@@ -40,7 +43,9 @@ public class TerminateDisksRequest extends AbstractModel {
 
     /**
      * Set 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+每次批量请求云硬盘的上限数量为100。
      * @param DiskIds 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+每次批量请求云硬盘的上限数量为100。
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

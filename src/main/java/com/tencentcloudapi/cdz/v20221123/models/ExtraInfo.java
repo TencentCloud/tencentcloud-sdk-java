@@ -25,7 +25,6 @@ public class ExtraInfo extends AbstractModel {
 
     /**
     * 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThisMondayLocalDate")
     @Expose
@@ -33,17 +32,14 @@ public class ExtraInfo extends AbstractModel {
 
     /**
     * 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastMondayLocalDate")
     @Expose
     private String LastMondayLocalDate;
 
     /**
-     * Get 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属可用区当地时间本周一日期 
      * @return ThisMondayLocalDate 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThisMondayLocalDate() {
         return this.ThisMondayLocalDate;
@@ -51,19 +47,15 @@ public class ExtraInfo extends AbstractModel {
 
     /**
      * Set 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThisMondayLocalDate 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThisMondayLocalDate(String ThisMondayLocalDate) {
         this.ThisMondayLocalDate = ThisMondayLocalDate;
     }
 
     /**
-     * Get 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属可用区当地时间上周一日期 
      * @return LastMondayLocalDate 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastMondayLocalDate() {
         return this.LastMondayLocalDate;
@@ -71,9 +63,7 @@ public class ExtraInfo extends AbstractModel {
 
     /**
      * Set 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastMondayLocalDate 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastMondayLocalDate(String LastMondayLocalDate) {
         this.LastMondayLocalDate = LastMondayLocalDate;

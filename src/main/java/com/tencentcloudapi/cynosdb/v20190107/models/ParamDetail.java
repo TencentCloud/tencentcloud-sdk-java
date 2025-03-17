@@ -88,7 +88,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnumValue")
     @Expose
@@ -117,7 +116,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFunc")
     @Expose
@@ -125,7 +123,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Func")
     @Expose
@@ -133,7 +130,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifiableInfo")
     @Expose
@@ -141,7 +137,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FuncPattern")
     @Expose
@@ -292,10 +287,8 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数的可选枚举值。如果为非枚举值，则为空 
      * @return EnumValue 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEnumValue() {
         return this.EnumValue;
@@ -303,9 +296,7 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnumValue 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
@@ -360,10 +351,8 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get true-为公式，false-非公式 
      * @return IsFunc true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
@@ -371,19 +360,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFunc true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数设置为公式时，Func返回设置的公式内容 
      * @return Func 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunc() {
         return this.Func;
@@ -391,19 +376,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Func 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数是否可修改 
      * @return ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifiableInfo getModifiableInfo() {
         return this.ModifiableInfo;
@@ -411,19 +392,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
         this.ModifiableInfo = ModifiableInfo;
     }
 
     /**
-     * Get 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持公式的参数的默认公式样式 
      * @return FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFuncPattern() {
         return this.FuncPattern;
@@ -431,9 +408,7 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFuncPattern(String FuncPattern) {
         this.FuncPattern = FuncPattern;

@@ -25,7 +25,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetId")
     @Expose
@@ -33,7 +32,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetName")
     @Expose
@@ -41,7 +39,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetType")
     @Expose
@@ -49,7 +46,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetSize")
     @Expose
@@ -57,7 +53,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetStatus")
     @Expose
@@ -65,7 +60,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 读流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadTraffic")
     @Expose
@@ -81,7 +74,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 写流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteTraffic")
     @Expose
@@ -89,7 +81,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 读IO
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadIO")
     @Expose
@@ -97,7 +88,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 写IO
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteIO")
     @Expose
@@ -105,7 +95,6 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Await")
     @Expose
@@ -113,17 +102,14 @@ public class SetInfo extends AbstractModel {
 
     /**
     * 利用率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Util")
     @Expose
     private DetailData Util;
 
     /**
-     * Get 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库id 
      * @return SetId 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetId() {
         return this.SetId;
@@ -131,19 +117,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetId 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetId(String SetId) {
         this.SetId = SetId;
     }
 
     /**
-     * Get 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库名称 
      * @return SetName 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetName() {
         return this.SetName;
@@ -151,19 +133,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetName 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetName(String SetName) {
         this.SetName = SetName;
     }
 
     /**
-     * Get 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库类型 
      * @return SetType 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetType() {
         return this.SetType;
@@ -171,19 +149,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetType 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetType(String SetType) {
         this.SetType = SetType;
     }
 
     /**
-     * Get 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库容量 
      * @return SetSize 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSetSize() {
         return this.SetSize;
@@ -191,19 +165,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetSize 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetSize(Float SetSize) {
         this.SetSize = SetSize;
     }
 
     /**
-     * Get 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库状态 
      * @return SetStatus 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetStatus() {
         return this.SetStatus;
@@ -211,19 +181,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetStatus 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetStatus(String SetStatus) {
         this.SetStatus = SetStatus;
     }
 
     /**
-     * Get 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库创建时间 
      * @return CreateTime 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -231,19 +197,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 读流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读流量 
      * @return ReadTraffic 读流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getReadTraffic() {
         return this.ReadTraffic;
@@ -251,19 +213,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 读流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadTraffic 读流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadTraffic(DetailData ReadTraffic) {
         this.ReadTraffic = ReadTraffic;
     }
 
     /**
-     * Get 写流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写流量 
      * @return WriteTraffic 写流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getWriteTraffic() {
         return this.WriteTraffic;
@@ -271,19 +229,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 写流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteTraffic 写流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteTraffic(DetailData WriteTraffic) {
         this.WriteTraffic = WriteTraffic;
     }
 
     /**
-     * Get 读IO
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读IO 
      * @return ReadIO 读IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getReadIO() {
         return this.ReadIO;
@@ -291,19 +245,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 读IO
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadIO 读IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadIO(DetailData ReadIO) {
         this.ReadIO = ReadIO;
     }
 
     /**
-     * Get 写IO
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写IO 
      * @return WriteIO 写IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getWriteIO() {
         return this.WriteIO;
@@ -311,19 +261,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 写IO
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteIO 写IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteIO(DetailData WriteIO) {
         this.WriteIO = WriteIO;
     }
 
     /**
-     * Get 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均等待时间 
      * @return Await 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getAwait() {
         return this.Await;
@@ -331,19 +277,15 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Await 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAwait(DetailData Await) {
         this.Await = Await;
     }
 
     /**
-     * Get 利用率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 利用率 
      * @return Util 利用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getUtil() {
         return this.Util;
@@ -351,9 +293,7 @@ public class SetInfo extends AbstractModel {
 
     /**
      * Set 利用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Util 利用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUtil(DetailData Util) {
         this.Util = Util;

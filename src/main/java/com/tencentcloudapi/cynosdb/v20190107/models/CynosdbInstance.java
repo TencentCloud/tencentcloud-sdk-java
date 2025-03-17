@@ -314,7 +314,6 @@ pause
 
     /**
     * 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageId")
     @Expose
@@ -336,7 +335,6 @@ pause
 
     /**
     * 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessType")
     @Expose
@@ -344,7 +342,6 @@ pause
 
     /**
     * 任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
     @Expose
@@ -352,7 +349,6 @@ pause
 
     /**
     * 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -368,7 +364,6 @@ pause
 
     /**
     * 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZone")
     @Expose
@@ -384,7 +379,6 @@ pause
 
     /**
     * 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNetInfo")
     @Expose
@@ -400,7 +394,6 @@ pause
 
     /**
     * 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIndexMode")
     @Expose
@@ -408,7 +401,6 @@ pause
 
     /**
     * 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAbility")
     @Expose
@@ -416,7 +408,6 @@ pause
 
     /**
     * 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -424,7 +415,6 @@ pause
 
     /**
     * 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStorageType")
     @Expose
@@ -1095,10 +1085,8 @@ pause
     }
 
     /**
-     * Get 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费存储Id 
      * @return StorageId 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageId() {
         return this.StorageId;
@@ -1106,9 +1094,7 @@ pause
 
     /**
      * Set 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageId 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
@@ -1147,10 +1133,8 @@ pause
     }
 
     /**
-     * Get 商业类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商业类型 
      * @return BusinessType 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessType() {
         return this.BusinessType;
@@ -1158,19 +1142,15 @@ pause
 
     /**
      * Set 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessType 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务 
      * @return Tasks 任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
@@ -1178,19 +1158,15 @@ pause
 
     /**
      * Set 任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tasks 任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否冻结 
      * @return IsFreeze 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsFreeze() {
         return this.IsFreeze;
@@ -1198,9 +1174,7 @@ pause
 
     /**
      * Set 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFreeze 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
@@ -1227,10 +1201,8 @@ pause
     }
 
     /**
-     * Get 主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主可用区 
      * @return MasterZone 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterZone() {
         return this.MasterZone;
@@ -1238,9 +1210,7 @@ pause
 
     /**
      * Set 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZone 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -1267,10 +1237,8 @@ pause
     }
 
     /**
-     * Get 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例网络信息 
      * @return InstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
@@ -1278,9 +1246,7 @@ pause
 
     /**
      * Set 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
@@ -1307,10 +1273,8 @@ pause
     }
 
     /**
-     * Get 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】 
      * @return InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceIndexMode() {
         return this.InstanceIndexMode;
@@ -1318,19 +1282,15 @@ pause
 
     /**
      * Set 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIndexMode(String InstanceIndexMode) {
         this.InstanceIndexMode = InstanceIndexMode;
     }
 
     /**
-     * Get 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前实例支持的能力 
      * @return InstanceAbility 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceAbility getInstanceAbility() {
         return this.InstanceAbility;
@@ -1338,19 +1298,15 @@ pause
 
     /**
      * Set 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAbility 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAbility(InstanceAbility InstanceAbility) {
         this.InstanceAbility = InstanceAbility;
     }
 
     /**
-     * Get 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例机器类型 
      * @return DeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -1358,19 +1314,15 @@ pause
 
     /**
      * Set 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例存储类型 
      * @return InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
@@ -1378,9 +1330,7 @@ pause
 
     /**
      * Set 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;

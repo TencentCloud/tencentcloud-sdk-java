@@ -25,7 +25,6 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,7 +32,6 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
     * 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DNSStatus")
     @Expose
@@ -49,17 +46,14 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
     * 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -67,19 +61,15 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -87,19 +77,15 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 解析状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析状态 
      * @return DNSStatus 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDNSStatus() {
         return this.DNSStatus;
@@ -107,19 +93,15 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
      * Set 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DNSStatus 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDNSStatus(String DNSStatus) {
         this.DNSStatus = DNSStatus;
     }
 
     /**
-     * Get 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已绑定证书ID 
      * @return OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
@@ -127,9 +109,7 @@ public class TCBHostInstance extends AbstractModel {
 
     /**
      * Set 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;

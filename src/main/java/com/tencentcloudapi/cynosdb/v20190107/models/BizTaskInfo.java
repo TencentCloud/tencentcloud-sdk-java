@@ -46,7 +46,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -61,7 +60,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
     @Expose
@@ -69,7 +67,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -211,7 +208,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateClustersData")
     @Expose
@@ -219,7 +215,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RollbackData")
     @Expose
@@ -227,7 +222,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyInstanceData")
     @Expose
@@ -243,7 +237,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyDbVersionData")
     @Expose
@@ -251,7 +244,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterSlaveData")
     @Expose
@@ -275,7 +267,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskMaintainInfo")
     @Expose
@@ -284,7 +275,6 @@ public class BizTaskInfo extends AbstractModel {
     /**
     * 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCLSDeliveryInfos")
     @Expose
@@ -346,10 +336,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -357,9 +345,7 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -382,10 +368,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延迟执行时间 
      * @return DelayTime 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelayTime() {
         return this.DelayTime;
@@ -393,19 +377,15 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayTime 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(String DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务失败信息 
      * @return ErrMsg 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -413,9 +393,7 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
@@ -738,10 +716,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建集群任务信息 
      * @return CreateClustersData 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateClustersData getCreateClustersData() {
         return this.CreateClustersData;
@@ -749,19 +725,15 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateClustersData 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateClustersData(CreateClustersData CreateClustersData) {
         this.CreateClustersData = CreateClustersData;
     }
 
     /**
-     * Get 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群回档任务信息 
      * @return RollbackData 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackData getRollbackData() {
         return this.RollbackData;
@@ -769,19 +741,15 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackData 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRollbackData(RollbackData RollbackData) {
         this.RollbackData = RollbackData;
     }
 
     /**
-     * Get 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例变配任务信息 
      * @return ModifyInstanceData 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyInstanceData getModifyInstanceData() {
         return this.ModifyInstanceData;
@@ -789,9 +757,7 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyInstanceData 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyInstanceData(ModifyInstanceData ModifyInstanceData) {
         this.ModifyInstanceData = ModifyInstanceData;
@@ -818,10 +784,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改内核版本任务信息 
      * @return ModifyDbVersionData 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyDbVersionData getModifyDbVersionData() {
         return this.ModifyDbVersionData;
@@ -829,19 +793,15 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyDbVersionData 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyDbVersionData(ModifyDbVersionData ModifyDbVersionData) {
         this.ModifyDbVersionData = ModifyDbVersionData;
     }
 
     /**
-     * Get 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群可用区信息 
      * @return ClusterSlaveData 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterSlaveData getClusterSlaveData() {
         return this.ClusterSlaveData;
@@ -849,9 +809,7 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterSlaveData 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterSlaveData(ClusterSlaveData ClusterSlaveData) {
         this.ClusterSlaveData = ClusterSlaveData;
@@ -898,10 +856,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 维护时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 维护时间 
      * @return TaskMaintainInfo 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskMaintainInfo getTaskMaintainInfo() {
         return this.TaskMaintainInfo;
@@ -909,9 +865,7 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Set 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMaintainInfo 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskMaintainInfo(TaskMaintainInfo TaskMaintainInfo) {
         this.TaskMaintainInfo = TaskMaintainInfo;
@@ -919,11 +873,9 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
      * Get 实例日志投递信息
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return InstanceCLSDeliveryInfos 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceCLSDeliveryInfo [] getInstanceCLSDeliveryInfos() {
         return this.InstanceCLSDeliveryInfos;
@@ -932,10 +884,8 @@ public class BizTaskInfo extends AbstractModel {
     /**
      * Set 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCLSDeliveryInfos 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCLSDeliveryInfos(InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos) {
         this.InstanceCLSDeliveryInfos = InstanceCLSDeliveryInfos;

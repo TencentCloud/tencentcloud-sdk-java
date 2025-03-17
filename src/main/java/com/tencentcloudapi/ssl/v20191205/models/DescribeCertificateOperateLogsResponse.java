@@ -39,7 +39,6 @@ public class DescribeCertificateOperateLogsResponse extends AbstractModel {
 
     /**
     * 证书操作日志列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateLogs")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeCertificateOperateLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书操作日志列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书操作日志列表。 
      * @return OperateLogs 证书操作日志列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OperationLog [] getOperateLogs() {
         return this.OperateLogs;
@@ -96,9 +93,7 @@ public class DescribeCertificateOperateLogsResponse extends AbstractModel {
 
     /**
      * Set 证书操作日志列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateLogs 证书操作日志列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateLogs(OperationLog [] OperateLogs) {
         this.OperateLogs = OperateLogs;

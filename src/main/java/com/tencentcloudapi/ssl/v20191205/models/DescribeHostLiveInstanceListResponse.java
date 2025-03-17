@@ -25,7 +25,6 @@ public class DescribeHostLiveInstanceListResponse extends AbstractModel {
 
     /**
     * live实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeHostLiveInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get live实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get live实例列表,如取不到值返回空数组 
      * @return InstanceList live实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -50,9 +47,7 @@ public class DescribeHostLiveInstanceListResponse extends AbstractModel {
 
     /**
      * Set live实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList live实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(LiveInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;

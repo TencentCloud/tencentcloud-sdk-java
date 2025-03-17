@@ -25,7 +25,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLB")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CDN")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WAF")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DDOS")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LIVE")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VOD")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TKE")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("APIGATEWAY")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TCB")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TEO")
     @Expose
@@ -119,7 +109,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TSE")
     @Expose
@@ -127,7 +116,6 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
     * 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COS")
     @Expose
@@ -141,10 +129,8 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联clb资源详情	 
      * @return CLB 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClbInstanceList [] getCLB() {
         return this.CLB;
@@ -152,19 +138,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLB 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLB(ClbInstanceList [] CLB) {
         this.CLB = CLB;
     }
 
     /**
-     * Get 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联cdn资源详情	 
      * @return CDN 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnInstanceList [] getCDN() {
         return this.CDN;
@@ -172,19 +154,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CDN 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCDN(CdnInstanceList [] CDN) {
         this.CDN = CDN;
     }
 
     /**
-     * Get 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联waf资源详情	 
      * @return WAF 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafInstanceList [] getWAF() {
         return this.WAF;
@@ -192,19 +170,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WAF 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWAF(WafInstanceList [] WAF) {
         this.WAF = WAF;
     }
 
     /**
-     * Get 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联ddos资源详情	 
      * @return DDOS 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosInstanceList [] getDDOS() {
         return this.DDOS;
@@ -212,19 +186,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DDOS 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDDOS(DdosInstanceList [] DDOS) {
         this.DDOS = DDOS;
     }
 
     /**
-     * Get 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联live资源详情	 
      * @return LIVE 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveInstanceList [] getLIVE() {
         return this.LIVE;
@@ -232,19 +202,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LIVE 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLIVE(LiveInstanceList [] LIVE) {
         this.LIVE = LIVE;
     }
 
     /**
-     * Get 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联vod资源详情	 
      * @return VOD 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VODInstanceList [] getVOD() {
         return this.VOD;
@@ -252,19 +218,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VOD 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVOD(VODInstanceList [] VOD) {
         this.VOD = VOD;
     }
 
     /**
-     * Get 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联tke资源详情	 
      * @return TKE 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TkeInstanceList [] getTKE() {
         return this.TKE;
@@ -272,19 +234,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TKE 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTKE(TkeInstanceList [] TKE) {
         this.TKE = TKE;
     }
 
     /**
-     * Get 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联apigateway资源详情	 
      * @return APIGATEWAY 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiGatewayInstanceList [] getAPIGATEWAY() {
         return this.APIGATEWAY;
@@ -292,19 +250,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param APIGATEWAY 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAPIGATEWAY(ApiGatewayInstanceList [] APIGATEWAY) {
         this.APIGATEWAY = APIGATEWAY;
     }
 
     /**
-     * Get 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联tcb资源详情	 
      * @return TCB 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TCBInstanceList [] getTCB() {
         return this.TCB;
@@ -312,19 +266,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TCB 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTCB(TCBInstanceList [] TCB) {
         this.TCB = TCB;
     }
 
     /**
-     * Get 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联teo资源详情	 
      * @return TEO 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TeoInstanceList [] getTEO() {
         return this.TEO;
@@ -332,9 +282,7 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TEO 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTEO(TeoInstanceList [] TEO) {
         this.TEO = TEO;
@@ -373,10 +321,8 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     }
 
     /**
-     * Get 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联tse资源详情	 
      * @return TSE 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TSEInstanceList [] getTSE() {
         return this.TSE;
@@ -384,19 +330,15 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TSE 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTSE(TSEInstanceList [] TSE) {
         this.TSE = TSE;
     }
 
     /**
-     * Get 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的COS资源详情 
      * @return COS 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSInstanceList [] getCOS() {
         return this.COS;
@@ -404,9 +346,7 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
 
     /**
      * Set 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param COS 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOS(COSInstanceList [] COS) {
         this.COS = COS;

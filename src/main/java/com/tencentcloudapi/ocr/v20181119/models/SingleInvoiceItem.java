@@ -256,6 +256,14 @@ public class SingleInvoiceItem extends AbstractModel {
     private CustomsPaymentReceipt CustomsPaymentReceipt;
 
     /**
+    * 银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BankSlip")
+    @Expose
+    private BankSlip BankSlip;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -835,6 +843,26 @@ public class SingleInvoiceItem extends AbstractModel {
         this.CustomsPaymentReceipt = CustomsPaymentReceipt;
     }
 
+    /**
+     * Get 银行回单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BankSlip 银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BankSlip getBankSlip() {
+        return this.BankSlip;
+    }
+
+    /**
+     * Set 银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BankSlip 银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBankSlip(BankSlip BankSlip) {
+        this.BankSlip = BankSlip;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -930,6 +958,9 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.CustomsPaymentReceipt != null) {
             this.CustomsPaymentReceipt = new CustomsPaymentReceipt(source.CustomsPaymentReceipt);
         }
+        if (source.BankSlip != null) {
+            this.BankSlip = new BankSlip(source.BankSlip);
+        }
     }
 
 
@@ -966,6 +997,7 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "ElectronicFlightTicketFull.", this.ElectronicFlightTicketFull);
         this.setParamObj(map, prefix + "TaxPayment.", this.TaxPayment);
         this.setParamObj(map, prefix + "CustomsPaymentReceipt.", this.CustomsPaymentReceipt);
+        this.setParamObj(map, prefix + "BankSlip.", this.BankSlip);
 
     }
 }

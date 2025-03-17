@@ -53,7 +53,6 @@ public class UpdateRecordInfo extends AbstractModel {
 
     /**
     * 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regions")
     @Expose
@@ -145,10 +144,8 @@ public class UpdateRecordInfo extends AbstractModel {
     }
 
     /**
-     * Get 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署地域列表 
      * @return Regions 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegions() {
         return this.Regions;
@@ -156,9 +153,7 @@ public class UpdateRecordInfo extends AbstractModel {
 
     /**
      * Set 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Regions 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

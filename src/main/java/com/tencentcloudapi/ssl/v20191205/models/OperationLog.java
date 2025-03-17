@@ -39,7 +39,6 @@ public class OperationLog extends AbstractModel {
 
     /**
     * 主账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -47,7 +46,6 @@ public class OperationLog extends AbstractModel {
 
     /**
     * 子账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
@@ -55,7 +53,6 @@ public class OperationLog extends AbstractModel {
 
     /**
     * 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -89,7 +86,6 @@ public class OperationLog extends AbstractModel {
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -128,10 +124,8 @@ public class OperationLog extends AbstractModel {
     }
 
     /**
-     * Get 主账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账号 
      * @return Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -139,19 +133,15 @@ public class OperationLog extends AbstractModel {
 
     /**
      * Set 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号 
      * @return SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -159,19 +149,15 @@ public class OperationLog extends AbstractModel {
 
     /**
      * Set 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
     }
 
     /**
-     * Get 证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书ID 
      * @return CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -179,9 +165,7 @@ public class OperationLog extends AbstractModel {
 
     /**
      * Set 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -214,8 +198,7 @@ public class OperationLog extends AbstractModel {
 23. modifyDownloadLimit - 表示修改下载限制开关。
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
-26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。 
+26. Resubmit - 表示证书重新申请。 
      * @return Type 每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
 1. apply - 表示申请一个免费的证书。
 2. delete - 表示删除操作。
@@ -243,7 +226,6 @@ public class OperationLog extends AbstractModel {
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -277,7 +259,6 @@ public class OperationLog extends AbstractModel {
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
 1. apply - 表示申请一个免费的证书。
 2. delete - 表示删除操作。
@@ -305,7 +286,6 @@ public class OperationLog extends AbstractModel {
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

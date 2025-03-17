@@ -25,7 +25,6 @@ public class DescribeHostTeoInstanceListResponse extends AbstractModel {
 
     /**
     * teo实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeHostTeoInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get teo实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get teo实例列表，如取不到值返回空数组 
      * @return InstanceList teo实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TeoInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -57,9 +54,7 @@ public class DescribeHostTeoInstanceListResponse extends AbstractModel {
 
     /**
      * Set teo实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList teo实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(TeoInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;

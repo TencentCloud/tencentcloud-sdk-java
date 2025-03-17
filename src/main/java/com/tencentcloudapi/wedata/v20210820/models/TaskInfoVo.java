@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskInfoVo extends AbstractModel {
 
     /**
-    * 1
+    * 租户id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
@@ -32,7 +32,7 @@ public class TaskInfoVo extends AbstractModel {
     private String AppID;
 
     /**
-    * 1
+    * 项目id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -40,7 +40,7 @@ public class TaskInfoVo extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 1
+    * 任务id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -48,7 +48,7 @@ public class TaskInfoVo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 1
+    * 任务名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,7 +56,7 @@ public class TaskInfoVo extends AbstractModel {
     private String TaskName;
 
     /**
-    * 1
+    * 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -64,7 +64,7 @@ public class TaskInfoVo extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 1
+    * 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnwerUid")
@@ -72,7 +72,7 @@ public class TaskInfoVo extends AbstractModel {
     private String OnwerUid;
 
     /**
-    * 1
+    * 负责人
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InChargeId")
@@ -80,7 +80,7 @@ public class TaskInfoVo extends AbstractModel {
     private String InChargeId;
 
     /**
-    * 1
+    * 实例id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -88,7 +88,7 @@ public class TaskInfoVo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 1
+    * jobId
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -96,7 +96,7 @@ public class TaskInfoVo extends AbstractModel {
     private String JobId;
 
     /**
-    * 1
+    * 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
@@ -104,7 +104,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineType;
 
     /**
-    * 1
+    * 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
@@ -112,7 +112,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineName;
 
     /**
-    * 1
+    * 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineSubType")
@@ -120,7 +120,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineSubType;
 
     /**
-    * 1
+    * 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineTaskId")
@@ -128,7 +128,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineTaskId;
 
     /**
-    * 1
+    * 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeStatus")
@@ -136,7 +136,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineExeStatus;
 
     /**
-    * 1
+    * 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeUser")
@@ -144,7 +144,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineExeUser;
 
     /**
-    * 1
+    * 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeStartTime")
@@ -152,7 +152,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineExeStartTime;
 
     /**
-    * 1
+    * 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeEndTime")
@@ -160,7 +160,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineExeEndTime;
 
     /**
-    * 1
+    * 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductSource")
@@ -168,9 +168,9 @@ public class TaskInfoVo extends AbstractModel {
     private String ProductSource;
 
     /**
-     * Get 1
+     * Get 租户id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppID 1
+     * @return AppID 租户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppID() {
@@ -178,9 +178,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 租户id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppID 1
+     * @param AppID 租户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(String AppID) {
@@ -188,9 +188,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 项目id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 1
+     * @return ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -198,9 +198,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 项目id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 1
+     * @param ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -208,9 +208,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 1
+     * @return TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -218,9 +218,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 1
+     * @param TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -228,9 +228,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 1
+     * @return TaskName 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -238,9 +238,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 1
+     * @param TaskName 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -248,9 +248,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 1
+     * @return TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -258,9 +258,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 1
+     * @param TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -268,9 +268,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 主账号id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OnwerUid 1
+     * @return OnwerUid 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOnwerUid() {
@@ -278,9 +278,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OnwerUid 1
+     * @param OnwerUid 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnwerUid(String OnwerUid) {
@@ -288,9 +288,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 负责人
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InChargeId 1
+     * @return InChargeId 负责人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInChargeId() {
@@ -298,9 +298,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 负责人
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InChargeId 1
+     * @param InChargeId 负责人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInChargeId(String InChargeId) {
@@ -308,9 +308,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 实例id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 1
+     * @return InstanceId 实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -318,9 +318,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 实例id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 1
+     * @param InstanceId 实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -328,9 +328,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get jobId
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 1
+     * @return JobId jobId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -338,9 +338,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set jobId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 1
+     * @param JobId jobId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -348,9 +348,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineType 1
+     * @return EngineType 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineType() {
@@ -358,9 +358,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineType 1
+     * @param EngineType 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(String EngineType) {
@@ -368,9 +368,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineName 1
+     * @return EngineName 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
@@ -378,9 +378,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineName 1
+     * @param EngineName 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
@@ -388,9 +388,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineSubType 1
+     * @return EngineSubType 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineSubType() {
@@ -398,9 +398,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineSubType 1
+     * @param EngineSubType 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineSubType(String EngineSubType) {
@@ -408,9 +408,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineTaskId 1
+     * @return EngineTaskId 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineTaskId() {
@@ -418,9 +418,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTaskId 1
+     * @param EngineTaskId 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineTaskId(String EngineTaskId) {
@@ -428,9 +428,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeStatus 1
+     * @return EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeStatus() {
@@ -438,9 +438,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeStatus 1
+     * @param EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeStatus(String EngineExeStatus) {
@@ -448,9 +448,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeUser 1
+     * @return EngineExeUser 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeUser() {
@@ -458,9 +458,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeUser 1
+     * @param EngineExeUser 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeUser(String EngineExeUser) {
@@ -468,9 +468,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeStartTime 1
+     * @return EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeStartTime() {
@@ -478,9 +478,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeStartTime 1
+     * @param EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeStartTime(String EngineExeStartTime) {
@@ -488,9 +488,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeEndTime 1
+     * @return EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeEndTime() {
@@ -498,9 +498,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeEndTime 1
+     * @param EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeEndTime(String EngineExeEndTime) {
@@ -508,9 +508,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductSource 1
+     * @return ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductSource() {
@@ -518,9 +518,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductSource 1
+     * @param ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductSource(String ProductSource) {

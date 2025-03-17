@@ -25,7 +25,6 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
 
     /**
     * 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
 
     /**
     * 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,7 +43,6 @@ trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("From")
     @Expose
@@ -53,7 +50,6 @@ sheca：上海CA
 
     /**
     * 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateType")
     @Expose
@@ -153,7 +149,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductZhName")
     @Expose
@@ -161,7 +156,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -169,7 +163,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -177,7 +170,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -213,7 +205,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulnerabilityStatus")
     @Expose
@@ -237,7 +228,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityPeriod")
     @Expose
@@ -245,7 +235,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsertTime")
     @Expose
@@ -261,7 +250,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateExtra")
     @Expose
@@ -301,7 +289,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateId")
     @Expose
@@ -317,7 +304,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusName")
     @Expose
@@ -325,7 +311,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubjectAltName")
     @Expose
@@ -333,7 +318,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVip")
     @Expose
@@ -341,7 +325,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWildcard")
     @Expose
@@ -349,7 +332,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDv")
     @Expose
@@ -357,7 +339,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVulnerability")
     @Expose
@@ -373,7 +354,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewAble")
     @Expose
@@ -381,7 +361,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deployable")
     @Expose
@@ -389,7 +368,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -397,7 +375,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootCert")
     @Expose
@@ -437,7 +414,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
@@ -467,10 +443,8 @@ null：用户上传证书（没有套餐类型），
     private String RequestId;
 
     /**
-     * Get 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书所属用户主账号 UIN。 
      * @return OwnerUin 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -478,19 +452,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目 ID。 
      * @return ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -498,9 +468,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -511,14 +479,12 @@ null：用户上传证书（没有套餐类型），
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
-sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。 
+sheca：上海CA 
      * @return From 证书来源：
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrom() {
         return this.From;
@@ -530,23 +496,19 @@ trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param From 证书来源：
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书类型：CA = 客户端证书，SVR = 服务器证书。 
      * @return CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateType() {
         return this.CertificateType;
@@ -554,9 +516,7 @@ sheca：上海CA
 
     /**
      * Set 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
@@ -919,10 +879,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书产品名称 
      * @return ProductZhName 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductZhName() {
         return this.ProductZhName;
@@ -930,19 +888,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductZhName 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductZhName(String ProductZhName) {
         this.ProductZhName = ProductZhName;
     }
 
     /**
-     * Get 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书绑定通用名称域名。 
      * @return Domain 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -950,19 +904,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注名称。 
      * @return Alias 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -970,19 +920,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中 
      * @return Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -990,9 +936,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -1087,10 +1031,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞扫描状态。 
      * @return VulnerabilityStatus 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulnerabilityStatus() {
         return this.VulnerabilityStatus;
@@ -1098,9 +1040,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulnerabilityStatus 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulnerabilityStatus(String VulnerabilityStatus) {
         this.VulnerabilityStatus = VulnerabilityStatus;
@@ -1147,10 +1087,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书有效期：单位（月）。 
      * @return ValidityPeriod 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
@@ -1158,19 +1096,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityPeriod 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书申请时间。 
      * @return InsertTime 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInsertTime() {
         return this.InsertTime;
@@ -1178,9 +1112,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InsertTime 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
@@ -1207,10 +1139,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书扩展信息。 
      * @return CertificateExtra 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateExtra getCertificateExtra() {
         return this.CertificateExtra;
@@ -1218,9 +1148,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateExtra 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateExtra(CertificateExtra CertificateExtra) {
         this.CertificateExtra = CertificateExtra;
@@ -1307,10 +1235,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书 ID。 
      * @return CertificateId 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateId() {
         return this.CertificateId;
@@ -1318,9 +1244,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateId 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
@@ -1347,10 +1271,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态描述。 
      * @return StatusName 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusName() {
         return this.StatusName;
@@ -1358,19 +1280,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusName 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusName(String StatusName) {
         this.StatusName = StatusName;
     }
 
     /**
-     * Get 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书包含的多个域名（不包含主域名，主域名使用Domain字段） 
      * @return SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
@@ -1378,19 +1296,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为付费证书。 
      * @return IsVip 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVip() {
         return this.IsVip;
@@ -1398,19 +1312,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVip 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVip(Boolean IsVip) {
         this.IsVip = IsVip;
     }
 
     /**
-     * Get 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为泛域名证书。 
      * @return IsWildcard 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsWildcard() {
         return this.IsWildcard;
@@ -1418,19 +1328,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWildcard 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWildcard(Boolean IsWildcard) {
         this.IsWildcard = IsWildcard;
     }
 
     /**
-     * Get 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为 DV 版证书。 
      * @return IsDv 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDv() {
         return this.IsDv;
@@ -1438,19 +1344,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDv 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDv(Boolean IsDv) {
         this.IsDv = IsDv;
     }
 
     /**
-     * Get 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用了漏洞扫描功能。 
      * @return IsVulnerability 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVulnerability() {
         return this.IsVulnerability;
@@ -1458,9 +1360,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVulnerability 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVulnerability(Boolean IsVulnerability) {
         this.IsVulnerability = IsVulnerability;
@@ -1487,10 +1387,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可续费。 
      * @return RenewAble 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewAble() {
         return this.RenewAble;
@@ -1498,19 +1396,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewAble 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewAble(Boolean RenewAble) {
         this.RenewAble = RenewAble;
     }
 
     /**
-     * Get 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可部署。 
      * @return Deployable 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeployable() {
         return this.Deployable;
@@ -1518,19 +1412,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deployable 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployable(Boolean Deployable) {
         this.Deployable = Deployable;
     }
 
     /**
-     * Get 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联标签列表。 
      * @return Tags 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getTags() {
         return this.Tags;
@@ -1538,19 +1428,15 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 根证书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 根证书。 
      * @return RootCert 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RootCertificates getRootCert() {
         return this.RootCert;
@@ -1558,9 +1444,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootCert 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootCert(RootCertificates RootCert) {
         this.RootCert = RootCert;
@@ -1647,10 +1531,8 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书加密算法（国密证书特有） 
      * @return EncryptAlgorithm 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
@@ -1658,9 +1540,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptAlgorithm 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;

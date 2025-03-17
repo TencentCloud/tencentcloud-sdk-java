@@ -25,7 +25,6 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
     * DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainValidateAuthPath")
     @Expose
@@ -33,7 +32,6 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
     * DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainValidateAuthKey")
     @Expose
@@ -41,7 +39,6 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
     * DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainValidateAuthValue")
     @Expose
@@ -49,17 +46,14 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
     * DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainValidateAuthDomain")
     @Expose
     private String DomainValidateAuthDomain;
 
     /**
-     * Get DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DV 认证值路径。 
      * @return DomainValidateAuthPath DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainValidateAuthPath() {
         return this.DomainValidateAuthPath;
@@ -67,19 +61,15 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
      * Set DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainValidateAuthPath DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainValidateAuthPath(String DomainValidateAuthPath) {
         this.DomainValidateAuthPath = DomainValidateAuthPath;
     }
 
     /**
-     * Get DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DV 认证 KEY。 
      * @return DomainValidateAuthKey DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainValidateAuthKey() {
         return this.DomainValidateAuthKey;
@@ -87,19 +77,15 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
      * Set DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainValidateAuthKey DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainValidateAuthKey(String DomainValidateAuthKey) {
         this.DomainValidateAuthKey = DomainValidateAuthKey;
     }
 
     /**
-     * Get DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DV 认证值。 
      * @return DomainValidateAuthValue DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainValidateAuthValue() {
         return this.DomainValidateAuthValue;
@@ -107,19 +93,15 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
      * Set DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainValidateAuthValue DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainValidateAuthValue(String DomainValidateAuthValue) {
         this.DomainValidateAuthValue = DomainValidateAuthValue;
     }
 
     /**
-     * Get DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DV 认证域名。 
      * @return DomainValidateAuthDomain DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainValidateAuthDomain() {
         return this.DomainValidateAuthDomain;
@@ -127,9 +109,7 @@ public class RevokeDomainValidateAuths extends AbstractModel {
 
     /**
      * Set DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainValidateAuthDomain DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainValidateAuthDomain(String DomainValidateAuthDomain) {
         this.DomainValidateAuthDomain = DomainValidateAuthDomain;

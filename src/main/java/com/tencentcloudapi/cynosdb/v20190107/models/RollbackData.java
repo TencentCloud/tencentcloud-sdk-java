@@ -74,7 +74,6 @@ public class RollbackData extends AbstractModel {
 
     /**
     * 回档到serverlessls集群时最小CPU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinCpu")
     @Expose
@@ -82,7 +81,6 @@ public class RollbackData extends AbstractModel {
 
     /**
     * 回档到serverlessls集群时最大CPU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -90,7 +88,6 @@ public class RollbackData extends AbstractModel {
 
     /**
     * 快照ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapShotId")
     @Expose
@@ -114,7 +111,6 @@ public class RollbackData extends AbstractModel {
 
     /**
     * 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupFileName")
     @Expose
@@ -122,7 +118,6 @@ public class RollbackData extends AbstractModel {
 
     /**
     * 回档进程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RollbackProcess")
     @Expose
@@ -241,10 +236,8 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get 回档到serverlessls集群时最小CPU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档到serverlessls集群时最小CPU 
      * @return MinCpu 回档到serverlessls集群时最小CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinCpu() {
         return this.MinCpu;
@@ -252,19 +245,15 @@ public class RollbackData extends AbstractModel {
 
     /**
      * Set 回档到serverlessls集群时最小CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinCpu 回档到serverlessls集群时最小CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinCpu(Long MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get 回档到serverlessls集群时最大CPU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档到serverlessls集群时最大CPU 
      * @return MaxCpu 回档到serverlessls集群时最大CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxCpu() {
         return this.MaxCpu;
@@ -272,19 +261,15 @@ public class RollbackData extends AbstractModel {
 
     /**
      * Set 回档到serverlessls集群时最大CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxCpu 回档到serverlessls集群时最大CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxCpu(Long MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get 快照ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照ID 
      * @return SnapShotId 快照ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSnapShotId() {
         return this.SnapShotId;
@@ -292,9 +277,7 @@ public class RollbackData extends AbstractModel {
 
     /**
      * Set 快照ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapShotId 快照ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapShotId(Long SnapShotId) {
         this.SnapShotId = SnapShotId;
@@ -341,10 +324,8 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件名称 
      * @return BackupFileName 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupFileName() {
         return this.BackupFileName;
@@ -352,19 +333,15 @@ public class RollbackData extends AbstractModel {
 
     /**
      * Set 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupFileName 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupFileName(String BackupFileName) {
         this.BackupFileName = BackupFileName;
     }
 
     /**
-     * Get 回档进程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档进程 
      * @return RollbackProcess 回档进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackProcessInfo getRollbackProcess() {
         return this.RollbackProcess;
@@ -372,9 +349,7 @@ public class RollbackData extends AbstractModel {
 
     /**
      * Set 回档进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackProcess 回档进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRollbackProcess(RollbackProcessInfo RollbackProcess) {
         this.RollbackProcess = RollbackProcess;

@@ -513,6 +513,20 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *伸缩组内实例进入备用中状态。
+* 备用中状态实例的 CLB 权重值为 0，不会被自动缩容、不健康替换、实例刷新操作选中
+* 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+* 实例进入备用中状态后，伸缩组会尝试下调期望实例数，新期望数不会小于最小值
+     * @param req EnterStandbyRequest
+     * @return EnterStandbyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnterStandbyResponse EnterStandby(EnterStandbyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnterStandby", EnterStandbyResponse.class);
+    }
+
+    /**
      *本接口（ExecuteScalingPolicy）用于执行伸缩策略。
 
 * 可以根据伸缩策略ID执行伸缩策略。

@@ -25,7 +25,6 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
 
     /**
     * apiGateway实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get apiGateway实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get apiGateway实例列表,如取不到值返回空数组 
      * @return InstanceList apiGateway实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiGatewayInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -57,9 +54,7 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
 
     /**
      * Set apiGateway实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList apiGateway实例列表,如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(ApiGatewayInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;

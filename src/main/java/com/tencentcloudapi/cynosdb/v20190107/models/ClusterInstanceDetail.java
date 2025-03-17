@@ -88,7 +88,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainStartTime")
     @Expose
@@ -96,7 +95,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainDuration")
     @Expose
@@ -104,7 +102,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaintainWeekDays")
     @Expose
@@ -112,7 +109,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerlessStatus")
     @Expose
@@ -120,7 +116,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTasks")
     @Expose
@@ -128,7 +123,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceDeviceType")
     @Expose
@@ -136,7 +130,6 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStorageType")
     @Expose
@@ -294,10 +287,8 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行开始时间(距离0点的秒数)	 
      * @return MaintainStartTime 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
@@ -305,19 +296,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainStartTime 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持续的时间(单位：秒)	 
      * @return MaintainDuration 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
@@ -325,19 +312,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainDuration 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"] 
      * @return MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
@@ -345,19 +328,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
     /**
-     * Get serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get serverless实例子状态 
      * @return ServerlessStatus serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
@@ -365,19 +344,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerlessStatus serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例任务信息 
      * @return InstanceTasks 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectTask [] getInstanceTasks() {
         return this.InstanceTasks;
@@ -385,19 +360,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTasks 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTasks(ObjectTask [] InstanceTasks) {
         this.InstanceTasks = InstanceTasks;
     }
 
     /**
-     * Get 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例机器类型 
      * @return InstanceDeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
@@ -405,19 +376,15 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceDeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
     }
 
     /**
-     * Get 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例存储类型 
      * @return InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
@@ -425,9 +392,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;

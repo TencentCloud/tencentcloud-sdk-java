@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RunReRankRequest extends AbstractModel {
 
     /**
-    * 模型名称, 必填，默认: lke-reranker-base
+    * 查询内容，必填
     */
     @SerializedName("Query")
     @Expose
@@ -59,16 +59,16 @@ public class RunReRankRequest extends AbstractModel {
     private Boolean Online;
 
     /**
-     * Get 模型名称, 必填，默认: lke-reranker-base 
-     * @return Query 模型名称, 必填，默认: lke-reranker-base
+     * Get 查询内容，必填 
+     * @return Query 查询内容，必填
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 模型名称, 必填，默认: lke-reranker-base
-     * @param Query 模型名称, 必填，默认: lke-reranker-base
+     * Set 查询内容，必填
+     * @param Query 查询内容，必填
      */
     public void setQuery(String Query) {
         this.Query = Query;

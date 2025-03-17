@@ -130,7 +130,6 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
     * VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -138,7 +137,6 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -146,7 +144,6 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
     * 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldAddrInfo")
     @Expose
@@ -414,10 +411,8 @@ public class CynosdbInstanceGroup extends AbstractModel {
     }
 
     /**
-     * Get VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC的ID 
      * @return UniqVpcId VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -425,19 +420,15 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
      * Set VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return UniqSubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -445,19 +436,15 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正在回收IP信息 
      * @return OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OldAddrInfo getOldAddrInfo() {
         return this.OldAddrInfo;
@@ -465,9 +452,7 @@ public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
      * Set 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldAddrInfo(OldAddrInfo OldAddrInfo) {
         this.OldAddrInfo = OldAddrInfo;

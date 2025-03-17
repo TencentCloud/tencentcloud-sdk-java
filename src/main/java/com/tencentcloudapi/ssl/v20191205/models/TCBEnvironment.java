@@ -25,7 +25,6 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
     * 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
     * 来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -41,7 +39,6 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,17 +46,14 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 唯一ID 
      * @return ID 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -67,19 +61,15 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
      * Set 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源 
      * @return Source 来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -87,19 +77,15 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
      * Set 来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -107,19 +93,15 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -127,9 +109,7 @@ public class TCBEnvironment extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -25,7 +25,6 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,7 +32,6 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
     * 存储量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StockCount")
     @Expose
@@ -41,7 +39,6 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
     * 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasStock")
     @Expose
@@ -49,17 +46,14 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
     * 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZoneStockInfos")
     @Expose
     private SlaveZoneStockInfo [] SlaveZoneStockInfos;
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -67,19 +61,15 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 存储量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储量 
      * @return StockCount 存储量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStockCount() {
         return this.StockCount;
@@ -87,19 +77,15 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
      * Set 存储量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StockCount 存储量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否包含库存 
      * @return HasStock 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasStock() {
         return this.HasStock;
@@ -107,19 +93,15 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
      * Set 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasStock 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 从可用区库存信息 
      * @return SlaveZoneStockInfos 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
         return this.SlaveZoneStockInfos;
@@ -127,9 +109,7 @@ public class ServerlessZoneStockInfo extends AbstractModel {
 
     /**
      * Set 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZoneStockInfos 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
         this.SlaveZoneStockInfos = SlaveZoneStockInfos;

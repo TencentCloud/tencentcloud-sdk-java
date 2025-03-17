@@ -32,7 +32,6 @@ public class UploadCertificateResponse extends AbstractModel {
 
     /**
     * 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepeatCertId")
     @Expose
@@ -62,10 +61,8 @@ public class UploadCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复证书的ID 
      * @return RepeatCertId 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepeatCertId() {
         return this.RepeatCertId;
@@ -73,9 +70,7 @@ public class UploadCertificateResponse extends AbstractModel {
 
     /**
      * Set 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepeatCertId 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepeatCertId(String RepeatCertId) {
         this.RepeatCertId = RepeatCertId;

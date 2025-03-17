@@ -25,7 +25,6 @@ public class DescribeHostDeployRecordResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostDeployRecordResponse extends AbstractModel {
 
     /**
     * 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployRecordList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeHostDeployRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeHostDeployRecordResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书部署记录列表 
      * @return DeployRecordList 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployRecordInfo [] getDeployRecordList() {
         return this.DeployRecordList;
@@ -78,9 +70,7 @@ public class DescribeHostDeployRecordResponse extends AbstractModel {
 
     /**
      * Set 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployRecordList 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployRecordList(DeployRecordInfo [] DeployRecordList) {
         this.DeployRecordList = DeployRecordList;

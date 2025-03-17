@@ -90,7 +90,6 @@ deleted:已删除
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -98,7 +97,6 @@ deleted:已删除
 
     /**
     * 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbType")
     @Expose
@@ -106,7 +104,6 @@ deleted:已删除
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -114,7 +111,6 @@ deleted:已删除
 
     /**
     * 集群状态描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -122,7 +118,6 @@ deleted:已删除
 
     /**
     * 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -130,7 +125,6 @@ deleted:已删除
 
     /**
     * 付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -138,7 +132,6 @@ deleted:已删除
 
     /**
     * 截止时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodEndTime")
     @Expose
@@ -146,7 +139,6 @@ deleted:已删除
 
     /**
     * 集群读写vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -154,7 +146,6 @@ deleted:已删除
 
     /**
     * 集群读写vport
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
@@ -162,7 +153,6 @@ deleted:已删除
 
     /**
     * 项目id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectID")
     @Expose
@@ -170,7 +160,6 @@ deleted:已删除
 
     /**
     * 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -178,7 +167,6 @@ deleted:已删除
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -186,7 +174,6 @@ deleted:已删除
 
     /**
     * cynos内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CynosVersion")
     @Expose
@@ -194,7 +181,6 @@ deleted:已删除
 
     /**
     * 存储容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -202,7 +188,6 @@ deleted:已删除
 
     /**
     * 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -210,7 +195,6 @@ deleted:已删除
 
     /**
     * 正在处理的任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessingTask")
     @Expose
@@ -218,7 +202,6 @@ deleted:已删除
 
     /**
     * 集群的任务数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
     @Expose
@@ -226,7 +209,6 @@ deleted:已删除
 
     /**
     * 集群绑定的tag数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -234,7 +216,6 @@ deleted:已删除
 
     /**
     * Db类型(NORMAL, SERVERLESS)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbMode")
     @Expose
@@ -244,7 +225,6 @@ deleted:已删除
     * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerlessStatus")
     @Expose
@@ -252,7 +232,6 @@ pause
 
     /**
     * 集群预付费存储值大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Storage")
     @Expose
@@ -260,7 +239,6 @@ pause
 
     /**
     * 集群存储为预付费时的存储ID，用于预付费存储变配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageId")
     @Expose
@@ -268,7 +246,6 @@ pause
 
     /**
     * 集群存储付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -276,7 +253,6 @@ pause
 
     /**
     * 集群计算规格对应的最小存储值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinStorageSize")
     @Expose
@@ -284,7 +260,6 @@ pause
 
     /**
     * 集群计算规格对应的最大存储值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxStorageSize")
     @Expose
@@ -292,7 +267,6 @@ pause
 
     /**
     * 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetAddrs")
     @Expose
@@ -300,7 +274,6 @@ pause
 
     /**
     * 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalZone")
     @Expose
@@ -308,7 +281,6 @@ pause
 
     /**
     * 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZone")
     @Expose
@@ -316,7 +288,6 @@ pause
 
     /**
     * 是否有从可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasSlaveZone")
     @Expose
@@ -324,7 +295,6 @@ pause
 
     /**
     * 从可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -332,7 +302,6 @@ pause
 
     /**
     * 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessType")
     @Expose
@@ -340,7 +309,6 @@ pause
 
     /**
     * 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -348,7 +316,6 @@ pause
 
     /**
     * 订单来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderSource")
     @Expose
@@ -356,7 +323,6 @@ pause
 
     /**
     * 能力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ability")
     @Expose
@@ -364,7 +330,6 @@ pause
 
     /**
     * 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourcePackages")
     @Expose
@@ -535,10 +500,8 @@ deleted:已删除
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -546,19 +509,15 @@ deleted:已删除
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎类型 
      * @return DbType 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbType() {
         return this.DbType;
@@ -566,19 +525,15 @@ deleted:已删除
 
     /**
      * Set 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbType 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -586,19 +541,15 @@ deleted:已删除
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 集群状态描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态描述 
      * @return StatusDesc 集群状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -606,19 +557,15 @@ deleted:已删除
 
     /**
      * Set 集群状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 集群状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群创建时间 
      * @return CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -626,19 +573,15 @@ deleted:已删除
 
     /**
      * Set 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费模式。0-按量计费，1-包年包月 
      * @return PayMode 付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -646,19 +589,15 @@ deleted:已删除
 
     /**
      * Set 付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 截止时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 截止时间 
      * @return PeriodEndTime 截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
@@ -666,19 +605,15 @@ deleted:已删除
 
     /**
      * Set 截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeriodEndTime 截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 集群读写vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群读写vip 
      * @return Vip 集群读写vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -686,19 +621,15 @@ deleted:已删除
 
     /**
      * Set 集群读写vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 集群读写vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 集群读写vport
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群读写vport 
      * @return Vport 集群读写vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -706,19 +637,15 @@ deleted:已删除
 
     /**
      * Set 集群读写vport
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport 集群读写vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 项目id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目id 
      * @return ProjectID 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectID() {
         return this.ProjectID;
@@ -726,19 +653,15 @@ deleted:已删除
 
     /**
      * Set 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectID 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -746,19 +669,15 @@ deleted:已删除
 
     /**
      * Set 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -766,19 +685,15 @@ deleted:已删除
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get cynos内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cynos内核版本 
      * @return CynosVersion cynos内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCynosVersion() {
         return this.CynosVersion;
@@ -786,19 +701,15 @@ deleted:已删除
 
     /**
      * Set cynos内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CynosVersion cynos内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get 存储容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储容量 
      * @return StorageLimit 存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
@@ -806,19 +717,15 @@ deleted:已删除
 
     /**
      * Set 存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageLimit 存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get 续费标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费标志 
      * @return RenewFlag 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -826,19 +733,15 @@ deleted:已删除
 
     /**
      * Set 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 正在处理的任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正在处理的任务 
      * @return ProcessingTask 正在处理的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
@@ -846,19 +749,15 @@ deleted:已删除
 
     /**
      * Set 正在处理的任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessingTask 正在处理的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get 集群的任务数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群的任务数组 
      * @return Tasks 集群的任务数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
@@ -866,19 +765,15 @@ deleted:已删除
 
     /**
      * Set 集群的任务数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tasks 集群的任务数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 集群绑定的tag数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群绑定的tag数组 
      * @return ResourceTags 集群绑定的tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
@@ -886,19 +781,15 @@ deleted:已删除
 
     /**
      * Set 集群绑定的tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceTags 集群绑定的tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Db类型(NORMAL, SERVERLESS)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Db类型(NORMAL, SERVERLESS) 
      * @return DbMode Db类型(NORMAL, SERVERLESS)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbMode() {
         return this.DbMode;
@@ -906,9 +797,7 @@ deleted:已删除
 
     /**
      * Set Db类型(NORMAL, SERVERLESS)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbMode Db类型(NORMAL, SERVERLESS)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
@@ -917,12 +806,10 @@ deleted:已删除
     /**
      * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
-pause
-注意：此字段可能返回 null，表示取不到有效值。 
+pause 
      * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
@@ -932,21 +819,17 @@ pause
      * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 集群预付费存储值大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群预付费存储值大小 
      * @return Storage 集群预付费存储值大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorage() {
         return this.Storage;
@@ -954,19 +837,15 @@ pause
 
     /**
      * Set 集群预付费存储值大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Storage 集群预付费存储值大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 集群存储为预付费时的存储ID，用于预付费存储变配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群存储为预付费时的存储ID，用于预付费存储变配 
      * @return StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageId() {
         return this.StorageId;
@@ -974,19 +853,15 @@ pause
 
     /**
      * Set 集群存储为预付费时的存储ID，用于预付费存储变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 集群存储付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群存储付费模式。0-按量计费，1-包年包月 
      * @return StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
@@ -994,19 +869,15 @@ pause
 
     /**
      * Set 集群存储付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 集群计算规格对应的最小存储值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群计算规格对应的最小存储值 
      * @return MinStorageSize 集群计算规格对应的最小存储值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
@@ -1014,19 +885,15 @@ pause
 
     /**
      * Set 集群计算规格对应的最小存储值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinStorageSize 集群计算规格对应的最小存储值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get 集群计算规格对应的最大存储值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群计算规格对应的最大存储值 
      * @return MaxStorageSize 集群计算规格对应的最大存储值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
@@ -1034,19 +901,15 @@ pause
 
     /**
      * Set 集群计算规格对应的最大存储值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxStorageSize 集群计算规格对应的最大存储值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群网络信息 
      * @return NetAddrs 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetAddr [] getNetAddrs() {
         return this.NetAddrs;
@@ -1054,19 +917,15 @@ pause
 
     /**
      * Set 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetAddrs 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetAddrs(NetAddr [] NetAddrs) {
         this.NetAddrs = NetAddrs;
     }
 
     /**
-     * Get 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理可用区 
      * @return PhysicalZone 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
@@ -1074,19 +933,15 @@ pause
 
     /**
      * Set 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalZone 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get 主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主可用区 
      * @return MasterZone 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterZone() {
         return this.MasterZone;
@@ -1094,19 +949,15 @@ pause
 
     /**
      * Set 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZone 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 是否有从可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否有从可用区 
      * @return HasSlaveZone 是否有从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHasSlaveZone() {
         return this.HasSlaveZone;
@@ -1114,19 +965,15 @@ pause
 
     /**
      * Set 是否有从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasSlaveZone 是否有从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasSlaveZone(String HasSlaveZone) {
         this.HasSlaveZone = HasSlaveZone;
     }
 
     /**
-     * Get 从可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 从可用区 
      * @return SlaveZones 从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
@@ -1134,19 +981,15 @@ pause
 
     /**
      * Set 从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZones 从可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 商业类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商业类型 
      * @return BusinessType 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessType() {
         return this.BusinessType;
@@ -1154,19 +997,15 @@ pause
 
     /**
      * Set 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessType 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否冻结 
      * @return IsFreeze 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsFreeze() {
         return this.IsFreeze;
@@ -1174,19 +1013,15 @@ pause
 
     /**
      * Set 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFreeze 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get 订单来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单来源 
      * @return OrderSource 订单来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderSource() {
         return this.OrderSource;
@@ -1194,19 +1029,15 @@ pause
 
     /**
      * Set 订单来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderSource 订单来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get 能力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 能力 
      * @return Ability 能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ability getAbility() {
         return this.Ability;
@@ -1214,19 +1045,15 @@ pause
 
     /**
      * Set 能力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ability 能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbility(Ability Ability) {
         this.Ability = Ability;
     }
 
     /**
-     * Get 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	 
      * @return ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
@@ -1234,9 +1061,7 @@ pause
 
     /**
      * Set 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;

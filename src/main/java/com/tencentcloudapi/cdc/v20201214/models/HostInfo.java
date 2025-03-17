@@ -95,7 +95,6 @@ public class HostInfo extends AbstractModel {
 
     /**
     * 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostId")
     @Expose
@@ -262,10 +261,8 @@ public class HostInfo extends AbstractModel {
     }
 
     /**
-     * Get 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宿主机id 
      * @return HostId 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostId() {
         return this.HostId;
@@ -273,9 +270,7 @@ public class HostInfo extends AbstractModel {
 
     /**
      * Set 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostId 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

@@ -31,7 +31,11 @@ public class DiskConfig extends AbstractModel {
     private String Zone;
 
     /**
-    * 云硬盘类型。
+    * 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
     */
     @SerializedName("DiskType")
     @Expose
@@ -82,16 +86,32 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘类型。 
-     * @return DiskType 云硬盘类型。
+     * Get 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li> 
+     * @return DiskType 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云硬盘类型。
-     * @param DiskType 云硬盘类型。
+     * Set 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+     * @param DiskType 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

@@ -80,7 +80,7 @@ public class DescribeReportTaskListRequest extends AbstractModel {
     private String EngineTaskId;
 
     /**
-    * 产品模块
+    * 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
     */
     @SerializedName("ProductSource")
     @Expose
@@ -236,16 +236,16 @@ public class DescribeReportTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get 产品模块 
-     * @return ProductSource 产品模块
+     * Get 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等 
+     * @return ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
      */
     public String getProductSource() {
         return this.ProductSource;
     }
 
     /**
-     * Set 产品模块
-     * @param ProductSource 产品模块
+     * Set 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
+     * @param ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
      */
     public void setProductSource(String ProductSource) {
         this.ProductSource = ProductSource;

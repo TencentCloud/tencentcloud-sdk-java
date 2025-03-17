@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EngineTaskInfo extends AbstractModel {
 
     /**
-    * 1
+    * 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineSubmitTime")
@@ -32,7 +32,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String EngineSubmitTime;
 
     /**
-    * 1
+    * 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeTime")
@@ -40,7 +40,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String EngineExeTime;
 
     /**
-    * 1
+    * 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeTimes")
@@ -48,7 +48,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long EngineExeTimes;
 
     /**
-    * 1
+    * cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CuConsume")
@@ -56,7 +56,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long CuConsume;
 
     /**
-    * 1
+    * 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceUsage")
@@ -64,7 +64,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long ResourceUsage;
 
     /**
-    * 1
+    * 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
@@ -72,7 +72,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String EngineName;
 
     /**
-    * 1
+    * 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeStatus")
@@ -80,7 +80,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String EngineExeStatus;
 
     /**
-    * 1
+    * 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskKind")
@@ -88,7 +88,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String TaskKind;
 
     /**
-    * 1
+    * 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -96,7 +96,7 @@ public class EngineTaskInfo extends AbstractModel {
     private String TaskType;
 
     /**
-    * 1
+    * 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskContent")
@@ -104,7 +104,8 @@ public class EngineTaskInfo extends AbstractModel {
     private String TaskContent;
 
     /**
-    * 1
+    * 数据扫描总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputBytesSum")
@@ -112,7 +113,8 @@ public class EngineTaskInfo extends AbstractModel {
     private Long InputBytesSum;
 
     /**
-    * 1
+    * shuffle read 总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShuffleReadBytesSum")
@@ -120,7 +122,8 @@ public class EngineTaskInfo extends AbstractModel {
     private Long ShuffleReadBytesSum;
 
     /**
-    * 1
+    * shuffle read 总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShuffleReadRecordsSum")
@@ -128,7 +131,8 @@ public class EngineTaskInfo extends AbstractModel {
     private Long ShuffleReadRecordsSum;
 
     /**
-    * 1
+    * 输出总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputRecordsSum")
@@ -136,7 +140,8 @@ public class EngineTaskInfo extends AbstractModel {
     private Long OutputRecordsSum;
 
     /**
-    * 1
+    * 输出总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputBytesSum")
@@ -144,7 +149,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long OutputBytesSum;
 
     /**
-    * 1
+    * 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputFilesNum")
@@ -152,7 +157,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long OutputFilesNum;
 
     /**
-    * 1
+    * 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputSmallFilesNum")
@@ -160,7 +165,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long OutputSmallFilesNum;
 
     /**
-    * 1
+    * 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitTime")
@@ -168,7 +173,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long WaitTime;
 
     /**
-    * 1
+    * 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryResultTime")
@@ -176,7 +181,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long QueryResultTime;
 
     /**
-    * 1
+    * 入参
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmdArgs")
@@ -184,9 +189,9 @@ public class EngineTaskInfo extends AbstractModel {
     private String CmdArgs;
 
     /**
-     * Get 1
+     * Get 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineSubmitTime 1
+     * @return EngineSubmitTime 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineSubmitTime() {
@@ -194,9 +199,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineSubmitTime 1
+     * @param EngineSubmitTime 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineSubmitTime(String EngineSubmitTime) {
@@ -204,9 +209,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeTime 1
+     * @return EngineExeTime 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeTime() {
@@ -214,9 +219,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeTime 1
+     * @param EngineExeTime 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeTime(String EngineExeTime) {
@@ -224,9 +229,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeTimes 1
+     * @return EngineExeTimes 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEngineExeTimes() {
@@ -234,9 +239,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeTimes 1
+     * @param EngineExeTimes 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeTimes(Long EngineExeTimes) {
@@ -244,9 +249,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get cu消耗
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CuConsume 1
+     * @return CuConsume cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCuConsume() {
@@ -254,9 +259,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CuConsume 1
+     * @param CuConsume cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCuConsume(Long CuConsume) {
@@ -264,9 +269,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceUsage 1
+     * @return ResourceUsage 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceUsage() {
@@ -274,9 +279,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceUsage 1
+     * @param ResourceUsage 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceUsage(Long ResourceUsage) {
@@ -284,9 +289,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineName 1
+     * @return EngineName 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
@@ -294,9 +299,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineName 1
+     * @param EngineName 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
@@ -304,9 +309,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeStatus 1
+     * @return EngineExeStatus 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeStatus() {
@@ -314,9 +319,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeStatus 1
+     * @param EngineExeStatus 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeStatus(String EngineExeStatus) {
@@ -324,9 +329,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务种类
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskKind 1
+     * @return TaskKind 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskKind() {
@@ -334,9 +339,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskKind 1
+     * @param TaskKind 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskKind(String TaskKind) {
@@ -344,9 +349,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 1
+     * @return TaskType 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -354,9 +359,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 1
+     * @param TaskType 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -364,9 +369,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskContent 1
+     * @return TaskContent 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskContent() {
@@ -374,9 +379,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskContent 1
+     * @param TaskContent 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskContent(String TaskContent) {
@@ -384,9 +389,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 数据扫描总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputBytesSum 1
+     * @return InputBytesSum 数据扫描总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputBytesSum() {
@@ -394,9 +401,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 数据扫描总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputBytesSum 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputBytesSum 数据扫描总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputBytesSum(Long InputBytesSum) {
@@ -404,9 +413,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get shuffle read 总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShuffleReadBytesSum 1
+     * @return ShuffleReadBytesSum shuffle read 总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShuffleReadBytesSum() {
@@ -414,9 +425,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set shuffle read 总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShuffleReadBytesSum 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShuffleReadBytesSum shuffle read 总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShuffleReadBytesSum(Long ShuffleReadBytesSum) {
@@ -424,9 +437,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get shuffle read 总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShuffleReadRecordsSum 1
+     * @return ShuffleReadRecordsSum shuffle read 总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShuffleReadRecordsSum() {
@@ -434,9 +449,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set shuffle read 总行数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShuffleReadRecordsSum 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShuffleReadRecordsSum shuffle read 总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShuffleReadRecordsSum(Long ShuffleReadRecordsSum) {
@@ -444,9 +461,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 输出总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputRecordsSum 1
+     * @return OutputRecordsSum 输出总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputRecordsSum() {
@@ -454,9 +473,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 输出总行数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputRecordsSum 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutputRecordsSum 输出总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputRecordsSum(Long OutputRecordsSum) {
@@ -464,9 +485,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 输出总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputBytesSum 1
+     * @return OutputBytesSum 输出总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputBytesSum() {
@@ -474,9 +497,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 输出总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputBytesSum 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutputBytesSum 输出总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputBytesSum(Long OutputBytesSum) {
@@ -484,9 +509,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputFilesNum 1
+     * @return OutputFilesNum 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputFilesNum() {
@@ -494,9 +519,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputFilesNum 1
+     * @param OutputFilesNum 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputFilesNum(Long OutputFilesNum) {
@@ -504,9 +529,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputSmallFilesNum 1
+     * @return OutputSmallFilesNum 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputSmallFilesNum() {
@@ -514,9 +539,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputSmallFilesNum 1
+     * @param OutputSmallFilesNum 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputSmallFilesNum(Long OutputSmallFilesNum) {
@@ -524,9 +549,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitTime 1
+     * @return WaitTime 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWaitTime() {
@@ -534,9 +559,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitTime 1
+     * @param WaitTime 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaitTime(Long WaitTime) {
@@ -544,9 +569,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueryResultTime 1
+     * @return QueryResultTime 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQueryResultTime() {
@@ -554,9 +579,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryResultTime 1
+     * @param QueryResultTime 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryResultTime(Long QueryResultTime) {
@@ -564,9 +589,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 入参
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CmdArgs 1
+     * @return CmdArgs 入参
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmdArgs() {
@@ -574,9 +599,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 入参
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CmdArgs 1
+     * @param CmdArgs 入参
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmdArgs(String CmdArgs) {

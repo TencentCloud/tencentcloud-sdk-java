@@ -25,7 +25,6 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
     * 总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
     * tke实例列表，取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
     * 异步刷新总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncTotalNum")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
     * 异步刷新当前执行数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncOffset")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
     * 当前缓存读取时间	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncCacheTime")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数，取不到值返回0 
      * @return TotalCount 总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -82,19 +75,15 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get tke实例列表，取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tke实例列表，取不到值返回空数组 
      * @return InstanceList tke实例列表，取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TkeInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -102,19 +91,15 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
      * Set tke实例列表，取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList tke实例列表，取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(TkeInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 异步刷新总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步刷新总数，取不到值返回0 
      * @return AsyncTotalNum 异步刷新总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncTotalNum() {
         return this.AsyncTotalNum;
@@ -122,19 +107,15 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 异步刷新总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncTotalNum 异步刷新总数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncTotalNum(Long AsyncTotalNum) {
         this.AsyncTotalNum = AsyncTotalNum;
     }
 
     /**
-     * Get 异步刷新当前执行数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步刷新当前执行数，取不到值返回0 
      * @return AsyncOffset 异步刷新当前执行数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncOffset() {
         return this.AsyncOffset;
@@ -142,19 +123,15 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 异步刷新当前执行数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncOffset 异步刷新当前执行数，取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncOffset(Long AsyncOffset) {
         this.AsyncOffset = AsyncOffset;
     }
 
     /**
-     * Get 当前缓存读取时间	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前缓存读取时间	 
      * @return AsyncCacheTime 当前缓存读取时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncCacheTime() {
         return this.AsyncCacheTime;
@@ -162,9 +139,7 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 当前缓存读取时间	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncCacheTime 当前缓存读取时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncCacheTime(String AsyncCacheTime) {
         this.AsyncCacheTime = AsyncCacheTime;

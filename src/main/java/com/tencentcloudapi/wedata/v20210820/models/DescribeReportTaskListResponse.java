@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeReportTaskListResponse extends AbstractModel {
 
     /**
-    * 1
+    * 任务列表信息
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeReportTaskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1 
-     * @return Data 1
+     * Get 任务列表信息 
+     * @return Data 任务列表信息
      */
     public ReportTaskListInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 1
-     * @param Data 1
+     * Set 任务列表信息
+     * @param Data 任务列表信息
      */
     public void setData(ReportTaskListInfo Data) {
         this.Data = Data;

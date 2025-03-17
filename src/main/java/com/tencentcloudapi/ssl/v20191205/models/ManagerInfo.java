@@ -135,7 +135,6 @@ public class ManagerInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -402,10 +401,8 @@ public class ManagerInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getTags() {
         return this.Tags;
@@ -413,9 +410,7 @@ public class ManagerInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;

@@ -81,7 +81,6 @@ public class InstanceSpec extends AbstractModel {
 
     /**
     * 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneStockInfos")
     @Expose
@@ -89,7 +88,6 @@ public class InstanceSpec extends AbstractModel {
 
     /**
     * 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StockCount")
     @Expose
@@ -224,10 +222,8 @@ public class InstanceSpec extends AbstractModel {
     }
 
     /**
-     * Get 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域库存信息 
      * @return ZoneStockInfos 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZoneStockInfo [] getZoneStockInfos() {
         return this.ZoneStockInfos;
@@ -235,19 +231,15 @@ public class InstanceSpec extends AbstractModel {
 
     /**
      * Set 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneStockInfos 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneStockInfos(ZoneStockInfo [] ZoneStockInfos) {
         this.ZoneStockInfos = ZoneStockInfos;
     }
 
     /**
-     * Get 库存数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 库存数量 
      * @return StockCount 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStockCount() {
         return this.StockCount;
@@ -255,9 +247,7 @@ public class InstanceSpec extends AbstractModel {
 
     /**
      * Set 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StockCount 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;

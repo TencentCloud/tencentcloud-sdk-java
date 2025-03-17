@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReportTaskDetail extends AbstractModel {
 
     /**
-    * 1
+    * 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineTaskId")
@@ -32,7 +32,7 @@ public class ReportTaskDetail extends AbstractModel {
     private String EngineTaskId;
 
     /**
-    * 1
+    * 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeStatus")
@@ -40,7 +40,7 @@ public class ReportTaskDetail extends AbstractModel {
     private String EngineExeStatus;
 
     /**
-    * 1
+    * 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeStartTime")
@@ -48,7 +48,7 @@ public class ReportTaskDetail extends AbstractModel {
     private String EngineExeStartTime;
 
     /**
-    * 1
+    * 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineExeEndTime")
@@ -56,7 +56,7 @@ public class ReportTaskDetail extends AbstractModel {
     private String EngineExeEndTime;
 
     /**
-    * 1
+    * 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -64,7 +64,7 @@ public class ReportTaskDetail extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 1
+    * 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessInfo")
@@ -72,7 +72,7 @@ public class ReportTaskDetail extends AbstractModel {
     private String BusinessInfo;
 
     /**
-    * 1
+    * 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineTaskInfo")
@@ -80,9 +80,9 @@ public class ReportTaskDetail extends AbstractModel {
     private EngineTaskInfo EngineTaskInfo;
 
     /**
-     * Get 1
+     * Get 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineTaskId 1
+     * @return EngineTaskId 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineTaskId() {
@@ -90,9 +90,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTaskId 1
+     * @param EngineTaskId 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineTaskId(String EngineTaskId) {
@@ -100,9 +100,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeStatus 1
+     * @return EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeStatus() {
@@ -110,9 +110,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeStatus 1
+     * @param EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeStatus(String EngineExeStatus) {
@@ -120,9 +120,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeStartTime 1
+     * @return EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeStartTime() {
@@ -130,9 +130,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeStartTime 1
+     * @param EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeStartTime(String EngineExeStartTime) {
@@ -140,9 +140,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeEndTime 1
+     * @return EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineExeEndTime() {
@@ -150,9 +150,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeEndTime 1
+     * @param EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineExeEndTime(String EngineExeEndTime) {
@@ -160,9 +160,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 1
+     * @return TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -170,9 +170,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 1
+     * @param TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -180,9 +180,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 业务信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessInfo 1
+     * @return BusinessInfo 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessInfo() {
@@ -190,9 +190,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessInfo 1
+     * @param BusinessInfo 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessInfo(String BusinessInfo) {
@@ -200,9 +200,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineTaskInfo 1
+     * @return EngineTaskInfo 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EngineTaskInfo getEngineTaskInfo() {
@@ -210,9 +210,9 @@ public class ReportTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTaskInfo 1
+     * @param EngineTaskInfo 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineTaskInfo(EngineTaskInfo EngineTaskInfo) {

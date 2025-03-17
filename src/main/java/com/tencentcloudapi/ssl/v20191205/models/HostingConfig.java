@@ -25,7 +25,6 @@ public class HostingConfig extends AbstractModel {
 
     /**
     * 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplaceTime")
     @Expose
@@ -33,7 +32,6 @@ public class HostingConfig extends AbstractModel {
 
     /**
     * 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTypes")
     @Expose
@@ -54,10 +52,8 @@ public class HostingConfig extends AbstractModel {
     private String ReplaceEndTime;
 
     /**
-     * Get 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换 
      * @return ReplaceTime 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplaceTime() {
         return this.ReplaceTime;
@@ -65,19 +61,15 @@ public class HostingConfig extends AbstractModel {
 
     /**
      * Set 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplaceTime 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplaceTime(Long ReplaceTime) {
         this.ReplaceTime = ReplaceTime;
     }
 
     /**
-     * Get 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒 
      * @return MessageTypes 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMessageTypes() {
         return this.MessageTypes;
@@ -85,9 +77,7 @@ public class HostingConfig extends AbstractModel {
 
     /**
      * Set 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageTypes 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTypes(Long [] MessageTypes) {
         this.MessageTypes = MessageTypes;

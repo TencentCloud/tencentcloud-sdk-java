@@ -498,6 +498,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
     * 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostingConfig")
     @Expose
@@ -1736,8 +1737,10 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 托管配置信息 
+     * Get 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostingConfig getHostingConfig() {
         return this.HostingConfig;
@@ -1745,7 +1748,9 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * Set 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostingConfig(HostingConfig HostingConfig) {
         this.HostingConfig = HostingConfig;

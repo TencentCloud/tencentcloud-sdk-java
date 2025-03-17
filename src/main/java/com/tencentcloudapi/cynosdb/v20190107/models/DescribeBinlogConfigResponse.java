@@ -25,7 +25,6 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
 
     /**
     * Binlog跨地域配置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogCrossRegionsConfigUpdateTime")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
 
     /**
     * Binlog配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogConfig")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Binlog跨地域配置更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Binlog跨地域配置更新时间 
      * @return BinlogCrossRegionsConfigUpdateTime Binlog跨地域配置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBinlogCrossRegionsConfigUpdateTime() {
         return this.BinlogCrossRegionsConfigUpdateTime;
@@ -58,19 +54,15 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
 
     /**
      * Set Binlog跨地域配置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BinlogCrossRegionsConfigUpdateTime Binlog跨地域配置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogCrossRegionsConfigUpdateTime(String BinlogCrossRegionsConfigUpdateTime) {
         this.BinlogCrossRegionsConfigUpdateTime = BinlogCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Get Binlog配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Binlog配置信息 
      * @return BinlogConfig Binlog配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BinlogConfigInfo getBinlogConfig() {
         return this.BinlogConfig;
@@ -78,9 +70,7 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
 
     /**
      * Set Binlog配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BinlogConfig Binlog配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogConfig(BinlogConfigInfo BinlogConfig) {
         this.BinlogConfig = BinlogConfig;

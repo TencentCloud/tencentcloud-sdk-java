@@ -131,6 +131,13 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     private Tag [] TagItems;
 
     /**
+    * 副可用去信息
+    */
+    @SerializedName("SecondaryZoneInfo")
+    @Expose
+    private SecondaryZoneInfo [] SecondaryZoneInfo;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -382,6 +389,22 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
         this.TagItems = TagItems;
     }
 
+    /**
+     * Get 副可用去信息 
+     * @return SecondaryZoneInfo 副可用去信息
+     */
+    public SecondaryZoneInfo [] getSecondaryZoneInfo() {
+        return this.SecondaryZoneInfo;
+    }
+
+    /**
+     * Set 副可用去信息
+     * @param SecondaryZoneInfo 副可用去信息
+     */
+    public void setSecondaryZoneInfo(SecondaryZoneInfo [] SecondaryZoneInfo) {
+        this.SecondaryZoneInfo = SecondaryZoneInfo;
+    }
+
     public CreateInstanceNewRequest() {
     }
 
@@ -438,6 +461,12 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
                 this.TagItems[i] = new Tag(source.TagItems[i]);
             }
         }
+        if (source.SecondaryZoneInfo != null) {
+            this.SecondaryZoneInfo = new SecondaryZoneInfo[source.SecondaryZoneInfo.length];
+            for (int i = 0; i < source.SecondaryZoneInfo.length; i++) {
+                this.SecondaryZoneInfo[i] = new SecondaryZoneInfo(source.SecondaryZoneInfo[i]);
+            }
+        }
     }
 
 
@@ -460,6 +489,7 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
         this.setParamSimple(map, prefix + "HAZk", this.HAZk);
         this.setParamObj(map, prefix + "CommonSpec.", this.CommonSpec);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
+        this.setParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
 
     }
 }

@@ -25,7 +25,6 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindDomains")
     @Expose
@@ -49,7 +46,6 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertSource")
     @Expose
@@ -57,17 +53,14 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-     * Get 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关证书ID 
      * @return Id 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
      * Set 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关证书名称 
      * @return Name 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -95,19 +84,15 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
      * Set 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定域名 
      * @return BindDomains 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBindDomains() {
         return this.BindDomains;
@@ -115,19 +100,15 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
      * Set 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindDomains 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindDomains(String [] BindDomains) {
         this.BindDomains = BindDomains;
     }
 
     /**
-     * Get 证书来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书来源 
      * @return CertSource 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertSource() {
         return this.CertSource;
@@ -135,19 +116,15 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
      * Set 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertSource 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertSource(String CertSource) {
         this.CertSource = CertSource;
     }
 
     /**
-     * Get 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前绑定的SSL证书ID 
      * @return CertId 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -155,9 +132,7 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
      * Set 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

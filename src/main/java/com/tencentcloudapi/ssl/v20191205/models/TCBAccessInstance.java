@@ -25,7 +25,6 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,7 +32,6 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -42,7 +40,6 @@ public class TCBAccessInstance extends AbstractModel {
     /**
     * 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnionStatus")
     @Expose
@@ -51,7 +48,6 @@ public class TCBAccessInstance extends AbstractModel {
     /**
     * 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPreempted")
     @Expose
@@ -60,7 +56,6 @@ public class TCBAccessInstance extends AbstractModel {
     /**
     * icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ICPStatus")
     @Expose
@@ -68,17 +63,14 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
     * 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -86,19 +78,15 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -106,9 +94,7 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -116,11 +102,9 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Get 统一域名状态
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return UnionStatus 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnionStatus() {
         return this.UnionStatus;
@@ -129,10 +113,8 @@ public class TCBAccessInstance extends AbstractModel {
     /**
      * Set 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnionStatus 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnionStatus(Long UnionStatus) {
         this.UnionStatus = UnionStatus;
@@ -140,11 +122,9 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Get 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return IsPreempted 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPreempted() {
         return this.IsPreempted;
@@ -153,10 +133,8 @@ public class TCBAccessInstance extends AbstractModel {
     /**
      * Set 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPreempted 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPreempted(Boolean IsPreempted) {
         this.IsPreempted = IsPreempted;
@@ -164,11 +142,9 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Get icp黑名单封禁状态，0-未封禁，1-封禁
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ICPStatus icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getICPStatus() {
         return this.ICPStatus;
@@ -177,20 +153,16 @@ public class TCBAccessInstance extends AbstractModel {
     /**
      * Set icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ICPStatus icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setICPStatus(Long ICPStatus) {
         this.ICPStatus = ICPStatus;
     }
 
     /**
-     * Get 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已绑定证书ID 
      * @return OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
@@ -198,9 +170,7 @@ public class TCBAccessInstance extends AbstractModel {
 
     /**
      * Set 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;

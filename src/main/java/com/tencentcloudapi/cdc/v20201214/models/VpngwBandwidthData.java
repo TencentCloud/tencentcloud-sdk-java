@@ -25,7 +25,6 @@ public class VpngwBandwidthData extends AbstractModel {
 
     /**
     * 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutBandwidth")
     @Expose
@@ -39,10 +38,8 @@ public class VpngwBandwidthData extends AbstractModel {
     private InBandwidth InBandwidth;
 
     /**
-     * Get 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出带宽流量 
      * @return OutBandwidth 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutBandwidth getOutBandwidth() {
         return this.OutBandwidth;
@@ -50,9 +47,7 @@ public class VpngwBandwidthData extends AbstractModel {
 
     /**
      * Set 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutBandwidth 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutBandwidth(OutBandwidth OutBandwidth) {
         this.OutBandwidth = OutBandwidth;

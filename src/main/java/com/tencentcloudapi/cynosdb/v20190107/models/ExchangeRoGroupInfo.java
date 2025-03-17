@@ -25,7 +25,6 @@ public class ExchangeRoGroupInfo extends AbstractModel {
 
     /**
     * 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcRoGroupInfo")
     @Expose
@@ -33,17 +32,14 @@ public class ExchangeRoGroupInfo extends AbstractModel {
 
     /**
     * 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstRoGroupInfo")
     @Expose
     private RollbackRoGroupInfo DstRoGroupInfo;
 
     /**
-     * Get 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源RO组信息 
      * @return SrcRoGroupInfo 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackRoGroupInfo getSrcRoGroupInfo() {
         return this.SrcRoGroupInfo;
@@ -51,19 +47,15 @@ public class ExchangeRoGroupInfo extends AbstractModel {
 
     /**
      * Set 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcRoGroupInfo 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcRoGroupInfo(RollbackRoGroupInfo SrcRoGroupInfo) {
         this.SrcRoGroupInfo = SrcRoGroupInfo;
     }
 
     /**
-     * Get 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标RO组信息 
      * @return DstRoGroupInfo 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackRoGroupInfo getDstRoGroupInfo() {
         return this.DstRoGroupInfo;
@@ -71,9 +63,7 @@ public class ExchangeRoGroupInfo extends AbstractModel {
 
     /**
      * Set 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstRoGroupInfo 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstRoGroupInfo(RollbackRoGroupInfo DstRoGroupInfo) {
         this.DstRoGroupInfo = DstRoGroupInfo;

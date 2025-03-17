@@ -25,7 +25,6 @@ public class DescribeDeleteCertificatesTaskResultResponse extends AbstractModel 
 
     /**
     * 批量删除证书异步任务结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteTaskResult")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDeleteCertificatesTaskResultResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 批量删除证书异步任务结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批量删除证书异步任务结果 
      * @return DeleteTaskResult 批量删除证书异步任务结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeleteTaskResult [] getDeleteTaskResult() {
         return this.DeleteTaskResult;
@@ -50,9 +47,7 @@ public class DescribeDeleteCertificatesTaskResultResponse extends AbstractModel 
 
     /**
      * Set 批量删除证书异步任务结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteTaskResult 批量删除证书异步任务结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteTaskResult(DeleteTaskResult [] DeleteTaskResult) {
         this.DeleteTaskResult = DeleteTaskResult;

@@ -25,7 +25,6 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
     * CDN实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
     * CDN域名总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
     * 异步刷新总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncTotalNum")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
     * 异步刷新当前执行数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncOffset")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
     * 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncCacheTime")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CDN实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDN实例列表，如取不到值返回空数组 
      * @return InstanceList CDN实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -82,19 +75,15 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
      * Set CDN实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList CDN实例列表，如取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(CdnInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get CDN域名总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDN域名总数，如取不到值返回0 
      * @return TotalCount CDN域名总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -102,19 +91,15 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
      * Set CDN域名总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount CDN域名总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 异步刷新总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步刷新总数，如取不到值返回0 
      * @return AsyncTotalNum 异步刷新总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncTotalNum() {
         return this.AsyncTotalNum;
@@ -122,19 +107,15 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
      * Set 异步刷新总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncTotalNum 异步刷新总数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncTotalNum(Long AsyncTotalNum) {
         this.AsyncTotalNum = AsyncTotalNum;
     }
 
     /**
-     * Get 异步刷新当前执行数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步刷新当前执行数，如取不到值返回0 
      * @return AsyncOffset 异步刷新当前执行数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncOffset() {
         return this.AsyncOffset;
@@ -142,19 +123,15 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
      * Set 异步刷新当前执行数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncOffset 异步刷新当前执行数，如取不到值返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncOffset(Long AsyncOffset) {
         this.AsyncOffset = AsyncOffset;
     }
 
     /**
-     * Get 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前缓存读取时间 
      * @return AsyncCacheTime 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncCacheTime() {
         return this.AsyncCacheTime;
@@ -162,9 +139,7 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
      * Set 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncCacheTime 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncCacheTime(String AsyncCacheTime) {
         this.AsyncCacheTime = AsyncCacheTime;

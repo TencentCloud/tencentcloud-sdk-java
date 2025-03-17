@@ -25,7 +25,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyGroup")
     @Expose
@@ -33,7 +32,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyGroupRwInfo")
     @Expose
@@ -49,7 +47,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -65,17 +62,14 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-     * Get 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库代理组 
      * @return ProxyGroup 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyGroup getProxyGroup() {
         return this.ProxyGroup;
@@ -83,19 +77,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyGroup 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyGroup(ProxyGroup ProxyGroup) {
         this.ProxyGroup = ProxyGroup;
     }
 
     /**
-     * Get 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库代理组读写分离信息 
      * @return ProxyGroupRwInfo 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyGroupRwInfo getProxyGroupRwInfo() {
         return this.ProxyGroupRwInfo;
@@ -103,9 +93,7 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyGroupRwInfo 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyGroupRwInfo(ProxyGroupRwInfo ProxyGroupRwInfo) {
         this.ProxyGroupRwInfo = ProxyGroupRwInfo;
@@ -132,10 +120,8 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库代理连接池信息 
      * @return ConnectionPool 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyConnectionPoolInfo getConnectionPool() {
         return this.ConnectionPool;
@@ -143,9 +129,7 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPool 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPool(ProxyConnectionPoolInfo ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -172,10 +156,8 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库代理任务集 
      * @return Tasks 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
@@ -183,9 +165,7 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tasks 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;

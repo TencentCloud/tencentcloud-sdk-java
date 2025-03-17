@@ -25,7 +25,6 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
 
     /**
     * DDOS实例列表,取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get DDOS实例列表,取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DDOS实例列表,取不到值返回空数组 
      * @return InstanceList DDOS实例列表,取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosInstanceDetail [] getInstanceList() {
         return this.InstanceList;
@@ -58,19 +54,15 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
 
     /**
      * Set DDOS实例列表,取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceList DDOS实例列表,取不到值返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(DdosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
