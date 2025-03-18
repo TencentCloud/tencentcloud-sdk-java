@@ -134,6 +134,14 @@ public class UserIdAndUserName extends AbstractModel {
     private String GlobalUserName;
 
     /**
+    * 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GlobalUserCode")
+    @Expose
+    private String GlobalUserCode;
+
+    /**
     * 手机号
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -180,6 +188,22 @@ public class UserIdAndUserName extends AbstractModel {
     @SerializedName("InValidateAppRange")
     @Expose
     private Boolean InValidateAppRange;
+
+    /**
+    * -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmailActivationStatus")
+    @Expose
+    private Long EmailActivationStatus;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
 
     /**
      * Get 用户ID 
@@ -454,6 +478,26 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
+     * Get 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GlobalUserCode 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGlobalUserCode() {
+        return this.GlobalUserCode;
+    }
+
+    /**
+     * Set 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GlobalUserCode 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGlobalUserCode(String GlobalUserCode) {
+        this.GlobalUserCode = GlobalUserCode;
+    }
+
+    /**
      * Get 手机号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mobile 手机号
@@ -573,6 +617,46 @@ public class UserIdAndUserName extends AbstractModel {
         this.InValidateAppRange = InValidateAppRange;
     }
 
+    /**
+     * Get -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEmailActivationStatus() {
+        return this.EmailActivationStatus;
+    }
+
+    /**
+     * Set -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmailActivationStatus(Long EmailActivationStatus) {
+        this.EmailActivationStatus = EmailActivationStatus;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public UserIdAndUserName() {
     }
 
@@ -623,6 +707,9 @@ public class UserIdAndUserName extends AbstractModel {
         if (source.GlobalUserName != null) {
             this.GlobalUserName = new String(source.GlobalUserName);
         }
+        if (source.GlobalUserCode != null) {
+            this.GlobalUserCode = new String(source.GlobalUserCode);
+        }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
@@ -640,6 +727,12 @@ public class UserIdAndUserName extends AbstractModel {
         }
         if (source.InValidateAppRange != null) {
             this.InValidateAppRange = new Boolean(source.InValidateAppRange);
+        }
+        if (source.EmailActivationStatus != null) {
+            this.EmailActivationStatus = new Long(source.EmailActivationStatus);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
     }
 
@@ -662,12 +755,15 @@ public class UserIdAndUserName extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedUser", this.UpdatedUser);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "GlobalUserName", this.GlobalUserName);
+        this.setParamSimple(map, prefix + "GlobalUserCode", this.GlobalUserCode);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
         this.setParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
         this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
         this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
+        this.setParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

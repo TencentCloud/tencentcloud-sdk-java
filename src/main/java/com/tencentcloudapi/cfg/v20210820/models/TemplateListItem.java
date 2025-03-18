@@ -46,7 +46,6 @@ public class TemplateListItem extends AbstractModel {
 
     /**
     * 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateTag")
     @Expose
@@ -82,7 +81,6 @@ public class TemplateListItem extends AbstractModel {
 
     /**
     * 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateSource")
     @Expose
@@ -137,10 +135,8 @@ public class TemplateListItem extends AbstractModel {
     }
 
     /**
-     * Get 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经验库标签 
      * @return TemplateTag 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateTag() {
         return this.TemplateTag;
@@ -148,9 +144,7 @@ public class TemplateListItem extends AbstractModel {
 
     /**
      * Set 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateTag 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateTag(String TemplateTag) {
         this.TemplateTag = TemplateTag;
@@ -221,10 +215,8 @@ public class TemplateListItem extends AbstractModel {
     }
 
     /**
-     * Get 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经验库来源 0-自建经验 1-专家推荐 
      * @return TemplateSource 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateSource() {
         return this.TemplateSource;
@@ -232,9 +224,7 @@ public class TemplateListItem extends AbstractModel {
 
     /**
      * Set 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateSource 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateSource(Long TemplateSource) {
         this.TemplateSource = TemplateSource;

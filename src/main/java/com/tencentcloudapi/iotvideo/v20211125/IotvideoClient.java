@@ -127,6 +127,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *p2p路线切换
+     * @param req ChangeP2PRouteRequest
+     * @return ChangeP2PRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeP2PRouteResponse ChangeP2PRoute(ChangeP2PRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeP2PRoute", ChangeP2PRouteResponse.class);
+    }
+
+    /**
      *判断是否开启转发的权限
      * @param req CheckForwardAuthRequest
      * @return CheckForwardAuthResponse
@@ -806,6 +817,17 @@ public class IotvideoClient extends AbstractClient{
     public DescribeP2PInfoResponse DescribeP2PInfo(DescribeP2PInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeP2PInfo", DescribeP2PInfoResponse.class);
+    }
+
+    /**
+     *当前p2p线路
+     * @param req DescribeP2PRouteRequest
+     * @return DescribeP2PRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeP2PRouteResponse DescribeP2PRoute(DescribeP2PRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeP2PRoute", DescribeP2PRouteResponse.class);
     }
 
     /**

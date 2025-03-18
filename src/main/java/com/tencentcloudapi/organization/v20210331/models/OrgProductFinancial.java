@@ -25,7 +25,6 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
     * 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -33,7 +32,6 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
     * 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -41,7 +39,6 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
     * 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -49,17 +46,14 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
     * 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ratio")
     @Expose
     private String Ratio;
 
     /**
-     * Get 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品Code。 
      * @return ProductName 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -67,19 +61,15 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
      * Set 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 产品名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名。 
      * @return ProductCode 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -87,19 +77,15 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
      * Set 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品消耗，单位：元。 
      * @return TotalCost 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
         return this.TotalCost;
@@ -107,19 +93,15 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
      * Set 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 占比%。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 占比%。 
      * @return Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRatio() {
         return this.Ratio;
@@ -127,9 +109,7 @@ public class OrgProductFinancial extends AbstractModel {
 
     /**
      * Set 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRatio(String Ratio) {
         this.Ratio = Ratio;

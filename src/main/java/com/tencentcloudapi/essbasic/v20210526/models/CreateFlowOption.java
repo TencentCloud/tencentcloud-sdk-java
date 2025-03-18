@@ -96,6 +96,14 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean SkipUploadFile;
 
     /**
+    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+    */
+    @SerializedName("SignComponentConfig")
+    @Expose
+    private SignComponentConfig SignComponentConfig;
+
+    /**
      * Get 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以 
@@ -287,6 +295,26 @@ public class CreateFlowOption extends AbstractModel {
         this.SkipUploadFile = SkipUploadFile;
     }
 
+    /**
+     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期. 
+     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public SignComponentConfig getSignComponentConfig() {
+        return this.SignComponentConfig;
+    }
+
+    /**
+     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
+        this.SignComponentConfig = SignComponentConfig;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -319,6 +347,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.SkipUploadFile != null) {
             this.SkipUploadFile = new Boolean(source.SkipUploadFile);
         }
+        if (source.SignComponentConfig != null) {
+            this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
+        }
     }
 
 
@@ -334,6 +365,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
         this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+        this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
 
     }
 }

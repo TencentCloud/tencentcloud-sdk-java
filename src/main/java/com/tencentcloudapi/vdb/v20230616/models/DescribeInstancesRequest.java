@@ -122,6 +122,13 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Tag [] ResourceTags;
 
     /**
+    * 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long [] TaskStatus;
+
+    /**
      * Get 实例ID数组。 
      * @return InstanceIds 实例ID数组。
      */
@@ -353,6 +360,22 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中 
+     * @return TaskStatus 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public Long [] getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * @param TaskStatus 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public void setTaskStatus(Long [] TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -430,6 +453,12 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
             }
         }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long[source.TaskStatus.length];
+            for (int i = 0; i < source.TaskStatus.length; i++) {
+                this.TaskStatus[i] = new Long(source.TaskStatus[i]);
+            }
+        }
     }
 
 
@@ -451,6 +480,7 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
 
     }
 }

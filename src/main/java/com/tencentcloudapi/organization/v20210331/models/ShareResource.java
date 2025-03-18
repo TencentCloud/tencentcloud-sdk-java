@@ -32,7 +32,6 @@ public class ShareResource extends AbstractModel {
 
     /**
     * 产品资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductResourceId")
     @Expose
@@ -59,10 +58,8 @@ public class ShareResource extends AbstractModel {
     }
 
     /**
-     * Get 产品资源ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品资源ID。 
      * @return ProductResourceId 产品资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductResourceId() {
         return this.ProductResourceId;
@@ -70,9 +67,7 @@ public class ShareResource extends AbstractModel {
 
     /**
      * Set 产品资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductResourceId 产品资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductResourceId(String ProductResourceId) {
         this.ProductResourceId = ProductResourceId;

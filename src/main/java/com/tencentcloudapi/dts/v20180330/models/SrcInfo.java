@@ -123,7 +123,6 @@ public class SrcInfo extends AbstractModel {
 
     /**
     * 云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -361,10 +360,8 @@ public class SrcInfo extends AbstractModel {
     }
 
     /**
-     * Get 云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网ID，如：ccn-afp6kltc 
      * @return CcnId 云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -372,9 +369,7 @@ public class SrcInfo extends AbstractModel {
 
     /**
      * Set 云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

@@ -196,6 +196,14 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AppOpenUserId;
 
     /**
+    * 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmailActivationStatus")
+    @Expose
+    private Long EmailActivationStatus;
+
+    /**
      * Get 业务ID 
      * @return Id 业务ID
      */
@@ -619,6 +627,26 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.AppOpenUserId = AppOpenUserId;
     }
 
+    /**
+     * Get 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmailActivationStatus 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEmailActivationStatus() {
+        return this.EmailActivationStatus;
+    }
+
+    /**
+     * Set 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmailActivationStatus 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmailActivationStatus(Long EmailActivationStatus) {
+        this.EmailActivationStatus = EmailActivationStatus;
+    }
+
     public UserRoleListDataUserRoleInfo() {
     }
 
@@ -699,6 +727,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         if (source.AppOpenUserId != null) {
             this.AppOpenUserId = new String(source.AppOpenUserId);
         }
+        if (source.EmailActivationStatus != null) {
+            this.EmailActivationStatus = new Long(source.EmailActivationStatus);
+        }
     }
 
 
@@ -728,6 +759,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
         this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
         this.setParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
+        this.setParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
 
     }
 }

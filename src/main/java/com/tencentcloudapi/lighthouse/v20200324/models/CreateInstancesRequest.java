@@ -61,6 +61,7 @@ public class CreateInstancesRequest extends AbstractModel {
     /**
     * 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
     */
     @SerializedName("Zones")
     @Expose
@@ -132,6 +133,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
     * 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
     */
     @SerializedName("DomainName")
     @Expose
@@ -139,6 +141,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
     * 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
     */
     @SerializedName("Subdomain")
     @Expose
@@ -226,9 +229,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
      * Get 可用区列表。
-不填此参数，表示为随机可用区。 
+不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息 
      * @return Zones 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
      */
     public String [] getZones() {
         return this.Zones;
@@ -237,8 +242,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     /**
      * Set 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
      * @param Zones 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -405,8 +412,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 主域名。 
+     * Get 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。 
      * @return DomainName 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -414,15 +423,19 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
      * Set 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      * @param DomainName 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 子域名。 
+     * Get 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。 
      * @return Subdomain 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      */
     public String getSubdomain() {
         return this.Subdomain;
@@ -430,7 +443,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
      * Set 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      * @param Subdomain 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      */
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;

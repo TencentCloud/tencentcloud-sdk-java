@@ -39,7 +39,6 @@ public class DescribeActionFieldConfigListResponse extends AbstractModel {
 
     /**
     * 资源下线信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceOffline")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeActionFieldConfigListResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源下线信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源下线信息 
      * @return ResourceOffline 资源下线信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceOffline [] getResourceOffline() {
         return this.ResourceOffline;
@@ -96,9 +93,7 @@ public class DescribeActionFieldConfigListResponse extends AbstractModel {
 
     /**
      * Set 资源下线信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceOffline 资源下线信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceOffline(ResourceOffline [] ResourceOffline) {
         this.ResourceOffline = ResourceOffline;

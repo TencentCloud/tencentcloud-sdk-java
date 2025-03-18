@@ -116,6 +116,13 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
     private String ScheduleTimeZone;
 
     /**
+    * 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+    */
+    @SerializedName("TimeType")
+    @Expose
+    private String TimeType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -327,6 +334,22 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理 
+     * @return TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public String getTimeType() {
+        return this.TimeType;
+    }
+
+    /**
+     * Set 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * @param TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public void setTimeType(String TimeType) {
+        this.TimeType = TimeType;
+    }
+
     public TriggerManualTasksRequest() {
     }
 
@@ -383,6 +406,9 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.TimeType != null) {
+            this.TimeType = new String(source.TimeType);
+        }
     }
 
 
@@ -403,6 +429,7 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
         this.setParamArrayObj(map, prefix + "CustomParams.", this.CustomParams);
         this.setParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "TimeType", this.TimeType);
 
     }
 }

@@ -25,7 +25,6 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel {
 
     /**
     * 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindId")
     @Expose
@@ -39,10 +38,8 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定Id 
      * @return BindId 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindId() {
         return this.BindId;
@@ -50,9 +47,7 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel {
 
     /**
      * Set 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindId 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindId(Long BindId) {
         this.BindId = BindId;

@@ -25,7 +25,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -33,7 +32,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务 Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareTaskId")
     @Expose
@@ -41,7 +39,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -49,7 +46,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -65,7 +60,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务校验详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckProcess")
     @Expose
@@ -73,7 +67,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比任务运行详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareProcess")
     @Expose
@@ -81,7 +74,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conclusion")
     @Expose
@@ -89,7 +81,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -97,7 +88,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 任务启动时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartedAt")
     @Expose
@@ -105,7 +95,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedAt")
     @Expose
@@ -113,7 +102,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -121,7 +109,6 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 对比配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Options")
     @Expose
@@ -129,17 +116,14 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
     * 一致性校验提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return JobId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -147,19 +131,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 对比任务 Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务 Id 
      * @return CompareTaskId 对比任务 Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
@@ -167,19 +147,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务 Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareTaskId 对比任务 Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 对比任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务名称 
      * @return TaskName 对比任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -187,19 +163,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 对比任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止 
      * @return Status 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -207,19 +179,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 对比任务配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务配置 
      * @return Config 对比任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareObject getConfig() {
         return this.Config;
@@ -227,19 +195,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 对比任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(CompareObject Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 对比任务校验详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务校验详情 
      * @return CheckProcess 对比任务校验详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessProgress getCheckProcess() {
         return this.CheckProcess;
@@ -247,19 +211,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务校验详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckProcess 对比任务校验详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckProcess(ProcessProgress CheckProcess) {
         this.CheckProcess = CheckProcess;
     }
 
     /**
-     * Get 对比任务运行详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比任务运行详情 
      * @return CompareProcess 对比任务运行详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessProgress getCompareProcess() {
         return this.CompareProcess;
@@ -267,19 +227,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比任务运行详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareProcess 对比任务运行详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareProcess(ProcessProgress CompareProcess) {
         this.CompareProcess = CompareProcess;
     }
 
     /**
-     * Get 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过 
      * @return Conclusion 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConclusion() {
         return this.Conclusion;
@@ -287,19 +243,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Conclusion 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;
     }
 
     /**
-     * Get 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务创建时间 
      * @return CreatedAt 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -307,19 +259,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 任务启动时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务启动时间 
      * @return StartedAt 任务启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartedAt() {
         return this.StartedAt;
@@ -327,19 +275,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 任务启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartedAt 任务启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartedAt(String StartedAt) {
         this.StartedAt = StartedAt;
     }
 
     /**
-     * Get 对比结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比结束时间 
      * @return FinishedAt 对比结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedAt() {
         return this.FinishedAt;
@@ -347,19 +291,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedAt 对比结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;
     }
 
     /**
-     * Get 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比) 
      * @return Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -367,19 +307,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 对比配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比配置信息 
      * @return Options 对比配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareOptions getOptions() {
         return this.Options;
@@ -387,19 +323,15 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 对比配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Options 对比配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptions(CompareOptions Options) {
         this.Options = Options;
     }
 
     /**
-     * Get 一致性校验提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验提示信息 
      * @return Message 一致性校验提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -407,9 +339,7 @@ public class CompareTaskItem extends AbstractModel {
 
     /**
      * Set 一致性校验提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 一致性校验提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

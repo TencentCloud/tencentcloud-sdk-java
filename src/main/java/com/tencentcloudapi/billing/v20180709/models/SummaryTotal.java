@@ -25,7 +25,6 @@ public class SummaryTotal extends AbstractModel {
 
     /**
     * 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -33,17 +32,14 @@ public class SummaryTotal extends AbstractModel {
 
     /**
     * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠后总价 
      * @return RealTotalCost 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -51,19 +47,15 @@ public class SummaryTotal extends AbstractModel {
 
     /**
      * Set 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。 
      * @return TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCost() {
         return this.TotalCost;
@@ -71,9 +63,7 @@ public class SummaryTotal extends AbstractModel {
 
     /**
      * Set 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

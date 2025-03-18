@@ -116,7 +116,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -124,7 +123,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionDetail")
     @Expose
@@ -132,7 +130,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAllowed")
     @Expose
@@ -140,7 +137,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionBestCase")
     @Expose
@@ -148,7 +144,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
     @Expose
@@ -156,7 +151,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricIdList")
     @Expose
@@ -164,7 +158,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAction")
     @Expose
@@ -172,7 +165,6 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
     * 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectTypeId")
     @Expose
@@ -387,10 +379,8 @@ public class ActionLibraryListResult extends AbstractModel {
     }
 
     /**
-     * Get 二级分类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二级分类 
      * @return ResourceType 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -398,19 +388,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 动作描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作描述 
      * @return ActionDetail 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionDetail() {
         return this.ActionDetail;
@@ -418,19 +404,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionDetail 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionDetail(String ActionDetail) {
         this.ActionDetail = ActionDetail;
     }
 
     /**
-     * Get 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许当前账号使用 
      * @return IsAllowed 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAllowed() {
         return this.IsAllowed;
@@ -438,19 +420,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAllowed 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAllowed(Boolean IsAllowed) {
         this.IsAllowed = IsAllowed;
     }
 
     /**
-     * Get 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最佳实践案例的链接地址 
      * @return ActionBestCase 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionBestCase() {
         return this.ActionBestCase;
@@ -458,19 +436,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionBestCase 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionBestCase(String ActionBestCase) {
         this.ActionBestCase = ActionBestCase;
     }
 
     /**
-     * Get 对象类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象类型 
      * @return ObjectType 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -478,19 +452,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectType 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控指标ID列表 
      * @return MetricIdList 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMetricIdList() {
         return this.MetricIdList;
@@ -498,19 +468,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricIdList 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricIdList(Long [] MetricIdList) {
         this.MetricIdList = MetricIdList;
     }
 
     /**
-     * Get 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是新动作 
      * @return IsNewAction 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNewAction() {
         return this.IsNewAction;
@@ -518,19 +484,15 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAction 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAction(Boolean IsNewAction) {
         this.IsNewAction = IsNewAction;
     }
 
     /**
-     * Get 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象类型ID 
      * @return ObjectTypeId 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectTypeId() {
         return this.ObjectTypeId;
@@ -538,9 +500,7 @@ public class ActionLibraryListResult extends AbstractModel {
 
     /**
      * Set 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectTypeId 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectTypeId(Long ObjectTypeId) {
         this.ObjectTypeId = ObjectTypeId;

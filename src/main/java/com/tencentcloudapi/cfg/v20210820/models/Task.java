@@ -46,7 +46,6 @@ public class Task extends AbstractModel {
 
     /**
     * 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTag")
     @Expose
@@ -54,7 +53,6 @@ public class Task extends AbstractModel {
 
     /**
     * 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -158,7 +156,6 @@ public class Task extends AbstractModel {
 
     /**
     * 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskMonitors")
     @Expose
@@ -174,7 +171,6 @@ public class Task extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -206,7 +202,6 @@ public class Task extends AbstractModel {
 
     /**
     * 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -214,7 +209,6 @@ public class Task extends AbstractModel {
 
     /**
     * 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmPolicy")
     @Expose
@@ -222,7 +216,6 @@ public class Task extends AbstractModel {
 
     /**
     * 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApmServiceList")
     @Expose
@@ -238,7 +231,6 @@ public class Task extends AbstractModel {
 
     /**
     * 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDealType")
     @Expose
@@ -278,7 +270,6 @@ public class Task extends AbstractModel {
 
     /**
     * region信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRegionName")
     @Expose
@@ -340,10 +331,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义标签 
      * @return TaskTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTag() {
         return this.TaskTag;
@@ -351,19 +340,15 @@ public class Task extends AbstractModel {
 
     /**
      * Set 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTag(String TaskTag) {
         this.TaskTag = TaskTag;
     }
 
     /**
-     * Get 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束 
      * @return TaskStatus 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
@@ -371,9 +356,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
@@ -608,10 +591,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控指标列表 
      * @return TaskMonitors 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskMonitor [] getTaskMonitors() {
         return this.TaskMonitors;
@@ -619,9 +600,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMonitors 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskMonitors(TaskMonitor [] TaskMonitors) {
         this.TaskMonitors = TaskMonitors;
@@ -648,10 +627,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagWithDescribe [] getTags() {
         return this.Tags;
@@ -659,9 +636,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagWithDescribe [] Tags) {
         this.Tags = Tags;
@@ -728,10 +703,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的应用名称 
      * @return ApplicationName 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -739,19 +712,15 @@ public class Task extends AbstractModel {
 
     /**
      * Set 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的告警指标 
      * @return AlarmPolicy 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlarmPolicy() {
         return this.AlarmPolicy;
@@ -759,19 +728,15 @@ public class Task extends AbstractModel {
 
     /**
      * Set 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmPolicy 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmPolicy(String [] AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;
     }
 
     /**
-     * Get 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的APM服务 
      * @return ApmServiceList 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApmServiceInfo [] getApmServiceList() {
         return this.ApmServiceList;
@@ -779,9 +744,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApmServiceList 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApmServiceList(ApmServiceInfo [] ApmServiceList) {
         this.ApmServiceList = ApmServiceList;
@@ -808,10 +771,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 护栏处理方式，1--顺序回滚，2--演练暂停 
      * @return PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyDealType() {
         return this.PolicyDealType;
@@ -819,9 +780,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDealType(Long PolicyDealType) {
         this.PolicyDealType = PolicyDealType;
@@ -908,10 +867,8 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get region信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get region信息 
      * @return TaskRegionName region信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskRegionName() {
         return this.TaskRegionName;
@@ -919,9 +876,7 @@ public class Task extends AbstractModel {
 
     /**
      * Set region信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskRegionName region信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRegionName(String TaskRegionName) {
         this.TaskRegionName = TaskRegionName;

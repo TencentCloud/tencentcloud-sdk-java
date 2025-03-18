@@ -25,7 +25,6 @@ public class DescribeCompareReportResponse extends AbstractModel {
 
     /**
     * 一致性校验摘要信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Abstract")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCompareReportResponse extends AbstractModel {
 
     /**
     * 一致性校验详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCompareReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一致性校验摘要信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验摘要信息 
      * @return Abstract 一致性校验摘要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareAbstractInfo getAbstract() {
         return this.Abstract;
@@ -58,19 +54,15 @@ public class DescribeCompareReportResponse extends AbstractModel {
 
     /**
      * Set 一致性校验摘要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Abstract 一致性校验摘要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbstract(CompareAbstractInfo Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get 一致性校验详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验详细信息 
      * @return Detail 一致性校验详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareDetailInfo getDetail() {
         return this.Detail;
@@ -78,9 +70,7 @@ public class DescribeCompareReportResponse extends AbstractModel {
 
     /**
      * Set 一致性校验详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 一致性校验详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(CompareDetailInfo Detail) {
         this.Detail = Detail;

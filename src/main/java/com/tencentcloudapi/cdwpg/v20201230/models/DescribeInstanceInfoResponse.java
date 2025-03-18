@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceInfoResponse extends AbstractModel {
 
     /**
-    * 1
+    * 集群描述信息
     */
     @SerializedName("SimpleInstanceInfo")
     @Expose
     private SimpleInstanceInfo SimpleInstanceInfo;
 
     /**
-    * 1
+    * 错误信息
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1 
-     * @return SimpleInstanceInfo 1
+     * Get 集群描述信息 
+     * @return SimpleInstanceInfo 集群描述信息
      */
     public SimpleInstanceInfo getSimpleInstanceInfo() {
         return this.SimpleInstanceInfo;
     }
 
     /**
-     * Set 1
-     * @param SimpleInstanceInfo 1
+     * Set 集群描述信息
+     * @param SimpleInstanceInfo 集群描述信息
      */
     public void setSimpleInstanceInfo(SimpleInstanceInfo SimpleInstanceInfo) {
         this.SimpleInstanceInfo = SimpleInstanceInfo;
     }
 
     /**
-     * Get 1 
-     * @return ErrorMsg 1
+     * Get 错误信息 
+     * @return ErrorMsg 错误信息
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 1
-     * @param ErrorMsg 1
+     * Set 错误信息
+     * @param ErrorMsg 错误信息
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

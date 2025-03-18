@@ -25,7 +25,6 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
     * 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Difference")
     @Expose
@@ -33,7 +32,6 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
     * 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Skipped")
     @Expose
@@ -41,7 +39,6 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
     * 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferenceAdvancedObjects")
     @Expose
@@ -49,7 +46,6 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
     * 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferenceData")
     @Expose
@@ -57,17 +53,14 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
     * 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferenceRow")
     @Expose
     private DifferenceRowDetail DifferenceRow;
 
     /**
-     * Get 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据不一致的表详情 
      * @return Difference 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DifferenceDetail getDifference() {
         return this.Difference;
@@ -75,19 +68,15 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
      * Set 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Difference 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifference(DifferenceDetail Difference) {
         this.Difference = Difference;
     }
 
     /**
-     * Get 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过校验的表详情 
      * @return Skipped 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SkippedDetail getSkipped() {
         return this.Skipped;
@@ -95,19 +84,15 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
      * Set 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Skipped 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipped(SkippedDetail Skipped) {
         this.Skipped = Skipped;
     }
 
     /**
-     * Get 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库不一致的详情，mongodb业务用到 
      * @return DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() {
         return this.DifferenceAdvancedObjects;
@@ -115,19 +100,15 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
      * Set 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects) {
         this.DifferenceAdvancedObjects = DifferenceAdvancedObjects;
     }
 
     /**
-     * Get 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据不一致的详情，mongodb业务用到 
      * @return DifferenceData 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DifferenceDataDetail getDifferenceData() {
         return this.DifferenceData;
@@ -135,19 +116,15 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
      * Set 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceData 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferenceData(DifferenceDataDetail DifferenceData) {
         this.DifferenceData = DifferenceData;
     }
 
     /**
-     * Get 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据行不一致的详情，mongodb业务用到 
      * @return DifferenceRow 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DifferenceRowDetail getDifferenceRow() {
         return this.DifferenceRow;
@@ -155,9 +132,7 @@ public class CompareDetailInfo extends AbstractModel {
 
     /**
      * Set 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceRow 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferenceRow(DifferenceRowDetail DifferenceRow) {
         this.DifferenceRow = DifferenceRow;

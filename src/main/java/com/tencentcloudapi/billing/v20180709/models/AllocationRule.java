@@ -25,7 +25,6 @@ public class AllocationRule extends AbstractModel {
 
     /**
     * 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,17 +32,14 @@ public class AllocationRule extends AbstractModel {
 
     /**
     * 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-     * Get 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公摊规则ID 
      * @return RuleId 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -51,19 +47,15 @@ public class AllocationRule extends AbstractModel {
 
     /**
      * Set 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公摊规则名称 
      * @return RuleName 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -71,9 +63,7 @@ public class AllocationRule extends AbstractModel {
 
     /**
      * Set 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

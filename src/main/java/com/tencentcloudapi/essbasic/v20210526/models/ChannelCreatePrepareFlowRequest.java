@@ -110,7 +110,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+    * <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
     */
@@ -355,25 +356,33 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * Get <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期. 
-     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * @return SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
+     * @deprecated
      */
+    @Deprecated
     public SignComponentConfig getSignComponentConfig() {
         return this.SignComponentConfig;
     }
 
     /**
-     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * Set <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
-     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * @param SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
+     * @deprecated
      */
+    @Deprecated
     public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
         this.SignComponentConfig = SignComponentConfig;
     }

@@ -38,7 +38,7 @@ public class CreateBlueprintRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 需要制作镜像的实例ID。
+    * 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -89,16 +89,16 @@ False：表示开机状态制作镜像
     }
 
     /**
-     * Get 需要制作镜像的实例ID。 
-     * @return InstanceId 需要制作镜像的实例ID。
+     * Get 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。 
+     * @return InstanceId 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 需要制作镜像的实例ID。
-     * @param InstanceId 需要制作镜像的实例ID。
+     * Set 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
+     * @param InstanceId 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

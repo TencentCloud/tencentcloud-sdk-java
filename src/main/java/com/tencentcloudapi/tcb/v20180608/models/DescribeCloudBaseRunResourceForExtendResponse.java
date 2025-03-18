@@ -53,7 +53,6 @@ public class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
 
     /**
     * 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
     }
 
     /**
-     * Get 子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网信息 
      * @return SubnetIds 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseRunVpcSubnet [] getSubnetIds() {
         return this.SubnetIds;
@@ -142,9 +139,7 @@ public class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
 
     /**
      * Set 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIds 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(CloudBaseRunVpcSubnet [] SubnetIds) {
         this.SubnetIds = SubnetIds;

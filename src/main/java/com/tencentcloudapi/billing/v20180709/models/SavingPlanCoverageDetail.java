@@ -104,6 +104,48 @@ public class SavingPlanCoverageDetail extends AbstractModel {
     private Float SpCoverage;
 
     /**
+    * 支付者昵称
+    */
+    @SerializedName("PayerUinName")
+    @Expose
+    private String PayerUinName;
+
+    /**
+    * 使用者昵称
+    */
+    @SerializedName("OwnerUinName")
+    @Expose
+    private String OwnerUinName;
+
+    /**
+    * 支付者uin
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+    * 计费项名称
+    */
+    @SerializedName("SubBillingItemName")
+    @Expose
+    private String SubBillingItemName;
+
+    /**
+    * 计费细项名称
+    */
+    @SerializedName("BillingItemName")
+    @Expose
+    private String BillingItemName;
+
+    /**
+    * 子产品名称
+    */
+    @SerializedName("SubProductName")
+    @Expose
+    private String SubProductName;
+
+    /**
      * Get 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID 
      * @return ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      */
@@ -291,6 +333,102 @@ public class SavingPlanCoverageDetail extends AbstractModel {
         this.SpCoverage = SpCoverage;
     }
 
+    /**
+     * Get 支付者昵称 
+     * @return PayerUinName 支付者昵称
+     */
+    public String getPayerUinName() {
+        return this.PayerUinName;
+    }
+
+    /**
+     * Set 支付者昵称
+     * @param PayerUinName 支付者昵称
+     */
+    public void setPayerUinName(String PayerUinName) {
+        this.PayerUinName = PayerUinName;
+    }
+
+    /**
+     * Get 使用者昵称 
+     * @return OwnerUinName 使用者昵称
+     */
+    public String getOwnerUinName() {
+        return this.OwnerUinName;
+    }
+
+    /**
+     * Set 使用者昵称
+     * @param OwnerUinName 使用者昵称
+     */
+    public void setOwnerUinName(String OwnerUinName) {
+        this.OwnerUinName = OwnerUinName;
+    }
+
+    /**
+     * Get 支付者uin 
+     * @return PayerUin 支付者uin
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 支付者uin
+     * @param PayerUin 支付者uin
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
+     * Get 计费项名称 
+     * @return SubBillingItemName 计费项名称
+     */
+    public String getSubBillingItemName() {
+        return this.SubBillingItemName;
+    }
+
+    /**
+     * Set 计费项名称
+     * @param SubBillingItemName 计费项名称
+     */
+    public void setSubBillingItemName(String SubBillingItemName) {
+        this.SubBillingItemName = SubBillingItemName;
+    }
+
+    /**
+     * Get 计费细项名称 
+     * @return BillingItemName 计费细项名称
+     */
+    public String getBillingItemName() {
+        return this.BillingItemName;
+    }
+
+    /**
+     * Set 计费细项名称
+     * @param BillingItemName 计费细项名称
+     */
+    public void setBillingItemName(String BillingItemName) {
+        this.BillingItemName = BillingItemName;
+    }
+
+    /**
+     * Get 子产品名称 
+     * @return SubProductName 子产品名称
+     */
+    public String getSubProductName() {
+        return this.SubProductName;
+    }
+
+    /**
+     * Set 子产品名称
+     * @param SubProductName 子产品名称
+     */
+    public void setSubProductName(String SubProductName) {
+        this.SubProductName = SubProductName;
+    }
+
     public SavingPlanCoverageDetail() {
     }
 
@@ -332,6 +470,24 @@ public class SavingPlanCoverageDetail extends AbstractModel {
         if (source.SpCoverage != null) {
             this.SpCoverage = new Float(source.SpCoverage);
         }
+        if (source.PayerUinName != null) {
+            this.PayerUinName = new String(source.PayerUinName);
+        }
+        if (source.OwnerUinName != null) {
+            this.OwnerUinName = new String(source.OwnerUinName);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.SubBillingItemName != null) {
+            this.SubBillingItemName = new String(source.SubBillingItemName);
+        }
+        if (source.BillingItemName != null) {
+            this.BillingItemName = new String(source.BillingItemName);
+        }
+        if (source.SubProductName != null) {
+            this.SubProductName = new String(source.SubProductName);
+        }
     }
 
 
@@ -350,6 +506,12 @@ public class SavingPlanCoverageDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalRealAmount", this.TotalRealAmount);
         this.setParamSimple(map, prefix + "ExpectedAmount", this.ExpectedAmount);
         this.setParamSimple(map, prefix + "SpCoverage", this.SpCoverage);
+        this.setParamSimple(map, prefix + "PayerUinName", this.PayerUinName);
+        this.setParamSimple(map, prefix + "OwnerUinName", this.OwnerUinName);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "SubBillingItemName", this.SubBillingItemName);
+        this.setParamSimple(map, prefix + "BillingItemName", this.BillingItemName);
+        this.setParamSimple(map, prefix + "SubProductName", this.SubProductName);
 
     }
 }

@@ -25,7 +25,6 @@ public class BillActionType extends AbstractModel {
 
     /**
     * 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -33,17 +32,14 @@ public class BillActionType extends AbstractModel {
 
     /**
     * 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-     * Get 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型编码 
      * @return ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -51,19 +47,15 @@ public class BillActionType extends AbstractModel {
 
     /**
      * Set 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型：明细交易类型 
      * @return ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
@@ -71,9 +63,7 @@ public class BillActionType extends AbstractModel {
 
     /**
      * Set 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;

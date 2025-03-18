@@ -25,7 +25,6 @@ public class RegionSummaryOverviewItem extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -95,10 +94,8 @@ public class RegionSummaryOverviewItem extends AbstractModel {
     private String TotalCost;
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -106,9 +103,7 @@ public class RegionSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

@@ -25,7 +25,6 @@ public class SkippedDetail extends AbstractModel {
 
     /**
     * 跳过的表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -40,10 +39,8 @@ public class SkippedDetail extends AbstractModel {
     private SkippedItem [] Items;
 
     /**
-     * Get 跳过的表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过的表数量 
      * @return TotalCount 跳过的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,9 +48,7 @@ public class SkippedDetail extends AbstractModel {
 
     /**
      * Set 跳过的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 跳过的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

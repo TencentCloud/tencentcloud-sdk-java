@@ -44,6 +44,13 @@ public class DrmInfo extends AbstractModel {
     private SimpleAesDrm SimpleAesDrm;
 
     /**
+    * FairPlay, WideVine， PlayReady 加密信息。
+    */
+    @SerializedName("SpekeDrm")
+    @Expose
+    private SpekeDrm SpekeDrm;
+
+    /**
      * Get 加密类型：
 <li> simpleaes: aes-128 加密</li>
 <li> widevine</li>
@@ -99,6 +106,22 @@ public class DrmInfo extends AbstractModel {
         this.SimpleAesDrm = SimpleAesDrm;
     }
 
+    /**
+     * Get FairPlay, WideVine， PlayReady 加密信息。 
+     * @return SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
+     */
+    public SpekeDrm getSpekeDrm() {
+        return this.SpekeDrm;
+    }
+
+    /**
+     * Set FairPlay, WideVine， PlayReady 加密信息。
+     * @param SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
+     */
+    public void setSpekeDrm(SpekeDrm SpekeDrm) {
+        this.SpekeDrm = SpekeDrm;
+    }
+
     public DrmInfo() {
     }
 
@@ -113,6 +136,9 @@ public class DrmInfo extends AbstractModel {
         if (source.SimpleAesDrm != null) {
             this.SimpleAesDrm = new SimpleAesDrm(source.SimpleAesDrm);
         }
+        if (source.SpekeDrm != null) {
+            this.SpekeDrm = new SpekeDrm(source.SpekeDrm);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DrmInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "SimpleAesDrm.", this.SimpleAesDrm);
+        this.setParamObj(map, prefix + "SpekeDrm.", this.SpekeDrm);
 
     }
 }

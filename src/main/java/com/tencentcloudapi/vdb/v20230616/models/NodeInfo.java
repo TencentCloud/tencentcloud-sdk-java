@@ -31,6 +31,13 @@ public class NodeInfo extends AbstractModel {
     private String Name;
 
     /**
+    * pod状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get Pod名称。 
      * @return Name Pod名称。
      */
@@ -46,6 +53,22 @@ public class NodeInfo extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get pod状态 
+     * @return Status pod状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set pod状态
+     * @param Status pod状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public NodeInfo() {
     }
 
@@ -57,6 +80,9 @@ public class NodeInfo extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class NodeInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

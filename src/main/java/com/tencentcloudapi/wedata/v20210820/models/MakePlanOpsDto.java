@@ -267,6 +267,14 @@ REVERSE： 实例数据时间逆序
     private String AppParam;
 
     /**
+    * 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+    */
+    @SerializedName("TimeType")
+    @Expose
+    private String TimeType;
+
+    /**
      * Get 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 补录计划ID
@@ -878,6 +886,26 @@ REVERSE： 实例数据时间逆序
         this.AppParam = AppParam;
     }
 
+    /**
+     * Get 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间 
+     * @return TimeType 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     */
+    public String getTimeType() {
+        return this.TimeType;
+    }
+
+    /**
+     * Set 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     * @param TimeType 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     */
+    public void setTimeType(String TimeType) {
+        this.TimeType = TimeType;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -985,6 +1013,9 @@ REVERSE： 实例数据时间逆序
         if (source.AppParam != null) {
             this.AppParam = new String(source.AppParam);
         }
+        if (source.TimeType != null) {
+            this.TimeType = new String(source.TimeType);
+        }
     }
 
 
@@ -1022,6 +1053,7 @@ REVERSE： 实例数据时间逆序
         this.setParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "AppParam", this.AppParam);
+        this.setParamSimple(map, prefix + "TimeType", this.TimeType);
 
     }
 }

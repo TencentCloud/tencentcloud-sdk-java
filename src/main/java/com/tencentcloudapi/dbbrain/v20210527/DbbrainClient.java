@@ -50,6 +50,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *自治中心-终止自治任务（单次）
+     * @param req CancelDBAutonomyActionRequest
+     * @return CancelDBAutonomyActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDBAutonomyActionResponse CancelDBAutonomyAction(CancelDBAutonomyActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelDBAutonomyAction", CancelDBAutonomyActionResponse.class);
+    }
+
+    /**
      *终止中断会话任务。
      * @param req CancelKillTaskRequest
      * @return CancelKillTaskResponse
@@ -58,6 +69,17 @@ public class DbbrainClient extends AbstractClient{
     public CancelKillTaskResponse CancelKillTask(CancelKillTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CancelKillTask", CancelKillTaskResponse.class);
+    }
+
+    /**
+     *自治中心-终止自治任务（单次）
+     * @param req CancelRedisBigKeyAnalysisTasksRequest
+     * @return CancelRedisBigKeyAnalysisTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelRedisBigKeyAnalysisTasksResponse CancelRedisBigKeyAnalysisTasks(CancelRedisBigKeyAnalysisTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelRedisBigKeyAnalysisTasks", CancelRedisBigKeyAnalysisTasksResponse.class);
     }
 
     /**
@@ -182,6 +204,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+     * @param req CreateUserAutonomyProfileRequest
+     * @return CreateUserAutonomyProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserAutonomyProfileResponse CreateUserAutonomyProfile(CreateUserAutonomyProfileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserAutonomyProfile", CreateUserAutonomyProfileResponse.class);
+    }
+
+    /**
      *用于删除云数据库实例的审计日志文件。
      * @param req DeleteAuditLogFileRequest
      * @return DeleteAuditLogFileResponse
@@ -289,6 +322,28 @@ public class DbbrainClient extends AbstractClient{
     public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *自治中心-终止自治任务（单次）
+     * @param req DescribeDBAutonomyActionsRequest
+     * @return DescribeDBAutonomyActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAutonomyActionsResponse DescribeDBAutonomyActions(DescribeDBAutonomyActionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAutonomyActions", DescribeDBAutonomyActionsResponse.class);
+    }
+
+    /**
+     *自治中心-终止自治任务（单次）
+     * @param req DescribeDBAutonomyEventsRequest
+     * @return DescribeDBAutonomyEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAutonomyEventsResponse DescribeDBAutonomyEvents(DescribeDBAutonomyEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAutonomyEvents", DescribeDBAutonomyEventsResponse.class);
     }
 
     /**
@@ -633,6 +688,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *自治中心-终止自治任务（单次）；注意： 接口调用需要加白名单。
+     * @param req DescribeUserAutonomyProfileRequest
+     * @return DescribeUserAutonomyProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserAutonomyProfileResponse DescribeUserAutonomyProfile(DescribeUserAutonomyProfileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserAutonomyProfile", DescribeUserAutonomyProfileResponse.class);
+    }
+
+    /**
      *获取SQL优化建议。【产品用户回馈，此接口限免开放，后续将并入dbbrain专业版】
      * @param req DescribeUserSqlAdviceRequest
      * @return DescribeUserSqlAdviceResponse
@@ -696,6 +762,17 @@ public class DbbrainClient extends AbstractClient{
     public ModifySqlFiltersResponse ModifySqlFilters(ModifySqlFiltersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySqlFilters", ModifySqlFiltersResponse.class);
+    }
+
+    /**
+     *自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+     * @param req ModifyUserAutonomyProfileRequest
+     * @return ModifyUserAutonomyProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserAutonomyProfileResponse ModifyUserAutonomyProfile(ModifyUserAutonomyProfileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserAutonomyProfile", ModifyUserAutonomyProfileResponse.class);
     }
 
     /**

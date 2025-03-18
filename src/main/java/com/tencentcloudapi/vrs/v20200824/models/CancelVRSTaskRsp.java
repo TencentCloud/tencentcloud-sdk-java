@@ -23,6 +23,34 @@ import java.util.HashMap;
 
 public class CancelVRSTaskRsp extends AbstractModel {
 
+    /**
+    * 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get 任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public CancelVRSTaskRsp() {
     }
 
@@ -31,6 +59,9 @@ public class CancelVRSTaskRsp extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CancelVRSTaskRsp(CancelVRSTaskRsp source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -38,6 +69,7 @@ public class CancelVRSTaskRsp extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

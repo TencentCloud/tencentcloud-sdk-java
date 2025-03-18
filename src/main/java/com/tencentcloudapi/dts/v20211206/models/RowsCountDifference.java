@@ -25,7 +25,6 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
     * 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Db")
     @Expose
@@ -33,7 +32,6 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
     * 集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
     * 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcCount")
     @Expose
@@ -49,17 +46,14 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
     * 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstCount")
     @Expose
     private Long DstCount;
 
     /**
-     * Get 数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名 
      * @return Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDb() {
         return this.Db;
@@ -67,19 +61,15 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
      * Set 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get 集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集合 
      * @return Table 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -87,19 +77,15 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
      * Set 集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 源端行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端行数 
      * @return SrcCount 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSrcCount() {
         return this.SrcCount;
@@ -107,19 +93,15 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
      * Set 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcCount 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcCount(Long SrcCount) {
         this.SrcCount = SrcCount;
     }
 
     /**
-     * Get 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端行数 
      * @return DstCount 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDstCount() {
         return this.DstCount;
@@ -127,9 +109,7 @@ public class RowsCountDifference extends AbstractModel {
 
     /**
      * Set 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstCount 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstCount(Long DstCount) {
         this.DstCount = DstCount;

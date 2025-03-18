@@ -38,7 +38,6 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel {
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
     */
     @SerializedName("ResourceNames")
     @Expose
@@ -58,8 +57,7 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel {
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
-- DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则 
+- DATA_DISK 数据盘 
      * @return ResourceNames 资源名列表，可取值:
 - GENERAL_BUNDLE_INSTANCE 通用型套餐实例
 - STORAGE_BUNDLE_INSTANCE 存储型套餐实例 
@@ -74,7 +72,6 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel {
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
@@ -95,7 +92,6 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel {
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
      * @param ResourceNames 资源名列表，可取值:
 - GENERAL_BUNDLE_INSTANCE 通用型套餐实例
 - STORAGE_BUNDLE_INSTANCE 存储型套餐实例 
@@ -110,7 +106,6 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel {
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;

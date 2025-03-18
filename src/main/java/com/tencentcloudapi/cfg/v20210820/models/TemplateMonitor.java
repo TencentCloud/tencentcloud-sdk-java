@@ -32,7 +32,6 @@ public class TemplateMonitor extends AbstractModel {
 
     /**
     * 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricId")
     @Expose
@@ -54,7 +53,6 @@ public class TemplateMonitor extends AbstractModel {
 
     /**
     * 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricChineseName")
     @Expose
@@ -77,10 +75,8 @@ public class TemplateMonitor extends AbstractModel {
     }
 
     /**
-     * Get 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控指标ID 
      * @return MetricId 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricId() {
         return this.MetricId;
@@ -88,9 +84,7 @@ public class TemplateMonitor extends AbstractModel {
 
     /**
      * Set 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricId 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
@@ -129,10 +123,8 @@ public class TemplateMonitor extends AbstractModel {
     }
 
     /**
-     * Get 中文指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 中文指标 
      * @return MetricChineseName 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricChineseName() {
         return this.MetricChineseName;
@@ -140,9 +132,7 @@ public class TemplateMonitor extends AbstractModel {
 
     /**
      * Set 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricChineseName 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricChineseName(String MetricChineseName) {
         this.MetricChineseName = MetricChineseName;

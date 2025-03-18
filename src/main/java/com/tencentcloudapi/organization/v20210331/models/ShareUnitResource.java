@@ -39,7 +39,6 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -54,7 +53,6 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
     * 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedMemberNum")
     @Expose
@@ -62,7 +60,6 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
     * 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedMemberUseNum")
     @Expose
@@ -70,7 +67,6 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
     * 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareManagerUin")
     @Expose
@@ -109,10 +105,8 @@ public class ShareUnitResource extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -120,9 +114,7 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -145,10 +137,8 @@ public class ShareUnitResource extends AbstractModel {
     }
 
     /**
-     * Get 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享单元成员数。 
      * @return SharedMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSharedMemberNum() {
         return this.SharedMemberNum;
@@ -156,19 +146,15 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
      * Set 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedMemberNum(Long SharedMemberNum) {
         this.SharedMemberNum = SharedMemberNum;
     }
 
     /**
-     * Get 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用中共享单元成员数。 
      * @return SharedMemberUseNum 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSharedMemberUseNum() {
         return this.SharedMemberUseNum;
@@ -176,19 +162,15 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
      * Set 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedMemberUseNum 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedMemberUseNum(Long SharedMemberUseNum) {
         this.SharedMemberUseNum = SharedMemberUseNum;
     }
 
     /**
-     * Get 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享管理员OwnerUin。 
      * @return ShareManagerUin 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShareManagerUin() {
         return this.ShareManagerUin;
@@ -196,9 +178,7 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
      * Set 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareManagerUin 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareManagerUin(Long ShareManagerUin) {
         this.ShareManagerUin = ShareManagerUin;

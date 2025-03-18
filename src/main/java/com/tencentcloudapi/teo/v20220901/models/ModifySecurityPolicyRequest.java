@@ -24,122 +24,138 @@ import java.util.HashMap;
 public class ModifySecurityPolicyRequest extends AbstractModel {
 
     /**
-    * 站点Id。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 安全配置。
+    * 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * 子域名/应用名。
+    * 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+    */
+    @SerializedName("SecurityPolicy")
+    @Expose
+    private SecurityPolicy SecurityPolicy;
 
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+    /**
+    * 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+    * 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
 
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+    /**
+    * 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 站点Id。 
-     * @return ZoneId 站点Id。
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点Id。
-     * @param ZoneId 站点Id。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 安全配置。 
-     * @return SecurityConfig 安全配置。
+     * Get 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li> 
+     * @return SecurityConfig 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set 安全配置。
-     * @param SecurityConfig 安全配置。
+     * Set 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
+     * @param SecurityConfig 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get 子域名/应用名。
+     * Get 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。 
+     * @return SecurityPolicy 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+     */
+    public SecurityPolicy getSecurityPolicy() {
+        return this.SecurityPolicy;
+    }
 
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。 
-     * @return Entity 子域名/应用名。
+    /**
+     * Set 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+     * @param SecurityPolicy 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+     */
+    public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
+        this.SecurityPolicy = SecurityPolicy;
+    }
 
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+    /**
+     * Get 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li> 
+     * @return Entity 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set 子域名/应用名。
-
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
-     * @param Entity 子域名/应用名。
-
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+     * Set 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
+     * @param Entity 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+     * Get 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。 
+     * @return Host 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+     */
+    public String getHost() {
+        return this.Host;
+    }
 
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。 
-     * @return TemplateId 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+    /**
+     * Set 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+     * @param Host 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
 
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+    /**
+     * Get 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。 
+     * @return TemplateId 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
-
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
-     * @param TemplateId 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
-
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+     * Set 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
+     * @param TemplateId 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -159,8 +175,14 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
         if (source.SecurityConfig != null) {
             this.SecurityConfig = new SecurityConfig(source.SecurityConfig);
         }
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new SecurityPolicy(source.SecurityPolicy);
+        }
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
         }
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
@@ -174,7 +196,9 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+        this.setParamObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }

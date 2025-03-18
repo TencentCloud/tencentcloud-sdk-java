@@ -53,7 +53,6 @@ public class ObjectType extends AbstractModel {
 
     /**
     * tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectTypeJsonParse")
     @Expose
@@ -61,7 +60,6 @@ public class ObjectType extends AbstractModel {
 
     /**
     * 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectHasNewAction")
     @Expose
@@ -69,7 +67,6 @@ public class ObjectType extends AbstractModel {
 
     /**
     * 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectPlatformName")
     @Expose
@@ -77,7 +74,6 @@ public class ObjectType extends AbstractModel {
 
     /**
     * 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectSupportType")
     @Expose
@@ -162,10 +158,8 @@ public class ObjectType extends AbstractModel {
     }
 
     /**
-     * Get tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tke接口json解析规则，null不需要解析 
      * @return ObjectTypeJsonParse tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectTypeJsonParse getObjectTypeJsonParse() {
         return this.ObjectTypeJsonParse;
@@ -173,19 +167,15 @@ public class ObjectType extends AbstractModel {
 
     /**
      * Set tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectTypeJsonParse tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectTypeJsonParse(ObjectTypeJsonParse ObjectTypeJsonParse) {
         this.ObjectTypeJsonParse = ObjectTypeJsonParse;
     }
 
     /**
-     * Get 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否包含新动作 
      * @return ObjectHasNewAction 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getObjectHasNewAction() {
         return this.ObjectHasNewAction;
@@ -193,19 +183,15 @@ public class ObjectType extends AbstractModel {
 
     /**
      * Set 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectHasNewAction 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectHasNewAction(Boolean ObjectHasNewAction) {
         this.ObjectHasNewAction = ObjectHasNewAction;
     }
 
     /**
-     * Get 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应在平台架构图中的资源类型名称 
      * @return ObjectPlatformName 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectPlatformName() {
         return this.ObjectPlatformName;
@@ -213,19 +199,15 @@ public class ObjectType extends AbstractModel {
 
     /**
      * Set 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectPlatformName 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectPlatformName(String ObjectPlatformName) {
         this.ObjectPlatformName = ObjectPlatformName;
     }
 
     /**
-     * Get 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1：平台支持的对象 2：应用支持的部分对象 
      * @return ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectSupportType() {
         return this.ObjectSupportType;
@@ -233,9 +215,7 @@ public class ObjectType extends AbstractModel {
 
     /**
      * Set 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectSupportType(Long ObjectSupportType) {
         this.ObjectSupportType = ObjectSupportType;

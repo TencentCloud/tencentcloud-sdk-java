@@ -25,7 +25,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Db")
     @Expose
@@ -33,7 +32,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 源端ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcChunk")
     @Expose
@@ -49,7 +46,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 目标端ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstChunk")
     @Expose
@@ -57,7 +53,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 源端值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcItem")
     @Expose
@@ -65,7 +60,6 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstItem")
     @Expose
@@ -73,17 +67,14 @@ public class DifferenceData extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-     * Get 数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名 
      * @return Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDb() {
         return this.Db;
@@ -91,19 +82,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get 集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集合 
      * @return Table 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -111,19 +98,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 源端ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端ID 
      * @return SrcChunk 源端ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcChunk() {
         return this.SrcChunk;
@@ -131,19 +114,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 源端ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcChunk 源端ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcChunk(String SrcChunk) {
         this.SrcChunk = SrcChunk;
     }
 
     /**
-     * Get 目标端ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端ID 
      * @return DstChunk 目标端ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstChunk() {
         return this.DstChunk;
@@ -151,19 +130,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 目标端ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstChunk 目标端ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstChunk(String DstChunk) {
         this.DstChunk = DstChunk;
     }
 
     /**
-     * Get 源端值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源端值 
      * @return SrcItem 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcItem() {
         return this.SrcItem;
@@ -171,19 +146,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcItem 源端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcItem(String SrcItem) {
         this.SrcItem = SrcItem;
     }
 
     /**
-     * Get 目标端值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端值 
      * @return DstItem 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstItem() {
         return this.DstItem;
@@ -191,19 +162,15 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstItem 目标端值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstItem(String DstItem) {
         this.DstItem = DstItem;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -211,9 +178,7 @@ public class DifferenceData extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;

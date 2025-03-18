@@ -32,7 +32,6 @@ public class ShareUnitMember extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -55,10 +54,8 @@ public class ShareUnitMember extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -66,9 +63,7 @@ public class ShareUnitMember extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -25,7 +25,6 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
     * 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -33,7 +32,6 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
     * 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachedTimes")
     @Expose
@@ -41,7 +39,6 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
     * 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -63,7 +60,6 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
     * 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -77,10 +73,8 @@ public class ListPolicyNode extends AbstractModel {
     private Long Type;
 
     /**
-     * Get 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略创建时间 
      * @return AddTime 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -88,19 +82,15 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
      * Set 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略绑定次数 
      * @return AttachedTimes 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttachedTimes() {
         return this.AttachedTimes;
@@ -108,19 +98,15 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
      * Set 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachedTimes 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachedTimes(Long AttachedTimes) {
         this.AttachedTimes = AttachedTimes;
     }
 
     /**
-     * Get 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述信息 
      * @return Description 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -128,9 +114,7 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
      * Set 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -169,10 +153,8 @@ public class ListPolicyNode extends AbstractModel {
     }
 
     /**
-     * Get 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略更新时间 
      * @return UpdateTime 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -180,9 +162,7 @@ public class ListPolicyNode extends AbstractModel {
 
     /**
      * Set 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

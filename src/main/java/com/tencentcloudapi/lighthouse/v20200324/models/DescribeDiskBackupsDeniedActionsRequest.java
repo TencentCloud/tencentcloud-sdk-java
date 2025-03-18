@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDiskBackupsDeniedActionsRequest extends AbstractModel {
 
     /**
-    * 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。
+    * 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。列表长度最大值为100。
     */
     @SerializedName("DiskBackupIds")
     @Expose
     private String [] DiskBackupIds;
 
     /**
-     * Get 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。 
-     * @return DiskBackupIds 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。
+     * Get 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。列表长度最大值为100。 
+     * @return DiskBackupIds 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。列表长度最大值为100。
      */
     public String [] getDiskBackupIds() {
         return this.DiskBackupIds;
     }
 
     /**
-     * Set 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。
-     * @param DiskBackupIds 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。
+     * Set 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。列表长度最大值为100。
+     * @param DiskBackupIds 云硬盘备份点 ID 列表, 可通过<a href="https://cloud.tencent.com/document/product/1207/84379" target="_blank">DescribeDiskBackups</a>接口查询。列表长度最大值为100。
      */
     public void setDiskBackupIds(String [] DiskBackupIds) {
         this.DiskBackupIds = DiskBackupIds;

@@ -25,7 +25,6 @@ public class NodeMainInfo extends AbstractModel {
 
     /**
     * 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeId")
     @Expose
@@ -33,17 +32,14 @@ public class NodeMainInfo extends AbstractModel {
 
     /**
     * 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-     * Get 部门ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门ID 
      * @return NodeId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodeId() {
         return this.NodeId;
@@ -51,19 +47,15 @@ public class NodeMainInfo extends AbstractModel {
 
     /**
      * Set 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 部门名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门名称 
      * @return NodeName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -71,9 +63,7 @@ public class NodeMainInfo extends AbstractModel {
 
     /**
      * Set 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

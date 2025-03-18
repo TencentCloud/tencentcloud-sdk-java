@@ -39,7 +39,6 @@ public class IdentityPolicy extends AbstractModel {
 
     /**
     * 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
     @Expose
@@ -47,7 +46,6 @@ public class IdentityPolicy extends AbstractModel {
 
     /**
     * 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDocument")
     @Expose
@@ -86,10 +84,8 @@ public class IdentityPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略类型。取值 1-自定义策略  2-预设策略；默认值2 
      * @return PolicyType 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyType() {
         return this.PolicyType;
@@ -97,19 +93,15 @@ public class IdentityPolicy extends AbstractModel {
 
     /**
      * Set 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(Long PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选 
      * @return PolicyDocument 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
@@ -117,9 +109,7 @@ public class IdentityPolicy extends AbstractModel {
 
     /**
      * Set 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDocument 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;

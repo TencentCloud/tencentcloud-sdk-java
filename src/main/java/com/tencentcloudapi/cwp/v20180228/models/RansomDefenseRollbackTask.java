@@ -101,6 +101,13 @@ public class RansomDefenseRollbackTask extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 主机类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 任务ID 
      * @return Id 任务ID
      */
@@ -276,6 +283,22 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 主机类型 
+     * @return MachineType 主机类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机类型
+     * @param MachineType 主机类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public RansomDefenseRollbackTask() {
     }
 
@@ -317,6 +340,9 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

@@ -25,7 +25,6 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameSpace")
     @Expose
@@ -33,7 +32,6 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
     * 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkloadName")
     @Expose
@@ -41,7 +39,6 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
     * 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanIP")
     @Expose
@@ -49,17 +46,14 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
     * 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return NameSpace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameSpace() {
         return this.NameSpace;
@@ -67,19 +61,15 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameSpace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameSpace(String NameSpace) {
         this.NameSpace = NameSpace;
     }
 
     /**
-     * Get 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作负载名称 
      * @return WorkloadName 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkloadName() {
         return this.WorkloadName;
@@ -87,19 +77,15 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
      * Set 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadName 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkloadName(String WorkloadName) {
         this.WorkloadName = WorkloadName;
     }
 
     /**
-     * Get 节点IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点IP 
      * @return LanIP 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanIP() {
         return this.LanIP;
@@ -107,19 +93,15 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
      * Set 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIP 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanIP(String LanIP) {
         this.LanIP = LanIP;
     }
 
     /**
-     * Get 节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点ID 
      * @return InstanceId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -127,9 +109,7 @@ public class ObjectTypeJsonParse extends AbstractModel {
 
     /**
      * Set 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

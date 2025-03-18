@@ -53,7 +53,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionGeneralConfiguration")
     @Expose
@@ -61,7 +60,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionCustomConfiguration")
     @Expose
@@ -104,7 +102,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * RandomId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionRandomId")
     @Expose
@@ -112,7 +109,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionRecoverId")
     @Expose
@@ -120,7 +116,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionExecuteId")
     @Expose
@@ -128,7 +123,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionApiType")
     @Expose
@@ -136,7 +130,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionAttribute")
     @Expose
@@ -144,7 +137,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -152,7 +144,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsExecuteRedo")
     @Expose
@@ -160,7 +151,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionRisk")
     @Expose
@@ -168,7 +158,6 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
     * 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupActionExecuteTime")
     @Expose
@@ -246,10 +235,8 @@ public class TaskGroupAction extends AbstractModel {
     }
 
     /**
-     * Get 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组动作通用配置 
      * @return TaskGroupActionGeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupActionGeneralConfiguration() {
         return this.TaskGroupActionGeneralConfiguration;
@@ -257,19 +244,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionGeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionGeneralConfiguration(String TaskGroupActionGeneralConfiguration) {
         this.TaskGroupActionGeneralConfiguration = TaskGroupActionGeneralConfiguration;
     }
 
     /**
-     * Get 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组动作自定义配置 
      * @return TaskGroupActionCustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupActionCustomConfiguration() {
         return this.TaskGroupActionCustomConfiguration;
@@ -277,9 +260,7 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionCustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionCustomConfiguration(String TaskGroupActionCustomConfiguration) {
         this.TaskGroupActionCustomConfiguration = TaskGroupActionCustomConfiguration;
@@ -366,10 +347,8 @@ public class TaskGroupAction extends AbstractModel {
     }
 
     /**
-     * Get RandomId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RandomId 
      * @return TaskGroupActionRandomId RandomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupActionRandomId() {
         return this.TaskGroupActionRandomId;
@@ -377,19 +356,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set RandomId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionRandomId RandomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionRandomId(Long TaskGroupActionRandomId) {
         this.TaskGroupActionRandomId = TaskGroupActionRandomId;
     }
 
     /**
-     * Get RecoverId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RecoverId 
      * @return TaskGroupActionRecoverId RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupActionRecoverId() {
         return this.TaskGroupActionRecoverId;
@@ -397,19 +372,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionRecoverId RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionRecoverId(Long TaskGroupActionRecoverId) {
         this.TaskGroupActionRecoverId = TaskGroupActionRecoverId;
     }
 
     /**
-     * Get ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ExecuteId 
      * @return TaskGroupActionExecuteId ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupActionExecuteId() {
         return this.TaskGroupActionExecuteId;
@@ -417,19 +388,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionExecuteId ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionExecuteId(Long TaskGroupActionExecuteId) {
         this.TaskGroupActionExecuteId = TaskGroupActionExecuteId;
     }
 
     /**
-     * Get 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调用api类型，0:tat, 1:云api 
      * @return ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActionApiType() {
         return this.ActionApiType;
@@ -437,19 +404,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionApiType(Long ActionApiType) {
         this.ActionApiType = ActionApiType;
     }
 
     /**
-     * Get 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:故障，2:恢复 
      * @return ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActionAttribute() {
         return this.ActionAttribute;
@@ -457,19 +420,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionAttribute(Long ActionAttribute) {
         this.ActionAttribute = ActionAttribute;
     }
 
     /**
-     * Get 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作类型：平台、自定义 
      * @return ActionType 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -477,19 +436,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可重试 
      * @return IsExecuteRedo 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsExecuteRedo() {
         return this.IsExecuteRedo;
@@ -497,19 +452,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsExecuteRedo 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsExecuteRedo(Boolean IsExecuteRedo) {
         this.IsExecuteRedo = IsExecuteRedo;
     }
 
     /**
-     * Get 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作风险级别 
      * @return ActionRisk 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionRisk() {
         return this.ActionRisk;
@@ -517,19 +468,15 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionRisk 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionRisk(String ActionRisk) {
         this.ActionRisk = ActionRisk;
     }
 
     /**
-     * Get 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作运行时间 
      * @return TaskGroupActionExecuteTime 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupActionExecuteTime() {
         return this.TaskGroupActionExecuteTime;
@@ -537,9 +484,7 @@ public class TaskGroupAction extends AbstractModel {
 
     /**
      * Set 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupActionExecuteTime 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupActionExecuteTime(Long TaskGroupActionExecuteTime) {
         this.TaskGroupActionExecuteTime = TaskGroupActionExecuteTime;

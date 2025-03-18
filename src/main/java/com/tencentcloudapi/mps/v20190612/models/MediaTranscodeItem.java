@@ -108,6 +108,25 @@ public class MediaTranscodeItem extends AbstractModel {
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
+    * 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallBackExtInfo")
+    @Expose
+    private String CallBackExtInfo;
+
+    /**
      * Get 转码后文件的目标存储。 
      * @return OutputStorage 转码后文件的目标存储。
      */
@@ -299,6 +318,70 @@ public class MediaTranscodeItem extends AbstractModel {
         this.VideoStreamSet = VideoStreamSet;
     }
 
+    /**
+     * Get 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CallBackExtInfo 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallBackExtInfo() {
+        return this.CallBackExtInfo;
+    }
+
+    /**
+     * Set 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallBackExtInfo 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallBackExtInfo(String CallBackExtInfo) {
+        this.CallBackExtInfo = CallBackExtInfo;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -349,6 +432,9 @@ public class MediaTranscodeItem extends AbstractModel {
                 this.VideoStreamSet[i] = new MediaVideoStreamItem(source.VideoStreamSet[i]);
             }
         }
+        if (source.CallBackExtInfo != null) {
+            this.CallBackExtInfo = new String(source.CallBackExtInfo);
+        }
     }
 
 
@@ -368,6 +454,7 @@ public class MediaTranscodeItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+        this.setParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
 
     }
 }

@@ -73,7 +73,7 @@ public class SaveDocRequest extends AbstractModel {
     private String Size;
 
     /**
-    * 标签适用范围，默认填0即可
+    * 标签适用范围，需要传参为1
     */
     @SerializedName("AttrRange")
     @Expose
@@ -256,16 +256,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签适用范围，默认填0即可 
-     * @return AttrRange 标签适用范围，默认填0即可
+     * Get 标签适用范围，需要传参为1 
+     * @return AttrRange 标签适用范围，需要传参为1
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 标签适用范围，默认填0即可
-     * @param AttrRange 标签适用范围，默认填0即可
+     * Set 标签适用范围，需要传参为1
+     * @param AttrRange 标签适用范围，需要传参为1
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;

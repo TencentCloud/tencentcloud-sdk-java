@@ -25,7 +25,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepNo")
     @Expose
@@ -33,7 +32,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepId")
     @Expose
@@ -41,7 +39,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepName")
     @Expose
@@ -49,7 +46,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepStatus")
     @Expose
@@ -57,7 +53,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepMessage")
     @Expose
@@ -65,7 +60,6 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailCheckItems")
     @Expose
@@ -73,17 +67,14 @@ public class CheckStep extends AbstractModel {
 
     /**
     * 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasSkipped")
     @Expose
     private Boolean HasSkipped;
 
     /**
-     * Get 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤编号 
      * @return StepNo 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepNo() {
         return this.StepNo;
@@ -91,19 +82,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepNo 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
     /**
-     * Get 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关 
      * @return StepId 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepId() {
         return this.StepId;
@@ -111,19 +98,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepId 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepId(String StepId) {
         this.StepId = StepId;
     }
 
     /**
-     * Get 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤名称 
      * @return StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepName() {
         return this.StepName;
@@ -131,19 +114,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepName(String StepName) {
         this.StepName = StepName;
     }
 
     /**
-     * Get 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过) 
      * @return StepStatus 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepStatus() {
         return this.StepStatus;
@@ -151,19 +130,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepStatus 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepStatus(String StepStatus) {
         this.StepStatus = StepStatus;
     }
 
     /**
-     * Get 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此检查步骤的错误消息 
      * @return StepMessage 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStepMessage() {
         return this.StepMessage;
@@ -171,19 +146,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepMessage 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepMessage(String StepMessage) {
         this.StepMessage = StepMessage;
     }
 
     /**
-     * Get 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个检查步骤里的具体检查项 
      * @return DetailCheckItems 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailCheckItem [] getDetailCheckItems() {
         return this.DetailCheckItems;
@@ -191,19 +162,15 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailCheckItems 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailCheckItems(DetailCheckItem [] DetailCheckItems) {
         this.DetailCheckItems = DetailCheckItems;
     }
 
     /**
-     * Get 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已跳过 
      * @return HasSkipped 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasSkipped() {
         return this.HasSkipped;
@@ -211,9 +178,7 @@ public class CheckStep extends AbstractModel {
 
     /**
      * Set 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasSkipped 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasSkipped(Boolean HasSkipped) {
         this.HasSkipped = HasSkipped;

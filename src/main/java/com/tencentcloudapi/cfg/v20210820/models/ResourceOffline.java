@@ -25,7 +25,6 @@ public class ResourceOffline extends AbstractModel {
 
     /**
     * 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceOffline extends AbstractModel {
 
     /**
     * 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceDeleteTime")
     @Expose
@@ -41,17 +39,14 @@ public class ResourceOffline extends AbstractModel {
 
     /**
     * 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceDeleteMessage")
     @Expose
     private String ResourceDeleteMessage;
 
     /**
-     * Get 资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID 
      * @return ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceId() {
         return this.ResourceId;
@@ -59,19 +54,15 @@ public class ResourceOffline extends AbstractModel {
 
     /**
      * Set 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(Long ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源下线时间 
      * @return ResourceDeleteTime 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceDeleteTime() {
         return this.ResourceDeleteTime;
@@ -79,19 +70,15 @@ public class ResourceOffline extends AbstractModel {
 
     /**
      * Set 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDeleteTime 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceDeleteTime(String ResourceDeleteTime) {
         this.ResourceDeleteTime = ResourceDeleteTime;
     }
 
     /**
-     * Get 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源下线提示 
      * @return ResourceDeleteMessage 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceDeleteMessage() {
         return this.ResourceDeleteMessage;
@@ -99,9 +86,7 @@ public class ResourceOffline extends AbstractModel {
 
     /**
      * Set 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDeleteMessage 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceDeleteMessage(String ResourceDeleteMessage) {
         this.ResourceDeleteMessage = ResourceDeleteMessage;

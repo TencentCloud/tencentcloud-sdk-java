@@ -255,6 +255,20 @@ public class InstanceApiOpsRequest extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 计划调度时间
+    */
+    @SerializedName("ScheduleTimeFrom")
+    @Expose
+    private String ScheduleTimeFrom;
+
+    /**
+    * 计划调度时间
+    */
+    @SerializedName("ScheduleTimeTo")
+    @Expose
+    private String ScheduleTimeTo;
+
+    /**
      * Get 单个查询条件 
      * @return Instance 单个查询条件
      */
@@ -782,6 +796,38 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 计划调度时间 
+     * @return ScheduleTimeFrom 计划调度时间
+     */
+    public String getScheduleTimeFrom() {
+        return this.ScheduleTimeFrom;
+    }
+
+    /**
+     * Set 计划调度时间
+     * @param ScheduleTimeFrom 计划调度时间
+     */
+    public void setScheduleTimeFrom(String ScheduleTimeFrom) {
+        this.ScheduleTimeFrom = ScheduleTimeFrom;
+    }
+
+    /**
+     * Get 计划调度时间 
+     * @return ScheduleTimeTo 计划调度时间
+     */
+    public String getScheduleTimeTo() {
+        return this.ScheduleTimeTo;
+    }
+
+    /**
+     * Set 计划调度时间
+     * @param ScheduleTimeTo 计划调度时间
+     */
+    public void setScheduleTimeTo(String ScheduleTimeTo) {
+        this.ScheduleTimeTo = ScheduleTimeTo;
+    }
+
     public InstanceApiOpsRequest() {
     }
 
@@ -925,6 +971,12 @@ public class InstanceApiOpsRequest extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.ScheduleTimeFrom != null) {
+            this.ScheduleTimeFrom = new String(source.ScheduleTimeFrom);
+        }
+        if (source.ScheduleTimeTo != null) {
+            this.ScheduleTimeTo = new String(source.ScheduleTimeTo);
+        }
     }
 
 
@@ -965,6 +1017,8 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
         this.setParamSimple(map, prefix + "OnlyRerun", this.OnlyRerun);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "ScheduleTimeFrom", this.ScheduleTimeFrom);
+        this.setParamSimple(map, prefix + "ScheduleTimeTo", this.ScheduleTimeTo);
 
     }
 }

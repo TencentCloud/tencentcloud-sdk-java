@@ -25,7 +25,6 @@ public class DescribeCompareTasksResponse extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCompareTasksResponse extends AbstractModel {
 
     /**
     * 一致性校验列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCompareTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeCompareTasksResponse extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 一致性校验列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验列表 
      * @return Items 一致性校验列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareTaskItem [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ public class DescribeCompareTasksResponse extends AbstractModel {
 
     /**
      * Set 一致性校验列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 一致性校验列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(CompareTaskItem [] Items) {
         this.Items = Items;

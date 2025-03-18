@@ -25,7 +25,6 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
     * 实例选取模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstancesExecuteMode")
     @Expose
@@ -33,7 +32,6 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
     * 按比例选取模式下选取比例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstancesExecutePercent")
     @Expose
@@ -41,17 +39,14 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
     * 按数量选取模式下选取数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstancesExecuteNum")
     @Expose
     private Long TaskGroupInstancesExecuteNum;
 
     /**
-     * Get 实例选取模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例选取模式 
      * @return TaskGroupInstancesExecuteMode 实例选取模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupInstancesExecuteMode() {
         return this.TaskGroupInstancesExecuteMode;
@@ -59,19 +54,15 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
      * Set 实例选取模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstancesExecuteMode 实例选取模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstancesExecuteMode(Long TaskGroupInstancesExecuteMode) {
         this.TaskGroupInstancesExecuteMode = TaskGroupInstancesExecuteMode;
     }
 
     /**
-     * Get 按比例选取模式下选取比例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按比例选取模式下选取比例 
      * @return TaskGroupInstancesExecutePercent 按比例选取模式下选取比例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupInstancesExecutePercent() {
         return this.TaskGroupInstancesExecutePercent;
@@ -79,19 +70,15 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
      * Set 按比例选取模式下选取比例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstancesExecutePercent 按比例选取模式下选取比例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstancesExecutePercent(Long TaskGroupInstancesExecutePercent) {
         this.TaskGroupInstancesExecutePercent = TaskGroupInstancesExecutePercent;
     }
 
     /**
-     * Get 按数量选取模式下选取数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按数量选取模式下选取数量 
      * @return TaskGroupInstancesExecuteNum 按数量选取模式下选取数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupInstancesExecuteNum() {
         return this.TaskGroupInstancesExecuteNum;
@@ -99,9 +86,7 @@ public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
      * Set 按数量选取模式下选取数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstancesExecuteNum 按数量选取模式下选取数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstancesExecuteNum(Long TaskGroupInstancesExecuteNum) {
         this.TaskGroupInstancesExecuteNum = TaskGroupInstancesExecuteNum;

@@ -287,6 +287,20 @@ HYBRID_PAID:
     private Long ServicePort;
 
     /**
+    * 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+    */
+    @SerializedName("TerminationGracePeriodSeconds")
+    @Expose
+    private Long TerminationGracePeriodSeconds;
+
+    /**
+    * 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+    */
+    @SerializedName("PreStopCommand")
+    @Expose
+    private String [] PreStopCommand;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -962,6 +976,38 @@ HYBRID_PAID:
         this.ServicePort = ServicePort;
     }
 
+    /**
+     * Get 服务的优雅退出时限。单位为秒，默认值为30，最小为1 
+     * @return TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     */
+    public Long getTerminationGracePeriodSeconds() {
+        return this.TerminationGracePeriodSeconds;
+    }
+
+    /**
+     * Set 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @param TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     */
+    public void setTerminationGracePeriodSeconds(Long TerminationGracePeriodSeconds) {
+        this.TerminationGracePeriodSeconds = TerminationGracePeriodSeconds;
+    }
+
+    /**
+     * Get 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束 
+     * @return PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     */
+    public String [] getPreStopCommand() {
+        return this.PreStopCommand;
+    }
+
+    /**
+     * Set 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @param PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     */
+    public void setPreStopCommand(String [] PreStopCommand) {
+        this.PreStopCommand = PreStopCommand;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1078,6 +1124,15 @@ HYBRID_PAID:
         if (source.ServicePort != null) {
             this.ServicePort = new Long(source.ServicePort);
         }
+        if (source.TerminationGracePeriodSeconds != null) {
+            this.TerminationGracePeriodSeconds = new Long(source.TerminationGracePeriodSeconds);
+        }
+        if (source.PreStopCommand != null) {
+            this.PreStopCommand = new String[source.PreStopCommand.length];
+            for (int i = 0; i < source.PreStopCommand.length; i++) {
+                this.PreStopCommand[i] = new String(source.PreStopCommand[i]);
+            }
+        }
     }
 
 
@@ -1117,6 +1172,8 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
         this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
+        this.setParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
+        this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
 
     }
 }

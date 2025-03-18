@@ -39,6 +39,7 @@ public class CompareObject extends AbstractModel {
 
     /**
     * 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedObjects")
     @Expose
@@ -77,8 +78,10 @@ public class CompareObject extends AbstractModel {
     }
 
     /**
-     * Get 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表) 
+     * Get 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdvancedObjects 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
@@ -86,7 +89,9 @@ public class CompareObject extends AbstractModel {
 
     /**
      * Set 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvancedObjects 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;

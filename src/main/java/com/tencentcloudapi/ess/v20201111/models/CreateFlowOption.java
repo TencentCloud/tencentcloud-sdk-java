@@ -201,6 +201,14 @@ public class CreateFlowOption extends AbstractModel {
     private CreateResultPageConfig [] ResultPageConfig;
 
     /**
+    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+    */
+    @SerializedName("SignComponentConfig")
+    @Expose
+    private SignComponentConfig SignComponentConfig;
+
+    /**
      * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/> 
      * @return CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
@@ -740,6 +748,26 @@ public class CreateFlowOption extends AbstractModel {
         this.ResultPageConfig = ResultPageConfig;
     }
 
+    /**
+     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期. 
+     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public SignComponentConfig getSignComponentConfig() {
+        return this.SignComponentConfig;
+    }
+
+    /**
+     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
+        this.SignComponentConfig = SignComponentConfig;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -799,6 +827,9 @@ public class CreateFlowOption extends AbstractModel {
                 this.ResultPageConfig[i] = new CreateResultPageConfig(source.ResultPageConfig[i]);
             }
         }
+        if (source.SignComponentConfig != null) {
+            this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
+        }
     }
 
 
@@ -820,6 +851,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamArraySimple(map, prefix + "HideComponentTypes.", this.HideComponentTypes);
         this.setParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);
         this.setParamArrayObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
+        this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
 
     }
 }

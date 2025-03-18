@@ -136,7 +136,7 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     private Long NotProtectMachineCnt;
 
     /**
-    * 已防护普惠版机器数（Lighthouse机器）
+    * 已防护轻量机器数（Lighthouse机器）
     */
     @SerializedName("LHGeneralDiscountCnt")
     @Expose
@@ -447,16 +447,16 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 已防护普惠版机器数（Lighthouse机器） 
-     * @return LHGeneralDiscountCnt 已防护普惠版机器数（Lighthouse机器）
+     * Get 已防护轻量机器数（Lighthouse机器） 
+     * @return LHGeneralDiscountCnt 已防护轻量机器数（Lighthouse机器）
      */
     public Long getLHGeneralDiscountCnt() {
         return this.LHGeneralDiscountCnt;
     }
 
     /**
-     * Set 已防护普惠版机器数（Lighthouse机器）
-     * @param LHGeneralDiscountCnt 已防护普惠版机器数（Lighthouse机器）
+     * Set 已防护轻量机器数（Lighthouse机器）
+     * @param LHGeneralDiscountCnt 已防护轻量机器数（Lighthouse机器）
      */
     public void setLHGeneralDiscountCnt(Long LHGeneralDiscountCnt) {
         this.LHGeneralDiscountCnt = LHGeneralDiscountCnt;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FirewallRule extends AbstractModel {
 
     /**
-    * 协议，取值：TCP，UDP，ICMP，ALL。
+    * 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
     */
     @SerializedName("Protocol")
     @Expose
@@ -72,16 +72,16 @@ public class FirewallRule extends AbstractModel {
     private String FirewallRuleDescription;
 
     /**
-     * Get 协议，取值：TCP，UDP，ICMP，ALL。 
-     * @return Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * Get 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。 
+     * @return Protocol 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，取值：TCP，UDP，ICMP，ALL。
-     * @param Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * Set 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+     * @param Protocol 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

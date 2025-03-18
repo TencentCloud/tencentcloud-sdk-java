@@ -25,7 +25,6 @@ public class CreateCompareTaskResponse extends AbstractModel {
 
     /**
     * 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareTaskId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCompareTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9 
      * @return CompareTaskId 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
@@ -50,9 +47,7 @@ public class CreateCompareTaskResponse extends AbstractModel {
 
     /**
      * Set 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareTaskId 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;

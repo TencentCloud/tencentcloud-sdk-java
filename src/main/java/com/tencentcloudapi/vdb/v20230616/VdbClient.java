@@ -61,7 +61,7 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
-     *实例节点列表
+     *查询实例pod列表
      * @param req DescribeInstanceNodesRequest
      * @return DescribeInstanceNodesResponse
      * @throws TencentCloudSDKException

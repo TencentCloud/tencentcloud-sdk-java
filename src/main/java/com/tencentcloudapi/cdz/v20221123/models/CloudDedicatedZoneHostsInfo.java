@@ -25,7 +25,6 @@ public class CloudDedicatedZoneHostsInfo extends AbstractModel {
 
     /**
     * Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostUuid")
     @Expose
@@ -33,17 +32,14 @@ public class CloudDedicatedZoneHostsInfo extends AbstractModel {
 
     /**
     * 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancesInfo")
     @Expose
     private String [] InstancesInfo;
 
     /**
-     * Get Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Host的唯一标识uuid 
      * @return HostUuid Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostUuid() {
         return this.HostUuid;
@@ -51,19 +47,15 @@ public class CloudDedicatedZoneHostsInfo extends AbstractModel {
 
     /**
      * Set Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostUuid Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostUuid(String HostUuid) {
         this.HostUuid = HostUuid;
     }
 
     /**
-     * Get 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称数组 
      * @return InstancesInfo 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstancesInfo() {
         return this.InstancesInfo;
@@ -71,9 +63,7 @@ public class CloudDedicatedZoneHostsInfo extends AbstractModel {
 
     /**
      * Set 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancesInfo 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancesInfo(String [] InstancesInfo) {
         this.InstancesInfo = InstancesInfo;

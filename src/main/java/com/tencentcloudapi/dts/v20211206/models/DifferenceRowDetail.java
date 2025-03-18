@@ -25,7 +25,6 @@ public class DifferenceRowDetail extends AbstractModel {
 
     /**
     * 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -40,10 +39,8 @@ public class DifferenceRowDetail extends AbstractModel {
     private RowsCountDifference [] Items;
 
     /**
-     * Get 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不一致总数 
      * @return TotalCount 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,9 +48,7 @@ public class DifferenceRowDetail extends AbstractModel {
 
     /**
      * Set 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

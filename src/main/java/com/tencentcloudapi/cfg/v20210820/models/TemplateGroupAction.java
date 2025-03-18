@@ -46,7 +46,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneralConfiguration")
     @Expose
@@ -54,7 +53,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomConfiguration")
     @Expose
@@ -83,7 +81,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RandomId")
     @Expose
@@ -91,7 +88,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecoverId")
     @Expose
@@ -99,7 +95,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteId")
     @Expose
@@ -107,7 +102,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionApiType")
     @Expose
@@ -115,7 +109,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionAttribute")
     @Expose
@@ -123,7 +116,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -131,7 +123,6 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
     * 动作风险等级，1:低风险 2:中风险 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionRisk")
     @Expose
@@ -193,10 +184,8 @@ public class TemplateGroupAction extends AbstractModel {
     }
 
     /**
-     * Get 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组动作通用配置 
      * @return GeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGeneralConfiguration() {
         return this.GeneralConfiguration;
@@ -204,19 +193,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneralConfiguration(String GeneralConfiguration) {
         this.GeneralConfiguration = GeneralConfiguration;
     }
 
     /**
-     * Get 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组动作自定义配置 
      * @return CustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomConfiguration() {
         return this.CustomConfiguration;
@@ -224,9 +209,7 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomConfiguration(String CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;
@@ -281,10 +264,8 @@ public class TemplateGroupAction extends AbstractModel {
     }
 
     /**
-     * Get 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自身随机id 
      * @return RandomId 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRandomId() {
         return this.RandomId;
@@ -292,19 +273,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RandomId 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRandomId(Long RandomId) {
         this.RandomId = RandomId;
     }
 
     /**
-     * Get 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恢复动作id 
      * @return RecoverId 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecoverId() {
         return this.RecoverId;
@@ -312,19 +289,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecoverId 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecoverId(Long RecoverId) {
         this.RecoverId = RecoverId;
     }
 
     /**
-     * Get 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行动作id 
      * @return ExecuteId 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecuteId() {
         return this.ExecuteId;
@@ -332,19 +305,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteId 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteId(Long ExecuteId) {
         this.ExecuteId = ExecuteId;
     }
 
     /**
-     * Get 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调用api类型，0:tat, 1:云api 
      * @return ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActionApiType() {
         return this.ActionApiType;
@@ -352,19 +321,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionApiType(Long ActionApiType) {
         this.ActionApiType = ActionApiType;
     }
 
     /**
-     * Get 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:故障，2:恢复 
      * @return ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActionAttribute() {
         return this.ActionAttribute;
@@ -372,19 +337,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionAttribute(Long ActionAttribute) {
         this.ActionAttribute = ActionAttribute;
     }
 
     /**
-     * Get 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作类型：平台和自定义 
      * @return ActionType 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -392,19 +353,15 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 动作风险等级，1:低风险 2:中风险 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作风险等级，1:低风险 2:中风险 3:高风险 
      * @return ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionRisk() {
         return this.ActionRisk;
@@ -412,9 +369,7 @@ public class TemplateGroupAction extends AbstractModel {
 
     /**
      * Set 动作风险等级，1:低风险 2:中风险 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionRisk(String ActionRisk) {
         this.ActionRisk = ActionRisk;

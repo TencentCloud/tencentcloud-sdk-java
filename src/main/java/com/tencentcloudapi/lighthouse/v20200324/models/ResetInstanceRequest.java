@@ -39,6 +39,7 @@ public class ResetInstanceRequest extends AbstractModel {
 
     /**
     * 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
     */
     @SerializedName("Containers")
     @Expose
@@ -84,8 +85,10 @@ public class ResetInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 要创建的容器配置列表。 
+     * Get 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。 
      * @return Containers 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
      */
     public DockerContainerConfiguration [] getContainers() {
         return this.Containers;
@@ -93,7 +96,9 @@ public class ResetInstanceRequest extends AbstractModel {
 
     /**
      * Set 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
      * @param Containers 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
      */
     public void setContainers(DockerContainerConfiguration [] Containers) {
         this.Containers = Containers;

@@ -161,6 +161,13 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+    */
+    @SerializedName("TimeType")
+    @Expose
+    private String TimeType;
+
+    /**
      * Get 运行触发记录ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TriggerId 运行触发记录ID
@@ -504,6 +511,22 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理 
+     * @return TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public String getTimeType() {
+        return this.TimeType;
+    }
+
+    /**
+     * Set 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * @param TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public void setTimeType(String TimeType) {
+        this.TimeType = TimeType;
+    }
+
     public ManualTriggerRecordOpsDto() {
     }
 
@@ -566,6 +589,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.TimeType != null) {
+            this.TimeType = new String(source.TimeType);
+        }
     }
 
 
@@ -590,6 +616,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "TimeType", this.TimeType);
 
     }
 }

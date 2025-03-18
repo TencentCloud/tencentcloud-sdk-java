@@ -185,6 +185,13 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     private String UrlUseEnv;
 
     /**
+    * 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+    */
+    @SerializedName("CanBatchReject")
+    @Expose
+    private Boolean CanBatchReject;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -648,6 +655,22 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.UrlUseEnv = UrlUseEnv;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。` 
+     * @return CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     */
+    public Boolean getCanBatchReject() {
+        return this.CanBatchReject;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     * @param CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     */
+    public void setCanBatchReject(Boolean CanBatchReject) {
+        this.CanBatchReject = CanBatchReject;
+    }
+
     public ChannelCreateBatchSignUrlRequest() {
     }
 
@@ -704,6 +727,9 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         if (source.UrlUseEnv != null) {
             this.UrlUseEnv = new String(source.UrlUseEnv);
         }
+        if (source.CanBatchReject != null) {
+            this.CanBatchReject = new Boolean(source.CanBatchReject);
+        }
     }
 
 
@@ -726,6 +752,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
+        this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
 
     }
 }

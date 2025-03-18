@@ -31,7 +31,7 @@ public class DescribeDockerContainersRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
+    * 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。参数不支持同时指定 ContainerIds 和 Filters。
     */
     @SerializedName("ContainerIds")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeDockerContainersRequest extends AbstractModel {
     }
 
     /**
-     * Get 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。 
-     * @return ContainerIds 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
+     * Get 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。参数不支持同时指定 ContainerIds 和 Filters。 
+     * @return ContainerIds 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。参数不支持同时指定 ContainerIds 和 Filters。
      */
     public String [] getContainerIds() {
         return this.ContainerIds;
     }
 
     /**
-     * Set 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
-     * @param ContainerIds 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
+     * Set 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。参数不支持同时指定 ContainerIds 和 Filters。
+     * @param ContainerIds 容器ID列表。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。参数不支持同时指定 ContainerIds 和 Filters。
      */
     public void setContainerIds(String [] ContainerIds) {
         this.ContainerIds = ContainerIds;

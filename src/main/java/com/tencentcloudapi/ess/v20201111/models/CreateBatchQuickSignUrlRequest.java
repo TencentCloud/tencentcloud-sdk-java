@@ -149,6 +149,17 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private Boolean CacheApproverInfo;
 
     /**
+    * 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+    */
+    @SerializedName("CanBatchReject")
+    @Expose
+    private Boolean CanBatchReject;
+
+    /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -504,6 +515,38 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.CacheApproverInfo = CacheApproverInfo;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+ 
+     * @return CanBatchReject 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+     */
+    public Boolean getCanBatchReject() {
+        return this.CanBatchReject;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+     * @param CanBatchReject 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+     */
+    public void setCanBatchReject(Boolean CanBatchReject) {
+        this.CanBatchReject = CanBatchReject;
+    }
+
     public CreateBatchQuickSignUrlRequest() {
     }
 
@@ -557,6 +600,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         if (source.CacheApproverInfo != null) {
             this.CacheApproverInfo = new Boolean(source.CacheApproverInfo);
         }
+        if (source.CanBatchReject != null) {
+            this.CanBatchReject = new Boolean(source.CanBatchReject);
+        }
     }
 
 
@@ -576,6 +622,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         this.setParamObj(map, prefix + "Intention.", this.Intention);
         this.setParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
+        this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
 
     }
 }

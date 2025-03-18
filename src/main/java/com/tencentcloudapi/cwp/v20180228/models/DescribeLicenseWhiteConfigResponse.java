@@ -38,7 +38,7 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
     private VersionWhiteConfig Professional;
 
     /**
-    * 普惠版 配置信息
+    * 轻量版 配置信息
     */
     @SerializedName("PrattWhitney")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 普惠版 配置信息 
-     * @return PrattWhitney 普惠版 配置信息
+     * Get 轻量版 配置信息 
+     * @return PrattWhitney 轻量版 配置信息
      */
     public VersionWhiteConfig getPrattWhitney() {
         return this.PrattWhitney;
     }
 
     /**
-     * Set 普惠版 配置信息
-     * @param PrattWhitney 普惠版 配置信息
+     * Set 轻量版 配置信息
+     * @param PrattWhitney 轻量版 配置信息
      */
     public void setPrattWhitney(VersionWhiteConfig PrattWhitney) {
         this.PrattWhitney = PrattWhitney;

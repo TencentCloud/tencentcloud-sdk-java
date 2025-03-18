@@ -25,7 +25,6 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
 
     /**
     * 迁移任务数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
 
     /**
     * 迁移任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 迁移任务数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移任务数量 
      * @return TotalCount 迁移任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
 
     /**
      * Set 迁移任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 迁移任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 迁移任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移任务列表 
      * @return JobList 迁移任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobItem [] getJobList() {
         return this.JobList;
@@ -78,9 +70,7 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
 
     /**
      * Set 迁移任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobList 迁移任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobList(JobItem [] JobList) {
         this.JobList = JobList;

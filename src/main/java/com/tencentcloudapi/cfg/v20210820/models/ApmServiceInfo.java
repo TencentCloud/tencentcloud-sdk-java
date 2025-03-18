@@ -25,7 +25,6 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
     * 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceNameList")
     @Expose
@@ -41,17 +39,14 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-     * Get 业务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务ID 
      * @return InstanceId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -59,19 +54,15 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
      * Set 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ServiceNameList 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getServiceNameList() {
         return this.ServiceNameList;
@@ -79,19 +70,15 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceNameList 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceNameList(String [] ServiceNameList) {
         this.ServiceNameList = ServiceNameList;
     }
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -99,9 +86,7 @@ public class ApmServiceInfo extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

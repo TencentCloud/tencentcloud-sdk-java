@@ -25,7 +25,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 校验配置参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Options")
     @Expose
@@ -33,7 +32,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 一致性校验对比对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Objects")
     @Expose
@@ -41,7 +39,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 对比结论: same,different
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conclusion")
     @Expose
@@ -49,7 +46,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 任务状态: success,failed
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 总的表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTables")
     @Expose
@@ -65,7 +60,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 已校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckedTables")
     @Expose
@@ -73,7 +67,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferentTables")
     @Expose
@@ -81,7 +74,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 跳过校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkippedTables")
     @Expose
@@ -89,7 +81,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 预估表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NearlyTableCount")
     @Expose
@@ -97,7 +88,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 不一致的数据行数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferentRows")
     @Expose
@@ -105,7 +95,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 源库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcSampleRows")
     @Expose
@@ -113,7 +102,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 目标库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstSampleRows")
     @Expose
@@ -121,7 +109,6 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartedAt")
     @Expose
@@ -129,17 +116,14 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-     * Get 校验配置参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验配置参数 
      * @return Options 校验配置参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareOptions getOptions() {
         return this.Options;
@@ -147,19 +131,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 校验配置参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Options 校验配置参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptions(CompareOptions Options) {
         this.Options = Options;
     }
 
     /**
-     * Get 一致性校验对比对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一致性校验对比对象 
      * @return Objects 一致性校验对比对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareObject getObjects() {
         return this.Objects;
@@ -167,19 +147,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 一致性校验对比对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Objects 一致性校验对比对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjects(CompareObject Objects) {
         this.Objects = Objects;
     }
 
     /**
-     * Get 对比结论: same,different
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比结论: same,different 
      * @return Conclusion 对比结论: same,different
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConclusion() {
         return this.Conclusion;
@@ -187,19 +163,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 对比结论: same,different
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Conclusion 对比结论: same,different
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;
     }
 
     /**
-     * Get 任务状态: success,failed
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态: success,failed 
      * @return Status 任务状态: success,failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -207,19 +179,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 任务状态: success,failed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态: success,failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 总的表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的表数量 
      * @return TotalTables 总的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalTables() {
         return this.TotalTables;
@@ -227,19 +195,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 总的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalTables 总的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTables(Long TotalTables) {
         this.TotalTables = TotalTables;
     }
 
     /**
-     * Get 已校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已校验的表数量 
      * @return CheckedTables 已校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckedTables() {
         return this.CheckedTables;
@@ -247,19 +211,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 已校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckedTables 已校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckedTables(Long CheckedTables) {
         this.CheckedTables = CheckedTables;
     }
 
     /**
-     * Get 不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不一致的表数量 
      * @return DifferentTables 不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDifferentTables() {
         return this.DifferentTables;
@@ -267,19 +227,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferentTables 不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferentTables(Long DifferentTables) {
         this.DifferentTables = DifferentTables;
     }
 
     /**
-     * Get 跳过校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过校验的表数量 
      * @return SkippedTables 跳过校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSkippedTables() {
         return this.SkippedTables;
@@ -287,19 +243,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 跳过校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkippedTables 跳过校验的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkippedTables(Long SkippedTables) {
         this.SkippedTables = SkippedTables;
     }
 
     /**
-     * Get 预估表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预估表总数 
      * @return NearlyTableCount 预估表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNearlyTableCount() {
         return this.NearlyTableCount;
@@ -307,19 +259,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 预估表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NearlyTableCount 预估表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNearlyTableCount(Long NearlyTableCount) {
         this.NearlyTableCount = NearlyTableCount;
     }
 
     /**
-     * Get 不一致的数据行数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不一致的数据行数量 
      * @return DifferentRows 不一致的数据行数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDifferentRows() {
         return this.DifferentRows;
@@ -327,19 +275,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 不一致的数据行数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferentRows 不一致的数据行数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferentRows(Long DifferentRows) {
         this.DifferentRows = DifferentRows;
     }
 
     /**
-     * Get 源库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源库行数，当对比类型为**行数对比**时此项有意义 
      * @return SrcSampleRows 源库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSrcSampleRows() {
         return this.SrcSampleRows;
@@ -347,19 +291,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 源库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcSampleRows 源库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcSampleRows(Long SrcSampleRows) {
         this.SrcSampleRows = SrcSampleRows;
     }
 
     /**
-     * Get 目标库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标库行数，当对比类型为**行数对比**时此项有意义 
      * @return DstSampleRows 目标库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDstSampleRows() {
         return this.DstSampleRows;
@@ -367,19 +307,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 目标库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstSampleRows 目标库行数，当对比类型为**行数对比**时此项有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstSampleRows(Long DstSampleRows) {
         this.DstSampleRows = DstSampleRows;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartedAt 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartedAt() {
         return this.StartedAt;
@@ -387,19 +323,15 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartedAt 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartedAt(String StartedAt) {
         this.StartedAt = StartedAt;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return FinishedAt 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedAt() {
         return this.FinishedAt;
@@ -407,9 +339,7 @@ public class CompareAbstractInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedAt 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;

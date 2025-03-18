@@ -116,6 +116,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *p2p路线切换
+     * @param req ChangeP2PRouteRequest
+     * @return ChangeP2PRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeP2PRouteResponse ChangeP2PRoute(ChangeP2PRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeP2PRoute", ChangeP2PRouteResponse.class);
+    }
+
+    /**
      *本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
      * @param req CheckFirmwareUpdateRequest
      * @return CheckFirmwareUpdateResponse
@@ -930,6 +941,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *当前p2p线路
+     * @param req DescribeP2PRouteRequest
+     * @return DescribeP2PRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeP2PRouteResponse DescribeP2PRoute(DescribeP2PRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeP2PRoute", DescribeP2PRouteResponse.class);
+    }
+
+    /**
      *查询套餐消耗记录详情
      * @param req DescribePackageConsumeTaskRequest
      * @return DescribePackageConsumeTaskResponse
@@ -1345,6 +1367,17 @@ public class IotexplorerClient extends AbstractClient{
     public ListTopicPolicyResponse ListTopicPolicy(ListTopicPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTopicPolicy", ListTopicPolicyResponse.class);
+    }
+
+    /**
+     *更新应用信息
+     * @param req ModifyApplicationRequest
+     * @return ModifyApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApplication", ModifyApplicationResponse.class);
     }
 
     /**

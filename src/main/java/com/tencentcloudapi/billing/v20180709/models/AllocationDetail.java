@@ -25,7 +25,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -33,7 +32,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKeyName")
     @Expose
@@ -41,7 +39,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillDate")
     @Expose
@@ -49,7 +46,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUin")
     @Expose
@@ -57,7 +53,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -65,7 +60,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateUin")
     @Expose
@@ -73,7 +67,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -81,7 +74,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCodeName")
     @Expose
@@ -89,7 +81,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -97,7 +88,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayModeName")
     @Expose
@@ -105,7 +95,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -113,7 +102,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
@@ -121,7 +109,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -129,7 +116,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -137,7 +123,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -145,7 +130,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -153,7 +137,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -161,7 +144,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -169,7 +151,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -177,7 +158,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeName")
     @Expose
@@ -201,7 +181,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -209,7 +188,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -217,7 +195,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -225,7 +202,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTypeName")
     @Expose
@@ -234,7 +210,6 @@ public class AllocationDetail extends AbstractModel {
     /**
     * 订单 ID：包年包月计费模式下订购的订单号
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
     @Expose
@@ -242,7 +217,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 交易 ID：结算扣费单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillId")
     @Expose
@@ -250,7 +224,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayTime")
     @Expose
@@ -258,7 +231,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeBeginTime")
     @Expose
@@ -266,7 +238,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeEndTime")
     @Expose
@@ -274,7 +245,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
     @Expose
@@ -282,7 +252,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCodeName")
     @Expose
@@ -290,7 +259,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SinglePrice")
     @Expose
@@ -298,7 +266,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContractPrice")
     @Expose
@@ -306,7 +273,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SinglePriceUnit")
     @Expose
@@ -314,7 +280,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedAmount")
     @Expose
@@ -322,7 +287,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedAmountUnit")
     @Expose
@@ -330,7 +294,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -338,7 +301,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -346,7 +308,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReserveDetail")
     @Expose
@@ -354,7 +315,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitRatio")
     @Expose
@@ -362,7 +322,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -370,7 +329,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RITimeSpan")
     @Expose
@@ -378,7 +336,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RICost")
     @Expose
@@ -386,7 +343,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPCost")
     @Expose
@@ -394,7 +350,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
@@ -402,7 +357,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlendedDiscount")
     @Expose
@@ -410,7 +364,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -418,7 +371,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CashPayAmount")
     @Expose
@@ -426,7 +378,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -434,7 +385,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -442,7 +392,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -450,7 +399,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -458,7 +406,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionType")
     @Expose
@@ -466,7 +413,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionTypeName")
     @Expose
@@ -474,7 +420,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCode")
     @Expose
@@ -482,7 +427,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCodeName")
     @Expose
@@ -497,7 +441,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceInfo")
     @Expose
@@ -505,7 +448,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Formula")
     @Expose
@@ -513,7 +455,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormulaUrl")
     @Expose
@@ -522,7 +463,6 @@ public class AllocationDetail extends AbstractModel {
     /**
     * 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalMeasure")
     @Expose
@@ -531,7 +471,6 @@ public class AllocationDetail extends AbstractModel {
     /**
     * 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductedMeasure")
     @Expose
@@ -539,7 +478,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentConfig")
     @Expose
@@ -550,7 +488,6 @@ public class AllocationDetail extends AbstractModel {
 0 - 分摊
 1 - 归集
 2 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllocationType")
     @Expose
@@ -558,7 +495,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountObject")
     @Expose
@@ -566,7 +502,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountType")
     @Expose
@@ -574,7 +509,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountContent")
     @Expose
@@ -582,7 +516,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeduction")
     @Expose
@@ -590,7 +523,6 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeductionRate")
     @Expose
@@ -598,17 +530,14 @@ public class AllocationDetail extends AbstractModel {
 
     /**
     * 账单月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillMonth")
     @Expose
     private String BillMonth;
 
     /**
-     * Get 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元唯一标识 
      * @return TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
@@ -616,19 +545,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元名称 
      * @return TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKeyName() {
         return this.TreeNodeUniqKeyName;
@@ -636,19 +561,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
         this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;
     }
 
     /**
-     * Get 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期：结算日期 
      * @return BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillDate() {
         return this.BillDate;
@@ -656,19 +577,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillDate(String BillDate) {
         this.BillDate = BillDate;
     }
 
     /**
-     * Get 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
      * @return PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUin() {
         return this.PayerUin;
@@ -676,19 +593,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用者 UIN：实际使用资源的账号 ID 
      * @return OwnerUin 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -696,19 +609,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID） 
      * @return OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateUin() {
         return this.OperateUin;
@@ -716,19 +625,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -736,19 +641,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称：用户所采购的各类云产品 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
@@ -756,19 +657,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式编码 
      * @return PayMode 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -776,19 +673,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
      * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayModeName() {
         return this.PayModeName;
@@ -796,19 +689,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -816,19 +705,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
      * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -836,19 +721,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -856,19 +737,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称：资源所属地域 
      * @return RegionName 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -876,19 +753,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -896,19 +769,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区：资源所属可用区 
      * @return ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -916,19 +785,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名 
      * @return ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -936,19 +801,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名 
      * @return ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -956,19 +817,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型编码 
      * @return InstanceType 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -976,19 +833,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-” 
      * @return InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
@@ -996,9 +849,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
@@ -1053,10 +904,8 @@ public class AllocationDetail extends AbstractModel {
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -1064,19 +913,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称：用户采购的具体产品细分类型 
      * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -1084,19 +929,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型编码 
      * @return ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -1104,19 +945,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型：明细交易类型 
      * @return ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
@@ -1124,9 +961,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
@@ -1134,11 +969,9 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Get 订单 ID：包年包月计费模式下订购的订单号
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OrderId 订单 ID：包年包月计费模式下订购的订单号
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
         return this.OrderId;
@@ -1147,20 +980,16 @@ public class AllocationDetail extends AbstractModel {
     /**
      * Set 订单 ID：包年包月计费模式下订购的订单号
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 订单 ID：包年包月计费模式下订购的订单号
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 交易 ID：结算扣费单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易 ID：结算扣费单号 
      * @return BillId 交易 ID：结算扣费单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillId() {
         return this.BillId;
@@ -1168,19 +997,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 交易 ID：结算扣费单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillId 交易 ID：结算扣费单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扣费时间：结算扣费时间 
      * @return PayTime 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayTime() {
         return this.PayTime;
@@ -1188,19 +1013,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayTime 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始使用时间：产品服务开始使用时间 
      * @return FeeBeginTime 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
@@ -1208,19 +1029,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeBeginTime 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束使用时间：产品服务结束使用时间 
      * @return FeeEndTime 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
@@ -1228,19 +1045,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeEndTime 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型编码 
      * @return ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
         return this.ComponentCode;
@@ -1248,19 +1061,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型：用户购买的产品或服务对应的组件大类 
      * @return ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
@@ -1268,19 +1077,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;
     }
 
     /**
-     * Get 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示） 
      * @return SinglePrice 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSinglePrice() {
         return this.SinglePrice;
@@ -1288,19 +1093,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SinglePrice 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSinglePrice(String SinglePrice) {
         this.SinglePrice = SinglePrice;
     }
 
     /**
-     * Get 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣 
      * @return ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContractPrice() {
         return this.ContractPrice;
@@ -1308,19 +1109,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContractPrice(String ContractPrice) {
         this.ContractPrice = ContractPrice;
     }
 
     /**
-     * Get 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位 
      * @return SinglePriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSinglePriceUnit() {
         return this.SinglePriceUnit;
@@ -1328,19 +1125,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SinglePriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSinglePriceUnit(String SinglePriceUnit) {
         this.SinglePriceUnit = SinglePriceUnit;
     }
 
     /**
-     * Get 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包） 
      * @return UsedAmount 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsedAmount() {
         return this.UsedAmount;
@@ -1348,19 +1141,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedAmount 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedAmount(String UsedAmount) {
         this.UsedAmount = UsedAmount;
     }
 
     /**
-     * Get 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件用量单位：组件用量对应的单位 
      * @return UsedAmountUnit 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsedAmountUnit() {
         return this.UsedAmountUnit;
@@ -1368,19 +1157,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedAmountUnit 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
         this.UsedAmountUnit = UsedAmountUnit;
     }
 
     /**
-     * Get 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包） 
      * @return TimeSpan 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeSpan() {
         return this.TimeSpan;
@@ -1388,19 +1173,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(String TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时长单位：资源使用时长的单位 
      * @return TimeUnit 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -1408,19 +1189,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息 
      * @return ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReserveDetail() {
         return this.ReserveDetail;
@@ -1428,19 +1205,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReserveDetail(String ReserveDetail) {
         this.ReserveDetail = ReserveDetail;
     }
 
     /**
-     * Get 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长） 
      * @return SplitRatio 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSplitRatio() {
         return this.SplitRatio;
@@ -1448,19 +1221,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SplitRatio 分拆项用量/时长占比：分拆项用量（时长）占比，分拆项用量（时长）/ 拆分前合计用量（时长）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSplitRatio(String SplitRatio) {
         this.SplitRatio = SplitRatio;
     }
 
     /**
-     * Get 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式 
      * @return TotalCost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCost() {
         return this.TotalCost;
@@ -1468,19 +1237,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长 
      * @return RITimeSpan 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRITimeSpan() {
         return this.RITimeSpan;
@@ -1488,19 +1253,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RITimeSpan 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRITimeSpan(String RITimeSpan) {
         this.RITimeSpan = RITimeSpan;
     }
 
     /**
-     * Get 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额 
      * @return RICost 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRICost() {
         return this.RICost;
@@ -1508,19 +1269,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RICost 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRICost(String RICost) {
         this.RICost = RICost;
     }
 
     /**
-     * Get 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率 
      * @return SPCost 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPCost() {
         return this.SPCost;
@@ -1528,19 +1285,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SPCost 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPCost(String SPCost) {
         this.SPCost = SPCost;
     }
 
     /**
-     * Get 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示） 
      * @return Discount 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscount() {
         return this.Discount;
@@ -1548,19 +1301,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Discount 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价 
      * @return BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBlendedDiscount() {
         return this.BlendedDiscount;
@@ -1568,19 +1317,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlendedDiscount(String BlendedDiscount) {
         this.BlendedDiscount = BlendedDiscount;
     }
 
     /**
-     * Get 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率 
      * @return RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -1588,19 +1333,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现金账户支出(元)：通过现金账户支付的金额 
      * @return CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
@@ -1608,19 +1349,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额 
      * @return VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
@@ -1628,19 +1365,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 赠送账户支出(元)：使用赠送金支付的金额 
      * @return IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -1648,19 +1381,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成账户支出(元)：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -1668,19 +1397,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账标签：资源绑定的标签 
      * @return Tag 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTag [] getTag() {
         return this.Tag;
@@ -1688,19 +1413,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(BillTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国内国际编码 
      * @return RegionType 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionType() {
         return this.RegionType;
@@ -1708,19 +1429,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionType 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * Get 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国内国际：资源所属区域类型（国内、国际） 
      * @return RegionTypeName 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionTypeName() {
         return this.RegionTypeName;
@@ -1728,19 +1445,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionTypeName 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionTypeName(String RegionTypeName) {
         this.RegionTypeName = RegionTypeName;
     }
 
     /**
-     * Get 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称编码 
      * @return ItemCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCode() {
         return this.ItemCode;
@@ -1748,19 +1461,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称：用户购买的产品或服务，所包含的具体组件 
      * @return ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
@@ -1768,9 +1477,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
@@ -1793,10 +1500,8 @@ public class AllocationDetail extends AbstractModel {
     }
 
     /**
-     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息 
      * @return PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPriceInfo() {
         return this.PriceInfo;
@@ -1804,19 +1509,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceInfo(String [] PriceInfo) {
         this.PriceInfo = PriceInfo;
     }
 
     /**
-     * Get 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配 
      * @return Formula 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormula() {
         return this.Formula;
@@ -1824,19 +1525,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Formula 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费规则：各产品详细的计费规则官网说明链接 
      * @return FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormulaUrl() {
         return this.FormulaUrl;
@@ -1844,9 +1541,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormulaUrl(String FormulaUrl) {
         this.FormulaUrl = FormulaUrl;
@@ -1854,11 +1549,9 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Get 原始用量/时长：组件被资源包抵扣前的原始用量
-（目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。 
+（目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中） 
      * @return RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalMeasure() {
         return this.RealTotalMeasure;
@@ -1867,10 +1560,8 @@ public class AllocationDetail extends AbstractModel {
     /**
      * Set 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalMeasure(String RealTotalMeasure) {
         this.RealTotalMeasure = RealTotalMeasure;
@@ -1878,11 +1569,9 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Get 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
-（目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。 
+（目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中） 
      * @return DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductedMeasure() {
         return this.DeductedMeasure;
@@ -1891,20 +1580,16 @@ public class AllocationDetail extends AbstractModel {
     /**
      * Set 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductedMeasure(String DeductedMeasure) {
         this.DeductedMeasure = DeductedMeasure;
     }
 
     /**
-     * Get 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置描述：资源配置规格信息 
      * @return ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentConfig() {
         return this.ComponentConfig;
@@ -1912,9 +1597,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentConfig(String ComponentConfig) {
         this.ComponentConfig = ComponentConfig;
@@ -1924,13 +1607,11 @@ public class AllocationDetail extends AbstractModel {
      * Get 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
-2 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。 
+2 - 未分配 
      * @return AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 2 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllocationType() {
         return this.AllocationType;
@@ -1941,22 +1622,18 @@ public class AllocationDetail extends AbstractModel {
 0 - 分摊
 1 - 归集
 2 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 2 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllocationType(Long AllocationType) {
         this.AllocationType = AllocationType;
     }
 
     /**
-     * Get 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。 
      * @return DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountObject() {
         return this.DiscountObject;
@@ -1964,19 +1641,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountObject(String DiscountObject) {
         this.DiscountObject = DiscountObject;
     }
 
     /**
-     * Get 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前消费项的优惠类型，例如：折扣、合同价。 
      * @return DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountType() {
         return this.DiscountType;
@@ -1984,19 +1657,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountType(String DiscountType) {
         this.DiscountType = DiscountType;
     }
 
     /**
-     * Get 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。 
      * @return DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountContent() {
         return this.DiscountContent;
@@ -2004,19 +1673,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountContent(String DiscountContent) {
         this.DiscountContent = DiscountContent;
     }
 
     /**
-     * Get SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SPDeduction 
      * @return SPDeduction SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeduction() {
         return this.SPDeduction;
@@ -2024,19 +1689,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SPDeduction SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeduction(String SPDeduction) {
         this.SPDeduction = SPDeduction;
     }
 
     /**
-     * Get SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SPDeduction 
      * @return SPDeductionRate SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeductionRate() {
         return this.SPDeductionRate;
@@ -2044,19 +1705,15 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SPDeductionRate SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeductionRate(String SPDeductionRate) {
         this.SPDeductionRate = SPDeductionRate;
     }
 
     /**
-     * Get 账单月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单月 
      * @return BillMonth 账单月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillMonth() {
         return this.BillMonth;
@@ -2064,9 +1721,7 @@ public class AllocationDetail extends AbstractModel {
 
     /**
      * Set 账单月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillMonth 账单月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;

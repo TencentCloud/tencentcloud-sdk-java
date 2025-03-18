@@ -25,7 +25,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckItemName")
     @Expose
@@ -33,7 +32,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckResult")
     @Expose
@@ -49,7 +46,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
     @Expose
@@ -57,7 +53,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Solution")
     @Expose
@@ -65,7 +60,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorLog")
     @Expose
@@ -73,7 +67,6 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HelpDoc")
     @Expose
@@ -81,17 +74,14 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
     * 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkipInfo")
     @Expose
     private String SkipInfo;
 
     /**
-     * Get 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项的名称，如：源实例权限检查 
      * @return CheckItemName 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckItemName() {
         return this.CheckItemName;
@@ -99,19 +89,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckItemName 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckItemName(String CheckItemName) {
         this.CheckItemName = CheckItemName;
     }
 
     /**
-     * Get 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项详细内容 
      * @return Description 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -119,19 +105,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pass(通过)，failed(失败), warning(校验有警告，但仍通过) 
      * @return CheckResult pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckResult() {
         return this.CheckResult;
@@ -139,19 +121,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckResult pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项失败原因 
      * @return FailureReason 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
         return this.FailureReason;
@@ -159,19 +137,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureReason 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
         this.FailureReason = FailureReason;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolution() {
         return this.Solution;
@@ -179,19 +153,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行报错日志 
      * @return ErrorLog 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getErrorLog() {
         return this.ErrorLog;
@@ -199,19 +169,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorLog 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorLog(String [] ErrorLog) {
         this.ErrorLog = ErrorLog;
     }
 
     /**
-     * Get 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细帮助的文档链接 
      * @return HelpDoc 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHelpDoc() {
         return this.HelpDoc;
@@ -219,19 +185,15 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HelpDoc 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHelpDoc(String [] HelpDoc) {
         this.HelpDoc = HelpDoc;
     }
 
     /**
-     * Get 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过风险文案 
      * @return SkipInfo 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSkipInfo() {
         return this.SkipInfo;
@@ -239,9 +201,7 @@ public class DetailCheckItem extends AbstractModel {
 
     /**
      * Set 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkipInfo 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipInfo(String SkipInfo) {
         this.SkipInfo = SkipInfo;

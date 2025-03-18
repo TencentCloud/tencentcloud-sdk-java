@@ -267,6 +267,9 @@ public enum IotexplorerErrorCode {
     // 项目参数错误。
      INVALIDPARAMETERVALUE_PROJECTPARMSERROR("InvalidParameterValue.ProjectParmsError"),
      
+    // PushEnvironment 非法。
+     INVALIDPARAMETERVALUE_PUSHENVIRONMENTINVALID("InvalidParameterValue.PushEnvironmentInvalid"),
+     
     // 转发的topic格式错误。
      INVALIDPARAMETERVALUE_REPUBLISHTOPICFORMATERROR("InvalidParameterValue.RepublishTopicFormatError"),
      
@@ -278,6 +281,12 @@ public enum IotexplorerErrorCode {
      
     // 开始时间晚于结束时间。
      INVALIDPARAMETERVALUE_STARTTIMELATERENDTIME("InvalidParameterValue.StartTimeLaterEndTime"),
+     
+    // TPNSAndroidAccessID, TPNSAndroidSecretKey, TPNSAndroidRegion validation failed。
+     INVALIDPARAMETERVALUE_TPNSANDROIDVALIDATIONFAILED("InvalidParameterValue.TPNSAndroidValidationFailed"),
+     
+    // TPNSiOSAccessID, TPNSiOSSecretKey, TPNSiOSRegion validation failed。
+     INVALIDPARAMETERVALUE_TPNSIOSVALIDATIONFAILED("InvalidParameterValue.TPNSiOSValidationFailed"),
      
     // Topic已存在。
      INVALIDPARAMETERVALUE_TOPICPOLICYALREADYEXIST("InvalidParameterValue.TopicPolicyAlreadyExist"),
@@ -350,6 +359,9 @@ public enum IotexplorerErrorCode {
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // App不存在。
+     RESOURCENOTFOUND_APPNOTEXISTS("ResourceNotFound.AppNotExists"),
      
     // 量产不存在。
      RESOURCENOTFOUND_BATCHPRODUCTIONNOTEXIST("ResourceNotFound.BatchProductionNotExist"),

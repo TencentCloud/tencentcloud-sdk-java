@@ -39,7 +39,6 @@ public class ObjectTypeConfigFields extends AbstractModel {
 
     /**
     * 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Transfer")
     @Expose
@@ -47,7 +46,6 @@ public class ObjectTypeConfigFields extends AbstractModel {
 
     /**
     * tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonParse")
     @Expose
@@ -93,10 +91,8 @@ public class ObjectTypeConfigFields extends AbstractModel {
     }
 
     /**
-     * Get 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段值是否需要转译，当不需要转译时，此字段返回null 
      * @return Transfer 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransfer() {
         return this.Transfer;
@@ -104,19 +100,15 @@ public class ObjectTypeConfigFields extends AbstractModel {
 
     /**
      * Set 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Transfer 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransfer(String Transfer) {
         this.Transfer = Transfer;
     }
 
     /**
-     * Get tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tke的pod字段信息解析 
      * @return JsonParse tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJsonParse() {
         return this.JsonParse;
@@ -124,9 +116,7 @@ public class ObjectTypeConfigFields extends AbstractModel {
 
     /**
      * Set tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonParse tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonParse(String JsonParse) {
         this.JsonParse = JsonParse;

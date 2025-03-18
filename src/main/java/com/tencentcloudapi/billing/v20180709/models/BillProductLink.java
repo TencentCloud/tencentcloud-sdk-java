@@ -25,7 +25,6 @@ public class BillProductLink extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -33,7 +32,6 @@ public class BillProductLink extends AbstractModel {
 
     /**
     * 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -41,17 +39,14 @@ public class BillProductLink extends AbstractModel {
 
     /**
     * 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
     @Expose
     private BillItem [] Children;
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -59,19 +54,15 @@ public class BillProductLink extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称 
      * @return ProductCodeName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -79,19 +70,15 @@ public class BillProductLink extends AbstractModel {
 
     /**
      * Set 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 组件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称 
      * @return Children 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillItem [] getChildren() {
         return this.Children;
@@ -99,9 +86,7 @@ public class BillProductLink extends AbstractModel {
 
     /**
      * Set 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Children 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(BillItem [] Children) {
         this.Children = Children;

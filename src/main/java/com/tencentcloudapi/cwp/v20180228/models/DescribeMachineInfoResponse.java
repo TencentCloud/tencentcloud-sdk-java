@@ -168,7 +168,7 @@ public class DescribeMachineInfoResponse extends AbstractModel {
     private Long HasAssetScan;
 
     /**
-    * 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+    * 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
     */
     @SerializedName("ProtectType")
     @Expose
@@ -530,16 +530,16 @@ public class DescribeMachineInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版 
-     * @return ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * Get 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版 
+     * @return ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
-     * @param ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * Set 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+     * @param ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;

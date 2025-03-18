@@ -46,7 +46,6 @@ public class Template extends AbstractModel {
 
     /**
     * 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateTag")
     @Expose
@@ -125,7 +124,6 @@ public class Template extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -133,7 +131,6 @@ public class Template extends AbstractModel {
 
     /**
     * 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateSource")
     @Expose
@@ -141,7 +138,6 @@ public class Template extends AbstractModel {
 
     /**
     * apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApmServiceList")
     @Expose
@@ -149,7 +145,6 @@ public class Template extends AbstractModel {
 
     /**
     * 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmPolicy")
     @Expose
@@ -157,7 +152,6 @@ public class Template extends AbstractModel {
 
     /**
     * 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDealType")
     @Expose
@@ -212,10 +206,8 @@ public class Template extends AbstractModel {
     }
 
     /**
-     * Get 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义标签 
      * @return TemplateTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateTag() {
         return this.TemplateTag;
@@ -223,9 +215,7 @@ public class Template extends AbstractModel {
 
     /**
      * Set 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateTag(String TemplateTag) {
         this.TemplateTag = TemplateTag;
@@ -396,10 +386,8 @@ public class Template extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagWithDescribe [] getTags() {
         return this.Tags;
@@ -407,19 +395,15 @@ public class Template extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagWithDescribe [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经验来源 0-自建 1-专家推荐 
      * @return TemplateSource 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateSource() {
         return this.TemplateSource;
@@ -427,19 +411,15 @@ public class Template extends AbstractModel {
 
     /**
      * Set 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateSource 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateSource(Long TemplateSource) {
         this.TemplateSource = TemplateSource;
     }
 
     /**
-     * Get apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get apm应用信息 
      * @return ApmServiceList apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApmServiceInfo [] getApmServiceList() {
         return this.ApmServiceList;
@@ -447,19 +427,15 @@ public class Template extends AbstractModel {
 
     /**
      * Set apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApmServiceList apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApmServiceList(ApmServiceInfo [] ApmServiceList) {
         this.ApmServiceList = ApmServiceList;
     }
 
     /**
-     * Get 告警指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警指标 
      * @return AlarmPolicy 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlarmPolicy() {
         return this.AlarmPolicy;
@@ -467,19 +443,15 @@ public class Template extends AbstractModel {
 
     /**
      * Set 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmPolicy 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmPolicy(String [] AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;
     }
 
     /**
-     * Get 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 护栏处理方式，1--顺序回滚，2--演练暂停 
      * @return PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyDealType() {
         return this.PolicyDealType;
@@ -487,9 +459,7 @@ public class Template extends AbstractModel {
 
     /**
      * Set 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDealType(Long PolicyDealType) {
         this.PolicyDealType = PolicyDealType;

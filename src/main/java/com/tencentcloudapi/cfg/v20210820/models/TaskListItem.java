@@ -46,7 +46,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTag")
     @Expose
@@ -75,7 +74,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskPreCheckStatus")
     @Expose
@@ -83,7 +81,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskPreCheckSuccess")
     @Expose
@@ -91,7 +88,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExpect")
     @Expose
@@ -99,7 +95,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -107,7 +102,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -115,7 +109,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyId")
     @Expose
@@ -123,7 +116,6 @@ public class TaskListItem extends AbstractModel {
 
     /**
     * 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatusType")
     @Expose
@@ -192,10 +184,8 @@ public class TaskListItem extends AbstractModel {
     }
 
     /**
-     * Get 任务标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务标签 
      * @return TaskTag 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTag() {
         return this.TaskTag;
@@ -203,9 +193,7 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTag 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTag(String TaskTag) {
         this.TaskTag = TaskTag;
@@ -260,10 +248,8 @@ public class TaskListItem extends AbstractModel {
     }
 
     /**
-     * Get 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0--未开始，1--进行中，2--已完成 
      * @return TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskPreCheckStatus() {
         return this.TaskPreCheckStatus;
@@ -271,19 +257,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskPreCheckStatus(Long TaskPreCheckStatus) {
         this.TaskPreCheckStatus = TaskPreCheckStatus;
     }
 
     /**
-     * Get 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境检查是否通过 
      * @return TaskPreCheckSuccess 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTaskPreCheckSuccess() {
         return this.TaskPreCheckSuccess;
@@ -291,19 +273,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskPreCheckSuccess 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskPreCheckSuccess(Boolean TaskPreCheckSuccess) {
         this.TaskPreCheckSuccess = TaskPreCheckSuccess;
     }
 
     /**
-     * Get 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 演练是否符合预期 1-符合预期 2-不符合预期 
      * @return TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskExpect() {
         return this.TaskExpect;
@@ -311,19 +289,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExpect(Long TaskExpect) {
         this.TaskExpect = TaskExpect;
     }
 
     /**
-     * Get 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联应用ID 
      * @return ApplicationId 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -331,19 +305,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联应用名称 
      * @return ApplicationName 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -351,19 +321,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 验证项ID 
      * @return VerifyId 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVerifyId() {
         return this.VerifyId;
@@ -371,19 +337,15 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifyId 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyId(Long VerifyId) {
         this.VerifyId = VerifyId;
     }
 
     /**
-     * Get 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止 
      * @return TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskStatusType() {
         return this.TaskStatusType;
@@ -391,9 +353,7 @@ public class TaskListItem extends AbstractModel {
 
     /**
      * Set 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatusType(Long TaskStatusType) {
         this.TaskStatusType = TaskStatusType;

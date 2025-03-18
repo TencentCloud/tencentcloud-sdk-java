@@ -25,7 +25,6 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
     * 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
     * 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Month")
     @Expose
@@ -41,7 +39,6 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
     * 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -49,17 +46,14 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
     * 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrowthRate")
     @Expose
     private String GrowthRate;
 
     /**
-     * Get 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录ID。 
      * @return Id 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
      * Set 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月份，格式：yyyy-mm，示例：2021-01。 
      * @return Month 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonth() {
         return this.Month;
@@ -87,19 +77,15 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
      * Set 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Month 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗金额，单元：元。 
      * @return TotalCost 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
         return this.TotalCost;
@@ -107,19 +93,15 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
      * Set 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 比上月增长率%。正数增长，负数下降，空值无法统计。 
      * @return GrowthRate 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrowthRate() {
         return this.GrowthRate;
@@ -127,9 +109,7 @@ public class OrgFinancialByMonth extends AbstractModel {
 
     /**
      * Set 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GrowthRate 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrowthRate(String GrowthRate) {
         this.GrowthRate = GrowthRate;

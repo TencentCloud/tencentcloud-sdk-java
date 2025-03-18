@@ -25,17 +25,14 @@ public class BillDays extends AbstractModel {
 
     /**
     * 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillDay")
     @Expose
     private String BillDay;
 
     /**
-     * Get 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期：结算日期 
      * @return BillDay 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillDay() {
         return this.BillDay;
@@ -43,9 +40,7 @@ public class BillDays extends AbstractModel {
 
     /**
      * Set 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDay 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillDay(String BillDay) {
         this.BillDay = BillDay;

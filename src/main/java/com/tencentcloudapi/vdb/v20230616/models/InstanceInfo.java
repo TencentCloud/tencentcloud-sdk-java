@@ -223,6 +223,13 @@ public class InstanceInfo extends AbstractModel {
     private Long AutoRenew;
 
     /**
+    * 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long TaskStatus;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -694,6 +701,22 @@ public class InstanceInfo extends AbstractModel {
         this.AutoRenew = AutoRenew;
     }
 
+    /**
+     * Get 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中 
+     * @return TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public Long getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * @param TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public void setTaskStatus(Long TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
     public InstanceInfo() {
     }
 
@@ -792,6 +815,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.AutoRenew != null) {
             this.AutoRenew = new Long(source.AutoRenew);
         }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
     }
 
 
@@ -827,6 +853,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WanAddress", this.WanAddress);
         this.setParamSimple(map, prefix + "IsolateAt", this.IsolateAt);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
 
     }
 }

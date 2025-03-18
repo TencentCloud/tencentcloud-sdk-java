@@ -186,7 +186,6 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
     * 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -215,7 +214,6 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -293,7 +291,6 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
     * 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillMonth")
     @Expose
@@ -668,10 +665,8 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金账户支出：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -679,9 +674,7 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
      * Set 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
@@ -736,10 +729,8 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
@@ -747,9 +738,7 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
@@ -920,10 +909,8 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单归属月 
      * @return BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillMonth() {
         return this.BillMonth;
@@ -931,9 +918,7 @@ public class BillResourceSummary extends AbstractModel {
 
     /**
      * Set 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;

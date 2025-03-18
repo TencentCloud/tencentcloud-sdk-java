@@ -39,7 +39,6 @@ public class TagDataInfo extends AbstractModel {
 
     /**
     * 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -78,10 +77,8 @@ public class TagDataInfo extends AbstractModel {
     }
 
     /**
-     * Get 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设置分账标签时间，普通标签不返回 
      * @return UpdateTime 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -89,9 +86,7 @@ public class TagDataInfo extends AbstractModel {
 
     /**
      * Set 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

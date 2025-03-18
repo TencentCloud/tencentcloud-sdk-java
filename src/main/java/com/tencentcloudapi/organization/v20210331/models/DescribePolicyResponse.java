@@ -32,7 +32,6 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
     * 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -47,7 +46,6 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
     * 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -55,7 +53,6 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
     * 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDocument")
     @Expose
@@ -63,7 +60,6 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
     * 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -71,7 +67,6 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
     * 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -101,10 +96,8 @@ public class DescribePolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称。 
      * @return PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -112,9 +105,7 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
      * Set 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -137,10 +128,8 @@ public class DescribePolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述。 
      * @return Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -148,19 +137,15 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
      * Set 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略文档。 
      * @return PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
@@ -168,19 +153,15 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
      * Set 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;
     }
 
     /**
-     * Get 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略更新时间。 
      * @return UpdateTime 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -188,19 +169,15 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
      * Set 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略创建时间。 
      * @return AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -208,9 +185,7 @@ public class DescribePolicyResponse extends AbstractModel {
 
     /**
      * Set 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;

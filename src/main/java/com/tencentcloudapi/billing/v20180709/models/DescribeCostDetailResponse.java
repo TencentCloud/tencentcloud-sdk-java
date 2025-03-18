@@ -25,7 +25,6 @@ public class DescribeCostDetailResponse extends AbstractModel {
 
     /**
     * 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailSet")
     @Expose
@@ -47,10 +46,8 @@ public class DescribeCostDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗明细 
      * @return DetailSet 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CostDetail [] getDetailSet() {
         return this.DetailSet;
@@ -58,9 +55,7 @@ public class DescribeCostDetailResponse extends AbstractModel {
 
     /**
      * Set 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailSet 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailSet(CostDetail [] DetailSet) {
         this.DetailSet = DetailSet;

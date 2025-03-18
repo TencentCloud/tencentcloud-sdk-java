@@ -60,7 +60,6 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
     * 现金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CashPayAmount")
     @Expose
@@ -68,7 +67,6 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
     * 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -76,7 +74,6 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
     * 代金券
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -84,7 +81,6 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
     * 分成金
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -171,10 +167,8 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
     }
 
     /**
-     * Get 现金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现金 
      * @return CashPayAmount 现金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
@@ -182,19 +176,15 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
      * Set 现金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CashPayAmount 现金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 赠送金 
      * @return IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -202,19 +192,15 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
      * Set 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券 
      * @return VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
@@ -222,19 +208,15 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
      * Set 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 分成金
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金 
      * @return TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -242,9 +224,7 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
      * Set 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

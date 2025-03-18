@@ -25,7 +25,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 标签值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagValue")
     @Expose
@@ -33,7 +32,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCostRatio")
     @Expose
@@ -41,7 +39,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -49,7 +46,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 现金账户支出：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CashPayAmount")
     @Expose
@@ -57,7 +53,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 赠送账户支出：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -65,7 +60,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -73,7 +67,6 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -81,17 +74,14 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get 标签值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签值 
      * @return TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagValue() {
         return this.TagValue;
@@ -99,19 +89,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用所占百分比，两位小数 
      * @return RealTotalCostRatio 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCostRatio() {
         return this.RealTotalCostRatio;
@@ -119,19 +105,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCostRatio 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCostRatio(String RealTotalCostRatio) {
         this.RealTotalCostRatio = RealTotalCostRatio;
     }
 
     /**
-     * Get 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠后总价 
      * @return RealTotalCost 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -139,19 +121,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 优惠后总价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金账户支出：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现金账户支出：通过现金账户支付的金额 
      * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
@@ -159,19 +137,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 现金账户支出：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送账户支出：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 赠送账户支出：使用赠送金支付的金额 
      * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -179,19 +153,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 赠送账户支出：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
      * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
@@ -199,19 +169,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分成金账户支出：通过分成金账户支付的金额 
      * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
@@ -219,19 +185,15 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。 
      * @return TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCost() {
         return this.TotalCost;
@@ -239,9 +201,7 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
      * Set 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

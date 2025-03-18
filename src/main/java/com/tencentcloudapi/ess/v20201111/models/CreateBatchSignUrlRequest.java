@@ -157,6 +157,13 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private String UrlUseEnv;
 
     /**
+    * 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+    */
+    @SerializedName("CanBatchReject")
+    @Expose
+    private Boolean CanBatchReject;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -532,6 +539,22 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.UrlUseEnv = UrlUseEnv;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。` 
+     * @return CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     */
+    public Boolean getCanBatchReject() {
+        return this.CanBatchReject;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     * @param CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     */
+    public void setCanBatchReject(Boolean CanBatchReject) {
+        this.CanBatchReject = CanBatchReject;
+    }
+
     public CreateBatchSignUrlRequest() {
     }
 
@@ -582,6 +605,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         if (source.UrlUseEnv != null) {
             this.UrlUseEnv = new String(source.UrlUseEnv);
         }
+        if (source.CanBatchReject != null) {
+            this.CanBatchReject = new Boolean(source.CanBatchReject);
+        }
     }
 
 
@@ -602,6 +628,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
+        this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
 
     }
 }

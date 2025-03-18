@@ -25,7 +25,6 @@ public class BillProduct extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -33,17 +32,14 @@ public class BillProduct extends AbstractModel {
 
     /**
     * 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -51,19 +47,15 @@ public class BillProduct extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称：用户采购的具体产品细分类型 
      * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
@@ -71,9 +63,7 @@ public class BillProduct extends AbstractModel {
 
     /**
      * Set 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;

@@ -25,7 +25,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 数据迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -33,7 +32,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 数据迁移任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobName")
     @Expose
@@ -41,7 +39,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -57,7 +53,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,7 +60,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -73,7 +67,6 @@ public class JobItem extends AbstractModel {
 
     /**
     * 迁移任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefMsg")
     @Expose
@@ -83,7 +76,6 @@ public class JobItem extends AbstractModel {
     * 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
 pausing(暂停中)、
 manualPaused(已暂停)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -91,7 +83,6 @@ manualPaused(已暂停)
 
     /**
     * 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunMode")
     @Expose
@@ -99,7 +90,6 @@ manualPaused(已暂停)
 
     /**
     * 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpectRunTime")
     @Expose
@@ -107,7 +97,6 @@ manualPaused(已暂停)
 
     /**
     * 任务操作信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -115,7 +104,6 @@ manualPaused(已暂停)
 
     /**
     * 迁移执行过程信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepInfo")
     @Expose
@@ -123,7 +111,6 @@ manualPaused(已暂停)
 
     /**
     * 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInfo")
     @Expose
@@ -131,7 +118,6 @@ manualPaused(已暂停)
 
     /**
     * 目标端信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInfo")
     @Expose
@@ -139,7 +125,6 @@ manualPaused(已暂停)
 
     /**
     * 数据一致性校验结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareTask")
     @Expose
@@ -147,7 +132,6 @@ manualPaused(已暂停)
 
     /**
     * 计费状态信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeInfo")
     @Expose
@@ -155,7 +139,6 @@ manualPaused(已暂停)
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -163,7 +146,6 @@ manualPaused(已暂停)
 
     /**
     * 自动重试时间段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
@@ -171,17 +153,14 @@ manualPaused(已暂停)
 
     /**
     * 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DumperResumeCtrl")
     @Expose
     private String DumperResumeCtrl;
 
     /**
-     * Get 数据迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -189,19 +168,15 @@ manualPaused(已暂停)
 
     /**
      * Set 数据迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 数据迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 数据迁移任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据迁移任务名称 
      * @return JobName 数据迁移任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobName() {
         return this.JobName;
@@ -209,19 +184,15 @@ manualPaused(已暂停)
 
     /**
      * Set 数据迁移任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobName 数据迁移任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return CreateTime 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -229,19 +200,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return UpdateTime 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -249,19 +216,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return StartTime 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -269,19 +232,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss 
      * @return EndTime 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -289,19 +248,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 迁移任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移任务错误信息 
      * @return BriefMsg 迁移任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBriefMsg() {
         return this.BriefMsg;
@@ -309,9 +264,7 @@ manualPaused(已暂停)
 
     /**
      * Set 迁移任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefMsg 迁移任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefMsg(String BriefMsg) {
         this.BriefMsg = BriefMsg;
@@ -320,12 +273,10 @@ manualPaused(已暂停)
     /**
      * Get 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
 pausing(暂停中)、
-manualPaused(已暂停)
-注意：此字段可能返回 null，表示取不到有效值。 
+manualPaused(已暂停) 
      * @return Status 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
 pausing(暂停中)、
 manualPaused(已暂停)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -335,21 +286,17 @@ manualPaused(已暂停)
      * Set 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
 pausing(暂停中)、
 manualPaused(已暂停)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
 pausing(暂停中)、
 manualPaused(已暂停)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务运行模式，值包括：immediate(立即运行)，timed(定时运行) 
      * @return RunMode 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunMode() {
         return this.RunMode;
@@ -357,19 +304,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunMode 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49 
      * @return ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpectRunTime() {
         return this.ExpectRunTime;
@@ -377,19 +320,15 @@ manualPaused(已暂停)
 
     /**
      * Set 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpectRunTime(String ExpectRunTime) {
         this.ExpectRunTime = ExpectRunTime;
     }
 
     /**
-     * Get 任务操作信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务操作信息 
      * @return Action 任务操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MigrateAction getAction() {
         return this.Action;
@@ -397,19 +336,15 @@ manualPaused(已暂停)
 
     /**
      * Set 任务操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 任务操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(MigrateAction Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 迁移执行过程信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移执行过程信息 
      * @return StepInfo 迁移执行过程信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MigrateDetailInfo getStepInfo() {
         return this.StepInfo;
@@ -417,19 +352,15 @@ manualPaused(已暂停)
 
     /**
      * Set 迁移执行过程信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepInfo 迁移执行过程信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepInfo(MigrateDetailInfo StepInfo) {
         this.StepInfo = StepInfo;
     }
 
     /**
-     * Get 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源实例信息 
      * @return SrcInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBEndpointInfo getSrcInfo() {
         return this.SrcInfo;
@@ -437,19 +368,15 @@ manualPaused(已暂停)
 
     /**
      * Set 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInfo(DBEndpointInfo SrcInfo) {
         this.SrcInfo = SrcInfo;
     }
 
     /**
-     * Get 目标端信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端信息 
      * @return DstInfo 目标端信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBEndpointInfo getDstInfo() {
         return this.DstInfo;
@@ -457,19 +384,15 @@ manualPaused(已暂停)
 
     /**
      * Set 目标端信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInfo 目标端信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInfo(DBEndpointInfo DstInfo) {
         this.DstInfo = DstInfo;
     }
 
     /**
-     * Get 数据一致性校验结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据一致性校验结果 
      * @return CompareTask 数据一致性校验结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareTaskInfo getCompareTask() {
         return this.CompareTask;
@@ -477,19 +400,15 @@ manualPaused(已暂停)
 
     /**
      * Set 数据一致性校验结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareTask 数据一致性校验结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareTask(CompareTaskInfo CompareTask) {
         this.CompareTask = CompareTask;
     }
 
     /**
-     * Get 计费状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费状态信息 
      * @return TradeInfo 计费状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TradeInfo getTradeInfo() {
         return this.TradeInfo;
@@ -497,19 +416,15 @@ manualPaused(已暂停)
 
     /**
      * Set 计费状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeInfo 计费状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeInfo(TradeInfo TradeInfo) {
         this.TradeInfo = TradeInfo;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
         return this.Tags;
@@ -517,19 +432,15 @@ manualPaused(已暂停)
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自动重试时间段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动重试时间段信息 
      * @return AutoRetryTimeRangeMinutes 自动重试时间段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
@@ -537,19 +448,15 @@ manualPaused(已暂停)
 
     /**
      * Set 自动重试时间段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRetryTimeRangeMinutes 自动重试时间段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传 
      * @return DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDumperResumeCtrl() {
         return this.DumperResumeCtrl;
@@ -557,9 +464,7 @@ manualPaused(已暂停)
 
     /**
      * Set 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDumperResumeCtrl(String DumperResumeCtrl) {
         this.DumperResumeCtrl = DumperResumeCtrl;

@@ -39,7 +39,6 @@ public class TaskGroup extends AbstractModel {
 
     /**
     * 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupDescription")
     @Expose
@@ -103,7 +102,6 @@ public class TaskGroup extends AbstractModel {
 
     /**
     * 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupSelectedInstanceList")
     @Expose
@@ -111,7 +109,6 @@ public class TaskGroup extends AbstractModel {
 
     /**
     * 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstancesExecuteRule")
     @Expose
@@ -150,10 +147,8 @@ public class TaskGroup extends AbstractModel {
     }
 
     /**
-     * Get 分组描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组描述 
      * @return TaskGroupDescription 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupDescription() {
         return this.TaskGroupDescription;
@@ -161,9 +156,7 @@ public class TaskGroup extends AbstractModel {
 
     /**
      * Set 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupDescription 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupDescription(String TaskGroupDescription) {
         this.TaskGroupDescription = TaskGroupDescription;
@@ -298,10 +291,8 @@ public class TaskGroup extends AbstractModel {
     }
 
     /**
-     * Get 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参演实例列表 
      * @return TaskGroupSelectedInstanceList 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskGroupSelectedInstanceList() {
         return this.TaskGroupSelectedInstanceList;
@@ -309,19 +300,15 @@ public class TaskGroup extends AbstractModel {
 
     /**
      * Set 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupSelectedInstanceList 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupSelectedInstanceList(String [] TaskGroupSelectedInstanceList) {
         this.TaskGroupSelectedInstanceList = TaskGroupSelectedInstanceList;
     }
 
     /**
-     * Get 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器选取规则 
      * @return TaskGroupInstancesExecuteRule 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskGroupInstancesExecuteRules [] getTaskGroupInstancesExecuteRule() {
         return this.TaskGroupInstancesExecuteRule;
@@ -329,9 +316,7 @@ public class TaskGroup extends AbstractModel {
 
     /**
      * Set 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstancesExecuteRule 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstancesExecuteRule(TaskGroupInstancesExecuteRules [] TaskGroupInstancesExecuteRule) {
         this.TaskGroupInstancesExecuteRule = TaskGroupInstancesExecuteRule;

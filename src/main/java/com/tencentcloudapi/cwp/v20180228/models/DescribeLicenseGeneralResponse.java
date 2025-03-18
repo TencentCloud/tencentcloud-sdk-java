@@ -115,7 +115,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private Long ProVersionLicenseCnt;
 
     /**
-    * 普惠版总授权数(有效订单的授权数)
+    * 轻量版总授权数(有效订单的授权数)
     */
     @SerializedName("CwpVersionLicenseCnt")
     @Expose
@@ -372,16 +372,16 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 普惠版总授权数(有效订单的授权数) 
-     * @return CwpVersionLicenseCnt 普惠版总授权数(有效订单的授权数)
+     * Get 轻量版总授权数(有效订单的授权数) 
+     * @return CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
      */
     public Long getCwpVersionLicenseCnt() {
         return this.CwpVersionLicenseCnt;
     }
 
     /**
-     * Set 普惠版总授权数(有效订单的授权数)
-     * @param CwpVersionLicenseCnt 普惠版总授权数(有效订单的授权数)
+     * Set 轻量版总授权数(有效订单的授权数)
+     * @param CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
      */
     public void setCwpVersionLicenseCnt(Long CwpVersionLicenseCnt) {
         this.CwpVersionLicenseCnt = CwpVersionLicenseCnt;

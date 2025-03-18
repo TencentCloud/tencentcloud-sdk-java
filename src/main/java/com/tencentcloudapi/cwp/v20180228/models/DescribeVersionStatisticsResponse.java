@@ -45,7 +45,7 @@ public class DescribeVersionStatisticsResponse extends AbstractModel {
     private Long UltimateVersionNum;
 
     /**
-    * 普惠版数量
+    * 轻量版数量
     */
     @SerializedName("GeneralVersionNum")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeVersionStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get 普惠版数量 
-     * @return GeneralVersionNum 普惠版数量
+     * Get 轻量版数量 
+     * @return GeneralVersionNum 轻量版数量
      */
     public Long getGeneralVersionNum() {
         return this.GeneralVersionNum;
     }
 
     /**
-     * Set 普惠版数量
-     * @param GeneralVersionNum 普惠版数量
+     * Set 轻量版数量
+     * @param GeneralVersionNum 轻量版数量
      */
     public void setGeneralVersionNum(Long GeneralVersionNum) {
         this.GeneralVersionNum = GeneralVersionNum;

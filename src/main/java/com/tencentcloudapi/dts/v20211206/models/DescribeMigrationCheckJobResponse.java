@@ -25,7 +25,6 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
     * 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
     * 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefMsg")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
     * 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepInfo")
     @Expose
@@ -62,10 +59,8 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功) 
      * @return Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -73,19 +68,15 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
      * Set 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 校验任务结果输出简要信息 
      * @return BriefMsg 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBriefMsg() {
         return this.BriefMsg;
@@ -93,19 +84,15 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
      * Set 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefMsg 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefMsg(String BriefMsg) {
         this.BriefMsg = BriefMsg;
     }
 
     /**
-     * Get 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查步骤 
      * @return StepInfo 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CheckStep [] getStepInfo() {
         return this.StepInfo;
@@ -113,9 +100,7 @@ public class DescribeMigrationCheckJobResponse extends AbstractModel {
 
     /**
      * Set 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepInfo 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepInfo(CheckStep [] StepInfo) {
         this.StepInfo = StepInfo;

@@ -32,7 +32,6 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel {
 
     /**
     * 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户Uin 
      * @return Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -73,9 +70,7 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

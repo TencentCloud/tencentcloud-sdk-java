@@ -193,7 +193,6 @@ public class DescribeSubscribeConfResponse extends AbstractModel {
 
     /**
     * 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -201,7 +200,6 @@ public class DescribeSubscribeConfResponse extends AbstractModel {
 
     /**
     * 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -614,10 +612,8 @@ public class DescribeSubscribeConfResponse extends AbstractModel {
     }
 
     /**
-     * Get 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订阅实例的标签 
      * @return Tags 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
         return this.Tags;
@@ -625,19 +621,15 @@ public class DescribeSubscribeConfResponse extends AbstractModel {
 
     /**
      * Set 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标识,0-不自动续费，1-自动续费 
      * @return AutoRenewFlag 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -645,9 +637,7 @@ public class DescribeSubscribeConfResponse extends AbstractModel {
 
     /**
      * Set 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

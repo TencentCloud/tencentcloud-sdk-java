@@ -80,7 +80,7 @@ public class ScanVulSettingRequest extends AbstractModel {
     private Long EnableScan;
 
     /**
-    * 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+    * 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
     */
     @SerializedName("Uuids")
     @Expose
@@ -222,16 +222,16 @@ public class ScanVulSettingRequest extends AbstractModel {
     }
 
     /**
-     * Get 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机 
-     * @return Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * Get 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机 
+     * @return Uuids 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      */
     public String [] getUuids() {
         return this.Uuids;
     }
 
     /**
-     * Set 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
-     * @param Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * Set 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
+     * @param Uuids 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;

@@ -229,6 +229,20 @@ HYBRID_PAID:
     private Long InstancePerReplicas;
 
     /**
+    * 30
+    */
+    @SerializedName("TerminationGracePeriodSeconds")
+    @Expose
+    private Long TerminationGracePeriodSeconds;
+
+    /**
+    * ["sleep","60"]
+    */
+    @SerializedName("PreStopCommand")
+    @Expose
+    private String [] PreStopCommand;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -736,6 +750,38 @@ HYBRID_PAID:
         this.InstancePerReplicas = InstancePerReplicas;
     }
 
+    /**
+     * Get 30 
+     * @return TerminationGracePeriodSeconds 30
+     */
+    public Long getTerminationGracePeriodSeconds() {
+        return this.TerminationGracePeriodSeconds;
+    }
+
+    /**
+     * Set 30
+     * @param TerminationGracePeriodSeconds 30
+     */
+    public void setTerminationGracePeriodSeconds(Long TerminationGracePeriodSeconds) {
+        this.TerminationGracePeriodSeconds = TerminationGracePeriodSeconds;
+    }
+
+    /**
+     * Get ["sleep","60"] 
+     * @return PreStopCommand ["sleep","60"]
+     */
+    public String [] getPreStopCommand() {
+        return this.PreStopCommand;
+    }
+
+    /**
+     * Set ["sleep","60"]
+     * @param PreStopCommand ["sleep","60"]
+     */
+    public void setPreStopCommand(String [] PreStopCommand) {
+        this.PreStopCommand = PreStopCommand;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -828,6 +874,15 @@ HYBRID_PAID:
         if (source.InstancePerReplicas != null) {
             this.InstancePerReplicas = new Long(source.InstancePerReplicas);
         }
+        if (source.TerminationGracePeriodSeconds != null) {
+            this.TerminationGracePeriodSeconds = new Long(source.TerminationGracePeriodSeconds);
+        }
+        if (source.PreStopCommand != null) {
+            this.PreStopCommand = new String[source.PreStopCommand.length];
+            for (int i = 0; i < source.PreStopCommand.length; i++) {
+                this.PreStopCommand[i] = new String(source.PreStopCommand[i]);
+            }
+        }
     }
 
 
@@ -861,6 +916,8 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
         this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
         this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
+        this.setParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
+        this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
 
     }
 }

@@ -25,7 +25,6 @@ public class TaskOrg extends AbstractModel {
 
     /**
     * 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRole")
     @Expose
@@ -33,17 +32,14 @@ public class TaskOrg extends AbstractModel {
 
     /**
     * 负责人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskOperator")
     @Expose
     private String TaskOperator;
 
     /**
-     * Get 演练角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 演练角色 
      * @return TaskRole 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskRole() {
         return this.TaskRole;
@@ -51,19 +47,15 @@ public class TaskOrg extends AbstractModel {
 
     /**
      * Set 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskRole 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRole(String TaskRole) {
         this.TaskRole = TaskRole;
     }
 
     /**
-     * Get 负责人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负责人 
      * @return TaskOperator 负责人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskOperator() {
         return this.TaskOperator;
@@ -71,9 +63,7 @@ public class TaskOrg extends AbstractModel {
 
     /**
      * Set 负责人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOperator 负责人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskOperator(String TaskOperator) {
         this.TaskOperator = TaskOperator;

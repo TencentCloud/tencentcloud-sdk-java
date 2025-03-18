@@ -25,7 +25,6 @@ public class AllocationTreeNode extends AbstractModel {
 
     /**
     * 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -33,17 +32,14 @@ public class AllocationTreeNode extends AbstractModel {
 
     /**
     * 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKeyName")
     @Expose
     private String TreeNodeUniqKeyName;
 
     /**
-     * Get 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元唯一标识 
      * @return TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
@@ -51,19 +47,15 @@ public class AllocationTreeNode extends AbstractModel {
 
     /**
      * Set 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账单元名称 
      * @return TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreeNodeUniqKeyName() {
         return this.TreeNodeUniqKeyName;
@@ -71,9 +63,7 @@ public class AllocationTreeNode extends AbstractModel {
 
     /**
      * Set 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
         this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;

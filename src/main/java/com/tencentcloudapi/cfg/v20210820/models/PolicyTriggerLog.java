@@ -32,7 +32,6 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
     * 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
     @Expose
@@ -48,7 +46,6 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
     * 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -56,7 +53,6 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
     * 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatTime")
     @Expose
@@ -79,10 +75,8 @@ public class PolicyTriggerLog extends AbstractModel {
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -90,19 +84,15 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，0--触发，1--恢复 
      * @return TriggerType 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerType() {
         return this.TriggerType;
@@ -110,19 +100,15 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
      * Set 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerType 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(Long TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容 
      * @return Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -130,19 +116,15 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
      * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 触发时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发时间 
      * @return CreatTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatTime() {
         return this.CreatTime;
@@ -150,9 +132,7 @@ public class PolicyTriggerLog extends AbstractModel {
 
     /**
      * Set 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatTime(String CreatTime) {
         this.CreatTime = CreatTime;

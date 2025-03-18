@@ -25,7 +25,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Db")
     @Expose
@@ -33,7 +32,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 分块号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Chunk")
     @Expose
@@ -49,7 +46,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 源库数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcItem")
     @Expose
@@ -57,7 +53,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 目标库数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstItem")
     @Expose
@@ -65,7 +60,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexName")
     @Expose
@@ -73,7 +67,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 索引下边界
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LowerBoundary")
     @Expose
@@ -81,7 +74,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 索引上边界
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpperBoundary")
     @Expose
@@ -89,7 +81,6 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 对比消耗时间,单位为 ms
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostTime")
     @Expose
@@ -97,17 +88,14 @@ public class DifferenceItem extends AbstractModel {
 
     /**
     * 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-     * Get 数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名 
      * @return Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDb() {
         return this.Db;
@@ -115,19 +103,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get 表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名 
      * @return Table 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -135,19 +119,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 分块号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分块号 
      * @return Chunk 分块号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChunk() {
         return this.Chunk;
@@ -155,19 +135,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 分块号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Chunk 分块号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChunk(Long Chunk) {
         this.Chunk = Chunk;
     }
 
     /**
-     * Get 源库数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源库数值 
      * @return SrcItem 源库数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcItem() {
         return this.SrcItem;
@@ -175,19 +151,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 源库数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcItem 源库数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcItem(String SrcItem) {
         this.SrcItem = SrcItem;
     }
 
     /**
-     * Get 目标库数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标库数值 
      * @return DstItem 目标库数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstItem() {
         return this.DstItem;
@@ -195,19 +167,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 目标库数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstItem 目标库数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstItem(String DstItem) {
         this.DstItem = DstItem;
     }
 
     /**
-     * Get 索引名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引名称 
      * @return IndexName 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexName() {
         return this.IndexName;
@@ -215,19 +183,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexName 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get 索引下边界
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引下边界 
      * @return LowerBoundary 索引下边界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLowerBoundary() {
         return this.LowerBoundary;
@@ -235,19 +199,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 索引下边界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LowerBoundary 索引下边界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLowerBoundary(String LowerBoundary) {
         this.LowerBoundary = LowerBoundary;
     }
 
     /**
-     * Get 索引上边界
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引上边界 
      * @return UpperBoundary 索引上边界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpperBoundary() {
         return this.UpperBoundary;
@@ -255,19 +215,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 索引上边界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpperBoundary 索引上边界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpperBoundary(String UpperBoundary) {
         this.UpperBoundary = UpperBoundary;
     }
 
     /**
-     * Get 对比消耗时间,单位为 ms
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对比消耗时间,单位为 ms 
      * @return CostTime 对比消耗时间,单位为 ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCostTime() {
         return this.CostTime;
@@ -275,19 +231,15 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 对比消耗时间,单位为 ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CostTime 对比消耗时间,单位为 ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostTime(Float CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成时间 
      * @return FinishedAt 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedAt() {
         return this.FinishedAt;
@@ -295,9 +247,7 @@ public class DifferenceItem extends AbstractModel {
 
     /**
      * Set 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedAt 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;

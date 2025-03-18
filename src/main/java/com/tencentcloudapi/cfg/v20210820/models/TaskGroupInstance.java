@@ -32,7 +32,6 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstanceObjectId")
     @Expose
@@ -68,7 +67,6 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
     * 执行开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstanceStartTime")
     @Expose
@@ -76,7 +74,6 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
     * 执行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstanceEndTime")
     @Expose
@@ -92,7 +89,6 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
     * 实例是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstanceIsRedo")
     @Expose
@@ -100,7 +96,6 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
     * 动作实例执行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupInstanceExecuteTime")
     @Expose
@@ -123,10 +118,8 @@ public class TaskGroupInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return TaskGroupInstanceObjectId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupInstanceObjectId() {
         return this.TaskGroupInstanceObjectId;
@@ -134,9 +127,7 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstanceObjectId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstanceObjectId(String TaskGroupInstanceObjectId) {
         this.TaskGroupInstanceObjectId = TaskGroupInstanceObjectId;
@@ -207,10 +198,8 @@ public class TaskGroupInstance extends AbstractModel {
     }
 
     /**
-     * Get 执行开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行开始时间 
      * @return TaskGroupInstanceStartTime 执行开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupInstanceStartTime() {
         return this.TaskGroupInstanceStartTime;
@@ -218,19 +207,15 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
      * Set 执行开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstanceStartTime 执行开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstanceStartTime(String TaskGroupInstanceStartTime) {
         this.TaskGroupInstanceStartTime = TaskGroupInstanceStartTime;
     }
 
     /**
-     * Get 执行结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行结束时间 
      * @return TaskGroupInstanceEndTime 执行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupInstanceEndTime() {
         return this.TaskGroupInstanceEndTime;
@@ -238,9 +223,7 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
      * Set 执行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstanceEndTime 执行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstanceEndTime(String TaskGroupInstanceEndTime) {
         this.TaskGroupInstanceEndTime = TaskGroupInstanceEndTime;
@@ -271,10 +254,8 @@ public class TaskGroupInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例是否可重试
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否可重试 
      * @return TaskGroupInstanceIsRedo 实例是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTaskGroupInstanceIsRedo() {
         return this.TaskGroupInstanceIsRedo;
@@ -282,19 +263,15 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
      * Set 实例是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstanceIsRedo 实例是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstanceIsRedo(Boolean TaskGroupInstanceIsRedo) {
         this.TaskGroupInstanceIsRedo = TaskGroupInstanceIsRedo;
     }
 
     /**
-     * Get 动作实例执行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作实例执行时间 
      * @return TaskGroupInstanceExecuteTime 动作实例执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskGroupInstanceExecuteTime() {
         return this.TaskGroupInstanceExecuteTime;
@@ -302,9 +279,7 @@ public class TaskGroupInstance extends AbstractModel {
 
     /**
      * Set 动作实例执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskGroupInstanceExecuteTime 动作实例执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupInstanceExecuteTime(Long TaskGroupInstanceExecuteTime) {
         this.TaskGroupInstanceExecuteTime = TaskGroupInstanceExecuteTime;

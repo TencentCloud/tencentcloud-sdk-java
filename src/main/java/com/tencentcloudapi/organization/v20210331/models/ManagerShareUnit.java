@@ -60,7 +60,6 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
     * 描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -68,7 +67,6 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -76,7 +74,6 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
     * 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareResourceNum")
     @Expose
@@ -84,7 +81,6 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
     * 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareMemberNum")
     @Expose
@@ -92,7 +88,6 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
     * 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareScope")
     @Expose
@@ -179,10 +174,8 @@ public class ManagerShareUnit extends AbstractModel {
     }
 
     /**
-     * Get 描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述。 
      * @return Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -190,19 +183,15 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
      * Set 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -210,19 +199,15 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享单元资源数。 
      * @return ShareResourceNum 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShareResourceNum() {
         return this.ShareResourceNum;
@@ -230,19 +215,15 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
      * Set 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareResourceNum 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareResourceNum(Long ShareResourceNum) {
         this.ShareResourceNum = ShareResourceNum;
     }
 
     /**
-     * Get 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享单元成员数。 
      * @return ShareMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShareMemberNum() {
         return this.ShareMemberNum;
@@ -250,19 +231,15 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
      * Set 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareMemberNum(Long ShareMemberNum) {
         this.ShareMemberNum = ShareMemberNum;
     }
 
     /**
-     * Get 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号 
      * @return ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShareScope() {
         return this.ShareScope;
@@ -270,9 +247,7 @@ public class ManagerShareUnit extends AbstractModel {
 
     /**
      * Set 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareScope(Long ShareScope) {
         this.ShareScope = ShareScope;

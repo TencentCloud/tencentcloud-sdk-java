@@ -46,7 +46,6 @@ public class TemplateGroup extends AbstractModel {
 
     /**
     * 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -136,10 +135,8 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 分组描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组描述 
      * @return Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -147,9 +144,7 @@ public class TemplateGroup extends AbstractModel {
 
     /**
      * Set 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

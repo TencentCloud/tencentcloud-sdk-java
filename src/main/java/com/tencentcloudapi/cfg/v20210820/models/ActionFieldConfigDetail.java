@@ -54,7 +54,6 @@ time   时间选择
 
     /**
     * 默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
@@ -201,10 +200,8 @@ time   时间选择
     }
 
     /**
-     * Get 默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认值 
      * @return DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -212,9 +209,7 @@ time   时间选择
 
     /**
      * Set 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;

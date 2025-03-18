@@ -27,7 +27,7 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
     * Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
     */
     @SerializedName("TableResultType")
     @Expose
@@ -40,9 +40,7 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
     */
     @SerializedName("ResultType")
     @Expose
@@ -52,11 +50,11 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
      * Get Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1 
+默认为0 
      * @return TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
      */
     public String getTableResultType() {
         return this.TableResultType;
@@ -66,11 +64,11 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
      * Set Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
      * @param TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
      */
     public void setTableResultType(String TableResultType) {
         this.TableResultType = TableResultType;
@@ -83,18 +81,14 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
- 
+默认值为0 
      * @return ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
      */
     public String getResultType() {
         return this.ResultType;
@@ -107,18 +101,14 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
      * @param ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
      */
     public void setResultType(String ResultType) {
         this.ResultType = ResultType;

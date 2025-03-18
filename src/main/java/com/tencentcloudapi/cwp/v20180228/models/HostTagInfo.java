@@ -115,6 +115,20 @@ public class HostTagInfo extends AbstractModel {
     private String MachineType;
 
     /**
+    * 可用区名称
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+    * 可用区ID
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
      * Get 主机Quuid 
      * @return Quuid 主机Quuid
      */
@@ -322,6 +336,38 @@ public class HostTagInfo extends AbstractModel {
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get 可用区名称 
+     * @return RegionName 可用区名称
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 可用区名称
+     * @param RegionName 可用区名称
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    /**
+     * Get 可用区ID 
+     * @return RegionId 可用区ID
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 可用区ID
+     * @param RegionId 可用区ID
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public HostTagInfo() {
     }
 
@@ -375,6 +421,12 @@ public class HostTagInfo extends AbstractModel {
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
     }
 
 
@@ -395,6 +447,8 @@ public class HostTagInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }
