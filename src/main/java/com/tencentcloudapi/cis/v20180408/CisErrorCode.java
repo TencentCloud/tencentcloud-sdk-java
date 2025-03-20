@@ -1,9 +1,9 @@
 package com.tencentcloudapi.cis.v20180408;
 public enum CisErrorCode {
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter");
      
     private String value;

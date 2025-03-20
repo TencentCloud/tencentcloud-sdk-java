@@ -1,6 +1,6 @@
 package com.tencentcloudapi.cdwdoris.v20211228;
 public enum CdwdorisErrorCode {
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError");
      
     private String value;

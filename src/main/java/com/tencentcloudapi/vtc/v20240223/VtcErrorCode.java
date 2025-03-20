@@ -1,90 +1,90 @@
 package com.tencentcloudapi.vtc.v20240223;
 public enum VtcErrorCode {
-     /*         音频解码失败。 */
+     /* 音频解码失败。 */
      FAILEDOPERATION_AUDIODECODEFAILED("FailedOperation.AudioDecodeFailed"),
      
-     /*         音频处理失败。 */
+     /* 音频处理失败。 */
      FAILEDOPERATION_AUDIOPROCESSFAILED("FailedOperation.AudioProcessFailed"),
      
-     /*         音频处理任务未完成，不能执行翻译结果确认 */
+     /* 音频处理任务未完成，不能执行翻译结果确认 */
      FAILEDOPERATION_AUDIOPROCESSNOTFINISHED("FailedOperation.AudioProcessNotFinished"),
      
-     /*         文件下载失败。 */
+     /* 文件下载失败。 */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownloadError"),
      
-     /*         任务不存在。 */
+     /* 任务不存在。 */
      FAILEDOPERATION_JOBNOTEXIST("FailedOperation.JobNotExist"),
      
-     /*         后端服务超时。 */
+     /* 后端服务超时。 */
      FAILEDOPERATION_REQUESTTIMEOUT("FailedOperation.RequestTimeout"),
      
-     /*         系统内部错误。 */
+     /* 系统内部错误。 */
      FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
      
-     /*         文本未通过审核，请修改后重新尝试。 */
+     /* 文本未通过审核，请修改后重新尝试。 */
      FAILEDOPERATION_TEXTMODERATIONNOTPASS("FailedOperation.TextModerationNotPass"),
      
-     /*         音频翻译结果已确认 */
+     /* 音频翻译结果已确认 */
      FAILEDOPERATION_TRANSLATIONCONFIRMHASFINISHED("FailedOperation.TranslationConfirmHasFinished"),
      
-     /*         用户未选择确认音频翻译结果 */
+     /* 用户未选择确认音频翻译结果 */
      FAILEDOPERATION_TRANSLATIONNOTNEEDCONFIRM("FailedOperation.TranslationNotNeedConfirm"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
      
-     /*         视频时长超限制。 */
+     /* 视频时长超限制。 */
      FAILEDOPERATION_VIDEODURATIONEXCEED("FailedOperation.VideoDurationExceed"),
      
-     /*         视频Fps超限制。 */
+     /* 视频Fps超限制。 */
      FAILEDOPERATION_VIDEOFPSEXCEED("FailedOperation.VideoFpsExceed"),
      
-     /*         视频分辨率超限制。 */
+     /* 视频分辨率超限制。 */
      FAILEDOPERATION_VIDEORESOLUTIONEXCEED("FailedOperation.VideoResolutionExceed"),
      
-     /*         视频分辨率超限制。 */
+     /* 视频分辨率超限制。 */
      FAILEDOPERATION_VIDEOSIZEEXCEED("FailedOperation.VideoSizeExceed"),
      
-     /*         参数不合法。 */
+     /* 参数不合法。 */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
-     /*         URL格式不合法。 */
+     /* URL格式不合法。 */
      INVALIDPARAMETERVALUE_URLILLEGAL("InvalidParameterValue.UrlIllegal"),
      
-     /*         当前并发数已超上限 */
+     /* 当前并发数已超上限 */
      REQUESTLIMITEXCEEDED_JOBNUMEXCEED("RequestLimitExceeded.JobNumExceed"),
      
-     /*         用户账号超出了限制。 */
+     /* 用户账号超出了限制。 */
      REQUESTLIMITEXCEEDED_UINLIMITEXCEEDED("RequestLimitExceeded.UinLimitExceeded"),
      
-     /*         资源正在发货中。 */
+     /* 资源正在发货中。 */
      RESOURCEUNAVAILABLE_DELIVERING("ResourceUnavailable.Delivering"),
      
-     /*         账号已被冻结。 */
+     /* 账号已被冻结。 */
      RESOURCEUNAVAILABLE_FREEZE("ResourceUnavailable.Freeze"),
      
-     /*         账号已欠费。 */
+     /* 账号已欠费。 */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-     /*         服务正在开通中，请稍等。 */
+     /* 服务正在开通中，请稍等。 */
      RESOURCEUNAVAILABLE_ISOPENING("ResourceUnavailable.IsOpening"),
      
-     /*         余额不足。 */
+     /* 余额不足。 */
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
      
-     /*         计费状态未知，请确认是否已在控制台开通服务。 */
+     /* 计费状态未知，请确认是否已在控制台开通服务。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-     /*         服务未开通。 */
+     /* 服务未开通。 */
      RESOURCEUNAVAILABLE_NOTREADY("ResourceUnavailable.NotReady"),
      
-     /*         资源已被回收。 */
+     /* 资源已被回收。 */
      RESOURCEUNAVAILABLE_RECOVER("ResourceUnavailable.Recover"),
      
-     /*         计费状态未知。 */
+     /* 计费状态未知。 */
      RESOURCEUNAVAILABLE_UNKNOWNSTATUS("ResourceUnavailable.UnknownStatus"),
      
-     /*         账号已欠费。 */
+     /* 账号已欠费。 */
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
      
     private String value;

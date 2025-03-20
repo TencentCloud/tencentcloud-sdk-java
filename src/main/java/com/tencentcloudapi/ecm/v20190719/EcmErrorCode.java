@@ -1,597 +1,597 @@
 package com.tencentcloudapi.ecm.v20190719;
 public enum EcmErrorCode {
-     /*         鉴权失败。 */
+     /* 鉴权失败。 */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
-     /*         操作失败。 */
+     /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-     /*         余额不足。 */
+     /* 余额不足。 */
      FAILEDOPERATION_BLOCKBALANCE("FailedOperation.BlockBalance"),
      
-     /*         数据操作失败。 */
+     /* 数据操作失败。 */
      FAILEDOPERATION_DATAOPERATIONFAILED("FailedOperation.DataOperationFailed"),
      
-     /*         FailedOperation.DiskAttached */
+     /* FailedOperation.DiskAttached */
      FAILEDOPERATION_DISKATTACHED("FailedOperation.DiskAttached"),
      
-     /*         镜像正在使用中。 */
+     /* 镜像正在使用中。 */
      FAILEDOPERATION_IMAGEINUSE("FailedOperation.ImageInUse"),
      
-     /*         模块下存在实例。 */
+     /* 模块下存在实例。 */
      FAILEDOPERATION_INSTANCEINMODULE("FailedOperation.InstanceInModule"),
      
-     /*         实例没有全部关机。 */
+     /* 实例没有全部关机。 */
      FAILEDOPERATION_INSTANCENOTALLSTOPPED("FailedOperation.InstanceNotAllStopped"),
      
-     /*         实例不属于当前模块。 */
+     /* 实例不属于当前模块。 */
      FAILEDOPERATION_INSTANCEOWNERCHECKFAILED("FailedOperation.InstanceOwnerCheckFailed"),
      
-     /*         内部操作错误。 */
+     /* 内部操作错误。 */
      FAILEDOPERATION_INTERNALOPERATIONFAILURE("FailedOperation.InternalOperationFailure"),
      
-     /*         当前状态无法执行该操作。 */
+     /* 当前状态无法执行该操作。 */
      FAILEDOPERATION_INVALIDSTATUS("FailedOperation.InvalidStatus"),
      
-     /*         其他操作正在运行，无法进行当前操作。 */
+     /* 其他操作正在运行，无法进行当前操作。 */
      FAILEDOPERATION_OPERATIONCONFLICT("FailedOperation.OperationConflict"),
      
-     /*         不允许执行当前操作。 */
+     /* 不允许执行当前操作。 */
      FAILEDOPERATION_OPERATIONNOTALLOW("FailedOperation.OperationNotAllow"),
      
-     /*         该内网IP已经绑定了弹性IP。 */
+     /* 该内网IP已经绑定了弹性IP。 */
      FAILEDOPERATION_PRIVATEIPADDRESSBINDED("FailedOperation.PrivateIpAddressBinded"),
      
-     /*         内网IP状态非可用状态。 */
+     /* 内网IP状态非可用状态。 */
      FAILEDOPERATION_PRIVATEIPADDRESSUNAVAILABLE("FailedOperation.PrivateIpAddressUnavailable"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         InternalError.ComponentError */
+     /* InternalError.ComponentError */
      INTERNALERROR_COMPONENTERROR("InternalError.ComponentError"),
      
-     /*         InternalError.FailQueryResource */
+     /* InternalError.FailQueryResource */
      INTERNALERROR_FAILQUERYRESOURCE("InternalError.FailQueryResource"),
      
-     /*         InternalError.ResourceOpFailed */
+     /* InternalError.ResourceOpFailed */
      INTERNALERROR_RESOURCEOPFAILED("InternalError.ResourceOpFailed"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数不支持同时指定。 */
+     /* 参数不支持同时指定。 */
      INVALIDPARAMETER_COEXIST("InvalidParameter.Coexist"),
      
-     /*         InvalidParameter.DiskConfigNotSupported */
+     /* InvalidParameter.DiskConfigNotSupported */
      INVALIDPARAMETER_DISKCONFIGNOTSUPPORTED("InvalidParameter.DiskConfigNotSupported"),
      
-     /*         参数格式错误。 */
+     /* 参数格式错误。 */
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
      
-     /*         数据格式不正确。 */
+     /* 数据格式不正确。 */
      INVALIDPARAMETER_INVALIDDATAFORMAT("InvalidParameter.InvalidDataFormat"),
      
-     /*         指定的两个参数冲突，不能同时存在。 EIP只能绑定在实例上或指定网卡的指定内网 IP 上。 */
+     /* 指定的两个参数冲突，不能同时存在。 EIP只能绑定在实例上或指定网卡的指定内网 IP 上。 */
      INVALIDPARAMETER_INVALIDPARAMETERCONFLICT("InvalidParameter.InvalidParameterConflict"),
      
-     /*         负载均衡实例ID错误。 */
+     /* 负载均衡实例ID错误。 */
      INVALIDPARAMETER_LBIDNOTFOUND("InvalidParameter.LBIdNotFound"),
      
-     /*         监听器ID错误。 */
+     /* 监听器ID错误。 */
      INVALIDPARAMETER_LISTENERIDNOTFOUND("InvalidParameter.ListenerIdNotFound"),
      
-     /*         查找不到符合条件的转发规则。 */
+     /* 查找不到符合条件的转发规则。 */
      INVALIDPARAMETER_LOCATIONNOTFOUND("InvalidParameter.LocationNotFound"),
      
-     /*         KeepImageLogin, Password, KeyIds 同时只能使用1个。 */
+     /* KeepImageLogin, Password, KeyIds 同时只能使用1个。 */
      INVALIDPARAMETER_PARAMETERCONFLICT("InvalidParameter.ParameterConflict"),
      
-     /*         监听器端口检查失败，比如端口冲突。 */
+     /* 监听器端口检查失败，比如端口冲突。 */
      INVALIDPARAMETER_PORTCHECKFAILED("InvalidParameter.PortCheckFailed"),
      
-     /*         InvalidParameter.ProjectIdNotExist */
+     /* InvalidParameter.ProjectIdNotExist */
      INVALIDPARAMETER_PROJECTIDNOTEXIST("InvalidParameter.ProjectIdNotExist"),
      
-     /*         监听器协议检查失败，比如相关协议不支持对应操作。 */
+     /* 监听器协议检查失败，比如相关协议不支持对应操作。 */
      INVALIDPARAMETER_PROTOCOLCHECKFAILED("InvalidParameter.ProtocolCheckFailed"),
      
-     /*         地域无效。 */
+     /* 地域无效。 */
      INVALIDPARAMETER_REGIONNOTFOUND("InvalidParameter.RegionNotFound"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         申请数量超限。 */
+     /* 申请数量超限。 */
      INVALIDPARAMETERVALUE_ADDRESSQUOTALIMITEXCEEDED("InvalidParameterValue.AddressQuotaLimitExceeded"),
      
-     /*         超多带宽限制。 */
+     /* 超多带宽限制。 */
      INVALIDPARAMETERVALUE_BANDWIDTHOUTOFRANGE("InvalidParameterValue.BandwidthOutOfRange"),
      
-     /*         目的网段不在对端VPC的CIDR范围内。 */
+     /* 目的网段不在对端VPC的CIDR范围内。 */
      INVALIDPARAMETERVALUE_CIDRNOTINPEERVPC("InvalidParameterValue.CidrNotInPeerVpc"),
      
-     /*         重复数据。 */
+     /* 重复数据。 */
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
-     /*         Filter参数数值超过限制。 */
+     /* Filter参数数值超过限制。 */
      INVALIDPARAMETERVALUE_FILTERLIMITEXCEEDED("InvalidParameterValue.FilterLimitExceeded"),
      
-     /*         镜像已导入。 */
+     /* 镜像已导入。 */
      INVALIDPARAMETERVALUE_IMAGEDUPLICATE("InvalidParameterValue.ImageDuplicate"),
      
-     /*         镜像名称重复。 */
+     /* 镜像名称重复。 */
      INVALIDPARAMETERVALUE_IMAGENAMEDUPLICATE("InvalidParameterValue.ImageNameDuplicate"),
      
-     /*         镜像大小大于系统盘大小。 */
+     /* 镜像大小大于系统盘大小。 */
      INVALIDPARAMETERVALUE_IMAGESIZELARGETHANSYSDISKSIZE("InvalidParameterValue.ImageSizeLargeThanSysDiskSize"),
      
-     /*         实例配置不匹配。 */
+     /* 实例配置不匹配。 */
      INVALIDPARAMETERVALUE_INSTANCECONFIGNOTMATCH("InvalidParameterValue.InstanceConfigNotMatch"),
      
-     /*         实例不支持当前操作。 */
+     /* 实例不支持当前操作。 */
      INVALIDPARAMETERVALUE_INSTANCEIDNOTSUPPORTED("InvalidParameterValue.InstanceIdNotSupported"),
      
-     /*         实例名字长度超出限制。 */
+     /* 实例名字长度超出限制。 */
      INVALIDPARAMETERVALUE_INSTANCENAMETOOLONG("InvalidParameterValue.InstanceNameTooLong"),
      
-     /*         实例机型和pid不匹配。 */
+     /* 实例机型和pid不匹配。 */
      INVALIDPARAMETERVALUE_INSTANCETYPENOTMATCHPID("InvalidParameterValue.InstanceTypeNotMatchPid"),
      
-     /*         InvalidParameterValue.InsufficientRefundQuota */
+     /* InvalidParameterValue.InsufficientRefundQuota */
      INVALIDPARAMETERVALUE_INSUFFICIENTREFUNDQUOTA("InvalidParameterValue.InsufficientRefundQuota"),
      
-     /*         无效的EIP。 */
+     /* 无效的EIP。 */
      INVALIDPARAMETERVALUE_INVAILDADDRESSID("InvalidParameterValue.InvaildAddressId"),
      
-     /*         您的输入有误或无相应的操作权限。 */
+     /* 您的输入有误或无相应的操作权限。 */
      INVALIDPARAMETERVALUE_INVAILDDESCRIBEINSTANCE("InvalidParameterValue.InvaildDescribeInstance"),
      
-     /*         无效的弹性网卡ID。 */
+     /* 无效的弹性网卡ID。 */
      INVALIDPARAMETERVALUE_INVAILDENIID("InvalidParameterValue.InvaildEniID"),
      
-     /*         HostName不合法。 */
+     /* HostName不合法。 */
      INVALIDPARAMETERVALUE_INVAILDHOSTNAME("InvalidParameterValue.InvaildHostName"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETERVALUE_INVAILDMODIFYPARAM("InvalidParameterValue.InvaildModifyParam"),
      
-     /*         模块数量不合法。 */
+     /* 模块数量不合法。 */
      INVALIDPARAMETERVALUE_INVAILDMODULENUM("InvalidParameterValue.InvaildModuleNum"),
      
-     /*         分页参数不合法。 */
+     /* 分页参数不合法。 */
      INVALIDPARAMETERVALUE_INVAILDPAGEPARAM("InvalidParameterValue.InvaildPageParam"),
      
-     /*         密码不合法。 */
+     /* 密码不合法。 */
      INVALIDPARAMETERVALUE_INVAILDPASSWORD("InvalidParameterValue.InvaildPassword"),
      
-     /*         当同步绑定弹性网卡时，一次只能申请单个弹性IP。 */
+     /* 当同步绑定弹性网卡时，一次只能申请单个弹性IP。 */
      INVALIDPARAMETERVALUE_INVALIDADDRESSCOUNT("InvalidParameterValue.InvalidAddressCount"),
      
-     /*         带宽大小不合法。 */
+     /* 带宽大小不合法。 */
      INVALIDPARAMETERVALUE_INVALIDBANDWIDTH("InvalidParameterValue.InvalidBandwidth"),
      
-     /*         入带宽大小超过限额。 */
+     /* 入带宽大小超过限额。 */
      INVALIDPARAMETERVALUE_INVALIDBANDWIDTHIN("InvalidParameterValue.InvalidBandwidthIn"),
      
-     /*         出入带宽必须一致。 */
+     /* 出入带宽必须一致。 */
      INVALIDPARAMETERVALUE_INVALIDBANDWIDTHINANDOUT("InvalidParameterValue.InvalidBandwidthInAndOut"),
      
-     /*         该用户不支持当前所选择的计费类型。 */
+     /* 该用户不支持当前所选择的计费类型。 */
      INVALIDPARAMETERVALUE_INVALIDBILLINGTYPE("InvalidParameterValue.InvalidBillingType"),
      
-     /*         数据盘个数不合法。 */
+     /* 数据盘个数不合法。 */
      INVALIDPARAMETERVALUE_INVALIDDATADISKNUM("InvalidParameterValue.InvalidDataDiskNum"),
      
-     /*         数据盘大小不合法。 */
+     /* 数据盘大小不合法。 */
      INVALIDPARAMETERVALUE_INVALIDDATADISKSIZE("InvalidParameterValue.InvalidDataDiskSize"),
      
-     /*         数据盘类型不合法。 */
+     /* 数据盘类型不合法。 */
      INVALIDPARAMETERVALUE_INVALIDDATADISKTYPE("InvalidParameterValue.InvalidDataDiskType"),
      
-     /*         InvalidParameterValue.InvalidDisk */
+     /* InvalidParameterValue.InvalidDisk */
      INVALIDPARAMETERVALUE_INVALIDDISK("InvalidParameterValue.InvalidDisk"),
      
-     /*         InvalidParameterValue.InvalidDiskId */
+     /* InvalidParameterValue.InvalidDiskId */
      INVALIDPARAMETERVALUE_INVALIDDISKID("InvalidParameterValue.InvalidDiskId"),
      
-     /*         InvalidParameterValue.InvalidDiskType */
+     /* InvalidParameterValue.InvalidDiskType */
      INVALIDPARAMETERVALUE_INVALIDDISKTYPE("InvalidParameterValue.InvalidDiskType"),
      
-     /*         windows镜像不支持IP直通。 */
+     /* windows镜像不支持IP直通。 */
      INVALIDPARAMETERVALUE_INVALIDEIPDIRECTSERVICE("InvalidParameterValue.InvalidEIPDirectService"),
      
-     /*         地域参数不合法。 */
+     /* 地域参数不合法。 */
      INVALIDPARAMETERVALUE_INVALIDECMREGION("InvalidParameterValue.InvalidEcmRegion"),
      
-     /*         无效过滤器。 */
+     /* 无效过滤器。 */
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
-     /*         运营商不合法。 */
+     /* 运营商不合法。 */
      INVALIDPARAMETERVALUE_INVALIDISPINNODE("InvalidParameterValue.InvalidISPInNode"),
      
-     /*         内存4G以上机型不支持32位操作系统镜像。 */
+     /* 内存4G以上机型不支持32位操作系统镜像。 */
      INVALIDPARAMETERVALUE_INVALIDIMAGEARCHITECTURE("InvalidParameterValue.InvalidImageArchitecture"),
      
-     /*         镜像ID不合法。 */
+     /* 镜像ID不合法。 */
      INVALIDPARAMETERVALUE_INVALIDIMAGEID("InvalidParameterValue.InvalidImageID"),
      
-     /*         实例计费类型不合法。 */
+     /* 实例计费类型不合法。 */
      INVALIDPARAMETERVALUE_INVALIDINSTANCECHARGETYPE("InvalidParameterValue.InvalidInstanceChargeType"),
      
-     /*         实例ID不合法。 */
+     /* 实例ID不合法。 */
      INVALIDPARAMETERVALUE_INVALIDINSTANCEID("InvalidParameterValue.InvalidInstanceID"),
      
-     /*         不支持调整高IO机型配置。 */
+     /* 不支持调整高IO机型配置。 */
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPE("InvalidParameterValue.InvalidInstanceType"),
      
-     /*         机型ID不合法。 */
+     /* 机型ID不合法。 */
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPECONFIGID("InvalidParameterValue.InvalidInstanceTypeConfigID"),
      
-     /*         计费类型不合法。 */
+     /* 计费类型不合法。 */
      INVALIDPARAMETERVALUE_INVALIDINTERNETCHARGETYPE("InvalidParameterValue.InvalidInternetChargeType"),
      
-     /*         密钥ID无效。 */
+     /* 密钥ID无效。 */
      INVALIDPARAMETERVALUE_INVALIDKEYPAIRID("InvalidParameterValue.InvalidKeyPairId"),
      
-     /*         密钥名称异常。 */
+     /* 密钥名称异常。 */
      INVALIDPARAMETERVALUE_INVALIDKEYPAIRNAME("InvalidParameterValue.InvalidKeyPairName"),
      
-     /*         负载均衡数量不合法。 */
+     /* 负载均衡数量不合法。 */
      INVALIDPARAMETERVALUE_INVALIDLOADBALANCERNUM("InvalidParameterValue.InvalidLoadBalancerNum"),
      
-     /*         负载均衡类型不合法。 */
+     /* 负载均衡类型不合法。 */
      INVALIDPARAMETERVALUE_INVALIDLOADBALANCERTYPE("InvalidParameterValue.InvalidLoadBalancerType"),
      
-     /*         模块ID不合法。 */
+     /* 模块ID不合法。 */
      INVALIDPARAMETERVALUE_INVALIDMODULEID("InvalidParameterValue.InvalidModuleID"),
      
-     /*         ModuleId和InstanceType参数不可同时为空。 */
+     /* ModuleId和InstanceType参数不可同时为空。 */
      INVALIDPARAMETERVALUE_INVALIDMODULEIDANDINSTANCETYPECONFIGID("InvalidParameterValue.InvalidModuleIDAndInstanceTypeConfigID"),
      
-     /*         ModuleId和InstanceType参数不可同时为空。 */
+     /* ModuleId和InstanceType参数不可同时为空。 */
      INVALIDPARAMETERVALUE_INVALIDMODULEIDANDINSTANCETYPEID("InvalidParameterValue.InvalidModuleIDAndInstanceTypeID"),
      
-     /*         模块名称冲突。 */
+     /* 模块名称冲突。 */
      INVALIDPARAMETERVALUE_INVALIDMODULENAME("InvalidParameterValue.InvalidModuleName"),
      
-     /*         排序字段不合法。 */
+     /* 排序字段不合法。 */
      INVALIDPARAMETERVALUE_INVALIDORDERBYFIELD("InvalidParameterValue.InvalidOrderByField"),
      
-     /*         公共参数不合法。 */
+     /* 公共参数不合法。 */
      INVALIDPARAMETERVALUE_INVALIDPUBLICPARAM("InvalidParameterValue.InvalidPublicParam"),
      
-     /*         ecm region不合法。 */
+     /* ecm region不合法。 */
      INVALIDPARAMETERVALUE_INVALIDREGION("InvalidParameterValue.InvalidRegion"),
      
-     /*         全组ID不合法。 */
+     /* 全组ID不合法。 */
      INVALIDPARAMETERVALUE_INVALIDSECURITYGROUPID("InvalidParameterValue.InvalidSecurityGroupID"),
      
-     /*         InvalidParameterValue.InvalidSnapshot */
+     /* InvalidParameterValue.InvalidSnapshot */
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOT("InvalidParameterValue.InvalidSnapshot"),
      
-     /*         InvalidParameterValue.InvalidSnapshotId */
+     /* InvalidParameterValue.InvalidSnapshotId */
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOTID("InvalidParameterValue.InvalidSnapshotId"),
      
-     /*         该子网不存在该节点。 */
+     /* 该子网不存在该节点。 */
      INVALIDPARAMETERVALUE_INVALIDSUBNETINZONE("InvalidParameterValue.InvalidSubnetInZone"),
      
-     /*         系统盘大小不合法。 */
+     /* 系统盘大小不合法。 */
      INVALIDPARAMETERVALUE_INVALIDSYSTEMDISKSIZE("InvalidParameterValue.InvalidSystemDiskSize"),
      
-     /*         系统盘类型不合法。 */
+     /* 系统盘类型不合法。 */
      INVALIDPARAMETERVALUE_INVALIDSYSTEMDISKTYPE("InvalidParameterValue.InvalidSystemDiskType"),
      
-     /*         时间不合法。 */
+     /* 时间不合法。 */
      INVALIDPARAMETERVALUE_INVALIDTIME("InvalidParameterValue.InvalidTime"),
      
-     /*         zone不合法。 */
+     /* zone不合法。 */
      INVALIDPARAMETERVALUE_INVALIDZONE("InvalidParameterValue.InvalidZone"),
      
-     /*         城市或者数量不合法。 */
+     /* 城市或者数量不合法。 */
      INVALIDPARAMETERVALUE_INVALIDZONEINSTANCECOUNT("InvalidParameterValue.InvalidZoneInstanceCount"),
      
-     /*         用区不支持此机型。 */
+     /* 用区不支持此机型。 */
      INVALIDPARAMETERVALUE_INVALIDZONEINSTANCETYPE("InvalidParameterValue.InvalidZoneInstanceType"),
      
-     /*         参数长度错误。 */
+     /* 参数长度错误。 */
      INVALIDPARAMETERVALUE_LENGTH("InvalidParameterValue.Length"),
      
-     /*         参数值超出限制。 */
+     /* 参数值超出限制。 */
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
-     /*         入参格式不合法。 */
+     /* 入参格式不合法。 */
      INVALIDPARAMETERVALUE_MALFORMED("InvalidParameterValue.Malformed"),
      
-     /*         已有实例的边缘模块不支持调整默认配置。 */
+     /* 已有实例的边缘模块不支持调整默认配置。 */
      INVALIDPARAMETERVALUE_MODULENOTALLOWCHANGE("InvalidParameterValue.ModuleNotAllowChange"),
      
-     /*         节点不支持ipv6。 */
+     /* 节点不支持ipv6。 */
      INVALIDPARAMETERVALUE_NODENOTSUPPORTIPV6("InvalidParameterValue.NodeNotSupportIPv6"),
      
-     /*         对象不在当前子网内。 */
+     /* 对象不在当前子网内。 */
      INVALIDPARAMETERVALUE_OBJECTNOTCURRENTSUBNET("InvalidParameterValue.ObjectNotCurrentSubnet"),
      
-     /*         指定对象不是当前的私有网络。 */
+     /* 指定对象不是当前的私有网络。 */
      INVALIDPARAMETERVALUE_OBJECTVPCNOTCURRENTVPC("InvalidParameterValue.ObjectVpcNotCurrentVpc"),
      
-     /*         参数值超出限制。 */
+     /* 参数值超出限制。 */
      INVALIDPARAMETERVALUE_PARAMETERVALUETOOLARGE("InvalidParameterValue.ParameterValueTooLarge"),
      
-     /*         参数值不在指定范围。 */
+     /* 参数值不在指定范围。 */
      INVALIDPARAMETERVALUE_RANGE("InvalidParameterValue.Range"),
      
-     /*         参数值是一个系统保留对象。 */
+     /* 参数值是一个系统保留对象。 */
      INVALIDPARAMETERVALUE_RESERVED("InvalidParameterValue.Reserved"),
      
-     /*         指定CIDR与同一个私有网络内的另一个子网发生冲突。 */
+     /* 指定CIDR与同一个私有网络内的另一个子网发生冲突。 */
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
      
-     /*         子网不存在。 */
+     /* 子网不存在。 */
      INVALIDPARAMETERVALUE_SUBNETNOTEXIST("InvalidParameterValue.SubnetNotExist"),
      
-     /*         无效的子网网段。 */
+     /* 无效的子网网段。 */
      INVALIDPARAMETERVALUE_SUBNETRANGE("InvalidParameterValue.SubnetRange"),
      
-     /*         标签数量超过限制。 */
+     /* 标签数量超过限制。 */
      INVALIDPARAMETERVALUE_TAGNUMOUTOFRANGE("InvalidParameterValue.TagNumOutOfRange"),
      
-     /*         无法找到任务。 */
+     /* 无法找到任务。 */
      INVALIDPARAMETERVALUE_TASKNOTFOUND("InvalidParameterValue.TaskNotFound"),
      
-     /*         定时销毁时间早于当前时间。 */
+     /* 定时销毁时间早于当前时间。 */
      INVALIDPARAMETERVALUE_TERMINATETIMESMALLER("InvalidParameterValue.TerminateTimeSmaller"),
      
-     /*         参数值太长。 */
+     /* 参数值太长。 */
      INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
      
-     /*         该机型不支持当前所选择的计费类型。 */
+     /* 该机型不支持当前所选择的计费类型。 */
      INVALIDPARAMETERVALUE_UNMATCHEDBILLINGTYPE("InvalidParameterValue.UnmatchedBillingType"),
      
-     /*         不支持该区域。 */
+     /* 不支持该区域。 */
      INVALIDPARAMETERVALUE_UNSUPPORTEDREGION("InvalidParameterValue.UnsupportedRegion"),
      
-     /*         用户不支持ipv6。 */
+     /* 用户不支持ipv6。 */
      INVALIDPARAMETERVALUE_USERNOTSUPPORTIPV6("InvalidParameterValue.UserNotSupportIPv6"),
      
-     /*         目的网段和当前VPC的CIDR冲突。 */
+     /* 目的网段和当前VPC的CIDR冲突。 */
      INVALIDPARAMETERVALUE_VPCCIDRCONFLICT("InvalidParameterValue.VpcCidrConflict"),
      
-     /*         超过配额限制。 */
+     /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /*         申请数量超限。 */
+     /* 申请数量超限。 */
      LIMITEXCEEDED_ADDRESSQUOTALIMITEXCEEDED("LimitExceeded.AddressQuotaLimitExceeded"),
      
-     /*         申购次数不足，每个腾讯云账户每个地域每天申购次数为配额数*2 次。 */
+     /* 申购次数不足，每个腾讯云账户每个地域每天申购次数为配额数*2 次。 */
      LIMITEXCEEDED_ADDRESSQUOTALIMITEXCEEDEDDAILYALLOCATE("LimitExceeded.AddressQuotaLimitExceededDailyAllocate"),
      
-     /*         LimitExceeded.AttachedDiskLimitExceeded */
+     /* LimitExceeded.AttachedDiskLimitExceeded */
      LIMITEXCEEDED_ATTACHEDDISKLIMITEXCEEDED("LimitExceeded.AttachedDiskLimitExceeded"),
      
-     /*         分配IPv6网段数量达到上限。 */
+     /* 分配IPv6网段数量达到上限。 */
      LIMITEXCEEDED_CIDRBLOCK("LimitExceeded.CidrBlock"),
      
-     /*         网卡配额不足。 */
+     /* 网卡配额不足。 */
      LIMITEXCEEDED_ENIQUOTALIMITEXCEEDED("LimitExceeded.EniQuotaLimitExceeded"),
      
-     /*         实例绑定的安全组超出限制。 */
+     /* 实例绑定的安全组超出限制。 */
      LIMITEXCEEDED_INSTANCESECURITYGROUPLIMITEXCEEDED("LimitExceeded.InstanceSecurityGroupLimitExceeded"),
      
-     /*         申请的clb超过限制。 */
+     /* 申请的clb超过限制。 */
      LIMITEXCEEDED_LBLIMITEXCEEDED("LimitExceeded.LBLimitExceeded"),
      
-     /*         模块默认安全组数目限制。 */
+     /* 模块默认安全组数目限制。 */
      LIMITEXCEEDED_MODULESECURITYGROUPLIMITEXCEEDED("LimitExceeded.ModuleSecurityGroupLimitExceeded"),
      
-     /*         弹性网卡或公网IP数超过CPU规定的限额。 */
+     /* 弹性网卡或公网IP数超过CPU规定的限额。 */
      LIMITEXCEEDED_NICORIPLIMITEXCEEDED("LimitExceeded.NicOrIPLimitExceeded"),
      
-     /*         内网IP超出限制。 */
+     /* 内网IP超出限制。 */
      LIMITEXCEEDED_PRIVATEIPQUOTALIMITEXCEEDED("LimitExceeded.PrivateIPQuotaLimitExceeded"),
      
-     /*         安全组绑定的实例数超限。 */
+     /* 安全组绑定的实例数超限。 */
      LIMITEXCEEDED_SECURITYGROUPINSTANCELIMITEXCEEDED("LimitExceeded.SecurityGroupInstanceLimitExceeded"),
      
-     /*         安全组可关联模块数目限制。 */
+     /* 安全组可关联模块数目限制。 */
      LIMITEXCEEDED_SECURITYGROUPMODULELIMITEXCEEDED("LimitExceeded.SecurityGroupModuleLimitExceeded"),
      
-     /*         安全组规则数量超过上限。 */
+     /* 安全组规则数量超过上限。 */
      LIMITEXCEEDED_SECURITYGROUPPOLICYSET("LimitExceeded.SecurityGroupPolicySet"),
      
-     /*         申请的cpu核数超限。 */
+     /* 申请的cpu核数超限。 */
      LIMITEXCEEDED_VCPULIMITEXCEEDED("LimitExceeded.VcpuLimitExceeded"),
      
-     /*         缺少参数错误。 */
+     /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-     /*         缺少需关联的实体参数。 */
+     /* 缺少需关联的实体参数。 */
      MISSINGPARAMETER_MISSINGASSOCIATEENTITY("MissingParameter.MissingAssociateEntity"),
      
-     /*         获取基础配置请求参数不全。 */
+     /* 获取基础配置请求参数不全。 */
      MISSINGPARAMETER_MISSINGBASECONFIGPARAMETER("MissingParameter.MissingBaseConfigParameter"),
      
-     /*         镜像操作参数不全。 */
+     /* 镜像操作参数不全。 */
      MISSINGPARAMETER_MISSINGIMAGEPARAMETER("MissingParameter.MissingImageParameter"),
      
-     /*         机型操作参数不全。 */
+     /* 机型操作参数不全。 */
      MISSINGPARAMETER_MISSINGINSTANCETYPECONFIGPARAMETER("MissingParameter.MissingInstanceTypeConfigParameter"),
      
-     /*         实例操作参数不全。 */
+     /* 实例操作参数不全。 */
      MISSINGPARAMETER_MISSINGINSTANCESPARAMETER("MissingParameter.MissingInstancesParameter"),
      
-     /*         模块操作参数不全。 */
+     /* 模块操作参数不全。 */
      MISSINGPARAMETER_MISSINGMODULEPARAMETER("MissingParameter.MissingModuleParameter"),
      
-     /*         缺少网卡操作配置的请求参数。 */
+     /* 缺少网卡操作配置的请求参数。 */
      MISSINGPARAMETER_MISSINGNETWORKINTERFACEPARAMETER("MissingParameter.MissingNetworkInterfaceParameter"),
      
-     /*         节点操作参数不全。 */
+     /* 节点操作参数不全。 */
      MISSINGPARAMETER_MISSINGNODEPARAMETER("MissingParameter.MissingNodeParameter"),
      
-     /*         获取概览页配置请求参数不全。 */
+     /* 获取概览页配置请求参数不全。 */
      MISSINGPARAMETER_MISSINGOVERVIEWPARAMETER("MissingParameter.MissingOverViewParameter"),
      
-     /*         缺少私有IP地址。 */
+     /* 缺少私有IP地址。 */
      MISSINGPARAMETER_MISSINGPRIVATEIPADDRESS("MissingParameter.MissingPrivateIpAddress"),
      
-     /*         不允许执行当前操作。 */
+     /* 不允许执行当前操作。 */
      OPERATIONDENIED_INSTANCEOPERATIONINPROGRESS("OperationDenied.InstanceOperationInProgress"),
      
-     /*         资源被占用。 */
+     /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-     /*         资源不足。 */
+     /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-     /*         网段资源不足。 */
+     /* 网段资源不足。 */
      RESOURCEINSUFFICIENT_CIDRBLOCK("ResourceInsufficient.CidrBlock"),
      
-     /*         IP资源不足。 */
+     /* IP资源不足。 */
      RESOURCEINSUFFICIENT_IPQUOTANOTENOUGH("ResourceInsufficient.IPQuotaNotEnough"),
      
-     /*         实例资源不足。 */
+     /* 实例资源不足。 */
      RESOURCEINSUFFICIENT_INSTANCEQUOTANOTENOUGH("ResourceInsufficient.InstanceQuotaNotEnough"),
      
-     /*         私有镜像数量超出限制。 */
+     /* 私有镜像数量超出限制。 */
      RESOURCEINSUFFICIENT_INVAILDPRIVATEIMAGENUM("ResourceInsufficient.InvaildPrivateImageNum"),
      
-     /*         当前子网中内网IP不足 */
+     /* 当前子网中内网IP不足 */
      RESOURCEINSUFFICIENT_PRIVATEIPQUOTANOTENOUGH("ResourceInsufficient.PrivateIPQuotaNotEnough"),
      
-     /*         资源不存在。 */
+     /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /*         实例不合法。 */
+     /* 实例不合法。 */
      RESOURCENOTFOUND_INSTANCENOTEXIST("ResourceNotFound.InstanceNotExist"),
      
-     /*         ResourceNotFound.NotFound */
+     /* ResourceNotFound.NotFound */
      RESOURCENOTFOUND_NOTFOUND("ResourceNotFound.NotFound"),
      
-     /*         ResourceUnavailable.Attached */
+     /* ResourceUnavailable.Attached */
      RESOURCEUNAVAILABLE_ATTACHED("ResourceUnavailable.Attached"),
      
-     /*         ResourceUnavailable.Expire */
+     /* ResourceUnavailable.Expire */
      RESOURCEUNAVAILABLE_EXPIRE("ResourceUnavailable.Expire"),
      
-     /*         实例未运行。 */
+     /* 实例未运行。 */
      RESOURCEUNAVAILABLE_INSTANCENOTRUNNING("ResourceUnavailable.InstanceNotRunning"),
      
-     /*         ResourceUnavailable.NotPortable */
+     /* ResourceUnavailable.NotPortable */
      RESOURCEUNAVAILABLE_NOTPORTABLE("ResourceUnavailable.NotPortable"),
      
-     /*         ResourceUnavailable.NotSupported */
+     /* ResourceUnavailable.NotSupported */
      RESOURCEUNAVAILABLE_NOTSUPPORTED("ResourceUnavailable.NotSupported"),
      
-     /*         ResourceUnavailable.RepeatRefund */
+     /* ResourceUnavailable.RepeatRefund */
      RESOURCEUNAVAILABLE_REPEATREFUND("ResourceUnavailable.RepeatRefund"),
      
-     /*         ResourceUnavailable.TypeError */
+     /* ResourceUnavailable.TypeError */
      RESOURCEUNAVAILABLE_TYPEERROR("ResourceUnavailable.TypeError"),
      
-     /*         负载均衡资源已经售罄。 */
+     /* 负载均衡资源已经售罄。 */
      RESOURCESSOLDOUT_LOADBALANCERSOLDOUT("ResourcesSoldOut.LoadBalancerSoldOut"),
      
-     /*         特定机型售罄。 */
+     /* 特定机型售罄。 */
      RESOURCESSOLDOUT_SPECIFIEDINSTANCETYPE("ResourcesSoldOut.SpecifiedInstanceType"),
      
-     /*         未授权操作。 */
+     /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /*         没有权限进行该操作。 */
+     /* 没有权限进行该操作。 */
      UNAUTHORIZEDOPERATION_FORBIDDENOPERATION("UnauthorizedOperation.ForbiddenOperation"),
      
-     /*         UnauthorizedOperation.MFAExpired */
+     /* UnauthorizedOperation.MFAExpired */
      UNAUTHORIZEDOPERATION_MFAEXPIRED("UnauthorizedOperation.MFAExpired"),
      
-     /*         UnauthorizedOperation.NotCertification */
+     /* UnauthorizedOperation.NotCertification */
      UNAUTHORIZEDOPERATION_NOTCERTIFICATION("UnauthorizedOperation.NotCertification"),
      
-     /*         UnauthorizedOperation.NotHavePaymentRight */
+     /* UnauthorizedOperation.NotHavePaymentRight */
      UNAUTHORIZEDOPERATION_NOTHAVEPAYMENTRIGHT("UnauthorizedOperation.NotHavePaymentRight"),
      
-     /*         无windows镜像权限。 */
+     /* 无windows镜像权限。 */
      UNAUTHORIZEDOPERATION_WINDOWSIMAGE("UnauthorizedOperation.WindowsImage"),
      
-     /*         操作不支持。 */
+     /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-     /*         未找到相关IP。 */
+     /* 未找到相关IP。 */
      UNSUPPORTEDOPERATION_ADDRESSIDNOTFOUND("UnsupportedOperation.AddressIdNotFound"),
      
-     /*         指定实例已经绑定了EIP。需先解绑当前的EIP才能再次进行绑定操作。 */
+     /* 指定实例已经绑定了EIP。需先解绑当前的EIP才能再次进行绑定操作。 */
      UNSUPPORTEDOPERATION_ALREADYBINDEIP("UnsupportedOperation.AlreadyBindEip"),
      
-     /*         弹性网卡与实例是已关联的。 */
+     /* 弹性网卡与实例是已关联的。 */
      UNSUPPORTEDOPERATION_ATTACHMENTALREADYEXISTS("UnsupportedOperation.AttachmentAlreadyExists"),
      
-     /*         实例是未关联的。 */
+     /* 实例是未关联的。 */
      UNSUPPORTEDOPERATION_ATTACHMENTNOTFOUND("UnsupportedOperation.AttachmentNotFound"),
      
-     /*         禁止删除默认路由表。 */
+     /* 禁止删除默认路由表。 */
      UNSUPPORTEDOPERATION_DELDEFAULTROUTE("UnsupportedOperation.DelDefaultRoute"),
      
-     /*         禁止删除已关联子网的路由表。 */
+     /* 禁止删除已关联子网的路由表。 */
      UNSUPPORTEDOPERATION_DELROUTEWITHSUBNET("UnsupportedOperation.DelRouteWithSubnet"),
      
-     /*         安全组规则重复。 */
+     /* 安全组规则重复。 */
      UNSUPPORTEDOPERATION_DUPLICATEPOLICY("UnsupportedOperation.DuplicatePolicy"),
      
-     /*         不支持ECMP。 */
+     /* 不支持ECMP。 */
      UNSUPPORTEDOPERATION_ECMP("UnsupportedOperation.Ecmp"),
      
-     /*         和云联网的路由形成ECMP。 */
+     /* 和云联网的路由形成ECMP。 */
      UNSUPPORTEDOPERATION_ECMPWITHCCNROUTE("UnsupportedOperation.EcmpWithCcnRoute"),
      
-     /*         和用户自定义的路由形成ECMP。 */
+     /* 和用户自定义的路由形成ECMP。 */
      UNSUPPORTEDOPERATION_ECMPWITHUSERROUTE("UnsupportedOperation.EcmpWithUserRoute"),
      
-     /*         无效实例ID。指定的实例ID不存在。 */
+     /* 无效实例ID。指定的实例ID不存在。 */
      UNSUPPORTEDOPERATION_INSTANCEIDNOTFOUND("UnsupportedOperation.InstanceIdNotFound"),
      
-     /*         不被支持的实例。 */
+     /* 不被支持的实例。 */
      UNSUPPORTEDOPERATION_INSTANCEIDNOTSUPPORTED("UnsupportedOperation.InstanceIdNotSupported"),
      
-     /*         当前机型不支持所选镜像。 */
+     /* 当前机型不支持所选镜像。 */
      UNSUPPORTEDOPERATION_INSTANCETYPENOTSUPPORTIMAGE("UnsupportedOperation.InstanceTypeNotSupportImage"),
      
-     /*         当前状态不能进行该操作。 */
+     /* 当前状态不能进行该操作。 */
      UNSUPPORTEDOPERATION_INVALIDINSTANCESTATE("UnsupportedOperation.InvalidInstanceState"),
      
-     /*         指定 NetworkInterfaceId 不存在或指定的PrivateIpAddress不在NetworkInterfaceId上。 */
+     /* 指定 NetworkInterfaceId 不存在或指定的PrivateIpAddress不在NetworkInterfaceId上。 */
      UNSUPPORTEDOPERATION_INVALIDNETWORKINTERFACEIDNOTFOUND("UnsupportedOperation.InvalidNetworkInterfaceIdNotFound"),
      
-     /*         指定弹性网卡的指定内网IP已经绑定了EIP，不能重复绑定。 */
+     /* 指定弹性网卡的指定内网IP已经绑定了EIP，不能重复绑定。 */
      UNSUPPORTEDOPERATION_INVALIDPRIVATEIPADDRESSALREADYBINDEIP("UnsupportedOperation.InvalidPrivateIpAddressAlreadyBindEip"),
      
-     /*         资源状态不合法。 */
+     /* 资源状态不合法。 */
      UNSUPPORTEDOPERATION_INVALIDSTATE("UnsupportedOperation.InvalidState"),
      
-     /*         请确认提供的IP地址是否完整。 */
+     /* 请确认提供的IP地址是否完整。 */
      UNSUPPORTEDOPERATION_MALFORMED("UnsupportedOperation.Malformed"),
      
-     /*         资源互斥操作任务正在执行。 */
+     /* 资源互斥操作任务正在执行。 */
      UNSUPPORTEDOPERATION_MUTEXOPERATIONTASKRUNNING("UnsupportedOperation.MutexOperationTaskRunning"),
      
-     /*         实例规格仅支持绑定三个EIP。 */
+     /* 实例规格仅支持绑定三个EIP。 */
      UNSUPPORTEDOPERATION_QUOTALIMITEXCEEDED("UnsupportedOperation.QuotaLimitExceeded"),
      
-     /*         UnsupportedOperation.SnapHasShared */
+     /* UnsupportedOperation.SnapHasShared */
      UNSUPPORTEDOPERATION_SNAPHASSHARED("UnsupportedOperation.SnapHasShared"),
      
-     /*         UnsupportedOperation.SnapshotHasBindedImage */
+     /* UnsupportedOperation.SnapshotHasBindedImage */
      UNSUPPORTEDOPERATION_SNAPSHOTHASBINDEDIMAGE("UnsupportedOperation.SnapshotHasBindedImage"),
      
-     /*         当前状态不能进行此操作。 */
+     /* 当前状态不能进行此操作。 */
      UNSUPPORTEDOPERATION_STATUSNOTPERMIT("UnsupportedOperation.StatusNotPermit"),
      
-     /*         系统路由，禁止操作。 */
+     /* 系统路由，禁止操作。 */
      UNSUPPORTEDOPERATION_SYSTEMROUTE("UnsupportedOperation.SystemRoute"),
      
-     /*         指定安全组规则版本号和当前最新版本不一致。 */
+     /* 指定安全组规则版本号和当前最新版本不一致。 */
      UNSUPPORTEDOPERATION_VERSIONMISMATCH("UnsupportedOperation.VersionMismatch"),
      
-     /*         资源不属于同一个VPC。 */
+     /* 资源不属于同一个VPC。 */
      UNSUPPORTEDOPERATION_VPCMISMATCH("UnsupportedOperation.VpcMismatch");
      
     private String value;

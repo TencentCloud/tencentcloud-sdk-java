@@ -1,120 +1,120 @@
 package com.tencentcloudapi.cms.v20190321;
 public enum CmsErrorCode {
-     /*         CAM签名/鉴权错误。 */
+     /* CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
-     /*         操作失败。 */
+     /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-     /*         内部错误 */
+     /* 内部错误 */
      INTERNALERROR("InternalError"),
      
-     /*         服务内部错误。 */
+     /* 服务内部错误。 */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         图片长宽比太大 */
+     /* 图片长宽比太大 */
      INVALIDPARAMETER_IMAGEASPECTRATIOTOOLARGE("InvalidParameter.ImageAspectRatioTooLarge"),
      
-     /*         图片体积太小 */
+     /* 图片体积太小 */
      INVALIDPARAMETER_IMAGEDATATOOSMALL("InvalidParameter.ImageDataTooSmall"),
      
-     /*         图片尺寸过小。 */
+     /* 图片尺寸过小。 */
      INVALIDPARAMETER_IMAGESIZETOOSMALL("InvalidParameter.ImageSizeTooSmall"),
      
-     /*         图片内容错误。 */
+     /* 图片内容错误。 */
      INVALIDPARAMETER_INVALIDIMAGECONTENT("InvalidParameter.InvalidImageContent"),
      
-     /*         参数不可用 */
+     /* 参数不可用 */
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
      
-     /*         FileContent不可用：需Base64编码 */
+     /* FileContent不可用：需Base64编码 */
      INVALIDPARAMETERVALUE_ERRFILECONTENT("InvalidParameterValue.ErrFileContent"),
      
-     /*         图片尺寸错误。 */
+     /* 图片尺寸错误。 */
      INVALIDPARAMETERVALUE_ERRIMAGESIZE("InvalidParameterValue.ErrImageSize"),
      
-     /*         文本内容过长。 */
+     /* 文本内容过长。 */
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTLEN("InvalidParameterValue.ErrTextContentLen"),
      
-     /*         文本内容类型错误：需base64编码 */
+     /* 文本内容类型错误：需base64编码 */
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
      
-     /*         Content参数错误 */
+     /* Content参数错误 */
      INVALIDPARAMETERVALUE_INVALIDCONTENT("InvalidParameterValue.InvalidContent"),
      
-     /*         图片文件内容大小异常。 */
+     /* 图片文件内容大小异常。 */
      INVALIDPARAMETERVALUE_INVALIDFILECONTENTSIZE("InvalidParameterValue.InvalidFileContentSize"),
      
-     /*         图片内容错误 */
+     /* 图片内容错误 */
      INVALIDPARAMETERVALUE_INVALIDIMAGECONTENT("InvalidParameterValue.InvalidImageContent"),
      
-     /*         参数取值错误 */
+     /* 参数取值错误 */
      INVALIDPARAMETERVALUE_INVALIDPARAMETER("InvalidParameterValue.InvalidParameter"),
      
-     /*         超过配额限制。 */
+     /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /*         缺少参数错误。 */
+     /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-     /*         FileUrl或FileContent都为空 */
+     /* FileUrl或FileContent都为空 */
      MISSINGPARAMETER_ERRFILEURL("MissingParameter.ErrFileUrl"),
      
-     /*         操作被拒绝。 */
+     /* 操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
-     /*         请求的次数超过了频率限制。 */
+     /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /*         资源被占用。 */
+     /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-     /*         资源不足。 */
+     /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-     /*         资源不存在。 */
+     /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /*         文件链接下载内部错误 */
+     /* 文件链接下载内部错误 */
      RESOURCENOTFOUND_ERRDOWDOWNINTERNALERROR("ResourceNotFound.ErrDowdownInternalError"),
      
-     /*         文件链接下载服务参数异常 */
+     /* 文件链接下载服务参数异常 */
      RESOURCENOTFOUND_ERRDOWDOWNPARAMSERROR("ResourceNotFound.ErrDowdownParamsError"),
      
-     /*         文件链接下载源错误 */
+     /* 文件链接下载源错误 */
      RESOURCENOTFOUND_ERRDOWDOWNSOURCEERROR("ResourceNotFound.ErrDowdownSourceError"),
      
-     /*         文件链接下载超时 */
+     /* 文件链接下载超时 */
      RESOURCENOTFOUND_ERRDOWDOWNTIMEOUT("ResourceNotFound.ErrDowdownTimeOut"),
      
-     /*         资源不可用。 */
+     /* 资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /*         图片识别服务超时 */
+     /* 图片识别服务超时 */
      RESOURCEUNAVAILABLE_ERRIMAGETIMEOUT("ResourceUnavailable.ErrImageTimeOut"),
      
-     /*         文本识别服务超时 */
+     /* 文本识别服务超时 */
      RESOURCEUNAVAILABLE_ERRTEXTTIMEOUT("ResourceUnavailable.ErrTextTimeOut"),
      
-     /*         图片文件下载失败。 */
+     /* 图片文件下载失败。 */
      RESOURCEUNAVAILABLE_IMAGEDOWNLOADERROR("ResourceUnavailable.ImageDownloadError"),
      
-     /*         未授权操作。 */
+     /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /*         鉴权失败 */
+     /* 鉴权失败 */
      UNAUTHORIZEDOPERATION_ERRAUTH("UnauthorizedOperation.ErrAuth"),
      
-     /*         未开通权限/无有效套餐包/账号已欠费。 */
+     /* 未开通权限/无有效套餐包/账号已欠费。 */
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized"),
      
-     /*         未知参数错误。 */
+     /* 未知参数错误。 */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-     /*         操作不支持。 */
+     /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

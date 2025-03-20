@@ -1,15 +1,15 @@
 package com.tencentcloudapi.region.v20220627;
 public enum RegionErrorCode {
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
      
-     /*         请求的次数超过了频率限制。 */
+     /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /*         操作不支持。 */
+     /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

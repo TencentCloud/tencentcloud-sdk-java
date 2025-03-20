@@ -1,12 +1,12 @@
 package com.tencentcloudapi.tchd.v20230306;
 public enum TchdErrorCode {
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue");
      
     private String value;

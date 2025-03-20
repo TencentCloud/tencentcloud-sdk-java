@@ -1,12 +1,12 @@
 package com.tencentcloudapi.api.v20201106;
 public enum ApiErrorCode {
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         请求的次数超过了频率限制。 */
+     /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /*         操作不支持。 */
+     /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

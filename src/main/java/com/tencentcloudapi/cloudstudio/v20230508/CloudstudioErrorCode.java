@@ -1,15 +1,15 @@
 package com.tencentcloudapi.cloudstudio.v20230508;
 public enum CloudstudioErrorCode {
-     /*         操作失败。 */
+     /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-     /*         工作空间名称重复 */
+     /* 工作空间名称重复 */
      FAILEDOPERATION_WORKSPACENAMEDUPLICATE("FailedOperation.WorkspaceNameDuplicate"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         请求的次数超过了频率限制。 */
+     /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded");
      
     private String value;

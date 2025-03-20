@@ -1,93 +1,93 @@
 package com.tencentcloudapi.chdfs.v20201112;
 public enum ChdfsErrorCode {
-     /*         操作失败。 */
+     /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-     /*         权限组被绑定。 */
+     /* 权限组被绑定。 */
      FAILEDOPERATION_ACCESSGROUPBOUND("FailedOperation.AccessGroupBound"),
      
-     /*         账户余额不足。 */
+     /* 账户余额不足。 */
      FAILEDOPERATION_ACCOUNTINSUFFICIENTBALANCE("FailedOperation.AccountInsufficientBalance"),
      
-     /*         账户未实名认证。 */
+     /* 账户未实名认证。 */
      FAILEDOPERATION_ACCOUNTUNAUTHENTICATED("FailedOperation.AccountUnauthenticated"),
      
-     /*         文件系统非空。 */
+     /* 文件系统非空。 */
      FAILEDOPERATION_FILESYSTEMNOTEMPTY("FailedOperation.FileSystemNotEmpty"),
      
-     /*         修改的文件系统容量小于当前使用量。 */
+     /* 修改的文件系统容量小于当前使用量。 */
      FAILEDOPERATION_QUOTALESSTHANCURRENTUSED("FailedOperation.QuotaLessThanCurrentUsed"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         AccessGroupId参数取值错误。 */
+     /* AccessGroupId参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDACCESSGROUPID("InvalidParameterValue.InvalidAccessGroupId"),
      
-     /*         AccessGroupName参数取值错误。 */
+     /* AccessGroupName参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDACCESSGROUPNAME("InvalidParameterValue.InvalidAccessGroupName"),
      
-     /*         权限规则的Address参数取值错误。 */
+     /* 权限规则的Address参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDACCESSRULEADDRESS("InvalidParameterValue.InvalidAccessRuleAddress"),
      
-     /*         CapacityQuota参数取值错误。 */
+     /* CapacityQuota参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDCAPACITYQUOTA("InvalidParameterValue.InvalidCapacityQuota"),
      
-     /*         Description参数取值错误。 */
+     /* Description参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDDESCRIPTION("InvalidParameterValue.InvalidDescription"),
      
-     /*         FileSystemId参数取值错误。 */
+     /* FileSystemId参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDFILESYSTEMID("InvalidParameterValue.InvalidFileSystemId"),
      
-     /*         FileSystemName参数取值错误。 */
+     /* FileSystemName参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDFILESYSTEMNAME("InvalidParameterValue.InvalidFileSystemName"),
      
-     /*         MountPointId参数取值错误。 */
+     /* MountPointId参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDMOUNTPOINTID("InvalidParameterValue.InvalidMountPointId"),
      
-     /*         MountPointName参数取值错误。 */
+     /* MountPointName参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDMOUNTPOINTNAME("InvalidParameterValue.InvalidMountPointName"),
      
-     /*         VpcId参数取值错误。 */
+     /* VpcId参数取值错误。 */
      INVALIDPARAMETERVALUE_INVALIDVPCID("InvalidParameterValue.InvalidVpcId"),
      
-     /*         超过配额限制。 */
+     /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /*         缺少参数错误。 */
+     /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-     /*         资源被占用。 */
+     /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-     /*         资源不存在。 */
+     /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /*         权限组不存在。 */
+     /* 权限组不存在。 */
      RESOURCENOTFOUND_ACCESSGROUPNOTEXISTS("ResourceNotFound.AccessGroupNotExists"),
      
-     /*         权限规则不存在。 */
+     /* 权限规则不存在。 */
      RESOURCENOTFOUND_ACCESSRULENOTEXISTS("ResourceNotFound.AccessRuleNotExists"),
      
-     /*         文件系统不存在。 */
+     /* 文件系统不存在。 */
      RESOURCENOTFOUND_FILESYSTEMNOTEXISTS("ResourceNotFound.FileSystemNotExists"),
      
-     /*         挂载点不存在。 */
+     /* 挂载点不存在。 */
      RESOURCENOTFOUND_MOUNTPOINTNOTEXISTS("ResourceNotFound.MountPointNotExists"),
      
-     /*         VPC网络不存在。 */
+     /* VPC网络不存在。 */
      RESOURCENOTFOUND_VPCNOTEXISTS("ResourceNotFound.VpcNotExists"),
      
-     /*         资源不可用。 */
+     /* 资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /*         未授权操作。 */
+     /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

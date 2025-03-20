@@ -1,18 +1,18 @@
 package com.tencentcloudapi.ca.v20230228;
 public enum CaErrorCode {
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         无效的过滤器 */
+     /* 无效的过滤器 */
      INVALIDFILTER("InvalidFilter"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         缺少参数错误。 */
+     /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter");
      
     private String value;

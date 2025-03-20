@@ -1,9 +1,9 @@
 package com.tencentcloudapi.cdwpg.v20201230;
 public enum CdwpgErrorCode {
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         InternalError.SystemError */
+     /* InternalError.SystemError */
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError");
      
     private String value;

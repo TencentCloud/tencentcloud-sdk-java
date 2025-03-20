@@ -1,186 +1,186 @@
 package com.tencentcloudapi.ocr.v20181119;
 public enum OcrErrorCode {
-     /*         账号已欠费。 */
+     /* 账号已欠费。 */
      FAILEDOPERATION_ARREARSERROR("FailedOperation.ArrearsError"),
      
-     /*         身份证CardSide类型错误 */
+     /* 身份证CardSide类型错误 */
      FAILEDOPERATION_CARDSIDEERROR("FailedOperation.CardSideError"),
      
-     /*         图片分类失败 */
+     /* 图片分类失败 */
      FAILEDOPERATION_CLASSIFYSTOREFAILED("FailedOperation.ClassifyStoreFailed"),
      
-     /*         今日次数达到限制。 */
+     /* 今日次数达到限制。 */
      FAILEDOPERATION_COUNTLIMITERROR("FailedOperation.CountLimitError"),
      
-     /*         数据库异常。 */
+     /* 数据库异常。 */
      FAILEDOPERATION_DBERROR("FailedOperation.DbError"),
      
-     /*         检测失败。 */
+     /* 检测失败。 */
      FAILEDOPERATION_DETECTFAILED("FailedOperation.DetectFailed"),
      
-     /*         文件下载失败。 */
+     /* 文件下载失败。 */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
      
-     /*         图片内容为空。 */
+     /* 图片内容为空。 */
      FAILEDOPERATION_EMPTYIMAGEERROR("FailedOperation.EmptyImageError"),
      
-     /*         引擎识别超时。 */
+     /* 引擎识别超时。 */
      FAILEDOPERATION_ENGINERECOGNIZETIMEOUT("FailedOperation.EngineRecognizeTimeout"),
      
-     /*         字段值不符合预期 */
+     /* 字段值不符合预期 */
      FAILEDOPERATION_FIELDEXCEPTION("FailedOperation.FieldException"),
      
-     /*         文件解码失败 */
+     /* 文件解码失败 */
      FAILEDOPERATION_FILEDECODEFAILED("FailedOperation.FileDecodeFailed"),
      
-     /*         第二代身份证信息不合法或缺失（身份证号、姓名字段校验非法等） */
+     /* 第二代身份证信息不合法或缺失（身份证号、姓名字段校验非法等） */
      FAILEDOPERATION_IDCARDINFOILLEGAL("FailedOperation.IdCardInfoIllegal"),
      
-     /*         图片分辨率过小或身份证在原图中的占比过小 */
+     /* 图片分辨率过小或身份证在原图中的占比过小 */
      FAILEDOPERATION_IDCARDTOOSMALL("FailedOperation.IdCardTooSmall"),
      
-     /*         银行卡信息非法。 */
+     /* 银行卡信息非法。 */
      FAILEDOPERATION_ILLEGALBANKCARDERROR("FailedOperation.IllegalBankCardError"),
      
-     /*         图片模糊。 */
+     /* 图片模糊。 */
      FAILEDOPERATION_IMAGEBLUR("FailedOperation.ImageBlur"),
      
-     /*         图片解码失败。 */
+     /* 图片解码失败。 */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-     /*         照片未检测到名片。 */
+     /* 照片未检测到名片。 */
      FAILEDOPERATION_IMAGENOBUSINESSCARD("FailedOperation.ImageNoBusinessCard"),
      
-     /*         图片中未检测到第二代身份证或临时身份证。 */
+     /* 图片中未检测到第二代身份证或临时身份证。 */
      FAILEDOPERATION_IMAGENOIDCARD("FailedOperation.ImageNoIdCard"),
      
-     /*         非指定卡类别图片 */
+     /* 非指定卡类别图片 */
      FAILEDOPERATION_IMAGENOSPECIFIEDCARD("FailedOperation.ImageNoSpecifiedCard"),
      
-     /*         图片中未检测到文本。 */
+     /* 图片中未检测到文本。 */
      FAILEDOPERATION_IMAGENOTEXT("FailedOperation.ImageNoText"),
      
-     /*         图片尺寸过大，请参考输入参数中关于图片大小限制的说明。 */
+     /* 图片尺寸过大，请参考输入参数中关于图片大小限制的说明。 */
      FAILEDOPERATION_IMAGESIZETOOLARGE("FailedOperation.ImageSizeTooLarge"),
      
-     /*         视读区信息与机读区信息不一致 */
+     /* 视读区信息与机读区信息不一致 */
      FAILEDOPERATION_INCONSISTENCYBETWEENMRZANDVRZ("FailedOperation.InconsistencyBetweenMRZAndVRZ"),
      
-     /*         马来西亚证件识别出的邮编长度不正确 */
+     /* 马来西亚证件识别出的邮编长度不正确 */
      FAILEDOPERATION_INVALIDPOSTALCODELENGTH("FailedOperation.InvalidPostalCodeLength"),
      
-     /*         发票数据不一致。温馨提示：新版发票核验接口功能更完整，请尽快切换，如已切换请忽略。 */
+     /* 发票数据不一致。温馨提示：新版发票核验接口功能更完整，请尽快切换，如已切换请忽略。 */
      FAILEDOPERATION_INVOICEMISMATCH("FailedOperation.InvoiceMismatch"),
      
-     /*         输入的Language不支持。 */
+     /* 输入的Language不支持。 */
      FAILEDOPERATION_LANGUAGENOTSUPPORT("FailedOperation.LanguageNotSupport"),
      
-     /*         入参CardSide错误，与实际上传的卡证正副页类型不符 */
+     /* 入参CardSide错误，与实际上传的卡证正副页类型不符 */
      FAILEDOPERATION_LICENSECARDSIDEERROR("FailedOperation.LicenseCardSideError"),
      
-     /*         图片中存在两张及以上同面卡证，请上传卡证单面图片或一正一反双面图片 */
+     /* 图片中存在两张及以上同面卡证，请上传卡证单面图片或一正一反双面图片 */
      FAILEDOPERATION_LICENSEMULTICARDERROR("FailedOperation.LicenseMultiCardError"),
      
-     /*         图片中存在两张及以上同面卡证，请上传卡证单面图片或一正一反双面图片。 */
+     /* 图片中存在两张及以上同面卡证，请上传卡证单面图片或一正一反双面图片。 */
      FAILEDOPERATION_MULTICARDERROR("FailedOperation.MultiCardError"),
      
-     /*         非银行卡。 */
+     /* 非银行卡。 */
      FAILEDOPERATION_NOBANKCARDERROR("FailedOperation.NoBankCardError"),
      
-     /*         非营业执照。 */
+     /* 非营业执照。 */
      FAILEDOPERATION_NOBIZLICENSE("FailedOperation.NoBizLicense"),
      
-     /*         上传的图片非驾驶证 */
+     /* 上传的图片非驾驶证 */
      FAILEDOPERATION_NODRIVERLICENSEERROR("FailedOperation.NoDriverLicenseError"),
      
-     /*         非香港身份证。 */
+     /* 非香港身份证。 */
      FAILEDOPERATION_NOHKIDCARD("FailedOperation.NoHKIDCard"),
      
-     /*         非马来身份证。 */
+     /* 非马来身份证。 */
      FAILEDOPERATION_NOMASIDCARD("FailedOperation.NoMASIDCard"),
      
-     /*         非护照。 */
+     /* 非护照。 */
      FAILEDOPERATION_NOPASSPORT("FailedOperation.NoPassport"),
      
-     /*         图片不属于门头照 */
+     /* 图片不属于门头照 */
      FAILEDOPERATION_NOSTORELABEL("FailedOperation.NoStoreLabel"),
      
-     /*         上传的图片非行驶证 */
+     /* 上传的图片非行驶证 */
      FAILEDOPERATION_NOVEHICLELICENSEERROR("FailedOperation.NoVehicleLicenseError"),
      
-     /*         OCR识别失败。 */
+     /* OCR识别失败。 */
      FAILEDOPERATION_OCRFAILED("FailedOperation.OcrFailed"),
      
-     /*         PDF解析失败。 */
+     /* PDF解析失败。 */
      FAILEDOPERATION_PDFPARSEFAILED("FailedOperation.PDFParseFailed"),
      
-     /*         未知错误。 */
+     /* 未知错误。 */
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
      
-     /*         未知的文件类型。 */
+     /* 未知的文件类型。 */
      FAILEDOPERATION_UNKNOWFILETYPEERROR("FailedOperation.UnKnowFileTypeError"),
      
-     /*         服务未开通。 */
+     /* 服务未开通。 */
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
-     /*         剩余识别次数不足，请检查资源包状态。 */
+     /* 剩余识别次数不足，请检查资源包状态。 */
      FAILEDOPERATION_USERQUOTAERROR("FailedOperation.UserQuotaError"),
      
-     /*         通用告警服务异常 */
+     /* 通用告警服务异常 */
      FAILEDOPERATION_WARNINGSERVICEFAILED("FailedOperation.WarningServiceFailed"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         Config不是有效的JSON格式。 */
+     /* Config不是有效的JSON格式。 */
      INVALIDPARAMETER_CONFIGFORMATERROR("InvalidParameter.ConfigFormatError"),
      
-     /*         图片解码失败。 */
+     /* 图片解码失败。 */
      INVALIDPARAMETER_ENGINEIMAGEDECODEFAILED("InvalidParameter.EngineImageDecodeFailed"),
      
-     /*         任务创建失败，文件URL非法。 */
+     /* 任务创建失败，文件URL非法。 */
      INVALIDPARAMETERVALUE_FILEURLILLEGALERROR("InvalidParameterValue.FileUrlIllegalError"),
      
-     /*         参数值错误。 */
+     /* 参数值错误。 */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
      
-     /*         开票金额或校验码参数值错误。 */
+     /* 开票金额或校验码参数值错误。 */
      INVALIDPARAMETERVALUE_PRICEORVERIFICATIONPARAMETERVALUELIMIT("InvalidParameterValue.PriceOrVerificationParameterValueLimit"),
      
-     /*         发票代码参数值错误。 */
+     /* 发票代码参数值错误。 */
      INVALIDPARAMETERVALUE_TICKETCODEPARAMETERVALUELIMIT("InvalidParameterValue.TicketCodeParameterValueLimit"),
      
-     /*         开票日期参数值错误。 */
+     /* 开票日期参数值错误。 */
      INVALIDPARAMETERVALUE_TICKETDATEPARAMETERVALUELIMIT("InvalidParameterValue.TicketDateParameterValueLimit"),
      
-     /*         发票号码参数值错误。 */
+     /* 发票号码参数值错误。 */
      INVALIDPARAMETERVALUE_TICKETSNPARAMETERVALUELIMIT("InvalidParameterValue.TicketSnParameterValueLimit"),
      
-     /*         文件内容太大。 */
+     /* 文件内容太大。 */
      LIMITEXCEEDED_TOOLARGEFILEERROR("LimitExceeded.TooLargeFileError"),
      
-     /*         请求的次数超过了频率限制。 */
+     /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /*         地区编码不存在。 */
+     /* 地区编码不存在。 */
      RESOURCENOTFOUND_NOAREACODE("ResourceNotFound.NoAreaCode"),
      
-     /*         发票不存在。温馨提示：新版发票核验接口功能更完整，请尽快切换，如已切换请忽略。 */
+     /* 发票不存在。温馨提示：新版发票核验接口功能更完整，请尽快切换，如已切换请忽略。 */
      RESOURCENOTFOUND_NOINVOICE("ResourceNotFound.NoInvoice"),
      
-     /*         不支持当天发票查询。 */
+     /* 不支持当天发票查询。 */
      RESOURCENOTFOUND_NOTSUPPORTCURRENTINVOICEQUERY("ResourceNotFound.NotSupportCurrentInvoiceQuery"),
      
-     /*         账号已欠费。 */
+     /* 账号已欠费。 */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-     /*         账号资源包耗尽。 */
+     /* 账号资源包耗尽。 */
      RESOURCEUNAVAILABLE_RESOURCEPACKAGERUNOUT("ResourceUnavailable.ResourcePackageRunOut"),
      
-     /*         税务局网络异常，请稍后访问。 */
+     /* 税务局网络异常，请稍后访问。 */
      RESOURCEUNAVAILABLE_TAXNETWORKERROR("ResourceUnavailable.TaxNetworkError"),
      
-     /*         计费状态异常。 */
+     /* 计费状态异常。 */
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
      
     private String value;

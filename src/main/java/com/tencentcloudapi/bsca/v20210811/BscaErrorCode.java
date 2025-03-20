@@ -1,21 +1,21 @@
 package com.tencentcloudapi.bsca.v20210811;
 public enum BscaErrorCode {
-     /*         账户流量余额不足。 */
+     /* 账户流量余额不足。 */
      FAILEDOPERATION_ACCOUNTNOTENOUGH("FailedOperation.AccountNotEnough"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         缺少参数错误。 */
+     /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-     /*         资源不存在。 */
+     /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;

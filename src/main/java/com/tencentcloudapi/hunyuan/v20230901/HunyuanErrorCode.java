@@ -1,96 +1,96 @@
 package com.tencentcloudapi.hunyuan.v20230901;
 public enum HunyuanErrorCode {
-     /*         操作失败。 */
+     /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-     /*         控制台服务异常。 */
+     /* 控制台服务异常。 */
      FAILEDOPERATION_CONSOLESERVERERROR("FailedOperation.ConsoleServerError"),
      
-     /*         LogoUrl 或 LogoImage 有误，水印图下载失败。 */
+     /* LogoUrl 或 LogoImage 有误，水印图下载失败。 */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownloadError"),
      
-     /*         引擎层请求超时；请稍后重试。 */
+     /* 引擎层请求超时；请稍后重试。 */
      FAILEDOPERATION_ENGINEREQUESTTIMEOUT("FailedOperation.EngineRequestTimeout"),
      
-     /*         引擎层内部错误；请稍后重试。 */
+     /* 引擎层内部错误；请稍后重试。 */
      FAILEDOPERATION_ENGINESERVERERROR("FailedOperation.EngineServerError"),
      
-     /*         引擎层请求超过限额；请稍后重试。 */
+     /* 引擎层请求超过限额；请稍后重试。 */
      FAILEDOPERATION_ENGINESERVERLIMITEXCEEDED("FailedOperation.EngineServerLimitExceeded"),
      
-     /*         免费资源包余量已用尽，请购买资源包或开通后付费。 */
+     /* 免费资源包余量已用尽，请购买资源包或开通后付费。 */
      FAILEDOPERATION_FREERESOURCEPACKEXHAUSTED("FailedOperation.FreeResourcePackExhausted"),
      
-     /*         图片包含敏感内容 */
+     /* 图片包含敏感内容 */
      FAILEDOPERATION_GENERATEIMAGEFAILED("FailedOperation.GenerateImageFailed"),
      
-     /*         水印图解码失败 */
+     /* 水印图解码失败 */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-     /*         LogoUrl 或 LogoImage 有误，水印图下载失败。 */
+     /* LogoUrl 或 LogoImage 有误，水印图下载失败。 */
      FAILEDOPERATION_IMAGEDOWNLOADERROR("FailedOperation.ImageDownloadError"),
      
-     /*         合作伙伴账号不允许开通，请更换账号。 */
+     /* 合作伙伴账号不允许开通，请更换账号。 */
      FAILEDOPERATION_PARTNERACCOUNTUNSUPPORT("FailedOperation.PartnerAccountUnSupport"),
      
-     /*         资源包余量已用尽，请购买资源包或开通后付费。 */
+     /* 资源包余量已用尽，请购买资源包或开通后付费。 */
      FAILEDOPERATION_RESOURCEPACKEXHAUSTED("FailedOperation.ResourcePackExhausted"),
      
-     /*         服务未开通，请前往控制台申请试用。 */
+     /* 服务未开通，请前往控制台申请试用。 */
      FAILEDOPERATION_SERVICENOTACTIVATED("FailedOperation.ServiceNotActivated"),
      
-     /*         用户主动停服。 */
+     /* 用户主动停服。 */
      FAILEDOPERATION_SERVICESTOP("FailedOperation.ServiceStop"),
      
-     /*         欠费停服。 */
+     /* 欠费停服。 */
      FAILEDOPERATION_SERVICESTOPARREARS("FailedOperation.ServiceStopArrears"),
      
-     /*         后付费设置次数超过每月限制。 */
+     /* 后付费设置次数超过每月限制。 */
      FAILEDOPERATION_SETPAYMODEEXCEED("FailedOperation.SetPayModeExceed"),
      
-     /*         用户未实名，请先进行实名认证。 */
+     /* 用户未实名，请先进行实名认证。 */
      FAILEDOPERATION_USERUNAUTHERROR("FailedOperation.UserUnAuthError"),
      
-     /*         内部错误。 */
+     /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
-     /*         参数错误。 */
+     /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*         参数不合法。 */
+     /* 参数不合法。 */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
-     /*         参数取值错误。 */
+     /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*         模型不存在。 */
+     /* 模型不存在。 */
      INVALIDPARAMETERVALUE_MODEL("InvalidParameterValue.Model"),
      
-     /*         参数字段或者值有误 */
+     /* 参数字段或者值有误 */
      INVALIDPARAMETERVALUE_PARAMETERVALUEERROR("InvalidParameterValue.ParameterValueError"),
      
-     /*         超过配额限制。 */
+     /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /*         图片可能包含敏感信息，请重试 */
+     /* 图片可能包含敏感信息，请重试 */
      OPERATIONDENIED_IMAGEILLEGALDETECTED("OperationDenied.ImageIllegalDetected"),
      
-     /*         文本包含违法违规信息，审核不通过。 */
+     /* 文本包含违法违规信息，审核不通过。 */
      OPERATIONDENIED_TEXTILLEGALDETECTED("OperationDenied.TextIllegalDetected"),
      
-     /*         计费资源已耗尽。 */
+     /* 计费资源已耗尽。 */
      RESOURCEINSUFFICIENT_CHARGERESOURCEEXHAUST("ResourceInsufficient.ChargeResourceExhaust"),
      
-     /*         账号已欠费。 */
+     /* 账号已欠费。 */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-     /*         余额不足。 */
+     /* 余额不足。 */
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
      
-     /*         计费状态未知，请确认是否已在控制台开通服务。 */
+     /* 计费状态未知，请确认是否已在控制台开通服务。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-     /*         账号已停服。 */
+     /* 账号已停服。 */
      RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing");
      
     private String value;
