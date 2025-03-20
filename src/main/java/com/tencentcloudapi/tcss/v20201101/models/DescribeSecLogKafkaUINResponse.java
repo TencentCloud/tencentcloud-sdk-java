@@ -25,7 +25,6 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
 
     /**
     * 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstUIN")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
 
     /**
     * 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标UIN 
      * @return DstUIN 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstUIN() {
         return this.DstUIN;
@@ -58,19 +54,15 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
 
     /**
      * Set 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstUIN 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstUIN(String DstUIN) {
         this.DstUIN = DstUIN;
     }
 
     /**
-     * Get 授权状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权状态 
      * @return Status 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStatus() {
         return this.Status;
@@ -78,9 +70,7 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
 
     /**
      * Set 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

@@ -32,7 +32,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -40,7 +39,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupList")
     @Expose
@@ -48,7 +46,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPartition")
     @Expose
@@ -56,7 +53,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionListForMonitor")
     @Expose
@@ -64,7 +60,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTopic")
     @Expose
@@ -72,7 +67,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicListForMonitor")
     @Expose
@@ -80,7 +74,6 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
     * 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupListForMonitor")
     @Expose
@@ -103,10 +96,8 @@ public class ConsumerGroupResponse extends AbstractModel {
     }
 
     /**
-     * Get 主题列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题列表 
      * @return TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerGroupTopic [] getTopicList() {
         return this.TopicList;
@@ -114,19 +105,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(ConsumerGroupTopic [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费分组List 
      * @return GroupList 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerGroup [] getGroupList() {
         return this.GroupList;
@@ -134,19 +121,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupList 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupList(ConsumerGroup [] GroupList) {
         this.GroupList = GroupList;
     }
 
     /**
-     * Get 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所有分区数量 
      * @return TotalPartition 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPartition() {
         return this.TotalPartition;
@@ -154,19 +137,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPartition 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPartition(Long TotalPartition) {
         this.TotalPartition = TotalPartition;
     }
 
     /**
-     * Get 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控的分区列表 
      * @return PartitionListForMonitor 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Partition [] getPartitionListForMonitor() {
         return this.PartitionListForMonitor;
@@ -174,19 +153,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionListForMonitor 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionListForMonitor(Partition [] PartitionListForMonitor) {
         this.PartitionListForMonitor = PartitionListForMonitor;
     }
 
     /**
-     * Get 主题总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题总数 
      * @return TotalTopic 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalTopic() {
         return this.TotalTopic;
@@ -194,19 +169,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalTopic 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTopic(Long TotalTopic) {
         this.TotalTopic = TotalTopic;
     }
 
     /**
-     * Get 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控的主题列表 
      * @return TopicListForMonitor 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerGroupTopic [] getTopicListForMonitor() {
         return this.TopicListForMonitor;
@@ -214,19 +185,15 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicListForMonitor 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicListForMonitor(ConsumerGroupTopic [] TopicListForMonitor) {
         this.TopicListForMonitor = TopicListForMonitor;
     }
 
     /**
-     * Get 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控的组列表 
      * @return GroupListForMonitor 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Group [] getGroupListForMonitor() {
         return this.GroupListForMonitor;
@@ -234,9 +201,7 @@ public class ConsumerGroupResponse extends AbstractModel {
 
     /**
      * Set 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupListForMonitor 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupListForMonitor(Group [] GroupListForMonitor) {
         this.GroupListForMonitor = GroupListForMonitor;

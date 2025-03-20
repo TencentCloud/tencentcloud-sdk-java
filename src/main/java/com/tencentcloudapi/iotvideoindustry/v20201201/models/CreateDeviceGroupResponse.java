@@ -25,7 +25,6 @@ public class CreateDeviceGroupResponse extends AbstractModel {
 
     /**
     * 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class CreateDeviceGroupResponse extends AbstractModel {
 
     /**
     * 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -47,10 +45,8 @@ public class CreateDeviceGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应结果，“OK”为成功，其他为失败 
      * @return Status 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -58,19 +54,15 @@ public class CreateDeviceGroupResponse extends AbstractModel {
 
     /**
      * Set 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID 
      * @return GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -78,9 +70,7 @@ public class CreateDeviceGroupResponse extends AbstractModel {
 
     /**
      * Set 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

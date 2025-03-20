@@ -25,7 +25,6 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
     * 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -33,7 +32,6 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
     * 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
     @Expose
@@ -41,7 +39,6 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
     * 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranId")
     @Expose
@@ -49,7 +46,6 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
     * 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -57,7 +53,6 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
     * 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -71,10 +66,8 @@ public class RenewClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费总订单号 
      * @return BigDealIds 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
@@ -82,19 +75,15 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
      * Set 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealIds 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
     }
 
     /**
-     * Get 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款订单号 
      * @return DealNames 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -102,19 +91,15 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
      * Set 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冻结流水，一次开通一个冻结流水 
      * @return TranId 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranId() {
         return this.TranId;
@@ -122,19 +107,15 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
      * Set 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranId 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个订单号对应的发货资源id列表 
      * @return ResourceIds 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
@@ -142,19 +123,15 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
      * Set 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceIds 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群id列表 
      * @return ClusterIds 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
@@ -162,9 +139,7 @@ public class RenewClustersResponse extends AbstractModel {
 
     /**
      * Set 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIds 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

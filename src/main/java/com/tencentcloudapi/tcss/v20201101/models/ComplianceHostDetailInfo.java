@@ -25,7 +25,6 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
     * 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DockerVersion")
     @Expose
@@ -33,7 +32,6 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
     * 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("K8SVersion")
     @Expose
@@ -41,17 +39,14 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
     * 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerdVersion")
     @Expose
     private String ContainerdVersion;
 
     /**
-     * Get 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机上的Docker版本。 
      * @return DockerVersion 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDockerVersion() {
         return this.DockerVersion;
@@ -59,19 +54,15 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
      * Set 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DockerVersion 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机上的K8S的版本。 
      * @return K8SVersion 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getK8SVersion() {
         return this.K8SVersion;
@@ -79,19 +70,15 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
      * Set 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param K8SVersion 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setK8SVersion(String K8SVersion) {
         this.K8SVersion = K8SVersion;
     }
 
     /**
-     * Get 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机上Containerd版本 
      * @return ContainerdVersion 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerdVersion() {
         return this.ContainerdVersion;
@@ -99,9 +86,7 @@ public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
      * Set 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerdVersion 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerdVersion(String ContainerdVersion) {
         this.ContainerdVersion = ContainerdVersion;

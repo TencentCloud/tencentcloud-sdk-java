@@ -25,7 +25,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntId")
     @Expose
@@ -33,7 +32,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -41,7 +39,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneName")
     @Expose
@@ -49,7 +46,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 触发规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneTrigger")
     @Expose
@@ -57,7 +53,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 录制时长 秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordDuration")
     @Expose
@@ -65,7 +60,6 @@ public class SceneItem extends AbstractModel {
 
     /**
     * 存储时长 天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoreDuration")
     @Expose
@@ -86,10 +80,8 @@ public class SceneItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get 场景ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景ID 
      * @return IntId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntId() {
         return this.IntId;
@@ -97,19 +89,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntId(Long IntId) {
         this.IntId = IntId;
     }
 
     /**
-     * Get 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户UIN 
      * @return Uin 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -117,19 +105,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 场景名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景名称 
      * @return SceneName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneName() {
         return this.SceneName;
@@ -137,19 +121,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get 触发规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发规则 
      * @return SceneTrigger 触发规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneTrigger() {
         return this.SceneTrigger;
@@ -157,19 +137,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 触发规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneTrigger 触发规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneTrigger(String SceneTrigger) {
         this.SceneTrigger = SceneTrigger;
     }
 
     /**
-     * Get 录制时长 秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制时长 秒 
      * @return RecordDuration 录制时长 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordDuration() {
         return this.RecordDuration;
@@ -177,19 +153,15 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 录制时长 秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordDuration 录制时长 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordDuration(Long RecordDuration) {
         this.RecordDuration = RecordDuration;
     }
 
     /**
-     * Get 存储时长 天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储时长 天 
      * @return StoreDuration 存储时长 天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStoreDuration() {
         return this.StoreDuration;
@@ -197,9 +169,7 @@ public class SceneItem extends AbstractModel {
 
     /**
      * Set 存储时长 天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoreDuration 存储时长 天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoreDuration(Long StoreDuration) {
         this.StoreDuration = StoreDuration;

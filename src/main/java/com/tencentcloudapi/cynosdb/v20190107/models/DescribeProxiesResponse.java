@@ -32,7 +32,6 @@ public class DescribeProxiesResponse extends AbstractModel {
 
     /**
     * 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyGroupInfos")
     @Expose
@@ -70,10 +69,8 @@ public class DescribeProxiesResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库代理组列表 
      * @return ProxyGroupInfos 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyGroupInfo [] getProxyGroupInfos() {
         return this.ProxyGroupInfos;
@@ -81,9 +78,7 @@ public class DescribeProxiesResponse extends AbstractModel {
 
     /**
      * Set 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyGroupInfos 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyGroupInfos(ProxyGroupInfo [] ProxyGroupInfos) {
         this.ProxyGroupInfos = ProxyGroupInfos;

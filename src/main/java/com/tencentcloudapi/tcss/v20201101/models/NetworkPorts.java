@@ -25,7 +25,6 @@ public class NetworkPorts extends AbstractModel {
 
     /**
     * 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -33,17 +32,14 @@ public class NetworkPorts extends AbstractModel {
 
     /**
     * 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-     * Get 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络策略协议 
      * @return Protocol 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -51,19 +47,15 @@ public class NetworkPorts extends AbstractModel {
 
     /**
      * Set 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络策略策略端口 
      * @return Port 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -71,9 +63,7 @@ public class NetworkPorts extends AbstractModel {
 
     /**
      * Set 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;

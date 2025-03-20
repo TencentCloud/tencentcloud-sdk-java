@@ -25,7 +25,6 @@ public class CreateLiveChannelResponse extends AbstractModel {
 
     /**
     * 直播频道ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveChannelId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateLiveChannelResponse extends AbstractModel {
 
     /**
     * 直播频道推流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushStreamAddress")
     @Expose
@@ -47,10 +45,8 @@ public class CreateLiveChannelResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 直播频道ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播频道ID 
      * @return LiveChannelId 直播频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLiveChannelId() {
         return this.LiveChannelId;
@@ -58,19 +54,15 @@ public class CreateLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 直播频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveChannelId 直播频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveChannelId(String LiveChannelId) {
         this.LiveChannelId = LiveChannelId;
     }
 
     /**
-     * Get 直播频道推流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播频道推流地址 
      * @return PushStreamAddress 直播频道推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPushStreamAddress() {
         return this.PushStreamAddress;
@@ -78,9 +70,7 @@ public class CreateLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 直播频道推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushStreamAddress 直播频道推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushStreamAddress(String PushStreamAddress) {
         this.PushStreamAddress = PushStreamAddress;

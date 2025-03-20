@@ -25,7 +25,6 @@ public class IsolateClusterResponse extends AbstractModel {
 
     /**
     * 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -47,10 +46,8 @@ public class IsolateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口) 
      * @return FlowId 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -58,9 +55,7 @@ public class IsolateClusterResponse extends AbstractModel {
 
     /**
      * Set 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

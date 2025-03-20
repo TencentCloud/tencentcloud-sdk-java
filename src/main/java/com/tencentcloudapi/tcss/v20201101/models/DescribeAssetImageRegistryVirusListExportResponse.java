@@ -25,7 +25,6 @@ public class DescribeAssetImageRegistryVirusListExportResponse extends AbstractM
 
     /**
     * excel文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAssetImageRegistryVirusListExportResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get excel文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get excel文件下载地址 
      * @return DownloadUrl excel文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -50,9 +47,7 @@ public class DescribeAssetImageRegistryVirusListExportResponse extends AbstractM
 
     /**
      * Set excel文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl excel文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

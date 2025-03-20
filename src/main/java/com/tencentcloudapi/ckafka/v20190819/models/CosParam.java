@@ -25,7 +25,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * cos 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketName")
     @Expose
@@ -33,7 +32,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -41,7 +39,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 对象名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectKey")
     @Expose
@@ -49,7 +46,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 汇聚消息量的大小（单位：MB)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AggregateBatchSize")
     @Expose
@@ -57,7 +53,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 汇聚的时间间隔（单位：小时）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AggregateInterval")
     @Expose
@@ -65,7 +60,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 消息汇聚后的文件格式（支持csv, json）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormatOutputType")
     @Expose
@@ -73,7 +67,6 @@ public class CosParam extends AbstractModel {
 
     /**
     * 转储的对象目录前缀
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectKeyPrefix")
     @Expose
@@ -81,17 +74,14 @@ public class CosParam extends AbstractModel {
 
     /**
     * 根据strptime 时间格式化的分区格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectoryTimeFormat")
     @Expose
     private String DirectoryTimeFormat;
 
     /**
-     * Get cos 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos 存储桶名称 
      * @return BucketName cos 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketName() {
         return this.BucketName;
@@ -99,19 +89,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set cos 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketName cos 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 地域代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域代码 
      * @return Region 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -119,19 +105,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 对象名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象名称 
      * @return ObjectKey 对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectKey() {
         return this.ObjectKey;
@@ -139,19 +121,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectKey 对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectKey(String ObjectKey) {
         this.ObjectKey = ObjectKey;
     }
 
     /**
-     * Get 汇聚消息量的大小（单位：MB)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 汇聚消息量的大小（单位：MB) 
      * @return AggregateBatchSize 汇聚消息量的大小（单位：MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAggregateBatchSize() {
         return this.AggregateBatchSize;
@@ -159,19 +137,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 汇聚消息量的大小（单位：MB)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AggregateBatchSize 汇聚消息量的大小（单位：MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggregateBatchSize(Long AggregateBatchSize) {
         this.AggregateBatchSize = AggregateBatchSize;
     }
 
     /**
-     * Get 汇聚的时间间隔（单位：小时）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 汇聚的时间间隔（单位：小时） 
      * @return AggregateInterval 汇聚的时间间隔（单位：小时）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAggregateInterval() {
         return this.AggregateInterval;
@@ -179,19 +153,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 汇聚的时间间隔（单位：小时）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AggregateInterval 汇聚的时间间隔（单位：小时）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAggregateInterval(Long AggregateInterval) {
         this.AggregateInterval = AggregateInterval;
     }
 
     /**
-     * Get 消息汇聚后的文件格式（支持csv, json）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息汇聚后的文件格式（支持csv, json） 
      * @return FormatOutputType 消息汇聚后的文件格式（支持csv, json）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormatOutputType() {
         return this.FormatOutputType;
@@ -199,19 +169,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 消息汇聚后的文件格式（支持csv, json）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormatOutputType 消息汇聚后的文件格式（支持csv, json）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormatOutputType(String FormatOutputType) {
         this.FormatOutputType = FormatOutputType;
     }
 
     /**
-     * Get 转储的对象目录前缀
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转储的对象目录前缀 
      * @return ObjectKeyPrefix 转储的对象目录前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectKeyPrefix() {
         return this.ObjectKeyPrefix;
@@ -219,19 +185,15 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 转储的对象目录前缀
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectKeyPrefix 转储的对象目录前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectKeyPrefix(String ObjectKeyPrefix) {
         this.ObjectKeyPrefix = ObjectKeyPrefix;
     }
 
     /**
-     * Get 根据strptime 时间格式化的分区格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 根据strptime 时间格式化的分区格式 
      * @return DirectoryTimeFormat 根据strptime 时间格式化的分区格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDirectoryTimeFormat() {
         return this.DirectoryTimeFormat;
@@ -239,9 +201,7 @@ public class CosParam extends AbstractModel {
 
     /**
      * Set 根据strptime 时间格式化的分区格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DirectoryTimeFormat 根据strptime 时间格式化的分区格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectoryTimeFormat(String DirectoryTimeFormat) {
         this.DirectoryTimeFormat = DirectoryTimeFormat;

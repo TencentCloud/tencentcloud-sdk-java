@@ -803,6 +803,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *删除漏洞防御白名单
+     * @param req DeleteRaspRulesRequest
+     * @return DeleteRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRaspRulesResponse DeleteRaspRules(DeleteRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRaspRules", DeleteRaspRulesResponse.class);
+    }
+
+    /**
      *删除运行时反弹shell事件
      * @param req DeleteReverseShellEventsRequest
      * @return DeleteReverseShellEventsResponse
@@ -902,19 +913,6 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃
-
-查询运行时异常进程事件列表信息导出
-     * @param req DescribeAbnormalProcessEventsExportRequest
-     * @return DescribeAbnormalProcessEventsExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(DescribeAbnormalProcessEventsExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAbnormalProcessEventsExport", DescribeAbnormalProcessEventsExportResponse.class);
-    }
-
-    /**
      *统计异常进程各威胁等级待处理事件数
      * @param req DescribeAbnormalProcessLevelSummaryRequest
      * @return DescribeAbnormalProcessLevelSummaryResponse
@@ -945,19 +943,6 @@ public class TcssClient extends AbstractClient{
     public DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(DescribeAbnormalProcessRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAbnormalProcessRules", DescribeAbnormalProcessRulesResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-查询运行时异常进程策略列表信息导出
-     * @param req DescribeAbnormalProcessRulesExportRequest
-     * @return DescribeAbnormalProcessRulesExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(DescribeAbnormalProcessRulesExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAbnormalProcessRulesExport", DescribeAbnormalProcessRulesExportResponse.class);
     }
 
     /**
@@ -1013,19 +998,6 @@ public class TcssClient extends AbstractClient{
     public DescribeAccessControlRulesResponse DescribeAccessControlRules(DescribeAccessControlRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessControlRules", DescribeAccessControlRulesResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-查询运行时访问控制策略列表导出
-     * @param req DescribeAccessControlRulesExportRequest
-     * @return DescribeAccessControlRulesExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(DescribeAccessControlRulesExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAccessControlRulesExport", DescribeAccessControlRulesExportResponse.class);
     }
 
     /**
@@ -1213,19 +1185,6 @@ public class TcssClient extends AbstractClient{
     public DescribeAssetImageListResponse DescribeAssetImageList(DescribeAssetImageListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssetImageList", DescribeAssetImageListResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-容器安全搜索查询镜像列表导出
-     * @param req DescribeAssetImageListExportRequest
-     * @return DescribeAssetImageListExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAssetImageListExportResponse DescribeAssetImageListExport(DescribeAssetImageListExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAssetImageListExport", DescribeAssetImageListExportResponse.class);
     }
 
     /**
@@ -1823,19 +1782,6 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃
-
-DescribeEscapeEventsExport  查询容器逃逸事件列表导出
-     * @param req DescribeEscapeEventsExportRequest
-     * @return DescribeEscapeEventsExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(DescribeEscapeEventsExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEscapeEventsExport", DescribeEscapeEventsExportResponse.class);
-    }
-
-    /**
      *DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
      * @param req DescribeEscapeRuleInfoRequest
      * @return DescribeEscapeRuleInfoResponse
@@ -2317,6 +2263,28 @@ DescribeEscapeEventsExport  查询容器逃逸事件列表导出
     public DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(DescribePurchaseStateInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePurchaseStateInfo", DescribePurchaseStateInfoResponse.class);
+    }
+
+    /**
+     *获取漏洞防御白名单漏洞列表
+     * @param req DescribeRaspRuleVulsRequest
+     * @return DescribeRaspRuleVulsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRuleVuls", DescribeRaspRuleVulsResponse.class);
+    }
+
+    /**
+     *查询支持防御的漏洞列表
+     * @param req DescribeRaspRulesRequest
+     * @return DescribeRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRulesResponse DescribeRaspRules(DescribeRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRules", DescribeRaspRulesResponse.class);
     }
 
     /**
@@ -3384,6 +3352,17 @@ DescribeEscapeEventsExport  查询容器逃逸事件列表导出
     public ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(ModifyK8sApiAbnormalRuleStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyK8sApiAbnormalRuleStatus", ModifyK8sApiAbnormalRuleStatusResponse.class);
+    }
+
+    /**
+     *编辑或者创建java内存马白名单
+     * @param req ModifyRaspRulesRequest
+     * @return ModifyRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspRulesResponse ModifyRaspRules(ModifyRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspRules", ModifyRaspRulesResponse.class);
     }
 
     /**

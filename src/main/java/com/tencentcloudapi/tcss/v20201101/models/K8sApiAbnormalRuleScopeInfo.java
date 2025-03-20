@@ -51,7 +51,6 @@ USER_DEFINED: 用户自定义
 
     /**
     * 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -59,7 +58,6 @@ USER_DEFINED: 用户自定义
 
     /**
     * 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -67,7 +65,6 @@ USER_DEFINED: 用户自定义
 
     /**
     * 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDelete")
     @Expose
@@ -154,10 +151,8 @@ USER_DEFINED: 用户自定义
     }
 
     /**
-     * Get 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示 
      * @return RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -165,19 +160,15 @@ USER_DEFINED: 用户自定义
 
     /**
      * Set 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关状态(true:开 false:关) 适用于系统规则 
      * @return Status 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStatus() {
         return this.Status;
@@ -185,19 +176,15 @@ USER_DEFINED: 用户自定义
 
     /**
      * Set 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否被删除 适用于自定义规则入参 
      * @return IsDelete 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDelete() {
         return this.IsDelete;
@@ -205,9 +192,7 @@ USER_DEFINED: 用户自定义
 
     /**
      * Set 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDelete 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDelete(Boolean IsDelete) {
         this.IsDelete = IsDelete;

@@ -32,7 +32,6 @@ public class Assignment extends AbstractModel {
 
     /**
     * topic信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topics")
     @Expose
@@ -55,10 +54,8 @@ public class Assignment extends AbstractModel {
     }
 
     /**
-     * Get topic信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get topic信息列表 
      * @return Topics topic信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfoTopics [] getTopics() {
         return this.Topics;
@@ -66,9 +63,7 @@ public class Assignment extends AbstractModel {
 
     /**
      * Set topic信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topics topic信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopics(GroupInfoTopics [] Topics) {
         this.Topics = Topics;

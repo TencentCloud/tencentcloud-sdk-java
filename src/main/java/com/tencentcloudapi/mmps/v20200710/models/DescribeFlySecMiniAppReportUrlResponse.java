@@ -32,7 +32,6 @@ public class DescribeFlySecMiniAppReportUrlResponse extends AbstractModel {
 
     /**
     * 诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeFlySecMiniAppReportUrlResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断报告下载链接 
      * @return Url 诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -73,9 +70,7 @@ public class DescribeFlySecMiniAppReportUrlResponse extends AbstractModel {
 
     /**
      * Set 诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

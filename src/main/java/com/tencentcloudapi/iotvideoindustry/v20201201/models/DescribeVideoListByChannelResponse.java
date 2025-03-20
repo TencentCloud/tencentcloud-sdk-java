@@ -25,7 +25,6 @@ public class DescribeVideoListByChannelResponse extends AbstractModel {
 
     /**
     * 录像详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVideoListByChannelResponse extends AbstractModel {
 
     /**
     * 录像总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeVideoListByChannelResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录像详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像详情列表 
      * @return VideoList 录像详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordTaskItem [] getVideoList() {
         return this.VideoList;
@@ -58,19 +54,15 @@ public class DescribeVideoListByChannelResponse extends AbstractModel {
 
     /**
      * Set 录像详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoList 录像详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoList(RecordTaskItem [] VideoList) {
         this.VideoList = VideoList;
     }
 
     /**
-     * Get 录像总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像总数 
      * @return TotalCount 录像总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeVideoListByChannelResponse extends AbstractModel {
 
     /**
      * Set 录像总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 录像总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

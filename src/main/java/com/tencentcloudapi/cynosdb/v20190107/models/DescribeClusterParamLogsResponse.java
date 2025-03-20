@@ -32,7 +32,6 @@ public class DescribeClusterParamLogsResponse extends AbstractModel {
 
     /**
     * 参数修改记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterParamLogs")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeClusterParamLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get 参数修改记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数修改记录 
      * @return ClusterParamLogs 参数修改记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterParamModifyLog [] getClusterParamLogs() {
         return this.ClusterParamLogs;
@@ -73,9 +70,7 @@ public class DescribeClusterParamLogsResponse extends AbstractModel {
 
     /**
      * Set 参数修改记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterParamLogs 参数修改记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterParamLogs(ClusterParamModifyLog [] ClusterParamLogs) {
         this.ClusterParamLogs = ClusterParamLogs;

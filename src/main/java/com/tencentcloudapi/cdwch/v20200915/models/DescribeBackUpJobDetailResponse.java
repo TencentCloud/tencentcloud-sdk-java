@@ -25,7 +25,6 @@ public class DescribeBackUpJobDetailResponse extends AbstractModel {
 
     /**
     * 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableContents")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBackUpJobDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份表详情 
      * @return TableContents 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupTableContent [] getTableContents() {
         return this.TableContents;
@@ -50,9 +47,7 @@ public class DescribeBackUpJobDetailResponse extends AbstractModel {
 
     /**
      * Set 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableContents 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableContents(BackupTableContent [] TableContents) {
         this.TableContents = TableContents;

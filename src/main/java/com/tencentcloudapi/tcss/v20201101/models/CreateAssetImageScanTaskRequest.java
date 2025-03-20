@@ -94,6 +94,13 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     private Long Timeout;
 
     /**
+    * 一键扫描任务。默认false表示非一键扫描，true一键扫描
+    */
+    @SerializedName("IsOneClickScanningTask")
+    @Expose
+    private Boolean IsOneClickScanningTask;
+
+    /**
      * Get 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
      * @return All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @deprecated
@@ -257,6 +264,22 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.Timeout = Timeout;
     }
 
+    /**
+     * Get 一键扫描任务。默认false表示非一键扫描，true一键扫描 
+     * @return IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     */
+    public Boolean getIsOneClickScanningTask() {
+        return this.IsOneClickScanningTask;
+    }
+
+    /**
+     * Set 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     * @param IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     */
+    public void setIsOneClickScanningTask(Boolean IsOneClickScanningTask) {
+        this.IsOneClickScanningTask = IsOneClickScanningTask;
+    }
+
     public CreateAssetImageScanTaskRequest() {
     }
 
@@ -304,6 +327,9 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         if (source.Timeout != null) {
             this.Timeout = new Long(source.Timeout);
         }
+        if (source.IsOneClickScanningTask != null) {
+            this.IsOneClickScanningTask = new Boolean(source.IsOneClickScanningTask);
+        }
     }
 
 
@@ -321,6 +347,7 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
 
     }
 }

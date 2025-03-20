@@ -53,7 +53,6 @@ public class ImageComponent extends AbstractModel {
 
     /**
     * 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCount")
     @Expose
@@ -61,7 +60,6 @@ public class ImageComponent extends AbstractModel {
 
     /**
     * 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageID")
     @Expose
@@ -132,10 +130,8 @@ public class ImageComponent extends AbstractModel {
     }
 
     /**
-     * Get 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件漏洞数量 
      * @return VulCount 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCount() {
         return this.VulCount;
@@ -143,19 +139,15 @@ public class ImageComponent extends AbstractModel {
 
     /**
      * Set 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCount 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像ID 
      * @return ImageID 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageID() {
         return this.ImageID;
@@ -163,9 +155,7 @@ public class ImageComponent extends AbstractModel {
 
     /**
      * Set 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageID 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;

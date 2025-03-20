@@ -25,7 +25,6 @@ public class DescribePostPayDetailResponse extends AbstractModel {
 
     /**
     * 弹性计费扣费详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftQuotaDayDetail")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePostPayDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 弹性计费扣费详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性计费扣费详情 
      * @return SoftQuotaDayDetail 弹性计费扣费详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SoftQuotaDayInfo [] getSoftQuotaDayDetail() {
         return this.SoftQuotaDayDetail;
@@ -50,9 +47,7 @@ public class DescribePostPayDetailResponse extends AbstractModel {
 
     /**
      * Set 弹性计费扣费详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoftQuotaDayDetail 弹性计费扣费详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftQuotaDayDetail(SoftQuotaDayInfo [] SoftQuotaDayDetail) {
         this.SoftQuotaDayDetail = SoftQuotaDayDetail;

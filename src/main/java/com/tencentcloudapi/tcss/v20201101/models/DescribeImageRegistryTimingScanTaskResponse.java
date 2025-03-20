@@ -25,7 +25,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanType")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Images")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -78,7 +74,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Latest")
     @Expose
@@ -86,7 +81,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanEndTime")
     @Expose
@@ -122,7 +116,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeImageAssetIds")
     @Expose
@@ -130,7 +123,6 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -151,10 +143,8 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时扫描开关 
      * @return Enable 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
         return this.Enable;
@@ -162,9 +152,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
@@ -203,10 +191,8 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描类型数组 
      * @return ScanType 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScanType() {
         return this.ScanType;
@@ -214,9 +200,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanType 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;
@@ -243,10 +227,8 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义扫描镜像 
      * @return Images 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageInfo [] getImages() {
         return this.Images;
@@ -254,19 +236,15 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Images 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImages(ImageInfo [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动以扫描镜像Id 
      * @return Id 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getId() {
         return this.Id;
@@ -274,19 +252,15 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long [] Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否扫描最新版本镜像 
      * @return Latest 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLatest() {
         return this.Latest;
@@ -294,19 +268,15 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Latest 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatest(Boolean Latest) {
         this.Latest = Latest;
     }
 
     /**
-     * Get 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描结束时间 
      * @return ScanEndTime 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanEndTime() {
         return this.ScanEndTime;
@@ -314,9 +284,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanEndTime 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanEndTime(String ScanEndTime) {
         this.ScanEndTime = ScanEndTime;
@@ -387,10 +355,8 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排除的镜像资产id 
      * @return ExcludeImageAssetIds 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getExcludeImageAssetIds() {
         return this.ExcludeImageAssetIds;
@@ -398,19 +364,15 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeImageAssetIds 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeImageAssetIds(Long [] ExcludeImageAssetIds) {
         this.ExcludeImageAssetIds = ExcludeImageAssetIds;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -418,9 +380,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;

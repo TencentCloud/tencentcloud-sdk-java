@@ -25,7 +25,6 @@ public class GetRecordPlanByIdResponse extends AbstractModel {
 
     /**
     * 录制计划详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Plan")
     @Expose
@@ -39,10 +38,8 @@ public class GetRecordPlanByIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录制计划详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制计划详情 
      * @return Plan 录制计划详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordPlanItem getPlan() {
         return this.Plan;
@@ -50,9 +47,7 @@ public class GetRecordPlanByIdResponse extends AbstractModel {
 
     /**
      * Set 录制计划详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Plan 录制计划详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlan(RecordPlanItem Plan) {
         this.Plan = Plan;

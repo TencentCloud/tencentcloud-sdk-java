@@ -46,7 +46,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Long Port;
 
     /**
-    * 目标组绑定的后端服务器
+    * 目标组绑定的后端服务器，单次最多支持50个。
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -138,16 +138,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组绑定的后端服务器 
-     * @return TargetGroupInstances 目标组绑定的后端服务器
+     * Get 目标组绑定的后端服务器，单次最多支持50个。 
+     * @return TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 目标组绑定的后端服务器
-     * @param TargetGroupInstances 目标组绑定的后端服务器
+     * Set 目标组绑定的后端服务器，单次最多支持50个。
+     * @param TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

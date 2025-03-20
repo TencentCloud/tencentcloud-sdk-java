@@ -25,7 +25,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 专属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 专属集群所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -49,7 +46,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 灾备集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StandbyDedicatedClusterSet")
     @Expose
@@ -57,7 +53,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -65,7 +60,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * Cpu总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTotal")
     @Expose
@@ -73,7 +67,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * Cpu可用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuAvailable")
     @Expose
@@ -81,7 +74,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 内存总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemTotal")
     @Expose
@@ -89,7 +81,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 内存可用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemAvailable")
     @Expose
@@ -97,7 +88,6 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 磁盘总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskTotal")
     @Expose
@@ -105,17 +95,14 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
     * 磁盘可用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskAvailable")
     @Expose
     private Long DiskAvailable;
 
     /**
-     * Get 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属集群ID 
      * @return DedicatedClusterId 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -123,19 +110,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 专属集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属集群名称 
      * @return Name 专属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -143,19 +126,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 专属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 专属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 专属集群所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属集群所在可用区 
      * @return Zone 专属集群所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -163,19 +142,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 专属集群所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 专属集群所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 灾备集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 灾备集群 
      * @return StandbyDedicatedClusterSet 灾备集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStandbyDedicatedClusterSet() {
         return this.StandbyDedicatedClusterSet;
@@ -183,19 +158,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 灾备集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StandbyDedicatedClusterSet 灾备集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStandbyDedicatedClusterSet(String [] StandbyDedicatedClusterSet) {
         this.StandbyDedicatedClusterSet = StandbyDedicatedClusterSet;
     }
 
     /**
-     * Get 实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数量 
      * @return InstanceCount 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
@@ -203,19 +174,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Cpu总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cpu总量 
      * @return CpuTotal Cpu总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuTotal() {
         return this.CpuTotal;
@@ -223,19 +190,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set Cpu总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuTotal Cpu总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTotal(Long CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
     /**
-     * Get Cpu可用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cpu可用数量 
      * @return CpuAvailable Cpu可用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuAvailable() {
         return this.CpuAvailable;
@@ -243,19 +206,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set Cpu可用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuAvailable Cpu可用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuAvailable(Long CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
     }
 
     /**
-     * Get 内存总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存总量 
      * @return MemTotal 内存总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemTotal() {
         return this.MemTotal;
@@ -263,19 +222,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 内存总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemTotal 内存总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemTotal(Long MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get 内存可用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存可用量 
      * @return MemAvailable 内存可用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemAvailable() {
         return this.MemAvailable;
@@ -283,19 +238,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 内存可用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemAvailable 内存可用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemAvailable(Long MemAvailable) {
         this.MemAvailable = MemAvailable;
     }
 
     /**
-     * Get 磁盘总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘总量 
      * @return DiskTotal 磁盘总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskTotal() {
         return this.DiskTotal;
@@ -303,19 +254,15 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 磁盘总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskTotal 磁盘总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskTotal(Long DiskTotal) {
         this.DiskTotal = DiskTotal;
     }
 
     /**
-     * Get 磁盘可用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘可用量 
      * @return DiskAvailable 磁盘可用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskAvailable() {
         return this.DiskAvailable;
@@ -323,9 +270,7 @@ public class DedicatedCluster extends AbstractModel {
 
     /**
      * Set 磁盘可用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskAvailable 磁盘可用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;

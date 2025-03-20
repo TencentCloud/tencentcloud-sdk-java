@@ -25,7 +25,6 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
     * 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
     * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
     * 是否全时录制，即7*24小时录制 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAllWeek")
     @Expose
@@ -49,7 +46,6 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
     * 是否为自定义模板 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,17 +53,14 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
     * 时间片段详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeTemplateSpecs")
     @Expose
     private TimeTemplateSpec [] TimeTemplateSpecs;
 
     /**
-     * Get 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间模板ID 
      * @return TemplateId 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -75,19 +68,15 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
      * Set 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名称 
      * @return Name 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -95,19 +84,15 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
      * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 是否全时录制，即7*24小时录制 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否全时录制，即7*24小时录制 0-否 1-是 
      * @return IsAllWeek 是否全时录制，即7*24小时录制 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAllWeek() {
         return this.IsAllWeek;
@@ -115,19 +100,15 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
      * Set 是否全时录制，即7*24小时录制 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAllWeek 是否全时录制，即7*24小时录制 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAllWeek(Long IsAllWeek) {
         this.IsAllWeek = IsAllWeek;
     }
 
     /**
-     * Get 是否为自定义模板 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为自定义模板 0-否 1-是 
      * @return Type 是否为自定义模板 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -135,19 +116,15 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
      * Set 是否为自定义模板 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 是否为自定义模板 0-否 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 时间片段详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间片段详情 
      * @return TimeTemplateSpecs 时间片段详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimeTemplateSpec [] getTimeTemplateSpecs() {
         return this.TimeTemplateSpecs;
@@ -155,9 +132,7 @@ public class TimeTemplateItem extends AbstractModel {
 
     /**
      * Set 时间片段详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeTemplateSpecs 时间片段详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeTemplateSpecs(TimeTemplateSpec [] TimeTemplateSpecs) {
         this.TimeTemplateSpecs = TimeTemplateSpecs;

@@ -32,7 +32,6 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Err")
     @Expose
@@ -69,10 +68,8 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Err 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErr() {
         return this.Err;
@@ -80,9 +77,7 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Err 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErr(String Err) {
         this.Err = Err;

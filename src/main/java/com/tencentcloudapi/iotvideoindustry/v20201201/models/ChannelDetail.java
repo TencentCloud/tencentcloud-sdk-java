@@ -39,7 +39,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelType")
     @Expose
@@ -47,7 +46,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelCode")
     @Expose
@@ -55,7 +53,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInformation")
     @Expose
@@ -63,7 +60,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -71,7 +67,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRecord")
     @Expose
@@ -79,7 +74,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -87,7 +81,6 @@ public class ChannelDetail extends AbstractModel {
 
     /**
     * 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessGroupId")
     @Expose
@@ -126,10 +119,8 @@ public class ChannelDetail extends AbstractModel {
     }
 
     /**
-     * Get 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道 
      * @return ChannelType 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelType() {
         return this.ChannelType;
@@ -137,19 +128,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelType 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelType(Long ChannelType) {
         this.ChannelType = ChannelType;
     }
 
     /**
-     * Get 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 20位国标通道编码 
      * @return ChannelCode 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelCode() {
         return this.ChannelCode;
@@ -157,19 +144,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelCode 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelCode(String ChannelCode) {
         this.ChannelCode = ChannelCode;
     }
 
     /**
-     * Get 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道扩展信息 
      * @return ExtraInformation 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInformation() {
         return this.ExtraInformation;
@@ -177,19 +160,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInformation 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInformation(String ExtraInformation) {
         this.ExtraInformation = ExtraInformation;
     }
 
     /**
-     * Get 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道在线状态 
      * @return Status 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -197,19 +176,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道是否存在录像标识 0：无录像；1：有录像 
      * @return IsRecord 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRecord() {
         return this.IsRecord;
@@ -217,19 +192,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRecord 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRecord(Long IsRecord) {
         this.IsRecord = IsRecord;
     }
 
     /**
-     * Get 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道所属设备唯一标识 
      * @return DeviceId 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -237,19 +208,15 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道所属虚拟组织的ID 
      * @return BusinessGroupId 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessGroupId() {
         return this.BusinessGroupId;
@@ -257,9 +224,7 @@ public class ChannelDetail extends AbstractModel {
 
     /**
      * Set 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessGroupId 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessGroupId(String BusinessGroupId) {
         this.BusinessGroupId = BusinessGroupId;

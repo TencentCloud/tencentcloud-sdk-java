@@ -25,7 +25,6 @@ public class DatabaseObject extends AbstractModel {
 
     /**
     * 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
     @Expose
@@ -33,7 +32,6 @@ public class DatabaseObject extends AbstractModel {
 
     /**
     * 所描述的数据库对象名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectName")
     @Expose
@@ -41,7 +39,6 @@ public class DatabaseObject extends AbstractModel {
 
     /**
     * 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -49,7 +46,6 @@ public class DatabaseObject extends AbstractModel {
 
     /**
     * 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -57,17 +53,14 @@ public class DatabaseObject extends AbstractModel {
 
     /**
     * 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-     * Get 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。 
      * @return ObjectType 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -75,19 +68,15 @@ public class DatabaseObject extends AbstractModel {
 
     /**
      * Set 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectType 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 所描述的数据库对象名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所描述的数据库对象名称 
      * @return ObjectName 所描述的数据库对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectName() {
         return this.ObjectName;
@@ -95,19 +84,15 @@ public class DatabaseObject extends AbstractModel {
 
     /**
      * Set 所描述的数据库对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectName 所描述的数据库对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectName(String ObjectName) {
         this.ObjectName = ObjectName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。 
      * @return DatabaseName 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -115,19 +100,15 @@ public class DatabaseObject extends AbstractModel {
 
     /**
      * Set 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。 
      * @return SchemaName 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -135,19 +116,15 @@ public class DatabaseObject extends AbstractModel {
 
     /**
      * Set 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。 
      * @return TableName 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -155,9 +132,7 @@ public class DatabaseObject extends AbstractModel {
 
     /**
      * Set 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

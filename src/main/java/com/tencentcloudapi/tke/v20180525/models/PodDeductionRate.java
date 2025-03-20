@@ -25,7 +25,6 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     * Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -33,7 +32,6 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     * Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -41,7 +39,6 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     *  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     *  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuNum")
     @Expose
@@ -57,7 +53,6 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     * 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -65,17 +60,14 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
     * 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductionNum")
     @Expose
     private Long DeductionNum;
 
     /**
-     * Get Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pod的 CPU 
      * @return Cpu Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpu() {
         return this.Cpu;
@@ -83,19 +75,15 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pod 的内存 
      * @return Memory Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemory() {
         return this.Memory;
@@ -103,19 +91,15 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  Pod 的类型 
      * @return Type  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -123,19 +107,15 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。 
      * @return GpuNum  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuNum() {
         return this.GpuNum;
@@ -143,19 +123,15 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuNum  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuNum(String GpuNum) {
         this.GpuNum = GpuNum;
     }
 
     /**
-     * Get 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 这种规格的 Pod总数 
      * @return TotalNum 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
         return this.TotalNum;
@@ -163,19 +139,15 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalNum 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 这种规格的 Pod被预留券抵扣的数量 
      * @return DeductionNum 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeductionNum() {
         return this.DeductionNum;
@@ -183,9 +155,7 @@ public class PodDeductionRate extends AbstractModel {
 
     /**
      * Set 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductionNum 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductionNum(Long DeductionNum) {
         this.DeductionNum = DeductionNum;

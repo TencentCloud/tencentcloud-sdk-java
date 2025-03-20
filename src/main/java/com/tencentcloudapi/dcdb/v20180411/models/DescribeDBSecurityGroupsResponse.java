@@ -32,7 +32,6 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
 
     /**
     * 实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VIP")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
 
     /**
     * 实例端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VPort")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例VIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例VIP 
      * @return VIP 实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVIP() {
         return this.VIP;
@@ -81,19 +77,15 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
 
     /**
      * Set 实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VIP 实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVIP(String VIP) {
         this.VIP = VIP;
     }
 
     /**
-     * Get 实例端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例端口 
      * @return VPort 实例端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVPort() {
         return this.VPort;
@@ -101,9 +93,7 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
 
     /**
      * Set 实例端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VPort 实例端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVPort(String VPort) {
         this.VPort = VPort;

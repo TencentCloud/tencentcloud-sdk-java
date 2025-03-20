@@ -25,7 +25,6 @@ public class DescribeLiveVideoListResponse extends AbstractModel {
 
     /**
     * 总的条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLiveVideoListResponse extends AbstractModel {
 
     /**
     * 录制任务详情数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeLiveVideoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总的条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的条数 
      * @return Total 总的条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeLiveVideoListResponse extends AbstractModel {
 
     /**
      * Set 总的条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总的条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 录制任务详情数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制任务详情数组 
      * @return RecordList 录制任务详情数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveRecordItem [] getRecordList() {
         return this.RecordList;
@@ -78,9 +70,7 @@ public class DescribeLiveVideoListResponse extends AbstractModel {
 
     /**
      * Set 录制任务详情数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordList 录制任务详情数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordList(LiveRecordItem [] RecordList) {
         this.RecordList = RecordList;

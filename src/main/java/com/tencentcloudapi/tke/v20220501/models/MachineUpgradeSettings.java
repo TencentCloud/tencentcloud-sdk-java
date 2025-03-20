@@ -25,7 +25,6 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
     * 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoUpgrade")
     @Expose
@@ -33,7 +32,6 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
     * 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeOptions")
     @Expose
@@ -49,17 +47,14 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
     * 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxUnavailable")
     @Expose
     private IntOrString MaxUnavailable;
 
     /**
-     * Get 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启自动升级 
      * @return AutoUpgrade 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoUpgrade() {
         return this.AutoUpgrade;
@@ -67,19 +62,15 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
      * Set 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoUpgrade 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoUpgrade(Boolean AutoUpgrade) {
         this.AutoUpgrade = AutoUpgrade;
     }
 
     /**
-     * Get 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运维窗口 
      * @return UpgradeOptions 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoUpgradeOptions getUpgradeOptions() {
         return this.UpgradeOptions;
@@ -87,9 +78,7 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
      * Set 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeOptions 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeOptions(AutoUpgradeOptions UpgradeOptions) {
         this.UpgradeOptions = UpgradeOptions;
@@ -116,10 +105,8 @@ public class MachineUpgradeSettings extends AbstractModel {
     }
 
     /**
-     * Get 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 升级时，最大不可升级的节点数 
      * @return MaxUnavailable 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntOrString getMaxUnavailable() {
         return this.MaxUnavailable;
@@ -127,9 +114,7 @@ public class MachineUpgradeSettings extends AbstractModel {
 
     /**
      * Set 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxUnavailable 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxUnavailable(IntOrString MaxUnavailable) {
         this.MaxUnavailable = MaxUnavailable;

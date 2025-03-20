@@ -25,7 +25,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,7 +32,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -41,7 +39,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,7 +53,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInformation")
     @Expose
@@ -65,7 +60,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -73,7 +67,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupPath")
     @Expose
@@ -81,7 +74,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCode")
     @Expose
@@ -89,7 +81,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRecord")
     @Expose
@@ -97,7 +88,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Recordable")
     @Expose
@@ -105,7 +95,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -113,7 +102,6 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -121,17 +109,14 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
     * 组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备唯一标识 
      * @return DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -139,19 +124,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型；2：IPC 
      * @return DeviceType 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceType() {
         return this.DeviceType;
@@ -159,19 +140,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册 
      * @return Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -179,19 +156,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -199,19 +172,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备扩展属性 
      * @return ExtraInformation 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInformation() {
         return this.ExtraInformation;
@@ -219,19 +188,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInformation 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInformation(String ExtraInformation) {
         this.ExtraInformation = ExtraInformation;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return NickName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -239,19 +204,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备绑定分组路径 
      * @return GroupPath 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupPath() {
         return this.GroupPath;
@@ -259,19 +220,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupPath 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupPath(String GroupPath) {
         this.GroupPath = GroupPath;
     }
 
     /**
-     * Get 设备编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备编码 
      * @return DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceCode() {
         return this.DeviceCode;
@@ -279,19 +236,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCode(String DeviceCode) {
         this.DeviceCode = DeviceCode;
     }
 
     /**
-     * Get 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否存在录像,，0:不存在；1：存在 
      * @return IsRecord 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRecord() {
         return this.IsRecord;
@@ -299,19 +252,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRecord 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRecord(Long IsRecord) {
         this.IsRecord = IsRecord;
     }
 
     /**
-     * Get 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该设备是否可录制 
      * @return Recordable 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordable() {
         return this.Recordable;
@@ -319,19 +268,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Recordable 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordable(Long Recordable) {
         this.Recordable = Recordable;
     }
 
     /**
-     * Get 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备接入协议 
      * @return Protocol 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -339,19 +284,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组Id 
      * @return GroupId 组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -359,19 +300,15 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组名 
      * @return GroupName 组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -379,9 +316,7 @@ public class AllDeviceInfo extends AbstractModel {
 
     /**
      * Set 组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

@@ -32,7 +32,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskContainerCnt")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCnt")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusDataBaseModifyTime")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskContainerIncrease")
     @Expose
@@ -64,7 +60,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskIncrease")
     @Expose
@@ -72,7 +67,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateIncrease")
     @Expose
@@ -80,7 +74,6 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
     * 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateCnt")
     @Expose
@@ -110,10 +103,8 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
     }
 
     /**
-     * Get 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 木马影响容器个数 
      * @return RiskContainerCnt 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskContainerCnt() {
         return this.RiskContainerCnt;
@@ -121,19 +112,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskContainerCnt 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskContainerCnt(Long RiskContainerCnt) {
         this.RiskContainerCnt = RiskContainerCnt;
     }
 
     /**
-     * Get 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待处理风险个数 
      * @return RiskCnt 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskCnt() {
         return this.RiskCnt;
@@ -141,19 +128,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskCnt 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }
 
     /**
-     * Get 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒库更新时间 
      * @return VirusDataBaseModifyTime 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirusDataBaseModifyTime() {
         return this.VirusDataBaseModifyTime;
@@ -161,19 +144,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusDataBaseModifyTime 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusDataBaseModifyTime(String VirusDataBaseModifyTime) {
         this.VirusDataBaseModifyTime = VirusDataBaseModifyTime;
     }
 
     /**
-     * Get 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 木马影响容器个数较昨日增长 
      * @return RiskContainerIncrease 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskContainerIncrease() {
         return this.RiskContainerIncrease;
@@ -181,19 +160,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskContainerIncrease 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskContainerIncrease(Long RiskContainerIncrease) {
         this.RiskContainerIncrease = RiskContainerIncrease;
     }
 
     /**
-     * Get 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待处理风险个数较昨日增长 
      * @return RiskIncrease 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskIncrease() {
         return this.RiskIncrease;
@@ -201,19 +176,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskIncrease 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskIncrease(Long RiskIncrease) {
         this.RiskIncrease = RiskIncrease;
     }
 
     /**
-     * Get 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离事件个数较昨日新增 
      * @return IsolateIncrease 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsolateIncrease() {
         return this.IsolateIncrease;
@@ -221,19 +192,15 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateIncrease 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateIncrease(Long IsolateIncrease) {
         this.IsolateIncrease = IsolateIncrease;
     }
 
     /**
-     * Get 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离事件总数 
      * @return IsolateCnt 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsolateCnt() {
         return this.IsolateCnt;
@@ -241,9 +208,7 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
 
     /**
      * Set 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateCnt 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateCnt(Long IsolateCnt) {
         this.IsolateCnt = IsolateCnt;

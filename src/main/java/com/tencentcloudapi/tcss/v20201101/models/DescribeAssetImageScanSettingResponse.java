@@ -102,7 +102,6 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
     * 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeImages")
     @Expose
@@ -110,7 +109,6 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
     * 最后一次扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -118,7 +116,6 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
     * 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanResult")
     @Expose
@@ -312,10 +309,8 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排除的扫描镜像 
      * @return ExcludeImages 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludeImages() {
         return this.ExcludeImages;
@@ -323,19 +318,15 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
      * Set 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeImages 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeImages(String [] ExcludeImages) {
         this.ExcludeImages = ExcludeImages;
     }
 
     /**
-     * Get 最后一次扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次扫描时间 
      * @return LastScanTime 最后一次扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -343,19 +334,15 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
      * Set 最后一次扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最后一次扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError) 
      * @return ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanResult() {
         return this.ScanResult;
@@ -363,9 +350,7 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
      * Set 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanResult(String ScanResult) {
         this.ScanResult = ScanResult;

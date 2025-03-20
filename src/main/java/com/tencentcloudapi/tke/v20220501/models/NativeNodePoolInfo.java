@@ -25,7 +25,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scaling")
     @Expose
@@ -48,7 +47,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 自动升级配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeSettings")
     @Expose
@@ -71,7 +69,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 包年包月机型计费配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -94,7 +91,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * Machine 系统配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Management")
     @Expose
@@ -126,7 +122,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 预定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lifecycle")
     @Expose
@@ -134,7 +129,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 运行时根目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeRootDir")
     @Expose
@@ -142,7 +136,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 是否开启弹性伸缩
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableAutoscaling")
     @Expose
@@ -157,7 +150,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 期望节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Replicas")
     @Expose
@@ -172,7 +164,6 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 公网带宽设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -188,17 +179,14 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
     * 原生节点机型 Native, NativeCVM
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-     * Get 伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 伸缩配置 
      * @return Scaling 伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineSetScaling getScaling() {
         return this.Scaling;
@@ -206,9 +194,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scaling 伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaling(MachineSetScaling Scaling) {
         this.Scaling = Scaling;
@@ -251,10 +237,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动升级配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动升级配置 
      * @return UpgradeSettings 自动升级配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineUpgradeSettings getUpgradeSettings() {
         return this.UpgradeSettings;
@@ -262,9 +246,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 自动升级配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeSettings 自动升级配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeSettings(MachineUpgradeSettings UpgradeSettings) {
         this.UpgradeSettings = UpgradeSettings;
@@ -307,10 +289,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 包年包月机型计费配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包年包月机型计费配置 
      * @return InstanceChargePrepaid 包年包月机型计费配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
@@ -318,9 +298,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 包年包月机型计费配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargePrepaid 包年包月机型计费配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
@@ -363,10 +341,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get Machine 系统配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Machine 系统配置 
      * @return Management Machine 系统配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ManagementConfig getManagement() {
         return this.Management;
@@ -374,9 +350,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set Machine 系统配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Management Machine 系统配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagement(ManagementConfig Management) {
         this.Management = Management;
@@ -443,10 +417,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 预定义脚本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预定义脚本 
      * @return Lifecycle 预定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LifecycleConfig getLifecycle() {
         return this.Lifecycle;
@@ -454,19 +426,15 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 预定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Lifecycle 预定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycle(LifecycleConfig Lifecycle) {
         this.Lifecycle = Lifecycle;
     }
 
     /**
-     * Get 运行时根目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时根目录 
      * @return RuntimeRootDir 运行时根目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeRootDir() {
         return this.RuntimeRootDir;
@@ -474,19 +442,15 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 运行时根目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeRootDir 运行时根目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeRootDir(String RuntimeRootDir) {
         this.RuntimeRootDir = RuntimeRootDir;
     }
 
     /**
-     * Get 是否开启弹性伸缩
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启弹性伸缩 
      * @return EnableAutoscaling 是否开启弹性伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableAutoscaling() {
         return this.EnableAutoscaling;
@@ -494,9 +458,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 是否开启弹性伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableAutoscaling 是否开启弹性伸缩
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableAutoscaling(Boolean EnableAutoscaling) {
         this.EnableAutoscaling = EnableAutoscaling;
@@ -519,10 +481,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 期望节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期望节点数 
      * @return Replicas 期望节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicas() {
         return this.Replicas;
@@ -530,9 +490,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 期望节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Replicas 期望节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
@@ -555,10 +513,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网带宽设置 
      * @return InternetAccessible 公网带宽设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
@@ -566,9 +522,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 公网带宽设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible 公网带宽设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -595,10 +549,8 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 原生节点机型 Native, NativeCVM
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原生节点机型 Native, NativeCVM 
      * @return MachineType 原生节点机型 Native, NativeCVM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineType() {
         return this.MachineType;
@@ -606,9 +558,7 @@ public class NativeNodePoolInfo extends AbstractModel {
 
     /**
      * Set 原生节点机型 Native, NativeCVM
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineType 原生节点机型 Native, NativeCVM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

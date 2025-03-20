@@ -46,7 +46,6 @@ public class ComplianceImageDetailInfo extends AbstractModel {
 
     /**
     * 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Repository")
     @Expose
@@ -101,10 +100,8 @@ public class ComplianceImageDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像所在远程仓库的路径。 
      * @return Repository 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepository() {
         return this.Repository;
@@ -112,9 +109,7 @@ public class ComplianceImageDetailInfo extends AbstractModel {
 
     /**
      * Set 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Repository 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepository(String Repository) {
         this.Repository = Repository;

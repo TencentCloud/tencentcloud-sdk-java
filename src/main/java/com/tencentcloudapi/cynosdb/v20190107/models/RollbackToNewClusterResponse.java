@@ -25,7 +25,6 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
     * 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranId")
     @Expose
@@ -33,7 +32,6 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
     * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
     @Expose
@@ -41,7 +39,6 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
     * 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -49,7 +46,6 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
     * 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -71,10 +67,8 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冻结流水ID 
      * @return TranId 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranId() {
         return this.TranId;
@@ -82,19 +76,15 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
      * Set 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranId 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号 
      * @return DealNames 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -102,19 +92,15 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
      * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID） 
      * @return ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
@@ -122,19 +108,15 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
      * Set 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID） 
      * @return ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
@@ -142,9 +124,7 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
      * Set 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

@@ -25,7 +25,6 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * KMS实例加密的KeyId。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyId")
     @Expose
@@ -33,7 +32,6 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * KMS实例加密Key的别名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyAlias")
     @Expose
@@ -41,7 +39,6 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * 实例加密密钥DEK的密文。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DEKCipherTextBlob")
     @Expose
@@ -49,7 +46,6 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * 密钥是否启用，1-启用， 0-未启用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEnabled")
     @Expose
@@ -57,7 +53,6 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * KMS密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyRegion")
     @Expose
@@ -65,17 +60,14 @@ public class EncryptionKey extends AbstractModel {
 
     /**
     * DEK密钥创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get KMS实例加密的KeyId。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS实例加密的KeyId。 
      * @return KeyId KMS实例加密的KeyId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyId() {
         return this.KeyId;
@@ -83,19 +75,15 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set KMS实例加密的KeyId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyId KMS实例加密的KeyId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get KMS实例加密Key的别名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS实例加密Key的别名。 
      * @return KeyAlias KMS实例加密Key的别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyAlias() {
         return this.KeyAlias;
@@ -103,19 +91,15 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set KMS实例加密Key的别名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyAlias KMS实例加密Key的别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyAlias(String KeyAlias) {
         this.KeyAlias = KeyAlias;
     }
 
     /**
-     * Get 实例加密密钥DEK的密文。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例加密密钥DEK的密文。 
      * @return DEKCipherTextBlob 实例加密密钥DEK的密文。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDEKCipherTextBlob() {
         return this.DEKCipherTextBlob;
@@ -123,19 +107,15 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set 实例加密密钥DEK的密文。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DEKCipherTextBlob 实例加密密钥DEK的密文。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDEKCipherTextBlob(String DEKCipherTextBlob) {
         this.DEKCipherTextBlob = DEKCipherTextBlob;
     }
 
     /**
-     * Get 密钥是否启用，1-启用， 0-未启用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥是否启用，1-启用， 0-未启用。 
      * @return IsEnabled 密钥是否启用，1-启用， 0-未启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
@@ -143,19 +123,15 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set 密钥是否启用，1-启用， 0-未启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsEnabled 密钥是否启用，1-启用， 0-未启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get KMS密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS密钥所在地域。 
      * @return KeyRegion KMS密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyRegion() {
         return this.KeyRegion;
@@ -163,19 +139,15 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set KMS密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyRegion KMS密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get DEK密钥创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DEK密钥创建时间。 
      * @return CreateTime DEK密钥创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -183,9 +155,7 @@ public class EncryptionKey extends AbstractModel {
 
     /**
      * Set DEK密钥创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime DEK密钥创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

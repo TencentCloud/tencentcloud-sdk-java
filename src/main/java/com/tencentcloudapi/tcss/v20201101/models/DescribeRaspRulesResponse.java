@@ -21,15 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEscapeEventsExportResponse extends AbstractModel {
+public class DescribeRaspRulesResponse extends AbstractModel {
 
     /**
-    * execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 列表内容	
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("List")
     @Expose
-    private String DownloadUrl;
+    private RaspRule [] List;
+
+    /**
+    * 总数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +45,35 @@ public class DescribeEscapeEventsExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 列表内容	 
+     * @return List 列表内容	
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public RaspRule [] getList() {
+        return this.List;
     }
 
     /**
-     * Set execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 列表内容	
+     * @param List 列表内容	
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
+    public void setList(RaspRule [] List) {
+        this.List = List;
+    }
+
+    /**
+     * Get 总数量 
+     * @return TotalCount 总数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数量
+     * @param TotalCount 总数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -74,16 +92,22 @@ public class DescribeEscapeEventsExportResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeEscapeEventsExportResponse() {
+    public DescribeRaspRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEscapeEventsExportResponse(DescribeEscapeEventsExportResponse source) {
-        if (source.DownloadUrl != null) {
-            this.DownloadUrl = new String(source.DownloadUrl);
+    public DescribeRaspRulesResponse(DescribeRaspRulesResponse source) {
+        if (source.List != null) {
+            this.List = new RaspRule[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new RaspRule(source.List[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +119,8 @@ public class DescribeEscapeEventsExportResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class PresetItem extends AbstractModel {
 
     /**
     * 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PresetId")
     @Expose
@@ -33,7 +32,6 @@ public class PresetItem extends AbstractModel {
 
     /**
     * 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PresetName")
     @Expose
@@ -54,10 +52,8 @@ public class PresetItem extends AbstractModel {
     private Long ResetTime;
 
     /**
-     * Get 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预置位ID 
      * @return PresetId 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPresetId() {
         return this.PresetId;
@@ -65,19 +61,15 @@ public class PresetItem extends AbstractModel {
 
     /**
      * Set 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PresetId 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPresetId(Long PresetId) {
         this.PresetId = PresetId;
     }
 
     /**
-     * Get 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预置位名称 
      * @return PresetName 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPresetName() {
         return this.PresetName;
@@ -85,9 +77,7 @@ public class PresetItem extends AbstractModel {
 
     /**
      * Set 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PresetName 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPresetName(String PresetName) {
         this.PresetName = PresetName;

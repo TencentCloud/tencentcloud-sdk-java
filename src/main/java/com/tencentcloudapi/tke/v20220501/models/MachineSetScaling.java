@@ -25,7 +25,6 @@ public class MachineSetScaling extends AbstractModel {
 
     /**
     * 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinReplicas")
     @Expose
@@ -33,7 +32,6 @@ public class MachineSetScaling extends AbstractModel {
 
     /**
     * 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReplicas")
     @Expose
@@ -48,10 +46,8 @@ public class MachineSetScaling extends AbstractModel {
     private String CreatePolicy;
 
     /**
-     * Get 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池最小副本数 
      * @return MinReplicas 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
@@ -59,19 +55,15 @@ public class MachineSetScaling extends AbstractModel {
 
     /**
      * Set 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinReplicas 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;
     }
 
     /**
-     * Get 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点池最大副本数 
      * @return MaxReplicas 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
@@ -79,9 +71,7 @@ public class MachineSetScaling extends AbstractModel {
 
     /**
      * Set 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicas 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;

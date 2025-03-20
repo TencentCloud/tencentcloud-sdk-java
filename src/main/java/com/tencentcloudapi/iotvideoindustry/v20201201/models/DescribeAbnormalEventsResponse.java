@@ -25,7 +25,6 @@ public class DescribeAbnormalEventsResponse extends AbstractModel {
 
     /**
     * 异动事件走势列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAbnormalEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异动事件走势列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异动事件走势列表 
      * @return Data 异动事件走势列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AbnormalEvents [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeAbnormalEventsResponse extends AbstractModel {
 
     /**
      * Set 异动事件走势列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 异动事件走势列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AbnormalEvents [] Data) {
         this.Data = Data;

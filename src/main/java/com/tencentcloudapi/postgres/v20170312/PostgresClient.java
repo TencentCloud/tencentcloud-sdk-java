@@ -72,7 +72,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
+     *【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
      * @param req CloseServerlessDBExtranetAccessRequest
      * @return CloseServerlessDBExtranetAccessResponse
      * @throws TencentCloudSDKException
@@ -206,7 +206,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
+     *【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
      * @param req CreateServerlessDBInstanceRequest
      * @return CreateServerlessDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -305,7 +305,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
+     *【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
      * @param req DeleteServerlessDBInstanceRequest
      * @return DeleteServerlessDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -714,7 +714,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *用于查询一个或多个serverlessDB实例的详细信息
+     *【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
      * @param req DescribeServerlessDBInstancesRequest
      * @return DescribeServerlessDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -1102,7 +1102,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
+     *【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
      * @param req OpenServerlessDBExtranetAccessRequest
      * @return OpenServerlessDBExtranetAccessResponse
      * @throws TencentCloudSDKException

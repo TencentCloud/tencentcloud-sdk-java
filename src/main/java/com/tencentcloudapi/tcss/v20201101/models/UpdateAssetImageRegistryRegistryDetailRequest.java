@@ -108,6 +108,20 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private Long RegistryId;
 
     /**
+    * 同步方式，0全量同步，1增量同步
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
+
+    /**
+    * 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -299,6 +313,38 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.RegistryId = RegistryId;
     }
 
+    /**
+     * Get 同步方式，0全量同步，1增量同步 
+     * @return SyncMode 同步方式，0全量同步，1增量同步
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 同步方式，0全量同步，1增量同步
+     * @param SyncMode 同步方式，0全量同步，1增量同步
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像 
+     * @return NeedScan 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+     * @param NeedScan 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -346,6 +392,12 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         if (source.RegistryId != null) {
             this.RegistryId = new Long(source.RegistryId);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
         this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
 
     }
 }

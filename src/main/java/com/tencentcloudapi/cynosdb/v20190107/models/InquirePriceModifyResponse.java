@@ -25,7 +25,6 @@ public class InquirePriceModifyResponse extends AbstractModel {
 
     /**
     * 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -33,7 +32,6 @@ public class InquirePriceModifyResponse extends AbstractModel {
 
     /**
     * 存储价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoragePrice")
     @Expose
@@ -47,10 +45,8 @@ public class InquirePriceModifyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例价格 
      * @return InstancePrice 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TradePrice getInstancePrice() {
         return this.InstancePrice;
@@ -58,19 +54,15 @@ public class InquirePriceModifyResponse extends AbstractModel {
 
     /**
      * Set 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePrice(TradePrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 存储价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储价格 
      * @return StoragePrice 存储价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TradePrice getStoragePrice() {
         return this.StoragePrice;
@@ -78,9 +70,7 @@ public class InquirePriceModifyResponse extends AbstractModel {
 
     /**
      * Set 存储价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoragePrice 存储价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoragePrice(TradePrice StoragePrice) {
         this.StoragePrice = StoragePrice;

@@ -39,6 +39,8 @@ public class TargetGroupInstance extends AbstractModel {
 
     /**
     * 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
     */
     @SerializedName("Weight")
     @Expose
@@ -84,8 +86,12 @@ public class TargetGroupInstance extends AbstractModel {
     }
 
     /**
-     * Get 目标组实例的权重 
+     * Get 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。 
      * @return Weight 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
      */
     public Long getWeight() {
         return this.Weight;
@@ -93,7 +99,11 @@ public class TargetGroupInstance extends AbstractModel {
 
     /**
      * Set 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
      * @param Weight 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

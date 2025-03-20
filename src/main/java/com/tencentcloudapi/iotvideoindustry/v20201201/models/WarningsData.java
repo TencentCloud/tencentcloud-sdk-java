@@ -25,7 +25,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -41,7 +39,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -49,7 +46,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnChannel")
     @Expose
@@ -57,7 +53,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnLevel")
     @Expose
@@ -65,7 +60,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnLevelName")
     @Expose
@@ -73,7 +67,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnMode")
     @Expose
@@ -81,7 +74,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnModeName")
     @Expose
@@ -122,7 +114,6 @@ public class WarningsData extends AbstractModel {
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnType")
     @Expose
@@ -130,7 +121,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Del")
     @Expose
@@ -138,7 +128,6 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -146,17 +135,14 @@ public class WarningsData extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 唯一ID 
      * @return Id 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -164,19 +150,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -184,19 +166,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -204,19 +182,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 告警通道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通道 
      * @return WarnChannel 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarnChannel() {
         return this.WarnChannel;
@@ -224,19 +198,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnChannel 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnChannel(String WarnChannel) {
         this.WarnChannel = WarnChannel;
     }
 
     /**
-     * Get 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情", 
      * @return WarnLevel 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarnLevel() {
         return this.WarnLevel;
@@ -244,19 +214,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnLevel 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnLevel(Long WarnLevel) {
         this.WarnLevel = WarnLevel;
     }
 
     /**
-     * Get 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别名称 
      * @return WarnLevelName 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarnLevelName() {
         return this.WarnLevelName;
@@ -264,19 +230,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnLevelName 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnLevelName(String WarnLevelName) {
         this.WarnLevelName = WarnLevelName;
     }
 
     /**
-     * Get 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警方式 2 设备报警 5 视频报警 6 设备故障报警 
      * @return WarnMode 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarnMode() {
         return this.WarnMode;
@@ -284,19 +246,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnMode 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnMode(Long WarnMode) {
         this.WarnMode = WarnMode;
     }
 
     /**
-     * Get 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警方式名称 
      * @return WarnModeName 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarnModeName() {
         return this.WarnModeName;
@@ -304,9 +262,7 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnModeName 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnModeName(String WarnModeName) {
         this.WarnModeName = WarnModeName;
@@ -346,8 +302,7 @@ public class WarningsData extends AbstractModel {
 				1: "存储设备磁盘故障报警",
 				2: "存储设备风扇故障报警",
 			},
-		}
-注意：此字段可能返回 null，表示取不到有效值。 
+		} 
      * @return WarnType 告警类型  2: {
 			Name: "设备报警",
 			WarnType: map[int]string{
@@ -382,7 +337,6 @@ public class WarningsData extends AbstractModel {
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarnType() {
         return this.WarnType;
@@ -423,7 +377,6 @@ public class WarningsData extends AbstractModel {
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnType 告警类型  2: {
 			Name: "设备报警",
 			WarnType: map[int]string{
@@ -458,17 +411,14 @@ public class WarningsData extends AbstractModel {
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnType(Long WarnType) {
         this.WarnType = WarnType;
     }
 
     /**
-     * Get 是否删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否删除 
      * @return Del 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDel() {
         return this.Del;
@@ -476,19 +426,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Del 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDel(Long Del) {
         this.Del = Del;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -496,19 +442,15 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -516,9 +458,7 @@ public class WarningsData extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

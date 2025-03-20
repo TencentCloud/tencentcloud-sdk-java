@@ -32,7 +32,6 @@ public class CdcSize extends AbstractModel {
 
     /**
     * 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskAvailable")
     @Expose
@@ -55,10 +54,8 @@ public class CdcSize extends AbstractModel {
     }
 
     /**
-     * Get 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独享集群的可用容量大小，单位GiB 
      * @return DiskAvailable 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskAvailable() {
         return this.DiskAvailable;
@@ -66,9 +63,7 @@ public class CdcSize extends AbstractModel {
 
     /**
      * Set 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskAvailable 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;

@@ -60,7 +60,6 @@ public class DescribeAccessControlDetailResponse extends AbstractModel {
 
     /**
     * 祖先进程信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AncestorProcessInfo")
     @Expose
@@ -154,10 +153,8 @@ public class DescribeAccessControlDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 祖先进程信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程信息 
      * @return AncestorProcessInfo 祖先进程信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessBaseInfo getAncestorProcessInfo() {
         return this.AncestorProcessInfo;
@@ -165,9 +162,7 @@ public class DescribeAccessControlDetailResponse extends AbstractModel {
 
     /**
      * Set 祖先进程信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AncestorProcessInfo 祖先进程信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAncestorProcessInfo(ProcessBaseInfo AncestorProcessInfo) {
         this.AncestorProcessInfo = AncestorProcessInfo;

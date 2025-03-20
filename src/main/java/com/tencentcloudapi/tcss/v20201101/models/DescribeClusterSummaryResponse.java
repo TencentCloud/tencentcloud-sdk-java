@@ -109,7 +109,6 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
     * TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TkeClusterCount")
     @Expose
@@ -117,7 +116,6 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
     * 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserCreateTencentClusterCount")
     @Expose
@@ -125,7 +123,6 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
     * 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserCreateHybridClusterCount")
     @Expose
@@ -331,10 +328,8 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     }
 
     /**
-     * Get TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TKE集群数量 
      * @return TkeClusterCount TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTkeClusterCount() {
         return this.TkeClusterCount;
@@ -342,19 +337,15 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
      * Set TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TkeClusterCount TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTkeClusterCount(Long TkeClusterCount) {
         this.TkeClusterCount = TkeClusterCount;
     }
 
     /**
-     * Get 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户自建腾讯云集群数量 
      * @return UserCreateTencentClusterCount 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserCreateTencentClusterCount() {
         return this.UserCreateTencentClusterCount;
@@ -362,19 +353,15 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserCreateTencentClusterCount 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserCreateTencentClusterCount(Long UserCreateTencentClusterCount) {
         this.UserCreateTencentClusterCount = UserCreateTencentClusterCount;
     }
 
     /**
-     * Get 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户自建集群混合云数量 
      * @return UserCreateHybridClusterCount 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserCreateHybridClusterCount() {
         return this.UserCreateHybridClusterCount;
@@ -382,9 +369,7 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserCreateHybridClusterCount 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserCreateHybridClusterCount(Long UserCreateHybridClusterCount) {
         this.UserCreateHybridClusterCount = UserCreateHybridClusterCount;

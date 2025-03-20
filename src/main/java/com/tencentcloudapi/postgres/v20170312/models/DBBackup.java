@@ -102,7 +102,6 @@ public class DBBackup extends AbstractModel {
 
     /**
     * 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetId")
     @Expose
@@ -285,10 +284,8 @@ public class DBBackup extends AbstractModel {
     }
 
     /**
-     * Get 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份集ID 
      * @return SetId 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetId() {
         return this.SetId;
@@ -296,9 +293,7 @@ public class DBBackup extends AbstractModel {
 
     /**
      * Set 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetId 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetId(String SetId) {
         this.SetId = SetId;

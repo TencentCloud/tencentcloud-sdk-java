@@ -25,7 +25,6 @@ public class DescribeGroupDevicesResponse extends AbstractModel {
 
     /**
     * 分组绑定的设备数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeGroupDevicesResponse extends AbstractModel {
 
     /**
     * 设备详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeGroupDevicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分组绑定的设备数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组绑定的设备数 
      * @return TotalCount 分组绑定的设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeGroupDevicesResponse extends AbstractModel {
 
     /**
      * Set 分组绑定的设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分组绑定的设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 设备详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备详情列表 
      * @return DeviceList 设备详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupDeviceItem [] getDeviceList() {
         return this.DeviceList;
@@ -78,9 +70,7 @@ public class DescribeGroupDevicesResponse extends AbstractModel {
 
     /**
      * Set 设备详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceList 设备详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceList(GroupDeviceItem [] DeviceList) {
         this.DeviceList = DeviceList;

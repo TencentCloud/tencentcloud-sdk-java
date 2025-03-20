@@ -25,7 +25,6 @@ public class DescribeVirusScanTimeoutSettingResponse extends AbstractModel {
 
     /**
     * 超时时长单位小时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVirusScanTimeoutSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 超时时长单位小时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超时时长单位小时 
      * @return Timeout 超时时长单位小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
         return this.Timeout;
@@ -50,9 +47,7 @@ public class DescribeVirusScanTimeoutSettingResponse extends AbstractModel {
 
     /**
      * Set 超时时长单位小时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeout 超时时长单位小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

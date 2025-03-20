@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageListExportResponse extends AbstractModel {
+public class CreateSubDomainsAnalyticsFileResponse extends AbstractModel {
 
     /**
-    * excel文件下载地址
+    * 当前批量任务 id。
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("JobId")
     @Expose
-    private String DownloadUrl;
+    private Long JobId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class DescribeAssetImageListExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get excel文件下载地址 
-     * @return DownloadUrl excel文件下载地址
+     * Get 当前批量任务 id。 
+     * @return JobId 当前批量任务 id。
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public Long getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set excel文件下载地址
-     * @param DownloadUrl excel文件下载地址
+     * Set 当前批量任务 id。
+     * @param JobId 当前批量任务 id。
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
+    public void setJobId(Long JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -69,16 +69,16 @@ public class DescribeAssetImageListExportResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeAssetImageListExportResponse() {
+    public CreateSubDomainsAnalyticsFileResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAssetImageListExportResponse(DescribeAssetImageListExportResponse source) {
-        if (source.DownloadUrl != null) {
-            this.DownloadUrl = new String(source.DownloadUrl);
+    public CreateSubDomainsAnalyticsFileResponse(CreateSubDomainsAnalyticsFileResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class DescribeAssetImageListExportResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

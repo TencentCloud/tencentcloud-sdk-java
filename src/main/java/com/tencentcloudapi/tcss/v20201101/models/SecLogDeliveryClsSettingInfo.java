@@ -60,7 +60,6 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
 
     /**
     * 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSetName")
     @Expose
@@ -68,11 +67,24 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
 
     /**
     * 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
+
+    /**
+    * 日志类型	
+    */
+    @SerializedName("SubLogType")
+    @Expose
+    private String [] SubLogType;
+
+    /**
+    * 错误信息
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
 
     /**
      * Get 日志类型 
@@ -155,10 +167,8 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集名称 
      * @return LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSetName() {
         return this.LogSetName;
@@ -166,19 +176,15 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
 
     /**
      * Set 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSetName(String LogSetName) {
         this.LogSetName = LogSetName;
     }
 
     /**
-     * Get 主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名称 
      * @return TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -186,12 +192,42 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
 
     /**
      * Set 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get 日志类型	 
+     * @return SubLogType 日志类型	
+     */
+    public String [] getSubLogType() {
+        return this.SubLogType;
+    }
+
+    /**
+     * Set 日志类型	
+     * @param SubLogType 日志类型	
+     */
+    public void setSubLogType(String [] SubLogType) {
+        this.SubLogType = SubLogType;
+    }
+
+    /**
+     * Get 错误信息 
+     * @return ErrMsg 错误信息
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrMsg 错误信息
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
     }
 
     public SecLogDeliveryClsSettingInfo() {
@@ -223,6 +259,15 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.SubLogType != null) {
+            this.SubLogType = new String[source.SubLogType.length];
+            for (int i = 0; i < source.SubLogType.length; i++) {
+                this.SubLogType[i] = new String(source.SubLogType[i]);
+            }
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
     }
 
 
@@ -237,6 +282,8 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicID", this.TopicID);
         this.setParamSimple(map, prefix + "LogSetName", this.LogSetName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
 
     }
 }

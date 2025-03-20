@@ -32,7 +32,6 @@ public class TrafficFlow extends AbstractModel {
 
     /**
     * 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormatValue")
     @Expose
@@ -40,7 +39,6 @@ public class TrafficFlow extends AbstractModel {
 
     /**
     * 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormatUnit")
     @Expose
@@ -63,10 +61,8 @@ public class TrafficFlow extends AbstractModel {
     }
 
     /**
-     * Get 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式化后的流量，单位见参数 FormatUnit 
      * @return FormatValue 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFormatValue() {
         return this.FormatValue;
@@ -74,19 +70,15 @@ public class TrafficFlow extends AbstractModel {
 
     /**
      * Set 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormatValue 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormatValue(Float FormatValue) {
         this.FormatValue = FormatValue;
     }
 
     /**
-     * Get 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式化后流量的单位 
      * @return FormatUnit 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormatUnit() {
         return this.FormatUnit;
@@ -94,9 +86,7 @@ public class TrafficFlow extends AbstractModel {
 
     /**
      * Set 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormatUnit 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormatUnit(String FormatUnit) {
         this.FormatUnit = FormatUnit;

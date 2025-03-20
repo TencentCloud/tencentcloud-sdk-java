@@ -25,7 +25,6 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
     * 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
     *  节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -41,7 +39,6 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -49,7 +46,6 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -57,17 +53,14 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
     *  Pod 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群 ID 
      * @return ClusterId 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -75,19 +68,15 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
      * Set 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get  节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  节点名称 
      * @return NodeName  节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -95,19 +84,15 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
      * Set  节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName  节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -115,19 +100,15 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -135,19 +116,15 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  Pod 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  Pod 名称 
      * @return Name  Pod 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,9 +132,7 @@ public class PodNodeInfo extends AbstractModel {
 
     /**
      * Set  Pod 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name  Pod 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

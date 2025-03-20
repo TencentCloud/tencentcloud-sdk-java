@@ -25,7 +25,6 @@ public class RecordStatistic extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -33,17 +32,14 @@ public class RecordStatistic extends AbstractModel {
 
     /**
     * 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private RecordStatisticValue Value;
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return Time 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTime() {
         return this.Time;
@@ -51,19 +47,15 @@ public class RecordStatistic extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 统计结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计结果 
      * @return Value 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordStatisticValue getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class RecordStatistic extends AbstractModel {
 
     /**
      * Set 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(RecordStatisticValue Value) {
         this.Value = Value;

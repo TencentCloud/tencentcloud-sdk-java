@@ -32,7 +32,6 @@ public class DescribeNetworkFirewallPolicyStatusResponse extends AbstractModel {
 
     /**
     * NameRepeat,K8sRuleIngressPortError等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskResult")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeNetworkFirewallPolicyStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get NameRepeat,K8sRuleIngressPortError等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NameRepeat,K8sRuleIngressPortError等 
      * @return TaskResult NameRepeat,K8sRuleIngressPortError等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskResult() {
         return this.TaskResult;
@@ -73,9 +70,7 @@ public class DescribeNetworkFirewallPolicyStatusResponse extends AbstractModel {
 
     /**
      * Set NameRepeat,K8sRuleIngressPortError等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskResult NameRepeat,K8sRuleIngressPortError等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskResult(String [] TaskResult) {
         this.TaskResult = TaskResult;

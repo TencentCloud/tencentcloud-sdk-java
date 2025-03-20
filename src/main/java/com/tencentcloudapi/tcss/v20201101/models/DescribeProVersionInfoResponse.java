@@ -25,7 +25,6 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
     * 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
     * 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
     * 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -86,10 +83,8 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专业版开始时间，补充购买时才不为空 
      * @return StartTime 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -97,19 +92,15 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
      * Set 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专业版结束时间，补充购买时才不为空 
      * @return EndTime 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -117,9 +108,7 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
      * Set 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -158,10 +147,8 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID 
      * @return ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -169,9 +156,7 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
      * Set 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

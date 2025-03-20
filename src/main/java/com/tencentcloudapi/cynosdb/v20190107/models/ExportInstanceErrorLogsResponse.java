@@ -25,7 +25,6 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
 
     /**
     * 错误日志导出内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorLogItems")
     @Expose
@@ -46,10 +45,8 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误日志导出内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误日志导出内容 
      * @return ErrorLogItems 错误日志导出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorLogItemExport [] getErrorLogItems() {
         return this.ErrorLogItems;
@@ -57,9 +54,7 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
 
     /**
      * Set 错误日志导出内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorLogItems 错误日志导出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorLogItems(ErrorLogItemExport [] ErrorLogItems) {
         this.ErrorLogItems = ErrorLogItems;

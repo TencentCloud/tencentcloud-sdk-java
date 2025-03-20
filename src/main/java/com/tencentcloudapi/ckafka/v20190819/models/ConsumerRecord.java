@@ -46,7 +46,6 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
     * 消息key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -54,7 +53,6 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
     * 消息value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -62,7 +60,6 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
     * 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -70,7 +67,6 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
     * 消息headers
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
     @Expose
@@ -125,10 +121,8 @@ public class ConsumerRecord extends AbstractModel {
     }
 
     /**
-     * Get 消息key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息key 
      * @return Key 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -136,19 +130,15 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
      * Set 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 消息value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息value 
      * @return Value 消息value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -156,19 +146,15 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
      * Set 消息value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 消息value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息时间戳 
      * @return Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -176,19 +162,15 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
      * Set 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 消息headers
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息headers 
      * @return Headers 消息headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeaders() {
         return this.Headers;
@@ -196,9 +178,7 @@ public class ConsumerRecord extends AbstractModel {
 
     /**
      * Set 消息headers
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 消息headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(String Headers) {
         this.Headers = Headers;

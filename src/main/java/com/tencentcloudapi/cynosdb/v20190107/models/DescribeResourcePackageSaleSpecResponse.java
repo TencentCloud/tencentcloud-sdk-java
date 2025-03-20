@@ -32,7 +32,6 @@ public class DescribeResourcePackageSaleSpecResponse extends AbstractModel {
 
     /**
     * 资源包明细说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeResourcePackageSaleSpecResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源包明细说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包明细说明 
      * @return Detail 资源包明细说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SalePackageSpec [] getDetail() {
         return this.Detail;
@@ -73,9 +70,7 @@ public class DescribeResourcePackageSaleSpecResponse extends AbstractModel {
 
     /**
      * Set 资源包明细说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 资源包明细说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(SalePackageSpec [] Detail) {
         this.Detail = Detail;

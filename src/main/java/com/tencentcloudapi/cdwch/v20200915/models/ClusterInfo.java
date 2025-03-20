@@ -25,7 +25,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * vcluster名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -33,17 +32,14 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 当前cluster的IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeIps")
     @Expose
     private String [] NodeIps;
 
     /**
-     * Get vcluster名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vcluster名字 
      * @return ClusterName vcluster名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -51,19 +47,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set vcluster名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName vcluster名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 当前cluster的IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前cluster的IP列表 
      * @return NodeIps 当前cluster的IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNodeIps() {
         return this.NodeIps;
@@ -71,9 +63,7 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 当前cluster的IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeIps 当前cluster的IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeIps(String [] NodeIps) {
         this.NodeIps = NodeIps;

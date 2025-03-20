@@ -32,7 +32,6 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
     * 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadURL")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
     * 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExportProgress")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureMsg")
     @Expose
@@ -78,10 +75,8 @@ public class DescribeExportJobResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回下载URL 
      * @return DownloadURL 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadURL() {
         return this.DownloadURL;
@@ -89,19 +84,15 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
      * Set 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadURL 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadURL(String DownloadURL) {
         this.DownloadURL = DownloadURL;
     }
 
     /**
-     * Get 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。 
      * @return ExportProgress 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getExportProgress() {
         return this.ExportProgress;
@@ -109,19 +100,15 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
      * Set 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExportProgress 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExportProgress(Float ExportProgress) {
         this.ExportProgress = ExportProgress;
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FailureMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureMsg() {
         return this.FailureMsg;
@@ -129,9 +116,7 @@ public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureMsg(String FailureMsg) {
         this.FailureMsg = FailureMsg;

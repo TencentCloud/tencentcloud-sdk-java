@@ -25,7 +25,6 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
     * 有效回归时间范围开始时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeRangeStart")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
     * 有效回归时间范围结束时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeRangeEnd")
     @Expose
@@ -54,10 +52,8 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有效回归时间范围开始时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效回归时间范围开始时间点（已废弃） 
      * @return TimeRangeStart 有效回归时间范围开始时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
@@ -65,19 +61,15 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
      * Set 有效回归时间范围开始时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeRangeStart 有效回归时间范围开始时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get 有效回归时间范围结束时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效回归时间范围结束时间点（已废弃） 
      * @return TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
@@ -85,9 +77,7 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
      * Set 有效回归时间范围结束时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;

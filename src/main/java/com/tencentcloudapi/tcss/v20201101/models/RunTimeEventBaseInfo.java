@@ -125,7 +125,6 @@ MountNamespace逃逸、
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIP")
     @Expose
@@ -133,7 +132,6 @@ MountNamespace逃逸、
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIP")
     @Expose
@@ -147,7 +145,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetStatus")
     @Expose
@@ -162,7 +159,6 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
@@ -170,7 +166,6 @@ MountNamespace逃逸、
 
     /**
     * 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -531,10 +526,8 @@ MountNamespace逃逸、
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return HostIP 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIP() {
         return this.HostIP;
@@ -542,19 +535,15 @@ MountNamespace逃逸、
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIP 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return ClientIP 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIP() {
         return this.ClientIP;
@@ -562,9 +551,7 @@ MountNamespace逃逸、
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIP 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
@@ -577,8 +564,7 @@ MountNamespace逃逸、
 隔离中		ISOLATING
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。 
+解除隔离失败 RESTORE_FAILED 
      * @return ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -586,7 +572,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -600,7 +585,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -608,7 +592,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
@@ -622,8 +605,7 @@ MountNamespace逃逸、
 "CONTAINER_DESTROYED" //容器已销毁
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。 
+"UNKNOW"              // 原因未知 
      * @return ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -632,7 +614,6 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
@@ -647,7 +628,6 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -656,17 +636,14 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离操作来源 
      * @return ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
@@ -674,9 +651,7 @@ MountNamespace逃逸、
 
     /**
      * Set 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;

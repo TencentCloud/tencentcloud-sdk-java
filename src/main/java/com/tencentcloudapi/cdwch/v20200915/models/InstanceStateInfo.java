@@ -25,7 +25,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceState")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowCreateTime")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowName")
     @Expose
@@ -49,7 +46,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowProgress")
     @Expose
@@ -57,7 +53,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStateDesc")
     @Expose
@@ -65,7 +60,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMsg")
     @Expose
@@ -73,7 +67,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessName")
     @Expose
@@ -81,7 +74,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 请求id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestId")
     @Expose
@@ -89,17 +81,14 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessSubName")
     @Expose
     private String ProcessSubName;
 
     /**
-     * Get 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态，例如：Serving 
      * @return InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -107,19 +96,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作创建时间 
      * @return FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowCreateTime() {
         return this.FlowCreateTime;
@@ -127,19 +112,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowCreateTime(String FlowCreateTime) {
         this.FlowCreateTime = FlowCreateTime;
     }
 
     /**
-     * Get 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作名称 
      * @return FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowName() {
         return this.FlowName;
@@ -147,19 +128,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作进度 
      * @return FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowProgress() {
         return this.FlowProgress;
@@ -167,19 +144,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowProgress(Long FlowProgress) {
         this.FlowProgress = FlowProgress;
     }
 
     /**
-     * Get 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态描述，例如：运行中 
      * @return InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStateDesc() {
         return this.InstanceStateDesc;
@@ -187,19 +160,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStateDesc(String InstanceStateDesc) {
         this.InstanceStateDesc = InstanceStateDesc;
     }
 
     /**
-     * Get 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群流程错误信息，例如：“创建失败，资源不足” 
      * @return FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMsg() {
         return this.FlowMsg;
@@ -207,19 +176,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMsg(String FlowMsg) {
         this.FlowMsg = FlowMsg;
     }
 
     /**
-     * Get 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤的名称，例如：”购买资源中“ 
      * @return ProcessName 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessName() {
         return this.ProcessName;
@@ -227,19 +192,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessName 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessName(String ProcessName) {
         this.ProcessName = ProcessName;
     }
 
     /**
-     * Get 请求id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求id 
      * @return RequestId 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestId() {
         return this.RequestId;
@@ -247,19 +208,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestId 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程的二级名称 
      * @return ProcessSubName 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessSubName() {
         return this.ProcessSubName;
@@ -267,9 +224,7 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessSubName 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessSubName(String ProcessSubName) {
         this.ProcessSubName = ProcessSubName;

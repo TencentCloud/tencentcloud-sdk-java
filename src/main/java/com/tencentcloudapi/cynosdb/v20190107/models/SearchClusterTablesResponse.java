@@ -25,7 +25,6 @@ public class SearchClusterTablesResponse extends AbstractModel {
 
     /**
     * 数据表列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tables")
     @Expose
@@ -39,10 +38,8 @@ public class SearchClusterTablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据表列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据表列表 
      * @return Tables 数据表列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseTables [] getTables() {
         return this.Tables;
@@ -50,9 +47,7 @@ public class SearchClusterTablesResponse extends AbstractModel {
 
     /**
      * Set 数据表列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tables 数据表列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTables(DatabaseTables [] Tables) {
         this.Tables = Tables;

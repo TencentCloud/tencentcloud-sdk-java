@@ -25,7 +25,6 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 接收组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveGroup")
     @Expose
@@ -33,7 +32,6 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndReceiveTime")
     @Expose
@@ -41,7 +39,6 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 接收名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveName")
     @Expose
@@ -49,7 +46,6 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendChannel")
     @Expose
@@ -57,7 +53,6 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartReceiveTime")
     @Expose
@@ -65,17 +60,14 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
     * 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveUin")
     @Expose
     private ReceiveUin [] ReceiveUin;
 
     /**
-     * Get 接收组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收组 
      * @return ReceiveGroup 接收组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReceiveGroup() {
         return this.ReceiveGroup;
@@ -83,19 +75,15 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 接收组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveGroup 接收组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveGroup(Long [] ReceiveGroup) {
         this.ReceiveGroup = ReceiveGroup;
     }
 
     /**
-     * Get 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后接收时间 
      * @return EndReceiveTime 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndReceiveTime() {
         return this.EndReceiveTime;
@@ -103,19 +91,15 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndReceiveTime 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndReceiveTime(String EndReceiveTime) {
         this.EndReceiveTime = EndReceiveTime;
     }
 
     /**
-     * Get 接收名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收名 
      * @return ReceiveName 接收名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReceiveName() {
         return this.ReceiveName;
@@ -123,19 +107,15 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 接收名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveName 接收名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveName(String ReceiveName) {
         this.ReceiveName = ReceiveName;
     }
 
     /**
-     * Get 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推送渠道 
      * @return SendChannel 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSendChannel() {
         return this.SendChannel;
@@ -143,19 +123,15 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendChannel 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendChannel(Long [] SendChannel) {
         this.SendChannel = SendChannel;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartReceiveTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartReceiveTime() {
         return this.StartReceiveTime;
@@ -163,19 +139,15 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartReceiveTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartReceiveTime(String StartReceiveTime) {
         this.StartReceiveTime = StartReceiveTime;
     }
 
     /**
-     * Get 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收用户列表 
      * @return ReceiveUin 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReceiveUin [] getReceiveUin() {
         return this.ReceiveUin;
@@ -183,9 +155,7 @@ public class ReceiveInfo extends AbstractModel {
 
     /**
      * Set 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveUin 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveUin(ReceiveUin [] ReceiveUin) {
         this.ReceiveUin = ReceiveUin;

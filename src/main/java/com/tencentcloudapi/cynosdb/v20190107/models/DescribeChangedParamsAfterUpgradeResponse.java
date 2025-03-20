@@ -32,7 +32,6 @@ public class DescribeChangedParamsAfterUpgradeResponse extends AbstractModel {
 
     /**
     * 实例参数列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeChangedParamsAfterUpgradeResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例参数列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例参数列表 
      * @return Items 实例参数列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamItemInfo [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeChangedParamsAfterUpgradeResponse extends AbstractModel {
 
     /**
      * Set 实例参数列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 实例参数列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ParamItemInfo [] Items) {
         this.Items = Items;

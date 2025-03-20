@@ -25,7 +25,6 @@ public class DescribeGroupByPathResponse extends AbstractModel {
 
     /**
     * 分组信息详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Group")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupByPathResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分组信息详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组信息详情 
      * @return Group 分组信息详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupItem getGroup() {
         return this.Group;
@@ -50,9 +47,7 @@ public class DescribeGroupByPathResponse extends AbstractModel {
 
     /**
      * Set 分组信息详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Group 分组信息详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroup(GroupItem Group) {
         this.Group = Group;

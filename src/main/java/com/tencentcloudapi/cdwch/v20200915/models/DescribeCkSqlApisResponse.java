@@ -25,7 +25,6 @@ public class DescribeCkSqlApisResponse extends AbstractModel {
 
     /**
     * 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnData")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCkSqlApisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的查询数据，大部分情况是list，也可能是bool 
      * @return ReturnData 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnData() {
         return this.ReturnData;
@@ -50,9 +47,7 @@ public class DescribeCkSqlApisResponse extends AbstractModel {
 
     /**
      * Set 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnData 返回的查询数据，大部分情况是list，也可能是bool
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnData(String ReturnData) {
         this.ReturnData = ReturnData;

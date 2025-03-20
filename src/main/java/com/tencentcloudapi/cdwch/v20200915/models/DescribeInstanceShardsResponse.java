@@ -25,7 +25,6 @@ public class DescribeInstanceShardsResponse extends AbstractModel {
 
     /**
     * 实例shard信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceShardsList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInstanceShardsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例shard信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例shard信息 
      * @return InstanceShardsList 实例shard信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceShardsList() {
         return this.InstanceShardsList;
@@ -50,9 +47,7 @@ public class DescribeInstanceShardsResponse extends AbstractModel {
 
     /**
      * Set 实例shard信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceShardsList 实例shard信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceShardsList(String InstanceShardsList) {
         this.InstanceShardsList = InstanceShardsList;

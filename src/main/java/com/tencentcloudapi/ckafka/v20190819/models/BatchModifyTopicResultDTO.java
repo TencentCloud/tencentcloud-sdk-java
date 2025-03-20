@@ -25,7 +25,6 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
     * ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
     * 主题名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -41,7 +39,6 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
     * 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -55,10 +52,8 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     private String Message;
 
     /**
-     * Get ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -66,19 +61,15 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
      * Set ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名 
      * @return TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -86,19 +77,15 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
      * Set 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作返回码 
      * @return ReturnCode 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnCode() {
         return this.ReturnCode;
@@ -106,9 +93,7 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
      * Set 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnCode 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(String ReturnCode) {
         this.ReturnCode = ReturnCode;

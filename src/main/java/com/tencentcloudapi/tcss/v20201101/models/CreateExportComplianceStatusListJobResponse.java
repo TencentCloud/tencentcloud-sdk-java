@@ -25,7 +25,6 @@ public class CreateExportComplianceStatusListJobResponse extends AbstractModel {
 
     /**
     * 返回创建的导出任务的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateExportComplianceStatusListJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回创建的导出任务的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回创建的导出任务的ID 
      * @return JobId 返回创建的导出任务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -50,9 +47,7 @@ public class CreateExportComplianceStatusListJobResponse extends AbstractModel {
 
     /**
      * Set 返回创建的导出任务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 返回创建的导出任务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

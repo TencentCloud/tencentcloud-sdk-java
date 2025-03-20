@@ -130,7 +130,6 @@ public class HostInfo extends AbstractModel {
 
     /**
     * 所属项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Project")
     @Expose
@@ -138,7 +137,6 @@ public class HostInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -429,10 +427,8 @@ public class HostInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属项目 
      * @return Project 所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProjectInfo getProject() {
         return this.Project;
@@ -440,19 +436,15 @@ public class HostInfo extends AbstractModel {
 
     /**
      * Set 所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Project 所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProject(ProjectInfo Project) {
         this.Project = Project;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -460,9 +452,7 @@ public class HostInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

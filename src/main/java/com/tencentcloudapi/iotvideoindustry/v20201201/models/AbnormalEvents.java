@@ -25,7 +25,6 @@ public class AbnormalEvents extends AbstractModel {
 
     /**
     * 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -33,17 +32,14 @@ public class AbnormalEvents extends AbstractModel {
 
     /**
     * 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
     private AbnormalEventsInfo [] Info;
 
     /**
-     * Get 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应查询日期 
      * @return Date 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -51,19 +47,15 @@ public class AbnormalEvents extends AbstractModel {
 
     /**
      * Set 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表信息 
      * @return Info 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AbnormalEventsInfo [] getInfo() {
         return this.Info;
@@ -71,9 +63,7 @@ public class AbnormalEvents extends AbstractModel {
 
     /**
      * Set 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(AbnormalEventsInfo [] Info) {
         this.Info = Info;

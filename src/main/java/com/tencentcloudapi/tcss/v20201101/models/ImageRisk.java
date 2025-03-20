@@ -25,7 +25,6 @@ public class ImageRisk extends AbstractModel {
 
     /**
     * 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Behavior")
     @Expose
@@ -33,7 +32,6 @@ public class ImageRisk extends AbstractModel {
 
     /**
     * 种类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class ImageRisk extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -49,7 +46,6 @@ public class ImageRisk extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -57,17 +53,14 @@ public class ImageRisk extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstructionContent")
     @Expose
     private String InstructionContent;
 
     /**
-     * Get 高危行为
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高危行为 
      * @return Behavior 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBehavior() {
         return this.Behavior;
@@ -75,19 +68,15 @@ public class ImageRisk extends AbstractModel {
 
     /**
      * Set 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Behavior 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBehavior(Long Behavior) {
         this.Behavior = Behavior;
     }
 
     /**
-     * Get 种类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 种类 
      * @return Type 种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -95,19 +84,15 @@ public class ImageRisk extends AbstractModel {
 
     /**
      * Set 种类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -115,19 +100,15 @@ public class ImageRisk extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -135,19 +116,15 @@ public class ImageRisk extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return InstructionContent 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstructionContent() {
         return this.InstructionContent;
@@ -155,9 +132,7 @@ public class ImageRisk extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstructionContent 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstructionContent(String InstructionContent) {
         this.InstructionContent = InstructionContent;

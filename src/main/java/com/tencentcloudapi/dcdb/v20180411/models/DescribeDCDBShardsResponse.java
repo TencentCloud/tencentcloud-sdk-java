@@ -39,7 +39,6 @@ public class DescribeDCDBShardsResponse extends AbstractModel {
 
     /**
     * 灾备标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DcnFlag")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeDCDBShardsResponse extends AbstractModel {
     }
 
     /**
-     * Get 灾备标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 灾备标志，0-无，1-主实例，2-灾备实例 
      * @return DcnFlag 灾备标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDcnFlag() {
         return this.DcnFlag;
@@ -96,9 +93,7 @@ public class DescribeDCDBShardsResponse extends AbstractModel {
 
     /**
      * Set 灾备标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DcnFlag 灾备标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDcnFlag(Long DcnFlag) {
         this.DcnFlag = DcnFlag;

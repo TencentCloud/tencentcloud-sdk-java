@@ -25,7 +25,6 @@ public class AbnormalEventsInfo extends AbstractModel {
 
     /**
     * 类型值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class AbnormalEventsInfo extends AbstractModel {
 
     /**
     * 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 类型值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型值 
      * @return Key 类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class AbnormalEventsInfo extends AbstractModel {
 
     /**
      * Set 类型值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(Long Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 类型总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型总数 
      * @return Count 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -71,9 +63,7 @@ public class AbnormalEventsInfo extends AbstractModel {
 
     /**
      * Set 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -95,7 +95,6 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
     * PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MajorVersion")
     @Expose
@@ -103,7 +102,6 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
     * PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KernelVersion")
     @Expose
@@ -111,7 +109,6 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
     * 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportTDE")
     @Expose
@@ -278,10 +275,8 @@ public class SpecItemInfo extends AbstractModel {
     }
 
     /**
-     * Get PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PostgreSQL的主要版本编号 
      * @return MajorVersion PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMajorVersion() {
         return this.MajorVersion;
@@ -289,19 +284,15 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
      * Set PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MajorVersion PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMajorVersion(String MajorVersion) {
         this.MajorVersion = MajorVersion;
     }
 
     /**
-     * Get PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PostgreSQL的内核版本编号 
      * @return KernelVersion PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKernelVersion() {
         return this.KernelVersion;
@@ -309,19 +300,15 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
      * Set PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KernelVersion PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持TDE数据加密功能，0-不支持，1-支持 
      * @return IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportTDE() {
         return this.IsSupportTDE;
@@ -329,9 +316,7 @@ public class SpecItemInfo extends AbstractModel {
 
     /**
      * Set 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportTDE(Long IsSupportTDE) {
         this.IsSupportTDE = IsSupportTDE;

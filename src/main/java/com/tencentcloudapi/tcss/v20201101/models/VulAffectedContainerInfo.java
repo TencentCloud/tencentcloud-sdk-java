@@ -123,7 +123,6 @@ public class VulAffectedContainerInfo extends AbstractModel {
 
     /**
     * 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerStatus")
     @Expose
@@ -354,10 +353,8 @@ public class VulAffectedContainerInfo extends AbstractModel {
     }
 
     /**
-     * Get 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知 
      * @return ContainerStatus 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
@@ -365,9 +362,7 @@ public class VulAffectedContainerInfo extends AbstractModel {
 
     /**
      * Set 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerStatus 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;

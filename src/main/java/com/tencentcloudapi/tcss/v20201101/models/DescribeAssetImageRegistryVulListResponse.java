@@ -25,7 +25,6 @@ public class DescribeAssetImageRegistryVulListResponse extends AbstractModel {
 
     /**
     * 镜像漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetImageRegistryVulListResponse extends AbstractModel {
 
     /**
     * 总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAssetImageRegistryVulListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像漏洞列表 
      * @return List 镜像漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageVul [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ public class DescribeAssetImageRegistryVulListResponse extends AbstractModel {
 
     /**
      * Set 镜像漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 镜像漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ImageVul [] List) {
         this.List = List;
     }
 
     /**
-     * Get 总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量 
      * @return TotalCount 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeAssetImageRegistryVulListResponse extends AbstractModel {
 
     /**
      * Set 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

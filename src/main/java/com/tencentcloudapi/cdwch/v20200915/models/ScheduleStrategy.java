@@ -25,7 +25,6 @@ public class ScheduleStrategy extends AbstractModel {
 
     /**
     * 备份桶名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -61,17 +60,14 @@ public class ScheduleStrategy extends AbstractModel {
 
     /**
     * 下次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextBackupTime")
     @Expose
     private String NextBackupTime;
 
     /**
-     * Get 备份桶名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份桶名称 
      * @return CosBucketName 备份桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucketName() {
         return this.CosBucketName;
@@ -79,9 +75,7 @@ public class ScheduleStrategy extends AbstractModel {
 
     /**
      * Set 备份桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosBucketName 备份桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
@@ -152,10 +146,8 @@ public class ScheduleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 下次备份时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下次备份时间 
      * @return NextBackupTime 下次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextBackupTime() {
         return this.NextBackupTime;
@@ -163,9 +155,7 @@ public class ScheduleStrategy extends AbstractModel {
 
     /**
      * Set 下次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextBackupTime 下次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextBackupTime(String NextBackupTime) {
         this.NextBackupTime = NextBackupTime;

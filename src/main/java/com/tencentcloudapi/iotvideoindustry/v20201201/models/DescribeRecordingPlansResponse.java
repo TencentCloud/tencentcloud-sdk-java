@@ -25,7 +25,6 @@ public class DescribeRecordingPlansResponse extends AbstractModel {
 
     /**
     * 录制计划详情·列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Plans")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRecordingPlansResponse extends AbstractModel {
 
     /**
     * 录制计划总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRecordingPlansResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录制计划详情·列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制计划详情·列表 
      * @return Plans 录制计划详情·列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordPlanDetail [] getPlans() {
         return this.Plans;
@@ -58,19 +54,15 @@ public class DescribeRecordingPlansResponse extends AbstractModel {
 
     /**
      * Set 录制计划详情·列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Plans 录制计划详情·列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlans(RecordPlanDetail [] Plans) {
         this.Plans = Plans;
     }
 
     /**
-     * Get 录制计划总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制计划总数 
      * @return TotalCount 录制计划总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRecordingPlansResponse extends AbstractModel {
 
     /**
      * Set 录制计划总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 录制计划总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

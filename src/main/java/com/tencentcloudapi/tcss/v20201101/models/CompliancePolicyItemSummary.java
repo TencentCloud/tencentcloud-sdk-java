@@ -74,7 +74,6 @@ public class CompliancePolicyItemSummary extends AbstractModel {
 
     /**
     * 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -99,7 +98,6 @@ CHECK_FAILED, 检测失败
     * 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckResult")
     @Expose
@@ -107,7 +105,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassedAssetCount")
     @Expose
@@ -115,7 +112,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedAssetCount")
     @Expose
@@ -123,7 +119,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WhitelistId")
     @Expose
@@ -145,7 +140,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicableVersion")
     @Expose
@@ -153,7 +147,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -161,7 +154,6 @@ RESULT_FAILED: 未通过
 
     /**
     * 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditProcedure")
     @Expose
@@ -171,7 +163,6 @@ RESULT_FAILED: 未通过
     * 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEnable")
     @Expose
@@ -290,10 +281,8 @@ RESULT_FAILED: 未通过
     }
 
     /**
-     * Get 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近检测的时间 
      * @return LastCheckTime 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
@@ -301,9 +290,7 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastCheckTime 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
@@ -360,12 +347,10 @@ CHECK_FAILED, 检测失败
     /**
      * Get 检测结果。RESULT_PASSED: 通过
 
-RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。 
+RESULT_FAILED: 未通过 
      * @return CheckResult 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckResult() {
         return this.CheckResult;
@@ -375,21 +360,17 @@ RESULT_FAILED: 未通过
      * Set 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckResult 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过检测的资产的数目 
      * @return PassedAssetCount 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPassedAssetCount() {
         return this.PassedAssetCount;
@@ -397,19 +378,15 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassedAssetCount 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassedAssetCount(Long PassedAssetCount) {
         this.PassedAssetCount = PassedAssetCount;
     }
 
     /**
-     * Get 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未通过检测的资产的数目 
      * @return FailedAssetCount 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedAssetCount() {
         return this.FailedAssetCount;
@@ -417,19 +394,15 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedAssetCount 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedAssetCount(Long FailedAssetCount) {
         this.FailedAssetCount = FailedAssetCount;
     }
 
     /**
-     * Get 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。 
      * @return WhitelistId 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWhitelistId() {
         return this.WhitelistId;
@@ -437,9 +410,7 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WhitelistId 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWhitelistId(Long WhitelistId) {
         this.WhitelistId = WhitelistId;
@@ -478,10 +449,8 @@ RESULT_FAILED: 未通过
     }
 
     /**
-     * Get 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项适用的版本 
      * @return ApplicableVersion 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicableVersion() {
         return this.ApplicableVersion;
@@ -489,19 +458,15 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicableVersion 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicableVersion(String ApplicableVersion) {
         this.ApplicableVersion = ApplicableVersion;
     }
 
     /**
-     * Get 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项描述 
      * @return Description 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -509,19 +474,15 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项审计方法 
      * @return AuditProcedure 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuditProcedure() {
         return this.AuditProcedure;
@@ -529,9 +490,7 @@ RESULT_FAILED: 未通过
 
     /**
      * Set 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditProcedure 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditProcedure(String AuditProcedure) {
         this.AuditProcedure = AuditProcedure;
@@ -540,12 +499,10 @@ RESULT_FAILED: 未通过
     /**
      * Get 是否开启
 <li>0 关闭</li>
-<li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>1 开启</li> 
      * @return IsEnable 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsEnable() {
         return this.IsEnable;
@@ -555,11 +512,9 @@ RESULT_FAILED: 未通过
      * Set 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsEnable 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEnable(Long IsEnable) {
         this.IsEnable = IsEnable;

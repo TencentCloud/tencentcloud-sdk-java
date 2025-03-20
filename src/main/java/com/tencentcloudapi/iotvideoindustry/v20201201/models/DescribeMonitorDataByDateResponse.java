@@ -25,7 +25,6 @@ public class DescribeMonitorDataByDateResponse extends AbstractModel {
 
     /**
     * 统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeMonitorDataByDateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计数据列表 
      * @return Data 统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordStatistic [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeMonitorDataByDateResponse extends AbstractModel {
 
     /**
      * Set 统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(RecordStatistic [] Data) {
         this.Data = Data;

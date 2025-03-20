@@ -25,7 +25,6 @@ public class WebCallbackInfo extends AbstractModel {
 
     /**
     * 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebCallbackId")
     @Expose
@@ -33,7 +32,6 @@ public class WebCallbackInfo extends AbstractModel {
 
     /**
     * 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -43,7 +41,6 @@ public class WebCallbackInfo extends AbstractModel {
     * 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -51,7 +48,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Webhook")
     @Expose
@@ -59,7 +55,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -67,7 +62,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -75,7 +69,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -83,7 +76,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
     @Expose
@@ -91,7 +83,6 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -99,17 +90,14 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
     * 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警渠道回调配置id。 
      * @return WebCallbackId 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebCallbackId() {
         return this.WebCallbackId;
@@ -117,19 +105,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebCallbackId 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebCallbackId(String WebCallbackId) {
         this.WebCallbackId = WebCallbackId;
     }
 
     /**
-     * Get 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警渠道回调配置名称。 
      * @return Name 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -137,9 +121,7 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -148,12 +130,10 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     /**
      * Get 渠道类型
 
-WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。 
+WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调; 
      * @return Type 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -163,21 +143,17 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
      * Set 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回调地址。 
      * @return Webhook 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebhook() {
         return this.Webhook;
@@ -185,19 +161,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Webhook 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebhook(String Webhook) {
         this.Webhook = Webhook;
     }
 
     /**
-     * Get 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求方式。 
      * @return Method 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -205,19 +177,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 秘钥信息。 
      * @return Key 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -225,19 +193,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 主账号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账号。 
      * @return Uin 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
         return this.Uin;
@@ -245,19 +209,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号。 
      * @return SubUin 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubUin() {
         return this.SubUin;
@@ -265,19 +225,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubUin 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(Long SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。秒级时间戳 
      * @return CreateTime 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -285,19 +241,15 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间。秒级时间戳 
      * @return UpdateTime 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -305,9 +257,7 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 
     /**
      * Set 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

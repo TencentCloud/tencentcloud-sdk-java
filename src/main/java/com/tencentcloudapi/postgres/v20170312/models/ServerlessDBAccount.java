@@ -25,7 +25,6 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBUser")
     @Expose
@@ -33,7 +32,6 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
     * 密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBPassword")
     @Expose
@@ -41,17 +39,14 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
     * 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBConnLimit")
     @Expose
     private Long DBConnLimit;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return DBUser 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBUser() {
         return this.DBUser;
@@ -59,19 +54,15 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBUser 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBUser(String DBUser) {
         this.DBUser = DBUser;
     }
 
     /**
-     * Get 密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密码 
      * @return DBPassword 密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBPassword() {
         return this.DBPassword;
@@ -79,19 +70,15 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
      * Set 密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBPassword 密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBPassword(String DBPassword) {
         this.DBPassword = DBPassword;
     }
 
     /**
-     * Get 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接数限制 
      * @return DBConnLimit 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDBConnLimit() {
         return this.DBConnLimit;
@@ -99,9 +86,7 @@ public class ServerlessDBAccount extends AbstractModel {
 
     /**
      * Set 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBConnLimit 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBConnLimit(Long DBConnLimit) {
         this.DBConnLimit = DBConnLimit;

@@ -25,7 +25,6 @@ public class DescribeClusterDetailDatabasesResponse extends AbstractModel {
 
     /**
     * 数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbInfos")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeClusterDetailDatabasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库信息 
      * @return DbInfos 数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DbInfo [] getDbInfos() {
         return this.DbInfos;
@@ -57,9 +54,7 @@ public class DescribeClusterDetailDatabasesResponse extends AbstractModel {
 
     /**
      * Set 数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbInfos 数据库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbInfos(DbInfo [] DbInfos) {
         this.DbInfos = DbInfos;

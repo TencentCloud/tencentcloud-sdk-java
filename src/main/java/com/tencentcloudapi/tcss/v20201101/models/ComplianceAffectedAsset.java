@@ -88,7 +88,6 @@ RESULT_PASSED: 通过
 
     /**
     * 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIP")
     @Expose
@@ -96,7 +95,6 @@ RESULT_PASSED: 通过
 
     /**
     * 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageTag")
     @Expose
@@ -104,7 +102,6 @@ RESULT_PASSED: 通过
 
     /**
     * 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyInfo")
     @Expose
@@ -112,7 +109,6 @@ RESULT_PASSED: 通过
 
     /**
     * 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -308,10 +304,8 @@ RESULT_PASSED: 通过
     }
 
     /**
-     * Get 主机IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机IP 
      * @return HostIP 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIP() {
         return this.HostIP;
@@ -319,19 +313,15 @@ RESULT_PASSED: 通过
 
     /**
      * Set 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIP 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像的tag 
      * @return ImageTag 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageTag() {
         return this.ImageTag;
@@ -339,19 +329,15 @@ RESULT_PASSED: 通过
 
     /**
      * Set 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageTag 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项验证信息 
      * @return VerifyInfo 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVerifyInfo() {
         return this.VerifyInfo;
@@ -359,19 +345,15 @@ RESULT_PASSED: 通过
 
     /**
      * Set 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifyInfo 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyInfo(String VerifyInfo) {
         this.VerifyInfo = VerifyInfo;
     }
 
     /**
-     * Get 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机实例id 
      * @return InstanceId 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -379,9 +361,7 @@ RESULT_PASSED: 通过
 
     /**
      * Set 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

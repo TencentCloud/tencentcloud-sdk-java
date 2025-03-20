@@ -25,7 +25,6 @@ public class DescribeSavingPlanOverviewResponse extends AbstractModel {
 
     /**
     * 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Overviews")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeSavingPlanOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划总览明细数据	 
      * @return Overviews 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SavingPlanOverviewDetail [] getOverviews() {
         return this.Overviews;
@@ -57,9 +54,7 @@ public class DescribeSavingPlanOverviewResponse extends AbstractModel {
 
     /**
      * Set 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Overviews 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverviews(SavingPlanOverviewDetail [] Overviews) {
         this.Overviews = Overviews;

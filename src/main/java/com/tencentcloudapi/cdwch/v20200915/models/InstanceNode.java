@@ -81,7 +81,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rip")
     @Expose
@@ -89,7 +88,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCHProxy")
     @Expose
@@ -97,7 +95,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -105,7 +102,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UUID")
     @Expose
@@ -113,7 +109,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -121,7 +116,6 @@ public class InstanceNode extends AbstractModel {
 
     /**
     * 区描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -263,10 +257,8 @@ public class InstanceNode extends AbstractModel {
     }
 
     /**
-     * Get VPC IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC IP 
      * @return Rip VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRip() {
         return this.Rip;
@@ -274,19 +266,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rip VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRip(String Rip) {
         this.Rip = Rip;
     }
 
     /**
-     * Get ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ture的时候表示该节点上部署了chproxy进程 
      * @return IsCHProxy ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCHProxy() {
         return this.IsCHProxy;
@@ -294,19 +282,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCHProxy ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCHProxy(Boolean IsCHProxy) {
         this.IsCHProxy = IsCHProxy;
     }
 
     /**
-     * Get 节点状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点状态 
      * @return Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -314,19 +298,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点uuid 
      * @return UUID 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUUID() {
         return this.UUID;
@@ -334,19 +314,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UUID 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get 区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区 
      * @return Zone 区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -354,19 +330,15 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 区描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区描述 
      * @return ZoneDesc 区描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
@@ -374,9 +346,7 @@ public class InstanceNode extends AbstractModel {
 
     /**
      * Set 区描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneDesc 区描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;

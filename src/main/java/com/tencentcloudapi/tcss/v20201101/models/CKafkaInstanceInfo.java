@@ -25,7 +25,6 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -33,7 +32,6 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -49,7 +46,6 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteList")
     @Expose
@@ -57,17 +53,14 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -75,19 +68,15 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -95,19 +84,15 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 主题列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题列表 
      * @return TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CKafkaTopicInfo [] getTopicList() {
         return this.TopicList;
@@ -115,19 +100,15 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
      * Set 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(CKafkaTopicInfo [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get 路由列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由列表 
      * @return RouteList 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CkafkaRouteInfo [] getRouteList() {
         return this.RouteList;
@@ -135,19 +116,15 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
      * Set 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteList 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteList(CkafkaRouteInfo [] RouteList) {
         this.RouteList = RouteList;
     }
 
     /**
-     * Get kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka版本号 
      * @return KafkaVersion kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
@@ -155,9 +132,7 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
      * Set kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaVersion kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;

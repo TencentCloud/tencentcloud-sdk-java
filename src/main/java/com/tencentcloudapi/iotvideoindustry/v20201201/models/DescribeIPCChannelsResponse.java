@@ -25,7 +25,6 @@ public class DescribeIPCChannelsResponse extends AbstractModel {
 
     /**
     * 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeIPCChannelsResponse extends AbstractModel {
 
     /**
     * 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeIPCChannelsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道总数 
      * @return TotalCount 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeIPCChannelsResponse extends AbstractModel {
 
     /**
      * Set 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道详情列表 
      * @return DeviceList 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupDeviceItem [] getDeviceList() {
         return this.DeviceList;
@@ -78,9 +70,7 @@ public class DescribeIPCChannelsResponse extends AbstractModel {
 
     /**
      * Set 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceList 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceList(GroupDeviceItem [] DeviceList) {
         this.DeviceList = DeviceList;

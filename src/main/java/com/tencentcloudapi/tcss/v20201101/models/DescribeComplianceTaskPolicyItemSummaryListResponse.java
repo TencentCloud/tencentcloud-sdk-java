@@ -25,7 +25,6 @@ public class DescribeComplianceTaskPolicyItemSummaryListResponse extends Abstrac
 
     /**
     * 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,10 +52,8 @@ public class DescribeComplianceTaskPolicyItemSummaryListResponse extends Abstrac
     private String RequestId;
 
     /**
-     * Get 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。 
      * @return TaskId 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -64,9 +61,7 @@ public class DescribeComplianceTaskPolicyItemSummaryListResponse extends Abstrac
 
     /**
      * Set 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -25,7 +25,6 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
     * 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCode")
     @Expose
@@ -33,7 +32,6 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
     * 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -41,7 +39,6 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
     * 设备虚拟组信息，仅在创建NVR时返回该值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualGroupId")
     @Expose
@@ -55,10 +52,8 @@ public class CreateDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备编码 
      * @return DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceCode() {
         return this.DeviceCode;
@@ -66,19 +61,15 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
      * Set 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCode(String DeviceCode) {
         this.DeviceCode = DeviceCode;
     }
 
     /**
-     * Get 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备唯一标识 
      * @return DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -86,19 +77,15 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
      * Set 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备虚拟组信息，仅在创建NVR时返回该值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备虚拟组信息，仅在创建NVR时返回该值 
      * @return VirtualGroupId 设备虚拟组信息，仅在创建NVR时返回该值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualGroupId() {
         return this.VirtualGroupId;
@@ -106,9 +93,7 @@ public class CreateDeviceResponse extends AbstractModel {
 
     /**
      * Set 设备虚拟组信息，仅在创建NVR时返回该值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualGroupId 设备虚拟组信息，仅在创建NVR时返回该值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualGroupId(String VirtualGroupId) {
         this.VirtualGroupId = VirtualGroupId;

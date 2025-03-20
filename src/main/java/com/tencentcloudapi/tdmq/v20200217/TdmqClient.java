@@ -1363,17 +1363,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *RabbitMQ专享版修改公网管控台，vpc15672开关
-     * @param req ModifyPublicNetworkAccessPointRequest
-     * @return ModifyPublicNetworkAccessPointResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPoint(ModifyPublicNetworkAccessPointRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyPublicNetworkAccessPoint", ModifyPublicNetworkAccessPointResponse.class);
-    }
-
-    /**
      *修改pulsar专业版公网安全策略
      * @param req ModifyPublicNetworkSecurityPolicyRequest
      * @return ModifyPublicNetworkSecurityPolicyResponse

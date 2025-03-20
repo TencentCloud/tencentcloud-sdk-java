@@ -39,7 +39,6 @@ public class CreateClusterCheckTaskResponse extends AbstractModel {
 
     /**
     * 返回创建的集群新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewTaskID")
     @Expose
@@ -85,10 +84,8 @@ public class CreateClusterCheckTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回创建的集群新任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回创建的集群新任务ID 
      * @return NewTaskID 返回创建的集群新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewTaskID() {
         return this.NewTaskID;
@@ -96,9 +93,7 @@ public class CreateClusterCheckTaskResponse extends AbstractModel {
 
     /**
      * Set 返回创建的集群新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewTaskID 返回创建的集群新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewTaskID(String NewTaskID) {
         this.NewTaskID = NewTaskID;

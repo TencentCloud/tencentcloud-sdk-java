@@ -25,7 +25,6 @@ public class UserProfile extends AbstractModel {
 
     /**
     * 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileId")
     @Expose
@@ -33,7 +32,6 @@ public class UserProfile extends AbstractModel {
 
     /**
     * 配置类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileType")
     @Expose
@@ -41,7 +39,6 @@ public class UserProfile extends AbstractModel {
 
     /**
     * 配置级别，"User"或"Instance"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileLevel")
     @Expose
@@ -49,7 +46,6 @@ public class UserProfile extends AbstractModel {
 
     /**
     * 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileName")
     @Expose
@@ -63,10 +59,8 @@ public class UserProfile extends AbstractModel {
     private ProfileInfo ProfileInfo;
 
     /**
-     * Get 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置的id。 
      * @return ProfileId 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileId() {
         return this.ProfileId;
@@ -74,19 +68,15 @@ public class UserProfile extends AbstractModel {
 
     /**
      * Set 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfileId 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileId(String ProfileId) {
         this.ProfileId = ProfileId;
     }
 
     /**
-     * Get 配置类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置类型。 
      * @return ProfileType 配置类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileType() {
         return this.ProfileType;
@@ -94,19 +84,15 @@ public class UserProfile extends AbstractModel {
 
     /**
      * Set 配置类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfileType 配置类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileType(String ProfileType) {
         this.ProfileType = ProfileType;
     }
 
     /**
-     * Get 配置级别，"User"或"Instance"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置级别，"User"或"Instance"。 
      * @return ProfileLevel 配置级别，"User"或"Instance"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileLevel() {
         return this.ProfileLevel;
@@ -114,19 +100,15 @@ public class UserProfile extends AbstractModel {
 
     /**
      * Set 配置级别，"User"或"Instance"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfileLevel 配置级别，"User"或"Instance"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileLevel(String ProfileLevel) {
         this.ProfileLevel = ProfileLevel;
     }
 
     /**
-     * Get 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置名称。 
      * @return ProfileName 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileName() {
         return this.ProfileName;
@@ -134,9 +116,7 @@ public class UserProfile extends AbstractModel {
 
     /**
      * Set 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfileName 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileName(String ProfileName) {
         this.ProfileName = ProfileName;

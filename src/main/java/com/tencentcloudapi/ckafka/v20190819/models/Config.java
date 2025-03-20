@@ -25,7 +25,6 @@ public class Config extends AbstractModel {
 
     /**
     * 消息保留时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retention")
     @Expose
@@ -33,7 +32,6 @@ public class Config extends AbstractModel {
 
     /**
     * 最小同步复制数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
@@ -42,7 +40,6 @@ public class Config extends AbstractModel {
     /**
     * 日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CleanUpPolicy")
     @Expose
@@ -50,7 +47,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * Segment 分片滚动的时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentMs")
     @Expose
@@ -58,7 +54,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * 0表示 false。 1表示 true。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
@@ -66,7 +61,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * Segment 分片滚动的字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentBytes")
     @Expose
@@ -74,7 +68,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * 最大消息字节数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMessageBytes")
     @Expose
@@ -82,7 +75,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * 消息保留文件大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionBytes")
     @Expose
@@ -90,17 +82,14 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
     * 消息保存的时间类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogMsgTimestampType")
     @Expose
     private String LogMsgTimestampType;
 
     /**
-     * Get 消息保留时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留时间 
      * @return Retention 消息保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetention() {
         return this.Retention;
@@ -108,19 +97,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 消息保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Retention 消息保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
     }
 
     /**
-     * Get 最小同步复制数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小同步复制数 
      * @return MinInsyncReplicas 最小同步复制数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
@@ -128,9 +113,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 最小同步复制数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinInsyncReplicas 最小同步复制数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
@@ -138,11 +121,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Get 日志清理模式，默认 delete。
-delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
-注意：此字段可能返回 null，表示取不到有效值。 
+delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。 
      * @return CleanUpPolicy 日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
@@ -151,20 +132,16 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     /**
      * Set 日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CleanUpPolicy 日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
     /**
-     * Get Segment 分片滚动的时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Segment 分片滚动的时长 
      * @return SegmentMs Segment 分片滚动的时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
@@ -172,19 +149,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set Segment 分片滚动的时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentMs Segment 分片滚动的时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get 0表示 false。 1表示 true。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0表示 false。 1表示 true。 
      * @return UncleanLeaderElectionEnable 0表示 false。 1表示 true。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
@@ -192,19 +165,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 0表示 false。 1表示 true。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UncleanLeaderElectionEnable 0表示 false。 1表示 true。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get Segment 分片滚动的字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Segment 分片滚动的字节数 
      * @return SegmentBytes Segment 分片滚动的字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentBytes() {
         return this.SegmentBytes;
@@ -212,19 +181,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set Segment 分片滚动的字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentBytes Segment 分片滚动的字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentBytes(Long SegmentBytes) {
         this.SegmentBytes = SegmentBytes;
     }
 
     /**
-     * Get 最大消息字节数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大消息字节数 
      * @return MaxMessageBytes 最大消息字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
@@ -232,19 +197,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 最大消息字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMessageBytes 最大消息字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get 消息保留文件大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留文件大小 
      * @return RetentionBytes 消息保留文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
@@ -252,19 +213,15 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 消息保留文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionBytes 消息保留文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get 消息保存的时间类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保存的时间类型 
      * @return LogMsgTimestampType 消息保存的时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogMsgTimestampType() {
         return this.LogMsgTimestampType;
@@ -272,9 +229,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
     /**
      * Set 消息保存的时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogMsgTimestampType 消息保存的时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {
         this.LogMsgTimestampType = LogMsgTimestampType;

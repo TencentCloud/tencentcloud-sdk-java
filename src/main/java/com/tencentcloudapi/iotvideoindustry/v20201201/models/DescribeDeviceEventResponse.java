@@ -25,7 +25,6 @@ public class DescribeDeviceEventResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDeviceEventResponse extends AbstractModel {
 
     /**
     * 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDeviceEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeDeviceEventResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件列表 
      * @return Events 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Events [] getEvents() {
         return this.Events;
@@ -78,9 +70,7 @@ public class DescribeDeviceEventResponse extends AbstractModel {
 
     /**
      * Set 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(Events [] Events) {
         this.Events = Events;

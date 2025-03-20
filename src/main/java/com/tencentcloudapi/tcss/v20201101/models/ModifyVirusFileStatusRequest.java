@@ -31,14 +31,7 @@ public class ModifyVirusFileStatusRequest extends AbstractModel {
     private String [] EventIdSet;
 
     /**
-    * 标记事件的状态，   
-    EVENT_DEALED:事件处理
-    EVENT_INGNORE"：事件忽略
-    EVENT_DEL:事件删除
-    EVENT_ADD_WHITE:事件加白
-    EVENT_PENDING: 事件待处理
-	EVENT_ISOLATE_CONTAINER: 隔离容器
-	EVENT_RESOTRE_CONTAINER: 恢复容器
+    * 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器
     */
     @SerializedName("Status")
     @Expose
@@ -75,44 +68,16 @@ public class ModifyVirusFileStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 标记事件的状态，   
-    EVENT_DEALED:事件处理
-    EVENT_INGNORE"：事件忽略
-    EVENT_DEL:事件删除
-    EVENT_ADD_WHITE:事件加白
-    EVENT_PENDING: 事件待处理
-	EVENT_ISOLATE_CONTAINER: 隔离容器
-	EVENT_RESOTRE_CONTAINER: 恢复容器 
-     * @return Status 标记事件的状态，   
-    EVENT_DEALED:事件处理
-    EVENT_INGNORE"：事件忽略
-    EVENT_DEL:事件删除
-    EVENT_ADD_WHITE:事件加白
-    EVENT_PENDING: 事件待处理
-	EVENT_ISOLATE_CONTAINER: 隔离容器
-	EVENT_RESOTRE_CONTAINER: 恢复容器
+     * Get 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器 
+     * @return Status 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 标记事件的状态，   
-    EVENT_DEALED:事件处理
-    EVENT_INGNORE"：事件忽略
-    EVENT_DEL:事件删除
-    EVENT_ADD_WHITE:事件加白
-    EVENT_PENDING: 事件待处理
-	EVENT_ISOLATE_CONTAINER: 隔离容器
-	EVENT_RESOTRE_CONTAINER: 恢复容器
-     * @param Status 标记事件的状态，   
-    EVENT_DEALED:事件处理
-    EVENT_INGNORE"：事件忽略
-    EVENT_DEL:事件删除
-    EVENT_ADD_WHITE:事件加白
-    EVENT_PENDING: 事件待处理
-	EVENT_ISOLATE_CONTAINER: 隔离容器
-	EVENT_RESOTRE_CONTAINER: 恢复容器
+     * Set 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器
+     * @param Status 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器
      */
     public void setStatus(String Status) {
         this.Status = Status;

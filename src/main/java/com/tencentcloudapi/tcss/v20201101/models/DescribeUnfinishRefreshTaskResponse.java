@@ -39,7 +39,6 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel {
 
     /**
     * 新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewTaskID")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 新任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新任务ID 
      * @return NewTaskID 新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewTaskID() {
         return this.NewTaskID;
@@ -96,9 +93,7 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel {
 
     /**
      * Set 新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewTaskID 新任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewTaskID(String NewTaskID) {
         this.NewTaskID = NewTaskID;

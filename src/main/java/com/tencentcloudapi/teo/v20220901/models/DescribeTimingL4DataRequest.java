@@ -39,10 +39,12 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
     * 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -83,10 +85,7 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     private QueryCondition [] Filters;
 
     /**
-    * 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+    * 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
     */
     @SerializedName("Area")
     @Expose
@@ -126,15 +125,19 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Get 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li> 
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li> 
      * @return MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -142,15 +145,19 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Set 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
      * @param MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -245,28 +252,16 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。 
-     * @return Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * Get 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。 
+     * @return Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
-     * @param Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * Set 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
+     * @param Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      */
     public void setArea(String Area) {
         this.Area = Area;

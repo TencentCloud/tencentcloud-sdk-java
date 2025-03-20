@@ -1023,6 +1023,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询安全防护配置详情。
+     * @param req DescribeSecurityPolicyRequest
+     * @return DescribeSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityPolicyResponse DescribeSecurityPolicy(DescribeSecurityPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityPolicy", DescribeSecurityPolicyResponse.class);
+    }
+
+    /**
      *查询指定策略模板的绑定关系列表。
      * @param req DescribeSecurityTemplateBindingsRequest
      * @return DescribeSecurityTemplateBindingsResponse

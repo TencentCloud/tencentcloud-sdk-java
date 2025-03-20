@@ -52,7 +52,7 @@ public class DescribeSuperNodePodListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 排序字段
+    * 排序字段 StartTime
     */
     @SerializedName("By")
     @Expose
@@ -142,16 +142,16 @@ public class DescribeSuperNodePodListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get 排序字段 StartTime 
+     * @return By 排序字段 StartTime
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set 排序字段 StartTime
+     * @param By 排序字段 StartTime
      */
     public void setBy(String By) {
         this.By = By;

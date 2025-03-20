@@ -25,7 +25,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVEID")
     @Expose
@@ -33,7 +32,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("POCID")
     @Expose
@@ -41,7 +39,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
     @Expose
@@ -57,7 +53,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 分类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -65,7 +60,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 分类2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryType")
     @Expose
@@ -73,7 +67,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -81,7 +74,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Des")
     @Expose
@@ -89,7 +81,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfficialSolution")
     @Expose
@@ -97,7 +88,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 引用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reference")
     @Expose
@@ -105,7 +95,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseSolution")
     @Expose
@@ -113,7 +102,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmitTime")
     @Expose
@@ -121,7 +109,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvssScore")
     @Expose
@@ -129,7 +116,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvssVector")
     @Expose
@@ -137,7 +123,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSuggest")
     @Expose
@@ -145,7 +130,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixedVersions")
     @Expose
@@ -153,7 +137,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -161,7 +144,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 组件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Component")
     @Expose
@@ -169,7 +151,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -177,7 +158,6 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackLevel")
     @Expose
@@ -185,17 +165,14 @@ public class ImageVul extends AbstractModel {
 
     /**
     * 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayerInfos")
     @Expose
     private ImageVulLayerInfo [] LayerInfos;
 
     /**
-     * Get 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞id 
      * @return CVEID 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVEID() {
         return this.CVEID;
@@ -203,19 +180,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVEID 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVEID(String CVEID) {
         this.CVEID = CVEID;
     }
 
     /**
-     * Get 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 观点验证程序id 
      * @return POCID 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPOCID() {
         return this.POCID;
@@ -223,19 +196,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param POCID 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPOCID(String POCID) {
         this.POCID = POCID;
     }
 
     /**
-     * Get 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称 
      * @return Name 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -243,19 +212,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉及组件信息 
      * @return Components 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComponentsInfo [] getComponents() {
         return this.Components;
@@ -263,19 +228,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Components 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(ComponentsInfo [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 分类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类 
      * @return Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -283,19 +244,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 分类2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类2 
      * @return CategoryType 分类2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryType() {
         return this.CategoryType;
@@ -303,19 +260,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 分类2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryType 分类2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryType(String CategoryType) {
         this.CategoryType = CategoryType;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -323,19 +276,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Des 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDes() {
         return this.Des;
@@ -343,19 +292,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Des 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDes(String Des) {
         this.Des = Des;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return OfficialSolution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfficialSolution() {
         return this.OfficialSolution;
@@ -363,19 +308,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfficialSolution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfficialSolution(String OfficialSolution) {
         this.OfficialSolution = OfficialSolution;
     }
 
     /**
-     * Get 引用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引用 
      * @return Reference 引用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReference() {
         return this.Reference;
@@ -383,19 +324,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 引用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reference 引用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get 防御方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防御方案 
      * @return DefenseSolution 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefenseSolution() {
         return this.DefenseSolution;
@@ -403,19 +340,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseSolution 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseSolution(String DefenseSolution) {
         this.DefenseSolution = DefenseSolution;
     }
 
     /**
-     * Get 提交时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交时间 
      * @return SubmitTime 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubmitTime() {
         return this.SubmitTime;
@@ -423,19 +356,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmitTime 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmitTime(String SubmitTime) {
         this.SubmitTime = SubmitTime;
     }
 
     /**
-     * Get Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cvss分数 
      * @return CvssScore Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCvssScore() {
         return this.CvssScore;
@@ -443,19 +372,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvssScore Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvssScore(String CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cvss信息 
      * @return CvssVector Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCvssVector() {
         return this.CvssVector;
@@ -463,19 +388,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvssVector Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvssVector(String CvssVector) {
         this.CvssVector = CvssVector;
     }
 
     /**
-     * Get 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否建议修复 
      * @return IsSuggest 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsSuggest() {
         return this.IsSuggest;
@@ -483,19 +404,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSuggest 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSuggest(String IsSuggest) {
         this.IsSuggest = IsSuggest;
     }
 
     /**
-     * Get 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复版本号 
      * @return FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixedVersions() {
         return this.FixedVersions;
@@ -503,19 +420,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixedVersions(String FixedVersions) {
         this.FixedVersions = FixedVersions;
     }
 
     /**
-     * Get 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp" 
      * @return Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTag() {
         return this.Tag;
@@ -523,19 +436,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 组件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名 
      * @return Component 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponent() {
         return this.Component;
@@ -543,19 +452,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Component 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get 组件版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件版本 
      * @return Version 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -563,19 +468,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热度 0-3 
      * @return AttackLevel 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackLevel() {
         return this.AttackLevel;
@@ -583,19 +484,15 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackLevel 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackLevel(Long AttackLevel) {
         this.AttackLevel = AttackLevel;
     }
 
     /**
-     * Get 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像层信息列表 
      * @return LayerInfos 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageVulLayerInfo [] getLayerInfos() {
         return this.LayerInfos;
@@ -603,9 +500,7 @@ public class ImageVul extends AbstractModel {
 
     /**
      * Set 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayerInfos 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayerInfos(ImageVulLayerInfo [] LayerInfos) {
         this.LayerInfos = LayerInfos;

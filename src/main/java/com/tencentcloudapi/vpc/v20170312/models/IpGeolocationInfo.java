@@ -25,7 +25,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 国家信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -33,7 +32,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 省、州、郡一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -41,7 +39,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 市一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -49,7 +46,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 市内区域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,7 +53,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 接入运营商信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isp")
     @Expose
@@ -65,7 +60,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 骨干运营商名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsName")
     @Expose
@@ -73,7 +67,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 骨干运营商AS号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsId")
     @Expose
@@ -81,7 +74,6 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -89,17 +81,14 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
     * IP地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-     * Get 国家信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家信息 
      * @return Country 国家信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountry() {
         return this.Country;
@@ -107,19 +96,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 国家信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 省、州、郡一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省、州、郡一级行政区域信息 
      * @return Province 省、州、郡一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvince() {
         return this.Province;
@@ -127,19 +112,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 省、州、郡一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省、州、郡一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 市一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 市一级行政区域信息 
      * @return City 市一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -147,19 +128,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 市一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 市一级行政区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 市内区域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 市内区域信息 
      * @return Region 市内区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -167,19 +144,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 市内区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 市内区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 接入运营商信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入运营商信息 
      * @return Isp 接入运营商信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsp() {
         return this.Isp;
@@ -187,19 +160,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 接入运营商信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Isp 接入运营商信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 骨干运营商名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 骨干运营商名称 
      * @return AsName 骨干运营商名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsName() {
         return this.AsName;
@@ -207,19 +176,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 骨干运营商名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsName 骨干运营商名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsName(String AsName) {
         this.AsName = AsName;
     }
 
     /**
-     * Get 骨干运营商AS号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 骨干运营商AS号 
      * @return AsId 骨干运营商AS号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsId() {
         return this.AsId;
@@ -227,19 +192,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 骨干运营商AS号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsId 骨干运营商AS号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsId(String AsId) {
         this.AsId = AsId;
     }
 
     /**
-     * Get 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空 
      * @return Comment 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -247,19 +208,15 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 注释信息。目前的填充值为移动接入用户的APN值，如无APN属性则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get IP地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP地址 
      * @return AddressIp IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressIp() {
         return this.AddressIp;
@@ -267,9 +224,7 @@ public class IpGeolocationInfo extends AbstractModel {
 
     /**
      * Set IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressIp IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;

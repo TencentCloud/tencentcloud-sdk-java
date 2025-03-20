@@ -25,7 +25,6 @@ public class CreateLiveRecordPlanResponse extends AbstractModel {
 
     /**
     * 录制计划名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateLiveRecordPlanResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录制计划名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制计划名称 
      * @return PlanId 录制计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanId() {
         return this.PlanId;
@@ -50,9 +47,7 @@ public class CreateLiveRecordPlanResponse extends AbstractModel {
 
     /**
      * Set 录制计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanId 录制计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;

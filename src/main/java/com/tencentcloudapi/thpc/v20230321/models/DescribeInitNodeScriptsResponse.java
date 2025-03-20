@@ -25,7 +25,6 @@ public class DescribeInitNodeScriptsResponse extends AbstractModel {
 
     /**
     * 节点初始化脚本列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitNodeScriptSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInitNodeScriptsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点初始化脚本列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点初始化脚本列表。 
      * @return InitNodeScriptSet 节点初始化脚本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeScript [] getInitNodeScriptSet() {
         return this.InitNodeScriptSet;
@@ -50,9 +47,7 @@ public class DescribeInitNodeScriptsResponse extends AbstractModel {
 
     /**
      * Set 节点初始化脚本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitNodeScriptSet 节点初始化脚本列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitNodeScriptSet(NodeScript [] InitNodeScriptSet) {
         this.InitNodeScriptSet = InitNodeScriptSet;

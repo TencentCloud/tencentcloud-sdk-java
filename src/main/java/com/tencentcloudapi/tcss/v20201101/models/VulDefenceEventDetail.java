@@ -172,7 +172,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PID")
     @Expose
@@ -180,7 +179,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainClass")
     @Expose
@@ -188,7 +186,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StackTrace")
     @Expose
@@ -196,7 +193,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerAccount")
     @Expose
@@ -204,7 +200,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerPort")
     @Expose
@@ -212,7 +207,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerExe")
     @Expose
@@ -220,7 +214,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerArg")
     @Expose
@@ -228,7 +221,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QUUID")
     @Expose
@@ -242,7 +234,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetStatus")
     @Expose
@@ -257,7 +248,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
@@ -265,7 +255,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -280,7 +269,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerStatus")
     @Expose
@@ -288,7 +276,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JNDIUrl")
     @Expose
@@ -296,7 +283,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RaspDetail")
     @Expose
@@ -716,10 +702,8 @@ public class VulDefenceEventDetail extends AbstractModel {
     }
 
     /**
-     * Get 进程PID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程PID 
      * @return PID 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPID() {
         return this.PID;
@@ -727,19 +711,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PID 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPID(Long PID) {
         this.PID = PID;
     }
 
     /**
-     * Get 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程主类名 
      * @return MainClass 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMainClass() {
         return this.MainClass;
@@ -747,19 +727,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainClass 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainClass(String MainClass) {
         this.MainClass = MainClass;
     }
 
     /**
-     * Get 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 堆栈信息 
      * @return StackTrace 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStackTrace() {
         return this.StackTrace;
@@ -767,19 +743,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StackTrace 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStackTrace(String StackTrace) {
         this.StackTrace = StackTrace;
     }
 
     /**
-     * Get 监听账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听账号 
      * @return ServerAccount 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerAccount() {
         return this.ServerAccount;
@@ -787,19 +759,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerAccount 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerAccount(String ServerAccount) {
         this.ServerAccount = ServerAccount;
     }
 
     /**
-     * Get 监听端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听端口 
      * @return ServerPort 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerPort() {
         return this.ServerPort;
@@ -807,19 +775,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerPort 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerPort(String ServerPort) {
         this.ServerPort = ServerPort;
     }
 
     /**
-     * Get 进程路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程路径 
      * @return ServerExe 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerExe() {
         return this.ServerExe;
@@ -827,19 +791,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerExe 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerExe(String ServerExe) {
         this.ServerExe = ServerExe;
     }
 
     /**
-     * Get 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程命令行参数 
      * @return ServerArg 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerArg() {
         return this.ServerArg;
@@ -847,19 +807,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerArg 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerArg(String ServerArg) {
         this.ServerArg = ServerArg;
     }
 
     /**
-     * Get 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机QUUID/超级节点ID 
      * @return QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQUUID() {
         return this.QUUID;
@@ -867,9 +823,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
@@ -882,8 +836,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 隔离中		ISOLATING
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。 
+解除隔离失败 RESTORE_FAILED 
      * @return ContainerNetStatus 隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -891,7 +844,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -905,7 +857,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetStatus 隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -913,7 +864,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
@@ -927,8 +877,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 	"CONTAINER_DESTROYED" //容器已销毁
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
-	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。 
+	"UNKNOW"              // 原因未知 
      * @return ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -937,7 +886,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
@@ -952,7 +900,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -961,17 +908,14 @@ public class VulDefenceEventDetail extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离操作来源 
      * @return ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
@@ -979,9 +923,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
@@ -995,8 +937,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 已经创建: CREATED
 已经销毁: DESTROYED
 正在重启中: RESTARTING
-迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。 
+迁移中: REMOVING 
      * @return ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -1005,7 +946,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
@@ -1020,7 +960,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -1029,17 +968,14 @@ public class VulDefenceEventDetail extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get 接口Url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接口Url 
      * @return JNDIUrl 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJNDIUrl() {
         return this.JNDIUrl;
@@ -1047,19 +983,15 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JNDIUrl 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJNDIUrl(String JNDIUrl) {
         this.JNDIUrl = JNDIUrl;
     }
 
     /**
-     * Get rasp detail
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rasp detail 
      * @return RaspDetail rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RaspInfo [] getRaspDetail() {
         return this.RaspDetail;
@@ -1067,9 +999,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RaspDetail rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRaspDetail(RaspInfo [] RaspDetail) {
         this.RaspDetail = RaspDetail;

@@ -25,7 +25,6 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
     * 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckErr")
     @Expose
@@ -33,7 +32,6 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
     * 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameRepeatErr")
     @Expose
@@ -41,7 +39,6 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
     * 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryId")
     @Expose
@@ -55,10 +52,8 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接错误信息 
      * @return HealthCheckErr 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthCheckErr() {
         return this.HealthCheckErr;
@@ -66,19 +61,15 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
      * Set 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckErr 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckErr(String HealthCheckErr) {
         this.HealthCheckErr = HealthCheckErr;
     }
 
     /**
-     * Get 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称错误信息 
      * @return NameRepeatErr 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameRepeatErr() {
         return this.NameRepeatErr;
@@ -86,19 +77,15 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
      * Set 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameRepeatErr 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameRepeatErr(String NameRepeatErr) {
         this.NameRepeatErr = NameRepeatErr;
     }
 
     /**
-     * Get 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库唯一id 
      * @return RegistryId 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegistryId() {
         return this.RegistryId;
@@ -106,9 +93,7 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
      * Set 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistryId 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryId(Long RegistryId) {
         this.RegistryId = RegistryId;

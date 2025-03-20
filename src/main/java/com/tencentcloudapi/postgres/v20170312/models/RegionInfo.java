@@ -53,7 +53,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 该地域是否支持国际站售卖，0：不支持，1：支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportInternational")
     @Expose
@@ -124,10 +123,8 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 该地域是否支持国际站售卖，0：不支持，1：支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该地域是否支持国际站售卖，0：不支持，1：支持 
      * @return SupportInternational 该地域是否支持国际站售卖，0：不支持，1：支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportInternational() {
         return this.SupportInternational;
@@ -135,9 +132,7 @@ public class RegionInfo extends AbstractModel {
 
     /**
      * Set 该地域是否支持国际站售卖，0：不支持，1：支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportInternational 该地域是否支持国际站售卖，0：不支持，1：支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportInternational(Long SupportInternational) {
         this.SupportInternational = SupportInternational;

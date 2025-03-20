@@ -25,7 +25,6 @@ public class DescribeSubGroupsResponse extends AbstractModel {
 
     /**
     * 子分组详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSubGroupsResponse extends AbstractModel {
 
     /**
     * 子分组总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeSubGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 子分组详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子分组详情列表 
      * @return GroupList 子分组详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupItem [] getGroupList() {
         return this.GroupList;
@@ -58,19 +54,15 @@ public class DescribeSubGroupsResponse extends AbstractModel {
 
     /**
      * Set 子分组详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupList 子分组详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupList(GroupItem [] GroupList) {
         this.GroupList = GroupList;
     }
 
     /**
-     * Get 子分组总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子分组总数 
      * @return TotalCount 子分组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeSubGroupsResponse extends AbstractModel {
 
     /**
      * Set 子分组总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 子分组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -1199,18 +1199,6 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *查询分类规则详情
-
-     * @param req DescribeRuleDetailRequest
-     * @return DescribeRuleDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRuleDetailResponse DescribeRuleDetail(DescribeRuleDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRuleDetail", DescribeRuleDetailResponse.class);
-    }
-
-    /**
      *查询分类下规则列表
 
      * @param req DescribeRuleListRequest

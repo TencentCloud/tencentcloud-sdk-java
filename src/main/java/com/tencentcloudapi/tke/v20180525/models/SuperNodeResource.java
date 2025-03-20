@@ -25,7 +25,6 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
     * 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -33,7 +32,6 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
     * 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Num")
     @Expose
@@ -41,7 +39,6 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
     * 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -49,7 +46,6 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
     * 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -57,17 +53,14 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
     * 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gpu")
     @Expose
     private Float Gpu;
 
     /**
-     * Get 节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点名称 
      * @return NodeName 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -75,19 +68,15 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
      * Set 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点上的资源总数 
      * @return Num 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNum() {
         return this.Num;
@@ -95,19 +84,15 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
      * Set 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Num 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNum(Long Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点上的总核数 
      * @return Cpu 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpu() {
         return this.Cpu;
@@ -115,19 +100,15 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
      * Set 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点上的总内存数 
      * @return Memory 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemory() {
         return this.Memory;
@@ -135,19 +116,15 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
      * Set 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点上的总 GPU 卡数 
      * @return Gpu 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getGpu() {
         return this.Gpu;
@@ -155,9 +132,7 @@ public class SuperNodeResource extends AbstractModel {
 
     /**
      * Set 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gpu 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpu(Float Gpu) {
         this.Gpu = Gpu;

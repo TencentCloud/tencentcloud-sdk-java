@@ -39,7 +39,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomPolicy")
     @Expose
@@ -76,7 +74,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -98,7 +95,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkPolicyPlugin")
     @Expose
@@ -113,7 +109,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishResult")
     @Expose
@@ -159,10 +154,8 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -170,9 +163,7 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -211,10 +202,8 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义规则 
      * @return CustomPolicy 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkCustomPolicy [] getCustomPolicy() {
         return this.CustomPolicy;
@@ -222,9 +211,7 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
      * Set 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomPolicy 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomPolicy(NetworkCustomPolicy [] CustomPolicy) {
         this.CustomPolicy = CustomPolicy;
@@ -247,10 +234,8 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -258,9 +243,7 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -299,10 +282,8 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络策略对应的网络插件 
      * @return NetworkPolicyPlugin 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkPolicyPlugin() {
         return this.NetworkPolicyPlugin;
@@ -310,9 +291,7 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
      * Set 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkPolicyPlugin 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkPolicyPlugin(String NetworkPolicyPlugin) {
         this.NetworkPolicyPlugin = NetworkPolicyPlugin;
@@ -335,10 +314,8 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络发布结果 
      * @return PublishResult 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublishResult() {
         return this.PublishResult;
@@ -346,9 +323,7 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
      * Set 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishResult 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

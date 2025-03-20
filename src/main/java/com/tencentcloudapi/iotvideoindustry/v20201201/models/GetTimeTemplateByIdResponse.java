@@ -25,7 +25,6 @@ public class GetTimeTemplateByIdResponse extends AbstractModel {
 
     /**
     * 时间模板详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Template")
     @Expose
@@ -39,10 +38,8 @@ public class GetTimeTemplateByIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时间模板详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间模板详情 
      * @return Template 时间模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimeTemplateItem getTemplate() {
         return this.Template;
@@ -50,9 +47,7 @@ public class GetTimeTemplateByIdResponse extends AbstractModel {
 
     /**
      * Set 时间模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Template 时间模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplate(TimeTemplateItem Template) {
         this.Template = Template;

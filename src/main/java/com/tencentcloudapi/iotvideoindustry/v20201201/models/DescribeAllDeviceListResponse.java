@@ -25,7 +25,6 @@ public class DescribeAllDeviceListResponse extends AbstractModel {
 
     /**
     * 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAllDeviceListResponse extends AbstractModel {
 
     /**
     * 设备详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Devices")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAllDeviceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备总数 
      * @return TotalCount 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeAllDeviceListResponse extends AbstractModel {
 
     /**
      * Set 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 设备详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备详细信息列表 
      * @return Devices 设备详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AllDeviceInfo [] getDevices() {
         return this.Devices;
@@ -78,9 +70,7 @@ public class DescribeAllDeviceListResponse extends AbstractModel {
 
     /**
      * Set 设备详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Devices 设备详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevices(AllDeviceInfo [] Devices) {
         this.Devices = Devices;

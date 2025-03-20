@@ -185,7 +185,6 @@ public class DescribeRiskDnsEventDetailResponse extends AbstractModel {
 
     /**
     * 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -193,7 +192,6 @@ public class DescribeRiskDnsEventDetailResponse extends AbstractModel {
 
     /**
     * 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -340,7 +338,6 @@ EVENT_ADD_WHITE：已加白
 
     /**
     * 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationTime")
     @Expose
@@ -852,10 +849,8 @@ EVENT_ADD_WHITE：已加白
     }
 
     /**
-     * Get 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意域名或IP 
      * @return Address 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -863,19 +858,15 @@ EVENT_ADD_WHITE：已加白
 
     /**
      * Set 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意IP所属城市 
      * @return City 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -883,9 +874,7 @@ EVENT_ADD_WHITE：已加白
 
     /**
      * Set 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;
@@ -1220,10 +1209,8 @@ EVENT_ADD_WHITE：已加白
     }
 
     /**
-     * Get 操作时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作时间 
      * @return OperationTime 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationTime() {
         return this.OperationTime;
@@ -1231,9 +1218,7 @@ EVENT_ADD_WHITE：已加白
 
     /**
      * Set 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationTime 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;

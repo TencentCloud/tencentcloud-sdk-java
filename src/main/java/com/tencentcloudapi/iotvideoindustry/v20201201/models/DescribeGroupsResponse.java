@@ -25,7 +25,6 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
     * 分组详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Groups")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分组详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组详细信息列表 
      * @return Groups 分组详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfo [] getGroups() {
         return this.Groups;
@@ -50,9 +47,7 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
      * Set 分组详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Groups 分组详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroups(GroupInfo [] Groups) {
         this.Groups = Groups;

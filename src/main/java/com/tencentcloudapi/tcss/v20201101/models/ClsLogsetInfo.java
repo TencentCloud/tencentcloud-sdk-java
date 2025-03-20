@@ -32,7 +32,6 @@ public class ClsLogsetInfo extends AbstractModel {
 
     /**
     * 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetName")
     @Expose
@@ -40,7 +39,6 @@ public class ClsLogsetInfo extends AbstractModel {
 
     /**
     * cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -63,10 +61,8 @@ public class ClsLogsetInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集名称 
      * @return LogsetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetName() {
         return this.LogsetName;
@@ -74,19 +70,15 @@ public class ClsLogsetInfo extends AbstractModel {
 
     /**
      * Set 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cls主题列表 
      * @return TopicList cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClsTopicInfo [] getTopicList() {
         return this.TopicList;
@@ -94,9 +86,7 @@ public class ClsLogsetInfo extends AbstractModel {
 
     /**
      * Set cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(ClsTopicInfo [] TopicList) {
         this.TopicList = TopicList;

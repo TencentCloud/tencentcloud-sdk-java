@@ -32,7 +32,6 @@ public class UsedDetail extends AbstractModel {
 
     /**
     * 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficPackageName")
     @Expose
@@ -111,10 +110,8 @@ public class UsedDetail extends AbstractModel {
     }
 
     /**
-     * Get 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包名称 
      * @return TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficPackageName() {
         return this.TrafficPackageName;
@@ -122,9 +119,7 @@ public class UsedDetail extends AbstractModel {
 
     /**
      * Set 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficPackageName(String TrafficPackageName) {
         this.TrafficPackageName = TrafficPackageName;

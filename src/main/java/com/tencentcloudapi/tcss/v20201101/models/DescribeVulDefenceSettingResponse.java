@@ -53,7 +53,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIDs")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostTotalCount")
     @Expose
@@ -69,7 +67,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportDefenseVulCount")
     @Expose
@@ -182,10 +179,8 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自选漏洞防御主机 
      * @return HostIDs 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHostIDs() {
         return this.HostIDs;
@@ -193,19 +188,15 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIDs 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIDs(String [] HostIDs) {
         this.HostIDs = HostIDs;
     }
 
     /**
-     * Get 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开通容器安全的主机总数 
      * @return HostTotalCount 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostTotalCount() {
         return this.HostTotalCount;
@@ -213,19 +204,15 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostTotalCount 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostTotalCount(Long HostTotalCount) {
         this.HostTotalCount = HostTotalCount;
     }
 
     /**
-     * Get 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持防御的漏洞数 
      * @return SupportDefenseVulCount 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportDefenseVulCount() {
         return this.SupportDefenseVulCount;
@@ -233,9 +220,7 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportDefenseVulCount 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportDefenseVulCount(Long SupportDefenseVulCount) {
         this.SupportDefenseVulCount = SupportDefenseVulCount;

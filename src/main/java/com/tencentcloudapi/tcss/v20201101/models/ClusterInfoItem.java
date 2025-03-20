@@ -180,7 +180,6 @@ public class ClusterInfoItem extends AbstractModel {
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessedStatus")
     @Expose
@@ -188,7 +187,6 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
     * 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessedSubStatus")
     @Expose
@@ -196,7 +194,6 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
     * 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeCount")
     @Expose
@@ -204,7 +201,6 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
     * 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffLineNodeCount")
     @Expose
@@ -212,7 +208,6 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
     * 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnInstallAgentNodeCount")
     @Expose
@@ -220,7 +215,6 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
     * 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
@@ -600,8 +594,7 @@ public class ClusterInfoItem extends AbstractModel {
 接入异常: AccessedException
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
-卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。 
+卸载中: AccessedUninstalling 
      * @return AccessedStatus 接入状态:
 未接入: AccessedNone
 已防护: AccessedDefended
@@ -611,7 +604,6 @@ public class ClusterInfoItem extends AbstractModel {
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessedStatus() {
         return this.AccessedStatus;
@@ -627,7 +619,6 @@ public class ClusterInfoItem extends AbstractModel {
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessedStatus 接入状态:
 未接入: AccessedNone
 已防护: AccessedDefended
@@ -637,17 +628,14 @@ public class ClusterInfoItem extends AbstractModel {
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessedStatus(String AccessedStatus) {
         this.AccessedStatus = AccessedStatus;
     }
 
     /**
-     * Get 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入失败原因 
      * @return AccessedSubStatus 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessedSubStatus() {
         return this.AccessedSubStatus;
@@ -655,19 +643,15 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
      * Set 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessedSubStatus 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessedSubStatus(String AccessedSubStatus) {
         this.AccessedSubStatus = AccessedSubStatus;
     }
 
     /**
-     * Get 节点总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点总数 
      * @return NodeCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodeCount() {
         return this.NodeCount;
@@ -675,19 +659,15 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
      * Set 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 离线节点数 
      * @return OffLineNodeCount 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffLineNodeCount() {
         return this.OffLineNodeCount;
@@ -695,19 +675,15 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
      * Set 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffLineNodeCount 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffLineNodeCount(Long OffLineNodeCount) {
         this.OffLineNodeCount = OffLineNodeCount;
     }
 
     /**
-     * Get 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未安装agent节点数 
      * @return UnInstallAgentNodeCount 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnInstallAgentNodeCount() {
         return this.UnInstallAgentNodeCount;
@@ -715,19 +691,15 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
      * Set 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnInstallAgentNodeCount 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnInstallAgentNodeCount(Long UnInstallAgentNodeCount) {
         this.UnInstallAgentNodeCount = UnInstallAgentNodeCount;
     }
 
     /**
-     * Get 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费核数(弹性计费核数+普通计费核数) 
      * @return ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeCoresCnt() {
         return this.ChargeCoresCnt;
@@ -735,9 +707,7 @@ public class ClusterInfoItem extends AbstractModel {
 
     /**
      * Set 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;

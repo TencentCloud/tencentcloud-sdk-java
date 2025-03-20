@@ -25,7 +25,6 @@ public class DestroyInstanceResponse extends AbstractModel {
 
     /**
     * 作业id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowID")
     @Expose
@@ -53,10 +52,8 @@ public class DestroyInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 作业id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作业id 
      * @return FlowID 作业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowID() {
         return this.FlowID;
@@ -64,9 +61,7 @@ public class DestroyInstanceResponse extends AbstractModel {
 
     /**
      * Set 作业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowID 作业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowID(String FlowID) {
         this.FlowID = FlowID;

@@ -206,7 +206,6 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
 
     /**
     * 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateSource")
     @Expose
@@ -214,7 +213,6 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
 
     /**
     * 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -743,10 +741,8 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离来源 
      * @return IsolateSource 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateSource() {
         return this.IsolateSource;
@@ -754,19 +750,15 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
 
     /**
      * Set 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateSource 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateSource(String IsolateSource) {
         this.IsolateSource = IsolateSource;
     }
 
     /**
-     * Get 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间 
      * @return IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -774,9 +766,7 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
 
     /**
      * Set 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;

@@ -60,7 +60,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssumerName")
     @Expose
@@ -84,7 +83,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -92,7 +90,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoSplit")
     @Expose
@@ -100,7 +97,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
@@ -111,7 +107,6 @@ public class TopicInfo extends AbstractModel {
 
 - hot: 标准存储
 - cold: 低频存储
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -119,7 +114,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -127,7 +121,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAssumerName")
     @Expose
@@ -145,7 +138,6 @@ public class TopicInfo extends AbstractModel {
     * 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HotPeriod")
     @Expose
@@ -155,7 +147,6 @@ HotPeriod=0为没有开启日志沉降。
     * 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -164,7 +155,6 @@ HotPeriod=0为没有开启日志沉降。
     /**
     * 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -180,7 +170,6 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 异步迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicAsyncTaskID")
     @Expose
@@ -188,7 +177,6 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 异步迁移状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MigrationStatus")
     @Expose
@@ -196,7 +184,6 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 异步迁移完成后，预计生效日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectiveDate")
     @Expose
@@ -283,10 +270,8 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE 
      * @return AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssumerName() {
         return this.AssumerName;
@@ -294,9 +279,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
@@ -343,10 +326,8 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题绑定的标签信息 
      * @return Tags 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -354,19 +335,15 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该主题是否开启自动分裂 
      * @return AutoSplit 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
@@ -374,19 +351,15 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoSplit 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
     }
 
     /**
-     * Get 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 若开启自动分裂的话，该主题能够允许的最大分区数 
      * @return MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
@@ -394,9 +367,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
@@ -406,13 +377,11 @@ HotPeriod=0为没有开启日志沉降。
      * Get 主题的存储类型
 
 - hot: 标准存储
-- cold: 低频存储
-注意：此字段可能返回 null，表示取不到有效值。 
+- cold: 低频存储 
      * @return StorageType 主题的存储类型
 
 - hot: 标准存储
 - cold: 低频存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
         return this.StorageType;
@@ -423,22 +392,18 @@ HotPeriod=0为没有开启日志沉降。
 
 - hot: 标准存储
 - cold: 低频存储
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 主题的存储类型
 
 - hot: 标准存储
 - cold: 低频存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存 
      * @return Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
         return this.Period;
@@ -446,19 +411,15 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。 
      * @return SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAssumerName() {
         return this.SubAssumerName;
@@ -466,9 +427,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAssumerName(String SubAssumerName) {
         this.SubAssumerName = SubAssumerName;
@@ -497,12 +456,10 @@ HotPeriod=0为没有开启日志沉降。
     /**
      * Get 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。 
+HotPeriod=0为没有开启日志沉降。 
      * @return HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
@@ -512,11 +469,9 @@ HotPeriod=0为没有开启日志沉降。
      * Set 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
@@ -525,12 +480,10 @@ HotPeriod=0为没有开启日志沉降。
     /**
      * Get 主题类型。
 - 0: 日志主题 
-- 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。 
+- 1: 指标主题 
      * @return BizType 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBizType() {
         return this.BizType;
@@ -540,11 +493,9 @@ HotPeriod=0为没有开启日志沉降。
      * Set 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;
@@ -552,11 +503,9 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Get 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。 
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
      * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
@@ -565,10 +514,8 @@ HotPeriod=0为没有开启日志沉降。
     /**
      * Set 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
@@ -595,10 +542,8 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 异步迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步迁移任务ID 
      * @return TopicAsyncTaskID 异步迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicAsyncTaskID() {
         return this.TopicAsyncTaskID;
@@ -606,19 +551,15 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 异步迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicAsyncTaskID 异步迁移任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicAsyncTaskID(String TopicAsyncTaskID) {
         this.TopicAsyncTaskID = TopicAsyncTaskID;
     }
 
     /**
-     * Get 异步迁移状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步迁移状态 
      * @return MigrationStatus 异步迁移状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMigrationStatus() {
         return this.MigrationStatus;
@@ -626,19 +567,15 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 异步迁移状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MigrationStatus 异步迁移状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrationStatus(Long MigrationStatus) {
         this.MigrationStatus = MigrationStatus;
     }
 
     /**
-     * Get 异步迁移完成后，预计生效日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步迁移完成后，预计生效日期 
      * @return EffectiveDate 异步迁移完成后，预计生效日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffectiveDate() {
         return this.EffectiveDate;
@@ -646,9 +583,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 异步迁移完成后，预计生效日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectiveDate 异步迁移完成后，预计生效日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectiveDate(String EffectiveDate) {
         this.EffectiveDate = EffectiveDate;

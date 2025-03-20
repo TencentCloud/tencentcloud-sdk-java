@@ -39,7 +39,6 @@ public class CreateInstancePostResp extends AbstractModel {
 
     /**
     * 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -78,10 +77,8 @@ public class CreateInstancePostResp extends AbstractModel {
     }
 
     /**
-     * Get 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的Data数据 
      * @return Data 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateInstancePostData getData() {
         return this.Data;
@@ -89,9 +86,7 @@ public class CreateInstancePostResp extends AbstractModel {
 
     /**
      * Set 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateInstancePostData Data) {
         this.Data = Data;

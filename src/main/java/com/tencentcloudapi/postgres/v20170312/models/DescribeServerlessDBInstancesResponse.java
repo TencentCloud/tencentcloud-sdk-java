@@ -32,7 +32,6 @@ public class DescribeServerlessDBInstancesResponse extends AbstractModel {
 
     /**
     * 查询结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeServerlessDBInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询结果 
      * @return DBInstanceSet 查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerlessDBInstance [] getDBInstanceSet() {
         return this.DBInstanceSet;
@@ -73,9 +70,7 @@ public class DescribeServerlessDBInstancesResponse extends AbstractModel {
 
     /**
      * Set 查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceSet 查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceSet(ServerlessDBInstance [] DBInstanceSet) {
         this.DBInstanceSet = DBInstanceSet;

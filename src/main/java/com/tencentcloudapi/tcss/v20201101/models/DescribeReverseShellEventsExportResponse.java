@@ -25,7 +25,6 @@ public class DescribeReverseShellEventsExportResponse extends AbstractModel {
 
     /**
     * execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeReverseShellEventsExportResponse extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeReverseShellEventsExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get execle下载地址 
      * @return DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -58,19 +54,15 @@ public class DescribeReverseShellEventsExportResponse extends AbstractModel {
 
     /**
      * Set execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return JobId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -78,9 +70,7 @@ public class DescribeReverseShellEventsExportResponse extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

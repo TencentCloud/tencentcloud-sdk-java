@@ -25,7 +25,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 网络资源id，实例id或RO组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 资源类型，1-实例 2-RO组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -41,7 +39,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -49,7 +46,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * IPV4地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -57,7 +53,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * IPV6地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
@@ -65,7 +60,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 访问端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
@@ -73,7 +67,6 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -81,17 +74,14 @@ public class NetworkAccess extends AbstractModel {
 
     /**
     * 网络状态，1-申请中，2-使用中，3-删除中，4-已删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcStatus")
     @Expose
     private Long VpcStatus;
 
     /**
-     * Get 网络资源id，实例id或RO组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络资源id，实例id或RO组id 
      * @return ResourceId 网络资源id，实例id或RO组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -99,19 +89,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 网络资源id，实例id或RO组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 网络资源id，实例id或RO组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型，1-实例 2-RO组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型，1-实例 2-RO组 
      * @return ResourceType 资源类型，1-实例 2-RO组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceType() {
         return this.ResourceType;
@@ -119,19 +105,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 资源类型，1-实例 2-RO组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型，1-实例 2-RO组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -139,19 +121,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get IPV4地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPV4地址 
      * @return Vip IPV4地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -159,19 +137,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set IPV4地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip IPV4地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get IPV6地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPV6地址 
      * @return Vip6 IPV6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
         return this.Vip6;
@@ -179,19 +153,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set IPV6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip6 IPV6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get 访问端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问端口 
      * @return Vport 访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -199,19 +169,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport 访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -219,19 +185,15 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 网络状态，1-申请中，2-使用中，3-删除中，4-已删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络状态，1-申请中，2-使用中，3-删除中，4-已删除 
      * @return VpcStatus 网络状态，1-申请中，2-使用中，3-删除中，4-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVpcStatus() {
         return this.VpcStatus;
@@ -239,9 +201,7 @@ public class NetworkAccess extends AbstractModel {
 
     /**
      * Set 网络状态，1-申请中，2-使用中，3-删除中，4-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcStatus 网络状态，1-申请中，2-使用中，3-删除中，4-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcStatus(Long VpcStatus) {
         this.VpcStatus = VpcStatus;

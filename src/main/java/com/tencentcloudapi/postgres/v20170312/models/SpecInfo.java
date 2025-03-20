@@ -46,7 +46,6 @@ public class SpecInfo extends AbstractModel {
 
     /**
     * 支持KMS的地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportKMSRegions")
     @Expose
@@ -101,10 +100,8 @@ public class SpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 支持KMS的地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持KMS的地域 
      * @return SupportKMSRegions 支持KMS的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportKMSRegions() {
         return this.SupportKMSRegions;
@@ -112,9 +109,7 @@ public class SpecInfo extends AbstractModel {
 
     /**
      * Set 支持KMS的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportKMSRegions 支持KMS的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportKMSRegions(String [] SupportKMSRegions) {
         this.SupportKMSRegions = SupportKMSRegions;

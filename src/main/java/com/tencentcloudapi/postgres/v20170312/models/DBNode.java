@@ -41,7 +41,6 @@ Standby，代表备节点。
 
     /**
     * 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -88,10 +87,8 @@ Standby，代表备节点。
     }
 
     /**
-     * Get 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专属集群ID 
      * @return DedicatedClusterId 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -99,9 +96,7 @@ Standby，代表备节点。
 
     /**
      * Set 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

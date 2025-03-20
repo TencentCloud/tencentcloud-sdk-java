@@ -25,7 +25,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Component")
     @Expose
@@ -33,7 +32,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 组件版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,7 +39,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 可修复版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixedVersion")
     @Expose
@@ -49,7 +46,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -57,7 +53,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,17 +60,14 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 组件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称 
      * @return Component 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -85,9 +77,7 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Component 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -96,10 +86,8 @@ public class ComponentsInfo extends AbstractModel {
     }
 
     /**
-     * Get 组件版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件版本信息 
      * @return Version 组件版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -107,19 +95,15 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 组件版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 组件版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 可修复版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可修复版本 
      * @return FixedVersion 可修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixedVersion() {
         return this.FixedVersion;
@@ -127,19 +111,15 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 可修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixedVersion 可修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixedVersion(String FixedVersion) {
         this.FixedVersion = FixedVersion;
     }
 
     /**
-     * Get 路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径 
      * @return Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -147,19 +127,15 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -167,19 +143,15 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 组件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称 
      * @return Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -187,9 +159,7 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
      * Set 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

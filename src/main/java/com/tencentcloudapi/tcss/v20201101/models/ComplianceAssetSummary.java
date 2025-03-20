@@ -56,7 +56,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckProgress")
     @Expose
@@ -141,7 +140,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckCostTime")
     @Expose
@@ -149,7 +147,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -164,7 +161,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenPolicyItemCount")
     @Expose
@@ -172,7 +168,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoredPolicyItemCount")
     @Expose
@@ -180,7 +175,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPolicyItemCount")
     @Expose
@@ -188,7 +182,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectHostCount")
     @Expose
@@ -196,7 +189,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftTime")
     @Expose
@@ -291,10 +283,8 @@ CHECK_FAILED, 检测失败
     }
 
     /**
-     * Get 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。 
      * @return CheckProgress 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCheckProgress() {
         return this.CheckProgress;
@@ -302,9 +292,7 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckProgress 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckProgress(Float CheckProgress) {
         this.CheckProgress = CheckProgress;
@@ -487,10 +475,8 @@ CHECK_FAILED, 检测失败
     }
 
     /**
-     * Get 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次检测的耗时，单位为秒。 
      * @return CheckCostTime 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCheckCostTime() {
         return this.CheckCostTime;
@@ -498,19 +484,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckCostTime 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckCostTime(Float CheckCostTime) {
         this.CheckCostTime = CheckCostTime;
     }
 
     /**
-     * Get 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次检测的时间。 
      * @return LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
@@ -518,9 +500,7 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
@@ -543,10 +523,8 @@ CHECK_FAILED, 检测失败
     }
 
     /**
-     * Get 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已开启的检查项总数 
      * @return OpenPolicyItemCount 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOpenPolicyItemCount() {
         return this.OpenPolicyItemCount;
@@ -554,19 +532,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenPolicyItemCount 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenPolicyItemCount(Long OpenPolicyItemCount) {
         this.OpenPolicyItemCount = OpenPolicyItemCount;
     }
 
     /**
-     * Get 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已忽略的检查项总数 
      * @return IgnoredPolicyItemCount 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIgnoredPolicyItemCount() {
         return this.IgnoredPolicyItemCount;
@@ -574,19 +548,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoredPolicyItemCount 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoredPolicyItemCount(Long IgnoredPolicyItemCount) {
         this.IgnoredPolicyItemCount = IgnoredPolicyItemCount;
     }
 
     /**
-     * Get 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总检测项数 
      * @return TotalPolicyItemCount 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPolicyItemCount() {
         return this.TotalPolicyItemCount;
@@ -594,19 +564,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPolicyItemCount 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPolicyItemCount(Long TotalPolicyItemCount) {
         this.TotalPolicyItemCount = TotalPolicyItemCount;
     }
 
     /**
-     * Get 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测主机数 
      * @return DetectHostCount 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDetectHostCount() {
         return this.DetectHostCount;
@@ -614,19 +580,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectHostCount 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectHostCount(Long DetectHostCount) {
         this.DetectHostCount = DetectHostCount;
     }
 
     /**
-     * Get 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前任务剩余时间，单位秒 
      * @return LeftTime 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLeftTime() {
         return this.LeftTime;
@@ -634,9 +596,7 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LeftTime 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftTime(Long LeftTime) {
         this.LeftTime = LeftTime;

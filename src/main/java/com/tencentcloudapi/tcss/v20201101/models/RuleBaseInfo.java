@@ -46,7 +46,6 @@ public class RuleBaseInfo extends AbstractModel {
 
     /**
     * 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -122,10 +121,8 @@ public class RuleBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略更新时间, 存在为空的情况 
      * @return UpdateTime 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -133,9 +130,7 @@ public class RuleBaseInfo extends AbstractModel {
 
     /**
      * Set 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

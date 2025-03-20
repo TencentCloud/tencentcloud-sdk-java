@@ -165,7 +165,6 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
     * 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paymode")
     @Expose
@@ -173,7 +172,6 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
     * 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardMasterZone")
     @Expose
@@ -181,7 +179,6 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
     * 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardSlaveZones")
     @Expose
@@ -522,10 +519,8 @@ public class DCDBShardInfo extends AbstractModel {
     }
 
     /**
-     * Get 付费模型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费模型 
      * @return Paymode 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymode() {
         return this.Paymode;
@@ -533,19 +528,15 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
      * Set 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paymode 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymode(String Paymode) {
         this.Paymode = Paymode;
     }
 
     /**
-     * Get 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片的主可用区 
      * @return ShardMasterZone 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShardMasterZone() {
         return this.ShardMasterZone;
@@ -553,19 +544,15 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
      * Set 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardMasterZone 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardMasterZone(String ShardMasterZone) {
         this.ShardMasterZone = ShardMasterZone;
     }
 
     /**
-     * Get 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片的从可用区列表 
      * @return ShardSlaveZones 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getShardSlaveZones() {
         return this.ShardSlaveZones;
@@ -573,9 +560,7 @@ public class DCDBShardInfo extends AbstractModel {
 
     /**
      * Set 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardSlaveZones 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardSlaveZones(String [] ShardSlaveZones) {
         this.ShardSlaveZones = ShardSlaveZones;

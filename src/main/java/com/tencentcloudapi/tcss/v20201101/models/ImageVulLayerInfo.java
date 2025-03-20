@@ -25,7 +25,6 @@ public class ImageVulLayerInfo extends AbstractModel {
 
     /**
     * 层id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayerId")
     @Expose
@@ -33,17 +32,14 @@ public class ImageVulLayerInfo extends AbstractModel {
 
     /**
     * 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LayerCmd")
     @Expose
     private String LayerCmd;
 
     /**
-     * Get 层id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 层id 
      * @return LayerId 层id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLayerId() {
         return this.LayerId;
@@ -51,19 +47,15 @@ public class ImageVulLayerInfo extends AbstractModel {
 
     /**
      * Set 层id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayerId 层id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayerId(String LayerId) {
         this.LayerId = LayerId;
     }
 
     /**
-     * Get 层cmd
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 层cmd 
      * @return LayerCmd 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLayerCmd() {
         return this.LayerCmd;
@@ -71,9 +63,7 @@ public class ImageVulLayerInfo extends AbstractModel {
 
     /**
      * Set 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LayerCmd 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayerCmd(String LayerCmd) {
         this.LayerCmd = LayerCmd;

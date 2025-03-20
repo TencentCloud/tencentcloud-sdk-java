@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeActivityInfoRequest extends AbstractModel {
+public class DescribeFileInfoByJobIdRequest extends AbstractModel {
 
     /**
-    * 活动id列表
+    * 任务ID
     */
-    @SerializedName("ActivityIdList")
+    @SerializedName("JobId")
     @Expose
-    private Long [] ActivityIdList;
+    private Long JobId;
 
     /**
-     * Get 活动id列表 
-     * @return ActivityIdList 活动id列表
+     * Get 任务ID 
+     * @return JobId 任务ID
      */
-    public Long [] getActivityIdList() {
-        return this.ActivityIdList;
+    public Long getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 活动id列表
-     * @param ActivityIdList 活动id列表
+     * Set 任务ID
+     * @param JobId 任务ID
      */
-    public void setActivityIdList(Long [] ActivityIdList) {
-        this.ActivityIdList = ActivityIdList;
+    public void setJobId(Long JobId) {
+        this.JobId = JobId;
     }
 
-    public DescribeActivityInfoRequest() {
+    public DescribeFileInfoByJobIdRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeActivityInfoRequest(DescribeActivityInfoRequest source) {
-        if (source.ActivityIdList != null) {
-            this.ActivityIdList = new Long[source.ActivityIdList.length];
-            for (int i = 0; i < source.ActivityIdList.length; i++) {
-                this.ActivityIdList[i] = new Long(source.ActivityIdList[i]);
-            }
+    public DescribeFileInfoByJobIdRequest(DescribeFileInfoByJobIdRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
         }
     }
 
@@ -67,7 +64,7 @@ public class DescribeActivityInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

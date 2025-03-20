@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dsgc.v20190723.models;
+package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,45 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRuleDetailRequest extends AbstractModel {
+public class DeleteRaspRulesRequest extends AbstractModel {
 
-    public DescribeRuleDetailRequest() {
+    /**
+    * 待删除的规则ID数组 (最大100条)
+    */
+    @SerializedName("IDs")
+    @Expose
+    private Long [] IDs;
+
+    /**
+     * Get 待删除的规则ID数组 (最大100条) 
+     * @return IDs 待删除的规则ID数组 (最大100条)
+     */
+    public Long [] getIDs() {
+        return this.IDs;
+    }
+
+    /**
+     * Set 待删除的规则ID数组 (最大100条)
+     * @param IDs 待删除的规则ID数组 (最大100条)
+     */
+    public void setIDs(Long [] IDs) {
+        this.IDs = IDs;
+    }
+
+    public DeleteRaspRulesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRuleDetailRequest(DescribeRuleDetailRequest source) {
+    public DeleteRaspRulesRequest(DeleteRaspRulesRequest source) {
+        if (source.IDs != null) {
+            this.IDs = new Long[source.IDs.length];
+            for (int i = 0; i < source.IDs.length; i++) {
+                this.IDs[i] = new Long(source.IDs[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class DescribeRuleDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "IDs.", this.IDs);
 
     }
 }

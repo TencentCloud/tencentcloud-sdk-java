@@ -25,7 +25,6 @@ public class DescribeRiskSyscallEventsExportResponse extends AbstractModel {
 
     /**
     * Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRiskSyscallEventsExportResponse extends AbstractModel {
 
     /**
     * 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRiskSyscallEventsExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Excel下载地址 
      * @return DownloadUrl Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -58,19 +54,15 @@ public class DescribeRiskSyscallEventsExportResponse extends AbstractModel {
 
     /**
      * Set Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务Id 
      * @return JobId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -78,9 +70,7 @@ public class DescribeRiskSyscallEventsExportResponse extends AbstractModel {
 
     /**
      * Set 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

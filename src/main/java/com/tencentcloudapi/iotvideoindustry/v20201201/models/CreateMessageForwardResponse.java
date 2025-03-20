@@ -25,7 +25,6 @@ public class CreateMessageForwardResponse extends AbstractModel {
 
     /**
     * 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateMessageForwardResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置ID 
      * @return IntId 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntId() {
         return this.IntId;
@@ -50,9 +47,7 @@ public class CreateMessageForwardResponse extends AbstractModel {
 
     /**
      * Set 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntId 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntId(Long IntId) {
         this.IntId = IntId;

@@ -39,7 +39,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoresCnt")
     @Expose
@@ -54,7 +53,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedCoresCnt")
     @Expose
@@ -62,7 +60,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GivenAuthorizedCoresCnt")
     @Expose
@@ -77,7 +74,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageCnt")
     @Expose
@@ -85,7 +81,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizedImageCnt")
     @Expose
@@ -93,7 +88,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpirationTime")
     @Expose
@@ -101,7 +95,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PurchasedAuthorizedCnt")
     @Expose
@@ -109,7 +102,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutomaticRenewal")
     @Expose
@@ -117,7 +109,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GivenAuthorizedCnt")
     @Expose
@@ -125,7 +116,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
     * 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -134,7 +124,6 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
     /**
     * 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubState")
     @Expose
@@ -142,7 +131,6 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
     * 计费key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InquireKey")
     @Expose
@@ -216,10 +204,8 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Get 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数 
      * @return CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
@@ -227,9 +213,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
@@ -252,10 +236,8 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Get 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已购买核数 
      * @return AuthorizedCoresCnt 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizedCoresCnt() {
         return this.AuthorizedCoresCnt;
@@ -263,19 +245,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedCoresCnt 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedCoresCnt(Long AuthorizedCoresCnt) {
         this.AuthorizedCoresCnt = AuthorizedCoresCnt;
     }
 
     /**
-     * Get 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 试用赠送专业版核心数 
      * @return GivenAuthorizedCoresCnt 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGivenAuthorizedCoresCnt() {
         return this.GivenAuthorizedCoresCnt;
@@ -283,9 +261,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GivenAuthorizedCoresCnt 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGivenAuthorizedCoresCnt(Long GivenAuthorizedCoresCnt) {
         this.GivenAuthorizedCoresCnt = GivenAuthorizedCoresCnt;
@@ -308,10 +284,8 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Get 镜像数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像数 
      * @return ImageCnt 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getImageCnt() {
         return this.ImageCnt;
@@ -319,19 +293,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageCnt 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
     }
 
     /**
-     * Get 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已授权镜像数 
      * @return AuthorizedImageCnt 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthorizedImageCnt() {
         return this.AuthorizedImageCnt;
@@ -339,19 +309,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizedImageCnt 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizedImageCnt(Long AuthorizedImageCnt) {
         this.AuthorizedImageCnt = AuthorizedImageCnt;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpirationTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpirationTime() {
         return this.ExpirationTime;
@@ -359,19 +325,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpirationTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpirationTime(String ExpirationTime) {
         this.ExpirationTime = ExpirationTime;
     }
 
     /**
-     * Get 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已购买镜像授权数 
      * @return PurchasedAuthorizedCnt 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPurchasedAuthorizedCnt() {
         return this.PurchasedAuthorizedCnt;
@@ -379,19 +341,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PurchasedAuthorizedCnt 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
         this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
     }
 
     /**
-     * Get 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置) 
      * @return AutomaticRenewal 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutomaticRenewal() {
         return this.AutomaticRenewal;
@@ -399,19 +357,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutomaticRenewal 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutomaticRenewal(Long AutomaticRenewal) {
         this.AutomaticRenewal = AutomaticRenewal;
     }
 
     /**
-     * Get 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 试用期间赠送镜像授权数，可能会过期 
      * @return GivenAuthorizedCnt 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGivenAuthorizedCnt() {
         return this.GivenAuthorizedCnt;
@@ -419,19 +373,15 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GivenAuthorizedCnt 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGivenAuthorizedCnt(Long GivenAuthorizedCnt) {
         this.GivenAuthorizedCnt = GivenAuthorizedCnt;
     }
 
     /**
-     * Get 起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始时间 
      * @return BeginTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginTime() {
         return this.BeginTime;
@@ -439,9 +389,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
@@ -449,11 +397,9 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Get 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。 
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁) 
      * @return SubState 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubState() {
         return this.SubState;
@@ -462,20 +408,16 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     /**
      * Set 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubState 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubState(String SubState) {
         this.SubState = SubState;
     }
 
     /**
-     * Get 计费key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费key 
      * @return InquireKey 计费key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInquireKey() {
         return this.InquireKey;
@@ -483,9 +425,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
     /**
      * Set 计费key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InquireKey 计费key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;

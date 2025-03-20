@@ -25,7 +25,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStep")
     @Expose
@@ -33,7 +32,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllSteps")
     @Expose
@@ -41,7 +39,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -49,7 +46,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -61,7 +57,6 @@ public class TaskDetail extends AbstractModel {
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -69,7 +64,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchTime")
     @Expose
@@ -77,17 +71,14 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前执行的子任务步骤名称。 
      * @return CurrentStep 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentStep() {
         return this.CurrentStep;
@@ -95,19 +86,15 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStep 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
     }
 
     /**
-     * Get 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前任务所拥有的子步骤描述。 
      * @return AllSteps 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllSteps() {
         return this.AllSteps;
@@ -115,19 +102,15 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllSteps 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllSteps(String AllSteps) {
         this.AllSteps = AllSteps;
     }
 
     /**
-     * Get 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的输入参数。 
      * @return Input 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInput() {
         return this.Input;
@@ -135,19 +118,15 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的输出参数。 
      * @return Output 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutput() {
         return this.Output;
@@ -155,9 +134,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(String Output) {
         this.Output = Output;
@@ -168,14 +145,12 @@ public class TaskDetail extends AbstractModel {
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
-3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。 
+3：维护时间窗口内切换。 
      * @return SwitchTag 指定实例配置完成变更后的切换时间，默认值：0
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
@@ -187,23 +162,19 @@ public class TaskDetail extends AbstractModel {
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchTag 指定实例配置完成变更后的切换时间，默认值：0
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
     }
 
     /**
-     * Get 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的切换时间。 
      * @return SwitchTime 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchTime() {
         return this.SwitchTime;
@@ -211,19 +182,15 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchTime 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchTime(String SwitchTime) {
         this.SwitchTime = SwitchTime;
     }
 
     /**
-     * Get 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的提示信息。 
      * @return Message 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -231,9 +198,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

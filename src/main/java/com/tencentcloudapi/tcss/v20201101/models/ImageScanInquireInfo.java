@@ -31,7 +31,7 @@ public class ImageScanInquireInfo extends AbstractModel {
     private String InquireKey;
 
     /**
-    * 容量
+    * 总容量
     */
     @SerializedName("Capcity")
     @Expose
@@ -76,6 +76,27 @@ public class ImageScanInquireInfo extends AbstractModel {
     private String ResourceID;
 
     /**
+    * 购买扫描数
+    */
+    @SerializedName("PayNum")
+    @Expose
+    private Long PayNum;
+
+    /**
+    * 试用扫描数
+    */
+    @SerializedName("TrialNum")
+    @Expose
+    private Long TrialNum;
+
+    /**
+    * 购买已使用量
+    */
+    @SerializedName("PayUsage")
+    @Expose
+    private Long PayUsage;
+
+    /**
      * Get 计费项 
      * @return InquireKey 计费项
      */
@@ -92,16 +113,16 @@ public class ImageScanInquireInfo extends AbstractModel {
     }
 
     /**
-     * Get 容量 
-     * @return Capcity 容量
+     * Get 总容量 
+     * @return Capcity 总容量
      */
     public Long getCapcity() {
         return this.Capcity;
     }
 
     /**
-     * Set 容量
-     * @param Capcity 容量
+     * Set 总容量
+     * @param Capcity 总容量
      */
     public void setCapcity(Long Capcity) {
         this.Capcity = Capcity;
@@ -199,6 +220,54 @@ public class ImageScanInquireInfo extends AbstractModel {
         this.ResourceID = ResourceID;
     }
 
+    /**
+     * Get 购买扫描数 
+     * @return PayNum 购买扫描数
+     */
+    public Long getPayNum() {
+        return this.PayNum;
+    }
+
+    /**
+     * Set 购买扫描数
+     * @param PayNum 购买扫描数
+     */
+    public void setPayNum(Long PayNum) {
+        this.PayNum = PayNum;
+    }
+
+    /**
+     * Get 试用扫描数 
+     * @return TrialNum 试用扫描数
+     */
+    public Long getTrialNum() {
+        return this.TrialNum;
+    }
+
+    /**
+     * Set 试用扫描数
+     * @param TrialNum 试用扫描数
+     */
+    public void setTrialNum(Long TrialNum) {
+        this.TrialNum = TrialNum;
+    }
+
+    /**
+     * Get 购买已使用量 
+     * @return PayUsage 购买已使用量
+     */
+    public Long getPayUsage() {
+        return this.PayUsage;
+    }
+
+    /**
+     * Set 购买已使用量
+     * @param PayUsage 购买已使用量
+     */
+    public void setPayUsage(Long PayUsage) {
+        this.PayUsage = PayUsage;
+    }
+
     public ImageScanInquireInfo() {
     }
 
@@ -228,6 +297,15 @@ public class ImageScanInquireInfo extends AbstractModel {
         if (source.ResourceID != null) {
             this.ResourceID = new String(source.ResourceID);
         }
+        if (source.PayNum != null) {
+            this.PayNum = new Long(source.PayNum);
+        }
+        if (source.TrialNum != null) {
+            this.TrialNum = new Long(source.TrialNum);
+        }
+        if (source.PayUsage != null) {
+            this.PayUsage = new Long(source.PayUsage);
+        }
     }
 
 
@@ -242,6 +320,9 @@ public class ImageScanInquireInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PurchaseStatus", this.PurchaseStatus);
         this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
+        this.setParamSimple(map, prefix + "PayNum", this.PayNum);
+        this.setParamSimple(map, prefix + "TrialNum", this.TrialNum);
+        this.setParamSimple(map, prefix + "PayUsage", this.PayUsage);
 
     }
 }

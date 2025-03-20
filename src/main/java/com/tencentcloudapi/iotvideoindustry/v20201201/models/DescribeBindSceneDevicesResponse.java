@@ -25,7 +25,6 @@ public class DescribeBindSceneDevicesResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBindSceneDevicesResponse extends AbstractModel {
 
     /**
     * 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBindSceneDevicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeBindSceneDevicesResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备列表 
      * @return List 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceItem [] getList() {
         return this.List;
@@ -78,9 +70,7 @@ public class DescribeBindSceneDevicesResponse extends AbstractModel {
 
     /**
      * Set 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(DeviceItem [] List) {
         this.List = List;

@@ -25,7 +25,6 @@ public class DeleteReadOnlyGroupNetworkAccessResponse extends AbstractModel {
 
     /**
     * 流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteReadOnlyGroupNetworkAccessResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程ID。 
      * @return FlowId 流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -50,9 +47,7 @@ public class DeleteReadOnlyGroupNetworkAccessResponse extends AbstractModel {
 
     /**
      * Set 流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

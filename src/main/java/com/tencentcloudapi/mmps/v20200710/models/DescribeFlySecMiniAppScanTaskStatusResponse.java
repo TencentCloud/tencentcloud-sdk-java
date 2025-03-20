@@ -39,7 +39,6 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
     * 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errno")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
     * 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniAppName")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
     * 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniAppVersion")
     @Expose
@@ -101,10 +98,8 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断失败错误码 
      * @return Errno 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrno() {
         return this.Errno;
@@ -112,19 +107,15 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
      * Set 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errno 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrno(Long Errno) {
         this.Errno = Errno;
     }
 
     /**
-     * Get 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序名称 
      * @return MiniAppName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniAppName() {
         return this.MiniAppName;
@@ -132,19 +123,15 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
      * Set 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniAppName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniAppName(String MiniAppName) {
         this.MiniAppName = MiniAppName;
     }
 
     /**
-     * Get 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序版本 
      * @return MiniAppVersion 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniAppVersion() {
         return this.MiniAppVersion;
@@ -152,9 +139,7 @@ public class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel {
 
     /**
      * Set 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniAppVersion 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniAppVersion(String MiniAppVersion) {
         this.MiniAppVersion = MiniAppVersion;

@@ -25,7 +25,6 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
     * 订单号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
     @Expose
@@ -33,7 +32,6 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
     * 订单流水号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillId")
     @Expose
@@ -41,7 +39,6 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
     * 克隆出的新实例ID，当前只支持后付费返回该值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -55,10 +52,8 @@ public class CloneDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号。 
      * @return DealName 订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
         return this.DealName;
@@ -66,19 +61,15 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
      * Set 订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealName 订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 订单流水号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单流水号。 
      * @return BillId 订单流水号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillId() {
         return this.BillId;
@@ -86,19 +77,15 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
      * Set 订单流水号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillId 订单流水号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 克隆出的新实例ID，当前只支持后付费返回该值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 克隆出的新实例ID，当前只支持后付费返回该值。 
      * @return DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
@@ -106,9 +93,7 @@ public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
      * Set 克隆出的新实例ID，当前只支持后付费返回该值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

@@ -60,7 +60,6 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
     * 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryVersion")
     @Expose
@@ -75,7 +74,6 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
     * 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryRegion")
     @Expose
@@ -83,7 +81,6 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
     * 限速
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeedLimit")
     @Expose
@@ -91,7 +88,6 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
     * 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Insecure")
     @Expose
@@ -110,6 +106,34 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
+
+    /**
+    * 同步方式，0全量同步，1增量同步
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
+
+    /**
+    * 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
+    * webhook接入地址
+    */
+    @SerializedName("WebhookUrl")
+    @Expose
+    private String WebhookUrl;
+
+    /**
+    * webhook接入token	
+    */
+    @SerializedName("WebhookToken")
+    @Expose
+    private String WebhookToken;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -199,10 +223,8 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库版本 
      * @return RegistryVersion 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistryVersion() {
         return this.RegistryVersion;
@@ -210,9 +232,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
      * Set 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistryVersion 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryVersion(String RegistryVersion) {
         this.RegistryVersion = RegistryVersion;
@@ -235,10 +255,8 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域，列表:default（默认） 
      * @return RegistryRegion 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistryRegion() {
         return this.RegistryRegion;
@@ -246,19 +264,15 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
      * Set 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistryRegion 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryRegion(String RegistryRegion) {
         this.RegistryRegion = RegistryRegion;
     }
 
     /**
-     * Get 限速
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限速 
      * @return SpeedLimit 限速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpeedLimit() {
         return this.SpeedLimit;
@@ -266,19 +280,15 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
      * Set 限速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpeedLimit 限速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeedLimit(Long SpeedLimit) {
         this.SpeedLimit = SpeedLimit;
     }
 
     /**
-     * Get 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1 
      * @return Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInsecure() {
         return this.Insecure;
@@ -286,9 +296,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
 
     /**
      * Set 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsecure(Long Insecure) {
         this.Insecure = Insecure;
@@ -324,6 +332,70 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get 同步方式，0全量同步，1增量同步 
+     * @return SyncMode 同步方式，0全量同步，1增量同步
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 同步方式，0全量同步，1增量同步
+     * @param SyncMode 同步方式，0全量同步，1增量同步
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像 
+     * @return NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     * @param NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
+    /**
+     * Get webhook接入地址 
+     * @return WebhookUrl webhook接入地址
+     */
+    public String getWebhookUrl() {
+        return this.WebhookUrl;
+    }
+
+    /**
+     * Set webhook接入地址
+     * @param WebhookUrl webhook接入地址
+     */
+    public void setWebhookUrl(String WebhookUrl) {
+        this.WebhookUrl = WebhookUrl;
+    }
+
+    /**
+     * Get webhook接入token	 
+     * @return WebhookToken webhook接入token	
+     */
+    public String getWebhookToken() {
+        return this.WebhookToken;
+    }
+
+    /**
+     * Set webhook接入token	
+     * @param WebhookToken webhook接入token	
+     */
+    public void setWebhookToken(String WebhookToken) {
+        this.WebhookToken = WebhookToken;
     }
 
     /**
@@ -389,6 +461,18 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
+        if (source.WebhookUrl != null) {
+            this.WebhookUrl = new String(source.WebhookUrl);
+        }
+        if (source.WebhookToken != null) {
+            this.WebhookToken = new String(source.WebhookToken);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -411,6 +495,10 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
         this.setParamArrayObj(map, prefix + "ConnDetectDetail.", this.ConnDetectDetail);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
+        this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
+        this.setParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

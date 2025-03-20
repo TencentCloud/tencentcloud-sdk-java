@@ -60,7 +60,6 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
     * agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentStatus")
     @Expose
@@ -68,7 +67,6 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIP")
     @Expose
@@ -76,7 +74,6 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
     * 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostID")
     @Expose
@@ -84,7 +81,6 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
     * 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineType")
     @Expose
@@ -95,7 +91,6 @@ public class ClusterNodeInfo extends AbstractModel {
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
     @Expose
@@ -103,7 +98,6 @@ SUPER:超级节点
 
     /**
     * uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UUID")
     @Expose
@@ -111,7 +105,6 @@ SUPER:超级节点
 
     /**
     * 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
@@ -121,7 +114,6 @@ SUPER:超级节点
     * 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefendStatus")
     @Expose
@@ -208,10 +200,8 @@ SUPER:超级节点
     }
 
     /**
-     * Get agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get agent安装状态 
      * @return AgentStatus agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAgentStatus() {
         return this.AgentStatus;
@@ -219,19 +209,15 @@ SUPER:超级节点
 
     /**
      * Set agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentStatus agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIP 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIP() {
         return this.PublicIP;
@@ -239,19 +225,15 @@ SUPER:超级节点
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIP 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
     }
 
     /**
-     * Get 节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点ID 
      * @return HostID 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostID() {
         return this.HostID;
@@ -259,19 +241,15 @@ SUPER:超级节点
 
     /**
      * Set 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostID 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机类型(普通节点情况) 
      * @return MachineType 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineType() {
         return this.MachineType;
@@ -279,9 +257,7 @@ SUPER:超级节点
 
     /**
      * Set 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineType 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -291,13 +267,11 @@ SUPER:超级节点
      * Get 节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
-)
-注意：此字段可能返回 null，表示取不到有效值。 
+) 
      * @return NodeType 节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
         return this.NodeType;
@@ -308,22 +282,18 @@ SUPER:超级节点
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeType 节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get uuid 
      * @return UUID uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUUID() {
         return this.UUID;
@@ -331,19 +301,15 @@ SUPER:超级节点
 
     /**
      * Set uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UUID uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get 计费核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费核数 
      * @return ChargeCoresCnt 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeCoresCnt() {
         return this.ChargeCoresCnt;
@@ -351,9 +317,7 @@ SUPER:超级节点
 
     /**
      * Set 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeCoresCnt 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;
@@ -362,12 +326,10 @@ SUPER:超级节点
     /**
      * Get 防护状态:
 已防护: Defended
-未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。 
+未防护: UnDefended 
      * @return DefendStatus 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefendStatus() {
         return this.DefendStatus;
@@ -377,11 +339,9 @@ SUPER:超级节点
      * Set 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefendStatus 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefendStatus(String DefendStatus) {
         this.DefendStatus = DefendStatus;

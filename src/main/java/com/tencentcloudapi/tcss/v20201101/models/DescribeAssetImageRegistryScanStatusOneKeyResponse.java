@@ -39,7 +39,6 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
 
     /**
     * 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageStatus")
     @Expose
@@ -75,7 +74,6 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
 
     /**
     * 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRemainTime")
     @Expose
@@ -121,10 +119,8 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
     }
 
     /**
-     * Get 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描进度列表 
      * @return ImageStatus 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageProgress [] getImageStatus() {
         return this.ImageStatus;
@@ -132,9 +128,7 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
 
     /**
      * Set 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageStatus 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageStatus(ImageProgress [] ImageStatus) {
         this.ImageStatus = ImageStatus;
@@ -205,10 +199,8 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
     }
 
     /**
-     * Get 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描剩余时间 
      * @return ScanRemainTime 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRemainTime() {
         return this.ScanRemainTime;
@@ -216,9 +208,7 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
 
     /**
      * Set 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanRemainTime 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRemainTime(Long ScanRemainTime) {
         this.ScanRemainTime = ScanRemainTime;

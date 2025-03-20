@@ -25,7 +25,6 @@ public class DescribeChannelsResponse extends AbstractModel {
 
     /**
     * 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeChannelsResponse extends AbstractModel {
 
     /**
     * 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Channels")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeChannelsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道总数 
      * @return TotalCount 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeChannelsResponse extends AbstractModel {
 
     /**
      * Set 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道详情列表 
      * @return Channels 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChannelDetail [] getChannels() {
         return this.Channels;
@@ -78,9 +70,7 @@ public class DescribeChannelsResponse extends AbstractModel {
 
     /**
      * Set 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Channels 通道详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannels(ChannelDetail [] Channels) {
         this.Channels = Channels;

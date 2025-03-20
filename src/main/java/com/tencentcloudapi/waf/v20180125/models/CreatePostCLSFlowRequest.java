@@ -45,6 +45,13 @@ public class CreatePostCLSFlowRequest extends AbstractModel {
     private Long LogType;
 
     /**
+    * 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+    */
+    @SerializedName("LogTopicName")
+    @Expose
+    private String LogTopicName;
+
+    /**
      * Get 投递的CLS所在区域，默认为ap-shanghai 
      * @return CLSRegion 投递的CLS所在区域，默认为ap-shanghai
      */
@@ -92,6 +99,22 @@ public class CreatePostCLSFlowRequest extends AbstractModel {
         this.LogType = LogType;
     }
 
+    /**
+     * Get 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic 
+     * @return LogTopicName 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+     */
+    public String getLogTopicName() {
+        return this.LogTopicName;
+    }
+
+    /**
+     * Set 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+     * @param LogTopicName 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+     */
+    public void setLogTopicName(String LogTopicName) {
+        this.LogTopicName = LogTopicName;
+    }
+
     public CreatePostCLSFlowRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreatePostCLSFlowRequest extends AbstractModel {
         if (source.LogType != null) {
             this.LogType = new Long(source.LogType);
         }
+        if (source.LogTopicName != null) {
+            this.LogTopicName = new String(source.LogTopicName);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreatePostCLSFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CLSRegion", this.CLSRegion);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "LogTopicName", this.LogTopicName);
 
     }
 }

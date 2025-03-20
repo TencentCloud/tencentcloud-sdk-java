@@ -25,7 +25,6 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanId")
     @Expose
@@ -33,7 +32,6 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeTemplateId")
     @Expose
@@ -49,7 +46,6 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeTemplateName")
     @Expose
@@ -57,7 +53,6 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Channels")
     @Expose
@@ -65,17 +60,14 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
     * 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordStorageTime")
     @Expose
     private Long RecordStorageTime;
 
     /**
-     * Get 计划ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划ID 
      * @return PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanId() {
         return this.PlanId;
@@ -83,19 +75,15 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 计划名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划名称 
      * @return Name 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -103,19 +91,15 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间模板ID 
      * @return TimeTemplateId 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeTemplateId() {
         return this.TimeTemplateId;
@@ -123,19 +107,15 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeTemplateId 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeTemplateId(String TimeTemplateId) {
         this.TimeTemplateId = TimeTemplateId;
     }
 
     /**
-     * Get 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间模板名称 
      * @return TimeTemplateName 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeTemplateName() {
         return this.TimeTemplateName;
@@ -143,19 +123,15 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeTemplateName 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeTemplateName(String TimeTemplateName) {
         this.TimeTemplateName = TimeTemplateName;
     }
 
     /**
-     * Get 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的通道列表 
      * @return Channels 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChannelItem [] getChannels() {
         return this.Channels;
@@ -163,19 +139,15 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Channels 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannels(ChannelItem [] Channels) {
         this.Channels = Channels;
     }
 
     /**
-     * Get 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储周期（天） 
      * @return RecordStorageTime 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordStorageTime() {
         return this.RecordStorageTime;
@@ -183,9 +155,7 @@ public class RecordPlanDetail extends AbstractModel {
 
     /**
      * Set 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordStorageTime 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordStorageTime(Long RecordStorageTime) {
         this.RecordStorageTime = RecordStorageTime;

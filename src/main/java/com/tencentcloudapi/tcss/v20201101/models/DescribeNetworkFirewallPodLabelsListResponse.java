@@ -32,7 +32,6 @@ public class DescribeNetworkFirewallPodLabelsListResponse extends AbstractModel 
 
     /**
     * 集群pod详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeNetworkFirewallPodLabelsListResponse extends AbstractModel 
     }
 
     /**
-     * Get 集群pod详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群pod详细信息 
      * @return PodList 集群pod详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkClusterPodInfo [] getPodList() {
         return this.PodList;
@@ -73,9 +70,7 @@ public class DescribeNetworkFirewallPodLabelsListResponse extends AbstractModel 
 
     /**
      * Set 集群pod详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodList 集群pod详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodList(NetworkClusterPodInfo [] PodList) {
         this.PodList = PodList;

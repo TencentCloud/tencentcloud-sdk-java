@@ -25,7 +25,6 @@ public class CheckRepeatAssetImageRegistryResponse extends AbstractModel {
 
     /**
     * 是否重复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRepeat")
     @Expose
@@ -39,10 +38,8 @@ public class CheckRepeatAssetImageRegistryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否重复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否重复 
      * @return IsRepeat 是否重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsRepeat() {
         return this.IsRepeat;
@@ -50,9 +47,7 @@ public class CheckRepeatAssetImageRegistryResponse extends AbstractModel {
 
     /**
      * Set 是否重复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRepeat 是否重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRepeat(Boolean IsRepeat) {
         this.IsRepeat = IsRepeat;

@@ -25,7 +25,6 @@ public class DescribeEncryptionKeysResponse extends AbstractModel {
 
     /**
     * 实例密钥信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptionKeys")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEncryptionKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例密钥信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例密钥信息列表。 
      * @return EncryptionKeys 实例密钥信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EncryptionKey [] getEncryptionKeys() {
         return this.EncryptionKeys;
@@ -50,9 +47,7 @@ public class DescribeEncryptionKeysResponse extends AbstractModel {
 
     /**
      * Set 实例密钥信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptionKeys 实例密钥信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptionKeys(EncryptionKey [] EncryptionKeys) {
         this.EncryptionKeys = EncryptionKeys;

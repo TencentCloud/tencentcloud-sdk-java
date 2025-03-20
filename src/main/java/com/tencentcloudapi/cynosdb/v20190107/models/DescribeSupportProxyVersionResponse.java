@@ -25,7 +25,6 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
     * 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportProxyVersions")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
     * 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
@@ -54,10 +52,8 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的数据库代理版本集合 
      * @return SupportProxyVersions 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportProxyVersions() {
         return this.SupportProxyVersions;
@@ -65,19 +61,15 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
      * Set 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportProxyVersions 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportProxyVersions(String [] SupportProxyVersions) {
         this.SupportProxyVersions = SupportProxyVersions;
     }
 
     /**
-     * Get 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前proxy版本号 
      * @return CurrentProxyVersion 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
@@ -85,9 +77,7 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
      * Set 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentProxyVersion 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;

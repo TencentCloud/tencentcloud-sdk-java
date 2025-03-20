@@ -32,7 +32,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -40,7 +39,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSSV3Score")
     @Expose
@@ -48,7 +46,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -63,7 +60,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 漏洞子类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -71,7 +67,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FoundTime")
     @Expose
@@ -79,7 +74,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestFoundTime")
     @Expose
@@ -101,7 +95,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 影响容器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerCount")
     @Expose
@@ -109,7 +102,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 影响仓库镜像数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryImageCount")
     @Expose
@@ -117,7 +109,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 漏洞PocID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PocID")
     @Expose
@@ -125,7 +116,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceStatus")
     @Expose
@@ -133,7 +123,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceScope")
     @Expose
@@ -141,7 +130,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceHostCount")
     @Expose
@@ -149,7 +137,6 @@ public class VulInfo extends AbstractModel {
 
     /**
     * 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefendedCount")
     @Expose
@@ -172,10 +159,8 @@ public class VulInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签 
      * @return Tags 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -183,19 +168,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVSS V3分数 
      * @return CVSSV3Score CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCVSSV3Score() {
         return this.CVSSV3Score;
@@ -203,19 +184,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSSV3Score CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSSV3Score(Float CVSSV3Score) {
         this.CVSSV3Score = CVSSV3Score;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -223,9 +200,7 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -248,10 +223,8 @@ public class VulInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞子类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞子类型 
      * @return Category 漏洞子类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -259,19 +232,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 漏洞子类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 漏洞子类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次发现时间 
      * @return FoundTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFoundTime() {
         return this.FoundTime;
@@ -279,19 +248,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FoundTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFoundTime(String FoundTime) {
         this.FoundTime = FoundTime;
     }
 
     /**
-     * Get 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近发现时间 
      * @return LatestFoundTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestFoundTime() {
         return this.LatestFoundTime;
@@ -299,9 +264,7 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestFoundTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestFoundTime(String LatestFoundTime) {
         this.LatestFoundTime = LatestFoundTime;
@@ -340,10 +303,8 @@ public class VulInfo extends AbstractModel {
     }
 
     /**
-     * Get 影响容器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响容器数 
      * @return ContainerCount 影响容器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContainerCount() {
         return this.ContainerCount;
@@ -351,19 +312,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 影响容器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerCount 影响容器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;
     }
 
     /**
-     * Get 影响仓库镜像数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响仓库镜像数 
      * @return RegistryImageCount 影响仓库镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegistryImageCount() {
         return this.RegistryImageCount;
@@ -371,19 +328,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 影响仓库镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistryImageCount 影响仓库镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryImageCount(Long RegistryImageCount) {
         this.RegistryImageCount = RegistryImageCount;
     }
 
     /**
-     * Get 漏洞PocID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞PocID 
      * @return PocID 漏洞PocID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPocID() {
         return this.PocID;
@@ -391,19 +344,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 漏洞PocID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PocID 漏洞PocID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPocID(String PocID) {
         this.PocID = PocID;
     }
 
     /**
-     * Get 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御 
      * @return DefenceStatus 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefenceStatus() {
         return this.DefenceStatus;
@@ -411,19 +360,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceStatus 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceStatus(String DefenceStatus) {
         this.DefenceStatus = DefenceStatus;
     }
 
     /**
-     * Get 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部 
      * @return DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefenceScope() {
         return this.DefenceScope;
@@ -431,19 +376,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceScope(String DefenceScope) {
         this.DefenceScope = DefenceScope;
     }
 
     /**
-     * Get 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞防御主机数量 
      * @return DefenceHostCount 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefenceHostCount() {
         return this.DefenceHostCount;
@@ -451,19 +392,15 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceHostCount 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceHostCount(Long DefenceHostCount) {
         this.DefenceHostCount = DefenceHostCount;
     }
 
     /**
-     * Get 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已防御攻击次数 
      * @return DefendedCount 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefendedCount() {
         return this.DefendedCount;
@@ -471,9 +408,7 @@ public class VulInfo extends AbstractModel {
 
     /**
      * Set 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefendedCount 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefendedCount(Long DefendedCount) {
         this.DefendedCount = DefendedCount;

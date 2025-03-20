@@ -32,7 +32,6 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
 
     /**
     * 查询到的慢日志耗时分段分析结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationAnalysis")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
 
     /**
     * 查询到的慢日志详细信息集合。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawSlowQueryList")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询到的慢日志耗时分段分析结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询到的慢日志耗时分段分析结果。 
      * @return DurationAnalysis 查询到的慢日志耗时分段分析结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DurationAnalysis [] getDurationAnalysis() {
         return this.DurationAnalysis;
@@ -81,19 +77,15 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
 
     /**
      * Set 查询到的慢日志耗时分段分析结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationAnalysis 查询到的慢日志耗时分段分析结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationAnalysis(DurationAnalysis [] DurationAnalysis) {
         this.DurationAnalysis = DurationAnalysis;
     }
 
     /**
-     * Get 查询到的慢日志详细信息集合。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询到的慢日志详细信息集合。 
      * @return RawSlowQueryList 查询到的慢日志详细信息集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RawSlowQuery [] getRawSlowQueryList() {
         return this.RawSlowQueryList;
@@ -101,9 +93,7 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
 
     /**
      * Set 查询到的慢日志详细信息集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RawSlowQueryList 查询到的慢日志详细信息集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawSlowQueryList(RawSlowQuery [] RawSlowQueryList) {
         this.RawSlowQueryList = RawSlowQueryList;

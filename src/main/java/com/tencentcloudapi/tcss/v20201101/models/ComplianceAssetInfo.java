@@ -46,7 +46,6 @@ public class ComplianceAssetInfo extends AbstractModel {
 
     /**
     * 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageTag")
     @Expose
@@ -83,7 +82,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassedPolicyItemCount")
     @Expose
@@ -91,7 +89,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedPolicyItemCount")
     @Expose
@@ -99,7 +96,6 @@ CHECK_FAILED, 检测失败
 
     /**
     * 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -109,7 +105,6 @@ CHECK_FAILED, 检测失败
     * 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckResult")
     @Expose
@@ -117,7 +112,6 @@ RESULT_PASSED: 通过。
 
     /**
     * 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -193,10 +187,8 @@ RESULT_PASSED: 通过。
     }
 
     /**
-     * Get 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当资产为镜像时，这个字段为镜像Tag。 
      * @return ImageTag 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageTag() {
         return this.ImageTag;
@@ -204,9 +196,7 @@ RESULT_PASSED: 通过。
 
     /**
      * Set 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageTag 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
@@ -293,10 +283,8 @@ CHECK_FAILED, 检测失败
     }
 
     /**
-     * Get 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此类资产通过的检测项的数目。 
      * @return PassedPolicyItemCount 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPassedPolicyItemCount() {
         return this.PassedPolicyItemCount;
@@ -304,19 +292,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassedPolicyItemCount 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassedPolicyItemCount(Long PassedPolicyItemCount) {
         this.PassedPolicyItemCount = PassedPolicyItemCount;
     }
 
     /**
-     * Get 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此类资产未通过的检测的数目。 
      * @return FailedPolicyItemCount 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedPolicyItemCount() {
         return this.FailedPolicyItemCount;
@@ -324,19 +308,15 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedPolicyItemCount 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedPolicyItemCount(Long FailedPolicyItemCount) {
         this.FailedPolicyItemCount = FailedPolicyItemCount;
     }
 
     /**
-     * Get 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次检测的时间。 
      * @return LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
@@ -344,9 +324,7 @@ CHECK_FAILED, 检测失败
 
     /**
      * Set 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
@@ -355,12 +333,10 @@ CHECK_FAILED, 检测失败
     /**
      * Get 检测结果：
 RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。 
+RESULT_PASSED: 通过。 
      * @return CheckResult 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckResult() {
         return this.CheckResult;
@@ -370,21 +346,17 @@ RESULT_PASSED: 通过。
      * Set 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckResult 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机节点的实例id 
      * @return InstanceId 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -392,9 +364,7 @@ RESULT_PASSED: 通过。
 
     /**
      * Set 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

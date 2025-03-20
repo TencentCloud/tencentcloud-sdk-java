@@ -129,6 +129,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量导出域名解析量
+     * @param req CreateDomainsAnalyticsFileRequest
+     * @return CreateDomainsAnalyticsFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainsAnalyticsFileResponse CreateDomainsAnalyticsFile(CreateDomainsAnalyticsFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDomainsAnalyticsFile", CreateDomainsAnalyticsFileResponse.class);
+    }
+
+    /**
      *创建域名的线路分组
      * @param req CreateLineGroupRequest
      * @return CreateLineGroupResponse
@@ -193,6 +204,17 @@ public class DnspodClient extends AbstractClient{
     public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSnapshot", CreateSnapshotResponse.class);
+    }
+
+    /**
+     *批量导出子域名解析量
+     * @param req CreateSubDomainsAnalyticsFileRequest
+     * @return CreateSubDomainsAnalyticsFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubDomainsAnalyticsFileResponse CreateSubDomainsAnalyticsFile(CreateSubDomainsAnalyticsFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubDomainsAnalyticsFile", CreateSubDomainsAnalyticsFileResponse.class);
     }
 
     /**
@@ -482,6 +504,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainWhoisResponse DescribeDomainWhois(DescribeDomainWhoisRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainWhois", DescribeDomainWhoisResponse.class);
+    }
+
+    /**
+     *根据批量任务ID获取生成文件信息
+     * @param req DescribeFileInfoByJobIdRequest
+     * @return DescribeFileInfoByJobIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileInfoByJobIdResponse DescribeFileInfoByJobId(DescribeFileInfoByJobIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFileInfoByJobId", DescribeFileInfoByJobIdResponse.class);
     }
 
     /**

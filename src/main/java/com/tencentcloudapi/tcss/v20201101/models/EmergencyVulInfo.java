@@ -32,7 +32,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -40,7 +39,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSSV3Score")
     @Expose
@@ -48,7 +46,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -63,7 +60,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -71,7 +67,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmitTime")
     @Expose
@@ -79,7 +74,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestFoundTime")
     @Expose
@@ -108,7 +102,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceStatus")
     @Expose
@@ -116,7 +109,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceScope")
     @Expose
@@ -124,7 +116,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenceHostCount")
     @Expose
@@ -132,7 +123,6 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
     * 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefendedCount")
     @Expose
@@ -155,10 +145,8 @@ public class EmergencyVulInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签 
      * @return Tags 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -166,19 +154,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVSS V3分数 
      * @return CVSSV3Score CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCVSSV3Score() {
         return this.CVSSV3Score;
@@ -186,19 +170,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSSV3Score CVSS V3分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSSV3Score(Float CVSSV3Score) {
         this.CVSSV3Score = CVSSV3Score;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -206,9 +186,7 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -231,10 +209,8 @@ public class EmergencyVulInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞类型 
      * @return Category 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -242,19 +218,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞披露时间 
      * @return SubmitTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubmitTime() {
         return this.SubmitTime;
@@ -262,19 +234,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmitTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmitTime(String SubmitTime) {
         this.SubmitTime = SubmitTime;
     }
 
     /**
-     * Get 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近发现时间 
      * @return LatestFoundTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestFoundTime() {
         return this.LatestFoundTime;
@@ -282,9 +250,7 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestFoundTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestFoundTime(String LatestFoundTime) {
         this.LatestFoundTime = LatestFoundTime;
@@ -339,10 +305,8 @@ public class EmergencyVulInfo extends AbstractModel {
     }
 
     /**
-     * Get 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御 
      * @return DefenceStatus 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefenceStatus() {
         return this.DefenceStatus;
@@ -350,19 +314,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceStatus 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceStatus(String DefenceStatus) {
         this.DefenceStatus = DefenceStatus;
     }
 
     /**
-     * Get 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部 
      * @return DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefenceScope() {
         return this.DefenceScope;
@@ -370,19 +330,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceScope(String DefenceScope) {
         this.DefenceScope = DefenceScope;
     }
 
     /**
-     * Get 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞防御主机数量 
      * @return DefenceHostCount 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefenceHostCount() {
         return this.DefenceHostCount;
@@ -390,19 +346,15 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenceHostCount 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenceHostCount(Long DefenceHostCount) {
         this.DefenceHostCount = DefenceHostCount;
     }
 
     /**
-     * Get 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已防御攻击次数 
      * @return DefendedCount 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefendedCount() {
         return this.DefendedCount;
@@ -410,9 +362,7 @@ public class EmergencyVulInfo extends AbstractModel {
 
     /**
      * Set 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefendedCount 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefendedCount(Long DefendedCount) {
         this.DefendedCount = DefendedCount;

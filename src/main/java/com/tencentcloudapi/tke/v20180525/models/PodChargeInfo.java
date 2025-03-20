@@ -60,7 +60,6 @@ public class PodChargeInfo extends AbstractModel {
 
     /**
     * Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gpu")
     @Expose
@@ -173,10 +172,8 @@ TPOD：特惠实例
     }
 
     /**
-     * Get Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pod是GPU时，表示GPU卡数 
      * @return Gpu Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpu() {
         return this.Gpu;
@@ -184,9 +181,7 @@ TPOD：特惠实例
 
     /**
      * Set Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gpu Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpu(String Gpu) {
         this.Gpu = Gpu;

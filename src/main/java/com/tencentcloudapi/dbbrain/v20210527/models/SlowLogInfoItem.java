@@ -46,7 +46,6 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
     * User来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -54,7 +53,6 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
     * IP来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserHost")
     @Expose
@@ -69,7 +67,6 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
     * 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockTime")
     @Expose
@@ -77,7 +74,6 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
     * 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowsExamined")
     @Expose
@@ -85,7 +81,6 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
     * 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowsSent")
     @Expose
@@ -140,10 +135,8 @@ public class SlowLogInfoItem extends AbstractModel {
     }
 
     /**
-     * Get User来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get User来源 
      * @return UserName User来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -151,19 +144,15 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
      * Set User来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName User来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get IP来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP来源 
      * @return UserHost IP来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserHost() {
         return this.UserHost;
@@ -171,9 +160,7 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
      * Set IP来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserHost IP来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserHost(String UserHost) {
         this.UserHost = UserHost;
@@ -196,10 +183,8 @@ public class SlowLogInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 锁时间,单位秒 
      * @return LockTime 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLockTime() {
         return this.LockTime;
@@ -207,19 +192,15 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
      * Set 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockTime 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描行数 
      * @return RowsExamined 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowsExamined() {
         return this.RowsExamined;
@@ -227,19 +208,15 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
      * Set 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowsExamined 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowsExamined(Long RowsExamined) {
         this.RowsExamined = RowsExamined;
     }
 
     /**
-     * Get 返回行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回行数 
      * @return RowsSent 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowsSent() {
         return this.RowsSent;
@@ -247,9 +224,7 @@ public class SlowLogInfoItem extends AbstractModel {
 
     /**
      * Set 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowsSent 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowsSent(Long RowsSent) {
         this.RowsSent = RowsSent;

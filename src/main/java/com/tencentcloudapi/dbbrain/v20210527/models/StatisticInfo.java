@@ -25,7 +25,6 @@ public class StatisticInfo extends AbstractModel {
 
     /**
     * 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimension")
     @Expose
@@ -33,17 +32,14 @@ public class StatisticInfo extends AbstractModel {
 
     /**
     * 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private StatisticDataInfo [] Data;
 
     /**
-     * Get 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计分析的维度。 
      * @return Dimension 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDimension() {
         return this.Dimension;
@@ -51,19 +47,15 @@ public class StatisticInfo extends AbstractModel {
 
     /**
      * Set 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dimension 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;
     }
 
     /**
-     * Get 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计分析的维度下的统计数据详情。 
      * @return Data 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatisticDataInfo [] getData() {
         return this.Data;
@@ -71,9 +63,7 @@ public class StatisticInfo extends AbstractModel {
 
     /**
      * Set 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(StatisticDataInfo [] Data) {
         this.Data = Data;

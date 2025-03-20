@@ -32,7 +32,6 @@ public class TrafficPackage extends AbstractModel {
 
     /**
     * 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficPackageName")
     @Expose
@@ -82,7 +81,6 @@ public class TrafficPackage extends AbstractModel {
 
     /**
     * 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -112,10 +110,8 @@ public class TrafficPackage extends AbstractModel {
     }
 
     /**
-     * Get 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包名称 
      * @return TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficPackageName() {
         return this.TrafficPackageName;
@@ -123,9 +119,7 @@ public class TrafficPackage extends AbstractModel {
 
     /**
      * Set 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficPackageName(String TrafficPackageName) {
         this.TrafficPackageName = TrafficPackageName;
@@ -228,10 +222,8 @@ public class TrafficPackage extends AbstractModel {
     }
 
     /**
-     * Get 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包标签 
      * @return TagSet 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -239,9 +231,7 @@ public class TrafficPackage extends AbstractModel {
 
     /**
      * Set 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

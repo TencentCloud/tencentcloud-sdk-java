@@ -25,7 +25,6 @@ public class GetRecordDatesByDevResponse extends AbstractModel {
 
     /**
     * 含有录像文件的日期列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dates")
     @Expose
@@ -39,10 +38,8 @@ public class GetRecordDatesByDevResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 含有录像文件的日期列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 含有录像文件的日期列表 
      * @return Dates 含有录像文件的日期列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDates() {
         return this.Dates;
@@ -50,9 +47,7 @@ public class GetRecordDatesByDevResponse extends AbstractModel {
 
     /**
      * Set 含有录像文件的日期列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dates 含有录像文件的日期列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDates(String [] Dates) {
         this.Dates = Dates;

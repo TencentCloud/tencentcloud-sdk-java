@@ -32,7 +32,6 @@ public class DescribeComplianceScanFailedAssetListResponse extends AbstractModel
 
     /**
     * 返回各类检测失败的资产的汇总信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanFailedAssetList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeComplianceScanFailedAssetListResponse extends AbstractModel
     }
 
     /**
-     * Get 返回各类检测失败的资产的汇总信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回各类检测失败的资产的汇总信息的列表。 
      * @return ScanFailedAssetList 返回各类检测失败的资产的汇总信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplianceScanFailedAsset [] getScanFailedAssetList() {
         return this.ScanFailedAssetList;
@@ -73,9 +70,7 @@ public class DescribeComplianceScanFailedAssetListResponse extends AbstractModel
 
     /**
      * Set 返回各类检测失败的资产的汇总信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanFailedAssetList 返回各类检测失败的资产的汇总信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanFailedAssetList(ComplianceScanFailedAsset [] ScanFailedAssetList) {
         this.ScanFailedAssetList = ScanFailedAssetList;

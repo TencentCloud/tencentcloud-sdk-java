@@ -74,7 +74,6 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel {
 
     /**
     * 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnhandledK8sApiEventCnt")
     @Expose
@@ -200,10 +199,8 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel {
     }
 
     /**
-     * Get 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未处理k8sApi事件 
      * @return UnhandledK8sApiEventCnt 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnhandledK8sApiEventCnt() {
         return this.UnhandledK8sApiEventCnt;
@@ -211,9 +208,7 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel {
 
     /**
      * Set 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnhandledK8sApiEventCnt 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnhandledK8sApiEventCnt(Long UnhandledK8sApiEventCnt) {
         this.UnhandledK8sApiEventCnt = UnhandledK8sApiEventCnt;

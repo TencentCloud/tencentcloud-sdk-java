@@ -199,6 +199,13 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
     private String Env;
 
     /**
+    * doris写入模式配置
+    */
+    @SerializedName("WriteMode")
+    @Expose
+    private String WriteMode;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -598,6 +605,22 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.Env = Env;
     }
 
+    /**
+     * Get doris写入模式配置 
+     * @return WriteMode doris写入模式配置
+     */
+    public String getWriteMode() {
+        return this.WriteMode;
+    }
+
+    /**
+     * Set doris写入模式配置
+     * @param WriteMode doris写入模式配置
+     */
+    public void setWriteMode(String WriteMode) {
+        this.WriteMode = WriteMode;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -693,6 +716,9 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.WriteMode != null) {
+            this.WriteMode = new String(source.WriteMode);
+        }
     }
 
 
@@ -725,6 +751,7 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
         this.setParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "WriteMode", this.WriteMode);
 
     }
 }

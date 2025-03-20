@@ -25,7 +25,6 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
     * 主题名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -33,7 +32,6 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
     * 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -41,17 +39,14 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
     * Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicTraffic")
     @Expose
     private String TopicTraffic;
 
     /**
-     * Get 主题名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名 
      * @return TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -59,19 +54,15 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
      * Set 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题Id 
      * @return TopicId 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -79,19 +70,15 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
      * Set 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic 流量(MB) 
      * @return TopicTraffic Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicTraffic() {
         return this.TopicTraffic;
@@ -99,9 +86,7 @@ public class BrokerTopicFlowData extends AbstractModel {
 
     /**
      * Set Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicTraffic Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicTraffic(String TopicTraffic) {
         this.TopicTraffic = TopicTraffic;

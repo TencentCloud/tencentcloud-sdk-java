@@ -25,7 +25,6 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
     * 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessStartUser")
     @Expose
@@ -33,7 +32,6 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
     * 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessUserGroup")
     @Expose
@@ -41,7 +39,6 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
     * 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessPath")
     @Expose
@@ -49,17 +46,14 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
     * 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessParam")
     @Expose
     private String ProcessParam;
 
     /**
-     * Get 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程启动用户 
      * @return ProcessStartUser 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessStartUser() {
         return this.ProcessStartUser;
@@ -67,19 +61,15 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessStartUser 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessStartUser(String ProcessStartUser) {
         this.ProcessStartUser = ProcessStartUser;
     }
 
     /**
-     * Get 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程用户组 
      * @return ProcessUserGroup 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessUserGroup() {
         return this.ProcessUserGroup;
@@ -87,19 +77,15 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessUserGroup 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessUserGroup(String ProcessUserGroup) {
         this.ProcessUserGroup = ProcessUserGroup;
     }
 
     /**
-     * Get 进程路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程路径 
      * @return ProcessPath 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessPath() {
         return this.ProcessPath;
@@ -107,19 +93,15 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessPath 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程命令行参数 
      * @return ProcessParam 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessParam() {
         return this.ProcessParam;
@@ -127,9 +109,7 @@ public class ProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessParam 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessParam(String ProcessParam) {
         this.ProcessParam = ProcessParam;

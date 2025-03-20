@@ -190,7 +190,6 @@ VALIDATION: 参数非法
 
     /**
     * md5值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MD5")
     @Expose
@@ -198,7 +197,6 @@ VALIDATION: 参数非法
 
     /**
     * 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -211,7 +209,6 @@ VALIDATION: 参数非法
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckPlatform")
     @Expose
@@ -739,10 +736,8 @@ VALIDATION: 参数非法
     }
 
     /**
-     * Get md5值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get md5值 
      * @return MD5 md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMD5() {
         return this.MD5;
@@ -750,19 +745,15 @@ VALIDATION: 参数非法
 
     /**
      * Set md5值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MD5 md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
     }
 
     /**
-     * Get 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。 
      * @return RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -770,9 +761,7 @@ VALIDATION: 参数非法
 
     /**
      * Set 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
@@ -784,15 +773,13 @@ VALIDATION: 参数非法
 2: tav
 3: binaryAi
 4: 异常行为
-5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。 
+5: 威胁情报 
      * @return CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
@@ -805,14 +792,12 @@ VALIDATION: 参数非法
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;

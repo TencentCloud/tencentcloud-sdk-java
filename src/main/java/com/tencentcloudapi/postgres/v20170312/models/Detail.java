@@ -39,7 +39,6 @@ public class Detail extends AbstractModel {
 
     /**
     * 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisItems")
     @Expose
@@ -78,10 +77,8 @@ public class Detail extends AbstractModel {
     }
 
     /**
-     * Get 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢SQL统计分析列表 
      * @return AnalysisItems 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalysisItems [] getAnalysisItems() {
         return this.AnalysisItems;
@@ -89,9 +86,7 @@ public class Detail extends AbstractModel {
 
     /**
      * Set 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalysisItems 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisItems(AnalysisItems [] AnalysisItems) {
         this.AnalysisItems = AnalysisItems;

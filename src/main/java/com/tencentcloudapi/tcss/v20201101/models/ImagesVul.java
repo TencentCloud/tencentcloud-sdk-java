@@ -130,7 +130,6 @@ public class ImagesVul extends AbstractModel {
 
     /**
     * 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixedVersions")
     @Expose
@@ -138,7 +137,6 @@ public class ImagesVul extends AbstractModel {
 
     /**
     * 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -146,7 +144,6 @@ public class ImagesVul extends AbstractModel {
 
     /**
     * 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackLevel")
     @Expose
@@ -393,10 +390,8 @@ public class ImagesVul extends AbstractModel {
     }
 
     /**
-     * Get 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复版本号 
      * @return FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixedVersions() {
         return this.FixedVersions;
@@ -404,19 +399,15 @@ public class ImagesVul extends AbstractModel {
 
     /**
      * Set 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixedVersions(String FixedVersions) {
         this.FixedVersions = FixedVersions;
     }
 
     /**
-     * Get 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp" 
      * @return Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTag() {
         return this.Tag;
@@ -424,19 +415,15 @@ public class ImagesVul extends AbstractModel {
 
     /**
      * Set 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热度 
      * @return AttackLevel 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackLevel() {
         return this.AttackLevel;
@@ -444,9 +431,7 @@ public class ImagesVul extends AbstractModel {
 
     /**
      * Set 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackLevel 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackLevel(Long AttackLevel) {
         this.AttackLevel = AttackLevel;

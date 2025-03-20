@@ -32,7 +32,6 @@ public class DescribeComplianceAssetListResponse extends AbstractModel {
 
     /**
     * 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetInfoList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeComplianceAssetListResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回各类资产的列表。 
      * @return AssetInfoList 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplianceAssetInfo [] getAssetInfoList() {
         return this.AssetInfoList;
@@ -73,9 +70,7 @@ public class DescribeComplianceAssetListResponse extends AbstractModel {
 
     /**
      * Set 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetInfoList 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetInfoList(ComplianceAssetInfo [] AssetInfoList) {
         this.AssetInfoList = AssetInfoList;

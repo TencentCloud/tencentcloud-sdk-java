@@ -25,7 +25,6 @@ public class DescribeWarnModResponse extends AbstractModel {
 
     /**
     * 告警类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeWarnModResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警类型 
      * @return Data 告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeWarnModResponse extends AbstractModel {
 
     /**
      * Set 告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

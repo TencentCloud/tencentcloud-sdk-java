@@ -49,7 +49,6 @@ long及double类型字段需为空；
 
     /**
     * 是否包含中文，long及double类型字段需为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainZH")
     @Expose
@@ -116,10 +115,8 @@ long及double类型字段需为空；
     }
 
     /**
-     * Get 是否包含中文，long及double类型字段需为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否包含中文，long及double类型字段需为false 
      * @return ContainZH 是否包含中文，long及double类型字段需为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getContainZH() {
         return this.ContainZH;
@@ -127,9 +124,7 @@ long及double类型字段需为空；
 
     /**
      * Set 是否包含中文，long及double类型字段需为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainZH 是否包含中文，long及double类型字段需为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainZH(Boolean ContainZH) {
         this.ContainZH = ContainZH;

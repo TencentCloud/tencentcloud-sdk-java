@@ -194,7 +194,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetStatus")
     @Expose
@@ -209,7 +208,6 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
@@ -217,7 +215,6 @@ RULE_MODE_HOLDUP 拦截
 
     /**
     * 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -709,8 +706,7 @@ RULE_MODE_HOLDUP 拦截
 隔离中		ISOLATING
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。 
+解除隔离失败 RESTORE_FAILED 
      * @return ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -718,7 +714,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -732,7 +727,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -740,7 +734,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
@@ -754,8 +747,7 @@ RULE_MODE_HOLDUP 拦截
 "CONTAINER_DESTROYED" //容器已销毁
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。 
+"UNKNOW"              // 原因未知 
      * @return ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -764,7 +756,6 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
@@ -779,7 +770,6 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -788,17 +778,14 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离操作来源 
      * @return ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
@@ -806,9 +793,7 @@ RULE_MODE_HOLDUP 拦截
 
     /**
      * Set 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;

@@ -25,7 +25,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -33,7 +32,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseOwner")
     @Expose
@@ -41,7 +39,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encoding")
     @Expose
@@ -49,7 +46,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Collate")
     @Expose
@@ -57,7 +53,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ctype")
     @Expose
@@ -65,7 +60,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowConn")
     @Expose
@@ -73,7 +67,6 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnLimit")
     @Expose
@@ -81,17 +74,14 @@ public class Database extends AbstractModel {
 
     /**
     * 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Privileges")
     @Expose
     private String Privileges;
 
     /**
-     * Get 数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名 
      * @return DatabaseName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -99,19 +89,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库所有者 
      * @return DatabaseOwner 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseOwner() {
         return this.DatabaseOwner;
@@ -119,19 +105,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseOwner 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseOwner(String DatabaseOwner) {
         this.DatabaseOwner = DatabaseOwner;
     }
 
     /**
-     * Get 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库字符编码 
      * @return Encoding 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncoding() {
         return this.Encoding;
@@ -139,19 +121,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encoding 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncoding(String Encoding) {
         this.Encoding = Encoding;
     }
 
     /**
-     * Get 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库排序规则 
      * @return Collate 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCollate() {
         return this.Collate;
@@ -159,19 +137,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Collate 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollate(String Collate) {
         this.Collate = Collate;
     }
 
     /**
-     * Get 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库字符分类 
      * @return Ctype 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCtype() {
         return this.Ctype;
@@ -179,19 +153,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ctype 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCtype(String Ctype) {
         this.Ctype = Ctype;
     }
 
     /**
-     * Get 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库是否允许连接 
      * @return AllowConn 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllowConn() {
         return this.AllowConn;
@@ -199,19 +169,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowConn 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowConn(Boolean AllowConn) {
         this.AllowConn = AllowConn;
     }
 
     /**
-     * Get 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库最大连接数，-1表示无限制 
      * @return ConnLimit 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnLimit() {
         return this.ConnLimit;
@@ -219,19 +185,15 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnLimit 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnLimit(Long ConnLimit) {
         this.ConnLimit = ConnLimit;
     }
 
     /**
-     * Get 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库权限列表 
      * @return Privileges 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivileges() {
         return this.Privileges;
@@ -239,9 +201,7 @@ public class Database extends AbstractModel {
 
     /**
      * Set 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Privileges 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivileges(String Privileges) {
         this.Privileges = Privileges;

@@ -52,7 +52,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuotaGroup")
     @Expose
@@ -131,10 +130,8 @@ public class Quota extends AbstractModel {
     }
 
     /**
-     * Get 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配额所属的网络组 
      * @return QuotaGroup 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuotaGroup() {
         return this.QuotaGroup;
@@ -142,9 +139,7 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuotaGroup 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuotaGroup(String QuotaGroup) {
         this.QuotaGroup = QuotaGroup;

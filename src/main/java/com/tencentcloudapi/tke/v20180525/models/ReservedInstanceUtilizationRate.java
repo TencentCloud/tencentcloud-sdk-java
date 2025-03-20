@@ -25,7 +25,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 使用率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rate")
     @Expose
@@ -33,7 +32,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 预留券数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Num")
     @Expose
@@ -41,7 +39,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPU")
     @Expose
@@ -49,7 +46,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -57,7 +53,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     *  预留券类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuNum")
     @Expose
@@ -73,7 +67,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -81,7 +74,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -89,7 +81,6 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -97,17 +88,14 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
     * Pod 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodNum")
     @Expose
     private Long PodNum;
 
     /**
-     * Get 使用率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用率 
      * @return Rate 使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRate() {
         return this.Rate;
@@ -115,19 +103,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 使用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rate 使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRate(Float Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get 预留券数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预留券数量 
      * @return Num 预留券数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNum() {
         return this.Num;
@@ -135,19 +119,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 预留券数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Num 预留券数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNum(Long Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核数 
      * @return CPU 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCPU() {
         return this.CPU;
@@ -155,19 +135,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPU 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPU(Float CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存 
      * @return Memory 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemory() {
         return this.Memory;
@@ -175,19 +151,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  预留券类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  预留券类型 
      * @return Type  预留券类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -195,19 +167,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set  预留券类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type  预留券类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GPU 卡数 
      * @return GpuNum GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuNum() {
         return this.GpuNum;
@@ -215,19 +183,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuNum GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuNum(String GpuNum) {
         this.GpuNum = GpuNum;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -235,19 +199,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群 ID 
      * @return ClusterId 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -255,19 +215,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点名称 
      * @return NodeName 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -275,19 +231,15 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Pod 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pod 数量 
      * @return PodNum Pod 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodNum() {
         return this.PodNum;
@@ -295,9 +247,7 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
 
     /**
      * Set Pod 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodNum Pod 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodNum(Long PodNum) {
         this.PodNum = PodNum;

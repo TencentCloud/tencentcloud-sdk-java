@@ -25,7 +25,6 @@ public class ComplianceK8SDetailInfo extends AbstractModel {
 
     /**
     * K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -33,17 +32,14 @@ public class ComplianceK8SDetailInfo extends AbstractModel {
 
     /**
     * K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-     * Get K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get K8S集群的名称。 
      * @return ClusterName K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -51,19 +47,15 @@ public class ComplianceK8SDetailInfo extends AbstractModel {
 
     /**
      * Set K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get K8S集群的版本。 
      * @return ClusterVersion K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
@@ -71,9 +63,7 @@ public class ComplianceK8SDetailInfo extends AbstractModel {
 
     /**
      * Set K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterVersion K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;

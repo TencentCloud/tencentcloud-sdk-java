@@ -53,7 +53,6 @@ public class Aggregation extends AbstractModel {
 
     /**
     * 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowLogs")
     @Expose
@@ -124,10 +123,8 @@ public class Aggregation extends AbstractModel {
     }
 
     /**
-     * Get 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢查模板概览。 
      * @return SlowLogs 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlowLogs() {
         return this.SlowLogs;
@@ -135,9 +132,7 @@ public class Aggregation extends AbstractModel {
 
     /**
      * Set 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowLogs 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowLogs(String [] SlowLogs) {
         this.SlowLogs = SlowLogs;

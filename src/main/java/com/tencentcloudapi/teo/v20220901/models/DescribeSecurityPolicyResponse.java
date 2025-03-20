@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudProductLogTaskResponse extends AbstractModel {
+public class DescribeSecurityPolicyResponse extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 安全策略配置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TopicId")
+    @SerializedName("SecurityPolicy")
     @Expose
-    private String TopicId;
-
-    /**
-    * 日志主题名称
-    */
-    @SerializedName("TopicName")
-    @Expose
-    private String TopicName;
-
-    /**
-    * 日志集ID
-    */
-    @SerializedName("LogsetId")
-    @Expose
-    private String LogsetId;
-
-    /**
-    * 日志集名称
-    */
-    @SerializedName("LogsetName")
-    @Expose
-    private String LogsetName;
+    private SecurityPolicy SecurityPolicy;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +39,23 @@ public class CreateCloudProductLogTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 安全策略配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityPolicy 安全策略配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTopicId() {
-        return this.TopicId;
+    public SecurityPolicy getSecurityPolicy() {
+        return this.SecurityPolicy;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 安全策略配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityPolicy 安全策略配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
-    }
-
-    /**
-     * Get 日志主题名称 
-     * @return TopicName 日志主题名称
-     */
-    public String getTopicName() {
-        return this.TopicName;
-    }
-
-    /**
-     * Set 日志主题名称
-     * @param TopicName 日志主题名称
-     */
-    public void setTopicName(String TopicName) {
-        this.TopicName = TopicName;
-    }
-
-    /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
-     */
-    public String getLogsetId() {
-        return this.LogsetId;
-    }
-
-    /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
-     */
-    public void setLogsetId(String LogsetId) {
-        this.LogsetId = LogsetId;
-    }
-
-    /**
-     * Get 日志集名称 
-     * @return LogsetName 日志集名称
-     */
-    public String getLogsetName() {
-        return this.LogsetName;
-    }
-
-    /**
-     * Set 日志集名称
-     * @param LogsetName 日志集名称
-     */
-    public void setLogsetName(String LogsetName) {
-        this.LogsetName = LogsetName;
+    public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
+        this.SecurityPolicy = SecurityPolicy;
     }
 
     /**
@@ -138,25 +74,16 @@ public class CreateCloudProductLogTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateCloudProductLogTaskResponse() {
+    public DescribeSecurityPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCloudProductLogTaskResponse(CreateCloudProductLogTaskResponse source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
-        }
-        if (source.TopicName != null) {
-            this.TopicName = new String(source.TopicName);
-        }
-        if (source.LogsetId != null) {
-            this.LogsetId = new String(source.LogsetId);
-        }
-        if (source.LogsetName != null) {
-            this.LogsetName = new String(source.LogsetName);
+    public DescribeSecurityPolicyResponse(DescribeSecurityPolicyResponse source) {
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new SecurityPolicy(source.SecurityPolicy);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +95,7 @@ public class CreateCloudProductLogTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
-        this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
-        this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
+        this.setParamObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

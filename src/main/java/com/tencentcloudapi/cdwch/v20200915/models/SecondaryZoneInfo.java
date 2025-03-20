@@ -25,7 +25,6 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
     * 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryZone")
     @Expose
@@ -33,7 +32,6 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
     * 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondarySubnet")
     @Expose
@@ -41,7 +39,6 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
     * 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIpNum")
     @Expose
@@ -49,17 +46,14 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
     * 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryUserSubnetIPNum")
     @Expose
     private Long SecondaryUserSubnetIPNum;
 
     /**
-     * Get 副可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 副可用区 
      * @return SecondaryZone 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondaryZone() {
         return this.SecondaryZone;
@@ -67,19 +61,15 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
      * Set 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryZone 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryZone(String SecondaryZone) {
         this.SecondaryZone = SecondaryZone;
     }
 
     /**
-     * Get 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区可用的子网id 
      * @return SecondarySubnet 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondarySubnet() {
         return this.SecondarySubnet;
@@ -87,19 +77,15 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondarySubnet 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondarySubnet(String SecondarySubnet) {
         this.SecondarySubnet = SecondarySubnet;
     }
 
     /**
-     * Get 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区可用的子网可用ip的数量 
      * @return UserIpNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserIpNum() {
         return this.UserIpNum;
@@ -107,19 +93,15 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIpNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIpNum(String UserIpNum) {
         this.UserIpNum = UserIpNum;
     }
 
     /**
-     * Get 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区可用的子网可用ip的数量 
      * @return SecondaryUserSubnetIPNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecondaryUserSubnetIPNum() {
         return this.SecondaryUserSubnetIPNum;
@@ -127,9 +109,7 @@ public class SecondaryZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryUserSubnetIPNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryUserSubnetIPNum(Long SecondaryUserSubnetIPNum) {
         this.SecondaryUserSubnetIPNum = SecondaryUserSubnetIPNum;

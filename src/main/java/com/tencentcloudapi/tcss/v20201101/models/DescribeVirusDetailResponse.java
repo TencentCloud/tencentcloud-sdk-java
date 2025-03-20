@@ -25,7 +25,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 木马文件大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 木马文件路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePath")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 最近生成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusName")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerName")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 容器id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerId")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 主机id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostId")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessName")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessPath")
     @Expose
@@ -137,7 +123,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程md5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessMd5")
     @Expose
@@ -145,7 +130,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessId")
     @Expose
@@ -153,7 +137,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessArgv")
     @Expose
@@ -161,7 +144,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程链
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessChan")
     @Expose
@@ -169,7 +151,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessAccountGroup")
     @Expose
@@ -177,7 +158,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessStartAccount")
     @Expose
@@ -185,7 +165,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 进程文件权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessFileAuthority")
     @Expose
@@ -193,7 +172,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 来源：0：一键扫描， 1：定时扫描 2：实时监控
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -201,7 +179,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -209,7 +186,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HarmDescribe")
     @Expose
@@ -217,7 +193,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuggestScheme")
     @Expose
@@ -225,7 +200,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mark")
     @Expose
@@ -233,7 +207,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 风险文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -241,7 +214,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 文件MD5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMd5")
     @Expose
@@ -249,7 +221,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventType")
     @Expose
@@ -257,7 +228,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
     @Expose
@@ -273,7 +243,6 @@ DEAL_ISOLATING:隔离中
 DEAL_ISOLATE_FAILED:隔离失败
 DEAL_RECOVERING:恢复中
 DEAL_RECOVER_FAILED: 恢复失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -287,7 +256,6 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubStatus")
     @Expose
@@ -295,7 +263,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIP")
     @Expose
@@ -303,7 +270,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIP")
     @Expose
@@ -311,7 +277,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 父进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PProcessStartUser")
     @Expose
@@ -319,7 +284,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 父进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PProcessUserGroup")
     @Expose
@@ -327,7 +291,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 父进程路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PProcessPath")
     @Expose
@@ -335,7 +298,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 父进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PProcessParam")
     @Expose
@@ -343,7 +305,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 祖先进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AncestorProcessStartUser")
     @Expose
@@ -351,7 +312,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 祖先进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AncestorProcessUserGroup")
     @Expose
@@ -359,7 +319,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 祖先进程路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AncestorProcessPath")
     @Expose
@@ -367,7 +326,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 祖先进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AncestorProcessParam")
     @Expose
@@ -375,7 +333,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationTime")
     @Expose
@@ -383,7 +340,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 容器隔离状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetStatus")
     @Expose
@@ -391,7 +347,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 容器隔离子状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
@@ -399,7 +354,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -412,7 +366,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckPlatform")
     @Expose
@@ -420,7 +373,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 文件访问时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileAccessTime")
     @Expose
@@ -428,7 +380,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
     * 文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileModifyTime")
     @Expose
@@ -526,10 +477,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String RequestId;
 
     /**
-     * Get 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像ID 
      * @return ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageId() {
         return this.ImageId;
@@ -537,19 +486,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像名称 
      * @return ImageName 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageName() {
         return this.ImageName;
@@ -557,19 +502,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageName 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -577,19 +518,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 木马文件大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 木马文件大小 
      * @return Size 木马文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -597,19 +534,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 木马文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 木马文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 木马文件路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 木马文件路径 
      * @return FilePath 木马文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePath() {
         return this.FilePath;
@@ -617,19 +550,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 木马文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePath 木马文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 最近生成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近生成时间 
      * @return ModifyTime 最近生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -637,19 +566,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 最近生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 最近生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒名称 
      * @return VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirusName() {
         return this.VirusName;
@@ -657,19 +582,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。 
      * @return RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -677,19 +598,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 容器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器名称 
      * @return ContainerName 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerName() {
         return this.ContainerName;
@@ -697,19 +614,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerName 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get 容器id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器id 
      * @return ContainerId 容器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerId() {
         return this.ContainerId;
@@ -717,19 +630,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 容器id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerId 容器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerId(String ContainerId) {
         this.ContainerId = ContainerId;
     }
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称 
      * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -737,19 +646,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机id 
      * @return HostId 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostId() {
         return this.HostId;
@@ -757,19 +662,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostId 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get 进程名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名称 
      * @return ProcessName 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessName() {
         return this.ProcessName;
@@ -777,19 +678,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessName 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessName(String ProcessName) {
         this.ProcessName = ProcessName;
     }
 
     /**
-     * Get 进程路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程路径 
      * @return ProcessPath 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessPath() {
         return this.ProcessPath;
@@ -797,19 +694,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessPath 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get 进程md5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程md5 
      * @return ProcessMd5 进程md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessMd5() {
         return this.ProcessMd5;
@@ -817,19 +710,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessMd5 进程md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessMd5(String ProcessMd5) {
         this.ProcessMd5 = ProcessMd5;
     }
 
     /**
-     * Get 进程id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程id 
      * @return ProcessId 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProcessId() {
         return this.ProcessId;
@@ -837,19 +726,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessId 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessId(Long ProcessId) {
         this.ProcessId = ProcessId;
     }
 
     /**
-     * Get 进程参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程参数 
      * @return ProcessArgv 进程参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessArgv() {
         return this.ProcessArgv;
@@ -857,19 +742,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessArgv 进程参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessArgv(String ProcessArgv) {
         this.ProcessArgv = ProcessArgv;
     }
 
     /**
-     * Get 进程链
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程链 
      * @return ProcessChan 进程链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessChan() {
         return this.ProcessChan;
@@ -877,19 +758,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程链
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessChan 进程链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessChan(String ProcessChan) {
         this.ProcessChan = ProcessChan;
     }
 
     /**
-     * Get 进程组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程组 
      * @return ProcessAccountGroup 进程组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessAccountGroup() {
         return this.ProcessAccountGroup;
@@ -897,19 +774,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessAccountGroup 进程组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessAccountGroup(String ProcessAccountGroup) {
         this.ProcessAccountGroup = ProcessAccountGroup;
     }
 
     /**
-     * Get 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程启动用户 
      * @return ProcessStartAccount 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessStartAccount() {
         return this.ProcessStartAccount;
@@ -917,19 +790,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessStartAccount 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessStartAccount(String ProcessStartAccount) {
         this.ProcessStartAccount = ProcessStartAccount;
     }
 
     /**
-     * Get 进程文件权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程文件权限 
      * @return ProcessFileAuthority 进程文件权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessFileAuthority() {
         return this.ProcessFileAuthority;
@@ -937,19 +806,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 进程文件权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessFileAuthority 进程文件权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessFileAuthority(String ProcessFileAuthority) {
         this.ProcessFileAuthority = ProcessFileAuthority;
     }
 
     /**
-     * Get 来源：0：一键扫描， 1：定时扫描 2：实时监控
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源：0：一键扫描， 1：定时扫描 2：实时监控 
      * @return SourceType 来源：0：一键扫描， 1：定时扫描 2：实时监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceType() {
         return this.SourceType;
@@ -957,19 +822,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 来源：0：一键扫描， 1：定时扫描 2：实时监控
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 来源：0：一键扫描， 1：定时扫描 2：实时监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -977,19 +838,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 事件描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件描述 
      * @return HarmDescribe 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
@@ -997,19 +854,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HarmDescribe 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get 建议方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议方案 
      * @return SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
@@ -1017,19 +870,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Mark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMark() {
         return this.Mark;
@@ -1037,19 +886,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMark(String Mark) {
         this.Mark = Mark;
     }
 
     /**
-     * Get 风险文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险文件名称 
      * @return FileName 风险文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -1057,19 +902,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 风险文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 风险文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件MD5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件MD5 
      * @return FileMd5 文件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMd5() {
         return this.FileMd5;
@@ -1077,19 +918,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 文件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMd5 文件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get 事件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件类型 
      * @return EventType 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventType() {
         return this.EventType;
@@ -1097,19 +934,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventType 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return PodName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
         return this.PodName;
@@ -1117,9 +950,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
@@ -1134,8 +965,7 @@ DEAL_ISOLATE:已经隔离
 DEAL_ISOLATING:隔离中
 DEAL_ISOLATE_FAILED:隔离失败
 DEAL_RECOVERING:恢复中
-DEAL_RECOVER_FAILED: 恢复失败
-注意：此字段可能返回 null，表示取不到有效值。 
+DEAL_RECOVER_FAILED: 恢复失败 
      * @return Status DEAL_NONE:文件待处理
 DEAL_IGNORE:已经忽略
 DEAL_ADD_WHITELIST:加白
@@ -1145,7 +975,6 @@ DEAL_ISOLATING:隔离中
 DEAL_ISOLATE_FAILED:隔离失败
 DEAL_RECOVERING:恢复中
 DEAL_RECOVER_FAILED: 恢复失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -1161,7 +990,6 @@ DEAL_ISOLATING:隔离中
 DEAL_ISOLATE_FAILED:隔离失败
 DEAL_RECOVERING:恢复中
 DEAL_RECOVER_FAILED: 恢复失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status DEAL_NONE:文件待处理
 DEAL_IGNORE:已经忽略
 DEAL_ADD_WHITELIST:加白
@@ -1171,7 +999,6 @@ DEAL_ISOLATING:隔离中
 DEAL_ISOLATE_FAILED:隔离失败
 DEAL_RECOVERING:恢复中
 DEAL_RECOVER_FAILED: 恢复失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -1184,8 +1011,7 @@ FILE_ABNORMAL:文件异常
 FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
-CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-注意：此字段可能返回 null，表示取不到有效值。 
+CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在 
      * @return SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -1193,7 +1019,6 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubStatus() {
         return this.SubStatus;
@@ -1207,7 +1032,6 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -1215,17 +1039,14 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return HostIP 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIP() {
         return this.HostIP;
@@ -1233,19 +1054,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIP 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return ClientIP 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIP() {
         return this.ClientIP;
@@ -1253,19 +1070,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIP 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
     }
 
     /**
-     * Get 父进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父进程启动用户 
      * @return PProcessStartUser 父进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPProcessStartUser() {
         return this.PProcessStartUser;
@@ -1273,19 +1086,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 父进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PProcessStartUser 父进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPProcessStartUser(String PProcessStartUser) {
         this.PProcessStartUser = PProcessStartUser;
     }
 
     /**
-     * Get 父进程用户组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父进程用户组 
      * @return PProcessUserGroup 父进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPProcessUserGroup() {
         return this.PProcessUserGroup;
@@ -1293,19 +1102,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 父进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PProcessUserGroup 父进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPProcessUserGroup(String PProcessUserGroup) {
         this.PProcessUserGroup = PProcessUserGroup;
     }
 
     /**
-     * Get 父进程路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父进程路径 
      * @return PProcessPath 父进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPProcessPath() {
         return this.PProcessPath;
@@ -1313,19 +1118,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 父进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PProcessPath 父进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPProcessPath(String PProcessPath) {
         this.PProcessPath = PProcessPath;
     }
 
     /**
-     * Get 父进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父进程命令行参数 
      * @return PProcessParam 父进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPProcessParam() {
         return this.PProcessParam;
@@ -1333,19 +1134,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 父进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PProcessParam 父进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPProcessParam(String PProcessParam) {
         this.PProcessParam = PProcessParam;
     }
 
     /**
-     * Get 祖先进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程启动用户 
      * @return AncestorProcessStartUser 祖先进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAncestorProcessStartUser() {
         return this.AncestorProcessStartUser;
@@ -1353,19 +1150,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 祖先进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AncestorProcessStartUser 祖先进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAncestorProcessStartUser(String AncestorProcessStartUser) {
         this.AncestorProcessStartUser = AncestorProcessStartUser;
     }
 
     /**
-     * Get 祖先进程用户组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程用户组 
      * @return AncestorProcessUserGroup 祖先进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAncestorProcessUserGroup() {
         return this.AncestorProcessUserGroup;
@@ -1373,19 +1166,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 祖先进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AncestorProcessUserGroup 祖先进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAncestorProcessUserGroup(String AncestorProcessUserGroup) {
         this.AncestorProcessUserGroup = AncestorProcessUserGroup;
     }
 
     /**
-     * Get 祖先进程路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程路径 
      * @return AncestorProcessPath 祖先进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAncestorProcessPath() {
         return this.AncestorProcessPath;
@@ -1393,19 +1182,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 祖先进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AncestorProcessPath 祖先进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAncestorProcessPath(String AncestorProcessPath) {
         this.AncestorProcessPath = AncestorProcessPath;
     }
 
     /**
-     * Get 祖先进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程命令行参数 
      * @return AncestorProcessParam 祖先进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAncestorProcessParam() {
         return this.AncestorProcessParam;
@@ -1413,19 +1198,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 祖先进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AncestorProcessParam 祖先进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAncestorProcessParam(String AncestorProcessParam) {
         this.AncestorProcessParam = AncestorProcessParam;
     }
 
     /**
-     * Get 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件最后一次处理的时间 
      * @return OperationTime 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationTime() {
         return this.OperationTime;
@@ -1433,19 +1214,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationTime 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;
     }
 
     /**
-     * Get 容器隔离状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离状态 
      * @return ContainerNetStatus 容器隔离状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -1453,19 +1230,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 容器隔离状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetStatus 容器隔离状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get 容器隔离子状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离子状态 
      * @return ContainerNetSubStatus 容器隔离子状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
@@ -1473,19 +1246,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 容器隔离子状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetSubStatus 容器隔离子状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离操作来源 
      * @return ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
@@ -1493,9 +1262,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
@@ -1507,15 +1274,13 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 2: tav
 3: binaryAi
 4: 异常行为
-5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。 
+5: 威胁情报 
      * @return CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
@@ -1528,24 +1293,20 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;
     }
 
     /**
-     * Get 文件访问时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件访问时间 
      * @return FileAccessTime 文件访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileAccessTime() {
         return this.FileAccessTime;
@@ -1553,19 +1314,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 文件访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileAccessTime 文件访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileAccessTime(String FileAccessTime) {
         this.FileAccessTime = FileAccessTime;
     }
 
     /**
-     * Get 文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件修改时间 
      * @return FileModifyTime 文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileModifyTime() {
         return this.FileModifyTime;
@@ -1573,9 +1330,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
     /**
      * Set 文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileModifyTime 文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileModifyTime(String FileModifyTime) {
         this.FileModifyTime = FileModifyTime;

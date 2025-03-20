@@ -32,7 +32,6 @@ public class InternetPriceDetail extends AbstractModel {
 
     /**
     * 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -40,7 +39,6 @@ public class InternetPriceDetail extends AbstractModel {
 
     /**
     * 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -70,10 +68,8 @@ public class InternetPriceDetail extends AbstractModel {
     }
 
     /**
-     * Get 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣后的价格，单位：元。 
      * @return DiscountPrice 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
@@ -81,19 +77,15 @@ public class InternetPriceDetail extends AbstractModel {
 
     /**
      * Set 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPrice 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul> 
      * @return ChargeUnit 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
@@ -101,9 +93,7 @@ public class InternetPriceDetail extends AbstractModel {
 
     /**
      * Set 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeUnit 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;

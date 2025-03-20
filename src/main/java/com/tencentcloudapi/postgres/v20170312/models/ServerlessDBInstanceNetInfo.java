@@ -25,7 +25,6 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
     * 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -33,7 +32,6 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
     * ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -41,7 +39,6 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
     * 端口号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -49,7 +46,6 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,17 +53,14 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
     * 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-     * Get 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址 
      * @return Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -75,19 +68,15 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
      * Set 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip地址 
      * @return Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -95,19 +84,15 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
      * Set ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 端口号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口号 
      * @return Port 端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -115,19 +100,15 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
      * Set 端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -135,19 +116,15 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 网络类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络类型 
      * @return NetType 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetType() {
         return this.NetType;
@@ -155,9 +132,7 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel {
 
     /**
      * Set 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetType 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

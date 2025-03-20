@@ -53,7 +53,6 @@ public class TaskSet extends AbstractModel {
 
     /**
     * 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -75,7 +74,6 @@ public class TaskSet extends AbstractModel {
 
     /**
     * 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskDetail")
     @Expose
@@ -146,10 +144,8 @@ public class TaskSet extends AbstractModel {
     }
 
     /**
-     * Get 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的结束时间。 
      * @return EndTime 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -157,9 +153,7 @@ public class TaskSet extends AbstractModel {
 
     /**
      * Set 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -198,10 +192,8 @@ public class TaskSet extends AbstractModel {
     }
 
     /**
-     * Get 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的详情信息 
      * @return TaskDetail 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDetail getTaskDetail() {
         return this.TaskDetail;
@@ -209,9 +201,7 @@ public class TaskSet extends AbstractModel {
 
     /**
      * Set 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskDetail 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskDetail(TaskDetail TaskDetail) {
         this.TaskDetail = TaskDetail;

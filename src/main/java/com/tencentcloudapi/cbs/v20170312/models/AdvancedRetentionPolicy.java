@@ -25,7 +25,6 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
     * 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Days")
     @Expose
@@ -33,7 +32,6 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
     * 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weeks")
     @Expose
@@ -41,7 +39,6 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
     * 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Months")
     @Expose
@@ -49,17 +46,14 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
     * 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Years")
     @Expose
     private Long Years;
 
     /**
-     * Get 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100] 
      * @return Days 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDays() {
         return this.Days;
@@ -67,19 +61,15 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
      * Set 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Days 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDays(Long Days) {
         this.Days = Days;
     }
 
     /**
-     * Get 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100] 
      * @return Weeks 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeeks() {
         return this.Weeks;
@@ -87,19 +77,15 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
      * Set 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weeks 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeeks(Long Weeks) {
         this.Weeks = Weeks;
     }
 
     /**
-     * Get 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100] 
      * @return Months 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonths() {
         return this.Months;
@@ -107,19 +93,15 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
      * Set 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Months 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonths(Long Months) {
         this.Months = Months;
     }
 
     /**
-     * Get 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100] 
      * @return Years 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getYears() {
         return this.Years;
@@ -127,9 +109,7 @@ public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
      * Set 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Years 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYears(Long Years) {
         this.Years = Years;

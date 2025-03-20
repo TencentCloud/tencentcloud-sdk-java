@@ -237,17 +237,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询活动信息
-     * @param req DescribeActivityInfoRequest
-     * @return DescribeActivityInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeActivityInfoResponse DescribeActivityInfo(DescribeActivityInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeActivityInfo", DescribeActivityInfoResponse.class);
-    }
-
-    /**
      *查询活动记录信息
      * @param req DescribeActivityRecordRequest
      * @return DescribeActivityRecordResponse

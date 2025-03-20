@@ -25,7 +25,6 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
 
     /**
     * 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
 
     /**
     * 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorLogs")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志条数 
      * @return TotalCount 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
 
     /**
      * Set 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误日志列表 
      * @return ErrorLogs 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CynosdbErrorLogItem [] getErrorLogs() {
         return this.ErrorLogs;
@@ -78,9 +70,7 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
 
     /**
      * Set 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorLogs 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorLogs(CynosdbErrorLogItem [] ErrorLogs) {
         this.ErrorLogs = ErrorLogs;

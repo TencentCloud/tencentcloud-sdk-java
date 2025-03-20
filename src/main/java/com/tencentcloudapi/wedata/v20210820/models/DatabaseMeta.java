@@ -240,6 +240,14 @@ public class DatabaseMeta extends AbstractModel {
     private Long LastAccessTimeByTables;
 
     /**
+    * 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseGuid")
+    @Expose
+    private String DatabaseGuid;
+
+    /**
      * Get 项目Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
@@ -779,6 +787,26 @@ public class DatabaseMeta extends AbstractModel {
         this.LastAccessTimeByTables = LastAccessTimeByTables;
     }
 
+    /**
+     * Get 库guid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseGuid 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseGuid() {
+        return this.DatabaseGuid;
+    }
+
+    /**
+     * Set 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseGuid 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseGuid(String DatabaseGuid) {
+        this.DatabaseGuid = DatabaseGuid;
+    }
+
     public DatabaseMeta() {
     }
 
@@ -871,6 +899,9 @@ public class DatabaseMeta extends AbstractModel {
         if (source.LastAccessTimeByTables != null) {
             this.LastAccessTimeByTables = new Long(source.LastAccessTimeByTables);
         }
+        if (source.DatabaseGuid != null) {
+            this.DatabaseGuid = new String(source.DatabaseGuid);
+        }
     }
 
 
@@ -905,6 +936,7 @@ public class DatabaseMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
         this.setParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
+        this.setParamSimple(map, prefix + "DatabaseGuid", this.DatabaseGuid);
 
     }
 }

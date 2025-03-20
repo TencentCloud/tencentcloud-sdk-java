@@ -25,7 +25,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 账号id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -33,7 +32,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 账号名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUinName")
     @Expose
@@ -41,7 +39,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 抵扣账号id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUin")
     @Expose
@@ -49,7 +46,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 抵扣账号名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUinName")
     @Expose
@@ -57,7 +53,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 节省计划资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpId")
     @Expose
@@ -65,7 +60,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -73,7 +67,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -81,7 +74,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
     @Expose
@@ -89,7 +81,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductName")
     @Expose
@@ -97,7 +88,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutTradeNo")
     @Expose
@@ -105,7 +95,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 地域id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -113,7 +102,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -121,7 +109,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 地区id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -129,7 +116,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 地区名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -137,7 +123,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpStartTime")
     @Expose
@@ -145,7 +130,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpEndTime")
     @Expose
@@ -153,7 +137,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 折扣时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductTime")
     @Expose
@@ -161,7 +144,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductAmount")
     @Expose
@@ -169,7 +151,6 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 抵扣折扣率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductDiscount")
     @Expose
@@ -177,17 +158,14 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
     * 抵扣比率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductRate")
     @Expose
     private String DeductRate;
 
     /**
-     * Get 账号id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号id 
      * @return OwnerUin 账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -195,19 +173,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 账号id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 账号名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号名称 
      * @return OwnerUinName 账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUinName() {
         return this.OwnerUinName;
@@ -215,19 +189,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUinName 账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUinName(String OwnerUinName) {
         this.OwnerUinName = OwnerUinName;
     }
 
     /**
-     * Get 抵扣账号id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣账号id 
      * @return PayerUin 抵扣账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUin() {
         return this.PayerUin;
@@ -235,19 +205,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 抵扣账号id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUin 抵扣账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 抵扣账号名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣账号名称 
      * @return PayerUinName 抵扣账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUinName() {
         return this.PayerUinName;
@@ -255,19 +221,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 抵扣账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUinName 抵扣账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUinName(String PayerUinName) {
         this.PayerUinName = PayerUinName;
     }
 
     /**
-     * Get 节省计划资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划资源id 
      * @return SpId 节省计划资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpId() {
         return this.SpId;
@@ -275,19 +237,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 节省计划资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpId 节省计划资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpId(String SpId) {
         this.SpId = SpId;
     }
 
     /**
-     * Get 产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品编码 
      * @return ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -295,19 +253,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -315,19 +269,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品编码 
      * @return SubProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
         return this.SubProductCode;
@@ -335,19 +285,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称 
      * @return SubProductName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductName() {
         return this.SubProductName;
@@ -355,19 +301,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
     }
 
     /**
-     * Get 交易ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易ID 
      * @return OutTradeNo 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutTradeNo() {
         return this.OutTradeNo;
@@ -375,19 +317,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutTradeNo 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutTradeNo(String OutTradeNo) {
         this.OutTradeNo = OutTradeNo;
     }
 
     /**
-     * Get 地域id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域id 
      * @return RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -395,19 +333,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称 
      * @return RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -415,19 +349,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 地区id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区id 
      * @return ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -435,19 +365,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 地区名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区名称 
      * @return ZoneName 地区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -455,19 +381,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 地区名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 地区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始使用时间 
      * @return SpStartTime 开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpStartTime() {
         return this.SpStartTime;
@@ -475,19 +397,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpStartTime 开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpStartTime(String SpStartTime) {
         this.SpStartTime = SpStartTime;
     }
 
     /**
-     * Get 结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束使用时间 
      * @return SpEndTime 结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpEndTime() {
         return this.SpEndTime;
@@ -495,19 +413,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpEndTime 结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpEndTime(String SpEndTime) {
         this.SpEndTime = SpEndTime;
     }
 
     /**
-     * Get 折扣时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣时间 
      * @return DeductTime 折扣时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductTime() {
         return this.DeductTime;
@@ -515,19 +429,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 折扣时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductTime 折扣时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductTime(String DeductTime) {
         this.DeductTime = DeductTime;
     }
 
     /**
-     * Get 抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣金额，单位分 
      * @return DeductAmount 抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductAmount() {
         return this.DeductAmount;
@@ -535,19 +445,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductAmount 抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductAmount(String DeductAmount) {
         this.DeductAmount = DeductAmount;
     }
 
     /**
-     * Get 抵扣折扣率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣折扣率 
      * @return DeductDiscount 抵扣折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductDiscount() {
         return this.DeductDiscount;
@@ -555,19 +461,15 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 抵扣折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductDiscount 抵扣折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductDiscount(String DeductDiscount) {
         this.DeductDiscount = DeductDiscount;
     }
 
     /**
-     * Get 抵扣比率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 抵扣比率 
      * @return DeductRate 抵扣比率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductRate() {
         return this.DeductRate;
@@ -575,9 +477,7 @@ public class SavingPlanDeductDetail extends AbstractModel {
 
     /**
      * Set 抵扣比率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeductRate 抵扣比率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductRate(String DeductRate) {
         this.DeductRate = DeductRate;

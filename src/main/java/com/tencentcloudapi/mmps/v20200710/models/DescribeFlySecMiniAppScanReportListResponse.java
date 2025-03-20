@@ -32,7 +32,6 @@ public class DescribeFlySecMiniAppScanReportListResponse extends AbstractModel {
 
     /**
     * 诊断报告数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeFlySecMiniAppScanReportListResponse extends AbstractModel {
 
     /**
     * 诊断任务数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeFlySecMiniAppScanReportListResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断报告数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断报告数据 
      * @return Data 诊断报告数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FlySecMiniAppReportData [] getData() {
         return this.Data;
@@ -81,19 +77,15 @@ public class DescribeFlySecMiniAppScanReportListResponse extends AbstractModel {
 
     /**
      * Set 诊断报告数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 诊断报告数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(FlySecMiniAppReportData [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 诊断任务数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断任务数 
      * @return Total 诊断任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -101,9 +93,7 @@ public class DescribeFlySecMiniAppScanReportListResponse extends AbstractModel {
 
     /**
      * Set 诊断任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 诊断任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

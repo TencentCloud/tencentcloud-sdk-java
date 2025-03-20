@@ -32,7 +32,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -40,7 +39,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -69,7 +67,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogStartTime")
     @Expose
@@ -77,7 +74,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogEndTime")
     @Expose
@@ -85,7 +81,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalSize")
     @Expose
@@ -93,7 +88,6 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
     * 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DangerLevels")
     @Expose
@@ -116,10 +110,8 @@ public class SecLogExportTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始时间。 
      * @return StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -127,19 +119,15 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间。 
      * @return EndTime 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -147,9 +135,7 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -204,10 +190,8 @@ public class SecLogExportTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导出日志开始时间。 
      * @return LogStartTime 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogStartTime() {
         return this.LogStartTime;
@@ -215,19 +199,15 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogStartTime 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogStartTime(String LogStartTime) {
         this.LogStartTime = LogStartTime;
     }
 
     /**
-     * Get 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导出日志结束时间。 
      * @return LogEndTime 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogEndTime() {
         return this.LogEndTime;
@@ -235,19 +215,15 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogEndTime 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogEndTime(String LogEndTime) {
         this.LogEndTime = LogEndTime;
     }
 
     /**
-     * Get 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志文件总大小，单位KB。 
      * @return TotalSize 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalSize() {
         return this.TotalSize;
@@ -255,19 +231,15 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalSize 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalSize(Long TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。 
      * @return DangerLevels 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDangerLevels() {
         return this.DangerLevels;
@@ -275,9 +247,7 @@ public class SecLogExportTaskInfo extends AbstractModel {
 
     /**
      * Set 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DangerLevels 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDangerLevels(Long [] DangerLevels) {
         this.DangerLevels = DangerLevels;

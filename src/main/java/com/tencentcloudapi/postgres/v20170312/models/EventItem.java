@@ -25,7 +25,6 @@ public class EventItem extends AbstractModel {
 
     /**
     * 参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamName")
     @Expose
@@ -33,7 +32,6 @@ public class EventItem extends AbstractModel {
 
     /**
     * 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventCount")
     @Expose
@@ -41,17 +39,14 @@ public class EventItem extends AbstractModel {
 
     /**
     * 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventDetail")
     @Expose
     private EventInfo [] EventDetail;
 
     /**
-     * Get 参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名 
      * @return ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamName() {
         return this.ParamName;
@@ -59,19 +54,15 @@ public class EventItem extends AbstractModel {
 
     /**
      * Set 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改事件数 
      * @return EventCount 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -79,19 +70,15 @@ public class EventItem extends AbstractModel {
 
     /**
      * Set 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventCount 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间详情 
      * @return EventDetail 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventInfo [] getEventDetail() {
         return this.EventDetail;
@@ -99,9 +86,7 @@ public class EventItem extends AbstractModel {
 
     /**
      * Set 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventDetail 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventDetail(EventInfo [] EventDetail) {
         this.EventDetail = EventDetail;

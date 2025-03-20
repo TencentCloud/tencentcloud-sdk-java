@@ -32,7 +32,6 @@ public class CreateDatahubTaskRes extends AbstractModel {
 
     /**
     * 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatahubId")
     @Expose
@@ -55,10 +54,8 @@ public class CreateDatahubTaskRes extends AbstractModel {
     }
 
     /**
-     * Get 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据转储Id 
      * @return DatahubId 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatahubId() {
         return this.DatahubId;
@@ -66,9 +63,7 @@ public class CreateDatahubTaskRes extends AbstractModel {
 
     /**
      * Set 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatahubId 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatahubId(String DatahubId) {
         this.DatahubId = DatahubId;

@@ -25,7 +25,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceStatus")
     @Expose
@@ -49,7 +46,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,7 +53,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -65,7 +60,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 项目id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -73,7 +67,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -81,7 +74,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -89,7 +81,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 字符集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBCharset")
     @Expose
@@ -97,7 +88,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBVersion")
     @Expose
@@ -105,7 +95,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -113,7 +102,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceNetInfo")
     @Expose
@@ -121,7 +109,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBAccountSet")
     @Expose
@@ -129,7 +116,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBDatabaseList")
     @Expose
@@ -137,7 +123,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -145,7 +130,6 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -153,17 +137,14 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
     * 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-     * Get 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id，唯一标识符 
      * @return DBInstanceId 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
@@ -171,19 +152,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceId 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return DBInstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
@@ -191,19 +168,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
     }
 
     /**
-     * Get 实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态 
      * @return DBInstanceStatus 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
@@ -211,19 +184,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceStatus 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -231,19 +200,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -251,19 +216,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 项目id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目id 
      * @return ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -271,19 +232,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络Id 
      * @return VpcId 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -291,19 +248,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -311,19 +264,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 字符集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字符集 
      * @return DBCharset 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBCharset() {
         return this.DBCharset;
@@ -331,19 +280,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBCharset 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBCharset(String DBCharset) {
         this.DBCharset = DBCharset;
     }
 
     /**
-     * Get 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库版本 
      * @return DBVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBVersion() {
         return this.DBVersion;
@@ -351,19 +296,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -371,19 +312,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例网络信息 
      * @return DBInstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerlessDBInstanceNetInfo [] getDBInstanceNetInfo() {
         return this.DBInstanceNetInfo;
@@ -391,19 +328,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceNetInfo(ServerlessDBInstanceNetInfo [] DBInstanceNetInfo) {
         this.DBInstanceNetInfo = DBInstanceNetInfo;
     }
 
     /**
-     * Get 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例账户信息 
      * @return DBAccountSet 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerlessDBAccount [] getDBAccountSet() {
         return this.DBAccountSet;
@@ -411,19 +344,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBAccountSet 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBAccountSet(ServerlessDBAccount [] DBAccountSet) {
         this.DBAccountSet = DBAccountSet;
     }
 
     /**
-     * Get 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例下的db信息 
      * @return DBDatabaseList 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDBDatabaseList() {
         return this.DBDatabaseList;
@@ -431,19 +360,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBDatabaseList 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBDatabaseList(String [] DBDatabaseList) {
         this.DBDatabaseList = DBDatabaseList;
     }
 
     /**
-     * Get 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例绑定的标签数组 
      * @return TagList 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagList() {
         return this.TagList;
@@ -451,19 +376,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库内核版本 
      * @return DBKernelVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
@@ -471,19 +392,15 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBKernelVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
     }
 
     /**
-     * Get 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库主要版本 
      * @return DBMajorVersion 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
@@ -491,9 +408,7 @@ public class ServerlessDBInstance extends AbstractModel {
 
     /**
      * Set 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBMajorVersion 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;

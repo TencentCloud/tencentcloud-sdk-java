@@ -74,7 +74,6 @@ public class ImageRepoRegistryInfo extends AbstractModel {
 
     /**
     * 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectMsg")
     @Expose
@@ -142,6 +141,13 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     @SerializedName("SyncMessage")
     @Expose
     private String SyncMessage;
+
+    /**
+    * 同步方式，0全量同步，1增量同步	
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
 
     /**
      * Get 仓库id 
@@ -256,10 +262,8 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     }
 
     /**
-     * Get 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库连接错误信息，待废弃，请使用ConnDetectException 
      * @return ConnectMsg 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectMsg() {
         return this.ConnectMsg;
@@ -267,9 +271,7 @@ public class ImageRepoRegistryInfo extends AbstractModel {
 
     /**
      * Set 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectMsg 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectMsg(String ConnectMsg) {
         this.ConnectMsg = ConnectMsg;
@@ -419,6 +421,22 @@ public class ImageRepoRegistryInfo extends AbstractModel {
         this.SyncMessage = SyncMessage;
     }
 
+    /**
+     * Get 同步方式，0全量同步，1增量同步	 
+     * @return SyncMode 同步方式，0全量同步，1增量同步	
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 同步方式，0全量同步，1增量同步	
+     * @param SyncMode 同步方式，0全量同步，1增量同步	
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
     public ImageRepoRegistryInfo() {
     }
 
@@ -481,6 +499,9 @@ public class ImageRepoRegistryInfo extends AbstractModel {
         if (source.SyncMessage != null) {
             this.SyncMessage = new String(source.SyncMessage);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
     }
 
 
@@ -505,6 +526,7 @@ public class ImageRepoRegistryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
         this.setParamSimple(map, prefix + "SyncSolution", this.SyncSolution);
         this.setParamSimple(map, prefix + "SyncMessage", this.SyncMessage);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

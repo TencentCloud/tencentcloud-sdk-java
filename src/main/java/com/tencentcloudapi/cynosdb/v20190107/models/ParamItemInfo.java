@@ -25,7 +25,6 @@ public class ParamItemInfo extends AbstractModel {
 
     /**
     * 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamName")
     @Expose
@@ -34,7 +33,6 @@ public class ParamItemInfo extends AbstractModel {
     /**
     * 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewValue")
     @Expose
@@ -43,7 +41,6 @@ public class ParamItemInfo extends AbstractModel {
     /**
     * 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldValue")
     @Expose
@@ -52,17 +49,14 @@ public class ParamItemInfo extends AbstractModel {
     /**
     * 参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueFunction")
     @Expose
     private String ValueFunction;
 
     /**
-     * Get 参数名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名字 
      * @return ParamName 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamName() {
         return this.ParamName;
@@ -70,9 +64,7 @@ public class ParamItemInfo extends AbstractModel {
 
     /**
      * Set 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamName 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
@@ -80,11 +72,9 @@ public class ParamItemInfo extends AbstractModel {
 
     /**
      * Get 参数新值
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return NewValue 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewValue() {
         return this.NewValue;
@@ -93,10 +83,8 @@ public class ParamItemInfo extends AbstractModel {
     /**
      * Set 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewValue 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewValue(String NewValue) {
         this.NewValue = NewValue;
@@ -104,11 +92,9 @@ public class ParamItemInfo extends AbstractModel {
 
     /**
      * Get 参数旧值
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OldValue 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldValue() {
         return this.OldValue;
@@ -117,10 +103,8 @@ public class ParamItemInfo extends AbstractModel {
     /**
      * Set 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldValue 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
@@ -128,11 +112,9 @@ public class ParamItemInfo extends AbstractModel {
 
     /**
      * Get 参数公式
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ValueFunction 参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValueFunction() {
         return this.ValueFunction;
@@ -141,10 +123,8 @@ public class ParamItemInfo extends AbstractModel {
     /**
      * Set 参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueFunction 参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueFunction(String ValueFunction) {
         this.ValueFunction = ValueFunction;

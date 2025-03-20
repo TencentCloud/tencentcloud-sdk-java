@@ -39,7 +39,6 @@ public class CompliancePeriodTaskRule extends AbstractModel {
 
     /**
     * 是否开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -78,10 +77,8 @@ public class CompliancePeriodTaskRule extends AbstractModel {
     }
 
     /**
-     * Get 是否开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启 
      * @return Enable 是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
         return this.Enable;
@@ -89,9 +86,7 @@ public class CompliancePeriodTaskRule extends AbstractModel {
 
     /**
      * Set 是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

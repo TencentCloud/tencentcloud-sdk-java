@@ -25,7 +25,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 0-不是 1-是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWebHook")
     @Expose
@@ -33,7 +32,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 接收告警用户数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveUinCount")
     @Expose
@@ -41,7 +39,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 语言
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lang")
     @Expose
@@ -49,7 +46,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateType")
     @Expose
@@ -57,7 +53,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -65,7 +60,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 接收组数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveGroupCount")
     @Expose
@@ -73,7 +67,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 更新用户的uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUin")
     @Expose
@@ -81,7 +74,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 接收类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveType")
     @Expose
@@ -89,7 +81,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 接收用户信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveInfo")
     @Expose
@@ -97,7 +88,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -105,7 +95,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 模板名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -113,7 +102,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 发送渠道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendChannel")
     @Expose
@@ -121,7 +109,6 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * 模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -129,17 +116,14 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
     * webhook数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebHookCount")
     @Expose
     private Long WebHookCount;
 
     /**
-     * Get 0-不是 1-是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0-不是 1-是 
      * @return IsWebHook 0-不是 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsWebHook() {
         return this.IsWebHook;
@@ -147,19 +131,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 0-不是 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWebHook 0-不是 1-是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWebHook(Long IsWebHook) {
         this.IsWebHook = IsWebHook;
     }
 
     /**
-     * Get 接收告警用户数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收告警用户数量 
      * @return ReceiveUinCount 接收告警用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReceiveUinCount() {
         return this.ReceiveUinCount;
@@ -167,19 +147,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 接收告警用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveUinCount 接收告警用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveUinCount(Long ReceiveUinCount) {
         this.ReceiveUinCount = ReceiveUinCount;
     }
 
     /**
-     * Get 语言
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语言 
      * @return Lang 语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLang() {
         return this.Lang;
@@ -187,19 +163,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Lang 语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLang(String Lang) {
         this.Lang = Lang;
     }
 
     /**
-     * Get 模板类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板类型 
      * @return TemplateType 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateType() {
         return this.TemplateType;
@@ -207,19 +179,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateType 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -227,19 +195,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 接收组数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收组数量 
      * @return ReceiveGroupCount 接收组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReceiveGroupCount() {
         return this.ReceiveGroupCount;
@@ -247,19 +211,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 接收组数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveGroupCount 接收组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveGroupCount(Long ReceiveGroupCount) {
         this.ReceiveGroupCount = ReceiveGroupCount;
     }
 
     /**
-     * Get 更新用户的uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新用户的uin 
      * @return UpdateUin 更新用户的uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateUin() {
         return this.UpdateUin;
@@ -267,19 +227,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 更新用户的uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateUin 更新用户的uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUin(Long UpdateUin) {
         this.UpdateUin = UpdateUin;
     }
 
     /**
-     * Get 接收类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收类型 
      * @return ReceiveType 接收类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReceiveType() {
         return this.ReceiveType;
@@ -287,19 +243,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 接收类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveType 接收类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveType(Long [] ReceiveType) {
         this.ReceiveType = ReceiveType;
     }
 
     /**
-     * Get 接收用户信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收用户信息 
      * @return ReceiveInfo 接收用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReceiveInfo [] getReceiveInfo() {
         return this.ReceiveInfo;
@@ -307,19 +259,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 接收用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiveInfo 接收用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveInfo(ReceiveInfo [] ReceiveInfo) {
         this.ReceiveInfo = ReceiveInfo;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -327,19 +275,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 模板名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名 
      * @return TemplateName 模板名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -347,19 +291,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 模板名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 模板名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 发送渠道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发送渠道 
      * @return SendChannel 发送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSendChannel() {
         return this.SendChannel;
@@ -367,19 +307,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 发送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendChannel 发送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendChannel(Long [] SendChannel) {
         this.SendChannel = SendChannel;
     }
 
     /**
-     * Get 模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板id 
      * @return TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -387,19 +323,15 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get webhook数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get webhook数量 
      * @return WebHookCount webhook数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWebHookCount() {
         return this.WebHookCount;
@@ -407,9 +339,7 @@ public class AlarmProfileList extends AbstractModel {
 
     /**
      * Set webhook数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebHookCount webhook数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebHookCount(Long WebHookCount) {
         this.WebHookCount = WebHookCount;

@@ -25,7 +25,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordTaskId")
     @Expose
@@ -33,7 +32,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordPlanId")
     @Expose
@@ -41,7 +39,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,7 +53,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -65,7 +60,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoUrl")
     @Expose
@@ -73,7 +67,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordStatus")
     @Expose
@@ -81,7 +74,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneId")
     @Expose
@@ -89,7 +81,6 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnId")
     @Expose
@@ -97,17 +88,14 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
     * 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-     * Get 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像任务ID 
      * @return RecordTaskId 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordTaskId() {
         return this.RecordTaskId;
@@ -115,19 +103,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordTaskId 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordTaskId(String RecordTaskId) {
         this.RecordTaskId = RecordTaskId;
     }
 
     /**
-     * Get 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制计划ID 
      * @return RecordPlanId 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordPlanId() {
         return this.RecordPlanId;
@@ -135,19 +119,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordPlanId 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordPlanId(String RecordPlanId) {
         this.RecordPlanId = RecordPlanId;
     }
 
     /**
-     * Get 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录制片段开始时间 
      * @return StartTime 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -155,19 +135,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录制片段结束时间 
      * @return EndTime 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -175,19 +151,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录制模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制模式 
      * @return EventId 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventId() {
         return this.EventId;
@@ -195,19 +167,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录制片段对应的录制文件URL 
      * @return VideoUrl 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoUrl() {
         return this.VideoUrl;
@@ -215,19 +183,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoUrl 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录制片段当前的录制状态 
      * @return RecordStatus 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordStatus() {
         return this.RecordStatus;
@@ -235,19 +199,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordStatus 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordStatus(Long RecordStatus) {
         this.RecordStatus = RecordStatus;
     }
 
     /**
-     * Get 场景ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景ID 
      * @return SceneId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSceneId() {
         return this.SceneId;
@@ -255,19 +215,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneId(Long SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get 告警ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警ID 
      * @return WarnId 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarnId() {
         return this.WarnId;
@@ -275,19 +231,15 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnId 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnId(Long WarnId) {
         this.WarnId = WarnId;
     }
 
     /**
-     * Get 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制id，NVR下属设备有效 
      * @return RecordId 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordId() {
         return this.RecordId;
@@ -295,9 +247,7 @@ public class RecordTaskItem extends AbstractModel {
 
     /**
      * Set 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordId 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

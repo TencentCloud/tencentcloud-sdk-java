@@ -116,7 +116,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -137,7 +136,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MergeTime")
     @Expose
@@ -152,7 +150,6 @@ public class VulDefenceEvent extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerStatus")
     @Expose
@@ -167,7 +164,6 @@ public class VulDefenceEvent extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
@@ -175,7 +171,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -183,7 +178,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QUUID")
     @Expose
@@ -191,7 +185,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIP")
     @Expose
@@ -199,7 +192,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -470,10 +462,8 @@ public class VulDefenceEvent extends AbstractModel {
     }
 
     /**
-     * Get 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次发现时间 
      * @return CreateTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -481,9 +471,7 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -530,10 +518,8 @@ public class VulDefenceEvent extends AbstractModel {
     }
 
     /**
-     * Get 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近发现时间 
      * @return MergeTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMergeTime() {
         return this.MergeTime;
@@ -541,9 +527,7 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MergeTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMergeTime(String MergeTime) {
         this.MergeTime = MergeTime;
@@ -557,8 +541,7 @@ public class VulDefenceEvent extends AbstractModel {
 已经创建: CREATED
 已经销毁: DESTROYED
 正在重启中: RESTARTING
-迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。 
+迁移中: REMOVING 
      * @return ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -567,7 +550,6 @@ public class VulDefenceEvent extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
@@ -582,7 +564,6 @@ public class VulDefenceEvent extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -591,7 +572,6 @@ public class VulDefenceEvent extends AbstractModel {
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
@@ -605,8 +585,7 @@ public class VulDefenceEvent extends AbstractModel {
 	"CONTAINER_DESTROYED" //容器已销毁
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
-	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。 
+	"UNKNOW"              // 原因未知 
      * @return ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -615,7 +594,6 @@ public class VulDefenceEvent extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
@@ -630,7 +608,6 @@ public class VulDefenceEvent extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -639,17 +616,14 @@ public class VulDefenceEvent extends AbstractModel {
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器隔离操作来源 
      * @return ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
@@ -657,19 +631,15 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机QUUID/超级节点ID 
      * @return QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQUUID() {
         return this.QUUID;
@@ -677,19 +647,15 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
     }
 
     /**
-     * Get 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机内网IP 
      * @return HostIP 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIP() {
         return this.HostIP;
@@ -697,19 +663,15 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIP 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称/超级节点名称 
      * @return HostName 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -717,9 +679,7 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
      * Set 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

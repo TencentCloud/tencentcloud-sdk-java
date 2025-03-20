@@ -102,7 +102,6 @@ public class NetworkClusterInfoItem extends AbstractModel {
 
     /**
     * 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkPolicyPluginError")
     @Expose
@@ -110,7 +109,6 @@ public class NetworkClusterInfoItem extends AbstractModel {
 
     /**
     * 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterNetworkSettings")
     @Expose
@@ -293,10 +291,8 @@ public class NetworkClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群网络插件错误信息 
      * @return NetworkPolicyPluginError 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkPolicyPluginError() {
         return this.NetworkPolicyPluginError;
@@ -304,19 +300,15 @@ public class NetworkClusterInfoItem extends AbstractModel {
 
     /**
      * Set 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkPolicyPluginError 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkPolicyPluginError(String NetworkPolicyPluginError) {
         this.NetworkPolicyPluginError = NetworkPolicyPluginError;
     }
 
     /**
-     * Get 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器网络插件 
      * @return ClusterNetworkSettings 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterNetworkSettings() {
         return this.ClusterNetworkSettings;
@@ -324,9 +316,7 @@ public class NetworkClusterInfoItem extends AbstractModel {
 
     /**
      * Set 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterNetworkSettings 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterNetworkSettings(String ClusterNetworkSettings) {
         this.ClusterNetworkSettings = ClusterNetworkSettings;

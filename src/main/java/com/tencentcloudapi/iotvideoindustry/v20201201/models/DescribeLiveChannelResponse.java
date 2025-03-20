@@ -25,7 +25,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveChannelId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveChannelName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveChannelType")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveStatus")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PushStreamAddress")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -87,10 +80,8 @@ public class DescribeLiveChannelResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 频道ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 频道ID 
      * @return LiveChannelId 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLiveChannelId() {
         return this.LiveChannelId;
@@ -98,19 +89,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveChannelId 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveChannelId(String LiveChannelId) {
         this.LiveChannelId = LiveChannelId;
     }
 
     /**
-     * Get 频道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 频道名称 
      * @return LiveChannelName 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLiveChannelName() {
         return this.LiveChannelName;
@@ -118,19 +105,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveChannelName 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveChannelName(String LiveChannelName) {
         this.LiveChannelName = LiveChannelName;
     }
 
     /**
-     * Get 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播频道类型 1：固定直播；2：移动直播 
      * @return LiveChannelType 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLiveChannelType() {
         return this.LiveChannelType;
@@ -138,19 +121,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveChannelType 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveChannelType(Long LiveChannelType) {
         this.LiveChannelType = LiveChannelType;
     }
 
     /**
-     * Get 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道直播状态：1: 未推流，2: 推流中 
      * @return LiveStatus 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLiveStatus() {
         return this.LiveStatus;
@@ -158,19 +137,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStatus 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveStatus(Long LiveStatus) {
         this.LiveStatus = LiveStatus;
     }
 
     /**
-     * Get 推流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流地址 
      * @return PushStreamAddress 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPushStreamAddress() {
         return this.PushStreamAddress;
@@ -178,19 +153,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PushStreamAddress 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPushStreamAddress(String PushStreamAddress) {
         this.PushStreamAddress = PushStreamAddress;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCreateTime() {
         return this.CreateTime;
@@ -198,19 +169,15 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String [] CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUpdateTime() {
         return this.UpdateTime;
@@ -218,9 +185,7 @@ public class DescribeLiveChannelResponse extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String [] UpdateTime) {
         this.UpdateTime = UpdateTime;

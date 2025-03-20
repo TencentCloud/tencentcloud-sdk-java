@@ -32,7 +32,6 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
     * vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcRestrictionEffect")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
     * 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcIdSet")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
     * ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpRestrictionEffect")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
     * 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpSet")
     @Expose
@@ -86,10 +82,8 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
     }
 
     /**
-     * Get vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc限制效力，ALLOW 允许；DENY 拒绝。 
      * @return VpcRestrictionEffect vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcRestrictionEffect() {
         return this.VpcRestrictionEffect;
@@ -97,19 +91,15 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
      * Set vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcRestrictionEffect vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcRestrictionEffect(String VpcRestrictionEffect) {
         this.VpcRestrictionEffect = VpcRestrictionEffect;
     }
 
     /**
-     * Get 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 允许或拒绝下载备份文件的vpcId列表。 
      * @return VpcIdSet 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVpcIdSet() {
         return this.VpcIdSet;
@@ -117,19 +107,15 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
      * Set 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcIdSet 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcIdSet(String [] VpcIdSet) {
         this.VpcIdSet = VpcIdSet;
     }
 
     /**
-     * Get ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip限制效力，ALLOW 允许；DENY 拒绝。 
      * @return IpRestrictionEffect ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpRestrictionEffect() {
         return this.IpRestrictionEffect;
@@ -137,19 +123,15 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
      * Set ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpRestrictionEffect ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpRestrictionEffect(String IpRestrictionEffect) {
         this.IpRestrictionEffect = IpRestrictionEffect;
     }
 
     /**
-     * Get 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 允许或拒绝下载备份文件的ip列表。 
      * @return IpSet 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpSet() {
         return this.IpSet;
@@ -157,9 +139,7 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
      * Set 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpSet 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpSet(String [] IpSet) {
         this.IpSet = IpSet;

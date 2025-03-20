@@ -39,7 +39,6 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
     * base64编码的yaml字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Yaml")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -69,7 +67,6 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
     * 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkPolicyPlugin")
     @Expose
@@ -84,7 +81,6 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
     * 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishResult")
     @Expose
@@ -130,10 +126,8 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
     }
 
     /**
-     * Get base64编码的yaml字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get base64编码的yaml字符串 
      * @return Yaml base64编码的yaml字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYaml() {
         return this.Yaml;
@@ -141,19 +135,15 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
      * Set base64编码的yaml字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Yaml base64编码的yaml字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -161,9 +151,7 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -202,10 +190,8 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
     }
 
     /**
-     * Get 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络策略对应的网络插件 
      * @return NetworkPolicyPlugin 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkPolicyPlugin() {
         return this.NetworkPolicyPlugin;
@@ -213,9 +199,7 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
      * Set 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkPolicyPlugin 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkPolicyPlugin(String NetworkPolicyPlugin) {
         this.NetworkPolicyPlugin = NetworkPolicyPlugin;
@@ -238,10 +222,8 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
     }
 
     /**
-     * Get 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络发布结果 
      * @return PublishResult 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublishResult() {
         return this.PublishResult;
@@ -249,9 +231,7 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
 
     /**
      * Set 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishResult 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

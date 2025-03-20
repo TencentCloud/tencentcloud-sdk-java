@@ -164,7 +164,6 @@ public class NativeNodeInfo extends AbstractModel {
 
     /**
     * VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -172,7 +171,6 @@ public class NativeNodeInfo extends AbstractModel {
 
     /**
     * 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -526,10 +524,8 @@ public class NativeNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 唯一 ID 
      * @return VpcId VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -537,19 +533,15 @@ public class NativeNodeInfo extends AbstractModel {
 
     /**
      * Set VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网唯一 ID 
      * @return SubnetId 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -557,9 +549,7 @@ public class NativeNodeInfo extends AbstractModel {
 
     /**
      * Set 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

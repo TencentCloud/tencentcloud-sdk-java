@@ -25,7 +25,6 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
     * 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranId")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
     * 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -41,7 +39,6 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
     * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
     @Expose
@@ -55,10 +52,8 @@ public class ModifyClusterStorageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冻结流水ID 
      * @return TranId 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranId() {
         return this.TranId;
@@ -66,19 +61,15 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
      * Set 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranId 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 大订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大订单号 
      * @return BigDealIds 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
@@ -86,19 +77,15 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
      * Set 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealIds 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
     }
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号 
      * @return DealNames 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -106,9 +93,7 @@ public class ModifyClusterStorageResponse extends AbstractModel {
 
     /**
      * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

@@ -25,17 +25,14 @@ public class BatchAnalyseParam extends AbstractModel {
 
     /**
     * ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ONE_BY_ONE单条输出，MERGE合并输出 
      * @return Format ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -43,9 +40,7 @@ public class BatchAnalyseParam extends AbstractModel {
 
     /**
      * Set ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;

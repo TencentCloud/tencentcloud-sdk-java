@@ -25,7 +25,6 @@ public class DescribeDeviceGroupResponse extends AbstractModel {
 
     /**
     * 设备所在分组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevGroups")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDeviceGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备所在分组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所在分组信息 
      * @return DevGroups 设备所在分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DevGroupInfo [] getDevGroups() {
         return this.DevGroups;
@@ -50,9 +47,7 @@ public class DescribeDeviceGroupResponse extends AbstractModel {
 
     /**
      * Set 设备所在分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevGroups 设备所在分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevGroups(DevGroupInfo [] DevGroups) {
         this.DevGroups = DevGroups;

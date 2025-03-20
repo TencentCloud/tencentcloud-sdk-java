@@ -48,7 +48,6 @@ public class AccessControlChildRuleInfo extends AbstractModel {
 
     /**
     * 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -111,10 +110,8 @@ public class AccessControlChildRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 子策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子策略id 
      * @return RuleId 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -122,9 +119,7 @@ public class AccessControlChildRuleInfo extends AbstractModel {
 
     /**
      * Set 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

@@ -76,6 +76,13 @@ public class DisasterRecoverGroup extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 置放群组亲和度
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Long Affinity;
+
+    /**
     * 置放群组关联的标签列表。
     */
     @SerializedName("Tags")
@@ -207,6 +214,22 @@ public class DisasterRecoverGroup extends AbstractModel {
     }
 
     /**
+     * Get 置放群组亲和度 
+     * @return Affinity 置放群组亲和度
+     */
+    public Long getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 置放群组亲和度
+     * @param Affinity 置放群组亲和度
+     */
+    public void setAffinity(Long Affinity) {
+        this.Affinity = Affinity;
+    }
+
+    /**
      * Get 置放群组关联的标签列表。 
      * @return Tags 置放群组关联的标签列表。
      */
@@ -254,6 +277,9 @@ public class DisasterRecoverGroup extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Affinity != null) {
+            this.Affinity = new Long(source.Affinity);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -274,6 +300,7 @@ public class DisasterRecoverGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

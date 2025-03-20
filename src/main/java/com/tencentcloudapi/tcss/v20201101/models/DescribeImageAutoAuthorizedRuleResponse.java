@@ -32,7 +32,6 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RangeType")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDailyCount")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -100,10 +96,8 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像 
      * @return RangeType 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRangeType() {
         return this.RangeType;
@@ -111,19 +105,15 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
      * Set 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RangeType 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRangeType(String RangeType) {
         this.RangeType = RangeType;
     }
 
     /**
-     * Get 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权范围是自选主机时的主机数量 
      * @return HostCount 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -131,19 +121,15 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
      * Set 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每天最大的镜像授权数限制, 0表示无限制 
      * @return MaxDailyCount 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDailyCount() {
         return this.MaxDailyCount;
@@ -151,19 +137,15 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
      * Set 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDailyCount 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDailyCount(Long MaxDailyCount) {
         this.MaxDailyCount = MaxDailyCount;
     }
 
     /**
-     * Get 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id，用未设置时为0 
      * @return RuleId 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -171,9 +153,7 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
      * Set 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

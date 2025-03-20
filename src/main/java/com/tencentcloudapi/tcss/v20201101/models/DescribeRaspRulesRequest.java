@@ -21,14 +21,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAbnormalProcessRulesExportRequest extends AbstractModel {
+public class DescribeRaspRulesRequest extends AbstractModel {
 
     /**
-    * 导出字段
+    * 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
     */
-    @SerializedName("ExportField")
+    @SerializedName("Filters")
     @Expose
-    private String [] ExportField;
+    private RunTimeFilters [] Filters;
 
     /**
     * 需要返回的数量，默认为10，最大值为100
@@ -45,40 +48,45 @@ public class DescribeAbnormalProcessRulesExportRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-    */
-    @SerializedName("Filters")
-    @Expose
-    private RunTimeFilters [] Filters;
-
-    /**
-    * 升序降序,asc desc
+    * 排序方式：asc/desc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
+    * 排序字段：披露时间：SubmitTime
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 导出字段 
-     * @return ExportField 导出字段
+     * Get 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li> 
+     * @return Filters 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
      */
-    public String [] getExportField() {
-        return this.ExportField;
+    public RunTimeFilters [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set 导出字段
-     * @param ExportField 导出字段
+     * Set 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
+     * @param Filters 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
      */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
+    public void setFilters(RunTimeFilters [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -114,65 +122,49 @@ public class DescribeAbnormalProcessRulesExportRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public RunTimeFilters [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public void setFilters(RunTimeFilters [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
-     * Get 升序降序,asc desc 
-     * @return Order 升序降序,asc desc
+     * Get 排序方式：asc/desc 
+     * @return Order 排序方式：asc/desc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 升序降序,asc desc
-     * @param Order 升序降序,asc desc
+     * Set 排序方式：asc/desc
+     * @param Order 排序方式：asc/desc
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get 排序字段：披露时间：SubmitTime 
+     * @return By 排序字段：披露时间：SubmitTime
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set 排序字段：披露时间：SubmitTime
+     * @param By 排序字段：披露时间：SubmitTime
      */
     public void setBy(String By) {
         this.By = By;
     }
 
-    public DescribeAbnormalProcessRulesExportRequest() {
+    public DescribeRaspRulesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAbnormalProcessRulesExportRequest(DescribeAbnormalProcessRulesExportRequest source) {
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
+    public DescribeRaspRulesRequest(DescribeRaspRulesRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new RunTimeFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new RunTimeFilters(source.Filters[i]);
             }
         }
         if (source.Limit != null) {
@@ -180,12 +172,6 @@ public class DescribeAbnormalProcessRulesExportRequest extends AbstractModel {
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
-        }
-        if (source.Filters != null) {
-            this.Filters = new RunTimeFilters[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new RunTimeFilters(source.Filters[i]);
-            }
         }
         if (source.Order != null) {
             this.Order = new String(source.Order);
@@ -200,10 +186,9 @@ public class DescribeAbnormalProcessRulesExportRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
 

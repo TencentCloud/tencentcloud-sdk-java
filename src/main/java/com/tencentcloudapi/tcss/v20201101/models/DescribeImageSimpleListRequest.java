@@ -45,14 +45,14 @@ public class DescribeImageSimpleListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 排序方式
+    * 排序方式 asc,desc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
+    * 排序字段 ContainerCnt
     */
     @SerializedName("By")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeImageSimpleListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序方式 
-     * @return Order 排序方式
+     * Get 排序方式 asc,desc 
+     * @return Order 排序方式 asc,desc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式
-     * @param Order 排序方式
+     * Set 排序方式 asc,desc
+     * @param Order 排序方式 asc,desc
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get 排序字段 ContainerCnt 
+     * @return By 排序字段 ContainerCnt
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set 排序字段 ContainerCnt
+     * @param By 排序字段 ContainerCnt
      */
     public void setBy(String By) {
         this.By = By;

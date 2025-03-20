@@ -25,7 +25,6 @@ public class AuditLogFile extends AbstractModel {
 
     /**
     * 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -40,7 +39,6 @@ public class AuditLogFile extends AbstractModel {
 
     /**
     * 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -51,7 +49,6 @@ public class AuditLogFile extends AbstractModel {
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -93,10 +90,8 @@ public class AuditLogFile extends AbstractModel {
     private String FinishTime;
 
     /**
-     * Get 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计日志文件生成异步任务ID。 
      * @return AsyncRequestId 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncRequestId() {
         return this.AsyncRequestId;
@@ -104,9 +99,7 @@ public class AuditLogFile extends AbstractModel {
 
     /**
      * Set 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRequestId 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(Long AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
@@ -129,10 +122,8 @@ public class AuditLogFile extends AbstractModel {
     }
 
     /**
-     * Get 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。 
      * @return CreateTime 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -140,9 +131,7 @@ public class AuditLogFile extends AbstractModel {
 
     /**
      * Set 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -152,13 +141,11 @@ public class AuditLogFile extends AbstractModel {
      * Get 文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
-"success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。 
+"success" - 已生成; 
      * @return Status 文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -169,12 +156,10 @@ public class AuditLogFile extends AbstractModel {
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

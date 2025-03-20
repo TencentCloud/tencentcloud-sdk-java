@@ -38,6 +38,13 @@ public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel {
     private Boolean IsKillProgress;
 
     /**
+    * 用户用户自定义开关
+    */
+    @SerializedName("UserAutoIsolateKillSwitch")
+    @Expose
+    private Boolean UserAutoIsolateKillSwitch;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel {
     }
 
     /**
+     * Get 用户用户自定义开关 
+     * @return UserAutoIsolateKillSwitch 用户用户自定义开关
+     */
+    public Boolean getUserAutoIsolateKillSwitch() {
+        return this.UserAutoIsolateKillSwitch;
+    }
+
+    /**
+     * Set 用户用户自定义开关
+     * @param UserAutoIsolateKillSwitch 用户用户自定义开关
+     */
+    public void setUserAutoIsolateKillSwitch(Boolean UserAutoIsolateKillSwitch) {
+        this.UserAutoIsolateKillSwitch = UserAutoIsolateKillSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel {
         if (source.IsKillProgress != null) {
             this.IsKillProgress = new Boolean(source.IsKillProgress);
         }
+        if (source.UserAutoIsolateKillSwitch != null) {
+            this.UserAutoIsolateKillSwitch = new Boolean(source.UserAutoIsolateKillSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoIsolateSwitch", this.AutoIsolateSwitch);
         this.setParamSimple(map, prefix + "IsKillProgress", this.IsKillProgress);
+        this.setParamSimple(map, prefix + "UserAutoIsolateKillSwitch", this.UserAutoIsolateKillSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
