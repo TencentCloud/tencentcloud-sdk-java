@@ -35,6 +35,7 @@ public class ActivityResult extends AbstractModel {
 <li>AIRecognition：智能识别。</li>
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
+<li>SmartSubtitles：智能字幕。</li>
     */
     @SerializedName("ActivityType")
     @Expose
@@ -58,7 +59,8 @@ public class ActivityResult extends AbstractModel {
 <li>AiContentReview：内容审核。</li>
 <li>AIRecognition：智能识别。</li>
 <li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li> 
+<li>AiQualityControl：媒体质检。</li>
+<li>SmartSubtitles：智能字幕。</li> 
      * @return ActivityType 原子任务类型。
 <li>Transcode：转码。</li>
 <li>SampleSnapshot：采样截图。</li>
@@ -70,6 +72,7 @@ public class ActivityResult extends AbstractModel {
 <li>AIRecognition：智能识别。</li>
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
+<li>SmartSubtitles：智能字幕。</li>
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -87,6 +90,7 @@ public class ActivityResult extends AbstractModel {
 <li>AIRecognition：智能识别。</li>
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
+<li>SmartSubtitles：智能字幕。</li>
      * @param ActivityType 原子任务类型。
 <li>Transcode：转码。</li>
 <li>SampleSnapshot：采样截图。</li>
@@ -98,6 +102,7 @@ public class ActivityResult extends AbstractModel {
 <li>AIRecognition：智能识别。</li>
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
+<li>SmartSubtitles：智能字幕。</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

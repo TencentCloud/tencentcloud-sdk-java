@@ -74,7 +74,6 @@ public class Environment extends AbstractModel {
 
     /**
     * Topic数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNum")
     @Expose
@@ -82,7 +81,6 @@ public class Environment extends AbstractModel {
 
     /**
     * 消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionPolicy")
     @Expose
@@ -90,7 +88,6 @@ public class Environment extends AbstractModel {
 
     /**
     * 是否自动创建订阅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoSubscriptionCreation")
     @Expose
@@ -209,10 +206,8 @@ public class Environment extends AbstractModel {
     }
 
     /**
-     * Get Topic数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic数量 
      * @return TopicNum Topic数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicNum() {
         return this.TopicNum;
@@ -220,19 +215,15 @@ public class Environment extends AbstractModel {
 
     /**
      * Set Topic数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNum Topic数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get 消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留策略 
      * @return RetentionPolicy 消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RetentionPolicy getRetentionPolicy() {
         return this.RetentionPolicy;
@@ -240,19 +231,15 @@ public class Environment extends AbstractModel {
 
     /**
      * Set 消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionPolicy 消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionPolicy(RetentionPolicy RetentionPolicy) {
         this.RetentionPolicy = RetentionPolicy;
     }
 
     /**
-     * Get 是否自动创建订阅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动创建订阅 
      * @return AutoSubscriptionCreation 是否自动创建订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoSubscriptionCreation() {
         return this.AutoSubscriptionCreation;
@@ -260,9 +247,7 @@ public class Environment extends AbstractModel {
 
     /**
      * Set 是否自动创建订阅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoSubscriptionCreation 是否自动创建订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
         this.AutoSubscriptionCreation = AutoSubscriptionCreation;

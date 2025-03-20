@@ -25,17 +25,14 @@ public class SpaceDeviceIdListRes extends AbstractModel {
 
     /**
     * 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceIds")
     @Expose
     private String [] DeviceIds;
 
     /**
-     * Get 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备id列表 
      * @return DeviceIds 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeviceIds() {
         return this.DeviceIds;
@@ -43,9 +40,7 @@ public class SpaceDeviceIdListRes extends AbstractModel {
 
     /**
      * Set 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceIds 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceIds(String [] DeviceIds) {
         this.DeviceIds = DeviceIds;

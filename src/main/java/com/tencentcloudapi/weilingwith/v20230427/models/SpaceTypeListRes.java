@@ -25,17 +25,14 @@ public class SpaceTypeListRes extends AbstractModel {
 
     /**
     * 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceTypeList")
     @Expose
     private SpaceType [] SpaceTypeList;
 
     /**
-     * Get 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间分类列表 
      * @return SpaceTypeList 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceType [] getSpaceTypeList() {
         return this.SpaceTypeList;
@@ -43,9 +40,7 @@ public class SpaceTypeListRes extends AbstractModel {
 
     /**
      * Set 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceTypeList 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceTypeList(SpaceType [] SpaceTypeList) {
         this.SpaceTypeList = SpaceTypeList;

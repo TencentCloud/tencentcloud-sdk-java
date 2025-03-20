@@ -25,7 +25,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiId")
     @Expose
@@ -33,7 +32,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API所属应用的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -49,7 +46,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API所属的项目空间的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -57,7 +53,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API所属目录的编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoiCode")
     @Expose
@@ -65,7 +60,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     *  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -73,7 +67,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 数据授权 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataAudit")
     @Expose
@@ -81,7 +74,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 是否需要申请 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyAudit")
     @Expose
@@ -89,7 +81,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -97,7 +88,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -105,7 +95,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 请求方法类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -113,7 +102,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -121,7 +109,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * API预览地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -129,7 +116,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * query参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryParams")
     @Expose
@@ -137,7 +123,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 路径参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathParams")
     @Expose
@@ -145,7 +130,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 请求头
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestHeaders")
     @Expose
@@ -153,7 +137,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 响应头
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseHeaders")
     @Expose
@@ -161,7 +144,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 是否为公共空间接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCommonSpace")
     @Expose
@@ -169,7 +151,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 请求体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
@@ -177,7 +158,6 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 响应体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseBody")
     @Expose
@@ -185,17 +165,14 @@ public class ApiInfo extends AbstractModel {
 
     /**
     * 接口方式 1.http 2消息通知服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Style")
     @Expose
     private Long Style;
 
     /**
-     * Get API的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API的id 
      * @return ApiId API的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiId() {
         return this.ApiId;
@@ -203,19 +180,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiId API的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiId(String ApiId) {
         this.ApiId = ApiId;
     }
 
     /**
-     * Get API名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API名称 
      * @return Name API名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -223,19 +196,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name API名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get API所属应用的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API所属应用的id 
      * @return AppId API所属应用的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -243,19 +212,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API所属应用的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId API所属应用的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get API所属的项目空间的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API所属的项目空间的id 
      * @return WorkspaceId API所属的项目空间的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
@@ -263,19 +228,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API所属的项目空间的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId API所属的项目空间的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get API所属目录的编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API所属目录的编码 
      * @return PoiCode API所属目录的编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPoiCode() {
         return this.PoiCode;
@@ -283,19 +244,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API所属目录的编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoiCode API所属目录的编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoiCode(String PoiCode) {
         this.PoiCode = PoiCode;
     }
 
     /**
-     * Get  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务 
      * @return Type  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -303,19 +260,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type  接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据授权 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据授权 0:否 1:是 
      * @return DataAudit 数据授权 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataAudit() {
         return this.DataAudit;
@@ -323,19 +276,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 数据授权 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataAudit 数据授权 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataAudit(Long DataAudit) {
         this.DataAudit = DataAudit;
     }
 
     /**
-     * Get 是否需要申请 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否需要申请 0:否 1:是 
      * @return ApplyAudit 是否需要申请 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplyAudit() {
         return this.ApplyAudit;
@@ -343,19 +292,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 是否需要申请 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyAudit 是否需要申请 0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyAudit(Long ApplyAudit) {
         this.ApplyAudit = ApplyAudit;
     }
 
     /**
-     * Get API详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API详情 
      * @return Description API详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -363,19 +308,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description API详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get API地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API地址 
      * @return Address API地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -383,19 +324,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address API地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 请求方法类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求方法类型 
      * @return Method 请求方法类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -403,19 +340,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 请求方法类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 请求方法类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get API状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API状态 
      * @return Status API状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -423,19 +356,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status API状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get API预览地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API预览地址 
      * @return PreviewUrl API预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
@@ -443,19 +372,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set API预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl API预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;
     }
 
     /**
-     * Get query参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get query参数 
      * @return QueryParams query参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiContent [] getQueryParams() {
         return this.QueryParams;
@@ -463,19 +388,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set query参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryParams query参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryParams(ApiContent [] QueryParams) {
         this.QueryParams = QueryParams;
     }
 
     /**
-     * Get 路径参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径参数 
      * @return PathParams 路径参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiContent [] getPathParams() {
         return this.PathParams;
@@ -483,19 +404,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 路径参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathParams 路径参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathParams(ApiContent [] PathParams) {
         this.PathParams = PathParams;
     }
 
     /**
-     * Get 请求头
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求头 
      * @return RequestHeaders 请求头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiContent [] getRequestHeaders() {
         return this.RequestHeaders;
@@ -503,19 +420,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 请求头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestHeaders 请求头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestHeaders(ApiContent [] RequestHeaders) {
         this.RequestHeaders = RequestHeaders;
     }
 
     /**
-     * Get 响应头
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应头 
      * @return ResponseHeaders 响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiContent [] getResponseHeaders() {
         return this.ResponseHeaders;
@@ -523,19 +436,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 响应头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResponseHeaders 响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseHeaders(ApiContent [] ResponseHeaders) {
         this.ResponseHeaders = ResponseHeaders;
     }
 
     /**
-     * Get 是否为公共空间接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为公共空间接口 
      * @return IsCommonSpace 是否为公共空间接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCommonSpace() {
         return this.IsCommonSpace;
@@ -543,19 +452,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 是否为公共空间接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCommonSpace 是否为公共空间接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCommonSpace(Boolean IsCommonSpace) {
         this.IsCommonSpace = IsCommonSpace;
     }
 
     /**
-     * Get 请求体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求体（base64编码） 
      * @return Body 请求体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -563,19 +468,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 请求体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 请求体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get 响应体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应体（base64编码） 
      * @return ResponseBody 响应体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResponseBody() {
         return this.ResponseBody;
@@ -583,19 +484,15 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 响应体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResponseBody 响应体（base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseBody(String ResponseBody) {
         this.ResponseBody = ResponseBody;
     }
 
     /**
-     * Get 接口方式 1.http 2消息通知服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接口方式 1.http 2消息通知服务 
      * @return Style 接口方式 1.http 2消息通知服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStyle() {
         return this.Style;
@@ -603,9 +500,7 @@ public class ApiInfo extends AbstractModel {
 
     /**
      * Set 接口方式 1.http 2消息通知服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Style 接口方式 1.http 2消息通知服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStyle(Long Style) {
         this.Style = Style;

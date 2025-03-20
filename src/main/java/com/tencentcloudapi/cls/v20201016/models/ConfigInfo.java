@@ -32,7 +32,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 采集规则配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 日志格式化方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogFormat")
     @Expose
@@ -48,7 +46,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 日志采集路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -65,7 +62,6 @@ public class ConfigInfo extends AbstractModel {
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
 - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
 - windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogType")
     @Expose
@@ -73,7 +69,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 提取规则，如果设置了ExtractRule，则必须设置LogType
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractRule")
     @Expose
@@ -96,7 +91,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -111,7 +105,6 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineRule")
     @Expose
@@ -126,7 +119,6 @@ public class ConfigInfo extends AbstractModel {
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedConfig")
     @Expose
@@ -149,10 +141,8 @@ public class ConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 采集规则配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采集规则配置名称 
      * @return Name 采集规则配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -160,19 +150,15 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 采集规则配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 采集规则配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 日志格式化方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志格式化方式 
      * @return LogFormat 日志格式化方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogFormat() {
         return this.LogFormat;
@@ -180,19 +166,15 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 日志格式化方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogFormat 日志格式化方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogFormat(String LogFormat) {
         this.LogFormat = LogFormat;
     }
 
     /**
-     * Get 日志采集路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志采集路径 
      * @return Path 日志采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -200,9 +182,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 日志采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 日志采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
@@ -218,8 +198,7 @@ public class ConfigInfo extends AbstractModel {
 - multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
 - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
-- windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-注意：此字段可能返回 null，表示取不到有效值。 
+- windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。 
      * @return LogType 采集的日志类型。
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -230,7 +209,6 @@ public class ConfigInfo extends AbstractModel {
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
 - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
 - windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogType() {
         return this.LogType;
@@ -247,7 +225,6 @@ public class ConfigInfo extends AbstractModel {
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
 - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
 - windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogType 采集的日志类型。
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -258,17 +235,14 @@ public class ConfigInfo extends AbstractModel {
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
 - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
 - windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 提取规则，如果设置了ExtractRule，则必须设置LogType
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提取规则，如果设置了ExtractRule，则必须设置LogType 
      * @return ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtractRuleInfo getExtractRule() {
         return this.ExtractRule;
@@ -276,9 +250,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 提取规则，如果设置了ExtractRule，则必须设置LogType
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractRule(ExtractRuleInfo ExtractRule) {
         this.ExtractRule = ExtractRule;
@@ -321,10 +293,8 @@ public class ConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -332,9 +302,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -357,10 +325,8 @@ public class ConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。 
      * @return UserDefineRule 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDefineRule() {
         return this.UserDefineRule;
@@ -368,9 +334,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineRule 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineRule(String UserDefineRule) {
         this.UserDefineRule = UserDefineRule;
@@ -384,8 +348,7 @@ public class ConfigInfo extends AbstractModel {
 样例：
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-控制台默认占位值：`{\"ClsAgentDefault\":0}`
-注意：此字段可能返回 null，表示取不到有效值。 
+控制台默认占位值：`{\"ClsAgentDefault\":0}` 
      * @return AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -394,7 +357,6 @@ public class ConfigInfo extends AbstractModel {
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdvancedConfig() {
         return this.AdvancedConfig;
@@ -409,7 +371,6 @@ public class ConfigInfo extends AbstractModel {
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -418,7 +379,6 @@ public class ConfigInfo extends AbstractModel {
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedConfig(String AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;

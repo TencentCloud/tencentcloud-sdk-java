@@ -27,8 +27,8 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
     * 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
     */
     @SerializedName("Filters")
     @Expose
@@ -52,13 +52,13 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
      * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name” 
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke” 
      * @return Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -68,13 +68,13 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
      * Set 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
      * @param Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

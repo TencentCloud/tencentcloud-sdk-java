@@ -26,7 +26,6 @@ public class BatchReportAppMessageRes extends AbstractModel {
     /**
     * 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalElements")
     @Expose
@@ -34,7 +33,6 @@ public class BatchReportAppMessageRes extends AbstractModel {
 
     /**
     * 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Commit")
     @Expose
@@ -42,7 +40,6 @@ public class BatchReportAppMessageRes extends AbstractModel {
 
     /**
     * 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpanMap")
     @Expose
@@ -50,11 +47,9 @@ public class BatchReportAppMessageRes extends AbstractModel {
 
     /**
      * Get 上报数量
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return TotalElements 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalElements() {
         return this.TotalElements;
@@ -63,20 +58,16 @@ public class BatchReportAppMessageRes extends AbstractModel {
     /**
      * Set 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalElements 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalElements(Long TotalElements) {
         this.TotalElements = TotalElements;
     }
 
     /**
-     * Get 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交数量（推送成功） 
      * @return Commit 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCommit() {
         return this.Commit;
@@ -84,19 +75,15 @@ public class BatchReportAppMessageRes extends AbstractModel {
 
     /**
      * Set 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Commit 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommit(Long Commit) {
         this.Commit = Commit;
     }
 
     /**
-     * Get 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息推送结果列表 
      * @return SpanMap 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReportMsgRes [] getSpanMap() {
         return this.SpanMap;
@@ -104,9 +91,7 @@ public class BatchReportAppMessageRes extends AbstractModel {
 
     /**
      * Set 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpanMap 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpanMap(ReportMsgRes [] SpanMap) {
         this.SpanMap = SpanMap;

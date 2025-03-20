@@ -25,7 +25,6 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
     * 第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNumber")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
     * 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
     * 总页数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPage")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalRow")
     @Expose
@@ -57,17 +53,14 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
     * 联动规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkRuleSet")
     @Expose
     private LinkRuleInfo [] LinkRuleSet;
 
     /**
-     * Get 第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第几页 
      * @return PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNumber() {
         return this.PageNumber;
@@ -75,19 +68,15 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
      * Set 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每页条数 
      * @return PageSize 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -95,19 +84,15 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
      * Set 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageSize 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总页数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总页数 
      * @return TotalPage 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPage() {
         return this.TotalPage;
@@ -115,19 +100,15 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
      * Set 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPage 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
     }
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalRow 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalRow() {
         return this.TotalRow;
@@ -135,19 +116,15 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalRow 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalRow(Long TotalRow) {
         this.TotalRow = TotalRow;
     }
 
     /**
-     * Get 联动规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动规则列表 
      * @return LinkRuleSet 联动规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkRuleInfo [] getLinkRuleSet() {
         return this.LinkRuleSet;
@@ -155,9 +132,7 @@ public class DescribeLinkRuleListRes extends AbstractModel {
 
     /**
      * Set 联动规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinkRuleSet 联动规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkRuleSet(LinkRuleInfo [] LinkRuleSet) {
         this.LinkRuleSet = LinkRuleSet;

@@ -25,7 +25,6 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
     * vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -41,17 +39,14 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
     * 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateType")
     @Expose
     private Long CreateType;
 
     /**
-     * Get vpc的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc的id 
      * @return VpcId vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -59,19 +54,15 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
      * Set vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
@@ -79,19 +70,15 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建类型(0=继承; 1=新建; 2=指定) 
      * @return CreateType 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateType() {
         return this.CreateType;
@@ -99,9 +86,7 @@ public class CloudBaseRunVpcInfo extends AbstractModel {
 
     /**
      * Set 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateType 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateType(Long CreateType) {
         this.CreateType = CreateType;

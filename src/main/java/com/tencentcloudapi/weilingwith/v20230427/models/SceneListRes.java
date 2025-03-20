@@ -25,17 +25,14 @@ public class SceneListRes extends AbstractModel {
 
     /**
     * 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneList")
     @Expose
     private SceneInfo [] SceneList;
 
     /**
-     * Get 场景列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景列表 
      * @return SceneList 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SceneInfo [] getSceneList() {
         return this.SceneList;
@@ -43,9 +40,7 @@ public class SceneListRes extends AbstractModel {
 
     /**
      * Set 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneList 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneList(SceneInfo [] SceneList) {
         this.SceneList = SceneList;

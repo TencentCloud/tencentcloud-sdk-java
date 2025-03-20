@@ -25,7 +25,6 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
     * 产品id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
     * 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentWID")
     @Expose
@@ -41,7 +39,6 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -49,17 +46,14 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
     * 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SN")
     @Expose
     private String SN;
 
     /**
-     * Get 产品id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品id 
      * @return ProductId 产品id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductId() {
         return this.ProductId;
@@ -67,19 +61,15 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
      * Set 产品id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父设备wid，不为空表示导入自设备 
      * @return ParentWID 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentWID() {
         return this.ParentWID;
@@ -87,19 +77,15 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
      * Set 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentWID 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentWID(String ParentWID) {
         this.ParentWID = ParentWID;
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -107,19 +93,15 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备sn序列号 
      * @return SN 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSN() {
         return this.SN;
@@ -127,9 +109,7 @@ public class CreateDeviceFailed extends AbstractModel {
 
     /**
      * Set 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SN 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSN(String SN) {
         this.SN = SN;

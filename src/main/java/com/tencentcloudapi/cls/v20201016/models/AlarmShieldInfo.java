@@ -60,7 +60,6 @@ public class AlarmShieldInfo extends AbstractModel {
 
     /**
     * 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
@@ -191,10 +190,8 @@ public class AlarmShieldInfo extends AbstractModel {
     }
 
     /**
-     * Get 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。 
      * @return Rule 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRule() {
         return this.Rule;
@@ -202,9 +199,7 @@ public class AlarmShieldInfo extends AbstractModel {
 
     /**
      * Set 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(String Rule) {
         this.Rule = Rule;

@@ -25,17 +25,14 @@ public class WorkspaceInfoList extends AbstractModel {
 
     /**
     * 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private SpaceInfo [] List;
 
     /**
-     * Get 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目空间列表 
      * @return List 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceInfo [] getList() {
         return this.List;
@@ -43,9 +40,7 @@ public class WorkspaceInfoList extends AbstractModel {
 
     /**
      * Set 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(SpaceInfo [] List) {
         this.List = List;

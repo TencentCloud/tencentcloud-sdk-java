@@ -25,17 +25,14 @@ public class SpaceDeviceRelationRes extends AbstractModel {
 
     /**
     * 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceDeviceRelationList")
     @Expose
     private SpaceDeviceRelation [] SpaceDeviceRelationList;
 
     /**
-     * Get 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备空间绑定关系列表 
      * @return SpaceDeviceRelationList 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceDeviceRelation [] getSpaceDeviceRelationList() {
         return this.SpaceDeviceRelationList;
@@ -43,9 +40,7 @@ public class SpaceDeviceRelationRes extends AbstractModel {
 
     /**
      * Set 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceDeviceRelationList 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceDeviceRelationList(SpaceDeviceRelation [] SpaceDeviceRelationList) {
         this.SpaceDeviceRelationList = SpaceDeviceRelationList;

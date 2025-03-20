@@ -25,7 +25,6 @@ public class HandlerPersonInfo extends AbstractModel {
 
     /**
     * 用户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class HandlerPersonInfo extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 用户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户id 
      * @return Id 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class HandlerPersonInfo extends AbstractModel {
 
     /**
      * Set 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return Name 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class HandlerPersonInfo extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

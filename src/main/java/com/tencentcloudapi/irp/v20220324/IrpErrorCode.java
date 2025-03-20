@@ -1,18 +1,18 @@
 package com.tencentcloudapi.irp.v20220324;
 public enum IrpErrorCode {
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 操作被拒绝。
+     /*         操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
-    // 未授权操作。
+     /*         未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

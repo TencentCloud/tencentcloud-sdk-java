@@ -1,321 +1,321 @@
 package com.tencentcloudapi.tbaas.v20180416;
 public enum TbaasErrorCode {
-    // CAM签名/鉴权错误。
+     /*         CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
-    // 用户无权限访问。
+     /*         用户无权限访问。 */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
-    // 为带来更好的服务与体验，长安链体验网络维护升级中，请稍后再试。
+     /*         为带来更好的服务与体验，长安链体验网络维护升级中，请稍后再试。 */
      FAILEDOPERATION_BAASSTOPSERVING("FailedOperation.BaaSStopServing"),
      
-    // Bcos网络异常。
+     /*         Bcos网络异常。 */
      FAILEDOPERATION_BCOSSERVICE("FailedOperation.BcosService"),
      
-    // 检查CSR文件非法。
+     /*         检查CSR文件非法。 */
      FAILEDOPERATION_CACHECKCSR("FailedOperation.CaCheckCsr"),
      
-    // 数据库操作错误。
+     /*         数据库操作错误。 */
      FAILEDOPERATION_CADBOPTION("FailedOperation.CaDbOption"),
      
-    // 证书已经存在。
+     /*         证书已经存在。 */
      FAILEDOPERATION_CAEXSIT("FailedOperation.CaExsit"),
      
-    // 产生密钥对失败。
+     /*         产生密钥对失败。 */
      FAILEDOPERATION_CAGENKEY("FailedOperation.CaGenkey"),
      
-    // 初始化CA失败。
+     /*         初始化CA失败。 */
      FAILEDOPERATION_CAINIT("FailedOperation.CaInit"),
      
-    // 输入参数非法。
+     /*         输入参数非法。 */
      FAILEDOPERATION_CAINPUTPARAM("FailedOperation.CaInputParam"),
      
-    // 证书不存在。
+     /*         证书不存在。 */
      FAILEDOPERATION_CANOEXIST("FailedOperation.CaNoExist"),
      
-    // 注销证书失败。
+     /*         注销证书失败。 */
      FAILEDOPERATION_CAREVOKE("FailedOperation.CaRevoke"),
      
-    // 根证书不存在。
+     /*         根证书不存在。 */
      FAILEDOPERATION_CAROOTNONEXIST("FailedOperation.CaRootNonExist"),
      
-    // CA内部错误。
+     /*         CA内部错误。 */
      FAILEDOPERATION_CASERVICE("FailedOperation.CaService"),
      
-    // 签发证书失败。
+     /*         签发证书失败。 */
      FAILEDOPERATION_CASIGNCERT("FailedOperation.CaSignCert"),
      
-    // CFCA云API申请证书失败。
+     /*         CFCA云API申请证书失败。 */
      FAILEDOPERATION_CAYUNAPIAPPLYCERT("FailedOperation.CaYunApiApplyCert"),
      
-    // CFCA云API错误。
+     /*         CFCA云API错误。 */
      FAILEDOPERATION_CAYUNAPICOMMON("FailedOperation.CaYunApiCommon"),
      
-    // Bcos不能编译已经部署的合约。
+     /*         Bcos不能编译已经部署的合约。 */
      FAILEDOPERATION_COMPILEDEPLOYEDCONTRACT("FailedOperation.CompileDeployedContract"),
      
-    // Bcos不能编译正在部署的合约。
+     /*         Bcos不能编译正在部署的合约。 */
      FAILEDOPERATION_COMPILEDEPLOYINGCONTRACT("FailedOperation.CompileDeployingContract"),
      
-    // Bcos只能由该合约所属机构执行操作。
+     /*         Bcos只能由该合约所属机构执行操作。 */
      FAILEDOPERATION_CONTRACTEDITEDBYOTHERAGENCY("FailedOperation.ContractEditedByOtherAgency"),
      
-    // 数据库操作异常。
+     /*         数据库操作异常。 */
      FAILEDOPERATION_DATABASEEXCEPTION("FailedOperation.DatabaseException"),
      
-    // Bcos合约已部署，无法删除。
+     /*         Bcos合约已部署，无法删除。 */
      FAILEDOPERATION_DELETEDEPLOYEDCONTRACT("FailedOperation.DeleteDeployedContract"),
      
-    // Bcos合约正在部署，无法删除。
+     /*         Bcos合约正在部署，无法删除。 */
      FAILEDOPERATION_DELETEDEPLOYINGCONTRACT("FailedOperation.DeleteDeployingContract"),
      
-    // Bcos不能部署未编译的合约。
+     /*         Bcos不能部署未编译的合约。 */
      FAILEDOPERATION_DEPLOYCONTRACTNOTCOMPILE("FailedOperation.DeployContractNotCompile"),
      
-    // 区块详情查询失败。
+     /*         区块详情查询失败。 */
      FAILEDOPERATION_FABRICBLOCKDETAIL("FailedOperation.FabricBlockDetail"),
      
-    // 区块不存在。
+     /*         区块不存在。 */
      FAILEDOPERATION_FABRICBLOCKNOEXIST("FailedOperation.FabricBlockNoExist"),
      
-    // 区块列表查询失败。
+     /*         区块列表查询失败。 */
      FAILEDOPERATION_FABRICBLOCKQUERY("FailedOperation.FabricBlockQuery"),
      
-    // 合约调用失败。
+     /*         合约调用失败。 */
      FAILEDOPERATION_FABRICCHAINCODEINVOKEFAILED("FailedOperation.FabricChaincodeInvokeFailed"),
      
-    // 合约不存在。
+     /*         合约不存在。 */
      FAILEDOPERATION_FABRICCHAINCODENOEXIST("FailedOperation.FabricChaincodeNoExist"),
      
-    // 合约查询失败。
+     /*         合约查询失败。 */
      FAILEDOPERATION_FABRICCHAINCODEQUERYFAILED("FailedOperation.FabricChaincodeQueryFailed"),
      
-    // 提交失败。
+     /*         提交失败。 */
      FAILEDOPERATION_FABRICCOMMIT("FailedOperation.FabricCommit"),
      
-    // event hub失败。
+     /*         event hub失败。 */
      FAILEDOPERATION_FABRICEVENTHUB("FailedOperation.FabricEventHub"),
      
-    // 背书失败。
+     /*         背书失败。 */
      FAILEDOPERATION_FABRICPROPOSAL("FailedOperation.FabricProposal"),
      
-    // fabric请求参数错误。
+     /*         fabric请求参数错误。 */
      FAILEDOPERATION_FABRICREQUESTPARAMS("FailedOperation.FabricRequestParams"),
      
-    // 参数验证失败。
+     /*         参数验证失败。 */
      FAILEDOPERATION_FABRICREQUSTPARAMS("FailedOperation.FabricRequstParams"),
      
-    // 交易详情查询失败。
+     /*         交易详情查询失败。 */
      FAILEDOPERATION_FABRICTRANSACTIONDETAIL("FailedOperation.FabricTransactionDetail"),
      
-    // 交易不存在。
+     /*         交易不存在。 */
      FAILEDOPERATION_FABRICTRANSACTIONNOEXIST("FailedOperation.FabricTransactionNoExist"),
      
-    // 交易列表查询失败。
+     /*         交易列表查询失败。 */
      FAILEDOPERATION_FABRICTRANSACTIONQUERY("FailedOperation.FabricTransactionQuery"),
      
-    // Txid 查询失败。
+     /*         Txid 查询失败。 */
      FAILEDOPERATION_FABRICTXIDQUERY("FailedOperation.FabricTxIdQuery"),
      
-    // fabric invoke交易错误。
+     /*         fabric invoke交易错误。 */
      FAILEDOPERATION_FABRICTXINVOKE("FailedOperation.FabricTxInvoke"),
      
-    // fabric query交易错误。
+     /*         fabric query交易错误。 */
      FAILEDOPERATION_FABRICTXQUERY("FailedOperation.FabricTxQuery"),
      
-    // fabric query交易错误, 无正确。
+     /*         fabric query交易错误, 无正确。 */
      FAILEDOPERATION_FABRICTXQUERYNONE("FailedOperation.FabricTxQueryNone"),
      
-    // Bcos前置服务调用失败。
+     /*         Bcos前置服务调用失败。 */
      FAILEDOPERATION_FRONTREQUESTFAIL("FailedOperation.FrontRequestFail"),
      
-    // 用户非法操作。
+     /*         用户非法操作。 */
      FAILEDOPERATION_GROUPILLEGAL("FailedOperation.GroupIllegal"),
      
-    // 用户无权限访问。
+     /*         用户无权限访问。 */
      FAILEDOPERATION_INVALIDAUTH("FailedOperation.InvalidAuth"),
      
-    // Bcos无效的群组编号。
+     /*         Bcos无效的群组编号。 */
      FAILEDOPERATION_INVALIDGROUPPK("FailedOperation.InvalidGroupPk"),
      
-    // Bcos无效的私钥用户信息。
+     /*         Bcos无效的私钥用户信息。 */
      FAILEDOPERATION_INVALIDKEYUSER("FailedOperation.InvalidKeyUser"),
      
-    // 用户非法操作。
+     /*         用户非法操作。 */
      FAILEDOPERATION_INVALIDOPERATION("FailedOperation.InvalidOperation"),
      
-    // 交易请求异常。
+     /*         交易请求异常。 */
      FAILEDOPERATION_MANAGESERVICE("FailedOperation.ManageService"),
      
-    // Bcos新建合约失败。
+     /*         Bcos新建合约失败。 */
      FAILEDOPERATION_NEWCONTRACT("FailedOperation.NewContract"),
      
-    // 合约没有在通道初始化。
+     /*         合约没有在通道初始化。 */
      FAILEDOPERATION_NOCHAINCODECHANNEL("FailedOperation.NoChainCodeChannel"),
      
-    // 组织没有加入合约。
+     /*         组织没有加入合约。 */
      FAILEDOPERATION_NOCHAINCODEGROUP("FailedOperation.NoChainCodeGroup"),
      
-    // 合约没有在节点安装。
+     /*         合约没有在节点安装。 */
      FAILEDOPERATION_NOCHAINCODEPEER("FailedOperation.NoChainCodePeer"),
      
-    // 组织没有加入通道。
+     /*         组织没有加入通道。 */
      FAILEDOPERATION_NOCHANNELGROUP("FailedOperation.NoChannelGroup"),
      
-    // 节点没有加入通道。
+     /*         节点没有加入通道。 */
      FAILEDOPERATION_NOCHANNELPEER("FailedOperation.NoChannelPeer"),
      
-    // 对象不存在。
+     /*         对象不存在。 */
      FAILEDOPERATION_NOOBJECT("FailedOperation.NoObject"),
      
-    // 没有可用节点。
+     /*         没有可用节点。 */
      FAILEDOPERATION_NOPEER("FailedOperation.NoPeer"),
      
-    // Bcos合约未部署。
+     /*         Bcos合约未部署。 */
      FAILEDOPERATION_NOTDEPLOYEDCONTRACT("FailedOperation.NotDeployedContract"),
      
-    // 服务调用失败，请检查参数。
+     /*         服务调用失败，请检查参数。 */
      FAILEDOPERATION_SERVICEFAILED("FailedOperation.ServiceFailed"),
      
-    // 操作状态不匹配。
+     /*         操作状态不匹配。 */
      FAILEDOPERATION_STATUSNOMATCH("FailedOperation.StatusNoMatch"),
      
-    // 后台服务请求超时。
+     /*         后台服务请求超时。 */
      FAILEDOPERATION_TIMEOUTURL("FailedOperation.TimeOutUrl"),
      
-    // 交易执行超时，请稍后再试。
+     /*         交易执行超时，请稍后再试。 */
      FAILEDOPERATION_TRANSACTIONTIMEOUT("FailedOperation.TransactionTimeout"),
      
-    // 获取用户认证类型出错。
+     /*         获取用户认证类型出错。 */
      FAILEDOPERATION_USERAUTHTYPE("FailedOperation.UserAuthType"),
      
-    // 您因违反用户协议，目前无法使用长安链体验网络。
+     /*         您因违反用户协议，目前无法使用长安链体验网络。 */
      FAILEDOPERATION_USERINBLACKLIST("FailedOperation.UserInBlackList"),
      
-    // 用户未加入体验网络。
+     /*         用户未加入体验网络。 */
      FAILEDOPERATION_USERNOJOINDEMOCLUSTER("FailedOperation.UserNoJoinDemoCluster"),
      
-    // Bcos数据库操作异常，请重试。
+     /*         Bcos数据库操作异常，请重试。 */
      INTERNALERROR_DBERROR("InternalError.DBError"),
      
-    // 服务器异常，请重试。
+     /*         服务器异常，请重试。 */
      INTERNALERROR_FAILURL("InternalError.FailUrl"),
      
-    // Flask内部错误。
+     /*         Flask内部错误。 */
      INTERNALERROR_FLASKEXCEPTION("InternalError.FlaskException"),
      
-    // Bcos无效的合约参数。
+     /*         Bcos无效的合约参数。 */
      INTERNALERROR_INVALIDCONTRACTPARAM("InternalError.InvalidContractParam"),
      
-    // Bcos不支持的请求类型。
+     /*         Bcos不支持的请求类型。 */
      INTERNALERROR_METHODTYPENOTSUPPORT("InternalError.MethodTypeNotSupport"),
      
-    // 错误码未定义。
+     /*         错误码未定义。 */
      INTERNALERROR_NODEFINEERROR("InternalError.NoDefineError"),
      
-    // 内部错误，请稍后重试或者联系技术人员
+     /*         内部错误，请稍后重试或者联系技术人员 */
      INTERNALERROR_SERVERERROR("InternalError.ServerError"),
      
-    // 服务器异常。
+     /*         服务器异常。 */
      INTERNALERROR_SERVEREXCEPTION("InternalError.ServerException"),
      
-    // 服务异常，请重试。
+     /*         服务异常，请重试。 */
      INTERNALERROR_SERVICEERROR("InternalError.ServiceError"),
      
-    // 交易服务异常，请重试。
+     /*         交易服务异常，请重试。 */
      INTERNALERROR_SERVICEPANIC("InternalError.ServicePanic"),
      
-    // 交易服务内部错误。
+     /*         交易服务内部错误。 */
      INTERNALERROR_TRANSACTIONSERVICE("InternalError.TransactionService"),
      
-    // 交易服务未知错误，请重试。
+     /*         交易服务未知错误，请重试。 */
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-    // Bcos账号参数错误。
+     /*         Bcos账号参数错误。 */
      INVALIDPARAMETER_ACCOUNTPARAMERROR("InvalidParameter.AccountParamError"),
      
-    // Bcos无效的机构信息。
+     /*         Bcos无效的机构信息。 */
      INVALIDPARAMETER_AGENCYINVALID("InvalidParameter.AgencyInvalid"),
      
-    // Bcos新增机构网络关联信息入参错误。
+     /*         Bcos新增机构网络关联信息入参错误。 */
      INVALIDPARAMETER_AGENCYNETPARAMINVALID("InvalidParameter.AgencyNetParamInvalid"),
      
-    // Bcos所属联盟编号不能为空。
+     /*         Bcos所属联盟编号不能为空。 */
      INVALIDPARAMETER_ALLIANCEIDOFNETEMPTY("InvalidParameter.AllianceIdOfNetEmpty"),
      
-    // Bcos无效的合约编号。
+     /*         Bcos无效的合约编号。 */
      INVALIDPARAMETER_CONTRACTIDINVALID("InvalidParameter.ContractIdInvalid"),
      
-    // Bcos数据已存在，请勿重复添加。
+     /*         Bcos数据已存在，请勿重复添加。 */
      INVALIDPARAMETER_DATAHADEXIST("InvalidParameter.DataHadExist"),
      
-    // Bcos无效参数。
+     /*         Bcos无效参数。 */
      INVALIDPARAMETER_EMPTYPARAM("InvalidParameter.EmptyParam"),
      
-    // Bcos无效的失效时间。
+     /*         Bcos无效的失效时间。 */
      INVALIDPARAMETER_EXPIRETIMEINVALID("InvalidParameter.ExpireTimeInvalid"),
      
-    // Bcos前置的IP或端口无效。
+     /*         Bcos前置的IP或端口无效。 */
      INVALIDPARAMETER_FRONTCONNFAIL("InvalidParameter.FrontConnFail"),
      
-    // Bcos IP格式错误。
+     /*         Bcos IP格式错误。 */
      INVALIDPARAMETER_FRONTIPINVALID("InvalidParameter.FrontIpInvalid"),
      
-    // Bcos新增前置服务参数错误。
+     /*         Bcos新增前置服务参数错误。 */
      INVALIDPARAMETER_FRONTPARAMERROR("InvalidParameter.FrontParamError"),
      
-    // Bcos前置服务调用失败。
+     /*         Bcos前置服务调用失败。 */
      INVALIDPARAMETER_FRONTREQUESTFAIL("InvalidParameter.FrontRequestFail"),
      
-    // 输入参数存在违规内容。
+     /*         输入参数存在违规内容。 */
      INVALIDPARAMETER_INPUTDATAVIOLATION("InvalidParameter.InputDataViolation"),
      
-    // Bcos无效的合约参数。
+     /*         Bcos无效的合约参数。 */
      INVALIDPARAMETER_INVALIDCONTRACTARG("InvalidParameter.InvalidContractArg"),
      
-    // Bcos无效的网络编号。
+     /*         Bcos无效的网络编号。 */
      INVALIDPARAMETER_NETIDINVALID("InvalidParameter.NetIdInvalid"),
      
-    // Bcos网络参数错误。
+     /*         Bcos网络参数错误。 */
      INVALIDPARAMETER_NETPARAMERROR("InvalidParameter.NetParamError"),
      
-    // Bcos新增私钥用户参数错误。
+     /*         Bcos新增私钥用户参数错误。 */
      INVALIDPARAMETER_NEWKEYUSERPARAMERROR("InvalidParameter.NewKeyUserParamError"),
      
-    // Bcos无可删信息,请确认后重试。
+     /*         Bcos无可删信息,请确认后重试。 */
      INVALIDPARAMETER_NOINFOTODELETE("InvalidParameter.NoInfoToDelete"),
      
-    // Bcos没有有效的前置服务信息。
+     /*         Bcos没有有效的前置服务信息。 */
      INVALIDPARAMETER_NOTFOUNDVALIDFRONT("InvalidParameter.NotFoundValidFront"),
      
-    // Bcos不能重复部署合约。
+     /*         Bcos不能重复部署合约。 */
      INVALIDPARAMETER_REDEPLOYEDCONTRACT("InvalidParameter.ReDeployedContract"),
      
-    // Bcos合约正在部署中，请勿重复操作。
+     /*         Bcos合约正在部署中，请勿重复操作。 */
      INVALIDPARAMETER_REDEPLOYINGCONTRACT("InvalidParameter.ReDeployingContract"),
      
-    // Bcos无效的角色。
+     /*         Bcos无效的角色。 */
      INVALIDPARAMETER_ROLEINVALID("InvalidParameter.RoleInvalid"),
      
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 参数格式不正确。
+     /*         参数格式不正确。 */
      INVALIDPARAMETERVALUE_ILLEGALFORMAT("InvalidParameterValue.IllegalFormat"),
      
-    // 请求参数错误。
+     /*         请求参数错误。 */
      INVALIDPARAMETERVALUE_ILLEGALVALUE("InvalidParameterValue.IllegalValue"),
      
-    // 参数值为空。
+     /*         参数值为空。 */
      INVALIDPARAMETERVALUE_PARAMETEREMPTY("InvalidParameterValue.ParameterEmpty"),
      
-    // Bcos缺少参数。
+     /*         Bcos缺少参数。 */
      MISSINGPARAMETER_EMPTYPARAM("MissingParameter.EmptyParam"),
      
-    // 只有所有者可以操作。
+     /*         只有所有者可以操作。 */
      OPERATIONDENIED_NOTOWNER("OperationDenied.NotOwner"),
      
-    // Bcos查询不到数据。
+     /*         Bcos查询不到数据。 */
      RESOURCENOTFOUND_EMPTYDATA("ResourceNotFound.EmptyData");
      
     private String value;

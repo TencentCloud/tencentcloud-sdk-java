@@ -25,7 +25,6 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
     * 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -41,17 +39,14 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
     * 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionClbSubnetId")
     @Expose
     private String VersionClbSubnetId;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -59,19 +54,15 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群的vpcId 
      * @return VpcId 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -79,19 +70,15 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
      * Set 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本内网CLB所在子网Id 
      * @return VersionClbSubnetId 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionClbSubnetId() {
         return this.VersionClbSubnetId;
@@ -99,9 +86,7 @@ public class TkeClusterInfo extends AbstractModel {
 
     /**
      * Set 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionClbSubnetId 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionClbSubnetId(String VersionClbSubnetId) {
         this.VersionClbSubnetId = VersionClbSubnetId;

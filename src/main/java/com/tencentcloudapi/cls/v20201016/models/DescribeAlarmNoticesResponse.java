@@ -25,7 +25,6 @@ public class DescribeAlarmNoticesResponse extends AbstractModel {
 
     /**
     * 告警通知模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmNotices")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAlarmNoticesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警通知模板列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知模板列表。 
      * @return AlarmNotices 告警通知模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmNotice [] getAlarmNotices() {
         return this.AlarmNotices;
@@ -57,9 +54,7 @@ public class DescribeAlarmNoticesResponse extends AbstractModel {
 
     /**
      * Set 告警通知模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmNotices 告警通知模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmNotices(AlarmNotice [] AlarmNotices) {
         this.AlarmNotices = AlarmNotices;

@@ -25,17 +25,14 @@ public class ApplicationTokenInfo extends AbstractModel {
 
     /**
     * 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-     * Get 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用申请调用API的令牌 
      * @return Token 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getToken() {
         return this.Token;
@@ -43,9 +40,7 @@ public class ApplicationTokenInfo extends AbstractModel {
 
     /**
      * Set 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Token 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToken(String Token) {
         this.Token = Token;

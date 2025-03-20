@@ -129,6 +129,41 @@ false 否
     private String WorkflowType;
 
     /**
+    * 任务类型id列表
+    */
+    @SerializedName("TaskTypeIdList")
+    @Expose
+    private Long [] TaskTypeIdList;
+
+    /**
+    * 责任人id列表
+    */
+    @SerializedName("InChargeIdList")
+    @Expose
+    private String [] InChargeIdList;
+
+    /**
+    * 自身责任人
+    */
+    @SerializedName("OnlyMe")
+    @Expose
+    private Boolean OnlyMe;
+
+    /**
+    * 是否包含代码模版
+    */
+    @SerializedName("IncludeCodeTemplate")
+    @Expose
+    private Boolean IncludeCodeTemplate;
+
+    /**
+    * 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+    */
+    @SerializedName("FolderForm")
+    @Expose
+    private String FolderForm;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -380,6 +415,86 @@ false 否
         this.WorkflowType = WorkflowType;
     }
 
+    /**
+     * Get 任务类型id列表 
+     * @return TaskTypeIdList 任务类型id列表
+     */
+    public Long [] getTaskTypeIdList() {
+        return this.TaskTypeIdList;
+    }
+
+    /**
+     * Set 任务类型id列表
+     * @param TaskTypeIdList 任务类型id列表
+     */
+    public void setTaskTypeIdList(Long [] TaskTypeIdList) {
+        this.TaskTypeIdList = TaskTypeIdList;
+    }
+
+    /**
+     * Get 责任人id列表 
+     * @return InChargeIdList 责任人id列表
+     */
+    public String [] getInChargeIdList() {
+        return this.InChargeIdList;
+    }
+
+    /**
+     * Set 责任人id列表
+     * @param InChargeIdList 责任人id列表
+     */
+    public void setInChargeIdList(String [] InChargeIdList) {
+        this.InChargeIdList = InChargeIdList;
+    }
+
+    /**
+     * Get 自身责任人 
+     * @return OnlyMe 自身责任人
+     */
+    public Boolean getOnlyMe() {
+        return this.OnlyMe;
+    }
+
+    /**
+     * Set 自身责任人
+     * @param OnlyMe 自身责任人
+     */
+    public void setOnlyMe(Boolean OnlyMe) {
+        this.OnlyMe = OnlyMe;
+    }
+
+    /**
+     * Get 是否包含代码模版 
+     * @return IncludeCodeTemplate 是否包含代码模版
+     */
+    public Boolean getIncludeCodeTemplate() {
+        return this.IncludeCodeTemplate;
+    }
+
+    /**
+     * Set 是否包含代码模版
+     * @param IncludeCodeTemplate 是否包含代码模版
+     */
+    public void setIncludeCodeTemplate(Boolean IncludeCodeTemplate) {
+        this.IncludeCodeTemplate = IncludeCodeTemplate;
+    }
+
+    /**
+     * Get 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理 
+     * @return FolderForm 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+     */
+    public String getFolderForm() {
+        return this.FolderForm;
+    }
+
+    /**
+     * Set 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+     * @param FolderForm 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+     */
+    public void setFolderForm(String FolderForm) {
+        this.FolderForm = FolderForm;
+    }
+
     public DescribeDsFolderTreeRequest() {
     }
 
@@ -430,6 +545,27 @@ false 否
         if (source.WorkflowType != null) {
             this.WorkflowType = new String(source.WorkflowType);
         }
+        if (source.TaskTypeIdList != null) {
+            this.TaskTypeIdList = new Long[source.TaskTypeIdList.length];
+            for (int i = 0; i < source.TaskTypeIdList.length; i++) {
+                this.TaskTypeIdList[i] = new Long(source.TaskTypeIdList[i]);
+            }
+        }
+        if (source.InChargeIdList != null) {
+            this.InChargeIdList = new String[source.InChargeIdList.length];
+            for (int i = 0; i < source.InChargeIdList.length; i++) {
+                this.InChargeIdList[i] = new String(source.InChargeIdList[i]);
+            }
+        }
+        if (source.OnlyMe != null) {
+            this.OnlyMe = new Boolean(source.OnlyMe);
+        }
+        if (source.IncludeCodeTemplate != null) {
+            this.IncludeCodeTemplate = new Boolean(source.IncludeCodeTemplate);
+        }
+        if (source.FolderForm != null) {
+            this.FolderForm = new String(source.FolderForm);
+        }
     }
 
 
@@ -451,6 +587,11 @@ false 否
         this.setParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
         this.setParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+        this.setParamArraySimple(map, prefix + "TaskTypeIdList.", this.TaskTypeIdList);
+        this.setParamArraySimple(map, prefix + "InChargeIdList.", this.InChargeIdList);
+        this.setParamSimple(map, prefix + "OnlyMe", this.OnlyMe);
+        this.setParamSimple(map, prefix + "IncludeCodeTemplate", this.IncludeCodeTemplate);
+        this.setParamSimple(map, prefix + "FolderForm", this.FolderForm);
 
     }
 }

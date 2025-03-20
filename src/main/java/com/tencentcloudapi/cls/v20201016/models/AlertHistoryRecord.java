@@ -116,7 +116,6 @@ public class AlertHistoryRecord extends AbstractModel {
 
     /**
     * 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
@@ -124,7 +123,6 @@ public class AlertHistoryRecord extends AbstractModel {
 
     /**
     * 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -133,7 +131,6 @@ public class AlertHistoryRecord extends AbstractModel {
     /**
     * 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorObjectType")
     @Expose
@@ -348,10 +345,8 @@ public class AlertHistoryRecord extends AbstractModel {
     }
 
     /**
-     * Get 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警分组触发时对应的分组信息 
      * @return GroupTriggerCondition 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupTriggerConditionInfo [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
@@ -359,19 +354,15 @@ public class AlertHistoryRecord extends AbstractModel {
 
     /**
      * Set 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupTriggerCondition 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupTriggerCondition(GroupTriggerConditionInfo [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical) 
      * @return AlarmLevel 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -379,9 +370,7 @@ public class AlertHistoryRecord extends AbstractModel {
 
     /**
      * Set 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
@@ -389,11 +378,9 @@ public class AlertHistoryRecord extends AbstractModel {
 
     /**
      * Get 监控对象类型。
-0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。 
+0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。  
      * @return MonitorObjectType 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
@@ -402,10 +389,8 @@ public class AlertHistoryRecord extends AbstractModel {
     /**
      * Set 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorObjectType 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;

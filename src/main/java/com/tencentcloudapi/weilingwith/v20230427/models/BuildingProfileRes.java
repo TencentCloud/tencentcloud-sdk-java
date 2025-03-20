@@ -25,17 +25,14 @@ public class BuildingProfileRes extends AbstractModel {
 
     /**
     * 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingProfile")
     @Expose
     private BuildingProfile BuildingProfile;
 
     /**
-     * Get 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑概要信息 
      * @return BuildingProfile 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BuildingProfile getBuildingProfile() {
         return this.BuildingProfile;
@@ -43,9 +40,7 @@ public class BuildingProfileRes extends AbstractModel {
 
     /**
      * Set 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingProfile 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingProfile(BuildingProfile BuildingProfile) {
         this.BuildingProfile = BuildingProfile;

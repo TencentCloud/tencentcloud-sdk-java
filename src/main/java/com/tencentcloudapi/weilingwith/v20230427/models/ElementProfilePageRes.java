@@ -25,7 +25,6 @@ public class ElementProfilePageRes extends AbstractModel {
 
     /**
     * 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class ElementProfilePageRes extends AbstractModel {
 
     /**
     * 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private ElementProfile [] List;
 
     /**
-     * Get 构件总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件总数 
      * @return TotalCount 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class ElementProfilePageRes extends AbstractModel {
 
     /**
      * Set 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 构件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件列表 
      * @return List 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementProfile [] getList() {
         return this.List;
@@ -71,9 +63,7 @@ public class ElementProfilePageRes extends AbstractModel {
 
     /**
      * Set 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ElementProfile [] List) {
         this.List = List;

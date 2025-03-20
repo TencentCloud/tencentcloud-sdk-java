@@ -140,6 +140,23 @@ public class ProcessMediaRequest extends AbstractModel {
     private String ResourceId;
 
     /**
+    * 智能字幕
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private SmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
+    * 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+    */
+    @SerializedName("SkipMateData")
+    @Expose
+    private Long SkipMateData;
+
+    /**
      * Get 媒体处理的文件输入信息。 
      * @return InputInfo 媒体处理的文件输入信息。
      */
@@ -423,6 +440,50 @@ public class ProcessMediaRequest extends AbstractModel {
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 智能字幕 
+     * @return SmartSubtitlesTask 智能字幕
+     */
+    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set 智能字幕
+     * @param SmartSubtitlesTask 智能字幕
+     */
+    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
+    /**
+     * Get 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	 
+     * @return SkipMateData 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+     */
+    public Long getSkipMateData() {
+        return this.SkipMateData;
+    }
+
+    /**
+     * Set 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+     * @param SkipMateData 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+     */
+    public void setSkipMateData(Long SkipMateData) {
+        this.SkipMateData = SkipMateData;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -476,6 +537,12 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
+        if (source.SkipMateData != null) {
+            this.SkipMateData = new Long(source.SkipMateData);
+        }
     }
 
 
@@ -498,6 +565,8 @@ public class ProcessMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
 
     }
 }

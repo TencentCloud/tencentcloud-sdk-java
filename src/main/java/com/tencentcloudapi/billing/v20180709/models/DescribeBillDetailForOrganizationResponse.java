@@ -40,7 +40,6 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
 
     /**
     * 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -90,10 +89,8 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
     }
 
     /**
-     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度 
      * @return Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -101,9 +98,7 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
 
     /**
      * Set 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;

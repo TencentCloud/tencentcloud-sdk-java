@@ -25,7 +25,6 @@ public class AlarmLevelInfo extends AbstractModel {
 
     /**
     * 级别id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -33,17 +32,14 @@ public class AlarmLevelInfo extends AbstractModel {
 
     /**
     * 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
     private String LevelName;
 
     /**
-     * Get 级别id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 级别id 
      * @return LevelId 级别id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -51,19 +47,15 @@ public class AlarmLevelInfo extends AbstractModel {
 
     /**
      * Set 级别id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 级别id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 级别名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 级别名称 
      * @return LevelName 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -71,9 +63,7 @@ public class AlarmLevelInfo extends AbstractModel {
 
     /**
      * Set 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;

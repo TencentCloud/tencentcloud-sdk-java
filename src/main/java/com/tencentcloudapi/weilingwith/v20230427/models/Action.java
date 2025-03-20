@@ -25,7 +25,6 @@ public class Action extends AbstractModel {
 
     /**
     * 动作id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class Action extends AbstractModel {
 
     /**
     * 动作名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 动作id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作id 
      * @return Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class Action extends AbstractModel {
 
     /**
      * Set 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 动作名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作名 
      * @return Name 动作名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class Action extends AbstractModel {
 
     /**
      * Set 动作名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 动作名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

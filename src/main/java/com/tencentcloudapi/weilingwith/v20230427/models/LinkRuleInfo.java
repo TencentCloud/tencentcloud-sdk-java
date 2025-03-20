@@ -25,7 +25,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 联动id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventSet")
     @Expose
@@ -49,7 +46,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionSet")
     @Expose
@@ -57,7 +53,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginDate")
     @Expose
@@ -73,7 +67,6 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndDate")
     @Expose
@@ -81,17 +74,14 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
     * 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidPeriod")
     @Expose
     private String ValidPeriod;
 
     /**
-     * Get 联动id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动id 
      * @return Id 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -99,19 +89,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 联动名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动名称 
      * @return Name 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -119,19 +105,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件列表 
      * @return EventSet 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Event [] getEventSet() {
         return this.EventSet;
@@ -139,19 +121,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventSet 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventSet(Event [] EventSet) {
         this.EventSet = EventSet;
     }
 
     /**
-     * Get 动作列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作列表 
      * @return ActionSet 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Action [] getActionSet() {
         return this.ActionSet;
@@ -159,19 +137,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionSet 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionSet(Action [] ActionSet) {
         this.ActionSet = ActionSet;
     }
 
     /**
-     * Get 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态：0开，-1关 
      * @return Status 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -179,19 +153,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始时间 
      * @return BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginDate() {
         return this.BeginDate;
@@ -199,19 +169,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginDate(String BeginDate) {
         this.BeginDate = BeginDate;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndDate() {
         return this.EndDate;
@@ -219,19 +185,15 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效周期内容,有效字段为x-json后的字段 
      * @return ValidPeriod 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidPeriod() {
         return this.ValidPeriod;
@@ -239,9 +201,7 @@ public class LinkRuleInfo extends AbstractModel {
 
     /**
      * Set 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidPeriod 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidPeriod(String ValidPeriod) {
         this.ValidPeriod = ValidPeriod;

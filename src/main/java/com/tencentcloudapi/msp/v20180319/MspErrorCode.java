@@ -1,9 +1,9 @@
 package com.tencentcloudapi.msp.v20180319;
 public enum MspErrorCode {
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 资源不可用。
+     /*         资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable");
      
     private String value;

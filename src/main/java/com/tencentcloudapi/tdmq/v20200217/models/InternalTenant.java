@@ -151,7 +151,6 @@ public class InternalTenant extends AbstractModel {
 
     /**
     * 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDispatchRateInBytes")
     @Expose
@@ -159,7 +158,6 @@ public class InternalTenant extends AbstractModel {
 
     /**
     * 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPublishRateInBytes")
     @Expose
@@ -167,7 +165,6 @@ public class InternalTenant extends AbstractModel {
 
     /**
     * 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetentionSizeInMB")
     @Expose
@@ -175,7 +172,6 @@ public class InternalTenant extends AbstractModel {
 
     /**
     * public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccessEnabled")
     @Expose
@@ -470,10 +466,8 @@ public class InternalTenant extends AbstractModel {
     }
 
     /**
-     * Get 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间最大消费带宽，byte为单位 
      * @return MaxDispatchRateInBytes 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDispatchRateInBytes() {
         return this.MaxDispatchRateInBytes;
@@ -481,19 +475,15 @@ public class InternalTenant extends AbstractModel {
 
     /**
      * Set 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDispatchRateInBytes 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDispatchRateInBytes(Long MaxDispatchRateInBytes) {
         this.MaxDispatchRateInBytes = MaxDispatchRateInBytes;
     }
 
     /**
-     * Get 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间最大生产带宽，byte为单位 
      * @return MaxPublishRateInBytes 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPublishRateInBytes() {
         return this.MaxPublishRateInBytes;
@@ -501,19 +491,15 @@ public class InternalTenant extends AbstractModel {
 
     /**
      * Set 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPublishRateInBytes 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPublishRateInBytes(Long MaxPublishRateInBytes) {
         this.MaxPublishRateInBytes = MaxPublishRateInBytes;
     }
 
     /**
-     * Get 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息最大保留空间，MB为单位 
      * @return MaxRetentionSizeInMB 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetentionSizeInMB() {
         return this.MaxRetentionSizeInMB;
@@ -521,19 +507,15 @@ public class InternalTenant extends AbstractModel {
 
     /**
      * Set 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxRetentionSizeInMB 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetentionSizeInMB(Long MaxRetentionSizeInMB) {
         this.MaxRetentionSizeInMB = MaxRetentionSizeInMB;
     }
 
     /**
-     * Get public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get public Access Enabled 
      * @return PublicAccessEnabled public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublicAccessEnabled() {
         return this.PublicAccessEnabled;
@@ -541,9 +523,7 @@ public class InternalTenant extends AbstractModel {
 
     /**
      * Set public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicAccessEnabled public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
         this.PublicAccessEnabled = PublicAccessEnabled;

@@ -32,7 +32,6 @@ public class PreviewKafkaRechargeResponse extends AbstractModel {
 
     /**
     * 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogData")
     @Expose
@@ -62,10 +61,8 @@ public class PreviewKafkaRechargeResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志预览结果 
      * @return LogData 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogData() {
         return this.LogData;
@@ -73,9 +70,7 @@ public class PreviewKafkaRechargeResponse extends AbstractModel {
 
     /**
      * Set 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogData 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogData(String LogData) {
         this.LogData = LogData;

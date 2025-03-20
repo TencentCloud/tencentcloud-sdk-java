@@ -46,7 +46,6 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
     * 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -54,7 +53,6 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
     * 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubName")
     @Expose
@@ -62,7 +60,6 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
     * BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageIDList")
     @Expose
@@ -70,7 +67,6 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
     * BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessagesPayload")
     @Expose
@@ -132,10 +128,8 @@ public class ReceiveMessageResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的错误信息，如果为空，说明没有错误 
      * @return ErrorMsg 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -143,19 +137,15 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
      * Set 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回订阅者的名字，用来创建 ack consumer时使用 
      * @return SubName 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubName() {
         return this.SubName;
@@ -163,19 +153,15 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
      * Set 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubName 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubName(String SubName) {
         this.SubName = SubName;
     }
 
     /**
-     * Get BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID 
      * @return MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessageIDList() {
         return this.MessageIDList;
@@ -183,19 +169,15 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
      * Set BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageIDList(String MessageIDList) {
         this.MessageIDList = MessageIDList;
     }
 
     /**
-     * Get BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容 
      * @return MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessagesPayload() {
         return this.MessagesPayload;
@@ -203,9 +185,7 @@ public class ReceiveMessageResponse extends AbstractModel {
 
     /**
      * Set BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessagesPayload(String MessagesPayload) {
         this.MessagesPayload = MessagesPayload;

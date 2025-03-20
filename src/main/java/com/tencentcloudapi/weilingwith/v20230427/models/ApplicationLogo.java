@@ -25,7 +25,6 @@ public class ApplicationLogo extends AbstractModel {
 
     /**
     * logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -33,17 +32,14 @@ public class ApplicationLogo extends AbstractModel {
 
     /**
     * logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get logo图片对应的fileId 
      * @return FileId logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -51,19 +47,15 @@ public class ApplicationLogo extends AbstractModel {
 
     /**
      * Set logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get logo图片地址 
      * @return Url logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -71,9 +63,7 @@ public class ApplicationLogo extends AbstractModel {
 
     /**
      * Set logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

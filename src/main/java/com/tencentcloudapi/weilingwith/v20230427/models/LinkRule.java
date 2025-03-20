@@ -25,7 +25,6 @@ public class LinkRule extends AbstractModel {
 
     /**
     * 关联联动规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class LinkRule extends AbstractModel {
 
     /**
     * 关联联动规则名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 关联联动规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联联动规则id 
      * @return Id 关联联动规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class LinkRule extends AbstractModel {
 
     /**
      * Set 关联联动规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 关联联动规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 关联联动规则名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联联动规则名字 
      * @return Name 关联联动规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class LinkRule extends AbstractModel {
 
     /**
      * Set 关联联动规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 关联联动规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

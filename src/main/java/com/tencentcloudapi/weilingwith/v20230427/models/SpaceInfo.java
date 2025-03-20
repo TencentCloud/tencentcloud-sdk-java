@@ -25,7 +25,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -33,7 +32,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 租户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
     @Expose
@@ -41,7 +39,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 英文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnglishName")
     @Expose
@@ -49,7 +46,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 中文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChineseName")
     @Expose
@@ -57,7 +53,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -65,7 +60,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +67,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCommWorkspace")
     @Expose
@@ -81,7 +74,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityStartTime")
     @Expose
@@ -89,7 +81,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityEndTime")
     @Expose
@@ -97,7 +88,6 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Selected")
     @Expose
@@ -105,17 +95,14 @@ public class SpaceInfo extends AbstractModel {
 
     /**
     * 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSystem")
     @Expose
     private Long IsSystem;
 
     /**
-     * Get 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目空间id 
      * @return WorkspaceId 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkspaceId() {
         return this.WorkspaceId;
@@ -123,19 +110,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(Long WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 租户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户id 
      * @return TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTenantId() {
         return this.TenantId;
@@ -143,19 +126,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(Long TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get 英文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 英文名 
      * @return EnglishName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnglishName() {
         return this.EnglishName;
@@ -163,19 +142,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnglishName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnglishName(String EnglishName) {
         this.EnglishName = EnglishName;
     }
 
     /**
-     * Get 中文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 中文名 
      * @return ChineseName 中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChineseName() {
         return this.ChineseName;
@@ -183,19 +158,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChineseName 中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChineseName(String ChineseName) {
         this.ChineseName = ChineseName;
     }
 
     /**
-     * Get 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目空间描述 
      * @return Description 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -203,19 +174,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目空间状态:0 启用 1 停用 -1 已删除 
      * @return Status 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -223,19 +190,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是公共空间 
      * @return IsCommWorkspace 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCommWorkspace() {
         return this.IsCommWorkspace;
@@ -243,19 +206,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCommWorkspace 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCommWorkspace(Boolean IsCommWorkspace) {
         this.IsCommWorkspace = IsCommWorkspace;
     }
 
     /**
-     * Get 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期开始时间 
      * @return ValidityStartTime 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidityStartTime() {
         return this.ValidityStartTime;
@@ -263,19 +222,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityStartTime 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityStartTime(String ValidityStartTime) {
         this.ValidityStartTime = ValidityStartTime;
     }
 
     /**
-     * Get 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期结束时间 
      * @return ValidityEndTime 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidityEndTime() {
         return this.ValidityEndTime;
@@ -283,19 +238,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityEndTime 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityEndTime(String ValidityEndTime) {
         this.ValidityEndTime = ValidityEndTime;
     }
 
     /**
-     * Get 选中状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选中状态 
      * @return Selected 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSelected() {
         return this.Selected;
@@ -303,19 +254,15 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Selected 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelected(Long Selected) {
         this.Selected = Selected;
     }
 
     /**
-     * Get 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统生成状态 
      * @return IsSystem 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSystem() {
         return this.IsSystem;
@@ -323,9 +270,7 @@ public class SpaceInfo extends AbstractModel {
 
     /**
      * Set 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSystem 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSystem(Long IsSystem) {
         this.IsSystem = IsSystem;

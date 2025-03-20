@@ -27,7 +27,6 @@ public class CollectInfo extends AbstractModel {
     * 采集类型，必填字段。
 <li>0：元数据配置。</li>
 <li>1：指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -37,7 +36,6 @@ public class CollectInfo extends AbstractModel {
     * 指定采集类型的采集配置信息。
 <li>当Type为0时，CollectConfigs不允许为空。</li>
 <li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CollectConfigs")
     @Expose
@@ -46,12 +44,10 @@ public class CollectInfo extends AbstractModel {
     /**
      * Get 采集类型，必填字段。
 <li>0：元数据配置。</li>
-<li>1：指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>1：指定Pod Label。</li> 
      * @return Type 采集类型，必填字段。
 <li>0：元数据配置。</li>
 <li>1：指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -61,11 +57,9 @@ public class CollectInfo extends AbstractModel {
      * Set 采集类型，必填字段。
 <li>0：元数据配置。</li>
 <li>1：指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 采集类型，必填字段。
 <li>0：元数据配置。</li>
 <li>1：指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -74,12 +68,10 @@ public class CollectInfo extends AbstractModel {
     /**
      * Get 指定采集类型的采集配置信息。
 <li>当Type为0时，CollectConfigs不允许为空。</li>
-<li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li> 
      * @return CollectConfigs 指定采集类型的采集配置信息。
 <li>当Type为0时，CollectConfigs不允许为空。</li>
 <li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CollectConfig [] getCollectConfigs() {
         return this.CollectConfigs;
@@ -89,11 +81,9 @@ public class CollectInfo extends AbstractModel {
      * Set 指定采集类型的采集配置信息。
 <li>当Type为0时，CollectConfigs不允许为空。</li>
 <li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CollectConfigs 指定采集类型的采集配置信息。
 <li>当Type为0时，CollectConfigs不允许为空。</li>
 <li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollectConfigs(CollectConfig [] CollectConfigs) {
         this.CollectConfigs = CollectConfigs;

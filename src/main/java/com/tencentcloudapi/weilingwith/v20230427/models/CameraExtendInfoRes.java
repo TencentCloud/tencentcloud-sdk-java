@@ -25,7 +25,6 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
     * 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SaveType")
     @Expose
@@ -34,7 +33,6 @@ public class CameraExtendInfoRes extends AbstractModel {
     /**
     * 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SaveDay")
     @Expose
@@ -42,7 +40,6 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
     * 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveResolution")
     @Expose
@@ -50,17 +47,14 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
     * 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistoryResolution")
     @Expose
     private Long HistoryResolution;
 
     /**
-     * Get 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储方式 (nvr或cosmtav) 
      * @return SaveType 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSaveType() {
         return this.SaveType;
@@ -68,9 +62,7 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
      * Set 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SaveType 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSaveType(String SaveType) {
         this.SaveType = SaveType;
@@ -78,11 +70,9 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
      * Get 云存储天数（save_type是cosmtav时这个参数才有效）
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SaveDay 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSaveDay() {
         return this.SaveDay;
@@ -91,20 +81,16 @@ public class CameraExtendInfoRes extends AbstractModel {
     /**
      * Set 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SaveDay 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSaveDay(Long SaveDay) {
         this.SaveDay = SaveDay;
     }
 
     /**
-     * Get 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实时分辨率 
      * @return LiveResolution 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLiveResolution() {
         return this.LiveResolution;
@@ -112,19 +98,15 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
      * Set 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveResolution 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveResolution(Long LiveResolution) {
         this.LiveResolution = LiveResolution;
     }
 
     /**
-     * Get 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历史分辨率 
      * @return HistoryResolution 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHistoryResolution() {
         return this.HistoryResolution;
@@ -132,9 +114,7 @@ public class CameraExtendInfoRes extends AbstractModel {
 
     /**
      * Set 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistoryResolution 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistoryResolution(Long HistoryResolution) {
         this.HistoryResolution = HistoryResolution;

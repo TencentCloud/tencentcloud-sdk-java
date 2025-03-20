@@ -25,7 +25,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dynamic")
     @Expose
@@ -57,7 +53,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Required")
     @Expose
@@ -65,7 +60,6 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -73,17 +67,14 @@ public class ApiContent extends AbstractModel {
 
     /**
     * 默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-     * Get 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属API的id 
      * @return Id 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -91,19 +82,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 参数名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名称 
      * @return Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -111,19 +98,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数类型 
      * @return Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -131,19 +114,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为动态值 
      * @return Dynamic 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDynamic() {
         return this.Dynamic;
@@ -151,19 +130,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dynamic 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamic(Boolean Dynamic) {
         this.Dynamic = Dynamic;
     }
 
     /**
-     * Get 是否必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否必填 
      * @return Required 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRequired() {
         return this.Required;
@@ -171,19 +146,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Required 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
     }
 
     /**
-     * Get 参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数值 
      * @return Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -191,19 +162,15 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认值 
      * @return DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -211,9 +178,7 @@ public class ApiContent extends AbstractModel {
 
     /**
      * Set 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;

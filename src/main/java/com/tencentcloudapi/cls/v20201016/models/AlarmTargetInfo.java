@@ -83,7 +83,6 @@ public class AlarmTargetInfo extends AbstractModel {
     * 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyntaxRule")
     @Expose
@@ -92,7 +91,6 @@ public class AlarmTargetInfo extends AbstractModel {
     /**
     * 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -229,12 +227,10 @@ public class AlarmTargetInfo extends AbstractModel {
     /**
      * Get 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。 
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a> 
      * @return SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
@@ -244,11 +240,9 @@ public class AlarmTargetInfo extends AbstractModel {
      * Set 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
@@ -256,11 +250,9 @@ public class AlarmTargetInfo extends AbstractModel {
 
     /**
      * Get 主题类型。
-0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。 
+0: 日志主题，1: 指标主题 
      * @return BizType 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBizType() {
         return this.BizType;
@@ -269,10 +261,8 @@ public class AlarmTargetInfo extends AbstractModel {
     /**
      * Set 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;

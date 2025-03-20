@@ -25,7 +25,6 @@ public class DescribeMachineGroupsResponse extends AbstractModel {
 
     /**
     * 机器组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineGroups")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeMachineGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 机器组信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器组信息列表 
      * @return MachineGroups 机器组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineGroupInfo [] getMachineGroups() {
         return this.MachineGroups;
@@ -57,9 +54,7 @@ public class DescribeMachineGroupsResponse extends AbstractModel {
 
     /**
      * Set 机器组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineGroups 机器组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineGroups(MachineGroupInfo [] MachineGroups) {
         this.MachineGroups = MachineGroups;

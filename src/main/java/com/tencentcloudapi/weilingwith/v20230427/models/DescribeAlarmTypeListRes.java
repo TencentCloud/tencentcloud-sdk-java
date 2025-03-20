@@ -25,17 +25,14 @@ public class DescribeAlarmTypeListRes extends AbstractModel {
 
     /**
     * 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmTypeSet")
     @Expose
     private AlarmTypeDetailInfo [] AlarmTypeSet;
 
     /**
-     * Get 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警类型查询列表 
      * @return AlarmTypeSet 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmTypeDetailInfo [] getAlarmTypeSet() {
         return this.AlarmTypeSet;
@@ -43,9 +40,7 @@ public class DescribeAlarmTypeListRes extends AbstractModel {
 
     /**
      * Set 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmTypeSet 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmTypeSet(AlarmTypeDetailInfo [] AlarmTypeSet) {
         this.AlarmTypeSet = AlarmTypeSet;

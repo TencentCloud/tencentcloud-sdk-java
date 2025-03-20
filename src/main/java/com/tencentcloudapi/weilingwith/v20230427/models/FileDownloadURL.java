@@ -26,7 +26,6 @@ public class FileDownloadURL extends AbstractModel {
     /**
     * 下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileURL")
     @Expose
@@ -34,11 +33,9 @@ public class FileDownloadURL extends AbstractModel {
 
     /**
      * Get 下载地址
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return FileURL 下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileURL() {
         return this.FileURL;
@@ -47,10 +44,8 @@ public class FileDownloadURL extends AbstractModel {
     /**
      * Set 下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileURL 下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileURL(String FileURL) {
         this.FileURL = FileURL;

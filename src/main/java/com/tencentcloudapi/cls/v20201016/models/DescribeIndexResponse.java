@@ -56,7 +56,6 @@ public class DescribeIndexResponse extends AbstractModel {
     * 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeInternalFields")
     @Expose
@@ -67,7 +66,6 @@ public class DescribeIndexResponse extends AbstractModel {
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetadataFlag")
     @Expose
@@ -151,12 +149,10 @@ public class DescribeIndexResponse extends AbstractModel {
     /**
      * Get 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
-* true:包含
-注意：此字段可能返回 null，表示取不到有效值。 
+* true:包含 
      * @return IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIncludeInternalFields() {
         return this.IncludeInternalFields;
@@ -166,11 +162,9 @@ public class DescribeIndexResponse extends AbstractModel {
      * Set 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeInternalFields(Boolean IncludeInternalFields) {
         this.IncludeInternalFields = IncludeInternalFields;
@@ -180,13 +174,11 @@ public class DescribeIndexResponse extends AbstractModel {
      * Get 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
-* 2:不包含任何元数据字段
-注意：此字段可能返回 null，表示取不到有效值。 
+* 2:不包含任何元数据字段 
      * @return MetadataFlag 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetadataFlag() {
         return this.MetadataFlag;
@@ -197,12 +189,10 @@ public class DescribeIndexResponse extends AbstractModel {
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetadataFlag 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadataFlag(Long MetadataFlag) {
         this.MetadataFlag = MetadataFlag;

@@ -25,7 +25,6 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 正常数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalSum")
     @Expose
@@ -41,7 +39,6 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 离线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineSum")
     @Expose
@@ -49,7 +46,6 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 故障数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaultSum")
     @Expose
@@ -57,7 +53,6 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 空间id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceCode")
     @Expose
@@ -65,17 +60,14 @@ public class StatLevel extends AbstractModel {
 
     /**
     * 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatDeviceTypeSet")
     @Expose
     private StatDeviceType [] StatDeviceTypeSet;
 
     /**
-     * Get 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 汇总数。在线（正常+故障） + 离线 
      * @return Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -83,19 +75,15 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 正常数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正常数 
      * @return NormalSum 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNormalSum() {
         return this.NormalSum;
@@ -103,19 +91,15 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalSum 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalSum(Long NormalSum) {
         this.NormalSum = NormalSum;
     }
 
     /**
-     * Get 离线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 离线数 
      * @return OfflineSum 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOfflineSum() {
         return this.OfflineSum;
@@ -123,19 +107,15 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineSum 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineSum(Long OfflineSum) {
         this.OfflineSum = OfflineSum;
     }
 
     /**
-     * Get 故障数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 故障数 
      * @return FaultSum 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFaultSum() {
         return this.FaultSum;
@@ -143,19 +123,15 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaultSum 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaultSum(Long FaultSum) {
         this.FaultSum = FaultSum;
     }
 
     /**
-     * Get 空间id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间id 
      * @return SpaceCode 空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceCode() {
         return this.SpaceCode;
@@ -163,19 +139,15 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceCode 空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceCode(String SpaceCode) {
         this.SpaceCode = SpaceCode;
     }
 
     /**
-     * Get 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型统计列表 
      * @return StatDeviceTypeSet 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatDeviceType [] getStatDeviceTypeSet() {
         return this.StatDeviceTypeSet;
@@ -183,9 +155,7 @@ public class StatLevel extends AbstractModel {
 
     /**
      * Set 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatDeviceTypeSet 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatDeviceTypeSet(StatDeviceType [] StatDeviceTypeSet) {
         this.StatDeviceTypeSet = StatDeviceTypeSet;

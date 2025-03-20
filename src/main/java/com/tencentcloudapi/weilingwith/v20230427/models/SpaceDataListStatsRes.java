@@ -25,17 +25,14 @@ public class SpaceDataListStatsRes extends AbstractModel {
 
     /**
     * 楼栋数量与建筑面积列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private SpaceDataStats [] List;
 
     /**
-     * Get 楼栋数量与建筑面积列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 楼栋数量与建筑面积列表 
      * @return List 楼栋数量与建筑面积列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceDataStats [] getList() {
         return this.List;
@@ -43,9 +40,7 @@ public class SpaceDataListStatsRes extends AbstractModel {
 
     /**
      * Set 楼栋数量与建筑面积列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 楼栋数量与建筑面积列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(SpaceDataStats [] List) {
         this.List = List;

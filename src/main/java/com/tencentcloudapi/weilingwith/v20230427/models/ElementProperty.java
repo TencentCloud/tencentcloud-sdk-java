@@ -25,7 +25,6 @@ public class ElementProperty extends AbstractModel {
 
     /**
     * 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ElementProperty extends AbstractModel {
 
     /**
     * 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,17 +39,14 @@ public class ElementProperty extends AbstractModel {
 
     /**
     * 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 属性名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性名称 
      * @return Name 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class ElementProperty extends AbstractModel {
 
     /**
      * Set 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 属性描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性描述 
      * @return Description 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -79,19 +70,15 @@ public class ElementProperty extends AbstractModel {
 
     /**
      * Set 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 属性内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性内容 
      * @return Content 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -99,9 +86,7 @@ public class ElementProperty extends AbstractModel {
 
     /**
      * Set 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;

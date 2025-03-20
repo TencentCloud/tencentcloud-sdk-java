@@ -32,7 +32,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -50,7 +49,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeReceivers")
     @Expose
@@ -58,7 +56,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebCallbacks")
     @Expose
@@ -66,7 +63,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmNoticeId")
     @Expose
@@ -74,7 +70,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeRules")
     @Expose
@@ -83,7 +78,6 @@ public class AlarmNotice extends AbstractModel {
     /**
     * 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmShieldStatus")
     @Expose
@@ -91,7 +85,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JumpDomain")
     @Expose
@@ -107,7 +100,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -115,7 +107,6 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -138,10 +129,8 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知渠道组绑定的标签信息。 
      * @return Tags 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -149,9 +138,7 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -186,10 +173,8 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知模板接收者信息。 
      * @return NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
@@ -197,19 +182,15 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知模板回调信息。 
      * @return WebCallbacks 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
@@ -217,19 +198,15 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebCallbacks 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知模板ID。 
      * @return AlarmNoticeId 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
@@ -237,19 +214,15 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmNoticeId 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知规则。 
      * @return NoticeRules 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
@@ -257,9 +230,7 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeRules 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
@@ -267,11 +238,9 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Get 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。 
+参数值： 1：关闭 2：开启（默认开启） 
      * @return AlarmShieldStatus 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmShieldStatus() {
         return this.AlarmShieldStatus;
@@ -280,20 +249,16 @@ public class AlarmNotice extends AbstractModel {
     /**
      * Set 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmShieldStatus 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmShieldStatus(Long AlarmShieldStatus) {
         this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
     /**
-     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾 
      * @return JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJumpDomain() {
         return this.JumpDomain;
@@ -301,9 +266,7 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJumpDomain(String JumpDomain) {
         this.JumpDomain = JumpDomain;
@@ -330,10 +293,8 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -341,19 +302,15 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近更新时间。 
      * @return UpdateTime 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -361,9 +318,7 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

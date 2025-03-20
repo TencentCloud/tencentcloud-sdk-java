@@ -38,21 +38,21 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * 令人反感的信息的控制参数。
+    * 鉴黄任务控制参数。
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * 令人不安全的信息的控制参数。
+    * 涉暴任务控制参数。
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * 令人不适宜的信息的控制参数。
+    * 涉敏任务控制参数。
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -108,48 +108,48 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 令人反感的信息的控制参数。 
-     * @return PornConfigure 令人反感的信息的控制参数。
+     * Get 鉴黄任务控制参数。 
+     * @return PornConfigure 鉴黄任务控制参数。
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set 令人反感的信息的控制参数。
-     * @param PornConfigure 令人反感的信息的控制参数。
+     * Set 鉴黄任务控制参数。
+     * @param PornConfigure 鉴黄任务控制参数。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get 令人不安全的信息的控制参数。 
-     * @return TerrorismConfigure 令人不安全的信息的控制参数。
+     * Get 涉暴任务控制参数。 
+     * @return TerrorismConfigure 涉暴任务控制参数。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set 令人不安全的信息的控制参数。
-     * @param TerrorismConfigure 令人不安全的信息的控制参数。
+     * Set 涉暴任务控制参数。
+     * @param TerrorismConfigure 涉暴任务控制参数。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get 令人不适宜的信息的控制参数。 
-     * @return PoliticalConfigure 令人不适宜的信息的控制参数。
+     * Get 涉敏任务控制参数。 
+     * @return PoliticalConfigure 涉敏任务控制参数。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set 令人不适宜的信息的控制参数。
-     * @param PoliticalConfigure 令人不适宜的信息的控制参数。
+     * Set 涉敏任务控制参数。
+     * @param PoliticalConfigure 涉敏任务控制参数。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;

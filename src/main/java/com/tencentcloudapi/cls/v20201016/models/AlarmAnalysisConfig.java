@@ -31,7 +31,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -46,7 +45,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -59,8 +57,7 @@ QueryIndex：执行语句序号。value支持  -1：自定义； 1：执行语�
 CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例： "* | select count(*) as count"。
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
-Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。 
+Limit：最大日志条数。 value示例： 5。 
      * @return Key 键。支持以下key：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
 QueryIndex：执行语句序号。value支持  -1：自定义； 1：执行语句1； 2：执行语句2。
@@ -68,7 +65,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -82,7 +78,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 键。支持以下key：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
 QueryIndex：执行语句序号。value支持  -1：自定义； 1：执行语句1； 2：执行语句2。
@@ -90,7 +85,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
@@ -104,8 +98,7 @@ QueryIndex：执行语句序号。value支持  -1：自定义； 1：执行语�
 CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例： "* | select count(*) as count"。
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
-Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。 
+Limit：最大日志条数。 value示例： 5。 
      * @return Value 值。
 键对应值如下：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
@@ -114,7 +107,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -129,7 +121,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值。
 键对应值如下：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
@@ -138,7 +129,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

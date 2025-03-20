@@ -25,17 +25,14 @@ public class DescribeCityWorkspaceListRes extends AbstractModel {
 
     /**
     * 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceSet")
     @Expose
     private WorkspaceInfo [] WorkspaceSet;
 
     /**
-     * Get 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过城市id查询工作空间列表结果 
      * @return WorkspaceSet 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkspaceInfo [] getWorkspaceSet() {
         return this.WorkspaceSet;
@@ -43,9 +40,7 @@ public class DescribeCityWorkspaceListRes extends AbstractModel {
 
     /**
      * Set 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceSet 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceSet(WorkspaceInfo [] WorkspaceSet) {
         this.WorkspaceSet = WorkspaceSet;

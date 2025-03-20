@@ -25,7 +25,6 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
@@ -33,7 +32,6 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementName")
     @Expose
@@ -41,7 +39,6 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -49,7 +46,6 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceCode")
     @Expose
@@ -57,7 +53,6 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentSpaceCode")
     @Expose
@@ -65,17 +60,14 @@ public class SpaceRelation extends AbstractModel {
 
     /**
     * 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
     @Expose
     private SpaceRelation [] Children;
 
     /**
-     * Get 构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件id 
      * @return ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -83,19 +75,15 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get 构件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件名称 
      * @return ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementName() {
         return this.ElementName;
@@ -103,19 +91,15 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get 空间层级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间层级 
      * @return Level 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -123,19 +107,15 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间编码 
      * @return SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceCode() {
         return this.SpaceCode;
@@ -143,19 +123,15 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceCode(String SpaceCode) {
         this.SpaceCode = SpaceCode;
     }
 
     /**
-     * Get 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级空间编码 
      * @return ParentSpaceCode 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentSpaceCode() {
         return this.ParentSpaceCode;
@@ -163,19 +139,15 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentSpaceCode 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentSpaceCode(String ParentSpaceCode) {
         this.ParentSpaceCode = ParentSpaceCode;
     }
 
     /**
-     * Get 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子构件信息 
      * @return Children 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceRelation [] getChildren() {
         return this.Children;
@@ -183,9 +155,7 @@ public class SpaceRelation extends AbstractModel {
 
     /**
      * Set 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Children 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(SpaceRelation [] Children) {
         this.Children = Children;

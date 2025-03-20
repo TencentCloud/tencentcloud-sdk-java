@@ -25,7 +25,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备ID， wid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备类型Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTypeCode")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTypeName")
     @Expose
@@ -57,7 +53,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 产品Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -65,7 +60,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -73,7 +67,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductAbility")
     @Expose
@@ -81,7 +74,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备位置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceInfoSet")
     @Expose
@@ -89,7 +81,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 模型id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelId")
     @Expose
@@ -97,7 +88,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelName")
     @Expose
@@ -105,7 +95,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备标签名，非必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTagSet")
     @Expose
@@ -113,7 +102,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 激活状态（1激活、0未激活）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsActive")
     @Expose
@@ -121,7 +109,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     *  激活时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveTime")
     @Expose
@@ -129,7 +116,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 推流状态（推流中、未推流） 仅摄像机有的状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLive")
     @Expose
@@ -137,7 +123,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备所属父设备id（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentWID")
     @Expose
@@ -145,7 +130,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备所有父设备名称（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentWIDName")
     @Expose
@@ -153,7 +137,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SN")
     @Expose
@@ -161,7 +144,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备点位坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -169,7 +151,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 自定义字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldList")
     @Expose
@@ -177,7 +158,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 分组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupInfo")
     @Expose
@@ -185,7 +165,6 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 通信在/离线状态（online=normal+fault，offline）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceStatus")
     @Expose
@@ -193,17 +172,14 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
     * 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 设备ID， wid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID， wid 
      * @return WID 设备ID， wid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -211,19 +187,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备ID， wid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备ID， wid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -231,19 +203,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备类型Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型Id 
      * @return DeviceTypeCode 设备类型Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceTypeCode() {
         return this.DeviceTypeCode;
@@ -251,19 +219,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备类型Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTypeCode 设备类型Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTypeCode(String DeviceTypeCode) {
         this.DeviceTypeCode = DeviceTypeCode;
     }
 
     /**
-     * Get 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型名称 
      * @return DeviceTypeName 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceTypeName() {
         return this.DeviceTypeName;
@@ -271,19 +235,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTypeName 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTypeName(String DeviceTypeName) {
         this.DeviceTypeName = DeviceTypeName;
     }
 
     /**
-     * Get 产品Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品Id 
      * @return ProductId 产品Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductId() {
         return this.ProductId;
@@ -291,19 +251,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 产品Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -311,19 +267,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。 
      * @return ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductAbility() {
         return this.ProductAbility;
@@ -331,19 +283,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductAbility(Long ProductAbility) {
         this.ProductAbility = ProductAbility;
     }
 
     /**
-     * Get 设备位置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备位置信息 
      * @return SpaceInfoSet 设备位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceSpaceInfo [] getSpaceInfoSet() {
         return this.SpaceInfoSet;
@@ -351,19 +299,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceInfoSet 设备位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceInfoSet(DeviceSpaceInfo [] SpaceInfoSet) {
         this.SpaceInfoSet = SpaceInfoSet;
     }
 
     /**
-     * Get 模型id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型id 
      * @return ModelId 模型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelId() {
         return this.ModelId;
@@ -371,19 +315,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 模型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelId 模型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
 
     /**
-     * Get 模型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型名称 
      * @return ModelName 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelName() {
         return this.ModelName;
@@ -391,19 +331,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelName 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 设备标签名，非必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备标签名，非必填 
      * @return DeviceTagSet 设备标签名，非必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeviceTagSet() {
         return this.DeviceTagSet;
@@ -411,19 +347,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备标签名，非必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTagSet 设备标签名，非必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTagSet(String [] DeviceTagSet) {
         this.DeviceTagSet = DeviceTagSet;
     }
 
     /**
-     * Get 激活状态（1激活、0未激活）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 激活状态（1激活、0未激活） 
      * @return IsActive 激活状态（1激活、0未激活）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsActive() {
         return this.IsActive;
@@ -431,19 +363,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 激活状态（1激活、0未激活）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsActive 激活状态（1激活、0未激活）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsActive(Long IsActive) {
         this.IsActive = IsActive;
     }
 
     /**
-     * Get  激活时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  激活时间 
      * @return ActiveTime  激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActiveTime() {
         return this.ActiveTime;
@@ -451,19 +379,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set  激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveTime  激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveTime(String ActiveTime) {
         this.ActiveTime = ActiveTime;
     }
 
     /**
-     * Get 推流状态（推流中、未推流） 仅摄像机有的状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流状态（推流中、未推流） 仅摄像机有的状态 
      * @return IsLive 推流状态（推流中、未推流） 仅摄像机有的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsLive() {
         return this.IsLive;
@@ -471,19 +395,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 推流状态（推流中、未推流） 仅摄像机有的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsLive 推流状态（推流中、未推流） 仅摄像机有的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLive(Boolean IsLive) {
         this.IsLive = IsLive;
     }
 
     /**
-     * Get 设备所属父设备id（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所属父设备id（子设备才有） 
      * @return ParentWID 设备所属父设备id（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentWID() {
         return this.ParentWID;
@@ -491,19 +411,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备所属父设备id（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentWID 设备所属父设备id（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentWID(String ParentWID) {
         this.ParentWID = ParentWID;
     }
 
     /**
-     * Get 设备所有父设备名称（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所有父设备名称（子设备才有） 
      * @return ParentWIDName 设备所有父设备名称（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentWIDName() {
         return this.ParentWIDName;
@@ -511,19 +427,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备所有父设备名称（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentWIDName 设备所有父设备名称（子设备才有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentWIDName(String ParentWIDName) {
         this.ParentWIDName = ParentWIDName;
     }
 
     /**
-     * Get 序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 序列号 
      * @return SN 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSN() {
         return this.SN;
@@ -531,19 +443,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SN 序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSN(String SN) {
         this.SN = SN;
     }
 
     /**
-     * Get 设备点位坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备点位坐标值 
      * @return Location 设备点位坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceLocation getLocation() {
         return this.Location;
@@ -551,19 +459,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备点位坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 设备点位坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(DeviceLocation Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 自定义字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义字段 
      * @return FieldList 自定义字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomFieldInfo [] getFieldList() {
         return this.FieldList;
@@ -571,19 +475,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 自定义字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldList 自定义字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldList(CustomFieldInfo [] FieldList) {
         this.FieldList = FieldList;
     }
 
     /**
-     * Get 分组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组信息 
      * @return GroupInfo 分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupInfo() {
         return this.GroupInfo;
@@ -591,19 +491,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupInfo 分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupInfo(String GroupInfo) {
         this.GroupInfo = GroupInfo;
     }
 
     /**
-     * Get 通信在/离线状态（online=normal+fault，offline）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通信在/离线状态（online=normal+fault，offline） 
      * @return DeviceStatus 通信在/离线状态（online=normal+fault，offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceStatus() {
         return this.DeviceStatus;
@@ -611,19 +507,15 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 通信在/离线状态（online=normal+fault，offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceStatus 通信在/离线状态（online=normal+fault，offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceStatus(String DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
     }
 
     /**
-     * Get 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备业务状态（normal、fault、offline） 
      * @return Status 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -631,9 +523,7 @@ public class DeviceDataInfo extends AbstractModel {
 
     /**
      * Set 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -25,7 +25,6 @@ public class SendMessagesResponse extends AbstractModel {
 
     /**
     * 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageId")
     @Expose
@@ -33,7 +32,6 @@ public class SendMessagesResponse extends AbstractModel {
 
     /**
     * 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -47,10 +45,8 @@ public class SendMessagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息的messageID, 是全局唯一的，用来标识消息的元数据信息 
      * @return MessageId 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessageId() {
         return this.MessageId;
@@ -58,19 +54,15 @@ public class SendMessagesResponse extends AbstractModel {
 
     /**
      * Set 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageId 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;
     }
 
     /**
-     * Get 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的错误消息，如果返回为 “”，说明没有错误 
      * @return ErrorMsg 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -78,9 +70,7 @@ public class SendMessagesResponse extends AbstractModel {
 
     /**
      * Set 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

@@ -25,7 +25,6 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
     * 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
     * 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
@@ -41,17 +39,14 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
     * 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤字段 
      * @return Key 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -59,19 +54,15 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
      * Set 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤规则，0:等于，1:字段存在，2:字段不存在 
      * @return Rule 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRule() {
         return this.Rule;
@@ -79,19 +70,15 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
      * Set 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(Long Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 过滤值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤值 
      * @return Value 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -99,9 +86,7 @@ public class AdvanceFilterRuleInfo extends AbstractModel {
 
     /**
      * Set 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -25,7 +25,6 @@ public class BillComponent extends AbstractModel {
 
     /**
     * 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
     @Expose
@@ -33,17 +32,14 @@ public class BillComponent extends AbstractModel {
 
     /**
     * 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCodeName")
     @Expose
     private String ComponentCodeName;
 
     /**
-     * Get 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型编码 
      * @return ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
         return this.ComponentCode;
@@ -51,19 +47,15 @@ public class BillComponent extends AbstractModel {
 
     /**
      * Set 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型：用户购买的产品或服务对应的组件大类 
      * @return ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
@@ -71,9 +63,7 @@ public class BillComponent extends AbstractModel {
 
     /**
      * Set 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;

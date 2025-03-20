@@ -25,7 +25,6 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
     * 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -40,7 +39,6 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
     * 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -48,7 +46,6 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
     * 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -69,10 +66,8 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配到的存储桶下的某个文件的前几行数据 
      * @return Data 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getData() {
         return this.Data;
@@ -80,9 +75,7 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
      * Set 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String [] Data) {
         this.Data = Data;
@@ -105,10 +98,8 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前预览文件路径 
      * @return Path 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -116,19 +107,15 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
      * Set 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预览获取数据失败原因 
      * @return Msg 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -136,9 +123,7 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
      * Set 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

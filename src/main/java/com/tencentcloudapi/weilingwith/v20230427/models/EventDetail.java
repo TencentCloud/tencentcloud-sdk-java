@@ -25,7 +25,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 事件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
     @Expose
@@ -49,7 +46,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerCondition")
     @Expose
@@ -57,7 +53,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 有效期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidPeriod")
     @Expose
@@ -65,7 +60,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkRuleSet")
     @Expose
@@ -73,7 +67,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +74,6 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -89,17 +81,14 @@ public class EventDetail extends AbstractModel {
 
     /**
     * 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
     private String WID;
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -107,19 +96,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 事件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件名 
      * @return Name 事件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -127,19 +112,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 事件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 事件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件触发类型 
      * @return TriggerType 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerType() {
         return this.TriggerType;
@@ -147,19 +128,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerType 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件触发条件，返回为x-json后的字段 
      * @return TriggerCondition 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerCondition() {
         return this.TriggerCondition;
@@ -167,19 +144,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerCondition 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerCondition(String TriggerCondition) {
         this.TriggerCondition = TriggerCondition;
     }
 
     /**
-     * Get 有效期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期 
      * @return ValidPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidPeriod() {
         return this.ValidPeriod;
@@ -187,19 +160,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidPeriod(String ValidPeriod) {
         this.ValidPeriod = ValidPeriod;
     }
 
     /**
-     * Get 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联规则列表 
      * @return LinkRuleSet 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkRule [] getLinkRuleSet() {
         return this.LinkRuleSet;
@@ -207,19 +176,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinkRuleSet 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkRuleSet(LinkRule [] LinkRuleSet) {
         this.LinkRuleSet = LinkRuleSet;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -227,19 +192,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型，当触发类型为deviceType时返回 
      * @return DeviceType 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -247,19 +208,15 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备的wid，当触发类型是device返回 
      * @return WID 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -267,9 +224,7 @@ public class EventDetail extends AbstractModel {
 
     /**
      * Set 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;

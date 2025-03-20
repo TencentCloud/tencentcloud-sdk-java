@@ -25,7 +25,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 动作id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -49,7 +46,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionDesc")
     @Expose
@@ -57,7 +53,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgType")
     @Expose
@@ -65,7 +60,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgContent")
     @Expose
@@ -73,7 +67,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +74,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -89,7 +81,6 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkRuleSet")
     @Expose
@@ -97,17 +88,14 @@ public class ActionDetail extends AbstractModel {
 
     /**
     * 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SinkConfig")
     @Expose
     private String SinkConfig;
 
     /**
-     * Get 动作id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作id 
      * @return Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -115,19 +103,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 动作名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作名称 
      * @return Name 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -135,19 +119,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 动作类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作类型 
      * @return ActionType 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -155,19 +135,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 动作说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作说明 
      * @return ActionDesc 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionDesc() {
         return this.ActionDesc;
@@ -175,19 +151,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionDesc 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionDesc(String ActionDesc) {
         this.ActionDesc = ActionDesc;
     }
 
     /**
-     * Get 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息类型，orgin/custom/model 
      * @return MsgType 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgType() {
         return this.MsgType;
@@ -195,19 +167,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgType 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgType(String MsgType) {
         this.MsgType = MsgType;
     }
 
     /**
-     * Get 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息内容,有效值为x-json:后的字段 
      * @return MsgContent 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgContent() {
         return this.MsgContent;
@@ -215,19 +183,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgContent 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgContent(String MsgContent) {
         this.MsgContent = MsgContent;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -235,19 +199,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备唯一标识 
      * @return WID 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -255,19 +215,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联故障列表 
      * @return LinkRuleSet 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkRule [] getLinkRuleSet() {
         return this.LinkRuleSet;
@@ -275,19 +231,15 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinkRuleSet 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkRuleSet(LinkRule [] LinkRuleSet) {
         this.LinkRuleSet = LinkRuleSet;
     }
 
     /**
-     * Get 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作下沉配置,有效值为x-json:后的字段 
      * @return SinkConfig 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSinkConfig() {
         return this.SinkConfig;
@@ -295,9 +247,7 @@ public class ActionDetail extends AbstractModel {
 
     /**
      * Set 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SinkConfig 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSinkConfig(String SinkConfig) {
         this.SinkConfig = SinkConfig;

@@ -25,17 +25,14 @@ public class DescribeDeviceGroupListRes extends AbstractModel {
 
     /**
     * 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private DescribeGroupInfo [] List;
 
     /**
-     * Get 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备分组list 
      * @return List 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeGroupInfo [] getList() {
         return this.List;
@@ -43,9 +40,7 @@ public class DescribeDeviceGroupListRes extends AbstractModel {
 
     /**
      * Set 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(DescribeGroupInfo [] List) {
         this.List = List;

@@ -46,7 +46,6 @@ public class CreateTopicResponse extends AbstractModel {
 
     /**
     * 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -58,7 +57,6 @@ public class CreateTopicResponse extends AbstractModel {
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicType")
     @Expose
@@ -120,10 +118,8 @@ public class CreateTopicResponse extends AbstractModel {
     }
 
     /**
-     * Get 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注，128字符以内。 
      * @return Remark 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -131,9 +127,7 @@ public class CreateTopicResponse extends AbstractModel {
 
     /**
      * Set 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -144,14 +138,12 @@ public class CreateTopicResponse extends AbstractModel {
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
-4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。 
+4 ：死信队列； 
      * @return TopicType 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicType() {
         return this.TopicType;
@@ -163,13 +155,11 @@ public class CreateTopicResponse extends AbstractModel {
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicType 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;

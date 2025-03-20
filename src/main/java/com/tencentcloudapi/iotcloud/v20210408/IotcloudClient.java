@@ -281,7 +281,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
+     *本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
      * @param req DescribeDevicesRequest
      * @return DescribeDevicesResponse
      * @throws TencentCloudSDKException
@@ -468,7 +468,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeProducts）用于列出产品列表。 
+     *本接口（DescribeProducts）用于列出产品列表。
      * @param req DescribeProductsRequest
      * @return DescribeProductsResponse
      * @throws TencentCloudSDKException
@@ -534,7 +534,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（EnableTopicRule）用于启用规则 
+     *本接口（EnableTopicRule）用于启用规则
      * @param req EnableTopicRuleRequest
      * @return EnableTopicRuleResponse
      * @throws TencentCloudSDKException
@@ -589,7 +589,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（ListLog）用于查看日志信息 
+     *本接口（ListLog）用于查看日志信息
      * @param req ListLogRequest
      * @return ListLogResponse
      * @throws TencentCloudSDKException

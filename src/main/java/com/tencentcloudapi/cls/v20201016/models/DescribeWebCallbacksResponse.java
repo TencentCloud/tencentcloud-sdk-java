@@ -25,7 +25,6 @@ public class DescribeWebCallbacksResponse extends AbstractModel {
 
     /**
     * 告警渠道回调配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebCallbacks")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeWebCallbacksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警渠道回调配置列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警渠道回调配置列表。 
      * @return WebCallbacks 告警渠道回调配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebCallbackInfo [] getWebCallbacks() {
         return this.WebCallbacks;
@@ -57,9 +54,7 @@ public class DescribeWebCallbacksResponse extends AbstractModel {
 
     /**
      * Set 告警渠道回调配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebCallbacks 告警渠道回调配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebCallbacks(WebCallbackInfo [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;

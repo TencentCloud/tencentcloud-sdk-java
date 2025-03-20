@@ -60,6 +60,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
     * 标签。
     */
     @SerializedName("Tags")
@@ -163,6 +170,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
+     * Get 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。 
+     * @return Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     * @param Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
      * Get 标签。 
      * @return Tags 标签。
      */
@@ -240,6 +263,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
         if (source.Tags != null) {
             this.Tags = new TagInfo[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -261,6 +287,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
 

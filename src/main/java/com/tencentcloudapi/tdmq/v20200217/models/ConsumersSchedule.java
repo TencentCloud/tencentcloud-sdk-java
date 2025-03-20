@@ -25,7 +25,6 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
     * 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partitions")
     @Expose
@@ -33,7 +32,6 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
     * 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberOfEntries")
     @Expose
@@ -41,7 +39,6 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
     * 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgBacklog")
     @Expose
@@ -63,17 +60,14 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
     * 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateExpired")
     @Expose
     private String MsgRateExpired;
 
     /**
-     * Get 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前分区id。 
      * @return Partitions 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitions() {
         return this.Partitions;
@@ -81,19 +75,15 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
      * Set 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Partitions 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息数量。 
      * @return NumberOfEntries 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumberOfEntries() {
         return this.NumberOfEntries;
@@ -101,19 +91,15 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
      * Set 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumberOfEntries 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberOfEntries(Long NumberOfEntries) {
         this.NumberOfEntries = NumberOfEntries;
     }
 
     /**
-     * Get 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息积压数量。 
      * @return MsgBacklog 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgBacklog() {
         return this.MsgBacklog;
@@ -121,9 +107,7 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
      * Set 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgBacklog 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgBacklog(Long MsgBacklog) {
         this.MsgBacklog = MsgBacklog;
@@ -162,10 +146,8 @@ public class ConsumersSchedule extends AbstractModel {
     }
 
     /**
-     * Get 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超时丢弃比例。 
      * @return MsgRateExpired 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgRateExpired() {
         return this.MsgRateExpired;
@@ -173,9 +155,7 @@ public class ConsumersSchedule extends AbstractModel {
 
     /**
      * Set 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateExpired 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateExpired(String MsgRateExpired) {
         this.MsgRateExpired = MsgRateExpired;

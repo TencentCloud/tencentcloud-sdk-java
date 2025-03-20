@@ -93,7 +93,6 @@ public class SearchLogResponse extends AbstractModel {
 
     /**
     * 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SamplingRate")
     @Expose
@@ -291,10 +290,8 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本次统计分析使用的采样率 
      * @return SamplingRate 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSamplingRate() {
         return this.SamplingRate;
@@ -302,9 +299,7 @@ public class SearchLogResponse extends AbstractModel {
 
     /**
      * Set 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SamplingRate 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSamplingRate(Float SamplingRate) {
         this.SamplingRate = SamplingRate;

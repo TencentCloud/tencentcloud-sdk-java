@@ -74,7 +74,6 @@ GZJGZY: 公证机构执业证。
 
     /**
     * 原始照片地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginImgUrl")
     @Expose
@@ -82,7 +81,6 @@ GZJGZY: 公证机构执业证。
 
     /**
     * 联系人证件号码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistrantCertificateCode")
     @Expose
@@ -118,7 +116,6 @@ GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistrantCertificateType")
     @Expose
@@ -126,7 +123,6 @@ GZJGZY: 公证机构执业证。
 
     /**
     * 联系人证件照片地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistrantImgUrl")
     @Expose
@@ -293,10 +289,8 @@ GZJGZY: 公证机构执业证。
     }
 
     /**
-     * Get 原始照片地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始照片地址 
      * @return OriginImgUrl 原始照片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginImgUrl() {
         return this.OriginImgUrl;
@@ -304,19 +298,15 @@ GZJGZY: 公证机构执业证。
 
     /**
      * Set 原始照片地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginImgUrl 原始照片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginImgUrl(String OriginImgUrl) {
         this.OriginImgUrl = OriginImgUrl;
     }
 
     /**
-     * Get 联系人证件号码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联系人证件号码。 
      * @return RegistrantCertificateCode 联系人证件号码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistrantCertificateCode() {
         return this.RegistrantCertificateCode;
@@ -324,9 +314,7 @@ GZJGZY: 公证机构执业证。
 
     /**
      * Set 联系人证件号码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistrantCertificateCode 联系人证件号码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistrantCertificateCode(String RegistrantCertificateCode) {
         this.RegistrantCertificateCode = RegistrantCertificateCode;
@@ -361,8 +349,7 @@ YLJGXKZ: 医疗机构执业许可证。
 GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
-GZJGZY: 公证机构执业证。
-注意：此字段可能返回 null，表示取不到有效值。 
+GZJGZY: 公证机构执业证。 
      * @return RegistrantCertificateType 联系人证件类型。
 SFZ: 身份证。
 HZ: 护照。
@@ -392,7 +379,6 @@ GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistrantCertificateType() {
         return this.RegistrantCertificateType;
@@ -428,7 +414,6 @@ GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistrantCertificateType 联系人证件类型。
 SFZ: 身份证。
 HZ: 护照。
@@ -458,17 +443,14 @@ GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistrantCertificateType(String RegistrantCertificateType) {
         this.RegistrantCertificateType = RegistrantCertificateType;
     }
 
     /**
-     * Get 联系人证件照片地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联系人证件照片地址。 
      * @return RegistrantImgUrl 联系人证件照片地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistrantImgUrl() {
         return this.RegistrantImgUrl;
@@ -476,9 +458,7 @@ GZJGZY: 公证机构执业证。
 
     /**
      * Set 联系人证件照片地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegistrantImgUrl 联系人证件照片地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistrantImgUrl(String RegistrantImgUrl) {
         this.RegistrantImgUrl = RegistrantImgUrl;

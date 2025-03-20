@@ -25,7 +25,6 @@ public class SsoDepartmentsResult extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,17 +32,14 @@ public class SsoDepartmentsResult extends AbstractModel {
 
     /**
     * 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Departments")
     @Expose
     private SsoDepartment [] Departments;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -51,19 +47,15 @@ public class SsoDepartmentsResult extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 部门列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门列表 
      * @return Departments 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SsoDepartment [] getDepartments() {
         return this.Departments;
@@ -71,9 +63,7 @@ public class SsoDepartmentsResult extends AbstractModel {
 
     /**
      * Set 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Departments 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartments(SsoDepartment [] Departments) {
         this.Departments = Departments;

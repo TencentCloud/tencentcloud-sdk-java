@@ -68,7 +68,6 @@ public class ContainerFileInfo extends AbstractModel {
 
     /**
     * 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkLoad")
     @Expose
@@ -76,7 +75,6 @@ public class ContainerFileInfo extends AbstractModel {
 
     /**
     * 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeNamespace")
     @Expose
@@ -199,10 +197,8 @@ public class ContainerFileInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作负载信息 
      * @return WorkLoad 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContainerWorkLoadInfo getWorkLoad() {
         return this.WorkLoad;
@@ -210,19 +206,15 @@ public class ContainerFileInfo extends AbstractModel {
 
     /**
      * Set 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkLoad 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkLoad(ContainerWorkLoadInfo WorkLoad) {
         this.WorkLoad = WorkLoad;
     }
 
     /**
-     * Get 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要排除的namespace可以多个，用分隔号分割,例如A,B 
      * @return ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExcludeNamespace() {
         return this.ExcludeNamespace;
@@ -230,9 +222,7 @@ public class ContainerFileInfo extends AbstractModel {
 
     /**
      * Set 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeNamespace(String ExcludeNamespace) {
         this.ExcludeNamespace = ExcludeNamespace;

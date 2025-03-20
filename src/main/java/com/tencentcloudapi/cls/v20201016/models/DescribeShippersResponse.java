@@ -25,7 +25,6 @@ public class DescribeShippersResponse extends AbstractModel {
 
     /**
     * 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Shippers")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeShippersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递规则列表 
      * @return Shippers 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShipperInfo [] getShippers() {
         return this.Shippers;
@@ -57,9 +54,7 @@ public class DescribeShippersResponse extends AbstractModel {
 
     /**
      * Set 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Shippers 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShippers(ShipperInfo [] Shippers) {
         this.Shippers = Shippers;

@@ -25,7 +25,6 @@ public class FileUploadURL extends AbstractModel {
 
     /**
     * 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadURL")
     @Expose
@@ -33,7 +32,6 @@ public class FileUploadURL extends AbstractModel {
 
     /**
     * 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -41,17 +39,14 @@ public class FileUploadURL extends AbstractModel {
 
     /**
     * 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadURL")
     @Expose
     private String DownloadURL;
 
     /**
-     * Get 上传地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传地址 
      * @return UploadURL 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadURL() {
         return this.UploadURL;
@@ -59,19 +54,15 @@ public class FileUploadURL extends AbstractModel {
 
     /**
      * Set 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadURL 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadURL(String UploadURL) {
         this.UploadURL = UploadURL;
     }
 
     /**
-     * Get 文件Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件Id 
      * @return FileId 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -79,19 +70,15 @@ public class FileUploadURL extends AbstractModel {
 
     /**
      * Set 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载地址 
      * @return DownloadURL 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadURL() {
         return this.DownloadURL;
@@ -99,9 +86,7 @@ public class FileUploadURL extends AbstractModel {
 
     /**
      * Set 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadURL 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadURL(String DownloadURL) {
         this.DownloadURL = DownloadURL;

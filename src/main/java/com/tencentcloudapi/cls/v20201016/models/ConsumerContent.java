@@ -26,7 +26,6 @@ public class ConsumerContent extends AbstractModel {
     /**
     * 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTag")
     @Expose
@@ -34,7 +33,6 @@ public class ConsumerContent extends AbstractModel {
 
     /**
     * 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaFields")
     @Expose
@@ -51,7 +49,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagJsonNotTiled")
     @Expose
@@ -59,7 +56,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
     /**
     * 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimestampAccuracy")
     @Expose
@@ -74,7 +70,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonType")
     @Expose
@@ -82,11 +77,9 @@ JsonType为1：转义。示例：
 
     /**
      * Get 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+当EnableTag为true时，表示投递TAG元信息。 
      * @return EnableTag 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableTag() {
         return this.EnableTag;
@@ -95,20 +88,16 @@ JsonType为1：转义。示例：
     /**
      * Set 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableTag 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTag(Boolean EnableTag) {
         this.EnableTag = EnableTag;
     }
 
     /**
-     * Get 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_ 
      * @return MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMetaFields() {
         return this.MetaFields;
@@ -116,9 +105,7 @@ JsonType为1：转义。示例：
 
     /**
      * Set 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;
@@ -134,8 +121,7 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。 
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}` 
      * @return TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
 TagJsonNotTiled用于标识tag信息是否json平铺。
 
@@ -146,7 +132,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTagJsonNotTiled() {
         return this.TagJsonNotTiled;
@@ -163,7 +148,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
 TagJsonNotTiled用于标识tag信息是否json平铺。
 
@@ -174,17 +158,14 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
         this.TagJsonNotTiled = TagJsonNotTiled;
     }
 
     /**
-     * Get 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。 
      * @return TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestampAccuracy() {
         return this.TimestampAccuracy;
@@ -192,9 +173,7 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
     /**
      * Set 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestampAccuracy(Long TimestampAccuracy) {
         this.TimestampAccuracy = TimestampAccuracy;
@@ -208,8 +187,7 @@ JsonType为0：和原始日志一致，不转义。示例：
 
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。 
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}` 
      * @return JsonType 投递Json格式。
 JsonType为0：和原始日志一致，不转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
@@ -218,7 +196,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJsonType() {
         return this.JsonType;
@@ -233,7 +210,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonType 投递Json格式。
 JsonType为0：和原始日志一致，不转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
@@ -242,7 +218,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

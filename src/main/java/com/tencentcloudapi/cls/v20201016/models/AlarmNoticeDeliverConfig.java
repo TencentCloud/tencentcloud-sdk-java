@@ -32,7 +32,6 @@ public class AlarmNoticeDeliverConfig extends AbstractModel {
 
     /**
     * 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -55,10 +54,8 @@ public class AlarmNoticeDeliverConfig extends AbstractModel {
     }
 
     /**
-     * Get 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递失败原因。 
      * @return ErrMsg 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -66,9 +63,7 @@ public class AlarmNoticeDeliverConfig extends AbstractModel {
 
     /**
      * Set 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

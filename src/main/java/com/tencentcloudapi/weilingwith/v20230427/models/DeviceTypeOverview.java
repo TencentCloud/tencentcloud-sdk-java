@@ -25,7 +25,6 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 设备类型值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 正常数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Normal")
     @Expose
@@ -57,7 +53,6 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 离线数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offline")
     @Expose
@@ -65,17 +60,14 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
     * 故障数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fault")
     @Expose
     private Long Fault;
 
     /**
-     * Get 设备类型值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型值 
      * @return DeviceType 设备类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -83,19 +75,15 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 设备类型值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型名称 
      * @return Name 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -103,19 +91,15 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 汇总数。在线（正常+故障） + 离线 
      * @return Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -123,19 +107,15 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 正常数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正常数 
      * @return Normal 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNormal() {
         return this.Normal;
@@ -143,19 +123,15 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Normal 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormal(Long Normal) {
         this.Normal = Normal;
     }
 
     /**
-     * Get 离线数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 离线数 
      * @return Offline 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffline() {
         return this.Offline;
@@ -163,19 +139,15 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offline 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffline(Long Offline) {
         this.Offline = Offline;
     }
 
     /**
-     * Get 故障数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 故障数 
      * @return Fault 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFault() {
         return this.Fault;
@@ -183,9 +155,7 @@ public class DeviceTypeOverview extends AbstractModel {
 
     /**
      * Set 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fault 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFault(Long Fault) {
         this.Fault = Fault;

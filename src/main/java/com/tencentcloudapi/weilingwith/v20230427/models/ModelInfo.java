@@ -25,7 +25,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -33,7 +32,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelName")
     @Expose
@@ -41,7 +39,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 物模型id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelId")
     @Expose
@@ -49,7 +46,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 关联产品信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedProduct")
     @Expose
@@ -57,7 +53,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 设备类型名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTypeName")
     @Expose
@@ -65,7 +60,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 设备类型id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -73,7 +67,6 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 物模型类型，产品模型/标准模型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelType")
     @Expose
@@ -81,17 +74,14 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * 模型参数内容,有效字段为"x-json:"后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelParams")
     @Expose
     private String ModelParams;
 
     /**
-     * Get 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间id 
      * @return WorkspaceId 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkspaceId() {
         return this.WorkspaceId;
@@ -99,19 +89,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(Long WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 模型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型名称 
      * @return ModelName 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelName() {
         return this.ModelName;
@@ -119,19 +105,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelName 模型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 物模型id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物模型id 
      * @return ModelId 物模型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelId() {
         return this.ModelId;
@@ -139,19 +121,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 物模型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelId 物模型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
 
     /**
-     * Get 关联产品信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联产品信息 
      * @return RelatedProduct 关联产品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RelatedProduct [] getRelatedProduct() {
         return this.RelatedProduct;
@@ -159,19 +137,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 关联产品信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelatedProduct 关联产品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedProduct(RelatedProduct [] RelatedProduct) {
         this.RelatedProduct = RelatedProduct;
     }
 
     /**
-     * Get 设备类型名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型名 
      * @return DeviceTypeName 设备类型名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceTypeName() {
         return this.DeviceTypeName;
@@ -179,19 +153,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 设备类型名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTypeName 设备类型名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTypeName(String DeviceTypeName) {
         this.DeviceTypeName = DeviceTypeName;
     }
 
     /**
-     * Get 设备类型id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型id 
      * @return DeviceType 设备类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -199,19 +169,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 设备类型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 物模型类型，产品模型/标准模型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物模型类型，产品模型/标准模型 
      * @return ModelType 物模型类型，产品模型/标准模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModelType() {
         return this.ModelType;
@@ -219,19 +185,15 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 物模型类型，产品模型/标准模型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelType 物模型类型，产品模型/标准模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelType(Long ModelType) {
         this.ModelType = ModelType;
     }
 
     /**
-     * Get 模型参数内容,有效字段为"x-json:"后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型参数内容,有效字段为"x-json:"后的字段 
      * @return ModelParams 模型参数内容,有效字段为"x-json:"后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelParams() {
         return this.ModelParams;
@@ -239,9 +201,7 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set 模型参数内容,有效字段为"x-json:"后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelParams 模型参数内容,有效字段为"x-json:"后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelParams(String ModelParams) {
         this.ModelParams = ModelParams;

@@ -1,15 +1,15 @@
 package com.tencentcloudapi.partners.v20180321;
 public enum PartnersErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 未授权操作。
+     /*         未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

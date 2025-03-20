@@ -1,12 +1,12 @@
 package com.tencentcloudapi.acp.v20220105;
 public enum AcpErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 操作不支持。
+     /*         操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

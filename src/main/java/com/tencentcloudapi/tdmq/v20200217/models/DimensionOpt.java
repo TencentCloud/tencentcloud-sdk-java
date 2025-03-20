@@ -23,6 +23,62 @@ import java.util.HashMap;
 
 public class DimensionOpt extends AbstractModel {
 
+    /**
+    * 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
     public DimensionOpt() {
     }
 
@@ -31,6 +87,12 @@ public class DimensionOpt extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DimensionOpt(DimensionOpt source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
     }
 
 
@@ -38,6 +100,8 @@ public class DimensionOpt extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

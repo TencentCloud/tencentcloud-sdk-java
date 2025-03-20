@@ -25,7 +25,6 @@ public class ApiInfoList extends AbstractModel {
 
     /**
     * API列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiInfo")
     @Expose
@@ -33,17 +32,14 @@ public class ApiInfoList extends AbstractModel {
 
     /**
     * 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get API列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API列表 
      * @return ApiInfo API列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiInfo [] getApiInfo() {
         return this.ApiInfo;
@@ -51,19 +47,15 @@ public class ApiInfoList extends AbstractModel {
 
     /**
      * Set API列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiInfo API列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiInfo(ApiInfo [] ApiInfo) {
         this.ApiInfo = ApiInfo;
     }
 
     /**
-     * Get 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据总条数 
      * @return TotalCount 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class ApiInfoList extends AbstractModel {
 
     /**
      * Set 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

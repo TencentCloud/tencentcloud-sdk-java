@@ -25,7 +25,6 @@ public class ElementProfileTreeNode extends AbstractModel {
 
     /**
     * 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementProfile")
     @Expose
@@ -33,17 +32,14 @@ public class ElementProfileTreeNode extends AbstractModel {
 
     /**
     * 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
     @Expose
     private ElementProfileTreeNode [] Children;
 
     /**
-     * Get 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件概要信息 
      * @return ElementProfile 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementProfile getElementProfile() {
         return this.ElementProfile;
@@ -51,19 +47,15 @@ public class ElementProfileTreeNode extends AbstractModel {
 
     /**
      * Set 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementProfile 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementProfile(ElementProfile ElementProfile) {
         this.ElementProfile = ElementProfile;
     }
 
     /**
-     * Get 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子节点信息 
      * @return Children 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementProfileTreeNode [] getChildren() {
         return this.Children;
@@ -71,9 +63,7 @@ public class ElementProfileTreeNode extends AbstractModel {
 
     /**
      * Set 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Children 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(ElementProfileTreeNode [] Children) {
         this.Children = Children;

@@ -25,7 +25,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 联动id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -41,7 +39,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleDesc")
     @Expose
@@ -49,7 +46,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidType")
     @Expose
@@ -57,7 +53,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidPeriod")
     @Expose
@@ -65,7 +60,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginDate")
     @Expose
@@ -73,7 +67,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndDate")
     @Expose
@@ -81,7 +74,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -89,7 +81,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventRule")
     @Expose
@@ -97,7 +88,6 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventInfoSet")
     @Expose
@@ -105,17 +95,14 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
     * 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionInfoSet")
     @Expose
     private ActionObj [] ActionInfoSet;
 
     /**
-     * Get 联动id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动id 
      * @return RuleId 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -123,19 +110,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 联动名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动名称 
      * @return RuleName 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -143,19 +126,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 联动说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联动说明 
      * @return RuleDesc 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleDesc() {
         return this.RuleDesc;
@@ -163,19 +142,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleDesc 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleDesc(String RuleDesc) {
         this.RuleDesc = RuleDesc;
     }
 
     /**
-     * Get 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 全天有效，0：固定时间段有效 
      * @return ValidType 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidType() {
         return this.ValidType;
@@ -183,19 +158,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidType 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidType(Long ValidType) {
         this.ValidType = ValidType;
     }
 
     /**
-     * Get 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期，json字符串（全天有效时为空） 
      * @return ValidPeriod 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidPeriod() {
         return this.ValidPeriod;
@@ -203,19 +174,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidPeriod 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidPeriod(String ValidPeriod) {
         this.ValidPeriod = ValidPeriod;
     }
 
     /**
-     * Get 起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始时间 
      * @return BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginDate() {
         return this.BeginDate;
@@ -223,19 +190,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginDate(String BeginDate) {
         this.BeginDate = BeginDate;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndDate() {
         return this.EndDate;
@@ -243,19 +206,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用状态。1-启用，0-停用 
      * @return Status 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -263,19 +222,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发规则，事件的组合 
      * @return EventRule 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventRule() {
         return this.EventRule;
@@ -283,19 +238,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventRule 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventRule(String EventRule) {
         this.EventRule = EventRule;
     }
 
     /**
-     * Get 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件对象集合 
      * @return EventInfoSet 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventObj [] getEventInfoSet() {
         return this.EventInfoSet;
@@ -303,19 +254,15 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventInfoSet 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventInfoSet(EventObj [] EventInfoSet) {
         this.EventInfoSet = EventInfoSet;
     }
 
     /**
-     * Get 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作对象集合 
      * @return ActionInfoSet 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ActionObj [] getActionInfoSet() {
         return this.ActionInfoSet;
@@ -323,9 +270,7 @@ public class RuleDetailRes extends AbstractModel {
 
     /**
      * Set 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionInfoSet 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionInfoSet(ActionObj [] ActionInfoSet) {
         this.ActionInfoSet = ActionInfoSet;

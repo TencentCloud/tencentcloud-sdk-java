@@ -106,6 +106,14 @@ public class WorkflowTask extends AbstractModel {
     private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
 
     /**
+    * 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartSubtitlesTaskResult")
+    @Expose
+    private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
+
+    /**
      * Get 媒体处理任务 ID。 
      * @return TaskId 媒体处理任务 ID。
      */
@@ -301,6 +309,26 @@ public class WorkflowTask extends AbstractModel {
         this.AiQualityControlTaskResult = AiQualityControlTaskResult;
     }
 
+    /**
+     * Get 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartSubtitlesTaskResult 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartSubtitlesResult [] getSmartSubtitlesTaskResult() {
+        return this.SmartSubtitlesTaskResult;
+    }
+
+    /**
+     * Set 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartSubtitlesTaskResult 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartSubtitlesTaskResult(SmartSubtitlesResult [] SmartSubtitlesTaskResult) {
+        this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -354,6 +382,12 @@ public class WorkflowTask extends AbstractModel {
         if (source.AiQualityControlTaskResult != null) {
             this.AiQualityControlTaskResult = new ScheduleQualityControlTaskResult(source.AiQualityControlTaskResult);
         }
+        if (source.SmartSubtitlesTaskResult != null) {
+            this.SmartSubtitlesTaskResult = new SmartSubtitlesResult[source.SmartSubtitlesTaskResult.length];
+            for (int i = 0; i < source.SmartSubtitlesTaskResult.length; i++) {
+                this.SmartSubtitlesTaskResult[i] = new SmartSubtitlesResult(source.SmartSubtitlesTaskResult[i]);
+            }
+        }
     }
 
 
@@ -372,6 +406,7 @@ public class WorkflowTask extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
+        this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
 
     }
 }

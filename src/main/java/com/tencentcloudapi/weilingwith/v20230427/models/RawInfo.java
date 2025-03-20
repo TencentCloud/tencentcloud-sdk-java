@@ -25,7 +25,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SM4Vector")
     @Expose
@@ -33,7 +32,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NATIP")
     @Expose
@@ -41,7 +39,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamToken")
     @Expose
@@ -49,7 +46,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -57,7 +53,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamEnKey")
     @Expose
@@ -65,7 +60,6 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
     @Expose
@@ -73,17 +67,14 @@ public class RawInfo extends AbstractModel {
 
     /**
     * 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerIP")
     @Expose
     private String InnerIP;
 
     /**
-     * Get 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密向量（如果视频网关选择流为非加密传输这个参数可忽略） 
      * @return SM4Vector 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSM4Vector() {
         return this.SM4Vector;
@@ -91,19 +82,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SM4Vector 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSM4Vector(String SM4Vector) {
         this.SM4Vector = SM4Vector;
     }
 
     /**
-     * Get 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专线ip (非专线接入可忽略) 
      * @return NATIP 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNATIP() {
         return this.NATIP;
@@ -111,19 +98,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NATIP 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNATIP(String NATIP) {
         this.NATIP = NATIP;
     }
 
     /**
-     * Get 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端握手鉴权参数 
      * @return StreamToken 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamToken() {
         return this.StreamToken;
@@ -131,19 +114,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamToken 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamToken(String StreamToken) {
         this.StreamToken = StreamToken;
     }
 
     /**
-     * Get 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拉流端口 
      * @return Port 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -151,19 +130,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略） 
      * @return StreamEnKey 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamEnKey() {
         return this.StreamEnKey;
@@ -171,19 +146,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamEnKey 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamEnKey(String StreamEnKey) {
         this.StreamEnKey = StreamEnKey;
     }
 
     /**
-     * Get 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拉流公网地址（非公网接入时，这个地址是内网地址） 
      * @return IP 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
         return this.IP;
@@ -191,19 +162,15 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IP 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拉流内网地址 
      * @return InnerIP 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInnerIP() {
         return this.InnerIP;
@@ -211,9 +178,7 @@ public class RawInfo extends AbstractModel {
 
     /**
      * Set 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InnerIP 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerIP(String InnerIP) {
         this.InnerIP = InnerIP;

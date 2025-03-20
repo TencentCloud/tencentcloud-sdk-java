@@ -25,7 +25,6 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
     * 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
     * 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -41,7 +39,6 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
     * 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
     * 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -57,17 +53,14 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
     * 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnglishName")
     @Expose
     private String EnglishName;
 
     /**
-     * Get 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警类型id 
      * @return Id 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
      * Set 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 父节点id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父节点id 
      * @return ParentId 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParentId() {
         return this.ParentId;
@@ -95,19 +84,15 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
      * Set 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0-标准告警类型，1-自定义告警类型 
      * @return Type 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -115,19 +100,15 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
      * Set 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警名称类型 
      * @return Name 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -135,19 +116,15 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
      * Set 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警类型英文名称 
      * @return EnglishName 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnglishName() {
         return this.EnglishName;
@@ -155,9 +132,7 @@ public class AlarmTypeDetailInfo extends AbstractModel {
 
     /**
      * Set 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnglishName 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnglishName(String EnglishName) {
         this.EnglishName = EnglishName;

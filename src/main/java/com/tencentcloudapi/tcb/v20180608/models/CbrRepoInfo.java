@@ -46,7 +46,6 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
     * 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Branch")
     @Expose
@@ -101,10 +100,8 @@ public class CbrRepoInfo extends AbstractModel {
     }
 
     /**
-     * Get 分支名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分支名称 
      * @return Branch 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBranch() {
         return this.Branch;
@@ -112,9 +109,7 @@ public class CbrRepoInfo extends AbstractModel {
 
     /**
      * Set 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Branch 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBranch(String Branch) {
         this.Branch = Branch;

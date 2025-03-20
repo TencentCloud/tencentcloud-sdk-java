@@ -25,7 +25,6 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
     * 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusID")
     @Expose
@@ -33,7 +32,6 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
     * 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusName")
     @Expose
@@ -41,17 +39,14 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
     * 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusType")
     @Expose
     private String StatusType;
 
     /**
-     * Get 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态ID 
      * @return StatusID 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusID() {
         return this.StatusID;
@@ -59,19 +54,15 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
      * Set 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusID 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusID(String StatusID) {
         this.StatusID = StatusID;
     }
 
     /**
-     * Get 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态名称 
      * @return StatusName 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusName() {
         return this.StatusName;
@@ -79,19 +70,15 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
      * Set 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusName 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusName(String StatusName) {
         this.StatusName = StatusName;
     }
 
     /**
-     * Get 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态类型 
      * @return StatusType 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusType() {
         return this.StatusType;
@@ -99,9 +86,7 @@ public class AlarmStatusData extends AbstractModel {
 
     /**
      * Set 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusType 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusType(String StatusType) {
         this.StatusType = StatusType;

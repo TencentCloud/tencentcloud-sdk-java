@@ -25,7 +25,6 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
     * 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
     * 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
     * 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -49,17 +46,14 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
     * 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-     * Get 空间Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间Id 
      * @return Id 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
      * Set 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 空间名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间名字 
      * @return Name 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -87,19 +77,15 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
      * Set 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 空间级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间级别 
      * @return Level 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -107,19 +93,15 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
      * Set 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间编码 
      * @return Code 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -127,9 +109,7 @@ public class DeviceSpaceInfo extends AbstractModel {
 
     /**
      * Set 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;

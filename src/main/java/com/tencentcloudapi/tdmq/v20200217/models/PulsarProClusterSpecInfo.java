@@ -60,7 +60,6 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
     * 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalableTps")
     @Expose
@@ -69,11 +68,17 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     /**
     * 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPartitions")
     @Expose
     private Long MaxPartitions;
+
+    /**
+    * 商品最大延迟消息数量。0代表没有限制	
+    */
+    @SerializedName("MaxDelayedMessages")
+    @Expose
+    private Long MaxDelayedMessages;
 
     /**
      * Get 集群规格名称 
@@ -156,10 +161,8 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格外弹性TPS 
      * @return ScalableTps 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalableTps() {
         return this.ScalableTps;
@@ -167,9 +170,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
      * Set 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScalableTps 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalableTps(Long ScalableTps) {
         this.ScalableTps = ScalableTps;
@@ -177,11 +178,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
      * Get 32或者128
-当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+当前集群topic的最大分区数 
      * @return MaxPartitions 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPartitions() {
         return this.MaxPartitions;
@@ -190,13 +189,27 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     /**
      * Set 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPartitions 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPartitions(Long MaxPartitions) {
         this.MaxPartitions = MaxPartitions;
+    }
+
+    /**
+     * Get 商品最大延迟消息数量。0代表没有限制	 
+     * @return MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
+     */
+    public Long getMaxDelayedMessages() {
+        return this.MaxDelayedMessages;
+    }
+
+    /**
+     * Set 商品最大延迟消息数量。0代表没有限制	
+     * @param MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
+     */
+    public void setMaxDelayedMessages(Long MaxDelayedMessages) {
+        this.MaxDelayedMessages = MaxDelayedMessages;
     }
 
     public PulsarProClusterSpecInfo() {
@@ -228,6 +241,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         if (source.MaxPartitions != null) {
             this.MaxPartitions = new Long(source.MaxPartitions);
         }
+        if (source.MaxDelayedMessages != null) {
+            this.MaxDelayedMessages = new Long(source.MaxDelayedMessages);
+        }
     }
 
 
@@ -242,6 +258,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxTopics", this.MaxTopics);
         this.setParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
         this.setParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
+        this.setParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
 
     }
 }

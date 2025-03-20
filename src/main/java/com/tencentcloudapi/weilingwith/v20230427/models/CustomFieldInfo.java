@@ -25,7 +25,6 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
     * 字段id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
     * 字段key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -41,7 +39,6 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
     * 字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,17 +46,14 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
     * 字段值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Val")
     @Expose
     private String Val;
 
     /**
-     * Get 字段id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段id 
      * @return Id 字段id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
      * Set 字段id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 字段id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 字段key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段key 
      * @return Key 字段key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -87,19 +77,15 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
      * Set 字段key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 字段key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名 
      * @return Name 字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -107,19 +93,15 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
      * Set 字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 字段值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段值 
      * @return Val 字段值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVal() {
         return this.Val;
@@ -127,9 +109,7 @@ public class CustomFieldInfo extends AbstractModel {
 
     /**
      * Set 字段值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Val 字段值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVal(String Val) {
         this.Val = Val;

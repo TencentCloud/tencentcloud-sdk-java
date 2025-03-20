@@ -25,7 +25,6 @@ public class RecordInfo extends AbstractModel {
 
     /**
     * 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +32,6 @@ public class RecordInfo extends AbstractModel {
 
     /**
     * 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,17 +39,14 @@ public class RecordInfo extends AbstractModel {
 
     /**
     * 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoURL")
     @Expose
     private String VideoURL;
 
     /**
-     * Get 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录像片段开始时间（s） 
      * @return StartTime 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -59,19 +54,15 @@ public class RecordInfo extends AbstractModel {
 
     /**
      * Set 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本录像片段结束时间（s） 
      * @return EndTime 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -79,19 +70,15 @@ public class RecordInfo extends AbstractModel {
 
     /**
      * Set 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像片段文件url 
      * @return VideoURL 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoURL() {
         return this.VideoURL;
@@ -99,9 +86,7 @@ public class RecordInfo extends AbstractModel {
 
     /**
      * Set 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoURL 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoURL(String VideoURL) {
         this.VideoURL = VideoURL;

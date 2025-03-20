@@ -25,7 +25,6 @@ public class ApplicationList extends AbstractModel {
 
     /**
     * 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationInfoList")
     @Expose
@@ -33,17 +32,14 @@ public class ApplicationList extends AbstractModel {
 
     /**
     * 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private String TotalCount;
 
     /**
-     * Get 应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用列表 
      * @return ApplicationInfoList 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicationInfo [] getApplicationInfoList() {
         return this.ApplicationInfoList;
@@ -51,19 +47,15 @@ public class ApplicationList extends AbstractModel {
 
     /**
      * Set 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationInfoList 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationInfoList(ApplicationInfo [] ApplicationInfoList) {
         this.ApplicationInfoList = ApplicationInfoList;
     }
 
     /**
-     * Get 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前查询条件命中的数据总条数 
      * @return TotalCount 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class ApplicationList extends AbstractModel {
 
     /**
      * Set 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(String TotalCount) {
         this.TotalCount = TotalCount;

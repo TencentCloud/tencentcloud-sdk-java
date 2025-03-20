@@ -25,7 +25,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
@@ -41,7 +39,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -49,7 +46,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +53,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Target")
     @Expose
@@ -65,7 +60,6 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -73,17 +67,14 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
     * 名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return Id 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -91,19 +82,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网的ipv4 
      * @return Cidr 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -111,19 +98,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -131,19 +114,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -151,19 +130,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get subnet类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get subnet类型 
      * @return Target subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTarget() {
         return this.Target;
@@ -171,19 +146,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Target subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTarget(String Target) {
         this.Target = Target;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -191,19 +162,15 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名字 
      * @return Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -211,9 +178,7 @@ public class CloudBaseRunVpcSubnet extends AbstractModel {
 
     /**
      * Set 名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

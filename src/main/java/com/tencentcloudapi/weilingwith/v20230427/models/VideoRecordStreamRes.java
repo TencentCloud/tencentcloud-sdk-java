@@ -25,7 +25,6 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FLV")
     @Expose
@@ -33,7 +32,6 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTMP")
     @Expose
@@ -41,7 +39,6 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HLS")
     @Expose
@@ -49,7 +46,6 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebRTC")
     @Expose
@@ -57,7 +53,6 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RAW")
     @Expose
@@ -65,17 +60,14 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
     * 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stream")
     @Expose
     private String Stream;
 
     /**
-     * Get FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FLV协议格式视频流 
      * @return FLV FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFLV() {
         return this.FLV;
@@ -83,19 +75,15 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FLV FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFLV(String FLV) {
         this.FLV = FLV;
     }
 
     /**
-     * Get RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RTMP协议格式视频流 
      * @return RTMP RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRTMP() {
         return this.RTMP;
@@ -103,19 +91,15 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RTMP RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTMP(String RTMP) {
         this.RTMP = RTMP;
     }
 
     /**
-     * Get HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HLS协议格式视频流 
      * @return HLS HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHLS() {
         return this.HLS;
@@ -123,19 +107,15 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HLS HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHLS(String HLS) {
         this.HLS = HLS;
     }
 
     /**
-     * Get WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WebRtc协议格式视频流 
      * @return WebRTC WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebRTC() {
         return this.WebRTC;
@@ -143,19 +123,15 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebRTC WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebRTC(String WebRTC) {
         this.WebRTC = WebRTC;
     }
 
     /**
-     * Get RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RAW协议格式视频流 
      * @return RAW RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RawInfo getRAW() {
         return this.RAW;
@@ -163,19 +139,15 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RAW RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRAW(RawInfo RAW) {
         this.RAW = RAW;
     }
 
     /**
-     * Get 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流的唯一标识 
      * @return Stream 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStream() {
         return this.Stream;
@@ -183,9 +155,7 @@ public class VideoRecordStreamRes extends AbstractModel {
 
     /**
      * Set 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stream 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStream(String Stream) {
         this.Stream = Stream;

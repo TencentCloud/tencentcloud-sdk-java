@@ -104,6 +104,14 @@ public class ActivityResItem extends AbstractModel {
     private ScheduleQualityControlTaskResult QualityControlTask;
 
     /**
+    * 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private ScheduleSmartSubtitleTaskResult SmartSubtitlesTask;
+
+    /**
      * Get 转码任务输出
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 转码任务输出
@@ -303,6 +311,26 @@ public class ActivityResItem extends AbstractModel {
         this.QualityControlTask = QualityControlTask;
     }
 
+    /**
+     * Get 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartSubtitlesTask 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartSubtitlesTask 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -341,6 +369,9 @@ public class ActivityResItem extends AbstractModel {
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new ScheduleQualityControlTaskResult(source.QualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult(source.SmartSubtitlesTask);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class ActivityResItem extends AbstractModel {
         this.setParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
         this.setParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }
 }

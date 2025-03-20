@@ -1,105 +1,105 @@
 package com.tencentcloudapi.ckafka.v20190819;
 public enum CkafkaErrorCode {
-    // CAM签名/鉴权错误。
+     /*         CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
-    // DryRun 操作，代表请求将会是成功的，只是多传了 DryRun 参数。
+     /*         DryRun 操作，代表请求将会是成功的，只是多传了 DryRun 参数。 */
      DRYRUNOPERATION("DryRunOperation"),
      
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 已存在同名Topic。
+     /*         已存在同名Topic。 */
      INVALIDPARAMETER_TOPICEXIST("InvalidParameter.TopicExist"),
      
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 实例不存在。
+     /*         实例不存在。 */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
      
-    // 参数不允许为空。
+     /*         参数不允许为空。 */
      INVALIDPARAMETERVALUE_NOTALLOWEDEMPTY("InvalidParameterValue.NotAllowedEmpty"),
      
-    // 已存在相同参数。
+     /*         已存在相同参数。 */
      INVALIDPARAMETERVALUE_REPETITIONVALUE("InvalidParameterValue.RepetitionValue"),
      
-    // 无效的子网id。
+     /*         无效的子网id。 */
      INVALIDPARAMETERVALUE_SUBNETIDINVALID("InvalidParameterValue.SubnetIdInvalid"),
      
-    // 子网不属于zone。
+     /*         子网不属于zone。 */
      INVALIDPARAMETERVALUE_SUBNETNOTBELONGTOZONE("InvalidParameterValue.SubnetNotBelongToZone"),
      
-    // 主题名已存在
+     /*         主题名已存在 */
      INVALIDPARAMETERVALUE_TOPICNAMEALREADYEXIST("InvalidParameterValue.TopicNameAlreadyExist"),
      
-    // 无效的 Vpc Id。
+     /*         无效的 Vpc Id。 */
      INVALIDPARAMETERVALUE_VPCIDINVALID("InvalidParameterValue.VpcIdInvalid"),
      
-    // Action参数取值错误。
+     /*         Action参数取值错误。 */
      INVALIDPARAMETERVALUE_WRONGACTION("InvalidParameterValue.WrongAction"),
      
-    // zone不支持。
+     /*         zone不支持。 */
      INVALIDPARAMETERVALUE_ZONENOTSUPPORT("InvalidParameterValue.ZoneNotSupport"),
      
-    // 超过配额限制。
+     /*         超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // 路由数超过限制。
+     /*         路由数超过限制。 */
      LIMITEXCEEDED_ROUTEOVERLIMIT("LimitExceeded.RouteOverLimit"),
      
-    // SASL路由超过限制。
+     /*         SASL路由超过限制。 */
      LIMITEXCEEDED_ROUTESASLOVERLIMIT("LimitExceeded.RouteSASLOverLimit"),
      
-    // 缺少参数错误。
+     /*         缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-    // 操作被拒绝。
+     /*         操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
-    // 任务资源暂停。
+     /*         任务资源暂停。 */
      OPERATIONDENIED_RESOURCETASKPAUSED("OperationDenied.ResourceTaskPaused"),
      
-    // 请求的次数超过了频率限制。
+     /*         请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // 资源被占用。
+     /*         资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-    // 资源不足。
+     /*         资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // 资源不存在。
+     /*         资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // 资源不可用。
+     /*         资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Broker 磁盘资源异常
+     /*         Broker 磁盘资源异常 */
      RESOURCEUNAVAILABLE_KAFKASTORAGEERROR("ResourceUnavailable.KafkaStorageError"),
      
-    // 未授权操作。
+     /*         未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // 未知参数错误。
+     /*         未知参数错误。 */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // 操作不支持。
+     /*         操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // 批量删除实例限制。
+     /*         批量删除实例限制。 */
      UNSUPPORTEDOPERATION_BATCHDELINSTANCELIMIT("UnsupportedOperation.BatchDelInstanceLimit"),
      
-    // 删除主题频率过快
+     /*         删除主题频率过快 */
      UNSUPPORTEDOPERATION_FREQUENCYTOPICDELETEOPERATE("UnsupportedOperation.FrequencyTopicDeleteOperate"),
      
-    // Oss拒绝该操作。
+     /*         Oss拒绝该操作。 */
      UNSUPPORTEDOPERATION_OSSREJECT("UnsupportedOperation.OssReject");
      
     private String value;

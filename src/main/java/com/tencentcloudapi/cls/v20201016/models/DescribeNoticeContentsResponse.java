@@ -25,7 +25,6 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
 
     /**
     * 通知内容模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContents")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通知内容模板列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板列表。 
      * @return NoticeContents 通知内容模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentTemplate [] getNoticeContents() {
         return this.NoticeContents;
@@ -57,9 +54,7 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
 
     /**
      * Set 通知内容模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContents 通知内容模板列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContents(NoticeContentTemplate [] NoticeContents) {
         this.NoticeContents = NoticeContents;

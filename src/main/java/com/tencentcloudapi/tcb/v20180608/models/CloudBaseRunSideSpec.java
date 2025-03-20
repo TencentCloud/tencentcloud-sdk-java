@@ -25,7 +25,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerImage")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerPort")
     @Expose
@@ -41,7 +39,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerName")
     @Expose
@@ -49,7 +46,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvVar")
     @Expose
@@ -57,7 +53,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialDelaySeconds")
     @Expose
@@ -65,7 +60,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -73,7 +67,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mem")
     @Expose
@@ -81,7 +74,6 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Security")
     @Expose
@@ -89,17 +81,14 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
     * 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeMountInfos")
     @Expose
     private CloudBaseRunVolumeMount [] VolumeMountInfos;
 
     /**
-     * Get 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器镜像 
      * @return ContainerImage 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerImage() {
         return this.ContainerImage;
@@ -107,19 +96,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerImage 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerImage(String ContainerImage) {
         this.ContainerImage = ContainerImage;
     }
 
     /**
-     * Get 容器端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器端口 
      * @return ContainerPort 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContainerPort() {
         return this.ContainerPort;
@@ -127,19 +112,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerPort 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerPort(Long ContainerPort) {
         this.ContainerPort = ContainerPort;
     }
 
     /**
-     * Get 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器的名称 
      * @return ContainerName 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerName() {
         return this.ContainerName;
@@ -147,19 +128,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerName 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kv的json字符串 
      * @return EnvVar kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvVar() {
         return this.EnvVar;
@@ -167,19 +144,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvVar kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvVar(String EnvVar) {
         this.EnvVar = EnvVar;
     }
 
     /**
-     * Get InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get InitialDelaySeconds 延迟多长时间启动健康检查 
      * @return InitialDelaySeconds InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInitialDelaySeconds() {
         return this.InitialDelaySeconds;
@@ -187,19 +160,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InitialDelaySeconds InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialDelaySeconds(Long InitialDelaySeconds) {
         this.InitialDelaySeconds = InitialDelaySeconds;
     }
 
     /**
-     * Get CPU大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU大小 
      * @return Cpu CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -207,19 +176,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小（单位：M） 
      * @return Mem 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMem() {
         return this.Mem;
@@ -227,19 +192,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mem 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 安全特性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全特性 
      * @return Security 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseSecurityContext getSecurity() {
         return this.Security;
@@ -247,19 +208,15 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Security 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurity(CloudBaseSecurityContext Security) {
         this.Security = Security;
     }
 
     /**
-     * Get 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载信息 
      * @return VolumeMountInfos 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseRunVolumeMount [] getVolumeMountInfos() {
         return this.VolumeMountInfos;
@@ -267,9 +224,7 @@ public class CloudBaseRunSideSpec extends AbstractModel {
 
     /**
      * Set 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeMountInfos 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeMountInfos(CloudBaseRunVolumeMount [] VolumeMountInfos) {
         this.VolumeMountInfos = VolumeMountInfos;

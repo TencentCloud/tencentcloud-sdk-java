@@ -32,7 +32,6 @@ public class RoleToken extends AbstractModel {
 
     /**
     * 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Token")
     @Expose
@@ -55,10 +54,8 @@ public class RoleToken extends AbstractModel {
     }
 
     /**
-     * Get 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于goosefs client/sdk等 
      * @return Token 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getToken() {
         return this.Token;
@@ -66,9 +63,7 @@ public class RoleToken extends AbstractModel {
 
     /**
      * Set 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Token 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToken(String Token) {
         this.Token = Token;

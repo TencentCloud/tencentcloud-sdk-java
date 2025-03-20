@@ -25,17 +25,14 @@ public class EmptyRes extends AbstractModel {
 
     /**
     * 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-     * Get 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回请求状态,成功ok，失败error 
      * @return Msg 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -43,9 +40,7 @@ public class EmptyRes extends AbstractModel {
 
     /**
      * Set 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

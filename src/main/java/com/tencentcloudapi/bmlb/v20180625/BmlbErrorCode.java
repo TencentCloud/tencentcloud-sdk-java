@@ -1,18 +1,18 @@
 package com.tencentcloudapi.bmlb.v20180625;
 public enum BmlbErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 资源被占用。
+     /*         资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-    // 资源不存在。
+     /*         资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;

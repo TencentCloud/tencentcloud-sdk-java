@@ -25,17 +25,14 @@ public class CloudBaseRunServiceVolumeHostPath extends AbstractModel {
 
     /**
     * 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get 主机路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机路径 
      * @return Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -43,9 +40,7 @@ public class CloudBaseRunServiceVolumeHostPath extends AbstractModel {
 
     /**
      * Set 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;

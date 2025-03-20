@@ -25,7 +25,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -33,7 +32,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -57,7 +53,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警业务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警业务类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeName")
     @Expose
@@ -73,7 +67,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 子告警类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -81,7 +74,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 子告警类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubTypeName")
     @Expose
@@ -89,7 +81,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警级别id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -97,7 +88,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
@@ -105,7 +95,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 上报应用appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -113,7 +102,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 设备wid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -121,7 +109,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -129,7 +116,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 空间位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -137,7 +123,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 上报图片
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportImg")
     @Expose
@@ -145,7 +130,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -153,7 +137,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 处理人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HandlePersonSet")
     @Expose
@@ -161,7 +144,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 处理记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HandleRecordSet")
     @Expose
@@ -169,7 +151,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend")
     @Expose
@@ -177,7 +158,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 应用扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendOne")
     @Expose
@@ -185,7 +165,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 应用扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendTwo")
     @Expose
@@ -193,17 +172,14 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 应用透传字段,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Echo")
     @Expose
     private String Echo;
 
     /**
-     * Get 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间id 
      * @return WorkspaceId 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkspaceId() {
         return this.WorkspaceId;
@@ -211,19 +187,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId 工作空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(Long WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 告警ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警ID 
      * @return Id 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -231,19 +203,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 告警状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态 
      * @return Status 告警状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -251,19 +219,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 告警状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 告警时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警时间 
      * @return Time 告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTime() {
         return this.Time;
@@ -271,19 +235,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 告警业务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警业务类型 
      * @return Type 告警业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -291,19 +251,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 告警业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警业务类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警业务类型名称 
      * @return TypeName 告警业务类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTypeName() {
         return this.TypeName;
@@ -311,19 +267,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警业务类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeName 告警业务类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get 子告警类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子告警类型 
      * @return SubType 子告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -331,19 +283,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 子告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 子告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 子告警类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子告警类型名称 
      * @return SubTypeName 子告警类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubTypeName() {
         return this.SubTypeName;
@@ -351,19 +299,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 子告警类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubTypeName 子告警类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubTypeName(String SubTypeName) {
         this.SubTypeName = SubTypeName;
     }
 
     /**
-     * Get 告警级别id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别id 
      * @return Level 告警级别id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -371,19 +315,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警级别id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 告警级别id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别名称 
      * @return LevelName 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -391,19 +331,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get 上报应用appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报应用appid 
      * @return AppId 上报应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -411,19 +347,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 上报应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 上报应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 设备wid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备wid 
      * @return WID 设备wid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -431,19 +363,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 设备wid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备wid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -451,19 +379,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 空间位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间位置 
      * @return Position 空间位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPosition() {
         return this.Position;
@@ -471,19 +395,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 空间位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 空间位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 上报图片
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报图片 
      * @return ReportImg 上报图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReportImg getReportImg() {
         return this.ReportImg;
@@ -491,19 +411,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 上报图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportImg 上报图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportImg(ReportImg ReportImg) {
         this.ReportImg = ReportImg;
     }
 
     /**
-     * Get 告警描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警描述 
      * @return Desc 告警描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -511,19 +427,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 告警描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 告警描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 处理人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理人 
      * @return HandlePersonSet 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HandlerPersonInfo [] getHandlePersonSet() {
         return this.HandlePersonSet;
@@ -531,19 +443,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HandlePersonSet 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHandlePersonSet(HandlerPersonInfo [] HandlePersonSet) {
         this.HandlePersonSet = HandlePersonSet;
     }
 
     /**
-     * Get 处理记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理记录 
      * @return HandleRecordSet 处理记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HandleRecordInfo [] getHandleRecordSet() {
         return this.HandleRecordSet;
@@ -551,19 +459,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 处理记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HandleRecordSet 处理记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHandleRecordSet(HandleRecordInfo [] HandleRecordSet) {
         this.HandleRecordSet = HandleRecordSet;
     }
 
     /**
-     * Get 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展信息 
      * @return Extend 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend() {
         return this.Extend;
@@ -571,19 +475,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 应用扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用扩展字段1 
      * @return ExtendOne 应用扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtendOne() {
         return this.ExtendOne;
@@ -591,19 +491,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 应用扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendOne 应用扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendOne(String ExtendOne) {
         this.ExtendOne = ExtendOne;
     }
 
     /**
-     * Get 应用扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用扩展字段2 
      * @return ExtendTwo 应用扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtendTwo() {
         return this.ExtendTwo;
@@ -611,19 +507,15 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 应用扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendTwo 应用扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendTwo(String ExtendTwo) {
         this.ExtendTwo = ExtendTwo;
     }
 
     /**
-     * Get 应用透传字段,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用透传字段,有效字段为x-json后的字段 
      * @return Echo 应用透传字段,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEcho() {
         return this.Echo;
@@ -631,9 +523,7 @@ public class AlarmInfo extends AbstractModel {
 
     /**
      * Set 应用透传字段,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Echo 应用透传字段,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEcho(String Echo) {
         this.Echo = Echo;

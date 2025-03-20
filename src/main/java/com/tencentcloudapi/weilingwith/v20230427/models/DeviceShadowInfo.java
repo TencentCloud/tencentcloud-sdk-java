@@ -25,7 +25,6 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
     * 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceShadow")
     @Expose
@@ -41,17 +39,14 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
     * 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceShadowUpdateTime")
     @Expose
     private String DeviceShadowUpdateTime;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -59,19 +54,15 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备影子数据,返回有效数据为"x-json:"后字段 
      * @return DeviceShadow 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceShadow() {
         return this.DeviceShadow;
@@ -79,19 +70,15 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
      * Set 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceShadow 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceShadow(String DeviceShadow) {
         this.DeviceShadow = DeviceShadow;
     }
 
     /**
-     * Get 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备影子更新时间 
      * @return DeviceShadowUpdateTime 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceShadowUpdateTime() {
         return this.DeviceShadowUpdateTime;
@@ -99,9 +86,7 @@ public class DeviceShadowInfo extends AbstractModel {
 
     /**
      * Set 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceShadowUpdateTime 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceShadowUpdateTime(String DeviceShadowUpdateTime) {
         this.DeviceShadowUpdateTime = DeviceShadowUpdateTime;

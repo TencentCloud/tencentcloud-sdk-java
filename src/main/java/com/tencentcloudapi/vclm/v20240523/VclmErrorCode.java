@@ -1,204 +1,204 @@
 package com.tencentcloudapi.vclm.v20240523;
 public enum VclmErrorCode {
-    // CAM签名/鉴权错误。
+     /*         CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
-    // 音频解码失败。
+     /*         音频解码失败。 */
      FAILEDOPERATION_AUDIODECODEFAILED("FailedOperation.AudioDecodeFailed"),
      
-    // 人体关键点检测失败。
+     /*         人体关键点检测失败。 */
      FAILEDOPERATION_BODYJOINTSFAIL("FailedOperation.BodyJointsFail"),
      
-    // 下载视频出错。
+     /*         下载视频出错。 */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownloadError"),
      
-    // 驱动失败
+     /*         驱动失败 */
      FAILEDOPERATION_DRIVERFAILED("FailedOperation.DriverFailed"),
      
-    // 人脸框太小，无法识别使用。
+     /*         人脸框太小，无法识别使用。 */
      FAILEDOPERATION_FACESIZETOOSMALL("FailedOperation.FaceSizeTooSmall"),
      
-    // 图片身体部位有遮挡或不全，请重新上传图片
+     /*         图片身体部位有遮挡或不全，请重新上传图片 */
      FAILEDOPERATION_IMAGEBODYJOINSUNDETECTED("FailedOperation.ImageBodyJoinsUndetected"),
      
-    // 输入图身体（头顶到脚踝）高度占比不到图片高度的二分之一
+     /*         输入图身体（头顶到脚踝）高度占比不到图片高度的二分之一 */
      FAILEDOPERATION_IMAGEBODYSMALL("FailedOperation.ImageBodySmall"),
      
-    // 输入图未检测到人体
+     /*         输入图未检测到人体 */
      FAILEDOPERATION_IMAGECHECKNOBODY("FailedOperation.ImageCheckNoBody"),
      
-    // 图片解码失败。
+     /*         图片解码失败。 */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-    // 输入图人脸检测失败
+     /*         输入图人脸检测失败 */
      FAILEDOPERATION_IMAGEDETECTFACEFAILED("FailedOperation.ImageDetectFaceFailed"),
      
-    // 人脸检测失败
+     /*         人脸检测失败 */
      FAILEDOPERATION_IMAGEFACEDETECTFAILED("FailedOperation.ImageFaceDetectFailed"),
      
-    // 输入图中存在多人
+     /*         输入图中存在多人 */
      FAILEDOPERATION_IMAGEMANYPEOPLE("FailedOperation.ImageManyPeople"),
      
-    // 不支持的图片文件。
+     /*         不支持的图片文件。 */
      FAILEDOPERATION_IMAGENOTSUPPORTED("FailedOperation.ImageNotSupported"),
      
-    // 输入图高宽比未在1.2～2.0范围内
+     /*         输入图高宽比未在1.2～2.0范围内 */
      FAILEDOPERATION_IMAGERADIOEXCCEED("FailedOperation.ImageRadioExcceed"),
      
-    // 图片高宽比超过限制。
+     /*         图片高宽比超过限制。 */
      FAILEDOPERATION_IMAGERATIOEXCCEED("FailedOperation.ImageRatioExcceed"),
      
-    // 图片分辨率过大。
+     /*         图片分辨率过大。 */
      FAILEDOPERATION_IMAGERESOLUTIONEXCEED("FailedOperation.ImageResolutionExceed"),
      
-    // base64编码后的图片数据过大。
+     /*         base64编码后的图片数据过大。 */
      FAILEDOPERATION_IMAGESIZEEXCEED("FailedOperation.ImageSizeExceed"),
      
-    // 服务内部错误，请重试。
+     /*         服务内部错误，请重试。 */
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
-    // 任务不存在。
+     /*         任务不存在。 */
      FAILEDOPERATION_JOBNOTFOUND("FailedOperation.JobNotFound"),
      
-    // 任务队列已满，请稍后重试。
+     /*         任务队列已满，请稍后重试。 */
      FAILEDOPERATION_JOBQUEUEFULL("FailedOperation.JobQueueFull"),
      
-    // 核心关节点未检测到
+     /*         核心关节点未检测到 */
      FAILEDOPERATION_KEYPOINTUNDETECTED("FailedOperation.KeyPointUndetected"),
      
-    // 音频审核失败
+     /*         音频审核失败 */
      FAILEDOPERATION_MODERATIONAUDIOFAILED("FailedOperation.ModerationAudioFailed"),
      
-    // 内容审核不通过。
+     /*         内容审核不通过。 */
      FAILEDOPERATION_MODERATIONFAILED("FailedOperation.ModerationFailed"),
      
-    // 系统内部错误。
+     /*         系统内部错误。 */
      FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
      
-    // 请求声伴分离失败，请重试。
+     /*         请求声伴分离失败，请重试。 */
      FAILEDOPERATION_SUBMITASSPFAILED("FailedOperation.SubmitAsspFailed"),
      
-    // 任务不存在。
+     /*         任务不存在。 */
      FAILEDOPERATION_TASKNOTEXIST("FailedOperation.TaskNotExist"),
      
-    // 任务状态异常。
+     /*         任务状态异常。 */
      FAILEDOPERATION_TASKSTATUSERROR("FailedOperation.TaskStatusError"),
      
-    // 模板视频首帧未检测到人脸
+     /*         模板视频首帧未检测到人脸 */
      FAILEDOPERATION_TEMPLATEFIRSTFRAMENOTDETECTFACE("FailedOperation.TemplateFirstFrameNotDetectFace"),
      
-    // 模板视频存在未检测到人体的帧
+     /*         模板视频存在未检测到人体的帧 */
      FAILEDOPERATION_TEMPLATENOTDETECTBODY("FailedOperation.TemplateNotDetectBody"),
      
-    // 视频解码失败。
+     /*         视频解码失败。 */
      FAILEDOPERATION_VIDEODECODEFAILED("FailedOperation.VideoDecodeFailed"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 模板不存在
+     /*         模板不存在 */
      INVALIDPARAMETER_TEMPLATENOTEXISTED("InvalidParameter.TemplateNotExisted"),
      
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 不支持的音频时长。
+     /*         不支持的音频时长。 */
      INVALIDPARAMETERVALUE_INVALIDAUDIODURATION("InvalidParameterValue.InvalidAudioDuration"),
      
-    // 不支持的音频格式。
+     /*         不支持的音频格式。 */
      INVALIDPARAMETERVALUE_INVALIDAUDIOFORMAT("InvalidParameterValue.InvalidAudioFormat"),
      
-    // 不支持的图片长宽比。
+     /*         不支持的图片长宽比。 */
      INVALIDPARAMETERVALUE_INVALIDIMAGEASPECTRATIO("InvalidParameterValue.InvalidImageAspectRatio"),
      
-    // 不支持的图片格式
+     /*         不支持的图片格式 */
      INVALIDPARAMETERVALUE_INVALIDIMAGEFORMAT("InvalidParameterValue.InvalidImageFormat"),
      
-    // 图片分辨率超限。
+     /*         图片分辨率超限。 */
      INVALIDPARAMETERVALUE_INVALIDIMAGERESOLUTION("InvalidParameterValue.InvalidImageResolution"),
      
-    // 不支持的图片大小
+     /*         不支持的图片大小 */
      INVALIDPARAMETERVALUE_INVALIDIMAGESIZE("InvalidParameterValue.InvalidImageSize"),
      
-    // 不支持的模型。
+     /*         不支持的模型。 */
      INVALIDPARAMETERVALUE_INVALIDMODEL("InvalidParameterValue.InvalidModel"),
      
-    // 不支持的视频宽高比。
+     /*         不支持的视频宽高比。 */
      INVALIDPARAMETERVALUE_INVALIDVIDEOASPECTRATIO("InvalidParameterValue.InvalidVideoAspectRatio"),
      
-    // 视频时长超过限制。
+     /*         视频时长超过限制。 */
      INVALIDPARAMETERVALUE_INVALIDVIDEODURATION("InvalidParameterValue.InvalidVideoDuration"),
      
-    // 不支持的视频FPS。
+     /*         不支持的视频FPS。 */
      INVALIDPARAMETERVALUE_INVALIDVIDEOFPS("InvalidParameterValue.InvalidVideoFPS"),
      
-    // 不支持的视频格式。
+     /*         不支持的视频格式。 */
      INVALIDPARAMETERVALUE_INVALIDVIDEOFORMAT("InvalidParameterValue.InvalidVideoFormat"),
      
-    // 不支持的分辨率。
+     /*         不支持的分辨率。 */
      INVALIDPARAMETERVALUE_INVALIDVIDEORESOLUTION("InvalidParameterValue.InvalidVideoResolution"),
      
-    // 图片中没有人脸。
+     /*         图片中没有人脸。 */
      INVALIDPARAMETERVALUE_NOFACEINPHOTO("InvalidParameterValue.NoFaceInPhoto"),
      
-    // 参数字段或者值有误。
+     /*         参数字段或者值有误。 */
      INVALIDPARAMETERVALUE_PARAMETERVALUEERROR("InvalidParameterValue.ParameterValueError"),
      
-    // 风格不存在。
+     /*         风格不存在。 */
      INVALIDPARAMETERVALUE_STYLENOTEXIST("InvalidParameterValue.StyleNotExist"),
      
-    // 风格化强度参数不存在。
+     /*         风格化强度参数不存在。 */
      INVALIDPARAMETERVALUE_STYLESTRENGTHNOTEXIST("InvalidParameterValue.StyleStrengthNotExist"),
      
-    // 人脸角度过大。
+     /*         人脸角度过大。 */
      INVALIDPARAMETERVALUE_TOOLARGEFACEANGLE("InvalidParameterValue.TooLargeFaceAngle"),
      
-    // 人脸质量过低。
+     /*         人脸质量过低。 */
      INVALIDPARAMETERVALUE_TOOLOWFACEQUALITY("InvalidParameterValue.TooLowFaceQuality"),
      
-    // 人脸数量超过1。
+     /*         人脸数量超过1。 */
      INVALIDPARAMETERVALUE_TOOMANYFACES("InvalidParameterValue.TooManyFaces"),
      
-    // 人脸遮挡过多。
+     /*         人脸遮挡过多。 */
      INVALIDPARAMETERVALUE_TOOMUCHFACEOCCLUSION("InvalidParameterValue.TooMuchFaceOcclusion"),
      
-    // 人脸过小。
+     /*         人脸过小。 */
      INVALIDPARAMETERVALUE_TOOSMALLFACESIZE("InvalidParameterValue.TooSmallFaceSize"),
      
-    // URL格式不合法。
+     /*         URL格式不合法。 */
      INVALIDPARAMETERVALUE_URLILLEGAL("InvalidParameterValue.UrlIllegal"),
      
-    // 视频大小超过限制。
+     /*         视频大小超过限制。 */
      INVALIDPARAMETERVALUE_VIDEOSIZEEXCEED("InvalidParameterValue.VideoSizeExceed"),
      
-    // 超过配额限制。
+     /*         超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // 操作被拒绝。
+     /*         操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
-    // 请求的次数超过了频率限制。
+     /*         请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // 提交任务数超过最大并发。
+     /*         提交任务数超过最大并发。 */
      REQUESTLIMITEXCEEDED_JOBNUMEXCEED("RequestLimitExceeded.JobNumExceed"),
      
-    // 资源不足。
+     /*         资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // 资源不存在。
+     /*         资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // 计费状态未知。
+     /*         计费状态未知。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-    // 未授权操作。
+     /*         未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // 操作不支持。
+     /*         操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

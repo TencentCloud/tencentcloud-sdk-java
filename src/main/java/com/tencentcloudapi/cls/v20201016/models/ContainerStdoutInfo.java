@@ -32,7 +32,6 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
     * container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Container")
     @Expose
@@ -40,7 +39,6 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
     * namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -64,7 +62,6 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
     * 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeNamespace")
     @Expose
@@ -103,10 +100,8 @@ public class ContainerStdoutInfo extends AbstractModel {
     }
 
     /**
-     * Get container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get container为空表所有的，不为空采集指定的容器 
      * @return Container container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainer() {
         return this.Container;
@@ -114,19 +109,15 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
      * Set container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Container container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace 
      * @return Namespace namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -134,9 +125,7 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
      * Set namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -183,10 +172,8 @@ public class ContainerStdoutInfo extends AbstractModel {
     }
 
     /**
-     * Get 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要排除的namespace可以多个，用分隔号分割,例如A,B 
      * @return ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExcludeNamespace() {
         return this.ExcludeNamespace;
@@ -194,9 +181,7 @@ public class ContainerStdoutInfo extends AbstractModel {
 
     /**
      * Set 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeNamespace(String ExcludeNamespace) {
         this.ExcludeNamespace = ExcludeNamespace;

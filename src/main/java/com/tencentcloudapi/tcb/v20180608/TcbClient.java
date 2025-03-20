@@ -835,6 +835,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *修改登录配置
+     * @param req EditAuthConfigRequest
+     * @return EditAuthConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditAuthConfigResponse EditAuthConfig(EditAuthConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EditAuthConfig", EditAuthConfigResponse.class);
+    }
+
+    /**
      *创建云应用服务
      * @param req EstablishCloudBaseRunServerRequest
      * @return EstablishCloudBaseRunServerResponse

@@ -25,7 +25,6 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 资源名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPath")
     @Expose
@@ -41,7 +39,6 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -57,17 +54,14 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPropagation")
     @Expose
     private String MountPropagation;
 
     /**
-     * Get 资源名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名 
      * @return Name 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,19 +69,15 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载路径 
      * @return MountPath 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPath() {
         return this.MountPath;
@@ -95,19 +85,15 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPath 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPath(String MountPath) {
         this.MountPath = MountPath;
     }
 
     /**
-     * Get 是否只读
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否只读 
      * @return ReadOnly 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
@@ -115,9 +101,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
@@ -144,10 +128,8 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
     }
 
     /**
-     * Get 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载配置 
      * @return MountPropagation 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPropagation() {
         return this.MountPropagation;
@@ -155,9 +137,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPropagation 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPropagation(String MountPropagation) {
         this.MountPropagation = MountPropagation;

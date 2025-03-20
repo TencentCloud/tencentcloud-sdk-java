@@ -25,7 +25,6 @@ public class SsoUserResult extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,17 +32,14 @@ public class SsoUserResult extends AbstractModel {
 
     /**
     * 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
     private SsoUser [] Users;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -51,19 +47,15 @@ public class SsoUserResult extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户人员数据 
      * @return Users 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SsoUser [] getUsers() {
         return this.Users;
@@ -71,9 +63,7 @@ public class SsoUserResult extends AbstractModel {
 
     /**
      * Set 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(SsoUser [] Users) {
         this.Users = Users;

@@ -25,7 +25,6 @@ public class EventObj extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class EventObj extends AbstractModel {
 
     /**
     * 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class EventObj extends AbstractModel {
 
     /**
     * 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,17 +46,14 @@ public class EventObj extends AbstractModel {
 
     /**
     * 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class EventObj extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 事件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件名称 
      * @return Name 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -87,19 +77,15 @@ public class EventObj extends AbstractModel {
 
     /**
      * Set 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件触发类型名称 
      * @return Type 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -107,19 +93,15 @@ public class EventObj extends AbstractModel {
 
     /**
      * Set 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间触发条件 
      * @return Condition 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCondition() {
         return this.Condition;
@@ -127,9 +109,7 @@ public class EventObj extends AbstractModel {
 
     /**
      * Set 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Condition 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;

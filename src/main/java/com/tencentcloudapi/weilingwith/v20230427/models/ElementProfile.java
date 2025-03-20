@@ -25,7 +25,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingId")
     @Expose
@@ -33,7 +32,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
@@ -41,7 +39,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntityType")
     @Expose
@@ -49,7 +46,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementName")
     @Expose
@@ -57,7 +53,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 构件空间级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -65,7 +60,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BottomHeight")
     @Expose
@@ -73,7 +67,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 排序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sort")
     @Expose
@@ -81,7 +74,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceCode")
     @Expose
@@ -89,7 +81,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceTypeCode")
     @Expose
@@ -97,7 +88,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceTypeName")
     @Expose
@@ -105,7 +95,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentElementId")
     @Expose
@@ -113,7 +102,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 空间层级类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpacePoiId")
     @Expose
@@ -121,7 +109,6 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 构件描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementDesc")
     @Expose
@@ -129,17 +116,14 @@ public class ElementProfile extends AbstractModel {
 
     /**
     * 删除标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDelete")
     @Expose
     private Long IsDelete;
 
     /**
-     * Get 建筑id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑id 
      * @return BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingId() {
         return this.BuildingId;
@@ -147,19 +131,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingId(String BuildingId) {
         this.BuildingId = BuildingId;
     }
 
     /**
-     * Get 构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件id 
      * @return ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -167,19 +147,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get 构件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件类型 
      * @return EntityType 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntityType() {
         return this.EntityType;
@@ -187,19 +163,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EntityType 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntityType(String EntityType) {
         this.EntityType = EntityType;
     }
 
     /**
-     * Get 构件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件名称 
      * @return ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementName() {
         return this.ElementName;
@@ -207,19 +179,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get 构件空间级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件空间级别 
      * @return Level 构件空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -227,19 +195,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 构件空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 构件空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 底部标高（单位mm） 
      * @return BottomHeight 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBottomHeight() {
         return this.BottomHeight;
@@ -247,19 +211,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BottomHeight 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBottomHeight(Long BottomHeight) {
         this.BottomHeight = BottomHeight;
     }
 
     /**
-     * Get 排序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排序 
      * @return Sort 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSort() {
         return this.Sort;
@@ -267,19 +227,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sort 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSort(Long Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间编码 
      * @return SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceCode() {
         return this.SpaceCode;
@@ -287,19 +243,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceCode(String SpaceCode) {
         this.SpaceCode = SpaceCode;
     }
 
     /**
-     * Get 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间分类编码 
      * @return SpaceTypeCode 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceTypeCode() {
         return this.SpaceTypeCode;
@@ -307,19 +259,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceTypeCode 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceTypeCode(String SpaceTypeCode) {
         this.SpaceTypeCode = SpaceTypeCode;
     }
 
     /**
-     * Get 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间分类名称 
      * @return SpaceTypeName 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceTypeName() {
         return this.SpaceTypeName;
@@ -327,19 +275,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceTypeName 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceTypeName(String SpaceTypeName) {
         this.SpaceTypeName = SpaceTypeName;
     }
 
     /**
-     * Get 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级构件id 
      * @return ParentElementId 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentElementId() {
         return this.ParentElementId;
@@ -347,19 +291,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentElementId 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentElementId(String ParentElementId) {
         this.ParentElementId = ParentElementId;
     }
 
     /**
-     * Get 空间层级类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间层级类型编码 
      * @return SpacePoiId 空间层级类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpacePoiId() {
         return this.SpacePoiId;
@@ -367,19 +307,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 空间层级类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpacePoiId 空间层级类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpacePoiId(String SpacePoiId) {
         this.SpacePoiId = SpacePoiId;
     }
 
     /**
-     * Get 构件描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件描述 
      * @return ElementDesc 构件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementDesc() {
         return this.ElementDesc;
@@ -387,19 +323,15 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 构件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementDesc 构件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementDesc(String ElementDesc) {
         this.ElementDesc = ElementDesc;
     }
 
     /**
-     * Get 删除标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除标记 
      * @return IsDelete 删除标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDelete() {
         return this.IsDelete;
@@ -407,9 +339,7 @@ public class ElementProfile extends AbstractModel {
 
     /**
      * Set 删除标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDelete 删除标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDelete(Long IsDelete) {
         this.IsDelete = IsDelete;

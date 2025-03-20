@@ -25,17 +25,14 @@ public class BuildingModelRes extends AbstractModel {
 
     /**
     * 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Models")
     @Expose
     private BuildingModel [] Models;
 
     /**
-     * Get 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建模模型信息出参 
      * @return Models 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BuildingModel [] getModels() {
         return this.Models;
@@ -43,9 +40,7 @@ public class BuildingModelRes extends AbstractModel {
 
     /**
      * Set 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Models 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModels(BuildingModel [] Models) {
         this.Models = Models;

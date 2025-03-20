@@ -25,7 +25,6 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
     * 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
     * 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowRatio")
     @Expose
@@ -41,7 +39,6 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
     * 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlParam")
     @Expose
@@ -49,7 +46,6 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
     * 优先级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -57,17 +53,14 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
     * 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefaultPriority")
     @Expose
     private Boolean IsDefaultPriority;
 
     /**
-     * Get 版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称 
      * @return VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -75,19 +68,15 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
      * Set 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 流量占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量占比 
      * @return FlowRatio 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowRatio() {
         return this.FlowRatio;
@@ -95,19 +84,15 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
      * Set 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowRatio 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowRatio(Long FlowRatio) {
         this.FlowRatio = FlowRatio;
     }
 
     /**
-     * Get 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量参数键值对（URL参数/HEADERS参数） 
      * @return UrlParam 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectKV getUrlParam() {
         return this.UrlParam;
@@ -115,19 +100,15 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
      * Set 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlParam 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlParam(ObjectKV UrlParam) {
         this.UrlParam = UrlParam;
     }
 
     /**
-     * Get 优先级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先级 
      * @return Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -135,19 +116,15 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
      * Set 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是默认兜底版本 
      * @return IsDefaultPriority 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefaultPriority() {
         return this.IsDefaultPriority;
@@ -155,9 +132,7 @@ public class CloudBaseRunVersionFlowItem extends AbstractModel {
 
     /**
      * Set 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefaultPriority 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefaultPriority(Boolean IsDefaultPriority) {
         this.IsDefaultPriority = IsDefaultPriority;

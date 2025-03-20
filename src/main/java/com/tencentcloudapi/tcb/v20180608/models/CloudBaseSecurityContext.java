@@ -25,17 +25,14 @@ public class CloudBaseSecurityContext extends AbstractModel {
 
     /**
     * 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capabilities")
     @Expose
     private CloudBaseCapabilities Capabilities;
 
     /**
-     * Get 安全特性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全特性 
      * @return Capabilities 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseCapabilities getCapabilities() {
         return this.Capabilities;
@@ -43,9 +40,7 @@ public class CloudBaseSecurityContext extends AbstractModel {
 
     /**
      * Set 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Capabilities 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapabilities(CloudBaseCapabilities Capabilities) {
         this.Capabilities = Capabilities;

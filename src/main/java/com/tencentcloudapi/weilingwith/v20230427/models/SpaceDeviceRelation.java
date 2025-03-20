@@ -25,7 +25,6 @@ public class SpaceDeviceRelation extends AbstractModel {
 
     /**
     * 设备id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,17 +32,14 @@ public class SpaceDeviceRelation extends AbstractModel {
 
     /**
     * 构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
     private String ElementId;
 
     /**
-     * Get 设备id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备id 
      * @return DeviceId 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -51,19 +47,15 @@ public class SpaceDeviceRelation extends AbstractModel {
 
     /**
      * Set 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件id 
      * @return ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -71,9 +63,7 @@ public class SpaceDeviceRelation extends AbstractModel {
 
     /**
      * Set 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;

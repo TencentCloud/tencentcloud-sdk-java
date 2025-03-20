@@ -25,7 +25,6 @@ public class SsoDepartment extends AbstractModel {
 
     /**
     * 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentId")
     @Expose
@@ -33,7 +32,6 @@ public class SsoDepartment extends AbstractModel {
 
     /**
     * 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class SsoDepartment extends AbstractModel {
 
     /**
     * 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentDepartmentId")
     @Expose
     private String ParentDepartmentId;
 
     /**
-     * Get 部门ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门ID 
      * @return DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentId() {
         return this.DepartmentId;
@@ -59,19 +54,15 @@ public class SsoDepartment extends AbstractModel {
 
     /**
      * Set 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentId(String DepartmentId) {
         this.DepartmentId = DepartmentId;
     }
 
     /**
-     * Get 部门名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门名称 
      * @return Name 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class SsoDepartment extends AbstractModel {
 
     /**
      * Set 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级部门ID 
      * @return ParentDepartmentId 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentDepartmentId() {
         return this.ParentDepartmentId;
@@ -99,9 +86,7 @@ public class SsoDepartment extends AbstractModel {
 
     /**
      * Set 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentDepartmentId 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentDepartmentId(String ParentDepartmentId) {
         this.ParentDepartmentId = ParentDepartmentId;

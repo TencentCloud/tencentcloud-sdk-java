@@ -26,7 +26,6 @@ public class HandleRecordInfo extends AbstractModel {
     /**
     * 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -34,7 +33,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -42,7 +40,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -50,7 +47,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationType")
     @Expose
@@ -58,7 +54,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -66,7 +61,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -75,7 +69,6 @@ public class HandleRecordInfo extends AbstractModel {
     /**
     * 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSet")
     @Expose
@@ -83,7 +76,6 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
     * 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -92,7 +84,6 @@ public class HandleRecordInfo extends AbstractModel {
     /**
     * 扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendOne")
     @Expose
@@ -100,11 +91,9 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Get 告警处理记录id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Id 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -113,20 +102,16 @@ public class HandleRecordInfo extends AbstractModel {
     /**
      * Set 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -134,19 +119,15 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -154,19 +135,15 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 操作类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作类型 
      * @return OperationType 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationType() {
         return this.OperationType;
@@ -174,19 +151,15 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationType 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get 处理时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理时间 
      * @return Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -194,19 +167,15 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -214,9 +183,7 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -224,11 +191,9 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Get 文件列表
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return FileSet 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileInfo [] getFileSet() {
         return this.FileSet;
@@ -237,20 +202,16 @@ public class HandleRecordInfo extends AbstractModel {
     /**
      * Set 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSet 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSet(FileInfo [] FileSet) {
         this.FileSet = FileSet;
     }
 
     /**
-     * Get 应用appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用appid 
      * @return AppId 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -258,9 +219,7 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Set 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -268,11 +227,9 @@ public class HandleRecordInfo extends AbstractModel {
 
     /**
      * Get 扩展字段1，存非孪生中台用户id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ExtendOne 扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtendOne() {
         return this.ExtendOne;
@@ -281,10 +238,8 @@ public class HandleRecordInfo extends AbstractModel {
     /**
      * Set 扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendOne 扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendOne(String ExtendOne) {
         this.ExtendOne = ExtendOne;

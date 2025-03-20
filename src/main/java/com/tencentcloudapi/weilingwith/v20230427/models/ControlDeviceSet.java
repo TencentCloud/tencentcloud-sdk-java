@@ -25,17 +25,14 @@ public class ControlDeviceSet extends AbstractModel {
 
     /**
     * 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Set")
     @Expose
     private ControlDeviceRes [] Set;
 
     /**
-     * Get 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备控制后返回结果集合 
      * @return Set 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ControlDeviceRes [] getSet() {
         return this.Set;
@@ -43,9 +40,7 @@ public class ControlDeviceSet extends AbstractModel {
 
     /**
      * Set 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Set 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSet(ControlDeviceRes [] Set) {
         this.Set = Set;

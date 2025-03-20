@@ -25,7 +25,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingId")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntityType")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementName")
     @Expose
@@ -57,7 +53,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -65,7 +60,6 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BottomHeight")
     @Expose
@@ -73,17 +67,14 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
     * 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceCode")
     @Expose
     private String SpaceCode;
 
     /**
-     * Get 建筑id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑id 
      * @return BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingId() {
         return this.BuildingId;
@@ -91,19 +82,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingId(String BuildingId) {
         this.BuildingId = BuildingId;
     }
 
     /**
-     * Get 构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件id 
      * @return ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -111,19 +98,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get 构件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件类型 
      * @return EntityType 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntityType() {
         return this.EntityType;
@@ -131,19 +114,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EntityType 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntityType(String EntityType) {
         this.EntityType = EntityType;
     }
 
     /**
-     * Get 构件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件名称 
      * @return ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementName() {
         return this.ElementName;
@@ -151,19 +130,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get 构件级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件级别 
      * @return Level 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -171,19 +146,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 底部标高（单位mm） 
      * @return BottomHeight 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBottomHeight() {
         return this.BottomHeight;
@@ -191,19 +162,15 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BottomHeight 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBottomHeight(Long BottomHeight) {
         this.BottomHeight = BottomHeight;
     }
 
     /**
-     * Get 空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间编码 
      * @return SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceCode() {
         return this.SpaceCode;
@@ -211,9 +178,7 @@ public class DeviceSpaceInfoRes extends AbstractModel {
 
     /**
      * Set 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceCode(String SpaceCode) {
         this.SpaceCode = SpaceCode;

@@ -25,7 +25,6 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
     * 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrativeTypeCode")
     @Expose
@@ -33,7 +32,6 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
     * 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrativeCode")
     @Expose
@@ -41,17 +39,14 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
     * 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrativeName")
     @Expose
     private String AdministrativeName;
 
     /**
-     * Get 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行政区域类型编码 
      * @return AdministrativeTypeCode 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdministrativeTypeCode() {
         return this.AdministrativeTypeCode;
@@ -59,19 +54,15 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
      * Set 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrativeTypeCode 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrativeTypeCode(String AdministrativeTypeCode) {
         this.AdministrativeTypeCode = AdministrativeTypeCode;
     }
 
     /**
-     * Get 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行政区域编码 
      * @return AdministrativeCode 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdministrativeCode() {
         return this.AdministrativeCode;
@@ -79,19 +70,15 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
      * Set 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrativeCode 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrativeCode(String AdministrativeCode) {
         this.AdministrativeCode = AdministrativeCode;
     }
 
     /**
-     * Get 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行政区域名称 
      * @return AdministrativeName 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdministrativeName() {
         return this.AdministrativeName;
@@ -99,9 +86,7 @@ public class AdministrativeDetail extends AbstractModel {
 
     /**
      * Set 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrativeName 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrativeName(String AdministrativeName) {
         this.AdministrativeName = AdministrativeName;

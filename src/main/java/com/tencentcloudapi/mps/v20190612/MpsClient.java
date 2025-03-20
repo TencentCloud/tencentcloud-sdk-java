@@ -116,6 +116,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *智能字幕新建热词库接口
+     * @param req CreateAsrHotwordsRequest
+     * @return CreateAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAsrHotwordsResponse CreateAsrHotwords(CreateAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAsrHotwords", CreateAsrHotwordsResponse.class);
+    }
+
+    /**
      *创建用户自定义内容审核模板，数量上限：50。
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
@@ -201,6 +212,17 @@ public class MpsClient extends AbstractClient{
     public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSchedule", CreateScheduleResponse.class);
+    }
+
+    /**
+     *创建自定义智能字幕模板
+     * @param req CreateSmartSubtitleTemplateRequest
+     * @return CreateSmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(CreateSmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSmartSubtitleTemplate", CreateSmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -394,6 +416,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除智能字幕热词库
+     * @param req DeleteAsrHotwordsRequest
+     * @return DeleteAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAsrHotwordsResponse DeleteAsrHotwords(DeleteAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAsrHotwords", DeleteAsrHotwordsResponse.class);
+    }
+
+    /**
      *删除用户自定义内容审核模板。
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
@@ -468,6 +501,17 @@ public class MpsClient extends AbstractClient{
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
+    }
+
+    /**
+     *删除用户自定义智能字幕模板。
+     * @param req DeleteSmartSubtitleTemplateRequest
+     * @return DeleteSmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(DeleteSmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSmartSubtitleTemplate", DeleteSmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -614,6 +658,28 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询智能字幕热词库
+     * @param req DescribeAsrHotwordsRequest
+     * @return DescribeAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsrHotwordsResponse DescribeAsrHotwords(DescribeAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAsrHotwords", DescribeAsrHotwordsResponse.class);
+    }
+
+    /**
+     *获取热词库列表
+     * @param req DescribeAsrHotwordsListRequest
+     * @return DescribeAsrHotwordsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(DescribeAsrHotwordsListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAsrHotwordsList", DescribeAsrHotwordsListResponse.class);
+    }
+
+    /**
      *根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -710,6 +776,17 @@ public class MpsClient extends AbstractClient{
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
+    }
+
+    /**
+     *根据智能字幕 模板唯一标识，获取智能字幕模板详情列表。返回结果包含符合条件的所有用户自定义智能字幕模板及系统预置智能字幕模板
+     * @param req DescribeSmartSubtitleTemplatesRequest
+     * @return DescribeSmartSubtitleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(DescribeSmartSubtitleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSmartSubtitleTemplates", DescribeSmartSubtitleTemplatesResponse.class);
     }
 
     /**
@@ -1105,6 +1182,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *智能字幕更新热词库接口
+     * @param req ModifyAsrHotwordsRequest
+     * @return ModifyAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAsrHotwordsResponse ModifyAsrHotwords(ModifyAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAsrHotwords", ModifyAsrHotwordsResponse.class);
+    }
+
+    /**
      *修改用户自定义内容审核模板。
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
@@ -1179,6 +1267,17 @@ public class MpsClient extends AbstractClient{
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
+    }
+
+    /**
+     *修改用户自定义智能字幕模板。
+     * @param req ModifySmartSubtitleTemplateRequest
+     * @return ModifySmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(ModifySmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySmartSubtitleTemplate", ModifySmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -1348,6 +1447,7 @@ public class MpsClient extends AbstractClient{
 8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
 10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+11. 智能字幕（语音全文、语音热词、语音翻译）
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException

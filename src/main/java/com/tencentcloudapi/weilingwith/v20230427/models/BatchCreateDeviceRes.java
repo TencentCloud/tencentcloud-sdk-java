@@ -25,7 +25,6 @@ public class BatchCreateDeviceRes extends AbstractModel {
 
     /**
     * 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessSet")
     @Expose
@@ -33,17 +32,14 @@ public class BatchCreateDeviceRes extends AbstractModel {
 
     /**
     * 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailSet")
     @Expose
     private CreateDeviceFailed [] FailSet;
 
     /**
-     * Get 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增成功的设备列表 
      * @return SuccessSet 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateDeviceSucceeded [] getSuccessSet() {
         return this.SuccessSet;
@@ -51,19 +47,15 @@ public class BatchCreateDeviceRes extends AbstractModel {
 
     /**
      * Set 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessSet 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessSet(CreateDeviceSucceeded [] SuccessSet) {
         this.SuccessSet = SuccessSet;
     }
 
     /**
-     * Get 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增失败的设备列表 
      * @return FailSet 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateDeviceFailed [] getFailSet() {
         return this.FailSet;
@@ -71,9 +63,7 @@ public class BatchCreateDeviceRes extends AbstractModel {
 
     /**
      * Set 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailSet 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailSet(CreateDeviceFailed [] FailSet) {
         this.FailSet = FailSet;

@@ -25,7 +25,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
     @Expose
@@ -33,7 +32,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChineseName")
     @Expose
@@ -41,7 +39,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParkName")
     @Expose
@@ -65,7 +60,6 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParkNum")
     @Expose
@@ -73,17 +67,14 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
     * 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrativeDetailSet")
     @Expose
     private AdministrativeDetail [] AdministrativeDetailSet;
 
     /**
-     * Get 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间Id 
      * @return WorkspaceId 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkspaceId() {
         return this.WorkspaceId;
@@ -91,19 +82,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceId 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(Long WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间中文名字 
      * @return ChineseName 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChineseName() {
         return this.ChineseName;
@@ -111,19 +98,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChineseName 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChineseName(String ChineseName) {
         this.ChineseName = ChineseName;
     }
 
     /**
-     * Get 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间描述 
      * @return Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -131,19 +114,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间是否删除状态 
      * @return Status 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -151,19 +130,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该工作空间绑定的区/县的行政区名字 
      * @return ParkName 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParkName() {
         return this.ParkName;
@@ -171,19 +146,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParkName 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParkName(String ParkName) {
         this.ParkName = ParkName;
     }
 
     /**
-     * Get 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该工作空间绑定的区/县的行政区编码 
      * @return ParkNum 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParkNum() {
         return this.ParkNum;
@@ -191,19 +162,15 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParkNum 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParkNum(String ParkNum) {
         this.ParkNum = ParkNum;
     }
 
     /**
-     * Get 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取该工作空间绑定的区/县的上级行政区划信息 
      * @return AdministrativeDetailSet 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdministrativeDetail [] getAdministrativeDetailSet() {
         return this.AdministrativeDetailSet;
@@ -211,9 +178,7 @@ public class WorkspaceInfo extends AbstractModel {
 
     /**
      * Set 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrativeDetailSet 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrativeDetailSet(AdministrativeDetail [] AdministrativeDetailSet) {
         this.AdministrativeDetailSet = AdministrativeDetailSet;

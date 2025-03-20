@@ -25,7 +25,6 @@ public class DeviceLocation extends AbstractModel {
 
     /**
     * 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceLocation extends AbstractModel {
 
     /**
     * 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -41,17 +39,14 @@ public class DeviceLocation extends AbstractModel {
 
     /**
     * 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Z")
     @Expose
     private Float Z;
 
     /**
-     * Get 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 点位X坐标值 
      * @return X 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getX() {
         return this.X;
@@ -59,19 +54,15 @@ public class DeviceLocation extends AbstractModel {
 
     /**
      * Set 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Float X) {
         this.X = X;
     }
 
     /**
-     * Get 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 点位Y坐标值 
      * @return Y 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
         return this.Y;
@@ -79,19 +70,15 @@ public class DeviceLocation extends AbstractModel {
 
     /**
      * Set 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 点位Z坐标值 
      * @return Z 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getZ() {
         return this.Z;
@@ -99,9 +86,7 @@ public class DeviceLocation extends AbstractModel {
 
     /**
      * Set 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Z 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZ(Float Z) {
         this.Z = Z;

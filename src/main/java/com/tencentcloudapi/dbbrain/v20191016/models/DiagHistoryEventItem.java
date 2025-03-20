@@ -74,7 +74,6 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
     * 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -82,7 +81,6 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
     * 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
     @Expose
@@ -90,7 +88,6 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -209,10 +206,8 @@ public class DiagHistoryEventItem extends AbstractModel {
     }
 
     /**
-     * Get 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -220,19 +215,15 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
      * Set 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 保留字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留字段 
      * @return Metric 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
         return this.Metric;
@@ -240,19 +231,15 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
      * Set 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -260,9 +247,7 @@ public class DiagHistoryEventItem extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

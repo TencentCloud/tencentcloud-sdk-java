@@ -25,7 +25,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProducerId")
     @Expose
@@ -33,7 +32,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProducerName")
     @Expose
@@ -41,7 +39,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -49,7 +46,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientVersion")
     @Expose
@@ -57,7 +53,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateIn")
     @Expose
@@ -65,7 +60,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgThroughputIn")
     @Expose
@@ -73,7 +67,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AverageMsgSize")
     @Expose
@@ -81,7 +74,6 @@ public class Publisher extends AbstractModel {
 
     /**
     * 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectedSince")
     @Expose
@@ -89,17 +81,14 @@ public class Publisher extends AbstractModel {
 
     /**
     * 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-     * Get 生产者id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产者id 
      * @return ProducerId 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProducerId() {
         return this.ProducerId;
@@ -107,19 +96,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProducerId 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProducerId(Long ProducerId) {
         this.ProducerId = ProducerId;
     }
 
     /**
-     * Get 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产者名称 
      * @return ProducerName 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProducerName() {
         return this.ProducerName;
@@ -127,19 +112,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProducerName 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProducerName(String ProducerName) {
         this.ProducerName = ProducerName;
     }
 
     /**
-     * Get 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产者地址 
      * @return Address 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -147,19 +128,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端版本 
      * @return ClientVersion 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientVersion() {
         return this.ClientVersion;
@@ -167,19 +144,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientVersion 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientVersion(String ClientVersion) {
         this.ClientVersion = ClientVersion;
     }
 
     /**
-     * Get 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息生产速率（条/秒） 
      * @return MsgRateIn 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMsgRateIn() {
         return this.MsgRateIn;
@@ -187,19 +160,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateIn 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateIn(Float MsgRateIn) {
         this.MsgRateIn = MsgRateIn;
     }
 
     /**
-     * Get 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息生产吞吐速率（字节/秒） 
      * @return MsgThroughputIn 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMsgThroughputIn() {
         return this.MsgThroughputIn;
@@ -207,19 +176,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgThroughputIn 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgThroughputIn(Float MsgThroughputIn) {
         this.MsgThroughputIn = MsgThroughputIn;
     }
 
     /**
-     * Get 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均消息大小（字节） 
      * @return AverageMsgSize 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAverageMsgSize() {
         return this.AverageMsgSize;
@@ -227,19 +192,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AverageMsgSize 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAverageMsgSize(Float AverageMsgSize) {
         this.AverageMsgSize = AverageMsgSize;
     }
 
     /**
-     * Get 连接时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接时间 
      * @return ConnectedSince 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectedSince() {
         return this.ConnectedSince;
@@ -247,19 +208,15 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectedSince 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectedSince(String ConnectedSince) {
         this.ConnectedSince = ConnectedSince;
     }
 
     /**
-     * Get 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产者连接的主题分区号 
      * @return Partition 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartition() {
         return this.Partition;
@@ -267,9 +224,7 @@ public class Publisher extends AbstractModel {
 
     /**
      * Set 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Partition 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

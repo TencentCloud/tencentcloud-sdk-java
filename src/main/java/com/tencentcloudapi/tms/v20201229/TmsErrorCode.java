@@ -1,33 +1,33 @@
 package com.tencentcloudapi.tms.v20201229;
 public enum TmsErrorCode {
-    // 请求超时。
+     /*         请求超时。 */
      INTERNALERROR_ERRTEXTTIMEOUT("InternalError.ErrTextTimeOut"),
      
-    // 错误的action。
+     /*         错误的action。 */
      INVALIDPARAMETER_ERRACTION("InvalidParameter.ErrAction"),
      
-    // 请求的文本长度过长。
+     /*         请求的文本长度过长。 */
      INVALIDPARAMETER_ERRTEXTCONTENTLEN("InvalidParameter.ErrTextContentLen"),
      
-    // 文本类型错误，需要base64的文本。
+     /*         文本类型错误，需要base64的文本。 */
      INVALIDPARAMETER_ERRTEXTCONTENTTYPE("InvalidParameter.ErrTextContentType"),
      
-    // InvalidParameter.ParameterError
+     /*         InvalidParameter.ParameterError */
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
      
-    // FileContent不可用，传入的Base64编码无法转换成标准utf8内容。
+     /*         FileContent不可用，传入的Base64编码无法转换成标准utf8内容。 */
      INVALIDPARAMETERVALUE_ERRFILECONTENT("InvalidParameterValue.ErrFileContent"),
      
-    // 请求的文本长度超过限制。
+     /*         请求的文本长度超过限制。 */
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTLEN("InvalidParameterValue.ErrTextContentLen"),
      
-    // 请求的文本格式错误（需要base64编码格式的文本）。
+     /*         请求的文本格式错误（需要base64编码格式的文本）。 */
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
      
-    // 请求的次数超过了频率限制。
+     /*         请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // 未开通权限/无有效套餐包/账号已欠费。
+     /*         未开通权限/无有效套餐包/账号已欠费。 */
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized");
      
     private String value;

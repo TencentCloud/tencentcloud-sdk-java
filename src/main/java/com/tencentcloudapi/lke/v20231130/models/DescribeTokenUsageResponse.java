@@ -80,6 +80,13 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     private Float RagSearchUsage;
 
     /**
+    * 联网搜索次数
+    */
+    @SerializedName("InternetSearchUsage")
+    @Expose
+    private Float InternetSearchUsage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -215,6 +222,22 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     }
 
     /**
+     * Get 联网搜索次数 
+     * @return InternetSearchUsage 联网搜索次数
+     */
+    public Float getInternetSearchUsage() {
+        return this.InternetSearchUsage;
+    }
+
+    /**
+     * Set 联网搜索次数
+     * @param InternetSearchUsage 联网搜索次数
+     */
+    public void setInternetSearchUsage(Float InternetSearchUsage) {
+        this.InternetSearchUsage = InternetSearchUsage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -262,6 +285,9 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         if (source.RagSearchUsage != null) {
             this.RagSearchUsage = new Float(source.RagSearchUsage);
         }
+        if (source.InternetSearchUsage != null) {
+            this.InternetSearchUsage = new Float(source.InternetSearchUsage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -280,6 +306,7 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PageUsage", this.PageUsage);
         this.setParamSimple(map, prefix + "SplitTokenUsage", this.SplitTokenUsage);
         this.setParamSimple(map, prefix + "RagSearchUsage", this.RagSearchUsage);
+        this.setParamSimple(map, prefix + "InternetSearchUsage", this.InternetSearchUsage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

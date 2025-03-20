@@ -25,7 +25,6 @@ public class DescribeKnowledgeSetListResponse extends AbstractModel {
 
     /**
     * 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeKnowledgeSetListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 知识库列表 
      * @return Data 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KnowledgeSetRsp getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeKnowledgeSetListResponse extends AbstractModel {
 
     /**
      * Set 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(KnowledgeSetRsp Data) {
         this.Data = Data;

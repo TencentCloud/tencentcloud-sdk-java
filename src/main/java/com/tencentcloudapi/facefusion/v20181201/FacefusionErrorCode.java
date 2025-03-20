@@ -1,150 +1,150 @@
 package com.tencentcloudapi.facefusion.v20181201;
 public enum FacefusionErrorCode {
-    // 认证失败。
+     /*         认证失败。 */
      AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
      
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 人脸配准点出框错误码。
+     /*         人脸配准点出框错误码。 */
      FAILEDOPERATION_FACEBORDERCHECKFAILED("FailedOperation.FaceBorderCheckFailed"),
      
-    // 人脸出框，无法使用。
+     /*         人脸出框，无法使用。 */
      FAILEDOPERATION_FACEEXCEEDBORDER("FailedOperation.FaceExceedBorder"),
      
-    // 人脸融合失败，请更换图片后重试。
+     /*         人脸融合失败，请更换图片后重试。 */
      FAILEDOPERATION_FACEFUSIONERROR("FailedOperation.FaceFusionError"),
      
-    // 人脸框不合法。
+     /*         人脸框不合法。 */
      FAILEDOPERATION_FACERECTINVALID("FailedOperation.FaceRectInvalid"),
      
-    // 人脸配准失败。
+     /*         人脸配准失败。 */
      FAILEDOPERATION_FACESHAPEFAILED("FailedOperation.FaceShapeFailed"),
      
-    // 人脸因太小被过滤，建议人脸分辨率不小于34*34。
+     /*         人脸因太小被过滤，建议人脸分辨率不小于34*34。 */
      FAILEDOPERATION_FACESIZETOOSMALL("FailedOperation.FaceSizeTooSmall"),
      
-    // 操作太频繁，触发频控。
+     /*         操作太频繁，触发频控。 */
      FAILEDOPERATION_FUSEFREQCTRL("FailedOperation.FuseFreqCtrl"),
      
-    // 图像处理出错。
+     /*         图像处理出错。 */
      FAILEDOPERATION_FUSEIMAGEERROR("FailedOperation.FuseImageError"),
      
-    // 服务内部错误，请重试。
+     /*         服务内部错误，请重试。 */
      FAILEDOPERATION_FUSEINNERERROR("FailedOperation.FuseInnerError"),
      
-    // 素材未经过审核。
+     /*         素材未经过审核。 */
      FAILEDOPERATION_FUSEMATERIALNOTAUTH("FailedOperation.FuseMaterialNotAuth"),
      
-    // 素材不存在。
+     /*         素材不存在。 */
      FAILEDOPERATION_FUSEMATERIALNOTEXIST("FailedOperation.FuseMaterialNotExist"),
      
-    // 保存结果图片出错。
+     /*         保存结果图片出错。 */
      FAILEDOPERATION_FUSESAVEPHOTOFAIL("FailedOperation.FuseSavePhotoFail"),
      
-    // 人脸检测-图片解码失败。
+     /*         人脸检测-图片解码失败。 */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-    // 图片下载失败。
+     /*         图片下载失败。 */
      FAILEDOPERATION_IMAGEDOWNLOADERROR("FailedOperation.ImageDownloadError"),
      
-    // 素材尺寸超过1080*1080像素。
+     /*         素材尺寸超过1080*1080像素。 */
      FAILEDOPERATION_IMAGEPIXELEXCEED("FailedOperation.ImagePixelExceed"),
      
-    // 图片分辨率过大。建议您resize压缩到3k*3k以内。
+     /*         图片分辨率过大。建议您resize压缩到3k*3k以内。 */
      FAILEDOPERATION_IMAGERESOLUTIONEXCEED("FailedOperation.ImageResolutionExceed"),
      
-    // 图片短边分辨率小于64。
+     /*         图片短边分辨率小于64。 */
      FAILEDOPERATION_IMAGERESOLUTIONTOOSMALL("FailedOperation.ImageResolutionTooSmall"),
      
-    // 输入图片base64数据大小超过5M。
+     /*         输入图片base64数据大小超过5M。 */
      FAILEDOPERATION_IMAGESIZEEXCEED("FailedOperation.ImageSizeExceed"),
      
-    // 图片尺寸过大或者过小；不满足算法要求。
+     /*         图片尺寸过大或者过小；不满足算法要求。 */
      FAILEDOPERATION_IMAGESIZEINVALID("FailedOperation.ImageSizeInvalid"),
      
-    // 服务内部错误。
+     /*         服务内部错误。 */
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
-    // 无法检测出人脸, 人脸框配准分低于阈值。
+     /*         无法检测出人脸, 人脸框配准分低于阈值。 */
      FAILEDOPERATION_NOFACEDETECTED("FailedOperation.NoFaceDetected"),
      
-    // 参数字段或者值有误。
+     /*         参数字段或者值有误。 */
      FAILEDOPERATION_PARAMETERVALUEERROR("FailedOperation.ParameterValueError"),
      
-    // 活动未支付授权费或已停用。
+     /*         活动未支付授权费或已停用。 */
      FAILEDOPERATION_PROJECTNOTAUTH("FailedOperation.ProjectNotAuth"),
      
-    // 请求实体太大。
+     /*         请求实体太大。 */
      FAILEDOPERATION_REQUESTENTITYTOOLARGE("FailedOperation.RequestEntityTooLarge"),
      
-    // 后端服务超时。
+     /*         后端服务超时。 */
      FAILEDOPERATION_REQUESTTIMEOUT("FailedOperation.RequestTimeout"),
      
-    // RPC请求失败，一般为算法微服务故障。
+     /*         RPC请求失败，一般为算法微服务故障。 */
      FAILEDOPERATION_RPCFAIL("FailedOperation.RpcFail"),
      
-    // 系统内部错误。
+     /*         系统内部错误。 */
      FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
      
-    // 素材人脸ID不存在。
+     /*         素材人脸ID不存在。 */
      FAILEDOPERATION_TEMPLATEFACEIDNOTEXIST("FailedOperation.TemplateFaceIDNotExist"),
      
-    // 内部错误。
+     /*         内部错误。 */
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
      
-    // 未知错误。
+     /*         未知错误。 */
      FAILEDOPERATION_UNKNOWN("FailedOperation.Unknown"),
      
-    // 未查找到活动id。
+     /*         未查找到活动id。 */
      INVALIDPARAMETERVALUE_ACTIVITYIDNOTFOUND("InvalidParameterValue.ActivityIdNotFound"),
      
-    // 人脸框参数有误或者人脸框太小。
+     /*         人脸框参数有误或者人脸框太小。 */
      INVALIDPARAMETERVALUE_FACERECTPARAMETERVALUEERROR("InvalidParameterValue.FaceRectParameterValueError"),
      
-    // 人脸检测-图片为空。
+     /*         人脸检测-图片为空。 */
      INVALIDPARAMETERVALUE_IMAGEEMPTY("InvalidParameterValue.ImageEmpty"),
      
-    // 未查找到素材Id。
+     /*         未查找到素材Id。 */
      INVALIDPARAMETERVALUE_MATERIALIDNOTFOUND("InvalidParameterValue.MaterialIdNotFound"),
      
-    // 人脸检测-图片没有人脸。
+     /*         人脸检测-图片没有人脸。 */
      INVALIDPARAMETERVALUE_NOFACEINPHOTO("InvalidParameterValue.NoFaceInPhoto"),
      
-    // 参数字段或者值有误。
+     /*         参数字段或者值有误。 */
      INVALIDPARAMETERVALUE_PARAMETERVALUEERROR("InvalidParameterValue.ParameterValueError"),
      
-    // 资源正在发货中。
+     /*         资源正在发货中。 */
      RESOURCEUNAVAILABLE_DELIVERING("ResourceUnavailable.Delivering"),
      
-    // 账号已被冻结。
+     /*         账号已被冻结。 */
      RESOURCEUNAVAILABLE_FREEZE("ResourceUnavailable.Freeze"),
      
-    // 获取认证信息失败。
+     /*         获取认证信息失败。 */
      RESOURCEUNAVAILABLE_GETAUTHINFOERROR("ResourceUnavailable.GetAuthInfoError"),
      
-    // 账号已欠费。
+     /*         账号已欠费。 */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-    // 余额不足。
+     /*         余额不足。 */
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
      
-    // 计费状态未知，请确认是否已在控制台开通服务。
+     /*         计费状态未知，请确认是否已在控制台开通服务。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-    // 服务未开通。
+     /*         服务未开通。 */
      RESOURCEUNAVAILABLE_NOTREADY("ResourceUnavailable.NotReady"),
      
-    // 资源已被回收。
+     /*         资源已被回收。 */
      RESOURCEUNAVAILABLE_RECOVER("ResourceUnavailable.Recover"),
      
-    // 账号已停服。
+     /*         账号已停服。 */
      RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing"),
      
-    // 计费状态未知。
+     /*         计费状态未知。 */
      RESOURCEUNAVAILABLE_UNKNOWNSTATUS("ResourceUnavailable.UnknownStatus"),
      
-    // 账号已欠费。
+     /*         账号已欠费。 */
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
      
     private String value;

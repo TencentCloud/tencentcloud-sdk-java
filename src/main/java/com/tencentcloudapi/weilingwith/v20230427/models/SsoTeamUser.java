@@ -25,7 +25,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealName")
     @Expose
@@ -41,7 +39,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
     @Expose
@@ -49,7 +46,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
     @Expose
@@ -57,7 +53,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
     @Expose
@@ -65,7 +60,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 电话
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
     @Expose
@@ -73,7 +67,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -81,7 +74,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateAt")
     @Expose
@@ -89,7 +81,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentId")
     @Expose
@@ -97,7 +88,6 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentName")
     @Expose
@@ -105,17 +95,14 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
     * 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkFilter")
     @Expose
     private Long LinkFilter;
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -123,19 +110,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名称 
      * @return RealName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealName() {
         return this.RealName;
@@ -143,19 +126,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户 
      * @return UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
         return this.UserType;
@@ -163,19 +142,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属租户ID 
      * @return TenantId 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
         return this.TenantId;
@@ -183,19 +158,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TenantId 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get 邮箱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 邮箱 
      * @return Email 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
         return this.Email;
@@ -203,19 +174,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Email 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 电话
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话 
      * @return Phone 电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
         return this.Phone;
@@ -223,19 +190,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 电话
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phone 电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 用户状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户状态 
      * @return Status 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -243,19 +206,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateAt() {
         return this.CreateAt;
@@ -263,19 +222,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateAt(Long CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 部门ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门ID 
      * @return DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentId() {
         return this.DepartmentId;
@@ -283,19 +238,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentId(String DepartmentId) {
         this.DepartmentId = DepartmentId;
     }
 
     /**
-     * Get 部门名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门名称 
      * @return DepartmentName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentName() {
         return this.DepartmentName;
@@ -303,19 +254,15 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepartmentName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentName(String DepartmentName) {
         this.DepartmentName = DepartmentName;
     }
 
     /**
-     * Get 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否关联权限 
      * @return LinkFilter 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLinkFilter() {
         return this.LinkFilter;
@@ -323,9 +270,7 @@ public class SsoTeamUser extends AbstractModel {
 
     /**
      * Set 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinkFilter 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkFilter(Long LinkFilter) {
         this.LinkFilter = LinkFilter;

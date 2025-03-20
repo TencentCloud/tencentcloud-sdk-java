@@ -25,7 +25,6 @@ public class AdministrationData extends AbstractModel {
 
     /**
     * 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrationCode")
     @Expose
@@ -33,17 +32,14 @@ public class AdministrationData extends AbstractModel {
 
     /**
     * 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdministrationName")
     @Expose
     private String AdministrationName;
 
     /**
-     * Get 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行政区划编码 
      * @return AdministrationCode 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdministrationCode() {
         return this.AdministrationCode;
@@ -51,19 +47,15 @@ public class AdministrationData extends AbstractModel {
 
     /**
      * Set 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrationCode 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrationCode(String AdministrationCode) {
         this.AdministrationCode = AdministrationCode;
     }
 
     /**
-     * Get 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行政区划名称 
      * @return AdministrationName 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdministrationName() {
         return this.AdministrationName;
@@ -71,9 +63,7 @@ public class AdministrationData extends AbstractModel {
 
     /**
      * Set 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdministrationName 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdministrationName(String AdministrationName) {
         this.AdministrationName = AdministrationName;

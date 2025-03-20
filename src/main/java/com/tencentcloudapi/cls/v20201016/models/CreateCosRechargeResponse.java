@@ -25,7 +25,6 @@ public class CreateCosRechargeResponse extends AbstractModel {
 
     /**
     * COS导入任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCosRechargeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get COS导入任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS导入任务id 
      * @return Id COS导入任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -50,9 +47,7 @@ public class CreateCosRechargeResponse extends AbstractModel {
 
     /**
      * Set COS导入任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id COS导入任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;

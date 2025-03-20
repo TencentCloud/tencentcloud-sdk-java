@@ -25,7 +25,6 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingId")
     @Expose
@@ -33,7 +32,6 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingName")
     @Expose
@@ -41,7 +39,6 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceCode")
     @Expose
@@ -49,7 +46,6 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 经度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Longitude")
     @Expose
@@ -57,7 +53,6 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 纬度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Latitude")
     @Expose
@@ -65,17 +60,14 @@ public class BuildingProfile extends AbstractModel {
 
     /**
     * 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-     * Get 建筑id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑id 
      * @return BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingId() {
         return this.BuildingId;
@@ -83,19 +75,15 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingId(String BuildingId) {
         this.BuildingId = BuildingId;
     }
 
     /**
-     * Get 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑名称 
      * @return BuildingName 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingName() {
         return this.BuildingName;
@@ -103,19 +91,15 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingName 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingName(String BuildingName) {
         this.BuildingName = BuildingName;
     }
 
     /**
-     * Get 空间编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间编码 
      * @return SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceCode() {
         return this.SpaceCode;
@@ -123,19 +107,15 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceCode(String SpaceCode) {
         this.SpaceCode = SpaceCode;
     }
 
     /**
-     * Get 经度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经度 
      * @return Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLongitude() {
         return this.Longitude;
@@ -143,19 +123,15 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 经度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongitude(Float Longitude) {
         this.Longitude = Longitude;
     }
 
     /**
-     * Get 纬度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 纬度 
      * @return Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLatitude() {
         return this.Latitude;
@@ -163,19 +139,15 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatitude(Float Latitude) {
         this.Latitude = Latitude;
     }
 
     /**
-     * Get 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址 
      * @return Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -183,9 +155,7 @@ public class BuildingProfile extends AbstractModel {
 
     /**
      * Set 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;

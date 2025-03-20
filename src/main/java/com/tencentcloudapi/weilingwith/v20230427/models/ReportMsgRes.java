@@ -26,7 +26,6 @@ public class ReportMsgRes extends AbstractModel {
     /**
     * 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
     @Expose
@@ -35,7 +34,6 @@ public class ReportMsgRes extends AbstractModel {
     /**
     * 上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportStatus")
     @Expose
@@ -43,11 +41,9 @@ public class ReportMsgRes extends AbstractModel {
 
     /**
      * Get 上报消息对应下标的16位标识Id, 即第几个消息
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ReportId 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
         return this.ReportId;
@@ -56,10 +52,8 @@ public class ReportMsgRes extends AbstractModel {
     /**
      * Set 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportId 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
@@ -67,11 +61,9 @@ public class ReportMsgRes extends AbstractModel {
 
     /**
      * Get 上报消息结果，1表示成功推送，0表示推送失败
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ReportStatus 上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportStatus() {
         return this.ReportStatus;
@@ -80,10 +72,8 @@ public class ReportMsgRes extends AbstractModel {
     /**
      * Set 上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportStatus 上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportStatus(Long ReportStatus) {
         this.ReportStatus = ReportStatus;

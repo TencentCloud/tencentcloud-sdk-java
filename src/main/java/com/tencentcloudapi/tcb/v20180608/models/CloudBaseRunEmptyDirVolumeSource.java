@@ -25,7 +25,6 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
     * 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableEmptyDirVolume")
     @Expose
@@ -33,7 +32,6 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
     * "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Medium")
     @Expose
@@ -41,17 +39,14 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
     * emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeLimit")
     @Expose
     private String SizeLimit;
 
     /**
-     * Get 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用emptydir数据卷 
      * @return EnableEmptyDirVolume 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableEmptyDirVolume() {
         return this.EnableEmptyDirVolume;
@@ -59,19 +54,15 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
      * Set 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableEmptyDirVolume 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableEmptyDirVolume(Boolean EnableEmptyDirVolume) {
         this.EnableEmptyDirVolume = EnableEmptyDirVolume;
     }
 
     /**
-     * Get "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "","Memory","HugePages" 
      * @return Medium "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMedium() {
         return this.Medium;
@@ -79,19 +70,15 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
      * Set "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Medium "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedium(String Medium) {
         this.Medium = Medium;
     }
 
     /**
-     * Get emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get emptydir数据卷大小 
      * @return SizeLimit emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSizeLimit() {
         return this.SizeLimit;
@@ -99,9 +86,7 @@ public class CloudBaseRunEmptyDirVolumeSource extends AbstractModel {
 
     /**
      * Set emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SizeLimit emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeLimit(String SizeLimit) {
         this.SizeLimit = SizeLimit;

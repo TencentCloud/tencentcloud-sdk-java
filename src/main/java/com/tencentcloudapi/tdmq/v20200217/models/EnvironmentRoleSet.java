@@ -25,7 +25,6 @@ public class EnvironmentRoleSet extends AbstractModel {
 
     /**
     * 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -34,17 +33,14 @@ public class EnvironmentRoleSet extends AbstractModel {
     /**
     * 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permissions")
     @Expose
     private String [] Permissions;
 
     /**
-     * Get 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要绑定的命名空间Id，不重复且存在资源 
      * @return EnvironmentId 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -52,9 +48,7 @@ public class EnvironmentRoleSet extends AbstractModel {
 
     /**
      * Set 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentId 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -62,11 +56,9 @@ public class EnvironmentRoleSet extends AbstractModel {
 
     /**
      * Get 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Permissions 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPermissions() {
         return this.Permissions;
@@ -75,10 +67,8 @@ public class EnvironmentRoleSet extends AbstractModel {
     /**
      * Set 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Permissions 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissions(String [] Permissions) {
         this.Permissions = Permissions;

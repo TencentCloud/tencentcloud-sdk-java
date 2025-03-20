@@ -53,7 +53,6 @@ public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
     * 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extend")
     @Expose
@@ -61,11 +60,17 @@ public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
     * 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
+
+    /**
+    * 任务状态， 0创建中 1创建完成 2 删除中 
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
      * Get 日志服务地域 
@@ -132,10 +137,8 @@ public class CloudProductLogTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志配置拓展信息， 一般用于存储额外的日志投递配置 
      * @return Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtend() {
         return this.Extend;
@@ -143,19 +146,15 @@ public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
      * Set 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS 
      * @return LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogType() {
         return this.LogType;
@@ -163,12 +162,26 @@ public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
      * Set 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
+    }
+
+    /**
+     * Get 任务状态， 0创建中 1创建完成 2 删除中  
+     * @return Status 任务状态， 0创建中 1创建完成 2 删除中 
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态， 0创建中 1创建完成 2 删除中 
+     * @param Status 任务状态， 0创建中 1创建完成 2 删除中 
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public CloudProductLogTaskInfo() {
@@ -197,6 +210,9 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         if (source.LogType != null) {
             this.LogType = new String(source.LogType);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -210,6 +226,7 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Extend", this.Extend);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

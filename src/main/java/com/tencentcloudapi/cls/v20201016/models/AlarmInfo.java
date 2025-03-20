@@ -110,7 +110,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallBack")
     @Expose
@@ -118,15 +117,13 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Analysis")
     @Expose
     private AnalysisDimensional [] Analysis;
 
     /**
-    * 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分组触发状态。true：开启，false：关闭（默认）
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
@@ -134,7 +131,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
@@ -142,7 +138,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorObjectType")
     @Expose
@@ -150,7 +145,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -158,7 +152,6 @@ public class AlarmInfo extends AbstractModel {
 
     /**
     * 告警附加分类字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Classifications")
     @Expose
@@ -167,7 +160,6 @@ public class AlarmInfo extends AbstractModel {
     /**
     * 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiConditions")
     @Expose
@@ -370,10 +362,8 @@ Condition互斥。
     }
 
     /**
-     * Get 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义回调模板 
      * @return CallBack 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CallBackInfo getCallBack() {
         return this.CallBack;
@@ -381,19 +371,15 @@ Condition互斥。
 
     /**
      * Set 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallBack 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallBack(CallBackInfo CallBack) {
         this.CallBack = CallBack;
     }
 
     /**
-     * Get 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多维分析设置 
      * @return Analysis 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalysisDimensional [] getAnalysis() {
         return this.Analysis;
@@ -401,39 +387,31 @@ Condition互斥。
 
     /**
      * Set 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Analysis 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysis(AnalysisDimensional [] Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组触发状态。true：开启，false：关闭（默认） 
+     * @return GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分组触发状态。true：开启，false：关闭（默认）
+     * @param GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;
     }
 
     /**
-     * Get 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组触发条件。 
      * @return GroupTriggerCondition 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
@@ -441,19 +419,15 @@ Condition互斥。
 
     /**
      * Set 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupTriggerCondition 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。  
      * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
@@ -461,19 +435,15 @@ Condition互斥。
 
     /**
      * Set 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
     }
 
     /**
-     * Get 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。 
      * @return AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -481,19 +451,15 @@ Condition互斥。
 
     /**
      * Set 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警附加分类字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警附加分类字段。 
      * @return Classifications 告警附加分类字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmClassification [] getClassifications() {
         return this.Classifications;
@@ -501,9 +467,7 @@ Condition互斥。
 
     /**
      * Set 告警附加分类字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Classifications 告警附加分类字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassifications(AlarmClassification [] Classifications) {
         this.Classifications = Classifications;
@@ -511,11 +475,9 @@ Condition互斥。
 
     /**
      * Get 多触发条件。与
-Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。 
+Condition互斥。 
      * @return MultiConditions 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
@@ -524,10 +486,8 @@ Condition互斥。
     /**
      * Set 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiConditions 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;

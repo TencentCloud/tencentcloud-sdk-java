@@ -721,6 +721,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *通过该 API 可以查询实例的 CPU 弹性扩容信息
+     * @param req DescribeCPUExpandStrategyInfoRequest
+     * @return DescribeCPUExpandStrategyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCPUExpandStrategyInfoResponse DescribeCPUExpandStrategyInfo(DescribeCPUExpandStrategyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCPUExpandStrategyInfo", DescribeCPUExpandStrategyInfoResponse.class);
+    }
+
+    /**
      *本接口（DescribeCdbProxyInfo）用于查询数据库代理详情信息。
      * @param req DescribeCdbProxyInfoRequest
      * @return DescribeCdbProxyInfoResponse

@@ -59,7 +59,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String [] BackupFreq;
 
     /**
-    * 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
+    * 该参数目前不支持修改，无需填写。
     */
     @SerializedName("BackupType")
     @Expose
@@ -160,16 +160,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份 
-     * @return BackupType 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
+     * Get 该参数目前不支持修改，无需填写。 
+     * @return BackupType 该参数目前不支持修改，无需填写。
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
-     * @param BackupType 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
+     * Set 该参数目前不支持修改，无需填写。
+     * @param BackupType 该参数目前不支持修改，无需填写。
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

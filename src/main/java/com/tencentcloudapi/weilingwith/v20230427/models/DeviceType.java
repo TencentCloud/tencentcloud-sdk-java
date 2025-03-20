@@ -25,7 +25,6 @@ public class DeviceType extends AbstractModel {
 
     /**
     * 设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceType extends AbstractModel {
 
     /**
     * 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceType extends AbstractModel {
 
     /**
     * 父设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentCode")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceType extends AbstractModel {
 
     /**
     * 父设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentName")
     @Expose
@@ -58,17 +54,14 @@ public class DeviceType extends AbstractModel {
     /**
     * 是否子系统，1是
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSubsystem")
     @Expose
     private Long IsSubsystem;
 
     /**
-     * Get 设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型编码 
      * @return Code 设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -76,19 +69,15 @@ public class DeviceType extends AbstractModel {
 
     /**
      * Set 设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型名称 
      * @return Name 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -96,19 +85,15 @@ public class DeviceType extends AbstractModel {
 
     /**
      * Set 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 父设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父设备类型编码 
      * @return ParentCode 父设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentCode() {
         return this.ParentCode;
@@ -116,19 +101,15 @@ public class DeviceType extends AbstractModel {
 
     /**
      * Set 父设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentCode 父设备类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentCode(String ParentCode) {
         this.ParentCode = ParentCode;
     }
 
     /**
-     * Get 父设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父设备类型名称 
      * @return ParentName 父设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentName() {
         return this.ParentName;
@@ -136,9 +117,7 @@ public class DeviceType extends AbstractModel {
 
     /**
      * Set 父设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentName 父设备类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentName(String ParentName) {
         this.ParentName = ParentName;
@@ -146,11 +125,9 @@ public class DeviceType extends AbstractModel {
 
     /**
      * Get 是否子系统，1是
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return IsSubsystem 是否子系统，1是
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSubsystem() {
         return this.IsSubsystem;
@@ -159,10 +136,8 @@ public class DeviceType extends AbstractModel {
     /**
      * Set 是否子系统，1是
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSubsystem 是否子系统，1是
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSubsystem(Long IsSubsystem) {
         this.IsSubsystem = IsSubsystem;

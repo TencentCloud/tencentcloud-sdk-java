@@ -25,17 +25,14 @@ public class DescribeAlarmStatusListRes extends AbstractModel {
 
     /**
     * 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private AlarmStatusData [] List;
 
     /**
-     * Get 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态返回结构 
      * @return List 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmStatusData [] getList() {
         return this.List;
@@ -43,9 +40,7 @@ public class DescribeAlarmStatusListRes extends AbstractModel {
 
     /**
      * Set 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(AlarmStatusData [] List) {
         this.List = List;

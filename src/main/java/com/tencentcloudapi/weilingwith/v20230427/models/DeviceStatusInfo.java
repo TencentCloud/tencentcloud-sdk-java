@@ -25,7 +25,6 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
     * 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceStatus")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
     * 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceStatusUpdateTime")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
     * 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,17 +53,14 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
     * 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAlive")
     @Expose
     private Boolean IsAlive;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -75,19 +68,15 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备状态（online=normal+fault、offline） 
      * @return DeviceStatus 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceStatus() {
         return this.DeviceStatus;
@@ -95,19 +84,15 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
      * Set 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceStatus 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceStatus(String DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
     }
 
     /**
-     * Get 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备状态更新时间 
      * @return DeviceStatusUpdateTime 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceStatusUpdateTime() {
         return this.DeviceStatusUpdateTime;
@@ -115,19 +100,15 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
      * Set 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceStatusUpdateTime 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceStatusUpdateTime(String DeviceStatusUpdateTime) {
         this.DeviceStatusUpdateTime = DeviceStatusUpdateTime;
     }
 
     /**
-     * Get 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备业务状态（normal、fault、offline） 
      * @return Status 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -135,19 +116,15 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
      * Set 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推流状态。推流中-true，未推流-false 
      * @return IsAlive 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAlive() {
         return this.IsAlive;
@@ -155,9 +132,7 @@ public class DeviceStatusInfo extends AbstractModel {
 
     /**
      * Set 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAlive 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAlive(Boolean IsAlive) {
         this.IsAlive = IsAlive;

@@ -25,7 +25,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -33,7 +32,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -49,7 +46,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationLogo")
     @Expose
@@ -57,7 +53,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * engine
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnglishName")
     @Expose
@@ -73,17 +67,14 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用分配的appId 
      * @return ApplicationId 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -91,19 +82,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用中文名 
      * @return Name 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -111,19 +98,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 应用地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用地址 
      * @return Address 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -131,19 +114,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 应用logo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用logo 
      * @return ApplicationLogo 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicationLogo getApplicationLogo() {
         return this.ApplicationLogo;
@@ -151,19 +130,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationLogo 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationLogo(ApplicationLogo ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型，0:saas应用 1:平台应用 
      * @return Type 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -171,19 +146,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get engine
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get engine 
      * @return EnglishName engine
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnglishName() {
         return this.EnglishName;
@@ -191,19 +162,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set engine
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnglishName engine
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnglishName(String EnglishName) {
         this.EnglishName = EnglishName;
     }
 
     /**
-     * Get 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 能源管理应用 
      * @return Description 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -211,9 +178,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

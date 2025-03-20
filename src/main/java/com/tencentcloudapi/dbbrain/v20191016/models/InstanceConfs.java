@@ -39,7 +39,6 @@ public class InstanceConfs extends AbstractModel {
 
     /**
     * redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyDelimiters")
     @Expose
@@ -78,10 +77,8 @@ public class InstanceConfs extends AbstractModel {
     }
 
     /**
-     * Get redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get redis大key分析的自定义分割符，仅redis使用 
      * @return KeyDelimiters redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeyDelimiters() {
         return this.KeyDelimiters;
@@ -89,9 +86,7 @@ public class InstanceConfs extends AbstractModel {
 
     /**
      * Set redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyDelimiters redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyDelimiters(String [] KeyDelimiters) {
         this.KeyDelimiters = KeyDelimiters;

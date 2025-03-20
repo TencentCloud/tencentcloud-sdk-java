@@ -60,7 +60,6 @@ public class VpcBindRecord extends AbstractModel {
 
     /**
     * 说明，128个字符以内
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -147,10 +146,8 @@ public class VpcBindRecord extends AbstractModel {
     }
 
     /**
-     * Get 说明，128个字符以内
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 说明，128个字符以内 
      * @return Remark 说明，128个字符以内
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -158,9 +155,7 @@ public class VpcBindRecord extends AbstractModel {
 
     /**
      * Set 说明，128个字符以内
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 说明，128个字符以内
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

@@ -46,7 +46,6 @@ public class ScoreDetail extends AbstractModel {
 
     /**
     * 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -101,10 +100,8 @@ public class ScoreDetail extends AbstractModel {
     }
 
     /**
-     * Get 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扣分项列表。 
      * @return Items 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScoreItem [] getItems() {
         return this.Items;
@@ -112,9 +109,7 @@ public class ScoreDetail extends AbstractModel {
 
     /**
      * Set 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ScoreItem [] Items) {
         this.Items = Items;

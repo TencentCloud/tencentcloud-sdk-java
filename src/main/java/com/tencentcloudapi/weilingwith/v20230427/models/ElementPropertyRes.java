@@ -25,7 +25,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingId")
     @Expose
@@ -33,7 +32,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
@@ -41,7 +39,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropertySet")
     @Expose
@@ -49,7 +46,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coordinates")
     @Expose
@@ -57,7 +53,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Translate")
     @Expose
@@ -65,7 +60,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementName")
     @Expose
@@ -73,7 +67,6 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntityTypeCode")
     @Expose
@@ -81,17 +74,14 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
     * 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntityTypeName")
     @Expose
     private String EntityTypeName;
 
     /**
-     * Get 建筑id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑id 
      * @return BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingId() {
         return this.BuildingId;
@@ -99,19 +89,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingId(String BuildingId) {
         this.BuildingId = BuildingId;
     }
 
     /**
-     * Get 构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件id 
      * @return ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -119,19 +105,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件属性集合 
      * @return PropertySet 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementProperty [] getPropertySet() {
         return this.PropertySet;
@@ -139,19 +121,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PropertySet 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropertySet(ElementProperty [] PropertySet) {
         this.PropertySet = PropertySet;
     }
 
     /**
-     * Get 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件地理坐标 
      * @return Coordinates 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementCoordinates getCoordinates() {
         return this.Coordinates;
@@ -159,19 +137,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coordinates 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoordinates(ElementCoordinates Coordinates) {
         this.Coordinates = Coordinates;
     }
 
     /**
-     * Get 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件偏移量 
      * @return Translate 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementTranslate getTranslate() {
         return this.Translate;
@@ -179,19 +153,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Translate 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslate(ElementTranslate Translate) {
         this.Translate = Translate;
     }
 
     /**
-     * Get 构件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件名称 
      * @return ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementName() {
         return this.ElementName;
@@ -199,19 +169,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件类型代码 
      * @return EntityTypeCode 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntityTypeCode() {
         return this.EntityTypeCode;
@@ -219,19 +185,15 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EntityTypeCode 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntityTypeCode(String EntityTypeCode) {
         this.EntityTypeCode = EntityTypeCode;
     }
 
     /**
-     * Get 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件类型名称 
      * @return EntityTypeName 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntityTypeName() {
         return this.EntityTypeName;
@@ -239,9 +201,7 @@ public class ElementPropertyRes extends AbstractModel {
 
     /**
      * Set 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EntityTypeName 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntityTypeName(String EntityTypeName) {
         this.EntityTypeName = EntityTypeName;

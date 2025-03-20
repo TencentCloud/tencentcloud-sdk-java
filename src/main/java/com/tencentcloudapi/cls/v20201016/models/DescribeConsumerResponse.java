@@ -54,7 +54,6 @@ public class DescribeConsumerResponse extends AbstractModel {
 
     /**
     * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compression")
     @Expose
@@ -136,10 +135,8 @@ public class DescribeConsumerResponse extends AbstractModel {
     }
 
     /**
-     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4] 
      * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompression() {
         return this.Compression;
@@ -147,9 +144,7 @@ public class DescribeConsumerResponse extends AbstractModel {
 
     /**
      * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

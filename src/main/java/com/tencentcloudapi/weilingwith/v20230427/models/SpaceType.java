@@ -25,7 +25,6 @@ public class SpaceType extends AbstractModel {
 
     /**
     * 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceTypeCode")
     @Expose
@@ -33,17 +32,14 @@ public class SpaceType extends AbstractModel {
 
     /**
     * 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceTypeName")
     @Expose
     private String SpaceTypeName;
 
     /**
-     * Get 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间分类编码 
      * @return SpaceTypeCode 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceTypeCode() {
         return this.SpaceTypeCode;
@@ -51,19 +47,15 @@ public class SpaceType extends AbstractModel {
 
     /**
      * Set 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceTypeCode 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceTypeCode(String SpaceTypeCode) {
         this.SpaceTypeCode = SpaceTypeCode;
     }
 
     /**
-     * Get 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间分类名称 
      * @return SpaceTypeName 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceTypeName() {
         return this.SpaceTypeName;
@@ -71,9 +63,7 @@ public class SpaceType extends AbstractModel {
 
     /**
      * Set 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceTypeName 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceTypeName(String SpaceTypeName) {
         this.SpaceTypeName = SpaceTypeName;

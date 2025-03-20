@@ -1,165 +1,168 @@
 package com.tencentcloudapi.fmu.v20191213;
 public enum FmuErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 图片美颜失败，请更换图片。
+     /*         图片美颜失败，请更换图片。 */
      FAILEDOPERATION_BEAUTIFYFAILED("FailedOperation.BeautifyFailed"),
      
-    // 未检测到人脸。
+     /*         未检测到人脸。 */
      FAILEDOPERATION_DETECTNOFACE("FailedOperation.DetectNoFace"),
      
-    // 人脸因太小被过滤，建议人脸分辨率不小于34*34。
+     /*         人脸因太小被过滤，建议人脸分辨率不小于34*34。 */
      FAILEDOPERATION_FACESIZETOOSMALL("FailedOperation.FaceSizeTooSmall"),
      
-    // 操作太频繁，触发频控，请稍后重试。
+     /*         操作太频繁，触发频控，请稍后重试。 */
      FAILEDOPERATION_FREQCTRL("FailedOperation.FreqCtrl"),
      
-    // 图片解码失败。
+     /*         图片解码失败。 */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-    // 图片下载失败。
+     /*         图片下载失败。 */
      FAILEDOPERATION_IMAGEDOWNLOADERROR("FailedOperation.ImageDownloadError"),
      
-    // 不支持灰色图。
+     /*         不支持灰色图。 */
      FAILEDOPERATION_IMAGEGRAYNOTSUPPORT("FailedOperation.ImageGrayNotSupport"),
      
-    // 不支持的图片文件。
+     /*         不支持的图片文件。 */
      FAILEDOPERATION_IMAGENOTSUPPORTED("FailedOperation.ImageNotSupported"),
      
-    // 图片分辨率过大，超过2000*2000。
+     /*         图片分辨率过大，超过2000*2000。 */
      FAILEDOPERATION_IMAGERESOLUTIONEXCEED("FailedOperation.ImageResolutionExceed"),
      
-    // 图片短边分辨率小于64。
+     /*         图片分辨率过大，超过4000*4000。 */
+     FAILEDOPERATION_IMAGERESOLUTIONTOOLARGE("FailedOperation.ImageResolutionTooLarge"),
+     
+     /*         图片短边分辨率小于64。 */
      FAILEDOPERATION_IMAGERESOLUTIONTOOSMALL("FailedOperation.ImageResolutionTooSmall"),
      
-    // 图片数据太大。
+     /*         图片数据太大。 */
      FAILEDOPERATION_IMAGESIZEEXCEED("FailedOperation.ImageSizeExceed"),
      
-    // 图片上传失败。
+     /*         图片上传失败。 */
      FAILEDOPERATION_IMAGEUPLOADFAILED("FailedOperation.ImageUploadFailed"),
      
-    // 服务内部错误，请重试。
+     /*         服务内部错误，请重试。 */
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
-    // 素材超过数量限制。
+     /*         素材超过数量限制。 */
      FAILEDOPERATION_MODELVALUEEXCEED("FailedOperation.ModelValueExceed"),
      
-    // 参数错误。
+     /*         参数错误。 */
      FAILEDOPERATION_PARAMETERVALUEERROR("FailedOperation.ParameterValueError"),
      
-    // 请求包体太大，建议在6M内（通常是参数中包括大的图片）。
+     /*         请求包体太大，建议在6M内（通常是参数中包括大的图片）。 */
      FAILEDOPERATION_REQUESTENTITYTOOLARGE("FailedOperation.RequestEntityTooLarge"),
      
-    // 后端服务超时，请重试。
+     /*         后端服务超时，请重试。 */
      FAILEDOPERATION_REQUESTTIMEOUT("FailedOperation.RequestTimeout"),
      
-    // RPC请求失败，一般为算法微服务故障。
+     /*         RPC请求失败，一般为算法微服务故障。 */
      FAILEDOPERATION_RPCFAIL("FailedOperation.RpcFail"),
      
-    // 系统内部错误。
+     /*         系统内部错误。 */
      FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
      
-    // 未知错误。
+     /*         未知错误。 */
      FAILEDOPERATION_UNKNOWN("FailedOperation.Unknown"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 参数不合法。
+     /*         参数不合法。 */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
-    // 图片中没有人脸。
+     /*         图片中没有人脸。 */
      INVALIDPARAMETER_NOFACEINPHOTO("InvalidParameter.NoFaceInPhoto"),
      
-    // 参数取值错误。
+     /*         参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 大眼参数不合法。
+     /*         大眼参数不合法。 */
      INVALIDPARAMETERVALUE_EYEENLARGINGILLEGAL("InvalidParameterValue.EyeEnlargingIllegal"),
      
-    // 瘦脸参数不合法。
+     /*         瘦脸参数不合法。 */
      INVALIDPARAMETERVALUE_FACELIFTINGILLEGAL("InvalidParameterValue.FaceLiftingIllegal"),
      
-    // 人脸框参数不合法。
+     /*         人脸框参数不合法。 */
      INVALIDPARAMETERVALUE_FACERECTINVALID("InvalidParameterValue.FaceRectInvalid"),
      
-    // 第1个人脸框参数不合法。
+     /*         第1个人脸框参数不合法。 */
      INVALIDPARAMETERVALUE_FACERECTINVALIDFIRST("InvalidParameterValue.FaceRectInvalidFirst"),
      
-    // 第2个人脸框参数不合法。
+     /*         第2个人脸框参数不合法。 */
      INVALIDPARAMETERVALUE_FACERECTINVALIDSECOND("InvalidParameterValue.FaceRectInvalidSecond"),
      
-    // 第3个人脸框参数不合法。
+     /*         第3个人脸框参数不合法。 */
      INVALIDPARAMETERVALUE_FACERECTINVALIDTHRID("InvalidParameterValue.FaceRectInvalidThrid"),
      
-    // 缺少参数，请检查图片参数是否为空。
+     /*         缺少参数，请检查图片参数是否为空。 */
      INVALIDPARAMETERVALUE_IMAGEEMPTY("InvalidParameterValue.ImageEmpty"),
      
-    // 图片不合法。
+     /*         图片不合法。 */
      INVALIDPARAMETERVALUE_IMAGEINVALID("InvalidParameterValue.ImageInvalid"),
      
-    // 图片数据太大。
+     /*         图片数据太大。 */
      INVALIDPARAMETERVALUE_IMAGESIZEEXCEED("InvalidParameterValue.ImageSizeExceed"),
      
-    // 素材图片不合法, 必须是512*512的PNG图片。
+     /*         素材图片不合法, 必须是512*512的PNG图片。 */
      INVALIDPARAMETERVALUE_LUTIMAGEINVALID("InvalidParameterValue.LutImageInvalid"),
      
-    // 素材图片尺寸不合法，必须是512*512的PNG图片。
+     /*         素材图片尺寸不合法，必须是512*512的PNG图片。 */
      INVALIDPARAMETERVALUE_LUTIMAGESIZEINVALID("InvalidParameterValue.LutImageSizeInvalid"),
      
-    // 素材不存在。
+     /*         素材不存在。 */
      INVALIDPARAMETERVALUE_MODELIDNOTFOUND("InvalidParameterValue.ModelIdNotFound"),
      
-    // 图片中没有人脸。
+     /*         图片中没有人脸。 */
      INVALIDPARAMETERVALUE_NOFACEINPHOTO("InvalidParameterValue.NoFaceInPhoto"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETERVALUE_PARAMETERVALUEERROR("InvalidParameterValue.ParameterValueError"),
      
-    // 磨皮参数不合法。
+     /*         磨皮参数不合法。 */
      INVALIDPARAMETERVALUE_SMOOTHINGILLEGAL("InvalidParameterValue.SmoothingIllegal"),
      
-    // URL格式不合法。
+     /*         URL格式不合法。 */
      INVALIDPARAMETERVALUE_URLILLEGAL("InvalidParameterValue.UrlIllegal"),
      
-    // 美白参数不合法。
+     /*         美白参数不合法。 */
      INVALIDPARAMETERVALUE_WHITENINGILLEGAL("InvalidParameterValue.WhiteningIllegal"),
      
-    // 资源正在发货中。
+     /*         资源正在发货中。 */
      RESOURCEUNAVAILABLE_DELIVERING("ResourceUnavailable.Delivering"),
      
-    // 账号已被冻结。
+     /*         账号已被冻结。 */
      RESOURCEUNAVAILABLE_FREEZE("ResourceUnavailable.Freeze"),
      
-    // 获取认证信息失败。
+     /*         获取认证信息失败。 */
      RESOURCEUNAVAILABLE_GETAUTHINFOERROR("ResourceUnavailable.GetAuthInfoError"),
      
-    // 账号已欠费。
+     /*         账号已欠费。 */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-    // 余额不足。
+     /*         余额不足。 */
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
      
-    // 计费状态未知，请确认是否已在控制台开通服务。
+     /*         计费状态未知，请确认是否已在控制台开通服务。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-    // 服务未开通。
+     /*         服务未开通。 */
      RESOURCEUNAVAILABLE_NOTREADY("ResourceUnavailable.NotReady"),
      
-    // 资源已被回收。
+     /*         资源已被回收。 */
      RESOURCEUNAVAILABLE_RECOVER("ResourceUnavailable.Recover"),
      
-    // 账号已停服。
+     /*         账号已停服。 */
      RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing"),
      
-    // 计费状态未知。
+     /*         计费状态未知。 */
      RESOURCEUNAVAILABLE_UNKNOWNSTATUS("ResourceUnavailable.UnknownStatus"),
      
-    // 账号已欠费。
+     /*         账号已欠费。 */
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
      
     private String value;

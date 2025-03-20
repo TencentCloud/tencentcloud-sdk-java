@@ -25,7 +25,6 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
     * 经度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Longitude")
     @Expose
@@ -33,7 +32,6 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
     * 纬度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Latitude")
     @Expose
@@ -41,17 +39,14 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
     * 高程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Altitude")
     @Expose
     private Float Altitude;
 
     /**
-     * Get 经度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经度 
      * @return Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLongitude() {
         return this.Longitude;
@@ -59,19 +54,15 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
      * Set 经度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongitude(Float Longitude) {
         this.Longitude = Longitude;
     }
 
     /**
-     * Get 纬度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 纬度 
      * @return Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLatitude() {
         return this.Latitude;
@@ -79,19 +70,15 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
      * Set 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatitude(Float Latitude) {
         this.Latitude = Latitude;
     }
 
     /**
-     * Get 高程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高程 
      * @return Altitude 高程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAltitude() {
         return this.Altitude;
@@ -99,9 +86,7 @@ public class ElementCoordinates extends AbstractModel {
 
     /**
      * Set 高程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Altitude 高程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAltitude(Float Altitude) {
         this.Altitude = Altitude;

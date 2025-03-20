@@ -26,7 +26,6 @@ public class FileInfo extends AbstractModel {
     /**
     * 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -34,7 +33,6 @@ public class FileInfo extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportName")
     @Expose
@@ -42,11 +40,9 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Get 文件id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return FileId 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -55,20 +51,16 @@ public class FileInfo extends AbstractModel {
     /**
      * Set 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return ReportName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportName() {
         return this.ReportName;
@@ -76,9 +68,7 @@ public class FileInfo extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportName(String ReportName) {
         this.ReportName = ReportName;

@@ -25,17 +25,14 @@ public class DescribeAlarmLevelListRes extends AbstractModel {
 
     /**
     * 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevelSet")
     @Expose
     private AlarmLevelInfo [] AlarmLevelSet;
 
     /**
-     * Get 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警级别枚举获取数组 
      * @return AlarmLevelSet 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmLevelInfo [] getAlarmLevelSet() {
         return this.AlarmLevelSet;
@@ -43,9 +40,7 @@ public class DescribeAlarmLevelListRes extends AbstractModel {
 
     /**
      * Set 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevelSet 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevelSet(AlarmLevelInfo [] AlarmLevelSet) {
         this.AlarmLevelSet = AlarmLevelSet;

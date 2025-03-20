@@ -1,144 +1,144 @@
 package com.tencentcloudapi.tts.v20190823;
 public enum TtsErrorCode {
-    // 授权无效。
+     /*         授权无效。 */
      AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
      
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 任务不存在。
+     /*         任务不存在。 */
      FAILEDOPERATION_NOSUCHTASK("FailedOperation.NoSuchTask"),
      
-    // 路由错误。
+     /*         路由错误。 */
      INTERNALERROR_ERRORGETROUTE("InternalError.ErrorGetRoute"),
      
-    // 负载限流。
+     /*         负载限流。 */
      INTERNALERROR_EXCEEDMAXLIMIT("InternalError.ExceedMaxLimit"),
      
-    // 数据库存取失败。
+     /*         数据库存取失败。 */
      INTERNALERROR_FAILACCESSDATABASE("InternalError.FailAccessDatabase"),
      
-    // Redis存储失败。
+     /*         Redis存储失败。 */
      INTERNALERROR_FAILACCESSREDIS("InternalError.FailAccessRedis"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
-    // 暂无资源，请稍后重试。
+     /*         暂无资源，请稍后重试。 */
      INTERNALERROR_NORESOURCE("InternalError.NoResource"),
      
-    // 请求文本含有非法字符。
+     /*         请求文本含有非法字符。 */
      INVALIDPARAMETER_INVALIDTEXT("InvalidParameter.InvalidText"),
      
-    // status 不合法。
+     /*         status 不合法。 */
      INVALIDPARAMETER_STATUS("InvalidParameter.Status"),
      
-    // AppId非法，请参考AppId参数说明。
+     /*         AppId非法，请参考AppId参数说明。 */
      INVALIDPARAMETERVALUE_APPID("InvalidParameterValue.AppId"),
      
-    // APPID未注册，请在语音合成主页   https://console.cloud.tencent.com/tts  开通使用。
+     /*         APPID未注册，请在语音合成主页   https://console.cloud.tencent.com/tts  开通使用。 */
      INVALIDPARAMETERVALUE_APPIDNOTREGISTERED("InvalidParameterValue.AppIdNotRegistered"),
      
-    // CallbackUrl非法或不可访问。
+     /*         CallbackUrl非法或不可访问。 */
      INVALIDPARAMETERVALUE_CALLBACKURL("InvalidParameterValue.CallbackUrl"),
      
-    // Codec非法，请参考Codec参数说明。
+     /*         Codec非法，请参考Codec参数说明。 */
      INVALIDPARAMETERVALUE_CODEC("InvalidParameterValue.Codec"),
      
-    // ssml的say-as标签属性为cardinal、currency、address时，数字部分非有效参数，仅允许包含数字、“,”、“.”和空格。
+     /*         ssml的say-as标签属性为cardinal、currency、address时，数字部分非有效参数，仅允许包含数字、“,”、“.”和空格。 */
      INVALIDPARAMETERVALUE_ERRORCARDINALFORMAT("InvalidParameterValue.ErrorCardinalFormat"),
      
-    // 请求文本含有非法字符，或请求文本没有有效字符。
+     /*         请求文本含有非法字符，或请求文本没有有效字符。 */
      INVALIDPARAMETERVALUE_INVALIDTEXT("InvalidParameterValue.InvalidText"),
      
-    // 缺少参数。
+     /*         缺少参数。 */
      INVALIDPARAMETERVALUE_MISSPARAMETERS("InvalidParameterValue.MissParameters"),
      
-    // ModelType非法。
+     /*         ModelType非法。 */
      INVALIDPARAMETERVALUE_MODELTYPE("InvalidParameterValue.ModelType"),
      
-    // 文本分词错误。
+     /*         文本分词错误。 */
      INVALIDPARAMETERVALUE_PARTICIPLEERROR("InvalidParameterValue.ParticipleError"),
      
-    // PrimaryLanguage非法，请参考PrimaryLanguage参数说明。
+     /*         PrimaryLanguage非法，请参考PrimaryLanguage参数说明。 */
      INVALIDPARAMETERVALUE_PRIMARYLANGUAGE("InvalidParameterValue.PrimaryLanguage"),
      
-    // SSML标签非法。
+     /*         SSML标签非法。 */
      INVALIDPARAMETERVALUE_SSMLINVALID("InvalidParameterValue.SSMLInvalid"),
      
-    // SampleRate非法，请参考SampleRate参数说明。
+     /*         SampleRate非法，请参考SampleRate参数说明。 */
      INVALIDPARAMETERVALUE_SAMPLERATE("InvalidParameterValue.SampleRate"),
      
-    // SessionId非法，请参考Volume参数说明。
+     /*         SessionId非法，请参考Volume参数说明。 */
      INVALIDPARAMETERVALUE_SESSIONID("InvalidParameterValue.SessionId"),
      
-    // Speed非法，请参考Speed参数说明。
+     /*         Speed非法，请参考Speed参数说明。 */
      INVALIDPARAMETERVALUE_SPEED("InvalidParameterValue.Speed"),
      
-    // 文本缺失。
+     /*         文本缺失。 */
      INVALIDPARAMETERVALUE_TEXT("InvalidParameterValue.Text"),
      
-    // Text为空。
+     /*         Text为空。 */
      INVALIDPARAMETERVALUE_TEXTEMPTY("InvalidParameterValue.TextEmpty"),
      
-    // 文本不是 UTF8 格式。
+     /*         文本不是 UTF8 格式。 */
      INVALIDPARAMETERVALUE_TEXTNOTUTF8("InvalidParameterValue.TextNotUtf8"),
      
-    // Text参数SSML语法错误，请参考SSML文档说明。
+     /*         Text参数SSML语法错误，请参考SSML文档说明。 */
      INVALIDPARAMETERVALUE_TEXTSSMLPARSEERROR("InvalidParameterValue.TextSsmlParseError"),
      
-    // 合成文本字符过长。
+     /*         合成文本字符过长。 */
      INVALIDPARAMETERVALUE_TEXTTOOLONG("InvalidParameterValue.TextTooLong"),
      
-    // Type 类型非法。
+     /*         Type 类型非法。 */
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
-    // VoiceType非法，请参考VoiceType参数说明。
+     /*         VoiceType非法，请参考VoiceType参数说明。 */
      INVALIDPARAMETERVALUE_VOICETYPE("InvalidParameterValue.VoiceType"),
      
-    // Volume非法，请参考Volume参数说明。
+     /*         Volume非法，请参考Volume参数说明。 */
      INVALIDPARAMETERVALUE_VOLUME("InvalidParameterValue.Volume"),
      
-    // 请求超过限制频率。
+     /*         请求超过限制频率。 */
      LIMITEXCEEDED_ACCESSLIMIT("LimitExceeded.AccessLimit"),
      
-    // 操作不支持。
+     /*         操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // 欠费。
+     /*         欠费。 */
      UNSUPPORTEDOPERATION_ACCOUNTARREARS("UnsupportedOperation.AccountArrears"),
      
-    // 鉴权已过期。
+     /*         鉴权已过期。 */
      UNSUPPORTEDOPERATION_AUTHORIZATIONEXPIRED("UnsupportedOperation.AuthorizationExpired"),
      
-    // 鉴权失败。
+     /*         鉴权失败。 */
      UNSUPPORTEDOPERATION_AUTHORIZATIONFAILED("UnsupportedOperation.AuthorizationFailed"),
      
-    // 服务禁止使用。
+     /*         服务禁止使用。 */
      UNSUPPORTEDOPERATION_FORBIDDENUSE("UnsupportedOperation.ForbiddenUse"),
      
-    // 没有余额。
+     /*         没有余额。 */
      UNSUPPORTEDOPERATION_NOBANLANCE("UnsupportedOperation.NoBanlance"),
      
-    // 免费资源包已用尽，请购买资源包或开通后付费。
+     /*         免费资源包已用尽，请购买资源包或开通后付费。 */
      UNSUPPORTEDOPERATION_NOFREEACCOUNT("UnsupportedOperation.NoFreeAccount"),
      
-    // 资源包余量已用尽。
+     /*         资源包余量已用尽。 */
      UNSUPPORTEDOPERATION_PKGEXHAUSTED("UnsupportedOperation.PkgExhausted"),
      
-    // 服务器已打开。
+     /*         服务器已打开。 */
      UNSUPPORTEDOPERATION_SERVERALREADYOPEN("UnsupportedOperation.ServerAlreadyOpen"),
      
-    // 服务已销毁。
+     /*         服务已销毁。 */
      UNSUPPORTEDOPERATION_SERVERDESTORYED("UnsupportedOperation.ServerDestoryed"),
      
-    // 服务未开通使用。
+     /*         服务未开通使用。 */
      UNSUPPORTEDOPERATION_SERVERNOTOPEN("UnsupportedOperation.ServerNotOpen"),
      
-    // 服务已停止使用。
+     /*         服务已停止使用。 */
      UNSUPPORTEDOPERATION_SERVERSTOPPED("UnsupportedOperation.ServerStopped"),
      
-    // 文本过长，请参考请求参数Text的说明。
+     /*         文本过长，请参考请求参数Text的说明。 */
      UNSUPPORTEDOPERATION_TEXTTOOLONG("UnsupportedOperation.TextTooLong");
      
     private String value;

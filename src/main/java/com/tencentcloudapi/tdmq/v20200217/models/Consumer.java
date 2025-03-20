@@ -25,7 +25,6 @@ public class Consumer extends AbstractModel {
 
     /**
     * 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectedSince")
     @Expose
@@ -33,7 +32,6 @@ public class Consumer extends AbstractModel {
 
     /**
     * 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerAddr")
     @Expose
@@ -41,7 +39,6 @@ public class Consumer extends AbstractModel {
 
     /**
     * 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerName")
     @Expose
@@ -49,7 +46,6 @@ public class Consumer extends AbstractModel {
 
     /**
     * 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientVersion")
     @Expose
@@ -57,17 +53,14 @@ public class Consumer extends AbstractModel {
 
     /**
     * 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-     * Get 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者开始连接的时间。 
      * @return ConnectedSince 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectedSince() {
         return this.ConnectedSince;
@@ -75,19 +68,15 @@ public class Consumer extends AbstractModel {
 
     /**
      * Set 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectedSince 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectedSince(String ConnectedSince) {
         this.ConnectedSince = ConnectedSince;
     }
 
     /**
-     * Get 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者地址。 
      * @return ConsumerAddr 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerAddr() {
         return this.ConsumerAddr;
@@ -95,19 +84,15 @@ public class Consumer extends AbstractModel {
 
     /**
      * Set 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerAddr 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerAddr(String ConsumerAddr) {
         this.ConsumerAddr = ConsumerAddr;
     }
 
     /**
-     * Get 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者名称。 
      * @return ConsumerName 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerName() {
         return this.ConsumerName;
@@ -115,19 +100,15 @@ public class Consumer extends AbstractModel {
 
     /**
      * Set 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerName 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerName(String ConsumerName) {
         this.ConsumerName = ConsumerName;
     }
 
     /**
-     * Get 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者版本。 
      * @return ClientVersion 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientVersion() {
         return this.ClientVersion;
@@ -135,19 +116,15 @@ public class Consumer extends AbstractModel {
 
     /**
      * Set 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientVersion 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientVersion(String ClientVersion) {
         this.ClientVersion = ClientVersion;
     }
 
     /**
-     * Get 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费者连接的主题分区号 
      * @return Partition 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartition() {
         return this.Partition;
@@ -155,9 +132,7 @@ public class Consumer extends AbstractModel {
 
     /**
      * Set 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Partition 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

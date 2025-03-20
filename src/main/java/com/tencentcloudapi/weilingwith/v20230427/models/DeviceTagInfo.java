@@ -25,7 +25,6 @@ public class DeviceTagInfo extends AbstractModel {
 
     /**
     * 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagId")
     @Expose
@@ -33,17 +32,14 @@ public class DeviceTagInfo extends AbstractModel {
 
     /**
     * 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagName")
     @Expose
     private String TagName;
 
     /**
-     * Get 标签Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签Id 
      * @return TagId 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTagId() {
         return this.TagId;
@@ -51,19 +47,15 @@ public class DeviceTagInfo extends AbstractModel {
 
     /**
      * Set 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagId 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagId(Long TagId) {
         this.TagId = TagId;
     }
 
     /**
-     * Get 标签名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签名字 
      * @return TagName 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagName() {
         return this.TagName;
@@ -71,9 +63,7 @@ public class DeviceTagInfo extends AbstractModel {
 
     /**
      * Set 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagName 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagName(String TagName) {
         this.TagName = TagName;

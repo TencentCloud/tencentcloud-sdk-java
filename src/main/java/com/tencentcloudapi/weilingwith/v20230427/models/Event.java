@@ -25,7 +25,6 @@ public class Event extends AbstractModel {
 
     /**
     * 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class Event extends AbstractModel {
 
     /**
     * 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id或动作Id 
      * @return Id 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class Event extends AbstractModel {
 
     /**
      * Set 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件名称或动作名称 
      * @return Name 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -71,9 +63,7 @@ public class Event extends AbstractModel {
 
     /**
      * Set 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

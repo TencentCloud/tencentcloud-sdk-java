@@ -25,7 +25,6 @@ public class VideoCloudRecordRes extends AbstractModel {
 
     /**
     * 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class VideoCloudRecordRes extends AbstractModel {
 
     /**
     * 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordSet")
     @Expose
     private RecordInfo [] RecordSet;
 
     /**
-     * Get 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像信息总数 
      * @return TotalCount 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class VideoCloudRecordRes extends AbstractModel {
 
     /**
      * Set 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像信息列表 
      * @return RecordSet 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordInfo [] getRecordSet() {
         return this.RecordSet;
@@ -71,9 +63,7 @@ public class VideoCloudRecordRes extends AbstractModel {
 
     /**
      * Set 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordSet 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordSet(RecordInfo [] RecordSet) {
         this.RecordSet = RecordSet;

@@ -1088,6 +1088,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取prometheus集成指标
+     * @param req DescribePrometheusIntegrationMetricsRequest
+     * @return DescribePrometheusIntegrationMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusIntegrationMetricsResponse DescribePrometheusIntegrationMetrics(DescribePrometheusIntegrationMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusIntegrationMetrics", DescribePrometheusIntegrationMetricsResponse.class);
+    }
+
+    /**
      *获取聚合规则列表，包含关联集群内crd资源创建的record rule
      * @param req DescribePrometheusRecordRulesRequest
      * @return DescribePrometheusRecordRulesResponse

@@ -45,6 +45,13 @@ public class CreateDsFolderRequest extends AbstractModel {
     private String ParentsFolderId;
 
     /**
+    * 文件夹来源 template管理，orchestrationSpace 编排空间
+    */
+    @SerializedName("FolderForm")
+    @Expose
+    private String FolderForm;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -92,6 +99,22 @@ public class CreateDsFolderRequest extends AbstractModel {
         this.ParentsFolderId = ParentsFolderId;
     }
 
+    /**
+     * Get 文件夹来源 template管理，orchestrationSpace 编排空间 
+     * @return FolderForm 文件夹来源 template管理，orchestrationSpace 编排空间
+     */
+    public String getFolderForm() {
+        return this.FolderForm;
+    }
+
+    /**
+     * Set 文件夹来源 template管理，orchestrationSpace 编排空间
+     * @param FolderForm 文件夹来源 template管理，orchestrationSpace 编排空间
+     */
+    public void setFolderForm(String FolderForm) {
+        this.FolderForm = FolderForm;
+    }
+
     public CreateDsFolderRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateDsFolderRequest extends AbstractModel {
         if (source.ParentsFolderId != null) {
             this.ParentsFolderId = new String(source.ParentsFolderId);
         }
+        if (source.FolderForm != null) {
+            this.FolderForm = new String(source.FolderForm);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateDsFolderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "FolderName", this.FolderName);
         this.setParamSimple(map, prefix + "ParentsFolderId", this.ParentsFolderId);
+        this.setParamSimple(map, prefix + "FolderForm", this.FolderForm);
 
     }
 }

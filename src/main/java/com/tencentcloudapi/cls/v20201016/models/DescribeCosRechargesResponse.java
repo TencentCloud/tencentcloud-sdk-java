@@ -25,7 +25,6 @@ public class DescribeCosRechargesResponse extends AbstractModel {
 
     /**
     * 见: CosRechargeInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCosRechargesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 见: CosRechargeInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 见: CosRechargeInfo 结构描述 
      * @return Data 见: CosRechargeInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosRechargeInfo [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeCosRechargesResponse extends AbstractModel {
 
     /**
      * Set 见: CosRechargeInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 见: CosRechargeInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CosRechargeInfo [] Data) {
         this.Data = Data;

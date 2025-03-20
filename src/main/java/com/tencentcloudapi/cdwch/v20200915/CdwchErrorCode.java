@@ -1,12 +1,12 @@
 package com.tencentcloudapi.cdwch.v20200915;
 public enum CdwchErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 资源不存在。
+     /*         资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;

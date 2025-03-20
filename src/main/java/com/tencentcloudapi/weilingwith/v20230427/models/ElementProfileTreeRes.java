@@ -25,7 +25,6 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
     * 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildingId")
     @Expose
@@ -33,7 +32,6 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
     * 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentElementId")
     @Expose
@@ -41,17 +39,14 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
     * 构件树
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Root")
     @Expose
     private ElementProfileTreeNode Root;
 
     /**
-     * Get 建筑id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建筑id 
      * @return BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuildingId() {
         return this.BuildingId;
@@ -59,19 +54,15 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
      * Set 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildingId(String BuildingId) {
         this.BuildingId = BuildingId;
     }
 
     /**
-     * Get 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级构件id 
      * @return ParentElementId 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentElementId() {
         return this.ParentElementId;
@@ -79,19 +70,15 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
      * Set 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentElementId 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentElementId(String ParentElementId) {
         this.ParentElementId = ParentElementId;
     }
 
     /**
-     * Get 构件树
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件树 
      * @return Root 构件树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElementProfileTreeNode getRoot() {
         return this.Root;
@@ -99,9 +86,7 @@ public class ElementProfileTreeRes extends AbstractModel {
 
     /**
      * Set 构件树
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Root 构件树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoot(ElementProfileTreeNode Root) {
         this.Root = Root;

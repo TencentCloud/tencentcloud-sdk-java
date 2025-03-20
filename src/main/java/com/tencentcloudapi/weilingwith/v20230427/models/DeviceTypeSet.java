@@ -25,17 +25,14 @@ public class DeviceTypeSet extends AbstractModel {
 
     /**
     * 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Set")
     @Expose
     private DeviceType [] Set;
 
     /**
-     * Get 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型列表 
      * @return Set 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceType [] getSet() {
         return this.Set;
@@ -43,9 +40,7 @@ public class DeviceTypeSet extends AbstractModel {
 
     /**
      * Set 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Set 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSet(DeviceType [] Set) {
         this.Set = Set;

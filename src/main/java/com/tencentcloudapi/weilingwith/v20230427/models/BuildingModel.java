@@ -25,7 +25,6 @@ public class BuildingModel extends AbstractModel {
 
     /**
     * 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementId")
     @Expose
@@ -33,7 +32,6 @@ public class BuildingModel extends AbstractModel {
 
     /**
     * 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElementName")
     @Expose
@@ -41,7 +39,6 @@ public class BuildingModel extends AbstractModel {
 
     /**
     * 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelType")
     @Expose
@@ -49,17 +46,14 @@ public class BuildingModel extends AbstractModel {
 
     /**
     * 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelUrl")
     @Expose
     private String ModelUrl;
 
     /**
-     * Get 构件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件ID 
      * @return ElementId 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementId() {
         return this.ElementId;
@@ -67,19 +61,15 @@ public class BuildingModel extends AbstractModel {
 
     /**
      * Set 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementId 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get 构件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构件名称 
      * @return ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElementName() {
         return this.ElementName;
@@ -87,19 +77,15 @@ public class BuildingModel extends AbstractModel {
 
     /**
      * Set 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get 模型类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型类型 
      * @return ModelType 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelType() {
         return this.ModelType;
@@ -107,19 +93,15 @@ public class BuildingModel extends AbstractModel {
 
     /**
      * Set 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelType 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelType(String ModelType) {
         this.ModelType = ModelType;
     }
 
     /**
-     * Get 模型URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型URL 
      * @return ModelUrl 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelUrl() {
         return this.ModelUrl;
@@ -127,9 +109,7 @@ public class BuildingModel extends AbstractModel {
 
     /**
      * Set 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelUrl 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelUrl(String ModelUrl) {
         this.ModelUrl = ModelUrl;

@@ -1,129 +1,129 @@
 package com.tencentcloudapi.cloudaudit.v20190319;
 public enum CloudauditErrorCode {
-    // 操作失败。
+     /*         操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
-    // 检查cls日志主题是否存在失败。
+     /*         检查cls日志主题是否存在失败。 */
      FAILEDOPERATION_CHECKCLSTOPICISEXISTFAILED("FailedOperation.CheckClsTopicIsExistFailed"),
      
-    // 检查cos桶是否存在失败。
+     /*         检查cos桶是否存在失败。 */
      FAILEDOPERATION_CHECKCOSBUCKETISEXISTFAILED("FailedOperation.CheckCosBucketIsExistFailed"),
      
-    // 拉取cls日志主题失败。
+     /*         拉取cls日志主题失败。 */
      FAILEDOPERATION_GETCLSTOPICFAILED("FailedOperation.GetClsTopicFailed"),
      
-    // 拉取cos存储桶列表失败。
+     /*         拉取cos存储桶列表失败。 */
      FAILEDOPERATION_GETCOSBUCKETLISTFAILED("FailedOperation.GetCosBucketListFailed"),
      
-    // 当前查询的用户还未开通操作审计权限，如需查询该用户审计记录，请联系其开通！
+     /*         当前查询的用户还未开通操作审计权限，如需查询该用户审计记录，请联系其开通！ */
      FAILEDOPERATION_MEMBERNOTAUDITROLE("FailedOperation.MemberNotAuditRole"),
      
-    // 成员不在集团组织中。
+     /*         成员不在集团组织中。 */
      FAILEDOPERATION_MEMBERNOTINORGANIZATION("FailedOperation.MemberNotInOrganization"),
      
-    // 内部错误。
+     /*         内部错误。 */
      INTERNALERROR("InternalError"),
      
-    // 创建cmq时发生异常，可能您准备创建的cmq队列已经存在，也有可能您没有权限或者欠费。
+     /*         创建cmq时发生异常，可能您准备创建的cmq队列已经存在，也有可能您没有权限或者欠费。 */
      INTERNALERROR_CMQERROR("InternalError.CmqError"),
      
-    // 查看跟踪集详情错误，请联系开发人员
+     /*         查看跟踪集详情错误，请联系开发人员 */
      INTERNALERROR_DESCRIBEAUDITERROR("InternalError.DescribeAuditError"),
      
-    // 查询可创建跟踪集的数量错误，请联系开发人员
+     /*         查询可创建跟踪集的数量错误，请联系开发人员 */
      INTERNALERROR_INQUIREAUDITCREDITERROR("InternalError.InquireAuditCreditError"),
      
-    // 查询跟踪集概要内部错误，请联系开发人员。
+     /*         查询跟踪集概要内部错误，请联系开发人员。 */
      INTERNALERROR_LISTAUDITSERROR("InternalError.ListAuditsError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_LISTCMQENABLEREGIONERROR("InternalError.ListCmqEnableRegionError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_LISTCOSENABLEREGIONERROR("InternalError.ListCosEnableRegionError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_LISTKEYALIASBYREGIONERROR("InternalError.ListKeyAliasByRegionError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_SEARCHERROR("InternalError.SearchError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_STARTLOGGINGERROR("InternalError.StartLoggingError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_STOPLOGGINGERROR("InternalError.StopLoggingError"),
      
-    // 内部错误，请联系开发人员
+     /*         内部错误，请联系开发人员 */
      INTERNALERROR_UPDATEAUDITERROR("InternalError.UpdateAuditError"),
      
-    // 参数错误。
+     /*         参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 必须包含开始时间和结束时间，且必须为整形时间戳（精确到秒）
+     /*         必须包含开始时间和结束时间，且必须为整形时间戳（精确到秒） */
      INVALIDPARAMETER_TIME("InvalidParameter.Time"),
      
-    // 别名已经存在
+     /*         别名已经存在 */
      INVALIDPARAMETERVALUE_ALIASALREADYEXISTS("InvalidParameterValue.AliasAlreadyExists"),
      
-    // 跟踪集名称不支持修改。
+     /*         跟踪集名称不支持修改。 */
      INVALIDPARAMETERVALUE_AUDITTRACKNAMENOTSUPPORTMODIFY("InvalidParameterValue.AuditTrackNameNotSupportModify"),
      
-    // 操作审计目前不支持输入的cmq地域
+     /*         操作审计目前不支持输入的cmq地域 */
      INVALIDPARAMETERVALUE_CMQREGIONERROR("InvalidParameterValue.CmqRegionError"),
      
-    // 输入的cos存储桶名称不符合规范
+     /*         输入的cos存储桶名称不符合规范 */
      INVALIDPARAMETERVALUE_COSNAMEERROR("InvalidParameterValue.CosNameError"),
      
-    // 操作审计目前不支持输入的cos地域
+     /*         操作审计目前不支持输入的cos地域 */
      INVALIDPARAMETERVALUE_COSREGIONERROR("InvalidParameterValue.CosRegionError"),
      
-    // 操作审计暂不支持该地域的KMS
+     /*         操作审计暂不支持该地域的KMS */
      INVALIDPARAMETERVALUE_KMSREGIONERROR("InvalidParameterValue.KmsRegionError"),
      
-    // 日志前缀格式错误
+     /*         日志前缀格式错误 */
      INVALIDPARAMETERVALUE_LOGFILEPREFIXERROR("InvalidParameterValue.LogFilePrefixError"),
      
-    // 单次检索支持的最大返回条数是50
+     /*         单次检索支持的最大返回条数是50 */
      INVALIDPARAMETERVALUE_MAXRESULT("InvalidParameterValue.MaxResult"),
      
-    // 输入的队列名称不符合规范
+     /*         输入的队列名称不符合规范 */
      INVALIDPARAMETERVALUE_QUEUENAMEERROR("InvalidParameterValue.QueueNameError"),
      
-    // 读写属性值仅支持：1,2,3。1代表只读，2代表只写，3代表全部。
+     /*         读写属性值仅支持：1,2,3。1代表只读，2代表只写，3代表全部。 */
      INVALIDPARAMETERVALUE_READWRITEATTRIBUTEERROR("InvalidParameterValue.ReadWriteAttributeError"),
      
-    // 开始时间不能大于结束时间
+     /*         开始时间不能大于结束时间 */
      INVALIDPARAMETERVALUE_TIME("InvalidParameterValue.Time"),
      
-    // AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId
+     /*         AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId */
      INVALIDPARAMETERVALUE_ATTRIBUTEKEY("InvalidParameterValue.attributeKey"),
      
-    // 超过跟踪集的最大值
+     /*         超过跟踪集的最大值 */
      LIMITEXCEEDED_OVERAMOUNT("LimitExceeded.OverAmount"),
      
-    // 检索支持的有效时间范围是7天
+     /*         检索支持的有效时间范围是7天 */
      LIMITEXCEEDED_OVERTIME("LimitExceeded.OverTime"),
      
-    // IsEnableCmqNotify输入1的话，IsCreateNewQueue、CmqQueueName和CmqRegion都是必须参数。
+     /*         IsEnableCmqNotify输入1的话，IsCreateNewQueue、CmqQueueName和CmqRegion都是必须参数。 */
      MISSINGPARAMETER_CMQ("MissingParameter.cmq"),
      
-    // cos存储桶已经存在
+     /*         cos存储桶已经存在 */
      RESOURCEINUSE_COSBUCKETEXISTS("ResourceInUse.CosBucketExists"),
      
-    // 资源不存在。
+     /*         资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // 跟踪集不存在
+     /*         跟踪集不存在 */
      RESOURCENOTFOUND_AUDITNOTEXIST("ResourceNotFound.AuditNotExist"),
      
-    // cos桶不存在。
+     /*         cos桶不存在。 */
      RESOURCENOTFOUND_COSNOTEXIST("ResourceNotFound.CosNotExist"),
      
-    // 角色不存在。
+     /*         角色不存在。 */
      RESOURCENOTFOUND_ROLENOTEXIST("ResourceNotFound.RoleNotExist"),
      
-    // 未授权操作。
+     /*         未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

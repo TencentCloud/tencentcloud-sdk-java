@@ -25,7 +25,6 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
     * 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WID")
     @Expose
@@ -33,7 +32,6 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
     * 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -41,7 +39,6 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
     * 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -49,17 +46,14 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
     * 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seq")
     @Expose
     private String Seq;
 
     /**
-     * Get 设备Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备Id 
      * @return WID 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWID() {
         return this.WID;
@@ -67,19 +61,15 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
      * Set 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WID 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWID(String WID) {
         this.WID = WID;
     }
 
     /**
-     * Get 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指令接受, 0表示成功 
      * @return Code 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -87,19 +77,15 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
      * Set 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 控制结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控制结果 
      * @return Result 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -107,19 +93,15 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
      * Set 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批量大于1时，可用此seq进行链路追踪 
      * @return Seq 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeq() {
         return this.Seq;
@@ -127,9 +109,7 @@ public class ControlDeviceRes extends AbstractModel {
 
     /**
      * Set 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Seq 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeq(String Seq) {
         this.Seq = Seq;

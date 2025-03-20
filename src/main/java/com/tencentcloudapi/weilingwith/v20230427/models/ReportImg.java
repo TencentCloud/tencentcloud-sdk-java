@@ -25,7 +25,6 @@ public class ReportImg extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,17 +32,14 @@ public class ReportImg extends AbstractModel {
 
     /**
     * 数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -51,19 +47,15 @@ public class ReportImg extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据 
      * @return Data 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -71,9 +63,7 @@ public class ReportImg extends AbstractModel {
 
     /**
      * Set 数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

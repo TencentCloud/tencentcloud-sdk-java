@@ -39,7 +39,6 @@ public class CloudBaseRunVersionPod extends AbstractModel {
 
     /**
     * pod ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodIp")
     @Expose
@@ -54,7 +53,6 @@ public class CloudBaseRunVersionPod extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -93,10 +91,8 @@ public class CloudBaseRunVersionPod extends AbstractModel {
     }
 
     /**
-     * Get pod ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod ip 
      * @return PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodIp() {
         return this.PodIp;
@@ -104,9 +100,7 @@ public class CloudBaseRunVersionPod extends AbstractModel {
 
     /**
      * Set pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodIp(String PodIp) {
         this.PodIp = PodIp;
@@ -129,10 +123,8 @@ public class CloudBaseRunVersionPod extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -140,9 +132,7 @@ public class CloudBaseRunVersionPod extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

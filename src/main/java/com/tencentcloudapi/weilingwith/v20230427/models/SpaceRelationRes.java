@@ -25,17 +25,14 @@ public class SpaceRelationRes extends AbstractModel {
 
     /**
     * 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceRelation")
     @Expose
     private SpaceRelation SpaceRelation;
 
     /**
-     * Get 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间层级关系 
      * @return SpaceRelation 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpaceRelation getSpaceRelation() {
         return this.SpaceRelation;
@@ -43,9 +40,7 @@ public class SpaceRelationRes extends AbstractModel {
 
     /**
      * Set 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceRelation 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceRelation(SpaceRelation SpaceRelation) {
         this.SpaceRelation = SpaceRelation;

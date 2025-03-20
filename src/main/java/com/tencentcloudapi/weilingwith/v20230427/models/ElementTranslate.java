@@ -25,7 +25,6 @@ public class ElementTranslate extends AbstractModel {
 
     /**
     * X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -33,7 +32,6 @@ public class ElementTranslate extends AbstractModel {
 
     /**
     * Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -41,17 +39,14 @@ public class ElementTranslate extends AbstractModel {
 
     /**
     * Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Z")
     @Expose
     private Float Z;
 
     /**
-     * Get X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get X方向偏移量 
      * @return X X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getX() {
         return this.X;
@@ -59,19 +54,15 @@ public class ElementTranslate extends AbstractModel {
 
     /**
      * Set X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Float X) {
         this.X = X;
     }
 
     /**
-     * Get Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Y方向偏移量 
      * @return Y Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
         return this.Y;
@@ -79,19 +70,15 @@ public class ElementTranslate extends AbstractModel {
 
     /**
      * Set Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
         this.Y = Y;
     }
 
     /**
-     * Get Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Z方向偏移量 
      * @return Z Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getZ() {
         return this.Z;
@@ -99,9 +86,7 @@ public class ElementTranslate extends AbstractModel {
 
     /**
      * Set Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Z Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZ(Float Z) {
         this.Z = Z;
