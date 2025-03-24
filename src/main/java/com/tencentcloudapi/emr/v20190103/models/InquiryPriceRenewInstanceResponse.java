@@ -61,6 +61,13 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
     private PriceDetail [] PriceDetail;
 
     /**
+    * 节点续费询价明细列表
+    */
+    @SerializedName("NodeRenewPriceDetails")
+    @Expose
+    private NodeRenewPriceDetail [] NodeRenewPriceDetails;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -156,6 +163,22 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 节点续费询价明细列表 
+     * @return NodeRenewPriceDetails 节点续费询价明细列表
+     */
+    public NodeRenewPriceDetail [] getNodeRenewPriceDetails() {
+        return this.NodeRenewPriceDetails;
+    }
+
+    /**
+     * Set 节点续费询价明细列表
+     * @param NodeRenewPriceDetails 节点续费询价明细列表
+     */
+    public void setNodeRenewPriceDetails(NodeRenewPriceDetail [] NodeRenewPriceDetails) {
+        this.NodeRenewPriceDetails = NodeRenewPriceDetails;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -197,6 +220,12 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
                 this.PriceDetail[i] = new PriceDetail(source.PriceDetail[i]);
             }
         }
+        if (source.NodeRenewPriceDetails != null) {
+            this.NodeRenewPriceDetails = new NodeRenewPriceDetail[source.NodeRenewPriceDetails.length];
+            for (int i = 0; i < source.NodeRenewPriceDetails.length; i++) {
+                this.NodeRenewPriceDetails[i] = new NodeRenewPriceDetail(source.NodeRenewPriceDetails[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -212,6 +241,7 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamArrayObj(map, prefix + "PriceDetail.", this.PriceDetail);
+        this.setParamArrayObj(map, prefix + "NodeRenewPriceDetails.", this.NodeRenewPriceDetails);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

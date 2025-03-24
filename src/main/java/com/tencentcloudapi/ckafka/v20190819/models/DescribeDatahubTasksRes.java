@@ -32,7 +32,6 @@ public class DescribeDatahubTasksRes extends AbstractModel {
 
     /**
     * Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskList")
     @Expose
@@ -55,10 +54,8 @@ public class DescribeDatahubTasksRes extends AbstractModel {
     }
 
     /**
-     * Get Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Datahub任务信息列表 
      * @return TaskList Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatahubTaskInfo [] getTaskList() {
         return this.TaskList;
@@ -66,9 +63,7 @@ public class DescribeDatahubTasksRes extends AbstractModel {
 
     /**
      * Set Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskList Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskList(DatahubTaskInfo [] TaskList) {
         this.TaskList = TaskList;

@@ -44,7 +44,6 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebCallbackId")
     @Expose
@@ -57,7 +56,6 @@ public class WebCallback extends AbstractModel {
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -65,7 +63,6 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContentId")
     @Expose
@@ -75,7 +72,6 @@ public class WebCallback extends AbstractModel {
     * 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemindType")
     @Expose
@@ -83,7 +79,6 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mobiles")
     @Expose
@@ -91,7 +86,6 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIds")
     @Expose
@@ -99,7 +93,6 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
     @Expose
@@ -175,10 +168,8 @@ public class WebCallback extends AbstractModel {
     }
 
     /**
-     * Get 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集成配置ID。 
      * @return WebCallbackId 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebCallbackId() {
         return this.WebCallbackId;
@@ -186,9 +177,7 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebCallbackId 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebCallbackId(String WebCallbackId) {
         this.WebCallbackId = WebCallbackId;
@@ -200,15 +189,13 @@ public class WebCallback extends AbstractModel {
 - PUT
 
 注意：
-- 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+- 参数CallbackType为Http时为必选，其它回调方式无需填写。 
      * @return Method 回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -221,24 +208,20 @@ public class WebCallback extends AbstractModel {
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。 
      * @return NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
@@ -246,9 +229,7 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;
@@ -257,12 +238,10 @@ public class WebCallback extends AbstractModel {
     /**
      * Get 提醒类型。
 
-0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。 
+0：不提醒；1：指定人；2：所有人 
      * @return RemindType 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemindType() {
         return this.RemindType;
@@ -272,21 +251,17 @@ public class WebCallback extends AbstractModel {
      * Set 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemindType 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemindType(Long RemindType) {
         this.RemindType = RemindType;
     }
 
     /**
-     * Get 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话列表。 
      * @return Mobiles 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMobiles() {
         return this.Mobiles;
@@ -294,19 +269,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mobiles 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobiles(String [] Mobiles) {
         this.Mobiles = Mobiles;
     }
 
     /**
-     * Get 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID列表。 
      * @return UserIds 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -314,19 +285,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIds 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数已废弃，请使用NoticeContentId。 
      * @return Headers 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHeaders() {
         return this.Headers;
@@ -334,9 +301,7 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;

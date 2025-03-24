@@ -31,6 +31,13 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
     private BackupTableContent [] AvailableTables;
 
     /**
+    * 错误描述
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
      */
     public void setAvailableTables(BackupTableContent [] AvailableTables) {
         this.AvailableTables = AvailableTables;
+    }
+
+    /**
+     * Get 错误描述 
+     * @return ErrorMsg 错误描述
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误描述
+     * @param ErrorMsg 错误描述
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
                 this.AvailableTables[i] = new BackupTableContent(source.AvailableTables[i]);
             }
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AvailableTables.", this.AvailableTables);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,6 +25,7 @@ public class SecurityPolicy extends AbstractModel {
 
     /**
     * ip或者网段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Route")
     @Expose
@@ -33,6 +34,7 @@ public class SecurityPolicy extends AbstractModel {
     /**
     * 策略 true就是允许，白名单或者 false 拒绝 黑名单
 
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -40,14 +42,17 @@ public class SecurityPolicy extends AbstractModel {
 
     /**
     * 备注
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get ip或者网段 
+     * Get ip或者网段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Route ip或者网段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoute() {
         return this.Route;
@@ -55,7 +60,9 @@ public class SecurityPolicy extends AbstractModel {
 
     /**
      * Set ip或者网段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Route ip或者网段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoute(String Route) {
         this.Route = Route;
@@ -63,9 +70,11 @@ public class SecurityPolicy extends AbstractModel {
 
     /**
      * Get 策略 true就是允许，白名单或者 false 拒绝 黑名单
- 
+
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Policy 策略 true就是允许，白名单或者 false 拒绝 黑名单
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPolicy() {
         return this.Policy;
@@ -74,16 +83,20 @@ public class SecurityPolicy extends AbstractModel {
     /**
      * Set 策略 true就是允许，白名单或者 false 拒绝 黑名单
 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 策略 true就是允许，白名单或者 false 拒绝 黑名单
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(Boolean Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 备注 
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -91,7 +104,9 @@ public class SecurityPolicy extends AbstractModel {
 
     /**
      * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

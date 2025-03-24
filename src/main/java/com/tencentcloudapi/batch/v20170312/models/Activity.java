@@ -81,7 +81,6 @@ public class Activity extends AbstractModel {
 
     /**
     * 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -89,7 +88,6 @@ public class Activity extends AbstractModel {
 
     /**
     * 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -224,10 +222,8 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活动结束时间 
      * @return EndTime 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -235,19 +231,15 @@ public class Activity extends AbstractModel {
 
     /**
      * Set 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云服务器实例ID 
      * @return InstanceId 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -255,9 +247,7 @@ public class Activity extends AbstractModel {
 
     /**
      * Set 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

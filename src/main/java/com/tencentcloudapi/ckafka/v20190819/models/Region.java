@@ -46,7 +46,6 @@ public class Region extends AbstractModel {
 
     /**
     * 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionCode")
     @Expose
@@ -54,7 +53,6 @@ public class Region extends AbstractModel {
 
     /**
     * 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionCodeV3")
     @Expose
@@ -62,7 +60,6 @@ public class Region extends AbstractModel {
 
     /**
     * NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Support")
     @Expose
@@ -70,7 +67,6 @@ public class Region extends AbstractModel {
 
     /**
     * 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6")
     @Expose
@@ -78,7 +74,6 @@ public class Region extends AbstractModel {
 
     /**
     * 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiZone")
     @Expose
@@ -133,10 +128,8 @@ public class Region extends AbstractModel {
     }
 
     /**
-     * Get 地域代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域代码 
      * @return RegionCode 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionCode() {
         return this.RegionCode;
@@ -144,19 +137,15 @@ public class Region extends AbstractModel {
 
     /**
      * Set 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionCode 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionCode(String RegionCode) {
         this.RegionCode = RegionCode;
     }
 
     /**
-     * Get 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域代码（V3版本） 
      * @return RegionCodeV3 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionCodeV3() {
         return this.RegionCodeV3;
@@ -164,19 +153,15 @@ public class Region extends AbstractModel {
 
     /**
      * Set 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionCodeV3 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionCodeV3(String RegionCodeV3) {
         this.RegionCodeV3 = RegionCodeV3;
     }
 
     /**
-     * Get NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NONE:默认值不支持任何特殊类型 实例类型 
      * @return Support NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSupport() {
         return this.Support;
@@ -184,19 +169,15 @@ public class Region extends AbstractModel {
 
     /**
      * Set NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Support NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupport(String Support) {
         this.Support = Support;
     }
 
     /**
-     * Get 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持ipv6, 0：表示不支持，1：表示支持 
      * @return Ipv6 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv6() {
         return this.Ipv6;
@@ -204,19 +185,15 @@ public class Region extends AbstractModel {
 
     /**
      * Set 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6(Long Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持跨可用区, 0：表示不支持，1：表示支持 
      * @return MultiZone 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMultiZone() {
         return this.MultiZone;
@@ -224,9 +201,7 @@ public class Region extends AbstractModel {
 
     /**
      * Set 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiZone 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiZone(Long MultiZone) {
         this.MultiZone = MultiZone;

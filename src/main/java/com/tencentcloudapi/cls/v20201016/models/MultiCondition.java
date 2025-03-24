@@ -25,7 +25,6 @@ public class MultiCondition extends AbstractModel {
 
     /**
     * 触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
     @Expose
@@ -35,17 +34,14 @@ public class MultiCondition extends AbstractModel {
     * 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
 
 - 不填则默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-     * Get 触发条件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发条件。 
      * @return Condition 触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCondition() {
         return this.Condition;
@@ -53,9 +49,7 @@ public class MultiCondition extends AbstractModel {
 
     /**
      * Set 触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Condition 触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -64,12 +58,10 @@ public class MultiCondition extends AbstractModel {
     /**
      * Get 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
 
-- 不填则默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+- 不填则默认为0。 
      * @return AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
 
 - 不填则默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -79,11 +71,9 @@ public class MultiCondition extends AbstractModel {
      * Set 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
 
 - 不填则默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
 
 - 不填则默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;

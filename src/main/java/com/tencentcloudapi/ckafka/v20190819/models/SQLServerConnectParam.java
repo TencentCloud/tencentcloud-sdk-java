@@ -25,7 +25,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer的连接port
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -33,7 +32,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -41,7 +39,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -49,7 +46,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -57,7 +53,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -65,7 +60,6 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * SQLServer连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -73,17 +67,14 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
     * 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
     private Boolean IsUpdate;
 
     /**
-     * Get SQLServer的连接port
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer的连接port 
      * @return Port SQLServer的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -91,19 +82,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port SQLServer的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer连接源的用户名 
      * @return UserName SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -111,19 +98,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer连接源的密码 
      * @return Password SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -131,19 +114,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get SQLServer连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer连接源的实例资源 
      * @return Resource SQLServer连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -151,19 +130,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource SQLServer连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get SQLServer连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer连接源的实例vip，当为腾讯云实例时，必填 
      * @return ServiceVip SQLServer连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -171,19 +146,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip SQLServer连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get SQLServer连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer连接源的vpcId，当为腾讯云实例时，必填 
      * @return UniqVpcId SQLServer连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -191,19 +162,15 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set SQLServer连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId SQLServer连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否更新到关联的Dip任务 
      * @return IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -211,9 +178,7 @@ public class SQLServerConnectParam extends AbstractModel {
 
     /**
      * Set 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;

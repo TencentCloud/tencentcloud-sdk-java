@@ -158,7 +158,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -166,7 +165,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -174,7 +172,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cvm")
     @Expose
@@ -182,7 +179,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -190,7 +186,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -198,7 +193,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxTopicNumber")
     @Expose
@@ -206,7 +200,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPartitionNumber")
     @Expose
@@ -214,7 +207,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RebalanceTime")
     @Expose
@@ -222,7 +214,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionNumber")
     @Expose
@@ -230,7 +221,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetworkChargeType")
     @Expose
@@ -238,7 +228,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -246,7 +235,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -254,7 +242,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Features")
     @Expose
@@ -565,10 +552,8 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kafka版本信息 
      * @return Version kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -576,19 +561,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨可用区 
      * @return ZoneIds 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
@@ -596,19 +577,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneIds 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka售卖类型 
      * @return Cvm ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvm() {
         return this.Cvm;
@@ -616,19 +593,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cvm ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例类型 
      * @return InstanceType ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -636,19 +609,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例磁盘类型 
      * @return DiskType ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -656,19 +625,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前规格最大Topic数 
      * @return MaxTopicNumber 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxTopicNumber() {
         return this.MaxTopicNumber;
@@ -676,19 +641,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxTopicNumber 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxTopicNumber(Long MaxTopicNumber) {
         this.MaxTopicNumber = MaxTopicNumber;
     }
 
     /**
-     * Get 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前规格最大Partition数 
      * @return MaxPartitionNumber 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPartitionNumber() {
         return this.MaxPartitionNumber;
@@ -696,19 +657,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPartitionNumber 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPartitionNumber(Long MaxPartitionNumber) {
         this.MaxPartitionNumber = MaxPartitionNumber;
     }
 
     /**
-     * Get 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划升级配置时间 
      * @return RebalanceTime 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRebalanceTime() {
         return this.RebalanceTime;
@@ -716,19 +673,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RebalanceTime 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRebalanceTime(String RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例当前partition数量 
      * @return PartitionNumber 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitionNumber() {
         return this.PartitionNumber;
@@ -736,19 +689,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionNumber 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionNumber(Long PartitionNumber) {
         this.PartitionNumber = PartitionNumber;
     }
 
     /**
-     * Get ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例公网带宽类型 
      * @return PublicNetworkChargeType ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicNetworkChargeType() {
         return this.PublicNetworkChargeType;
@@ -756,19 +705,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicNetworkChargeType ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
         this.PublicNetworkChargeType = PublicNetworkChargeType;
     }
 
     /**
-     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写 
      * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
@@ -776,19 +721,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例底层集群类型 
      * @return ClusterType ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -796,19 +737,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例功能列表 
      * @return Features 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFeatures() {
         return this.Features;
@@ -816,9 +753,7 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Features 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;

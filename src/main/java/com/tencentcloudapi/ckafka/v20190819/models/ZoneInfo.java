@@ -81,7 +81,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesInfo")
     @Expose
@@ -227,10 +226,8 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准版售罄信息 
      * @return SalesInfo 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SaleInfo [] getSalesInfo() {
         return this.SalesInfo;
@@ -238,9 +235,7 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesInfo 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesInfo(SaleInfo [] SalesInfo) {
         this.SalesInfo = SalesInfo;

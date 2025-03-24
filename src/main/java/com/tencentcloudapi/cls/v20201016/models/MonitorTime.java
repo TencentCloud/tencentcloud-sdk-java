@@ -45,7 +45,6 @@ public class MonitorTime extends AbstractModel {
     /**
     * 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronExpression")
     @Expose
@@ -105,11 +104,9 @@ public class MonitorTime extends AbstractModel {
 
     /**
      * Get 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+当type为`Cron`时，CronExpression字段生效。 
      * @return CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronExpression() {
         return this.CronExpression;
@@ -118,10 +115,8 @@ public class MonitorTime extends AbstractModel {
     /**
      * Set 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronExpression(String CronExpression) {
         this.CronExpression = CronExpression;

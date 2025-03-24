@@ -67,7 +67,6 @@ public class Docker extends AbstractModel {
 
     /**
     * Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DockerRunOption")
     @Expose
@@ -170,10 +169,8 @@ public class Docker extends AbstractModel {
     }
 
     /**
-     * Get Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Docker命令运行参数。 
      * @return DockerRunOption Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDockerRunOption() {
         return this.DockerRunOption;
@@ -181,9 +178,7 @@ public class Docker extends AbstractModel {
 
     /**
      * Set Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DockerRunOption Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDockerRunOption(String DockerRunOption) {
         this.DockerRunOption = DockerRunOption;

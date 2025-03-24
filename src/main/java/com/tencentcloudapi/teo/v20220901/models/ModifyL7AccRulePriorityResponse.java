@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBlackWhiteIpListResponse extends AbstractModel {
-
-    /**
-    * 黑名单IP列表
-    */
-    @SerializedName("BlackIpList")
-    @Expose
-    private String [] BlackIpList;
-
-    /**
-    * 白名单IP列表
-    */
-    @SerializedName("WhiteIpList")
-    @Expose
-    private String [] WhiteIpList;
+public class ModifyL7AccRulePriorityResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeBlackWhiteIpListResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 黑名单IP列表 
-     * @return BlackIpList 黑名单IP列表
-     */
-    public String [] getBlackIpList() {
-        return this.BlackIpList;
-    }
-
-    /**
-     * Set 黑名单IP列表
-     * @param BlackIpList 黑名单IP列表
-     */
-    public void setBlackIpList(String [] BlackIpList) {
-        this.BlackIpList = BlackIpList;
-    }
-
-    /**
-     * Get 白名单IP列表 
-     * @return WhiteIpList 白名单IP列表
-     */
-    public String [] getWhiteIpList() {
-        return this.WhiteIpList;
-    }
-
-    /**
-     * Set 白名单IP列表
-     * @param WhiteIpList 白名单IP列表
-     */
-    public void setWhiteIpList(String [] WhiteIpList) {
-        this.WhiteIpList = WhiteIpList;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,26 +46,14 @@ public class DescribeBlackWhiteIpListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeBlackWhiteIpListResponse() {
+    public ModifyL7AccRulePriorityResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBlackWhiteIpListResponse(DescribeBlackWhiteIpListResponse source) {
-        if (source.BlackIpList != null) {
-            this.BlackIpList = new String[source.BlackIpList.length];
-            for (int i = 0; i < source.BlackIpList.length; i++) {
-                this.BlackIpList[i] = new String(source.BlackIpList[i]);
-            }
-        }
-        if (source.WhiteIpList != null) {
-            this.WhiteIpList = new String[source.WhiteIpList.length];
-            for (int i = 0; i < source.WhiteIpList.length; i++) {
-                this.WhiteIpList[i] = new String(source.WhiteIpList[i]);
-            }
-        }
+    public ModifyL7AccRulePriorityResponse(ModifyL7AccRulePriorityResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,8 +64,6 @@ public class DescribeBlackWhiteIpListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "BlackIpList.", this.BlackIpList);
-        this.setParamArraySimple(map, prefix + "WhiteIpList.", this.WhiteIpList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

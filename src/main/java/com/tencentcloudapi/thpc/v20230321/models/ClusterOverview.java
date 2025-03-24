@@ -67,7 +67,6 @@ public class ClusterOverview extends AbstractModel {
 
     /**
     * 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerVersion")
     @Expose
@@ -226,10 +225,8 @@ public class ClusterOverview extends AbstractModel {
     }
 
     /**
-     * Get 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群调度器版本。 
      * @return SchedulerVersion 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerVersion() {
         return this.SchedulerVersion;
@@ -237,9 +234,7 @@ public class ClusterOverview extends AbstractModel {
 
     /**
      * Set 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchedulerVersion 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerVersion(String SchedulerVersion) {
         this.SchedulerVersion = SchedulerVersion;

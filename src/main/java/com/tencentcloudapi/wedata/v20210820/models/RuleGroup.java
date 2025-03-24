@@ -216,6 +216,53 @@ public class RuleGroup extends AbstractModel {
     private String ClusterDeployType;
 
     /**
+    * 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecDetail")
+    @Expose
+    private String ExecDetail;
+
+    /**
+    * 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PipelineTaskCount")
+    @Expose
+    private Long PipelineTaskCount;
+
+    /**
+    * 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableRuleCount")
+    @Expose
+    private Long EnableRuleCount;
+
+    /**
+    * 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 监控创建人
+    */
+    @SerializedName("CreateUserName")
+    @Expose
+    private String CreateUserName;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -695,6 +742,122 @@ public class RuleGroup extends AbstractModel {
         this.ClusterDeployType = ClusterDeployType;
     }
 
+    /**
+     * Get 任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 执行详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecDetail 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecDetail() {
+        return this.ExecDetail;
+    }
+
+    /**
+     * Set 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecDetail 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecDetail(String ExecDetail) {
+        this.ExecDetail = ExecDetail;
+    }
+
+    /**
+     * Get 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PipelineTaskCount 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPipelineTaskCount() {
+        return this.PipelineTaskCount;
+    }
+
+    /**
+     * Set 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PipelineTaskCount 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPipelineTaskCount(Long PipelineTaskCount) {
+        this.PipelineTaskCount = PipelineTaskCount;
+    }
+
+    /**
+     * Get 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableRuleCount 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableRuleCount() {
+        return this.EnableRuleCount;
+    }
+
+    /**
+     * Set 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableRuleCount 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableRuleCount(Long EnableRuleCount) {
+        this.EnableRuleCount = EnableRuleCount;
+    }
+
+    /**
+     * Get 任务描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 监控创建人 
+     * @return CreateUserName 监控创建人
+     */
+    public String getCreateUserName() {
+        return this.CreateUserName;
+    }
+
+    /**
+     * Set 监控创建人
+     * @param CreateUserName 监控创建人
+     */
+    public void setCreateUserName(String CreateUserName) {
+        this.CreateUserName = CreateUserName;
+    }
+
     public RuleGroup() {
     }
 
@@ -775,6 +938,24 @@ public class RuleGroup extends AbstractModel {
         if (source.ClusterDeployType != null) {
             this.ClusterDeployType = new String(source.ClusterDeployType);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ExecDetail != null) {
+            this.ExecDetail = new String(source.ExecDetail);
+        }
+        if (source.PipelineTaskCount != null) {
+            this.PipelineTaskCount = new Long(source.PipelineTaskCount);
+        }
+        if (source.EnableRuleCount != null) {
+            this.EnableRuleCount = new Long(source.EnableRuleCount);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateUserName != null) {
+            this.CreateUserName = new String(source.CreateUserName);
+        }
     }
 
 
@@ -806,6 +987,12 @@ public class RuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
+        this.setParamSimple(map, prefix + "PipelineTaskCount", this.PipelineTaskCount);
+        this.setParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CreateUserName", this.CreateUserName);
 
     }
 }

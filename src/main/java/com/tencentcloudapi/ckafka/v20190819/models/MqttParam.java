@@ -25,7 +25,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topics")
     @Expose
@@ -33,7 +32,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CleanSession")
     @Expose
@@ -41,7 +39,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -49,7 +46,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -57,7 +53,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -65,7 +60,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -73,7 +67,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -81,7 +74,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * QoS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qos")
     @Expose
@@ -89,7 +81,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxTasks")
     @Expose
@@ -97,7 +88,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -105,7 +95,6 @@ public class MqttParam extends AbstractModel {
 
     /**
     * MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -113,17 +102,14 @@ public class MqttParam extends AbstractModel {
 
     /**
     * 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-     * Get 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要同步的MQTT Topic列表, CSV格式 
      * @return Topics 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopics() {
         return this.Topics;
@@ -131,19 +117,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topics 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopics(String Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT clean-session 
      * @return CleanSession MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCleanSession() {
         return this.CleanSession;
@@ -151,19 +133,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CleanSession MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCleanSession(Boolean CleanSession) {
         this.CleanSession = CleanSession;
     }
 
     /**
-     * Get MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT instance-id 
      * @return Resource MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -171,19 +149,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT实例VIP 
      * @return Ip MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -191,19 +165,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT VIP 端口 
      * @return Port MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -211,19 +181,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT实例用户名 
      * @return UserName MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -231,19 +197,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT实例内账户密码 
      * @return Password MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -251,19 +213,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get QoS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get QoS 
      * @return Qos QoS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQos() {
         return this.Qos;
@@ -271,19 +229,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set QoS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qos QoS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQos(Long Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription 
      * @return MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxTasks() {
         return this.MaxTasks;
@@ -291,19 +245,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxTasks(Long MaxTasks) {
         this.MaxTasks = MaxTasks;
     }
 
     /**
-     * Get MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT 实例的Service VIP 
      * @return ServiceVip MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -311,19 +261,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT实例的VPC ID 
      * @return UniqVpcId MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -331,19 +277,15 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为自建集群, MQTT只支持非自建集群 
      * @return SelfBuilt 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -351,9 +293,7 @@ public class MqttParam extends AbstractModel {
 
     /**
      * Set 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;

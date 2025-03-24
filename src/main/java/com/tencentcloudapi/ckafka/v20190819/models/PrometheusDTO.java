@@ -46,7 +46,6 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
     * broker地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerIp")
     @Expose
@@ -54,7 +53,6 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
     * VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -62,7 +60,6 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
     * 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -117,10 +114,8 @@ public class PrometheusDTO extends AbstractModel {
     }
 
     /**
-     * Get broker地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get broker地址 
      * @return BrokerIp broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerIp() {
         return this.BrokerIp;
@@ -128,19 +123,15 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
      * Set broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerIp broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerIp(String BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC ID信息 
      * @return VpcId VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -148,19 +139,15 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
      * Set VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID信息 
      * @return SubnetId 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -168,9 +155,7 @@ public class PrometheusDTO extends AbstractModel {
 
     /**
      * Set 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

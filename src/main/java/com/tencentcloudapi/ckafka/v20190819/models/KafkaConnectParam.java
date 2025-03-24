@@ -25,7 +25,6 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
     * Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,7 +32,6 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
     * 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
@@ -49,7 +47,6 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
     * Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerAddress")
     @Expose
@@ -57,17 +54,14 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
     * CKafka连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id 
      * @return Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -75,19 +69,15 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
      * Set Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -95,9 +85,7 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
      * Set 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
@@ -124,10 +112,8 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Get Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Kafka连接的broker地址, NetworkType=PUBLIC公网时必填 
      * @return BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerAddress() {
         return this.BrokerAddress;
@@ -135,19 +121,15 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
      * Set Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerAddress(String BrokerAddress) {
         this.BrokerAddress = BrokerAddress;
     }
 
     /**
-     * Get CKafka连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CKafka连接源的实例资源地域, 跨地域时必填 
      * @return Region CKafka连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -155,9 +137,7 @@ public class KafkaConnectParam extends AbstractModel {
 
     /**
      * Set CKafka连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region CKafka连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

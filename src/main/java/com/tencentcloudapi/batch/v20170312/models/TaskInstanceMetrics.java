@@ -25,7 +25,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Submitted个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmittedCount")
     @Expose
@@ -33,7 +32,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Pending个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingCount")
     @Expose
@@ -41,7 +39,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Runnable个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunnableCount")
     @Expose
@@ -49,7 +46,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Starting个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartingCount")
     @Expose
@@ -57,7 +53,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Running个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCount")
     @Expose
@@ -65,7 +60,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Succeed个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SucceedCount")
     @Expose
@@ -73,7 +67,6 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * FailedInterrupted个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedInterruptedCount")
     @Expose
@@ -81,17 +74,14 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
     * Failed个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedCount")
     @Expose
     private Long FailedCount;
 
     /**
-     * Get Submitted个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Submitted个数 
      * @return SubmittedCount Submitted个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubmittedCount() {
         return this.SubmittedCount;
@@ -99,19 +89,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Submitted个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmittedCount Submitted个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmittedCount(Long SubmittedCount) {
         this.SubmittedCount = SubmittedCount;
     }
 
     /**
-     * Get Pending个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pending个数 
      * @return PendingCount Pending个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPendingCount() {
         return this.PendingCount;
@@ -119,19 +105,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Pending个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingCount Pending个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingCount(Long PendingCount) {
         this.PendingCount = PendingCount;
     }
 
     /**
-     * Get Runnable个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Runnable个数 
      * @return RunnableCount Runnable个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunnableCount() {
         return this.RunnableCount;
@@ -139,19 +121,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Runnable个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunnableCount Runnable个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunnableCount(Long RunnableCount) {
         this.RunnableCount = RunnableCount;
     }
 
     /**
-     * Get Starting个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Starting个数 
      * @return StartingCount Starting个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartingCount() {
         return this.StartingCount;
@@ -159,19 +137,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Starting个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartingCount Starting个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartingCount(Long StartingCount) {
         this.StartingCount = StartingCount;
     }
 
     /**
-     * Get Running个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Running个数 
      * @return RunningCount Running个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningCount() {
         return this.RunningCount;
@@ -179,19 +153,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Running个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningCount Running个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCount(Long RunningCount) {
         this.RunningCount = RunningCount;
     }
 
     /**
-     * Get Succeed个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Succeed个数 
      * @return SucceedCount Succeed个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSucceedCount() {
         return this.SucceedCount;
@@ -199,19 +169,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Succeed个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SucceedCount Succeed个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSucceedCount(Long SucceedCount) {
         this.SucceedCount = SucceedCount;
     }
 
     /**
-     * Get FailedInterrupted个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FailedInterrupted个数 
      * @return FailedInterruptedCount FailedInterrupted个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedInterruptedCount() {
         return this.FailedInterruptedCount;
@@ -219,19 +185,15 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set FailedInterrupted个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedInterruptedCount FailedInterrupted个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedInterruptedCount(Long FailedInterruptedCount) {
         this.FailedInterruptedCount = FailedInterruptedCount;
     }
 
     /**
-     * Get Failed个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Failed个数 
      * @return FailedCount Failed个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedCount() {
         return this.FailedCount;
@@ -239,9 +201,7 @@ public class TaskInstanceMetrics extends AbstractModel {
 
     /**
      * Set Failed个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedCount Failed个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;

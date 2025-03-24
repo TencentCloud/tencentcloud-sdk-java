@@ -31,13 +31,6 @@ public class ResizeDataDisksRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 需要扩容的云盘ID
-    */
-    @SerializedName("DiskIds")
-    @Expose
-    private String [] DiskIds;
-
-    /**
     * 需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
     */
     @SerializedName("DiskSize")
@@ -50,6 +43,20 @@ public class ResizeDataDisksRequest extends AbstractModel {
     @SerializedName("CvmInstanceIds")
     @Expose
     private String [] CvmInstanceIds;
+
+    /**
+    * 需要扩容的云盘ID
+    */
+    @SerializedName("DiskIds")
+    @Expose
+    private String [] DiskIds;
+
+    /**
+    * 是否扩容全部云硬盘
+    */
+    @SerializedName("ResizeAll")
+    @Expose
+    private Boolean ResizeAll;
 
     /**
      * Get EMR集群实例ID 
@@ -65,22 +72,6 @@ public class ResizeDataDisksRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 需要扩容的云盘ID 
-     * @return DiskIds 需要扩容的云盘ID
-     */
-    public String [] getDiskIds() {
-        return this.DiskIds;
-    }
-
-    /**
-     * Set 需要扩容的云盘ID
-     * @param DiskIds 需要扩容的云盘ID
-     */
-    public void setDiskIds(String [] DiskIds) {
-        this.DiskIds = DiskIds;
     }
 
     /**
@@ -115,6 +106,38 @@ public class ResizeDataDisksRequest extends AbstractModel {
         this.CvmInstanceIds = CvmInstanceIds;
     }
 
+    /**
+     * Get 需要扩容的云盘ID 
+     * @return DiskIds 需要扩容的云盘ID
+     */
+    public String [] getDiskIds() {
+        return this.DiskIds;
+    }
+
+    /**
+     * Set 需要扩容的云盘ID
+     * @param DiskIds 需要扩容的云盘ID
+     */
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get 是否扩容全部云硬盘 
+     * @return ResizeAll 是否扩容全部云硬盘
+     */
+    public Boolean getResizeAll() {
+        return this.ResizeAll;
+    }
+
+    /**
+     * Set 是否扩容全部云硬盘
+     * @param ResizeAll 是否扩容全部云硬盘
+     */
+    public void setResizeAll(Boolean ResizeAll) {
+        this.ResizeAll = ResizeAll;
+    }
+
     public ResizeDataDisksRequest() {
     }
 
@@ -126,12 +149,6 @@ public class ResizeDataDisksRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.DiskIds != null) {
-            this.DiskIds = new String[source.DiskIds.length];
-            for (int i = 0; i < source.DiskIds.length; i++) {
-                this.DiskIds[i] = new String(source.DiskIds[i]);
-            }
-        }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
@@ -141,6 +158,15 @@ public class ResizeDataDisksRequest extends AbstractModel {
                 this.CvmInstanceIds[i] = new String(source.CvmInstanceIds[i]);
             }
         }
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
+        if (source.ResizeAll != null) {
+            this.ResizeAll = new Boolean(source.ResizeAll);
+        }
     }
 
 
@@ -149,9 +175,10 @@ public class ResizeDataDisksRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamArraySimple(map, prefix + "CvmInstanceIds.", this.CvmInstanceIds);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamSimple(map, prefix + "ResizeAll", this.ResizeAll);
 
     }
 }

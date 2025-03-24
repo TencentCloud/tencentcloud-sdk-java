@@ -25,7 +25,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
     * 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStep")
     @Expose
@@ -192,10 +184,8 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MqttConnectParam MqttConnectParam;
 
     /**
-     * Get 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的Id 
      * @return ResourceId 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -203,19 +193,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源名称 
      * @return ResourceName 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -223,19 +209,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源描述 
      * @return Description 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -243,19 +225,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源类型 
      * @return Type 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -263,19 +241,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的状态 
      * @return Status 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -283,19 +257,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的创建时间 
      * @return CreateTime 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -303,19 +273,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的异常信息 
      * @return ErrorMessage 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -323,19 +289,15 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的当前所处步骤 
      * @return CurrentStep 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentStep() {
         return this.CurrentStep;
@@ -343,9 +305,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
      * Set 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentStep 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;

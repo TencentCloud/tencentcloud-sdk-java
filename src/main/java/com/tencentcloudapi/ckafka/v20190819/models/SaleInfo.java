@@ -25,7 +25,6 @@ public class SaleInfo extends AbstractModel {
 
     /**
     * 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flag")
     @Expose
@@ -33,7 +32,6 @@ public class SaleInfo extends AbstractModel {
 
     /**
     * ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,7 +39,6 @@ public class SaleInfo extends AbstractModel {
 
     /**
     * 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Platform")
     @Expose
@@ -49,17 +46,14 @@ public class SaleInfo extends AbstractModel {
 
     /**
     * 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoldOut")
     @Expose
     private Boolean SoldOut;
 
     /**
-     * Get 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手动设置的flag标志 
      * @return Flag 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFlag() {
         return this.Flag;
@@ -67,19 +61,15 @@ public class SaleInfo extends AbstractModel {
 
     /**
      * Set 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flag 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckakfa版本号(1.1.1/2.4.2/0.10.2) 
      * @return Version ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -87,19 +77,15 @@ public class SaleInfo extends AbstractModel {
 
     /**
      * Set ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 专业版、标准版标志 
      * @return Platform 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlatform() {
         return this.Platform;
@@ -107,19 +93,15 @@ public class SaleInfo extends AbstractModel {
 
     /**
      * Set 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Platform 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 售罄标志：true售罄 
      * @return SoldOut 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSoldOut() {
         return this.SoldOut;
@@ -127,9 +109,7 @@ public class SaleInfo extends AbstractModel {
 
     /**
      * Set 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoldOut 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoldOut(Boolean SoldOut) {
         this.SoldOut = SoldOut;

@@ -25,7 +25,6 @@ public class DescribeLiveChannelListResponse extends AbstractModel {
 
     /**
     * 频道总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLiveChannelListResponse extends AbstractModel {
 
     /**
     * 频道信息数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveChannels")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeLiveChannelListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 频道总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 频道总数 
      * @return Total 频道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeLiveChannelListResponse extends AbstractModel {
 
     /**
      * Set 频道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 频道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 频道信息数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 频道信息数组 
      * @return LiveChannels 频道信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveChannelInfo [] getLiveChannels() {
         return this.LiveChannels;
@@ -78,9 +70,7 @@ public class DescribeLiveChannelListResponse extends AbstractModel {
 
     /**
      * Set 频道信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveChannels 频道信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveChannels(LiveChannelInfo [] LiveChannels) {
         this.LiveChannels = LiveChannels;

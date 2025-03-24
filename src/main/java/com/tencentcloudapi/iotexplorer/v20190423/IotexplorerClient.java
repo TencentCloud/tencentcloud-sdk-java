@@ -1051,6 +1051,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取未绑定的设备列表
+     * @param req DescribeUnbindedDevicesRequest
+     * @return DescribeUnbindedDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnbindedDevicesResponse DescribeUnbindedDevices(DescribeUnbindedDevicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUnbindedDevices", DescribeUnbindedDevicesResponse.class);
+    }
+
+    /**
      *用于查询视频激活码统计概览
      * @param req DescribeVideoLicenseRequest
      * @return DescribeVideoLicenseResponse

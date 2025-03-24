@@ -25,7 +25,6 @@ public class TopicResult extends AbstractModel {
 
     /**
     * 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -33,17 +32,14 @@ public class TopicResult extends AbstractModel {
 
     /**
     * 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的主题信息列表 
      * @return TopicList 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Topic [] getTopicList() {
         return this.TopicList;
@@ -51,19 +47,15 @@ public class TopicResult extends AbstractModel {
 
     /**
      * Set 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(Topic [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的 topic 数量 
      * @return TotalCount 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class TopicResult extends AbstractModel {
 
     /**
      * Set 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

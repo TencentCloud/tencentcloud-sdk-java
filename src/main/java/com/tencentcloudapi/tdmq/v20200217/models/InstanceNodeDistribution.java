@@ -53,6 +53,7 @@ public class InstanceNodeDistribution extends AbstractModel {
 
     /**
     * 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneStatus")
     @Expose
@@ -123,8 +124,10 @@ public class InstanceNodeDistribution extends AbstractModel {
     }
 
     /**
-     * Get 可用区状态 
+     * Get 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneStatus 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneStatus() {
         return this.ZoneStatus;
@@ -132,7 +135,9 @@ public class InstanceNodeDistribution extends AbstractModel {
 
     /**
      * Set 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneStatus 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneStatus(String ZoneStatus) {
         this.ZoneStatus = ZoneStatus;

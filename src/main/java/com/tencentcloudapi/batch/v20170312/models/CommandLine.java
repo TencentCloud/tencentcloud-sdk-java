@@ -25,17 +25,14 @@ public class CommandLine extends AbstractModel {
 
     /**
     * 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-     * Get 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务执行命令。 
      * @return Command 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommand() {
         return this.Command;
@@ -43,9 +40,7 @@ public class CommandLine extends AbstractModel {
 
     /**
      * Set 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Command 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommand(String Command) {
         this.Command = Command;

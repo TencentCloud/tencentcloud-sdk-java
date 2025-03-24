@@ -32,7 +32,6 @@ public class DescribeConnectResourcesResp extends AbstractModel {
 
     /**
     * 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectResourceList")
     @Expose
@@ -55,10 +54,8 @@ public class DescribeConnectResourcesResp extends AbstractModel {
     }
 
     /**
-     * Get 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源数据 
      * @return ConnectResourceList 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeConnectResource [] getConnectResourceList() {
         return this.ConnectResourceList;
@@ -66,9 +63,7 @@ public class DescribeConnectResourcesResp extends AbstractModel {
 
     /**
      * Set 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectResourceList 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectResourceList(DescribeConnectResource [] ConnectResourceList) {
         this.ConnectResourceList = ConnectResourceList;

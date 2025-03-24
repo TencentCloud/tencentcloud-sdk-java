@@ -39,7 +39,6 @@ public class TopicSubscribeGroup extends AbstractModel {
 
     /**
     * 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupsInfo")
     @Expose
@@ -47,7 +46,6 @@ public class TopicSubscribeGroup extends AbstractModel {
 
     /**
     * 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -86,10 +84,8 @@ public class TopicSubscribeGroup extends AbstractModel {
     }
 
     /**
-     * Get 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费分组信息 
      * @return GroupsInfo 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfoResponse [] getGroupsInfo() {
         return this.GroupsInfo;
@@ -97,19 +93,15 @@ public class TopicSubscribeGroup extends AbstractModel {
 
     /**
      * Set 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupsInfo 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupsInfo(GroupInfoResponse [] GroupsInfo) {
         this.GroupsInfo = GroupsInfo;
     }
 
     /**
-     * Get 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。 
      * @return Status 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -117,9 +109,7 @@ public class TopicSubscribeGroup extends AbstractModel {
 
     /**
      * Set 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

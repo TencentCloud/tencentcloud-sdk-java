@@ -38,20 +38,6 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     private QueryMetricItem [] Metrics;
 
     /**
-    * 聚合维度
-    */
-    @SerializedName("GroupBy")
-    @Expose
-    private String [] GroupBy;
-
-    /**
-    * 过滤条件
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
     * 开始时间（单位：秒）
     */
     @SerializedName("StartTime")
@@ -64,6 +50,20 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
+
+    /**
+    * 聚合维度
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
+    * 过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
     * 排序方式
@@ -122,38 +122,6 @@ Value 填写：
     }
 
     /**
-     * Get 聚合维度 
-     * @return GroupBy 聚合维度
-     */
-    public String [] getGroupBy() {
-        return this.GroupBy;
-    }
-
-    /**
-     * Set 聚合维度
-     * @param GroupBy 聚合维度
-     */
-    public void setGroupBy(String [] GroupBy) {
-        this.GroupBy = GroupBy;
-    }
-
-    /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Get 开始时间（单位：秒） 
      * @return StartTime 开始时间（单位：秒）
      */
@@ -183,6 +151,38 @@ Value 填写：
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 聚合维度 
+     * @return GroupBy 聚合维度
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 聚合维度
+     * @param GroupBy 聚合维度
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
+    /**
+     * Get 过滤条件 
+     * @return Filters 过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param Filters 过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -262,6 +262,12 @@ Value 填写：
                 this.Metrics[i] = new QueryMetricItem(source.Metrics[i]);
             }
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
         if (source.GroupBy != null) {
             this.GroupBy = new String[source.GroupBy.length];
             for (int i = 0; i < source.GroupBy.length; i++) {
@@ -273,12 +279,6 @@ Value 填写：
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
-        }
-        if (source.StartTime != null) {
-            this.StartTime = new Long(source.StartTime);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new Long(source.EndTime);
         }
         if (source.OrderBy != null) {
             this.OrderBy = new OrderBy(source.OrderBy);
@@ -298,10 +298,10 @@ Value 填写：
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);
-        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

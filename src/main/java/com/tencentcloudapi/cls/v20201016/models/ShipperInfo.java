@@ -81,7 +81,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterRules")
     @Expose
@@ -96,7 +95,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compress")
     @Expose
@@ -104,7 +102,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -119,7 +116,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilenameMode")
     @Expose
@@ -127,7 +123,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -135,7 +130,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -143,7 +137,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -151,7 +144,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainTime")
     @Expose
@@ -164,7 +156,6 @@ public class ShipperInfo extends AbstractModel {
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistoryStatus")
     @Expose
@@ -172,7 +163,6 @@ public class ShipperInfo extends AbstractModel {
 
     /**
     * cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -307,10 +297,8 @@ public class ShipperInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递日志的过滤规则 
      * @return FilterRules 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterRuleInfo [] getFilterRules() {
         return this.FilterRules;
@@ -318,9 +306,7 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterRules 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterRules(FilterRuleInfo [] FilterRules) {
         this.FilterRules = FilterRules;
@@ -343,10 +329,8 @@ public class ShipperInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递日志的压缩配置 
      * @return Compress 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompressInfo getCompress() {
         return this.Compress;
@@ -354,19 +338,15 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Compress 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompress(CompressInfo Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递日志的内容格式配置 
      * @return Content 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContentInfo getContent() {
         return this.Content;
@@ -374,9 +354,7 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(ContentInfo Content) {
         this.Content = Content;
@@ -399,10 +377,8 @@ public class ShipperInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名） 
      * @return FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFilenameMode() {
         return this.FilenameMode;
@@ -410,19 +386,15 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilenameMode(Long FilenameMode) {
         this.FilenameMode = FilenameMode;
     }
 
     /**
-     * Get 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递数据范围的开始时间点 
      * @return StartTime 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -430,19 +402,15 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递数据范围的结束时间点 
      * @return EndTime 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -450,19 +418,15 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效） 
      * @return Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
         return this.Progress;
@@ -470,19 +434,15 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效） 
      * @return RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainTime() {
         return this.RemainTime;
@@ -490,9 +450,7 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainTime(Long RemainTime) {
         this.RemainTime = RemainTime;
@@ -504,15 +462,13 @@ public class ShipperInfo extends AbstractModel {
 1：任务准备中
 2：任务运行中
 3：任务运行异常
-4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。 
+4：任务运行结束 
      * @return HistoryStatus 历史任务状态：
 0：实时任务
 1：任务准备中
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHistoryStatus() {
         return this.HistoryStatus;
@@ -525,24 +481,20 @@ public class ShipperInfo extends AbstractModel {
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistoryStatus 历史任务状态：
 0：实时任务
 1：任务准备中
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistoryStatus(Long HistoryStatus) {
         this.HistoryStatus = HistoryStatus;
     }
 
     /**
-     * Get cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos桶类型 
      * @return StorageType cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
         return this.StorageType;
@@ -550,9 +502,7 @@ public class ShipperInfo extends AbstractModel {
 
     /**
      * Set cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

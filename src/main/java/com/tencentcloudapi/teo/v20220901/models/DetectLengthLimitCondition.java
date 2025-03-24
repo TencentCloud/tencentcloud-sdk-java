@@ -34,7 +34,7 @@ public class DetectLengthLimitCondition extends AbstractModel {
     /**
     * 匹配条件的参数值，取值与 Name 成对使用。
 当 Name 值为 body_depth 时， Values 只支持传入单个值，取值有：
-<li>8KB；</li>
+<li>10KB；</li>
 <li>64KB；</li>
 <li>128KB。</li>
     */
@@ -65,12 +65,12 @@ public class DetectLengthLimitCondition extends AbstractModel {
     /**
      * Get 匹配条件的参数值，取值与 Name 成对使用。
 当 Name 值为 body_depth 时， Values 只支持传入单个值，取值有：
-<li>8KB；</li>
+<li>10KB；</li>
 <li>64KB；</li>
 <li>128KB。</li> 
      * @return Values 匹配条件的参数值，取值与 Name 成对使用。
 当 Name 值为 body_depth 时， Values 只支持传入单个值，取值有：
-<li>8KB；</li>
+<li>10KB；</li>
 <li>64KB；</li>
 <li>128KB。</li>
      */
@@ -81,12 +81,12 @@ public class DetectLengthLimitCondition extends AbstractModel {
     /**
      * Set 匹配条件的参数值，取值与 Name 成对使用。
 当 Name 值为 body_depth 时， Values 只支持传入单个值，取值有：
-<li>8KB；</li>
+<li>10KB；</li>
 <li>64KB；</li>
 <li>128KB。</li>
      * @param Values 匹配条件的参数值，取值与 Name 成对使用。
 当 Name 值为 body_depth 时， Values 只支持传入单个值，取值有：
-<li>8KB；</li>
+<li>10KB；</li>
 <li>64KB；</li>
 <li>128KB。</li>
      */

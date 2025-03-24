@@ -25,7 +25,6 @@ public class DescribeSavingPlanDeductResponse extends AbstractModel {
 
     /**
     * 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeSavingPlanDeductResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询命中的节省计划抵扣明细数据总条数 
      * @return Total 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -57,9 +54,7 @@ public class DescribeSavingPlanDeductResponse extends AbstractModel {
 
     /**
      * Set 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

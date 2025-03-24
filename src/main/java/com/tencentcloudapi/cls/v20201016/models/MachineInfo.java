@@ -32,7 +32,6 @@ public class MachineInfo extends AbstractModel {
 
     /**
     * 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -106,10 +105,8 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器实例ID 
      * @return InstanceID 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -117,9 +114,7 @@ public class MachineInfo extends AbstractModel {
 
     /**
      * Set 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

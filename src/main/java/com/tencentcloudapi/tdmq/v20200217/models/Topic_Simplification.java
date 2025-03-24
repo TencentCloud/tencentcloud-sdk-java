@@ -25,6 +25,7 @@ public class Topic_Simplification extends AbstractModel {
 
     /**
     * 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -35,14 +36,17 @@ public class Topic_Simplification extends AbstractModel {
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PulsarTopicType")
     @Expose
     private Long PulsarTopicType;
 
     /**
-     * Get 主题名称。 
+     * Get 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicName 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -50,7 +54,9 @@ public class Topic_Simplification extends AbstractModel {
 
     /**
      * Set 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -60,11 +66,13 @@ public class Topic_Simplification extends AbstractModel {
      * Get 0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
-3: 持久分区 
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PulsarTopicType 0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPulsarTopicType() {
         return this.PulsarTopicType;
@@ -75,10 +83,12 @@ public class Topic_Simplification extends AbstractModel {
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PulsarTopicType 0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPulsarTopicType(Long PulsarTopicType) {
         this.PulsarTopicType = PulsarTopicType;

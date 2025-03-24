@@ -25,7 +25,6 @@ public class DropCls extends AbstractModel {
 
     /**
     * 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropInvalidMessageToCls")
     @Expose
@@ -33,7 +32,6 @@ public class DropCls extends AbstractModel {
 
     /**
     * 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropClsRegion")
     @Expose
@@ -41,7 +39,6 @@ public class DropCls extends AbstractModel {
 
     /**
     * 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropClsOwneruin")
     @Expose
@@ -49,7 +46,6 @@ public class DropCls extends AbstractModel {
 
     /**
     * 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropClsTopicId")
     @Expose
@@ -57,17 +53,14 @@ public class DropCls extends AbstractModel {
 
     /**
     * 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropClsLogSet")
     @Expose
     private String DropClsLogSet;
 
     /**
-     * Get 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否投递到cls 
      * @return DropInvalidMessageToCls 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDropInvalidMessageToCls() {
         return this.DropInvalidMessageToCls;
@@ -75,19 +68,15 @@ public class DropCls extends AbstractModel {
 
     /**
      * Set 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropInvalidMessageToCls 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropInvalidMessageToCls(Boolean DropInvalidMessageToCls) {
         this.DropInvalidMessageToCls = DropInvalidMessageToCls;
     }
 
     /**
-     * Get 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递cls的地域 
      * @return DropClsRegion 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDropClsRegion() {
         return this.DropClsRegion;
@@ -95,19 +84,15 @@ public class DropCls extends AbstractModel {
 
     /**
      * Set 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropClsRegion 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropClsRegion(String DropClsRegion) {
         this.DropClsRegion = DropClsRegion;
     }
 
     /**
-     * Get 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递cls的账号 
      * @return DropClsOwneruin 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDropClsOwneruin() {
         return this.DropClsOwneruin;
@@ -115,19 +100,15 @@ public class DropCls extends AbstractModel {
 
     /**
      * Set 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropClsOwneruin 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropClsOwneruin(String DropClsOwneruin) {
         this.DropClsOwneruin = DropClsOwneruin;
     }
 
     /**
-     * Get 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递cls的主题 
      * @return DropClsTopicId 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDropClsTopicId() {
         return this.DropClsTopicId;
@@ -135,19 +116,15 @@ public class DropCls extends AbstractModel {
 
     /**
      * Set 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropClsTopicId 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropClsTopicId(String DropClsTopicId) {
         this.DropClsTopicId = DropClsTopicId;
     }
 
     /**
-     * Get 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递cls的日志集id 
      * @return DropClsLogSet 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDropClsLogSet() {
         return this.DropClsLogSet;
@@ -155,9 +132,7 @@ public class DropCls extends AbstractModel {
 
     /**
      * Set 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropClsLogSet 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropClsLogSet(String DropClsLogSet) {
         this.DropClsLogSet = DropClsLogSet;

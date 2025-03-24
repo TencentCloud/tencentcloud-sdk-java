@@ -130,6 +130,13 @@ public class CBSInstance extends AbstractModel {
     private Boolean Shareable;
 
     /**
+    * emr节点ID
+    */
+    @SerializedName("EmrResourceId")
+    @Expose
+    private String EmrResourceId;
+
+    /**
      * Get 云硬盘ID 
      * @return DiskId 云硬盘ID
      */
@@ -373,6 +380,22 @@ public class CBSInstance extends AbstractModel {
         this.Shareable = Shareable;
     }
 
+    /**
+     * Get emr节点ID 
+     * @return EmrResourceId emr节点ID
+     */
+    public String getEmrResourceId() {
+        return this.EmrResourceId;
+    }
+
+    /**
+     * Set emr节点ID
+     * @param EmrResourceId emr节点ID
+     */
+    public void setEmrResourceId(String EmrResourceId) {
+        this.EmrResourceId = EmrResourceId;
+    }
+
     public CBSInstance() {
     }
 
@@ -429,6 +452,9 @@ public class CBSInstance extends AbstractModel {
         if (source.Shareable != null) {
             this.Shareable = new Boolean(source.Shareable);
         }
+        if (source.EmrResourceId != null) {
+            this.EmrResourceId = new String(source.EmrResourceId);
+        }
     }
 
 
@@ -451,6 +477,7 @@ public class CBSInstance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
+        this.setParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
 
     }
 }

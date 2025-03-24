@@ -32,7 +32,6 @@ public class GroupInfoTopics extends AbstractModel {
 
     /**
     * 分配的 partition 信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partitions")
     @Expose
@@ -55,10 +54,8 @@ public class GroupInfoTopics extends AbstractModel {
     }
 
     /**
-     * Get 分配的 partition 信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分配的 partition 信息 
      * @return Partitions 分配的 partition 信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPartitions() {
         return this.Partitions;
@@ -66,9 +63,7 @@ public class GroupInfoTopics extends AbstractModel {
 
     /**
      * Set 分配的 partition 信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Partitions 分配的 partition 信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitions(Long [] Partitions) {
         this.Partitions = Partitions;

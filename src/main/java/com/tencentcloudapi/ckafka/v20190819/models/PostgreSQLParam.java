@@ -25,7 +25,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * PostgreSQL的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -33,7 +32,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 该PostgreSQL在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -49,7 +46,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 插件名(decoderbufs/pgoutput)，默认为decoderbufs
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PluginName")
     @Expose
@@ -57,7 +53,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 复制存量信息(never增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotMode")
     @Expose
@@ -65,7 +60,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataFormat")
     @Expose
@@ -73,7 +67,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetInsertMode")
     @Expose
@@ -81,7 +74,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetPrimaryKeyField")
     @Expose
@@ -89,7 +81,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 表与消息间的映射关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetRecordMapping")
     @Expose
@@ -97,7 +88,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 是否抛弃解析失败的消息，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropInvalidMessage")
     @Expose
@@ -105,7 +95,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 输入的table是否为正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTableRegular")
     @Expose
@@ -113,7 +102,6 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyColumns")
     @Expose
@@ -121,17 +109,14 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
     * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordWithSchema")
     @Expose
     private Boolean RecordWithSchema;
 
     /**
-     * Get PostgreSQL的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PostgreSQL的数据库名称 
      * @return Database PostgreSQL的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -139,19 +124,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set PostgreSQL的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database PostgreSQL的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名" 
      * @return Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -159,19 +140,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 该PostgreSQL在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该PostgreSQL在连接管理内的Id 
      * @return Resource 该PostgreSQL在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -179,19 +156,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 该PostgreSQL在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 该PostgreSQL在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 插件名(decoderbufs/pgoutput)，默认为decoderbufs
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 插件名(decoderbufs/pgoutput)，默认为decoderbufs 
      * @return PluginName 插件名(decoderbufs/pgoutput)，默认为decoderbufs
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPluginName() {
         return this.PluginName;
@@ -199,19 +172,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 插件名(decoderbufs/pgoutput)，默认为decoderbufs
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PluginName 插件名(decoderbufs/pgoutput)，默认为decoderbufs
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPluginName(String PluginName) {
         this.PluginName = PluginName;
     }
 
     /**
-     * Get 复制存量信息(never增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复制存量信息(never增量, initial全量)，默认为initial 
      * @return SnapshotMode 复制存量信息(never增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotMode() {
         return this.SnapshotMode;
@@ -219,19 +188,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 复制存量信息(never增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotMode 复制存量信息(never增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotMode(String SnapshotMode) {
         this.SnapshotMode = SnapshotMode;
     }
 
     /**
-     * Get 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填 
      * @return DataFormat 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataFormat() {
         return this.DataFormat;
@@ -239,19 +204,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataFormat 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataFormat(String DataFormat) {
         this.DataFormat = DataFormat;
     }
 
     /**
-     * Get "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入 
      * @return DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataTargetInsertMode() {
         return this.DataTargetInsertMode;
@@ -259,19 +220,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetInsertMode(String DataTargetInsertMode) {
         this.DataTargetInsertMode = DataTargetInsertMode;
     }
 
     /**
-     * Get 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键 
      * @return DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataTargetPrimaryKeyField() {
         return this.DataTargetPrimaryKeyField;
@@ -279,19 +236,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetPrimaryKeyField(String DataTargetPrimaryKeyField) {
         this.DataTargetPrimaryKeyField = DataTargetPrimaryKeyField;
     }
 
     /**
-     * Get 表与消息间的映射关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表与消息间的映射关系 
      * @return DataTargetRecordMapping 表与消息间的映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordMapping [] getDataTargetRecordMapping() {
         return this.DataTargetRecordMapping;
@@ -299,19 +252,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 表与消息间的映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetRecordMapping 表与消息间的映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetRecordMapping(RecordMapping [] DataTargetRecordMapping) {
         this.DataTargetRecordMapping = DataTargetRecordMapping;
     }
 
     /**
-     * Get 是否抛弃解析失败的消息，默认为true
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否抛弃解析失败的消息，默认为true 
      * @return DropInvalidMessage 是否抛弃解析失败的消息，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDropInvalidMessage() {
         return this.DropInvalidMessage;
@@ -319,19 +268,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 是否抛弃解析失败的消息，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropInvalidMessage 是否抛弃解析失败的消息，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropInvalidMessage(Boolean DropInvalidMessage) {
         this.DropInvalidMessage = DropInvalidMessage;
     }
 
     /**
-     * Get 输入的table是否为正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入的table是否为正则表达式 
      * @return IsTableRegular 输入的table是否为正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsTableRegular() {
         return this.IsTableRegular;
@@ -339,19 +284,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 输入的table是否为正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTableRegular 输入的table是否为正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTableRegular(Boolean IsTableRegular) {
         this.IsTableRegular = IsTableRegular;
     }
 
     /**
-     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
      * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyColumns() {
         return this.KeyColumns;
@@ -359,19 +300,15 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyColumns(String KeyColumns) {
         this.KeyColumns = KeyColumns;
     }
 
     /**
-     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
      * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRecordWithSchema() {
         return this.RecordWithSchema;
@@ -379,9 +316,7 @@ public class PostgreSQLParam extends AbstractModel {
 
     /**
      * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordWithSchema(Boolean RecordWithSchema) {
         this.RecordWithSchema = RecordWithSchema;

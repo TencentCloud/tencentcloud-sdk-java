@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class DescribeMetricRecordsRequest extends AbstractModel {
 
     /**
-    * 指标列表
-    */
-    @SerializedName("Metrics")
-    @Expose
-    private QueryMetricItem [] Metrics;
-
-    /**
     * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * 指标列表
+    */
+    @SerializedName("Metrics")
+    @Expose
+    private QueryMetricItem [] Metrics;
 
     /**
     * 开始时间（单位为秒）
@@ -52,6 +52,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * 聚合维度
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
     * 过滤条件
     */
     @SerializedName("Filters")
@@ -64,13 +71,6 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     @SerializedName("OrFilters")
     @Expose
     private Filter [] OrFilters;
-
-    /**
-    * 聚合维度
-    */
-    @SerializedName("GroupBy")
-    @Expose
-    private String [] GroupBy;
 
     /**
     * 排序
@@ -132,22 +132,6 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-     * Get 指标列表 
-     * @return Metrics 指标列表
-     */
-    public QueryMetricItem [] getMetrics() {
-        return this.Metrics;
-    }
-
-    /**
-     * Set 指标列表
-     * @param Metrics 指标列表
-     */
-    public void setMetrics(QueryMetricItem [] Metrics) {
-        this.Metrics = Metrics;
-    }
-
-    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -161,6 +145,22 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 指标列表 
+     * @return Metrics 指标列表
+     */
+    public QueryMetricItem [] getMetrics() {
+        return this.Metrics;
+    }
+
+    /**
+     * Set 指标列表
+     * @param Metrics 指标列表
+     */
+    public void setMetrics(QueryMetricItem [] Metrics) {
+        this.Metrics = Metrics;
     }
 
     /**
@@ -196,6 +196,22 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     }
 
     /**
+     * Get 聚合维度 
+     * @return GroupBy 聚合维度
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 聚合维度
+     * @param GroupBy 聚合维度
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
+    /**
      * Get 过滤条件 
      * @return Filters 过滤条件
      */
@@ -225,22 +241,6 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
      */
     public void setOrFilters(Filter [] OrFilters) {
         this.OrFilters = OrFilters;
-    }
-
-    /**
-     * Get 聚合维度 
-     * @return GroupBy 聚合维度
-     */
-    public String [] getGroupBy() {
-        return this.GroupBy;
-    }
-
-    /**
-     * Set 聚合维度
-     * @param GroupBy 聚合维度
-     */
-    public void setGroupBy(String [] GroupBy) {
-        this.GroupBy = GroupBy;
     }
 
     /**
@@ -403,20 +403,26 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeMetricRecordsRequest(DescribeMetricRecordsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.Metrics != null) {
             this.Metrics = new QueryMetricItem[source.Metrics.length];
             for (int i = 0; i < source.Metrics.length; i++) {
                 this.Metrics[i] = new QueryMetricItem(source.Metrics[i]);
             }
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -428,12 +434,6 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
             this.OrFilters = new Filter[source.OrFilters.length];
             for (int i = 0; i < source.OrFilters.length; i++) {
                 this.OrFilters[i] = new Filter(source.OrFilters[i]);
-            }
-        }
-        if (source.GroupBy != null) {
-            this.GroupBy = new String[source.GroupBy.length];
-            for (int i = 0; i < source.GroupBy.length; i++) {
-                this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
         if (source.OrderBy != null) {
@@ -464,13 +464,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
-        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
         this.setParamSimple(map, prefix + "Type", this.Type);

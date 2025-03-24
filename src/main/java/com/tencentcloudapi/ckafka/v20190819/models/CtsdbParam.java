@@ -25,7 +25,6 @@ public class CtsdbParam extends AbstractModel {
 
     /**
     * 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,17 +32,14 @@ public class CtsdbParam extends AbstractModel {
 
     /**
     * Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CtsdbMetric")
     @Expose
     private String CtsdbMetric;
 
     /**
-     * Get 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接管理实例资源 
      * @return Resource 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -51,19 +47,15 @@ public class CtsdbParam extends AbstractModel {
 
     /**
      * Set 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ctsdb的metric 
      * @return CtsdbMetric Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCtsdbMetric() {
         return this.CtsdbMetric;
@@ -71,9 +63,7 @@ public class CtsdbParam extends AbstractModel {
 
     /**
      * Set Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CtsdbMetric Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCtsdbMetric(String CtsdbMetric) {
         this.CtsdbMetric = CtsdbMetric;

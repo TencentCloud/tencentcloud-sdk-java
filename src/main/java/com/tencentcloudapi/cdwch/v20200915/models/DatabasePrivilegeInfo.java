@@ -31,16 +31,14 @@ public class DatabasePrivilegeInfo extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
+    * 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
     */
     @SerializedName("DatabasePrivileges")
     @Expose
     private String [] DatabasePrivileges;
 
     /**
-    * // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+    * 库下面的表权限
     */
     @SerializedName("TablePrivilegeList")
     @Expose
@@ -63,40 +61,32 @@ public class DatabasePrivilegeInfo extends AbstractModel {
     }
 
     /**
-     * Get //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabasePrivileges //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE 
+     * @return DatabasePrivileges 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
      */
     public String [] getDatabasePrivileges() {
         return this.DatabasePrivileges;
     }
 
     /**
-     * Set //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabasePrivileges //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
+     * @param DatabasePrivileges 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
      */
     public void setDatabasePrivileges(String [] DatabasePrivileges) {
         this.DatabasePrivileges = DatabasePrivileges;
     }
 
     /**
-     * Get // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TablePrivilegeList // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 库下面的表权限 
+     * @return TablePrivilegeList 库下面的表权限
      */
     public TablePrivilegeInfo [] getTablePrivilegeList() {
         return this.TablePrivilegeList;
     }
 
     /**
-     * Set // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TablePrivilegeList // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 库下面的表权限
+     * @param TablePrivilegeList 库下面的表权限
      */
     public void setTablePrivilegeList(TablePrivilegeInfo [] TablePrivilegeList) {
         this.TablePrivilegeList = TablePrivilegeList;

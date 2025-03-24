@@ -95,6 +95,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -109,6 +110,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalableTps")
     @Expose
@@ -116,6 +118,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -123,6 +126,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 子网id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -137,6 +141,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -144,6 +149,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -151,6 +157,7 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
     * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingLabelVersion")
     @Expose
@@ -324,8 +331,10 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 备注信息 
+     * Get 备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -333,7 +342,9 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -356,8 +367,10 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 规格外弹性TPS 
+     * Get 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalableTps() {
         return this.ScalableTps;
@@ -365,15 +378,19 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalableTps(Long ScalableTps) {
         this.ScalableTps = ScalableTps;
     }
 
     /**
-     * Get VPC的id 
+     * Get VPC的id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -381,15 +398,19 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id 
+     * Get 子网id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -397,7 +418,9 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 子网id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -420,8 +443,10 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 集群的标签列表 
+     * Get 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -429,15 +454,19 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 集群创建时间 
+     * Get 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -445,15 +474,19 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储 
+     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingLabelVersion() {
         return this.BillingLabelVersion;
@@ -461,7 +494,9 @@ public class PulsarProInstance extends AbstractModel {
 
     /**
      * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingLabelVersion(String BillingLabelVersion) {
         this.BillingLabelVersion = BillingLabelVersion;

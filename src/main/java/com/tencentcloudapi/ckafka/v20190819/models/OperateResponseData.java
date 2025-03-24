@@ -25,7 +25,6 @@ public class OperateResponseData extends AbstractModel {
 
     /**
     * 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,17 +32,14 @@ public class OperateResponseData extends AbstractModel {
 
     /**
     * RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteDTO")
     @Expose
     private RouteDTO RouteDTO;
 
     /**
-     * Get 流程Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程Id 
      * @return FlowId 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -51,19 +47,15 @@ public class OperateResponseData extends AbstractModel {
 
     /**
      * Set 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RouteIdDto 
      * @return RouteDTO RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RouteDTO getRouteDTO() {
         return this.RouteDTO;
@@ -71,9 +63,7 @@ public class OperateResponseData extends AbstractModel {
 
     /**
      * Set RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteDTO RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteDTO(RouteDTO RouteDTO) {
         this.RouteDTO = RouteDTO;

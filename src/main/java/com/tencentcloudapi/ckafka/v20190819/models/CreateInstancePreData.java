@@ -25,7 +25,6 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
     * CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
     * 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
     @Expose
@@ -41,7 +39,6 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
     * ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,17 +46,14 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
     * 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNameInstanceIdMapping")
     @Expose
     private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
-     * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。 
      * @return FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -67,19 +61,15 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
      * Set CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号列表 
      * @return DealNames 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -87,19 +77,15 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
      * Set 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id 
      * @return InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -107,19 +93,15 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
      * Set ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单和购买实例对应映射列表 
      * @return DealNameInstanceIdMapping 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DealInstanceDTO [] getDealNameInstanceIdMapping() {
         return this.DealNameInstanceIdMapping;
@@ -127,9 +109,7 @@ public class CreateInstancePreData extends AbstractModel {
 
     /**
      * Set 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNameInstanceIdMapping 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
         this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;

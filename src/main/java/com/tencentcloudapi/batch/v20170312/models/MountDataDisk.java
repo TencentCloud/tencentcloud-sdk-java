@@ -25,7 +25,6 @@ public class MountDataDisk extends AbstractModel {
 
     /**
     * 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalPath")
     @Expose
@@ -33,17 +32,14 @@ public class MountDataDisk extends AbstractModel {
 
     /**
     * 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystemType")
     @Expose
     private String FileSystemType;
 
     /**
-     * Get 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\" 
      * @return LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalPath() {
         return this.LocalPath;
@@ -51,19 +47,15 @@ public class MountDataDisk extends AbstractModel {
 
     /**
      * Set 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalPath(String LocalPath) {
         this.LocalPath = LocalPath;
     }
 
     /**
-     * Get 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS" 
      * @return FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSystemType() {
         return this.FileSystemType;
@@ -71,9 +63,7 @@ public class MountDataDisk extends AbstractModel {
 
     /**
      * Set 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystemType(String FileSystemType) {
         this.FileSystemType = FileSystemType;

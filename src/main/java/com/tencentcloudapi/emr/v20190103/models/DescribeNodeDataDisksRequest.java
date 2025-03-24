@@ -38,6 +38,34 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     private String [] CvmInstanceIds;
 
     /**
+    * 查询云盘的过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filters [] Filters;
+
+    /**
+    * 模糊搜索
+    */
+    @SerializedName("InnerSearch")
+    @Expose
+    private String InnerSearch;
+
+    /**
+    * 每页返回数量，默认值为100，最大值为100。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 数据偏移值
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get EMR集群实例ID 
      * @return InstanceId EMR集群实例ID
      */
@@ -69,6 +97,70 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         this.CvmInstanceIds = CvmInstanceIds;
     }
 
+    /**
+     * Get 查询云盘的过滤条件 
+     * @return Filters 查询云盘的过滤条件
+     */
+    public Filters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询云盘的过滤条件
+     * @param Filters 查询云盘的过滤条件
+     */
+    public void setFilters(Filters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 模糊搜索 
+     * @return InnerSearch 模糊搜索
+     */
+    public String getInnerSearch() {
+        return this.InnerSearch;
+    }
+
+    /**
+     * Set 模糊搜索
+     * @param InnerSearch 模糊搜索
+     */
+    public void setInnerSearch(String InnerSearch) {
+        this.InnerSearch = InnerSearch;
+    }
+
+    /**
+     * Get 每页返回数量，默认值为100，最大值为100。 
+     * @return Limit 每页返回数量，默认值为100，最大值为100。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页返回数量，默认值为100，最大值为100。
+     * @param Limit 每页返回数量，默认值为100，最大值为100。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 数据偏移值 
+     * @return Offset 数据偏移值
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 数据偏移值
+     * @param Offset 数据偏移值
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeNodeDataDisksRequest() {
     }
 
@@ -86,6 +178,21 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
                 this.CvmInstanceIds[i] = new String(source.CvmInstanceIds[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filters(source.Filters[i]);
+            }
+        }
+        if (source.InnerSearch != null) {
+            this.InnerSearch = new String(source.InnerSearch);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -95,6 +202,10 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "CvmInstanceIds.", this.CvmInstanceIds);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

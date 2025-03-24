@@ -1038,17 +1038,6 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *重置会话
-     * @param req ResetSessionRequest
-     * @return ResetSessionResponse
-     * @throws TencentCloudSDKException
-     */
-    public ResetSessionResponse ResetSession(ResetSessionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ResetSession", ResetSessionResponse.class);
-    }
-
-    /**
      *文档解析重试
      * @param req RetryDocAuditRequest
      * @return RetryDocAuditResponse

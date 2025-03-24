@@ -25,6 +25,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -32,6 +33,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -67,6 +69,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationType")
     @Expose
@@ -74,6 +77,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPointsType")
     @Expose
@@ -81,6 +85,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -88,6 +93,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 类
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -95,6 +101,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StandardAccessPoint")
     @Expose
@@ -102,14 +109,17 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get vpc的id，支撑网和公网接入点，该字段为空 
+     * Get vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -117,15 +127,19 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id，支撑网和公网接入点，该字段为空 
+     * Get 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -133,7 +147,9 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -204,12 +220,14 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
-4:跨地域访问，目标集群已经完成异地切回，等待删除状态 
+4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperationType 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
 1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperationType() {
         return this.OperationType;
@@ -221,19 +239,23 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationType 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
 1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationType(Long OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get 接入点类型 
+     * Get 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPointsType() {
         return this.AccessPointsType;
@@ -241,15 +263,19 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPointsType(String AccessPointsType) {
         this.AccessPointsType = AccessPointsType;
     }
 
     /**
-     * Get 带宽，目前只有公网会有这个值 
+     * Get 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
@@ -257,15 +283,19 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 类 
+     * Get 类
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityPolicy [] getSecurityPolicy() {
         return this.SecurityPolicy;
@@ -273,15 +303,19 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 类
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityPolicy(SecurityPolicy [] SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;
     }
 
     /**
-     * Get 是否是标准的接入点 true是标准的 false不是标准的 
+     * Get 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStandardAccessPoint() {
         return this.StandardAccessPoint;
@@ -289,15 +323,19 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStandardAccessPoint(Boolean StandardAccessPoint) {
         this.StandardAccessPoint = StandardAccessPoint;
     }
 
     /**
-     * Get 可用区信息 
+     * Get 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneName 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -305,7 +343,9 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
      * Set 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

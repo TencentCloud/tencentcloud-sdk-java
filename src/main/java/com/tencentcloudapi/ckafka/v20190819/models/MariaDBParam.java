@@ -25,7 +25,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * MariaDB的数据库名称，"*"为全数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -33,7 +32,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 该MariaDB在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -49,7 +46,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 复制存量信息(schema_only不复制, initial全量)，默认值initial
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotMode")
     @Expose
@@ -57,7 +53,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyColumns")
     @Expose
@@ -65,7 +60,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 当Table输入的是前缀时，该项值为true，否则为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTablePrefix")
     @Expose
@@ -73,7 +67,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 输出格式，DEFAULT、CANAL_1、CANAL_2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputFormat")
     @Expose
@@ -81,7 +74,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeContentChanges")
     @Expose
@@ -89,7 +81,6 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeQuery")
     @Expose
@@ -97,17 +88,14 @@ public class MariaDBParam extends AbstractModel {
 
     /**
     * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordWithSchema")
     @Expose
     private Boolean RecordWithSchema;
 
     /**
-     * Get MariaDB的数据库名称，"*"为全数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB的数据库名称，"*"为全数据库 
      * @return Database MariaDB的数据库名称，"*"为全数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -115,19 +103,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set MariaDB的数据库名称，"*"为全数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database MariaDB的数据库名称，"*"为全数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写 
      * @return Table MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -135,19 +119,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 该MariaDB在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该MariaDB在连接管理内的Id 
      * @return Resource 该MariaDB在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -155,19 +135,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 该MariaDB在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 该MariaDB在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 复制存量信息(schema_only不复制, initial全量)，默认值initial
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复制存量信息(schema_only不复制, initial全量)，默认值initial 
      * @return SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotMode() {
         return this.SnapshotMode;
@@ -175,19 +151,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 复制存量信息(schema_only不复制, initial全量)，默认值initial
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotMode(String SnapshotMode) {
         this.SnapshotMode = SnapshotMode;
     }
 
     /**
-     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
      * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyColumns() {
         return this.KeyColumns;
@@ -195,19 +167,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyColumns(String KeyColumns) {
         this.KeyColumns = KeyColumns;
     }
 
     /**
-     * Get 当Table输入的是前缀时，该项值为true，否则为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当Table输入的是前缀时，该项值为true，否则为false 
      * @return IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsTablePrefix() {
         return this.IsTablePrefix;
@@ -215,19 +183,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 当Table输入的是前缀时，该项值为true，否则为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTablePrefix(Boolean IsTablePrefix) {
         this.IsTablePrefix = IsTablePrefix;
     }
 
     /**
-     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2 
      * @return OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputFormat() {
         return this.OutputFormat;
@@ -235,19 +199,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 输出格式，DEFAULT、CANAL_1、CANAL_2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;
     }
 
     /**
-     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic 
      * @return IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeContentChanges() {
         return this.IncludeContentChanges;
@@ -255,19 +215,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeContentChanges(String IncludeContentChanges) {
         this.IncludeContentChanges = IncludeContentChanges;
     }
 
     /**
-     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句 
      * @return IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIncludeQuery() {
         return this.IncludeQuery;
@@ -275,19 +231,15 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeQuery(Boolean IncludeQuery) {
         this.IncludeQuery = IncludeQuery;
     }
 
     /**
-     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
      * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRecordWithSchema() {
         return this.RecordWithSchema;
@@ -295,9 +247,7 @@ public class MariaDBParam extends AbstractModel {
 
     /**
      * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordWithSchema(Boolean RecordWithSchema) {
         this.RecordWithSchema = RecordWithSchema;

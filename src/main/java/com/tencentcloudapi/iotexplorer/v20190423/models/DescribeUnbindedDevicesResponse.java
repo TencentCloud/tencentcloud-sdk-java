@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeListProtectThresholdConfigResponse extends AbstractModel {
+public class DescribeUnbindedDevicesResponse extends AbstractModel {
 
     /**
-    * 总记录数
+    * 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnbindedDevices")
+    @Expose
+    private BindDeviceInfo [] UnbindedDevices;
+
+    /**
+    * 设备的总数量
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
-
-    /**
-    * 防护阈值配置列表
-    */
-    @SerializedName("ConfigList")
-    @Expose
-    private ProtectThresholdRelation [] ConfigList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +46,39 @@ public class DescribeListProtectThresholdConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总记录数 
-     * @return Total 总记录数
+     * Get 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnbindedDevices 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BindDeviceInfo [] getUnbindedDevices() {
+        return this.UnbindedDevices;
+    }
+
+    /**
+     * Set 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnbindedDevices 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnbindedDevices(BindDeviceInfo [] UnbindedDevices) {
+        this.UnbindedDevices = UnbindedDevices;
+    }
+
+    /**
+     * Get 设备的总数量 
+     * @return Total 设备的总数量
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总记录数
-     * @param Total 总记录数
+     * Set 设备的总数量
+     * @param Total 设备的总数量
      */
     public void setTotal(Long Total) {
         this.Total = Total;
-    }
-
-    /**
-     * Get 防护阈值配置列表 
-     * @return ConfigList 防护阈值配置列表
-     */
-    public ProtectThresholdRelation [] getConfigList() {
-        return this.ConfigList;
-    }
-
-    /**
-     * Set 防护阈值配置列表
-     * @param ConfigList 防护阈值配置列表
-     */
-    public void setConfigList(ProtectThresholdRelation [] ConfigList) {
-        this.ConfigList = ConfigList;
     }
 
     /**
@@ -92,22 +97,22 @@ public class DescribeListProtectThresholdConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeListProtectThresholdConfigResponse() {
+    public DescribeUnbindedDevicesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeListProtectThresholdConfigResponse(DescribeListProtectThresholdConfigResponse source) {
+    public DescribeUnbindedDevicesResponse(DescribeUnbindedDevicesResponse source) {
+        if (source.UnbindedDevices != null) {
+            this.UnbindedDevices = new BindDeviceInfo[source.UnbindedDevices.length];
+            for (int i = 0; i < source.UnbindedDevices.length; i++) {
+                this.UnbindedDevices[i] = new BindDeviceInfo(source.UnbindedDevices[i]);
+            }
+        }
         if (source.Total != null) {
             this.Total = new Long(source.Total);
-        }
-        if (source.ConfigList != null) {
-            this.ConfigList = new ProtectThresholdRelation[source.ConfigList.length];
-            for (int i = 0; i < source.ConfigList.length; i++) {
-                this.ConfigList[i] = new ProtectThresholdRelation(source.ConfigList[i]);
-            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +124,8 @@ public class DescribeListProtectThresholdConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "UnbindedDevices.", this.UnbindedDevices);
         this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "ConfigList.", this.ConfigList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

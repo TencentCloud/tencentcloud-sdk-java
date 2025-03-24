@@ -82,7 +82,6 @@ public class NoticeRule extends AbstractModel {
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
@@ -90,7 +89,6 @@ public class NoticeRule extends AbstractModel {
 
     /**
     * 告警通知接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeReceivers")
     @Expose
@@ -98,7 +96,6 @@ public class NoticeRule extends AbstractModel {
 
     /**
     * 告警通知模板回调信息，包括企业微信、钉钉、飞书。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebCallbacks")
     @Expose
@@ -106,7 +103,6 @@ public class NoticeRule extends AbstractModel {
 
     /**
     * 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Escalate")
     @Expose
@@ -117,7 +113,6 @@ public class NoticeRule extends AbstractModel {
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -125,7 +120,6 @@ public class NoticeRule extends AbstractModel {
 
     /**
     * 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -133,7 +127,6 @@ public class NoticeRule extends AbstractModel {
 
     /**
     * 告警升级后下一个环节的通知渠道配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EscalateNotice")
     @Expose
@@ -197,8 +190,7 @@ public class NoticeRule extends AbstractModel {
     - 子节点Type支持`Compare`，Value支持`>`，`<`，`>=`，`<=`
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
-`{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。 
+`{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}` 
      * @return Rule 匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -257,7 +249,6 @@ public class NoticeRule extends AbstractModel {
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRule() {
         return this.Rule;
@@ -322,7 +313,6 @@ public class NoticeRule extends AbstractModel {
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -381,17 +371,14 @@ public class NoticeRule extends AbstractModel {
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 告警通知接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知接收者信息。 
      * @return NoticeReceivers 告警通知接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
@@ -399,19 +386,15 @@ public class NoticeRule extends AbstractModel {
 
     /**
      * Set 告警通知接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeReceivers 告警通知接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 告警通知模板回调信息，包括企业微信、钉钉、飞书。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警通知模板回调信息，包括企业微信、钉钉、飞书。 
      * @return WebCallbacks 告警通知模板回调信息，包括企业微信、钉钉、飞书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
@@ -419,19 +402,15 @@ public class NoticeRule extends AbstractModel {
 
     /**
      * Set 告警通知模板回调信息，包括企业微信、钉钉、飞书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebCallbacks 告警通知模板回调信息，包括企业微信、钉钉、飞书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false 
      * @return Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEscalate() {
         return this.Escalate;
@@ -439,9 +418,7 @@ public class NoticeRule extends AbstractModel {
 
     /**
      * Set 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEscalate(Boolean Escalate) {
         this.Escalate = Escalate;
@@ -451,13 +428,11 @@ public class NoticeRule extends AbstractModel {
      * Get 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Type 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -468,22 +443,18 @@ public class NoticeRule extends AbstractModel {
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级间隔。单位：分钟，范围`[1，14400]` 
      * @return Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
         return this.Interval;
@@ -491,19 +462,15 @@ public class NoticeRule extends AbstractModel {
 
     /**
      * Set 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 告警升级后下一个环节的通知渠道配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级后下一个环节的通知渠道配置 
      * @return EscalateNotice 告警升级后下一个环节的通知渠道配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EscalateNoticeInfo getEscalateNotice() {
         return this.EscalateNotice;
@@ -511,9 +478,7 @@ public class NoticeRule extends AbstractModel {
 
     /**
      * Set 告警升级后下一个环节的通知渠道配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EscalateNotice 告警升级后下一个环节的通知渠道配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEscalateNotice(EscalateNoticeInfo EscalateNotice) {
         this.EscalateNotice = EscalateNotice;

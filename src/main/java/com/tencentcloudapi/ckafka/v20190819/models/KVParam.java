@@ -39,7 +39,6 @@ public class KVParam extends AbstractModel {
 
     /**
     * 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepOriginalKey")
     @Expose
@@ -78,10 +77,8 @@ public class KVParam extends AbstractModel {
     }
 
     /**
-     * Get 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留源Key，默认为false不保留 
      * @return KeepOriginalKey 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeepOriginalKey() {
         return this.KeepOriginalKey;
@@ -89,9 +86,7 @@ public class KVParam extends AbstractModel {
 
     /**
      * Set 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeepOriginalKey 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepOriginalKey(String KeepOriginalKey) {
         this.KeepOriginalKey = KeepOriginalKey;

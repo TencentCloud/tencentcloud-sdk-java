@@ -39,7 +39,6 @@ public class MonitorMetric extends AbstractModel {
 
     /**
     * 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
@@ -78,10 +77,8 @@ public class MonitorMetric extends AbstractModel {
     }
 
     /**
-     * Get 指标值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标值。 
      * @return Values 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getValues() {
         return this.Values;
@@ -89,9 +86,7 @@ public class MonitorMetric extends AbstractModel {
 
     /**
      * Set 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(Float [] Values) {
         this.Values = Values;

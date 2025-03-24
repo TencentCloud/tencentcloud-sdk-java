@@ -512,19 +512,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *接口变更
-
-获取DDoS防护的IP黑白名单
-     * @param req DescribeBlackWhiteIpListRequest
-     * @return DescribeBlackWhiteIpListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBlackWhiteIpList", DescribeBlackWhiteIpListResponse.class);
-    }
-
-    /**
      *获取边界防护CC防护等级列表
      * @param req DescribeCCLevelListRequest
      * @return DescribeCCLevelListResponse
@@ -786,19 +773,6 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListPortAclListResponse DescribeListPortAclList(DescribeListPortAclListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeListPortAclList", DescribeListPortAclListResponse.class);
-    }
-
-    /**
-     *接口变更
-
-获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
-     * @param req DescribeListProtectThresholdConfigRequest
-     * @return DescribeListProtectThresholdConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeListProtectThresholdConfig", DescribeListProtectThresholdConfigResponse.class);
     }
 
     /**

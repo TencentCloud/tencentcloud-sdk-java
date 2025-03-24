@@ -32,7 +32,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutLog")
     @Expose
@@ -40,7 +39,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrLog")
     @Expose
@@ -48,7 +46,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutRedirectPath")
     @Expose
@@ -56,7 +53,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrRedirectPath")
     @Expose
@@ -64,7 +60,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutRedirectFileName")
     @Expose
@@ -72,7 +67,6 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
     * 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrRedirectFileName")
     @Expose
@@ -95,10 +89,8 @@ public class TaskInstanceLog extends AbstractModel {
     }
 
     /**
-     * Get 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出日志（Base64编码，解码后最大日志长度2048字节） 
      * @return StdoutLog 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutLog() {
         return this.StdoutLog;
@@ -106,19 +98,15 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutLog 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutLog(String StdoutLog) {
         this.StdoutLog = StdoutLog;
     }
 
     /**
-     * Get 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准错误日志（Base64编码，解码后最大日志长度2048字节） 
      * @return StderrLog 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrLog() {
         return this.StderrLog;
@@ -126,19 +114,15 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrLog 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrLog(String StderrLog) {
         this.StderrLog = StderrLog;
     }
 
     /**
-     * Get 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出重定向路径 
      * @return StdoutRedirectPath 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutRedirectPath() {
         return this.StdoutRedirectPath;
@@ -146,19 +130,15 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutRedirectPath 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutRedirectPath(String StdoutRedirectPath) {
         this.StdoutRedirectPath = StdoutRedirectPath;
     }
 
     /**
-     * Get 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准错误重定向路径 
      * @return StderrRedirectPath 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrRedirectPath() {
         return this.StderrRedirectPath;
@@ -166,19 +146,15 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectPath 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrRedirectPath(String StderrRedirectPath) {
         this.StderrRedirectPath = StderrRedirectPath;
     }
 
     /**
-     * Get 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出重定向文件名 
      * @return StdoutRedirectFileName 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutRedirectFileName() {
         return this.StdoutRedirectFileName;
@@ -186,19 +162,15 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutRedirectFileName 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutRedirectFileName(String StdoutRedirectFileName) {
         this.StdoutRedirectFileName = StdoutRedirectFileName;
     }
 
     /**
-     * Get 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准错误重定向文件名 
      * @return StderrRedirectFileName 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrRedirectFileName() {
         return this.StderrRedirectFileName;
@@ -206,9 +178,7 @@ public class TaskInstanceLog extends AbstractModel {
 
     /**
      * Set 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectFileName 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrRedirectFileName(String StderrRedirectFileName) {
         this.StderrRedirectFileName = StderrRedirectFileName;

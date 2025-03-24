@@ -39,7 +39,6 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
     * Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicMessageHeap")
     @Expose
@@ -47,7 +46,6 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
     * Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerIp")
     @Expose
@@ -55,7 +53,6 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
     * 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerTopicData")
     @Expose
@@ -101,10 +98,8 @@ public class TopicFlowRankingResult extends AbstractModel {
     }
 
     /**
-     * Get Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic 消息堆积/占用磁盘排行 
      * @return TopicMessageHeap Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicMessageHeapRanking [] getTopicMessageHeap() {
         return this.TopicMessageHeap;
@@ -112,19 +107,15 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
      * Set Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicMessageHeap Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicMessageHeap(TopicMessageHeapRanking [] TopicMessageHeap) {
         this.TopicMessageHeap = TopicMessageHeap;
     }
 
     /**
-     * Get Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Broker Ip 列表 
      * @return BrokerIp Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBrokerIp() {
         return this.BrokerIp;
@@ -132,19 +123,15 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
      * Set Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerIp Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerIp(String [] BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单个broker 节点 Topic占用的数据大小 
      * @return BrokerTopicData 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BrokerTopicData [] getBrokerTopicData() {
         return this.BrokerTopicData;
@@ -152,9 +139,7 @@ public class TopicFlowRankingResult extends AbstractModel {
 
     /**
      * Set 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerTopicData 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerTopicData(BrokerTopicData [] BrokerTopicData) {
         this.BrokerTopicData = BrokerTopicData;

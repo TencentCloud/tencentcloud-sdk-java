@@ -67,6 +67,7 @@ public class PulsarProClusterInfo extends AbstractModel {
 
     /**
     * 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeDistribution")
     @Expose
@@ -81,6 +82,7 @@ public class PulsarProClusterInfo extends AbstractModel {
 
     /**
     * 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanEditRoute")
     @Expose
@@ -88,6 +90,7 @@ public class PulsarProClusterInfo extends AbstractModel {
 
     /**
     * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingLabelVersion")
     @Expose
@@ -95,6 +98,7 @@ public class PulsarProClusterInfo extends AbstractModel {
 
     /**
     * 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -103,6 +107,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     /**
     * 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoCreateTopicStatus")
     @Expose
@@ -110,6 +115,7 @@ true就是开启了，false是关闭
 
     /**
     * 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultPartitionNumber")
     @Expose
@@ -220,8 +226,10 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 节点分布情况 
+     * Get 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NodeDistribution 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNodeDistribution [] getNodeDistribution() {
         return this.NodeDistribution;
@@ -229,7 +237,9 @@ true就是开启了，false是关闭
 
     /**
      * Set 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeDistribution 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeDistribution(InstanceNodeDistribution [] NodeDistribution) {
         this.NodeDistribution = NodeDistribution;
@@ -252,8 +262,10 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 是否可以修改路由 
+     * Get 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanEditRoute() {
         return this.CanEditRoute;
@@ -261,15 +273,19 @@ true就是开启了，false是关闭
 
     /**
      * Set 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanEditRoute(Boolean CanEditRoute) {
         this.CanEditRoute = CanEditRoute;
     }
 
     /**
-     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储 
+     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingLabelVersion() {
         return this.BillingLabelVersion;
@@ -277,15 +293,19 @@ true就是开启了，false是关闭
 
     /**
      * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingLabelVersion(String BillingLabelVersion) {
         this.BillingLabelVersion = BillingLabelVersion;
     }
 
     /**
-     * Get 实例到期时间戳，毫秒级精度。 
+     * Get 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -293,7 +313,9 @@ true就是开启了，false是关闭
 
     /**
      * Set 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -301,9 +323,11 @@ true就是开启了，false是关闭
 
     /**
      * Get 是否开启自动创建主题
-true就是开启了，false是关闭 
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoCreateTopicStatus 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoCreateTopicStatus() {
         return this.AutoCreateTopicStatus;
@@ -312,16 +336,20 @@ true就是开启了，false是关闭
     /**
      * Set 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoCreateTopicStatus 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoCreateTopicStatus(Boolean AutoCreateTopicStatus) {
         this.AutoCreateTopicStatus = AutoCreateTopicStatus;
     }
 
     /**
-     * Get 自动创建主题的默认分区数，如果没开启就是0 
+     * Get 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultPartitionNumber() {
         return this.DefaultPartitionNumber;
@@ -329,7 +357,9 @@ true就是开启了，false是关闭
 
     /**
      * Set 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultPartitionNumber(Long DefaultPartitionNumber) {
         this.DefaultPartitionNumber = DefaultPartitionNumber;

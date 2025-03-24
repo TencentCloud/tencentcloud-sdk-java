@@ -32,7 +32,6 @@ public class DatahubTopicResp extends AbstractModel {
 
     /**
     * 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -55,10 +54,8 @@ public class DatahubTopicResp extends AbstractModel {
     }
 
     /**
-     * Get 主题Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题Id 
      * @return TopicId 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -66,9 +63,7 @@ public class DatahubTopicResp extends AbstractModel {
 
     /**
      * Set 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

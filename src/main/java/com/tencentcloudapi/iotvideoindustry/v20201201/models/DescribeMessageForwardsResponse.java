@@ -25,7 +25,6 @@ public class DescribeMessageForwardsResponse extends AbstractModel {
 
     /**
     * 配置总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMessageForwardsResponse extends AbstractModel {
 
     /**
     * 配置列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeMessageForwardsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置总数 
      * @return Total 配置总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeMessageForwardsResponse extends AbstractModel {
 
     /**
      * Set 配置总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 配置总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 配置列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置列表 
      * @return List 配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MessageForward [] getList() {
         return this.List;
@@ -78,9 +70,7 @@ public class DescribeMessageForwardsResponse extends AbstractModel {
 
     /**
      * Set 配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(MessageForward [] List) {
         this.List = List;

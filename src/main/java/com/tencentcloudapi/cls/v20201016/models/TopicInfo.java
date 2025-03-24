@@ -128,7 +128,6 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describes")
     @Expose
@@ -162,7 +161,6 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extends")
     @Expose
@@ -434,10 +432,8 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 主题描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题描述 
      * @return Describes 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribes() {
         return this.Describes;
@@ -445,9 +441,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Describes 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
@@ -522,10 +516,8 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题扩展信息 
      * @return Extends 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
@@ -533,9 +525,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extends 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;

@@ -146,7 +146,6 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
 
     /**
     * 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyntaxRule")
     @Expose
@@ -154,7 +153,6 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
 
     /**
     * 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasServicesLog")
     @Expose
@@ -441,10 +439,8 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语法规则，0：Lucene语法，1：CQL语法 
      * @return SyntaxRule 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
@@ -452,19 +448,15 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
 
     /**
      * Set 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyntaxRule 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
     }
 
     /**
-     * Get 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启投递服务日志。1：关闭，2：开启。 
      * @return HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
@@ -472,9 +464,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
 
     /**
      * Set 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;

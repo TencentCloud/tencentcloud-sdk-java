@@ -25,7 +25,6 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
     * 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -33,7 +32,6 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
     * 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -41,17 +39,14 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
     * 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Session")
     @Expose
     private String Session;
 
     /**
-     * Get 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景类型，支持WINDOWS 
      * @return Scene 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -59,19 +54,15 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
      * Set 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行Agent的User 
      * @return User 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -79,19 +70,15 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
      * Set 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行Agent的Session 
      * @return Session 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSession() {
         return this.Session;
@@ -99,9 +86,7 @@ public class AgentRunningMode extends AbstractModel {
 
     /**
      * Set 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Session 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSession(String Session) {
         this.Session = Session;

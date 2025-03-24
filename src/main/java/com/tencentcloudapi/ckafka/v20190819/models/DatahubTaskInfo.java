@@ -53,7 +53,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceResource")
     @Expose
@@ -61,7 +60,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 数据目标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetResource")
     @Expose
@@ -69,7 +67,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -77,7 +74,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -85,7 +81,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskProgress")
     @Expose
@@ -93,7 +88,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 任务当前处于的步骤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCurrentStep")
     @Expose
@@ -101,7 +95,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * Datahub转储Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatahubId")
     @Expose
@@ -109,7 +102,6 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
     * 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepList")
     @Expose
@@ -180,10 +172,8 @@ public class DatahubTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源 
      * @return SourceResource 数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatahubResource getSourceResource() {
         return this.SourceResource;
@@ -191,19 +181,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceResource 数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceResource(DatahubResource SourceResource) {
         this.SourceResource = SourceResource;
     }
 
     /**
-     * Get 数据目标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据目标 
      * @return TargetResource 数据目标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatahubResource getTargetResource() {
         return this.TargetResource;
@@ -211,19 +197,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 数据目标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetResource 数据目标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetResource(DatahubResource TargetResource) {
         this.TargetResource = TargetResource;
     }
 
     /**
-     * Get 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务创建时间 
      * @return CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -231,19 +213,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常信息 
      * @return ErrorMessage 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -251,19 +229,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建进度百分比 
      * @return TaskProgress 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTaskProgress() {
         return this.TaskProgress;
@@ -271,19 +245,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskProgress 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskProgress(Float TaskProgress) {
         this.TaskProgress = TaskProgress;
     }
 
     /**
-     * Get 任务当前处于的步骤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务当前处于的步骤 
      * @return TaskCurrentStep 任务当前处于的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskCurrentStep() {
         return this.TaskCurrentStep;
@@ -291,19 +261,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 任务当前处于的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskCurrentStep 任务当前处于的步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCurrentStep(String TaskCurrentStep) {
         this.TaskCurrentStep = TaskCurrentStep;
     }
 
     /**
-     * Get Datahub转储Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Datahub转储Id 
      * @return DatahubId Datahub转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatahubId() {
         return this.DatahubId;
@@ -311,19 +277,15 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set Datahub转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatahubId Datahub转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatahubId(String DatahubId) {
         this.DatahubId = DatahubId;
     }
 
     /**
-     * Get 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步骤列表 
      * @return StepList 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStepList() {
         return this.StepList;
@@ -331,9 +293,7 @@ public class DatahubTaskInfo extends AbstractModel {
 
     /**
      * Set 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepList 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepList(String [] StepList) {
         this.StepList = StepList;

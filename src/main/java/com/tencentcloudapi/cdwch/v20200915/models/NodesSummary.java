@@ -74,7 +74,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachCBSSpec")
     @Expose
@@ -82,7 +81,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductType")
     @Expose
@@ -90,7 +88,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecCore")
     @Expose
@@ -98,7 +95,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecMemory")
     @Expose
@@ -106,7 +102,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCount")
     @Expose
@@ -114,7 +109,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDiskSize")
     @Expose
@@ -122,7 +116,6 @@ public class NodesSummary extends AbstractModel {
 
     /**
     * 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -241,10 +234,8 @@ public class NodesSummary extends AbstractModel {
     }
 
     /**
-     * Get 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载云盘信息 
      * @return AttachCBSSpec 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttachCBSSpec getAttachCBSSpec() {
         return this.AttachCBSSpec;
@@ -252,19 +243,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachCBSSpec 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachCBSSpec(AttachCBSSpec AttachCBSSpec) {
         this.AttachCBSSpec = AttachCBSSpec;
     }
 
     /**
-     * Get 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品类型 
      * @return SubProductType 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductType() {
         return this.SubProductType;
@@ -272,19 +259,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductType 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductType(String SubProductType) {
         this.SubProductType = SubProductType;
     }
 
     /**
-     * Get 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格对应的核数 
      * @return SpecCore 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpecCore() {
         return this.SpecCore;
@@ -292,19 +275,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecCore 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecCore(Long SpecCore) {
         this.SpecCore = SpecCore;
     }
 
     /**
-     * Get 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格对应的内存大小 
      * @return SpecMemory 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpecMemory() {
         return this.SpecMemory;
@@ -312,19 +291,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecMemory 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecMemory(Long SpecMemory) {
         this.SpecMemory = SpecMemory;
     }
 
     /**
-     * Get 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘的数量 
      * @return DiskCount 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskCount() {
         return this.DiskCount;
@@ -332,19 +307,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskCount 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCount(Long DiskCount) {
         this.DiskCount = DiskCount;
     }
 
     /**
-     * Get 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘的最大大小 
      * @return MaxDiskSize 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
@@ -352,19 +323,15 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDiskSize 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
     /**
-     * Get 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为加密云盘 
      * @return Encrypt 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncrypt() {
         return this.Encrypt;
@@ -372,9 +339,7 @@ public class NodesSummary extends AbstractModel {
 
     /**
      * Set 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encrypt 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncrypt(Long Encrypt) {
         this.Encrypt = Encrypt;

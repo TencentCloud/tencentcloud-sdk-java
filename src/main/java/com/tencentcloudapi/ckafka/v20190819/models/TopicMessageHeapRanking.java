@@ -25,7 +25,6 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -33,7 +32,6 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -41,7 +39,6 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * 分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionNum")
     @Expose
@@ -49,7 +46,6 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * 副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicaNum")
     @Expose
@@ -57,7 +53,6 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicTraffic")
     @Expose
@@ -65,17 +60,14 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
     * topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageHeap")
     @Expose
     private Long MessageHeap;
 
     /**
-     * Get 主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题ID 
      * @return TopicId 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -83,19 +75,15 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名称 
      * @return TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -103,19 +91,15 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分区数 
      * @return PartitionNum 分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
@@ -123,19 +107,15 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set 分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionNum 分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get 副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 副本数 
      * @return ReplicaNum 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
@@ -143,19 +123,15 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplicaNum 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic 流量 
      * @return TopicTraffic Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicTraffic() {
         return this.TopicTraffic;
@@ -163,19 +139,15 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicTraffic Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicTraffic(String TopicTraffic) {
         this.TopicTraffic = TopicTraffic;
     }
 
     /**
-     * Get topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get topic消息堆积/占用磁盘 
      * @return MessageHeap topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageHeap() {
         return this.MessageHeap;
@@ -183,9 +155,7 @@ public class TopicMessageHeapRanking extends AbstractModel {
 
     /**
      * Set topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageHeap topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageHeap(Long MessageHeap) {
         this.MessageHeap = MessageHeap;

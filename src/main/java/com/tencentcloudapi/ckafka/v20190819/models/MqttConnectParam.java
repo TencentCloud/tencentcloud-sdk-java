@@ -25,7 +25,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -33,7 +32,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -41,7 +39,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -49,7 +46,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -57,7 +53,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
@@ -65,7 +60,6 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
@@ -73,17 +67,14 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT连接源的用户名 
      * @return UserName MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -91,19 +82,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT连接源的密码 
      * @return Password MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -111,19 +98,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT连接源的实例资源 
      * @return Resource MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -131,19 +114,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT Instance vpc-id 
      * @return UniqVpcId MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -151,19 +130,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -171,19 +146,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否更新到关联的Dip任务 
      * @return IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -191,19 +162,15 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;
     }
 
     /**
-     * Get MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MQTT连接源的实例资源地域, 跨地域时必填 
      * @return Region MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -211,9 +178,7 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;

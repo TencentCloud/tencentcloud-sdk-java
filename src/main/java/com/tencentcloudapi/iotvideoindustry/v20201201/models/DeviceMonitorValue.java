@@ -25,7 +25,6 @@ public class DeviceMonitorValue extends AbstractModel {
 
     /**
     * 统计值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -33,17 +32,14 @@ public class DeviceMonitorValue extends AbstractModel {
 
     /**
     * 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-     * Get 统计值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计值 
      * @return Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
         return this.Value;
@@ -51,19 +47,15 @@ public class DeviceMonitorValue extends AbstractModel {
 
     /**
      * Set 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 统计时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计时间 
      * @return Time 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTime() {
         return this.Time;
@@ -71,9 +63,7 @@ public class DeviceMonitorValue extends AbstractModel {
 
     /**
      * Set 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(Long Time) {
         this.Time = Time;

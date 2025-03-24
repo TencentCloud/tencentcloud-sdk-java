@@ -25,7 +25,6 @@ public class Dependence extends AbstractModel {
 
     /**
     * 依赖关系的起点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTask")
     @Expose
@@ -33,17 +32,14 @@ public class Dependence extends AbstractModel {
 
     /**
     * 依赖关系的终点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTask")
     @Expose
     private String EndTask;
 
     /**
-     * Get 依赖关系的起点任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 依赖关系的起点任务名称 
      * @return StartTask 依赖关系的起点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTask() {
         return this.StartTask;
@@ -51,19 +47,15 @@ public class Dependence extends AbstractModel {
 
     /**
      * Set 依赖关系的起点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTask 依赖关系的起点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTask(String StartTask) {
         this.StartTask = StartTask;
     }
 
     /**
-     * Get 依赖关系的终点任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 依赖关系的终点任务名称 
      * @return EndTask 依赖关系的终点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTask() {
         return this.EndTask;
@@ -71,9 +63,7 @@ public class Dependence extends AbstractModel {
 
     /**
      * Set 依赖关系的终点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTask 依赖关系的终点任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTask(String EndTask) {
         this.EndTask = EndTask;

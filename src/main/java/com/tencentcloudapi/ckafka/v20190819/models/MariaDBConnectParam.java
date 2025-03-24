@@ -25,7 +25,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -33,7 +32,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -41,7 +39,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -49,7 +46,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -57,7 +53,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -65,7 +60,6 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * MariaDB连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -73,17 +67,14 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
     * 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
     private Boolean IsUpdate;
 
     /**
-     * Get MariaDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB的连接port 
      * @return Port MariaDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -91,19 +82,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port MariaDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get MariaDB连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB连接源的用户名 
      * @return UserName MariaDB连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -111,19 +98,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName MariaDB连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MariaDB连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB连接源的密码 
      * @return Password MariaDB连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -131,19 +114,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password MariaDB连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get MariaDB连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB连接源的实例资源 
      * @return Resource MariaDB连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -151,19 +130,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource MariaDB连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MariaDB连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB连接源的实例vip，当为腾讯云实例时，必填 
      * @return ServiceVip MariaDB连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -171,19 +146,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip MariaDB连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get MariaDB连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MariaDB连接源的vpcId，当为腾讯云实例时，必填 
      * @return UniqVpcId MariaDB连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -191,19 +162,15 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set MariaDB连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId MariaDB连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否更新到关联的Datahub任务 
      * @return IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -211,9 +178,7 @@ public class MariaDBConnectParam extends AbstractModel {
 
     /**
      * Set 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;

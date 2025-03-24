@@ -25,17 +25,14 @@ public class UrlDecodeParam extends AbstractModel {
 
     /**
     * 编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CharsetName")
     @Expose
     private String CharsetName;
 
     /**
-     * Get 编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编码 
      * @return CharsetName 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCharsetName() {
         return this.CharsetName;
@@ -43,9 +40,7 @@ public class UrlDecodeParam extends AbstractModel {
 
     /**
      * Set 编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CharsetName 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCharsetName(String CharsetName) {
         this.CharsetName = CharsetName;

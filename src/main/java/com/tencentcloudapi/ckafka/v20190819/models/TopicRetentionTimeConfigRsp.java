@@ -25,7 +25,6 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
     * 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expect")
     @Expose
@@ -33,7 +32,6 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
     * 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Current")
     @Expose
@@ -41,17 +39,14 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
     * 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModTimeStamp")
     @Expose
     private Long ModTimeStamp;
 
     /**
-     * Get 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期望值，即用户配置的Topic消息保留时间(单位分钟) 
      * @return Expect 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpect() {
         return this.Expect;
@@ -59,19 +54,15 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
      * Set 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expect 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpect(Long Expect) {
         this.Expect = Expect;
     }
 
     /**
-     * Get 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前值，即当前生效值(可能存在动态调整，单位分钟) 
      * @return Current 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrent() {
         return this.Current;
@@ -79,19 +70,15 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
      * Set 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Current 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrent(Long Current) {
         this.Current = Current;
     }
 
     /**
-     * Get 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近变更时间 
      * @return ModTimeStamp 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModTimeStamp() {
         return this.ModTimeStamp;
@@ -99,9 +86,7 @@ public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
      * Set 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModTimeStamp 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModTimeStamp(Long ModTimeStamp) {
         this.ModTimeStamp = ModTimeStamp;

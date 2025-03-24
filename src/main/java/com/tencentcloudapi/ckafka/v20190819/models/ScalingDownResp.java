@@ -25,17 +25,14 @@ public class ScalingDownResp extends AbstractModel {
 
     /**
     * 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-     * Get 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号列表 
      * @return DealNames 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -43,9 +40,7 @@ public class ScalingDownResp extends AbstractModel {
 
     /**
      * Set 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

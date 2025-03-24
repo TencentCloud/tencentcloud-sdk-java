@@ -102,7 +102,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QpsLimit")
     @Expose
@@ -118,7 +117,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseTableMapping")
     @Expose
@@ -126,7 +124,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseAutoCreateTopic")
     @Expose
@@ -134,7 +131,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompressionType")
     @Expose
@@ -142,7 +138,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgMultiple")
     @Expose
@@ -150,7 +145,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectorSyncType")
     @Expose
@@ -158,7 +152,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepPartition")
     @Expose
@@ -166,7 +159,6 @@ public class KafkaParam extends AbstractModel {
 
     /**
     * 正则匹配Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicRegularExpression")
     @Expose
@@ -361,10 +353,8 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Qps 限制 
      * @return QpsLimit Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQpsLimit() {
         return this.QpsLimit;
@@ -372,9 +362,7 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QpsLimit Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQpsLimit(Long QpsLimit) {
         this.QpsLimit = QpsLimit;
@@ -401,10 +389,8 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 「分发到多个topic」开关，默认为false 
      * @return UseTableMapping 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseTableMapping() {
         return this.UseTableMapping;
@@ -412,19 +398,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseTableMapping 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseTableMapping(Boolean UseTableMapping) {
         this.UseTableMapping = UseTableMapping;
     }
 
     /**
-     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名） 
      * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseAutoCreateTopic() {
         return this.UseAutoCreateTopic;
@@ -432,19 +414,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
         this.UseAutoCreateTopic = UseAutoCreateTopic;
     }
 
     /**
-     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。 
      * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompressionType() {
         return this.CompressionType;
@@ -452,19 +430,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompressionType(String CompressionType) {
         this.CompressionType = CompressionType;
     }
 
     /**
-     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用) 
      * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgMultiple() {
         return this.MsgMultiple;
@@ -472,19 +446,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgMultiple(Long MsgMultiple) {
         this.MsgMultiple = MsgMultiple;
     }
 
     /**
-     * Get 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE" 
      * @return ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectorSyncType() {
         return this.ConnectorSyncType;
@@ -492,19 +462,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectorSyncType(String ConnectorSyncType) {
         this.ConnectorSyncType = ConnectorSyncType;
     }
 
     /**
-     * Get 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false 
      * @return KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getKeepPartition() {
         return this.KeepPartition;
@@ -512,19 +478,15 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepPartition(Boolean KeepPartition) {
         this.KeepPartition = KeepPartition;
     }
 
     /**
-     * Get 正则匹配Topic列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正则匹配Topic列表 
      * @return TopicRegularExpression 正则匹配Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicRegularExpression() {
         return this.TopicRegularExpression;
@@ -532,9 +494,7 @@ public class KafkaParam extends AbstractModel {
 
     /**
      * Set 正则匹配Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicRegularExpression 正则匹配Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicRegularExpression(String TopicRegularExpression) {
         this.TopicRegularExpression = TopicRegularExpression;

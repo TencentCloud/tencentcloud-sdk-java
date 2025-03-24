@@ -25,7 +25,6 @@ public class ScfParam extends AbstractModel {
 
     /**
     * SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FunctionName")
     @Expose
@@ -33,7 +32,6 @@ public class ScfParam extends AbstractModel {
 
     /**
     * SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -41,7 +39,6 @@ public class ScfParam extends AbstractModel {
 
     /**
     * SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qualifier")
     @Expose
@@ -49,7 +46,6 @@ public class ScfParam extends AbstractModel {
 
     /**
     * 每批最大发送消息数, 默认为1000
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchSize")
     @Expose
@@ -57,17 +53,14 @@ public class ScfParam extends AbstractModel {
 
     /**
     * SCF调用失败后重试次数, 默认为5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetries")
     @Expose
     private Long MaxRetries;
 
     /**
-     * Get SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF云函数函数名 
      * @return FunctionName SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunctionName() {
         return this.FunctionName;
@@ -75,19 +68,15 @@ public class ScfParam extends AbstractModel {
 
     /**
      * Set SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FunctionName SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF云函数命名空间, 默认为default 
      * @return Namespace SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -95,19 +84,15 @@ public class ScfParam extends AbstractModel {
 
     /**
      * Set SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF云函数版本及别名, 默认为$DEFAULT 
      * @return Qualifier SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQualifier() {
         return this.Qualifier;
@@ -115,19 +100,15 @@ public class ScfParam extends AbstractModel {
 
     /**
      * Set SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Qualifier SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get 每批最大发送消息数, 默认为1000
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每批最大发送消息数, 默认为1000 
      * @return BatchSize 每批最大发送消息数, 默认为1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchSize() {
         return this.BatchSize;
@@ -135,19 +116,15 @@ public class ScfParam extends AbstractModel {
 
     /**
      * Set 每批最大发送消息数, 默认为1000
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchSize 每批最大发送消息数, 默认为1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchSize(Long BatchSize) {
         this.BatchSize = BatchSize;
     }
 
     /**
-     * Get SCF调用失败后重试次数, 默认为5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF调用失败后重试次数, 默认为5 
      * @return MaxRetries SCF调用失败后重试次数, 默认为5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetries() {
         return this.MaxRetries;
@@ -155,9 +132,7 @@ public class ScfParam extends AbstractModel {
 
     /**
      * Set SCF调用失败后重试次数, 默认为5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxRetries SCF调用失败后重试次数, 默认为5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetries(Long MaxRetries) {
         this.MaxRetries = MaxRetries;

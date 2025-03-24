@@ -25,7 +25,6 @@ public class GroupResponse extends AbstractModel {
 
     /**
     * 计数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class GroupResponse extends AbstractModel {
 
     /**
     * GroupList
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupList")
     @Expose
@@ -41,17 +39,14 @@ public class GroupResponse extends AbstractModel {
 
     /**
     * 消费分组配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupCountQuota")
     @Expose
     private Long GroupCountQuota;
 
     /**
-     * Get 计数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计数 
      * @return TotalCount 计数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -59,19 +54,15 @@ public class GroupResponse extends AbstractModel {
 
     /**
      * Set 计数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 计数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get GroupList
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GroupList 
      * @return GroupList GroupList
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeGroup [] getGroupList() {
         return this.GroupList;
@@ -79,19 +70,15 @@ public class GroupResponse extends AbstractModel {
 
     /**
      * Set GroupList
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupList GroupList
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupList(DescribeGroup [] GroupList) {
         this.GroupList = GroupList;
     }
 
     /**
-     * Get 消费分组配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费分组配额 
      * @return GroupCountQuota 消费分组配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupCountQuota() {
         return this.GroupCountQuota;
@@ -99,9 +86,7 @@ public class GroupResponse extends AbstractModel {
 
     /**
      * Set 消费分组配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupCountQuota 消费分组配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupCountQuota(Long GroupCountQuota) {
         this.GroupCountQuota = GroupCountQuota;

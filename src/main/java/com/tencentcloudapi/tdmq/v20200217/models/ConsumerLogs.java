@@ -25,6 +25,7 @@ public class ConsumerLogs extends AbstractModel {
 
     /**
     * 记录数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -32,14 +33,17 @@ public class ConsumerLogs extends AbstractModel {
 
     /**
     * 消费日志。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerLogSets")
     @Expose
     private ConsumerLog [] ConsumerLogSets;
 
     /**
-     * Get 记录数。 
+     * Get 记录数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 记录数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -47,15 +51,19 @@ public class ConsumerLogs extends AbstractModel {
 
     /**
      * Set 记录数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 记录数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 消费日志。 
+     * Get 消费日志。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerLogSets 消费日志。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerLog [] getConsumerLogSets() {
         return this.ConsumerLogSets;
@@ -63,7 +71,9 @@ public class ConsumerLogs extends AbstractModel {
 
     /**
      * Set 消费日志。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerLogSets 消费日志。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerLogSets(ConsumerLog [] ConsumerLogSets) {
         this.ConsumerLogSets = ConsumerLogSets;

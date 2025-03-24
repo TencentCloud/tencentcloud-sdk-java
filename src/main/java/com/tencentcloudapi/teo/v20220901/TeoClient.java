@@ -1466,6 +1466,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中规则列表的优先级，本接口需要传入站点 ID 下完整的规则 ID 列表，规则 ID 列表可以通过[查询七层加速规则](https://cloud.tencent.com/document/product/1552/115820)接口获取，最终优先级顺序将调整成规则 ID 列表的顺序，从前往后执行。
+     * @param req ModifyL7AccRulePriorityRequest
+     * @return ModifyL7AccRulePriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL7AccRulePriorityResponse ModifyL7AccRulePriority(ModifyL7AccRulePriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL7AccRulePriority", ModifyL7AccRulePriorityResponse.class);
+    }
+
+    /**
      *本接口用于修改[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
      * @param req ModifyL7AccSettingRequest
      * @return ModifyL7AccSettingResponse

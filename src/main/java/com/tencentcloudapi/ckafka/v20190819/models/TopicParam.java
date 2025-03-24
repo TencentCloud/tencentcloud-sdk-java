@@ -48,7 +48,6 @@ public class TopicParam extends AbstractModel {
 
     /**
     * Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -56,7 +55,6 @@ public class TopicParam extends AbstractModel {
 
     /**
     * 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompressionType")
     @Expose
@@ -64,7 +62,6 @@ public class TopicParam extends AbstractModel {
 
     /**
     * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseAutoCreateTopic")
     @Expose
@@ -72,7 +69,6 @@ public class TopicParam extends AbstractModel {
 
     /**
     * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgMultiple")
     @Expose
@@ -135,10 +131,8 @@ public class TopicParam extends AbstractModel {
     }
 
     /**
-     * Get Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Topic的TopicId【出参】 
      * @return TopicId Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -146,19 +140,15 @@ public class TopicParam extends AbstractModel {
 
     /**
      * Set Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。 
      * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompressionType() {
         return this.CompressionType;
@@ -166,19 +156,15 @@ public class TopicParam extends AbstractModel {
 
     /**
      * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompressionType(String CompressionType) {
         this.CompressionType = CompressionType;
     }
 
     /**
-     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务） 
      * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseAutoCreateTopic() {
         return this.UseAutoCreateTopic;
@@ -186,19 +172,15 @@ public class TopicParam extends AbstractModel {
 
     /**
      * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
         this.UseAutoCreateTopic = UseAutoCreateTopic;
     }
 
     /**
-     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用) 
      * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgMultiple() {
         return this.MsgMultiple;
@@ -206,9 +188,7 @@ public class TopicParam extends AbstractModel {
 
     /**
      * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgMultiple(Long MsgMultiple) {
         this.MsgMultiple = MsgMultiple;

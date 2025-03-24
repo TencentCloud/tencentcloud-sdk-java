@@ -25,7 +25,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContentId")
     @Expose
@@ -33,7 +32,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -44,7 +42,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -52,7 +49,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContents")
     @Expose
@@ -63,7 +59,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flag")
     @Expose
@@ -71,7 +66,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -79,7 +73,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
     @Expose
@@ -87,7 +80,6 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -95,17 +87,14 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
     * 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板ID。 
      * @return NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
@@ -113,19 +102,15 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;
     }
 
     /**
-     * Get 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板名称 
      * @return Name 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -133,9 +118,7 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -145,13 +128,11 @@ public class NoticeContentTemplate extends AbstractModel {
      * Get 语言类型。
 
 0： 中文
-1： 英文
-注意：此字段可能返回 null，表示取不到有效值。 
+1： 英文 
      * @return Type 语言类型。
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -162,22 +143,18 @@ public class NoticeContentTemplate extends AbstractModel {
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 语言类型。
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板信息。 
      * @return NoticeContents 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContent [] getNoticeContents() {
         return this.NoticeContents;
@@ -185,9 +162,7 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContents 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContents(NoticeContent [] NoticeContents) {
         this.NoticeContents = NoticeContents;
@@ -197,13 +172,11 @@ public class NoticeContentTemplate extends AbstractModel {
      * Get 通知内容模板标记。
 
 0： 用户自定义
-1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。 
+1： 系统内置 
      * @return Flag 通知内容模板标记。
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlag() {
         return this.Flag;
@@ -214,22 +187,18 @@ public class NoticeContentTemplate extends AbstractModel {
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Flag 通知内容模板标记。
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者主账号。 
      * @return Uin 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
         return this.Uin;
@@ -237,19 +206,15 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建/修改者子账号。 
      * @return SubUin 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubUin() {
         return this.SubUin;
@@ -257,19 +222,15 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubUin 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(Long SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 秒级时间戳。 
      * @return CreateTime 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -277,19 +238,15 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 秒级时间戳。 
      * @return UpdateTime 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -297,9 +254,7 @@ public class NoticeContentTemplate extends AbstractModel {
 
     /**
      * Set 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

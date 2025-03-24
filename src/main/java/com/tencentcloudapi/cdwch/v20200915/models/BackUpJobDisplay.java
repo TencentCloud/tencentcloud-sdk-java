@@ -73,6 +73,20 @@ public class BackUpJobDisplay extends AbstractModel {
     private String JobStatus;
 
     /**
+    * 处理数据量
+    */
+    @SerializedName("ProcessSize")
+    @Expose
+    private Long ProcessSize;
+
+    /**
+    * 错误原因
+    */
+    @SerializedName("ErrorReason")
+    @Expose
+    private String ErrorReason;
+
+    /**
      * Get 备份任务id 
      * @return JobId 备份任务id
      */
@@ -184,6 +198,38 @@ public class BackUpJobDisplay extends AbstractModel {
         this.JobStatus = JobStatus;
     }
 
+    /**
+     * Get 处理数据量 
+     * @return ProcessSize 处理数据量
+     */
+    public Long getProcessSize() {
+        return this.ProcessSize;
+    }
+
+    /**
+     * Set 处理数据量
+     * @param ProcessSize 处理数据量
+     */
+    public void setProcessSize(Long ProcessSize) {
+        this.ProcessSize = ProcessSize;
+    }
+
+    /**
+     * Get 错误原因 
+     * @return ErrorReason 错误原因
+     */
+    public String getErrorReason() {
+        return this.ErrorReason;
+    }
+
+    /**
+     * Set 错误原因
+     * @param ErrorReason 错误原因
+     */
+    public void setErrorReason(String ErrorReason) {
+        this.ErrorReason = ErrorReason;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -213,6 +259,12 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.JobStatus != null) {
             this.JobStatus = new String(source.JobStatus);
         }
+        if (source.ProcessSize != null) {
+            this.ProcessSize = new Long(source.ProcessSize);
+        }
+        if (source.ErrorReason != null) {
+            this.ErrorReason = new String(source.ErrorReason);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamSimple(map, prefix + "BackUpTime", this.BackUpTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
+        this.setParamSimple(map, prefix + "ProcessSize", this.ProcessSize);
+        this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
 
     }
 }

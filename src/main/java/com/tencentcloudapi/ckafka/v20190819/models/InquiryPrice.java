@@ -25,7 +25,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -33,7 +32,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
@@ -41,7 +39,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -49,7 +46,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -57,7 +53,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
@@ -65,7 +60,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -73,7 +67,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Currency")
     @Expose
@@ -89,7 +82,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -97,7 +89,6 @@ public class InquiryPrice extends AbstractModel {
 
     /**
     * 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -120,10 +111,8 @@ public class InquiryPrice extends AbstractModel {
     private InquiryDetailPrice DetailPrices;
 
     /**
-     * Get 单位原价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位原价 
      * @return UnitPrice 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -131,19 +120,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣单位价格 
      * @return UnitPriceDiscount 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
@@ -151,19 +136,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPriceDiscount 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get 合计原价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合计原价 
      * @return OriginalPrice 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
@@ -171,19 +152,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalPrice 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣合计价格 
      * @return DiscountPrice 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
@@ -191,19 +168,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPrice 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣(单位是%) 
      * @return Discount 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscount() {
         return this.Discount;
@@ -211,19 +184,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Discount 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 商品数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品数量 
      * @return GoodsNum 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
@@ -231,19 +200,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsNum 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 付费货币
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费货币 
      * @return Currency 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrency() {
         return this.Currency;
@@ -251,9 +216,7 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Currency 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
@@ -280,10 +243,8 @@ public class InquiryPrice extends AbstractModel {
     }
 
     /**
-     * Get 购买时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买时长 
      * @return TimeSpan 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -291,19 +252,15 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买时长单位("m"按月, "h"按小时) 
      * @return TimeUnit 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -311,9 +268,7 @@ public class InquiryPrice extends AbstractModel {
 
     /**
      * Set 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

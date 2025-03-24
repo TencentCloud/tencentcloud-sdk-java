@@ -165,7 +165,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -173,7 +172,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -181,7 +179,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -189,7 +186,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * ckafka集群实例版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -197,7 +193,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxGroupNum")
     @Expose
@@ -205,7 +200,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cvm")
     @Expose
@@ -213,7 +207,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -221,7 +214,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Features")
     @Expose
@@ -229,7 +221,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
@@ -237,7 +228,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxConnection")
     @Expose
@@ -245,7 +235,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -253,7 +242,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
@@ -261,7 +249,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainingPartitions")
     @Expose
@@ -269,7 +256,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainingTopics")
     @Expose
@@ -277,7 +263,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DynamicDiskConfig")
     @Expose
@@ -285,7 +270,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -293,7 +277,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -308,7 +291,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * 弹性带宽上浮值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticFloatBandwidth")
     @Expose
@@ -649,10 +631,8 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签数组 
      * @return Tags 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -660,19 +640,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -680,19 +656,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区列表 
      * @return ZoneIds 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
@@ -700,19 +672,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneIds 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ckafka集群实例版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例版本 
      * @return Version ckafka集群实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -720,19 +688,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set ckafka集群实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version ckafka集群实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大分组数 
      * @return MaxGroupNum 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxGroupNum() {
         return this.MaxGroupNum;
@@ -740,19 +704,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxGroupNum 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxGroupNum(Long MaxGroupNum) {
         this.MaxGroupNum = MaxGroupNum;
     }
 
     /**
-     * Get 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 售卖类型,0:标准版,1:专业版 
      * @return Cvm 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvm() {
         return this.Cvm;
@@ -760,19 +720,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cvm 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return InstanceType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -780,19 +736,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。 
      * @return Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFeatures() {
         return this.Features;
@@ -800,19 +752,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动态消息保留策略 
      * @return RetentionTimeConfig 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DynamicRetentionTime getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
@@ -820,19 +768,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionTimeConfig 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大连接数 
      * @return MaxConnection 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
@@ -840,19 +784,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxConnection 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;
     }
 
     /**
-     * Get 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网带宽 
      * @return PublicNetwork 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
@@ -860,19 +800,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicNetwork 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return DeleteRouteTimestamp 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
@@ -880,19 +816,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteRouteTimestamp 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }
 
     /**
-     * Get 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余创建分区数 
      * @return RemainingPartitions 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainingPartitions() {
         return this.RemainingPartitions;
@@ -900,19 +832,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainingPartitions 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainingPartitions(Long RemainingPartitions) {
         this.RemainingPartitions = RemainingPartitions;
     }
 
     /**
-     * Get 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余创建主题数 
      * @return RemainingTopics 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainingTopics() {
         return this.RemainingTopics;
@@ -920,19 +848,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainingTopics 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainingTopics(Long RemainingTopics) {
         this.RemainingTopics = RemainingTopics;
     }
 
     /**
-     * Get 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动态硬盘扩容策略 
      * @return DynamicDiskConfig 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
@@ -940,19 +864,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicDiskConfig 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
     /**
-     * Get 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例计费类型 
      * @return InstanceChargeType 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -960,19 +880,15 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargeType 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -980,9 +896,7 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -1005,10 +919,8 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 弹性带宽上浮值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性带宽上浮值 
      * @return ElasticFloatBandwidth 弹性带宽上浮值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticFloatBandwidth() {
         return this.ElasticFloatBandwidth;
@@ -1016,9 +928,7 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
      * Set 弹性带宽上浮值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticFloatBandwidth 弹性带宽上浮值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticFloatBandwidth(Long ElasticFloatBandwidth) {
         this.ElasticFloatBandwidth = ElasticFloatBandwidth;

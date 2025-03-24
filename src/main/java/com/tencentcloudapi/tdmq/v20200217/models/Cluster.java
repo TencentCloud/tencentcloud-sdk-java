@@ -67,6 +67,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群健康信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyInfo")
     @Expose
@@ -116,6 +117,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -123,6 +125,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicEndPoint")
     @Expose
@@ -130,6 +133,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcEndPoint")
     @Expose
@@ -137,6 +141,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceNum")
     @Expose
@@ -144,6 +149,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedStorageBudget")
     @Expose
@@ -151,6 +157,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPublishRateInMessages")
     @Expose
@@ -158,6 +165,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDispatchRateInMessages")
     @Expose
@@ -165,6 +173,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPublishRateInBytes")
     @Expose
@@ -172,6 +181,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDispatchRateInBytes")
     @Expose
@@ -179,6 +189,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNum")
     @Expose
@@ -186,6 +197,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMessageDelayInSeconds")
     @Expose
@@ -193,6 +205,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccessEnabled")
     @Expose
@@ -200,6 +213,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 标签
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -209,6 +223,7 @@ public class Cluster extends AbstractModel {
     * 计费模式：
 0: 按量计费
 1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -216,6 +231,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -223,6 +239,7 @@ public class Cluster extends AbstractModel {
 
     /**
     * 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
@@ -332,8 +349,10 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群健康信息 
+     * Get 集群健康信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthyInfo 集群健康信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthyInfo() {
         return this.HealthyInfo;
@@ -341,7 +360,9 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群健康信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyInfo 集群健康信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyInfo(String HealthyInfo) {
         this.HealthyInfo = HealthyInfo;
@@ -444,8 +465,10 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群版本 
+     * Get 集群版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -453,15 +476,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 公网访问接入点 
+     * Get 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicEndPoint 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicEndPoint() {
         return this.PublicEndPoint;
@@ -469,15 +496,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicEndPoint 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicEndPoint(String PublicEndPoint) {
         this.PublicEndPoint = PublicEndPoint;
     }
 
     /**
-     * Get VPC访问接入点 
+     * Get VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcEndPoint VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcEndPoint() {
         return this.VpcEndPoint;
@@ -485,15 +516,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcEndPoint VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcEndPoint(String VpcEndPoint) {
         this.VpcEndPoint = VpcEndPoint;
     }
 
     /**
-     * Get 命名空间数量 
+     * Get 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNamespaceNum() {
         return this.NamespaceNum;
@@ -501,15 +536,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceNum(Long NamespaceNum) {
         this.NamespaceNum = NamespaceNum;
     }
 
     /**
-     * Get 已使用存储限制，MB为单位 
+     * Get 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UsedStorageBudget 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedStorageBudget() {
         return this.UsedStorageBudget;
@@ -517,15 +556,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedStorageBudget 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedStorageBudget(Long UsedStorageBudget) {
         this.UsedStorageBudget = UsedStorageBudget;
     }
 
     /**
-     * Get 最大生产消息速率，以条数为单位 
+     * Get 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxPublishRateInMessages 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPublishRateInMessages() {
         return this.MaxPublishRateInMessages;
@@ -533,15 +576,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPublishRateInMessages 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPublishRateInMessages(Long MaxPublishRateInMessages) {
         this.MaxPublishRateInMessages = MaxPublishRateInMessages;
     }
 
     /**
-     * Get 最大推送消息速率，以条数为单位 
+     * Get 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDispatchRateInMessages() {
         return this.MaxDispatchRateInMessages;
@@ -549,15 +596,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDispatchRateInMessages(Long MaxDispatchRateInMessages) {
         this.MaxDispatchRateInMessages = MaxDispatchRateInMessages;
     }
 
     /**
-     * Get 最大生产消息速率，以字节为单位 
+     * Get 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxPublishRateInBytes 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPublishRateInBytes() {
         return this.MaxPublishRateInBytes;
@@ -565,15 +616,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPublishRateInBytes 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPublishRateInBytes(Long MaxPublishRateInBytes) {
         this.MaxPublishRateInBytes = MaxPublishRateInBytes;
     }
 
     /**
-     * Get 最大推送消息速率，以字节为单位 
+     * Get 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDispatchRateInBytes() {
         return this.MaxDispatchRateInBytes;
@@ -581,15 +636,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDispatchRateInBytes(Long MaxDispatchRateInBytes) {
         this.MaxDispatchRateInBytes = MaxDispatchRateInBytes;
     }
 
     /**
-     * Get 已创建主题数 
+     * Get 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicNum 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicNum() {
         return this.TopicNum;
@@ -597,15 +656,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNum 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get 最长消息延时，以秒为单位 
+     * Get 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxMessageDelayInSeconds 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMessageDelayInSeconds() {
         return this.MaxMessageDelayInSeconds;
@@ -613,15 +676,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMessageDelayInSeconds 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMessageDelayInSeconds(Long MaxMessageDelayInSeconds) {
         this.MaxMessageDelayInSeconds = MaxMessageDelayInSeconds;
     }
 
     /**
-     * Get 是否开启公网访问，不填时默认开启 
+     * Get 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicAccessEnabled 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublicAccessEnabled() {
         return this.PublicAccessEnabled;
@@ -629,15 +696,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicAccessEnabled 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
         this.PublicAccessEnabled = PublicAccessEnabled;
     }
 
     /**
-     * Get 标签 
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -645,7 +716,9 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -654,10 +727,12 @@ public class Cluster extends AbstractModel {
     /**
      * Get 计费模式：
 0: 按量计费
-1: 包年包月 
+1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PayMode 计费模式：
 0: 按量计费
 1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -667,17 +742,21 @@ public class Cluster extends AbstractModel {
      * Set 计费模式：
 0: 按量计费
 1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式：
 0: 按量计费
 1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 项目ID 
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -685,15 +764,19 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名字 
+     * Get 项目名字
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectName 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -701,7 +784,9 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;

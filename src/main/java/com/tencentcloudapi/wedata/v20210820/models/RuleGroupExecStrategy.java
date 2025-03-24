@@ -168,6 +168,48 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String DlcGroupName;
 
     /**
+    * 任务名称
+    */
+    @SerializedName("RuleGroupName")
+    @Expose
+    private String RuleGroupName;
+
+    /**
+    * 数据库名称
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * schema名称
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 表名称
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
+    * 数据源id
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private String DatasourceId;
+
+    /**
+    * 任务描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -527,6 +569,102 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.DlcGroupName = DlcGroupName;
     }
 
+    /**
+     * Get 任务名称 
+     * @return RuleGroupName 任务名称
+     */
+    public String getRuleGroupName() {
+        return this.RuleGroupName;
+    }
+
+    /**
+     * Set 任务名称
+     * @param RuleGroupName 任务名称
+     */
+    public void setRuleGroupName(String RuleGroupName) {
+        this.RuleGroupName = RuleGroupName;
+    }
+
+    /**
+     * Get 数据库名称 
+     * @return DatabaseName 数据库名称
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名称
+     * @param DatabaseName 数据库名称
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get schema名称 
+     * @return SchemaName schema名称
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set schema名称
+     * @param SchemaName schema名称
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 表名称 
+     * @return TableName 表名称
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 表名称
+     * @param TableName 表名称
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
+    /**
+     * Get 数据源id 
+     * @return DatasourceId 数据源id
+     */
+    public String getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源id
+     * @param DatasourceId 数据源id
+     */
+    public void setDatasourceId(String DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 任务描述 
+     * @return Description 任务描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述
+     * @param Description 任务描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -595,6 +733,24 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.DlcGroupName != null) {
             this.DlcGroupName = new String(source.DlcGroupName);
         }
+        if (source.RuleGroupName != null) {
+            this.RuleGroupName = new String(source.RuleGroupName);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new String(source.DatasourceId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -620,6 +776,12 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
         this.setParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
+        this.setParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

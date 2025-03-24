@@ -53,7 +53,6 @@ public class ClusterActivity extends AbstractModel {
 
     /**
     * 集群活动状态码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityStatusCode")
     @Expose
@@ -90,7 +89,6 @@ public class ClusterActivity extends AbstractModel {
 
     /**
     * 集群活动开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -98,7 +96,6 @@ public class ClusterActivity extends AbstractModel {
 
     /**
     * 集群活动结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -169,10 +166,8 @@ public class ClusterActivity extends AbstractModel {
     }
 
     /**
-     * Get 集群活动状态码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群活动状态码。 
      * @return ActivityStatusCode 集群活动状态码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityStatusCode() {
         return this.ActivityStatusCode;
@@ -180,9 +175,7 @@ public class ClusterActivity extends AbstractModel {
 
     /**
      * Set 集群活动状态码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityStatusCode 集群活动状态码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityStatusCode(String ActivityStatusCode) {
         this.ActivityStatusCode = ActivityStatusCode;
@@ -257,10 +250,8 @@ public class ClusterActivity extends AbstractModel {
     }
 
     /**
-     * Get 集群活动开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群活动开始时间。 
      * @return StartTime 集群活动开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -268,19 +259,15 @@ public class ClusterActivity extends AbstractModel {
 
     /**
      * Set 集群活动开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 集群活动开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 集群活动结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群活动结束时间。 
      * @return EndTime 集群活动结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -288,9 +275,7 @@ public class ClusterActivity extends AbstractModel {
 
     /**
      * Set 集群活动结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 集群活动结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -26,7 +26,6 @@ public class NoticeContentInfo extends AbstractModel {
     /**
     * 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -34,7 +33,6 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
     * 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -43,7 +41,6 @@ public class NoticeContentInfo extends AbstractModel {
     /**
     * 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
     @Expose
@@ -51,11 +48,9 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
      * Get 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。 
+部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。 
      * @return Title 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -64,20 +59,16 @@ public class NoticeContentInfo extends AbstractModel {
     /**
      * Set 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板正文信息。 
      * @return Content 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -85,9 +76,7 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
      * Set 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
@@ -95,11 +84,9 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
      * Get 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
-仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+仅“自定义回调”支持该配置。 
      * @return Headers 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHeaders() {
         return this.Headers;
@@ -108,10 +95,8 @@ public class NoticeContentInfo extends AbstractModel {
     /**
      * Set 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;

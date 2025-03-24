@@ -117,7 +117,6 @@ public class DescribeJobResponse extends AbstractModel {
 
     /**
     * 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextAction")
     @Expose
@@ -343,10 +342,8 @@ public class DescribeJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一步动作 
      * @return NextAction 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextAction() {
         return this.NextAction;
@@ -354,9 +351,7 @@ public class DescribeJobResponse extends AbstractModel {
 
     /**
      * Set 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextAction 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextAction(String NextAction) {
         this.NextAction = NextAction;

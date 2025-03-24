@@ -33,7 +33,6 @@ public class RecordMapping extends AbstractModel {
 
     /**
     * 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -116,10 +115,8 @@ public class RecordMapping extends AbstractModel {
     }
 
     /**
-     * Get 消息类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息类型 
      * @return Type 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -127,9 +124,7 @@ public class RecordMapping extends AbstractModel {
 
     /**
      * Set 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

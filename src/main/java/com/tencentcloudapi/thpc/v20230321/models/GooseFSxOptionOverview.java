@@ -25,7 +25,6 @@ public class GooseFSxOptionOverview extends AbstractModel {
 
     /**
     * 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Masters")
     @Expose
@@ -33,17 +32,14 @@ public class GooseFSxOptionOverview extends AbstractModel {
 
     /**
     * 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalPath")
     @Expose
     private String LocalPath;
 
     /**
-     * Get 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统master的ip和端口列表。 
      * @return Masters 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMasters() {
         return this.Masters;
@@ -51,19 +47,15 @@ public class GooseFSxOptionOverview extends AbstractModel {
 
     /**
      * Set 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Masters 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasters(String [] Masters) {
         this.Masters = Masters;
     }
 
     /**
-     * Get 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。 
      * @return LocalPath 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalPath() {
         return this.LocalPath;
@@ -71,9 +63,7 @@ public class GooseFSxOptionOverview extends AbstractModel {
 
     /**
      * Set 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalPath 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalPath(String LocalPath) {
         this.LocalPath = LocalPath;

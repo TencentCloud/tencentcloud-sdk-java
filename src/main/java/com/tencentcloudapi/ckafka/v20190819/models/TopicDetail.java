@@ -53,7 +53,6 @@ public class TopicDetail extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -82,7 +81,6 @@ public class TopicDetail extends AbstractModel {
 
     /**
     * 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardCosBucket")
     @Expose
@@ -104,7 +102,6 @@ public class TopicDetail extends AbstractModel {
 
     /**
     * 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -112,7 +109,6 @@ public class TopicDetail extends AbstractModel {
 
     /**
     * 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
@@ -120,7 +116,6 @@ public class TopicDetail extends AbstractModel {
 
     /**
     * 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -199,10 +194,8 @@ public class TopicDetail extends AbstractModel {
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -210,9 +203,7 @@ public class TopicDetail extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;
@@ -267,10 +258,8 @@ public class TopicDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据备份cos bucket: 转存到cos 的bucket地址 
      * @return ForwardCosBucket 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardCosBucket() {
         return this.ForwardCosBucket;
@@ -278,9 +267,7 @@ public class TopicDetail extends AbstractModel {
 
     /**
      * Set 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardCosBucket 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardCosBucket(String ForwardCosBucket) {
         this.ForwardCosBucket = ForwardCosBucket;
@@ -319,10 +306,8 @@ public class TopicDetail extends AbstractModel {
     }
 
     /**
-     * Get 高级配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高级配置 
      * @return Config 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Config getConfig() {
         return this.Config;
@@ -330,19 +315,15 @@ public class TopicDetail extends AbstractModel {
 
     /**
      * Set 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(Config Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留时间配置(用于动态配置变更记录) 
      * @return RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicRetentionTimeConfigRsp getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
@@ -350,19 +331,15 @@ public class TopicDetail extends AbstractModel {
 
     /**
      * Set 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionTimeConfig(TopicRetentionTimeConfigRsp RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0:正常，1：已删除，2：删除中 
      * @return Status 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -370,9 +347,7 @@ public class TopicDetail extends AbstractModel {
 
     /**
      * Set 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

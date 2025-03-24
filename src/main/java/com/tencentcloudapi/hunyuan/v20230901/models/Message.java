@@ -70,6 +70,13 @@ public class Message extends AbstractModel {
     private String [] FileIDs;
 
     /**
+    * 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+    */
+    @SerializedName("ReasoningContent")
+    @Expose
+    private String ReasoningContent;
+
+    /**
      * Get 角色，可选值包括 system、user、assistant、 tool。 
      * @return Role 角色，可选值包括 system、user、assistant、 tool。
      */
@@ -181,6 +188,22 @@ public class Message extends AbstractModel {
         this.FileIDs = FileIDs;
     }
 
+    /**
+     * Get 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。 
+     * @return ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public String getReasoningContent() {
+        return this.ReasoningContent;
+    }
+
+    /**
+     * Set 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     * @param ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public void setReasoningContent(String ReasoningContent) {
+        this.ReasoningContent = ReasoningContent;
+    }
+
     public Message() {
     }
 
@@ -216,6 +239,9 @@ public class Message extends AbstractModel {
                 this.FileIDs[i] = new String(source.FileIDs[i]);
             }
         }
+        if (source.ReasoningContent != null) {
+            this.ReasoningContent = new String(source.ReasoningContent);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class Message extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
         this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
         this.setParamArraySimple(map, prefix + "FileIDs.", this.FileIDs);
+        this.setParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
 
     }
 }

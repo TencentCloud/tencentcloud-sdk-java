@@ -46,7 +46,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IfCommunity")
     @Expose
@@ -101,10 +100,8 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开源实例。开源：true，不开源：false 
      * @return IfCommunity 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIfCommunity() {
         return this.IfCommunity;
@@ -112,9 +109,7 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IfCommunity 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIfCommunity(Boolean IfCommunity) {
         this.IfCommunity = IfCommunity;

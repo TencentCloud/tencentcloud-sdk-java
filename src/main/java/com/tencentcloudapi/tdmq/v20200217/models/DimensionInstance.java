@@ -25,14 +25,17 @@ public class DimensionInstance extends AbstractModel {
 
     /**
     * 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimensions")
     @Expose
     private DimensionOpt [] Dimensions;
 
     /**
-     * Get 实例的维度组合 
+     * Get 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Dimensions 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DimensionOpt [] getDimensions() {
         return this.Dimensions;
@@ -40,7 +43,9 @@ public class DimensionInstance extends AbstractModel {
 
     /**
      * Set 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Dimensions 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimensions(DimensionOpt [] Dimensions) {
         this.Dimensions = Dimensions;

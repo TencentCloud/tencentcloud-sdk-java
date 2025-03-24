@@ -25,7 +25,6 @@ public class PartitionOffset extends AbstractModel {
 
     /**
     * 分区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partition")
     @Expose
@@ -33,17 +32,14 @@ public class PartitionOffset extends AbstractModel {
 
     /**
     * 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 分区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分区 
      * @return Partition 分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPartition() {
         return this.Partition;
@@ -51,19 +47,15 @@ public class PartitionOffset extends AbstractModel {
 
     /**
      * Set 分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Partition 分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartition(String Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位点偏移量 
      * @return Offset 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
         return this.Offset;
@@ -71,9 +63,7 @@ public class PartitionOffset extends AbstractModel {
 
     /**
      * Set 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

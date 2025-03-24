@@ -25,7 +25,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,7 +32,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -41,7 +39,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -49,7 +46,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -57,7 +53,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -65,7 +60,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupUser")
     @Expose
@@ -73,7 +67,6 @@ public class DtsParam extends AbstractModel {
 
     /**
     * Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupPassword")
     @Expose
@@ -81,17 +74,14 @@ public class DtsParam extends AbstractModel {
 
     /**
     * false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranSql")
     @Expose
     private Boolean TranSql;
 
     /**
-     * Get Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts实例Id 
      * @return Resource Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -99,19 +89,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts的连接ip 
      * @return Ip Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -119,19 +105,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts的连接port 
      * @return Port Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -139,19 +121,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts订阅的topic 
      * @return Topic Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -159,19 +137,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的Id 
      * @return GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -179,19 +153,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的账号 
      * @return GroupUser Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupUser() {
         return this.GroupUser;
@@ -199,19 +169,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupUser Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupUser(String GroupUser) {
         this.GroupUser = GroupUser;
     }
 
     /**
-     * Get Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的密码 
      * @return GroupPassword Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupPassword() {
         return this.GroupPassword;
@@ -219,19 +185,15 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupPassword Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupPassword(String GroupPassword) {
         this.GroupPassword = GroupPassword;
     }
 
     /**
-     * Get false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get false同步原始数据，true同步解析后的json格式数据,默认true 
      * @return TranSql false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTranSql() {
         return this.TranSql;
@@ -239,9 +201,7 @@ public class DtsParam extends AbstractModel {
 
     /**
      * Set false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranSql false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranSql(Boolean TranSql) {
         this.TranSql = TranSql;

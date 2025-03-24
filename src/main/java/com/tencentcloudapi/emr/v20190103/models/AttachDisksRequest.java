@@ -75,6 +75,13 @@ ALIGN_DEADLINE：自动对其到期时间
     private Boolean DeleteWithInstance;
 
     /**
+    * 新挂磁盘时可支持配置的服务名称列表
+    */
+    @SerializedName("SelectiveConfServices")
+    @Expose
+    private String [] SelectiveConfServices;
+
+    /**
      * Get EMR集群实例ID 
      * @return InstanceId EMR集群实例ID
      */
@@ -194,6 +201,22 @@ ALIGN_DEADLINE：自动对其到期时间
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
+    /**
+     * Get 新挂磁盘时可支持配置的服务名称列表 
+     * @return SelectiveConfServices 新挂磁盘时可支持配置的服务名称列表
+     */
+    public String [] getSelectiveConfServices() {
+        return this.SelectiveConfServices;
+    }
+
+    /**
+     * Set 新挂磁盘时可支持配置的服务名称列表
+     * @param SelectiveConfServices 新挂磁盘时可支持配置的服务名称列表
+     */
+    public void setSelectiveConfServices(String [] SelectiveConfServices) {
+        this.SelectiveConfServices = SelectiveConfServices;
+    }
+
     public AttachDisksRequest() {
     }
 
@@ -229,6 +252,12 @@ ALIGN_DEADLINE：自动对其到期时间
         if (source.DeleteWithInstance != null) {
             this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
         }
+        if (source.SelectiveConfServices != null) {
+            this.SelectiveConfServices = new String[source.SelectiveConfServices.length];
+            for (int i = 0; i < source.SelectiveConfServices.length; i++) {
+                this.SelectiveConfServices[i] = new String(source.SelectiveConfServices[i]);
+            }
+        }
     }
 
 
@@ -243,6 +272,7 @@ ALIGN_DEADLINE：自动对其到期时间
         this.setParamSimple(map, prefix + "CreateDisk", this.CreateDisk);
         this.setParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamArraySimple(map, prefix + "SelectiveConfServices.", this.SelectiveConfServices);
 
     }
 }

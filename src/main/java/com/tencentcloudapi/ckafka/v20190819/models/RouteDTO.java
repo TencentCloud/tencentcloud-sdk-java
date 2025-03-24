@@ -25,17 +25,14 @@ public class RouteDTO extends AbstractModel {
 
     /**
     * 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteId")
     @Expose
     private Long RouteId;
 
     /**
-     * Get 路由Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由Id 
      * @return RouteId 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRouteId() {
         return this.RouteId;
@@ -43,9 +40,7 @@ public class RouteDTO extends AbstractModel {
 
     /**
      * Set 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteId 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

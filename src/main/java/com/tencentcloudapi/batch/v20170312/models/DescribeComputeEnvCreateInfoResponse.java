@@ -39,7 +39,6 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel {
 
     /**
     * 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvDescription")
     @Expose
@@ -142,10 +141,8 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算环境描述 
      * @return EnvDescription 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvDescription() {
         return this.EnvDescription;
@@ -153,9 +150,7 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel {
 
     /**
      * Set 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvDescription 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvDescription(String EnvDescription) {
         this.EnvDescription = EnvDescription;

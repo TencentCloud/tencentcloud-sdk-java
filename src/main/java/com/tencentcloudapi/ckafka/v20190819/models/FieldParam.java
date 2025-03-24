@@ -32,7 +32,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * 二次解析
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryAnalyse")
     @Expose
@@ -40,7 +39,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * 数据处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SMT")
     @Expose
@@ -48,7 +46,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -56,7 +53,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalyseResult")
     @Expose
@@ -64,7 +60,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * 二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryAnalyseResult")
     @Expose
@@ -72,7 +67,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * JSON格式解析结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalyseJsonResult")
     @Expose
@@ -80,7 +74,6 @@ public class FieldParam extends AbstractModel {
 
     /**
     * JSON格式二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryAnalyseJsonResult")
     @Expose
@@ -103,10 +96,8 @@ public class FieldParam extends AbstractModel {
     }
 
     /**
-     * Get 二次解析
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二次解析 
      * @return SecondaryAnalyse 二次解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecondaryAnalyseParam getSecondaryAnalyse() {
         return this.SecondaryAnalyse;
@@ -114,19 +105,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set 二次解析
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryAnalyse 二次解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryAnalyse(SecondaryAnalyseParam SecondaryAnalyse) {
         this.SecondaryAnalyse = SecondaryAnalyse;
     }
 
     /**
-     * Get 数据处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据处理 
      * @return SMT 数据处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SMTParam [] getSMT() {
         return this.SMT;
@@ -134,19 +121,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set 数据处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SMT 数据处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSMT(SMTParam [] SMT) {
         this.SMT = SMT;
     }
 
     /**
-     * Get 测试结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试结果 
      * @return Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -154,19 +137,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 解析结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析结果 
      * @return AnalyseResult 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SMTParam [] getAnalyseResult() {
         return this.AnalyseResult;
@@ -174,19 +153,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseResult 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalyseResult(SMTParam [] AnalyseResult) {
         this.AnalyseResult = AnalyseResult;
     }
 
     /**
-     * Get 二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二次解析结果 
      * @return SecondaryAnalyseResult 二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SMTParam [] getSecondaryAnalyseResult() {
         return this.SecondaryAnalyseResult;
@@ -194,19 +169,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set 二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryAnalyseResult 二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryAnalyseResult(SMTParam [] SecondaryAnalyseResult) {
         this.SecondaryAnalyseResult = SecondaryAnalyseResult;
     }
 
     /**
-     * Get JSON格式解析结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get JSON格式解析结果 
      * @return AnalyseJsonResult JSON格式解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnalyseJsonResult() {
         return this.AnalyseJsonResult;
@@ -214,19 +185,15 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set JSON格式解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseJsonResult JSON格式解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalyseJsonResult(String AnalyseJsonResult) {
         this.AnalyseJsonResult = AnalyseJsonResult;
     }
 
     /**
-     * Get JSON格式二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get JSON格式二次解析结果 
      * @return SecondaryAnalyseJsonResult JSON格式二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondaryAnalyseJsonResult() {
         return this.SecondaryAnalyseJsonResult;
@@ -234,9 +201,7 @@ public class FieldParam extends AbstractModel {
 
     /**
      * Set JSON格式二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryAnalyseJsonResult JSON格式二次解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryAnalyseJsonResult(String SecondaryAnalyseJsonResult) {
         this.SecondaryAnalyseJsonResult = SecondaryAnalyseJsonResult;

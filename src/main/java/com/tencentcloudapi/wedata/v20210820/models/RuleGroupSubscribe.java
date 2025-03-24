@@ -72,6 +72,14 @@ public class RuleGroupSubscribe extends AbstractModel {
     private String RuleName;
 
     /**
+    * 发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmMessageRule")
+    @Expose
+    private String AlarmMessageRule;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -191,6 +199,26 @@ public class RuleGroupSubscribe extends AbstractModel {
         this.RuleName = RuleName;
     }
 
+    /**
+     * Get 发送对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmMessageRule 发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmMessageRule() {
+        return this.AlarmMessageRule;
+    }
+
+    /**
+     * Set 发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmMessageRule 发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmMessageRule(String AlarmMessageRule) {
+        this.AlarmMessageRule = AlarmMessageRule;
+    }
+
     public RuleGroupSubscribe() {
     }
 
@@ -226,6 +254,9 @@ public class RuleGroupSubscribe extends AbstractModel {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
+        if (source.AlarmMessageRule != null) {
+            this.AlarmMessageRule = new String(source.AlarmMessageRule);
+        }
     }
 
 
@@ -239,6 +270,7 @@ public class RuleGroupSubscribe extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
 
     }
 }

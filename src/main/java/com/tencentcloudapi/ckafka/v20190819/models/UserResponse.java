@@ -25,7 +25,6 @@ public class UserResponse extends AbstractModel {
 
     /**
     * 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -39,10 +38,8 @@ public class UserResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-     * Get 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的用户列表 
      * @return Users 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public User [] getUsers() {
         return this.Users;
@@ -50,9 +47,7 @@ public class UserResponse extends AbstractModel {
 
     /**
      * Set 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(User [] Users) {
         this.Users = Users;

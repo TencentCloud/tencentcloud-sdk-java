@@ -73,7 +73,6 @@ public class Route extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteTimestamp")
     @Expose
@@ -89,7 +88,6 @@ public class Route extends AbstractModel {
 
     /**
     * 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerVipList")
     @Expose
@@ -224,10 +222,8 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return DeleteTimestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeleteTimestamp() {
         return this.DeleteTimestamp;
@@ -235,9 +231,7 @@ public class Route extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteTimestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteTimestamp(String DeleteTimestamp) {
         this.DeleteTimestamp = DeleteTimestamp;
@@ -264,10 +258,8 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 虚拟IP列表(1对1 broker节点) 
      * @return BrokerVipList 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VipEntity [] getBrokerVipList() {
         return this.BrokerVipList;
@@ -275,9 +267,7 @@ public class Route extends AbstractModel {
 
     /**
      * Set 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BrokerVipList 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerVipList(VipEntity [] BrokerVipList) {
         this.BrokerVipList = BrokerVipList;

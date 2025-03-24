@@ -39,7 +39,6 @@ public class GroupOffsetPartition extends AbstractModel {
 
     /**
     * 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
     @Expose
@@ -99,10 +98,8 @@ public class GroupOffsetPartition extends AbstractModel {
     }
 
     /**
-     * Get 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串 
      * @return Metadata 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetadata() {
         return this.Metadata;
@@ -110,9 +107,7 @@ public class GroupOffsetPartition extends AbstractModel {
 
     /**
      * Set 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadata 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(String Metadata) {
         this.Metadata = Metadata;

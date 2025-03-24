@@ -32,7 +32,6 @@ public class GroupOffsetResponse extends AbstractModel {
 
     /**
     * 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
@@ -55,10 +54,8 @@ public class GroupOffsetResponse extends AbstractModel {
     }
 
     /**
-     * Get 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该主题分区数组，其中每个元素为一个 json object 
      * @return TopicList 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupOffsetTopic [] getTopicList() {
         return this.TopicList;
@@ -66,9 +63,7 @@ public class GroupOffsetResponse extends AbstractModel {
 
     /**
      * Set 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicList 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(GroupOffsetTopic [] TopicList) {
         this.TopicList = TopicList;

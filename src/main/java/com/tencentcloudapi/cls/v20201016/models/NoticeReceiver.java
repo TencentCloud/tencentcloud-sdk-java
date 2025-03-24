@@ -55,7 +55,6 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
     * 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContentId")
     @Expose
@@ -170,10 +169,8 @@ public class NoticeReceiver extends AbstractModel {
     }
 
     /**
-     * Get 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。 
      * @return NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
@@ -181,9 +178,7 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Set 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;

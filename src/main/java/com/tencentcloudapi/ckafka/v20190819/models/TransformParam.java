@@ -81,7 +81,6 @@ public class TransformParam extends AbstractModel {
 
     /**
     * 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -89,7 +88,6 @@ public class TransformParam extends AbstractModel {
 
     /**
     * 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalyseResult")
     @Expose
@@ -97,7 +95,6 @@ public class TransformParam extends AbstractModel {
 
     /**
     * 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseEventBus")
     @Expose
@@ -232,10 +229,8 @@ public class TransformParam extends AbstractModel {
     }
 
     /**
-     * Get 测试结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试结果 
      * @return Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -243,19 +238,15 @@ public class TransformParam extends AbstractModel {
 
     /**
      * Set 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 解析结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析结果 
      * @return AnalyseResult 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MapParam [] getAnalyseResult() {
         return this.AnalyseResult;
@@ -263,19 +254,15 @@ public class TransformParam extends AbstractModel {
 
     /**
      * Set 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseResult 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalyseResult(MapParam [] AnalyseResult) {
         this.AnalyseResult = AnalyseResult;
     }
 
     /**
-     * Get 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 底层引擎是否使用eb 
      * @return UseEventBus 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseEventBus() {
         return this.UseEventBus;
@@ -283,9 +270,7 @@ public class TransformParam extends AbstractModel {
 
     /**
      * Set 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseEventBus 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseEventBus(Boolean UseEventBus) {
         this.UseEventBus = UseEventBus;

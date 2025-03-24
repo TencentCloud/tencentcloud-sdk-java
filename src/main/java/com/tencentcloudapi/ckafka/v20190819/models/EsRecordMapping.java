@@ -25,7 +25,6 @@ public class EsRecordMapping extends AbstractModel {
 
     /**
     * es 索引成员名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnName")
     @Expose
@@ -33,17 +32,14 @@ public class EsRecordMapping extends AbstractModel {
 
     /**
     * 消息字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonKey")
     @Expose
     private String JsonKey;
 
     /**
-     * Get es 索引成员名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es 索引成员名称 
      * @return ColumnName es 索引成员名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnName() {
         return this.ColumnName;
@@ -51,19 +47,15 @@ public class EsRecordMapping extends AbstractModel {
 
     /**
      * Set es 索引成员名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnName es 索引成员名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnName(String ColumnName) {
         this.ColumnName = ColumnName;
     }
 
     /**
-     * Get 消息字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息字段名称 
      * @return JsonKey 消息字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJsonKey() {
         return this.JsonKey;
@@ -71,9 +63,7 @@ public class EsRecordMapping extends AbstractModel {
 
     /**
      * Set 消息字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonKey 消息字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonKey(String JsonKey) {
         this.JsonKey = JsonKey;

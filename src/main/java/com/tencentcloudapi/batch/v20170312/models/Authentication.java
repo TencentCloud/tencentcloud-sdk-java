@@ -25,7 +25,6 @@ public class Authentication extends AbstractModel {
 
     /**
     * 授权场景，例如COS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -33,7 +32,6 @@ public class Authentication extends AbstractModel {
 
     /**
     * SecretId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretId")
     @Expose
@@ -41,17 +39,14 @@ public class Authentication extends AbstractModel {
 
     /**
     * SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-     * Get 授权场景，例如COS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权场景，例如COS 
      * @return Scene 授权场景，例如COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -59,19 +54,15 @@ public class Authentication extends AbstractModel {
 
     /**
      * Set 授权场景，例如COS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 授权场景，例如COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get SecretId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SecretId 
      * @return SecretId SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretId() {
         return this.SecretId;
@@ -79,19 +70,15 @@ public class Authentication extends AbstractModel {
 
     /**
      * Set SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretId SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get SecretKey
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SecretKey 
      * @return SecretKey SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -99,9 +86,7 @@ public class Authentication extends AbstractModel {
 
     /**
      * Set SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretKey SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

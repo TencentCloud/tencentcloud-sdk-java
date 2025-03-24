@@ -38,6 +38,13 @@ public class CreateProxySessionKillTaskRequest extends AbstractModel {
     private String Product;
 
     /**
+    * 实列代理ID。
+    */
+    @SerializedName("InstanceProxyId")
+    @Expose
+    private String InstanceProxyId;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -69,6 +76,22 @@ public class CreateProxySessionKillTaskRequest extends AbstractModel {
         this.Product = Product;
     }
 
+    /**
+     * Get 实列代理ID。 
+     * @return InstanceProxyId 实列代理ID。
+     */
+    public String getInstanceProxyId() {
+        return this.InstanceProxyId;
+    }
+
+    /**
+     * Set 实列代理ID。
+     * @param InstanceProxyId 实列代理ID。
+     */
+    public void setInstanceProxyId(String InstanceProxyId) {
+        this.InstanceProxyId = InstanceProxyId;
+    }
+
     public CreateProxySessionKillTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateProxySessionKillTaskRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.InstanceProxyId != null) {
+            this.InstanceProxyId = new String(source.InstanceProxyId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateProxySessionKillTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
 
     }
 }

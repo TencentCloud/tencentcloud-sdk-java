@@ -60,6 +60,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
     * 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalableTps")
     @Expose
@@ -68,6 +69,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     /**
     * 32或者128
 当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPartitions")
     @Expose
@@ -161,8 +163,10 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 规格外弹性TPS 
+     * Get 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalableTps() {
         return this.ScalableTps;
@@ -170,7 +174,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
      * Set 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalableTps(Long ScalableTps) {
         this.ScalableTps = ScalableTps;
@@ -178,9 +184,11 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
      * Get 32或者128
-当前集群topic的最大分区数 
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxPartitions 32或者128
 当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPartitions() {
         return this.MaxPartitions;
@@ -189,8 +197,10 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     /**
      * Set 32或者128
 当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPartitions 32或者128
 当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPartitions(Long MaxPartitions) {
         this.MaxPartitions = MaxPartitions;

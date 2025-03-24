@@ -32,7 +32,6 @@ public class RowParam extends AbstractModel {
 
     /**
     * key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyValueDelimiter")
     @Expose
@@ -40,7 +39,6 @@ public class RowParam extends AbstractModel {
 
     /**
     * 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntryDelimiter")
     @Expose
@@ -63,10 +61,8 @@ public class RowParam extends AbstractModel {
     }
 
     /**
-     * Get key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key和value间的分隔符 
      * @return KeyValueDelimiter key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyValueDelimiter() {
         return this.KeyValueDelimiter;
@@ -74,19 +70,15 @@ public class RowParam extends AbstractModel {
 
     /**
      * Set key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueDelimiter key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyValueDelimiter(String KeyValueDelimiter) {
         this.KeyValueDelimiter = KeyValueDelimiter;
     }
 
     /**
-     * Get 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元素建的分隔符 
      * @return EntryDelimiter 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntryDelimiter() {
         return this.EntryDelimiter;
@@ -94,9 +86,7 @@ public class RowParam extends AbstractModel {
 
     /**
      * Set 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EntryDelimiter 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntryDelimiter(String EntryDelimiter) {
         this.EntryDelimiter = EntryDelimiter;

@@ -25,6 +25,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 最后一次间隔内发布消息的平均byte大小。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AverageMsgSize")
     @Expose
@@ -32,6 +33,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerCount")
     @Expose
@@ -39,6 +41,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastConfirmedEntry")
     @Expose
@@ -46,6 +49,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 最后一个ledger创建的时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastLedgerCreatedTimestamp")
     @Expose
@@ -53,6 +57,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 本地和复制的发布者每秒发布消息的速率。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateIn")
     @Expose
@@ -60,6 +65,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 本地和复制的消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateOut")
     @Expose
@@ -67,6 +73,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 本地和复制的发布者每秒发布消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgThroughputIn")
     @Expose
@@ -74,6 +81,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 本地和复制的消费者每秒分发消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgThroughputOut")
     @Expose
@@ -81,6 +89,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberOfEntries")
     @Expose
@@ -88,6 +97,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 子分区id。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partitions")
     @Expose
@@ -95,6 +105,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 生产者数量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProducerCount")
     @Expose
@@ -102,6 +113,7 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * 以byte计算的所有消息存储总量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalSize")
     @Expose
@@ -109,14 +121,17 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
     * topic类型描述。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicType")
     @Expose
     private Long TopicType;
 
     /**
-     * Get 最后一次间隔内发布消息的平均byte大小。 
+     * Get 最后一次间隔内发布消息的平均byte大小。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAverageMsgSize() {
         return this.AverageMsgSize;
@@ -124,15 +139,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 最后一次间隔内发布消息的平均byte大小。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAverageMsgSize(String AverageMsgSize) {
         this.AverageMsgSize = AverageMsgSize;
     }
 
     /**
-     * Get 消费者数量。 
+     * Get 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerCount 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerCount() {
         return this.ConsumerCount;
@@ -140,15 +159,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerCount 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerCount(String ConsumerCount) {
         this.ConsumerCount = ConsumerCount;
     }
 
     /**
-     * Get 被记录下来的消息总数。 
+     * Get 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastConfirmedEntry 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastConfirmedEntry() {
         return this.LastConfirmedEntry;
@@ -156,15 +179,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LastConfirmedEntry 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastConfirmedEntry(String LastConfirmedEntry) {
         this.LastConfirmedEntry = LastConfirmedEntry;
     }
 
     /**
-     * Get 最后一个ledger创建的时间。 
+     * Get 最后一个ledger创建的时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastLedgerCreatedTimestamp 最后一个ledger创建的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastLedgerCreatedTimestamp() {
         return this.LastLedgerCreatedTimestamp;
@@ -172,15 +199,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 最后一个ledger创建的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LastLedgerCreatedTimestamp 最后一个ledger创建的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastLedgerCreatedTimestamp(String LastLedgerCreatedTimestamp) {
         this.LastLedgerCreatedTimestamp = LastLedgerCreatedTimestamp;
     }
 
     /**
-     * Get 本地和复制的发布者每秒发布消息的速率。 
+     * Get 本地和复制的发布者每秒发布消息的速率。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgRateIn 本地和复制的发布者每秒发布消息的速率。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgRateIn() {
         return this.MsgRateIn;
@@ -188,15 +219,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 本地和复制的发布者每秒发布消息的速率。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateIn 本地和复制的发布者每秒发布消息的速率。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateIn(String MsgRateIn) {
         this.MsgRateIn = MsgRateIn;
     }
 
     /**
-     * Get 本地和复制的消费者每秒分发消息的数量之和。 
+     * Get 本地和复制的消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgRateOut 本地和复制的消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgRateOut() {
         return this.MsgRateOut;
@@ -204,15 +239,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 本地和复制的消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateOut 本地和复制的消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateOut(String MsgRateOut) {
         this.MsgRateOut = MsgRateOut;
     }
 
     /**
-     * Get 本地和复制的发布者每秒发布消息的byte。 
+     * Get 本地和复制的发布者每秒发布消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgThroughputIn 本地和复制的发布者每秒发布消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgThroughputIn() {
         return this.MsgThroughputIn;
@@ -220,15 +259,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 本地和复制的发布者每秒发布消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgThroughputIn 本地和复制的发布者每秒发布消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgThroughputIn(String MsgThroughputIn) {
         this.MsgThroughputIn = MsgThroughputIn;
     }
 
     /**
-     * Get 本地和复制的消费者每秒分发消息的byte。 
+     * Get 本地和复制的消费者每秒分发消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgThroughputOut 本地和复制的消费者每秒分发消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgThroughputOut() {
         return this.MsgThroughputOut;
@@ -236,15 +279,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 本地和复制的消费者每秒分发消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgThroughputOut 本地和复制的消费者每秒分发消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgThroughputOut(String MsgThroughputOut) {
         this.MsgThroughputOut = MsgThroughputOut;
     }
 
     /**
-     * Get 被记录下来的消息总数。 
+     * Get 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NumberOfEntries 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumberOfEntries() {
         return this.NumberOfEntries;
@@ -252,15 +299,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NumberOfEntries 被记录下来的消息总数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberOfEntries(String NumberOfEntries) {
         this.NumberOfEntries = NumberOfEntries;
     }
 
     /**
-     * Get 子分区id。 
+     * Get 子分区id。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Partitions 子分区id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitions() {
         return this.Partitions;
@@ -268,15 +319,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 子分区id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Partitions 子分区id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get 生产者数量。 
+     * Get 生产者数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProducerCount 生产者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProducerCount() {
         return this.ProducerCount;
@@ -284,15 +339,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 生产者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProducerCount 生产者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProducerCount(String ProducerCount) {
         this.ProducerCount = ProducerCount;
     }
 
     /**
-     * Get 以byte计算的所有消息存储总量。 
+     * Get 以byte计算的所有消息存储总量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalSize 以byte计算的所有消息存储总量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalSize() {
         return this.TotalSize;
@@ -300,15 +359,19 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set 以byte计算的所有消息存储总量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalSize 以byte计算的所有消息存储总量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalSize(String TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get topic类型描述。 
+     * Get topic类型描述。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicType topic类型描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicType() {
         return this.TopicType;
@@ -316,7 +379,9 @@ public class PartitionsTopic extends AbstractModel {
 
     /**
      * Set topic类型描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicType topic类型描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;

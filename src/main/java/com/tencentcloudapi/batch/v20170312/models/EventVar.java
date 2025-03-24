@@ -25,7 +25,6 @@ public class EventVar extends AbstractModel {
 
     /**
     * 自定义键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class EventVar extends AbstractModel {
 
     /**
     * 自定义值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 自定义键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义键 
      * @return Name 自定义键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class EventVar extends AbstractModel {
 
     /**
      * Set 自定义键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 自定义键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 自定义值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义值 
      * @return Value 自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class EventVar extends AbstractModel {
 
     /**
      * Set 自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

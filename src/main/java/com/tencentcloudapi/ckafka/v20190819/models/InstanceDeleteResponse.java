@@ -25,17 +25,14 @@ public class InstanceDeleteResponse extends AbstractModel {
 
     /**
     * 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-     * Get 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除实例返回的任务Id 
      * @return FlowId 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -43,9 +40,7 @@ public class InstanceDeleteResponse extends AbstractModel {
 
     /**
      * Set 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -25,7 +25,6 @@ public class MetricLabel extends AbstractModel {
 
     /**
     * 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class MetricLabel extends AbstractModel {
 
     /**
     * 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 指标名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标名称 
      * @return Key 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class MetricLabel extends AbstractModel {
 
     /**
      * Set 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 指标内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标内容 
      * @return Value 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class MetricLabel extends AbstractModel {
 
     /**
      * Set 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

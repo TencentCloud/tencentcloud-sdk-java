@@ -39,6 +39,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者开始连接的时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectedSince")
     @Expose
@@ -46,6 +47,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerAddr")
     @Expose
@@ -53,6 +55,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerCount")
     @Expose
@@ -60,6 +63,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerName")
     @Expose
@@ -67,6 +71,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 堆积的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgBacklog")
     @Expose
@@ -74,6 +79,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 于TTL，此订阅下没有被发送而是被丢弃的比例。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateExpired")
     @Expose
@@ -81,6 +87,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRateOut")
     @Expose
@@ -88,6 +95,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者每秒消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgThroughputOut")
     @Expose
@@ -95,6 +103,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 订阅名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -102,6 +111,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费者集合。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerSets")
     @Expose
@@ -109,6 +119,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 是否在线。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOnline")
     @Expose
@@ -116,6 +127,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 消费进度集合。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumersScheduleSets")
     @Expose
@@ -123,6 +135,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 备注。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -130,6 +143,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -137,6 +151,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -144,6 +159,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -151,6 +167,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockedSubscriptionOnUnackedMsgs")
     @Expose
@@ -158,6 +175,7 @@ public class Subscription extends AbstractModel {
 
     /**
     * 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxUnackedMsgNum")
     @Expose
@@ -196,8 +214,10 @@ public class Subscription extends AbstractModel {
     }
 
     /**
-     * Get 消费者开始连接的时间。 
+     * Get 消费者开始连接的时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConnectedSince 消费者开始连接的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectedSince() {
         return this.ConnectedSince;
@@ -205,15 +225,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者开始连接的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectedSince 消费者开始连接的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectedSince(String ConnectedSince) {
         this.ConnectedSince = ConnectedSince;
     }
 
     /**
-     * Get 消费者地址。 
+     * Get 消费者地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerAddr 消费者地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerAddr() {
         return this.ConsumerAddr;
@@ -221,15 +245,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerAddr 消费者地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerAddr(String ConsumerAddr) {
         this.ConsumerAddr = ConsumerAddr;
     }
 
     /**
-     * Get 消费者数量。 
+     * Get 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerCount 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerCount() {
         return this.ConsumerCount;
@@ -237,15 +265,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerCount 消费者数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerCount(String ConsumerCount) {
         this.ConsumerCount = ConsumerCount;
     }
 
     /**
-     * Get 消费者名称。 
+     * Get 消费者名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerName 消费者名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerName() {
         return this.ConsumerName;
@@ -253,15 +285,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerName 消费者名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerName(String ConsumerName) {
         this.ConsumerName = ConsumerName;
     }
 
     /**
-     * Get 堆积的消息数量。 
+     * Get 堆积的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgBacklog 堆积的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgBacklog() {
         return this.MsgBacklog;
@@ -269,15 +305,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 堆积的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgBacklog 堆积的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgBacklog(String MsgBacklog) {
         this.MsgBacklog = MsgBacklog;
     }
 
     /**
-     * Get 于TTL，此订阅下没有被发送而是被丢弃的比例。 
+     * Get 于TTL，此订阅下没有被发送而是被丢弃的比例。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgRateExpired 于TTL，此订阅下没有被发送而是被丢弃的比例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgRateExpired() {
         return this.MsgRateExpired;
@@ -285,15 +325,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 于TTL，此订阅下没有被发送而是被丢弃的比例。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateExpired 于TTL，此订阅下没有被发送而是被丢弃的比例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateExpired(String MsgRateExpired) {
         this.MsgRateExpired = MsgRateExpired;
     }
 
     /**
-     * Get 消费者每秒分发消息的数量之和。 
+     * Get 消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgRateOut 消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgRateOut() {
         return this.MsgRateOut;
@@ -301,15 +345,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgRateOut 消费者每秒分发消息的数量之和。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRateOut(String MsgRateOut) {
         this.MsgRateOut = MsgRateOut;
     }
 
     /**
-     * Get 消费者每秒消息的byte。 
+     * Get 消费者每秒消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MsgThroughputOut 消费者每秒消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsgThroughputOut() {
         return this.MsgThroughputOut;
@@ -317,15 +365,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者每秒消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgThroughputOut 消费者每秒消息的byte。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgThroughputOut(String MsgThroughputOut) {
         this.MsgThroughputOut = MsgThroughputOut;
     }
 
     /**
-     * Get 订阅名称。 
+     * Get 订阅名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubscriptionName 订阅名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
@@ -333,15 +385,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 订阅名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionName 订阅名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;
     }
 
     /**
-     * Get 消费者集合。 
+     * Get 消费者集合。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumerSets 消费者集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Consumer [] getConsumerSets() {
         return this.ConsumerSets;
@@ -349,15 +405,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费者集合。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumerSets 消费者集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerSets(Consumer [] ConsumerSets) {
         this.ConsumerSets = ConsumerSets;
     }
 
     /**
-     * Get 是否在线。 
+     * Get 是否在线。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsOnline 是否在线。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsOnline() {
         return this.IsOnline;
@@ -365,15 +425,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 是否在线。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsOnline 是否在线。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOnline(Boolean IsOnline) {
         this.IsOnline = IsOnline;
     }
 
     /**
-     * Get 消费进度集合。 
+     * Get 消费进度集合。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumersScheduleSets 消费进度集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumersSchedule [] getConsumersScheduleSets() {
         return this.ConsumersScheduleSets;
@@ -381,15 +445,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 消费进度集合。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumersScheduleSets 消费进度集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumersScheduleSets(ConsumersSchedule [] ConsumersScheduleSets) {
         this.ConsumersScheduleSets = ConsumersScheduleSets;
     }
 
     /**
-     * Get 备注。 
+     * Get 备注。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 备注。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -397,15 +465,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 备注。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 创建时间。 
+     * Get 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -413,15 +485,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近修改时间。 
+     * Get 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -429,15 +505,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知， 
+     * Get 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -445,15 +525,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 是否由于未 ack 数到达上限而被 block 
+     * Get 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBlockedSubscriptionOnUnackedMsgs() {
         return this.BlockedSubscriptionOnUnackedMsgs;
@@ -461,15 +545,19 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockedSubscriptionOnUnackedMsgs(Boolean BlockedSubscriptionOnUnackedMsgs) {
         this.BlockedSubscriptionOnUnackedMsgs = BlockedSubscriptionOnUnackedMsgs;
     }
 
     /**
-     * Get 未 ack 消息数上限 
+     * Get 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxUnackedMsgNum 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxUnackedMsgNum() {
         return this.MaxUnackedMsgNum;
@@ -477,7 +565,9 @@ public class Subscription extends AbstractModel {
 
     /**
      * Set 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxUnackedMsgNum 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
         this.MaxUnackedMsgNum = MaxUnackedMsgNum;

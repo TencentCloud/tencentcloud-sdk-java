@@ -46,7 +46,6 @@ public class SMTParam extends AbstractModel {
 
     /**
     * 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -54,7 +53,6 @@ public class SMTParam extends AbstractModel {
 
     /**
     * VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueOperate")
     @Expose
@@ -62,7 +60,6 @@ public class SMTParam extends AbstractModel {
 
     /**
     * 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalValue")
     @Expose
@@ -70,7 +67,6 @@ public class SMTParam extends AbstractModel {
 
     /**
     * VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueOperates")
     @Expose
@@ -125,10 +121,8 @@ public class SMTParam extends AbstractModel {
     }
 
     /**
-     * Get 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据处理VALUE 
      * @return Value 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -136,19 +130,15 @@ public class SMTParam extends AbstractModel {
 
     /**
      * Set 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VALUE处理 
      * @return ValueOperate VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueParam getValueOperate() {
         return this.ValueOperate;
@@ -156,19 +146,15 @@ public class SMTParam extends AbstractModel {
 
     /**
      * Set VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueOperate VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueOperate(ValueParam ValueOperate) {
         this.ValueOperate = ValueOperate;
     }
 
     /**
-     * Get 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始VALUE 
      * @return OriginalValue 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalValue() {
         return this.OriginalValue;
@@ -176,19 +162,15 @@ public class SMTParam extends AbstractModel {
 
     /**
      * Set 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalValue 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalValue(String OriginalValue) {
         this.OriginalValue = OriginalValue;
     }
 
     /**
-     * Get VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VALUE处理链 
      * @return ValueOperates VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueParam [] getValueOperates() {
         return this.ValueOperates;
@@ -196,9 +178,7 @@ public class SMTParam extends AbstractModel {
 
     /**
      * Set VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueOperates VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueOperates(ValueParam [] ValueOperates) {
         this.ValueOperates = ValueOperates;

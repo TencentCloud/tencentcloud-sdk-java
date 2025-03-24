@@ -25,7 +25,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -33,7 +32,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -41,7 +39,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -49,7 +46,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -57,7 +53,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -65,7 +60,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * MySQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -81,7 +75,6 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * 当type为TDSQL_C_MYSQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -89,17 +82,14 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
     * Mysql 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-     * Get MySQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL的连接port 
      * @return Port MySQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -107,19 +97,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port MySQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL连接源的用户名 
      * @return UserName MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -127,19 +113,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL连接源的密码 
      * @return Password MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -147,19 +129,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get MySQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL连接源的实例资源 
      * @return Resource MySQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -167,19 +145,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource MySQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MySQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL连接源的实例vip，当为腾讯云实例时，必填 
      * @return ServiceVip MySQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -187,19 +161,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip MySQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get MySQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MySQL连接源的vpcId，当为腾讯云实例时，必填 
      * @return UniqVpcId MySQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -207,9 +177,7 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set MySQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId MySQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
@@ -236,10 +204,8 @@ public class MySQLConnectParam extends AbstractModel {
     }
 
     /**
-     * Get 当type为TDSQL_C_MYSQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当type为TDSQL_C_MYSQL时，必填 
      * @return ClusterId 当type为TDSQL_C_MYSQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -247,19 +213,15 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set 当type为TDSQL_C_MYSQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 当type为TDSQL_C_MYSQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Mysql 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Mysql 连接源是否为自建集群 
      * @return SelfBuilt Mysql 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -267,9 +229,7 @@ public class MySQLConnectParam extends AbstractModel {
 
     /**
      * Set Mysql 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt Mysql 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;

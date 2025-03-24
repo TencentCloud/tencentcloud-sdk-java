@@ -53,7 +53,6 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
     * 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginOffset")
     @Expose
@@ -61,7 +60,6 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
     * 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndOffset")
     @Expose
@@ -69,7 +67,6 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
     * 消息数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageCount")
     @Expose
@@ -77,7 +74,6 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
     * 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutOfSyncReplica")
     @Expose
@@ -148,10 +144,8 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
     }
 
     /**
-     * Get 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始Offset 
      * @return BeginOffset 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBeginOffset() {
         return this.BeginOffset;
@@ -159,19 +153,15 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
      * Set 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginOffset 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginOffset(Long BeginOffset) {
         this.BeginOffset = BeginOffset;
     }
 
     /**
-     * Get 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 末端Offset 
      * @return EndOffset 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndOffset() {
         return this.EndOffset;
@@ -179,19 +169,15 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
      * Set 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndOffset 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndOffset(Long EndOffset) {
         this.EndOffset = EndOffset;
     }
 
     /**
-     * Get 消息数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息数 
      * @return MessageCount 消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageCount() {
         return this.MessageCount;
@@ -199,19 +185,15 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
      * Set 消息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageCount 消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageCount(Long MessageCount) {
         this.MessageCount = MessageCount;
     }
 
     /**
-     * Get 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未同步副本集 
      * @return OutOfSyncReplica 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutOfSyncReplica() {
         return this.OutOfSyncReplica;
@@ -219,9 +201,7 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
 
     /**
      * Set 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutOfSyncReplica 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutOfSyncReplica(String OutOfSyncReplica) {
         this.OutOfSyncReplica = OutOfSyncReplica;

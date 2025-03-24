@@ -25,7 +25,6 @@ public class SQLServerParam extends AbstractModel {
 
     /**
     * SQLServer的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -33,7 +32,6 @@ public class SQLServerParam extends AbstractModel {
 
     /**
     * SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -41,7 +39,6 @@ public class SQLServerParam extends AbstractModel {
 
     /**
     * 该SQLServer在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -49,17 +46,14 @@ public class SQLServerParam extends AbstractModel {
 
     /**
     * 复制存量信息(schema_only增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotMode")
     @Expose
     private String SnapshotMode;
 
     /**
-     * Get SQLServer的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer的数据库名称 
      * @return Database SQLServer的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -67,19 +61,15 @@ public class SQLServerParam extends AbstractModel {
 
     /**
      * Set SQLServer的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database SQLServer的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写 
      * @return Table SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -87,19 +77,15 @@ public class SQLServerParam extends AbstractModel {
 
     /**
      * Set SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 该SQLServer在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该SQLServer在连接管理内的Id 
      * @return Resource 该SQLServer在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -107,19 +93,15 @@ public class SQLServerParam extends AbstractModel {
 
     /**
      * Set 该SQLServer在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 该SQLServer在连接管理内的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 复制存量信息(schema_only增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复制存量信息(schema_only增量, initial全量)，默认为initial 
      * @return SnapshotMode 复制存量信息(schema_only增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotMode() {
         return this.SnapshotMode;
@@ -127,9 +109,7 @@ public class SQLServerParam extends AbstractModel {
 
     /**
      * Set 复制存量信息(schema_only增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotMode 复制存量信息(schema_only增量, initial全量)，默认为initial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotMode(String SnapshotMode) {
         this.SnapshotMode = SnapshotMode;

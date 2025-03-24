@@ -56,6 +56,13 @@ public class ProdSchedulerTask extends AbstractModel {
     private Long CycleType;
 
     /**
+    * 生产任务类型
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 生产调度任务工作流ID
@@ -135,6 +142,22 @@ public class ProdSchedulerTask extends AbstractModel {
         this.CycleType = CycleType;
     }
 
+    /**
+     * Get 生产任务类型 
+     * @return TaskType 生产任务类型
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 生产任务类型
+     * @param TaskType 生产任务类型
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public ProdSchedulerTask() {
     }
 
@@ -155,6 +178,9 @@ public class ProdSchedulerTask extends AbstractModel {
         if (source.CycleType != null) {
             this.CycleType = new Long(source.CycleType);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class ProdSchedulerTask extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "CycleType", this.CycleType);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

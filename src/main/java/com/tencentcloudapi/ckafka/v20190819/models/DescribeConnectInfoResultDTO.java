@@ -41,7 +41,6 @@ public class DescribeConnectInfoResultDTO extends AbstractModel {
 
     /**
     * 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUnSupportVersion")
     @Expose
@@ -88,10 +87,8 @@ public class DescribeConnectInfoResultDTO extends AbstractModel {
     }
 
     /**
-     * Get 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持的版本 
      * @return IsUnSupportVersion 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUnSupportVersion() {
         return this.IsUnSupportVersion;
@@ -99,9 +96,7 @@ public class DescribeConnectInfoResultDTO extends AbstractModel {
 
     /**
      * Set 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUnSupportVersion 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUnSupportVersion(Boolean IsUnSupportVersion) {
         this.IsUnSupportVersion = IsUnSupportVersion;

@@ -25,7 +25,6 @@ public class DealInstanceDTO extends AbstractModel {
 
     /**
     * 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
     @Expose
@@ -33,17 +32,14 @@ public class DealInstanceDTO extends AbstractModel {
 
     /**
     * 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-     * Get 订单流水
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单流水 
      * @return DealName 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
         return this.DealName;
@@ -51,19 +47,15 @@ public class DealInstanceDTO extends AbstractModel {
 
     /**
      * Set 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealName 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单流水对应购买的 CKafka 实例 id 列表 
      * @return InstanceIdList 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
@@ -71,9 +63,7 @@ public class DealInstanceDTO extends AbstractModel {
 
     /**
      * Set 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIdList 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;

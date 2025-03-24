@@ -25,7 +25,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,7 +32,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -41,7 +39,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -49,7 +46,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -57,7 +53,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -65,7 +60,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -73,7 +67,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
@@ -81,7 +74,6 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
@@ -89,17 +81,14 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
     * Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BePort")
     @Expose
     private Long BePort;
 
     /**
-     * Get Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源的实例资源 
      * @return Resource Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -107,19 +96,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口 
      * @return Port Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -127,19 +112,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源的实例vip，当为腾讯云实例时，必填 
      * @return ServiceVip Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -147,19 +128,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源的vpcId，当为腾讯云实例时，必填 
      * @return UniqVpcId Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -167,19 +144,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源的用户名 
      * @return UserName Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -187,19 +160,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源的密码 
      * @return Password Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -207,19 +176,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否更新到关联的Datahub任务 
      * @return IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -227,19 +192,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;
     }
 
     /**
-     * Get Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 连接源是否为自建集群 
      * @return SelfBuilt Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -247,19 +208,15 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口 
      * @return BePort Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBePort() {
         return this.BePort;
@@ -267,9 +224,7 @@ public class DorisModifyConnectParam extends AbstractModel {
 
     /**
      * Set Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BePort Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBePort(Long BePort) {
         this.BePort = BePort;
