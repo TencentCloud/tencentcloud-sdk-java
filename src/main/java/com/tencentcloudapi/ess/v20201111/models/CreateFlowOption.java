@@ -112,12 +112,22 @@ public class CreateFlowOption extends AbstractModel {
     private String CustomCreateFlowDescription;
 
     /**
-    *   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+    *  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
     */
     @SerializedName("ForbidAddApprover")
     @Expose
     private Boolean ForbidAddApprover;
+
+    /**
+    * 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+    */
+    @SerializedName("ForbidEditApprover")
+    @Expose
+    private Boolean ForbidEditApprover;
 
     /**
     *   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
@@ -453,9 +463,9 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * Get  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
  
-     * @return ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * @return ForbidAddApprover  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
      */
     public Boolean getForbidAddApprover() {
@@ -463,13 +473,41 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Set   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * Set  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
-     * @param ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * @param ForbidAddApprover  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
      */
     public void setForbidAddApprover(Boolean ForbidAddApprover) {
         this.ForbidAddApprover = ForbidAddApprover;
+    }
+
+    /**
+     * Get 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空 
+     * @return ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     */
+    public Boolean getForbidEditApprover() {
+        return this.ForbidEditApprover;
+    }
+
+    /**
+     * Set 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     * @param ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     */
+    public void setForbidEditApprover(Boolean ForbidEditApprover) {
+        this.ForbidEditApprover = ForbidEditApprover;
     }
 
     /**
@@ -806,6 +844,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.ForbidAddApprover != null) {
             this.ForbidAddApprover = new Boolean(source.ForbidAddApprover);
         }
+        if (source.ForbidEditApprover != null) {
+            this.ForbidEditApprover = new Boolean(source.ForbidEditApprover);
+        }
         if (source.ForbidEditFlowProperties != null) {
             this.ForbidEditFlowProperties = new Boolean(source.ForbidEditFlowProperties);
         }
@@ -847,6 +888,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
         this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
         this.setParamSimple(map, prefix + "ForbidAddApprover", this.ForbidAddApprover);
+        this.setParamSimple(map, prefix + "ForbidEditApprover", this.ForbidEditApprover);
         this.setParamSimple(map, prefix + "ForbidEditFlowProperties", this.ForbidEditFlowProperties);
         this.setParamArraySimple(map, prefix + "HideComponentTypes.", this.HideComponentTypes);
         this.setParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);

@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class AddProjectUserRoleRequest extends AbstractModel {
 
+    /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 用户uin
+    */
+    @SerializedName("UserIds")
+    @Expose
+    private String [] UserIds;
+
+    /**
+    * 角色id
+    */
+    @SerializedName("RoleIds")
+    @Expose
+    private String [] RoleIds;
+
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 用户uin 
+     * @return UserIds 用户uin
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set 用户uin
+     * @param UserIds 用户uin
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
+    /**
+     * Get 角色id 
+     * @return RoleIds 角色id
+     */
+    public String [] getRoleIds() {
+        return this.RoleIds;
+    }
+
+    /**
+     * Set 角色id
+     * @param RoleIds 角色id
+     */
+    public void setRoleIds(String [] RoleIds) {
+        this.RoleIds = RoleIds;
+    }
+
     public AddProjectUserRoleRequest() {
     }
 
@@ -31,6 +100,21 @@ public class AddProjectUserRoleRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddProjectUserRoleRequest(AddProjectUserRoleRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
+        if (source.RoleIds != null) {
+            this.RoleIds = new String[source.RoleIds.length];
+            for (int i = 0; i < source.RoleIds.length; i++) {
+                this.RoleIds[i] = new String(source.RoleIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +122,9 @@ public class AddProjectUserRoleRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
 
     }
 }

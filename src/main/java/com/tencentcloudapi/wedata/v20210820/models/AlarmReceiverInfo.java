@@ -96,6 +96,14 @@ public class AlarmReceiverInfo extends AbstractModel {
     private Long LarkGroup;
 
     /**
+    * 发送结果 大json格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmMessageSendResult")
+    @Expose
+    private String AlarmMessageSendResult;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -263,6 +271,26 @@ public class AlarmReceiverInfo extends AbstractModel {
         this.LarkGroup = LarkGroup;
     }
 
+    /**
+     * Get 发送结果 大json格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmMessageSendResult 发送结果 大json格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmMessageSendResult() {
+        return this.AlarmMessageSendResult;
+    }
+
+    /**
+     * Set 发送结果 大json格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmMessageSendResult 发送结果 大json格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmMessageSendResult(String AlarmMessageSendResult) {
+        this.AlarmMessageSendResult = AlarmMessageSendResult;
+    }
+
     public AlarmReceiverInfo() {
     }
 
@@ -301,6 +329,9 @@ public class AlarmReceiverInfo extends AbstractModel {
         if (source.LarkGroup != null) {
             this.LarkGroup = new Long(source.LarkGroup);
         }
+        if (source.AlarmMessageSendResult != null) {
+            this.AlarmMessageSendResult = new String(source.AlarmMessageSendResult);
+        }
     }
 
 
@@ -318,6 +349,7 @@ public class AlarmReceiverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Http", this.Http);
         this.setParamSimple(map, prefix + "WecomGroup", this.WecomGroup);
         this.setParamSimple(map, prefix + "LarkGroup", this.LarkGroup);
+        this.setParamSimple(map, prefix + "AlarmMessageSendResult", this.AlarmMessageSendResult);
 
     }
 }

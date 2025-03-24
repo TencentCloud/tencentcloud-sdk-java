@@ -46,7 +46,6 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
     * 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniAppTestAccount")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
     * 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniAppTestPwd")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
     * 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanVersion")
     @Expose
@@ -124,10 +121,8 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
     }
 
     /**
-     * Get 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序测试账号(自有账号体系需提供,其他情况不需要) 
      * @return MiniAppTestAccount 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniAppTestAccount() {
         return this.MiniAppTestAccount;
@@ -135,19 +130,15 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
      * Set 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniAppTestAccount 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniAppTestAccount(String MiniAppTestAccount) {
         this.MiniAppTestAccount = MiniAppTestAccount;
     }
 
     /**
-     * Get 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序测试密码(自有账号体系需提供,其他情况不需要) 
      * @return MiniAppTestPwd 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniAppTestPwd() {
         return this.MiniAppTestPwd;
@@ -155,19 +146,15 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
      * Set 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniAppTestPwd 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniAppTestPwd(String MiniAppTestPwd) {
         this.MiniAppTestPwd = MiniAppTestPwd;
     }
 
     /**
-     * Get 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断扫描版本 0:正式版 1:体验版 
      * @return ScanVersion 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanVersion() {
         return this.ScanVersion;
@@ -175,9 +162,7 @@ public class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel {
 
     /**
      * Set 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanVersion 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanVersion(Long ScanVersion) {
         this.ScanVersion = ScanVersion;

@@ -25,7 +25,6 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
     * 符合条件的审计日志文件个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
     * 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的审计日志文件个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的审计日志文件个数。 
      * @return TotalCount 符合条件的审计日志文件个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
      * Set 符合条件的审计日志文件个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的审计日志文件个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计日志文件详情。 
      * @return Items 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditLogFile [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
      * Set 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(AuditLogFile [] Items) {
         this.Items = Items;

@@ -45,8 +45,7 @@ public class MQTTInstanceItem extends AbstractModel {
     private String Version;
 
     /**
-    * 实例类型，
-EXPERIMENT，体验版
+    * 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -108,7 +107,7 @@ DELETING，删除中
     private Long TpsLimit;
 
     /**
-    * 创建时间
+    * 创建时间，毫秒级时间戳
     */
     @SerializedName("CreateTime")
     @Expose
@@ -129,7 +128,9 @@ DELETING，删除中
     private Long ClientNumLimit;
 
     /**
-    * 是否自动续费
+    * 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -143,14 +144,14 @@ DELETING，删除中
     private String PayMode;
 
     /**
-    * 到期时间，秒为单位
+    * 到期时间，毫秒级时间戳
     */
     @SerializedName("ExpiryTime")
     @Expose
     private Long ExpiryTime;
 
     /**
-    * 预销毁时间
+    * 预销毁时间，毫秒级时间戳
     */
     @SerializedName("DestroyTime")
     @Expose
@@ -226,13 +227,11 @@ DELETING，删除中
     }
 
     /**
-     * Get 实例类型，
-EXPERIMENT，体验版
+     * Get 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版 
-     * @return InstanceType 实例类型，
-EXPERIMENT，体验版
+     * @return InstanceType 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -242,13 +241,11 @@ PLATINUM，铂金版
     }
 
     /**
-     * Set 实例类型，
-EXPERIMENT，体验版
+     * Set 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
-     * @param InstanceType 实例类型，
-EXPERIMENT，体验版
+     * @param InstanceType 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -394,16 +391,16 @@ DELETING，删除中
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间，毫秒级时间戳 
+     * @return CreateTime 创建时间，毫秒级时间戳
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间，毫秒级时间戳
+     * @param CreateTime 创建时间，毫秒级时间戳
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -442,16 +439,24 @@ DELETING，删除中
     }
 
     /**
-     * Get 是否自动续费 
-     * @return RenewFlag 是否自动续费
+     * Get 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费 
+     * @return RenewFlag 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-     * @param RenewFlag 是否自动续费
+     * Set 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
+     * @param RenewFlag 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -474,32 +479,32 @@ DELETING，删除中
     }
 
     /**
-     * Get 到期时间，秒为单位 
-     * @return ExpiryTime 到期时间，秒为单位
+     * Get 到期时间，毫秒级时间戳 
+     * @return ExpiryTime 到期时间，毫秒级时间戳
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
     }
 
     /**
-     * Set 到期时间，秒为单位
-     * @param ExpiryTime 到期时间，秒为单位
+     * Set 到期时间，毫秒级时间戳
+     * @param ExpiryTime 到期时间，毫秒级时间戳
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
     }
 
     /**
-     * Get 预销毁时间 
-     * @return DestroyTime 预销毁时间
+     * Get 预销毁时间，毫秒级时间戳 
+     * @return DestroyTime 预销毁时间，毫秒级时间戳
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set 预销毁时间
-     * @param DestroyTime 预销毁时间
+     * Set 预销毁时间，毫秒级时间戳
+     * @param DestroyTime 预销毁时间，毫秒级时间戳
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;

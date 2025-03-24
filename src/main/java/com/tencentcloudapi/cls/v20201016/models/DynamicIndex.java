@@ -25,17 +25,14 @@ public class DynamicIndex extends AbstractModel {
 
     /**
     * 键值索引自动配置开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-     * Get 键值索引自动配置开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 键值索引自动配置开关 
      * @return Status 键值索引自动配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStatus() {
         return this.Status;
@@ -43,9 +40,7 @@ public class DynamicIndex extends AbstractModel {
 
     /**
      * Set 键值索引自动配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 键值索引自动配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSimpleInstancesResponse extends AbstractModel {
 
     /**
-    * 1
+    * 集群列表总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 1
+    * 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancesList")
@@ -40,7 +40,7 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     private InstanceSimpleInfoNew [] InstancesList;
 
     /**
-    * -
+    * 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
@@ -55,9 +55,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1
+     * Get 集群列表总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 1
+     * @return TotalCount 集群列表总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -65,9 +65,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 集群列表总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 1
+     * @param TotalCount 集群列表总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -75,9 +75,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstancesList 1
+     * @return InstancesList 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceSimpleInfoNew [] getInstancesList() {
@@ -85,9 +85,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstancesList 1
+     * @param InstancesList 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancesList(InstanceSimpleInfoNew [] InstancesList) {
@@ -95,9 +95,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 错误信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMsg -
+     * @return ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
@@ -105,9 +105,9 @@ public class DescribeSimpleInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMsg -
+     * @param ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {

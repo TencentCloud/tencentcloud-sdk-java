@@ -45,14 +45,14 @@ public class DescribeRepositoriesRequest extends AbstractModel {
     private String RepositoryName;
 
     /**
-    * 页数，用于分页
+    * 页数，第几页，用于分页
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页个数，用于分页
+    * 每页个数，用于分页，最大值为100
     */
     @SerializedName("Limit")
     @Expose
@@ -114,32 +114,32 @@ public class DescribeRepositoriesRequest extends AbstractModel {
     }
 
     /**
-     * Get 页数，用于分页 
-     * @return Offset 页数，用于分页
+     * Get 页数，第几页，用于分页 
+     * @return Offset 页数，第几页，用于分页
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页数，用于分页
-     * @param Offset 页数，用于分页
+     * Set 页数，第几页，用于分页
+     * @param Offset 页数，第几页，用于分页
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页个数，用于分页 
-     * @return Limit 每页个数，用于分页
+     * Get 每页个数，用于分页，最大值为100 
+     * @return Limit 每页个数，用于分页，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页个数，用于分页
-     * @param Limit 每页个数，用于分页
+     * Set 每页个数，用于分页，最大值为100
+     * @param Limit 每页个数，用于分页，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

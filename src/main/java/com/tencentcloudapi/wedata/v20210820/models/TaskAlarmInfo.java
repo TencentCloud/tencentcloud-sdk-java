@@ -288,6 +288,14 @@ public class TaskAlarmInfo extends AbstractModel {
     private Long BusinessType;
 
     /**
+    * alarm message rule
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmMessageRule")
+    @Expose
+    private String AlarmMessageRule;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -935,6 +943,26 @@ public class TaskAlarmInfo extends AbstractModel {
         this.BusinessType = BusinessType;
     }
 
+    /**
+     * Get alarm message rule
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmMessageRule alarm message rule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmMessageRule() {
+        return this.AlarmMessageRule;
+    }
+
+    /**
+     * Set alarm message rule
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmMessageRule alarm message rule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmMessageRule(String AlarmMessageRule) {
+        this.AlarmMessageRule = AlarmMessageRule;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -1054,6 +1082,9 @@ public class TaskAlarmInfo extends AbstractModel {
         if (source.BusinessType != null) {
             this.BusinessType = new Long(source.BusinessType);
         }
+        if (source.AlarmMessageRule != null) {
+            this.AlarmMessageRule = new String(source.AlarmMessageRule);
+        }
     }
 
 
@@ -1095,6 +1126,7 @@ public class TaskAlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
         this.setParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
 
     }
 }

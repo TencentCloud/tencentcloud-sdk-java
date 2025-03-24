@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeSimpleInstancesRequest extends AbstractModel {
 
     /**
-    * 11
+    * 用集群id搜索
     */
     @SerializedName("SearchInstanceId")
     @Expose
     private String SearchInstanceId;
 
     /**
-    * 11
+    * 用集群名字搜索
     */
     @SerializedName("SearchInstanceName")
     @Expose
     private String SearchInstanceName;
 
     /**
-    * 11
+    * 分页参数，第一页为0，第二页为10
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 11
+    * 分页参数，分页步长，默认为10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 11
+    * 用标签列表搜索
     */
     @SerializedName("SearchTags")
     @Expose
     private String [] SearchTags;
 
     /**
-     * Get 11 
-     * @return SearchInstanceId 11
+     * Get 用集群id搜索 
+     * @return SearchInstanceId 用集群id搜索
      */
     public String getSearchInstanceId() {
         return this.SearchInstanceId;
     }
 
     /**
-     * Set 11
-     * @param SearchInstanceId 11
+     * Set 用集群id搜索
+     * @param SearchInstanceId 用集群id搜索
      */
     public void setSearchInstanceId(String SearchInstanceId) {
         this.SearchInstanceId = SearchInstanceId;
     }
 
     /**
-     * Get 11 
-     * @return SearchInstanceName 11
+     * Get 用集群名字搜索 
+     * @return SearchInstanceName 用集群名字搜索
      */
     public String getSearchInstanceName() {
         return this.SearchInstanceName;
     }
 
     /**
-     * Set 11
-     * @param SearchInstanceName 11
+     * Set 用集群名字搜索
+     * @param SearchInstanceName 用集群名字搜索
      */
     public void setSearchInstanceName(String SearchInstanceName) {
         this.SearchInstanceName = SearchInstanceName;
     }
 
     /**
-     * Get 11 
-     * @return Offset 11
+     * Get 分页参数，第一页为0，第二页为10 
+     * @return Offset 分页参数，第一页为0，第二页为10
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 11
-     * @param Offset 11
+     * Set 分页参数，第一页为0，第二页为10
+     * @param Offset 分页参数，第一页为0，第二页为10
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 11 
-     * @return Limit 11
+     * Get 分页参数，分页步长，默认为10 
+     * @return Limit 分页参数，分页步长，默认为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 11
-     * @param Limit 11
+     * Set 分页参数，分页步长，默认为10
+     * @param Limit 分页参数，分页步长，默认为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 11 
-     * @return SearchTags 11
+     * Get 用标签列表搜索 
+     * @return SearchTags 用标签列表搜索
      */
     public String [] getSearchTags() {
         return this.SearchTags;
     }
 
     /**
-     * Set 11
-     * @param SearchTags 11
+     * Set 用标签列表搜索
+     * @param SearchTags 用标签列表搜索
      */
     public void setSearchTags(String [] SearchTags) {
         this.SearchTags = SearchTags;

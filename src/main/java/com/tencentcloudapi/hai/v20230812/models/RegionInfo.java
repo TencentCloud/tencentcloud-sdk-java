@@ -26,7 +26,6 @@ public class RegionInfo extends AbstractModel {
     /**
     * ap-guangzhou
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -34,7 +33,6 @@ public class RegionInfo extends AbstractModel {
 
     /**
     * 华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -44,7 +42,6 @@ public class RegionInfo extends AbstractModel {
     * 地域是否可用状态
 AVAILABLE：可用
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionState")
     @Expose
@@ -53,7 +50,6 @@ AVAILABLE：可用
     /**
     * 学术加速是否支持：
 NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScholarRocketSupportState")
     @Expose
@@ -61,11 +57,9 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
 
     /**
      * Get ap-guangzhou
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Region ap-guangzhou
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -74,20 +68,16 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
     /**
      * Set ap-guangzhou
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region ap-guangzhou
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 华南地区(广州) 
      * @return RegionName 华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -95,9 +85,7 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
 
     /**
      * Set 华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 华南地区(广州)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -106,12 +94,10 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
     /**
      * Get 地域是否可用状态
 AVAILABLE：可用
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return RegionState 地域是否可用状态
 AVAILABLE：可用
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionState() {
         return this.RegionState;
@@ -121,11 +107,9 @@ AVAILABLE：可用
      * Set 地域是否可用状态
 AVAILABLE：可用
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionState 地域是否可用状态
 AVAILABLE：可用
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionState(String RegionState) {
         this.RegionState = RegionState;
@@ -133,11 +117,9 @@ AVAILABLE：可用
 
     /**
      * Get 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭 
      * @return ScholarRocketSupportState 学术加速是否支持：
 NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScholarRocketSupportState() {
         return this.ScholarRocketSupportState;
@@ -146,10 +128,8 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
     /**
      * Set 学术加速是否支持：
 NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScholarRocketSupportState 学术加速是否支持：
 NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScholarRocketSupportState(String ScholarRocketSupportState) {
         this.ScholarRocketSupportState = ScholarRocketSupportState;

@@ -25,7 +25,6 @@ public class NetworkStatus extends AbstractModel {
 
     /**
     * HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,7 +48,6 @@ public class NetworkStatus extends AbstractModel {
 
     /**
     * 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTrafficAmount")
     @Expose
@@ -57,17 +55,14 @@ public class NetworkStatus extends AbstractModel {
 
     /**
     * 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainingTrafficAmount")
     @Expose
     private Float RemainingTrafficAmount;
 
     /**
-     * Get HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HAI 的实例 ID 
      * @return InstanceId HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -75,9 +70,7 @@ public class NetworkStatus extends AbstractModel {
 
     /**
      * Set HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -124,10 +117,8 @@ public class NetworkStatus extends AbstractModel {
     }
 
     /**
-     * Get 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包总量，单位GB 
      * @return TotalTrafficAmount 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalTrafficAmount() {
         return this.TotalTrafficAmount;
@@ -135,19 +126,15 @@ public class NetworkStatus extends AbstractModel {
 
     /**
      * Set 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalTrafficAmount 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTrafficAmount(Float TotalTrafficAmount) {
         this.TotalTrafficAmount = TotalTrafficAmount;
     }
 
     /**
-     * Get 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量包剩余量，单位GB 
      * @return RemainingTrafficAmount 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRemainingTrafficAmount() {
         return this.RemainingTrafficAmount;
@@ -155,9 +142,7 @@ public class NetworkStatus extends AbstractModel {
 
     /**
      * Set 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainingTrafficAmount 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainingTrafficAmount(Float RemainingTrafficAmount) {
         this.RemainingTrafficAmount = RemainingTrafficAmount;

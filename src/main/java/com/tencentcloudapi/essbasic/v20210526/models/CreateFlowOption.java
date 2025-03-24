@@ -69,6 +69,16 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean CanSkipAddApprover;
 
     /**
+    * 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+    */
+    @SerializedName("ForbidEditApprover")
+    @Expose
+    private Boolean ForbidEditApprover;
+
+    /**
     * 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
     */
     @SerializedName("CustomCreateFlowDescription")
@@ -224,6 +234,34 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
+     * Get 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空 
+     * @return ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     */
+    public Boolean getForbidEditApprover() {
+        return this.ForbidEditApprover;
+    }
+
+    /**
+     * Set 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     * @param ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+
+注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     */
+    public void setForbidEditApprover(Boolean ForbidEditApprover) {
+        this.ForbidEditApprover = ForbidEditApprover;
+    }
+
+    /**
      * Get 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。 
      * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
      */
@@ -338,6 +376,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.CanSkipAddApprover != null) {
             this.CanSkipAddApprover = new Boolean(source.CanSkipAddApprover);
         }
+        if (source.ForbidEditApprover != null) {
+            this.ForbidEditApprover = new Boolean(source.ForbidEditApprover);
+        }
         if (source.CustomCreateFlowDescription != null) {
             this.CustomCreateFlowDescription = new String(source.CustomCreateFlowDescription);
         }
@@ -362,6 +403,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "HideShowFlowType", this.HideShowFlowType);
         this.setParamSimple(map, prefix + "HideShowDeadline", this.HideShowDeadline);
         this.setParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
+        this.setParamSimple(map, prefix + "ForbidEditApprover", this.ForbidEditApprover);
         this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
         this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);

@@ -124,7 +124,6 @@ public class ExportInfo extends AbstractModel {
 
     /**
     * 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DerivedFields")
     @Expose
@@ -359,10 +358,8 @@ public class ExportInfo extends AbstractModel {
     }
 
     /**
-     * Get 导出字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导出字段 
      * @return DerivedFields 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDerivedFields() {
         return this.DerivedFields;
@@ -370,9 +367,7 @@ public class ExportInfo extends AbstractModel {
 
     /**
      * Set 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DerivedFields 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDerivedFields(String [] DerivedFields) {
         this.DerivedFields = DerivedFields;

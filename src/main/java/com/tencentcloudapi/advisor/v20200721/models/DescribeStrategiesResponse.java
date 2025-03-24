@@ -25,7 +25,6 @@ public class DescribeStrategiesResponse extends AbstractModel {
 
     /**
     * 评估项列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategies")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeStrategiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 评估项列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项列表 
      * @return Strategies 评估项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Strategies [] getStrategies() {
         return this.Strategies;
@@ -50,9 +47,7 @@ public class DescribeStrategiesResponse extends AbstractModel {
 
     /**
      * Set 评估项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategies 评估项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategies(Strategies [] Strategies) {
         this.Strategies = Strategies;

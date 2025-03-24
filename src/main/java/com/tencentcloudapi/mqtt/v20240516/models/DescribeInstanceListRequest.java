@@ -24,24 +24,24 @@ import java.util.HashMap;
 public class DescribeInstanceListRequest extends AbstractModel {
 
     /**
-    * 查询条件列表,支持以下子弹
+    * 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认20，最大100
     */
     @SerializedName("Limit")
     @Expose
@@ -55,60 +55,60 @@ InstanceStatus：集群状态搜索
     private TagFilter [] TagFilters;
 
     /**
-     * Get 查询条件列表,支持以下子弹
+     * Get 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索 
-     * @return Filters 查询条件列表,支持以下子弹
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中） 
+     * @return Filters 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件列表,支持以下子弹
+     * Set 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
-     * @param Filters 查询条件列表,支持以下子弹
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+     * @param Filters 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认0 
+     * @return Offset 查询起始位置，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认0
+     * @param Offset 查询起始位置，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认20，最大100 
+     * @return Limit 查询结果限制数量，默认20，最大100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认20，最大100
+     * @param Limit 查询结果限制数量，默认20，最大100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

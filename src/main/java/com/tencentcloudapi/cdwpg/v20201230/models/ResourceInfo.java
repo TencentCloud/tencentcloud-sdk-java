@@ -48,7 +48,7 @@ public class ResourceInfo extends AbstractModel {
     private CBSSpecInfo DiskSpec;
 
     /**
-    * 资源类型，DATA
+    * 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -116,9 +116,9 @@ public class ResourceInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源类型，DATA
+     * Get 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 资源类型，DATA
+     * @return Type 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -126,9 +126,9 @@ public class ResourceInfo extends AbstractModel {
     }
 
     /**
-     * Set 资源类型，DATA
+     * Set 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 资源类型，DATA
+     * @param Type 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

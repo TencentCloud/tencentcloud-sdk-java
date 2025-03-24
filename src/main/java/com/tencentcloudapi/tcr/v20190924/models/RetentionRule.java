@@ -25,7 +25,6 @@ public class RetentionRule extends AbstractModel {
 
     /**
     * 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class RetentionRule extends AbstractModel {
 
     /**
     * 规则设置下的对应值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送） 
      * @return Key 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class RetentionRule extends AbstractModel {
 
     /**
      * Set 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 规则设置下的对应值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则设置下的对应值 
      * @return Value 规则设置下的对应值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class RetentionRule extends AbstractModel {
 
     /**
      * Set 规则设置下的对应值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 规则设置下的对应值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;

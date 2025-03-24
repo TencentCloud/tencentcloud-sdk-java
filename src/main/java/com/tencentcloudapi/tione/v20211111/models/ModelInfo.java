@@ -67,6 +67,13 @@ public class ModelInfo extends AbstractModel {
     private CosPathInfo CosPathInfo;
 
     /**
+    * GooseFSx的配置，ModelSource为GooseFSx时有效
+    */
+    @SerializedName("GooseFSx")
+    @Expose
+    private GooseFSx GooseFSx;
+
+    /**
     * 模型对应的算法框架，预留
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -206,6 +213,22 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
+     * Get GooseFSx的配置，ModelSource为GooseFSx时有效 
+     * @return GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     */
+    public GooseFSx getGooseFSx() {
+        return this.GooseFSx;
+    }
+
+    /**
+     * Set GooseFSx的配置，ModelSource为GooseFSx时有效
+     * @param GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     */
+    public void setGooseFSx(GooseFSx GooseFSx) {
+        this.GooseFSx = GooseFSx;
+    }
+
+    /**
      * Get 模型对应的算法框架，预留
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlgorithmFramework 模型对应的算法框架，预留
@@ -327,6 +350,9 @@ public class ModelInfo extends AbstractModel {
         if (source.CosPathInfo != null) {
             this.CosPathInfo = new CosPathInfo(source.CosPathInfo);
         }
+        if (source.GooseFSx != null) {
+            this.GooseFSx = new GooseFSx(source.GooseFSx);
+        }
         if (source.AlgorithmFramework != null) {
             this.AlgorithmFramework = new String(source.AlgorithmFramework);
         }
@@ -355,6 +381,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
         this.setParamSimple(map, prefix + "ModelSource", this.ModelSource);
         this.setParamObj(map, prefix + "CosPathInfo.", this.CosPathInfo);
+        this.setParamObj(map, prefix + "GooseFSx.", this.GooseFSx);
         this.setParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);

@@ -116,7 +116,6 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTransformType")
     @Expose
@@ -124,7 +123,6 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepFailureLog")
     @Expose
@@ -132,7 +130,6 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureLogKey")
     @Expose
@@ -347,10 +344,8 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据加工类型。0：标准加工任务；1：前置加工任务。 
      * @return DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataTransformType() {
         return this.DataTransformType;
@@ -358,19 +353,15 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTransformType(Long DataTransformType) {
         this.DataTransformType = DataTransformType;
     }
 
     /**
-     * Get 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留失败日志状态。 1:不保留，2:保留 
      * @return KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKeepFailureLog() {
         return this.KeepFailureLog;
@@ -378,19 +369,15 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepFailureLog(Long KeepFailureLog) {
         this.KeepFailureLog = KeepFailureLog;
     }
 
     /**
-     * Get 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败日志的字段名称 
      * @return FailureLogKey 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureLogKey() {
         return this.FailureLogKey;
@@ -398,9 +385,7 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureLogKey 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureLogKey(String FailureLogKey) {
         this.FailureLogKey = FailureLogKey;

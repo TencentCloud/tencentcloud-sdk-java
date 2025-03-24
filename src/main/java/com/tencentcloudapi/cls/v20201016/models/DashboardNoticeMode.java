@@ -56,7 +56,6 @@ public class DashboardNoticeMode extends AbstractModel {
     * 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -145,12 +144,10 @@ public class DashboardNoticeMode extends AbstractModel {
     /**
      * Get 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。 
      * @return Url 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -160,11 +157,9 @@ public class DashboardNoticeMode extends AbstractModel {
      * Set 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

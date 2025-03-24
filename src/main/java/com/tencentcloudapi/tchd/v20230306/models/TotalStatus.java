@@ -39,7 +39,6 @@ public class TotalStatus extends AbstractModel {
 
     /**
     * 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbnormalCount")
     @Expose
@@ -78,10 +77,8 @@ public class TotalStatus extends AbstractModel {
     }
 
     /**
-     * Get 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常状态的数目 
      * @return AbnormalCount 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAbnormalCount() {
         return this.AbnormalCount;
@@ -89,9 +86,7 @@ public class TotalStatus extends AbstractModel {
 
     /**
      * Set 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbnormalCount 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbnormalCount(Long AbnormalCount) {
         this.AbnormalCount = AbnormalCount;

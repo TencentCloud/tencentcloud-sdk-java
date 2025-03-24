@@ -26,7 +26,6 @@ public class SceneInfo extends AbstractModel {
     /**
     * 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneId")
     @Expose
@@ -35,7 +34,6 @@ public class SceneInfo extends AbstractModel {
     /**
     * 场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneName")
     @Expose
@@ -43,11 +41,9 @@ public class SceneInfo extends AbstractModel {
 
     /**
      * Get 场景id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SceneId 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneId() {
         return this.SceneId;
@@ -56,10 +52,8 @@ public class SceneInfo extends AbstractModel {
     /**
      * Set 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneId 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneId(String SceneId) {
         this.SceneId = SceneId;
@@ -67,11 +61,9 @@ public class SceneInfo extends AbstractModel {
 
     /**
      * Get 场景名
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SceneName 场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneName() {
         return this.SceneName;
@@ -80,10 +72,8 @@ public class SceneInfo extends AbstractModel {
     /**
      * Set 场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneName 场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;

@@ -40,7 +40,6 @@ public class JsonInfo extends AbstractModel {
 
     /**
     * 投递Json格式，0：字符串方式投递；1:以结构化方式投递
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonType")
     @Expose
@@ -83,10 +82,8 @@ public class JsonInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递Json格式，0：字符串方式投递；1:以结构化方式投递
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递Json格式，0：字符串方式投递；1:以结构化方式投递 
      * @return JsonType 投递Json格式，0：字符串方式投递；1:以结构化方式投递
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJsonType() {
         return this.JsonType;
@@ -94,9 +91,7 @@ public class JsonInfo extends AbstractModel {
 
     /**
      * Set 投递Json格式，0：字符串方式投递；1:以结构化方式投递
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonType 投递Json格式，0：字符串方式投递；1:以结构化方式投递
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

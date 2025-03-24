@@ -25,7 +25,6 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeKey")
     @Expose
@@ -33,7 +32,6 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeFormat")
     @Expose
@@ -41,7 +39,6 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delimiter")
     @Expose
@@ -49,7 +46,6 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 整条日志匹配规则，只有LogType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogRegex")
     @Expose
@@ -57,7 +53,6 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginRegex")
     @Expose
@@ -75,7 +70,6 @@ public class ExtractRuleInfo extends AbstractModel {
     * 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterKeyRegex")
     @Expose
@@ -112,7 +106,6 @@ public class ExtractRuleInfo extends AbstractModel {
 注意
 - 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGBK")
     @Expose
@@ -132,7 +125,6 @@ public class ExtractRuleInfo extends AbstractModel {
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -143,7 +135,6 @@ public class ExtractRuleInfo extends AbstractModel {
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -157,7 +148,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParseProtocol")
     @Expose
@@ -183,7 +173,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为3时必填。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathRegex")
     @Expose
@@ -218,10 +207,8 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     private AdvanceFilterRuleInfo [] AdvanceFilterRules;
 
     /**
-     * Get 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段的key名字，TikeKey和TimeFormat必须成对出现 
      * @return TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeKey() {
         return this.TimeKey;
@@ -229,19 +216,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数 
      * @return TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeFormat() {
         return this.TimeFormat;
@@ -249,19 +232,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效 
      * @return Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelimiter() {
         return this.Delimiter;
@@ -269,19 +248,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
     }
 
     /**
-     * Get 整条日志匹配规则，只有LogType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 整条日志匹配规则，只有LogType为fullregex_log时有效 
      * @return LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogRegex() {
         return this.LogRegex;
@@ -289,19 +264,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 整条日志匹配规则，只有LogType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
     }
 
     /**
-     * Get 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效 
      * @return BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginRegex() {
         return this.BeginRegex;
@@ -309,9 +280,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginRegex(String BeginRegex) {
         this.BeginRegex = BeginRegex;
@@ -340,12 +309,10 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     /**
      * Get 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return FilterKeyRegex 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyRegexInfo [] getFilterKeyRegex() {
         return this.FilterKeyRegex;
@@ -355,11 +322,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Set 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterKeyRegex 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterKeyRegex(KeyRegexInfo [] FilterKeyRegex) {
         this.FilterKeyRegex = FilterKeyRegex;
@@ -437,13 +402,11 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Get 是否为Gbk编码。 0：否；1：是。
 注意
 - 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS导入不支持此字段。 
      * @return IsGBK 是否为Gbk编码。 0：否；1：是。
 注意
 - 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsGBK() {
         return this.IsGBK;
@@ -454,12 +417,10 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意
 - 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsGBK 是否为Gbk编码。 0：否；1：是。
 注意
 - 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGBK(Long IsGBK) {
         this.IsGBK = IsGBK;
@@ -493,13 +454,11 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Get syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS导入不支持此字段。 
      * @return Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -510,12 +469,10 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -525,13 +482,11 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS导入不支持此字段。 
      * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -542,12 +497,10 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
@@ -560,8 +513,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS导入不支持此字段。 
      * @return ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
@@ -569,7 +521,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParseProtocol() {
         return this.ParseProtocol;
@@ -583,7 +534,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
@@ -591,7 +541,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParseProtocol(String ParseProtocol) {
         this.ParseProtocol = ParseProtocol;
@@ -631,8 +580,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
 注意：
 - MetadataType为3时必填。
-- COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS导入不支持此字段。 
      * @return PathRegex 采集配置路径正则表达式。
 
 ```
@@ -643,7 +591,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为3时必填。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathRegex() {
         return this.PathRegex;
@@ -660,7 +607,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为3时必填。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathRegex 采集配置路径正则表达式。
 
 ```
@@ -671,7 +617,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为3时必填。
 - COS导入不支持此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathRegex(String PathRegex) {
         this.PathRegex = PathRegex;

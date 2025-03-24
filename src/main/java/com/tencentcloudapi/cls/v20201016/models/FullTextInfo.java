@@ -41,7 +41,6 @@ public class FullTextInfo extends AbstractModel {
 
     /**
     * 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainZH")
     @Expose
@@ -88,10 +87,8 @@ public class FullTextInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否包含中文 
      * @return ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getContainZH() {
         return this.ContainZH;
@@ -99,9 +96,7 @@ public class FullTextInfo extends AbstractModel {
 
     /**
      * Set 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainZH(Boolean ContainZH) {
         this.ContainZH = ContainZH;

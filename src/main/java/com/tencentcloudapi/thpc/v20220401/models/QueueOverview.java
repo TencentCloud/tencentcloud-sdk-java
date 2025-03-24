@@ -25,17 +25,14 @@ public class QueueOverview extends AbstractModel {
 
     /**
     * 队列名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-     * Get 队列名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列名称。 
      * @return QueueName 队列名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueName() {
         return this.QueueName;
@@ -43,9 +40,7 @@ public class QueueOverview extends AbstractModel {
 
     /**
      * Set 队列名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueName 队列名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

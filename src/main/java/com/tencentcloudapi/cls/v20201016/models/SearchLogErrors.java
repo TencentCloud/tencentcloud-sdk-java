@@ -25,7 +25,6 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -33,7 +32,6 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -41,17 +39,14 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
     * 错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCodeStr")
     @Expose
     private String ErrorCodeStr;
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -59,19 +54,15 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -79,19 +70,15 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码 
      * @return ErrorCodeStr 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorCodeStr() {
         return this.ErrorCodeStr;
@@ -99,9 +86,7 @@ public class SearchLogErrors extends AbstractModel {
 
     /**
      * Set 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorCodeStr 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCodeStr(String ErrorCodeStr) {
         this.ErrorCodeStr = ErrorCodeStr;

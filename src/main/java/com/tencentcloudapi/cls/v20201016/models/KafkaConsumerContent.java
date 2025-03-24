@@ -57,7 +57,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagTransaction")
     @Expose
@@ -150,8 +149,7 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。 
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}` 
      * @return TagTransaction tag数据处理方式：1:不平铺（默认值）；2:平铺。
 
 不平铺示例：
@@ -161,7 +159,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTagTransaction() {
         return this.TagTransaction;
@@ -177,7 +174,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagTransaction tag数据处理方式：1:不平铺（默认值）；2:平铺。
 
 不平铺示例：
@@ -187,7 +183,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagTransaction(Long TagTransaction) {
         this.TagTransaction = TagTransaction;

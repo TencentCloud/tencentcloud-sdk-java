@@ -88,6 +88,13 @@ public class NodeOverview extends AbstractModel {
     private String NodeId;
 
     /**
+    * 节点的工作状态
+    */
+    @SerializedName("NodeAllocateState")
+    @Expose
+    private String NodeAllocateState;
+
+    /**
      * Get 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 节点实例ID。
@@ -247,6 +254,22 @@ public class NodeOverview extends AbstractModel {
         this.NodeId = NodeId;
     }
 
+    /**
+     * Get 节点的工作状态 
+     * @return NodeAllocateState 节点的工作状态
+     */
+    public String getNodeAllocateState() {
+        return this.NodeAllocateState;
+    }
+
+    /**
+     * Set 节点的工作状态
+     * @param NodeAllocateState 节点的工作状态
+     */
+    public void setNodeAllocateState(String NodeAllocateState) {
+        this.NodeAllocateState = NodeAllocateState;
+    }
+
     public NodeOverview() {
     }
 
@@ -279,6 +302,9 @@ public class NodeOverview extends AbstractModel {
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
+        if (source.NodeAllocateState != null) {
+            this.NodeAllocateState = new String(source.NodeAllocateState);
+        }
     }
 
 
@@ -294,6 +320,7 @@ public class NodeOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "NodeAllocateState", this.NodeAllocateState);
 
     }
 }

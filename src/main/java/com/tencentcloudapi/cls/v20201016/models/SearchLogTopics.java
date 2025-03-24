@@ -25,7 +25,6 @@ public class SearchLogTopics extends AbstractModel {
 
     /**
     * 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
     @Expose
@@ -33,17 +32,14 @@ public class SearchLogTopics extends AbstractModel {
 
     /**
     * 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Infos")
     @Expose
     private SearchLogInfos [] Infos;
 
     /**
-     * Get 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多日志主题检索对应的错误信息 
      * @return Errors 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchLogErrors [] getErrors() {
         return this.Errors;
@@ -51,19 +47,15 @@ public class SearchLogTopics extends AbstractModel {
 
     /**
      * Set 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errors 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(SearchLogErrors [] Errors) {
         this.Errors = Errors;
     }
 
     /**
-     * Get 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多日志主题检索各日志主题信息 
      * @return Infos 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchLogInfos [] getInfos() {
         return this.Infos;
@@ -71,9 +63,7 @@ public class SearchLogTopics extends AbstractModel {
 
     /**
      * Set 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Infos 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfos(SearchLogInfos [] Infos) {
         this.Infos = Infos;

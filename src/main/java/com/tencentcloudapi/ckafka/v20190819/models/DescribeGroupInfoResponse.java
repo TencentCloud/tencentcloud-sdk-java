@@ -25,7 +25,6 @@ public class DescribeGroupInfoResponse extends AbstractModel {
 
     /**
     * 返回的结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的结果 
      * @return Result 返回的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfoResponse [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeGroupInfoResponse extends AbstractModel {
 
     /**
      * Set 返回的结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 返回的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(GroupInfoResponse [] Result) {
         this.Result = Result;

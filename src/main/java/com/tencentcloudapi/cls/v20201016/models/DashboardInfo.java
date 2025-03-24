@@ -39,7 +39,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -54,7 +53,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssumerUin")
     @Expose
@@ -62,7 +60,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleName")
     @Expose
@@ -70,7 +67,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssumerName")
     @Expose
@@ -78,7 +74,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -86,7 +81,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DashboardRegion")
     @Expose
@@ -94,7 +88,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -102,7 +95,6 @@ public class DashboardInfo extends AbstractModel {
 
     /**
     * 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DashboardTopicInfos")
     @Expose
@@ -141,10 +133,8 @@ public class DashboardInfo extends AbstractModel {
     }
 
     /**
-     * Get 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仪表盘数据 
      * @return Data 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -152,9 +142,7 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;
@@ -177,10 +165,8 @@ public class DashboardInfo extends AbstractModel {
     }
 
     /**
-     * Get AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AssumerUin非空则表示创建该日志主题的服务方Uin 
      * @return AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssumerUin() {
         return this.AssumerUin;
@@ -188,19 +174,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssumerUin(Long AssumerUin) {
         this.AssumerUin = AssumerUin;
     }
 
     /**
-     * Get RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RoleName非空则表示创建该日志主题的服务方使用的角色 
      * @return RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleName() {
         return this.RoleName;
@@ -208,19 +190,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AssumerName非空则表示创建该日志主题的服务方名称 
      * @return AssumerName AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssumerName() {
         return this.AssumerName;
@@ -228,19 +206,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssumerName AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
     }
 
     /**
-     * Get 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题绑定的标签信息 
      * @return Tags 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -248,19 +222,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仪表盘所在地域： 为了兼容老的地域。 
      * @return DashboardRegion 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDashboardRegion() {
         return this.DashboardRegion;
@@ -268,19 +238,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DashboardRegion 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDashboardRegion(String DashboardRegion) {
         this.DashboardRegion = DashboardRegion;
     }
 
     /**
-     * Get 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改仪表盘的时间 
      * @return UpdateTime 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -288,19 +254,15 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仪表盘对应的topic相关信息 
      * @return DashboardTopicInfos 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DashboardTopicInfo [] getDashboardTopicInfos() {
         return this.DashboardTopicInfos;
@@ -308,9 +270,7 @@ public class DashboardInfo extends AbstractModel {
 
     /**
      * Set 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DashboardTopicInfos 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDashboardTopicInfos(DashboardTopicInfo [] DashboardTopicInfos) {
         this.DashboardTopicInfos = DashboardTopicInfos;

@@ -55,8 +55,7 @@ public class DescribeQAResponse extends AbstractModel {
     private String CustomParam;
 
     /**
-    * 来源
-
+    * 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
     */
     @SerializedName("Source")
     @Expose
@@ -79,8 +78,7 @@ public class DescribeQAResponse extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 状态
-
+    * 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
     */
     @SerializedName("Status")
     @Expose
@@ -327,20 +325,16 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Get 来源
- 
-     * @return Source 来源
-
+     * Get 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对 
+     * @return Source 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-
-     * @param Source 来源
-
+     * Set 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
+     * @param Source 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
      */
     public void setSource(Long Source) {
         this.Source = Source;
@@ -387,20 +381,16 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Get 状态
- 
-     * @return Status 状态
-
+     * Get 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败 
+     * @return Status 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-
-     * @param Status 状态
-
+     * Set 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+     * @param Status 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

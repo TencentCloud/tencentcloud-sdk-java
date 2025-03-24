@@ -25,7 +25,6 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionSet 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionInfo [] getRegionSet() {
         return this.RegionSet;
@@ -50,9 +47,7 @@ public class DescribeRegionsResponse extends AbstractModel {
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionSet 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionSet(RegionInfo [] RegionSet) {
         this.RegionSet = RegionSet;

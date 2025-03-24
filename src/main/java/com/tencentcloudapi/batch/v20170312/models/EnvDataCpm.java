@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class EnvDataCpm extends AbstractModel {
 
     /**
-    * 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+    * 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+    * 购买的机型ID。
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -52,7 +52,7 @@ public class EnvDataCpm extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+    * RAID类型ID。
     */
     @SerializedName("RaidId")
     @Expose
@@ -143,7 +143,7 @@ public class EnvDataCpm extends AbstractModel {
     private String ImageId;
 
     /**
-    * 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+    * 系统盘根分区大小，单位为G，默认取值10G。
     */
     @SerializedName("SysRootSpace")
     @Expose
@@ -171,32 +171,32 @@ public class EnvDataCpm extends AbstractModel {
     private String [] LanIps;
 
     /**
-     * Get 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。 
-     * @return Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * Get 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。 
+     * @return Zones 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
-     * @param Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * Set 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * @param Zones 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。 
-     * @return InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * Get 购买的机型ID。 
+     * @return InstanceTypes 购买的机型ID。
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
-     * @param InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * Set 购买的机型ID。
+     * @param InstanceTypes 购买的机型ID。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
@@ -235,16 +235,16 @@ public class EnvDataCpm extends AbstractModel {
     }
 
     /**
-     * Get RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。 
-     * @return RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * Get RAID类型ID。 
+     * @return RaidId RAID类型ID。
      */
     public Long getRaidId() {
         return this.RaidId;
     }
 
     /**
-     * Set RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
-     * @param RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * Set RAID类型ID。
+     * @param RaidId RAID类型ID。
      */
     public void setRaidId(Long RaidId) {
         this.RaidId = RaidId;
@@ -443,16 +443,16 @@ public class EnvDataCpm extends AbstractModel {
     }
 
     /**
-     * Get 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。 
-     * @return SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * Get 系统盘根分区大小，单位为G，默认取值10G。 
+     * @return SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。
      */
     public Long getSysRootSpace() {
         return this.SysRootSpace;
     }
 
     /**
-     * Set 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
-     * @param SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * Set 系统盘根分区大小，单位为G，默认取值10G。
+     * @param SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。
      */
     public void setSysRootSpace(Long SysRootSpace) {
         this.SysRootSpace = SysRootSpace;

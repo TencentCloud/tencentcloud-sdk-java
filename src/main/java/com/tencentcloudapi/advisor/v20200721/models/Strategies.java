@@ -25,7 +25,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -33,7 +32,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -49,7 +46,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项对应产品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Product")
     @Expose
@@ -57,7 +53,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项对应产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductDesc")
     @Expose
@@ -65,7 +60,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项优化建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Repair")
     @Expose
@@ -73,7 +67,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项类别ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -81,7 +74,6 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项类别名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -89,17 +81,14 @@ public class Strategies extends AbstractModel {
 
     /**
     * 评估项风险列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conditions")
     @Expose
     private Conditions [] Conditions;
 
     /**
-     * Get 评估项ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项ID 
      * @return StrategyId 评估项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -107,19 +96,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 评估项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 评估项名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项名称 
      * @return Name 评估项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -127,19 +112,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 评估项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项描述 
      * @return Desc 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -147,19 +128,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 评估项对应产品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项对应产品ID 
      * @return Product 评估项对应产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduct() {
         return this.Product;
@@ -167,19 +144,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项对应产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Product 评估项对应产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 评估项对应产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项对应产品名称 
      * @return ProductDesc 评估项对应产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductDesc() {
         return this.ProductDesc;
@@ -187,19 +160,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项对应产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductDesc 评估项对应产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductDesc(String ProductDesc) {
         this.ProductDesc = ProductDesc;
     }
 
     /**
-     * Get 评估项优化建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项优化建议 
      * @return Repair 评估项优化建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepair() {
         return this.Repair;
@@ -207,19 +176,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项优化建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Repair 评估项优化建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepair(String Repair) {
         this.Repair = Repair;
     }
 
     /**
-     * Get 评估项类别ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项类别ID 
      * @return GroupId 评估项类别ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
         return this.GroupId;
@@ -227,19 +192,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项类别ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 评估项类别ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 评估项类别名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项类别名称 
      * @return GroupName 评估项类别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -247,19 +208,15 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项类别名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 评估项类别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 评估项风险列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估项风险列表 
      * @return Conditions 评估项风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Conditions [] getConditions() {
         return this.Conditions;
@@ -267,9 +224,7 @@ public class Strategies extends AbstractModel {
 
     /**
      * Set 评估项风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Conditions 评估项风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditions(Conditions [] Conditions) {
         this.Conditions = Conditions;

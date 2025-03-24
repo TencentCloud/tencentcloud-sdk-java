@@ -46,7 +46,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogRegex")
     @Expose
@@ -61,7 +60,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchLogKey")
     @Expose
@@ -69,7 +67,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchLogTimeSrc")
     @Expose
@@ -77,7 +74,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultTimeSrc")
     @Expose
@@ -85,7 +81,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeKey")
     @Expose
@@ -93,7 +88,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeRegex")
     @Expose
@@ -101,7 +95,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeFormat")
     @Expose
@@ -109,7 +102,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeZone")
     @Expose
@@ -117,7 +109,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
     @Expose
@@ -125,7 +116,6 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
     * 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -187,10 +177,8 @@ public class LogRechargeRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 整条日志匹配规则，只有RechargeType为fullregex_log时有效 
      * @return LogRegex 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogRegex() {
         return this.LogRegex;
@@ -198,9 +186,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogRegex 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
@@ -223,10 +209,8 @@ public class LogRechargeRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析失败日志的键名称 
      * @return UnMatchLogKey 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnMatchLogKey() {
         return this.UnMatchLogKey;
@@ -234,19 +218,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnMatchLogKey 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchLogKey(String UnMatchLogKey) {
         this.UnMatchLogKey = UnMatchLogKey;
     }
 
     /**
-     * Get 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳 
      * @return UnMatchLogTimeSrc 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnMatchLogTimeSrc() {
         return this.UnMatchLogTimeSrc;
@@ -254,19 +234,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnMatchLogTimeSrc 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchLogTimeSrc(Long UnMatchLogTimeSrc) {
         this.UnMatchLogTimeSrc = UnMatchLogTimeSrc;
     }
 
     /**
-     * Get 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳 
      * @return DefaultTimeSrc 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultTimeSrc() {
         return this.DefaultTimeSrc;
@@ -274,19 +250,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultTimeSrc 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultTimeSrc(Long DefaultTimeSrc) {
         this.DefaultTimeSrc = DefaultTimeSrc;
     }
 
     /**
-     * Get 时间字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段 
      * @return TimeKey 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeKey() {
         return this.TimeKey;
@@ -294,19 +266,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeKey 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间提取正则表达式 
      * @return TimeRegex 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeRegex() {
         return this.TimeRegex;
@@ -314,19 +282,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeRegex 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeRegex(String TimeRegex) {
         this.TimeRegex = TimeRegex;
     }
 
     /**
-     * Get 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段格式 
      * @return TimeFormat 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeFormat() {
         return this.TimeFormat;
@@ -334,19 +298,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeFormat 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段时区 
      * @return TimeZone 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeZone() {
         return this.TimeZone;
@@ -354,19 +314,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeZone 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp 
      * @return Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMetadata() {
         return this.Metadata;
@@ -374,19 +330,15 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(String [] Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志Key列表，RechargeType为full_regex_log时必填 
      * @return Keys 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeys() {
         return this.Keys;
@@ -394,9 +346,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
      * Set 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;

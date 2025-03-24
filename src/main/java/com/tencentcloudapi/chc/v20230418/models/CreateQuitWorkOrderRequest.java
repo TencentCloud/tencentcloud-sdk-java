@@ -1,0 +1,344 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.chc.v20230418.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateQuitWorkOrderRequest extends AbstractModel {
+
+    /**
+    * 机房id
+    */
+    @SerializedName("IdcId")
+    @Expose
+    private Long IdcId;
+
+    /**
+    * 设备类型，server, netDevice, otherDevice
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+    * 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+    */
+    @SerializedName("StuffOption")
+    @Expose
+    private String StuffOption;
+
+    /**
+    * 关电确认 1.授权时关电 2.关电前需要确认
+    */
+    @SerializedName("IsPowerOffConfirm")
+    @Expose
+    private String IsPowerOffConfirm;
+
+    /**
+    * 设备sn列表
+    */
+    @SerializedName("DeviceSnList")
+    @Expose
+    private String [] DeviceSnList;
+
+    /**
+    * 交接方式 1.物流上门收货 2.客户上门自提
+    */
+    @SerializedName("HandoverMethod")
+    @Expose
+    private String HandoverMethod;
+
+    /**
+    * 自行解决必填
+    */
+    @SerializedName("SelfOperationInfo")
+    @Expose
+    private SelfOperation SelfOperationInfo;
+
+    /**
+    * 关电前需要确认时必填
+    */
+    @SerializedName("PowerOffConfirmInfo")
+    @Expose
+    private PowerOffConfirm PowerOffConfirmInfo;
+
+    /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 物流上门收货必传
+    */
+    @SerializedName("LogisticsReceipt")
+    @Expose
+    private LogisticsReceipt LogisticsReceipt;
+
+    /**
+    * 客户上门自提必传
+    */
+    @SerializedName("CustomerReceipt")
+    @Expose
+    private CustomerReceipt CustomerReceipt;
+
+    /**
+     * Get 机房id 
+     * @return IdcId 机房id
+     */
+    public Long getIdcId() {
+        return this.IdcId;
+    }
+
+    /**
+     * Set 机房id
+     * @param IdcId 机房id
+     */
+    public void setIdcId(Long IdcId) {
+        this.IdcId = IdcId;
+    }
+
+    /**
+     * Get 设备类型，server, netDevice, otherDevice 
+     * @return DeviceType 设备类型，server, netDevice, otherDevice
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 设备类型，server, netDevice, otherDevice
+     * @param DeviceType 设备类型，server, netDevice, otherDevice
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出 
+     * @return StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     */
+    public String getStuffOption() {
+        return this.StuffOption;
+    }
+
+    /**
+     * Set 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     * @param StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     */
+    public void setStuffOption(String StuffOption) {
+        this.StuffOption = StuffOption;
+    }
+
+    /**
+     * Get 关电确认 1.授权时关电 2.关电前需要确认 
+     * @return IsPowerOffConfirm 关电确认 1.授权时关电 2.关电前需要确认
+     */
+    public String getIsPowerOffConfirm() {
+        return this.IsPowerOffConfirm;
+    }
+
+    /**
+     * Set 关电确认 1.授权时关电 2.关电前需要确认
+     * @param IsPowerOffConfirm 关电确认 1.授权时关电 2.关电前需要确认
+     */
+    public void setIsPowerOffConfirm(String IsPowerOffConfirm) {
+        this.IsPowerOffConfirm = IsPowerOffConfirm;
+    }
+
+    /**
+     * Get 设备sn列表 
+     * @return DeviceSnList 设备sn列表
+     */
+    public String [] getDeviceSnList() {
+        return this.DeviceSnList;
+    }
+
+    /**
+     * Set 设备sn列表
+     * @param DeviceSnList 设备sn列表
+     */
+    public void setDeviceSnList(String [] DeviceSnList) {
+        this.DeviceSnList = DeviceSnList;
+    }
+
+    /**
+     * Get 交接方式 1.物流上门收货 2.客户上门自提 
+     * @return HandoverMethod 交接方式 1.物流上门收货 2.客户上门自提
+     */
+    public String getHandoverMethod() {
+        return this.HandoverMethod;
+    }
+
+    /**
+     * Set 交接方式 1.物流上门收货 2.客户上门自提
+     * @param HandoverMethod 交接方式 1.物流上门收货 2.客户上门自提
+     */
+    public void setHandoverMethod(String HandoverMethod) {
+        this.HandoverMethod = HandoverMethod;
+    }
+
+    /**
+     * Get 自行解决必填 
+     * @return SelfOperationInfo 自行解决必填
+     */
+    public SelfOperation getSelfOperationInfo() {
+        return this.SelfOperationInfo;
+    }
+
+    /**
+     * Set 自行解决必填
+     * @param SelfOperationInfo 自行解决必填
+     */
+    public void setSelfOperationInfo(SelfOperation SelfOperationInfo) {
+        this.SelfOperationInfo = SelfOperationInfo;
+    }
+
+    /**
+     * Get 关电前需要确认时必填 
+     * @return PowerOffConfirmInfo 关电前需要确认时必填
+     */
+    public PowerOffConfirm getPowerOffConfirmInfo() {
+        return this.PowerOffConfirmInfo;
+    }
+
+    /**
+     * Set 关电前需要确认时必填
+     * @param PowerOffConfirmInfo 关电前需要确认时必填
+     */
+    public void setPowerOffConfirmInfo(PowerOffConfirm PowerOffConfirmInfo) {
+        this.PowerOffConfirmInfo = PowerOffConfirmInfo;
+    }
+
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 物流上门收货必传 
+     * @return LogisticsReceipt 物流上门收货必传
+     */
+    public LogisticsReceipt getLogisticsReceipt() {
+        return this.LogisticsReceipt;
+    }
+
+    /**
+     * Set 物流上门收货必传
+     * @param LogisticsReceipt 物流上门收货必传
+     */
+    public void setLogisticsReceipt(LogisticsReceipt LogisticsReceipt) {
+        this.LogisticsReceipt = LogisticsReceipt;
+    }
+
+    /**
+     * Get 客户上门自提必传 
+     * @return CustomerReceipt 客户上门自提必传
+     */
+    public CustomerReceipt getCustomerReceipt() {
+        return this.CustomerReceipt;
+    }
+
+    /**
+     * Set 客户上门自提必传
+     * @param CustomerReceipt 客户上门自提必传
+     */
+    public void setCustomerReceipt(CustomerReceipt CustomerReceipt) {
+        this.CustomerReceipt = CustomerReceipt;
+    }
+
+    public CreateQuitWorkOrderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateQuitWorkOrderRequest(CreateQuitWorkOrderRequest source) {
+        if (source.IdcId != null) {
+            this.IdcId = new Long(source.IdcId);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.StuffOption != null) {
+            this.StuffOption = new String(source.StuffOption);
+        }
+        if (source.IsPowerOffConfirm != null) {
+            this.IsPowerOffConfirm = new String(source.IsPowerOffConfirm);
+        }
+        if (source.DeviceSnList != null) {
+            this.DeviceSnList = new String[source.DeviceSnList.length];
+            for (int i = 0; i < source.DeviceSnList.length; i++) {
+                this.DeviceSnList[i] = new String(source.DeviceSnList[i]);
+            }
+        }
+        if (source.HandoverMethod != null) {
+            this.HandoverMethod = new String(source.HandoverMethod);
+        }
+        if (source.SelfOperationInfo != null) {
+            this.SelfOperationInfo = new SelfOperation(source.SelfOperationInfo);
+        }
+        if (source.PowerOffConfirmInfo != null) {
+            this.PowerOffConfirmInfo = new PowerOffConfirm(source.PowerOffConfirmInfo);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.LogisticsReceipt != null) {
+            this.LogisticsReceipt = new LogisticsReceipt(source.LogisticsReceipt);
+        }
+        if (source.CustomerReceipt != null) {
+            this.CustomerReceipt = new CustomerReceipt(source.CustomerReceipt);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IdcId", this.IdcId);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "StuffOption", this.StuffOption);
+        this.setParamSimple(map, prefix + "IsPowerOffConfirm", this.IsPowerOffConfirm);
+        this.setParamArraySimple(map, prefix + "DeviceSnList.", this.DeviceSnList);
+        this.setParamSimple(map, prefix + "HandoverMethod", this.HandoverMethod);
+        this.setParamObj(map, prefix + "SelfOperationInfo.", this.SelfOperationInfo);
+        this.setParamObj(map, prefix + "PowerOffConfirmInfo.", this.PowerOffConfirmInfo);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamObj(map, prefix + "LogisticsReceipt.", this.LogisticsReceipt);
+        this.setParamObj(map, prefix + "CustomerReceipt.", this.CustomerReceipt);
+
+    }
+}
+

@@ -25,7 +25,6 @@ public class DescribeScenesResponse extends AbstractModel {
 
     /**
     * 场景详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScenesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 场景详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景详情 
      * @return SceneSet 场景详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SceneInfo [] getSceneSet() {
         return this.SceneSet;
@@ -50,9 +47,7 @@ public class DescribeScenesResponse extends AbstractModel {
 
     /**
      * Set 场景详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneSet 场景详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneSet(SceneInfo [] SceneSet) {
         this.SceneSet = SceneSet;

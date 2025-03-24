@@ -25,7 +25,6 @@ public class CancelAuthorizationTokenResponse extends AbstractModel {
 
     /**
     * 0 成功 非0 失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CancelAuthorizationTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0 成功 非0 失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 成功 非0 失败 
      * @return Result 0 成功 非0 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CancelAuthorizationTokenResponse extends AbstractModel {
 
     /**
      * Set 0 成功 非0 失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 0 成功 非0 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Long Result) {
         this.Result = Result;

@@ -48,7 +48,6 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
     * 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timezone")
     @Expose
@@ -56,7 +55,6 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
     * 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeLanguage")
     @Expose
@@ -64,7 +62,6 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
     * 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JumpDomain")
     @Expose
@@ -72,7 +69,6 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
     * 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JumpUrl")
     @Expose
@@ -135,10 +131,8 @@ public class DashboardSubscribeData extends AbstractModel {
     }
 
     /**
-     * Get 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI 
      * @return Timezone 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimezone() {
         return this.Timezone;
@@ -146,19 +140,15 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
      * Set 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timezone 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimezone(String Timezone) {
         this.Timezone = Timezone;
     }
 
     /**
-     * Get 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语言。 zh 中文、en`英文。 
      * @return SubscribeLanguage 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscribeLanguage() {
         return this.SubscribeLanguage;
@@ -166,19 +156,15 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
      * Set 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeLanguage 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeLanguage(String SubscribeLanguage) {
         this.SubscribeLanguage = SubscribeLanguage;
     }
 
     /**
-     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾 
      * @return JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJumpDomain() {
         return this.JumpDomain;
@@ -186,19 +172,15 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
      * Set 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJumpDomain(String JumpDomain) {
         this.JumpDomain = JumpDomain;
     }
 
     /**
-     * Get 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义跳转链接。 
      * @return JumpUrl 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJumpUrl() {
         return this.JumpUrl;
@@ -206,9 +188,7 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
      * Set 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JumpUrl 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;

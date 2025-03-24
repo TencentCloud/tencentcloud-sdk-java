@@ -25,7 +25,6 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
     * 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
     * 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventNums")
     @Expose
@@ -41,17 +39,14 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
     * 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YamlDetail")
     @Expose
     private String YamlDetail;
 
     /**
-     * Get 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略实例名称 
      * @return Name 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
      * Set 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略实例关联事件数 
      * @return EventNums 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventNums() {
         return this.EventNums;
@@ -79,19 +70,15 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
      * Set 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventNums 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventNums(Long EventNums) {
         this.EventNums = EventNums;
     }
 
     /**
-     * Get 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例yaml详情base64编码 
      * @return YamlDetail 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYamlDetail() {
         return this.YamlDetail;
@@ -99,9 +86,7 @@ public class OpenConstraintInfo extends AbstractModel {
 
     /**
      * Set 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param YamlDetail 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYamlDetail(String YamlDetail) {
         this.YamlDetail = YamlDetail;

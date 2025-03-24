@@ -391,6 +391,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *根据实例ID获取指定时间段的性能趋势。
+     * @param req DescribeDBPerfTimeSeriesRequest
+     * @return DescribeDBPerfTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeries(DescribeDBPerfTimeSeriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBPerfTimeSeries", DescribeDBPerfTimeSeriesResponse.class);
+    }
+
+    /**
      *获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
      * @param req DescribeDBSpaceStatusRequest
      * @return DescribeDBSpaceStatusResponse
@@ -509,6 +520,39 @@ public class DbbrainClient extends AbstractClient{
     public DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasks(DescribeRedisBigKeyAnalysisTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRedisBigKeyAnalysisTasks", DescribeRedisBigKeyAnalysisTasksResponse.class);
+    }
+
+    /**
+     *延迟分析-命令字分析-查询命令延迟趋势
+     * @param req DescribeRedisCmdPerfTimeSeriesRequest
+     * @return DescribeRedisCmdPerfTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisCmdPerfTimeSeriesResponse DescribeRedisCmdPerfTimeSeries(DescribeRedisCmdPerfTimeSeriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisCmdPerfTimeSeries", DescribeRedisCmdPerfTimeSeriesResponse.class);
+    }
+
+    /**
+     *延迟分析-查询命令延迟分布
+     * @param req DescribeRedisCommandCostStatisticsRequest
+     * @return DescribeRedisCommandCostStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisCommandCostStatisticsResponse DescribeRedisCommandCostStatistics(DescribeRedisCommandCostStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisCommandCostStatistics", DescribeRedisCommandCostStatisticsResponse.class);
+    }
+
+    /**
+     *延迟分析-查询实例访问命令统计
+     * @param req DescribeRedisCommandOverviewRequest
+     * @return DescribeRedisCommandOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisCommandOverviewResponse DescribeRedisCommandOverview(DescribeRedisCommandOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisCommandOverview", DescribeRedisCommandOverviewResponse.class);
     }
 
     /**

@@ -25,7 +25,6 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
     * 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -40,10 +39,8 @@ public class ClusterInternalLB extends AbstractModel {
     private String SubnetId;
 
     /**
-     * Get 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启内网访问LB 
      * @return Enabled 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -51,9 +48,7 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
      * Set 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

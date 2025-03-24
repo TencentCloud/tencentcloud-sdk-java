@@ -39,7 +39,6 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
     * 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Escalate")
     @Expose
@@ -47,7 +46,6 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
     * 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -58,7 +56,6 @@ public class EscalateNoticeInfo extends AbstractModel {
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -66,7 +63,6 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
     * 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EscalateNotice")
     @Expose
@@ -105,10 +101,8 @@ public class EscalateNoticeInfo extends AbstractModel {
     }
 
     /**
-     * Get 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false 
      * @return Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEscalate() {
         return this.Escalate;
@@ -116,19 +110,15 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
      * Set 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEscalate(Boolean Escalate) {
         this.Escalate = Escalate;
     }
 
     /**
-     * Get 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级间隔。单位：分钟，范围`[1，14400]` 
      * @return Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
         return this.Interval;
@@ -136,9 +126,7 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
      * Set 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
@@ -148,13 +136,11 @@ public class EscalateNoticeInfo extends AbstractModel {
      * Get 升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Type 升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -165,22 +151,18 @@ public class EscalateNoticeInfo extends AbstractModel {
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。 
      * @return EscalateNotice 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EscalateNoticeInfo getEscalateNotice() {
         return this.EscalateNotice;
@@ -188,9 +170,7 @@ public class EscalateNoticeInfo extends AbstractModel {
 
     /**
      * Set 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EscalateNotice 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEscalateNotice(EscalateNoticeInfo EscalateNotice) {
         this.EscalateNotice = EscalateNotice;

@@ -25,7 +25,6 @@ public class Conditions extends AbstractModel {
 
     /**
     * 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionId")
     @Expose
@@ -33,7 +32,6 @@ public class Conditions extends AbstractModel {
 
     /**
     * 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ public class Conditions extends AbstractModel {
 
     /**
     * 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelDesc")
     @Expose
@@ -55,10 +52,8 @@ public class Conditions extends AbstractModel {
     private String Desc;
 
     /**
-     * Get 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 警告条件ID 
      * @return ConditionId 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConditionId() {
         return this.ConditionId;
@@ -66,19 +61,15 @@ public class Conditions extends AbstractModel {
 
     /**
      * Set 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionId 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionId(Long ConditionId) {
         this.ConditionId = ConditionId;
     }
 
     /**
-     * Get 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 警告级别，2:中风险，3:高风险 
      * @return Level 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -86,19 +77,15 @@ public class Conditions extends AbstractModel {
 
     /**
      * Set 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 警告级别描述 
      * @return LevelDesc 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelDesc() {
         return this.LevelDesc;
@@ -106,9 +93,7 @@ public class Conditions extends AbstractModel {
 
     /**
      * Set 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelDesc 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelDesc(String LevelDesc) {
         this.LevelDesc = LevelDesc;

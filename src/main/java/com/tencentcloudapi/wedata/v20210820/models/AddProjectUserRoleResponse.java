@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class AddProjectUserRoleResponse extends AbstractModel {
 
     /**
+    * 返回数据
+    */
+    @SerializedName("Data")
+    @Expose
+    private Boolean Data;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 返回数据 
+     * @return Data 返回数据
+     */
+    public Boolean getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 返回数据
+     * @param Data 返回数据
+     */
+    public void setData(Boolean Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class AddProjectUserRoleResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddProjectUserRoleResponse(AddProjectUserRoleResponse source) {
+        if (source.Data != null) {
+            this.Data = new Boolean(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class AddProjectUserRoleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

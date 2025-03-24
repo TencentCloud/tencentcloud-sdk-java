@@ -25,7 +25,6 @@ public class EnhancedService extends AbstractModel {
 
     /**
     * 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityService")
     @Expose
@@ -33,7 +32,6 @@ public class EnhancedService extends AbstractModel {
 
     /**
     * 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorService")
     @Expose
@@ -41,17 +39,14 @@ public class EnhancedService extends AbstractModel {
 
     /**
     * 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutomationService")
     @Expose
     private RunAutomationServiceEnabled AutomationService;
 
     /**
-     * Get 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启云安全服务。若不指定该参数，则默认开启云安全服务。 
      * @return SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RunSecurityServiceEnabled getSecurityService() {
         return this.SecurityService;
@@ -59,19 +54,15 @@ public class EnhancedService extends AbstractModel {
 
     /**
      * Set 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityService(RunSecurityServiceEnabled SecurityService) {
         this.SecurityService = SecurityService;
     }
 
     /**
-     * Get 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。 
      * @return MonitorService 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RunMonitorServiceEnabled getMonitorService() {
         return this.MonitorService;
@@ -79,19 +70,15 @@ public class EnhancedService extends AbstractModel {
 
     /**
      * Set 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorService 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorService(RunMonitorServiceEnabled MonitorService) {
         this.MonitorService = MonitorService;
     }
 
     /**
-     * Get 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。 
      * @return AutomationService 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RunAutomationServiceEnabled getAutomationService() {
         return this.AutomationService;
@@ -99,9 +86,7 @@ public class EnhancedService extends AbstractModel {
 
     /**
      * Set 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutomationService 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutomationService(RunAutomationServiceEnabled AutomationService) {
         this.AutomationService = AutomationService;

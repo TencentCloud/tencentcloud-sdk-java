@@ -53,7 +53,6 @@ public class TcrRepositoryInfo extends AbstractModel {
 
     /**
     * 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -61,7 +60,6 @@ public class TcrRepositoryInfo extends AbstractModel {
 
     /**
     * 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefDescription")
     @Expose
@@ -139,10 +137,8 @@ public class TcrRepositoryInfo extends AbstractModel {
     }
 
     /**
-     * Get 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库详细描述 
      * @return Description 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -150,19 +146,15 @@ public class TcrRepositoryInfo extends AbstractModel {
 
     /**
      * Set 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 简单描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 简单描述 
      * @return BriefDescription 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBriefDescription() {
         return this.BriefDescription;
@@ -170,9 +162,7 @@ public class TcrRepositoryInfo extends AbstractModel {
 
     /**
      * Set 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefDescription 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefDescription(String BriefDescription) {
         this.BriefDescription = BriefDescription;

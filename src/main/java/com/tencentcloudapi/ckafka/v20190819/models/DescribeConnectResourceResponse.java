@@ -25,7 +25,6 @@ public class DescribeConnectResourceResponse extends AbstractModel {
 
     /**
     * 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeConnectResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接源的Id 
      * @return Result 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeConnectResourceResp getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeConnectResourceResponse extends AbstractModel {
 
     /**
      * Set 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DescribeConnectResourceResp Result) {
         this.Result = Result;

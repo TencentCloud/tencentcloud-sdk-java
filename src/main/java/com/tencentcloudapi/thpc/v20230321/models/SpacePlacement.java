@@ -25,7 +25,6 @@ public class SpacePlacement extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -33,17 +32,14 @@ public class SpacePlacement extends AbstractModel {
 
     /**
     * 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -51,19 +47,15 @@ public class SpacePlacement extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目，默认是0 
      * @return ProjectId 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -71,9 +63,7 @@ public class SpacePlacement extends AbstractModel {
 
     /**
      * Set 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

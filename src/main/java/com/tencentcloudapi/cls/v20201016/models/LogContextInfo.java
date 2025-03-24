@@ -67,7 +67,6 @@ public class LogContextInfo extends AbstractModel {
 
     /**
     * 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -75,7 +74,6 @@ public class LogContextInfo extends AbstractModel {
 
     /**
     * 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawLog")
     @Expose
@@ -83,7 +81,6 @@ public class LogContextInfo extends AbstractModel {
 
     /**
     * 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexStatus")
     @Expose
@@ -91,7 +88,6 @@ public class LogContextInfo extends AbstractModel {
 
     /**
     * 日志内容的高亮描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighLights")
     @Expose
@@ -194,10 +190,8 @@ public class LogContextInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志来源主机名称 
      * @return HostName 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -205,19 +199,15 @@ public class LogContextInfo extends AbstractModel {
 
     /**
      * Set 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始日志(仅在日志创建索引异常时有值) 
      * @return RawLog 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRawLog() {
         return this.RawLog;
@@ -225,19 +215,15 @@ public class LogContextInfo extends AbstractModel {
 
     /**
      * Set 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RawLog 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawLog(String RawLog) {
         this.RawLog = RawLog;
     }
 
     /**
-     * Get 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志创建索引异常原因(仅在日志创建索引异常时有值) 
      * @return IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexStatus() {
         return this.IndexStatus;
@@ -245,19 +231,15 @@ public class LogContextInfo extends AbstractModel {
 
     /**
      * Set 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexStatus(String IndexStatus) {
         this.IndexStatus = IndexStatus;
     }
 
     /**
-     * Get 日志内容的高亮描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志内容的高亮描述信息 
      * @return HighLights 日志内容的高亮描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HighLightItem [] getHighLights() {
         return this.HighLights;
@@ -265,9 +247,7 @@ public class LogContextInfo extends AbstractModel {
 
     /**
      * Set 日志内容的高亮描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighLights 日志内容的高亮描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighLights(HighLightItem [] HighLights) {
         this.HighLights = HighLights;
