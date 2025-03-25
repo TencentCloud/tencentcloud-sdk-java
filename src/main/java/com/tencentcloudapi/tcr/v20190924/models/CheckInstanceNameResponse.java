@@ -32,7 +32,6 @@ public class CheckInstanceNameResponse extends AbstractModel {
 
     /**
     * 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailCode")
     @Expose
@@ -62,10 +61,8 @@ public class CheckInstanceNameResponse extends AbstractModel {
     }
 
     /**
-     * Get 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在） 
      * @return DetailCode 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDetailCode() {
         return this.DetailCode;
@@ -73,9 +70,7 @@ public class CheckInstanceNameResponse extends AbstractModel {
 
     /**
      * Set 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailCode 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailCode(Long DetailCode) {
         this.DetailCode = DetailCode;

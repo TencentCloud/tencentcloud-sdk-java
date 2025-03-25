@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLoadBalancerMixIpTargetRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID数组。
+    * 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyLoadBalancerMixIpTargetRequest extends AbstractModel {
     private Boolean MixIpTarget;
 
     /**
-     * Get 负载均衡实例ID数组。 
-     * @return LoadBalancerIds 负载均衡实例ID数组。
+     * Get 负载均衡实例ID数组，默认支持20个负载均衡实例ID。 
+     * @return LoadBalancerIds 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例ID数组。
-     * @param LoadBalancerIds 负载均衡实例ID数组。
+     * Set 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+     * @param LoadBalancerIds 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

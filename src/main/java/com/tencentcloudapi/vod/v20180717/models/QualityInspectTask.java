@@ -63,7 +63,6 @@ public class QualityInspectTask extends AbstractModel {
 
     /**
     * 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -71,7 +70,6 @@ public class QualityInspectTask extends AbstractModel {
 
     /**
     * 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -184,10 +182,8 @@ public class QualityInspectTask extends AbstractModel {
     }
 
     /**
-     * Get 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音画质检测任务输入。 
      * @return Input 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityInspectTaskInput getInput() {
         return this.Input;
@@ -195,19 +191,15 @@ public class QualityInspectTask extends AbstractModel {
 
     /**
      * Set 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(QualityInspectTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音画质检测任务输出。 
      * @return Output 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityInspectTaskOutput getOutput() {
         return this.Output;
@@ -215,9 +207,7 @@ public class QualityInspectTask extends AbstractModel {
 
     /**
      * Set 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(QualityInspectTaskOutput Output) {
         this.Output = Output;

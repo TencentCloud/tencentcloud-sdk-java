@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetRoomEventResponse extends AbstractModel {
 
     /**
-    * 该房间的事件总数，keyword搜索不影响该值。
+    * 该课堂的事件总数，keyword搜索不影响该值。
     */
     @SerializedName("Total")
     @Expose
@@ -45,16 +45,16 @@ public class GetRoomEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该房间的事件总数，keyword搜索不影响该值。 
-     * @return Total 该房间的事件总数，keyword搜索不影响该值。
+     * Get 该课堂的事件总数，keyword搜索不影响该值。 
+     * @return Total 该课堂的事件总数，keyword搜索不影响该值。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 该房间的事件总数，keyword搜索不影响该值。
-     * @param Total 该房间的事件总数，keyword搜索不影响该值。
+     * Set 该课堂的事件总数，keyword搜索不影响该值。
+     * @param Total 该课堂的事件总数，keyword搜索不影响该值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

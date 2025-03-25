@@ -64,7 +64,6 @@ public class RepeatStrategy extends AbstractModel {
 
     /**
     * 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expire")
     @Expose
@@ -174,10 +173,8 @@ public class RepeatStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写 
      * @return Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpire() {
         return this.Expire;
@@ -185,9 +182,7 @@ public class RepeatStrategy extends AbstractModel {
 
     /**
      * Set 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpire(String Expire) {
         this.Expire = Expire;

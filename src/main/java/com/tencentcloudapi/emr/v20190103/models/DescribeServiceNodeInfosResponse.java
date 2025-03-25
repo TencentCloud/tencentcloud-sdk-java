@@ -25,7 +25,6 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
 
     /**
     * 总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCnt")
     @Expose
@@ -41,7 +40,6 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
 
     /**
     * 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasInfo")
     @Expose
@@ -63,10 +61,8 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量 
      * @return TotalCnt 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
@@ -74,9 +70,7 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
 
     /**
      * Set 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCnt 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
@@ -103,10 +97,8 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所有节点的别名序列化 
      * @return AliasInfo 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasInfo() {
         return this.AliasInfo;
@@ -114,9 +106,7 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
 
     /**
      * Set 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasInfo 集群所有节点的别名序列化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasInfo(String AliasInfo) {
         this.AliasInfo = AliasInfo;

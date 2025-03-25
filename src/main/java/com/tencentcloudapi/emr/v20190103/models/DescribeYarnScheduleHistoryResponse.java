@@ -33,7 +33,6 @@ public class DescribeYarnScheduleHistoryResponse extends AbstractModel {
 
     /**
     * 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -83,10 +82,8 @@ public class DescribeYarnScheduleHistoryResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务详情总数 
      * @return Total 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -94,9 +91,7 @@ public class DescribeYarnScheduleHistoryResponse extends AbstractModel {
 
     /**
      * Set 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

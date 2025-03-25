@@ -53,7 +53,6 @@ public class TcrNamespaceInfo extends AbstractModel {
 
     /**
     * 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -61,7 +60,6 @@ public class TcrNamespaceInfo extends AbstractModel {
 
     /**
     * 命名空间元数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
     @Expose
@@ -160,10 +158,8 @@ public class TcrNamespaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例云标签 
      * @return TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
@@ -171,19 +167,15 @@ public class TcrNamespaceInfo extends AbstractModel {
 
     /**
      * Set 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 命名空间元数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间元数据 
      * @return Metadata 命名空间元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueString [] getMetadata() {
         return this.Metadata;
@@ -191,9 +183,7 @@ public class TcrNamespaceInfo extends AbstractModel {
 
     /**
      * Set 命名空间元数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadata 命名空间元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(KeyValueString [] Metadata) {
         this.Metadata = Metadata;

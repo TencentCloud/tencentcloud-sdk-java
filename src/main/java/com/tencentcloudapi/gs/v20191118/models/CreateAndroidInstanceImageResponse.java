@@ -25,7 +25,6 @@ public class CreateAndroidInstanceImageResponse extends AbstractModel {
 
     /**
     * 安卓实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAndroidInstanceImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安卓实例镜像 ID 
      * @return AndroidInstanceImageId 安卓实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageId() {
         return this.AndroidInstanceImageId;
@@ -50,9 +47,7 @@ public class CreateAndroidInstanceImageResponse extends AbstractModel {
 
     /**
      * Set 安卓实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageId 安卓实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageId(String AndroidInstanceImageId) {
         this.AndroidInstanceImageId = AndroidInstanceImageId;

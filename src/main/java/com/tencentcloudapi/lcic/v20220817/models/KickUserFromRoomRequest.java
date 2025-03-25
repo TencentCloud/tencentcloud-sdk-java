@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KickUserFromRoomRequest extends AbstractModel {
 
     /**
-    * 房间Id。
+    * 课堂Id。
     */
     @SerializedName("RoomId")
     @Expose
@@ -61,16 +61,16 @@ public class KickUserFromRoomRequest extends AbstractModel {
     private Long Duration;
 
     /**
-     * Get 房间Id。 
-     * @return RoomId 房间Id。
+     * Get 课堂Id。 
+     * @return RoomId 课堂Id。
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间Id。
-     * @param RoomId 房间Id。
+     * Set 课堂Id。
+     * @param RoomId 课堂Id。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

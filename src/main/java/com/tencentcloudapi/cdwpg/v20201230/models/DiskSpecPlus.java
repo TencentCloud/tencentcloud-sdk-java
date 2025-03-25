@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DiskSpecPlus extends AbstractModel {
 
     /**
-    * 1
+    * 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCount")
@@ -32,7 +32,7 @@ public class DiskSpecPlus extends AbstractModel {
     private Long DiskCount;
 
     /**
-    * 1
+    * 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDiskSize")
@@ -40,7 +40,7 @@ public class DiskSpecPlus extends AbstractModel {
     private Long MaxDiskSize;
 
     /**
-    * 1
+    * 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinDiskSize")
@@ -48,7 +48,7 @@ public class DiskSpecPlus extends AbstractModel {
     private Long MinDiskSize;
 
     /**
-    * 1
+    * 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -56,7 +56,7 @@ public class DiskSpecPlus extends AbstractModel {
     private String DiskType;
 
     /**
-    * 1
+    * 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskDesc")
@@ -64,7 +64,7 @@ public class DiskSpecPlus extends AbstractModel {
     private String DiskDesc;
 
     /**
-    * 1
+    * 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvmClass")
@@ -72,9 +72,9 @@ public class DiskSpecPlus extends AbstractModel {
     private String CvmClass;
 
     /**
-     * Get 1
+     * Get 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskCount 1
+     * @return DiskCount 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskCount() {
@@ -82,9 +82,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskCount 1
+     * @param DiskCount 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCount(Long DiskCount) {
@@ -92,9 +92,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxDiskSize 1
+     * @return MaxDiskSize 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDiskSize() {
@@ -102,9 +102,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxDiskSize 1
+     * @param MaxDiskSize 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
@@ -112,9 +112,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinDiskSize 1
+     * @return MinDiskSize 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinDiskSize() {
@@ -122,9 +122,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinDiskSize 1
+     * @param MinDiskSize 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinDiskSize(Long MinDiskSize) {
@@ -132,9 +132,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 1
+     * @return DiskType 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -142,9 +142,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 1
+     * @param DiskType 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -152,9 +152,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskDesc 1
+     * @return DiskDesc 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskDesc() {
@@ -162,9 +162,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskDesc 1
+     * @param DiskDesc 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskDesc(String DiskDesc) {
@@ -172,9 +172,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 机型类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CvmClass 1
+     * @return CvmClass 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCvmClass() {
@@ -182,9 +182,9 @@ public class DiskSpecPlus extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CvmClass 1
+     * @param CvmClass 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvmClass(String CvmClass) {

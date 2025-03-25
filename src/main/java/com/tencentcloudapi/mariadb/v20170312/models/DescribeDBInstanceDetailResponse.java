@@ -249,7 +249,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
@@ -278,7 +277,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -286,7 +284,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanVipv6")
     @Expose
@@ -294,7 +291,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanStatusIpv6")
     @Expose
@@ -302,7 +298,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanPortIpv6")
     @Expose
@@ -310,7 +305,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbEngine")
     @Expose
@@ -318,7 +312,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbVersion")
     @Expose
@@ -333,7 +326,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DcnFlag")
     @Expose
@@ -341,7 +333,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DcnStatus")
     @Expose
@@ -349,7 +340,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DcnDstNum")
     @Expose
@@ -357,7 +347,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -365,7 +354,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodesInfo")
     @Expose
@@ -373,7 +361,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMaxUserConnectionsSupported")
     @Expose
@@ -381,7 +368,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -389,7 +375,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptStatus")
     @Expose
@@ -413,7 +398,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusterType")
     @Expose
@@ -421,7 +405,6 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
     * VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RsAccessStrategy")
     @Expose
@@ -982,10 +965,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IPv6 
      * @return Vip6 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
         return this.Vip6;
@@ -993,9 +974,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip6 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
@@ -1050,10 +1029,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持IPv6 
      * @return Ipv6Flag 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
@@ -1061,19 +1038,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6Flag 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
     }
 
     /**
-     * Get 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网IPv6地址，公网可访问 
      * @return WanVipv6 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanVipv6() {
         return this.WanVipv6;
@@ -1081,19 +1054,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanVipv6 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanVipv6(String WanVipv6) {
         this.WanVipv6 = WanVipv6;
     }
 
     /**
-     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中 
      * @return WanStatusIpv6 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWanStatusIpv6() {
         return this.WanStatusIpv6;
@@ -1101,19 +1070,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanStatusIpv6 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanStatusIpv6(Long WanStatusIpv6) {
         this.WanStatusIpv6 = WanStatusIpv6;
     }
 
     /**
-     * Get 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网IPv6端口 
      * @return WanPortIpv6 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWanPortIpv6() {
         return this.WanPortIpv6;
@@ -1121,19 +1086,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanPortIpv6 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanPortIpv6(Long WanPortIpv6) {
         this.WanPortIpv6 = WanPortIpv6;
     }
 
     /**
-     * Get 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库引擎 
      * @return DbEngine 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbEngine() {
         return this.DbEngine;
@@ -1141,19 +1102,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbEngine 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbEngine(String DbEngine) {
         this.DbEngine = DbEngine;
     }
 
     /**
-     * Get 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库版本 
      * @return DbVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbVersion() {
         return this.DbVersion;
@@ -1161,9 +1118,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
@@ -1186,10 +1141,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DCN标志，0-无，1-主实例，2-灾备实例 
      * @return DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDcnFlag() {
         return this.DcnFlag;
@@ -1197,19 +1150,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDcnFlag(Long DcnFlag) {
         this.DcnFlag = DcnFlag;
     }
 
     /**
-     * Get DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DCN状态，0-无，1-创建中，2-同步中，3-已断开 
      * @return DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDcnStatus() {
         return this.DcnStatus;
@@ -1217,19 +1166,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDcnStatus(Long DcnStatus) {
         this.DcnStatus = DcnStatus;
     }
 
     /**
-     * Get DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DCN灾备实例数 
      * @return DcnDstNum DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDcnDstNum() {
         return this.DcnDstNum;
@@ -1237,19 +1182,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DcnDstNum DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDcnDstNum(Long DcnDstNum) {
         this.DcnDstNum = DcnDstNum;
     }
 
     /**
-     * Get 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型） 
      * @return InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceType() {
         return this.InstanceType;
@@ -1257,19 +1198,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的各个DB节点信息 
      * @return NodesInfo 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getNodesInfo() {
         return this.NodesInfo;
@@ -1277,19 +1214,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodesInfo 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodesInfo(NodeInfo [] NodesInfo) {
         this.NodesInfo = NodesInfo;
     }
 
     /**
-     * Get 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否支持设置用户连接数限制，内核为10.1暂不支持。 
      * @return IsMaxUserConnectionsSupported 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsMaxUserConnectionsSupported() {
         return this.IsMaxUserConnectionsSupported;
@@ -1297,19 +1230,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsMaxUserConnectionsSupported 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMaxUserConnectionsSupported(Boolean IsMaxUserConnectionsSupported) {
         this.IsMaxUserConnectionsSupported = IsMaxUserConnectionsSupported;
     }
 
     /**
-     * Get 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外显示的数据库版本 
      * @return DbVersionId 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
@@ -1317,19 +1246,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbVersionId 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;
     }
 
     /**
-     * Get 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密状态, 0-未开启，1-已开启 
      * @return EncryptStatus 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncryptStatus() {
         return this.EncryptStatus;
@@ -1337,9 +1262,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptStatus 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptStatus(Long EncryptStatus) {
         this.EncryptStatus = EncryptStatus;
@@ -1386,10 +1309,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群 
      * @return ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExclusterType() {
         return this.ExclusterType;
@@ -1397,19 +1318,15 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusterType(Long ExclusterType) {
         this.ExclusterType = ExclusterType;
     }
 
     /**
-     * Get VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC就近访问 
      * @return RsAccessStrategy VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRsAccessStrategy() {
         return this.RsAccessStrategy;
@@ -1417,9 +1334,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
      * Set VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RsAccessStrategy VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRsAccessStrategy(Long RsAccessStrategy) {
         this.RsAccessStrategy = RsAccessStrategy;

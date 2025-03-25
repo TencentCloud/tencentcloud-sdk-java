@@ -25,7 +25,6 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
     * 应用id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidAppId")
     @Expose
@@ -33,7 +32,6 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
     * 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidAppVersion")
     @Expose
@@ -69,10 +66,8 @@ public class AndroidInstanceAppInfo extends AbstractModel {
     private String PackageLabel;
 
     /**
-     * Get 应用id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用id 
      * @return AndroidAppId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidAppId() {
         return this.AndroidAppId;
@@ -80,19 +75,15 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
      * Set 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidAppId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidAppId(String AndroidAppId) {
         this.AndroidAppId = AndroidAppId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return Name 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -100,19 +91,15 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 应用版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用版本 
      * @return AndroidAppVersion 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidAppVersion() {
         return this.AndroidAppVersion;
@@ -120,9 +107,7 @@ public class AndroidInstanceAppInfo extends AbstractModel {
 
     /**
      * Set 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidAppVersion 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidAppVersion(String AndroidAppVersion) {
         this.AndroidAppVersion = AndroidAppVersion;

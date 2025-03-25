@@ -31,7 +31,7 @@ public class GetRoomsResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 房间列表
+    * 课堂列表
     */
     @SerializedName("Rooms")
     @Expose
@@ -61,16 +61,16 @@ public class GetRoomsResponse extends AbstractModel {
     }
 
     /**
-     * Get 房间列表 
-     * @return Rooms 房间列表
+     * Get 课堂列表 
+     * @return Rooms 课堂列表
      */
     public RoomItem [] getRooms() {
         return this.Rooms;
     }
 
     /**
-     * Set 房间列表
-     * @param Rooms 房间列表
+     * Set 课堂列表
+     * @param Rooms 课堂列表
      */
     public void setRooms(RoomItem [] Rooms) {
         this.Rooms = Rooms;

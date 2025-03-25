@@ -67,7 +67,6 @@ public class WorkOrderData extends AbstractModel {
 
     /**
     * 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
     @Expose
@@ -170,10 +169,8 @@ public class WorkOrderData extends AbstractModel {
     }
 
     /**
-     * Get 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工单完成时间 
      * @return FinishTime 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -181,9 +178,7 @@ public class WorkOrderData extends AbstractModel {
 
     /**
      * Set 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishTime 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

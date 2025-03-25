@@ -25,7 +25,6 @@ public class SearchBusinessLogResponse extends AbstractModel {
 
     /**
     * 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class SearchBusinessLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务日志列表 
      * @return Result 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageBusinessLogV2 getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class SearchBusinessLogResponse extends AbstractModel {
 
     /**
      * Set 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageBusinessLogV2 Result) {
         this.Result = Result;

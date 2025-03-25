@@ -25,7 +25,6 @@ public class SelfOperation extends AbstractModel {
 
     /**
     * 联系人员电话
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StuffContact")
     @Expose
@@ -33,7 +32,6 @@ public class SelfOperation extends AbstractModel {
 
     /**
     * 身份证号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StuffIDCard")
     @Expose
@@ -41,7 +39,6 @@ public class SelfOperation extends AbstractModel {
 
     /**
     * 人员姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StuffName")
     @Expose
@@ -49,17 +46,14 @@ public class SelfOperation extends AbstractModel {
 
     /**
     * 上门时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationTime")
     @Expose
     private String OperationTime;
 
     /**
-     * Get 联系人员电话
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 联系人员电话 
      * @return StuffContact 联系人员电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStuffContact() {
         return this.StuffContact;
@@ -67,19 +61,15 @@ public class SelfOperation extends AbstractModel {
 
     /**
      * Set 联系人员电话
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StuffContact 联系人员电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStuffContact(String StuffContact) {
         this.StuffContact = StuffContact;
     }
 
     /**
-     * Get 身份证号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份证号 
      * @return StuffIDCard 身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStuffIDCard() {
         return this.StuffIDCard;
@@ -87,19 +77,15 @@ public class SelfOperation extends AbstractModel {
 
     /**
      * Set 身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StuffIDCard 身份证号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStuffIDCard(String StuffIDCard) {
         this.StuffIDCard = StuffIDCard;
     }
 
     /**
-     * Get 人员姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人员姓名 
      * @return StuffName 人员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStuffName() {
         return this.StuffName;
@@ -107,19 +93,15 @@ public class SelfOperation extends AbstractModel {
 
     /**
      * Set 人员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StuffName 人员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStuffName(String StuffName) {
         this.StuffName = StuffName;
     }
 
     /**
-     * Get 上门时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上门时间 
      * @return OperationTime 上门时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationTime() {
         return this.OperationTime;
@@ -127,9 +109,7 @@ public class SelfOperation extends AbstractModel {
 
     /**
      * Set 上门时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationTime 上门时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;

@@ -25,7 +25,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 原单价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -33,7 +32,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountUnitPrice")
     @Expose
@@ -41,7 +39,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
@@ -50,7 +47,6 @@ public class ItemPrice extends AbstractModel {
     /**
     * 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -58,17 +54,14 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
     @Expose
     private Long Amount;
 
     /**
-     * Get 原单价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原单价 
      * @return UnitPrice 原单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -76,19 +69,15 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 原单价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 原单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣后单价 
      * @return DiscountUnitPrice 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountUnitPrice() {
         return this.DiscountUnitPrice;
@@ -96,19 +85,15 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountUnitPrice 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountUnitPrice(Float DiscountUnitPrice) {
         this.DiscountUnitPrice = DiscountUnitPrice;
     }
 
     /**
-     * Get 折扣
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣 
      * @return Discount 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscount() {
         return this.Discount;
@@ -116,9 +101,7 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Discount 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
@@ -126,11 +109,9 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Get 单位：时/月
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ChargeUnit 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
@@ -139,20 +120,16 @@ public class ItemPrice extends AbstractModel {
     /**
      * Set 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeUnit 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
     }
 
     /**
-     * Get 商品数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品数量 
      * @return Amount 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAmount() {
         return this.Amount;
@@ -160,9 +137,7 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Amount 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(Long Amount) {
         this.Amount = Amount;

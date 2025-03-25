@@ -32,7 +32,6 @@ public class TriggerInvokeCondition extends AbstractModel {
 
     /**
     * 触发表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeExpr")
     @Expose
@@ -55,10 +54,8 @@ public class TriggerInvokeCondition extends AbstractModel {
     }
 
     /**
-     * Get 触发表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发表达式 
      * @return InvokeExpr 触发表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeExpr() {
         return this.InvokeExpr;
@@ -66,9 +63,7 @@ public class TriggerInvokeCondition extends AbstractModel {
 
     /**
      * Set 触发表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeExpr 触发表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeExpr(String InvokeExpr) {
         this.InvokeExpr = InvokeExpr;

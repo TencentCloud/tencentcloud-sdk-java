@@ -101,6 +101,13 @@ public class InstanceOperation extends AbstractModel {
     private String OperationDetail;
 
     /**
+    * 计算组id
+    */
+    @SerializedName("ComputerGroupId")
+    @Expose
+    private String ComputerGroupId;
+
+    /**
      * Get 操作名称，例如“create_instance"、“scaleout_instance”等 
      * @return Name 操作名称，例如“create_instance"、“scaleout_instance”等
      */
@@ -276,6 +283,22 @@ public class InstanceOperation extends AbstractModel {
         this.OperationDetail = OperationDetail;
     }
 
+    /**
+     * Get 计算组id 
+     * @return ComputerGroupId 计算组id
+     */
+    public String getComputerGroupId() {
+        return this.ComputerGroupId;
+    }
+
+    /**
+     * Set 计算组id
+     * @param ComputerGroupId 计算组id
+     */
+    public void setComputerGroupId(String ComputerGroupId) {
+        this.ComputerGroupId = ComputerGroupId;
+    }
+
     public InstanceOperation() {
     }
 
@@ -317,6 +340,9 @@ public class InstanceOperation extends AbstractModel {
         if (source.OperationDetail != null) {
             this.OperationDetail = new String(source.OperationDetail);
         }
+        if (source.ComputerGroupId != null) {
+            this.ComputerGroupId = new String(source.ComputerGroupId);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class InstanceOperation extends AbstractModel {
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "OperationDetail", this.OperationDetail);
+        this.setParamSimple(map, prefix + "ComputerGroupId", this.ComputerGroupId);
 
     }
 }

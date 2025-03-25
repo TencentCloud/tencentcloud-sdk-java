@@ -32,7 +32,6 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
     * app名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
@@ -40,7 +39,6 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
     * ios包名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
     @Expose
@@ -55,7 +53,6 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
     * 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -91,7 +88,6 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
     * license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResidueDay")
     @Expose
@@ -99,7 +95,6 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
     * license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Residue")
     @Expose
@@ -129,10 +124,8 @@ public class CreateActivityLicenseResponse extends AbstractModel {
     }
 
     /**
-     * Get app名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get app名称 
      * @return AppName app名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -140,19 +133,15 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
      * Set app名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName app名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get ios包名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ios包名 
      * @return BundleId ios包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
         return this.BundleId;
@@ -160,9 +149,7 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
      * Set ios包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BundleId ios包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
@@ -185,10 +172,8 @@ public class CreateActivityLicenseResponse extends AbstractModel {
     }
 
     /**
-     * Get 有效时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效时长 
      * @return Duration 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -196,9 +181,7 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
      * Set 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -269,10 +252,8 @@ public class CreateActivityLicenseResponse extends AbstractModel {
     }
 
     /**
-     * Get license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license剩余天数，最后一天以及过期显示0 
      * @return ResidueDay license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResidueDay() {
         return this.ResidueDay;
@@ -280,19 +261,15 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
      * Set license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResidueDay license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResidueDay(Long ResidueDay) {
         this.ResidueDay = ResidueDay;
     }
 
     /**
-     * Get license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license剩余秒数 
      * @return Residue license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResidue() {
         return this.Residue;
@@ -300,9 +277,7 @@ public class CreateActivityLicenseResponse extends AbstractModel {
 
     /**
      * Set license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Residue license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResidue(Long Residue) {
         this.Residue = Residue;

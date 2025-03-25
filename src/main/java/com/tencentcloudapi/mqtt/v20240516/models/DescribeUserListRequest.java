@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserListRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,37 +32,37 @@ public class DescribeUserListRequest extends AbstractModel {
 
     /**
     * 查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认值0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认值20，最大值100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -70,9 +70,9 @@ Username：Username模糊查询
 
     /**
      * Get 查询条件列表支持字段
-Username：Username模糊查询 
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String 
      * @return Filters 查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -80,41 +80,41 @@ Username：Username模糊查询
 
     /**
      * Set 查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
      * @param Filters 查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认值0 
+     * @return Offset 查询起始位置，默认值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认值0
+     * @param Offset 查询起始位置，默认值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认值20，最大值100 
+     * @return Limit 查询结果限制数量，默认值20，最大值100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认值20，最大值100
+     * @param Limit 查询结果限制数量，默认值20，最大值100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

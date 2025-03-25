@@ -74,7 +74,6 @@ public class Feature extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -82,7 +81,6 @@ public class Feature extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -201,10 +199,8 @@ public class Feature extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -212,19 +208,15 @@ public class Feature extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -232,9 +224,7 @@ public class Feature extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;

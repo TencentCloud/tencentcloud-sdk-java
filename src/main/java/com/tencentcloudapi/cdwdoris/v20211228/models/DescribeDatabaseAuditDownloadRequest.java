@@ -129,6 +129,13 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
     private Boolean [] IsQuery;
 
     /**
+    * 计算组列表
+    */
+    @SerializedName("ComputeGroups")
+    @Expose
+    private String [] ComputeGroups;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -368,6 +375,22 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
         this.IsQuery = IsQuery;
     }
 
+    /**
+     * Get 计算组列表 
+     * @return ComputeGroups 计算组列表
+     */
+    public String [] getComputeGroups() {
+        return this.ComputeGroups;
+    }
+
+    /**
+     * Set 计算组列表
+     * @param ComputeGroups 计算组列表
+     */
+    public void setComputeGroups(String [] ComputeGroups) {
+        this.ComputeGroups = ComputeGroups;
+    }
+
     public DescribeDatabaseAuditDownloadRequest() {
     }
 
@@ -436,6 +459,12 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
                 this.IsQuery[i] = new Boolean(source.IsQuery[i]);
             }
         }
+        if (source.ComputeGroups != null) {
+            this.ComputeGroups = new String[source.ComputeGroups.length];
+            for (int i = 0; i < source.ComputeGroups.length; i++) {
+                this.ComputeGroups[i] = new String(source.ComputeGroups[i]);
+            }
+        }
     }
 
 
@@ -458,6 +487,7 @@ public class DescribeDatabaseAuditDownloadRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
         this.setParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
         this.setParamArraySimple(map, prefix + "IsQuery.", this.IsQuery);
+        this.setParamArraySimple(map, prefix + "ComputeGroups.", this.ComputeGroups);
 
     }
 }

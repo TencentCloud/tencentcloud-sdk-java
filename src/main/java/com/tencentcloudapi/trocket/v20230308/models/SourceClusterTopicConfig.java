@@ -25,7 +25,6 @@ public class SourceClusterTopicConfig extends AbstractModel {
 
     /**
     * 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -46,7 +45,6 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicType")
     @Expose
@@ -54,7 +52,6 @@ DelayScheduled 延时消息
 
     /**
     * 队列数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueNum")
     @Expose
@@ -62,7 +59,6 @@ DelayScheduled 延时消息
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -70,7 +66,6 @@ DelayScheduled 延时消息
 
     /**
     * 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Imported")
     @Expose
@@ -78,7 +73,6 @@ DelayScheduled 延时消息
 
     /**
     * 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -90,7 +84,6 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportStatus")
     @Expose
@@ -98,7 +91,6 @@ Failure 失败
 
     /**
     * 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceV4")
     @Expose
@@ -106,7 +98,6 @@ Failure 失败
 
     /**
     * 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNameV4")
     @Expose
@@ -114,17 +105,14 @@ Failure 失败
 
     /**
     * 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullNamespaceV4")
     @Expose
     private String FullNamespaceV4;
 
     /**
-     * Get 主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名称 
      * @return TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -132,9 +120,7 @@ Failure 失败
 
     /**
      * Set 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -154,8 +140,7 @@ Normal 普通消息
 PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return TopicType 主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -170,7 +155,6 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicType() {
         return this.TopicType;
@@ -191,7 +175,6 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicType 主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -206,17 +189,14 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get 队列数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 队列数 
      * @return QueueNum 队列数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQueueNum() {
         return this.QueueNum;
@@ -224,19 +204,15 @@ DelayScheduled 延时消息
 
     /**
      * Set 队列数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueueNum 队列数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueNum(Long QueueNum) {
         this.QueueNum = QueueNum;
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -244,19 +220,15 @@ DelayScheduled 延时消息
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已导入，作为入参时无效 
      * @return Imported 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getImported() {
         return this.Imported;
@@ -264,19 +236,15 @@ DelayScheduled 延时消息
 
     /**
      * Set 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Imported 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImported(Boolean Imported) {
         this.Imported = Imported;
     }
 
     /**
-     * Get 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间，仅4.x集群有效 
      * @return Namespace 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -284,9 +252,7 @@ DelayScheduled 延时消息
 
     /**
      * Set 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -297,14 +263,12 @@ DelayScheduled 延时消息
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
-Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。 
+Failure 失败 
      * @return ImportStatus 导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImportStatus() {
         return this.ImportStatus;
@@ -316,23 +280,19 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImportStatus 导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportStatus(String ImportStatus) {
         this.ImportStatus = ImportStatus;
     }
 
     /**
-     * Get 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 4.x的命名空间，出参使用 
      * @return NamespaceV4 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceV4() {
         return this.NamespaceV4;
@@ -340,19 +300,15 @@ Failure 失败
 
     /**
      * Set 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceV4 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceV4(String NamespaceV4) {
         this.NamespaceV4 = NamespaceV4;
     }
 
     /**
-     * Get 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 4.x的主题名，出参使用 
      * @return TopicNameV4 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicNameV4() {
         return this.TopicNameV4;
@@ -360,19 +316,15 @@ Failure 失败
 
     /**
      * Set 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNameV4 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNameV4(String TopicNameV4) {
         this.TopicNameV4 = TopicNameV4;
     }
 
     /**
-     * Get 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 4.x的完整命名空间，出参使用 
      * @return FullNamespaceV4 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullNamespaceV4() {
         return this.FullNamespaceV4;
@@ -380,9 +332,7 @@ Failure 失败
 
     /**
      * Set 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FullNamespaceV4 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullNamespaceV4(String FullNamespaceV4) {
         this.FullNamespaceV4 = FullNamespaceV4;

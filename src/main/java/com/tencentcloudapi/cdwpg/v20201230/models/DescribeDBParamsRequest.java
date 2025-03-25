@@ -31,14 +31,14 @@ public class DescribeDBParamsRequest extends AbstractModel {
     private String [] NodeTypes;
 
     /**
-    * range::(0,100]
+    * 分页参数，分页步长，默认为10 示例值：10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * range::[0,INF)
+    * 分页参数，第一页为0，第二页为10
     */
     @SerializedName("Offset")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeDBParamsRequest extends AbstractModel {
     }
 
     /**
-     * Get range::(0,100] 
-     * @return Limit range::(0,100]
+     * Get 分页参数，分页步长，默认为10 示例值：10 
+     * @return Limit 分页参数，分页步长，默认为10 示例值：10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set range::(0,100]
-     * @param Limit range::(0,100]
+     * Set 分页参数，分页步长，默认为10 示例值：10
+     * @param Limit 分页参数，分页步长，默认为10 示例值：10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get range::[0,INF) 
-     * @return Offset range::[0,INF)
+     * Get 分页参数，第一页为0，第二页为10 
+     * @return Offset 分页参数，第一页为0，第二页为10
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set range::[0,INF)
-     * @param Offset range::[0,INF)
+     * Set 分页参数，第一页为0，第二页为10
+     * @param Offset 分页参数，第一页为0，第二页为10
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

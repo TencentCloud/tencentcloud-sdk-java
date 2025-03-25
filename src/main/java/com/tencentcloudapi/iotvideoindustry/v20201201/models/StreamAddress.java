@@ -25,7 +25,6 @@ public class StreamAddress extends AbstractModel {
 
     /**
     * 流ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamId")
     @Expose
@@ -33,7 +32,6 @@ public class StreamAddress extends AbstractModel {
 
     /**
     * rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RtspAddr")
     @Expose
@@ -41,7 +39,6 @@ public class StreamAddress extends AbstractModel {
 
     /**
     * rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RtmpAddr")
     @Expose
@@ -49,7 +46,6 @@ public class StreamAddress extends AbstractModel {
 
     /**
     * hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HlsAddr")
     @Expose
@@ -57,17 +53,14 @@ public class StreamAddress extends AbstractModel {
 
     /**
     * flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlvAddr")
     @Expose
     private String FlvAddr;
 
     /**
-     * Get 流ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流ID 
      * @return StreamId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamId() {
         return this.StreamId;
@@ -75,19 +68,15 @@ public class StreamAddress extends AbstractModel {
 
     /**
      * Set 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rtsp流地址 
      * @return RtspAddr rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRtspAddr() {
         return this.RtspAddr;
@@ -95,19 +84,15 @@ public class StreamAddress extends AbstractModel {
 
     /**
      * Set rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RtspAddr rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRtspAddr(String RtspAddr) {
         this.RtspAddr = RtspAddr;
     }
 
     /**
-     * Get rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rtmp流地址 
      * @return RtmpAddr rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRtmpAddr() {
         return this.RtmpAddr;
@@ -115,19 +100,15 @@ public class StreamAddress extends AbstractModel {
 
     /**
      * Set rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RtmpAddr rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRtmpAddr(String RtmpAddr) {
         this.RtmpAddr = RtmpAddr;
     }
 
     /**
-     * Get hls流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get hls流地址 
      * @return HlsAddr hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHlsAddr() {
         return this.HlsAddr;
@@ -135,19 +116,15 @@ public class StreamAddress extends AbstractModel {
 
     /**
      * Set hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HlsAddr hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHlsAddr(String HlsAddr) {
         this.HlsAddr = HlsAddr;
     }
 
     /**
-     * Get flv流地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get flv流地址 
      * @return FlvAddr flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlvAddr() {
         return this.FlvAddr;
@@ -155,9 +132,7 @@ public class StreamAddress extends AbstractModel {
 
     /**
      * Set flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlvAddr flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlvAddr(String FlvAddr) {
         this.FlvAddr = FlvAddr;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyUserRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class ModifyUserRequest extends AbstractModel {
     private String Username;
 
     /**
-    * 备注
+    * 备注，长度不超过128个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class ModifyUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注，长度不超过128个字符。 
+     * @return Remark 备注，长度不超过128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注，长度不超过128个字符。
+     * @param Remark 备注，长度不超过128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

@@ -59,6 +59,13 @@ public class XMagicTrial extends AbstractModel {
     private String XMagicType;
 
     /**
+    * vod：点播 live：直播
+    */
+    @SerializedName("BizType")
+    @Expose
+    private String BizType;
+
+    /**
      * Get 功能名称 
      * @return Name 功能名称
      */
@@ -138,6 +145,22 @@ public class XMagicTrial extends AbstractModel {
         this.XMagicType = XMagicType;
     }
 
+    /**
+     * Get vod：点播 live：直播 
+     * @return BizType vod：点播 live：直播
+     */
+    public String getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set vod：点播 live：直播
+     * @param BizType vod：点播 live：直播
+     */
+    public void setBizType(String BizType) {
+        this.BizType = BizType;
+    }
+
     public XMagicTrial() {
     }
 
@@ -161,6 +184,9 @@ public class XMagicTrial extends AbstractModel {
         if (source.XMagicType != null) {
             this.XMagicType = new String(source.XMagicType);
         }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class XMagicTrial extends AbstractModel {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "Plan", this.Plan);
         this.setParamSimple(map, prefix + "XMagicType", this.XMagicType);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
 
     }
 }

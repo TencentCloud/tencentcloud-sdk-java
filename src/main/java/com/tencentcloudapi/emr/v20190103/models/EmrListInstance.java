@@ -32,7 +32,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -103,7 +102,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -111,7 +109,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -119,7 +116,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 区域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -127,7 +123,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -135,7 +130,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -143,7 +137,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 地区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -151,7 +144,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -167,7 +159,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmInfo")
     @Expose
@@ -175,7 +166,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWoodpeckerCluster")
     @Expose
@@ -183,7 +173,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -191,7 +180,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetName")
     @Expose
@@ -199,7 +187,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -207,7 +194,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -215,7 +201,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterClass")
     @Expose
@@ -223,7 +208,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMultiZoneCluster")
     @Expose
@@ -231,7 +215,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsHandsCluster")
     @Expose
@@ -247,7 +230,6 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportOutsideCluster")
     @Expose
@@ -255,11 +237,17 @@ public class EmrListInstance extends AbstractModel {
 
     /**
     * 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDedicatedCluster")
     @Expose
     private Boolean IsDedicatedCluster;
+
+    /**
+    * 集群支持克隆
+    */
+    @SerializedName("IsSupportClone")
+    @Expose
+    private Boolean IsSupportClone;
 
     /**
      * Get 集群ID 
@@ -278,10 +266,8 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除 
      * @return StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -289,9 +275,7 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
@@ -442,10 +426,8 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 产品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品ID 
      * @return ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductId() {
         return this.ProductId;
@@ -453,19 +435,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -473,19 +451,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 区域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域 
      * @return RegionId 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -493,19 +467,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubnetId() {
         return this.SubnetId;
@@ -513,19 +483,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络ID 
      * @return VpcId 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVpcId() {
         return this.VpcId;
@@ -533,19 +499,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 地区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区 
      * @return Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -553,19 +515,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 地区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中) 
      * @return Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -573,9 +531,7 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -602,10 +558,8 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 告警信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警信息 
      * @return AlarmInfo 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmInfo() {
         return this.AlarmInfo;
@@ -613,19 +567,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmInfo 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmInfo(String AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是woodpecker集群 
      * @return IsWoodpeckerCluster 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsWoodpeckerCluster() {
         return this.IsWoodpeckerCluster;
@@ -633,19 +583,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWoodpeckerCluster 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
         this.IsWoodpeckerCluster = IsWoodpeckerCluster;
     }
 
     /**
-     * Get Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc中文 
      * @return VpcName Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -653,19 +599,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 子网中文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网中文 
      * @return SubnetName 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetName() {
         return this.SubnetName;
@@ -673,19 +615,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetName 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字符串VpcId 
      * @return UniqVpcId 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -693,19 +631,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字符串子网 
      * @return UniqSubnetId 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -713,19 +647,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterClass 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterClass() {
         return this.ClusterClass;
@@ -733,19 +663,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterClass 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterClass(String ClusterClass) {
         this.ClusterClass = ClusterClass;
     }
 
     /**
-     * Get 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为跨AZ集群 
      * @return IsMultiZoneCluster 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsMultiZoneCluster() {
         return this.IsMultiZoneCluster;
@@ -753,19 +679,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsMultiZoneCluster 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
     /**
-     * Get 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否手戳集群 
      * @return IsHandsCluster 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsHandsCluster() {
         return this.IsHandsCluster;
@@ -773,9 +695,7 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsHandsCluster 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsHandsCluster(Boolean IsHandsCluster) {
         this.IsHandsCluster = IsHandsCluster;
@@ -802,10 +722,8 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前集群的应用场景是否支持体外客户端 
      * @return IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSupportOutsideCluster() {
         return this.IsSupportOutsideCluster;
@@ -813,19 +731,15 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportOutsideCluster(Boolean IsSupportOutsideCluster) {
         this.IsSupportOutsideCluster = IsSupportOutsideCluster;
     }
 
     /**
-     * Get 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否专有集群场景集群 
      * @return IsDedicatedCluster 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDedicatedCluster() {
         return this.IsDedicatedCluster;
@@ -833,12 +747,26 @@ public class EmrListInstance extends AbstractModel {
 
     /**
      * Set 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDedicatedCluster 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDedicatedCluster(Boolean IsDedicatedCluster) {
         this.IsDedicatedCluster = IsDedicatedCluster;
+    }
+
+    /**
+     * Get 集群支持克隆 
+     * @return IsSupportClone 集群支持克隆
+     */
+    public Boolean getIsSupportClone() {
+        return this.IsSupportClone;
+    }
+
+    /**
+     * Set 集群支持克隆
+     * @param IsSupportClone 集群支持克隆
+     */
+    public void setIsSupportClone(Boolean IsSupportClone) {
+        this.IsSupportClone = IsSupportClone;
     }
 
     public EmrListInstance() {
@@ -948,6 +876,9 @@ public class EmrListInstance extends AbstractModel {
         if (source.IsDedicatedCluster != null) {
             this.IsDedicatedCluster = new Boolean(source.IsDedicatedCluster);
         }
+        if (source.IsSupportClone != null) {
+            this.IsSupportClone = new Boolean(source.IsSupportClone);
+        }
     }
 
 
@@ -986,6 +917,7 @@ public class EmrListInstance extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
         this.setParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
         this.setParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
+        this.setParamSimple(map, prefix + "IsSupportClone", this.IsSupportClone);
 
     }
 }

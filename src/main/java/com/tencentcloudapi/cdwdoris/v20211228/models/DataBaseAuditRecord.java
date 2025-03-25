@@ -129,6 +129,13 @@ public class DataBaseAuditRecord extends AbstractModel {
     private Boolean IsQuery;
 
     /**
+    * 计算组
+    */
+    @SerializedName("ComputeGroup")
+    @Expose
+    private String ComputeGroup;
+
+    /**
      * Get 查询用户 
      * @return OsUser 查询用户
      */
@@ -368,6 +375,22 @@ public class DataBaseAuditRecord extends AbstractModel {
         this.IsQuery = IsQuery;
     }
 
+    /**
+     * Get 计算组 
+     * @return ComputeGroup 计算组
+     */
+    public String getComputeGroup() {
+        return this.ComputeGroup;
+    }
+
+    /**
+     * Set 计算组
+     * @param ComputeGroup 计算组
+     */
+    public void setComputeGroup(String ComputeGroup) {
+        this.ComputeGroup = ComputeGroup;
+    }
+
     public DataBaseAuditRecord() {
     }
 
@@ -421,6 +444,9 @@ public class DataBaseAuditRecord extends AbstractModel {
         if (source.IsQuery != null) {
             this.IsQuery = new Boolean(source.IsQuery);
         }
+        if (source.ComputeGroup != null) {
+            this.ComputeGroup = new String(source.ComputeGroup);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class DataBaseAuditRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
+        this.setParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
 
     }
 }

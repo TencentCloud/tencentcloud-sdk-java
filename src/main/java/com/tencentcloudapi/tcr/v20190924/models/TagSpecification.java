@@ -25,7 +25,6 @@ public class TagSpecification extends AbstractModel {
 
     /**
     * 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -33,17 +32,14 @@ public class TagSpecification extends AbstractModel {
 
     /**
     * 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认值为instance 
      * @return ResourceType 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -51,19 +47,15 @@ public class TagSpecification extends AbstractModel {
 
     /**
      * Set 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签数组 
      * @return Tags 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -71,9 +63,7 @@ public class TagSpecification extends AbstractModel {
 
     /**
      * Set 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

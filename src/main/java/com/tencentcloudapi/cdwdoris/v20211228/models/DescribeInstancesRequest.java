@@ -59,6 +59,13 @@ public class DescribeInstancesRequest extends AbstractModel {
     private SearchTags [] SearchTags;
 
     /**
+    * 0 : 存算一体,1：存算分离,2:ALL
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 搜索的集群id名称 
      * @return SearchInstanceId 搜索的集群id名称
      */
@@ -138,6 +145,22 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.SearchTags = SearchTags;
     }
 
+    /**
+     * Get 0 : 存算一体,1：存算分离,2:ALL 
+     * @return InstanceType 0 : 存算一体,1：存算分离,2:ALL
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 0 : 存算一体,1：存算分离,2:ALL
+     * @param InstanceType 0 : 存算一体,1：存算分离,2:ALL
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.SearchTags[i] = new SearchTags(source.SearchTags[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

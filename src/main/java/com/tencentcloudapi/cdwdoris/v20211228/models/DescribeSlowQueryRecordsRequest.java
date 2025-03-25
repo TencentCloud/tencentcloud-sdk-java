@@ -143,6 +143,13 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
     private String UserName;
 
     /**
+    * 计算组列表
+    */
+    @SerializedName("ComputeGroups")
+    @Expose
+    private String [] ComputeGroups;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -414,6 +421,22 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.UserName = UserName;
     }
 
+    /**
+     * Get 计算组列表 
+     * @return ComputeGroups 计算组列表
+     */
+    public String [] getComputeGroups() {
+        return this.ComputeGroups;
+    }
+
+    /**
+     * Set 计算组列表
+     * @param ComputeGroups 计算组列表
+     */
+    public void setComputeGroups(String [] ComputeGroups) {
+        this.ComputeGroups = ComputeGroups;
+    }
+
     public DescribeSlowQueryRecordsRequest() {
     }
 
@@ -479,6 +502,12 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.ComputeGroups != null) {
+            this.ComputeGroups = new String[source.ComputeGroups.length];
+            for (int i = 0; i < source.ComputeGroups.length; i++) {
+                this.ComputeGroups[i] = new String(source.ComputeGroups[i]);
+            }
+        }
     }
 
 
@@ -503,6 +532,7 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamArraySimple(map, prefix + "ComputeGroups.", this.ComputeGroups);
 
     }
 }

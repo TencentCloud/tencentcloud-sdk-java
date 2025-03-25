@@ -81,7 +81,7 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
     private String [] Scope;
 
     /**
-    * 描述
+    * 描述信息。由用户自行定义。
     */
     @SerializedName("Description")
     @Expose
@@ -220,16 +220,16 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get 描述信息。由用户自行定义。 
+     * @return Description 描述信息。由用户自行定义。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set 描述信息。由用户自行定义。
+     * @param Description 描述信息。由用户自行定义。
      */
     public void setDescription(String Description) {
         this.Description = Description;

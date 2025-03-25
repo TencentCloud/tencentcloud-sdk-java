@@ -150,6 +150,13 @@ public class SlowQueryRecord extends AbstractModel {
     private Long CpuTimeMs;
 
     /**
+    * 计算组
+    */
+    @SerializedName("ComputeGroup")
+    @Expose
+    private String ComputeGroup;
+
+    /**
      * Get 查询用户 
      * @return OsUser 查询用户
      */
@@ -437,6 +444,22 @@ public class SlowQueryRecord extends AbstractModel {
         this.CpuTimeMs = CpuTimeMs;
     }
 
+    /**
+     * Get 计算组 
+     * @return ComputeGroup 计算组
+     */
+    public String getComputeGroup() {
+        return this.ComputeGroup;
+    }
+
+    /**
+     * Set 计算组
+     * @param ComputeGroup 计算组
+     */
+    public void setComputeGroup(String ComputeGroup) {
+        this.ComputeGroup = ComputeGroup;
+    }
+
     public SlowQueryRecord() {
     }
 
@@ -499,6 +522,9 @@ public class SlowQueryRecord extends AbstractModel {
         if (source.CpuTimeMs != null) {
             this.CpuTimeMs = new Long(source.CpuTimeMs);
         }
+        if (source.ComputeGroup != null) {
+            this.ComputeGroup = new String(source.ComputeGroup);
+        }
     }
 
 
@@ -524,6 +550,7 @@ public class SlowQueryRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
         this.setParamSimple(map, prefix + "CpuTimeMs", this.CpuTimeMs);
+        this.setParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
 
     }
 }

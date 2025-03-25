@@ -25,7 +25,6 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -33,7 +32,6 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjName")
     @Expose
@@ -49,7 +47,6 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -57,7 +54,6 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -73,7 +69,6 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProposalDocUrl")
     @Expose
@@ -81,17 +76,14 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
     * 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProposalDocName")
     @Expose
     private String ProposalDocName;
 
     /**
-     * Get 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果级别 
      * @return Level 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -99,19 +91,15 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断对象名 
      * @return ObjName 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjName() {
         return this.ObjName;
@@ -119,9 +107,7 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjName 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjName(String ObjName) {
         this.ObjName = ObjName;
@@ -148,10 +134,8 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
     }
 
     /**
-     * Get 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断项标题 
      * @return Title 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -159,19 +143,15 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断项描述 
      * @return Desc 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -179,9 +159,7 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
@@ -208,10 +186,8 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
     }
 
     /**
-     * Get 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断建议文档链接 
      * @return ProposalDocUrl 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProposalDocUrl() {
         return this.ProposalDocUrl;
@@ -219,19 +195,15 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProposalDocUrl 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProposalDocUrl(String ProposalDocUrl) {
         this.ProposalDocUrl = ProposalDocUrl;
     }
 
     /**
-     * Get 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断建议文档名称 
      * @return ProposalDocName 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProposalDocName() {
         return this.ProposalDocName;
@@ -239,9 +211,7 @@ public class KubeJarvisStateResultsItem extends AbstractModel {
 
     /**
      * Set 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProposalDocName 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProposalDocName(String ProposalDocName) {
         this.ProposalDocName = ProposalDocName;

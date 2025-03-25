@@ -25,7 +25,6 @@ public class StatisticItem extends AbstractModel {
 
     /**
     * 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -33,17 +32,14 @@ public class StatisticItem extends AbstractModel {
 
     /**
     * 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sum")
     @Expose
     private Float Sum;
 
     /**
-     * Get 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期。格式【YYYY-MM-DD】 
      * @return Date 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -51,19 +47,15 @@ public class StatisticItem extends AbstractModel {
 
     /**
      * Set 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 统计数额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计数额 
      * @return Sum 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSum() {
         return this.Sum;
@@ -71,9 +63,7 @@ public class StatisticItem extends AbstractModel {
 
     /**
      * Set 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sum 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSum(Float Sum) {
         this.Sum = Sum;

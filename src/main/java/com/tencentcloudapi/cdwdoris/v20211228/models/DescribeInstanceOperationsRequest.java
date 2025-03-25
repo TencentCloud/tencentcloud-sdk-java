@@ -59,6 +59,13 @@ public class DescribeInstanceOperationsRequest extends AbstractModel {
     private String EndTime;
 
     /**
+    * 计算组ID
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -138,6 +145,22 @@ public class DescribeInstanceOperationsRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 计算组ID 
+     * @return ComputeGroupId 计算组ID
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组ID
+     * @param ComputeGroupId 计算组ID
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
+    }
+
     public DescribeInstanceOperationsRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeInstanceOperationsRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeInstanceOperationsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
 
     }
 }

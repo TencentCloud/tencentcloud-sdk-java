@@ -127,7 +127,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *p2p路线切换
+     *p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
      * @param req ChangeP2PRouteRequest
      * @return ChangeP2PRouteResponse
      * @throws TencentCloudSDKException

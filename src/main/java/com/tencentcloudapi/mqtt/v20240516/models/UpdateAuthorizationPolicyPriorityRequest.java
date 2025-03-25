@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAuthorizationPolicyPriorityRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateAuthorizationPolicyPriorityRequest extends AbstractModel {
     private AuthorizationPolicyPriority [] Priorities;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

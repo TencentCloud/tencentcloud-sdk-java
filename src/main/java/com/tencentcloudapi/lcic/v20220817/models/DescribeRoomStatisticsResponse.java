@@ -66,14 +66,14 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
     private Long RealEndTime;
 
     /**
-    * 房间消息总数。
+    * 课堂消息总数。
     */
     @SerializedName("MessageCount")
     @Expose
     private Long MessageCount;
 
     /**
-    * 房间连麦总数。
+    * 课堂连麦总数。
     */
     @SerializedName("MicCount")
     @Expose
@@ -183,32 +183,32 @@ public class DescribeRoomStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get 房间消息总数。 
-     * @return MessageCount 房间消息总数。
+     * Get 课堂消息总数。 
+     * @return MessageCount 课堂消息总数。
      */
     public Long getMessageCount() {
         return this.MessageCount;
     }
 
     /**
-     * Set 房间消息总数。
-     * @param MessageCount 房间消息总数。
+     * Set 课堂消息总数。
+     * @param MessageCount 课堂消息总数。
      */
     public void setMessageCount(Long MessageCount) {
         this.MessageCount = MessageCount;
     }
 
     /**
-     * Get 房间连麦总数。 
-     * @return MicCount 房间连麦总数。
+     * Get 课堂连麦总数。 
+     * @return MicCount 课堂连麦总数。
      */
     public Long getMicCount() {
         return this.MicCount;
     }
 
     /**
-     * Set 房间连麦总数。
-     * @param MicCount 房间连麦总数。
+     * Set 课堂连麦总数。
+     * @param MicCount 课堂连麦总数。
      */
     public void setMicCount(Long MicCount) {
         this.MicCount = MicCount;

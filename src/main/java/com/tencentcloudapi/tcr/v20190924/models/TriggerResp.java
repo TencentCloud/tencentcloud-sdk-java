@@ -25,7 +25,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerName")
     @Expose
@@ -33,7 +32,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeSource")
     @Expose
@@ -41,7 +39,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeAction")
     @Expose
@@ -49,7 +46,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,7 +53,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -65,7 +60,6 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeCondition")
     @Expose
@@ -73,17 +67,14 @@ public class TriggerResp extends AbstractModel {
 
     /**
     * 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokePara")
     @Expose
     private TriggerInvokePara InvokePara;
 
     /**
-     * Get 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发器名称 
      * @return TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerName() {
         return this.TriggerName;
@@ -91,19 +82,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get 触发来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发来源 
      * @return InvokeSource 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeSource() {
         return this.InvokeSource;
@@ -111,19 +98,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeSource 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeSource(String InvokeSource) {
         this.InvokeSource = InvokeSource;
     }
 
     /**
-     * Get 触发动作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发动作 
      * @return InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeAction() {
         return this.InvokeAction;
@@ -131,19 +114,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeAction(String InvokeAction) {
         this.InvokeAction = InvokeAction;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -151,19 +130,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -171,19 +146,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 触发条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发条件 
      * @return InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerInvokeCondition getInvokeCondition() {
         return this.InvokeCondition;
@@ -191,19 +162,15 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeCondition(TriggerInvokeCondition InvokeCondition) {
         this.InvokeCondition = InvokeCondition;
     }
 
     /**
-     * Get 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发器参数 
      * @return InvokePara 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerInvokePara getInvokePara() {
         return this.InvokePara;
@@ -211,9 +178,7 @@ public class TriggerResp extends AbstractModel {
 
     /**
      * Set 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokePara 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokePara(TriggerInvokePara InvokePara) {
         this.InvokePara = InvokePara;

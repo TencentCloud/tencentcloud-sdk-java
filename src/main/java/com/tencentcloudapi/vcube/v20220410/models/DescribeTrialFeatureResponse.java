@@ -40,7 +40,6 @@ public class DescribeTrialFeatureResponse extends AbstractModel {
 
     /**
     * 可以开通的优图测试功能列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XMagicTrialList")
     @Expose
@@ -90,10 +89,8 @@ public class DescribeTrialFeatureResponse extends AbstractModel {
     }
 
     /**
-     * Get 可以开通的优图测试功能列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以开通的优图测试功能列表 
      * @return XMagicTrialList 可以开通的优图测试功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public XMagicTrial [] getXMagicTrialList() {
         return this.XMagicTrialList;
@@ -101,9 +98,7 @@ public class DescribeTrialFeatureResponse extends AbstractModel {
 
     /**
      * Set 可以开通的优图测试功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param XMagicTrialList 可以开通的优图测试功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXMagicTrialList(XMagicTrial [] XMagicTrialList) {
         this.XMagicTrialList = XMagicTrialList;

@@ -46,7 +46,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
     */
     @SerializedName("Height")
@@ -122,7 +122,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。 
      * @return Height 水印的高度，支持 px，%，W%，H%，S%，L% 六种格式：
 <li>当字符串以 px 结尾，表示水印 Height 单位为像素，如 100px 表示 Height 为 100 像素；当填 0px 且
@@ -131,7 +131,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
      */
     public String getHeight() {
@@ -146,7 +146,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
      * @param Height 水印的高度，支持 px，%，W%，H%，S%，L% 六种格式：
 <li>当字符串以 px 结尾，表示水印 Height 单位为像素，如 100px 表示 Height 为 100 像素；当填 0px 且
@@ -155,7 +155,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
      */
     public void setHeight(String Height) {
@@ -177,7 +177,9 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public WatermarkCycleConfigForUpdate getCycleConfig() {
         return this.CycleConfig;
     }
@@ -197,7 +199,9 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCycleConfig(WatermarkCycleConfigForUpdate CycleConfig) {
         this.CycleConfig = CycleConfig;
     }

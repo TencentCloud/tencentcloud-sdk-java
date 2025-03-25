@@ -45,7 +45,7 @@ public class TargetGroupInfo extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * 目标组的默认端口
+    * 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
@@ -114,6 +114,13 @@ public class TargetGroupInfo extends AbstractModel {
     private Long Weight;
 
     /**
+    * 是否全监听目标组
+    */
+    @SerializedName("FullListenSwitch")
+    @Expose
+    private Boolean FullListenSwitch;
+
+    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -162,9 +169,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组的默认端口
+     * Get 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Port 目标组的默认端口
+     * @return Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
@@ -172,9 +179,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 目标组的默认端口
+     * Set 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Port 目标组的默认端口
+     * @param Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
@@ -329,6 +336,22 @@ public class TargetGroupInfo extends AbstractModel {
         this.Weight = Weight;
     }
 
+    /**
+     * Get 是否全监听目标组 
+     * @return FullListenSwitch 是否全监听目标组
+     */
+    public Boolean getFullListenSwitch() {
+        return this.FullListenSwitch;
+    }
+
+    /**
+     * Set 是否全监听目标组
+     * @param FullListenSwitch 是否全监听目标组
+     */
+    public void setFullListenSwitch(Boolean FullListenSwitch) {
+        this.FullListenSwitch = FullListenSwitch;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -379,6 +402,9 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.FullListenSwitch != null) {
+            this.FullListenSwitch = new Boolean(source.FullListenSwitch);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateRoomRequest extends AbstractModel {
 
     /**
-    * 房间名称。
+    * 课堂名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 预定的房间开始时间，unix时间戳（秒）。
+    * 预定的课堂开始时间，unix时间戳（秒）。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 预定的房间结束时间，unix时间戳（秒）。
+    * 预定的课堂结束时间，unix时间戳（秒）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -62,16 +62,14 @@ public class CreateRoomRequest extends AbstractModel {
     private Long Resolution;
 
     /**
-    * 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
+    * 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
     */
     @SerializedName("MaxMicNumber")
     @Expose
     private Long MaxMicNumber;
 
     /**
-    * 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+    * 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
     */
     @SerializedName("SubType")
     @Expose
@@ -147,7 +145,7 @@ video 纯视频
     private Long RecordLayout;
 
     /**
-    * 房间绑定的群组ID,非空时限制组成员进入
+    * 课堂绑定的群组ID,非空时限制组成员进入
     */
     @SerializedName("GroupId")
     @Expose
@@ -186,8 +184,7 @@ video 纯视频
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-注：大班课的布局(layout)只有三分屏
+    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
     */
     @SerializedName("RoomType")
     @Expose
@@ -258,48 +255,48 @@ video 纯视频
     private Long WhiteBoardSnapshotMode;
 
     /**
-     * Get 房间名称。 
-     * @return Name 房间名称。
+     * Get 课堂名称。 
+     * @return Name 课堂名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 房间名称。
-     * @param Name 房间名称。
+     * Set 课堂名称。
+     * @param Name 课堂名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 预定的房间开始时间，unix时间戳（秒）。 
-     * @return StartTime 预定的房间开始时间，unix时间戳（秒）。
+     * Get 预定的课堂开始时间，unix时间戳（秒）。 
+     * @return StartTime 预定的课堂开始时间，unix时间戳（秒）。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 预定的房间开始时间，unix时间戳（秒）。
-     * @param StartTime 预定的房间开始时间，unix时间戳（秒）。
+     * Set 预定的课堂开始时间，unix时间戳（秒）。
+     * @param StartTime 预定的课堂开始时间，unix时间戳（秒）。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 预定的房间结束时间，unix时间戳（秒）。 
-     * @return EndTime 预定的房间结束时间，unix时间戳（秒）。
+     * Get 预定的课堂结束时间，unix时间戳（秒）。 
+     * @return EndTime 预定的课堂结束时间，unix时间戳（秒）。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 预定的房间结束时间，unix时间戳（秒）。
-     * @param EndTime 预定的房间结束时间，unix时间戳（秒）。
+     * Set 预定的课堂结束时间，unix时间戳（秒）。
+     * @param EndTime 预定的课堂结束时间，unix时间戳（秒）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -350,40 +347,32 @@ video 纯视频
     }
 
     /**
-     * Get 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。 
-     * @return MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
+     * Get 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。 
+     * @return MaxMicNumber 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
-     * @param MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
+     * Set 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
+     * @param MaxMicNumber 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
     }
 
     /**
-     * Get 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频 
-     * @return SubType 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+     * Get 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频 
+     * @return SubType 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
-     * @param SubType 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+     * Set 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
+     * @param SubType 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
@@ -562,16 +551,16 @@ video 纯视频
     }
 
     /**
-     * Get 房间绑定的群组ID,非空时限制组成员进入 
-     * @return GroupId 房间绑定的群组ID,非空时限制组成员进入
+     * Get 课堂绑定的群组ID,非空时限制组成员进入 
+     * @return GroupId 课堂绑定的群组ID,非空时限制组成员进入
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 房间绑定的群组ID,非空时限制组成员进入
-     * @param GroupId 房间绑定的群组ID,非空时限制组成员进入
+     * Set 课堂绑定的群组ID,非空时限制组成员进入
+     * @param GroupId 课堂绑定的群组ID,非空时限制组成员进入
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -658,20 +647,16 @@ video 纯视频
     }
 
     /**
-     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-注：大班课的布局(layout)只有三分屏 
-     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-注：大班课的布局(layout)只有三分屏
+     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏 
+     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-注：大班课的布局(layout)只有三分屏
-     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-注：大班课的布局(layout)只有三分屏
+     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;

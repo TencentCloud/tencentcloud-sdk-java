@@ -45,6 +45,20 @@ public class ActionAlterUserRequest extends AbstractModel {
     private Long UserPrivilege;
 
     /**
+    * 计算组列表
+    */
+    @SerializedName("ComputeGroups")
+    @Expose
+    private String [] ComputeGroups;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 用户信息 
      * @return UserInfo 用户信息
      */
@@ -92,6 +106,38 @@ public class ActionAlterUserRequest extends AbstractModel {
         this.UserPrivilege = UserPrivilege;
     }
 
+    /**
+     * Get 计算组列表 
+     * @return ComputeGroups 计算组列表
+     */
+    public String [] getComputeGroups() {
+        return this.ComputeGroups;
+    }
+
+    /**
+     * Set 计算组列表
+     * @param ComputeGroups 计算组列表
+     */
+    public void setComputeGroups(String [] ComputeGroups) {
+        this.ComputeGroups = ComputeGroups;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return InstanceId 集群ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param InstanceId 集群ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ActionAlterUserRequest() {
     }
 
@@ -109,6 +155,15 @@ public class ActionAlterUserRequest extends AbstractModel {
         if (source.UserPrivilege != null) {
             this.UserPrivilege = new Long(source.UserPrivilege);
         }
+        if (source.ComputeGroups != null) {
+            this.ComputeGroups = new String[source.ComputeGroups.length];
+            for (int i = 0; i < source.ComputeGroups.length; i++) {
+                this.ComputeGroups[i] = new String(source.ComputeGroups[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -119,6 +174,8 @@ public class ActionAlterUserRequest extends AbstractModel {
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
         this.setParamSimple(map, prefix + "ApiType", this.ApiType);
         this.setParamSimple(map, prefix + "UserPrivilege", this.UserPrivilege);
+        this.setParamArraySimple(map, prefix + "ComputeGroups.", this.ComputeGroups);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

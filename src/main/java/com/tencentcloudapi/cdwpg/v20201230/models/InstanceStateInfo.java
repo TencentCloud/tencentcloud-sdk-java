@@ -88,7 +88,7 @@ public class InstanceStateInfo extends AbstractModel {
     private Long BackupStatus;
 
     /**
-    * 1
+    * 请求id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestId")
@@ -96,7 +96,7 @@ public class InstanceStateInfo extends AbstractModel {
     private String RequestId;
 
     /**
-    * 1
+    * 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupOpenStatus")
@@ -264,9 +264,9 @@ public class InstanceStateInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 请求id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestId 1
+     * @return RequestId 请求id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestId() {
@@ -274,9 +274,9 @@ public class InstanceStateInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 请求id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestId 1
+     * @param RequestId 请求id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestId(String RequestId) {
@@ -284,9 +284,9 @@ public class InstanceStateInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupOpenStatus 1
+     * @return BackupOpenStatus 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupOpenStatus() {
@@ -294,9 +294,9 @@ public class InstanceStateInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupOpenStatus 1
+     * @param BackupOpenStatus 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupOpenStatus(Long BackupOpenStatus) {

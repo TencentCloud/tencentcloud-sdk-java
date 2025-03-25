@@ -94,7 +94,7 @@ public class VcubeClient extends AbstractClient{
     }
 
     /**
-     *申请开通测试版优图
+     *申请开通测试版腾讯特效
      * @param req CreateTestXMagicRequest
      * @return CreateTestXMagicResponse
      * @throws TencentCloudSDKException
@@ -281,7 +281,7 @@ public class VcubeClient extends AbstractClient{
     }
 
     /**
-     *编辑更改应用
+     *更改测试包名信息
      * @param req ModifyApplicationRequest
      * @return ModifyApplicationResponse
      * @throws TencentCloudSDKException

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyTrialLicenseRequest extends AbstractModel {
 
     /**
-    * 执照ID
+    * 授权ID
     */
     @SerializedName("LicenseId")
     @Expose
     private String LicenseId;
 
     /**
-     * Get 执照ID 
-     * @return LicenseId 执照ID
+     * Get 授权ID 
+     * @return LicenseId 授权ID
      */
     public String getLicenseId() {
         return this.LicenseId;
     }
 
     /**
-     * Set 执照ID
-     * @param LicenseId 执照ID
+     * Set 授权ID
+     * @param LicenseId 授权ID
      */
     public void setLicenseId(String LicenseId) {
         this.LicenseId = LicenseId;

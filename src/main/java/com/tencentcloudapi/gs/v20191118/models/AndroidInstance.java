@@ -39,7 +39,6 @@ public class AndroidInstance extends AbstractModel {
 
     /**
     * 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceZone")
     @Expose
@@ -61,7 +60,6 @@ public class AndroidInstance extends AbstractModel {
 
     /**
     * 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageId")
     @Expose
@@ -149,10 +147,8 @@ public class AndroidInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例可用区 
      * @return AndroidInstanceZone 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceZone() {
         return this.AndroidInstanceZone;
@@ -160,9 +156,7 @@ public class AndroidInstance extends AbstractModel {
 
     /**
      * Set 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceZone 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceZone(String AndroidInstanceZone) {
         this.AndroidInstanceZone = AndroidInstanceZone;
@@ -201,10 +195,8 @@ public class AndroidInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例镜像 ID 
      * @return AndroidInstanceImageId 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageId() {
         return this.AndroidInstanceImageId;
@@ -212,9 +204,7 @@ public class AndroidInstance extends AbstractModel {
 
     /**
      * Set 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageId 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageId(String AndroidInstanceImageId) {
         this.AndroidInstanceImageId = AndroidInstanceImageId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MQTTClientInfo extends AbstractModel {
 
     /**
-    * 客户端唯一标识
+    * 客户端ID
     */
     @SerializedName("ClientId")
     @Expose
@@ -38,7 +38,10 @@ public class MQTTClientInfo extends AbstractModel {
     private String ClientAddress;
 
     /**
-    * MQTT 协议版本，4 表示 MQTT 3.1.1
+    * MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
     */
     @SerializedName("ProtocolVersion")
     @Expose
@@ -59,21 +62,21 @@ public class MQTTClientInfo extends AbstractModel {
     private String ConnectionStatus;
 
     /**
-    * 客户端创建时间
+    * 客户端创建时间，毫秒级时间戳 。
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 上次建立连接时间
+    * 上次建立连接时间，毫秒级时间戳 。
     */
     @SerializedName("ConnectTime")
     @Expose
     private Long ConnectTime;
 
     /**
-    * 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+    * 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
     */
     @SerializedName("DisconnectTime")
     @Expose
@@ -87,16 +90,16 @@ public class MQTTClientInfo extends AbstractModel {
     private MQTTClientSubscription [] MQTTClientSubscriptions;
 
     /**
-     * Get 客户端唯一标识 
-     * @return ClientId 客户端唯一标识
+     * Get 客户端ID 
+     * @return ClientId 客户端ID
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端唯一标识
-     * @param ClientId 客户端唯一标识
+     * Set 客户端ID
+     * @param ClientId 客户端ID
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
@@ -119,16 +122,28 @@ public class MQTTClientInfo extends AbstractModel {
     }
 
     /**
-     * Get MQTT 协议版本，4 表示 MQTT 3.1.1 
-     * @return ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
+     * Get MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议 
+     * @return ProtocolVersion MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
      */
     public Long getProtocolVersion() {
         return this.ProtocolVersion;
     }
 
     /**
-     * Set MQTT 协议版本，4 表示 MQTT 3.1.1
-     * @param ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
+     * Set MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
+     * @param ProtocolVersion MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
      */
     public void setProtocolVersion(Long ProtocolVersion) {
         this.ProtocolVersion = ProtocolVersion;
@@ -167,48 +182,48 @@ public class MQTTClientInfo extends AbstractModel {
     }
 
     /**
-     * Get 客户端创建时间 
-     * @return CreateTime 客户端创建时间
+     * Get 客户端创建时间，毫秒级时间戳 。 
+     * @return CreateTime 客户端创建时间，毫秒级时间戳 。
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 客户端创建时间
-     * @param CreateTime 客户端创建时间
+     * Set 客户端创建时间，毫秒级时间戳 。
+     * @param CreateTime 客户端创建时间，毫秒级时间戳 。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 上次建立连接时间 
-     * @return ConnectTime 上次建立连接时间
+     * Get 上次建立连接时间，毫秒级时间戳 。 
+     * @return ConnectTime 上次建立连接时间，毫秒级时间戳 。
      */
     public Long getConnectTime() {
         return this.ConnectTime;
     }
 
     /**
-     * Set 上次建立连接时间
-     * @param ConnectTime 上次建立连接时间
+     * Set 上次建立连接时间，毫秒级时间戳 。
+     * @param ConnectTime 上次建立连接时间，毫秒级时间戳 。
      */
     public void setConnectTime(Long ConnectTime) {
         this.ConnectTime = ConnectTime;
     }
 
     /**
-     * Get 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义 
-     * @return DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+     * Get 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。 
+     * @return DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
      */
     public Long getDisconnectTime() {
         return this.DisconnectTime;
     }
 
     /**
-     * Set 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-     * @param DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+     * Set 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
+     * @param DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
      */
     public void setDisconnectTime(Long DisconnectTime) {
         this.DisconnectTime = DisconnectTime;

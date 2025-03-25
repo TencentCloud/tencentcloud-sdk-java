@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 搜索的集群id名称
+    * 用集群id搜索
     */
     @SerializedName("SearchInstanceId")
     @Expose
     private String SearchInstanceId;
 
     /**
-    * 搜索的集群name
+    * 用集群名字搜索
     */
     @SerializedName("SearchInstanceName")
     @Expose
@@ -59,32 +59,32 @@ public class DescribeInstancesRequest extends AbstractModel {
     private SearchTags [] SearchTags;
 
     /**
-     * Get 搜索的集群id名称 
-     * @return SearchInstanceId 搜索的集群id名称
+     * Get 用集群id搜索 
+     * @return SearchInstanceId 用集群id搜索
      */
     public String getSearchInstanceId() {
         return this.SearchInstanceId;
     }
 
     /**
-     * Set 搜索的集群id名称
-     * @param SearchInstanceId 搜索的集群id名称
+     * Set 用集群id搜索
+     * @param SearchInstanceId 用集群id搜索
      */
     public void setSearchInstanceId(String SearchInstanceId) {
         this.SearchInstanceId = SearchInstanceId;
     }
 
     /**
-     * Get 搜索的集群name 
-     * @return SearchInstanceName 搜索的集群name
+     * Get 用集群名字搜索 
+     * @return SearchInstanceName 用集群名字搜索
      */
     public String getSearchInstanceName() {
         return this.SearchInstanceName;
     }
 
     /**
-     * Set 搜索的集群name
-     * @param SearchInstanceName 搜索的集群name
+     * Set 用集群名字搜索
+     * @param SearchInstanceName 用集群名字搜索
      */
     public void setSearchInstanceName(String SearchInstanceName) {
         this.SearchInstanceName = SearchInstanceName;

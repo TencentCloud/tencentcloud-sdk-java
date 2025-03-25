@@ -60,7 +60,6 @@ public class TagInfo extends AbstractModel {
 
     /**
     * 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationDays")
     @Expose
@@ -210,10 +209,8 @@ public class TagInfo extends AbstractModel {
     }
 
     /**
-     * Get 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 制品创建至今时间长度 
      * @return DurationDays 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDurationDays() {
         return this.DurationDays;
@@ -221,9 +218,7 @@ public class TagInfo extends AbstractModel {
 
     /**
      * Set 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DurationDays 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationDays(String DurationDays) {
         this.DurationDays = DurationDays;

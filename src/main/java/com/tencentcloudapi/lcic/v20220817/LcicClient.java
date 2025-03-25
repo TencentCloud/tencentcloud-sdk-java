@@ -191,7 +191,7 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
-     *创建房间
+     *创建课堂
      * @param req CreateRoomRequest
      * @return CreateRoomResponse
      * @throws TencentCloudSDKException

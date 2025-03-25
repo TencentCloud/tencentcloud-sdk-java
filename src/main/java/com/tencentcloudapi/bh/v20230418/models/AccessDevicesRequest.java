@@ -24,14 +24,7 @@ import java.util.HashMap;
 public class AccessDevicesRequest extends AbstractModel {
 
     /**
-    * 资源id
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * 账号
+    * 资产的登录账号
     */
     @SerializedName("Account")
     @Expose
@@ -52,21 +45,35 @@ public class AccessDevicesRequest extends AbstractModel {
     private String LoginPassword;
 
     /**
-    * 密码
+    * 资产ID
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private Long DeviceId;
+
+    /**
+    * 资源id(优先使用DeviceId)
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 未托管密码私钥时，填入
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 私钥
+    * 未托管密码私钥时，填入
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * 私钥密码
+    * 未托管密码私钥时，填入
     */
     @SerializedName("PrivateKeyPassword")
     @Expose
@@ -108,32 +115,23 @@ public class AccessDevicesRequest extends AbstractModel {
     private Boolean IntranetAccess;
 
     /**
-     * Get 资源id 
-     * @return InstanceId 资源id
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
+    * 是否自动管理访问串，删掉过期的，新建可用的（默认false）
+    */
+    @SerializedName("AutoManageAccessCredential")
+    @Expose
+    private Boolean AutoManageAccessCredential;
 
     /**
-     * Set 资源id
-     * @param InstanceId 资源id
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 账号 
-     * @return Account 账号
+     * Get 资产的登录账号 
+     * @return Account 资产的登录账号
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 账号
-     * @param Account 账号
+     * Set 资产的登录账号
+     * @param Account 资产的登录账号
      */
     public void setAccount(String Account) {
         this.Account = Account;
@@ -142,7 +140,9 @@ public class AccessDevicesRequest extends AbstractModel {
     /**
      * Get 运维端登录账号 
      * @return LoginAccount 运维端登录账号
+     * @deprecated
      */
+    @Deprecated
     public String getLoginAccount() {
         return this.LoginAccount;
     }
@@ -150,7 +150,9 @@ public class AccessDevicesRequest extends AbstractModel {
     /**
      * Set 运维端登录账号
      * @param LoginAccount 运维端登录账号
+     * @deprecated
      */
+    @Deprecated
     public void setLoginAccount(String LoginAccount) {
         this.LoginAccount = LoginAccount;
     }
@@ -158,7 +160,9 @@ public class AccessDevicesRequest extends AbstractModel {
     /**
      * Get 运维端登录密码 
      * @return LoginPassword 运维端登录密码
+     * @deprecated
      */
+    @Deprecated
     public String getLoginPassword() {
         return this.LoginPassword;
     }
@@ -166,54 +170,88 @@ public class AccessDevicesRequest extends AbstractModel {
     /**
      * Set 运维端登录密码
      * @param LoginPassword 运维端登录密码
+     * @deprecated
      */
+    @Deprecated
     public void setLoginPassword(String LoginPassword) {
         this.LoginPassword = LoginPassword;
     }
 
     /**
-     * Get 密码 
-     * @return Password 密码
+     * Get 资产ID 
+     * @return DeviceId 资产ID
+     */
+    public Long getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 资产ID
+     * @param DeviceId 资产ID
+     */
+    public void setDeviceId(Long DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 资源id(优先使用DeviceId) 
+     * @return InstanceId 资源id(优先使用DeviceId)
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 资源id(优先使用DeviceId)
+     * @param InstanceId 资源id(优先使用DeviceId)
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 未托管密码私钥时，填入 
+     * @return Password 未托管密码私钥时，填入
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码
-     * @param Password 密码
+     * Set 未托管密码私钥时，填入
+     * @param Password 未托管密码私钥时，填入
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 私钥 
-     * @return PrivateKey 私钥
+     * Get 未托管密码私钥时，填入 
+     * @return PrivateKey 未托管密码私钥时，填入
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 私钥
-     * @param PrivateKey 私钥
+     * Set 未托管密码私钥时，填入
+     * @param PrivateKey 未托管密码私钥时，填入
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get 私钥密码 
-     * @return PrivateKeyPassword 私钥密码
+     * Get 未托管密码私钥时，填入 
+     * @return PrivateKeyPassword 未托管密码私钥时，填入
      */
     public String getPrivateKeyPassword() {
         return this.PrivateKeyPassword;
     }
 
     /**
-     * Set 私钥密码
-     * @param PrivateKeyPassword 私钥密码
+     * Set 未托管密码私钥时，填入
+     * @param PrivateKeyPassword 未托管密码私钥时，填入
      */
     public void setPrivateKeyPassword(String PrivateKeyPassword) {
         this.PrivateKeyPassword = PrivateKeyPassword;
@@ -299,6 +337,22 @@ public class AccessDevicesRequest extends AbstractModel {
         this.IntranetAccess = IntranetAccess;
     }
 
+    /**
+     * Get 是否自动管理访问串，删掉过期的，新建可用的（默认false） 
+     * @return AutoManageAccessCredential 是否自动管理访问串，删掉过期的，新建可用的（默认false）
+     */
+    public Boolean getAutoManageAccessCredential() {
+        return this.AutoManageAccessCredential;
+    }
+
+    /**
+     * Set 是否自动管理访问串，删掉过期的，新建可用的（默认false）
+     * @param AutoManageAccessCredential 是否自动管理访问串，删掉过期的，新建可用的（默认false）
+     */
+    public void setAutoManageAccessCredential(Boolean AutoManageAccessCredential) {
+        this.AutoManageAccessCredential = AutoManageAccessCredential;
+    }
+
     public AccessDevicesRequest() {
     }
 
@@ -307,9 +361,6 @@ public class AccessDevicesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessDevicesRequest(AccessDevicesRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.Account != null) {
             this.Account = new String(source.Account);
         }
@@ -318,6 +369,12 @@ public class AccessDevicesRequest extends AbstractModel {
         }
         if (source.LoginPassword != null) {
             this.LoginPassword = new String(source.LoginPassword);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new Long(source.DeviceId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
@@ -346,6 +403,9 @@ public class AccessDevicesRequest extends AbstractModel {
         if (source.IntranetAccess != null) {
             this.IntranetAccess = new Boolean(source.IntranetAccess);
         }
+        if (source.AutoManageAccessCredential != null) {
+            this.AutoManageAccessCredential = new Boolean(source.AutoManageAccessCredential);
+        }
     }
 
 
@@ -353,10 +413,11 @@ public class AccessDevicesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Account", this.Account);
         this.setParamSimple(map, prefix + "LoginAccount", this.LoginAccount);
         this.setParamSimple(map, prefix + "LoginPassword", this.LoginPassword);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamSimple(map, prefix + "PrivateKeyPassword", this.PrivateKeyPassword);
@@ -365,6 +426,7 @@ public class AccessDevicesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+        this.setParamSimple(map, prefix + "AutoManageAccessCredential", this.AutoManageAccessCredential);
 
     }
 }

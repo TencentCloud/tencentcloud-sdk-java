@@ -56,7 +56,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Plan")
     @Expose
@@ -115,7 +114,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reply")
     @Expose
@@ -137,7 +135,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -161,7 +158,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XMagicType")
     @Expose
@@ -169,7 +165,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -185,7 +180,6 @@ public class XMagicInfo extends AbstractModel {
 
     /**
     * 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVest")
     @Expose
@@ -268,10 +262,8 @@ public class XMagicInfo extends AbstractModel {
     }
 
     /**
-     * Get 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优图套餐类型 
      * @return Plan 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlan() {
         return this.Plan;
@@ -279,9 +271,7 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Plan 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlan(String Plan) {
         this.Plan = Plan;
@@ -420,10 +410,8 @@ public class XMagicInfo extends AbstractModel {
     }
 
     /**
-     * Get 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历次审批的回复 
      * @return Reply 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReply() {
         return this.Reply;
@@ -431,9 +419,7 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reply 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReply(String [] Reply) {
         this.Reply = Reply;
@@ -472,10 +458,8 @@ public class XMagicInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户更新信息的时间 
      * @return UpdateTime 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -483,9 +467,7 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -532,10 +514,8 @@ public class XMagicInfo extends AbstractModel {
     }
 
     /**
-     * Get single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get single: 原子能力,combined:套餐 
      * @return XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getXMagicType() {
         return this.XMagicType;
@@ -543,19 +523,15 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXMagicType(String XMagicType) {
         this.XMagicType = XMagicType;
     }
 
     /**
-     * Get 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优图模块名称，自动中英文 
      * @return Name 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -563,9 +539,7 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -592,10 +566,8 @@ public class XMagicInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是马甲包 
      * @return IsVest 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVest() {
         return this.IsVest;
@@ -603,9 +575,7 @@ public class XMagicInfo extends AbstractModel {
 
     /**
      * Set 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVest 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVest(Boolean IsVest) {
         this.IsVest = IsVest;

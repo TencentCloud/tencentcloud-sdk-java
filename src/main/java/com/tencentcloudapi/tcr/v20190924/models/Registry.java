@@ -113,7 +113,6 @@ DeleteFailed, 实例删除失败
 
     /**
     * 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -121,7 +120,6 @@ DeleteFailed, 实例删除失败
 
     /**
     * 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredAt")
     @Expose
@@ -129,7 +127,6 @@ DeleteFailed, 实例删除失败
 
     /**
     * 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMod")
     @Expose
@@ -137,7 +134,6 @@ DeleteFailed, 实例删除失败
 
     /**
     * 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -371,10 +367,8 @@ DeleteFailed, 实例删除失败
     }
 
     /**
-     * Get 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例云标签 
      * @return TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
@@ -382,19 +376,15 @@ DeleteFailed, 实例删除失败
 
     /**
      * Set 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例过期时间（预付费） 
      * @return ExpiredAt 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredAt() {
         return this.ExpiredAt;
@@ -402,19 +392,15 @@ DeleteFailed, 实例删除失败
 
     /**
      * Set 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredAt 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredAt(String ExpiredAt) {
         this.ExpiredAt = ExpiredAt;
     }
 
     /**
-     * Get 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例付费类型，0表示后付费，1表示预付费 
      * @return PayMod 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMod() {
         return this.PayMod;
@@ -422,19 +408,15 @@ DeleteFailed, 实例删除失败
 
     /**
      * Set 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMod 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMod(Long PayMod) {
         this.PayMod = PayMod;
     }
 
     /**
-     * Get 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知 
      * @return RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -442,9 +424,7 @@ DeleteFailed, 实例删除失败
 
     /**
      * Set 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;

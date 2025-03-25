@@ -32,7 +32,6 @@ public class DescribeApplicationTriggerLogPersonalResp extends AbstractModel {
 
     /**
     * 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogInfo")
     @Expose
@@ -55,10 +54,8 @@ public class DescribeApplicationTriggerLogPersonalResp extends AbstractModel {
     }
 
     /**
-     * Get 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发日志列表 
      * @return LogInfo 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerLogResp [] getLogInfo() {
         return this.LogInfo;
@@ -66,9 +63,7 @@ public class DescribeApplicationTriggerLogPersonalResp extends AbstractModel {
 
     /**
      * Set 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogInfo 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogInfo(TriggerLogResp [] LogInfo) {
         this.LogInfo = LogInfo;

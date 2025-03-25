@@ -25,7 +25,6 @@ public class InquirePriceRunInstancesResponse extends AbstractModel {
 
     /**
     * 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -39,10 +38,8 @@ public class InquirePriceRunInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发货参数对应的价格组合，当DryRun=True，会返回空 
      * @return Price 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Price getPrice() {
         return this.Price;
@@ -50,9 +47,7 @@ public class InquirePriceRunInstancesResponse extends AbstractModel {
 
     /**
      * Set 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Price Price) {
         this.Price = Price;

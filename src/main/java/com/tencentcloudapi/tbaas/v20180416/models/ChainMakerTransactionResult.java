@@ -32,7 +32,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeMessage")
     @Expose
@@ -40,7 +39,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxId")
     @Expose
@@ -48,7 +46,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GasUsed")
     @Expose
@@ -56,7 +53,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockHeight")
     @Expose
@@ -64,7 +60,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContractEvent")
     @Expose
@@ -72,7 +67,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -80,7 +74,6 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
     * 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -103,10 +96,8 @@ public class ChainMakerTransactionResult extends AbstractModel {
     }
 
     /**
-     * Get 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易结果码含义 
      * @return CodeMessage 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeMessage() {
         return this.CodeMessage;
@@ -114,19 +105,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodeMessage 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeMessage(String CodeMessage) {
         this.CodeMessage = CodeMessage;
     }
 
     /**
-     * Get 交易ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易ID 
      * @return TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTxId() {
         return this.TxId;
@@ -134,19 +121,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxId(String TxId) {
         this.TxId = TxId;
     }
 
     /**
-     * Get Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Gas使用量 
      * @return GasUsed Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGasUsed() {
         return this.GasUsed;
@@ -154,19 +137,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GasUsed Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGasUsed(Long GasUsed) {
         this.GasUsed = GasUsed;
     }
 
     /**
-     * Get 区块高度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区块高度 
      * @return BlockHeight 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBlockHeight() {
         return this.BlockHeight;
@@ -174,19 +153,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockHeight 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockHeight(Long BlockHeight) {
         this.BlockHeight = BlockHeight;
     }
 
     /**
-     * Get 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合约执行结果 
      * @return ContractEvent 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContractEvent() {
         return this.ContractEvent;
@@ -194,19 +169,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContractEvent 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContractEvent(String ContractEvent) {
         this.ContractEvent = ContractEvent;
     }
 
     /**
-     * Get 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合约返回信息 
      * @return Message 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -214,19 +185,15 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易时间，单位是秒 
      * @return Timestamp 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -234,9 +201,7 @@ public class ChainMakerTransactionResult extends AbstractModel {
 
     /**
      * Set 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

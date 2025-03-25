@@ -25,6 +25,7 @@ public class ConfigParams extends AbstractModel {
 
     /**
     * 名字
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
     @Expose
@@ -32,6 +33,7 @@ public class ConfigParams extends AbstractModel {
 
     /**
     * 值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterValue")
     @Expose
@@ -39,14 +41,17 @@ public class ConfigParams extends AbstractModel {
 
     /**
     * 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterOldValue")
     @Expose
     private String ParameterOldValue;
 
     /**
-     * Get 名字 
+     * Get 名字
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParameterName 名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
         return this.ParameterName;
@@ -54,15 +59,19 @@ public class ConfigParams extends AbstractModel {
 
     /**
      * Set 名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterName 名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;
     }
 
     /**
-     * Get 值 
+     * Get 值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParameterValue 值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterValue() {
         return this.ParameterValue;
@@ -70,15 +79,19 @@ public class ConfigParams extends AbstractModel {
 
     /**
      * Set 值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterValue 值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterValue(String ParameterValue) {
         this.ParameterValue = ParameterValue;
     }
 
     /**
-     * Get 修改前的值 
+     * Get 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParameterOldValue 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterOldValue() {
         return this.ParameterOldValue;
@@ -86,7 +99,9 @@ public class ConfigParams extends AbstractModel {
 
     /**
      * Set 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterOldValue 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterOldValue(String ParameterOldValue) {
         this.ParameterOldValue = ParameterOldValue;

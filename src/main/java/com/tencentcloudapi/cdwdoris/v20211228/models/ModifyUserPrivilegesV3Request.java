@@ -52,6 +52,20 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
     private String WhiteHost;
 
     /**
+    * 更新类型，默认0，1为更新绑定计算组
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private Long UpdateType;
+
+    /**
+    * 需绑定计算组列表
+    */
+    @SerializedName("UpdateComputeGroups")
+    @Expose
+    private String [] UpdateComputeGroups;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -115,6 +129,38 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.WhiteHost = WhiteHost;
     }
 
+    /**
+     * Get 更新类型，默认0，1为更新绑定计算组 
+     * @return UpdateType 更新类型，默认0，1为更新绑定计算组
+     */
+    public Long getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 更新类型，默认0，1为更新绑定计算组
+     * @param UpdateType 更新类型，默认0，1为更新绑定计算组
+     */
+    public void setUpdateType(Long UpdateType) {
+        this.UpdateType = UpdateType;
+    }
+
+    /**
+     * Get 需绑定计算组列表 
+     * @return UpdateComputeGroups 需绑定计算组列表
+     */
+    public String [] getUpdateComputeGroups() {
+        return this.UpdateComputeGroups;
+    }
+
+    /**
+     * Set 需绑定计算组列表
+     * @param UpdateComputeGroups 需绑定计算组列表
+     */
+    public void setUpdateComputeGroups(String [] UpdateComputeGroups) {
+        this.UpdateComputeGroups = UpdateComputeGroups;
+    }
+
     public ModifyUserPrivilegesV3Request() {
     }
 
@@ -135,6 +181,15 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         if (source.WhiteHost != null) {
             this.WhiteHost = new String(source.WhiteHost);
         }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.UpdateComputeGroups != null) {
+            this.UpdateComputeGroups = new String[source.UpdateComputeGroups.length];
+            for (int i = 0; i < source.UpdateComputeGroups.length; i++) {
+                this.UpdateComputeGroups[i] = new String(source.UpdateComputeGroups[i]);
+            }
+        }
     }
 
 
@@ -146,6 +201,8 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamObj(map, prefix + "UserPrivileges.", this.UserPrivileges);
         this.setParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
+        this.setParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
 
     }
 }

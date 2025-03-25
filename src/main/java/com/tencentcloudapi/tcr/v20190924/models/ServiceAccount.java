@@ -25,7 +25,6 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disable")
     @Expose
@@ -49,7 +46,6 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiresAt")
     @Expose
@@ -65,7 +61,6 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -73,17 +68,14 @@ public class ServiceAccount extends AbstractModel {
 
     /**
     * 策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permissions")
     @Expose
     private Permission [] Permissions;
 
     /**
-     * Get 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务级账号名 
      * @return Name 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -91,19 +83,15 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -111,19 +99,15 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否禁用 
      * @return Disable 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDisable() {
         return this.Disable;
@@ -131,19 +115,15 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Disable 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisable(Boolean Disable) {
         this.Disable = Disable;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpiresAt 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiresAt() {
         return this.ExpiresAt;
@@ -151,9 +131,7 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiresAt 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiresAt(Long ExpiresAt) {
         this.ExpiresAt = ExpiresAt;
@@ -180,10 +158,8 @@ public class ServiceAccount extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -191,19 +167,15 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略 
      * @return Permissions 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Permission [] getPermissions() {
         return this.Permissions;
@@ -211,9 +183,7 @@ public class ServiceAccount extends AbstractModel {
 
     /**
      * Set 策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Permissions 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissions(Permission [] Permissions) {
         this.Permissions = Permissions;

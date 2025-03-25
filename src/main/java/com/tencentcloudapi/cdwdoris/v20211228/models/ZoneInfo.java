@@ -59,6 +59,13 @@ public class ZoneInfo extends AbstractModel {
     private Boolean Main;
 
     /**
+    * 0表示未开通容器化，1表示已开通容器化
+    */
+    @SerializedName("ContainerEnabled")
+    @Expose
+    private Long ContainerEnabled;
+
+    /**
      * Get 可用区名称，例如"ap-guangzhou-1" 
      * @return Name 可用区名称，例如"ap-guangzhou-1"
      */
@@ -138,6 +145,22 @@ public class ZoneInfo extends AbstractModel {
         this.Main = Main;
     }
 
+    /**
+     * Get 0表示未开通容器化，1表示已开通容器化 
+     * @return ContainerEnabled 0表示未开通容器化，1表示已开通容器化
+     */
+    public Long getContainerEnabled() {
+        return this.ContainerEnabled;
+    }
+
+    /**
+     * Set 0表示未开通容器化，1表示已开通容器化
+     * @param ContainerEnabled 0表示未开通容器化，1表示已开通容器化
+     */
+    public void setContainerEnabled(Long ContainerEnabled) {
+        this.ContainerEnabled = ContainerEnabled;
+    }
+
     public ZoneInfo() {
     }
 
@@ -161,6 +184,9 @@ public class ZoneInfo extends AbstractModel {
         if (source.Main != null) {
             this.Main = new Boolean(source.Main);
         }
+        if (source.ContainerEnabled != null) {
+            this.ContainerEnabled = new Long(source.ContainerEnabled);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ZoneInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamSimple(map, prefix + "Main", this.Main);
+        this.setParamSimple(map, prefix + "ContainerEnabled", this.ContainerEnabled);
 
     }
 }

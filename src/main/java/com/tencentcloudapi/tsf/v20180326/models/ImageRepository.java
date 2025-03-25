@@ -157,6 +157,13 @@ public class ImageRepository extends AbstractModel {
     private String RepoName;
 
     /**
+    * 仓库类型
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
      * Get 仓库名,含命名空间,如tsf/nginx 
      * @return Reponame 仓库名,含命名空间,如tsf/nginx
      */
@@ -460,6 +467,22 @@ public class ImageRepository extends AbstractModel {
         this.RepoName = RepoName;
     }
 
+    /**
+     * Get 仓库类型 
+     * @return RepoType 仓库类型
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 仓库类型
+     * @param RepoType 仓库类型
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
+    }
+
     public ImageRepository() {
     }
 
@@ -525,6 +548,9 @@ public class ImageRepository extends AbstractModel {
         if (source.RepoName != null) {
             this.RepoName = new String(source.RepoName);
         }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class ImageRepository extends AbstractModel {
         this.setParamSimple(map, prefix + "Public", this.Public);
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "RepoName", this.RepoName);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

@@ -25,7 +25,6 @@ public class CreateInstanceTokenResponse extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Username")
     @Expose
@@ -47,7 +46,6 @@ public class CreateInstanceTokenResponse extends AbstractModel {
 
     /**
     * 长期凭证的TokenId，短期凭证没有TokenId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TokenId")
     @Expose
@@ -61,10 +59,8 @@ public class CreateInstanceTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsername() {
         return this.Username;
@@ -72,9 +68,7 @@ public class CreateInstanceTokenResponse extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsername(String Username) {
         this.Username = Username;
@@ -113,10 +107,8 @@ public class CreateInstanceTokenResponse extends AbstractModel {
     }
 
     /**
-     * Get 长期凭证的TokenId，短期凭证没有TokenId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 长期凭证的TokenId，短期凭证没有TokenId 
      * @return TokenId 长期凭证的TokenId，短期凭证没有TokenId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTokenId() {
         return this.TokenId;
@@ -124,9 +116,7 @@ public class CreateInstanceTokenResponse extends AbstractModel {
 
     /**
      * Set 长期凭证的TokenId，短期凭证没有TokenId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TokenId 长期凭证的TokenId，短期凭证没有TokenId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTokenId(String TokenId) {
         this.TokenId = TokenId;

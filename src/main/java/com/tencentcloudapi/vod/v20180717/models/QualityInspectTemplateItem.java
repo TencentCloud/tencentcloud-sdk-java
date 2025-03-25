@@ -62,7 +62,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JitterConfigure")
     @Expose
@@ -70,7 +69,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlurConfigure")
     @Expose
@@ -78,7 +76,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbnormalLightingConfigure")
     @Expose
@@ -86,7 +83,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrashScreenConfigure")
     @Expose
@@ -94,7 +90,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlackWhiteEdgeConfigure")
     @Expose
@@ -102,7 +97,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoiseConfigure")
     @Expose
@@ -110,7 +104,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MosaicConfigure")
     @Expose
@@ -118,7 +111,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QRCodeConfigure")
     @Expose
@@ -126,7 +118,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEvaluationConfigure")
     @Expose
@@ -134,7 +125,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
     * 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceConfigure")
     @Expose
@@ -243,10 +233,8 @@ public class QualityInspectTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面抖动重影检测的控制参数。 
      * @return JitterConfigure 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JitterConfigureInfo getJitterConfigure() {
         return this.JitterConfigure;
@@ -254,19 +242,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JitterConfigure 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
         this.JitterConfigure = JitterConfigure;
     }
 
     /**
-     * Get 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面模糊检测的控制参数。 
      * @return BlurConfigure 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlurConfigureInfo getBlurConfigure() {
         return this.BlurConfigure;
@@ -274,19 +258,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlurConfigure 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
         this.BlurConfigure = BlurConfigure;
     }
 
     /**
-     * Get 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面低光、过曝检测的控制参数。 
      * @return AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
         return this.AbnormalLightingConfigure;
@@ -294,19 +274,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
         this.AbnormalLightingConfigure = AbnormalLightingConfigure;
     }
 
     /**
-     * Get 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面花屏检测的控制参数。 
      * @return CrashScreenConfigure 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CrashScreenConfigureInfo getCrashScreenConfigure() {
         return this.CrashScreenConfigure;
@@ -314,19 +290,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrashScreenConfigure 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
         this.CrashScreenConfigure = CrashScreenConfigure;
     }
 
     /**
-     * Get 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面黑边、白边、黑屏、白屏检测的控制参数。 
      * @return BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
         return this.BlackWhiteEdgeConfigure;
@@ -334,19 +306,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
         this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Get 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面噪点检测的控制参数。 
      * @return NoiseConfigure 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoiseConfigureInfo getNoiseConfigure() {
         return this.NoiseConfigure;
@@ -354,19 +322,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoiseConfigure 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
         this.NoiseConfigure = NoiseConfigure;
     }
 
     /**
-     * Get 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面马赛克检测的控制参数。 
      * @return MosaicConfigure 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MosaicConfigureInfo getMosaicConfigure() {
         return this.MosaicConfigure;
@@ -374,19 +338,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MosaicConfigure 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
         this.MosaicConfigure = MosaicConfigure;
     }
 
     /**
-     * Get 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面二维码检测的控制参数。 
      * @return QRCodeConfigure 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QRCodeConfigureInfo getQRCodeConfigure() {
         return this.QRCodeConfigure;
@@ -394,19 +354,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QRCodeConfigure 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
         this.QRCodeConfigure = QRCodeConfigure;
     }
 
     /**
-     * Get 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频画面质量评价的控制参数。 
      * @return QualityEvaluationConfigure 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
         return this.QualityEvaluationConfigure;
@@ -414,19 +370,15 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityEvaluationConfigure 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
         this.QualityEvaluationConfigure = QualityEvaluationConfigure;
     }
 
     /**
-     * Get 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音频（静音、低音、爆音）检测的控制参数。 
      * @return VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VoiceConfigureInfo getVoiceConfigure() {
         return this.VoiceConfigure;
@@ -434,9 +386,7 @@ public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
      * Set 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;

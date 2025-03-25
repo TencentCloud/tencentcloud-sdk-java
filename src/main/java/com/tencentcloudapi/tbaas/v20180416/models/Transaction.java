@@ -25,7 +25,6 @@ public class Transaction extends AbstractModel {
 
     /**
     * 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxId")
     @Expose
@@ -33,7 +32,6 @@ public class Transaction extends AbstractModel {
 
     /**
     * 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChaincodeName")
     @Expose
@@ -41,7 +39,6 @@ public class Transaction extends AbstractModel {
 
     /**
     * 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sender")
     @Expose
@@ -49,7 +46,6 @@ public class Transaction extends AbstractModel {
 
     /**
     * 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,7 +53,6 @@ public class Transaction extends AbstractModel {
 
     /**
     * 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockHeight")
     @Expose
@@ -65,17 +60,14 @@ public class Transaction extends AbstractModel {
 
     /**
     * 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxIndex")
     @Expose
     private Long TxIndex;
 
     /**
-     * Get 交易ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易ID 
      * @return TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTxId() {
         return this.TxId;
@@ -83,19 +75,15 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxId(String TxId) {
         this.TxId = TxId;
     }
 
     /**
-     * Get 合约名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合约名称 
      * @return ChaincodeName 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChaincodeName() {
         return this.ChaincodeName;
@@ -103,19 +91,15 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChaincodeName 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChaincodeName(String ChaincodeName) {
         this.ChaincodeName = ChaincodeName;
     }
 
     /**
-     * Get 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易发送者 
      * @return Sender 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSender() {
         return this.Sender;
@@ -123,19 +107,15 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sender 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSender(String Sender) {
         this.Sender = Sender;
     }
 
     /**
-     * Get 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易创建时间 
      * @return CreateTime 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -143,19 +123,15 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易所在区块高度 
      * @return BlockHeight 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBlockHeight() {
         return this.BlockHeight;
@@ -163,19 +139,15 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockHeight 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockHeight(Long BlockHeight) {
         this.BlockHeight = BlockHeight;
     }
 
     /**
-     * Get 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易在区块中的序号 
      * @return TxIndex 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTxIndex() {
         return this.TxIndex;
@@ -183,9 +155,7 @@ public class Transaction extends AbstractModel {
 
     /**
      * Set 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxIndex 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxIndex(Long TxIndex) {
         this.TxIndex = TxIndex;

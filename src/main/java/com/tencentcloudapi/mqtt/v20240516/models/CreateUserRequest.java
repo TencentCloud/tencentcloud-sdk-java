@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名
+    * 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
     */
     @SerializedName("Username")
     @Expose
@@ -45,39 +45,39 @@ public class CreateUserRequest extends AbstractModel {
     private String Password;
 
     /**
-    * 备注
+    * 备注，长度不超过128个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符 
+     * @return Username 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
+     * @param Username 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      */
     public void setUsername(String Username) {
         this.Username = Username;
@@ -100,16 +100,16 @@ public class CreateUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注，长度不超过128个字符。 
+     * @return Remark 备注，长度不超过128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注，长度不超过128个字符。
+     * @param Remark 备注，长度不超过128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

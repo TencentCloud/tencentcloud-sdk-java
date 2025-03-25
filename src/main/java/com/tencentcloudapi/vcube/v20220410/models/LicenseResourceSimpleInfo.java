@@ -54,7 +54,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -62,7 +61,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -84,7 +82,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUse")
     @Expose
@@ -92,7 +89,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -108,7 +104,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -116,7 +111,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -132,7 +126,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -140,7 +133,6 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
     * 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -215,10 +207,8 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此license资源的开始生效时间 
      * @return StartTime 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -226,19 +216,15 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此license资源的生效结束时间 
      * @return EndTime 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -246,9 +232,7 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -287,10 +271,8 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此资源是否可用于续期和更新有效期 
      * @return IsUse 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUse() {
         return this.IsUse;
@@ -298,19 +280,15 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUse 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUse(Boolean IsUse) {
         this.IsUse = IsUse;
     }
 
     /**
-     * Get 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此资源的状态 
      * @return Status 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -318,9 +296,7 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -347,10 +323,8 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能模块名称 
      * @return Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -358,19 +332,15 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能模块类型 
      * @return Type 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -378,9 +348,7 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -407,10 +375,8 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id 
      * @return ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -418,19 +384,15 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费状态 
      * @return AutoRenewFlag 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -438,9 +400,7 @@ public class LicenseResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
-    * 1
+    * 流程id
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 1
+    * 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
@@ -46,25 +46,25 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1 
-     * @return FlowId 1
+     * Get 流程id 
+     * @return FlowId 流程id
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 1
-     * @param FlowId 1
+     * Set 流程id
+     * @param FlowId 流程id
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 1
+     * Get 错误信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMsg 1
+     * @return ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
@@ -72,9 +72,9 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMsg 1
+     * @param ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {

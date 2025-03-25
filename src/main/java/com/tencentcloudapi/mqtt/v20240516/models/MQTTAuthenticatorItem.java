@@ -24,14 +24,27 @@ import java.util.HashMap;
 public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
-    * 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
+    * 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 认证器配置
+    * HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
     */
     @SerializedName("Config")
     @Expose
@@ -39,60 +52,118 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
     * 认证器状态
+open：认证器打开
+close：认证器关闭
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 创建时间
+    * 创建时间，毫秒级时间戳 。
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 说明
+    * 说明，最长 128 字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器 
-     * @return Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
+     * Get 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器 
+     * @return Type 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-     * @param Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
+     * Set 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
+     * @param Type 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 认证器配置 
-     * @return Config 认证器配置
+     * Get HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813) 
+     * @return Config HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 认证器配置
-     * @param Config 认证器配置
+     * Set HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
+     * @param Config HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 认证器状态 
+     * Get 认证器状态
+open：认证器打开
+close：认证器关闭 
      * @return Status 认证器状态
+open：认证器打开
+close：认证器关闭
      */
     public String getStatus() {
         return this.Status;
@@ -100,39 +171,43 @@ public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
      * Set 认证器状态
+open：认证器打开
+close：认证器关闭
      * @param Status 认证器状态
+open：认证器打开
+close：认证器关闭
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间，毫秒级时间戳 。 
+     * @return CreateTime 创建时间，毫秒级时间戳 。
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间，毫秒级时间戳 。
+     * @param CreateTime 创建时间，毫秒级时间戳 。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 说明 
-     * @return Remark 说明
+     * Get 说明，最长 128 字符。 
+     * @return Remark 说明，最长 128 字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明
-     * @param Remark 说明
+     * Set 说明，最长 128 字符。
+     * @param Remark 说明，最长 128 字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

@@ -32,7 +32,6 @@ public class SyncExecuteCommandResult extends AbstractModel {
 
     /**
     * 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -62,10 +61,8 @@ public class SyncExecuteCommandResult extends AbstractModel {
     }
 
     /**
-     * Get 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令执行输出内容 
      * @return Output 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutput() {
         return this.Output;
@@ -73,9 +70,7 @@ public class SyncExecuteCommandResult extends AbstractModel {
 
     /**
      * Set 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(String Output) {
         this.Output = Output;

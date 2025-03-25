@@ -25,7 +25,6 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
     * 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageId")
     @Expose
@@ -33,7 +32,6 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
     * 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageName")
     @Expose
@@ -41,7 +39,6 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
     * 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageState")
     @Expose
@@ -49,17 +46,14 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
     * 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImageZone")
     @Expose
     private String AndroidInstanceImageZone;
 
     /**
-     * Get 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像 ID 
      * @return AndroidInstanceImageId 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageId() {
         return this.AndroidInstanceImageId;
@@ -67,19 +61,15 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
      * Set 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageId 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageId(String AndroidInstanceImageId) {
         this.AndroidInstanceImageId = AndroidInstanceImageId;
     }
 
     /**
-     * Get 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像名称，由业务方自定义，仅用于展示 
      * @return AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageName() {
         return this.AndroidInstanceImageName;
@@ -87,19 +77,15 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
      * Set 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageName(String AndroidInstanceImageName) {
         this.AndroidInstanceImageName = AndroidInstanceImageName;
     }
 
     /**
-     * Get 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像状态 
      * @return AndroidInstanceImageState 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageState() {
         return this.AndroidInstanceImageState;
@@ -107,19 +93,15 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
      * Set 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageState 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageState(String AndroidInstanceImageState) {
         this.AndroidInstanceImageState = AndroidInstanceImageState;
     }
 
     /**
-     * Get 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像可用区 
      * @return AndroidInstanceImageZone 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceImageZone() {
         return this.AndroidInstanceImageZone;
@@ -127,9 +109,7 @@ public class AndroidInstanceImage extends AbstractModel {
 
     /**
      * Set 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImageZone 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImageZone(String AndroidInstanceImageZone) {
         this.AndroidInstanceImageZone = AndroidInstanceImageZone;

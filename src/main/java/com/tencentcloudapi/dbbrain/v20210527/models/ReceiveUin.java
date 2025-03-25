@@ -25,7 +25,6 @@ public class ReceiveUin extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UinName")
     @Expose
@@ -33,17 +32,14 @@ public class ReceiveUin extends AbstractModel {
 
     /**
     * 用户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UinName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUinName() {
         return this.UinName;
@@ -51,19 +47,15 @@ public class ReceiveUin extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UinName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUinName(String UinName) {
         this.UinName = UinName;
     }
 
     /**
-     * Get 用户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户id 
      * @return Uin 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -71,9 +63,7 @@ public class ReceiveUin extends AbstractModel {
 
     /**
      * Set 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

@@ -53,7 +53,6 @@ public class TcrImageInfo extends AbstractModel {
 
     /**
     * 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kind")
     @Expose
@@ -61,7 +60,6 @@ public class TcrImageInfo extends AbstractModel {
 
     /**
     * KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsSignature")
     @Expose
@@ -132,10 +130,8 @@ public class TcrImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 制品类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 制品类型 
      * @return Kind 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKind() {
         return this.Kind;
@@ -143,19 +139,15 @@ public class TcrImageInfo extends AbstractModel {
 
     /**
      * Set 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kind 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS 签名信息 
      * @return KmsSignature KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsSignature() {
         return this.KmsSignature;
@@ -163,9 +155,7 @@ public class TcrImageInfo extends AbstractModel {
 
     /**
      * Set KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KmsSignature KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsSignature(String KmsSignature) {
         this.KmsSignature = KmsSignature;

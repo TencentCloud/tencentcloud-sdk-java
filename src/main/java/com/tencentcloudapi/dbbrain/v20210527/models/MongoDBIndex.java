@@ -60,7 +60,6 @@ public class MongoDBIndex extends AbstractModel {
 
     /**
     * 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexesToBuild")
     @Expose
@@ -68,7 +67,6 @@ public class MongoDBIndex extends AbstractModel {
 
     /**
     * 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexesToDrop")
     @Expose
@@ -155,10 +153,8 @@ public class MongoDBIndex extends AbstractModel {
     }
 
     /**
-     * Get 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推荐索引列表。 
      * @return IndexesToBuild 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndexesToBuild [] getIndexesToBuild() {
         return this.IndexesToBuild;
@@ -166,19 +162,15 @@ public class MongoDBIndex extends AbstractModel {
 
     /**
      * Set 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexesToBuild 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexesToBuild(IndexesToBuild [] IndexesToBuild) {
         this.IndexesToBuild = IndexesToBuild;
     }
 
     /**
-     * Get 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无效索引列表。 
      * @return IndexesToDrop 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndexesToDrop [] getIndexesToDrop() {
         return this.IndexesToDrop;
@@ -186,9 +178,7 @@ public class MongoDBIndex extends AbstractModel {
 
     /**
      * Set 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexesToDrop 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexesToDrop(IndexesToDrop [] IndexesToDrop) {
         this.IndexesToDrop = IndexesToDrop;

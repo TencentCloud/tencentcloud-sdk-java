@@ -39,7 +39,6 @@ public class AppInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
@@ -139,10 +138,8 @@ public class AppInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return AppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -150,9 +147,7 @@ public class AppInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

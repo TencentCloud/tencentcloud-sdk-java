@@ -52,6 +52,13 @@ public class DescribeSpecRequest extends AbstractModel {
     private String SpecName;
 
     /**
+    * 是否存算分离
+    */
+    @SerializedName("IsSSC")
+    @Expose
+    private Boolean IsSSC;
+
+    /**
      * Get 地域信息，例如"ap-guangzhou-1" 
      * @return Zone 地域信息，例如"ap-guangzhou-1"
      */
@@ -115,6 +122,22 @@ public class DescribeSpecRequest extends AbstractModel {
         this.SpecName = SpecName;
     }
 
+    /**
+     * Get 是否存算分离 
+     * @return IsSSC 是否存算分离
+     */
+    public Boolean getIsSSC() {
+        return this.IsSSC;
+    }
+
+    /**
+     * Set 是否存算分离
+     * @param IsSSC 是否存算分离
+     */
+    public void setIsSSC(Boolean IsSSC) {
+        this.IsSSC = IsSSC;
+    }
+
     public DescribeSpecRequest() {
     }
 
@@ -138,6 +161,9 @@ public class DescribeSpecRequest extends AbstractModel {
         if (source.SpecName != null) {
             this.SpecName = new String(source.SpecName);
         }
+        if (source.IsSSC != null) {
+            this.IsSSC = new Boolean(source.IsSSC);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class DescribeSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "IsSSC", this.IsSSC);
 
     }
 }

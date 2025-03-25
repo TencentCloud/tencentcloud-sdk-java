@@ -25,7 +25,6 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
     * 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -41,7 +39,6 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
     * 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudDiskPrice")
     @Expose
@@ -49,17 +46,14 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
     * 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTotalPrice")
     @Expose
     private ItemPrice InstanceTotalPrice;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -67,19 +61,15 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例价格详情 
      * @return InstancePrice 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getInstancePrice() {
         return this.InstancePrice;
@@ -87,19 +77,15 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
      * Set 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePrice(ItemPrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘价格详情 
      * @return CloudDiskPrice 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getCloudDiskPrice() {
         return this.CloudDiskPrice;
@@ -107,19 +93,15 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
      * Set 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudDiskPrice 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudDiskPrice(ItemPrice CloudDiskPrice) {
         this.CloudDiskPrice = CloudDiskPrice;
     }
 
     /**
-     * Get 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该实例的总价钱 
      * @return InstanceTotalPrice 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getInstanceTotalPrice() {
         return this.InstanceTotalPrice;
@@ -127,9 +109,7 @@ public class ItemPriceDetail extends AbstractModel {
 
     /**
      * Set 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTotalPrice 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTotalPrice(ItemPrice InstanceTotalPrice) {
         this.InstanceTotalPrice = InstanceTotalPrice;

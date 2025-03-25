@@ -123,7 +123,6 @@ public class ShardBriefInfo extends AbstractModel {
 
     /**
     * DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodesInfo")
     @Expose
@@ -354,10 +353,8 @@ public class ShardBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DB节点信息 
      * @return NodesInfo DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getNodesInfo() {
         return this.NodesInfo;
@@ -365,9 +362,7 @@ public class ShardBriefInfo extends AbstractModel {
 
     /**
      * Set DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodesInfo DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodesInfo(NodeInfo [] NodesInfo) {
         this.NodesInfo = NodesInfo;

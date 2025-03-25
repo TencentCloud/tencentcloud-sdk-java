@@ -31,7 +31,7 @@ public class UnblockKickedUserRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * 房间Id。
+    * 课堂Id。
     */
     @SerializedName("RoomId")
     @Expose
@@ -61,16 +61,16 @@ public class UnblockKickedUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 房间Id。 
-     * @return RoomId 房间Id。
+     * Get 课堂Id。 
+     * @return RoomId 课堂Id。
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间Id。
-     * @param RoomId 房间Id。
+     * Set 课堂Id。
+     * @param RoomId 课堂Id。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

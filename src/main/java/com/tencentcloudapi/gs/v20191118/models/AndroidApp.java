@@ -32,7 +32,6 @@ public class AndroidApp extends AbstractModel {
 
     /**
     * 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -47,7 +46,6 @@ public class AndroidApp extends AbstractModel {
 
     /**
     * 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidAppVersionInfo")
     @Expose
@@ -77,10 +75,8 @@ public class AndroidApp extends AbstractModel {
     }
 
     /**
-     * Get 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安卓应用名称 
      * @return Name 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -88,9 +84,7 @@ public class AndroidApp extends AbstractModel {
 
     /**
      * Set 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -113,10 +107,8 @@ public class AndroidApp extends AbstractModel {
     }
 
     /**
-     * Get 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安卓应用版本列表 
      * @return AndroidAppVersionInfo 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidAppVersionInfo [] getAndroidAppVersionInfo() {
         return this.AndroidAppVersionInfo;
@@ -124,9 +116,7 @@ public class AndroidApp extends AbstractModel {
 
     /**
      * Set 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidAppVersionInfo 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidAppVersionInfo(AndroidAppVersionInfo [] AndroidAppVersionInfo) {
         this.AndroidAppVersionInfo = AndroidAppVersionInfo;

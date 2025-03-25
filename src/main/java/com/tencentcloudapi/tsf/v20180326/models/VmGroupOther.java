@@ -25,7 +25,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -57,7 +56,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -65,7 +63,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunInstanceCount")
     @Expose
@@ -73,7 +70,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffInstanceCount")
     @Expose
@@ -81,7 +77,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupStatus")
     @Expose
@@ -89,7 +84,6 @@ public class VmGroupOther extends AbstractModel {
 
     /**
     * 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNotEqualServiceConfig")
     @Expose
@@ -104,10 +98,8 @@ public class VmGroupOther extends AbstractModel {
     private HealthCheckSettings HealthCheckSettings;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组ID 
      * @return GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -115,9 +107,7 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -184,10 +174,8 @@ public class VmGroupOther extends AbstractModel {
     }
 
     /**
-     * Get 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组实例数 
      * @return InstanceCount 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
@@ -195,19 +183,15 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组运行中实例数 
      * @return RunInstanceCount 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunInstanceCount() {
         return this.RunInstanceCount;
@@ -215,19 +199,15 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunInstanceCount 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
         this.RunInstanceCount = RunInstanceCount;
     }
 
     /**
-     * Get 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组中停止实例数 
      * @return OffInstanceCount 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffInstanceCount() {
         return this.OffInstanceCount;
@@ -235,19 +215,15 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffInstanceCount 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffInstanceCount(Long OffInstanceCount) {
         this.OffInstanceCount = OffInstanceCount;
     }
 
     /**
-     * Get 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组状态 
      * @return GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupStatus() {
         return this.GroupStatus;
@@ -255,19 +231,15 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupStatus(String GroupStatus) {
         this.GroupStatus = GroupStatus;
     }
 
     /**
-     * Get 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务配置信息是否匹配 
      * @return IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNotEqualServiceConfig() {
         return this.IsNotEqualServiceConfig;
@@ -275,9 +247,7 @@ public class VmGroupOther extends AbstractModel {
 
     /**
      * Set 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNotEqualServiceConfig(Boolean IsNotEqualServiceConfig) {
         this.IsNotEqualServiceConfig = IsNotEqualServiceConfig;

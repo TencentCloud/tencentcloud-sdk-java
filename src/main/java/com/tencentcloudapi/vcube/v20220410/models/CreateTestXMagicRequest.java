@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTestXMagicRequest extends AbstractModel {
 
     /**
-    * 应用id
+    * 将腾讯特效创建到哪个应用下
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -59,16 +59,16 @@ public class CreateTestXMagicRequest extends AbstractModel {
     private String [] PlanList;
 
     /**
-     * Get 应用id 
-     * @return ApplicationId 应用id
+     * Get 将腾讯特效创建到哪个应用下 
+     * @return ApplicationId 将腾讯特效创建到哪个应用下
      */
     public Long getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用id
-     * @param ApplicationId 应用id
+     * Set 将腾讯特效创建到哪个应用下
+     * @param ApplicationId 将腾讯特效创建到哪个应用下
      */
     public void setApplicationId(Long ApplicationId) {
         this.ApplicationId = ApplicationId;

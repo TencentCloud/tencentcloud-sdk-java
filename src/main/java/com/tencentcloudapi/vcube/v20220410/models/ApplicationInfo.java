@@ -47,6 +47,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * license数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Licenses")
     @Expose
@@ -54,7 +55,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseKey")
     @Expose
@@ -70,7 +70,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -78,7 +77,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -86,7 +84,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -94,7 +91,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseUrl")
     @Expose
@@ -192,8 +188,10 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get license数组 
+     * Get license数组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Licenses license数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public License [] getLicenses() {
         return this.Licenses;
@@ -201,17 +199,17 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set license数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Licenses license数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenses(License [] Licenses) {
         this.Licenses = Licenses;
     }
 
     /**
-     * Get license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license 秘钥 
      * @return LicenseKey license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLicenseKey() {
         return this.LicenseKey;
@@ -219,9 +217,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseKey license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseKey(String LicenseKey) {
         this.LicenseKey = LicenseKey;
@@ -248,10 +244,8 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -259,19 +253,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -279,19 +269,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户应用Id 
      * @return ApplicationId 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationId() {
         return this.ApplicationId;
@@ -299,19 +285,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(Long ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视立方下载license的url 
      * @return LicenseUrl 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLicenseUrl() {
         return this.LicenseUrl;
@@ -319,9 +301,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseUrl 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseUrl(String LicenseUrl) {
         this.LicenseUrl = LicenseUrl;

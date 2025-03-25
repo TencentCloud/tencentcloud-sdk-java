@@ -25,7 +25,6 @@ public class Permission extends AbstractModel {
 
     /**
     * 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -33,17 +32,14 @@ public class Permission extends AbstractModel {
 
     /**
     * 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
     @Expose
     private String [] Actions;
 
     /**
-     * Get 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源路径，目前仅支持Namespace 
      * @return Resource 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -51,19 +47,15 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts 
      * @return Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActions() {
         return this.Actions;
@@ -71,9 +63,7 @@ public class Permission extends AbstractModel {
 
     /**
      * Set 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String [] Actions) {
         this.Actions = Actions;

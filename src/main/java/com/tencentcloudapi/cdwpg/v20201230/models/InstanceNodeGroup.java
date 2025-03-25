@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceNodeGroup extends AbstractModel {
 
     /**
-    * 1
+    * 机型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
@@ -32,7 +32,7 @@ public class InstanceNodeGroup extends AbstractModel {
     private String SpecName;
 
     /**
-    * 1
+    * 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisk")
@@ -40,7 +40,7 @@ public class InstanceNodeGroup extends AbstractModel {
     private DiskSpecPlus DataDisk;
 
     /**
-    * 1
+    * 机器个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvmCount")
@@ -48,9 +48,9 @@ public class InstanceNodeGroup extends AbstractModel {
     private Long CvmCount;
 
     /**
-     * Get 1
+     * Get 机型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecName 1
+     * @return SpecName 机型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
@@ -58,9 +58,9 @@ public class InstanceNodeGroup extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 机型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecName 1
+     * @param SpecName 机型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
@@ -68,9 +68,9 @@ public class InstanceNodeGroup extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDisk 1
+     * @return DataDisk 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpecPlus getDataDisk() {
@@ -78,9 +78,9 @@ public class InstanceNodeGroup extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDisk 1
+     * @param DataDisk 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisk(DiskSpecPlus DataDisk) {
@@ -88,9 +88,9 @@ public class InstanceNodeGroup extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 机器个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CvmCount 1
+     * @return CvmCount 机器个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvmCount() {
@@ -98,9 +98,9 @@ public class InstanceNodeGroup extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 机器个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CvmCount 1
+     * @param CvmCount 机器个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvmCount(Long CvmCount) {

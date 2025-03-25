@@ -25,7 +25,6 @@ public class StartAndroidInstancesResponse extends AbstractModel {
 
     /**
     * 任务集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskSet")
     @Expose
@@ -39,10 +38,8 @@ public class StartAndroidInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务集合 
      * @return TaskSet 任务集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidInstanceTask [] getTaskSet() {
         return this.TaskSet;
@@ -50,9 +47,7 @@ public class StartAndroidInstancesResponse extends AbstractModel {
 
     /**
      * Set 任务集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskSet 任务集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskSet(AndroidInstanceTask [] TaskSet) {
         this.TaskSet = TaskSet;

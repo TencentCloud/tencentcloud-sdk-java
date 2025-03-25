@@ -45,14 +45,14 @@ public class MQTTUserItem extends AbstractModel {
     private String Remark;
 
     /**
-    * 创建时间，秒为单位
+    * 创建时间，毫秒级时间戳 。
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 修改时间，秒为单位
+    * 修改时间，毫秒级时间戳 。
     */
     @SerializedName("ModifiedTime")
     @Expose
@@ -107,32 +107,32 @@ public class MQTTUserItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get 创建时间，毫秒级时间戳 。 
+     * @return CreatedTime 创建时间，毫秒级时间戳 。
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set 创建时间，毫秒级时间戳 。
+     * @param CreatedTime 创建时间，毫秒级时间戳 。
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 修改时间，秒为单位 
-     * @return ModifiedTime 修改时间，秒为单位
+     * Get 修改时间，毫秒级时间戳 。 
+     * @return ModifiedTime 修改时间，毫秒级时间戳 。
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set 修改时间，秒为单位
-     * @param ModifiedTime 修改时间，秒为单位
+     * Set 修改时间，毫秒级时间戳 。
+     * @param ModifiedTime 修改时间，毫秒级时间戳 。
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;

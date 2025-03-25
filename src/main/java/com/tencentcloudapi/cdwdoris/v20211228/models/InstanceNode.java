@@ -115,6 +115,13 @@ public class InstanceNode extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 计算组ID
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -322,6 +329,22 @@ public class InstanceNode extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 计算组ID 
+     * @return ComputeGroupId 计算组ID
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组ID
+     * @param ComputeGroupId 计算组ID
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
+    }
+
     public InstanceNode() {
     }
 
@@ -369,6 +392,9 @@ public class InstanceNode extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class InstanceNode extends AbstractModel {
         this.setParamSimple(map, prefix + "UUID", this.UUID);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
 
     }
 }

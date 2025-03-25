@@ -24,91 +24,100 @@ import java.util.HashMap;
 public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
-    * 规则ID
+    * 策略规则ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集群ID
+    * MQTT集群ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 规则名
+    * 策略规则名
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 规则语法版本
+    * 规则语法版本，当前仅支持1，默认为1
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-    * 越小越优先
+    * 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * allow/deny
+    * 决策
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * connect、pub、sub
+    * 操作
+connect：连接
+pub：发布mqtt消息
+sub：订阅mqtt消息
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Actions")
     @Expose
     private String Actions;
 
     /**
-    * 资源
+    * 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Resources")
     @Expose
     private String Resources;
 
     /**
-    * client
+    * 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 用户
+    * 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * IP地址
+    * 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 0，1，2
+    * 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-    * 1：表示匹配retain消息
+    * 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
     */
@@ -117,223 +126,257 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private Long Retain;
 
     /**
-    * 描述
+    * 备注，长度不超过128个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 1713164969433
+    * 创建时间。毫秒级时间戳 。
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 1713164969433
+    * 更新时间。毫秒级时间戳 。
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 规则ID 
-     * @return Id 规则ID
+     * Get 策略规则ID 
+     * @return Id 策略规则ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则ID
-     * @param Id 规则ID
+     * Set 策略规则ID
+     * @param Id 策略规则ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get MQTT集群ID 
+     * @return InstanceId MQTT集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set MQTT集群ID
+     * @param InstanceId MQTT集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 规则名 
-     * @return PolicyName 规则名
+     * Get 策略规则名 
+     * @return PolicyName 策略规则名
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 规则名
-     * @param PolicyName 规则名
+     * Set 策略规则名
+     * @param PolicyName 策略规则名
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 规则语法版本 
-     * @return Version 规则语法版本
+     * Get 规则语法版本，当前仅支持1，默认为1 
+     * @return Version 规则语法版本，当前仅支持1，默认为1
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 规则语法版本
-     * @param Version 规则语法版本
+     * Set 规则语法版本，当前仅支持1，默认为1
+     * @param Version 规则语法版本，当前仅支持1，默认为1
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 越小越优先 
-     * @return Priority 越小越优先
+     * Get 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Priority 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 越小越优先
-     * @param Priority 越小越优先
+     * Set 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Priority 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get allow/deny 
-     * @return Effect allow/deny
+     * Get 决策
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Effect 决策
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getEffect() {
         return this.Effect;
     }
 
     /**
-     * Set allow/deny
-     * @param Effect allow/deny
+     * Set 决策
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Effect 决策
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get connect、pub、sub 
-     * @return Actions connect、pub、sub
+     * Get 操作
+connect：连接
+pub：发布mqtt消息
+sub：订阅mqtt消息
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Actions 操作
+connect：连接
+pub：发布mqtt消息
+sub：订阅mqtt消息
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getActions() {
         return this.Actions;
     }
 
     /**
-     * Set connect、pub、sub
-     * @param Actions connect、pub、sub
+     * Set 操作
+connect：连接
+pub：发布mqtt消息
+sub：订阅mqtt消息
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Actions 操作
+connect：连接
+pub：发布mqtt消息
+sub：订阅mqtt消息
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setActions(String Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 资源 
-     * @return Resources 资源
+     * Get 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Resources 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源
-     * @param Resources 资源
+     * Set 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Resources 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setResources(String Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get client 
-     * @return ClientId client
+     * Get 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return ClientId 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set client
-     * @param ClientId client
+     * Set 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param ClientId 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 用户 
-     * @return Username 用户
+     * Get 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ 
+     * @return Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户
-     * @param Username 用户
+     * Set 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+     * @param Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get IP地址 
-     * @return Ip IP地址
+     * Get 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Ip 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP地址
-     * @param Ip IP地址
+     * Set 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Ip 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 0，1，2 
-     * @return Qos 0，1，2
+     * Get 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Qos 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getQos() {
         return this.Qos;
     }
 
     /**
-     * Set 0，1，2
-     * @param Qos 0，1，2
+     * Set 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Qos 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get 1：表示匹配retain消息
+     * Get 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息 
-     * @return Retain 1：表示匹配retain消息
+     * @return Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
      */
@@ -342,10 +385,12 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Set 1：表示匹配retain消息
+     * Set 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
-     * @param Retain 1：表示匹配retain消息
+     * @param Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+1：表示匹配retain消息
 2：表示匹配非retain消息
 3：表示匹配retain和非retain消息
      */
@@ -354,48 +399,48 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get 描述 
-     * @return Remark 描述
+     * Get 备注，长度不超过128个字符。 
+     * @return Remark 备注，长度不超过128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 描述
-     * @param Remark 描述
+     * Set 备注，长度不超过128个字符。
+     * @param Remark 备注，长度不超过128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 1713164969433 
-     * @return CreatedTime 1713164969433
+     * Get 创建时间。毫秒级时间戳 。 
+     * @return CreatedTime 创建时间。毫秒级时间戳 。
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 1713164969433
-     * @param CreatedTime 1713164969433
+     * Set 创建时间。毫秒级时间戳 。
+     * @param CreatedTime 创建时间。毫秒级时间戳 。
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 1713164969433 
-     * @return UpdateTime 1713164969433
+     * Get 更新时间。毫秒级时间戳 。 
+     * @return UpdateTime 更新时间。毫秒级时间戳 。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 1713164969433
-     * @param UpdateTime 1713164969433
+     * Set 更新时间。毫秒级时间戳 。
+     * @param UpdateTime 更新时间。毫秒级时间戳 。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

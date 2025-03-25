@@ -38,7 +38,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * 目标组的新默认端口。
+    * 目标组的新默认端口。全监听目标组不支持此参数。
     */
     @SerializedName("Port")
     @Expose
@@ -88,16 +88,16 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的新默认端口。 
-     * @return Port 目标组的新默认端口。
+     * Get 目标组的新默认端口。全监听目标组不支持此参数。 
+     * @return Port 目标组的新默认端口。全监听目标组不支持此参数。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的新默认端口。
-     * @param Port 目标组的新默认端口。
+     * Set 目标组的新默认端口。全监听目标组不支持此参数。
+     * @param Port 目标组的新默认端口。全监听目标组不支持此参数。
      */
     public void setPort(Long Port) {
         this.Port = Port;

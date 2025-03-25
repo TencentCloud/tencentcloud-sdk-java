@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAuthenticatorRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -34,23 +34,23 @@ public class DeleteAuthenticatorRequest extends AbstractModel {
     * 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -60,11 +60,11 @@ BYOC：一端一证认证器
      * Get 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器 
+HTTP：HTTP认证器 
      * @return Type 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
      */
     public String getType() {
         return this.Type;
@@ -74,11 +74,11 @@ BYOC：一端一证认证器
      * Set 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
      * @param Type 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
      */
     public void setType(String Type) {
         this.Type = Type;

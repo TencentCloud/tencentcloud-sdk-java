@@ -40,7 +40,7 @@ public class DescribeInstancesResponse extends AbstractModel {
     private InstanceInfo [] InstancesList;
 
     /**
-    * -
+    * 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
@@ -95,9 +95,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 错误信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMsg -
+     * @return ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
@@ -105,9 +105,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMsg -
+     * @param ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {

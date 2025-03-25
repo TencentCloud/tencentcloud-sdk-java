@@ -87,6 +87,20 @@ public class NodeInfos extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 计算组id
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
+
+    /**
+    * rip
+    */
+    @SerializedName("RIp")
+    @Expose
+    private String RIp;
+
+    /**
      * Get 节点名称 
      * @return NodeName 节点名称
      */
@@ -230,6 +244,38 @@ public class NodeInfos extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 计算组id 
+     * @return ComputeGroupId 计算组id
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组id
+     * @param ComputeGroupId 计算组id
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
+    }
+
+    /**
+     * Get rip 
+     * @return RIp rip
+     */
+    public String getRIp() {
+        return this.RIp;
+    }
+
+    /**
+     * Set rip
+     * @param RIp rip
+     */
+    public void setRIp(String RIp) {
+        this.RIp = RIp;
+    }
+
     public NodeInfos() {
     }
 
@@ -265,6 +311,12 @@ public class NodeInfos extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
+        if (source.RIp != null) {
+            this.RIp = new String(source.RIp);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class NodeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
+        this.setParamSimple(map, prefix + "RIp", this.RIp);
 
     }
 }

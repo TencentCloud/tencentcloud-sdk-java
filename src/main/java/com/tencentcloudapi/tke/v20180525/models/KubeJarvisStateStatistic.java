@@ -25,7 +25,6 @@ public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
     * 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyLevel")
     @Expose
@@ -33,17 +32,14 @@ public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
     * 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果的健康水平 
      * @return HealthyLevel 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthyLevel() {
         return this.HealthyLevel;
@@ -51,19 +47,15 @@ public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
      * Set 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyLevel 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyLevel(String HealthyLevel) {
         this.HealthyLevel = HealthyLevel;
     }
 
     /**
-     * Get 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果的统计 
      * @return Count 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -71,9 +63,7 @@ public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
      * Set 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

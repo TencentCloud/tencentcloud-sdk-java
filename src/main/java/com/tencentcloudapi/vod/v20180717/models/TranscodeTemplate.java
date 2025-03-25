@@ -80,7 +80,6 @@ public class TranscodeTemplate extends AbstractModel {
 
     /**
     * 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoTemplate")
     @Expose
@@ -88,7 +87,6 @@ public class TranscodeTemplate extends AbstractModel {
 
     /**
     * 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioTemplate")
     @Expose
@@ -269,10 +267,8 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。 
      * @return VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
@@ -280,19 +276,15 @@ public class TranscodeTemplate extends AbstractModel {
 
     /**
      * Set 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。 
      * @return AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
@@ -300,9 +292,7 @@ public class TranscodeTemplate extends AbstractModel {
 
     /**
      * Set 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;

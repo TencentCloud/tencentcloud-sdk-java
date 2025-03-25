@@ -25,7 +25,6 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
     * 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DayofWeek")
     @Expose
@@ -33,7 +32,6 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
     * 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -41,17 +39,14 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
     * 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一周中的周几 
      * @return DayofWeek 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDayofWeek() {
         return this.DayofWeek;
@@ -59,19 +54,15 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
      * Set 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DayofWeek 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDayofWeek(Long DayofWeek) {
         this.DayofWeek = DayofWeek;
     }
 
     /**
-     * Get 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间片段的开始时分。格式【HH:MM】 
      * @return BeginTime 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginTime() {
         return this.BeginTime;
@@ -79,19 +70,15 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
      * Set 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间片段的结束时分。格式【HH:MM】 
      * @return EndTime 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -99,9 +86,7 @@ public class TimeTemplateSpec extends AbstractModel {
 
     /**
      * Set 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

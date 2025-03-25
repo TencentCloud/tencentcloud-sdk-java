@@ -25,7 +25,6 @@ public class DescribeFeatureListResponse extends AbstractModel {
 
     /**
     * 功能列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeFeatureListResponse extends AbstractModel {
 
     /**
     * 优图功能列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XMagicFeatureList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeFeatureListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 功能列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能列表 
      * @return FeatureList 功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoFeature [] getFeatureList() {
         return this.FeatureList;
@@ -58,19 +54,15 @@ public class DescribeFeatureListResponse extends AbstractModel {
 
     /**
      * Set 功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureList 功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureList(VideoFeature [] FeatureList) {
         this.FeatureList = FeatureList;
     }
 
     /**
-     * Get 优图功能列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优图功能列表 
      * @return XMagicFeatureList 优图功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public XMagicFeature [] getXMagicFeatureList() {
         return this.XMagicFeatureList;
@@ -78,9 +70,7 @@ public class DescribeFeatureListResponse extends AbstractModel {
 
     /**
      * Set 优图功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param XMagicFeatureList 优图功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXMagicFeatureList(XMagicFeature [] XMagicFeatureList) {
         this.XMagicFeatureList = XMagicFeatureList;

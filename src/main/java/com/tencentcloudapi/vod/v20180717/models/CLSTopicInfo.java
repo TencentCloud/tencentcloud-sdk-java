@@ -25,7 +25,6 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
     * 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -33,7 +32,6 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
     * 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -41,17 +39,14 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
     * 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题 ID。 
      * @return TopicId 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -59,19 +54,15 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题名。 
      * @return TopicName 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -79,19 +70,15 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集 ID。 
      * @return LogsetId 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -99,9 +86,7 @@ public class CLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetId 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

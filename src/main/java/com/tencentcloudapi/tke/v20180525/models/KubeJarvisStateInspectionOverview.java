@@ -25,7 +25,6 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
     * 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
@@ -41,17 +39,14 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
     * 诊断结果详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Diagnostics")
     @Expose
     private KubeJarvisStateDiagnosticOverview [] Diagnostics;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -59,19 +54,15 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果统计 
      * @return Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateStatistic [] getStatistics() {
         return this.Statistics;
@@ -79,19 +70,15 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
      * Set 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(KubeJarvisStateStatistic [] Statistics) {
         this.Statistics = Statistics;
     }
 
     /**
-     * Get 诊断结果详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果详情 
      * @return Diagnostics 诊断结果详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateDiagnosticOverview [] getDiagnostics() {
         return this.Diagnostics;
@@ -99,9 +86,7 @@ public class KubeJarvisStateInspectionOverview extends AbstractModel {
 
     /**
      * Set 诊断结果详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Diagnostics 诊断结果详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnostics(KubeJarvisStateDiagnosticOverview [] Diagnostics) {
         this.Diagnostics = Diagnostics;

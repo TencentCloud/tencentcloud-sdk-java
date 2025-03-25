@@ -39,7 +39,6 @@ public class Favors extends AbstractModel {
 
     /**
     * Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullCount")
     @Expose
@@ -47,7 +46,6 @@ public class Favors extends AbstractModel {
 
     /**
     * 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FavorCount")
     @Expose
@@ -55,7 +53,6 @@ public class Favors extends AbstractModel {
 
     /**
     * 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Public")
     @Expose
@@ -63,7 +60,6 @@ public class Favors extends AbstractModel {
 
     /**
     * 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsQcloudOfficial")
     @Expose
@@ -71,7 +67,6 @@ public class Favors extends AbstractModel {
 
     /**
     * 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagCount")
     @Expose
@@ -79,7 +74,6 @@ public class Favors extends AbstractModel {
 
     /**
     * Logo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Logo")
     @Expose
@@ -132,10 +126,8 @@ public class Favors extends AbstractModel {
     }
 
     /**
-     * Get Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pull总共的次数 
      * @return PullCount Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPullCount() {
         return this.PullCount;
@@ -143,19 +135,15 @@ public class Favors extends AbstractModel {
 
     /**
      * Set Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PullCount Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullCount(Long PullCount) {
         this.PullCount = PullCount;
     }
 
     /**
-     * Get 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库收藏次数 
      * @return FavorCount 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFavorCount() {
         return this.FavorCount;
@@ -163,19 +151,15 @@ public class Favors extends AbstractModel {
 
     /**
      * Set 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FavorCount 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFavorCount(Long FavorCount) {
         this.FavorCount = FavorCount;
     }
 
     /**
-     * Get 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库是否公开 
      * @return Public 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublic() {
         return this.Public;
@@ -183,19 +167,15 @@ public class Favors extends AbstractModel {
 
     /**
      * Set 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Public 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublic(Long Public) {
         this.Public = Public;
     }
 
     /**
-     * Get 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为官方所有 
      * @return IsQcloudOfficial 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsQcloudOfficial() {
         return this.IsQcloudOfficial;
@@ -203,19 +183,15 @@ public class Favors extends AbstractModel {
 
     /**
      * Set 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsQcloudOfficial 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsQcloudOfficial(Boolean IsQcloudOfficial) {
         this.IsQcloudOfficial = IsQcloudOfficial;
     }
 
     /**
-     * Get 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库Tag的数量 
      * @return TagCount 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTagCount() {
         return this.TagCount;
@@ -223,19 +199,15 @@ public class Favors extends AbstractModel {
 
     /**
      * Set 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagCount 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagCount(Long TagCount) {
         this.TagCount = TagCount;
     }
 
     /**
-     * Get Logo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Logo 
      * @return Logo Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogo() {
         return this.Logo;
@@ -243,9 +215,7 @@ public class Favors extends AbstractModel {
 
     /**
      * Set Logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Logo Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;

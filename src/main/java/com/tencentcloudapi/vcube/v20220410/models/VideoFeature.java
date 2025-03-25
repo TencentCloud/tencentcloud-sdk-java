@@ -39,7 +39,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -47,7 +46,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -55,7 +53,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trial")
     @Expose
@@ -79,7 +76,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -87,7 +83,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -95,7 +90,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -103,7 +97,6 @@ public class VideoFeature extends AbstractModel {
 
     /**
     * 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Platform")
     @Expose
@@ -142,10 +135,8 @@ public class VideoFeature extends AbstractModel {
     }
 
     /**
-     * Get 功能名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能名称 
      * @return Name 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -153,19 +144,15 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 功能类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能类型 
      * @return Type 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -173,19 +160,15 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以申请试用 
      * @return Trial 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTrial() {
         return this.Trial;
@@ -193,9 +176,7 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trial 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrial(Boolean Trial) {
         this.Trial = Trial;
@@ -242,10 +223,8 @@ public class VideoFeature extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -253,19 +232,15 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -273,19 +248,15 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能所属业务方 
      * @return BizType 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
         return this.BizType;
@@ -293,19 +264,15 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 平台类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平台类型 
      * @return Platform 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlatform() {
         return this.Platform;
@@ -313,9 +280,7 @@ public class VideoFeature extends AbstractModel {
 
     /**
      * Set 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Platform 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

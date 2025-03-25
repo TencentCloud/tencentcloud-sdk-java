@@ -38,7 +38,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
     */
     @SerializedName("Port")
@@ -86,6 +86,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Long Weight;
 
     /**
+    * 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+    */
+    @SerializedName("FullListenSwitch")
+    @Expose
+    private Boolean FullListenSwitch;
+
+    /**
      * Get 目标组名称，限定50个字符 
      * @return TargetGroupName 目标组名称，限定50个字符
      */
@@ -118,9 +125,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
  
-     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
      */
     public Long getPort() {
@@ -128,9 +135,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
-     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
      */
     public void setPort(Long Port) {
@@ -237,6 +244,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.Weight = Weight;
     }
 
+    /**
+     * Get 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。 
+     * @return FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     */
+    public Boolean getFullListenSwitch() {
+        return this.FullListenSwitch;
+    }
+
+    /**
+     * Set 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * @param FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     */
+    public void setFullListenSwitch(Boolean FullListenSwitch) {
+        this.FullListenSwitch = FullListenSwitch;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -275,6 +298,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.FullListenSwitch != null) {
+            this.FullListenSwitch = new Boolean(source.FullListenSwitch);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
 
     }
 }

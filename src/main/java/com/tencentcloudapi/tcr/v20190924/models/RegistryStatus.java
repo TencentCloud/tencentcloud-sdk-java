@@ -39,7 +39,6 @@ public class RegistryStatus extends AbstractModel {
 
     /**
     * 附加状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conditions")
     @Expose
@@ -78,10 +77,8 @@ public class RegistryStatus extends AbstractModel {
     }
 
     /**
-     * Get 附加状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加状态 
      * @return Conditions 附加状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegistryCondition [] getConditions() {
         return this.Conditions;
@@ -89,9 +86,7 @@ public class RegistryStatus extends AbstractModel {
 
     /**
      * Set 附加状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Conditions 附加状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditions(RegistryCondition [] Conditions) {
         this.Conditions = Conditions;

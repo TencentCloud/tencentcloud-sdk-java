@@ -25,7 +25,6 @@ public class LiveRecordPlanItem extends AbstractModel {
 
     /**
     * 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanId")
     @Expose
@@ -33,17 +32,14 @@ public class LiveRecordPlanItem extends AbstractModel {
 
     /**
     * 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-     * Get 计划ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划ID 
      * @return PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanId() {
         return this.PlanId;
@@ -51,19 +47,15 @@ public class LiveRecordPlanItem extends AbstractModel {
 
     /**
      * Set 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 计划名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划名称 
      * @return PlanName 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanName() {
         return this.PlanName;
@@ -71,9 +63,7 @@ public class LiveRecordPlanItem extends AbstractModel {
 
     /**
      * Set 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlanName 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;

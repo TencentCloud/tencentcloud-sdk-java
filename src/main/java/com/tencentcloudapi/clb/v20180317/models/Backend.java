@@ -38,7 +38,7 @@ public class Backend extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 后端服务的监听端口
+    * 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
     */
     @SerializedName("Port")
     @Expose
@@ -132,16 +132,16 @@ public class Backend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的监听端口 
-     * @return Port 后端服务的监听端口
+     * Get 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。 
+     * @return Port 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 后端服务的监听端口
-     * @param Port 后端服务的监听端口
+     * Set 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
+     * @param Port 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
      */
     public void setPort(Long Port) {
         this.Port = Port;

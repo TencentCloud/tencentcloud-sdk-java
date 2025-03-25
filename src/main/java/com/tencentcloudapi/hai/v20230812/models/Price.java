@@ -25,7 +25,6 @@ public class Price extends AbstractModel {
 
     /**
     * 实例价格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -33,7 +32,6 @@ public class Price extends AbstractModel {
 
     /**
     * 云盘价格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudDiskPrice")
     @Expose
@@ -41,17 +39,14 @@ public class Price extends AbstractModel {
 
     /**
     * 分实例价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceDetailSet")
     @Expose
     private ItemPriceDetail [] PriceDetailSet;
 
     /**
-     * Get 实例价格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例价格信息 
      * @return InstancePrice 实例价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getInstancePrice() {
         return this.InstancePrice;
@@ -59,19 +54,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 实例价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice 实例价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePrice(ItemPrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 云盘价格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘价格信息 
      * @return CloudDiskPrice 云盘价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getCloudDiskPrice() {
         return this.CloudDiskPrice;
@@ -79,19 +70,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 云盘价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudDiskPrice 云盘价格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudDiskPrice(ItemPrice CloudDiskPrice) {
         this.CloudDiskPrice = CloudDiskPrice;
     }
 
     /**
-     * Get 分实例价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分实例价格 
      * @return PriceDetailSet 分实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPriceDetail [] getPriceDetailSet() {
         return this.PriceDetailSet;
@@ -99,9 +86,7 @@ public class Price extends AbstractModel {
 
     /**
      * Set 分实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceDetailSet 分实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceDetailSet(ItemPriceDetail [] PriceDetailSet) {
         this.PriceDetailSet = PriceDetailSet;

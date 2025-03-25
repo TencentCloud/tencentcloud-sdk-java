@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ClusterConfigsInfoFromEMR extends AbstractModel {
 
     /**
+    * 计算组id
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
+
+    /**
     * 配置文件名称
     */
     @SerializedName("FileName")
@@ -79,6 +86,22 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
     @SerializedName("FileKeyValuesNew")
     @Expose
     private ConfigKeyValue [] FileKeyValuesNew;
+
+    /**
+     * Get 计算组id 
+     * @return ComputeGroupId 计算组id
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组id
+     * @param ComputeGroupId 计算组id
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
+    }
 
     /**
      * Get 配置文件名称 
@@ -224,6 +247,9 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ClusterConfigsInfoFromEMR(ClusterConfigsInfoFromEMR source) {
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
@@ -258,6 +284,7 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileConf", this.FileConf);
         this.setParamSimple(map, prefix + "KeyConf", this.KeyConf);

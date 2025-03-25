@@ -25,7 +25,6 @@ public class ModifyYarnDeployResponse extends AbstractModel {
 
     /**
     * 为false不点亮部署生效、重置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDraft")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyYarnDeployResponse extends AbstractModel {
 
     /**
     * 错误信息，预留
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -47,10 +45,8 @@ public class ModifyYarnDeployResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 为false不点亮部署生效、重置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 为false不点亮部署生效、重置 
      * @return IsDraft 为false不点亮部署生效、重置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDraft() {
         return this.IsDraft;
@@ -58,19 +54,15 @@ public class ModifyYarnDeployResponse extends AbstractModel {
 
     /**
      * Set 为false不点亮部署生效、重置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDraft 为false不点亮部署生效、重置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDraft(Boolean IsDraft) {
         this.IsDraft = IsDraft;
     }
 
     /**
-     * Get 错误信息，预留
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息，预留 
      * @return ErrorMsg 错误信息，预留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -78,9 +70,7 @@ public class ModifyYarnDeployResponse extends AbstractModel {
 
     /**
      * Set 错误信息，预留
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息，预留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

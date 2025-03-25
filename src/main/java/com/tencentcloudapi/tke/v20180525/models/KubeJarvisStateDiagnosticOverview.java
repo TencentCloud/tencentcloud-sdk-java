@@ -25,7 +25,6 @@ public class KubeJarvisStateDiagnosticOverview extends AbstractModel {
 
     /**
     * 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalogues")
     @Expose
@@ -33,17 +32,14 @@ public class KubeJarvisStateDiagnosticOverview extends AbstractModel {
 
     /**
     * 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
     private KubeJarvisStateStatistic [] Statistics;
 
     /**
-     * Get 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断目录 
      * @return Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateCatalogue [] getCatalogues() {
         return this.Catalogues;
@@ -51,19 +47,15 @@ public class KubeJarvisStateDiagnosticOverview extends AbstractModel {
 
     /**
      * Set 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogues(KubeJarvisStateCatalogue [] Catalogues) {
         this.Catalogues = Catalogues;
     }
 
     /**
-     * Get 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果统计 
      * @return Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateStatistic [] getStatistics() {
         return this.Statistics;
@@ -71,9 +63,7 @@ public class KubeJarvisStateDiagnosticOverview extends AbstractModel {
 
     /**
      * Set 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(KubeJarvisStateStatistic [] Statistics) {
         this.Statistics = Statistics;

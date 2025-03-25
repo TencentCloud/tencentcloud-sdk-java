@@ -46,7 +46,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskMessage")
     @Expose
@@ -61,7 +60,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedTime")
     @Expose
@@ -116,10 +114,8 @@ public class TaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的状态信息 
      * @return TaskMessage 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskMessage() {
         return this.TaskMessage;
@@ -127,9 +123,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMessage 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;
@@ -152,10 +146,8 @@ public class TaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间 
      * @return FinishedTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedTime() {
         return this.FinishedTime;
@@ -163,9 +155,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedTime(String FinishedTime) {
         this.FinishedTime = FinishedTime;

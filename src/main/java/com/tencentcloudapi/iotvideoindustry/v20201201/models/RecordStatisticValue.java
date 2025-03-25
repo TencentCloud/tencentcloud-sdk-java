@@ -25,7 +25,6 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
     * 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpectTimeLen")
     @Expose
@@ -33,7 +32,6 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
     * 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordTimeLen")
     @Expose
@@ -41,17 +39,14 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
     * 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
     private Float FileSize;
 
     /**
-     * Get 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期望执行时间 秒 
      * @return ExpectTimeLen 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpectTimeLen() {
         return this.ExpectTimeLen;
@@ -59,19 +54,15 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
      * Set 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpectTimeLen 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpectTimeLen(Long ExpectTimeLen) {
         this.ExpectTimeLen = ExpectTimeLen;
     }
 
     /**
-     * Get 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实际执行时间 秒 
      * @return RecordTimeLen 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordTimeLen() {
         return this.RecordTimeLen;
@@ -79,19 +70,15 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
      * Set 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordTimeLen 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordTimeLen(Long RecordTimeLen) {
         this.RecordTimeLen = RecordTimeLen;
     }
 
     /**
-     * Get 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储大小 G 
      * @return FileSize 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFileSize() {
         return this.FileSize;
@@ -99,9 +86,7 @@ public class RecordStatisticValue extends AbstractModel {
 
     /**
      * Set 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Float FileSize) {
         this.FileSize = FileSize;

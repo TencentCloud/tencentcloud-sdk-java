@@ -25,7 +25,6 @@ public class ClusterRelationMeta extends AbstractModel {
 
     /**
     * 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -40,10 +39,8 @@ public class ClusterRelationMeta extends AbstractModel {
     private String [] ClusterIdList;
 
     /**
-     * Get 集群类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型 
      * @return ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -51,9 +48,7 @@ public class ClusterRelationMeta extends AbstractModel {
 
     /**
      * Set 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

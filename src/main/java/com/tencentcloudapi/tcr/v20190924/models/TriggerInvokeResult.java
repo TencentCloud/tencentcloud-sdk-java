@@ -25,7 +25,6 @@ public class TriggerInvokeResult extends AbstractModel {
 
     /**
     * 请求TKE返回值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -33,17 +32,14 @@ public class TriggerInvokeResult extends AbstractModel {
 
     /**
     * 请求TKE返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-     * Get 请求TKE返回值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求TKE返回值 
      * @return ReturnCode 请求TKE返回值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
@@ -51,19 +47,15 @@ public class TriggerInvokeResult extends AbstractModel {
 
     /**
      * Set 请求TKE返回值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnCode 请求TKE返回值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 请求TKE返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求TKE返回信息 
      * @return ReturnMsg 请求TKE返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
@@ -71,9 +63,7 @@ public class TriggerInvokeResult extends AbstractModel {
 
     /**
      * Set 请求TKE返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMsg 请求TKE返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

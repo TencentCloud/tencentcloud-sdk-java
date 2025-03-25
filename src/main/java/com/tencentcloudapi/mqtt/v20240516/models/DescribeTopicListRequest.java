@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicListRequest extends AbstractModel {
 
     /**
-    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,30 +39,30 @@ public class DescribeTopicListRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认0，最大20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -89,32 +89,32 @@ public class DescribeTopicListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认0。 
+     * @return Offset 查询起始位置，默认0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认0。
+     * @param Offset 查询起始位置，默认0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认0，最大20 
+     * @return Limit 查询结果限制数量，默认0，最大20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认0，最大20
+     * @param Limit 查询结果限制数量，默认0，最大20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

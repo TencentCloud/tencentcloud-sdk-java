@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
-    * 策略id
+    * 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class AuthorizationPolicyPriority extends AbstractModel {
     private Long Priority;
 
     /**
-     * Get 策略id 
-     * @return Id 策略id
+     * Get 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。 
+     * @return Id 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 策略id
-     * @param Id 策略id
+     * Set 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
+     * @param Id 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
      */
     public void setId(Long Id) {
         this.Id = Id;

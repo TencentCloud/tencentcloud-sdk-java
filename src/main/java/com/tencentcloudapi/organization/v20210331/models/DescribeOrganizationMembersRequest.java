@@ -73,6 +73,20 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 组织单元ID
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private Long NodeId;
+
+    /**
+    * 组织单元名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get 偏移量。取值是limit的整数倍，默认值 : 0 
      * @return Offset 偏移量。取值是limit的整数倍，默认值 : 0
      */
@@ -184,6 +198,38 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 组织单元ID 
+     * @return NodeId 组织单元ID
+     */
+    public Long getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set 组织单元ID
+     * @param NodeId 组织单元ID
+     */
+    public void setNodeId(Long NodeId) {
+        this.NodeId = NodeId;
+    }
+
+    /**
+     * Get 组织单元名称 
+     * @return NodeName 组织单元名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 组织单元名称
+     * @param NodeName 组织单元名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public DescribeOrganizationMembersRequest() {
     }
 
@@ -216,6 +262,12 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthName", this.AuthName);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

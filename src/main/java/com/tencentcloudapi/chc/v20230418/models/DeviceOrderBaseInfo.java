@@ -32,7 +32,6 @@ public class DeviceOrderBaseInfo extends AbstractModel {
 
     /**
     * 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdcName")
     @Expose
@@ -153,10 +152,8 @@ public class DeviceOrderBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 机房名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机房名称 
      * @return IdcName 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdcName() {
         return this.IdcName;
@@ -164,9 +161,7 @@ public class DeviceOrderBaseInfo extends AbstractModel {
 
     /**
      * Set 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdcName 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdcName(String IdcName) {
         this.IdcName = IdcName;

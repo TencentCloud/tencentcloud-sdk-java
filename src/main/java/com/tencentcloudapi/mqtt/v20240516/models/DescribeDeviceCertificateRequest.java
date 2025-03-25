@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeDeviceCertificateRequest extends AbstractModel {
 
     /**
-    * 设备证书sn
+    * 设备证书的SN序列号，用于唯一标识一个设备证书。
     */
     @SerializedName("DeviceCertificateSn")
     @Expose
     private String DeviceCertificateSn;
 
     /**
-    * 集群id
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 设备证书sn 
-     * @return DeviceCertificateSn 设备证书sn
+     * Get 设备证书的SN序列号，用于唯一标识一个设备证书。 
+     * @return DeviceCertificateSn 设备证书的SN序列号，用于唯一标识一个设备证书。
      */
     public String getDeviceCertificateSn() {
         return this.DeviceCertificateSn;
     }
 
     /**
-     * Set 设备证书sn
-     * @param DeviceCertificateSn 设备证书sn
+     * Set 设备证书的SN序列号，用于唯一标识一个设备证书。
+     * @param DeviceCertificateSn 设备证书的SN序列号，用于唯一标识一个设备证书。
      */
     public void setDeviceCertificateSn(String DeviceCertificateSn) {
         this.DeviceCertificateSn = DeviceCertificateSn;
     }
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

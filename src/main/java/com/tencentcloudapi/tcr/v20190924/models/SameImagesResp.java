@@ -25,17 +25,14 @@ public class SameImagesResp extends AbstractModel {
 
     /**
     * tag列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SameImages")
     @Expose
     private String [] SameImages;
 
     /**
-     * Get tag列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tag列表 
      * @return SameImages tag列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSameImages() {
         return this.SameImages;
@@ -43,9 +40,7 @@ public class SameImagesResp extends AbstractModel {
 
     /**
      * Set tag列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SameImages tag列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSameImages(String [] SameImages) {
         this.SameImages = SameImages;

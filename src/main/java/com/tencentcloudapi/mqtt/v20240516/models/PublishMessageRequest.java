@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PublishMessageRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消息 payload，需要按 encoding 指定的编码方式进行编码
+    * 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
     */
     @SerializedName("Payload")
     @Expose
@@ -60,6 +60,9 @@ public class PublishMessageRequest extends AbstractModel {
 
     /**
     * 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
     */
     @SerializedName("Qos")
     @Expose
@@ -73,32 +76,32 @@ public class PublishMessageRequest extends AbstractModel {
     private Boolean Retain;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消息 payload，需要按 encoding 指定的编码方式进行编码 
-     * @return Payload 消息 payload，需要按 encoding 指定的编码方式进行编码
+     * Get 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码 
+     * @return Payload 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 消息 payload，需要按 encoding 指定的编码方式进行编码
-     * @param Payload 消息 payload，需要按 encoding 指定的编码方式进行编码
+     * Set 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+     * @param Payload 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
@@ -153,8 +156,14 @@ public class PublishMessageRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息的服务质量等级，默认为 1 
+     * Get 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。 
      * @return Qos 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
      */
     public Long getQos() {
         return this.Qos;
@@ -162,7 +171,13 @@ public class PublishMessageRequest extends AbstractModel {
 
     /**
      * Set 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
      * @param Qos 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
      */
     public void setQos(Long Qos) {
         this.Qos = Qos;

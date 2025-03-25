@@ -46,7 +46,6 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
 
     /**
     * 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskResult")
     @Expose
@@ -101,10 +100,8 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
     }
 
     /**
-     * Get 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务执行结果描述，针对某些任务，可以是可解析的 json 
      * @return TaskResult 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskResult() {
         return this.TaskResult;
@@ -112,9 +109,7 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
 
     /**
      * Set 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskResult 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskResult(String TaskResult) {
         this.TaskResult = TaskResult;

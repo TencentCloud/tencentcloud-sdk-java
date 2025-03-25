@@ -25,7 +25,6 @@ public class Personnel extends AbstractModel {
 
     /**
     * 证件号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IDCardNumber")
     @Expose
@@ -37,7 +36,6 @@ HONG_KONG_AND_MACAO_PASS: 港澳通行证',
 PASSPORT: 护照,
 DRIVING_LICENSE: 驾照,
 OTHER: 其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IDCardType")
     @Expose
@@ -45,7 +43,6 @@ OTHER: 其他
 
     /**
     * 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Company")
     @Expose
@@ -53,7 +50,6 @@ OTHER: 其他
 
     /**
     * 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanguageType")
     @Expose
@@ -61,7 +57,6 @@ OTHER: 其他
 
     /**
     * 姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -69,7 +64,6 @@ OTHER: 其他
 
     /**
     * 电话
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TelNumber")
     @Expose
@@ -77,7 +71,6 @@ OTHER: 其他
 
     /**
     * 职位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -85,7 +78,6 @@ OTHER: 其他
 
     /**
     * 微信
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Wechat")
     @Expose
@@ -93,17 +85,14 @@ OTHER: 其他
 
     /**
     * 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-     * Get 证件号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证件号码 
      * @return IDCardNumber 证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIDCardNumber() {
         return this.IDCardNumber;
@@ -111,9 +100,7 @@ OTHER: 其他
 
     /**
      * Set 证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IDCardNumber 证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIDCardNumber(String IDCardNumber) {
         this.IDCardNumber = IDCardNumber;
@@ -124,14 +111,12 @@ OTHER: 其他
 HONG_KONG_AND_MACAO_PASS: 港澳通行证',
 PASSPORT: 护照,
 DRIVING_LICENSE: 驾照,
-OTHER: 其他
-注意：此字段可能返回 null，表示取不到有效值。 
+OTHER: 其他 
      * @return IDCardType 证件类型。对应关系如下：IDENTITY_CARD: 身份证,
 HONG_KONG_AND_MACAO_PASS: 港澳通行证',
 PASSPORT: 护照,
 DRIVING_LICENSE: 驾照,
 OTHER: 其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIDCardType() {
         return this.IDCardType;
@@ -143,23 +128,19 @@ HONG_KONG_AND_MACAO_PASS: 港澳通行证',
 PASSPORT: 护照,
 DRIVING_LICENSE: 驾照,
 OTHER: 其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IDCardType 证件类型。对应关系如下：IDENTITY_CARD: 身份证,
 HONG_KONG_AND_MACAO_PASS: 港澳通行证',
 PASSPORT: 护照,
 DRIVING_LICENSE: 驾照,
 OTHER: 其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIDCardType(String IDCardType) {
         this.IDCardType = IDCardType;
     }
 
     /**
-     * Get 公司名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公司名称 
      * @return Company 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompany() {
         return this.Company;
@@ -167,19 +148,15 @@ OTHER: 其他
 
     /**
      * Set 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Company 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompany(String Company) {
         this.Company = Company;
     }
 
     /**
-     * Get 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语言。对应关系：ENGLISH: 英文, CHINESE: 中文 
      * @return LanguageType 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanguageType() {
         return this.LanguageType;
@@ -187,19 +164,15 @@ OTHER: 其他
 
     /**
      * Set 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LanguageType 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanguageType(String LanguageType) {
         this.LanguageType = LanguageType;
     }
 
     /**
-     * Get 姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 姓名 
      * @return Name 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -207,19 +180,15 @@ OTHER: 其他
 
     /**
      * Set 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 电话
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话 
      * @return TelNumber 电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTelNumber() {
         return this.TelNumber;
@@ -227,19 +196,15 @@ OTHER: 其他
 
     /**
      * Set 电话
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TelNumber 电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTelNumber(String TelNumber) {
         this.TelNumber = TelNumber;
     }
 
     /**
-     * Get 职位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 职位 
      * @return Position 职位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPosition() {
         return this.Position;
@@ -247,19 +212,15 @@ OTHER: 其他
 
     /**
      * Set 职位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 职位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 微信
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信 
      * @return Wechat 微信
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechat() {
         return this.Wechat;
@@ -267,19 +228,15 @@ OTHER: 其他
 
     /**
      * Set 微信
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Wechat 微信
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechat(String Wechat) {
         this.Wechat = Wechat;
     }
 
     /**
-     * Get 邮箱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 邮箱 
      * @return Email 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
         return this.Email;
@@ -287,9 +244,7 @@ OTHER: 其他
 
     /**
      * Set 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Email 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
         this.Email = Email;

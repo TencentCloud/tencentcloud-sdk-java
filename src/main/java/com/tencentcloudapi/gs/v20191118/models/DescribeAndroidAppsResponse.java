@@ -25,7 +25,6 @@ public class DescribeAndroidAppsResponse extends AbstractModel {
 
     /**
     * 安卓应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Apps")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAndroidAppsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安卓应用列表 
      * @return Apps 安卓应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidApp [] getApps() {
         return this.Apps;
@@ -57,9 +54,7 @@ public class DescribeAndroidAppsResponse extends AbstractModel {
 
     /**
      * Set 安卓应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Apps 安卓应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApps(AndroidApp [] Apps) {
         this.Apps = Apps;

@@ -396,6 +396,13 @@ Modify 集群变更中；
     private NodesSummary CNSummary;
 
     /**
+    * 计算组个数
+    */
+    @SerializedName("ComputeGroupCount")
+    @Expose
+    private Long ComputeGroupCount;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      */
@@ -1263,6 +1270,22 @@ Modify 集群变更中；
         this.CNSummary = CNSummary;
     }
 
+    /**
+     * Get 计算组个数 
+     * @return ComputeGroupCount 计算组个数
+     */
+    public Long getComputeGroupCount() {
+        return this.ComputeGroupCount;
+    }
+
+    /**
+     * Set 计算组个数
+     * @param ComputeGroupCount 计算组个数
+     */
+    public void setComputeGroupCount(Long ComputeGroupCount) {
+        this.ComputeGroupCount = ComputeGroupCount;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1436,6 +1459,9 @@ Modify 集群变更中；
         if (source.CNSummary != null) {
             this.CNSummary = new NodesSummary(source.CNSummary);
         }
+        if (source.ComputeGroupCount != null) {
+            this.ComputeGroupCount = new Long(source.ComputeGroupCount);
+        }
     }
 
 
@@ -1495,6 +1521,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
         this.setParamObj(map, prefix + "CNSummary.", this.CNSummary);
+        this.setParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
 
     }
 }

@@ -32,6 +32,9 @@ public class MQTTClientSubscription extends AbstractModel {
 
     /**
     * 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
     */
     @SerializedName("Qos")
     @Expose
@@ -68,8 +71,14 @@ public class MQTTClientSubscription extends AbstractModel {
     }
 
     /**
-     * Get 服务质量等级 
+     * Get 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次 
      * @return Qos 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
      */
     public Long getQos() {
         return this.Qos;
@@ -77,7 +86,13 @@ public class MQTTClientSubscription extends AbstractModel {
 
     /**
      * Set 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
      * @param Qos 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
      */
     public void setQos(Long Qos) {
         this.Qos = Qos;

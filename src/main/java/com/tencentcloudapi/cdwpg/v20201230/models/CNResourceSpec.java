@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CNResourceSpec extends AbstractModel {
 
     /**
-    * 无
+    * 节点类型
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 无
+    * 机型
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 无
+    * 节点个数
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 无
+    * 磁盘信息
     */
     @SerializedName("DiskSpec")
     @Expose
     private CBSSpec DiskSpec;
 
     /**
-     * Get 无 
-     * @return Type 无
+     * Get 节点类型 
+     * @return Type 节点类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 无
-     * @param Type 无
+     * Set 节点类型
+     * @param Type 节点类型
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 无 
-     * @return SpecName 无
+     * Get 机型 
+     * @return SpecName 机型
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 无
-     * @param SpecName 无
+     * Set 机型
+     * @param SpecName 机型
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 无 
-     * @return Count 无
+     * Get 节点个数 
+     * @return Count 节点个数
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 无
-     * @param Count 无
+     * Set 节点个数
+     * @param Count 节点个数
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 无 
-     * @return DiskSpec 无
+     * Get 磁盘信息 
+     * @return DiskSpec 磁盘信息
      */
     public CBSSpec getDiskSpec() {
         return this.DiskSpec;
     }
 
     /**
-     * Set 无
-     * @param DiskSpec 无
+     * Set 磁盘信息
+     * @param DiskSpec 磁盘信息
      */
     public void setDiskSpec(CBSSpec DiskSpec) {
         this.DiskSpec = DiskSpec;

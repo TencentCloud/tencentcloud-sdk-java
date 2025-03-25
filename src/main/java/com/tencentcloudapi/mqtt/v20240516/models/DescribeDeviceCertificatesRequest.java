@@ -24,14 +24,23 @@ import java.util.HashMap;
 public class DescribeDeviceCertificatesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+    * 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
     */
     @SerializedName("Filters")
     @Expose
@@ -62,32 +71,68 @@ public class DescribeDeviceCertificatesRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索 
-     * @return Filters 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+     * Get 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+ 
+     * @return Filters 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
-     * @param Filters 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+     * Set 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
+     * @param Filters 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

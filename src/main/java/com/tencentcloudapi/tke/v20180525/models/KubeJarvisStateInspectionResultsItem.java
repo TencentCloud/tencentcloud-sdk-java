@@ -25,7 +25,6 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
 
     /**
     * 巡检结果名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
 
     /**
     * 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
     private KubeJarvisStateStatistic [] Statistics;
 
     /**
-     * Get 巡检结果名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 巡检结果名称 
      * @return Name 巡检结果名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
 
     /**
      * Set 巡检结果名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 巡检结果名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果统计 
      * @return Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateStatistic [] getStatistics() {
         return this.Statistics;
@@ -71,9 +63,7 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
 
     /**
      * Set 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(KubeJarvisStateStatistic [] Statistics) {
         this.Statistics = Statistics;

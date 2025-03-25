@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class NewsInfo extends AbstractModel {
 
+    /**
+    * 新闻Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
+     * Get 新闻Id 
+     * @return Id 新闻Id
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 新闻Id
+     * @param Id 新闻Id
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public NewsInfo() {
     }
 
@@ -31,6 +54,9 @@ public class NewsInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NewsInfo(NewsInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class NewsInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

@@ -39,7 +39,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -125,7 +124,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetention")
     @Expose
@@ -133,7 +131,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinRetention")
     @Expose
@@ -141,7 +138,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retention")
     @Expose
@@ -149,7 +145,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclEnabled")
     @Expose
@@ -157,7 +152,6 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
     * 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestroyTime")
     @Expose
@@ -196,10 +190,8 @@ public class RocketMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例版本 
      * @return InstanceVersion 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
@@ -207,9 +199,7 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceVersion 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
@@ -396,10 +386,8 @@ public class RocketMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大可设置消息保留时间，小时为单位 
      * @return MaxRetention 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetention() {
         return this.MaxRetention;
@@ -407,19 +395,15 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxRetention 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetention(Long MaxRetention) {
         this.MaxRetention = MaxRetention;
     }
 
     /**
-     * Get 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小可设置消息保留时间，小时为单位 
      * @return MinRetention 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinRetention() {
         return this.MinRetention;
@@ -427,19 +411,15 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinRetention 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinRetention(Long MinRetention) {
         this.MinRetention = MinRetention;
     }
 
     /**
-     * Get 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例消息保留时间，小时为单位 
      * @return Retention 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetention() {
         return this.Retention;
@@ -447,19 +427,15 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Retention 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
     }
 
     /**
-     * Get 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启ACL鉴权 
      * @return AclEnabled 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAclEnabled() {
         return this.AclEnabled;
@@ -467,19 +443,15 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AclEnabled 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclEnabled(Boolean AclEnabled) {
         this.AclEnabled = AclEnabled;
     }
 
     /**
-     * Get 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 销毁时间 
      * @return DestroyTime 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
@@ -487,9 +459,7 @@ public class RocketMQVipInstance extends AbstractModel {
 
     /**
      * Set 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestroyTime 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;

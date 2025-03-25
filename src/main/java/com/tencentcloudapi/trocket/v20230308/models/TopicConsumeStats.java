@@ -60,7 +60,6 @@ public class TopicConsumeStats extends AbstractModel {
 
     /**
     * 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -147,10 +146,8 @@ public class TopicConsumeStats extends AbstractModel {
     }
 
     /**
-     * Get 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后消费进度更新时间 
      * @return LastUpdateTime 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
@@ -158,9 +155,7 @@ public class TopicConsumeStats extends AbstractModel {
 
     /**
      * Set 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;

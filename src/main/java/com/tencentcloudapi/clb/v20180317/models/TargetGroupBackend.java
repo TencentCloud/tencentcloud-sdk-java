@@ -45,7 +45,7 @@ public class TargetGroupBackend extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 后端服务的监听端口
+    * 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
     */
     @SerializedName("Port")
     @Expose
@@ -155,16 +155,16 @@ public class TargetGroupBackend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的监听端口 
-     * @return Port 后端服务的监听端口
+     * Get 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。 
+     * @return Port 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 后端服务的监听端口
-     * @param Port 后端服务的监听端口
+     * Set 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
+     * @param Port 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
      */
     public void setPort(Long Port) {
         this.Port = Port;

@@ -67,7 +67,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -75,7 +74,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -114,7 +112,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUse")
     @Expose
@@ -122,7 +119,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XMagicType")
     @Expose
@@ -130,7 +126,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -138,7 +133,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -146,7 +140,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -154,7 +147,6 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
     * 资源自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -257,10 +249,8 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源开始生效时间 
      * @return StartTime 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -268,19 +258,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源结束生效时间 
      * @return EndTime 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -288,9 +274,7 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -373,10 +357,8 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以使用 
      * @return IsUse 是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUse() {
         return this.IsUse;
@@ -384,19 +366,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUse 是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUse(Boolean IsUse) {
         this.IsUse = IsUse;
     }
 
     /**
-     * Get single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get single: 原子能力,combined:套餐 
      * @return XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getXMagicType() {
         return this.XMagicType;
@@ -404,19 +382,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXMagicType(String XMagicType) {
         this.XMagicType = XMagicType;
     }
 
     /**
-     * Get 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 功能模块名称 
      * @return Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -424,19 +398,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属业务方 xmagic：优图，avatar：虚拟形象  
      * @return BizType 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
         return this.BizType;
@@ -444,19 +414,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id 
      * @return ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -464,19 +430,15 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源自动续费状态 
      * @return AutoRenewFlag 资源自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -484,9 +446,7 @@ public class XMagicResourceSimpleInfo extends AbstractModel {
 
     /**
      * Set 资源自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 资源自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

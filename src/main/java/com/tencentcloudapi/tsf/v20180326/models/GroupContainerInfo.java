@@ -32,7 +32,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 容器名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerName")
     @Expose
@@ -40,7 +39,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 镜像名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoName")
     @Expose
@@ -48,7 +46,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 仓库类型,tcr，address，personal，默认personal
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoType")
     @Expose
@@ -56,7 +53,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * tcr仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcrRepoInfo")
     @Expose
@@ -64,7 +60,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Server")
     @Expose
@@ -72,7 +67,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 凭证名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretName")
     @Expose
@@ -80,7 +74,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * jvm 参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JvmOpts")
     @Expose
@@ -88,7 +81,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 容器最大的 CPU 核数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuLimit")
     @Expose
@@ -96,7 +88,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 容器分配的 CPU 核数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuRequest")
     @Expose
@@ -104,7 +95,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 容器分配的内存 MiB 数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemRequest")
     @Expose
@@ -112,7 +102,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 容器最大的内存 MiB 数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemLimit")
     @Expose
@@ -120,7 +109,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 健康检查配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckSettings")
     @Expose
@@ -128,7 +116,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envs")
     @Expose
@@ -136,7 +123,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 环境变量,作为入参时不用填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserEnvs")
     @Expose
@@ -144,7 +130,6 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
     * 数据卷挂载点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeMountInfoList")
     @Expose
@@ -167,10 +152,8 @@ public class GroupContainerInfo extends AbstractModel {
     }
 
     /**
-     * Get 容器名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器名字 
      * @return ContainerName 容器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerName() {
         return this.ContainerName;
@@ -178,19 +161,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 容器名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerName 容器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get 镜像名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像名 
      * @return RepoName 镜像名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoName() {
         return this.RepoName;
@@ -198,19 +177,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 镜像名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoName 镜像名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;
     }
 
     /**
-     * Get 仓库类型,tcr，address，personal，默认personal
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库类型,tcr，address，personal，默认personal 
      * @return RepoType 仓库类型,tcr，address，personal，默认personal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoType() {
         return this.RepoType;
@@ -218,19 +193,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 仓库类型,tcr，address，personal，默认personal
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoType 仓库类型,tcr，address，personal，默认personal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoType(String RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get tcr仓库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tcr仓库信息 
      * @return TcrRepoInfo tcr仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TcrRepoInfo getTcrRepoInfo() {
         return this.TcrRepoInfo;
@@ -238,19 +209,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set tcr仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcrRepoInfo tcr仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
         this.TcrRepoInfo = TcrRepoInfo;
     }
 
     /**
-     * Get 镜像server
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像server 
      * @return Server 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServer() {
         return this.Server;
@@ -258,19 +225,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Server 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServer(String Server) {
         this.Server = Server;
     }
 
     /**
-     * Get 凭证名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 凭证名字 
      * @return SecretName 凭证名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretName() {
         return this.SecretName;
@@ -278,19 +241,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 凭证名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretName 凭证名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get jvm 参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get jvm 参数 
      * @return JvmOpts jvm 参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJvmOpts() {
         return this.JvmOpts;
@@ -298,19 +257,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set jvm 参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JvmOpts jvm 参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJvmOpts(String JvmOpts) {
         this.JvmOpts = JvmOpts;
     }
 
     /**
-     * Get 容器最大的 CPU 核数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器最大的 CPU 核数，对应 K8S 的 limit 
      * @return CpuLimit 容器最大的 CPU 核数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuLimit() {
         return this.CpuLimit;
@@ -318,19 +273,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 容器最大的 CPU 核数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLimit 容器最大的 CPU 核数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuLimit(String CpuLimit) {
         this.CpuLimit = CpuLimit;
     }
 
     /**
-     * Get 容器分配的 CPU 核数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器分配的 CPU 核数，对应 K8S 的 request 
      * @return CpuRequest 容器分配的 CPU 核数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuRequest() {
         return this.CpuRequest;
@@ -338,19 +289,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 容器分配的 CPU 核数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuRequest 容器分配的 CPU 核数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuRequest(String CpuRequest) {
         this.CpuRequest = CpuRequest;
     }
 
     /**
-     * Get 容器分配的内存 MiB 数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器分配的内存 MiB 数，对应 K8S 的 request 
      * @return MemRequest 容器分配的内存 MiB 数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemRequest() {
         return this.MemRequest;
@@ -358,19 +305,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 容器分配的内存 MiB 数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemRequest 容器分配的内存 MiB 数，对应 K8S 的 request
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemRequest(String MemRequest) {
         this.MemRequest = MemRequest;
     }
 
     /**
-     * Get 容器最大的内存 MiB 数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器最大的内存 MiB 数，对应 K8S 的 limit 
      * @return MemLimit 容器最大的内存 MiB 数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemLimit() {
         return this.MemLimit;
@@ -378,19 +321,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 容器最大的内存 MiB 数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemLimit 容器最大的内存 MiB 数，对应 K8S 的 limit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemLimit(String MemLimit) {
         this.MemLimit = MemLimit;
     }
 
     /**
-     * Get 健康检查配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查配置信息 
      * @return HealthCheckSettings 健康检查配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheckSettings getHealthCheckSettings() {
         return this.HealthCheckSettings;
@@ -398,19 +337,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 健康检查配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckSettings 健康检查配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
         this.HealthCheckSettings = HealthCheckSettings;
     }
 
     /**
-     * Get 环境变量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境变量 
      * @return Envs 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Env [] getEnvs() {
         return this.Envs;
@@ -418,19 +353,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Envs 环境变量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvs(Env [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 环境变量,作为入参时不用填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境变量,作为入参时不用填 
      * @return UserEnvs 环境变量,作为入参时不用填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Env [] getUserEnvs() {
         return this.UserEnvs;
@@ -438,19 +369,15 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 环境变量,作为入参时不用填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserEnvs 环境变量,作为入参时不用填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserEnvs(Env [] UserEnvs) {
         this.UserEnvs = UserEnvs;
     }
 
     /**
-     * Get 数据卷挂载点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据卷挂载点信息 
      * @return VolumeMountInfoList 数据卷挂载点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeMountInfo [] getVolumeMountInfoList() {
         return this.VolumeMountInfoList;
@@ -458,9 +385,7 @@ public class GroupContainerInfo extends AbstractModel {
 
     /**
      * Set 数据卷挂载点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeMountInfoList 数据卷挂载点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeMountInfoList(VolumeMountInfo [] VolumeMountInfoList) {
         this.VolumeMountInfoList = VolumeMountInfoList;

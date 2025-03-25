@@ -25,7 +25,6 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
     * unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -41,17 +39,14 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
     * ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -59,19 +54,15 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get unique vpc id 
      * @return VpcId unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -79,19 +70,15 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
      * Set unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错 
      * @return Status ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -99,9 +86,7 @@ public class VpcPrivateDomainStatus extends AbstractModel {
 
     /**
      * Set ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

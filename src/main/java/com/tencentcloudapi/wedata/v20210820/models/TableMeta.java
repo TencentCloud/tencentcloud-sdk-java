@@ -537,6 +537,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private CreateAndDDLSupport IfSupportCreateAndDDL;
 
     /**
+    * 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColumnCount")
+    @Expose
+    private Long ColumnCount;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1820,6 +1828,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.IfSupportCreateAndDDL = IfSupportCreateAndDDL;
     }
 
+    /**
+     * Get 字段数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnCount 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getColumnCount() {
+        return this.ColumnCount;
+    }
+
+    /**
+     * Set 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnCount 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumnCount(Long ColumnCount) {
+        this.ColumnCount = ColumnCount;
+    }
+
     public TableMeta() {
     }
 
@@ -2038,6 +2066,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.IfSupportCreateAndDDL != null) {
             this.IfSupportCreateAndDDL = new CreateAndDDLSupport(source.IfSupportCreateAndDDL);
         }
+        if (source.ColumnCount != null) {
+            this.ColumnCount = new Long(source.ColumnCount);
+        }
     }
 
 
@@ -2109,6 +2140,7 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
         this.setParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
         this.setParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
+        this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
 
     }
 }

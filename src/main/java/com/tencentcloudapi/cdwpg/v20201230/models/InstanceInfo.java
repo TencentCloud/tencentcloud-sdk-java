@@ -32,7 +32,7 @@ public class InstanceInfo extends AbstractModel {
     private Long ID;
 
     /**
-    * cdwpg-cn或者其他
+    * 内核版本类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -40,7 +40,7 @@ public class InstanceInfo extends AbstractModel {
     private String InstanceType;
 
     /**
-    * cdwpg-cn或者其他
+    * 集群名字
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -48,7 +48,7 @@ public class InstanceInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Running
+    * 集群状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -56,7 +56,7 @@ public class InstanceInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 运行中
+    * 集群状态详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
@@ -64,7 +64,7 @@ public class InstanceInfo extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * 无
+    * 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStateInfo")
@@ -72,7 +72,7 @@ public class InstanceInfo extends AbstractModel {
     private InstanceStateInfo InstanceStateInfo;
 
     /**
-    * -
+    * 集群id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
@@ -80,7 +80,7 @@ public class InstanceInfo extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 2022-09-05 20:00:01
+    * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -88,7 +88,7 @@ public class InstanceInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * ap-chongqing
+    * 地域
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -96,7 +96,7 @@ public class InstanceInfo extends AbstractModel {
     private String Region;
 
     /**
-    * ap
+    * 地区
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
@@ -104,7 +104,7 @@ public class InstanceInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * region
+    * 地域详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionDesc")
@@ -112,7 +112,7 @@ public class InstanceInfo extends AbstractModel {
     private String RegionDesc;
 
     /**
-    * zone
+    * 地区详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneDesc")
@@ -128,7 +128,7 @@ public class InstanceInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * v3
+    * 内核版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -160,7 +160,7 @@ public class InstanceInfo extends AbstractModel {
     private InstanceNodeGroup [] DNNodes;
 
     /**
-    * 1
+    * 地域id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
@@ -168,7 +168,7 @@ public class InstanceInfo extends AbstractModel {
     private Long RegionId;
 
     /**
-    * 1
+    * 地区id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -176,7 +176,7 @@ public class InstanceInfo extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * 1
+    * 私有网络
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -184,7 +184,7 @@ public class InstanceInfo extends AbstractModel {
     private String VpcId;
 
     /**
-    * 1
+    * 子网
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -192,7 +192,7 @@ public class InstanceInfo extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 1
+    * 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -200,7 +200,7 @@ public class InstanceInfo extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 1
+    * 计费方式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
@@ -208,7 +208,7 @@ public class InstanceInfo extends AbstractModel {
     private String PayMode;
 
     /**
-    * 1
+    * 自动续费
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
@@ -216,7 +216,7 @@ public class InstanceInfo extends AbstractModel {
     private Boolean RenewFlag;
 
     /**
-    * 1
+    * 集群id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -252,9 +252,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get cdwpg-cn或者其他
+     * Get 内核版本类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType cdwpg-cn或者其他
+     * @return InstanceType 内核版本类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -262,9 +262,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set cdwpg-cn或者其他
+     * Set 内核版本类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType cdwpg-cn或者其他
+     * @param InstanceType 内核版本类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -272,9 +272,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get cdwpg-cn或者其他
+     * Get 集群名字
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName cdwpg-cn或者其他
+     * @return InstanceName 集群名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -282,9 +282,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set cdwpg-cn或者其他
+     * Set 集群名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName cdwpg-cn或者其他
+     * @param InstanceName 集群名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -292,9 +292,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Running
+     * Get 集群状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status Running
+     * @return Status 集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -302,9 +302,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set Running
+     * Set 集群状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status Running
+     * @param Status 集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -312,9 +312,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 运行中
+     * Get 集群状态详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusDesc 运行中
+     * @return StatusDesc 集群状态详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
@@ -322,9 +322,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 运行中
+     * Set 集群状态详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusDesc 运行中
+     * @param StatusDesc 集群状态详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
@@ -332,9 +332,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceStateInfo 无
+     * @return InstanceStateInfo 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceStateInfo getInstanceStateInfo() {
@@ -342,9 +342,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceStateInfo 无
+     * @param InstanceStateInfo 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStateInfo(InstanceStateInfo InstanceStateInfo) {
@@ -352,9 +352,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 集群id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceID -
+     * @return InstanceID 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
@@ -362,9 +362,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 集群id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceID -
+     * @param InstanceID 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
@@ -372,9 +372,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 2022-09-05 20:00:01
+     * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 2022-09-05 20:00:01
+     * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -382,9 +382,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 2022-09-05 20:00:01
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 2022-09-05 20:00:01
+     * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -392,9 +392,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get ap-chongqing
+     * Get 地域
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region ap-chongqing
+     * @return Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -402,9 +402,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set ap-chongqing
+     * Set 地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region ap-chongqing
+     * @param Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -412,9 +412,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get ap
+     * Get 地区
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zone ap
+     * @return Zone 地区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
@@ -422,9 +422,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set ap
+     * Set 地区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zone ap
+     * @param Zone 地区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
@@ -432,9 +432,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get region
+     * Get 地域详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionDesc region
+     * @return RegionDesc 地域详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionDesc() {
@@ -442,9 +442,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set region
+     * Set 地域详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionDesc region
+     * @param RegionDesc 地域详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionDesc(String RegionDesc) {
@@ -452,9 +452,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get zone
+     * Get 地区详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneDesc zone
+     * @return ZoneDesc 地区详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneDesc() {
@@ -462,9 +462,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set zone
+     * Set 地区详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneDesc zone
+     * @param ZoneDesc 地区详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneDesc(String ZoneDesc) {
@@ -492,9 +492,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get v3
+     * Get 内核版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version v3
+     * @return Version 内核版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -502,9 +502,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set v3
+     * Set 内核版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version v3
+     * @param Version 内核版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -572,9 +572,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 地域id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionId 1
+     * @return RegionId 地域id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
@@ -582,9 +582,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 地域id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionId 1
+     * @param RegionId 地域id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
@@ -592,9 +592,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 地区id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 1
+     * @return ZoneId 地区id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -602,9 +602,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 地区id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 1
+     * @param ZoneId 地区id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -612,9 +612,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 私有网络
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 1
+     * @return VpcId 私有网络
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -622,9 +622,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 私有网络
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 1
+     * @param VpcId 私有网络
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -632,9 +632,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 子网
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 1
+     * @return SubnetId 子网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -642,9 +642,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 子网
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 1
+     * @param SubnetId 子网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -652,9 +652,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 1
+     * @return ExpireTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -662,9 +662,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 1
+     * @param ExpireTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -672,9 +672,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 计费方式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 1
+     * @return PayMode 计费方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
@@ -682,9 +682,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 计费方式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 1
+     * @param PayMode 计费方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
@@ -692,9 +692,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 自动续费
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewFlag 1
+     * @return RenewFlag 自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewFlag() {
@@ -702,9 +702,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 自动续费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewFlag 1
+     * @param RenewFlag 自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Boolean RenewFlag) {
@@ -712,9 +712,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 集群id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 1
+     * @return InstanceId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -722,9 +722,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 集群id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 1
+     * @param InstanceId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {

@@ -75,7 +75,6 @@ public class Package extends AbstractModel {
 
     /**
     * 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -198,10 +197,8 @@ public class Package extends AbstractModel {
     }
 
     /**
-     * Get 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源包类型ID,对应点播：PackageId 对应直播：TypeId 
      * @return Type 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -209,9 +206,7 @@ public class Package extends AbstractModel {
 
     /**
      * Set 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

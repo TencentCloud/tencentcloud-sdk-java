@@ -25,7 +25,6 @@ public class DescribeXMagicResourceResponse extends AbstractModel {
 
     /**
     * 优图资源包信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeXMagicResourceResponse extends AbstractModel {
 
     /**
     * 资源数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeXMagicResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 优图资源包信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优图资源包信息 
      * @return Resources 优图资源包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public XMagicResource [] getResources() {
         return this.Resources;
@@ -58,19 +54,15 @@ public class DescribeXMagicResourceResponse extends AbstractModel {
 
     /**
      * Set 优图资源包信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resources 优图资源包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(XMagicResource [] Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 资源数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数量 
      * @return Count 资源数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -78,9 +70,7 @@ public class DescribeXMagicResourceResponse extends AbstractModel {
 
     /**
      * Set 资源数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 资源数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

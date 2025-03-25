@@ -26,7 +26,6 @@ public class ApplicationInfo extends AbstractModel {
     /**
     * 应用id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -34,7 +33,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -43,7 +41,6 @@ public class ApplicationInfo extends AbstractModel {
     /**
     * 应用描述
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -51,7 +48,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用的环境配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigEnvironment")
     @Expose
@@ -59,7 +55,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 系统盘大小下限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinSystemDiskSize")
     @Expose
@@ -67,7 +62,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -76,7 +70,6 @@ public class ApplicationInfo extends AbstractModel {
     /**
     * 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationState")
     @Expose
@@ -84,7 +77,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -92,7 +84,6 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
     * 应用大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationSize")
     @Expose
@@ -100,11 +91,9 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Get 应用id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ApplicationId 应用id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -113,20 +102,16 @@ public class ApplicationInfo extends AbstractModel {
     /**
      * Set 应用id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -134,9 +119,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
@@ -144,11 +127,9 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Get 应用描述
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Description 应用描述
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -157,20 +138,16 @@ public class ApplicationInfo extends AbstractModel {
     /**
      * Set 应用描述
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 应用描述
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 应用的环境配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用的环境配置 
      * @return ConfigEnvironment 应用的环境配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigEnvironment() {
         return this.ConfigEnvironment;
@@ -178,19 +155,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用的环境配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigEnvironment 应用的环境配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigEnvironment(String ConfigEnvironment) {
         this.ConfigEnvironment = ConfigEnvironment;
     }
 
     /**
-     * Get 系统盘大小下限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘大小下限 
      * @return MinSystemDiskSize 系统盘大小下限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinSystemDiskSize() {
         return this.MinSystemDiskSize;
@@ -198,19 +171,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 系统盘大小下限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinSystemDiskSize 系统盘大小下限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinSystemDiskSize(Long MinSystemDiskSize) {
         this.MinSystemDiskSize = MinSystemDiskSize;
     }
 
     /**
-     * Get 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION 
      * @return ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -218,9 +187,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
@@ -228,11 +195,9 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Get 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
-示例值：ONLINE
-注意：此字段可能返回 null，表示取不到有效值。 
+示例值：ONLINE 
      * @return ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationState() {
         return this.ApplicationState;
@@ -241,20 +206,16 @@ public class ApplicationInfo extends AbstractModel {
     /**
      * Set 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationState(String ApplicationState) {
         this.ApplicationState = ApplicationState;
     }
 
     /**
-     * Get 应用创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用创建时间 
      * @return CreateTime 应用创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -262,19 +223,15 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 应用创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 应用大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用大小 
      * @return ApplicationSize 应用大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationSize() {
         return this.ApplicationSize;
@@ -282,9 +239,7 @@ public class ApplicationInfo extends AbstractModel {
 
     /**
      * Set 应用大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationSize 应用大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationSize(Long ApplicationSize) {
         this.ApplicationSize = ApplicationSize;

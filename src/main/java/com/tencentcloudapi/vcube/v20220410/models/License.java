@@ -68,7 +68,6 @@ public class License extends AbstractModel {
 
     /**
     * 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Renewal")
     @Expose
@@ -83,7 +82,6 @@ public class License extends AbstractModel {
 
     /**
     * license名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -91,7 +89,6 @@ public class License extends AbstractModel {
 
     /**
     * 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Update")
     @Expose
@@ -115,7 +112,6 @@ public class License extends AbstractModel {
 
     /**
     * 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expired")
     @Expose
@@ -131,7 +127,6 @@ public class License extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -139,7 +134,6 @@ public class License extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -155,7 +149,6 @@ public class License extends AbstractModel {
 
     /**
     * 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVest")
     @Expose
@@ -262,10 +255,8 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试license 是否可以续期 
      * @return Renewal 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewal() {
         return this.Renewal;
@@ -273,9 +264,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Renewal 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewal(Boolean Renewal) {
         this.Renewal = Renewal;
@@ -298,10 +287,8 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get license名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license名称 
      * @return Name license名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -309,19 +296,15 @@ public class License extends AbstractModel {
 
     /**
      * Set license名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name license名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 测试license 是否升级 
      * @return Update 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUpdate() {
         return this.Update;
@@ -329,9 +312,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Update 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdate(Boolean Update) {
         this.Update = Update;
@@ -378,10 +359,8 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期：true ，未过期：其它 
      * @return Expired 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExpired() {
         return this.Expired;
@@ -389,9 +368,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expired 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpired(Boolean Expired) {
         this.Expired = Expired;
@@ -418,10 +395,8 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -429,19 +404,15 @@ public class License extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -449,9 +420,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
@@ -478,10 +447,8 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为马甲包 
      * @return IsVest 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVest() {
         return this.IsVest;
@@ -489,9 +456,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVest 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVest(Boolean IsVest) {
         this.IsVest = IsVest;

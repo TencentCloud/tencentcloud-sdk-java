@@ -25,7 +25,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -41,7 +39,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupStatus")
     @Expose
@@ -73,7 +70,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -81,7 +77,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -89,7 +84,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -97,7 +91,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -105,7 +98,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -113,7 +105,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -121,7 +112,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -129,7 +119,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunInstanceCount")
     @Expose
@@ -145,7 +134,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -153,7 +141,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -161,7 +148,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffInstanceCount")
     @Expose
@@ -177,7 +163,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -185,7 +170,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -193,7 +177,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -201,7 +184,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -217,7 +199,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateType")
     @Expose
@@ -225,7 +206,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployBetaEnable")
     @Expose
@@ -233,7 +213,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployBatch")
     @Expose
@@ -241,7 +220,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployExeMode")
     @Expose
@@ -249,7 +227,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployWaitTime")
     @Expose
@@ -257,7 +234,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableHealthCheck")
     @Expose
@@ -305,7 +281,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentProfileList")
     @Expose
@@ -313,7 +288,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmupSetting")
     @Expose
@@ -329,17 +303,62 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableBatchHealthCheck")
     @Expose
     private Boolean EnableBatchHealthCheck;
 
     /**
-     * Get 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 部署组ID
+    * 是否开启cgroup控制内存cpu
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilebeatCgroupEnable")
+    @Expose
+    private Boolean FilebeatCgroupEnable;
+
+    /**
+    * filebeat使用cpu上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilebeatMaxCpu")
+    @Expose
+    private Float FilebeatMaxCpu;
+
+    /**
+    * filebeat使用内存上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilebeatMaxMem")
+    @Expose
+    private Long FilebeatMaxMem;
+
+    /**
+    * 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepositoryId")
+    @Expose
+    private String RepositoryId;
+
+    /**
+    * 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepositoryName")
+    @Expose
+    private String RepositoryName;
+
+    /**
+    * 仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepositoryType")
+    @Expose
+    private String RepositoryType;
+
+    /**
+     * Get 部署组ID 
+     * @return GroupId 部署组ID
      */
     public String getGroupId() {
         return this.GroupId;
@@ -347,19 +366,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组名称 
      * @return GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -367,19 +382,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组状态 
      * @return GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupStatus() {
         return this.GroupStatus;
@@ -387,9 +398,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupStatus(String GroupStatus) {
         this.GroupStatus = GroupStatus;
@@ -456,10 +465,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -467,19 +474,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -487,19 +490,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -507,19 +506,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
@@ -527,19 +522,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -547,19 +538,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -567,19 +554,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组机器数目 
      * @return InstanceCount 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
@@ -587,19 +570,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组运行中机器数目 
      * @return RunInstanceCount 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunInstanceCount() {
         return this.RunInstanceCount;
@@ -607,9 +586,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunInstanceCount 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
         this.RunInstanceCount = RunInstanceCount;
@@ -636,10 +613,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组创建时间 
      * @return CreateTime 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -647,19 +622,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组更新时间 
      * @return UpdateTime 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -667,19 +638,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组停止机器数目 
      * @return OffInstanceCount 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffInstanceCount() {
         return this.OffInstanceCount;
@@ -687,9 +654,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffInstanceCount 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffInstanceCount(Long OffInstanceCount) {
         this.OffInstanceCount = OffInstanceCount;
@@ -716,10 +681,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务类型 
      * @return MicroserviceType 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
@@ -727,19 +690,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -747,19 +706,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组资源类型 
      * @return GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
@@ -767,19 +722,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
     }
 
     /**
-     * Get 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组更新时间戳 
      * @return UpdatedTime 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdatedTime() {
         return this.UpdatedTime;
@@ -787,9 +738,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(Long UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
@@ -816,10 +765,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动发布的更新方式 
      * @return UpdateType 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateType() {
         return this.UpdateType;
@@ -827,19 +774,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateType 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布是否启用beta批次 
      * @return DeployBetaEnable 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeployBetaEnable() {
         return this.DeployBetaEnable;
@@ -847,19 +790,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployBetaEnable 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployBetaEnable(Boolean DeployBetaEnable) {
         this.DeployBetaEnable = DeployBetaEnable;
     }
 
     /**
-     * Get 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动发布的批次比例列表 
      * @return DeployBatch 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getDeployBatch() {
         return this.DeployBatch;
@@ -867,19 +806,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployBatch 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployBatch(Float [] DeployBatch) {
         this.DeployBatch = DeployBatch;
     }
 
     /**
-     * Get 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动发布的批次执行方式 
      * @return DeployExeMode 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployExeMode() {
         return this.DeployExeMode;
@@ -887,19 +822,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployExeMode 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployExeMode(String DeployExeMode) {
         this.DeployExeMode = DeployExeMode;
     }
 
     /**
-     * Get 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 滚动发布的每个批次的等待时间 
      * @return DeployWaitTime 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployWaitTime() {
         return this.DeployWaitTime;
@@ -907,19 +838,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployWaitTime 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployWaitTime(Long DeployWaitTime) {
         this.DeployWaitTime = DeployWaitTime;
     }
 
     /**
-     * Get 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启了健康检查 
      * @return EnableHealthCheck 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
@@ -927,9 +854,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableHealthCheck 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
@@ -1036,10 +961,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get javaagent信息 
      * @return AgentProfileList javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentProfile [] getAgentProfileList() {
         return this.AgentProfileList;
@@ -1047,19 +970,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentProfileList javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentProfileList(AgentProfile [] AgentProfileList) {
         this.AgentProfileList = AgentProfileList;
     }
 
     /**
-     * Get 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预热属性配置 
      * @return WarmupSetting 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WarmupSetting getWarmupSetting() {
         return this.WarmupSetting;
@@ -1067,9 +986,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarmupSetting 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmupSetting(WarmupSetting WarmupSetting) {
         this.WarmupSetting = WarmupSetting;
@@ -1096,10 +1013,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次是否开启健康检查 
      * @return EnableBatchHealthCheck 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableBatchHealthCheck() {
         return this.EnableBatchHealthCheck;
@@ -1107,12 +1022,130 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableBatchHealthCheck 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableBatchHealthCheck(Boolean EnableBatchHealthCheck) {
         this.EnableBatchHealthCheck = EnableBatchHealthCheck;
+    }
+
+    /**
+     * Get 是否开启cgroup控制内存cpu
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilebeatCgroupEnable 是否开启cgroup控制内存cpu
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFilebeatCgroupEnable() {
+        return this.FilebeatCgroupEnable;
+    }
+
+    /**
+     * Set 是否开启cgroup控制内存cpu
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilebeatCgroupEnable 是否开启cgroup控制内存cpu
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilebeatCgroupEnable(Boolean FilebeatCgroupEnable) {
+        this.FilebeatCgroupEnable = FilebeatCgroupEnable;
+    }
+
+    /**
+     * Get filebeat使用cpu上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilebeatMaxCpu filebeat使用cpu上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getFilebeatMaxCpu() {
+        return this.FilebeatMaxCpu;
+    }
+
+    /**
+     * Set filebeat使用cpu上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilebeatMaxCpu filebeat使用cpu上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilebeatMaxCpu(Float FilebeatMaxCpu) {
+        this.FilebeatMaxCpu = FilebeatMaxCpu;
+    }
+
+    /**
+     * Get filebeat使用内存上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilebeatMaxMem filebeat使用内存上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFilebeatMaxMem() {
+        return this.FilebeatMaxMem;
+    }
+
+    /**
+     * Set filebeat使用内存上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilebeatMaxMem filebeat使用内存上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilebeatMaxMem(Long FilebeatMaxMem) {
+        this.FilebeatMaxMem = FilebeatMaxMem;
+    }
+
+    /**
+     * Get 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepositoryId 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepositoryId() {
+        return this.RepositoryId;
+    }
+
+    /**
+     * Set 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepositoryId 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepositoryId(String RepositoryId) {
+        this.RepositoryId = RepositoryId;
+    }
+
+    /**
+     * Get 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepositoryName 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepositoryName() {
+        return this.RepositoryName;
+    }
+
+    /**
+     * Set 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepositoryName 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepositoryName(String RepositoryName) {
+        this.RepositoryName = RepositoryName;
+    }
+
+    /**
+     * Get 仓库类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepositoryType 仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepositoryType() {
+        return this.RepositoryType;
+    }
+
+    /**
+     * Set 仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepositoryType 仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepositoryType(String RepositoryType) {
+        this.RepositoryType = RepositoryType;
     }
 
     public VmGroup() {
@@ -1246,6 +1279,24 @@ public class VmGroup extends AbstractModel {
         if (source.EnableBatchHealthCheck != null) {
             this.EnableBatchHealthCheck = new Boolean(source.EnableBatchHealthCheck);
         }
+        if (source.FilebeatCgroupEnable != null) {
+            this.FilebeatCgroupEnable = new Boolean(source.FilebeatCgroupEnable);
+        }
+        if (source.FilebeatMaxCpu != null) {
+            this.FilebeatMaxCpu = new Float(source.FilebeatMaxCpu);
+        }
+        if (source.FilebeatMaxMem != null) {
+            this.FilebeatMaxMem = new Long(source.FilebeatMaxMem);
+        }
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
     }
 
 
@@ -1292,6 +1343,12 @@ public class VmGroup extends AbstractModel {
         this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         this.setParamSimple(map, prefix + "EnableBatchHealthCheck", this.EnableBatchHealthCheck);
+        this.setParamSimple(map, prefix + "FilebeatCgroupEnable", this.FilebeatCgroupEnable);
+        this.setParamSimple(map, prefix + "FilebeatMaxCpu", this.FilebeatMaxCpu);
+        this.setParamSimple(map, prefix + "FilebeatMaxMem", this.FilebeatMaxMem);
+        this.setParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
+        this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+        this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
 
     }
 }

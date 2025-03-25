@@ -25,7 +25,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoName")
     @Expose
@@ -33,7 +32,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagName")
     @Expose
@@ -41,7 +39,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerName")
     @Expose
@@ -49,7 +46,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeSource")
     @Expose
@@ -57,7 +53,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeAction")
     @Expose
@@ -65,7 +60,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeTime")
     @Expose
@@ -73,7 +67,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeCondition")
     @Expose
@@ -81,7 +74,6 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokePara")
     @Expose
@@ -89,17 +81,14 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
     * 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeResult")
     @Expose
     private TriggerInvokeResult InvokeResult;
 
     /**
-     * Get 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库名称 
      * @return RepoName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoName() {
         return this.RepoName;
@@ -107,19 +96,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;
     }
 
     /**
-     * Get Tag名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Tag名称 
      * @return TagName Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagName() {
         return this.TagName;
@@ -127,19 +112,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagName Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagName(String TagName) {
         this.TagName = TagName;
     }
 
     /**
-     * Get 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发器名称 
      * @return TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerName() {
         return this.TriggerName;
@@ -147,19 +128,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get 触发方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发方式 
      * @return InvokeSource 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeSource() {
         return this.InvokeSource;
@@ -167,19 +144,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeSource 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeSource(String InvokeSource) {
         this.InvokeSource = InvokeSource;
     }
 
     /**
-     * Get 触发动作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发动作 
      * @return InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeAction() {
         return this.InvokeAction;
@@ -187,19 +160,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeAction(String InvokeAction) {
         this.InvokeAction = InvokeAction;
     }
 
     /**
-     * Get 触发时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发时间 
      * @return InvokeTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInvokeTime() {
         return this.InvokeTime;
@@ -207,19 +176,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeTime(String InvokeTime) {
         this.InvokeTime = InvokeTime;
     }
 
     /**
-     * Get 触发条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发条件 
      * @return InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerInvokeCondition getInvokeCondition() {
         return this.InvokeCondition;
@@ -227,19 +192,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeCondition(TriggerInvokeCondition InvokeCondition) {
         this.InvokeCondition = InvokeCondition;
     }
 
     /**
-     * Get 触发参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发参数 
      * @return InvokePara 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerInvokePara getInvokePara() {
         return this.InvokePara;
@@ -247,19 +208,15 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokePara 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokePara(TriggerInvokePara InvokePara) {
         this.InvokePara = InvokePara;
     }
 
     /**
-     * Get 触发结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发结果 
      * @return InvokeResult 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerInvokeResult getInvokeResult() {
         return this.InvokeResult;
@@ -267,9 +224,7 @@ public class TriggerLogResp extends AbstractModel {
 
     /**
      * Set 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeResult 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeResult(TriggerInvokeResult InvokeResult) {
         this.InvokeResult = InvokeResult;

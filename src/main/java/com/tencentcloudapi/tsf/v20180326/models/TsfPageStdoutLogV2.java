@@ -25,7 +25,6 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
 
     /**
     * 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -56,10 +54,16 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     private String Status;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 总条数
+    * 游标ID
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchAfter")
+    @Expose
+    private String [] SearchAfter;
+
+    /**
+     * Get 总条数 
+     * @return TotalCount 总条数
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -67,19 +71,15 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出日志列表 
      * @return Content 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StdoutLogV2 [] getContent() {
         return this.Content;
@@ -87,9 +87,7 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
 
     /**
      * Set 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(StdoutLogV2 [] Content) {
         this.Content = Content;
@@ -135,6 +133,26 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 游标ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchAfter 游标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSearchAfter() {
+        return this.SearchAfter;
+    }
+
+    /**
+     * Set 游标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchAfter 游标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchAfter(String [] SearchAfter) {
+        this.SearchAfter = SearchAfter;
+    }
+
     public TsfPageStdoutLogV2() {
     }
 
@@ -158,6 +176,12 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SearchAfter != null) {
+            this.SearchAfter = new String[source.SearchAfter.length];
+            for (int i = 0; i < source.SearchAfter.length; i++) {
+                this.SearchAfter[i] = new String(source.SearchAfter[i]);
+            }
+        }
     }
 
 
@@ -169,6 +193,7 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "ScrollId", this.ScrollId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "SearchAfter.", this.SearchAfter);
 
     }
 }

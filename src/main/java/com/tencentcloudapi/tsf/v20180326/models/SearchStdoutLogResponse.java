@@ -25,7 +25,6 @@ public class SearchStdoutLogResponse extends AbstractModel {
 
     /**
     * 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class SearchStdoutLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出日志列表 
      * @return Result 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageStdoutLogV2 getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class SearchStdoutLogResponse extends AbstractModel {
 
     /**
      * Set 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 标准输出日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageStdoutLogV2 Result) {
         this.Result = Result;

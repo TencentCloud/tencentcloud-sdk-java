@@ -25,7 +25,6 @@ public class ModifyRocketMQInstanceSpecResponse extends AbstractModel {
 
     /**
     * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyRocketMQInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单号 
      * @return OrderId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
         return this.OrderId;
@@ -50,9 +47,7 @@ public class ModifyRocketMQInstanceSpecResponse extends AbstractModel {
 
     /**
      * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

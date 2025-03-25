@@ -38,7 +38,7 @@ public class DescribeInsPublicEndpointsResponse extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 带宽
+    * 带宽，单位Mbps
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -103,16 +103,16 @@ public class DescribeInsPublicEndpointsResponse extends AbstractModel {
     }
 
     /**
-     * Get 带宽 
-     * @return Bandwidth 带宽
+     * Get 带宽，单位Mbps 
+     * @return Bandwidth 带宽，单位Mbps
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽
-     * @param Bandwidth 带宽
+     * Set 带宽，单位Mbps
+     * @param Bandwidth 带宽，单位Mbps
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

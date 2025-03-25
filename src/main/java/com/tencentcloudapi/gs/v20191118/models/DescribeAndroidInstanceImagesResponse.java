@@ -25,7 +25,6 @@ public class DescribeAndroidInstanceImagesResponse extends AbstractModel {
 
     /**
     * 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAndroidInstanceImagesResponse extends AbstractModel {
 
     /**
     * 镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceImages")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAndroidInstanceImagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像总数 
      * @return Total 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeAndroidInstanceImagesResponse extends AbstractModel {
 
     /**
      * Set 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 镜像列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像列表 
      * @return AndroidInstanceImages 镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidInstanceImage [] getAndroidInstanceImages() {
         return this.AndroidInstanceImages;
@@ -78,9 +70,7 @@ public class DescribeAndroidInstanceImagesResponse extends AbstractModel {
 
     /**
      * Set 镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceImages 镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceImages(AndroidInstanceImage [] AndroidInstanceImages) {
         this.AndroidInstanceImages = AndroidInstanceImages;

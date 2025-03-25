@@ -25,7 +25,6 @@ public class RenewResource extends AbstractModel {
 
     /**
     * 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class RenewResource extends AbstractModel {
 
     /**
     * 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -57,7 +55,6 @@ public class RenewResource extends AbstractModel {
 
     /**
     * 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
     @Expose
@@ -65,17 +62,14 @@ public class RenewResource extends AbstractModel {
 
     /**
     * 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 资源Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源Id 
      * @return ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -83,19 +77,15 @@ public class RenewResource extends AbstractModel {
 
     /**
      * Set 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续期标记，0：默认，1：自动续期，2：不续期 
      * @return AutoRenewFlag 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -103,9 +93,7 @@ public class RenewResource extends AbstractModel {
 
     /**
      * Set 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -152,10 +140,8 @@ public class RenewResource extends AbstractModel {
     }
 
     /**
-     * Get 子产品码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品码 
      * @return SubProductCode 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
         return this.SubProductCode;
@@ -163,19 +149,15 @@ public class RenewResource extends AbstractModel {
 
     /**
      * Set 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCode 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源到期时间 
      * @return EndTime 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -183,9 +165,7 @@ public class RenewResource extends AbstractModel {
 
     /**
      * Set 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

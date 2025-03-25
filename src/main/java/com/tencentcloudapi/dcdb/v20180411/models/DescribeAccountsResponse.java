@@ -32,7 +32,6 @@ public class DescribeAccountsResponse extends AbstractModel {
 
     /**
     * 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAccountsResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例用户列表。 
      * @return Users 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBAccount [] getUsers() {
         return this.Users;
@@ -73,9 +70,7 @@ public class DescribeAccountsResponse extends AbstractModel {
 
     /**
      * Set 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(DBAccount [] Users) {
         this.Users = Users;

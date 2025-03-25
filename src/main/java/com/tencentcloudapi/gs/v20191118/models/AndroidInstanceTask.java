@@ -25,7 +25,6 @@ public class AndroidInstanceTask extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,17 +32,14 @@ public class AndroidInstanceTask extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidInstanceId")
     @Expose
     private String AndroidInstanceId;
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -51,19 +47,15 @@ public class AndroidInstanceTask extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return AndroidInstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAndroidInstanceId() {
         return this.AndroidInstanceId;
@@ -71,9 +63,7 @@ public class AndroidInstanceTask extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidInstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidInstanceId(String AndroidInstanceId) {
         this.AndroidInstanceId = AndroidInstanceId;

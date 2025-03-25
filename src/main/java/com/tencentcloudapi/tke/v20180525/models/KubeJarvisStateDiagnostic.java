@@ -25,7 +25,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +32,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,7 +39,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalogues")
     @Expose
@@ -49,7 +46,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +53,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -65,7 +60,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -73,7 +67,6 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -81,17 +74,14 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
     * 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
     private KubeJarvisStateStatistic [] Statistics;
 
     /**
-     * Get 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断开始时间 
      * @return StartTime 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -99,19 +89,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结束时间 
      * @return EndTime 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -119,19 +105,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断目录 
      * @return Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateCatalogue [] getCatalogues() {
         return this.Catalogues;
@@ -139,19 +121,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogues(KubeJarvisStateCatalogue [] Catalogues) {
         this.Catalogues = Catalogues;
     }
 
     /**
-     * Get 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断类型 
      * @return Type 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -159,19 +137,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断名称 
      * @return Name 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -179,19 +153,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断描述 
      * @return Desc 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -199,19 +169,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果列表 
      * @return Results 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateResultsItem [] getResults() {
         return this.Results;
@@ -219,19 +185,15 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(KubeJarvisStateResultsItem [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结果统计 
      * @return Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KubeJarvisStateStatistic [] getStatistics() {
         return this.Statistics;
@@ -239,9 +201,7 @@ public class KubeJarvisStateDiagnostic extends AbstractModel {
 
     /**
      * Set 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(KubeJarvisStateStatistic [] Statistics) {
         this.Statistics = Statistics;
