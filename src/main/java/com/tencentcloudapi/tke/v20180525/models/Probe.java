@@ -24,21 +24,20 @@ import java.util.HashMap;
 public class Probe extends AbstractModel {
 
     /**
+    * Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailureThreshold")
+    @Expose
+    private Long FailureThreshold;
+
+    /**
     * Number of seconds after the container has started before liveness probes are initiated.
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialDelaySeconds")
     @Expose
     private Long InitialDelaySeconds;
-
-    /**
-    * Number of seconds after which the probe times out.
-Defaults to 1 second. Minimum value is 1.
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TimeoutSeconds")
-    @Expose
-    private Long TimeoutSeconds;
 
     /**
     * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
@@ -57,12 +56,33 @@ Defaults to 1 second. Minimum value is 1.
     private Long SuccessThreshold;
 
     /**
-    * Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+    * Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1.
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FailureThreshold")
+    @SerializedName("TimeoutSeconds")
     @Expose
-    private Long FailureThreshold;
+    private Long TimeoutSeconds;
+
+    /**
+     * Get Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailureThreshold() {
+        return this.FailureThreshold;
+    }
+
+    /**
+     * Set Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailureThreshold(Long FailureThreshold) {
+        this.FailureThreshold = FailureThreshold;
+    }
 
     /**
      * Get Number of seconds after the container has started before liveness probes are initiated.
@@ -82,30 +102,6 @@ Defaults to 1 second. Minimum value is 1.
      */
     public void setInitialDelaySeconds(Long InitialDelaySeconds) {
         this.InitialDelaySeconds = InitialDelaySeconds;
-    }
-
-    /**
-     * Get Number of seconds after which the probe times out.
-Defaults to 1 second. Minimum value is 1.
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeoutSeconds Number of seconds after which the probe times out.
-Defaults to 1 second. Minimum value is 1.
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTimeoutSeconds() {
-        return this.TimeoutSeconds;
-    }
-
-    /**
-     * Set Number of seconds after which the probe times out.
-Defaults to 1 second. Minimum value is 1.
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeoutSeconds Number of seconds after which the probe times out.
-Defaults to 1 second. Minimum value is 1.
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTimeoutSeconds(Long TimeoutSeconds) {
-        this.TimeoutSeconds = TimeoutSeconds;
     }
 
     /**
@@ -149,23 +145,27 @@ Defaults to 1 second. Minimum value is 1.
     }
 
     /**
-     * Get Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+     * Get Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1.
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+     * @return TimeoutSeconds Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1.
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFailureThreshold() {
-        return this.FailureThreshold;
+    public Long getTimeoutSeconds() {
+        return this.TimeoutSeconds;
     }
 
     /**
-     * Set Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+     * Set Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1.
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded.Defaults to 3. Minimum value is 1.
+     * @param TimeoutSeconds Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1.
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFailureThreshold(Long FailureThreshold) {
-        this.FailureThreshold = FailureThreshold;
+    public void setTimeoutSeconds(Long TimeoutSeconds) {
+        this.TimeoutSeconds = TimeoutSeconds;
     }
 
     public Probe() {
@@ -176,11 +176,11 @@ Defaults to 1 second. Minimum value is 1.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Probe(Probe source) {
+        if (source.FailureThreshold != null) {
+            this.FailureThreshold = new Long(source.FailureThreshold);
+        }
         if (source.InitialDelaySeconds != null) {
             this.InitialDelaySeconds = new Long(source.InitialDelaySeconds);
-        }
-        if (source.TimeoutSeconds != null) {
-            this.TimeoutSeconds = new Long(source.TimeoutSeconds);
         }
         if (source.PeriodSeconds != null) {
             this.PeriodSeconds = new Long(source.PeriodSeconds);
@@ -188,8 +188,8 @@ Defaults to 1 second. Minimum value is 1.
         if (source.SuccessThreshold != null) {
             this.SuccessThreshold = new Long(source.SuccessThreshold);
         }
-        if (source.FailureThreshold != null) {
-            this.FailureThreshold = new Long(source.FailureThreshold);
+        if (source.TimeoutSeconds != null) {
+            this.TimeoutSeconds = new Long(source.TimeoutSeconds);
         }
     }
 
@@ -198,11 +198,11 @@ Defaults to 1 second. Minimum value is 1.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FailureThreshold", this.FailureThreshold);
         this.setParamSimple(map, prefix + "InitialDelaySeconds", this.InitialDelaySeconds);
-        this.setParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
         this.setParamSimple(map, prefix + "PeriodSeconds", this.PeriodSeconds);
         this.setParamSimple(map, prefix + "SuccessThreshold", this.SuccessThreshold);
-        this.setParamSimple(map, prefix + "FailureThreshold", this.FailureThreshold);
+        this.setParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
 
     }
 }

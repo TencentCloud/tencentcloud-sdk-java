@@ -39,7 +39,6 @@ public class DescribeCaptchaRceResultResponse extends AbstractModel {
 
     /**
     * 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -49,7 +48,6 @@ public class DescribeCaptchaRceResultResponse extends AbstractModel {
     * 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvilLevel")
     @Expose
@@ -57,7 +55,6 @@ EvilLevel=100 请求有恶意
 
     /**
     * 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GetCaptchaTime")
     @Expose
@@ -80,11 +77,17 @@ EvilLevel=100 请求有恶意
 
     /**
     * rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RceResult")
     @Expose
     private RceResult RceResult;
+
+    /**
+    * 设备风险大类
+    */
+    @SerializedName("DeviceRiskCategory")
+    @Expose
+    private String DeviceRiskCategory;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -138,10 +141,8 @@ EvilLevel=100 请求有恶意
     }
 
     /**
-     * Get 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态描述及验证错误信息 
      * @return CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -149,9 +150,7 @@ EvilLevel=100 请求有恶意
 
     /**
      * Set 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;
@@ -160,12 +159,10 @@ EvilLevel=100 请求有恶意
     /**
      * Get 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。 
+EvilLevel=100 请求有恶意 
      * @return EvilLevel 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilLevel() {
         return this.EvilLevel;
@@ -175,21 +172,17 @@ EvilLevel=100 请求有恶意
      * Set 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilLevel 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilLevel(Long EvilLevel) {
         this.EvilLevel = EvilLevel;
     }
 
     /**
-     * Get 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 前端获取验证码时间，时间戳格式 
      * @return GetCaptchaTime 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGetCaptchaTime() {
         return this.GetCaptchaTime;
@@ -197,9 +190,7 @@ EvilLevel=100 请求有恶意
 
     /**
      * Set 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GetCaptchaTime 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGetCaptchaTime(Long GetCaptchaTime) {
         this.GetCaptchaTime = GetCaptchaTime;
@@ -242,10 +233,8 @@ EvilLevel=100 请求有恶意
     }
 
     /**
-     * Get rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rce检测结果 
      * @return RceResult rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RceResult getRceResult() {
         return this.RceResult;
@@ -253,12 +242,26 @@ EvilLevel=100 请求有恶意
 
     /**
      * Set rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RceResult rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRceResult(RceResult RceResult) {
         this.RceResult = RceResult;
+    }
+
+    /**
+     * Get 设备风险大类 
+     * @return DeviceRiskCategory 设备风险大类
+     */
+    public String getDeviceRiskCategory() {
+        return this.DeviceRiskCategory;
+    }
+
+    /**
+     * Set 设备风险大类
+     * @param DeviceRiskCategory 设备风险大类
+     */
+    public void setDeviceRiskCategory(String DeviceRiskCategory) {
+        this.DeviceRiskCategory = DeviceRiskCategory;
     }
 
     /**
@@ -306,6 +309,9 @@ EvilLevel=100 请求有恶意
         if (source.RceResult != null) {
             this.RceResult = new RceResult(source.RceResult);
         }
+        if (source.DeviceRiskCategory != null) {
+            this.DeviceRiskCategory = new String(source.DeviceRiskCategory);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -323,6 +329,7 @@ EvilLevel=100 请求有恶意
         this.setParamSimple(map, prefix + "EvilBitmap", this.EvilBitmap);
         this.setParamSimple(map, prefix + "SubmitCaptchaTime", this.SubmitCaptchaTime);
         this.setParamObj(map, prefix + "RceResult.", this.RceResult);
+        this.setParamSimple(map, prefix + "DeviceRiskCategory", this.DeviceRiskCategory);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

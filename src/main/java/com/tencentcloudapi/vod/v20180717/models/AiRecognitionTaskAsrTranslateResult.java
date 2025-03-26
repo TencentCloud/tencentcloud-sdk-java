@@ -60,7 +60,6 @@ public class AiRecognitionTaskAsrTranslateResult extends AbstractModel {
 
     /**
     * 语音翻译任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskAsrTranslateResult extends AbstractModel {
     }
 
     /**
-     * Get 语音翻译任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音翻译任务输出信息。 
      * @return Output 语音翻译任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrTranslateResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskAsrTranslateResult extends AbstractModel {
 
     /**
      * Set 语音翻译任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 语音翻译任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskAsrTranslateResultOutput Output) {
         this.Output = Output;

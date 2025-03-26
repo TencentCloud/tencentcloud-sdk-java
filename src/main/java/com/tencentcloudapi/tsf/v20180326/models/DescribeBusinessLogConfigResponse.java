@@ -25,7 +25,6 @@ public class DescribeBusinessLogConfigResponse extends AbstractModel {
 
     /**
     * 日志配置项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBusinessLogConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志配置项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志配置项 
      * @return Result 日志配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BusinessLogConfig getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeBusinessLogConfigResponse extends AbstractModel {
 
     /**
      * Set 日志配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 日志配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(BusinessLogConfig Result) {
         this.Result = Result;

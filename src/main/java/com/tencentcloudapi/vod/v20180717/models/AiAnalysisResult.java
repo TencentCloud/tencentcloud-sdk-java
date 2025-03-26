@@ -37,7 +37,6 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassificationTask")
     @Expose
@@ -45,7 +44,6 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverTask")
     @Expose
@@ -53,7 +51,6 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagTask")
     @Expose
@@ -61,7 +58,6 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameTagTask")
     @Expose
@@ -69,7 +65,6 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighlightTask")
     @Expose
@@ -112,10 +107,8 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。 
      * @return ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
@@ -123,19 +116,15 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
      * Set 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
     }
 
     /**
-     * Get 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。 
      * @return CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
@@ -143,19 +132,15 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
      * Set 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
     }
 
     /**
-     * Get 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。 
      * @return TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
@@ -163,19 +148,15 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
      * Set 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;
     }
 
     /**
-     * Get 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。 
      * @return FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskFrameTagResult getFrameTagTask() {
         return this.FrameTagTask;
@@ -183,19 +164,15 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
      * Set 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameTagTask(AiAnalysisTaskFrameTagResult FrameTagTask) {
         this.FrameTagTask = FrameTagTask;
     }
 
     /**
-     * Get 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。 
      * @return HighlightTask 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskHighlightResult getHighlightTask() {
         return this.HighlightTask;
@@ -203,9 +180,7 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
      * Set 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighlightTask 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
         this.HighlightTask = HighlightTask;

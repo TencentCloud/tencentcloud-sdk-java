@@ -179,14 +179,14 @@ public class Component extends AbstractModel {
     * **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
@@ -214,7 +214,7 @@ public class Component extends AbstractModel {
 <b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
+<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"、仿宋，如果不填默认为"黑体"</li>
 <li> <b>FontSize</b> : 数字类型，范围6-72，默认值为12</li>
 <li> <b>FontAlign</b> : 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐</li>
 <li> <b>Format</b> : 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。</li>
@@ -899,14 +899,14 @@ ChildrenComponent结构体定义:
      * Get **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
@@ -934,7 +934,7 @@ ChildrenComponent结构体定义:
 <b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
+<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"、仿宋，如果不填默认为"黑体"</li>
 <li> <b>FontSize</b> : 数字类型，范围6-72，默认值为12</li>
 <li> <b>FontAlign</b> : 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐</li>
 <li> <b>Format</b> : 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。</li>
@@ -1018,14 +1018,14 @@ ChildrenComponent结构体定义:
      * @return ComponentExtra **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
@@ -1053,7 +1053,7 @@ ChildrenComponent结构体定义:
 <b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
+<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"、仿宋，如果不填默认为"黑体"</li>
 <li> <b>FontSize</b> : 数字类型，范围6-72，默认值为12</li>
 <li> <b>FontAlign</b> : 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐</li>
 <li> <b>Format</b> : 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。</li>
@@ -1143,14 +1143,14 @@ ChildrenComponent结构体定义:
      * Set **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
@@ -1178,7 +1178,7 @@ ChildrenComponent结构体定义:
 <b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
+<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"、仿宋，如果不填默认为"黑体"</li>
 <li> <b>FontSize</b> : 数字类型，范围6-72，默认值为12</li>
 <li> <b>FontAlign</b> : 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐</li>
 <li> <b>Format</b> : 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。</li>
@@ -1262,14 +1262,14 @@ ChildrenComponent结构体定义:
      * @param ComponentExtra **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
@@ -1297,7 +1297,7 @@ ChildrenComponent结构体定义:
 <b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
-<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
+<ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"、仿宋，如果不填默认为"黑体"</li>
 <li> <b>FontSize</b> : 数字类型，范围6-72，默认值为12</li>
 <li> <b>FontAlign</b> : 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐</li>
 <li> <b>Format</b> : 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。</li>

@@ -38,7 +38,7 @@ public class CreateUserRequest extends AbstractModel {
     private String Username;
 
     /**
-    * 密码，该字段为空时候则后端会默认生成
+    * 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
     */
     @SerializedName("Password")
     @Expose
@@ -84,16 +84,16 @@ public class CreateUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 密码，该字段为空时候则后端会默认生成 
-     * @return Password 密码，该字段为空时候则后端会默认生成
+     * Get 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。 
+     * @return Password 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码，该字段为空时候则后端会默认生成
-     * @param Password 密码，该字段为空时候则后端会默认生成
+     * Set 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
+     * @param Password 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
      */
     public void setPassword(String Password) {
         this.Password = Password;

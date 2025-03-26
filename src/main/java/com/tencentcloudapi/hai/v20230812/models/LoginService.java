@@ -25,17 +25,14 @@ public class LoginService extends AbstractModel {
 
     /**
     * 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-     * Get 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录方式名称 
      * @return ServiceName 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -43,9 +40,7 @@ public class LoginService extends AbstractModel {
 
     /**
      * Set 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

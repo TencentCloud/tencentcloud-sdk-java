@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConfigHistory extends AbstractModel {
 
     /**
-    * id1
+    * id
     */
     @SerializedName("Id")
     @Expose
@@ -87,16 +87,16 @@ public class ConfigHistory extends AbstractModel {
     private String Status;
 
     /**
-     * Get id1 
-     * @return Id id1
+     * Get id 
+     * @return Id id
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set id1
-     * @param Id id1
+     * Set id
+     * @param Id id
      */
     public void setId(Long Id) {
         this.Id = Id;

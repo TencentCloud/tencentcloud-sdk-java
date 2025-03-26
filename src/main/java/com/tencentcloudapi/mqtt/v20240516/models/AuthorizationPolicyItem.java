@@ -95,7 +95,6 @@ sub：订阅mqtt消息
 
     /**
     * 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
     */
     @SerializedName("Username")
     @Expose
@@ -319,10 +318,8 @@ sub：订阅mqtt消息
     }
 
     /**
-     * Get 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- 
+     * Get 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
      * @return Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
      */
     public String getUsername() {
         return this.Username;
@@ -330,9 +327,7 @@ sub：订阅mqtt消息
 
     /**
      * Set 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
      * @param Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
      */
     public void setUsername(String Username) {
         this.Username = Username;

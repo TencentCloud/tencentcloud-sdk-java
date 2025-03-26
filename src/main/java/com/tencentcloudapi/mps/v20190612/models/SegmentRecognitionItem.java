@@ -128,6 +128,13 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String PersonPositionUrl;
 
     /**
+    * 指定人物ID。
+    */
+    @SerializedName("PersonId")
+    @Expose
+    private String PersonId;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -375,6 +382,22 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.PersonPositionUrl = PersonPositionUrl;
     }
 
+    /**
+     * Get 指定人物ID。 
+     * @return PersonId 指定人物ID。
+     */
+    public String getPersonId() {
+        return this.PersonId;
+    }
+
+    /**
+     * Set 指定人物ID。
+     * @param PersonId 指定人物ID。
+     */
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -428,6 +451,9 @@ public class SegmentRecognitionItem extends AbstractModel {
         if (source.PersonPositionUrl != null) {
             this.PersonPositionUrl = new String(source.PersonPositionUrl);
         }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
     }
 
 
@@ -449,6 +475,7 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioBeginTime", this.AudioBeginTime);
         this.setParamSimple(map, prefix + "AudioEndTime", this.AudioEndTime);
         this.setParamSimple(map, prefix + "PersonPositionUrl", this.PersonPositionUrl);
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
 
     }
 }

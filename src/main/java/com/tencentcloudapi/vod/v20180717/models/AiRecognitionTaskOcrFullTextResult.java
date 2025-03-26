@@ -60,7 +60,6 @@ public class AiRecognitionTaskOcrFullTextResult extends AbstractModel {
 
     /**
     * 文本全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskOcrFullTextResult extends AbstractModel {
     }
 
     /**
-     * Get 文本全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本全文识别任务输出信息。 
      * @return Output 文本全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskOcrFullTextResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskOcrFullTextResult extends AbstractModel {
 
     /**
      * Set 文本全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 文本全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskOcrFullTextResultOutput Output) {
         this.Output = Output;

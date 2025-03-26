@@ -39,7 +39,6 @@ public class DescribeCaptchaResultResponse extends AbstractModel {
 
     /**
     * 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -49,7 +48,6 @@ public class DescribeCaptchaResultResponse extends AbstractModel {
     * 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvilLevel")
     @Expose
@@ -57,7 +55,6 @@ EvilLevel=100 请求有恶意
 
     /**
     * 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GetCaptchaTime")
     @Expose
@@ -138,10 +135,8 @@ EvilLevel=100 请求有恶意
     }
 
     /**
-     * Get 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态描述及验证错误信息 
      * @return CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
@@ -149,9 +144,7 @@ EvilLevel=100 请求有恶意
 
     /**
      * Set 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;
@@ -160,12 +153,10 @@ EvilLevel=100 请求有恶意
     /**
      * Get 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。 
+EvilLevel=100 请求有恶意 
      * @return EvilLevel 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilLevel() {
         return this.EvilLevel;
@@ -175,21 +166,17 @@ EvilLevel=100 请求有恶意
      * Set 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilLevel 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilLevel(Long EvilLevel) {
         this.EvilLevel = EvilLevel;
     }
 
     /**
-     * Get 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 前端获取验证码时间，时间戳格式 
      * @return GetCaptchaTime 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGetCaptchaTime() {
         return this.GetCaptchaTime;
@@ -197,9 +184,7 @@ EvilLevel=100 请求有恶意
 
     /**
      * Set 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GetCaptchaTime 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGetCaptchaTime(Long GetCaptchaTime) {
         this.GetCaptchaTime = GetCaptchaTime;

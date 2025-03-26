@@ -59,6 +59,13 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     private String ServiceInstanceId;
 
     /**
+    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
      * Get 终端节点服务ID。 
      * @return EndPointServiceId 终端节点服务ID。
      */
@@ -138,6 +145,22 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
         this.ServiceInstanceId = ServiceInstanceId;
     }
 
+    /**
+     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
+    }
+
     public ModifyVpcEndPointServiceAttributeRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
         if (source.ServiceInstanceId != null) {
             this.ServiceInstanceId = new String(source.ServiceInstanceId);
         }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndPointServiceName", this.EndPointServiceName);
         this.setParamSimple(map, prefix + "AutoAcceptFlag", this.AutoAcceptFlag);
         this.setParamSimple(map, prefix + "ServiceInstanceId", this.ServiceInstanceId);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }

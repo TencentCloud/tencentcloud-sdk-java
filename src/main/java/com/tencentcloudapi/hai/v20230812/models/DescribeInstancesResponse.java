@@ -26,7 +26,6 @@ public class DescribeInstancesResponse extends AbstractModel {
     /**
     * 实例总数
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -35,7 +34,6 @@ public class DescribeInstancesResponse extends AbstractModel {
     /**
     * 分页实例详情
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -50,11 +48,9 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Get 实例总数
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return TotalCount 实例总数
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -63,10 +59,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     /**
      * Set 实例总数
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 实例总数
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -74,11 +68,9 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Get 分页实例详情
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return InstanceSet 分页实例详情
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instance [] getInstanceSet() {
         return this.InstanceSet;
@@ -87,10 +79,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     /**
      * Set 分页实例详情
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceSet 分页实例详情
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSet(Instance [] InstanceSet) {
         this.InstanceSet = InstanceSet;

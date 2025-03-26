@@ -38,11 +38,18 @@ public class ThreadPicture extends AbstractModel {
     private CurvePoint [] ThreadActive;
 
     /**
-    * 守护线程数
+    * 守护线程数 拼写错误，废弃
     */
     @SerializedName("DeamonThreadCount")
     @Expose
     private CurvePoint [] DeamonThreadCount;
+
+    /**
+    * 守护线程数
+    */
+    @SerializedName("DaemonThreadCount")
+    @Expose
+    private CurvePoint [] DaemonThreadCount;
 
     /**
      * Get 总线程数 
@@ -77,19 +84,35 @@ public class ThreadPicture extends AbstractModel {
     }
 
     /**
-     * Get 守护线程数 
-     * @return DeamonThreadCount 守护线程数
+     * Get 守护线程数 拼写错误，废弃 
+     * @return DeamonThreadCount 守护线程数 拼写错误，废弃
      */
     public CurvePoint [] getDeamonThreadCount() {
         return this.DeamonThreadCount;
     }
 
     /**
-     * Set 守护线程数
-     * @param DeamonThreadCount 守护线程数
+     * Set 守护线程数 拼写错误，废弃
+     * @param DeamonThreadCount 守护线程数 拼写错误，废弃
      */
     public void setDeamonThreadCount(CurvePoint [] DeamonThreadCount) {
         this.DeamonThreadCount = DeamonThreadCount;
+    }
+
+    /**
+     * Get 守护线程数 
+     * @return DaemonThreadCount 守护线程数
+     */
+    public CurvePoint [] getDaemonThreadCount() {
+        return this.DaemonThreadCount;
+    }
+
+    /**
+     * Set 守护线程数
+     * @param DaemonThreadCount 守护线程数
+     */
+    public void setDaemonThreadCount(CurvePoint [] DaemonThreadCount) {
+        this.DaemonThreadCount = DaemonThreadCount;
     }
 
     public ThreadPicture() {
@@ -118,6 +141,12 @@ public class ThreadPicture extends AbstractModel {
                 this.DeamonThreadCount[i] = new CurvePoint(source.DeamonThreadCount[i]);
             }
         }
+        if (source.DaemonThreadCount != null) {
+            this.DaemonThreadCount = new CurvePoint[source.DaemonThreadCount.length];
+            for (int i = 0; i < source.DaemonThreadCount.length; i++) {
+                this.DaemonThreadCount[i] = new CurvePoint(source.DaemonThreadCount[i]);
+            }
+        }
     }
 
 
@@ -128,6 +157,7 @@ public class ThreadPicture extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ThreadCount.", this.ThreadCount);
         this.setParamArrayObj(map, prefix + "ThreadActive.", this.ThreadActive);
         this.setParamArrayObj(map, prefix + "DeamonThreadCount.", this.DeamonThreadCount);
+        this.setParamArrayObj(map, prefix + "DaemonThreadCount.", this.DaemonThreadCount);
 
     }
 }

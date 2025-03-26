@@ -50,7 +50,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（BatchUpdateFirmware）用于批量更新设备固件 
+     *本接口（BatchUpdateFirmware）用于批量更新设备固件
      * @param req BatchUpdateFirmwareRequest
      * @return BatchUpdateFirmwareResponse
      * @throws TencentCloudSDKException
@@ -292,7 +292,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteFirmware）用于删除固件 
+     *本接口（DeleteFirmware）用于删除固件
      * @param req DeleteFirmwareRequest
      * @return DeleteFirmwareResponse
      * @throws TencentCloudSDKException
@@ -952,7 +952,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
+     *本接口（GetAllFirmwareVersion）用于获取所有的版本列表
      * @param req GetAllFirmwareVersionRequest
      * @return GetAllFirmwareVersionResponse
      * @throws TencentCloudSDKException
@@ -963,7 +963,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（GetFirmwareURL）用于获取固件存储的URL 
+     *本接口（GetFirmwareURL）用于获取固件存储的URL
      * @param req GetFirmwareURLRequest
      * @return GetFirmwareURLResponse
      * @throws TencentCloudSDKException
@@ -996,7 +996,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（ListFirmwares）用于获取固件列表 
+     *本接口（ListFirmwares）用于获取固件列表
      * @param req ListFirmwaresRequest
      * @return ListFirmwaresResponse
      * @throws TencentCloudSDKException
@@ -1194,7 +1194,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（UploadFirmware）用于上传设备固件信息 
+     *本接口（UploadFirmware）用于上传设备固件信息
      * @param req UploadFirmwareRequest
      * @return UploadFirmwareResponse
      * @throws TencentCloudSDKException

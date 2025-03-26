@@ -55,7 +55,6 @@ public class ReviewAudioVideoTask extends AbstractModel {
 
     /**
     * 音视频审核任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -63,7 +62,6 @@ public class ReviewAudioVideoTask extends AbstractModel {
 
     /**
     * 音视频审核任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -156,10 +154,8 @@ public class ReviewAudioVideoTask extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音视频审核任务的输入。 
      * @return Input 音视频审核任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReviewAudioVideoTaskInput getInput() {
         return this.Input;
@@ -167,19 +163,15 @@ public class ReviewAudioVideoTask extends AbstractModel {
 
     /**
      * Set 音视频审核任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 音视频审核任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(ReviewAudioVideoTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 音视频审核任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音视频审核任务的输出。 
      * @return Output 音视频审核任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReviewAudioVideoTaskOutput getOutput() {
         return this.Output;
@@ -187,9 +179,7 @@ public class ReviewAudioVideoTask extends AbstractModel {
 
     /**
      * Set 音视频审核任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 音视频审核任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(ReviewAudioVideoTaskOutput Output) {
         this.Output = Output;

@@ -52,7 +52,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private String [] Callers;
 
     /**
-    * 呼叫使用的Ivr
+    * 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
     */
     @SerializedName("IvrId")
     @Expose
@@ -106,6 +106,27 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     @SerializedName("CalleeAttributes")
     @Expose
     private CalleeAttribute [] CalleeAttributes;
+
+    /**
+    * IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * 可用时间段
+    */
+    @SerializedName("AvailableTime")
+    @Expose
+    private TimeRange [] AvailableTime;
+
+    /**
+    * 智能体 ID，不填写时需要填写 IvrId
+    */
+    @SerializedName("AIAgentId")
+    @Expose
+    private Long AIAgentId;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -172,16 +193,16 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 呼叫使用的Ivr 
-     * @return IvrId 呼叫使用的Ivr
+     * Get 呼叫使用的 IVR Id，不填时需要填写 AIAgentId 
+     * @return IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
      */
     public Long getIvrId() {
         return this.IvrId;
     }
 
     /**
-     * Set 呼叫使用的Ivr
-     * @param IvrId 呼叫使用的Ivr
+     * Set 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+     * @param IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
      */
     public void setIvrId(Long IvrId) {
         this.IvrId = IvrId;
@@ -299,6 +320,54 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.CalleeAttributes = CalleeAttributes;
     }
 
+    /**
+     * Get IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones 
+     * @return TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @param TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get 可用时间段 
+     * @return AvailableTime 可用时间段
+     */
+    public TimeRange [] getAvailableTime() {
+        return this.AvailableTime;
+    }
+
+    /**
+     * Set 可用时间段
+     * @param AvailableTime 可用时间段
+     */
+    public void setAvailableTime(TimeRange [] AvailableTime) {
+        this.AvailableTime = AvailableTime;
+    }
+
+    /**
+     * Get 智能体 ID，不填写时需要填写 IvrId 
+     * @return AIAgentId 智能体 ID，不填写时需要填写 IvrId
+     */
+    public Long getAIAgentId() {
+        return this.AIAgentId;
+    }
+
+    /**
+     * Set 智能体 ID，不填写时需要填写 IvrId
+     * @param AIAgentId 智能体 ID，不填写时需要填写 IvrId
+     */
+    public void setAIAgentId(Long AIAgentId) {
+        this.AIAgentId = AIAgentId;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -355,6 +424,18 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
                 this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
             }
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.AvailableTime != null) {
+            this.AvailableTime = new TimeRange[source.AvailableTime.length];
+            for (int i = 0; i < source.AvailableTime.length; i++) {
+                this.AvailableTime[i] = new TimeRange(source.AvailableTime[i]);
+            }
+        }
+        if (source.AIAgentId != null) {
+            this.AIAgentId = new Long(source.AIAgentId);
+        }
     }
 
 
@@ -374,6 +455,9 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
+        this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
 
     }
 }

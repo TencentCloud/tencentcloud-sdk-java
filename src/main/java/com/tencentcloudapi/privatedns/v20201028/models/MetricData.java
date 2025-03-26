@@ -46,7 +46,6 @@ public class MetricData extends AbstractModel {
 
     /**
     * 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricCount")
     @Expose
@@ -101,10 +100,8 @@ public class MetricData extends AbstractModel {
     }
 
     /**
-     * Get 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询范围内的请求总量 
      * @return MetricCount 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricCount() {
         return this.MetricCount;
@@ -112,9 +109,7 @@ public class MetricData extends AbstractModel {
 
     /**
      * Set 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricCount 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricCount(Long MetricCount) {
         this.MetricCount = MetricCount;

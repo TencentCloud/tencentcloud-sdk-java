@@ -39,7 +39,6 @@ public class DescribeImageManifestsResponse extends AbstractModel {
 
     /**
     * 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeImageManifestsResponse extends AbstractModel {
 
     /**
     * 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeImageManifestsResponse extends AbstractModel {
     }
 
     /**
-     * Get 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像的Labels信息 
      * @return Labels 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueString [] getLabels() {
         return this.Labels;
@@ -104,19 +100,15 @@ public class DescribeImageManifestsResponse extends AbstractModel {
 
     /**
      * Set 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(KeyValueString [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像大小，单位：byte 
      * @return Size 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -124,9 +116,7 @@ public class DescribeImageManifestsResponse extends AbstractModel {
 
     /**
      * Set 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;

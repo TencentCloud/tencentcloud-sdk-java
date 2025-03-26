@@ -25,19 +25,10 @@ public class LivenessOrReadinessProbe extends AbstractModel {
 
     /**
     * 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Probe")
     @Expose
     private Probe Probe;
-
-    /**
-    * HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HttpGet")
-    @Expose
-    private HttpGet HttpGet;
 
     /**
     * 容器内检测命令参数
@@ -48,6 +39,13 @@ public class LivenessOrReadinessProbe extends AbstractModel {
     private Exec Exec;
 
     /**
+    * HttpGet检测参数
+    */
+    @SerializedName("HttpGet")
+    @Expose
+    private HttpGet HttpGet;
+
+    /**
     * TcpSocket检测的端口参数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -56,10 +54,8 @@ public class LivenessOrReadinessProbe extends AbstractModel {
     private TcpSocket TcpSocket;
 
     /**
-     * Get 探针参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探针参数 
      * @return Probe 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Probe getProbe() {
         return this.Probe;
@@ -67,32 +63,10 @@ public class LivenessOrReadinessProbe extends AbstractModel {
 
     /**
      * Set 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Probe 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProbe(Probe Probe) {
         this.Probe = Probe;
-    }
-
-    /**
-     * Get HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpGet HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public HttpGet getHttpGet() {
-        return this.HttpGet;
-    }
-
-    /**
-     * Set HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpGet HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHttpGet(HttpGet HttpGet) {
-        this.HttpGet = HttpGet;
     }
 
     /**
@@ -113,6 +87,22 @@ public class LivenessOrReadinessProbe extends AbstractModel {
      */
     public void setExec(Exec Exec) {
         this.Exec = Exec;
+    }
+
+    /**
+     * Get HttpGet检测参数 
+     * @return HttpGet HttpGet检测参数
+     */
+    public HttpGet getHttpGet() {
+        return this.HttpGet;
+    }
+
+    /**
+     * Set HttpGet检测参数
+     * @param HttpGet HttpGet检测参数
+     */
+    public void setHttpGet(HttpGet HttpGet) {
+        this.HttpGet = HttpGet;
     }
 
     /**
@@ -146,11 +136,11 @@ public class LivenessOrReadinessProbe extends AbstractModel {
         if (source.Probe != null) {
             this.Probe = new Probe(source.Probe);
         }
-        if (source.HttpGet != null) {
-            this.HttpGet = new HttpGet(source.HttpGet);
-        }
         if (source.Exec != null) {
             this.Exec = new Exec(source.Exec);
+        }
+        if (source.HttpGet != null) {
+            this.HttpGet = new HttpGet(source.HttpGet);
         }
         if (source.TcpSocket != null) {
             this.TcpSocket = new TcpSocket(source.TcpSocket);
@@ -163,8 +153,8 @@ public class LivenessOrReadinessProbe extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Probe.", this.Probe);
-        this.setParamObj(map, prefix + "HttpGet.", this.HttpGet);
         this.setParamObj(map, prefix + "Exec.", this.Exec);
+        this.setParamObj(map, prefix + "HttpGet.", this.HttpGet);
         this.setParamObj(map, prefix + "TcpSocket.", this.TcpSocket);
 
     }

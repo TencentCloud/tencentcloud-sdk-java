@@ -38,7 +38,7 @@ public class DeviceCertificateItem extends AbstractModel {
     private String DeviceCertificate;
 
     /**
-    * 设备证书Sn
+    * 设备证书SN序列号，用于唯一标识一个设备证书
     */
     @SerializedName("DeviceCertificateSn")
     @Expose
@@ -52,25 +52,25 @@ public class DeviceCertificateItem extends AbstractModel {
     private String DeviceCertificateCn;
 
     /**
-    * 签发ca的序列号
+    * 签发该证书的CA证书的序列号
     */
     @SerializedName("CaSn")
     @Expose
     private String CaSn;
 
     /**
-    * 证书格式
+    * 证书格式，当前仅支持PEM
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 证书状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+    * 设备证书状态
+    ACTIVE：激活
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
     */
     @SerializedName("Status")
     @Expose
@@ -84,28 +84,28 @@ public class DeviceCertificateItem extends AbstractModel {
     private String OrganizationalUnit;
 
     /**
-    * 上次激活时间
+    * 上次激活时间，毫秒级时间戳 。
     */
     @SerializedName("LastActivationTime")
     @Expose
     private Long LastActivationTime;
 
     /**
-    * 上次取消激活时间
+    * 上次取消激活时间，毫秒级时间戳 。
     */
     @SerializedName("LastInactivationTime")
     @Expose
     private Long LastInactivationTime;
 
     /**
-    * 创建时间
+    * 创建时间，毫秒级时间戳 。
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 预销毁时间
+    * 更新时间，毫秒级时间戳 。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -121,14 +121,14 @@ JITP 自动注册
     private String CertificateSource;
 
     /**
-    * 证书失效日期
+    * 证书失效日期，毫秒级时间戳 。
     */
     @SerializedName("NotAfterTime")
     @Expose
     private Long NotAfterTime;
 
     /**
-    * 证书生效开始日期
+    * 证书生效开始日期，毫秒级时间戳 。
     */
     @SerializedName("NotBeforeTime")
     @Expose
@@ -167,16 +167,16 @@ JITP 自动注册
     }
 
     /**
-     * Get 设备证书Sn 
-     * @return DeviceCertificateSn 设备证书Sn
+     * Get 设备证书SN序列号，用于唯一标识一个设备证书 
+     * @return DeviceCertificateSn 设备证书SN序列号，用于唯一标识一个设备证书
      */
     public String getDeviceCertificateSn() {
         return this.DeviceCertificateSn;
     }
 
     /**
-     * Set 设备证书Sn
-     * @param DeviceCertificateSn 设备证书Sn
+     * Set 设备证书SN序列号，用于唯一标识一个设备证书
+     * @param DeviceCertificateSn 设备证书SN序列号，用于唯一标识一个设备证书
      */
     public void setDeviceCertificateSn(String DeviceCertificateSn) {
         this.DeviceCertificateSn = DeviceCertificateSn;
@@ -199,64 +199,64 @@ JITP 自动注册
     }
 
     /**
-     * Get 签发ca的序列号 
-     * @return CaSn 签发ca的序列号
+     * Get 签发该证书的CA证书的序列号 
+     * @return CaSn 签发该证书的CA证书的序列号
      */
     public String getCaSn() {
         return this.CaSn;
     }
 
     /**
-     * Set 签发ca的序列号
-     * @param CaSn 签发ca的序列号
+     * Set 签发该证书的CA证书的序列号
+     * @param CaSn 签发该证书的CA证书的序列号
      */
     public void setCaSn(String CaSn) {
         this.CaSn = CaSn;
     }
 
     /**
-     * Get 证书格式 
-     * @return Format 证书格式
+     * Get 证书格式，当前仅支持PEM 
+     * @return Format 证书格式，当前仅支持PEM
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 证书格式
-     * @param Format 证书格式
+     * Set 证书格式，当前仅支持PEM
+     * @param Format 证书格式，当前仅支持PEM
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 证书状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活 
-     * @return Status 证书状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+     * Get 设备证书状态
+    ACTIVE：激活
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活 
+     * @return Status 设备证书状态
+    ACTIVE：激活
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 证书状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
-     * @param Status 证书状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+     * Set 设备证书状态
+    ACTIVE：激活
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
+     * @param Status 设备证书状态
+    ACTIVE：激活
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -279,64 +279,64 @@ JITP 自动注册
     }
 
     /**
-     * Get 上次激活时间 
-     * @return LastActivationTime 上次激活时间
+     * Get 上次激活时间，毫秒级时间戳 。 
+     * @return LastActivationTime 上次激活时间，毫秒级时间戳 。
      */
     public Long getLastActivationTime() {
         return this.LastActivationTime;
     }
 
     /**
-     * Set 上次激活时间
-     * @param LastActivationTime 上次激活时间
+     * Set 上次激活时间，毫秒级时间戳 。
+     * @param LastActivationTime 上次激活时间，毫秒级时间戳 。
      */
     public void setLastActivationTime(Long LastActivationTime) {
         this.LastActivationTime = LastActivationTime;
     }
 
     /**
-     * Get 上次取消激活时间 
-     * @return LastInactivationTime 上次取消激活时间
+     * Get 上次取消激活时间，毫秒级时间戳 。 
+     * @return LastInactivationTime 上次取消激活时间，毫秒级时间戳 。
      */
     public Long getLastInactivationTime() {
         return this.LastInactivationTime;
     }
 
     /**
-     * Set 上次取消激活时间
-     * @param LastInactivationTime 上次取消激活时间
+     * Set 上次取消激活时间，毫秒级时间戳 。
+     * @param LastInactivationTime 上次取消激活时间，毫秒级时间戳 。
      */
     public void setLastInactivationTime(Long LastInactivationTime) {
         this.LastInactivationTime = LastInactivationTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get 创建时间，毫秒级时间戳 。 
+     * @return CreatedTime 创建时间，毫秒级时间戳 。
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set 创建时间，毫秒级时间戳 。
+     * @param CreatedTime 创建时间，毫秒级时间戳 。
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 预销毁时间 
-     * @return UpdateTime 预销毁时间
+     * Get 更新时间，毫秒级时间戳 。 
+     * @return UpdateTime 更新时间，毫秒级时间戳 。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 预销毁时间
-     * @param UpdateTime 预销毁时间
+     * Set 更新时间，毫秒级时间戳 。
+     * @param UpdateTime 更新时间，毫秒级时间戳 。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -367,32 +367,32 @@ JITP 自动注册
     }
 
     /**
-     * Get 证书失效日期 
-     * @return NotAfterTime 证书失效日期
+     * Get 证书失效日期，毫秒级时间戳 。 
+     * @return NotAfterTime 证书失效日期，毫秒级时间戳 。
      */
     public Long getNotAfterTime() {
         return this.NotAfterTime;
     }
 
     /**
-     * Set 证书失效日期
-     * @param NotAfterTime 证书失效日期
+     * Set 证书失效日期，毫秒级时间戳 。
+     * @param NotAfterTime 证书失效日期，毫秒级时间戳 。
      */
     public void setNotAfterTime(Long NotAfterTime) {
         this.NotAfterTime = NotAfterTime;
     }
 
     /**
-     * Get 证书生效开始日期 
-     * @return NotBeforeTime 证书生效开始日期
+     * Get 证书生效开始日期，毫秒级时间戳 。 
+     * @return NotBeforeTime 证书生效开始日期，毫秒级时间戳 。
      */
     public Long getNotBeforeTime() {
         return this.NotBeforeTime;
     }
 
     /**
-     * Set 证书生效开始日期
-     * @param NotBeforeTime 证书生效开始日期
+     * Set 证书生效开始日期，毫秒级时间戳 。
+     * @param NotBeforeTime 证书生效开始日期，毫秒级时间戳 。
      */
     public void setNotBeforeTime(Long NotBeforeTime) {
         this.NotBeforeTime = NotBeforeTime;

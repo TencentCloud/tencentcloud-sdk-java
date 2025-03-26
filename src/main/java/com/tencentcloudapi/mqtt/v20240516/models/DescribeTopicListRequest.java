@@ -46,7 +46,7 @@ public class DescribeTopicListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 查询结果限制数量，默认0，最大20
+    * 查询结果限制数量，默认20，最大20
     */
     @SerializedName("Limit")
     @Expose
@@ -105,16 +105,16 @@ public class DescribeTopicListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询结果限制数量，默认0，最大20 
-     * @return Limit 查询结果限制数量，默认0，最大20
+     * Get 查询结果限制数量，默认20，最大20 
+     * @return Limit 查询结果限制数量，默认20，最大20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量，默认0，最大20
-     * @param Limit 查询结果限制数量，默认0，最大20
+     * Set 查询结果限制数量，默认20，最大20
+     * @param Limit 查询结果限制数量，默认20，最大20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

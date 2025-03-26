@@ -25,7 +25,6 @@ public class DescribeInstanceCustomizedDomainResponse extends AbstractModel {
 
     /**
     * 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainInfoList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeInstanceCustomizedDomainResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名信息列表 
      * @return DomainInfoList 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomizedDomainInfo [] getDomainInfoList() {
         return this.DomainInfoList;
@@ -57,9 +54,7 @@ public class DescribeInstanceCustomizedDomainResponse extends AbstractModel {
 
     /**
      * Set 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainInfoList 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainInfoList(CustomizedDomainInfo [] DomainInfoList) {
         this.DomainInfoList = DomainInfoList;

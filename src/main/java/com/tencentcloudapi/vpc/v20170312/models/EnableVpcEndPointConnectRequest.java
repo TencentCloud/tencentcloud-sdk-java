@@ -46,6 +46,13 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel {
     private Boolean AcceptFlag;
 
     /**
+    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
      * Get 终端节点服务ID。 
      * @return EndPointServiceId 终端节点服务ID。
      */
@@ -97,6 +104,22 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel {
         this.AcceptFlag = AcceptFlag;
     }
 
+    /**
+     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
+    }
+
     public EnableVpcEndPointConnectRequest() {
     }
 
@@ -117,6 +140,9 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel {
         if (source.AcceptFlag != null) {
             this.AcceptFlag = new Boolean(source.AcceptFlag);
         }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -127,6 +153,7 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
         this.setParamArraySimple(map, prefix + "EndPointId.", this.EndPointId);
         this.setParamSimple(map, prefix + "AcceptFlag", this.AcceptFlag);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }

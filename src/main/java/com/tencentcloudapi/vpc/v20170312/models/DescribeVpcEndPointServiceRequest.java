@@ -63,6 +63,13 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
     private Boolean IsListAuthorizedEndPointService;
 
     /**
+    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
      * Get 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
@@ -158,6 +165,22 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
         this.IsListAuthorizedEndPointService = IsListAuthorizedEndPointService;
     }
 
+    /**
+     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
+    }
+
     public DescribeVpcEndPointServiceRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
         if (source.IsListAuthorizedEndPointService != null) {
             this.IsListAuthorizedEndPointService = new Boolean(source.IsListAuthorizedEndPointService);
         }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "EndPointServiceIds.", this.EndPointServiceIds);
         this.setParamSimple(map, prefix + "IsListAuthorizedEndPointService", this.IsListAuthorizedEndPointService);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }

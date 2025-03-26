@@ -78,6 +78,15 @@ public class AudioTemplateInfo extends AbstractModel {
     private Long AudioChannel;
 
     /**
+    * 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrackChannelInfo")
+    @Expose
+    private AudioTrackChannelInfo TrackChannelInfo;
+
+    /**
      * Get 音频流的编码格式。
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
@@ -245,6 +254,30 @@ public class AudioTemplateInfo extends AbstractModel {
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrackChannelInfo 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioTrackChannelInfo getTrackChannelInfo() {
+        return this.TrackChannelInfo;
+    }
+
+    /**
+     * Set 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrackChannelInfo 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrackChannelInfo(AudioTrackChannelInfo TrackChannelInfo) {
+        this.TrackChannelInfo = TrackChannelInfo;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -265,6 +298,9 @@ public class AudioTemplateInfo extends AbstractModel {
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.TrackChannelInfo != null) {
+            this.TrackChannelInfo = new AudioTrackChannelInfo(source.TrackChannelInfo);
+        }
     }
 
 
@@ -276,6 +312,7 @@ public class AudioTemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
 
     }
 }

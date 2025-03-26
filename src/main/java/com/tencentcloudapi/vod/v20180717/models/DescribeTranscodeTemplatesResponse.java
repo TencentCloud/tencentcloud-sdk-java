@@ -32,7 +32,6 @@ public class DescribeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
     * 转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTemplateSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeTranscodeTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码模板详情列表。 
      * @return TranscodeTemplateSet 转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTemplate [] getTranscodeTemplateSet() {
         return this.TranscodeTemplateSet;
@@ -73,9 +70,7 @@ public class DescribeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
      * Set 转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTemplateSet 转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTemplateSet(TranscodeTemplate [] TranscodeTemplateSet) {
         this.TranscodeTemplateSet = TranscodeTemplateSet;

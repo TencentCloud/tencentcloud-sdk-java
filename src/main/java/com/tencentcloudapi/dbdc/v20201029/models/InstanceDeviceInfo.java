@@ -25,7 +25,6 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
     * 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadWriteDevice")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
     * 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnlyDevice")
     @Expose
@@ -49,17 +46,14 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
     * 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeDevice")
     @Expose
     private DeviceInfo [] FreeDevice;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -67,19 +61,15 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读写设备组 
      * @return ReadWriteDevice 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceInfo [] getReadWriteDevice() {
         return this.ReadWriteDevice;
@@ -87,19 +77,15 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
      * Set 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadWriteDevice 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadWriteDevice(DeviceInfo [] ReadWriteDevice) {
         this.ReadWriteDevice = ReadWriteDevice;
     }
 
     /**
-     * Get 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读设备组 
      * @return ReadOnlyDevice 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceInfo [] getReadOnlyDevice() {
         return this.ReadOnlyDevice;
@@ -107,19 +93,15 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
      * Set 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnlyDevice 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnlyDevice(DeviceInfo [] ReadOnlyDevice) {
         this.ReadOnlyDevice = ReadOnlyDevice;
     }
 
     /**
-     * Get 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空闲设备组 
      * @return FreeDevice 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceInfo [] getFreeDevice() {
         return this.FreeDevice;
@@ -127,9 +109,7 @@ public class InstanceDeviceInfo extends AbstractModel {
 
     /**
      * Set 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeDevice 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeDevice(DeviceInfo [] FreeDevice) {
         this.FreeDevice = FreeDevice;

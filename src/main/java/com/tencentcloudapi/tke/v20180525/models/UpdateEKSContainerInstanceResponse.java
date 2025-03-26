@@ -25,7 +25,6 @@ public class UpdateEKSContainerInstanceResponse extends AbstractModel {
 
     /**
     * 容器实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EksCiId")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateEKSContainerInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 容器实例 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器实例 ID 
      * @return EksCiId 容器实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEksCiId() {
         return this.EksCiId;
@@ -50,9 +47,7 @@ public class UpdateEKSContainerInstanceResponse extends AbstractModel {
 
     /**
      * Set 容器实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EksCiId 容器实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEksCiId(String EksCiId) {
         this.EksCiId = EksCiId;

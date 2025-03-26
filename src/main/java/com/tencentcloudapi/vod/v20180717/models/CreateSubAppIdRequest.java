@@ -31,7 +31,7 @@ public class CreateSubAppIdRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 应用简介，长度限制： 300个字符。
+    * 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
     */
     @SerializedName("Description")
     @Expose
@@ -54,16 +54,16 @@ public class CreateSubAppIdRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用简介，长度限制： 300个字符。 
-     * @return Description 应用简介，长度限制： 300个字符。
+     * Get 应用简介，长度限制： 300个字符。不填则应用简介默认为空。 
+     * @return Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 应用简介，长度限制： 300个字符。
-     * @param Description 应用简介，长度限制： 300个字符。
+     * Set 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+     * @param Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
      */
     public void setDescription(String Description) {
         this.Description = Description;

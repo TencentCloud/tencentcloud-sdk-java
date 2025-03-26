@@ -60,7 +60,6 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
 
     /**
     * 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本关键词识别任务输出信息。 
      * @return Output 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskOcrWordsResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
 
     /**
      * Set 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskOcrWordsResultOutput Output) {
         this.Output = Output;

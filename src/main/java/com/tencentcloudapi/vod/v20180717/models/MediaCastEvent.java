@@ -36,7 +36,6 @@ public class MediaCastEvent extends AbstractModel {
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -63,14 +62,12 @@ public class MediaCastEvent extends AbstractModel {
 <li>Working ：运行中；</li>
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
-<li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>Idle ：空闲。</li> 
      * @return Status 转推状态，取值有：
 <li>Working ：运行中；</li>
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -82,13 +79,11 @@ public class MediaCastEvent extends AbstractModel {
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 转推状态，取值有：
 <li>Working ：运行中；</li>
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

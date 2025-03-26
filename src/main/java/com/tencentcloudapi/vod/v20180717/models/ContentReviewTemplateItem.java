@@ -46,7 +46,6 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
     * 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PornConfigure")
     @Expose
@@ -54,7 +53,6 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
     * 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismConfigure")
     @Expose
@@ -62,7 +60,6 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
     * 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -72,7 +69,6 @@ public class ContentReviewTemplateItem extends AbstractModel {
     * 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
@@ -80,7 +76,6 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
     * 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -165,10 +160,8 @@ public class ContentReviewTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鉴别涉及令人反感的信息的控制参数。 
      * @return PornConfigure 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
@@ -176,19 +169,15 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
      * Set 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornConfigure 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鉴别涉及令人不安全的信息的控制参数。 
      * @return TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
@@ -196,19 +185,15 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
      * Set 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鉴别涉及令人不适宜的信息的控制参数。 
      * @return PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
@@ -216,9 +201,7 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
      * Set 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -227,12 +210,10 @@ public class ContentReviewTemplateItem extends AbstractModel {
     /**
      * Get 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
-<li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>涉毒违法。</li> 
      * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
@@ -242,21 +223,17 @@ public class ContentReviewTemplateItem extends AbstractModel {
      * Set 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户自定义音视频审核控制参数。 
      * @return UserDefineConfigure 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
@@ -264,9 +241,7 @@ public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
      * Set 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigure 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class VolumeMount extends AbstractModel {
 
     /**
+    * 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MountPath")
+    @Expose
+    private String MountPath;
+
+    /**
     * volume名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -32,12 +40,12 @@ public class VolumeMount extends AbstractModel {
     private String Name;
 
     /**
-    * 挂载路径
+    * 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MountPath")
+    @SerializedName("MountPropagation")
     @Expose
-    private String MountPath;
+    private String MountPropagation;
 
     /**
     * 是否只读
@@ -56,20 +64,32 @@ public class VolumeMount extends AbstractModel {
     private String SubPath;
 
     /**
-    * 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MountPropagation")
-    @Expose
-    private String MountPropagation;
-
-    /**
     * 子路径表达式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubPathExpr")
     @Expose
     private String SubPathExpr;
+
+    /**
+     * Get 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MountPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMountPath() {
+        return this.MountPath;
+    }
+
+    /**
+     * Set 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMountPath(String MountPath) {
+        this.MountPath = MountPath;
+    }
 
     /**
      * Get volume名称
@@ -92,23 +112,23 @@ public class VolumeMount extends AbstractModel {
     }
 
     /**
-     * Get 挂载路径
+     * Get 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountPath 挂载路径
+     * @return MountPropagation 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMountPath() {
-        return this.MountPath;
+    public String getMountPropagation() {
+        return this.MountPropagation;
     }
 
     /**
-     * Set 挂载路径
+     * Set 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountPath 挂载路径
+     * @param MountPropagation 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMountPath(String MountPath) {
-        this.MountPath = MountPath;
+    public void setMountPropagation(String MountPropagation) {
+        this.MountPropagation = MountPropagation;
     }
 
     /**
@@ -152,26 +172,6 @@ public class VolumeMount extends AbstractModel {
     }
 
     /**
-     * Get 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountPropagation 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getMountPropagation() {
-        return this.MountPropagation;
-    }
-
-    /**
-     * Set 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountPropagation 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMountPropagation(String MountPropagation) {
-        this.MountPropagation = MountPropagation;
-    }
-
-    /**
      * Get 子路径表达式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubPathExpr 子路径表达式
@@ -199,20 +199,20 @@ public class VolumeMount extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public VolumeMount(VolumeMount source) {
+        if (source.MountPath != null) {
+            this.MountPath = new String(source.MountPath);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.MountPath != null) {
-            this.MountPath = new String(source.MountPath);
+        if (source.MountPropagation != null) {
+            this.MountPropagation = new String(source.MountPropagation);
         }
         if (source.ReadOnly != null) {
             this.ReadOnly = new Boolean(source.ReadOnly);
         }
         if (source.SubPath != null) {
             this.SubPath = new String(source.SubPath);
-        }
-        if (source.MountPropagation != null) {
-            this.MountPropagation = new String(source.MountPropagation);
         }
         if (source.SubPathExpr != null) {
             this.SubPathExpr = new String(source.SubPathExpr);
@@ -224,11 +224,11 @@ public class VolumeMount extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "MountPath", this.MountPath);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "SubPath", this.SubPath);
-        this.setParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
         this.setParamSimple(map, prefix + "SubPathExpr", this.SubPathExpr);
 
     }

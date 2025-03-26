@@ -25,7 +25,6 @@ public class DescribeServiceLoginSettingsResponse extends AbstractModel {
 
     /**
     * 服务登录配置详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeServiceLoginSettingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务登录配置详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务登录配置详情 
      * @return LoginSettings 服务登录配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoginSetting [] getLoginSettings() {
         return this.LoginSettings;
@@ -50,9 +47,7 @@ public class DescribeServiceLoginSettingsResponse extends AbstractModel {
 
     /**
      * Set 服务登录配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginSettings 服务登录配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginSettings(LoginSetting [] LoginSettings) {
         this.LoginSettings = LoginSettings;

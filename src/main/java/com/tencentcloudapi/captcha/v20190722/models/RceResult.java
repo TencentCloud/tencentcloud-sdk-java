@@ -25,7 +25,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostTime")
     @Expose
@@ -41,7 +39,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociateAccount")
     @Expose
@@ -49,7 +46,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIp")
     @Expose
@@ -57,7 +53,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -65,7 +60,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -73,7 +67,6 @@ public class RceResult extends AbstractModel {
 
     /**
     * 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConstId")
     @Expose
@@ -81,17 +74,14 @@ public class RceResult extends AbstractModel {
 
     /**
     * 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskInformation")
     @Expose
     private String RiskInformation;
 
     /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户ID 
      * @return UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -99,19 +89,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作时间戳 
      * @return PostTime 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPostTime() {
         return this.PostTime;
@@ -119,19 +105,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostTime 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostTime(Long PostTime) {
         this.PostTime = PostTime;
     }
 
     /**
-     * Get 业务参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务参数 
      * @return AssociateAccount 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociateAccount() {
         return this.AssociateAccount;
@@ -139,19 +121,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociateAccount 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociateAccount(String AssociateAccount) {
         this.AssociateAccount = AssociateAccount;
     }
 
     /**
-     * Get 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户Ip 
      * @return UserIp 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserIp() {
         return this.UserIp;
@@ -159,19 +137,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIp 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -179,19 +153,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRiskType() {
         return this.RiskType;
@@ -199,19 +169,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(Long [] RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备唯一ID 
      * @return ConstId 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConstId() {
         return this.ConstId;
@@ -219,19 +185,15 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConstId 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstId(String ConstId) {
         this.ConstId = ConstId;
     }
 
     /**
-     * Get 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险扩展参数 
      * @return RiskInformation 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskInformation() {
         return this.RiskInformation;
@@ -239,9 +201,7 @@ public class RceResult extends AbstractModel {
 
     /**
      * Set 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskInformation 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskInformation(String RiskInformation) {
         this.RiskInformation = RiskInformation;

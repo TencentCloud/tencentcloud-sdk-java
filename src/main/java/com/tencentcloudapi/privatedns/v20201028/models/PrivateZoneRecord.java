@@ -67,7 +67,6 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
     * MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MX")
     @Expose
@@ -112,7 +111,6 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
     * 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -120,7 +118,6 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -223,10 +220,8 @@ public class PrivateZoneRecord extends AbstractModel {
     }
 
     /**
-     * Get MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50 
      * @return MX MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMX() {
         return this.MX;
@@ -234,9 +229,7 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
      * Set MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MX MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMX(Long MX) {
         this.MX = MX;
@@ -331,10 +324,8 @@ public class PrivateZoneRecord extends AbstractModel {
     }
 
     /**
-     * Get 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0暂停，1启用 
      * @return Enabled 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnabled() {
         return this.Enabled;
@@ -342,19 +333,15 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
      * Set 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Long Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -362,9 +349,7 @@ public class PrivateZoneRecord extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

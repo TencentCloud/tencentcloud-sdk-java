@@ -39,6 +39,17 @@ public class TafClient extends AbstractClient{
     }
 
     /**
+     *oaid 设备风险接口
+     * @param req ManageDeviceRiskRequest
+     * @return ManageDeviceRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageDeviceRiskResponse ManageDeviceRisk(ManageDeviceRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ManageDeviceRisk", ManageDeviceRiskResponse.class);
+    }
+
+    /**
      *虚假流量识别
      * @param req ManagePortraitRiskRequest
      * @return ManagePortraitRiskResponse

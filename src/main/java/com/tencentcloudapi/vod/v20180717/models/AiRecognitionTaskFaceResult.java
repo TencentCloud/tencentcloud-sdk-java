@@ -60,7 +60,6 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
 
     /**
     * 人脸识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     }
 
     /**
-     * Get 人脸识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人脸识别任务输出信息。 
      * @return Output 人脸识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskFaceResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
 
     /**
      * Set 人脸识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 人脸识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskFaceResultOutput Output) {
         this.Output = Output;

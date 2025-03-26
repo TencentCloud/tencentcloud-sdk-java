@@ -31,6 +31,13 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel {
     private String EndPointServiceId;
 
     /**
+    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
      * Get 终端节点ID。 
      * @return EndPointServiceId 终端节点ID。
      */
@@ -46,6 +53,22 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel {
         this.EndPointServiceId = EndPointServiceId;
     }
 
+    /**
+     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
+    }
+
     public DeleteVpcEndPointServiceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel {
         if (source.EndPointServiceId != null) {
             this.EndPointServiceId = new String(source.EndPointServiceId);
         }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }

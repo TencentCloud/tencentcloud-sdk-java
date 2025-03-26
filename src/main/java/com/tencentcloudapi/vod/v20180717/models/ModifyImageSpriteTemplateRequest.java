@@ -45,14 +45,14 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+    * 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+    * 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
     */
     @SerializedName("Height")
     @Expose
@@ -101,10 +101,7 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
     private Long ColumnCount;
 
     /**
-    * 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+    * 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
     */
     @SerializedName("FillType")
     @Expose
@@ -176,32 +173,32 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。 
-     * @return Width 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+     * Get 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。 
+     * @return Width 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
-     * @param Width 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+     * Set 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
+     * @param Width 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。 
-     * @return Height 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * Get 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。 
+     * @return Height 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
-     * @param Height 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * Set 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
+     * @param Height 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -316,28 +313,16 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。 
-     * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+     * Get 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。 
+     * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
-     * @param FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+     * Set 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
+     * @param FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;

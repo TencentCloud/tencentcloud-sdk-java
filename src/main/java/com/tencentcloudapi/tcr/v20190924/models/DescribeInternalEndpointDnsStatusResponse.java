@@ -25,7 +25,6 @@ public class DescribeInternalEndpointDnsStatusResponse extends AbstractModel {
 
     /**
     * vpc私有域名解析状态列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInternalEndpointDnsStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get vpc私有域名解析状态列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc私有域名解析状态列表 
      * @return VpcSet vpc私有域名解析状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcPrivateDomainStatus [] getVpcSet() {
         return this.VpcSet;
@@ -50,9 +47,7 @@ public class DescribeInternalEndpointDnsStatusResponse extends AbstractModel {
 
     /**
      * Set vpc私有域名解析状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcSet vpc私有域名解析状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcSet(VpcPrivateDomainStatus [] VpcSet) {
         this.VpcSet = VpcSet;

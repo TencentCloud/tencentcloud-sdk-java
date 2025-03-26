@@ -24,42 +24,45 @@ import java.util.HashMap;
 public class DescribeCaCertificateResponse extends AbstractModel {
 
     /**
-    * 创建时间
+    * 创建时间，毫秒级时间戳 。
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 上次更新时间
+    * 上次更新时间，毫秒级时间戳 。
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 失效日期
+    * 失效日期，毫秒级时间戳 。
     */
     @SerializedName("NotAfterTime")
     @Expose
     private Long NotAfterTime;
 
     /**
-    * 上次激活时间
+    * 上次激活时间，毫秒级时间戳 。
     */
     @SerializedName("LastActivationTime")
     @Expose
     private Long LastActivationTime;
 
     /**
-    * 上次吊销时间
+    * 上次吊销时间，毫秒级时间戳 。
     */
     @SerializedName("LastInactivationTime")
     @Expose
     private Long LastInactivationTime;
 
     /**
-    * 证书状态
+    * CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +76,7 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     private String CaSn;
 
     /**
-    * common name
+    * 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
     */
     @SerializedName("CaCn")
     @Expose
@@ -87,7 +90,7 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     private String CaCertificate;
 
     /**
-    * 证书格式
+    * 证书格式，当仅支持PEM格式
     */
     @SerializedName("Format")
     @Expose
@@ -101,7 +104,7 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     private String CaIssuerCn;
 
     /**
-    * 生效开始时间
+    * 生效开始时间，毫秒级时间戳 。
     */
     @SerializedName("NotBeforeTime")
     @Expose
@@ -115,96 +118,108 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get 创建时间，毫秒级时间戳 。 
+     * @return CreatedTime 创建时间，毫秒级时间戳 。
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set 创建时间，毫秒级时间戳 。
+     * @param CreatedTime 创建时间，毫秒级时间戳 。
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 上次更新时间 
-     * @return UpdateTime 上次更新时间
+     * Get 上次更新时间，毫秒级时间戳 。 
+     * @return UpdateTime 上次更新时间，毫秒级时间戳 。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 上次更新时间
-     * @param UpdateTime 上次更新时间
+     * Set 上次更新时间，毫秒级时间戳 。
+     * @param UpdateTime 上次更新时间，毫秒级时间戳 。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 失效日期 
-     * @return NotAfterTime 失效日期
+     * Get 失效日期，毫秒级时间戳 。 
+     * @return NotAfterTime 失效日期，毫秒级时间戳 。
      */
     public Long getNotAfterTime() {
         return this.NotAfterTime;
     }
 
     /**
-     * Set 失效日期
-     * @param NotAfterTime 失效日期
+     * Set 失效日期，毫秒级时间戳 。
+     * @param NotAfterTime 失效日期，毫秒级时间戳 。
      */
     public void setNotAfterTime(Long NotAfterTime) {
         this.NotAfterTime = NotAfterTime;
     }
 
     /**
-     * Get 上次激活时间 
-     * @return LastActivationTime 上次激活时间
+     * Get 上次激活时间，毫秒级时间戳 。 
+     * @return LastActivationTime 上次激活时间，毫秒级时间戳 。
      */
     public Long getLastActivationTime() {
         return this.LastActivationTime;
     }
 
     /**
-     * Set 上次激活时间
-     * @param LastActivationTime 上次激活时间
+     * Set 上次激活时间，毫秒级时间戳 。
+     * @param LastActivationTime 上次激活时间，毫秒级时间戳 。
      */
     public void setLastActivationTime(Long LastActivationTime) {
         this.LastActivationTime = LastActivationTime;
     }
 
     /**
-     * Get 上次吊销时间 
-     * @return LastInactivationTime 上次吊销时间
+     * Get 上次吊销时间，毫秒级时间戳 。 
+     * @return LastInactivationTime 上次吊销时间，毫秒级时间戳 。
      */
     public Long getLastInactivationTime() {
         return this.LastInactivationTime;
     }
 
     /**
-     * Set 上次吊销时间
-     * @param LastInactivationTime 上次吊销时间
+     * Set 上次吊销时间，毫秒级时间戳 。
+     * @param LastInactivationTime 上次吊销时间，毫秒级时间戳 。
      */
     public void setLastInactivationTime(Long LastInactivationTime) {
         this.LastInactivationTime = LastInactivationTime;
     }
 
     /**
-     * Get 证书状态 
-     * @return Status 证书状态
+     * Get CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+ 
+     * @return Status CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 证书状态
-     * @param Status 证书状态
+     * Set CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
+     * @param Status CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -227,16 +242,16 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get common name 
-     * @return CaCn common name
+     * Get 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称 
+     * @return CaCn 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
      */
     public String getCaCn() {
         return this.CaCn;
     }
 
     /**
-     * Set common name
-     * @param CaCn common name
+     * Set 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
+     * @param CaCn 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
      */
     public void setCaCn(String CaCn) {
         this.CaCn = CaCn;
@@ -259,16 +274,16 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书格式 
-     * @return Format 证书格式
+     * Get 证书格式，当仅支持PEM格式 
+     * @return Format 证书格式，当仅支持PEM格式
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 证书格式
-     * @param Format 证书格式
+     * Set 证书格式，当仅支持PEM格式
+     * @param Format 证书格式，当仅支持PEM格式
      */
     public void setFormat(String Format) {
         this.Format = Format;
@@ -291,16 +306,16 @@ public class DescribeCaCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 生效开始时间 
-     * @return NotBeforeTime 生效开始时间
+     * Get 生效开始时间，毫秒级时间戳 。 
+     * @return NotBeforeTime 生效开始时间，毫秒级时间戳 。
      */
     public Long getNotBeforeTime() {
         return this.NotBeforeTime;
     }
 
     /**
-     * Set 生效开始时间
-     * @param NotBeforeTime 生效开始时间
+     * Set 生效开始时间，毫秒级时间戳 。
+     * @param NotBeforeTime 生效开始时间，毫秒级时间戳 。
      */
     public void setNotBeforeTime(Long NotBeforeTime) {
         this.NotBeforeTime = NotBeforeTime;

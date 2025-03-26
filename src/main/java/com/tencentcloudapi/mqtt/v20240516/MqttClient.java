@@ -578,7 +578,7 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
-     *注册ca证书
+     *注册CA证书（仅一机一证场景支持），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817)
      * @param req RegisterCaCertificateRequest
      * @return RegisterCaCertificateResponse
      * @throws TencentCloudSDKException
@@ -589,7 +589,7 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
-     *注册设备证书
+     *注册设备证书（仅一机一证场景生效），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817#6cb39d46-efad-4220-8f11-2e7fab207bc8)
      * @param req RegisterDeviceCertificateRequest
      * @return RegisterDeviceCertificateResponse
      * @throws TencentCloudSDKException

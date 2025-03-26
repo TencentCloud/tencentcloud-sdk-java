@@ -25,7 +25,6 @@ public class DescribeEKSContainerInstanceRegionsResponse extends AbstractModel {
 
     /**
     * EKS Container Instance支持的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regions")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeEKSContainerInstanceRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get EKS Container Instance支持的地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EKS Container Instance支持的地域信息 
      * @return Regions EKS Container Instance支持的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EksCiRegionInfo [] getRegions() {
         return this.Regions;
@@ -57,9 +54,7 @@ public class DescribeEKSContainerInstanceRegionsResponse extends AbstractModel {
 
     /**
      * Set EKS Container Instance支持的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Regions EKS Container Instance支持的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegions(EksCiRegionInfo [] Regions) {
         this.Regions = Regions;

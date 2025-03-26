@@ -73,6 +73,13 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -184,6 +191,22 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
+    }
+
     public CreateVpcEndPointServiceRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPassService", this.IsPassService);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }

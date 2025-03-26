@@ -25,7 +25,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -48,7 +46,6 @@ ARREARS：表示待回收
 STOPPED_NO_CHARGE：表示关机不收费
 TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceState")
     @Expose
@@ -57,7 +54,6 @@ TERMINATED：表示已销毁
     /**
     * 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -66,7 +62,6 @@ TERMINATED：表示已销毁
     /**
     * 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleName")
     @Expose
@@ -74,7 +69,6 @@ TERMINATED：表示已销毁
 
     /**
     * 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUCount")
     @Expose
@@ -83,7 +77,6 @@ TERMINATED：表示已销毁
     /**
     * 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUPerformance")
     @Expose
@@ -91,7 +84,6 @@ TERMINATED：表示已销毁
 
     /**
     * 显存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUMemory")
     @Expose
@@ -99,7 +91,6 @@ TERMINATED：表示已销毁
 
     /**
     * CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPU")
     @Expose
@@ -108,7 +99,6 @@ TERMINATED：表示已销毁
     /**
     * 内存
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -116,7 +106,6 @@ TERMINATED：表示已销毁
 
     /**
     * 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemDisk")
     @Expose
@@ -124,7 +113,6 @@ TERMINATED：表示已销毁
 
     /**
     * 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -132,7 +120,6 @@ TERMINATED：表示已销毁
 
     /**
     * 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -141,7 +128,6 @@ TERMINATED：表示已销毁
     /**
     * 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -149,7 +135,6 @@ TERMINATED：表示已销毁
 
     /**
     * 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperation")
     @Expose
@@ -161,7 +146,6 @@ SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
     @Expose
@@ -169,7 +153,6 @@ FAILED：表示操作失败
 
     /**
     * 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -177,7 +160,6 @@ FAILED：表示操作失败
 
     /**
     * 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxOutBandwidth")
     @Expose
@@ -185,7 +167,6 @@ FAILED：表示操作失败
 
     /**
     * 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxFreeTraffic")
     @Expose
@@ -193,7 +174,6 @@ FAILED：表示操作失败
 
     /**
     * 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigurationEnvironment")
     @Expose
@@ -201,7 +181,6 @@ FAILED：表示操作失败
 
     /**
     * 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginServices")
     @Expose
@@ -209,17 +188,14 @@ FAILED：表示操作失败
 
     /**
     * 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OSType")
     @Expose
     private String OSType;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -227,19 +203,15 @@ FAILED：表示操作失败
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -247,9 +219,7 @@ FAILED：表示操作失败
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -263,8 +233,7 @@ RUNNING：表示运行中
 ARREARS：表示待回收
 STOPPED_NO_CHARGE：表示关机不收费
 TERMINATING：表示销毁中
-TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。 
+TERMINATED：表示已销毁 
      * @return InstanceState 实例状态：
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
@@ -273,7 +242,6 @@ ARREARS：表示待回收
 STOPPED_NO_CHARGE：表示关机不收费
 TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -288,7 +256,6 @@ ARREARS：表示待回收
 STOPPED_NO_CHARGE：表示关机不收费
 TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceState 实例状态：
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
@@ -297,7 +264,6 @@ ARREARS：表示待回收
 STOPPED_NO_CHARGE：表示关机不收费
 TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
@@ -305,11 +271,9 @@ TERMINATED：表示已销毁
 
     /**
      * Get 应用名称
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ApplicationName 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -318,10 +282,8 @@ TERMINATED：表示已销毁
     /**
      * Set 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
@@ -329,11 +291,9 @@ TERMINATED：表示已销毁
 
     /**
      * Get 算力套餐名称
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return BundleName 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleName() {
         return this.BundleName;
@@ -342,20 +302,16 @@ TERMINATED：表示已销毁
     /**
      * Set 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BundleName 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleName(String BundleName) {
         this.BundleName = BundleName;
     }
 
     /**
-     * Get 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所包含的GPU卡数 
      * @return GPUCount 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGPUCount() {
         return this.GPUCount;
@@ -363,9 +319,7 @@ TERMINATED：表示已销毁
 
     /**
      * Set 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUCount 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUCount(Long GPUCount) {
         this.GPUCount = GPUCount;
@@ -373,11 +327,9 @@ TERMINATED：表示已销毁
 
     /**
      * Get 算力
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return GPUPerformance 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGPUPerformance() {
         return this.GPUPerformance;
@@ -386,20 +338,16 @@ TERMINATED：表示已销毁
     /**
      * Set 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUPerformance 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUPerformance(String GPUPerformance) {
         this.GPUPerformance = GPUPerformance;
     }
 
     /**
-     * Get 显存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 显存 
      * @return GPUMemory 显存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGPUMemory() {
         return this.GPUMemory;
@@ -407,19 +355,15 @@ TERMINATED：表示已销毁
 
     /**
      * Set 显存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUMemory 显存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUMemory(String GPUMemory) {
         this.GPUMemory = GPUMemory;
     }
 
     /**
-     * Get CPU核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU核数 
      * @return CPU CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCPU() {
         return this.CPU;
@@ -427,9 +371,7 @@ TERMINATED：表示已销毁
 
     /**
      * Set CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPU CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPU(String CPU) {
         this.CPU = CPU;
@@ -437,11 +379,9 @@ TERMINATED：表示已销毁
 
     /**
      * Get 内存
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Memory 内存
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemory() {
         return this.Memory;
@@ -450,20 +390,16 @@ TERMINATED：表示已销毁
     /**
      * Set 内存
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(String Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘数据 
      * @return SystemDisk 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
@@ -471,19 +407,15 @@ TERMINATED：表示已销毁
 
     /**
      * Set 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemDisk 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip地址 
      * @return PrivateIpAddresses 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
@@ -491,19 +423,15 @@ TERMINATED：表示已销毁
 
     /**
      * Set 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip地址 
      * @return PublicIpAddresses 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -511,9 +439,7 @@ TERMINATED：表示已销毁
 
     /**
      * Set 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
@@ -521,11 +447,9 @@ TERMINATED：表示已销毁
 
     /**
      * Get 安全组ID
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SecurityGroupIds 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -534,20 +458,16 @@ TERMINATED：表示已销毁
     /**
      * Set 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupIds 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例最新操作 
      * @return LatestOperation 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperation() {
         return this.LatestOperation;
@@ -555,9 +475,7 @@ TERMINATED：表示已销毁
 
     /**
      * Set 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperation 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
@@ -568,14 +486,12 @@ TERMINATED：表示已销毁
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return LatestOperationState 实例最新操作状态：
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
@@ -587,23 +503,19 @@ SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationState 实例最新操作状态：
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -611,19 +523,15 @@ FAILED：表示操作失败
 
     /**
      * Set 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网出带宽上限，默认10Mbps 
      * @return MaxOutBandwidth 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxOutBandwidth() {
         return this.MaxOutBandwidth;
@@ -631,19 +539,15 @@ FAILED：表示操作失败
 
     /**
      * Set 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxOutBandwidth 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxOutBandwidth(String MaxOutBandwidth) {
         this.MaxOutBandwidth = MaxOutBandwidth;
     }
 
     /**
-     * Get 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每月免费流量，默认500G 
      * @return MaxFreeTraffic 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxFreeTraffic() {
         return this.MaxFreeTraffic;
@@ -651,19 +555,15 @@ FAILED：表示操作失败
 
     /**
      * Set 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxFreeTraffic 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxFreeTraffic(String MaxFreeTraffic) {
         this.MaxFreeTraffic = MaxFreeTraffic;
     }
 
     /**
-     * Get 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用配置环境 
      * @return ConfigurationEnvironment 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigurationEnvironment() {
         return this.ConfigurationEnvironment;
@@ -671,19 +571,15 @@ FAILED：表示操作失败
 
     /**
      * Set 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigurationEnvironment 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigurationEnvironment(String ConfigurationEnvironment) {
         this.ConfigurationEnvironment = ConfigurationEnvironment;
     }
 
     /**
-     * Get 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例包含的登录服务详情 
      * @return LoginServices 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoginService [] getLoginServices() {
         return this.LoginServices;
@@ -691,19 +587,15 @@ FAILED：表示操作失败
 
     /**
      * Set 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginServices 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginServices(LoginService [] LoginServices) {
         this.LoginServices = LoginServices;
     }
 
     /**
-     * Get 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用服务的操作系统类型 
      * @return OSType 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOSType() {
         return this.OSType;
@@ -711,9 +603,7 @@ FAILED：表示操作失败
 
     /**
      * Set 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OSType 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOSType(String OSType) {
         this.OSType = OSType;

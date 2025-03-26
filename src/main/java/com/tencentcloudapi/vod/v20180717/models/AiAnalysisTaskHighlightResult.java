@@ -60,7 +60,6 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
 
     /**
     * 智能精彩片段任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     }
 
     /**
-     * Get 智能精彩片段任务输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 智能精彩片段任务输出。 
      * @return Output 智能精彩片段任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskHighlightOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
 
     /**
      * Set 智能精彩片段任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 智能精彩片段任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiAnalysisTaskHighlightOutput Output) {
         this.Output = Output;

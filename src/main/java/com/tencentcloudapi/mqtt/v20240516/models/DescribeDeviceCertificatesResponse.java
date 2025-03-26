@@ -31,7 +31,7 @@ public class DescribeDeviceCertificatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 设备证书
+    * 设备证书列表
     */
     @SerializedName("Data")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDeviceCertificatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 设备证书 
-     * @return Data 设备证书
+     * Get 设备证书列表 
+     * @return Data 设备证书列表
      */
     public DeviceCertificateItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 设备证书
-     * @param Data 设备证书
+     * Set 设备证书列表
+     * @param Data 设备证书列表
      */
     public void setData(DeviceCertificateItem [] Data) {
         this.Data = Data;

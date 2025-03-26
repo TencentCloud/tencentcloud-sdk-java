@@ -67,7 +67,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -104,7 +103,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 绑定的关联账号的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountVpcSet")
     @Expose
@@ -112,7 +110,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 是否自定义TLD
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCustomTld")
     @Expose
@@ -127,7 +124,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 转发规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardRuleName")
     @Expose
@@ -135,7 +131,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardRuleType")
     @Expose
@@ -143,7 +138,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 转发的地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardAddress")
     @Expose
@@ -159,7 +153,6 @@ public class PrivateZone extends AbstractModel {
 
     /**
     * 已删除的vpc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeletedVpcSet")
     @Expose
@@ -262,10 +255,8 @@ public class PrivateZone extends AbstractModel {
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -273,9 +264,7 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -350,10 +339,8 @@ public class PrivateZone extends AbstractModel {
     }
 
     /**
-     * Get 绑定的关联账号的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的关联账号的vpc列表 
      * @return AccountVpcSet 绑定的关联账号的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccountVpcInfoOutput [] getAccountVpcSet() {
         return this.AccountVpcSet;
@@ -361,19 +348,15 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 绑定的关联账号的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountVpcSet 绑定的关联账号的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
         this.AccountVpcSet = AccountVpcSet;
     }
 
     /**
-     * Get 是否自定义TLD
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自定义TLD 
      * @return IsCustomTld 是否自定义TLD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCustomTld() {
         return this.IsCustomTld;
@@ -381,9 +364,7 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 是否自定义TLD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCustomTld 是否自定义TLD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCustomTld(Boolean IsCustomTld) {
         this.IsCustomTld = IsCustomTld;
@@ -406,10 +387,8 @@ public class PrivateZone extends AbstractModel {
     }
 
     /**
-     * Get 转发规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则名称 
      * @return ForwardRuleName 转发规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardRuleName() {
         return this.ForwardRuleName;
@@ -417,19 +396,15 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 转发规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardRuleName 转发规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardRuleName(String ForwardRuleName) {
         this.ForwardRuleName = ForwardRuleName;
     }
 
     /**
-     * Get 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN 
      * @return ForwardRuleType 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardRuleType() {
         return this.ForwardRuleType;
@@ -437,19 +412,15 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardRuleType 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardRuleType(String ForwardRuleType) {
         this.ForwardRuleType = ForwardRuleType;
     }
 
     /**
-     * Get 转发的地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发的地址 
      * @return ForwardAddress 转发的地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardAddress() {
         return this.ForwardAddress;
@@ -457,9 +428,7 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 转发的地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardAddress 转发的地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardAddress(String ForwardAddress) {
         this.ForwardAddress = ForwardAddress;
@@ -486,10 +455,8 @@ public class PrivateZone extends AbstractModel {
     }
 
     /**
-     * Get 已删除的vpc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已删除的vpc 
      * @return DeletedVpcSet 已删除的vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getDeletedVpcSet() {
         return this.DeletedVpcSet;
@@ -497,9 +464,7 @@ public class PrivateZone extends AbstractModel {
 
     /**
      * Set 已删除的vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeletedVpcSet 已删除的vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeletedVpcSet(VpcInfo [] DeletedVpcSet) {
         this.DeletedVpcSet = DeletedVpcSet;

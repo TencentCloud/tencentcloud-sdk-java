@@ -1392,6 +1392,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取OS聚合信息
+     * @param req DescribeOSImagesRequest
+     * @return DescribeOSImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOSImagesResponse DescribeOSImages(DescribeOSImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOSImages", DescribeOSImagesResponse.class);
+    }
+
+    /**
      *查询opa策略列表
      * @param req DescribeOpenPolicyListRequest
      * @return DescribeOpenPolicyListResponse

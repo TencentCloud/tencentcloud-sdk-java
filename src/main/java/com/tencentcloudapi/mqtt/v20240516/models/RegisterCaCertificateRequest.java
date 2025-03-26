@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class RegisterCaCertificateRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * CA证书
+    * CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
     */
     @SerializedName("CaCertificate")
     @Expose
     private String CaCertificate;
 
     /**
-    * 验证证书
+    * 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
     */
     @SerializedName("VerificationCertificate")
     @Expose
     private String VerificationCertificate;
 
     /**
-    * 证书格式，不传默认PEM格式
+    * 证书格式，不传默认PEM格式，当前仅支持PEM格式
     */
     @SerializedName("Format")
     @Expose
@@ -53,74 +53,72 @@ public class RegisterCaCertificateRequest extends AbstractModel {
 
     /**
     * 证书状态，不传默认ACTIVE状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+    ACTIVE：激活
+    INACTIVE：未激活
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get CA证书 
-     * @return CaCertificate CA证书
+     * Get CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA 
+     * @return CaCertificate CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
      */
     public String getCaCertificate() {
         return this.CaCertificate;
     }
 
     /**
-     * Set CA证书
-     * @param CaCertificate CA证书
+     * Set CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+     * @param CaCertificate CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
      */
     public void setCaCertificate(String CaCertificate) {
         this.CaCertificate = CaCertificate;
     }
 
     /**
-     * Get 验证证书 
-     * @return VerificationCertificate 验证证书
+     * Get 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节 
+     * @return VerificationCertificate 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
      */
     public String getVerificationCertificate() {
         return this.VerificationCertificate;
     }
 
     /**
-     * Set 验证证书
-     * @param VerificationCertificate 验证证书
+     * Set 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+     * @param VerificationCertificate 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
      */
     public void setVerificationCertificate(String VerificationCertificate) {
         this.VerificationCertificate = VerificationCertificate;
     }
 
     /**
-     * Get 证书格式，不传默认PEM格式 
-     * @return Format 证书格式，不传默认PEM格式
+     * Get 证书格式，不传默认PEM格式，当前仅支持PEM格式 
+     * @return Format 证书格式，不传默认PEM格式，当前仅支持PEM格式
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 证书格式，不传默认PEM格式
-     * @param Format 证书格式，不传默认PEM格式
+     * Set 证书格式，不传默认PEM格式，当前仅支持PEM格式
+     * @param Format 证书格式，不传默认PEM格式，当前仅支持PEM格式
      */
     public void setFormat(String Format) {
         this.Format = Format;
@@ -128,15 +126,11 @@ public class RegisterCaCertificateRequest extends AbstractModel {
 
     /**
      * Get 证书状态，不传默认ACTIVE状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活 
+    ACTIVE：激活
+    INACTIVE：未激活 
      * @return Status 证书状态，不传默认ACTIVE状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+    ACTIVE：激活
+    INACTIVE：未激活
      */
     public String getStatus() {
         return this.Status;
@@ -144,15 +138,11 @@ public class RegisterCaCertificateRequest extends AbstractModel {
 
     /**
      * Set 证书状态，不传默认ACTIVE状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+    ACTIVE：激活
+    INACTIVE：未激活
      * @param Status 证书状态，不传默认ACTIVE状态
-    ACTIVE,//激活
-    INACTIVE,//未激活
-    REVOKED,//吊销
-    PENDING_ACTIVATION,//注册待激活
+    ACTIVE：激活
+    INACTIVE：未激活
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -109,6 +109,14 @@ public class VideoProduct extends AbstractModel {
     private String NetType;
 
     /**
+    * 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoryId")
+    @Expose
+    private Long CategoryId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -304,6 +312,26 @@ public class VideoProduct extends AbstractModel {
         this.NetType = NetType;
     }
 
+    /**
+     * Get 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CategoryId 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCategoryId() {
+        return this.CategoryId;
+    }
+
+    /**
+     * Set 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoryId 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoryId(Long CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
     public VideoProduct() {
     }
 
@@ -351,6 +379,9 @@ public class VideoProduct extends AbstractModel {
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
         }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
+        }
     }
 
 
@@ -370,6 +401,7 @@ public class VideoProduct extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
 
     }
 }

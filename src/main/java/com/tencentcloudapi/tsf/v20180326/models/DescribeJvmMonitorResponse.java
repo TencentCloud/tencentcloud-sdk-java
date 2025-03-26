@@ -25,7 +25,6 @@ public class DescribeJvmMonitorResponse extends AbstractModel {
 
     /**
     * Java实例jvm监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeJvmMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Java实例jvm监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Java实例jvm监控数据 
      * @return Result Java实例jvm监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JvmMonitorData getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeJvmMonitorResponse extends AbstractModel {
 
     /**
      * Set Java实例jvm监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result Java实例jvm监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(JvmMonitorData Result) {
         this.Result = Result;

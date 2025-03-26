@@ -104,6 +104,13 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private TCHouseD TCHouseD;
 
     /**
+    * TccHive数据目录连接信息
+    */
+    @SerializedName("TccHive")
+    @Expose
+    private TccHive TccHive;
+
+    /**
      * Get Mysql数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mysql Mysql数据源连接的属性
@@ -303,6 +310,22 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.TCHouseD = TCHouseD;
     }
 
+    /**
+     * Get TccHive数据目录连接信息 
+     * @return TccHive TccHive数据目录连接信息
+     */
+    public TccHive getTccHive() {
+        return this.TccHive;
+    }
+
+    /**
+     * Set TccHive数据目录连接信息
+     * @param TccHive TccHive数据目录连接信息
+     */
+    public void setTccHive(TccHive TccHive) {
+        this.TccHive = TccHive;
+    }
+
     public DatasourceConnectionConfig() {
     }
 
@@ -341,6 +364,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
         if (source.TCHouseD != null) {
             this.TCHouseD = new TCHouseD(source.TCHouseD);
         }
+        if (source.TccHive != null) {
+            this.TccHive = new TccHive(source.TccHive);
+        }
     }
 
 
@@ -358,6 +384,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.setParamObj(map, prefix + "Elasticsearch.", this.Elasticsearch);
         this.setParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
         this.setParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
+        this.setParamObj(map, prefix + "TccHive.", this.TccHive);
 
     }
 }

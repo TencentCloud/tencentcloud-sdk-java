@@ -31,18 +31,18 @@ public class NfsVolume extends AbstractModel {
     private String Name;
 
     /**
-    * NFS 服务器地址
-    */
-    @SerializedName("Server")
-    @Expose
-    private String Server;
-
-    /**
     * NFS 数据卷路径
     */
     @SerializedName("Path")
     @Expose
     private String Path;
+
+    /**
+    * NFS 服务器地址
+    */
+    @SerializedName("Server")
+    @Expose
+    private String Server;
 
     /**
     * 默认为 False
@@ -68,22 +68,6 @@ public class NfsVolume extends AbstractModel {
     }
 
     /**
-     * Get NFS 服务器地址 
-     * @return Server NFS 服务器地址
-     */
-    public String getServer() {
-        return this.Server;
-    }
-
-    /**
-     * Set NFS 服务器地址
-     * @param Server NFS 服务器地址
-     */
-    public void setServer(String Server) {
-        this.Server = Server;
-    }
-
-    /**
      * Get NFS 数据卷路径 
      * @return Path NFS 数据卷路径
      */
@@ -97,6 +81,22 @@ public class NfsVolume extends AbstractModel {
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get NFS 服务器地址 
+     * @return Server NFS 服务器地址
+     */
+    public String getServer() {
+        return this.Server;
+    }
+
+    /**
+     * Set NFS 服务器地址
+     * @param Server NFS 服务器地址
+     */
+    public void setServer(String Server) {
+        this.Server = Server;
     }
 
     /**
@@ -126,11 +126,11 @@ public class NfsVolume extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Server != null) {
-            this.Server = new String(source.Server);
-        }
         if (source.Path != null) {
             this.Path = new String(source.Path);
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
         }
         if (source.ReadOnly != null) {
             this.ReadOnly = new Boolean(source.ReadOnly);
@@ -143,8 +143,8 @@ public class NfsVolume extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
 
     }

@@ -80,7 +80,7 @@ public class CreateHourDBInstanceRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+    * 数据库引擎版本，当前可选：8.0，5.7，10.1。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -287,16 +287,16 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     }
 
     /**
-     * Get 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。 
-     * @return DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+     * Get 数据库引擎版本，当前可选：8.0，5.7，10.1。 
+     * @return DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
-     * @param DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+     * Set 数据库引擎版本，当前可选：8.0，5.7，10.1。
+     * @param DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

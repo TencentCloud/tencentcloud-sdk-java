@@ -25,17 +25,14 @@ public class TcpSocket extends AbstractModel {
 
     /**
     * TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TcpSocket检测的端口 
      * @return Port TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -43,9 +40,7 @@ public class TcpSocket extends AbstractModel {
 
     /**
      * Set TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;

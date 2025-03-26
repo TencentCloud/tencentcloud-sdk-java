@@ -60,7 +60,6 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
 
     /**
     * 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
     }
 
     /**
-     * Get 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 智能封面任务输出。 
      * @return Output 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskCoverOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
 
     /**
      * Set 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiAnalysisTaskCoverOutput Output) {
         this.Output = Output;

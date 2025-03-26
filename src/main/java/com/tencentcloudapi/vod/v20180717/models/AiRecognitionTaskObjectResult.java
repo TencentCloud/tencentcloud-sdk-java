@@ -60,7 +60,6 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
 
     /**
     * 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
     }
 
     /**
-     * Get 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物体识别任务输出信息。 
      * @return Output 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskObjectResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
 
     /**
      * Set 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskObjectResultOutput Output) {
         this.Output = Output;

@@ -67,13 +67,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     private String [] Namespaces;
 
     /**
-    * 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+    * 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
     */
     @SerializedName("Dimensions")
     @Expose
@@ -222,6 +216,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     private String [] NoticeContentTmplIDs;
 
     /**
+    * 是否为预设策略，1是，0否
+    */
+    @SerializedName("IsPredefined")
+    @Expose
+    private Long IsPredefined;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -322,40 +323,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时 
-     * @return Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * Get 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时 
+     * @return Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
-     * @param Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * Set 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * @param Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
@@ -689,6 +666,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
         this.NoticeContentTmplIDs = NoticeContentTmplIDs;
     }
 
+    /**
+     * Get 是否为预设策略，1是，0否 
+     * @return IsPredefined 是否为预设策略，1是，0否
+     */
+    public Long getIsPredefined() {
+        return this.IsPredefined;
+    }
+
+    /**
+     * Set 是否为预设策略，1是，0否
+     * @param IsPredefined 是否为预设策略，1是，0否
+     */
+    public void setIsPredefined(Long IsPredefined) {
+        this.IsPredefined = IsPredefined;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -820,6 +813,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
                 this.NoticeContentTmplIDs[i] = new String(source.NoticeContentTmplIDs[i]);
             }
         }
+        if (source.IsPredefined != null) {
+            this.IsPredefined = new Long(source.IsPredefined);
+        }
     }
 
 
@@ -854,6 +850,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PromInsId", this.PromInsId);
         this.setParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
         this.setParamArraySimple(map, prefix + "NoticeContentTmplIDs.", this.NoticeContentTmplIDs);
+        this.setParamSimple(map, prefix + "IsPredefined", this.IsPredefined);
 
     }
 }

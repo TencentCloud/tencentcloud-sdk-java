@@ -193,7 +193,6 @@ public class DescribeInstanceDetail extends AbstractModel {
 
     /**
     * 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FenceId")
     @Expose
@@ -201,7 +200,6 @@ public class DescribeInstanceDetail extends AbstractModel {
 
     /**
     * 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -592,10 +590,8 @@ public class DescribeInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 金融围笼ID 
      * @return FenceId 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFenceId() {
         return this.FenceId;
@@ -603,19 +599,15 @@ public class DescribeInstanceDetail extends AbstractModel {
 
     /**
      * Set 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FenceId 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFenceId(String FenceId) {
         this.FenceId = FenceId;
     }
 
     /**
-     * Get 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属集群ID(默认集群为空) 
      * @return ClusterId 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -623,9 +615,7 @@ public class DescribeInstanceDetail extends AbstractModel {
 
     /**
      * Set 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

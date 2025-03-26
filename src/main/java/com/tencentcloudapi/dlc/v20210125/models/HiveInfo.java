@@ -98,7 +98,6 @@ public class HiveInfo extends AbstractModel {
 
     /**
     * EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HiveVersion")
     @Expose
@@ -293,10 +292,8 @@ public class HiveInfo extends AbstractModel {
     }
 
     /**
-     * Get EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EMR集群中hive组件的版本号 
      * @return HiveVersion EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHiveVersion() {
         return this.HiveVersion;
@@ -304,9 +301,7 @@ public class HiveInfo extends AbstractModel {
 
     /**
      * Set EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HiveVersion EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHiveVersion(String HiveVersion) {
         this.HiveVersion = HiveVersion;

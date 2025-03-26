@@ -60,7 +60,6 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
 
     /**
     * 音视频审核 Ocr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -154,10 +153,8 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核 Ocr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音视频审核 Ocr 文字鉴违禁任务输出。 
      * @return Output 音视频审核 Ocr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewProhibitedOcrTaskOutput getOutput() {
         return this.Output;
@@ -165,9 +162,7 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
 
     /**
      * Set 音视频审核 Ocr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 音视频审核 Ocr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewProhibitedOcrTaskOutput Output) {
         this.Output = Output;

@@ -114,6 +114,9 @@ public enum CccErrorCode {
      /* 审核单状态错误。 */
      INVALIDPARAMETERVALUE_ERRORAPPLYSTATUS("InvalidParameterValue.ErrorApplyStatus"),
      
+     /* 使用体验账号的智能体不支持此类操作 */
+     INVALIDPARAMETERVALUE_EXPERIENCEACCOUNT("InvalidParameterValue.ExperienceAccount"),
+     
      /* 实例不存在。 */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
      

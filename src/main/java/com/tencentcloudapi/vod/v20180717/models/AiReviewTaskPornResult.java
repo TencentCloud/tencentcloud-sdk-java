@@ -60,7 +60,6 @@ public class AiReviewTaskPornResult extends AbstractModel {
 
     /**
     * 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -154,10 +153,8 @@ public class AiReviewTaskPornResult extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音视频审核涉及令人反感的信息的任务输出。 
      * @return Output 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPornTaskOutput getOutput() {
         return this.Output;
@@ -165,9 +162,7 @@ public class AiReviewTaskPornResult extends AbstractModel {
 
     /**
      * Set 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPornTaskOutput Output) {
         this.Output = Output;

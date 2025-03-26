@@ -136,6 +136,20 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     private CalleeAttribute [] CalleeAttributes;
 
     /**
+    * IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * 可用时间段
+    */
+    @SerializedName("AvailableTime")
+    @Expose
+    private TimeRange [] AvailableTime;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -391,6 +405,38 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         this.CalleeAttributes = CalleeAttributes;
     }
 
+    /**
+     * Get IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones 
+     * @return TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @param TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get 可用时间段 
+     * @return AvailableTime 可用时间段
+     */
+    public TimeRange [] getAvailableTime() {
+        return this.AvailableTime;
+    }
+
+    /**
+     * Set 可用时间段
+     * @param AvailableTime 可用时间段
+     */
+    public void setAvailableTime(TimeRange [] AvailableTime) {
+        this.AvailableTime = AvailableTime;
+    }
+
     public CreatePredictiveDialingCampaignRequest() {
     }
 
@@ -459,6 +505,15 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
                 this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
             }
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.AvailableTime != null) {
+            this.AvailableTime = new TimeRange[source.AvailableTime.length];
+            for (int i = 0; i < source.AvailableTime.length; i++) {
+                this.AvailableTime[i] = new TimeRange(source.AvailableTime[i]);
+            }
+        }
     }
 
 
@@ -482,6 +537,8 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
 
     }
 }

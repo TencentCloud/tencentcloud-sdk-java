@@ -25,7 +25,6 @@ public class DescribeServiceAccountsResponse extends AbstractModel {
 
     /**
     * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceAccounts")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeServiceAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务级账号列表 
      * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceAccount [] getServiceAccounts() {
         return this.ServiceAccounts;
@@ -57,9 +54,7 @@ public class DescribeServiceAccountsResponse extends AbstractModel {
 
     /**
      * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
         this.ServiceAccounts = ServiceAccounts;

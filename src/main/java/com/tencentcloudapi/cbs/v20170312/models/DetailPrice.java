@@ -25,7 +25,6 @@ public class DetailPrice extends AbstractModel {
 
     /**
     * 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceTitle")
     @Expose
@@ -111,10 +110,8 @@ public class DetailPrice extends AbstractModel {
     private String UnitPriceDiscountHigh;
 
     /**
-     * Get 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述计费项目名称。 
      * @return PriceTitle 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPriceTitle() {
         return this.PriceTitle;
@@ -122,9 +119,7 @@ public class DetailPrice extends AbstractModel {
 
     /**
      * Set 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceTitle 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceTitle(String PriceTitle) {
         this.PriceTitle = PriceTitle;

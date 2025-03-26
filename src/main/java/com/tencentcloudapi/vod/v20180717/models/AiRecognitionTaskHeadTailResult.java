@@ -60,7 +60,6 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
 
     /**
     * 视频片头片尾识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     }
 
     /**
-     * Get 视频片头片尾识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频片头片尾识别任务输出信息。 
      * @return Output 视频片头片尾识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskHeadTailResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
 
     /**
      * Set 视频片头片尾识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 视频片头片尾识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskHeadTailResultOutput Output) {
         this.Output = Output;

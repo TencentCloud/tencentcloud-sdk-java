@@ -55,7 +55,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadTailConfigure")
     @Expose
@@ -63,7 +62,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentConfigure")
     @Expose
@@ -71,7 +69,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceConfigure")
     @Expose
@@ -79,7 +76,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
@@ -87,7 +83,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
@@ -96,7 +91,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     /**
     * 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -104,7 +98,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
@@ -112,7 +105,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
@@ -120,7 +112,6 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectConfigure")
     @Expose
@@ -220,10 +211,8 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 头尾识别控制参数。 
      * @return HeadTailConfigure 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HeadTailConfigureInfo getHeadTailConfigure() {
         return this.HeadTailConfigure;
@@ -231,19 +220,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadTailConfigure 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
     }
 
     /**
-     * Get 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拆条识别控制参数。 
      * @return SegmentConfigure 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SegmentConfigureInfo getSegmentConfigure() {
         return this.SegmentConfigure;
@@ -251,19 +236,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentConfigure 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentConfigure(SegmentConfigureInfo SegmentConfigure) {
         this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
-     * Get 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人脸识别控制参数。 
      * @return FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
@@ -271,19 +252,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
     }
 
     /**
-     * Get 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本全文识别控制参数。 
      * @return OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
@@ -291,19 +268,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
     }
 
     /**
-     * Get 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本关键词识别控制参数。 
      * @return OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrWordsConfigureInfo getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
@@ -311,9 +284,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
@@ -321,11 +292,9 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Get 语音全文识别控制参数。
-<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。 
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font>  
      * @return AsrFullTextConfigure 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -334,20 +303,16 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     /**
      * Set 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextConfigure 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
     }
 
     /**
-     * Get 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音关键词识别控制参数。 
      * @return AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrWordsConfigureInfo getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
@@ -355,19 +320,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
     /**
-     * Get 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音翻译识别控制参数。 
      * @return AsrTranslateConfigure 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
@@ -375,19 +336,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrTranslateConfigure 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物体识别控制参数。 
      * @return ObjectConfigure 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectConfigureInfo getObjectConfigure() {
         return this.ObjectConfigure;
@@ -395,9 +352,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectConfigure 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;

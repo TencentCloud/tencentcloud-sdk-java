@@ -25,7 +25,6 @@ public class DescribeImmutableTagRulesResponse extends AbstractModel {
 
     /**
     * 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeImmutableTagRulesResponse extends AbstractModel {
 
     /**
     * 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmptyNs")
     @Expose
@@ -54,10 +52,8 @@ public class DescribeImmutableTagRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则列表 
      * @return Rules 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImmutableTagRule [] getRules() {
         return this.Rules;
@@ -65,19 +61,15 @@ public class DescribeImmutableTagRulesResponse extends AbstractModel {
 
     /**
      * Set 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(ImmutableTagRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未创建规则的命名空间 
      * @return EmptyNs 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEmptyNs() {
         return this.EmptyNs;
@@ -85,9 +77,7 @@ public class DescribeImmutableTagRulesResponse extends AbstractModel {
 
     /**
      * Set 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyNs 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmptyNs(String [] EmptyNs) {
         this.EmptyNs = EmptyNs;

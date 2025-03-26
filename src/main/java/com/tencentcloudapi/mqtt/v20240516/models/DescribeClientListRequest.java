@@ -31,7 +31,7 @@ public class DescribeClientListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 客户端名
+    * 客户端ID
     */
     @SerializedName("ClientId")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeClientListRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户端名 
-     * @return ClientId 客户端名
+     * Get 客户端ID 
+     * @return ClientId 客户端ID
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端名
-     * @param ClientId 客户端名
+     * Set 客户端ID
+     * @param ClientId 客户端ID
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;

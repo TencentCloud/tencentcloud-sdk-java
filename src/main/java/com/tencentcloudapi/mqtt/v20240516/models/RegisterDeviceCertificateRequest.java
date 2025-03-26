@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RegisterDeviceCertificateRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 设备证书
+    * 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
     */
     @SerializedName("DeviceCertificate")
     @Expose
@@ -45,53 +45,57 @@ public class RegisterDeviceCertificateRequest extends AbstractModel {
     private String CaSn;
 
     /**
-    * 客户端ID
+    * 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 证书格式
+    * 证书格式，默认为PEM，当前仅支持PEM格式
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    *     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+    *  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 设备证书 
-     * @return DeviceCertificate 设备证书
+     * Get 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成 
+     * @return DeviceCertificate 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
      */
     public String getDeviceCertificate() {
         return this.DeviceCertificate;
     }
 
     /**
-     * Set 设备证书
-     * @param DeviceCertificate 设备证书
+     * Set 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
+     * @param DeviceCertificate 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
      */
     public void setDeviceCertificate(String DeviceCertificate) {
         this.DeviceCertificate = DeviceCertificate;
@@ -114,48 +118,64 @@ public class RegisterDeviceCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientId 客户端ID
+     * Get 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写 
+     * @return ClientId 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端ID
-     * @param ClientId 客户端ID
+     * Set 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
+     * @param ClientId 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 证书格式 
-     * @return Format 证书格式
+     * Get 证书格式，默认为PEM，当前仅支持PEM格式 
+     * @return Format 证书格式，默认为PEM，当前仅支持PEM格式
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 证书格式
-     * @param Format 证书格式
+     * Set 证书格式，默认为PEM，当前仅支持PEM格式
+     * @param Format 证书格式，默认为PEM，当前仅支持PEM格式
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活 
-     * @return Status     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+     * Get  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活 
+     * @return Status  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
-     * @param Status     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+     * Set  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
+     * @param Status  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -38,13 +38,6 @@ public class Container extends AbstractModel {
     private String Name;
 
     /**
-    * 容器启动命令
-    */
-    @SerializedName("Commands")
-    @Expose
-    private String [] Commands;
-
-    /**
     * 容器启动参数
     */
     @SerializedName("Args")
@@ -52,11 +45,11 @@ public class Container extends AbstractModel {
     private String [] Args;
 
     /**
-    * 容器内操作系统的环境变量
+    * 容器启动命令
     */
-    @SerializedName("EnvironmentVars")
+    @SerializedName("Commands")
     @Expose
-    private EnvironmentVariable [] EnvironmentVars;
+    private String [] Commands;
 
     /**
     * CPU，制改容器最多可使用的核数，该值不可超过容器实例的总核数。单位：核。
@@ -66,59 +59,18 @@ public class Container extends AbstractModel {
     private Float Cpu;
 
     /**
-    * 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
-    */
-    @SerializedName("Memory")
-    @Expose
-    private Float Memory;
-
-    /**
-    * 数据卷挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("VolumeMounts")
-    @Expose
-    private VolumeMount [] VolumeMounts;
-
-    /**
     * 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentState")
     @Expose
     private ContainerState CurrentState;
 
     /**
-    * 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 容器内操作系统的环境变量
     */
-    @SerializedName("RestartCount")
+    @SerializedName("EnvironmentVars")
     @Expose
-    private Long RestartCount;
-
-    /**
-    * 容器工作目录
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WorkingDir")
-    @Expose
-    private String WorkingDir;
-
-    /**
-    * 存活探针
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LivenessProbe")
-    @Expose
-    private LivenessOrReadinessProbe LivenessProbe;
-
-    /**
-    * 就绪探针
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ReadinessProbe")
-    @Expose
-    private LivenessOrReadinessProbe ReadinessProbe;
+    private EnvironmentVariable [] EnvironmentVars;
 
     /**
     * Gpu限制
@@ -129,12 +81,58 @@ public class Container extends AbstractModel {
     private Long GpuLimit;
 
     /**
+    * 存活探针
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessProbe")
+    @Expose
+    private LivenessOrReadinessProbe LivenessProbe;
+
+    /**
+    * 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Float Memory;
+
+    /**
+    * 就绪探针
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadinessProbe")
+    @Expose
+    private LivenessOrReadinessProbe ReadinessProbe;
+
+    /**
+    * 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestartCount")
+    @Expose
+    private Long RestartCount;
+
+    /**
     * 容器的安全上下文
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityContext")
     @Expose
     private SecurityContext SecurityContext;
+
+    /**
+    * 数据卷挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeMounts")
+    @Expose
+    private VolumeMount [] VolumeMounts;
+
+    /**
+    * 容器工作目录
+    */
+    @SerializedName("WorkingDir")
+    @Expose
+    private String WorkingDir;
 
     /**
      * Get 镜像 
@@ -169,22 +167,6 @@ public class Container extends AbstractModel {
     }
 
     /**
-     * Get 容器启动命令 
-     * @return Commands 容器启动命令
-     */
-    public String [] getCommands() {
-        return this.Commands;
-    }
-
-    /**
-     * Set 容器启动命令
-     * @param Commands 容器启动命令
-     */
-    public void setCommands(String [] Commands) {
-        this.Commands = Commands;
-    }
-
-    /**
      * Get 容器启动参数 
      * @return Args 容器启动参数
      */
@@ -201,19 +183,19 @@ public class Container extends AbstractModel {
     }
 
     /**
-     * Get 容器内操作系统的环境变量 
-     * @return EnvironmentVars 容器内操作系统的环境变量
+     * Get 容器启动命令 
+     * @return Commands 容器启动命令
      */
-    public EnvironmentVariable [] getEnvironmentVars() {
-        return this.EnvironmentVars;
+    public String [] getCommands() {
+        return this.Commands;
     }
 
     /**
-     * Set 容器内操作系统的环境变量
-     * @param EnvironmentVars 容器内操作系统的环境变量
+     * Set 容器启动命令
+     * @param Commands 容器启动命令
      */
-    public void setEnvironmentVars(EnvironmentVariable [] EnvironmentVars) {
-        this.EnvironmentVars = EnvironmentVars;
+    public void setCommands(String [] Commands) {
+        this.Commands = Commands;
     }
 
     /**
@@ -233,46 +215,8 @@ public class Container extends AbstractModel {
     }
 
     /**
-     * Get 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB 
-     * @return Memory 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
-     */
-    public Float getMemory() {
-        return this.Memory;
-    }
-
-    /**
-     * Set 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
-     * @param Memory 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
-     */
-    public void setMemory(Float Memory) {
-        this.Memory = Memory;
-    }
-
-    /**
-     * Get 数据卷挂载信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeMounts 数据卷挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public VolumeMount [] getVolumeMounts() {
-        return this.VolumeMounts;
-    }
-
-    /**
-     * Set 数据卷挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeMounts 数据卷挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVolumeMounts(VolumeMount [] VolumeMounts) {
-        this.VolumeMounts = VolumeMounts;
-    }
-
-    /**
-     * Get 当前状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前状态 
      * @return CurrentState 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContainerState getCurrentState() {
         return this.CurrentState;
@@ -280,92 +224,26 @@ public class Container extends AbstractModel {
 
     /**
      * Set 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentState 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentState(ContainerState CurrentState) {
         this.CurrentState = CurrentState;
     }
 
     /**
-     * Get 重启次数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RestartCount 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 容器内操作系统的环境变量 
+     * @return EnvironmentVars 容器内操作系统的环境变量
      */
-    public Long getRestartCount() {
-        return this.RestartCount;
+    public EnvironmentVariable [] getEnvironmentVars() {
+        return this.EnvironmentVars;
     }
 
     /**
-     * Set 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RestartCount 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 容器内操作系统的环境变量
+     * @param EnvironmentVars 容器内操作系统的环境变量
      */
-    public void setRestartCount(Long RestartCount) {
-        this.RestartCount = RestartCount;
-    }
-
-    /**
-     * Get 容器工作目录
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkingDir 容器工作目录
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getWorkingDir() {
-        return this.WorkingDir;
-    }
-
-    /**
-     * Set 容器工作目录
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkingDir 容器工作目录
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWorkingDir(String WorkingDir) {
-        this.WorkingDir = WorkingDir;
-    }
-
-    /**
-     * Get 存活探针
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessProbe 存活探针
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public LivenessOrReadinessProbe getLivenessProbe() {
-        return this.LivenessProbe;
-    }
-
-    /**
-     * Set 存活探针
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessProbe 存活探针
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLivenessProbe(LivenessOrReadinessProbe LivenessProbe) {
-        this.LivenessProbe = LivenessProbe;
-    }
-
-    /**
-     * Get 就绪探针
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadinessProbe 就绪探针
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public LivenessOrReadinessProbe getReadinessProbe() {
-        return this.ReadinessProbe;
-    }
-
-    /**
-     * Set 就绪探针
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadinessProbe 就绪探针
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setReadinessProbe(LivenessOrReadinessProbe ReadinessProbe) {
-        this.ReadinessProbe = ReadinessProbe;
+    public void setEnvironmentVars(EnvironmentVariable [] EnvironmentVars) {
+        this.EnvironmentVars = EnvironmentVars;
     }
 
     /**
@@ -389,6 +267,82 @@ public class Container extends AbstractModel {
     }
 
     /**
+     * Get 存活探针
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessProbe 存活探针
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LivenessOrReadinessProbe getLivenessProbe() {
+        return this.LivenessProbe;
+    }
+
+    /**
+     * Set 存活探针
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessProbe 存活探针
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessProbe(LivenessOrReadinessProbe LivenessProbe) {
+        this.LivenessProbe = LivenessProbe;
+    }
+
+    /**
+     * Get 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB 
+     * @return Memory 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
+     */
+    public Float getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
+     * @param Memory 内存，限制该容器最多可使用的内存值，该值不可超过容器实例的总内存值。单位：GiB
+     */
+    public void setMemory(Float Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 就绪探针
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadinessProbe 就绪探针
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LivenessOrReadinessProbe getReadinessProbe() {
+        return this.ReadinessProbe;
+    }
+
+    /**
+     * Set 就绪探针
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadinessProbe 就绪探针
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadinessProbe(LivenessOrReadinessProbe ReadinessProbe) {
+        this.ReadinessProbe = ReadinessProbe;
+    }
+
+    /**
+     * Get 重启次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestartCount 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRestartCount() {
+        return this.RestartCount;
+    }
+
+    /**
+     * Set 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestartCount 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestartCount(Long RestartCount) {
+        this.RestartCount = RestartCount;
+    }
+
+    /**
      * Get 容器的安全上下文
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityContext 容器的安全上下文
@@ -408,6 +362,42 @@ public class Container extends AbstractModel {
         this.SecurityContext = SecurityContext;
     }
 
+    /**
+     * Get 数据卷挂载信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeMounts 数据卷挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeMount [] getVolumeMounts() {
+        return this.VolumeMounts;
+    }
+
+    /**
+     * Set 数据卷挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeMounts 数据卷挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeMounts(VolumeMount [] VolumeMounts) {
+        this.VolumeMounts = VolumeMounts;
+    }
+
+    /**
+     * Get 容器工作目录 
+     * @return WorkingDir 容器工作目录
+     */
+    public String getWorkingDir() {
+        return this.WorkingDir;
+    }
+
+    /**
+     * Set 容器工作目录
+     * @param WorkingDir 容器工作目录
+     */
+    public void setWorkingDir(String WorkingDir) {
+        this.WorkingDir = WorkingDir;
+    }
+
     public Container() {
     }
 
@@ -422,17 +412,23 @@ public class Container extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
         if (source.Commands != null) {
             this.Commands = new String[source.Commands.length];
             for (int i = 0; i < source.Commands.length; i++) {
                 this.Commands[i] = new String(source.Commands[i]);
             }
         }
-        if (source.Args != null) {
-            this.Args = new String[source.Args.length];
-            for (int i = 0; i < source.Args.length; i++) {
-                this.Args[i] = new String(source.Args[i]);
-            }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.CurrentState != null) {
+            this.CurrentState = new ContainerState(source.CurrentState);
         }
         if (source.EnvironmentVars != null) {
             this.EnvironmentVars = new EnvironmentVariable[source.EnvironmentVars.length];
@@ -440,11 +436,23 @@ public class Container extends AbstractModel {
                 this.EnvironmentVars[i] = new EnvironmentVariable(source.EnvironmentVars[i]);
             }
         }
-        if (source.Cpu != null) {
-            this.Cpu = new Float(source.Cpu);
+        if (source.GpuLimit != null) {
+            this.GpuLimit = new Long(source.GpuLimit);
+        }
+        if (source.LivenessProbe != null) {
+            this.LivenessProbe = new LivenessOrReadinessProbe(source.LivenessProbe);
         }
         if (source.Memory != null) {
             this.Memory = new Float(source.Memory);
+        }
+        if (source.ReadinessProbe != null) {
+            this.ReadinessProbe = new LivenessOrReadinessProbe(source.ReadinessProbe);
+        }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
+        if (source.SecurityContext != null) {
+            this.SecurityContext = new SecurityContext(source.SecurityContext);
         }
         if (source.VolumeMounts != null) {
             this.VolumeMounts = new VolumeMount[source.VolumeMounts.length];
@@ -452,26 +460,8 @@ public class Container extends AbstractModel {
                 this.VolumeMounts[i] = new VolumeMount(source.VolumeMounts[i]);
             }
         }
-        if (source.CurrentState != null) {
-            this.CurrentState = new ContainerState(source.CurrentState);
-        }
-        if (source.RestartCount != null) {
-            this.RestartCount = new Long(source.RestartCount);
-        }
         if (source.WorkingDir != null) {
             this.WorkingDir = new String(source.WorkingDir);
-        }
-        if (source.LivenessProbe != null) {
-            this.LivenessProbe = new LivenessOrReadinessProbe(source.LivenessProbe);
-        }
-        if (source.ReadinessProbe != null) {
-            this.ReadinessProbe = new LivenessOrReadinessProbe(source.ReadinessProbe);
-        }
-        if (source.GpuLimit != null) {
-            this.GpuLimit = new Long(source.GpuLimit);
-        }
-        if (source.SecurityContext != null) {
-            this.SecurityContext = new SecurityContext(source.SecurityContext);
         }
     }
 
@@ -482,19 +472,19 @@ public class Container extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Commands.", this.Commands);
         this.setParamArraySimple(map, prefix + "Args.", this.Args);
-        this.setParamArrayObj(map, prefix + "EnvironmentVars.", this.EnvironmentVars);
+        this.setParamArraySimple(map, prefix + "Commands.", this.Commands);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
-        this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamObj(map, prefix + "CurrentState.", this.CurrentState);
-        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
-        this.setParamSimple(map, prefix + "WorkingDir", this.WorkingDir);
-        this.setParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
-        this.setParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
+        this.setParamArrayObj(map, prefix + "EnvironmentVars.", this.EnvironmentVars);
         this.setParamSimple(map, prefix + "GpuLimit", this.GpuLimit);
+        this.setParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
+        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
         this.setParamObj(map, prefix + "SecurityContext.", this.SecurityContext);
+        this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
+        this.setParamSimple(map, prefix + "WorkingDir", this.WorkingDir);
 
     }
 }

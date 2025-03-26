@@ -41,7 +41,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadTailTask")
     @Expose
@@ -50,7 +49,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentTask")
     @Expose
@@ -59,7 +57,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceTask")
     @Expose
@@ -68,7 +65,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrWordsTask")
     @Expose
@@ -77,7 +73,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrFullTextTask")
     @Expose
@@ -85,7 +80,6 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
     * 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrTranslateTask")
     @Expose
@@ -94,7 +88,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrWordsTask")
     @Expose
@@ -103,7 +96,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrFullTextTask")
     @Expose
@@ -112,7 +104,6 @@ public class AiRecognitionResult extends AbstractModel {
     /**
     * 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectTask")
     @Expose
@@ -168,11 +159,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ HeadTailRecognition 时有效。 
      * @return HeadTailTask 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskHeadTailResult getHeadTailTask() {
         return this.HeadTailTask;
@@ -181,10 +170,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadTailTask 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadTailTask(AiRecognitionTaskHeadTailResult HeadTailTask) {
         this.HeadTailTask = HeadTailTask;
@@ -192,11 +179,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 视频拆条识别结果，当 Type 为
- SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ SegmentRecognition 时有效。 
      * @return SegmentTask 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskSegmentResult getSegmentTask() {
         return this.SegmentTask;
@@ -205,10 +190,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentTask 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentTask(AiRecognitionTaskSegmentResult SegmentTask) {
         this.SegmentTask = SegmentTask;
@@ -216,11 +199,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 人脸识别结果，当 Type 为 
- FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ FaceRecognition 时有效。 
      * @return FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskFaceResult getFaceTask() {
         return this.FaceTask;
@@ -229,10 +210,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceTask(AiRecognitionTaskFaceResult FaceTask) {
         this.FaceTask = FaceTask;
@@ -240,11 +219,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 语音关键词识别结果，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ AsrWordsRecognition 时有效。 
      * @return AsrWordsTask 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
         return this.AsrWordsTask;
@@ -253,10 +230,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsTask 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
         this.AsrWordsTask = AsrWordsTask;
@@ -264,11 +239,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 语音全文识别结果，当 Type 为
- AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ AsrFullTextRecognition 时有效。 
      * @return AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() {
         return this.AsrFullTextTask;
@@ -277,20 +250,16 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;
     }
 
     /**
-     * Get 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。 
      * @return AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() {
         return this.AsrTranslateTask;
@@ -298,9 +267,7 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Set 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult AsrTranslateTask) {
         this.AsrTranslateTask = AsrTranslateTask;
@@ -308,11 +275,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 文本关键词识别结果，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ OcrWordsRecognition 时有效。 
      * @return OcrWordsTask 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
         return this.OcrWordsTask;
@@ -321,10 +286,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsTask 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
         this.OcrWordsTask = OcrWordsTask;
@@ -332,11 +295,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 文本全文识别结果，当 Type 为
- OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ OcrFullTextRecognition 时有效。 
      * @return OcrFullTextTask 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() {
         return this.OcrFullTextTask;
@@ -345,10 +306,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextTask 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;
@@ -356,11 +315,9 @@ public class AiRecognitionResult extends AbstractModel {
 
     /**
      * Get 物体识别结果，当 Type 为
- ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+ ObjectRecognition 时有效。 
      * @return ObjectTask 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskObjectResult getObjectTask() {
         return this.ObjectTask;
@@ -369,10 +326,8 @@ public class AiRecognitionResult extends AbstractModel {
     /**
      * Set 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectTask 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectTask(AiRecognitionTaskObjectResult ObjectTask) {
         this.ObjectTask = ObjectTask;

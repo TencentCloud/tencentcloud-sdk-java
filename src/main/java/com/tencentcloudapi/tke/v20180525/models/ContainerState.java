@@ -24,6 +24,46 @@ import java.util.HashMap;
 public class ContainerState extends AbstractModel {
 
     /**
+    * 容器运行退出码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExitCode")
+    @Expose
+    private Long ExitCode;
+
+    /**
+    * 容器运行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
+    * 容器状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+    * 容器状态 Reason
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+    * 容器重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestartCount")
+    @Expose
+    private Long RestartCount;
+
+    /**
     * 容器运行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -39,44 +79,104 @@ public class ContainerState extends AbstractModel {
     private String State;
 
     /**
-    * 容器运行结束时间
+     * Get 容器运行退出码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExitCode 容器运行退出码
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("FinishTime")
-    @Expose
-    private String FinishTime;
+     */
+    public Long getExitCode() {
+        return this.ExitCode;
+    }
 
     /**
-    * 容器运行退出码
+     * Set 容器运行退出码
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ExitCode")
-    @Expose
-    private Long ExitCode;
+     * @param ExitCode 容器运行退出码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExitCode(Long ExitCode) {
+        this.ExitCode = ExitCode;
+    }
 
     /**
-    * 容器状态 Reason
+     * Get 容器运行结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinishTime 容器运行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Reason")
-    @Expose
-    private String Reason;
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
 
     /**
-    * 容器状态信息
+     * Set 容器运行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Message")
-    @Expose
-    private String Message;
+     * @param FinishTime 容器运行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
 
     /**
-    * 容器重启次数
+     * Get 容器状态信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 容器状态信息
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RestartCount")
-    @Expose
-    private Long RestartCount;
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 容器状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 容器状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * Get 容器状态 Reason
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Reason 容器状态 Reason
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 容器状态 Reason
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Reason 容器状态 Reason
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * Get 容器重启次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestartCount 容器重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRestartCount() {
+        return this.RestartCount;
+    }
+
+    /**
+     * Set 容器重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestartCount 容器重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestartCount(Long RestartCount) {
+        this.RestartCount = RestartCount;
+    }
 
     /**
      * Get 容器运行开始时间
@@ -114,106 +214,6 @@ public class ContainerState extends AbstractModel {
         this.State = State;
     }
 
-    /**
-     * Get 容器运行结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinishTime 容器运行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getFinishTime() {
-        return this.FinishTime;
-    }
-
-    /**
-     * Set 容器运行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinishTime 容器运行结束时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setFinishTime(String FinishTime) {
-        this.FinishTime = FinishTime;
-    }
-
-    /**
-     * Get 容器运行退出码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExitCode 容器运行退出码
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getExitCode() {
-        return this.ExitCode;
-    }
-
-    /**
-     * Set 容器运行退出码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExitCode 容器运行退出码
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setExitCode(Long ExitCode) {
-        this.ExitCode = ExitCode;
-    }
-
-    /**
-     * Get 容器状态 Reason
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Reason 容器状态 Reason
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getReason() {
-        return this.Reason;
-    }
-
-    /**
-     * Set 容器状态 Reason
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Reason 容器状态 Reason
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setReason(String Reason) {
-        this.Reason = Reason;
-    }
-
-    /**
-     * Get 容器状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 容器状态信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getMessage() {
-        return this.Message;
-    }
-
-    /**
-     * Set 容器状态信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 容器状态信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMessage(String Message) {
-        this.Message = Message;
-    }
-
-    /**
-     * Get 容器重启次数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RestartCount 容器重启次数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getRestartCount() {
-        return this.RestartCount;
-    }
-
-    /**
-     * Set 容器重启次数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RestartCount 容器重启次数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRestartCount(Long RestartCount) {
-        this.RestartCount = RestartCount;
-    }
-
     public ContainerState() {
     }
 
@@ -222,26 +222,26 @@ public class ContainerState extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ContainerState(ContainerState source) {
+        if (source.ExitCode != null) {
+            this.ExitCode = new Long(source.ExitCode);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
         if (source.State != null) {
             this.State = new String(source.State);
-        }
-        if (source.FinishTime != null) {
-            this.FinishTime = new String(source.FinishTime);
-        }
-        if (source.ExitCode != null) {
-            this.ExitCode = new Long(source.ExitCode);
-        }
-        if (source.Reason != null) {
-            this.Reason = new String(source.Reason);
-        }
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
-        }
-        if (source.RestartCount != null) {
-            this.RestartCount = new Long(source.RestartCount);
         }
     }
 
@@ -250,13 +250,13 @@ public class ContainerState extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExitCode", this.ExitCode);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "State", this.State);
-        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
-        this.setParamSimple(map, prefix + "ExitCode", this.ExitCode);
-        this.setParamSimple(map, prefix + "Reason", this.Reason);
-        this.setParamSimple(map, prefix + "Message", this.Message);
-        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
 
     }
 }

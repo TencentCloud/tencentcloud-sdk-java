@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDeviceCertificatesRequest extends AbstractModel {
 
     /**
-    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,14 +32,14 @@ public class DescribeDeviceCertificatesRequest extends AbstractModel {
 
     /**
     * 支持搜索参数
-ClientId：客户端id
-CaSn：所属的CA证书SN
-DeviceCertificateSn：设备证书SN
-DeviceCertificateCn：设备证书CN
+ClientId：客户端id，根据实际业务使用获取
+CaSn：所属的CA证书SN序列号 可以从 [查询集群CA证书列表](https://cloud.tencent.com/document/api/1778/116206) 或者实际业务使用获取
+DeviceCertificateSn：设备证书SN序列号 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
+DeviceCertificateCn：设备证书CN 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
 OrganizationalUnit：证书OU
 NotAfterEnd：过期时间小于等于指定时间的证书
 NotAfterStart：过期时间大于等于指定时间的证书
-Status：证书状态
+Status：设备证书状态     ACTIVE（激活）； INACTIVE（未激活）REVOKED（吊销）；PENDING_ACTIVATION（注册待激活）
 
     */
     @SerializedName("Filters")
@@ -47,21 +47,22 @@ Status：证书状态
     private Filter [] Filters;
 
     /**
-    * 分页limit
+    * 分页limit，默认20，最大100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量
+    * 分页偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * CREATE_TIME_DESC, 创建时间降序
+    * 排序规则
+    CREATE_TIME_DESC, 创建时间降序
     CREATE_TIME_ASC,创建时间升序
     UPDATE_TIME_DESC,更新时间降序
     UPDATE_TIME_ASC,更新时间升序
@@ -71,16 +72,16 @@ Status：证书状态
     private String OrderBy;
 
     /**
-     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -88,24 +89,24 @@ Status：证书状态
 
     /**
      * Get 支持搜索参数
-ClientId：客户端id
-CaSn：所属的CA证书SN
-DeviceCertificateSn：设备证书SN
-DeviceCertificateCn：设备证书CN
+ClientId：客户端id，根据实际业务使用获取
+CaSn：所属的CA证书SN序列号 可以从 [查询集群CA证书列表](https://cloud.tencent.com/document/api/1778/116206) 或者实际业务使用获取
+DeviceCertificateSn：设备证书SN序列号 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
+DeviceCertificateCn：设备证书CN 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
 OrganizationalUnit：证书OU
 NotAfterEnd：过期时间小于等于指定时间的证书
 NotAfterStart：过期时间大于等于指定时间的证书
-Status：证书状态
+Status：设备证书状态     ACTIVE（激活）； INACTIVE（未激活）REVOKED（吊销）；PENDING_ACTIVATION（注册待激活）
  
      * @return Filters 支持搜索参数
-ClientId：客户端id
-CaSn：所属的CA证书SN
-DeviceCertificateSn：设备证书SN
-DeviceCertificateCn：设备证书CN
+ClientId：客户端id，根据实际业务使用获取
+CaSn：所属的CA证书SN序列号 可以从 [查询集群CA证书列表](https://cloud.tencent.com/document/api/1778/116206) 或者实际业务使用获取
+DeviceCertificateSn：设备证书SN序列号 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
+DeviceCertificateCn：设备证书CN 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
 OrganizationalUnit：证书OU
 NotAfterEnd：过期时间小于等于指定时间的证书
 NotAfterStart：过期时间大于等于指定时间的证书
-Status：证书状态
+Status：设备证书状态     ACTIVE（激活）； INACTIVE（未激活）REVOKED（吊销）；PENDING_ACTIVATION（注册待激活）
 
      */
     public Filter [] getFilters() {
@@ -114,24 +115,24 @@ Status：证书状态
 
     /**
      * Set 支持搜索参数
-ClientId：客户端id
-CaSn：所属的CA证书SN
-DeviceCertificateSn：设备证书SN
-DeviceCertificateCn：设备证书CN
+ClientId：客户端id，根据实际业务使用获取
+CaSn：所属的CA证书SN序列号 可以从 [查询集群CA证书列表](https://cloud.tencent.com/document/api/1778/116206) 或者实际业务使用获取
+DeviceCertificateSn：设备证书SN序列号 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
+DeviceCertificateCn：设备证书CN 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
 OrganizationalUnit：证书OU
 NotAfterEnd：过期时间小于等于指定时间的证书
 NotAfterStart：过期时间大于等于指定时间的证书
-Status：证书状态
+Status：设备证书状态     ACTIVE（激活）； INACTIVE（未激活）REVOKED（吊销）；PENDING_ACTIVATION（注册待激活）
 
      * @param Filters 支持搜索参数
-ClientId：客户端id
-CaSn：所属的CA证书SN
-DeviceCertificateSn：设备证书SN
-DeviceCertificateCn：设备证书CN
+ClientId：客户端id，根据实际业务使用获取
+CaSn：所属的CA证书SN序列号 可以从 [查询集群CA证书列表](https://cloud.tencent.com/document/api/1778/116206) 或者实际业务使用获取
+DeviceCertificateSn：设备证书SN序列号 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
+DeviceCertificateCn：设备证书CN 可从[查询设备证书详情](https://cloud.tencent.com/document/api/1778/113748) 获取
 OrganizationalUnit：证书OU
 NotAfterEnd：过期时间小于等于指定时间的证书
 NotAfterStart：过期时间大于等于指定时间的证书
-Status：证书状态
+Status：设备证书状态     ACTIVE（激活）； INACTIVE（未激活）REVOKED（吊销）；PENDING_ACTIVATION（注册待激活）
 
      */
     public void setFilters(Filter [] Filters) {
@@ -139,43 +140,45 @@ Status：证书状态
     }
 
     /**
-     * Get 分页limit 
-     * @return Limit 分页limit
+     * Get 分页limit，默认20，最大100 
+     * @return Limit 分页limit，默认20，最大100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页limit
-     * @param Limit 分页limit
+     * Set 分页limit，默认20，最大100
+     * @param Limit 分页limit，默认20，最大100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量 
-     * @return Offset 分页偏移量
+     * Get 分页偏移量，默认0 
+     * @return Offset 分页偏移量，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量
-     * @param Offset 分页偏移量
+     * Set 分页偏移量，默认0
+     * @param Offset 分页偏移量，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get CREATE_TIME_DESC, 创建时间降序
+     * Get 排序规则
+    CREATE_TIME_DESC, 创建时间降序
     CREATE_TIME_ASC,创建时间升序
     UPDATE_TIME_DESC,更新时间降序
     UPDATE_TIME_ASC,更新时间升序 
-     * @return OrderBy CREATE_TIME_DESC, 创建时间降序
+     * @return OrderBy 排序规则
+    CREATE_TIME_DESC, 创建时间降序
     CREATE_TIME_ASC,创建时间升序
     UPDATE_TIME_DESC,更新时间降序
     UPDATE_TIME_ASC,更新时间升序
@@ -185,11 +188,13 @@ Status：证书状态
     }
 
     /**
-     * Set CREATE_TIME_DESC, 创建时间降序
+     * Set 排序规则
+    CREATE_TIME_DESC, 创建时间降序
     CREATE_TIME_ASC,创建时间升序
     UPDATE_TIME_DESC,更新时间降序
     UPDATE_TIME_ASC,更新时间升序
-     * @param OrderBy CREATE_TIME_DESC, 创建时间降序
+     * @param OrderBy 排序规则
+    CREATE_TIME_DESC, 创建时间降序
     CREATE_TIME_ASC,创建时间升序
     UPDATE_TIME_DESC,更新时间降序
     UPDATE_TIME_ASC,更新时间升序

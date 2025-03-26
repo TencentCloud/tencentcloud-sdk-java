@@ -25,7 +25,6 @@ public class ApplyChainMakerBatchUserCertResponse extends AbstractModel {
 
     /**
     * 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUserCrtList")
     @Expose
@@ -39,10 +38,8 @@ public class ApplyChainMakerBatchUserCertResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应 
      * @return SignUserCrtList 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSignUserCrtList() {
         return this.SignUserCrtList;
@@ -50,9 +47,7 @@ public class ApplyChainMakerBatchUserCertResponse extends AbstractModel {
 
     /**
      * Set 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignUserCrtList 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUserCrtList(String [] SignUserCrtList) {
         this.SignUserCrtList = SignUserCrtList;

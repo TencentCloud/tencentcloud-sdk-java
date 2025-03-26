@@ -31,7 +31,7 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String Input;
 
     /**
-    * 输入文本数组。输入数组总长度不超过 200 。
+    * 输入文本数组。输入数组总长度不超过 50 。
     */
     @SerializedName("InputList")
     @Expose
@@ -54,16 +54,16 @@ public class GetEmbeddingRequest extends AbstractModel {
     }
 
     /**
-     * Get 输入文本数组。输入数组总长度不超过 200 。 
-     * @return InputList 输入文本数组。输入数组总长度不超过 200 。
+     * Get 输入文本数组。输入数组总长度不超过 50 。 
+     * @return InputList 输入文本数组。输入数组总长度不超过 50 。
      */
     public String [] getInputList() {
         return this.InputList;
     }
 
     /**
-     * Set 输入文本数组。输入数组总长度不超过 200 。
-     * @param InputList 输入文本数组。输入数组总长度不超过 200 。
+     * Set 输入文本数组。输入数组总长度不超过 50 。
+     * @param InputList 输入文本数组。输入数组总长度不超过 50 。
      */
     public void setInputList(String [] InputList) {
         this.InputList = InputList;

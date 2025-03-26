@@ -32,7 +32,6 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
     * 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Registries")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例信息列表 
      * @return Registries 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Registry [] getRegistries() {
         return this.Registries;
@@ -73,9 +70,7 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Registries 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistries(Registry [] Registries) {
         this.Registries = Registries;

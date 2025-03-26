@@ -56,6 +56,15 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private Long RemoveVideo;
 
     /**
+    * 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioList")
+    @Expose
+    private AudioTemplateInfo [] AudioList;
+
+    /**
      * Get 音频参数信息。 
      * @return Audio 音频参数信息。
      */
@@ -135,6 +144,30 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         this.RemoveVideo = RemoveVideo;
     }
 
+    /**
+     * Get 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioList 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioTemplateInfo [] getAudioList() {
+        return this.AudioList;
+    }
+
+    /**
+     * Set 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioList 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioList(AudioTemplateInfo [] AudioList) {
+        this.AudioList = AudioList;
+    }
+
     public AdaptiveStreamTemplate() {
     }
 
@@ -155,6 +188,12 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         if (source.RemoveVideo != null) {
             this.RemoveVideo = new Long(source.RemoveVideo);
         }
+        if (source.AudioList != null) {
+            this.AudioList = new AudioTemplateInfo[source.AudioList.length];
+            for (int i = 0; i < source.AudioList.length; i++) {
+                this.AudioList[i] = new AudioTemplateInfo(source.AudioList[i]);
+            }
+        }
     }
 
 
@@ -166,6 +205,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         this.setParamObj(map, prefix + "Video.", this.Video);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+        this.setParamArrayObj(map, prefix + "AudioList.", this.AudioList);
 
     }
 }

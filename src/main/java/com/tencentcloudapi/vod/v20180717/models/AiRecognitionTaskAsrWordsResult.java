@@ -60,7 +60,6 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
 
     /**
     * 语音关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -168,10 +167,8 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get 语音关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音关键词识别任务输出信息。 
      * @return Output 语音关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrWordsResultOutput getOutput() {
         return this.Output;
@@ -179,9 +176,7 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
 
     /**
      * Set 语音关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 语音关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskAsrWordsResultOutput Output) {
         this.Output = Output;

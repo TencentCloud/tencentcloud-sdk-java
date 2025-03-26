@@ -25,7 +25,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JdbcUrl")
     @Expose
@@ -49,7 +46,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -57,7 +53,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -73,7 +68,6 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -81,17 +75,14 @@ public class TCHouseD extends AbstractModel {
 
     /**
     * 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessInfo")
     @Expose
     private String AccessInfo;
 
     /**
-     * Get 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源实例的唯一ID 
      * @return InstanceId 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -99,19 +90,15 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return InstanceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -119,19 +106,15 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源的JDBC 
      * @return JdbcUrl 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJdbcUrl() {
         return this.JdbcUrl;
@@ -139,19 +122,15 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JdbcUrl 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJdbcUrl(String JdbcUrl) {
         this.JdbcUrl = JdbcUrl;
     }
 
     /**
-     * Get 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于访问数据源的用户 
      * @return User 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -159,19 +138,15 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源访问密码，需要base64编码 
      * @return Password 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -179,9 +154,7 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -208,10 +181,8 @@ public class TCHouseD extends AbstractModel {
     }
 
     /**
-     * Get 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认数据库名 
      * @return DbName 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -219,19 +190,15 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 访问信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问信息 
      * @return AccessInfo 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessInfo() {
         return this.AccessInfo;
@@ -239,9 +206,7 @@ public class TCHouseD extends AbstractModel {
 
     /**
      * Set 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessInfo 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;

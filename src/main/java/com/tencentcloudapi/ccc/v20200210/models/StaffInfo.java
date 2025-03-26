@@ -60,10 +60,18 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
+
+    /**
+    * 用户角色id列表
+    */
+    @SerializedName("RoleIdList")
+    @Expose
+    private Long RoleIdList;
 
     /**
     * 所属技能组列表
@@ -167,19 +175,43 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户角色id 
+     * Get 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准 
      * @return RoleId 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
+     * @deprecated
      */
+    @Deprecated
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
      * Set 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
      * @param RoleId 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
+     * @deprecated
      */
+    @Deprecated
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
+    }
+
+    /**
+     * Get 用户角色id列表 
+     * @return RoleIdList 用户角色id列表
+     */
+    public Long getRoleIdList() {
+        return this.RoleIdList;
+    }
+
+    /**
+     * Set 用户角色id列表
+     * @param RoleIdList 用户角色id列表
+     */
+    public void setRoleIdList(Long RoleIdList) {
+        this.RoleIdList = RoleIdList;
     }
 
     /**
@@ -256,6 +288,9 @@ public class StaffInfo extends AbstractModel {
         if (source.RoleId != null) {
             this.RoleId = new Long(source.RoleId);
         }
+        if (source.RoleIdList != null) {
+            this.RoleIdList = new Long(source.RoleIdList);
+        }
         if (source.SkillGroupList != null) {
             this.SkillGroupList = new SkillGroupItem[source.SkillGroupList.length];
             for (int i = 0; i < source.SkillGroupList.length; i++) {
@@ -281,6 +316,7 @@ public class StaffInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
+        this.setParamSimple(map, prefix + "RoleIdList", this.RoleIdList);
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
