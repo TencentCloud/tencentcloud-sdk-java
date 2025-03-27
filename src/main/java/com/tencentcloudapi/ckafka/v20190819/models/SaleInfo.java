@@ -31,7 +31,7 @@ public class SaleInfo extends AbstractModel {
     private Boolean Flag;
 
     /**
-    * ckakfa版本号(1.1.1/2.4.2/0.10.2)
+    * ckafka版本号(1.1.1/2.4.2/0.10.2)
     */
     @SerializedName("Version")
     @Expose
@@ -68,16 +68,16 @@ public class SaleInfo extends AbstractModel {
     }
 
     /**
-     * Get ckakfa版本号(1.1.1/2.4.2/0.10.2) 
-     * @return Version ckakfa版本号(1.1.1/2.4.2/0.10.2)
+     * Get ckafka版本号(1.1.1/2.4.2/0.10.2) 
+     * @return Version ckafka版本号(1.1.1/2.4.2/0.10.2)
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set ckakfa版本号(1.1.1/2.4.2/0.10.2)
-     * @param Version ckakfa版本号(1.1.1/2.4.2/0.10.2)
+     * Set ckafka版本号(1.1.1/2.4.2/0.10.2)
+     * @param Version ckafka版本号(1.1.1/2.4.2/0.10.2)
      */
     public void setVersion(String Version) {
         this.Version = Version;

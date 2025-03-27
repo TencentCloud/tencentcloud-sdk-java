@@ -52,7 +52,7 @@ public class MQTTMessageItem extends AbstractModel {
     private String ProducerAddr;
 
     /**
-    * 消息发送时间	
+    * 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
     */
     @SerializedName("ProduceTime")
     @Expose
@@ -81,6 +81,9 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
     * 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
     */
     @SerializedName("Qos")
     @Expose
@@ -151,16 +154,16 @@ public class MQTTMessageItem extends AbstractModel {
     }
 
     /**
-     * Get 消息发送时间	 
-     * @return ProduceTime 消息发送时间	
+     * Get 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss 
+     * @return ProduceTime 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
      */
     public String getProduceTime() {
         return this.ProduceTime;
     }
 
     /**
-     * Set 消息发送时间	
-     * @param ProduceTime 消息发送时间	
+     * Set 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
+     * @param ProduceTime 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
      */
     public void setProduceTime(String ProduceTime) {
         this.ProduceTime = ProduceTime;
@@ -215,8 +218,14 @@ public class MQTTMessageItem extends AbstractModel {
     }
 
     /**
-     * Get 消息质量等级 
+     * Get 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次 
      * @return Qos 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
      */
     public String getQos() {
         return this.Qos;
@@ -224,7 +233,13 @@ public class MQTTMessageItem extends AbstractModel {
 
     /**
      * Set 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
      * @param Qos 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
      */
     public void setQos(String Qos) {
         this.Qos = Qos;

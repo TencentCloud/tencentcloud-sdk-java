@@ -25,7 +25,7 @@ public class MaterialTagInfo extends AbstractModel {
 
     /**
     * 标签类型，取值为：
-<li>PRESET：预置标签；</li>
+<li>PRESET：预置标签。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -47,9 +47,9 @@ public class MaterialTagInfo extends AbstractModel {
 
     /**
      * Get 标签类型，取值为：
-<li>PRESET：预置标签；</li> 
+<li>PRESET：预置标签。</li> 
      * @return Type 标签类型，取值为：
-<li>PRESET：预置标签；</li>
+<li>PRESET：预置标签。</li>
      */
     public String getType() {
         return this.Type;
@@ -57,9 +57,9 @@ public class MaterialTagInfo extends AbstractModel {
 
     /**
      * Set 标签类型，取值为：
-<li>PRESET：预置标签；</li>
+<li>PRESET：预置标签。</li>
      * @param Type 标签类型，取值为：
-<li>PRESET：预置标签；</li>
+<li>PRESET：预置标签。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

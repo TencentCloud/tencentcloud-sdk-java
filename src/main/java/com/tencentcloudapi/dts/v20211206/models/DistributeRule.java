@@ -46,7 +46,6 @@ public class DistributeRule extends AbstractModel {
 
     /**
     * 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Columns")
     @Expose
@@ -101,10 +100,8 @@ public class DistributeRule extends AbstractModel {
     }
 
     /**
-     * Get 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。 
      * @return Columns 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getColumns() {
         return this.Columns;
@@ -112,9 +109,7 @@ public class DistributeRule extends AbstractModel {
 
     /**
      * Set 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Columns 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumns(String [] Columns) {
         this.Columns = Columns;

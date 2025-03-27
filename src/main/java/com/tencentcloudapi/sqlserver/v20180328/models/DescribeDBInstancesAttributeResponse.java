@@ -122,6 +122,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private DrReadableInfo [] MultiDrReadableInfo;
 
     /**
+    * 是否开启磁盘加密，1-开启，0-未开启
+    */
+    @SerializedName("IsDiskEncryptFlag")
+    @Expose
+    private Long IsDiskEncryptFlag;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +360,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否开启磁盘加密，1-开启，0-未开启 
+     * @return IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
+     */
+    public Long getIsDiskEncryptFlag() {
+        return this.IsDiskEncryptFlag;
+    }
+
+    /**
+     * Set 是否开启磁盘加密，1-开启，0-未开启
+     * @param IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
+     */
+    public void setIsDiskEncryptFlag(Long IsDiskEncryptFlag) {
+        this.IsDiskEncryptFlag = IsDiskEncryptFlag;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -424,6 +447,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
                 this.MultiDrReadableInfo[i] = new DrReadableInfo(source.MultiDrReadableInfo[i]);
             }
         }
+        if (source.IsDiskEncryptFlag != null) {
+            this.IsDiskEncryptFlag = new Long(source.IsDiskEncryptFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -448,6 +474,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OldVipList.", this.OldVipList);
         this.setParamSimple(map, prefix + "XEventStatus", this.XEventStatus);
         this.setParamArrayObj(map, prefix + "MultiDrReadableInfo.", this.MultiDrReadableInfo);
+        this.setParamSimple(map, prefix + "IsDiskEncryptFlag", this.IsDiskEncryptFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

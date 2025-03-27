@@ -71,6 +71,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
     */
     @SerializedName("ConfigId")
     @Expose
@@ -82,6 +85,13 @@ BookingConfirmation -- 配舱通知书识别模板
     @SerializedName("EnableCoord")
     @Expose
     private Boolean EnableCoord;
+
+    /**
+    * 是否开启父子key识别，默认是
+    */
+    @SerializedName("OutputParentKey")
+    @Expose
+    private Boolean OutputParentKey;
 
     /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
@@ -175,7 +185,10 @@ BillOfLading -- 海运提单
 EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板 
+BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板 
      * @return ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -188,6 +201,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -206,6 +222,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
      * @param ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -218,6 +237,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -237,6 +259,22 @@ BookingConfirmation -- 配舱通知书识别模板
      */
     public void setEnableCoord(Boolean EnableCoord) {
         this.EnableCoord = EnableCoord;
+    }
+
+    /**
+     * Get 是否开启父子key识别，默认是 
+     * @return OutputParentKey 是否开启父子key识别，默认是
+     */
+    public Boolean getOutputParentKey() {
+        return this.OutputParentKey;
+    }
+
+    /**
+     * Set 是否开启父子key识别，默认是
+     * @param OutputParentKey 是否开启父子key识别，默认是
+     */
+    public void setOutputParentKey(Boolean OutputParentKey) {
+        this.OutputParentKey = OutputParentKey;
     }
 
     public SmartStructuralProRequest() {
@@ -271,6 +309,9 @@ BookingConfirmation -- 配舱通知书识别模板
         if (source.EnableCoord != null) {
             this.EnableCoord = new Boolean(source.EnableCoord);
         }
+        if (source.OutputParentKey != null) {
+            this.OutputParentKey = new Boolean(source.OutputParentKey);
+        }
     }
 
 
@@ -285,6 +326,7 @@ BookingConfirmation -- 配舱通知书识别模板
         this.setParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
         this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
+        this.setParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
 
     }
 }

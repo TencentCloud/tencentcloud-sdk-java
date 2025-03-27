@@ -25,7 +25,6 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
     * 画面鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
@@ -33,7 +32,6 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
     * 语音鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
@@ -41,17 +39,14 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
     * 文本鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 画面鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 画面鉴别涉及令人不适宜的信息的控制参数。 
      * @return ImgReviewInfo 画面鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
@@ -59,19 +54,15 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
      * Set 画面鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgReviewInfo 画面鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get 语音鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音鉴别涉及令人不适宜的信息的控制参数。 
      * @return AsrReviewInfo 语音鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
@@ -79,19 +70,15 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
      * Set 语音鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrReviewInfo 语音鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get 文本鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本鉴别涉及令人不适宜的信息的控制参数。 
      * @return OcrReviewInfo 文本鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
@@ -99,9 +86,7 @@ public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
      * Set 文本鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 文本鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

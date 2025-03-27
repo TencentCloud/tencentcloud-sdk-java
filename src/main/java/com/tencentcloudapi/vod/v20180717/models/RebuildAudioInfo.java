@@ -25,17 +25,14 @@ public class RebuildAudioInfo extends AbstractModel {
 
     /**
     * 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioDenoiseInfo")
     @Expose
     private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-     * Get 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音频降噪控制参数。 
      * @return AudioDenoiseInfo 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioDenoiseInfo getAudioDenoiseInfo() {
         return this.AudioDenoiseInfo;
@@ -43,9 +40,7 @@ public class RebuildAudioInfo extends AbstractModel {
 
     /**
      * Set 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioDenoiseInfo 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
         this.AudioDenoiseInfo = AudioDenoiseInfo;

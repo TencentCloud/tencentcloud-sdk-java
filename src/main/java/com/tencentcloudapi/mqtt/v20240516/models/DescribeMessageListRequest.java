@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeMessageListRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题
+    * 要查询的一级Topic，可从 [查询MQTT主题列表](https://cloud.tencent.com/document/product/1778/111082) 获取。
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 开始时间
+    * 开始时间，毫秒级时间戳 。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，毫秒级时间戳 。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 请求任务id
+    * 请求任务id，用于相同查询参数下查询加速，第一次查询时无需传递，第一次查询会根据本次查询参数生成查询任务ID，保留查询条件，查询下一页消息时可传递第一次查询返回的任务ID。
     */
     @SerializedName("TaskRequestId")
     @Expose
     private String TaskRequestId;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认20，最大50
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题 
-     * @return Topic 主题
+     * Get 要查询的一级Topic，可从 [查询MQTT主题列表](https://cloud.tencent.com/document/product/1778/111082) 获取。 
+     * @return Topic 要查询的一级Topic，可从 [查询MQTT主题列表](https://cloud.tencent.com/document/product/1778/111082) 获取。
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题
-     * @param Topic 主题
+     * Set 要查询的一级Topic，可从 [查询MQTT主题列表](https://cloud.tencent.com/document/product/1778/111082) 获取。
+     * @param Topic 要查询的一级Topic，可从 [查询MQTT主题列表](https://cloud.tencent.com/document/product/1778/111082) 获取。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间，毫秒级时间戳 。 
+     * @return StartTime 开始时间，毫秒级时间戳 。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间，毫秒级时间戳 。
+     * @param StartTime 开始时间，毫秒级时间戳 。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，毫秒级时间戳 。 
+     * @return EndTime 结束时间，毫秒级时间戳 。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，毫秒级时间戳 。
+     * @param EndTime 结束时间，毫秒级时间戳 。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 请求任务id 
-     * @return TaskRequestId 请求任务id
+     * Get 请求任务id，用于相同查询参数下查询加速，第一次查询时无需传递，第一次查询会根据本次查询参数生成查询任务ID，保留查询条件，查询下一页消息时可传递第一次查询返回的任务ID。 
+     * @return TaskRequestId 请求任务id，用于相同查询参数下查询加速，第一次查询时无需传递，第一次查询会根据本次查询参数生成查询任务ID，保留查询条件，查询下一页消息时可传递第一次查询返回的任务ID。
      */
     public String getTaskRequestId() {
         return this.TaskRequestId;
     }
 
     /**
-     * Set 请求任务id
-     * @param TaskRequestId 请求任务id
+     * Set 请求任务id，用于相同查询参数下查询加速，第一次查询时无需传递，第一次查询会根据本次查询参数生成查询任务ID，保留查询条件，查询下一页消息时可传递第一次查询返回的任务ID。
+     * @param TaskRequestId 请求任务id，用于相同查询参数下查询加速，第一次查询时无需传递，第一次查询会根据本次查询参数生成查询任务ID，保留查询条件，查询下一页消息时可传递第一次查询返回的任务ID。
      */
     public void setTaskRequestId(String TaskRequestId) {
         this.TaskRequestId = TaskRequestId;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认0 
+     * @return Offset 查询起始位置，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认0
+     * @param Offset 查询起始位置，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认20，最大50 
+     * @return Limit 查询结果限制数量，默认20，最大50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认20，最大50
+     * @param Limit 查询结果限制数量，默认20，最大50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

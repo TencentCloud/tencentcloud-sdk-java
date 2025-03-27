@@ -38,6 +38,13 @@ public class DescribeCloudRecordingRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * 转推录制任务发起时所填，标识一次录制
+    */
+    @SerializedName("RecorderKey")
+    @Expose
+    private String RecorderKey;
+
+    /**
      * Get TRTC的SDKAppId，和录制的房间所对应的SDKAppId相同。 
      * @return SdkAppId TRTC的SDKAppId，和录制的房间所对应的SDKAppId相同。
      */
@@ -69,6 +76,22 @@ public class DescribeCloudRecordingRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 转推录制任务发起时所填，标识一次录制 
+     * @return RecorderKey 转推录制任务发起时所填，标识一次录制
+     */
+    public String getRecorderKey() {
+        return this.RecorderKey;
+    }
+
+    /**
+     * Set 转推录制任务发起时所填，标识一次录制
+     * @param RecorderKey 转推录制任务发起时所填，标识一次录制
+     */
+    public void setRecorderKey(String RecorderKey) {
+        this.RecorderKey = RecorderKey;
+    }
+
     public DescribeCloudRecordingRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeCloudRecordingRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.RecorderKey != null) {
+            this.RecorderKey = new String(source.RecorderKey);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeCloudRecordingRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RecorderKey", this.RecorderKey);
 
     }
 }

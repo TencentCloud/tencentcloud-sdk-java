@@ -52,6 +52,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
     */
     @SerializedName("Type")
     @Expose
@@ -166,7 +167,8 @@ FailedOperation.UnKnowError：表示识别失败；
 16：全电发票
 17：医疗发票
 18：完税凭证
-19：海关缴款书 
+19：海关缴款书
+20：银行回单 
      * @return Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
@@ -185,6 +187,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
      */
     public Long getType() {
         return this.Type;
@@ -209,6 +212,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
      * @param Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
@@ -227,6 +231,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
      */
     public void setType(Long Type) {
         this.Type = Type;

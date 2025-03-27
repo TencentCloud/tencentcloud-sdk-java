@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class DescribeDomainPriceListRequest extends AbstractModel {
 
     /**
-    * 查询价格的后缀列表。默认则为全部后缀
+    * 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。
     */
     @SerializedName("TldList")
     @Expose
     private String [] TldList;
 
     /**
-    * 查询购买的年份，默认会列出所有年份的价格
+    * 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】
     */
     @SerializedName("Year")
     @Expose
     private Long [] Year;
 
     /**
-    * 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+    * 域名的购买类型：
+new  新购
+renew 续费
+redem 赎回
+tran 转入
     */
     @SerializedName("Operation")
     @Expose
     private String [] Operation;
 
     /**
-     * Get 查询价格的后缀列表。默认则为全部后缀 
-     * @return TldList 查询价格的后缀列表。默认则为全部后缀
+     * Get 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。 
+     * @return TldList 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。
      */
     public String [] getTldList() {
         return this.TldList;
     }
 
     /**
-     * Set 查询价格的后缀列表。默认则为全部后缀
-     * @param TldList 查询价格的后缀列表。默认则为全部后缀
+     * Set 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。
+     * @param TldList 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。
      */
     public void setTldList(String [] TldList) {
         this.TldList = TldList;
     }
 
     /**
-     * Get 查询购买的年份，默认会列出所有年份的价格 
-     * @return Year 查询购买的年份，默认会列出所有年份的价格
+     * Get 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】 
+     * @return Year 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】
      */
     public Long [] getYear() {
         return this.Year;
     }
 
     /**
-     * Set 查询购买的年份，默认会列出所有年份的价格
-     * @param Year 查询购买的年份，默认会列出所有年份的价格
+     * Set 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】
+     * @param Year 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】
      */
     public void setYear(Long [] Year) {
         this.Year = Year;
     }
 
     /**
-     * Get 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入 
-     * @return Operation 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+     * Get 域名的购买类型：
+new  新购
+renew 续费
+redem 赎回
+tran 转入 
+     * @return Operation 域名的购买类型：
+new  新购
+renew 续费
+redem 赎回
+tran 转入
      */
     public String [] getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
-     * @param Operation 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+     * Set 域名的购买类型：
+new  新购
+renew 续费
+redem 赎回
+tran 转入
+     * @param Operation 域名的购买类型：
+new  新购
+renew 续费
+redem 赎回
+tran 转入
      */
     public void setOperation(String [] Operation) {
         this.Operation = Operation;

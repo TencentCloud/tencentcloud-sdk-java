@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class AssignPrivateIpAddressesRequest extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
@@ -45,7 +46,7 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel {
     private Long SecondaryPrivateIpAddressCount;
 
     /**
-    * IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+    * IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
     */
     @SerializedName("QosLevel")
     @Expose
@@ -59,16 +60,20 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+ 
+     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
@@ -107,16 +112,16 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel {
     }
 
     /**
-     * Get IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。 
-     * @return QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * Get IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。 
+     * @return QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
-     * @param QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * Set IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+     * @param QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

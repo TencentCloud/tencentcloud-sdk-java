@@ -127,7 +127,7 @@ public class NetworkInterface extends AbstractModel {
     private String Zone;
 
     /**
-    * 创建时间。
+    * 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -148,14 +148,14 @@ public class NetworkInterface extends AbstractModel {
     private Tag [] TagSet;
 
     /**
-    * 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+    * 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
     */
     @SerializedName("EniType")
     @Expose
     private Long EniType;
 
     /**
-    * 网卡绑定的子机类型：cvm，eks。
+    * 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
@@ -188,10 +188,10 @@ public class NetworkInterface extends AbstractModel {
 
     /**
     * 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosLevel")
@@ -455,16 +455,16 @@ public class NetworkInterface extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59 
+     * @return CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+     * @param CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -503,25 +503,25 @@ public class NetworkInterface extends AbstractModel {
     }
 
     /**
-     * Get 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。 
-     * @return EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * Get 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡 
+     * @return EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
      */
     public Long getEniType() {
         return this.EniType;
     }
 
     /**
-     * Set 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
-     * @param EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * Set 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+     * @param EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
      */
     public void setEniType(Long EniType) {
         this.EniType = EniType;
     }
 
     /**
-     * Get 网卡绑定的子机类型：cvm，eks。
+     * Get 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Business 网卡绑定的子机类型：cvm，eks。
+     * @return Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusiness() {
@@ -529,9 +529,9 @@ public class NetworkInterface extends AbstractModel {
     }
 
     /**
-     * Set 网卡绑定的子机类型：cvm，eks。
+     * Set 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Business 网卡绑定的子机类型：cvm，eks。
+     * @param Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String Business) {
@@ -600,16 +600,16 @@ public class NetworkInterface extends AbstractModel {
 
     /**
      * Get 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QosLevel 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosLevel() {
@@ -618,16 +618,16 @@ public class NetworkInterface extends AbstractModel {
 
     /**
      * Set 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QosLevel 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosLevel(String QosLevel) {

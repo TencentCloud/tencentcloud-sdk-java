@@ -67,7 +67,6 @@ public class AclConfig extends AbstractModel {
 
     /**
     * 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -170,10 +169,8 @@ public class AclConfig extends AbstractModel {
     }
 
     /**
-     * Get 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000 
      * @return Priority 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -181,9 +178,7 @@ public class AclConfig extends AbstractModel {
 
     /**
      * Set 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

@@ -24,28 +24,29 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 要修改实例名称
+    * 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 要修改的备注信息
+    * 要修改的备注信息，最多64个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 要变更的配置规格
+    * 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
     */
     @SerializedName("SkuCode")
     @Expose
@@ -68,64 +69,75 @@ API：手动通过API注册
     private Boolean AutomaticActivation;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * 授权策略开关
+    */
+    @SerializedName("AuthorizationPolicy")
+    @Expose
+    private Boolean AuthorizationPolicy;
+
+    /**
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 要修改实例名称 
-     * @return Name 要修改实例名称
+     * Get 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。 
+     * @return Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 要修改实例名称
-     * @param Name 要修改实例名称
+     * Set 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+     * @param Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 要修改的备注信息 
-     * @return Remark 要修改的备注信息
+     * Get 要修改的备注信息，最多64个字符。 
+     * @return Remark 要修改的备注信息，最多64个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 要修改的备注信息
-     * @param Remark 要修改的备注信息
+     * Set 要修改的备注信息，最多64个字符。
+     * @param Remark 要修改的备注信息，最多64个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 要变更的配置规格 
-     * @return SkuCode 要变更的配置规格
+     * Get 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。 
+     * @return SkuCode 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set 要变更的配置规格
-     * @param SkuCode 要变更的配置规格
+     * Set 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+     * @param SkuCode 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
@@ -171,6 +183,22 @@ API：手动通过API注册
         this.AutomaticActivation = AutomaticActivation;
     }
 
+    /**
+     * Get 授权策略开关 
+     * @return AuthorizationPolicy 授权策略开关
+     */
+    public Boolean getAuthorizationPolicy() {
+        return this.AuthorizationPolicy;
+    }
+
+    /**
+     * Set 授权策略开关
+     * @param AuthorizationPolicy 授权策略开关
+     */
+    public void setAuthorizationPolicy(Boolean AuthorizationPolicy) {
+        this.AuthorizationPolicy = AuthorizationPolicy;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -197,6 +225,9 @@ API：手动通过API注册
         if (source.AutomaticActivation != null) {
             this.AutomaticActivation = new Boolean(source.AutomaticActivation);
         }
+        if (source.AuthorizationPolicy != null) {
+            this.AuthorizationPolicy = new Boolean(source.AuthorizationPolicy);
+        }
     }
 
 
@@ -210,6 +241,7 @@ API：手动通过API注册
         this.setParamSimple(map, prefix + "SkuCode", this.SkuCode);
         this.setParamSimple(map, prefix + "DeviceCertificateProvisionType", this.DeviceCertificateProvisionType);
         this.setParamSimple(map, prefix + "AutomaticActivation", this.AutomaticActivation);
+        this.setParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
 
     }
 }

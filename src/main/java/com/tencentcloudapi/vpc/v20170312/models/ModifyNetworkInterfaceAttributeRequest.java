@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID，例如：eni-pxir56ns。
+    * 弹性网卡实例ID，例如：eni-pxir56ns。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
@@ -45,7 +46,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel {
     private String NetworkInterfaceDescription;
 
     /**
-    * 指定绑定的安全组，例如:['sg-1dd51d']。
+    * 指定绑定的安全组，例如:['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -59,16 +61,20 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel {
     private String TrunkingFlag;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-pxir56ns。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
+     * Get 弹性网卡实例ID，例如：eni-pxir56ns。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+ 
+     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-pxir56ns。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
+     * Set 弹性网卡实例ID，例如：eni-pxir56ns。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
@@ -107,16 +113,20 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定绑定的安全组，例如:['sg-1dd51d']。 
-     * @return SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
+     * Get 指定绑定的安全组，例如:['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+ 
+     * @return SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 指定绑定的安全组，例如:['sg-1dd51d']。
-     * @param SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
+     * Set 指定绑定的安全组，例如:['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+
+     * @param SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

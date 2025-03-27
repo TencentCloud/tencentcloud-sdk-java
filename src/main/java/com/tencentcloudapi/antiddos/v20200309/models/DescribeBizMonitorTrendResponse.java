@@ -39,7 +39,6 @@ public class DescribeBizMonitorTrendResponse extends AbstractModel {
 
     /**
     * 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxData")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeBizMonitorTrendResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回DataList中的最大值 
      * @return MaxData 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxData() {
         return this.MaxData;
@@ -96,9 +93,7 @@ public class DescribeBizMonitorTrendResponse extends AbstractModel {
 
     /**
      * Set 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxData 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxData(Long MaxData) {
         this.MaxData = MaxData;

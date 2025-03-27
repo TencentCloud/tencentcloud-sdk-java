@@ -38,6 +38,13 @@ public class DescribePullTransformPushInfoResponse extends AbstractModel {
     private Long TotalDuration;
 
     /**
+    * 拉流转推得总时长（秒）
+    */
+    @SerializedName("TotalDurationSecond")
+    @Expose
+    private Long TotalDurationSecond;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribePullTransformPushInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 拉流转推得总时长（秒） 
+     * @return TotalDurationSecond 拉流转推得总时长（秒）
+     */
+    public Long getTotalDurationSecond() {
+        return this.TotalDurationSecond;
+    }
+
+    /**
+     * Set 拉流转推得总时长（秒）
+     * @param TotalDurationSecond 拉流转推得总时长（秒）
+     */
+    public void setTotalDurationSecond(Long TotalDurationSecond) {
+        this.TotalDurationSecond = TotalDurationSecond;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribePullTransformPushInfoResponse extends AbstractModel {
         if (source.TotalDuration != null) {
             this.TotalDuration = new Long(source.TotalDuration);
         }
+        if (source.TotalDurationSecond != null) {
+            this.TotalDurationSecond = new Long(source.TotalDurationSecond);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribePullTransformPushInfoResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
         this.setParamSimple(map, prefix + "TotalDuration", this.TotalDuration);
+        this.setParamSimple(map, prefix + "TotalDurationSecond", this.TotalDurationSecond);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

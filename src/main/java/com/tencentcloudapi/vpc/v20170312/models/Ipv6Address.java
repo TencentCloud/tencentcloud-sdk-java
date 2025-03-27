@@ -38,7 +38,7 @@ public class Ipv6Address extends AbstractModel {
     private Boolean Primary;
 
     /**
-    * `EIP`实例`ID`，形如：`eip-hxlqja90`。
+    * `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
     */
     @SerializedName("AddressId")
     @Expose
@@ -78,7 +78,7 @@ public class Ipv6Address extends AbstractModel {
     private String PublicIpAddress;
 
     /**
-    * `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+    * `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressType")
@@ -118,16 +118,16 @@ public class Ipv6Address extends AbstractModel {
     }
 
     /**
-     * Get `EIP`实例`ID`，形如：`eip-hxlqja90`。 
-     * @return AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Get `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。 
+     * @return AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set `EIP`实例`ID`，形如：`eip-hxlqja90`。
-     * @param AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Set `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
+     * @param AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
@@ -218,9 +218,9 @@ public class Ipv6Address extends AbstractModel {
     }
 
     /**
-     * Get `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+     * Get `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AddressType `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+     * @return AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressType() {
@@ -228,9 +228,9 @@ public class Ipv6Address extends AbstractModel {
     }
 
     /**
-     * Set `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+     * Set `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AddressType `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+     * @param AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressType(String AddressType) {

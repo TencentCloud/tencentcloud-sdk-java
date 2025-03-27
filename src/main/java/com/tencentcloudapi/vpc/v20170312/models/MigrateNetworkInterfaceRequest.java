@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class MigrateNetworkInterfaceRequest extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+    * 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
     */
     @SerializedName("SourceInstanceId")
     @Expose
     private String SourceInstanceId;
 
     /**
-    * 待迁移的目的CVM实例ID。
+    * 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
     */
     @SerializedName("DestinationInstanceId")
     @Expose
     private String DestinationInstanceId;
 
     /**
-    * 网卡绑定类型：0 标准型 1 扩展型。
+    * 网卡绑定类型：0 标准型 1 扩展型。默认：0。
     */
     @SerializedName("AttachType")
     @Expose
     private Long AttachType;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+ 
+     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。 
-     * @return SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+     * Get 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+ 
+     * @return SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public String getSourceInstanceId() {
         return this.SourceInstanceId;
     }
 
     /**
-     * Set 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
-     * @param SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+     * Set 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
+     * @param SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public void setSourceInstanceId(String SourceInstanceId) {
         this.SourceInstanceId = SourceInstanceId;
     }
 
     /**
-     * Get 待迁移的目的CVM实例ID。 
-     * @return DestinationInstanceId 待迁移的目的CVM实例ID。
+     * Get 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+ 
+     * @return DestinationInstanceId 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public String getDestinationInstanceId() {
         return this.DestinationInstanceId;
     }
 
     /**
-     * Set 待迁移的目的CVM实例ID。
-     * @param DestinationInstanceId 待迁移的目的CVM实例ID。
+     * Set 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
+     * @param DestinationInstanceId 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public void setDestinationInstanceId(String DestinationInstanceId) {
         this.DestinationInstanceId = DestinationInstanceId;
     }
 
     /**
-     * Get 网卡绑定类型：0 标准型 1 扩展型。 
-     * @return AttachType 网卡绑定类型：0 标准型 1 扩展型。
+     * Get 网卡绑定类型：0 标准型 1 扩展型。默认：0。 
+     * @return AttachType 网卡绑定类型：0 标准型 1 扩展型。默认：0。
      */
     public Long getAttachType() {
         return this.AttachType;
     }
 
     /**
-     * Set 网卡绑定类型：0 标准型 1 扩展型。
-     * @param AttachType 网卡绑定类型：0 标准型 1 扩展型。
+     * Set 网卡绑定类型：0 标准型 1 扩展型。默认：0。
+     * @param AttachType 网卡绑定类型：0 标准型 1 扩展型。默认：0。
      */
     public void setAttachType(Long AttachType) {
         this.AttachType = AttachType;

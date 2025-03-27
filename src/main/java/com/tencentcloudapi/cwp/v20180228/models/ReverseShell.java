@@ -185,6 +185,13 @@ public class ReverseShell extends AbstractModel {
     private Long RiskLevel;
 
     /**
+    * 命令详情的转义后内容，供正则加白全字符串匹配使用	
+    */
+    @SerializedName("CmdLineQuote")
+    @Expose
+    private String CmdLineQuote;
+
+    /**
      * Get ID 主键 
      * @return Id ID 主键
      */
@@ -552,6 +559,22 @@ public class ReverseShell extends AbstractModel {
         this.RiskLevel = RiskLevel;
     }
 
+    /**
+     * Get 命令详情的转义后内容，供正则加白全字符串匹配使用	 
+     * @return CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用	
+     */
+    public String getCmdLineQuote() {
+        return this.CmdLineQuote;
+    }
+
+    /**
+     * Set 命令详情的转义后内容，供正则加白全字符串匹配使用	
+     * @param CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用	
+     */
+    public void setCmdLineQuote(String CmdLineQuote) {
+        this.CmdLineQuote = CmdLineQuote;
+    }
+
     public ReverseShell() {
     }
 
@@ -629,6 +652,9 @@ public class ReverseShell extends AbstractModel {
         if (source.RiskLevel != null) {
             this.RiskLevel = new Long(source.RiskLevel);
         }
+        if (source.CmdLineQuote != null) {
+            this.CmdLineQuote = new String(source.CmdLineQuote);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class ReverseShell extends AbstractModel {
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+        this.setParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
 
     }
 }

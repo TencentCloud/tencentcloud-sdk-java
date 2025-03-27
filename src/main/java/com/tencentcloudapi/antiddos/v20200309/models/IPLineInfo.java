@@ -59,7 +59,6 @@ public class IPLineInfo extends AbstractModel {
 
     /**
     * 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -154,10 +153,8 @@ public class IPLineInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名化资产对应的域名 
      * @return Domain 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -165,9 +162,7 @@ public class IPLineInfo extends AbstractModel {
 
     /**
      * Set 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

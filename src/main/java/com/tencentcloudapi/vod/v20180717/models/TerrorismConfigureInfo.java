@@ -25,7 +25,6 @@ public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
     * 画面鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
@@ -33,17 +32,14 @@ public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
     * 文字鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 画面鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 画面鉴别涉及令人不安全的信息的任务控制参数。 
      * @return ImgReviewInfo 画面鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
@@ -51,19 +47,15 @@ public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
      * Set 画面鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgReviewInfo 画面鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get 文字鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字鉴别涉及令人不安全的信息的任务控制参数。 
      * @return OcrReviewInfo 文字鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
@@ -71,9 +63,7 @@ public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
      * Set 文字鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 文字鉴别涉及令人不安全的信息的任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

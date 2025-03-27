@@ -32,7 +32,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * 加速地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccelerateAreaInfos")
     @Expose
@@ -50,7 +49,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * HTTPS 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HTTPSConfig")
     @Expose
@@ -58,7 +56,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
@@ -66,7 +63,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
@@ -82,7 +78,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * 域名 QUIC 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QUICConfig")
     @Expose
@@ -90,7 +85,6 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
     * IP 访问限制配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPFilterPolicy")
     @Expose
@@ -120,10 +114,8 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 加速地区信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加速地区信息。 
      * @return AccelerateAreaInfos 加速地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccelerateAreaInfo [] getAccelerateAreaInfos() {
         return this.AccelerateAreaInfos;
@@ -131,9 +123,7 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set 加速地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccelerateAreaInfos 加速地区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccelerateAreaInfos(AccelerateAreaInfo [] AccelerateAreaInfos) {
         this.AccelerateAreaInfos = AccelerateAreaInfos;
@@ -168,10 +158,8 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTPS 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HTTPS 配置信息。 
      * @return HTTPSConfig HTTPS 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainHTTPSConfig getHTTPSConfig() {
         return this.HTTPSConfig;
@@ -179,19 +167,15 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set HTTPS 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HTTPSConfig HTTPS 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHTTPSConfig(DomainHTTPSConfig HTTPSConfig) {
         this.HTTPSConfig = HTTPSConfig;
     }
 
     /**
-     * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。 
      * @return UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
@@ -199,19 +183,15 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。 
      * @return RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
@@ -219,9 +199,7 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
@@ -248,10 +226,8 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名 QUIC 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 QUIC 配置信息。 
      * @return QUICConfig 域名 QUIC 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
@@ -259,19 +235,15 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set 域名 QUIC 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QUICConfig 域名 QUIC 配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get IP 访问限制配置信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP 访问限制配置信息。 
      * @return IPFilterPolicy IP 访问限制配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
@@ -279,9 +251,7 @@ public class DomainDetailInfo extends AbstractModel {
 
     /**
      * Set IP 访问限制配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPFilterPolicy IP 访问限制配置信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;

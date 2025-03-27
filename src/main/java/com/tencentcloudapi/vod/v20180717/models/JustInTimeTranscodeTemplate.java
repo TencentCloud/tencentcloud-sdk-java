@@ -46,7 +46,6 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
     * 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoConfigure")
     @Expose
@@ -54,7 +53,6 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
     * 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WatermarkConfigure")
     @Expose
@@ -109,10 +107,8 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频参数配置。 
      * @return VideoConfigure 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoConfigureInfo getVideoConfigure() {
         return this.VideoConfigure;
@@ -120,19 +116,15 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
      * Set 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoConfigure 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoConfigure(VideoConfigureInfo VideoConfigure) {
         this.VideoConfigure = VideoConfigure;
     }
 
     /**
-     * Get 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印参数配置。 
      * @return WatermarkConfigure 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkConfigureData getWatermarkConfigure() {
         return this.WatermarkConfigure;
@@ -140,9 +132,7 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
      * Set 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkConfigure 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWatermarkConfigure(WatermarkConfigureData WatermarkConfigure) {
         this.WatermarkConfigure = WatermarkConfigure;

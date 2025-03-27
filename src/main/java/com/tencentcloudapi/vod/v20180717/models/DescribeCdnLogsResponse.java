@@ -25,7 +25,6 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
     * 日志下载链接总数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
     * 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverseaCdnLogs")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
     * 国内CDN节点的日志下载列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomesticCdnLogs")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCdnLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志下载链接总数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志下载链接总数量。 
      * @return TotalCount 日志下载链接总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -66,19 +61,15 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
      * Set 日志下载链接总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 日志下载链接总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。 
      * @return OverseaCdnLogs 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnLogInfo [] getOverseaCdnLogs() {
         return this.OverseaCdnLogs;
@@ -86,19 +77,15 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
      * Set 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverseaCdnLogs 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverseaCdnLogs(CdnLogInfo [] OverseaCdnLogs) {
         this.OverseaCdnLogs = OverseaCdnLogs;
     }
 
     /**
-     * Get 国内CDN节点的日志下载列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国内CDN节点的日志下载列表。 
      * @return DomesticCdnLogs 国内CDN节点的日志下载列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnLogInfo [] getDomesticCdnLogs() {
         return this.DomesticCdnLogs;
@@ -106,9 +93,7 @@ public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
      * Set 国内CDN节点的日志下载列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomesticCdnLogs 国内CDN节点的日志下载列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
         this.DomesticCdnLogs = DomesticCdnLogs;

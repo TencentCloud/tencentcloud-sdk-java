@@ -32,7 +32,6 @@ public class SkippedDetail extends AbstractModel {
 
     /**
     * 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -55,10 +54,8 @@ public class SkippedDetail extends AbstractModel {
     }
 
     /**
-     * Get 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过校验的表详情 
      * @return Items 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SkippedItem [] getItems() {
         return this.Items;
@@ -66,9 +63,7 @@ public class SkippedDetail extends AbstractModel {
 
     /**
      * Set 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(SkippedItem [] Items) {
         this.Items = Items;

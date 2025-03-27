@@ -25,7 +25,6 @@ public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
     * 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
@@ -33,17 +32,14 @@ public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
     * 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private ProhibitedOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语音违禁控制参数。 
      * @return AsrReviewInfo 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
@@ -51,19 +47,15 @@ public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
      * Set 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrReviewInfo 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本违禁控制参数。 
      * @return OcrReviewInfo 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
@@ -71,9 +63,7 @@ public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
      * Set 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

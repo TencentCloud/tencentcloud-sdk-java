@@ -78,7 +78,6 @@ public class SchedulingDomainInfo extends AbstractModel {
 
     /**
     * 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsrDomainName")
     @Expose
@@ -213,10 +212,8 @@ public class SchedulingDomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名名称 
      * @return UsrDomainName 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsrDomainName() {
         return this.UsrDomainName;
@@ -224,9 +221,7 @@ public class SchedulingDomainInfo extends AbstractModel {
 
     /**
      * Set 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsrDomainName 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsrDomainName(String UsrDomainName) {
         this.UsrDomainName = UsrDomainName;

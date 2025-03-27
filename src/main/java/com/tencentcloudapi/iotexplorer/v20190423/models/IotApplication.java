@@ -225,6 +225,14 @@ public class IotApplication extends AbstractModel {
     private Long WechatNotifyStatus;
 
     /**
+    * 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InterconnectionProducts")
+    @Expose
+    private String InterconnectionProducts;
+
+    /**
      * Get 应用 ID 
      * @return IotAppID 应用 ID
      */
@@ -692,6 +700,26 @@ public class IotApplication extends AbstractModel {
         this.WechatNotifyStatus = WechatNotifyStatus;
     }
 
+    /**
+     * Get 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InterconnectionProducts 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInterconnectionProducts() {
+        return this.InterconnectionProducts;
+    }
+
+    /**
+     * Set 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InterconnectionProducts 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterconnectionProducts(String InterconnectionProducts) {
+        this.InterconnectionProducts = InterconnectionProducts;
+    }
+
     public IotApplication() {
     }
 
@@ -784,6 +812,9 @@ public class IotApplication extends AbstractModel {
         if (source.WechatNotifyStatus != null) {
             this.WechatNotifyStatus = new Long(source.WechatNotifyStatus);
         }
+        if (source.InterconnectionProducts != null) {
+            this.InterconnectionProducts = new String(source.InterconnectionProducts);
+        }
     }
 
 
@@ -819,6 +850,7 @@ public class IotApplication extends AbstractModel {
         this.setParamSimple(map, prefix + "SelfSmsSign", this.SelfSmsSign);
         this.setParamSimple(map, prefix + "SelfSmsTemplateId", this.SelfSmsTemplateId);
         this.setParamSimple(map, prefix + "WechatNotifyStatus", this.WechatNotifyStatus);
+        this.setParamSimple(map, prefix + "InterconnectionProducts", this.InterconnectionProducts);
 
     }
 }

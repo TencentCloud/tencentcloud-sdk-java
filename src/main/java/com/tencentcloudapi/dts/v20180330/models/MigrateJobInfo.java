@@ -137,7 +137,6 @@ public class MigrateJobInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -408,10 +407,8 @@ public class MigrateJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
         return this.Tags;
@@ -419,9 +416,7 @@ public class MigrateJobInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;

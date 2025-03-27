@@ -25,17 +25,14 @@ public class ComplexAdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
     * 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamPara")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara;
 
     /**
-     * Get 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自适应码流参数。 
      * @return StreamPara 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplexAdaptiveDynamicStreamingTaskStreamPara getStreamPara() {
         return this.StreamPara;
@@ -43,9 +40,7 @@ public class ComplexAdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
      * Set 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamPara 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamPara(ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara) {
         this.StreamPara = StreamPara;

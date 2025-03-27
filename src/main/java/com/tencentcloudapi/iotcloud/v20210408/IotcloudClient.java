@@ -72,7 +72,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateDevice）用于新建一个物联网通信设备。 
+     *本接口（CreateDevice）用于新建一个物联网通信设备。
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteDevice）用于删除物联网通信设备。 
+     *本接口（DeleteDevice）用于删除物联网通信设备。
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
      * @throws TencentCloudSDKException

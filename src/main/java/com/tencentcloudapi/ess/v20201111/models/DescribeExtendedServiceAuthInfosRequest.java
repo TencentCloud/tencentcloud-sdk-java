@@ -44,10 +44,14 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel {
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
     */
     @SerializedName("ExtendServiceType")
     @Expose
@@ -94,10 +98,14 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel {
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul> 
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul> 
      * @return ExtendServiceType 要查询的扩展服务类型。
 默认为空，即查询当前支持的所有扩展服务信息。
 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
@@ -110,10 +118,14 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel {
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
      */
     public String getExtendServiceType() {
         return this.ExtendServiceType;
@@ -132,10 +144,14 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel {
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
      * @param ExtendServiceType 要查询的扩展服务类型。
 默认为空，即查询当前支持的所有扩展服务信息。
 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
@@ -148,10 +164,14 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel {
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
      */
     public void setExtendServiceType(String ExtendServiceType) {
         this.ExtendServiceType = ExtendServiceType;

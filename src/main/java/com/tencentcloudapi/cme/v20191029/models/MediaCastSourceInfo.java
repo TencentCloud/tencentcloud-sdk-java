@@ -25,7 +25,6 @@ public class MediaCastSourceInfo extends AbstractModel {
 
     /**
     * 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -77,10 +76,8 @@ public class MediaCastSourceInfo extends AbstractModel {
     private String Url;
 
     /**
-     * Get 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入源 Id，由系统分配。 
      * @return Id 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -88,9 +85,7 @@ public class MediaCastSourceInfo extends AbstractModel {
 
     /**
      * Set 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;

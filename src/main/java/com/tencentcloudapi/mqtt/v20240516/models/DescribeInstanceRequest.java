@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029) 
+     * @return InstanceId 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
+     * @param InstanceId 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -62,7 +62,6 @@ public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
     * 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
     @Expose
@@ -194,10 +193,8 @@ public class ReduceMediaBitrateTask extends AbstractModel {
     }
 
     /**
-     * Get 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始视频的元信息。 
      * @return MetaData 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -205,9 +202,7 @@ public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
      * Set 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

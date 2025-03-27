@@ -39,7 +39,6 @@ public class FileVerifyInfo extends AbstractModel {
 
     /**
     * 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileVerifyName")
     @Expose
@@ -78,10 +77,8 @@ public class FileVerifyInfo extends AbstractModel {
     }
 
     /**
-     * Get 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件校验文件名。 
      * @return FileVerifyName 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileVerifyName() {
         return this.FileVerifyName;
@@ -89,9 +86,7 @@ public class FileVerifyInfo extends AbstractModel {
 
     /**
      * Set 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileVerifyName 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileVerifyName(String FileVerifyName) {
         this.FileVerifyName = FileVerifyName;

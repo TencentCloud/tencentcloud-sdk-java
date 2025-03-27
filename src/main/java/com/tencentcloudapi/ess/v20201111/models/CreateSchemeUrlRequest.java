@@ -167,6 +167,13 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     private String UrlUseEnv;
 
     /**
+    * 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+    */
+    @SerializedName("PickUpAfterJoined")
+    @Expose
+    private Boolean PickUpAfterJoined;
+
+    /**
      * Get 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息, userId 必填。
@@ -546,6 +553,22 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.UrlUseEnv = UrlUseEnv;
     }
 
+    /**
+     * Get 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。 
+     * @return PickUpAfterJoined 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+     */
+    public Boolean getPickUpAfterJoined() {
+        return this.PickUpAfterJoined;
+    }
+
+    /**
+     * Set 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+     * @param PickUpAfterJoined 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+     */
+    public void setPickUpAfterJoined(Boolean PickUpAfterJoined) {
+        this.PickUpAfterJoined = PickUpAfterJoined;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -605,6 +628,9 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         if (source.UrlUseEnv != null) {
             this.UrlUseEnv = new String(source.UrlUseEnv);
         }
+        if (source.PickUpAfterJoined != null) {
+            this.PickUpAfterJoined = new Boolean(source.PickUpAfterJoined);
+        }
     }
 
 
@@ -628,6 +654,7 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
         this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
+        this.setParamSimple(map, prefix + "PickUpAfterJoined", this.PickUpAfterJoined);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeOSImagesResponse extends AbstractModel {
 
     /**
     * 镜像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OSImageSeriesSet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOSImagesResponse extends AbstractModel {
 
     /**
     * 镜像数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeOSImagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像信息列表 
      * @return OSImageSeriesSet 镜像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OSImage [] getOSImageSeriesSet() {
         return this.OSImageSeriesSet;
@@ -58,19 +54,15 @@ public class DescribeOSImagesResponse extends AbstractModel {
 
     /**
      * Set 镜像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OSImageSeriesSet 镜像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOSImageSeriesSet(OSImage [] OSImageSeriesSet) {
         this.OSImageSeriesSet = OSImageSeriesSet;
     }
 
     /**
-     * Get 镜像数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像数量 
      * @return TotalCount 镜像数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeOSImagesResponse extends AbstractModel {
 
     /**
      * Set 镜像数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 镜像数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

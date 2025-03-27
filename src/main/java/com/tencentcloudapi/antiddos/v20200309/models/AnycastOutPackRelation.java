@@ -25,7 +25,6 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
     * 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalBandwidth")
     @Expose
@@ -33,7 +32,6 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
     * 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardRulesLimit")
     @Expose
@@ -41,7 +39,6 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
     * 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -49,17 +46,14 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
     * 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
     private String CurDeadline;
 
     /**
-     * Get 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务带宽(单位M) 
      * @return NormalBandwidth 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNormalBandwidth() {
         return this.NormalBandwidth;
@@ -67,19 +61,15 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
      * Set 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalBandwidth 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalBandwidth(Long NormalBandwidth) {
         this.NormalBandwidth = NormalBandwidth;
     }
 
     /**
-     * Get 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则数 
      * @return ForwardRulesLimit 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getForwardRulesLimit() {
         return this.ForwardRulesLimit;
@@ -87,19 +77,15 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
      * Set 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardRulesLimit 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardRulesLimit(Long ForwardRulesLimit) {
         this.ForwardRulesLimit = ForwardRulesLimit;
     }
 
     /**
-     * Get 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标记 
      * @return AutoRenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -107,19 +93,15 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
      * Set 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间 
      * @return CurDeadline 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -127,9 +109,7 @@ public class AnycastOutPackRelation extends AbstractModel {
 
     /**
      * Set 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;

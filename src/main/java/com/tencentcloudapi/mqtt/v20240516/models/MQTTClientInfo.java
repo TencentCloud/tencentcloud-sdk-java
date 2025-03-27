@@ -41,7 +41,7 @@ public class MQTTClientInfo extends AbstractModel {
     * MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
     */
     @SerializedName("ProtocolVersion")
     @Expose
@@ -125,11 +125,11 @@ public class MQTTClientInfo extends AbstractModel {
      * Get MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议 
+5：表示MQTT 5.0协议 
      * @return ProtocolVersion MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
      */
     public Long getProtocolVersion() {
         return this.ProtocolVersion;
@@ -139,11 +139,11 @@ public class MQTTClientInfo extends AbstractModel {
      * Set MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
      * @param ProtocolVersion MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
      */
     public void setProtocolVersion(Long ProtocolVersion) {
         this.ProtocolVersion = ProtocolVersion;

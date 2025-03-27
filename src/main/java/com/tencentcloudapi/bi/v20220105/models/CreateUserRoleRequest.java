@@ -63,7 +63,9 @@ public class CreateUserRoleRequest extends AbstractModel {
     /**
      * Get 用户列表（废弃） 
      * @return UserList 用户列表（废弃）
+     * @deprecated
      */
+    @Deprecated
     public UserIdAndUserName [] getUserList() {
         return this.UserList;
     }
@@ -71,7 +73,9 @@ public class CreateUserRoleRequest extends AbstractModel {
     /**
      * Set 用户列表（废弃）
      * @param UserList 用户列表（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setUserList(UserIdAndUserName [] UserList) {
         this.UserList = UserList;
     }

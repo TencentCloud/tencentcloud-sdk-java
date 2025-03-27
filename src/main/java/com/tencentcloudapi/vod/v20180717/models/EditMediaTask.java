@@ -72,7 +72,6 @@ public class EditMediaTask extends AbstractModel {
 
     /**
     * 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -80,7 +79,6 @@ public class EditMediaTask extends AbstractModel {
 
     /**
     * 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -238,10 +236,8 @@ public class EditMediaTask extends AbstractModel {
     }
 
     /**
-     * Get 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频编辑任务的输入。 
      * @return Input 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
@@ -249,19 +245,15 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Set 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频编辑任务的输出。 
      * @return Output 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
@@ -269,9 +261,7 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Set 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;

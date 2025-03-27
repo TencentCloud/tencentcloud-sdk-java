@@ -46,7 +46,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -61,7 +60,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateAt")
     @Expose
@@ -69,7 +67,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -77,7 +74,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmPolicy")
     @Expose
@@ -85,7 +81,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 模板状态。0-无任务 ，1-修改中。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -93,7 +88,6 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板应用在哪些在实例。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectedInstances")
     @Expose
@@ -148,10 +142,8 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板描述。 
      * @return Description 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -159,9 +151,7 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -184,10 +174,8 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 规则模板修改时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板修改时间。 
      * @return UpdateAt 规则模板修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateAt() {
         return this.UpdateAt;
@@ -195,19 +183,15 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateAt 规则模板修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateAt(String UpdateAt) {
         this.UpdateAt = UpdateAt;
     }
 
     /**
-     * Get 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警等级。1-低风险，2-中风险，3-高风险。 
      * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -215,19 +199,15 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警策略。0-不告警，1-告警。 
      * @return AlarmPolicy 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
@@ -235,19 +215,15 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmPolicy 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;
     }
 
     /**
-     * Get 模板状态。0-无任务 ，1-修改中。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板状态。0-无任务 ，1-修改中。 
      * @return Status 模板状态。0-无任务 ，1-修改中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -255,19 +231,15 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 模板状态。0-无任务 ，1-修改中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 模板状态。0-无任务 ，1-修改中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规则模板应用在哪些在实例。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板应用在哪些在实例。 
      * @return AffectedInstances 规则模板应用在哪些在实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAffectedInstances() {
         return this.AffectedInstances;
@@ -275,9 +247,7 @@ public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板应用在哪些在实例。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectedInstances 规则模板应用在哪些在实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectedInstances(String [] AffectedInstances) {
         this.AffectedInstances = AffectedInstances;

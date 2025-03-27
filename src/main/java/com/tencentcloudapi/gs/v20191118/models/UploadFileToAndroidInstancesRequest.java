@@ -38,6 +38,13 @@ public class UploadFileToAndroidInstancesRequest extends AbstractModel {
     private String FileURL;
 
     /**
+    * 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+    */
+    @SerializedName("DestinationDirectory")
+    @Expose
+    private String DestinationDirectory;
+
+    /**
      * Get 安卓实例 ID 列表 
      * @return AndroidInstanceIds 安卓实例 ID 列表
      */
@@ -69,6 +76,22 @@ public class UploadFileToAndroidInstancesRequest extends AbstractModel {
         this.FileURL = FileURL;
     }
 
+    /**
+     * Get 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下 
+     * @return DestinationDirectory 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+     */
+    public String getDestinationDirectory() {
+        return this.DestinationDirectory;
+    }
+
+    /**
+     * Set 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+     * @param DestinationDirectory 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+     */
+    public void setDestinationDirectory(String DestinationDirectory) {
+        this.DestinationDirectory = DestinationDirectory;
+    }
+
     public UploadFileToAndroidInstancesRequest() {
     }
 
@@ -86,6 +109,9 @@ public class UploadFileToAndroidInstancesRequest extends AbstractModel {
         if (source.FileURL != null) {
             this.FileURL = new String(source.FileURL);
         }
+        if (source.DestinationDirectory != null) {
+            this.DestinationDirectory = new String(source.DestinationDirectory);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class UploadFileToAndroidInstancesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "FileURL", this.FileURL);
+        this.setParamSimple(map, prefix + "DestinationDirectory", this.DestinationDirectory);
 
     }
 }

@@ -35,7 +35,6 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
     * 域名化资产的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBData")
     @Expose
@@ -43,7 +42,6 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
     * cnamewaf资源状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CnameWafData")
     @Expose
@@ -85,10 +83,8 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 域名化资产的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名化资产的名称 
      * @return CLBData 域名化资产的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValue [] getCLBData() {
         return this.CLBData;
@@ -96,19 +92,15 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
      * Set 域名化资产的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBData 域名化资产的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBData(KeyValue [] CLBData) {
         this.CLBData = CLBData;
     }
 
     /**
-     * Get cnamewaf资源状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cnamewaf资源状态 
      * @return CnameWafData cnamewaf资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValue [] getCnameWafData() {
         return this.CnameWafData;
@@ -116,9 +108,7 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
      * Set cnamewaf资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CnameWafData cnamewaf资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCnameWafData(KeyValue [] CnameWafData) {
         this.CnameWafData = CnameWafData;

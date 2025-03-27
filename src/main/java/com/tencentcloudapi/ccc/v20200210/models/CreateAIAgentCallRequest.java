@@ -59,6 +59,17 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     private Variable [] PromptVariables;
 
     /**
+    * 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+
+1. dify-inputs-xxx 为dify的inputs变量
+2.  dify-inputs-user 为dify的user值
+3.  dify-inputs-conversation_id 为dify的conversation_id值
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -138,6 +149,38 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.PromptVariables = PromptVariables;
     }
 
+    /**
+     * Get 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+
+1. dify-inputs-xxx 为dify的inputs变量
+2.  dify-inputs-user 为dify的user值
+3.  dify-inputs-conversation_id 为dify的conversation_id值 
+     * @return Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+
+1. dify-inputs-xxx 为dify的inputs变量
+2.  dify-inputs-user 为dify的user值
+3.  dify-inputs-conversation_id 为dify的conversation_id值
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+
+1. dify-inputs-xxx 为dify的inputs变量
+2.  dify-inputs-user 为dify的user值
+3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * @param Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+
+1. dify-inputs-xxx 为dify的inputs变量
+2.  dify-inputs-user 为dify的user值
+3.  dify-inputs-conversation_id 为dify的conversation_id值
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
     public CreateAIAgentCallRequest() {
     }
 
@@ -167,6 +210,12 @@ public class CreateAIAgentCallRequest extends AbstractModel {
                 this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
             }
         }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
     }
 
 
@@ -179,6 +228,7 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Callee", this.Callee);
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
 
     }
 }

@@ -213,6 +213,13 @@ public class ReverseShellEventInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 命令详情的转义后内容，供正则加白全字符串匹配使用
+    */
+    @SerializedName("CmdLineQuote")
+    @Expose
+    private String CmdLineQuote;
+
+    /**
      * Get ID 主键 
      * @return Id ID 主键
      */
@@ -644,6 +651,22 @@ public class ReverseShellEventInfo extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 命令详情的转义后内容，供正则加白全字符串匹配使用 
+     * @return CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用
+     */
+    public String getCmdLineQuote() {
+        return this.CmdLineQuote;
+    }
+
+    /**
+     * Set 命令详情的转义后内容，供正则加白全字符串匹配使用
+     * @param CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用
+     */
+    public void setCmdLineQuote(String CmdLineQuote) {
+        this.CmdLineQuote = CmdLineQuote;
+    }
+
     public ReverseShellEventInfo() {
     }
 
@@ -739,6 +762,9 @@ public class ReverseShellEventInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.CmdLineQuote != null) {
+            this.CmdLineQuote = new String(source.CmdLineQuote);
+        }
     }
 
 
@@ -773,6 +799,7 @@ public class ReverseShellEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
 
     }
 }

@@ -64,7 +64,6 @@ public class ComposeMediaTask extends AbstractModel {
 
     /**
     * 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -72,7 +71,6 @@ public class ComposeMediaTask extends AbstractModel {
 
     /**
     * 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -197,10 +195,8 @@ public class ComposeMediaTask extends AbstractModel {
     }
 
     /**
-     * Get 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 制作媒体文件任务的输入。 
      * @return Input 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComposeMediaTaskInput getInput() {
         return this.Input;
@@ -208,19 +204,15 @@ public class ComposeMediaTask extends AbstractModel {
 
     /**
      * Set 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(ComposeMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 制作媒体文件任务的输出。 
      * @return Output 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComposeMediaTaskOutput getOutput() {
         return this.Output;
@@ -228,9 +220,7 @@ public class ComposeMediaTask extends AbstractModel {
 
     /**
      * Set 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(ComposeMediaTaskOutput Output) {
         this.Output = Output;

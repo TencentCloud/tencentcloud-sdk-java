@@ -53,6 +53,13 @@ Oversea：则查询国外数据，
     private String MainlandOrOversea;
 
     /**
+    * 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
      * Get 起始时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
@@ -132,6 +139,22 @@ Oversea：则查询国外数据，
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
+    /**
+     * Get 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型 
+     * @return SourceType 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型
+     * @param SourceType 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
     public DescribePullTransformPushInfoRequest() {
     }
 
@@ -149,6 +172,9 @@ Oversea：则查询国外数据，
         if (source.MainlandOrOversea != null) {
             this.MainlandOrOversea = new String(source.MainlandOrOversea);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
     }
 
 
@@ -159,6 +185,7 @@ Oversea：则查询国外数据，
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

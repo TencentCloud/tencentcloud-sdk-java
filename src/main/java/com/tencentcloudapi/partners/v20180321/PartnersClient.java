@@ -207,6 +207,17 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *查询客户的交易类型切换任务的信息，查询成功则获取当前用户的切换链接，查询失败则返回失败的原因
+     * @param req DescribeClientSwitchTraTaskInfoRequest
+     * @return DescribeClientSwitchTraTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientSwitchTraTaskInfoResponse DescribeClientSwitchTraTaskInfo(DescribeClientSwitchTraTaskInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClientSwitchTraTaskInfo", DescribeClientSwitchTraTaskInfoResponse.class);
+    }
+
+    /**
      *【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息
      * @param req DescribeRebateInfosRequest
      * @return DescribeRebateInfosResponse

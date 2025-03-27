@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class DetachNetworkInterfaceRequest extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * CVM实例ID。形如：ins-r8hr2upy。
+    * CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,32 +47,40 @@ public class DetachNetworkInterfaceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+ 
+     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get CVM实例ID。形如：ins-r8hr2upy。 
-     * @return InstanceId CVM实例ID。形如：ins-r8hr2upy。
+     * Get CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+ 
+     * @return InstanceId CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CVM实例ID。形如：ins-r8hr2upy。
-     * @param InstanceId CVM实例ID。形如：ins-r8hr2upy。
+     * Set CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
+     * @param InstanceId CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

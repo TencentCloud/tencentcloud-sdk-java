@@ -1284,19 +1284,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
-
-更新Amqp集群信息
-     * @param req ModifyAMQPClusterRequest
-     * @return ModifyAMQPClusterResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAMQPClusterResponse ModifyAMQPCluster(ModifyAMQPClusterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAMQPCluster", ModifyAMQPClusterResponse.class);
-    }
-
-    /**
      *更新集群信息
      * @param req ModifyClusterRequest
      * @return ModifyClusterResponse

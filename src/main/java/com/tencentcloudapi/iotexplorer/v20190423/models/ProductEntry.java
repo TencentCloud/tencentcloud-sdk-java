@@ -179,6 +179,14 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     private String Period;
 
     /**
+    * 互联互通标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInterconnection")
+    @Expose
+    private Long IsInterconnection;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -546,6 +554,26 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.Period = Period;
     }
 
+    /**
+     * Get 互联互通标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInterconnection 互联互通标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsInterconnection() {
+        return this.IsInterconnection;
+    }
+
+    /**
+     * Set 互联互通标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInterconnection 互联互通标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInterconnection(Long IsInterconnection) {
+        this.IsInterconnection = IsInterconnection;
+    }
+
     public ProductEntry() {
     }
 
@@ -617,6 +645,9 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         if (source.Period != null) {
             this.Period = new String(source.Period);
         }
+        if (source.IsInterconnection != null) {
+            this.IsInterconnection = new Long(source.IsInterconnection);
+        }
     }
 
 
@@ -645,6 +676,7 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.setParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "IsInterconnection", this.IsInterconnection);
 
     }
 }

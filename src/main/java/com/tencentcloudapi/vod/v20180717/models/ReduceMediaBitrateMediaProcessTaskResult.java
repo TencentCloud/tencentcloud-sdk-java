@@ -34,7 +34,6 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
 
     /**
     * 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
     @Expose
@@ -42,7 +41,6 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
 
     /**
     * 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
@@ -73,10 +71,8 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。 
      * @return TranscodeTask 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReduceMediaBitrateTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
@@ -84,19 +80,15 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
 
     /**
      * Set 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(ReduceMediaBitrateTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。 
      * @return AdaptiveDynamicStreamingTask 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
@@ -104,9 +96,7 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
 
     /**
      * Set 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingTask 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;

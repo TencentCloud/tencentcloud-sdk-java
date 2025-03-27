@@ -27,6 +27,7 @@ public class DescribeInstanceResponse extends AbstractModel {
     * 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
     */
     @SerializedName("InstanceType")
     @Expose
@@ -82,7 +83,7 @@ PRO  专业版
     private String Remark;
 
     /**
-    * 实例状态
+    * 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -133,7 +134,7 @@ API：通过API手动注册
     private Boolean AutomaticActivation;
 
     /**
-    * 是否自动续费
+    * 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -147,14 +148,14 @@ API：通过API手动注册
     private String PayMode;
 
     /**
-    * 到期时间，秒为单位
+    * 到期时间，毫秒级时间戳
     */
     @SerializedName("ExpiryTime")
     @Expose
     private Long ExpiryTime;
 
     /**
-    * 预销毁时间
+    * 预销毁时间，毫秒级时间戳
     */
     @SerializedName("DestroyTime")
     @Expose
@@ -189,6 +190,13 @@ API：通过API手动注册
     private Long MaxSubscription;
 
     /**
+    * 授权策略开关
+    */
+    @SerializedName("AuthorizationPolicy")
+    @Expose
+    private Boolean AuthorizationPolicy;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -198,10 +206,12 @@ API：通过API手动注册
     /**
      * Get 实例类型
 BASIC 基础版
-PRO  专业版 
+PRO  专业版
+PLATINUM 铂金版 
      * @return InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -211,9 +221,11 @@ PRO  专业版
      * Set 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
      * @param InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -332,16 +344,16 @@ PRO  专业版
     }
 
     /**
-     * Get 实例状态 
-     * @return InstanceStatus 实例状态
+     * Get 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中 
+     * @return InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param InstanceStatus 实例状态
+     * Set 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+     * @param InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -452,16 +464,16 @@ API：通过API手动注册
     }
 
     /**
-     * Get 是否自动续费 
-     * @return RenewFlag 是否自动续费
+     * Get 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费 
+     * @return RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-     * @param RenewFlag 是否自动续费
+     * Set 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+     * @param RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -484,32 +496,32 @@ API：通过API手动注册
     }
 
     /**
-     * Get 到期时间，秒为单位 
-     * @return ExpiryTime 到期时间，秒为单位
+     * Get 到期时间，毫秒级时间戳 
+     * @return ExpiryTime 到期时间，毫秒级时间戳
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
     }
 
     /**
-     * Set 到期时间，秒为单位
-     * @param ExpiryTime 到期时间，秒为单位
+     * Set 到期时间，毫秒级时间戳
+     * @param ExpiryTime 到期时间，毫秒级时间戳
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
     }
 
     /**
-     * Get 预销毁时间 
-     * @return DestroyTime 预销毁时间
+     * Get 预销毁时间，毫秒级时间戳 
+     * @return DestroyTime 预销毁时间，毫秒级时间戳
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set 预销毁时间
-     * @param DestroyTime 预销毁时间
+     * Set 预销毁时间，毫秒级时间戳
+     * @param DestroyTime 预销毁时间，毫秒级时间戳
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;
@@ -577,6 +589,22 @@ API：通过API手动注册
      */
     public void setMaxSubscription(Long MaxSubscription) {
         this.MaxSubscription = MaxSubscription;
+    }
+
+    /**
+     * Get 授权策略开关 
+     * @return AuthorizationPolicy 授权策略开关
+     */
+    public Boolean getAuthorizationPolicy() {
+        return this.AuthorizationPolicy;
+    }
+
+    /**
+     * Set 授权策略开关
+     * @param AuthorizationPolicy 授权策略开关
+     */
+    public void setAuthorizationPolicy(Boolean AuthorizationPolicy) {
+        this.AuthorizationPolicy = AuthorizationPolicy;
     }
 
     /**
@@ -672,6 +700,9 @@ API：通过API手动注册
         if (source.MaxSubscription != null) {
             this.MaxSubscription = new Long(source.MaxSubscription);
         }
+        if (source.AuthorizationPolicy != null) {
+            this.AuthorizationPolicy = new Boolean(source.AuthorizationPolicy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -705,6 +736,7 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "MaxCaNum", this.MaxCaNum);
         this.setParamSimple(map, prefix + "RegistrationCode", this.RegistrationCode);
         this.setParamSimple(map, prefix + "MaxSubscription", this.MaxSubscription);
+        this.setParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -199,6 +199,13 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String [] DrZones;
 
     /**
+    * 磁盘加密标识，0-不加密，1-加密
+    */
+    @SerializedName("DiskEncryptFlag")
+    @Expose
+    private Long DiskEncryptFlag;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -598,6 +605,22 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         this.DrZones = DrZones;
     }
 
+    /**
+     * Get 磁盘加密标识，0-不加密，1-加密 
+     * @return DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     */
+    public Long getDiskEncryptFlag() {
+        return this.DiskEncryptFlag;
+    }
+
+    /**
+     * Set 磁盘加密标识，0-不加密，1-加密
+     * @param DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     */
+    public void setDiskEncryptFlag(Long DiskEncryptFlag) {
+        this.DiskEncryptFlag = DiskEncryptFlag;
+    }
+
     public CreateCloudDBInstancesRequest() {
     }
 
@@ -696,6 +719,9 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
                 this.DrZones[i] = new String(source.DrZones[i]);
             }
         }
+        if (source.DiskEncryptFlag != null) {
+            this.DiskEncryptFlag = new Long(source.DiskEncryptFlag);
+        }
     }
 
 
@@ -728,6 +754,7 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
         this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
+        this.setParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
 
     }
 }

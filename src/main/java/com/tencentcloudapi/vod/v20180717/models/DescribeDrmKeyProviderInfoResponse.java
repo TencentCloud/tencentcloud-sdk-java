@@ -25,7 +25,6 @@ public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
     * 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SDMCInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 华曦达（SDMC）相关的 DRM 密钥提供商信息。 
      * @return SDMCInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SDMCDrmKeyProviderInfo getSDMCInfo() {
         return this.SDMCInfo;
@@ -50,9 +47,7 @@ public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
      * Set 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SDMCInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
         this.SDMCInfo = SDMCInfo;

@@ -192,6 +192,13 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     private String TimeZone;
 
     /**
+    * 磁盘加密标识，0-不加密，1-加密
+    */
+    @SerializedName("DiskEncryptFlag")
+    @Expose
+    private Long DiskEncryptFlag;
+
+    /**
      * Get 主实例ID，格式如：mssql-3l3fgqn7 
      * @return InstanceId 主实例ID，格式如：mssql-3l3fgqn7
      */
@@ -575,6 +582,22 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
         this.TimeZone = TimeZone;
     }
 
+    /**
+     * Get 磁盘加密标识，0-不加密，1-加密 
+     * @return DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     */
+    public Long getDiskEncryptFlag() {
+        return this.DiskEncryptFlag;
+    }
+
+    /**
+     * Set 磁盘加密标识，0-不加密，1-加密
+     * @param DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     */
+    public void setDiskEncryptFlag(Long DiskEncryptFlag) {
+        this.DiskEncryptFlag = DiskEncryptFlag;
+    }
+
     public CreateCloudReadOnlyDBInstancesRequest() {
     }
 
@@ -664,6 +687,9 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.DiskEncryptFlag != null) {
+            this.DiskEncryptFlag = new Long(source.DiskEncryptFlag);
+        }
     }
 
 
@@ -695,6 +721,7 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
 
     }
 }

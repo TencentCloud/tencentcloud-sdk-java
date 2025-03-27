@@ -63,7 +63,6 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
 
     /**
     * 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -162,10 +161,8 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自适应码流任务的输出。 
      * @return Output 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplexAdaptiveDynamicStreamingTaskOutput getOutput() {
         return this.Output;
@@ -173,9 +170,7 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
 
     /**
      * Set 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(ComplexAdaptiveDynamicStreamingTaskOutput Output) {
         this.Output = Output;

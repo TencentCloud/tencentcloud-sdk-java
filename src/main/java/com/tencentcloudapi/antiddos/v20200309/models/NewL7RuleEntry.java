@@ -195,7 +195,6 @@ public class NewL7RuleEntry extends AbstractModel {
 
     /**
     * 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualPort")
     @Expose
@@ -217,7 +216,6 @@ public class NewL7RuleEntry extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -616,10 +614,8 @@ public class NewL7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入端口值 
      * @return VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVirtualPort() {
         return this.VirtualPort;
@@ -627,9 +623,7 @@ public class NewL7RuleEntry extends AbstractModel {
 
     /**
      * Set 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualPort(Long VirtualPort) {
         this.VirtualPort = VirtualPort;
@@ -668,10 +662,8 @@ public class NewL7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
         return this.Version;
@@ -679,9 +671,7 @@ public class NewL7RuleEntry extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
         this.Version = Version;

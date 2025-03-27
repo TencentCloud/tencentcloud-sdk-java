@@ -32,7 +32,6 @@ public class SplitMediaTaskSegmentInfo extends AbstractModel {
 
     /**
     * 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -69,10 +68,8 @@ public class SplitMediaTaskSegmentInfo extends AbstractModel {
     }
 
     /**
-     * Get 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频拆条任务输出信息。 
      * @return Output 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputMediaInfo getOutput() {
         return this.Output;
@@ -80,9 +77,7 @@ public class SplitMediaTaskSegmentInfo extends AbstractModel {
 
     /**
      * Set 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(TaskOutputMediaInfo Output) {
         this.Output = Output;

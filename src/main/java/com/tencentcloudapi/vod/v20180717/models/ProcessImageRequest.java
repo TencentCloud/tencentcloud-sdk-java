@@ -38,18 +38,18 @@ public class ProcessImageRequest extends AbstractModel {
     private String Operation;
 
     /**
-    * 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
-    */
-    @SerializedName("ContentReviewInput")
-    @Expose
-    private ImageContentReviewInput ContentReviewInput;
-
-    /**
     * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
+    */
+    @SerializedName("ContentReviewInput")
+    @Expose
+    private ImageContentReviewInput ContentReviewInput;
 
     /**
      * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符。本接口要求媒体文件必须是图片格式。 
@@ -84,22 +84,6 @@ public class ProcessImageRequest extends AbstractModel {
     }
 
     /**
-     * Get 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。 
-     * @return ContentReviewInput 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
-     */
-    public ImageContentReviewInput getContentReviewInput() {
-        return this.ContentReviewInput;
-    }
-
-    /**
-     * Set 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
-     * @param ContentReviewInput 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
-     */
-    public void setContentReviewInput(ImageContentReviewInput ContentReviewInput) {
-        this.ContentReviewInput = ContentReviewInput;
-    }
-
-    /**
      * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
      * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
@@ -113,6 +97,22 @@ public class ProcessImageRequest extends AbstractModel {
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。 
+     * @return ContentReviewInput 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
+     */
+    public ImageContentReviewInput getContentReviewInput() {
+        return this.ContentReviewInput;
+    }
+
+    /**
+     * Set 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
+     * @param ContentReviewInput 图片内容智能识别参数，当 Operation 为 ContentReview 时该字段有效。
+     */
+    public void setContentReviewInput(ImageContentReviewInput ContentReviewInput) {
+        this.ContentReviewInput = ContentReviewInput;
     }
 
     public ProcessImageRequest() {
@@ -129,11 +129,11 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.Operation != null) {
             this.Operation = new String(source.Operation);
         }
-        if (source.ContentReviewInput != null) {
-            this.ContentReviewInput = new ImageContentReviewInput(source.ContentReviewInput);
-        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.ContentReviewInput != null) {
+            this.ContentReviewInput = new ImageContentReviewInput(source.ContentReviewInput);
         }
     }
 
@@ -144,8 +144,8 @@ public class ProcessImageRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
-        this.setParamObj(map, prefix + "ContentReviewInput.", this.ContentReviewInput);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamObj(map, prefix + "ContentReviewInput.", this.ContentReviewInput);
 
     }
 }

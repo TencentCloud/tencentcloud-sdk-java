@@ -151,7 +151,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037)接口。
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 可以指定`IPv6`地址申请，地址类型不能为主`IP`，`IPv6`地址暂时只支持作为辅助`IP`。
 * 地址必须要在弹性网卡所在子网内，而且不能被占用。
@@ -342,7 +342,8 @@ public class VpcClient extends AbstractClient{
 * 只有运行中或者已关机状态的云服务器才能绑定弹性网卡，查看云服务器状态详见<a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">腾讯云服务器信息</a>。
 * 弹性网卡绑定的云服务器必须是私有网络的，而且云服务器所在可用区必须和弹性网卡子网的可用区相同。
 
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037)
+接口。
      * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -3027,7 +3028,8 @@ LimitTypes取值范围：
 
     /**
      *本接口（DetachNetworkInterface）用于弹性网卡解绑云服务器。
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037)
+接口。
      * @param req DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -4708,7 +4710,7 @@ LimitTypes取值范围：
 
     /**
      *本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037)接口。
      * @param req UnassignIpv6AddressesRequest
      * @return UnassignIpv6AddressesResponse
      * @throws TencentCloudSDKException
@@ -4746,7 +4748,8 @@ LimitTypes取值范围：
      *本接口（UnassignPrivateIpAddresses）用于弹性网卡退还内网 IP。
 * 退还弹性网卡上的辅助内网IP，接口自动解除关联弹性公网 IP。不能退还弹性网卡的主内网IP。
 
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037)
+接口。
      * @param req UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse
      * @throws TencentCloudSDKException

@@ -109,7 +109,6 @@ public class L7RuleEntry extends AbstractModel {
 
     /**
     * 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsToHttpEnable")
     @Expose
@@ -152,7 +151,6 @@ public class L7RuleEntry extends AbstractModel {
 
     /**
     * 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualPort")
     @Expose
@@ -372,10 +370,8 @@ public class L7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭 
      * @return HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpsToHttpEnable() {
         return this.HttpsToHttpEnable;
@@ -383,9 +379,7 @@ public class L7RuleEntry extends AbstractModel {
 
     /**
      * Set 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsToHttpEnable(Long HttpsToHttpEnable) {
         this.HttpsToHttpEnable = HttpsToHttpEnable;
@@ -472,10 +466,8 @@ public class L7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入端口值 
      * @return VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVirtualPort() {
         return this.VirtualPort;
@@ -483,9 +475,7 @@ public class L7RuleEntry extends AbstractModel {
 
     /**
      * Set 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualPort(Long VirtualPort) {
         this.VirtualPort = VirtualPort;

@@ -41,7 +41,7 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
     private String Status;
 
     /**
-    * 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+    * 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingTaskResultSet")
     @Expose
@@ -92,16 +92,16 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
     }
 
     /**
-     * Get 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。 
-     * @return ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+     * Get 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。 
+     * @return ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
      */
     public ComplexAdaptiveDynamicStreamingTaskResult [] getComplexAdaptiveDynamicStreamingTaskResultSet() {
         return this.ComplexAdaptiveDynamicStreamingTaskResultSet;
     }
 
     /**
-     * Set 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
-     * @param ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+     * Set 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
+     * @param ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
      */
     public void setComplexAdaptiveDynamicStreamingTaskResultSet(ComplexAdaptiveDynamicStreamingTaskResult [] ComplexAdaptiveDynamicStreamingTaskResultSet) {
         this.ComplexAdaptiveDynamicStreamingTaskResultSet = ComplexAdaptiveDynamicStreamingTaskResultSet;

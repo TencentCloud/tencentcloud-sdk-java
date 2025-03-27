@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MoveClassRequest extends AbstractModel {
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
@@ -59,16 +59,16 @@ public class MoveClassRequest extends AbstractModel {
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

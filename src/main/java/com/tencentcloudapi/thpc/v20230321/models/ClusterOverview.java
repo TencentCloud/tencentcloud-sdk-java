@@ -129,6 +129,13 @@ public class ClusterOverview extends AbstractModel {
     private String VpcId;
 
     /**
+    * 集群类型
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get 集群ID。 
      * @return ClusterId 集群ID。
      */
@@ -368,6 +375,22 @@ public class ClusterOverview extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get 集群类型 
+     * @return ClusterType 集群类型
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型
+     * @param ClusterType 集群类型
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public ClusterOverview() {
     }
 
@@ -430,6 +453,9 @@ public class ClusterOverview extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -452,6 +478,7 @@ public class ClusterOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
         this.setParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

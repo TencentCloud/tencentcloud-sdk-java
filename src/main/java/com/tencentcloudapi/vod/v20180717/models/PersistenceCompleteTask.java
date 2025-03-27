@@ -25,7 +25,6 @@ public class PersistenceCompleteTask extends AbstractModel {
 
     /**
     * 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -36,17 +35,14 @@ public class PersistenceCompleteTask extends AbstractModel {
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersistenceSource")
     @Expose
     private String PersistenceSource;
 
     /**
-     * Get 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固化生成的媒体 ID。 
      * @return FileId 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -54,9 +50,7 @@ public class PersistenceCompleteTask extends AbstractModel {
 
     /**
      * Set 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -66,13 +60,11 @@ public class PersistenceCompleteTask extends AbstractModel {
      * Get 剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
-<li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>LiveRealTimeClip:来自直播即时剪辑。</li> 
      * @return PersistenceSource 剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPersistenceSource() {
         return this.PersistenceSource;
@@ -83,12 +75,10 @@ public class PersistenceCompleteTask extends AbstractModel {
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersistenceSource 剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersistenceSource(String PersistenceSource) {
         this.PersistenceSource = PersistenceSource;

@@ -48,6 +48,13 @@ Exited：表示当前录制任务正在退出的过程中。
     private StorageFile [] StorageFileList;
 
     /**
+    * 转推录制任务发起时所填，标识一次录制
+    */
+    @SerializedName("RecorderKey")
+    @Expose
+    private String RecorderKey;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +122,22 @@ Exited：表示当前录制任务正在退出的过程中。
     }
 
     /**
+     * Get 转推录制任务发起时所填，标识一次录制 
+     * @return RecorderKey 转推录制任务发起时所填，标识一次录制
+     */
+    public String getRecorderKey() {
+        return this.RecorderKey;
+    }
+
+    /**
+     * Set 转推录制任务发起时所填，标识一次录制
+     * @param RecorderKey 转推录制任务发起时所填，标识一次录制
+     */
+    public void setRecorderKey(String RecorderKey) {
+        this.RecorderKey = RecorderKey;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -150,6 +173,9 @@ Exited：表示当前录制任务正在退出的过程中。
                 this.StorageFileList[i] = new StorageFile(source.StorageFileList[i]);
             }
         }
+        if (source.RecorderKey != null) {
+            this.RecorderKey = new String(source.RecorderKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -163,6 +189,7 @@ Exited：表示当前录制任务正在退出的过程中。
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "StorageFileList.", this.StorageFileList);
+        this.setParamSimple(map, prefix + "RecorderKey", this.RecorderKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
     * 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppCounter")
     @Expose
@@ -33,7 +32,6 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
     * 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserCounter")
     @Expose
@@ -41,7 +39,6 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
     * 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppCnt")
     @Expose
@@ -49,7 +46,6 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
     * 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployCnt")
     @Expose
@@ -57,7 +53,6 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
     * 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChainCnt")
     @Expose
@@ -71,10 +66,8 @@ public class GetOverSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户参与应用的统计指标 
      * @return AppCounter 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceCounterData getAppCounter() {
         return this.AppCounter;
@@ -82,19 +75,15 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppCounter 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppCounter(ResourceCounterData AppCounter) {
         this.AppCounter = AppCounter;
     }
 
     /**
-     * Get 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户部署应用的统计指标 
      * @return UserCounter 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceCounterData getUserCounter() {
         return this.UserCounter;
@@ -102,19 +91,15 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserCounter 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserCounter(ResourceCounterData UserCounter) {
         this.UserCounter = UserCounter;
     }
 
     /**
-     * Get 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户参与的应用总数 
      * @return AppCnt 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppCnt() {
         return this.AppCnt;
@@ -122,19 +107,15 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppCnt 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppCnt(Long AppCnt) {
         this.AppCnt = AppCnt;
     }
 
     /**
-     * Get 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户部署的应用总数 
      * @return DeployCnt 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployCnt() {
         return this.DeployCnt;
@@ -142,19 +123,15 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
      * Set 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployCnt 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployCnt(Long DeployCnt) {
         this.DeployCnt = DeployCnt;
     }
 
     /**
-     * Get 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署网络子链总数 
      * @return ChainCnt 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChainCnt() {
         return this.ChainCnt;
@@ -162,9 +139,7 @@ public class GetOverSummaryResponse extends AbstractModel {
 
     /**
      * Set 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChainCnt 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChainCnt(Long ChainCnt) {
         this.ChainCnt = ChainCnt;

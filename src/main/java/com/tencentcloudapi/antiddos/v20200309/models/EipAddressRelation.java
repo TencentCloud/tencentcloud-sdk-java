@@ -25,7 +25,6 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
     * 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipAddressRegion")
     @Expose
@@ -33,7 +32,6 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
     * 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipBoundRscIns")
     @Expose
@@ -41,7 +39,6 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
     * 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipBoundRscEni")
     @Expose
@@ -49,7 +46,6 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
     * 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipBoundRscVip")
     @Expose
@@ -57,17 +53,14 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高防弹性公网IP绑定的实例地区，例如hk代表中国香港 
      * @return EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEipAddressRegion() {
         return this.EipAddressRegion;
@@ -75,19 +68,15 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
      * Set 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipAddressRegion(String EipAddressRegion) {
         this.EipAddressRegion = EipAddressRegion;
     }
 
     /**
-     * Get 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的资源实例ID。可能是一个CVM。 
      * @return EipBoundRscIns 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEipBoundRscIns() {
         return this.EipBoundRscIns;
@@ -95,19 +84,15 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
      * Set 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipBoundRscIns 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipBoundRscIns(String EipBoundRscIns) {
         this.EipBoundRscIns = EipBoundRscIns;
     }
 
     /**
-     * Get 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的弹性网卡ID 
      * @return EipBoundRscEni 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEipBoundRscEni() {
         return this.EipBoundRscEni;
@@ -115,19 +100,15 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
      * Set 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipBoundRscEni 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipBoundRscEni(String EipBoundRscEni) {
         this.EipBoundRscEni = EipBoundRscEni;
     }
 
     /**
-     * Get 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的资源内网ip 
      * @return EipBoundRscVip 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEipBoundRscVip() {
         return this.EipBoundRscVip;
@@ -135,19 +116,15 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
      * Set 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipBoundRscVip 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipBoundRscVip(String EipBoundRscVip) {
         this.EipBoundRscVip = EipBoundRscVip;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -155,9 +132,7 @@ public class EipAddressRelation extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

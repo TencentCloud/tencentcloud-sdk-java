@@ -263,8 +263,6 @@ public class CmeClient extends AbstractClient{
 <li>支持获取指定的平台列表信息。</li>
 
 关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
-
-
      * @param req DescribePlatformsRequest
      * @return DescribePlatformsResponse
      * @throws TencentCloudSDKException
@@ -627,7 +625,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     * 资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
+     *资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
      * @param req RevokeResourceAuthorizationRequest
      * @return RevokeResourceAuthorizationResponse
      * @throws TencentCloudSDKException

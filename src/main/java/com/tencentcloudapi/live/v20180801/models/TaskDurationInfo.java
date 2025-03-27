@@ -38,6 +38,13 @@ public class TaskDurationInfo extends AbstractModel {
     private Long Duration;
 
     /**
+    * 拉流转推任务的时长，单位为秒
+    */
+    @SerializedName("DurationSecond")
+    @Expose
+    private Long DurationSecond;
+
+    /**
      * Get 拉流转推任务的时间点 
      * @return Time 拉流转推任务的时间点
      */
@@ -69,6 +76,22 @@ public class TaskDurationInfo extends AbstractModel {
         this.Duration = Duration;
     }
 
+    /**
+     * Get 拉流转推任务的时长，单位为秒 
+     * @return DurationSecond 拉流转推任务的时长，单位为秒
+     */
+    public Long getDurationSecond() {
+        return this.DurationSecond;
+    }
+
+    /**
+     * Set 拉流转推任务的时长，单位为秒
+     * @param DurationSecond 拉流转推任务的时长，单位为秒
+     */
+    public void setDurationSecond(Long DurationSecond) {
+        this.DurationSecond = DurationSecond;
+    }
+
     public TaskDurationInfo() {
     }
 
@@ -83,6 +106,9 @@ public class TaskDurationInfo extends AbstractModel {
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
+        if (source.DurationSecond != null) {
+            this.DurationSecond = new Long(source.DurationSecond);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class TaskDurationInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "DurationSecond", this.DurationSecond);
 
     }
 }

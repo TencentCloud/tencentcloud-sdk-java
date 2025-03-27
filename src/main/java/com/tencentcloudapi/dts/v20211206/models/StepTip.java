@@ -25,7 +25,6 @@ public class StepTip extends AbstractModel {
 
     /**
     * 错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class StepTip extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -41,7 +39,6 @@ public class StepTip extends AbstractModel {
 
     /**
     * 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Solution")
     @Expose
@@ -49,7 +46,6 @@ public class StepTip extends AbstractModel {
 
     /**
     * 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HelpDoc")
     @Expose
@@ -57,17 +53,14 @@ public class StepTip extends AbstractModel {
 
     /**
     * 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkipInfo")
     @Expose
     private String SkipInfo;
 
     /**
-     * Get 错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码 
      * @return Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -75,19 +68,15 @@ public class StepTip extends AbstractModel {
 
     /**
      * Set 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -95,19 +84,15 @@ public class StepTip extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 解决方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方式 
      * @return Solution 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolution() {
         return this.Solution;
@@ -115,19 +100,15 @@ public class StepTip extends AbstractModel {
 
     /**
      * Set 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Solution 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 帮助文档 
      * @return HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHelpDoc() {
         return this.HelpDoc;
@@ -135,19 +116,15 @@ public class StepTip extends AbstractModel {
 
     /**
      * Set 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHelpDoc(String HelpDoc) {
         this.HelpDoc = HelpDoc;
     }
 
     /**
-     * Get 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤跳过信息 
      * @return SkipInfo 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSkipInfo() {
         return this.SkipInfo;
@@ -155,9 +132,7 @@ public class StepTip extends AbstractModel {
 
     /**
      * Set 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkipInfo 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipInfo(String SkipInfo) {
         this.SkipInfo = SkipInfo;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class ModifyNetworkInterfaceQosRequest extends AbstractModel {
 
     /**
-    * 弹性网卡ID，支持批量修改。
+    * 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
     */
     @SerializedName("NetworkInterfaceIds")
     @Expose
     private String [] NetworkInterfaceIds;
 
     /**
-    * 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+    * 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
     */
     @SerializedName("QosLevel")
     @Expose
     private String QosLevel;
 
     /**
-    * DirectSend端口范围最大值。
+    * DirectSend端口范围最大值。最大值: 65535。
     */
     @SerializedName("DirectSendMaxPort")
     @Expose
     private Long DirectSendMaxPort;
 
     /**
-     * Get 弹性网卡ID，支持批量修改。 
-     * @return NetworkInterfaceIds 弹性网卡ID，支持批量修改。
+     * Get 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+ 
+     * @return NetworkInterfaceIds 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public String [] getNetworkInterfaceIds() {
         return this.NetworkInterfaceIds;
     }
 
     /**
-     * Set 弹性网卡ID，支持批量修改。
-     * @param NetworkInterfaceIds 弹性网卡ID，支持批量修改。
+     * Set 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param NetworkInterfaceIds 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public void setNetworkInterfaceIds(String [] NetworkInterfaceIds) {
         this.NetworkInterfaceIds = NetworkInterfaceIds;
     }
 
     /**
-     * Get 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。 
-     * @return QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * Get 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。 
+     * @return QosLevel 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
-     * @param QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * Set 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+     * @param QosLevel 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
     }
 
     /**
-     * Get DirectSend端口范围最大值。 
-     * @return DirectSendMaxPort DirectSend端口范围最大值。
+     * Get DirectSend端口范围最大值。最大值: 65535。 
+     * @return DirectSendMaxPort DirectSend端口范围最大值。最大值: 65535。
      */
     public Long getDirectSendMaxPort() {
         return this.DirectSendMaxPort;
     }
 
     /**
-     * Set DirectSend端口范围最大值。
-     * @param DirectSendMaxPort DirectSend端口范围最大值。
+     * Set DirectSend端口范围最大值。最大值: 65535。
+     * @param DirectSendMaxPort DirectSend端口范围最大值。最大值: 65535。
      */
     public void setDirectSendMaxPort(Long DirectSendMaxPort) {
         this.DirectSendMaxPort = DirectSendMaxPort;

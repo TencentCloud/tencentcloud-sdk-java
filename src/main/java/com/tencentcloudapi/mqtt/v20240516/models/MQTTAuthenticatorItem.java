@@ -34,16 +34,35 @@ HTTP：HTTP认证器
     private String Type;
 
     /**
-    * HTTP认证器
+    * JWT认证器字段说明
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+secret（签名方式）
+    hmac-based：hmac-based签名方式
+    public-key：public-key签名方式
+secret（密钥），hmac-based需要配置密钥
+public-key（公钥），public-key签名方式需要配置
+样例：{"from":"password","secret":"secret282698","algorithm":"hmac-based"}
+
+JWKS认证器字段说明
+endpoint（接入点）：公钥获取服务器接入地址
+refreshInterval（认证内容）：公钥集合刷新周期
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+text：公钥集合
+样例：{"endpoint":"127.0.0.1","refreshInterval":60,"from":"password"}
+
+HTTP认证器
 headers（请求头）：标准请求头和自定义请求头
 endpoint（接入点）：认证服务器接入点
 method（http请求方法）：POST/GET
 readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
 connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
 body（请求体）：http请求体
-concurrency（并发数）：最大并发请求数
+concurrency（并发数）：最大并发请求数量
 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
-
 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
     */
     @SerializedName("Config")
@@ -102,27 +121,65 @@ HTTP：HTTP认证器
     }
 
     /**
-     * Get HTTP认证器
+     * Get JWT认证器字段说明
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+secret（签名方式）
+    hmac-based：hmac-based签名方式
+    public-key：public-key签名方式
+secret（密钥），hmac-based需要配置密钥
+public-key（公钥），public-key签名方式需要配置
+样例：{"from":"password","secret":"secret282698","algorithm":"hmac-based"}
+
+JWKS认证器字段说明
+endpoint（接入点）：公钥获取服务器接入地址
+refreshInterval（认证内容）：公钥集合刷新周期
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+text：公钥集合
+样例：{"endpoint":"127.0.0.1","refreshInterval":60,"from":"password"}
+
+HTTP认证器
 headers（请求头）：标准请求头和自定义请求头
 endpoint（接入点）：认证服务器接入点
 method（http请求方法）：POST/GET
 readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
 connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
 body（请求体）：http请求体
-concurrency（并发数）：最大并发请求数
+concurrency（并发数）：最大并发请求数量
 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
-
 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813) 
-     * @return Config HTTP认证器
+     * @return Config JWT认证器字段说明
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+secret（签名方式）
+    hmac-based：hmac-based签名方式
+    public-key：public-key签名方式
+secret（密钥），hmac-based需要配置密钥
+public-key（公钥），public-key签名方式需要配置
+样例：{"from":"password","secret":"secret282698","algorithm":"hmac-based"}
+
+JWKS认证器字段说明
+endpoint（接入点）：公钥获取服务器接入地址
+refreshInterval（认证内容）：公钥集合刷新周期
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+text：公钥集合
+样例：{"endpoint":"127.0.0.1","refreshInterval":60,"from":"password"}
+
+HTTP认证器
 headers（请求头）：标准请求头和自定义请求头
 endpoint（接入点）：认证服务器接入点
 method（http请求方法）：POST/GET
 readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
 connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
 body（请求体）：http请求体
-concurrency（并发数）：最大并发请求数
+concurrency（并发数）：最大并发请求数量
 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
-
 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      */
     public String getConfig() {
@@ -130,27 +187,65 @@ concurrency（并发数）：最大并发请求数
     }
 
     /**
-     * Set HTTP认证器
+     * Set JWT认证器字段说明
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+secret（签名方式）
+    hmac-based：hmac-based签名方式
+    public-key：public-key签名方式
+secret（密钥），hmac-based需要配置密钥
+public-key（公钥），public-key签名方式需要配置
+样例：{"from":"password","secret":"secret282698","algorithm":"hmac-based"}
+
+JWKS认证器字段说明
+endpoint（接入点）：公钥获取服务器接入地址
+refreshInterval（认证内容）：公钥集合刷新周期
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+text：公钥集合
+样例：{"endpoint":"127.0.0.1","refreshInterval":60,"from":"password"}
+
+HTTP认证器
 headers（请求头）：标准请求头和自定义请求头
 endpoint（接入点）：认证服务器接入点
 method（http请求方法）：POST/GET
 readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
 connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
 body（请求体）：http请求体
-concurrency（并发数）：最大并发请求数
+concurrency（并发数）：最大并发请求数量
 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
-
 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
-     * @param Config HTTP认证器
+     * @param Config JWT认证器字段说明
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+secret（签名方式）
+    hmac-based：hmac-based签名方式
+    public-key：public-key签名方式
+secret（密钥），hmac-based需要配置密钥
+public-key（公钥），public-key签名方式需要配置
+样例：{"from":"password","secret":"secret282698","algorithm":"hmac-based"}
+
+JWKS认证器字段说明
+endpoint（接入点）：公钥获取服务器接入地址
+refreshInterval（认证内容）：公钥集合刷新周期
+from（认证字段）
+    password：从password字段获取认证字段
+    username：从username字段获取认证字段
+text：公钥集合
+样例：{"endpoint":"127.0.0.1","refreshInterval":60,"from":"password"}
+
+HTTP认证器
 headers（请求头）：标准请求头和自定义请求头
 endpoint（接入点）：认证服务器接入点
 method（http请求方法）：POST/GET
 readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
 connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
 body（请求体）：http请求体
-concurrency（并发数）：最大并发请求数
+concurrency（并发数）：最大并发请求数量
 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
-
 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      */
     public void setConfig(String Config) {
