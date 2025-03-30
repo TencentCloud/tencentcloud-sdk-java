@@ -27,7 +27,6 @@ public class OutputMappingOption extends AbstractModel {
     * 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Workspace")
     @Expose
@@ -36,12 +35,10 @@ GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
     /**
      * Get 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
-GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。 
+GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。 
      * @return Workspace 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspace() {
         return this.Workspace;
@@ -51,11 +48,9 @@ GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
      * Set 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Workspace 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspace(String Workspace) {
         this.Workspace = Workspace;

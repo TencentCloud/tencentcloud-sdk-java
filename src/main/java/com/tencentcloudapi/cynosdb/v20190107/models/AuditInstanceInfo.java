@@ -25,7 +25,6 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -33,17 +32,14 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -51,19 +47,15 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return TagList 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagList() {
         return this.TagList;
@@ -71,9 +63,7 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;

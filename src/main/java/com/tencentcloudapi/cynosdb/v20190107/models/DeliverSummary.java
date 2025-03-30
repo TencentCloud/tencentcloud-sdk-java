@@ -38,6 +38,20 @@ public class DeliverSummary extends AbstractModel {
     private String DeliverSubType;
 
     /**
+    * 投递者
+    */
+    @SerializedName("DeliverConsumer")
+    @Expose
+    private String DeliverConsumer;
+
+    /**
+    * 投递者名称
+    */
+    @SerializedName("DeliverConsumerName")
+    @Expose
+    private String DeliverConsumerName;
+
+    /**
      * Get 投递类型，store（存储类），mq（消息通道） 
      * @return DeliverType 投递类型，store（存储类），mq（消息通道）
      */
@@ -69,6 +83,38 @@ public class DeliverSummary extends AbstractModel {
         this.DeliverSubType = DeliverSubType;
     }
 
+    /**
+     * Get 投递者 
+     * @return DeliverConsumer 投递者
+     */
+    public String getDeliverConsumer() {
+        return this.DeliverConsumer;
+    }
+
+    /**
+     * Set 投递者
+     * @param DeliverConsumer 投递者
+     */
+    public void setDeliverConsumer(String DeliverConsumer) {
+        this.DeliverConsumer = DeliverConsumer;
+    }
+
+    /**
+     * Get 投递者名称 
+     * @return DeliverConsumerName 投递者名称
+     */
+    public String getDeliverConsumerName() {
+        return this.DeliverConsumerName;
+    }
+
+    /**
+     * Set 投递者名称
+     * @param DeliverConsumerName 投递者名称
+     */
+    public void setDeliverConsumerName(String DeliverConsumerName) {
+        this.DeliverConsumerName = DeliverConsumerName;
+    }
+
     public DeliverSummary() {
     }
 
@@ -83,6 +129,12 @@ public class DeliverSummary extends AbstractModel {
         if (source.DeliverSubType != null) {
             this.DeliverSubType = new String(source.DeliverSubType);
         }
+        if (source.DeliverConsumer != null) {
+            this.DeliverConsumer = new String(source.DeliverConsumer);
+        }
+        if (source.DeliverConsumerName != null) {
+            this.DeliverConsumerName = new String(source.DeliverConsumerName);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class DeliverSummary extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeliverType", this.DeliverType);
         this.setParamSimple(map, prefix + "DeliverSubType", this.DeliverSubType);
+        this.setParamSimple(map, prefix + "DeliverConsumer", this.DeliverConsumer);
+        this.setParamSimple(map, prefix + "DeliverConsumerName", this.DeliverConsumerName);
 
     }
 }

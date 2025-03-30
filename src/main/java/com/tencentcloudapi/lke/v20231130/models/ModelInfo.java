@@ -88,7 +88,7 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter MaxTokens;
 
     /**
-    * 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+    * 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
     */
     @SerializedName("Source")
     @Expose
@@ -107,6 +107,29 @@ public class ModelInfo extends AbstractModel {
     @SerializedName("IsFree")
     @Expose
     private Boolean IsFree;
+
+    /**
+    * 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputLenLimit")
+    @Expose
+    private Long InputLenLimit;
+
+    /**
+    * 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportWorkflowStatus")
+    @Expose
+    private Long SupportWorkflowStatus;
+
+    /**
+    * 模型类别 generate：生成模型，thought：思考模型
+    */
+    @SerializedName("ModelCategory")
+    @Expose
+    private String ModelCategory;
 
     /**
      * Get 模型名称
@@ -269,16 +292,16 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验 
-     * @return Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * Get 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型 
+     * @return Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
-     * @param Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * Set 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+     * @param Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
      */
     public void setSource(String Source) {
         this.Source = Source;
@@ -314,6 +337,62 @@ public class ModelInfo extends AbstractModel {
      */
     public void setIsFree(Boolean IsFree) {
         this.IsFree = IsFree;
+    }
+
+    /**
+     * Get 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputLenLimit 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInputLenLimit() {
+        return this.InputLenLimit;
+    }
+
+    /**
+     * Set 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputLenLimit 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputLenLimit(Long InputLenLimit) {
+        this.InputLenLimit = InputLenLimit;
+    }
+
+    /**
+     * Get 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSupportWorkflowStatus() {
+        return this.SupportWorkflowStatus;
+    }
+
+    /**
+     * Set 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportWorkflowStatus(Long SupportWorkflowStatus) {
+        this.SupportWorkflowStatus = SupportWorkflowStatus;
+    }
+
+    /**
+     * Get 模型类别 generate：生成模型，thought：思考模型 
+     * @return ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     */
+    public String getModelCategory() {
+        return this.ModelCategory;
+    }
+
+    /**
+     * Set 模型类别 generate：生成模型，thought：思考模型
+     * @param ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     */
+    public void setModelCategory(String ModelCategory) {
+        this.ModelCategory = ModelCategory;
     }
 
     public ModelInfo() {
@@ -357,6 +436,15 @@ public class ModelInfo extends AbstractModel {
         if (source.IsFree != null) {
             this.IsFree = new Boolean(source.IsFree);
         }
+        if (source.InputLenLimit != null) {
+            this.InputLenLimit = new Long(source.InputLenLimit);
+        }
+        if (source.SupportWorkflowStatus != null) {
+            this.SupportWorkflowStatus = new Long(source.SupportWorkflowStatus);
+        }
+        if (source.ModelCategory != null) {
+            this.ModelCategory = new String(source.ModelCategory);
+        }
     }
 
 
@@ -375,6 +463,9 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Icon", this.Icon);
         this.setParamSimple(map, prefix + "IsFree", this.IsFree);
+        this.setParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
+        this.setParamSimple(map, prefix + "SupportWorkflowStatus", this.SupportWorkflowStatus);
+        this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
 
     }
 }

@@ -25,17 +25,14 @@ public class AuditRuleFilters extends AbstractModel {
 
     /**
     * 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-     * Get 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单条审计规则。 
      * @return RuleFilters 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
@@ -43,9 +40,7 @@ public class AuditRuleFilters extends AbstractModel {
 
     /**
      * Set 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleFilters 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;

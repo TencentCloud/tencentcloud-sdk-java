@@ -32,7 +32,6 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
     * 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
@@ -40,7 +39,6 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
     * 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
     @Expose
@@ -48,7 +46,6 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
     * 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QCloudUIN")
     @Expose
@@ -56,7 +53,6 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
     * 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -64,7 +60,6 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
     * 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubDomain")
     @Expose
@@ -87,10 +82,8 @@ public class DomainShareUserInfo extends AbstractModel {
     }
 
     /**
-     * Get 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享模式。r-只读；w-可写；rw-可读写。 
      * @return Mode 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
         return this.Mode;
@@ -98,19 +91,15 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
      * Set 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享到的用户昵称 
      * @return Nickname 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
         return this.Nickname;
@@ -118,19 +107,15 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
      * Set 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nickname 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享到的用户UIN 
      * @return QCloudUIN 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQCloudUIN() {
         return this.QCloudUIN;
@@ -138,19 +123,15 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
      * Set 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QCloudUIN 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQCloudUIN(String QCloudUIN) {
         this.QCloudUIN = QCloudUIN;
     }
 
     /**
-     * Get 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享状态。enabled-有效；pause-无效。 
      * @return Status 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -158,19 +139,15 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
      * Set 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 共享的子域名 
      * @return SubDomain 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubDomain() {
         return this.SubDomain;
@@ -178,9 +155,7 @@ public class DomainShareUserInfo extends AbstractModel {
 
     /**
      * Set 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubDomain 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;

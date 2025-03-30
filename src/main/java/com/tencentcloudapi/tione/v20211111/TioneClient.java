@@ -105,6 +105,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *创建模型训练任务
+     * @param req CreateTrainingTaskRequest
+     * @return CreateTrainingTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrainingTaskResponse CreateTrainingTask(CreateTrainingTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrainingTask", CreateTrainingTaskResponse.class);
+    }
+
+    /**
      *删除数据集
      * @param req DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -168,6 +179,17 @@ public class TioneClient extends AbstractClient{
     public DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(DeleteTrainingModelVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTrainingModelVersion", DeleteTrainingModelVersionResponse.class);
+    }
+
+    /**
+     *删除训练任务
+     * @param req DeleteTrainingTaskRequest
+     * @return DeleteTrainingTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrainingTaskResponse DeleteTrainingTask(DeleteTrainingTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrainingTask", DeleteTrainingTaskResponse.class);
     }
 
     /**
@@ -448,6 +470,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *启动模型训练任务
+     * @param req StartTrainingTaskRequest
+     * @return StartTrainingTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartTrainingTaskResponse StartTrainingTask(StartTrainingTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartTrainingTask", StartTrainingTaskResponse.class);
+    }
+
+    /**
      *停止模型加速任务
      * @param req StopModelAccelerateTaskRequest
      * @return StopModelAccelerateTaskResponse
@@ -467,6 +500,17 @@ public class TioneClient extends AbstractClient{
     public StopNotebookResponse StopNotebook(StopNotebookRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopNotebook", StopNotebookResponse.class);
+    }
+
+    /**
+     *停止模型训练任务
+     * @param req StopTrainingTaskRequest
+     * @return StopTrainingTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopTrainingTaskResponse StopTrainingTask(StopTrainingTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopTrainingTask", StopTrainingTaskResponse.class);
     }
 
 }

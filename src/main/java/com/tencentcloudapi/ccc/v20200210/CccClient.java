@@ -39,6 +39,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *停止座席巡航式外呼任务
+     * @param req AbortAgentCruiseDialingCampaignRequest
+     * @return AbortAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaign(AbortAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AbortAgentCruiseDialingCampaign", AbortAgentCruiseDialingCampaignResponse.class);
+    }
+
+    /**
      *停止预测式外呼任务
      * @param req AbortPredictiveDialingCampaignRequest
      * @return AbortPredictiveDialingCampaignResponse
@@ -106,6 +117,17 @@ public class CccClient extends AbstractClient{
     public CreateAdminURLResponse CreateAdminURL(CreateAdminURLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAdminURL", CreateAdminURLResponse.class);
+    }
+
+    /**
+     *座席巡航式外呼。
+     * @param req CreateAgentCruiseDialingCampaignRequest
+     * @return CreateAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaign(CreateAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAgentCruiseDialingCampaign", CreateAgentCruiseDialingCampaignResponse.class);
     }
 
     /**
@@ -297,6 +319,17 @@ public class CccClient extends AbstractClient{
     public DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumber(DescribeActiveCarrierPrivilegeNumberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeActiveCarrierPrivilegeNumber", DescribeActiveCarrierPrivilegeNumberResponse.class);
+    }
+
+    /**
+     *查询 座席巡航式外呼任务
+     * @param req DescribeAgentCruiseDialingCampaignRequest
+     * @return DescribeAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaign(DescribeAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentCruiseDialingCampaign", DescribeAgentCruiseDialingCampaignResponse.class);
     }
 
     /**
@@ -695,6 +728,17 @@ public class CccClient extends AbstractClient{
     public StopAutoCalloutTaskResponse StopAutoCalloutTask(StopAutoCalloutTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopAutoCalloutTask", StopAutoCalloutTaskResponse.class);
+    }
+
+    /**
+     *特定场景下讲会话转接到人工坐席
+     * @param req TransferToManualRequest
+     * @return TransferToManualResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferToManualResponse TransferToManual(TransferToManualRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferToManual", TransferToManualResponse.class);
     }
 
     /**

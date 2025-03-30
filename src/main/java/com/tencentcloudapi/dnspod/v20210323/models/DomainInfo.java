@@ -74,7 +74,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -166,7 +165,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActualNsList")
     @Expose
@@ -181,7 +179,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerNick")
     @Expose
@@ -189,7 +186,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGracePeriod")
     @Expose
@@ -197,7 +193,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipBuffered")
     @Expose
@@ -237,7 +232,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSubDomain")
     @Expose
@@ -245,7 +239,6 @@ public class DomainInfo extends AbstractModel {
 
     /**
     * 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -378,10 +371,8 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名备注 
      * @return Remark 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -389,9 +380,7 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -590,10 +579,8 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名实际使用的NS列表 
      * @return ActualNsList 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActualNsList() {
         return this.ActualNsList;
@@ -601,9 +588,7 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActualNsList 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActualNsList(String [] ActualNsList) {
         this.ActualNsList = ActualNsList;
@@ -626,10 +611,8 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名所有者的账户昵称 
      * @return OwnerNick 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerNick() {
         return this.OwnerNick;
@@ -637,19 +620,15 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerNick 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerNick(String OwnerNick) {
         this.OwnerNick = OwnerNick;
     }
 
     /**
-     * Get 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否在付费套餐宽限期 
      * @return IsGracePeriod 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsGracePeriod() {
         return this.IsGracePeriod;
@@ -657,19 +636,15 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsGracePeriod 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGracePeriod(String IsGracePeriod) {
         this.IsGracePeriod = IsGracePeriod;
     }
 
     /**
-     * Get 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否在付费套餐缓冲期 
      * @return VipBuffered 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipBuffered() {
         return this.VipBuffered;
@@ -677,9 +652,7 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VipBuffered 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipBuffered(String VipBuffered) {
         this.VipBuffered = VipBuffered;
@@ -766,10 +739,8 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是子域名。 
      * @return IsSubDomain 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSubDomain() {
         return this.IsSubDomain;
@@ -777,19 +748,15 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSubDomain 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSubDomain(Boolean IsSubDomain) {
         this.IsSubDomain = IsSubDomain;
     }
 
     /**
-     * Get 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名关联的标签列表 
      * @return TagList 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTagList() {
         return this.TagList;
@@ -797,9 +764,7 @@ public class DomainInfo extends AbstractModel {
 
     /**
      * Set 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(TagItem [] TagList) {
         this.TagList = TagList;

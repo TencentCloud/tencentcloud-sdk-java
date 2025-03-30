@@ -185,6 +185,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *控制设备抓拍--单次，当前仅支持国标设备
+     * @param req ControlDeviceSnapshotRequest
+     * @return ControlDeviceSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlDeviceSnapshotResponse ControlDeviceSnapshot(ControlDeviceSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlDeviceSnapshot", ControlDeviceSnapshotResponse.class);
+    }
+
+    /**
      *用于获取设备的实时开流地址。
      * @param req ControlDeviceStreamRequest
      * @return ControlDeviceStreamResponse
@@ -623,6 +634,17 @@ public class IssClient extends AbstractClient{
     public ListAITasksResponse ListAITasks(ListAITasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAITasks", ListAITasksResponse.class);
+    }
+
+    /**
+     *获取设备抓拍结果列表
+     * @param req ListDeviceSnapshotsRequest
+     * @return ListDeviceSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDeviceSnapshotsResponse ListDeviceSnapshots(ListDeviceSnapshotsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDeviceSnapshots", ListDeviceSnapshotsResponse.class);
     }
 
     /**

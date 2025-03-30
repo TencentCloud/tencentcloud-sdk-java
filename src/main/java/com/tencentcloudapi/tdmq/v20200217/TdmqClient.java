@@ -1075,7 +1075,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *用于查询RocketMQ平滑迁移任务列表
+     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+用于查询RocketMQ平滑迁移任务列表
      * @param req DescribeRocketMQSmoothMigrationTaskListRequest
      * @return DescribeRocketMQSmoothMigrationTaskListResponse
      * @throws TencentCloudSDKException
@@ -1086,7 +1088,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *平滑迁移过程获取源集群group列表接口
+     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+平滑迁移过程获取源集群group列表接口
      * @param req DescribeRocketMQSourceClusterGroupListRequest
      * @return DescribeRocketMQSourceClusterGroupListResponse
      * @throws TencentCloudSDKException
@@ -1097,7 +1101,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *平滑迁移过程获取源集群topic列表接口
+     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+平滑迁移过程获取源集群topic列表接口
      * @param req DescribeRocketMQSourceClusterTopicListRequest
      * @return DescribeRocketMQSourceClusterTopicListResponse
      * @throws TencentCloudSDKException

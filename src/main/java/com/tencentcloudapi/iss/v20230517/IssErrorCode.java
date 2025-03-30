@@ -333,6 +333,9 @@ public enum IssErrorCode {
      /* 时间范围超限 */
      INVALIDPARAMETERVALUE_OUTOFTIMERANGE("InvalidParameterValue.OutOfTimeRange"),
      
+     /* 页面大小超出限制，单页最多请求2000条记录 */
+     INVALIDPARAMETERVALUE_PAGESIZEEXCEEDLIMIT("InvalidParameterValue.PageSizeExceedLimit"),
+     
      /* 通道数量一次最多添加5000路 */
      INVALIDPARAMETERVALUE_PLANCHANNELSEXCEEDSRANGE("InvalidParameterValue.PlanChannelsExceedsRange"),
      

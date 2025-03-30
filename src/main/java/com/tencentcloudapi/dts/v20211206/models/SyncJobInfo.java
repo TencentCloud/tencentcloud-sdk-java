@@ -67,6 +67,7 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
     * 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
     @Expose
@@ -372,8 +373,10 @@ public class SyncJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前状态能进行的操作 
+     * Get 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Actions 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActions() {
         return this.Actions;
@@ -381,7 +384,9 @@ public class SyncJobInfo extends AbstractModel {
 
     /**
      * Set 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Actions 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String [] Actions) {
         this.Actions = Actions;

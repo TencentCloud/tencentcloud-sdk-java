@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeDomainLogListResponse extends AbstractModel {
 
     /**
-    * 域名信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 域名日志信息
     */
     @SerializedName("LogList")
     @Expose
@@ -53,20 +52,16 @@ public class DescribeDomainLogListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogList 域名信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 域名日志信息 
+     * @return LogList 域名日志信息
      */
     public String [] getLogList() {
         return this.LogList;
     }
 
     /**
-     * Set 域名信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogList 域名信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 域名日志信息
+     * @param LogList 域名日志信息
      */
     public void setLogList(String [] LogList) {
         this.LogList = LogList;

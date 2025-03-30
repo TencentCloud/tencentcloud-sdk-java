@@ -80,13 +80,6 @@ public class DataAuthorizationInfo extends AbstractModel {
     private String PrivacyPolicyLink;
 
     /**
-    * 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-    */
-    @SerializedName("IsPersonalData")
-    @Expose
-    private Long IsPersonalData;
-
-    /**
      * Get 数据委托方、需求方：客户主体名称。 
      * @return DataProviderName 数据委托方、需求方：客户主体名称。
      */
@@ -226,22 +219,6 @@ public class DataAuthorizationInfo extends AbstractModel {
         this.PrivacyPolicyLink = PrivacyPolicyLink;
     }
 
-    /**
-     * Get 是否是用户个人敏感数据（不推荐使用）。固定填：1。 
-     * @return IsPersonalData 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-     */
-    public Long getIsPersonalData() {
-        return this.IsPersonalData;
-    }
-
-    /**
-     * Set 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-     * @param IsPersonalData 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-     */
-    public void setIsPersonalData(Long IsPersonalData) {
-        this.IsPersonalData = IsPersonalData;
-    }
-
     public DataAuthorizationInfo() {
     }
 
@@ -274,9 +251,6 @@ public class DataAuthorizationInfo extends AbstractModel {
         if (source.PrivacyPolicyLink != null) {
             this.PrivacyPolicyLink = new String(source.PrivacyPolicyLink);
         }
-        if (source.IsPersonalData != null) {
-            this.IsPersonalData = new Long(source.IsPersonalData);
-        }
     }
 
 
@@ -291,7 +265,6 @@ public class DataAuthorizationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsOrderHandling", this.IsOrderHandling);
         this.setParamSimple(map, prefix + "AuthorizationTerm", this.AuthorizationTerm);
         this.setParamSimple(map, prefix + "PrivacyPolicyLink", this.PrivacyPolicyLink);
-        this.setParamSimple(map, prefix + "IsPersonalData", this.IsPersonalData);
 
     }
 }

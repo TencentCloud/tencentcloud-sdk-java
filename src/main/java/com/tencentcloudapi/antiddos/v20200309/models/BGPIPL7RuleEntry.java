@@ -186,7 +186,6 @@ public class BGPIPL7RuleEntry extends AbstractModel {
 
     /**
     * 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualPort")
     @Expose
@@ -582,10 +581,8 @@ public class BGPIPL7RuleEntry extends AbstractModel {
     }
 
     /**
-     * Get 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入端口值 
      * @return VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVirtualPort() {
         return this.VirtualPort;
@@ -593,9 +590,7 @@ public class BGPIPL7RuleEntry extends AbstractModel {
 
     /**
      * Set 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualPort(Long VirtualPort) {
         this.VirtualPort = VirtualPort;

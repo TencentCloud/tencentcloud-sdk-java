@@ -107,7 +107,6 @@ public class RecordInfo extends AbstractModel {
 
     /**
     * 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -324,10 +323,8 @@ public class RecordInfo extends AbstractModel {
     }
 
     /**
-     * Get 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录的备注。 
      * @return Remark 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -335,9 +332,7 @@ public class RecordInfo extends AbstractModel {
 
     /**
      * Set 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

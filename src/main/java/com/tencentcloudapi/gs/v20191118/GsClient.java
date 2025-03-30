@@ -120,6 +120,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *安卓实例截图
+     * @param req CreateAndroidInstancesScreenshotRequest
+     * @return CreateAndroidInstancesScreenshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidInstancesScreenshotResponse CreateAndroidInstancesScreenshot(CreateAndroidInstancesScreenshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidInstancesScreenshot", CreateAndroidInstancesScreenshotResponse.class);
+    }
+
+    /**
      *创建会话
      * @param req CreateSessionRequest
      * @return CreateSessionResponse

@@ -45,6 +45,9 @@ public enum CccErrorCode {
      /* 坐席处于忙碌状态。 */
      FAILEDOPERATION_SEATSTATUSBUSY("FailedOperation.SeatStatusBusy"),
      
+     /* 会话不存在 */
+     FAILEDOPERATION_SESSIONNOTEXISTS("FailedOperation.SessionNotExists"),
+     
      /* 上传文件个数超过限制 */
      FAILEDOPERATION_UPLOADFILEOVERFLOW("FailedOperation.UploadFileOverflow"),
      
@@ -128,6 +131,9 @@ public enum CccErrorCode {
      
      /* 查询记录不存在。 */
      INVALIDPARAMETERVALUE_RECORDNOTEXIST("InvalidParameterValue.RecordNotExist"),
+     
+     /* 同振技能组人数超上限2，请确认并修改。 */
+     INVALIDPARAMETERVALUE_RINGALLGROUPMEMBEROVERFLOW("InvalidParameterValue.RingAllGroupMemberOverflow"),
      
      /* 技能组错误。 */
      INVALIDPARAMETERVALUE_SKILLGROUPERROR("InvalidParameterValue.SkillGroupError"),

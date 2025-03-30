@@ -32,7 +32,6 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
     * 是否是规则审计。true-规则审计，false-全审计。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditRule")
     @Expose
@@ -40,7 +39,6 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
     * 审计规则详情。仅当AuditRule=true时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditRuleFilters")
     @Expose
@@ -48,7 +46,6 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
     * 是否是审计策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldRule")
     @Expose
@@ -56,7 +53,6 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
     * 实例应用的规则模板详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplates")
     @Expose
@@ -79,10 +75,8 @@ public class InstanceAuditRule extends AbstractModel {
     }
 
     /**
-     * Get 是否是规则审计。true-规则审计，false-全审计。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是规则审计。true-规则审计，false-全审计。 
      * @return AuditRule 是否是规则审计。true-规则审计，false-全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAuditRule() {
         return this.AuditRule;
@@ -90,19 +84,15 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
      * Set 是否是规则审计。true-规则审计，false-全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditRule 是否是规则审计。true-规则审计，false-全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditRule(Boolean AuditRule) {
         this.AuditRule = AuditRule;
     }
 
     /**
-     * Get 审计规则详情。仅当AuditRule=true时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计规则详情。仅当AuditRule=true时有效。 
      * @return AuditRuleFilters 审计规则详情。仅当AuditRule=true时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
@@ -110,19 +100,15 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
      * Set 审计规则详情。仅当AuditRule=true时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditRuleFilters 审计规则详情。仅当AuditRule=true时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }
 
     /**
-     * Get 是否是审计策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是审计策略 
      * @return OldRule 是否是审计策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOldRule() {
         return this.OldRule;
@@ -130,19 +116,15 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
      * Set 是否是审计策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldRule 是否是审计策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldRule(Boolean OldRule) {
         this.OldRule = OldRule;
     }
 
     /**
-     * Get 实例应用的规则模板详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例应用的规则模板详情 
      * @return RuleTemplates 实例应用的规则模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTemplateInfo [] getRuleTemplates() {
         return this.RuleTemplates;
@@ -150,9 +132,7 @@ public class InstanceAuditRule extends AbstractModel {
 
     /**
      * Set 实例应用的规则模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplates 实例应用的规则模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplates(RuleTemplateInfo [] RuleTemplates) {
         this.RuleTemplates = RuleTemplates;

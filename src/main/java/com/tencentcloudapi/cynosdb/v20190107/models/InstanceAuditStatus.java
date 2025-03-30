@@ -39,7 +39,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogExpireDay")
     @Expose
@@ -47,7 +46,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighLogExpireDay")
     @Expose
@@ -55,7 +53,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LowLogExpireDay")
     @Expose
@@ -63,7 +60,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingAmount")
     @Expose
@@ -71,7 +67,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighRealStorage")
     @Expose
@@ -79,7 +74,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LowRealStorage")
     @Expose
@@ -87,7 +81,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditAll")
     @Expose
@@ -95,7 +88,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateAt")
     @Expose
@@ -103,7 +95,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceInfo")
     @Expose
@@ -111,7 +102,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealStorage")
     @Expose
@@ -119,7 +109,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -127,7 +116,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 是否开启日志投递：ON，OFF
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deliver")
     @Expose
@@ -135,7 +123,6 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
     * 日志投递类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliverSummary")
     @Expose
@@ -174,10 +161,8 @@ public class InstanceAuditStatus extends AbstractModel {
     }
 
     /**
-     * Get 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志保留时长。 
      * @return LogExpireDay 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
@@ -185,19 +170,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogExpireDay 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高频存储时长。 
      * @return HighLogExpireDay 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
@@ -205,19 +186,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighLogExpireDay 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 低频存储时长。 
      * @return LowLogExpireDay 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLowLogExpireDay() {
         return this.LowLogExpireDay;
@@ -225,19 +202,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LowLogExpireDay 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLowLogExpireDay(Long LowLogExpireDay) {
         this.LowLogExpireDay = LowLogExpireDay;
     }
 
     /**
-     * Get 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志存储量。 
      * @return BillingAmount 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBillingAmount() {
         return this.BillingAmount;
@@ -245,19 +218,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingAmount 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingAmount(Float BillingAmount) {
         this.BillingAmount = BillingAmount;
     }
 
     /**
-     * Get 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高频存储量。 
      * @return HighRealStorage 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getHighRealStorage() {
         return this.HighRealStorage;
@@ -265,19 +234,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighRealStorage 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighRealStorage(Float HighRealStorage) {
         this.HighRealStorage = HighRealStorage;
     }
 
     /**
-     * Get 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 低频存储量。 
      * @return LowRealStorage 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLowRealStorage() {
         return this.LowRealStorage;
@@ -285,19 +250,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LowRealStorage 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLowRealStorage(Float LowRealStorage) {
         this.LowRealStorage = LowRealStorage;
     }
 
     /**
-     * Get 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为全审计。true-表示全审计。 
      * @return AuditAll 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
@@ -305,19 +266,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditAll 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;
     }
 
     /**
-     * Get 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计开通时间。 
      * @return CreateAt 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateAt() {
         return this.CreateAt;
@@ -325,19 +282,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateAt 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例相关信息。 
      * @return InstanceInfo 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditInstanceInfo getInstanceInfo() {
         return this.InstanceInfo;
@@ -345,19 +298,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceInfo 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceInfo(AuditInstanceInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;
     }
 
     /**
-     * Get 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总存储量。 
      * @return RealStorage 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRealStorage() {
         return this.RealStorage;
@@ -365,19 +314,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealStorage 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealStorage(Float RealStorage) {
         this.RealStorage = RealStorage;
     }
 
     /**
-     * Get 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所应用的规则模板。 
      * @return RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
@@ -385,19 +330,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get 是否开启日志投递：ON，OFF
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启日志投递：ON，OFF 
      * @return Deliver 是否开启日志投递：ON，OFF
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeliver() {
         return this.Deliver;
@@ -405,19 +346,15 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 是否开启日志投递：ON，OFF
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deliver 是否开启日志投递：ON，OFF
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliver(String Deliver) {
         this.Deliver = Deliver;
     }
 
     /**
-     * Get 日志投递类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志投递类型 
      * @return DeliverSummary 日志投递类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeliverSummary [] getDeliverSummary() {
         return this.DeliverSummary;
@@ -425,9 +362,7 @@ public class InstanceAuditStatus extends AbstractModel {
 
     /**
      * Set 日志投递类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliverSummary 日志投递类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliverSummary(DeliverSummary [] DeliverSummary) {
         this.DeliverSummary = DeliverSummary;

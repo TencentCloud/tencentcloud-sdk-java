@@ -39,7 +39,6 @@ public class DescribeRecordSnapshotRollbackResultResponse extends AbstractModel 
 
     /**
     * 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedRecordList")
     @Expose
@@ -141,10 +140,8 @@ public class DescribeRecordSnapshotRollbackResultResponse extends AbstractModel 
     }
 
     /**
-     * Get 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败的记录信息 
      * @return FailedRecordList 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotRecord [] getFailedRecordList() {
         return this.FailedRecordList;
@@ -152,9 +149,7 @@ public class DescribeRecordSnapshotRollbackResultResponse extends AbstractModel 
 
     /**
      * Set 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedRecordList 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedRecordList(SnapshotRecord [] FailedRecordList) {
         this.FailedRecordList = FailedRecordList;

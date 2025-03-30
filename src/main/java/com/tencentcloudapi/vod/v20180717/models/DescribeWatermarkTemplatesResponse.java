@@ -32,7 +32,6 @@ public class DescribeWatermarkTemplatesResponse extends AbstractModel {
 
     /**
     * 水印模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WatermarkTemplateSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeWatermarkTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 水印模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印模板详情列表。 
      * @return WatermarkTemplateSet 水印模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkTemplate [] getWatermarkTemplateSet() {
         return this.WatermarkTemplateSet;
@@ -73,9 +70,7 @@ public class DescribeWatermarkTemplatesResponse extends AbstractModel {
 
     /**
      * Set 水印模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkTemplateSet 水印模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWatermarkTemplateSet(WatermarkTemplate [] WatermarkTemplateSet) {
         this.WatermarkTemplateSet = WatermarkTemplateSet;

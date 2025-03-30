@@ -90,6 +90,13 @@ public class StartAIConversationRequest extends AbstractModel {
     private String AvatarConfig;
 
     /**
+    * 实验性参数,联系后台使用
+    */
+    @SerializedName("ExperimentalParams")
+    @Expose
+    private String ExperimentalParams;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      */
@@ -245,6 +252,22 @@ public class StartAIConversationRequest extends AbstractModel {
         this.AvatarConfig = AvatarConfig;
     }
 
+    /**
+     * Get 实验性参数,联系后台使用 
+     * @return ExperimentalParams 实验性参数,联系后台使用
+     */
+    public String getExperimentalParams() {
+        return this.ExperimentalParams;
+    }
+
+    /**
+     * Set 实验性参数,联系后台使用
+     * @param ExperimentalParams 实验性参数,联系后台使用
+     */
+    public void setExperimentalParams(String ExperimentalParams) {
+        this.ExperimentalParams = ExperimentalParams;
+    }
+
     public StartAIConversationRequest() {
     }
 
@@ -280,6 +303,9 @@ public class StartAIConversationRequest extends AbstractModel {
         if (source.AvatarConfig != null) {
             this.AvatarConfig = new String(source.AvatarConfig);
         }
+        if (source.ExperimentalParams != null) {
+            this.ExperimentalParams = new String(source.ExperimentalParams);
+        }
     }
 
 
@@ -296,6 +322,7 @@ public class StartAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LLMConfig", this.LLMConfig);
         this.setParamSimple(map, prefix + "TTSConfig", this.TTSConfig);
         this.setParamSimple(map, prefix + "AvatarConfig", this.AvatarConfig);
+        this.setParamSimple(map, prefix + "ExperimentalParams", this.ExperimentalParams);
 
     }
 }

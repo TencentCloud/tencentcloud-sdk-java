@@ -25,13 +25,16 @@ public class FirewallRule extends AbstractModel {
 
     /**
     * 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+
+- 使用ICMP协议时，只支持CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
+- 使用ICMPv6协议时，只支持Ipv6CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
+    * 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。注意：单独的端口与离散端口不能同时存在。
     */
     @SerializedName("Port")
     @Expose
@@ -58,7 +61,7 @@ public class FirewallRule extends AbstractModel {
     private String Ipv6CidrBlock;
 
     /**
-    * 取值：ACCEPT，DROP。默认为 ACCEPT。
+    * 取值：ACCEPT（允许），DROP（拒绝）。默认为 ACCEPT。
     */
     @SerializedName("Action")
     @Expose
@@ -72,8 +75,14 @@ public class FirewallRule extends AbstractModel {
     private String FirewallRuleDescription;
 
     /**
-     * Get 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。 
+     * Get 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+
+- 使用ICMP协议时，只支持CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
+- 使用ICMPv6协议时，只支持Ipv6CidrBlock，不支持使用Port、Ipv6CidrBlock参数； 
      * @return Protocol 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+
+- 使用ICMP协议时，只支持CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
+- 使用ICMPv6协议时，只支持Ipv6CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
      */
     public String getProtocol() {
         return this.Protocol;
@@ -81,23 +90,29 @@ public class FirewallRule extends AbstractModel {
 
     /**
      * Set 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+
+- 使用ICMP协议时，只支持CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
+- 使用ICMPv6协议时，只支持Ipv6CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
      * @param Protocol 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+
+- 使用ICMP协议时，只支持CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
+- 使用ICMPv6协议时，只支持Ipv6CidrBlock，不支持使用Port、Ipv6CidrBlock参数；
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。 
-     * @return Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
+     * Get 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。注意：单独的端口与离散端口不能同时存在。 
+     * @return Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。注意：单独的端口与离散端口不能同时存在。
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
-     * @param Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
+     * Set 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。注意：单独的端口与离散端口不能同时存在。
+     * @param Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。注意：单独的端口与离散端口不能同时存在。
      */
     public void setPort(String Port) {
         this.Port = Port;
@@ -160,16 +175,16 @@ public class FirewallRule extends AbstractModel {
     }
 
     /**
-     * Get 取值：ACCEPT，DROP。默认为 ACCEPT。 
-     * @return Action 取值：ACCEPT，DROP。默认为 ACCEPT。
+     * Get 取值：ACCEPT（允许），DROP（拒绝）。默认为 ACCEPT。 
+     * @return Action 取值：ACCEPT（允许），DROP（拒绝）。默认为 ACCEPT。
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 取值：ACCEPT，DROP。默认为 ACCEPT。
-     * @param Action 取值：ACCEPT，DROP。默认为 ACCEPT。
+     * Set 取值：ACCEPT（允许），DROP（拒绝）。默认为 ACCEPT。
+     * @param Action 取值：ACCEPT（允许），DROP（拒绝）。默认为 ACCEPT。
      */
     public void setAction(String Action) {
         this.Action = Action;

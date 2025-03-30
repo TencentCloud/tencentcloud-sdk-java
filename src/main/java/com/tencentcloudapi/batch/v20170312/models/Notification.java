@@ -25,7 +25,6 @@ public class Notification extends AbstractModel {
 
     /**
     * CMQ主题名字，要求主题名有效且关联订阅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -33,17 +32,14 @@ public class Notification extends AbstractModel {
 
     /**
     * 事件配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventConfigs")
     @Expose
     private EventConfig [] EventConfigs;
 
     /**
-     * Get CMQ主题名字，要求主题名有效且关联订阅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CMQ主题名字，要求主题名有效且关联订阅 
      * @return TopicName CMQ主题名字，要求主题名有效且关联订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -51,19 +47,15 @@ public class Notification extends AbstractModel {
 
     /**
      * Set CMQ主题名字，要求主题名有效且关联订阅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName CMQ主题名字，要求主题名有效且关联订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 事件配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件配置 
      * @return EventConfigs 事件配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventConfig [] getEventConfigs() {
         return this.EventConfigs;
@@ -71,9 +63,7 @@ public class Notification extends AbstractModel {
 
     /**
      * Set 事件配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventConfigs 事件配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventConfigs(EventConfig [] EventConfigs) {
         this.EventConfigs = EventConfigs;

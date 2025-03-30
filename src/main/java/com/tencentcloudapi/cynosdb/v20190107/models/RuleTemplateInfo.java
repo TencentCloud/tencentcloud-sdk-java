@@ -25,7 +25,6 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateName")
     @Expose
@@ -41,7 +39,6 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleFilters")
     @Expose
@@ -49,7 +46,6 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -57,7 +53,6 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmPolicy")
     @Expose
@@ -65,17 +60,14 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板ID。 
      * @return RuleTemplateId 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
@@ -83,19 +75,15 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateId 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;
     }
 
     /**
-     * Get 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板名称。 
      * @return RuleTemplateName 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
@@ -103,19 +91,15 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateName 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则内容。 
      * @return RuleFilters 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
@@ -123,19 +107,15 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleFilters 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
     }
 
     /**
-     * Get 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警等级。1-低风险，2-中风险，3-高风险。 
      * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -143,19 +123,15 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警策略。0-不告警，1-告警。 
      * @return AlarmPolicy 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
@@ -163,19 +139,15 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmPolicy 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;
     }
 
     /**
-     * Get 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述。 
      * @return Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -183,9 +155,7 @@ public class RuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
