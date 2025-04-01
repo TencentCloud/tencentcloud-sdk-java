@@ -39,7 +39,6 @@ public class InvokeExternalSourceAIServiceTaskResponse extends AbstractModel {
 
     /**
     * 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskInfo")
     @Expose
@@ -85,10 +84,8 @@ public class InvokeExternalSourceAIServiceTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务信息 
      * @return TaskInfo 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudStorageAIServiceTask getTaskInfo() {
         return this.TaskInfo;
@@ -96,9 +93,7 @@ public class InvokeExternalSourceAIServiceTaskResponse extends AbstractModel {
 
     /**
      * Set 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskInfo 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskInfo(CloudStorageAIServiceTask TaskInfo) {
         this.TaskInfo = TaskInfo;

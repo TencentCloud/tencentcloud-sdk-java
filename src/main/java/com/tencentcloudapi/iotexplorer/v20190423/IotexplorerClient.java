@@ -325,7 +325,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateTopicPolicy）用于创建一个Topic 
+     *本接口（CreateTopicPolicy）用于创建一个Topic
      * @param req CreateTopicPolicyRequest
      * @return CreateTopicPolicyResponse
      * @throws TencentCloudSDKException
@@ -457,7 +457,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteTopicPolicy）用于删除Topic 
+     *本接口（DeleteTopicPolicy）用于删除Topic
      * @param req DeleteTopicPolicyRequest
      * @return DeleteTopicPolicyResponse
      * @throws TencentCloudSDKException
@@ -1029,7 +1029,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+     *本接口（DescribeTopicPolicy）用于查看Topic详细信息
      * @param req DescribeTopicPolicyRequest
      * @return DescribeTopicPolicyResponse
      * @throws TencentCloudSDKException
@@ -1524,7 +1524,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpdateTopicPolicy）用于更新Topic信息 
+     *本接口（UpdateTopicPolicy）用于更新Topic信息
      * @param req ModifyTopicPolicyRequest
      * @return ModifyTopicPolicyResponse
      * @throws TencentCloudSDKException
@@ -1781,7 +1781,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+     *本接口（UpdateFirmware）用于对指定设备发起固件升级请求
      * @param req UpdateFirmwareRequest
      * @return UpdateFirmwareResponse
      * @throws TencentCloudSDKException

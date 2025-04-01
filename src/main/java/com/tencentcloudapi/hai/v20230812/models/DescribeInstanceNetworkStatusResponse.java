@@ -32,7 +32,6 @@ public class DescribeInstanceNetworkStatusResponse extends AbstractModel {
 
     /**
     * 查询结果集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkStatusSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInstanceNetworkStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询结果集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询结果集 
      * @return NetworkStatusSet 查询结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkStatus [] getNetworkStatusSet() {
         return this.NetworkStatusSet;
@@ -73,9 +70,7 @@ public class DescribeInstanceNetworkStatusResponse extends AbstractModel {
 
     /**
      * Set 查询结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkStatusSet 查询结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkStatusSet(NetworkStatus [] NetworkStatusSet) {
         this.NetworkStatusSet = NetworkStatusSet;

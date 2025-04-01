@@ -59,6 +59,13 @@ public class AndroidApp extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 用户 Id
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 安卓应用 Id 
      * @return AndroidAppId 安卓应用 Id
      */
@@ -138,6 +145,22 @@ public class AndroidApp extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 用户 Id 
+     * @return UserId 用户 Id
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户 Id
+     * @param UserId 用户 Id
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public AndroidApp() {
     }
 
@@ -164,6 +187,9 @@ public class AndroidApp extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class AndroidApp extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamArrayObj(map, prefix + "AndroidAppVersionInfo.", this.AndroidAppVersionInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

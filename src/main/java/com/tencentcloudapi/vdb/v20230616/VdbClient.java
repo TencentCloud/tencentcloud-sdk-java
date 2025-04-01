@@ -50,6 +50,17 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateInstance）用于创建向量数据库实例。
+     * @param req CreateInstanceRequest
+     * @return CreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
@@ -58,6 +69,17 @@ public class VdbClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInstanceMaintenanceWindow）用于查看实例维护时间窗。
+     * @param req DescribeInstanceMaintenanceWindowRequest
+     * @return DescribeInstanceMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMaintenanceWindowResponse DescribeInstanceMaintenanceWindow(DescribeInstanceMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceMaintenanceWindow", DescribeInstanceMaintenanceWindowResponse.class);
     }
 
     /**
@@ -83,6 +105,17 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DestroyInstances）用于销毁实例。
+     * @param req DestroyInstancesRequest
+     * @return DestroyInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyInstancesResponse DestroyInstances(DestroyInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyInstances", DestroyInstancesResponse.class);
+    }
+
+    /**
      *本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
      * @param req DisassociateSecurityGroupsRequest
      * @return DisassociateSecurityGroupsResponse
@@ -94,6 +127,17 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（IsolateInstance）用于隔离实例于回收站，在回收站保护时长内可恢复实例。
+     * @param req IsolateInstanceRequest
+     * @return IsolateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateInstanceResponse IsolateInstance(IsolateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateInstance", IsolateInstanceResponse.class);
+    }
+
+    /**
      *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
@@ -102,6 +146,50 @@ public class VdbClient extends AbstractClient{
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstanceMaintenanceWindow）用于修改实例维护时间窗范围。
+     * @param req ModifyInstanceMaintenanceWindowRequest
+     * @return ModifyInstanceMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceMaintenanceWindowResponse ModifyInstanceMaintenanceWindow(ModifyInstanceMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceMaintenanceWindow", ModifyInstanceMaintenanceWindowResponse.class);
+    }
+
+    /**
+     *本接口（RecoverInstance）用于恢复在回收站隔离的实例。
+     * @param req RecoverInstanceRequest
+     * @return RecoverInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecoverInstanceResponse RecoverInstance(RecoverInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecoverInstance", RecoverInstanceResponse.class);
+    }
+
+    /**
+     *本接口（ScaleOutInstance）用于水平扩容节点数量。
+     * @param req ScaleOutInstanceRequest
+     * @return ScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
+    }
+
+    /**
+     *本接口（ScaleUpInstance）用于升级节点配置规格。
+     * @param req ScaleUpInstanceRequest
+     * @return ScaleUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleUpInstance", ScaleUpInstanceResponse.class);
     }
 
 }

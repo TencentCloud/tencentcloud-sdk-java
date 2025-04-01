@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateOutputSRTSettingsDestinations extends AbstractModel {
 
     /**
-    * 输出的IP。
+    * 输出的IP或域名。
     */
     @SerializedName("Ip")
     @Expose
@@ -38,16 +38,16 @@ public class CreateOutputSRTSettingsDestinations extends AbstractModel {
     private Long Port;
 
     /**
-     * Get 输出的IP。 
-     * @return Ip 输出的IP。
+     * Get 输出的IP或域名。 
+     * @return Ip 输出的IP或域名。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 输出的IP。
-     * @param Ip 输出的IP。
+     * Set 输出的IP或域名。
+     * @param Ip 输出的IP或域名。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

@@ -39,6 +39,33 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建增量迁移策略。
+     * @param req CreateIncrementalMigrationStrategyRequest
+     * @return CreateIncrementalMigrationStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIncrementalMigrationStrategyResponse CreateIncrementalMigrationStrategy(CreateIncrementalMigrationStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIncrementalMigrationStrategy", CreateIncrementalMigrationStrategyResponse.class);
+    }
+
+    /**
+     *该接口用于为专业版应用创建存储桶。
+
+注：
+- 本接口仅用于专业版应用；
+- 客户创建点播专业版应用时，系统默认为客户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通；
+- 通过 [DescribeStorageRegions](https://cloud.tencent.com/document/product/266/72480) 接口可以查询到所有存储地域及已经开通存储桶的地域。
+     * @param req CreateStorageRequest
+     * @return CreateStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStorageResponse CreateStorage(CreateStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStorage", CreateStorageResponse.class);
+    }
+
+    /**
      *用于按指定策略，生成专业版应用的临时访问凭证，比如生成用于客户端上传的临时凭证。
      * @param req CreateStorageCredentialsRequest
      * @return CreateStorageCredentialsResponse
@@ -47,6 +74,53 @@ public class VodClient extends AbstractClient{
     public CreateStorageCredentialsResponse CreateStorageCredentials(CreateStorageCredentialsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateStorageCredentials", CreateStorageCredentialsResponse.class);
+    }
+
+    /**
+     *删除增量迁移策略。
+     * @param req DeleteIncrementalMigrationStrategyRequest
+     * @return DeleteIncrementalMigrationStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIncrementalMigrationStrategyResponse DeleteIncrementalMigrationStrategy(DeleteIncrementalMigrationStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIncrementalMigrationStrategy", DeleteIncrementalMigrationStrategyResponse.class);
+    }
+
+    /**
+     *查询增量迁移策略信息。
+     * @param req DescribeIncrementalMigrationStrategyInfosRequest
+     * @return DescribeIncrementalMigrationStrategyInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIncrementalMigrationStrategyInfosResponse DescribeIncrementalMigrationStrategyInfos(DescribeIncrementalMigrationStrategyInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIncrementalMigrationStrategyInfos", DescribeIncrementalMigrationStrategyInfosResponse.class);
+    }
+
+    /**
+     *该接口用于查询专业版应用中的存储桶信息，同时支持分页查询。
+
+注：
+- 本接口仅用于专业版应用。
+     * @param req DescribeStorageRequest
+     * @return DescribeStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageResponse DescribeStorage(DescribeStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStorage", DescribeStorageResponse.class);
+    }
+
+    /**
+     *创建增量迁移策略。
+     * @param req ModifyIncrementalMigrationStrategyRequest
+     * @return ModifyIncrementalMigrationStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIncrementalMigrationStrategyResponse ModifyIncrementalMigrationStrategy(ModifyIncrementalMigrationStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIncrementalMigrationStrategy", ModifyIncrementalMigrationStrategyResponse.class);
     }
 
 }

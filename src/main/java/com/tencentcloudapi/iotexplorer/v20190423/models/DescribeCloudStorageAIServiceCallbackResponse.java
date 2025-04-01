@@ -32,7 +32,6 @@ public class DescribeCloudStorageAIServiceCallbackResponse extends AbstractModel
 
     /**
     * HTTP 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeCloudStorageAIServiceCallbackResponse extends AbstractModel
 
     /**
     * HTTP 回调鉴权 Token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackToken")
     @Expose
@@ -70,10 +68,8 @@ public class DescribeCloudStorageAIServiceCallbackResponse extends AbstractModel
     }
 
     /**
-     * Get HTTP 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HTTP 回调 URL 
      * @return CallbackUrl HTTP 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
@@ -81,19 +77,15 @@ public class DescribeCloudStorageAIServiceCallbackResponse extends AbstractModel
 
     /**
      * Set HTTP 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackUrl HTTP 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get HTTP 回调鉴权 Token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HTTP 回调鉴权 Token 
      * @return CallbackToken HTTP 回调鉴权 Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackToken() {
         return this.CallbackToken;
@@ -101,9 +93,7 @@ public class DescribeCloudStorageAIServiceCallbackResponse extends AbstractModel
 
     /**
      * Set HTTP 回调鉴权 Token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackToken HTTP 回调鉴权 Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackToken(String CallbackToken) {
         this.CallbackToken = CallbackToken;

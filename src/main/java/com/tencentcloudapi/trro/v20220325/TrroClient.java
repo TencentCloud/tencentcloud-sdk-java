@@ -72,6 +72,17 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
+     * @param req CreateCloudRecordingRequest
+     * @return CreateCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudRecording", CreateCloudRecordingResponse.class);
+    }
+
+    /**
      *用于创建设备
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -91,6 +102,17 @@ public class TrroClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
+     *成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+     * @param req DeleteCloudRecordingRequest
+     * @return DeleteCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudRecording", DeleteCloudRecordingResponse.class);
     }
 
     /**
@@ -259,6 +281,19 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *设置回调URL
+录制回调事件内容参考：https://cloud.tencent.com/document/product/647/81113
+转推回调事件内容参考：https://cloud.tencent.com/document/product/647/88552
+     * @param req ModifyCallbackUrlRequest
+     * @return ModifyCallbackUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCallbackUrlResponse ModifyCallbackUrl(ModifyCallbackUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCallbackUrl", ModifyCallbackUrlResponse.class);
+    }
+
+    /**
      *用于修改设备信息
      * @param req ModifyDeviceRequest
      * @return ModifyDeviceResponse
@@ -302,6 +337,28 @@ public class TrroClient extends AbstractClient{
     public ModifyProjectSecModeResponse ModifyProjectSecMode(ModifyProjectSecModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyProjectSecMode", ModifyProjectSecModeResponse.class);
+    }
+
+    /**
+     *启动一个混流转推任务，将 TRTC 房间的多路音视频流混成一路音视频流，编码后推到直播 CDN 或者回推到 TRTC 房间。也支持不转码直接转推 TRTC 房间的单路流。启动成功后，会返回一个 SdkAppid 维度唯一的任务 Id（TaskId）。您需要保存该 TaskId，后续需要依赖此 TaskId 更新和结束任务。
+     * @param req StartPublishLiveStreamRequest
+     * @return StartPublishLiveStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishLiveStreamResponse StartPublishLiveStream(StartPublishLiveStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartPublishLiveStream", StartPublishLiveStreamResponse.class);
+    }
+
+    /**
+     *停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开房间超过MaxIdleTime 设置的时间后，任务也会自动停止。
+     * @param req StopPublishLiveStreamRequest
+     * @return StopPublishLiveStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopPublishLiveStreamResponse StopPublishLiveStream(StopPublishLiveStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopPublishLiveStream", StopPublishLiveStreamResponse.class);
     }
 
 }

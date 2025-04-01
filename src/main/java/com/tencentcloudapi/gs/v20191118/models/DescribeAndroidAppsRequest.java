@@ -45,6 +45,13 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
     private String [] AndroidAppIds;
 
     /**
+    * 过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 分页偏移 
      * @return Offset 分页偏移
      */
@@ -92,6 +99,22 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
         this.AndroidAppIds = AndroidAppIds;
     }
 
+    /**
+     * Get 过滤条件 
+     * @return Filters 过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param Filters 过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAndroidAppsRequest() {
     }
 
@@ -112,6 +135,12 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
                 this.AndroidAppIds[i] = new String(source.AndroidAppIds[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

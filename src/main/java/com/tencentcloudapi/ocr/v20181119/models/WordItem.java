@@ -38,6 +38,20 @@ public class WordItem extends AbstractModel {
     private Polygon Coord;
 
     /**
+    * 描述性信息
+    */
+    @SerializedName("AdvancedInfo")
+    @Expose
+    private String AdvancedInfo;
+
+    /**
+    * 单词的四点坐标
+    */
+    @SerializedName("WordCoord")
+    @Expose
+    private WordPolygon [] WordCoord;
+
+    /**
      * Get 文本块内容 
      * @return DetectedText 文本块内容
      */
@@ -69,6 +83,38 @@ public class WordItem extends AbstractModel {
         this.Coord = Coord;
     }
 
+    /**
+     * Get 描述性信息 
+     * @return AdvancedInfo 描述性信息
+     */
+    public String getAdvancedInfo() {
+        return this.AdvancedInfo;
+    }
+
+    /**
+     * Set 描述性信息
+     * @param AdvancedInfo 描述性信息
+     */
+    public void setAdvancedInfo(String AdvancedInfo) {
+        this.AdvancedInfo = AdvancedInfo;
+    }
+
+    /**
+     * Get 单词的四点坐标 
+     * @return WordCoord 单词的四点坐标
+     */
+    public WordPolygon [] getWordCoord() {
+        return this.WordCoord;
+    }
+
+    /**
+     * Set 单词的四点坐标
+     * @param WordCoord 单词的四点坐标
+     */
+    public void setWordCoord(WordPolygon [] WordCoord) {
+        this.WordCoord = WordCoord;
+    }
+
     public WordItem() {
     }
 
@@ -83,6 +129,15 @@ public class WordItem extends AbstractModel {
         if (source.Coord != null) {
             this.Coord = new Polygon(source.Coord);
         }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.WordCoord != null) {
+            this.WordCoord = new WordPolygon[source.WordCoord.length];
+            for (int i = 0; i < source.WordCoord.length; i++) {
+                this.WordCoord[i] = new WordPolygon(source.WordCoord[i]);
+            }
+        }
     }
 
 
@@ -92,6 +147,8 @@ public class WordItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);
         this.setParamObj(map, prefix + "Coord.", this.Coord);
+        this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamArrayObj(map, prefix + "WordCoord.", this.WordCoord);
 
     }
 }

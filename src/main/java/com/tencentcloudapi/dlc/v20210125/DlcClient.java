@@ -413,6 +413,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
+     * @param req CreateSparkSubmitTaskRequest
+     * @return CreateSparkSubmitTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkSubmitTaskResponse CreateSparkSubmitTask(CreateSparkSubmitTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSparkSubmitTask", CreateSparkSubmitTaskResponse.class);
+    }
+
+    /**
      *该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
      * @param req CreateStoreLocationRequest
      * @return CreateStoreLocationResponse

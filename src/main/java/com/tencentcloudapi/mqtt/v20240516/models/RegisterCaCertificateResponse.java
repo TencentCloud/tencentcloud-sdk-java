@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class RegisterCaCertificateResponse extends AbstractModel {
 
     /**
+    * mqtt实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * ca 证书的序列号
+    */
+    @SerializedName("CaSn")
+    @Expose
+    private String CaSn;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get mqtt实例ID 
+     * @return InstanceId mqtt实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set mqtt实例ID
+     * @param InstanceId mqtt实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get ca 证书的序列号 
+     * @return CaSn ca 证书的序列号
+     */
+    public String getCaSn() {
+        return this.CaSn;
+    }
+
+    /**
+     * Set ca 证书的序列号
+     * @param CaSn ca 证书的序列号
+     */
+    public void setCaSn(String CaSn) {
+        this.CaSn = CaSn;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,12 @@ public class RegisterCaCertificateResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RegisterCaCertificateResponse(RegisterCaCertificateResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CaSn != null) {
+            this.CaSn = new String(source.CaSn);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +116,8 @@ public class RegisterCaCertificateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "CaSn", this.CaSn);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

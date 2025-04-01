@@ -25,7 +25,6 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
     * 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
     * 分页返回的应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeApplicationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用总数 
      * @return TotalCount 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
      * Set 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 分页返回的应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页返回的应用列表 
      * @return ApplicationSet 分页返回的应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicationInfo [] getApplicationSet() {
         return this.ApplicationSet;
@@ -78,9 +70,7 @@ public class DescribeApplicationsResponse extends AbstractModel {
 
     /**
      * Set 分页返回的应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationSet 分页返回的应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationSet(ApplicationInfo [] ApplicationSet) {
         this.ApplicationSet = ApplicationSet;

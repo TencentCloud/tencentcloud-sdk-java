@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class PriceTag extends AbstractModel {
 
     /**
-    * 计价名称
+    * 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 计价类别
+    * 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 计费项标签
+    * 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 步长
+    * 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
     */
     @SerializedName("Step")
     @Expose
     private Long Step;
 
     /**
-     * Get 计价名称 
-     * @return Name 计价名称
+     * Get 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。 
+     * @return Name 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 计价名称
-     * @param Name 计价名称
+     * Set 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+     * @param Name 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 计价类别 
-     * @return Category 计价类别
+     * Get 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。 
+     * @return Category 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 计价类别
-     * @param Category 计价类别
+     * Set 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
+     * @param Category 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 计费项标签 
-     * @return Code 计费项标签
+     * Get 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。 
+     * @return Code 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 计费项标签
-     * @param Code 计费项标签
+     * Set 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+     * @param Code 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 步长 
-     * @return Step 步长
+     * Get 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 
+     * @return Step 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
      */
     public Long getStep() {
         return this.Step;
     }
 
     /**
-     * Set 步长
-     * @param Step 步长
+     * Set 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
+     * @param Step 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
      */
     public void setStep(Long Step) {
         this.Step = Step;

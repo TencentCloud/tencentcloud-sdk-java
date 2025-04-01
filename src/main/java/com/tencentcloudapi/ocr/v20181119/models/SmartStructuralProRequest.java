@@ -74,6 +74,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
     */
     @SerializedName("ConfigId")
     @Expose
@@ -92,6 +93,13 @@ ReceiptWeightNote -- 磅单收货单识别模板
     @SerializedName("OutputParentKey")
     @Expose
     private Boolean OutputParentKey;
+
+    /**
+    * 模版的单个属性配置
+    */
+    @SerializedName("ConfigAdvanced")
+    @Expose
+    private ConfigAdvanced ConfigAdvanced;
 
     /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
@@ -188,7 +196,8 @@ Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
-ReceiptWeightNote -- 磅单收货单识别模板 
+ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版 
      * @return ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -204,6 +213,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -225,6 +235,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
      * @param ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -240,6 +251,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -277,6 +289,22 @@ ReceiptWeightNote -- 磅单收货单识别模板
         this.OutputParentKey = OutputParentKey;
     }
 
+    /**
+     * Get 模版的单个属性配置 
+     * @return ConfigAdvanced 模版的单个属性配置
+     */
+    public ConfigAdvanced getConfigAdvanced() {
+        return this.ConfigAdvanced;
+    }
+
+    /**
+     * Set 模版的单个属性配置
+     * @param ConfigAdvanced 模版的单个属性配置
+     */
+    public void setConfigAdvanced(ConfigAdvanced ConfigAdvanced) {
+        this.ConfigAdvanced = ConfigAdvanced;
+    }
+
     public SmartStructuralProRequest() {
     }
 
@@ -312,6 +340,9 @@ ReceiptWeightNote -- 磅单收货单识别模板
         if (source.OutputParentKey != null) {
             this.OutputParentKey = new Boolean(source.OutputParentKey);
         }
+        if (source.ConfigAdvanced != null) {
+            this.ConfigAdvanced = new ConfigAdvanced(source.ConfigAdvanced);
+        }
     }
 
 
@@ -327,6 +358,7 @@ ReceiptWeightNote -- 磅单收货单识别模板
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
         this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
         this.setParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
+        this.setParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
 
     }
 }

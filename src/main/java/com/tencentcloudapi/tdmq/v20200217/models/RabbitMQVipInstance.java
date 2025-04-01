@@ -167,6 +167,13 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long InstanceType;
 
     /**
+    * 隔离时间，毫秒为单位
+    */
+    @SerializedName("IsolatedTime")
+    @Expose
+    private Long IsolatedTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -498,6 +505,22 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 隔离时间，毫秒为单位 
+     * @return IsolatedTime 隔离时间，毫秒为单位
+     */
+    public Long getIsolatedTime() {
+        return this.IsolatedTime;
+    }
+
+    /**
+     * Set 隔离时间，毫秒为单位
+     * @param IsolatedTime 隔离时间，毫秒为单位
+     */
+    public void setIsolatedTime(Long IsolatedTime) {
+        this.IsolatedTime = IsolatedTime;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -569,6 +592,9 @@ public class RabbitMQVipInstance extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new Long(source.IsolatedTime);
+        }
     }
 
 
@@ -596,6 +622,7 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
 
     }
 }

@@ -193,6 +193,20 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long InstanceType;
 
     /**
+    * 开始隔离时间
+    */
+    @SerializedName("IsolatedTime")
+    @Expose
+    private Long IsolatedTime;
+
+    /**
+    * 是否为容器实例，默认 true
+    */
+    @SerializedName("Container")
+    @Expose
+    private Boolean Container;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -580,6 +594,38 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 开始隔离时间 
+     * @return IsolatedTime 开始隔离时间
+     */
+    public Long getIsolatedTime() {
+        return this.IsolatedTime;
+    }
+
+    /**
+     * Set 开始隔离时间
+     * @param IsolatedTime 开始隔离时间
+     */
+    public void setIsolatedTime(Long IsolatedTime) {
+        this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get 是否为容器实例，默认 true 
+     * @return Container 是否为容器实例，默认 true
+     */
+    public Boolean getContainer() {
+        return this.Container;
+    }
+
+    /**
+     * Set 是否为容器实例，默认 true
+     * @param Container 是否为容器实例，默认 true
+     */
+    public void setContainer(Boolean Container) {
+        this.Container = Container;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -666,6 +712,12 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new Long(source.IsolatedTime);
+        }
+        if (source.Container != null) {
+            this.Container = new Boolean(source.Container);
+        }
     }
 
 
@@ -697,6 +749,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "Container", this.Container);
 
     }
 }

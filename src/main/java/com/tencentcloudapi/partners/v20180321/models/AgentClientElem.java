@@ -101,6 +101,13 @@ public class AgentClientElem extends AbstractModel {
     private String ClientName;
 
     /**
+    * 增量目标金额(分)
+    */
+    @SerializedName("IncreaseGoal")
+    @Expose
+    private String IncreaseGoal;
+
+    /**
      * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
@@ -276,6 +283,22 @@ public class AgentClientElem extends AbstractModel {
         this.ClientName = ClientName;
     }
 
+    /**
+     * Get 增量目标金额(分) 
+     * @return IncreaseGoal 增量目标金额(分)
+     */
+    public String getIncreaseGoal() {
+        return this.IncreaseGoal;
+    }
+
+    /**
+     * Set 增量目标金额(分)
+     * @param IncreaseGoal 增量目标金额(分)
+     */
+    public void setIncreaseGoal(String IncreaseGoal) {
+        this.IncreaseGoal = IncreaseGoal;
+    }
+
     public AgentClientElem() {
     }
 
@@ -317,6 +340,9 @@ public class AgentClientElem extends AbstractModel {
         if (source.ClientName != null) {
             this.ClientName = new String(source.ClientName);
         }
+        if (source.IncreaseGoal != null) {
+            this.IncreaseGoal = new String(source.IncreaseGoal);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class AgentClientElem extends AbstractModel {
         this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
         this.setParamSimple(map, prefix + "SalesName", this.SalesName);
         this.setParamSimple(map, prefix + "ClientName", this.ClientName);
+        this.setParamSimple(map, prefix + "IncreaseGoal", this.IncreaseGoal);
 
     }
 }

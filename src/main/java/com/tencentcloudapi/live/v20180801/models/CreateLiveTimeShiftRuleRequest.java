@@ -31,15 +31,14 @@ public class CreateLiveTimeShiftRuleRequest extends AbstractModel {
     private String DomainName;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+    * 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
     */
     @SerializedName("StreamName")
     @Expose
@@ -69,36 +68,32 @@ public class CreateLiveTimeShiftRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。 
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。 
-     * @return StreamName 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * Get 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。 
+     * @return StreamName 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
-     * @param StreamName 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * Set 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
+     * @param StreamName 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

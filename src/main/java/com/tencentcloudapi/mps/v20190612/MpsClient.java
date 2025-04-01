@@ -868,7 +868,6 @@ public class MpsClient extends AbstractClient{
 
     /**
      *查询媒体传输流的媒体质量数据。
-
      * @param req DescribeStreamLinkFlowMediaStatisticsRequest
      * @return DescribeStreamLinkFlowMediaStatisticsResponse
      * @throws TencentCloudSDKException
@@ -902,7 +901,6 @@ public class MpsClient extends AbstractClient{
 
     /**
      *查询媒体传输流的媒体质量数据。
-
      * @param req DescribeStreamLinkFlowStatisticsRequest
      * @return DescribeStreamLinkFlowStatisticsResponse
      * @throws TencentCloudSDKException

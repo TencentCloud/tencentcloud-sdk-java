@@ -173,7 +173,7 @@ public class InstanceDetail extends AbstractModel {
     private Long CellNum;
 
     /**
-    * 实例Tag
+    * 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingTag")
@@ -553,9 +553,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例Tag
+     * Get 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingTag 实例Tag
+     * @return BillingTag 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingTag() {
@@ -563,9 +563,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set 实例Tag
+     * Set 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingTag 实例Tag
+     * @param BillingTag 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingTag(String BillingTag) {

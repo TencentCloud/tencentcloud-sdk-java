@@ -38,11 +38,22 @@ public class IPGroup extends AbstractModel {
     private String Name;
 
     /**
-    * IP 组内容，仅支持 IP 及 IP 掩码。
+    * IP 组内容，仅支持 IP 及 IP 网段。
     */
     @SerializedName("Content")
     @Expose
     private String [] Content;
+
+    /**
+    * IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+    */
+    @SerializedName("IPExpireInfo")
+    @Expose
+    private IPExpireInfo [] IPExpireInfo;
 
     /**
      * Get 组 Id，创建时填 0 即可。 
@@ -77,19 +88,51 @@ public class IPGroup extends AbstractModel {
     }
 
     /**
-     * Get IP 组内容，仅支持 IP 及 IP 掩码。 
-     * @return Content IP 组内容，仅支持 IP 及 IP 掩码。
+     * Get IP 组内容，仅支持 IP 及 IP 网段。 
+     * @return Content IP 组内容，仅支持 IP 及 IP 网段。
      */
     public String [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set IP 组内容，仅支持 IP 及 IP 掩码。
-     * @param Content IP 组内容，仅支持 IP 及 IP 掩码。
+     * Set IP 组内容，仅支持 IP 及 IP 网段。
+     * @param Content IP 组内容，仅支持 IP 及 IP 网段。
      */
     public void setContent(String [] Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li> 
+     * @return IPExpireInfo IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     */
+    public IPExpireInfo [] getIPExpireInfo() {
+        return this.IPExpireInfo;
+    }
+
+    /**
+     * Set IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     * @param IPExpireInfo IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     */
+    public void setIPExpireInfo(IPExpireInfo [] IPExpireInfo) {
+        this.IPExpireInfo = IPExpireInfo;
     }
 
     public IPGroup() {
@@ -112,6 +155,12 @@ public class IPGroup extends AbstractModel {
                 this.Content[i] = new String(source.Content[i]);
             }
         }
+        if (source.IPExpireInfo != null) {
+            this.IPExpireInfo = new IPExpireInfo[source.IPExpireInfo.length];
+            for (int i = 0; i < source.IPExpireInfo.length; i++) {
+                this.IPExpireInfo[i] = new IPExpireInfo(source.IPExpireInfo[i]);
+            }
+        }
     }
 
 
@@ -122,6 +171,7 @@ public class IPGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
 
     }
 }

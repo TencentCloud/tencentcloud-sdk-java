@@ -1471,6 +1471,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取角色列表信息
+     * @param req DescribeRoleListRequest
+     * @return DescribeRoleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoleListResponse DescribeRoleList(DescribeRoleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
+    }
+
+    /**
      *查询规则详情
      * @param req DescribeRuleRequest
      * @return DescribeRuleResponse
@@ -2715,6 +2726,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(UpdateDataModelRegistryInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateDataModelRegistryInfo", UpdateDataModelRegistryInfoResponse.class);
+    }
+
+    /**
+     *修改项目用户角色
+     * @param req UpdateProjectUserRoleRequest
+     * @return UpdateProjectUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectUserRoleResponse UpdateProjectUserRole(UpdateProjectUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProjectUserRole", UpdateProjectUserRoleResponse.class);
     }
 
     /**

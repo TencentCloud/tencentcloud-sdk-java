@@ -25,7 +25,6 @@ public class LoginSetting extends AbstractModel {
 
     /**
     * 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -33,17 +32,14 @@ public class LoginSetting extends AbstractModel {
 
     /**
     * 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称 
      * @return ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -51,19 +47,15 @@ public class LoginSetting extends AbstractModel {
 
     /**
      * Set 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务登录url 
      * @return Url 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -71,9 +63,7 @@ public class LoginSetting extends AbstractModel {
 
     /**
      * Set 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

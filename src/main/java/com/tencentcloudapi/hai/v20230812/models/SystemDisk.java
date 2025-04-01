@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+    * 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
     */
     @SerializedName("DiskType")
     @Expose
@@ -33,7 +32,6 @@ public class SystemDisk extends AbstractModel {
 
     /**
     * 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -41,37 +39,30 @@ public class SystemDisk extends AbstractModel {
 
     /**
     * 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
 
     /**
-     * Get 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。 
+     * @return DiskType 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
+     * @param DiskType 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘大小，单位：GB。默认值为 80 
      * @return DiskSize 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -79,19 +70,15 @@ public class SystemDisk extends AbstractModel {
 
     /**
      * Set 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统盘分区盘符 
      * @return DiskName 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskName() {
         return this.DiskName;
@@ -99,9 +86,7 @@ public class SystemDisk extends AbstractModel {
 
     /**
      * Set 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskName 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

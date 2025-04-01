@@ -59,6 +59,13 @@ public class CloudStorageAIServiceTaskFileInfo extends AbstractModel {
     private CloudStorageAIServiceTaskVideoMetaInfo VideoMetaInfo;
 
     /**
+    * 文件标签
+    */
+    @SerializedName("Labels")
+    @Expose
+    private CloudStorageAIServiceTaskFileLabel [] Labels;
+
+    /**
      * Get 文件名称（含扩展名） 
      * @return FileName 文件名称（含扩展名）
      */
@@ -138,6 +145,22 @@ public class CloudStorageAIServiceTaskFileInfo extends AbstractModel {
         this.VideoMetaInfo = VideoMetaInfo;
     }
 
+    /**
+     * Get 文件标签 
+     * @return Labels 文件标签
+     */
+    public CloudStorageAIServiceTaskFileLabel [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 文件标签
+     * @param Labels 文件标签
+     */
+    public void setLabels(CloudStorageAIServiceTaskFileLabel [] Labels) {
+        this.Labels = Labels;
+    }
+
     public CloudStorageAIServiceTaskFileInfo() {
     }
 
@@ -161,6 +184,12 @@ public class CloudStorageAIServiceTaskFileInfo extends AbstractModel {
         if (source.VideoMetaInfo != null) {
             this.VideoMetaInfo = new CloudStorageAIServiceTaskVideoMetaInfo(source.VideoMetaInfo);
         }
+        if (source.Labels != null) {
+            this.Labels = new CloudStorageAIServiceTaskFileLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new CloudStorageAIServiceTaskFileLabel(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class CloudStorageAIServiceTaskFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DownloadURL", this.DownloadURL);
         this.setParamSimple(map, prefix + "MimeType", this.MimeType);
         this.setParamObj(map, prefix + "VideoMetaInfo.", this.VideoMetaInfo);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }
 }

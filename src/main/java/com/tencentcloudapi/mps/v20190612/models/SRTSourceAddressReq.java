@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SRTSourceAddressReq extends AbstractModel {
 
     /**
-    * 对端IP。
+    * 对端IP或域名。
     */
     @SerializedName("Ip")
     @Expose
@@ -38,16 +38,16 @@ public class SRTSourceAddressReq extends AbstractModel {
     private Long Port;
 
     /**
-     * Get 对端IP。 
-     * @return Ip 对端IP。
+     * Get 对端IP或域名。 
+     * @return Ip 对端IP或域名。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 对端IP。
-     * @param Ip 对端IP。
+     * Set 对端IP或域名。
+     * @param Ip 对端IP或域名。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

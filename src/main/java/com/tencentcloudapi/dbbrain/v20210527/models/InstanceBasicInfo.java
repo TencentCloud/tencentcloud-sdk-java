@@ -66,6 +66,69 @@ public class InstanceBasicInfo extends AbstractModel {
     private String EngineVersion;
 
     /**
+    * CPU数量，对于Redis为0。
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 实例部署模式。
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private String DeployMode;
+
+    /**
+    * 实例内存配置。
+    */
+    @SerializedName("InstanceConf")
+    @Expose
+    private RedisInstanceConf InstanceConf;
+
+    /**
+    * DBbrain是否支持该实例。
+    */
+    @SerializedName("IsSupported")
+    @Expose
+    private Boolean IsSupported;
+
+    /**
+    * 实例内存，单位MB。
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * 实例地域。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 实例子网统一ID，对于redis为空字符串。
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * 实例私有网络统一ID，对于redis为空字符串。
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 实例磁盘容量，对于Redis为0。
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -161,6 +224,150 @@ public class InstanceBasicInfo extends AbstractModel {
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get CPU数量，对于Redis为0。 
+     * @return Cpu CPU数量，对于Redis为0。
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set CPU数量，对于Redis为0。
+     * @param Cpu CPU数量，对于Redis为0。
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 实例部署模式。 
+     * @return DeployMode 实例部署模式。
+     */
+    public String getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 实例部署模式。
+     * @param DeployMode 实例部署模式。
+     */
+    public void setDeployMode(String DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
+    /**
+     * Get 实例内存配置。 
+     * @return InstanceConf 实例内存配置。
+     */
+    public RedisInstanceConf getInstanceConf() {
+        return this.InstanceConf;
+    }
+
+    /**
+     * Set 实例内存配置。
+     * @param InstanceConf 实例内存配置。
+     */
+    public void setInstanceConf(RedisInstanceConf InstanceConf) {
+        this.InstanceConf = InstanceConf;
+    }
+
+    /**
+     * Get DBbrain是否支持该实例。 
+     * @return IsSupported DBbrain是否支持该实例。
+     */
+    public Boolean getIsSupported() {
+        return this.IsSupported;
+    }
+
+    /**
+     * Set DBbrain是否支持该实例。
+     * @param IsSupported DBbrain是否支持该实例。
+     */
+    public void setIsSupported(Boolean IsSupported) {
+        this.IsSupported = IsSupported;
+    }
+
+    /**
+     * Get 实例内存，单位MB。 
+     * @return Memory 实例内存，单位MB。
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 实例内存，单位MB。
+     * @param Memory 实例内存，单位MB。
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 实例地域。 
+     * @return Region 实例地域。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 实例地域。
+     * @param Region 实例地域。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 实例子网统一ID，对于redis为空字符串。 
+     * @return UniqSubnetId 实例子网统一ID，对于redis为空字符串。
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set 实例子网统一ID，对于redis为空字符串。
+     * @param UniqSubnetId 实例子网统一ID，对于redis为空字符串。
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get 实例私有网络统一ID，对于redis为空字符串。 
+     * @return UniqVpcId 实例私有网络统一ID，对于redis为空字符串。
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 实例私有网络统一ID，对于redis为空字符串。
+     * @param UniqVpcId 实例私有网络统一ID，对于redis为空字符串。
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 实例磁盘容量，对于Redis为0。 
+     * @return Volume 实例磁盘容量，对于Redis为0。
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set 实例磁盘容量，对于Redis为0。
+     * @param Volume 实例磁盘容量，对于Redis为0。
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
     public InstanceBasicInfo() {
     }
 
@@ -187,6 +394,33 @@ public class InstanceBasicInfo extends AbstractModel {
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
+        if (source.InstanceConf != null) {
+            this.InstanceConf = new RedisInstanceConf(source.InstanceConf);
+        }
+        if (source.IsSupported != null) {
+            this.IsSupported = new Boolean(source.IsSupported);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -200,6 +434,15 @@ public class InstanceBasicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
+        this.setParamObj(map, prefix + "InstanceConf.", this.InstanceConf);
+        this.setParamSimple(map, prefix + "IsSupported", this.IsSupported);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

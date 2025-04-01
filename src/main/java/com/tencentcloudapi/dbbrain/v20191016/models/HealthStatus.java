@@ -52,6 +52,13 @@ public class HealthStatus extends AbstractModel {
     private ScoreDetail [] ScoreDetails;
 
     /**
+    * 健康等级版本，默认为V1
+    */
+    @SerializedName("HealthLevelVersion")
+    @Expose
+    private String HealthLevelVersion;
+
+    /**
      * Get 健康分数，满分100。 
      * @return HealthScore 健康分数，满分100。
      */
@@ -115,6 +122,22 @@ public class HealthStatus extends AbstractModel {
         this.ScoreDetails = ScoreDetails;
     }
 
+    /**
+     * Get 健康等级版本，默认为V1 
+     * @return HealthLevelVersion 健康等级版本，默认为V1
+     */
+    public String getHealthLevelVersion() {
+        return this.HealthLevelVersion;
+    }
+
+    /**
+     * Set 健康等级版本，默认为V1
+     * @param HealthLevelVersion 健康等级版本，默认为V1
+     */
+    public void setHealthLevelVersion(String HealthLevelVersion) {
+        this.HealthLevelVersion = HealthLevelVersion;
+    }
+
     public HealthStatus() {
     }
 
@@ -138,6 +161,9 @@ public class HealthStatus extends AbstractModel {
                 this.ScoreDetails[i] = new ScoreDetail(source.ScoreDetails[i]);
             }
         }
+        if (source.HealthLevelVersion != null) {
+            this.HealthLevelVersion = new String(source.HealthLevelVersion);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class HealthStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthLevel", this.HealthLevel);
         this.setParamSimple(map, prefix + "ScoreLost", this.ScoreLost);
         this.setParamArrayObj(map, prefix + "ScoreDetails.", this.ScoreDetails);
+        this.setParamSimple(map, prefix + "HealthLevelVersion", this.HealthLevelVersion);
 
     }
 }

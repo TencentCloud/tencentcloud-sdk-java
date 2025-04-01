@@ -31,6 +31,15 @@ public class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+    */
+    @SerializedName("FileURLExpireTime")
+    @Expose
+    private Long FileURLExpireTime;
+
+    /**
      * Get 任务 ID 
      * @return TaskId 任务 ID
      */
@@ -46,6 +55,30 @@ public class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL 
+     * @return FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public Long getFileURLExpireTime() {
+        return this.FileURLExpireTime;
+    }
+
+    /**
+     * Set 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     * @param FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public void setFileURLExpireTime(Long FileURLExpireTime) {
+        this.FileURLExpireTime = FileURLExpireTime;
+    }
+
     public DescribeCloudStorageAIServiceTaskRequest() {
     }
 
@@ -57,6 +90,9 @@ public class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.FileURLExpireTime != null) {
+            this.FileURLExpireTime = new Long(source.FileURLExpireTime);
+        }
     }
 
 
@@ -65,6 +101,7 @@ public class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
 
     }
 }

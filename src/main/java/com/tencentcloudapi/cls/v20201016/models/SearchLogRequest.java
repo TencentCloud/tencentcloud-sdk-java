@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel {
 
     /**
-    * 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+    * 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+    * 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("To")
     @Expose
@@ -48,11 +48,12 @@ public class SearchLogRequest extends AbstractModel {
 
     /**
     * 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
     */
     @SerializedName("SyntaxRule")
     @Expose
@@ -143,32 +144,32 @@ public class SearchLogRequest extends AbstractModel {
     private Boolean UseNewAnalysis;
 
     /**
-     * Get 要检索分析的日志的起始时间，Unix时间戳（毫秒） 
-     * @return From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+     * Get 要检索分析的日志的起始时间，**Unix时间戳（毫秒）** 
+     * @return From 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 要检索分析的日志的起始时间，Unix时间戳（毫秒）
-     * @param From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+     * Set 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
+     * @param From 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 要检索分析的日志的结束时间，Unix时间戳（毫秒） 
-     * @return To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * Get 要检索分析的日志的结束时间，**Unix时间戳（毫秒）** 
+     * @return To 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 要检索分析的日志的结束时间，Unix时间戳（毫秒）
-     * @param To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * Set 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
+     * @param To 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
      */
     public void setTo(Long To) {
         this.To = To;
@@ -200,17 +201,19 @@ public class SearchLogRequest extends AbstractModel {
 
     /**
      * Get 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a> 
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。 
      * @return SyntaxRule 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
@@ -218,17 +221,19 @@ public class SearchLogRequest extends AbstractModel {
 
     /**
      * Set 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
      * @param SyntaxRule 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
