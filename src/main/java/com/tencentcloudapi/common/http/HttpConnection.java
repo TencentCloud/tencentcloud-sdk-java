@@ -143,11 +143,11 @@ public class HttpConnection {
         return this.doRequest(request);
     }
 
-    public static void setHttpClientSingleton(Object client) {
+    public static void setHttpClientTemplate(Object client) {
         clientSingleton = (OkHttpClient) client;
     }
 
-    public static Object getHttpClientSingleton() {
+    public static Object getHttpClientTemplate() {
         return clientSingleton;
     }
 }
