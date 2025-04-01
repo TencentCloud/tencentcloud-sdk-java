@@ -33,7 +33,7 @@ public class HttpConnection {
     // https://github.com/square/okhttp/issues/3372
     // Creating dispatcher and connectionPool is expensive.
     // Share them between OkHttpClients by singleton's Builder.
-    private static OkHttpClient clientSingleton = new OkHttpClient();
+    private static final OkHttpClient clientSingleton = new OkHttpClient();
     private OkHttpClient client;
 
     public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
@@ -143,11 +143,11 @@ public class HttpConnection {
         return this.doRequest(request);
     }
 
-    public static void setHttpClientTemplate(Object client) {
-        clientSingleton = (OkHttpClient) client;
+    public void setHttpClient(Object httpClient) {
+        client = (OkHttpClient) httpClient;
     }
 
-    public static Object getHttpClientTemplate() {
-        return clientSingleton;
+    public Object getHttpClient() {
+        return client;
     }
 }
