@@ -25,7 +25,6 @@ public class DescribeVideoLicenseResponse extends AbstractModel {
 
     /**
     * 视频激活码分类概览
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("License")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVideoLicenseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 视频激活码分类概览
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频激活码分类概览 
      * @return License 视频激活码分类概览
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoLicenseEntity [] getLicense() {
         return this.License;
@@ -50,9 +47,7 @@ public class DescribeVideoLicenseResponse extends AbstractModel {
 
     /**
      * Set 视频激活码分类概览
-注意：此字段可能返回 null，表示取不到有效值。
      * @param License 视频激活码分类概览
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicense(VideoLicenseEntity [] License) {
         this.License = License;

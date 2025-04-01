@@ -25,7 +25,6 @@ public class ThumbnailURLInfoList extends AbstractModel {
 
     /**
     * 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThumbnailURL")
     @Expose
@@ -33,17 +32,14 @@ public class ThumbnailURLInfoList extends AbstractModel {
 
     /**
     * 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-     * Get 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缩略图访问地址 
      * @return ThumbnailURL 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThumbnailURL() {
         return this.ThumbnailURL;
@@ -51,19 +47,15 @@ public class ThumbnailURLInfoList extends AbstractModel {
 
     /**
      * Set 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThumbnailURL 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThumbnailURL(String ThumbnailURL) {
         this.ThumbnailURL = ThumbnailURL;
     }
 
     /**
-     * Get 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缩略图访问地址的过期时间 
      * @return ExpireTime 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -71,9 +63,7 @@ public class ThumbnailURLInfoList extends AbstractModel {
 
     /**
      * Set 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

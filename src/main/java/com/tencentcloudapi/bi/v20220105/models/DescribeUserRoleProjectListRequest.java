@@ -52,6 +52,20 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
     private Boolean IsOnlyBindAppUser;
 
     /**
+    * 是否获取全部数据
+    */
+    @SerializedName("AllPage")
+    @Expose
+    private Boolean AllPage;
+
+    /**
+    * 角色编码
+    */
+    @SerializedName("RoleCode")
+    @Expose
+    private String RoleCode;
+
+    /**
      * Get 页码 
      * @return PageNo 页码
      */
@@ -115,6 +129,38 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         this.IsOnlyBindAppUser = IsOnlyBindAppUser;
     }
 
+    /**
+     * Get 是否获取全部数据 
+     * @return AllPage 是否获取全部数据
+     */
+    public Boolean getAllPage() {
+        return this.AllPage;
+    }
+
+    /**
+     * Set 是否获取全部数据
+     * @param AllPage 是否获取全部数据
+     */
+    public void setAllPage(Boolean AllPage) {
+        this.AllPage = AllPage;
+    }
+
+    /**
+     * Get 角色编码 
+     * @return RoleCode 角色编码
+     */
+    public String getRoleCode() {
+        return this.RoleCode;
+    }
+
+    /**
+     * Set 角色编码
+     * @param RoleCode 角色编码
+     */
+    public void setRoleCode(String RoleCode) {
+        this.RoleCode = RoleCode;
+    }
+
     public DescribeUserRoleProjectListRequest() {
     }
 
@@ -135,6 +181,12 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         if (source.IsOnlyBindAppUser != null) {
             this.IsOnlyBindAppUser = new Boolean(source.IsOnlyBindAppUser);
         }
+        if (source.AllPage != null) {
+            this.AllPage = new Boolean(source.AllPage);
+        }
+        if (source.RoleCode != null) {
+            this.RoleCode = new String(source.RoleCode);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
+        this.setParamSimple(map, prefix + "AllPage", this.AllPage);
+        this.setParamSimple(map, prefix + "RoleCode", this.RoleCode);
 
     }
 }

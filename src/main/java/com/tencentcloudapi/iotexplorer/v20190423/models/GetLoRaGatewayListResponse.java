@@ -32,7 +32,6 @@ public class GetLoRaGatewayListResponse extends AbstractModel {
 
     /**
     * 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gateways")
     @Expose
@@ -62,10 +61,8 @@ public class GetLoRaGatewayListResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回详情项 
      * @return Gateways 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoRaGatewayItem [] getGateways() {
         return this.Gateways;
@@ -73,9 +70,7 @@ public class GetLoRaGatewayListResponse extends AbstractModel {
 
     /**
      * Set 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gateways 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGateways(LoRaGatewayItem [] Gateways) {
         this.Gateways = Gateways;

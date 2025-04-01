@@ -25,7 +25,6 @@ public class CheckFirmwareUpdateResponse extends AbstractModel {
 
     /**
     * 设备当前固件版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentVersion")
     @Expose
@@ -33,7 +32,6 @@ public class CheckFirmwareUpdateResponse extends AbstractModel {
 
     /**
     * 固件可升级版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstVersion")
     @Expose
@@ -47,10 +45,8 @@ public class CheckFirmwareUpdateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备当前固件版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备当前固件版本。 
      * @return CurrentVersion 设备当前固件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentVersion() {
         return this.CurrentVersion;
@@ -58,19 +54,15 @@ public class CheckFirmwareUpdateResponse extends AbstractModel {
 
     /**
      * Set 设备当前固件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentVersion 设备当前固件版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentVersion(String CurrentVersion) {
         this.CurrentVersion = CurrentVersion;
     }
 
     /**
-     * Get 固件可升级版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件可升级版本。 
      * @return DstVersion 固件可升级版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstVersion() {
         return this.DstVersion;
@@ -78,9 +70,7 @@ public class CheckFirmwareUpdateResponse extends AbstractModel {
 
     /**
      * Set 固件可升级版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstVersion 固件可升级版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstVersion(String DstVersion) {
         this.DstVersion = DstVersion;

@@ -112,6 +112,14 @@ public class ProjectUserRole extends AbstractModel {
     private String AppId;
 
     /**
+    * 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsProjectOwner")
+    @Expose
+    private Boolean IsProjectOwner;
+
+    /**
      * Get 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Roles 用户角色对象
@@ -331,6 +339,26 @@ public class ProjectUserRole extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsProjectOwner 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsProjectOwner() {
+        return this.IsProjectOwner;
+    }
+
+    /**
+     * Set 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsProjectOwner 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsProjectOwner(Boolean IsProjectOwner) {
+        this.IsProjectOwner = IsProjectOwner;
+    }
+
     public ProjectUserRole() {
     }
 
@@ -375,6 +403,9 @@ public class ProjectUserRole extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.IsProjectOwner != null) {
+            this.IsProjectOwner = new Boolean(source.IsProjectOwner);
+        }
     }
 
 
@@ -393,6 +424,7 @@ public class ProjectUserRole extends AbstractModel {
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "IsProjectOwner", this.IsProjectOwner);
 
     }
 }

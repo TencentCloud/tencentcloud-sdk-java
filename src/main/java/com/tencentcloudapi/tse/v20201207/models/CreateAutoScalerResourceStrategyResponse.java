@@ -32,7 +32,6 @@ public class CreateAutoScalerResourceStrategyResponse extends AbstractModel {
 
     /**
     * 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -66,10 +65,8 @@ public class CreateAutoScalerResourceStrategyResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略Id 
      * @return StrategyId 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyId() {
         return this.StrategyId;
@@ -77,9 +74,7 @@ public class CreateAutoScalerResourceStrategyResponse extends AbstractModel {
 
     /**
      * Set 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;

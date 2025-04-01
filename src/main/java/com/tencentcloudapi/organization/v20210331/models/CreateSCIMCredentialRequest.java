@@ -31,6 +31,13 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+    */
+    @SerializedName("ExpireDuration")
+    @Expose
+    private Long ExpireDuration;
+
+    /**
      * Get 空间ID。z-前缀开头，后面是12位随机数字/小写字母 
      * @return ZoneId 空间ID。z-前缀开头，后面是12位随机数字/小写字母
      */
@@ -46,6 +53,22 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
         this.ZoneId = ZoneId;
     }
 
+    /**
+     * Get 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期 
+     * @return ExpireDuration 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+     */
+    public Long getExpireDuration() {
+        return this.ExpireDuration;
+    }
+
+    /**
+     * Set 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+     * @param ExpireDuration 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+     */
+    public void setExpireDuration(Long ExpireDuration) {
+        this.ExpireDuration = ExpireDuration;
+    }
+
     public CreateSCIMCredentialRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.ExpireDuration != null) {
+            this.ExpireDuration = new Long(source.ExpireDuration);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ExpireDuration", this.ExpireDuration);
 
     }
 }

@@ -124,7 +124,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableProductScript")
     @Expose
@@ -132,7 +131,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserId")
     @Expose
@@ -140,7 +138,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorNickName")
     @Expose
@@ -148,7 +145,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindStrategy")
     @Expose
@@ -156,7 +152,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCount")
     @Expose
@@ -164,7 +159,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rate")
     @Expose
@@ -172,7 +166,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 有效期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -180,7 +173,6 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
     * 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInterconnection")
     @Expose
@@ -415,10 +407,8 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     }
 
     /**
-     * Get 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用脚本进行二进制转json功能 可以取值 true / false 
      * @return EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnableProductScript() {
         return this.EnableProductScript;
@@ -426,19 +416,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableProductScript(String EnableProductScript) {
         this.EnableProductScript = EnableProductScript;
     }
 
     /**
-     * Get 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人 UinId 
      * @return CreateUserId 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateUserId() {
         return this.CreateUserId;
@@ -446,19 +432,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUserId 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserId(Long CreateUserId) {
         this.CreateUserId = CreateUserId;
     }
 
     /**
-     * Get 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者昵称 
      * @return CreatorNickName 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorNickName() {
         return this.CreatorNickName;
@@ -466,19 +448,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorNickName 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorNickName(String CreatorNickName) {
         this.CreatorNickName = CreatorNickName;
     }
 
     /**
-     * Get 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定策略（1：强踢；2：非强踢；0：表示无意义） 
      * @return BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindStrategy() {
         return this.BindStrategy;
@@ -486,19 +464,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindStrategy(Long BindStrategy) {
         this.BindStrategy = BindStrategy;
     }
 
     /**
-     * Get 设备数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备数量 
      * @return DeviceCount 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceCount() {
         return this.DeviceCount;
@@ -506,19 +480,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCount 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCount(Long DeviceCount) {
         this.DeviceCount = DeviceCount;
     }
 
     /**
-     * Get 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均传输速率 
      * @return Rate 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRate() {
         return this.Rate;
@@ -526,19 +496,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rate 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRate(String Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get 有效期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期 
      * @return Period 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeriod() {
         return this.Period;
@@ -546,19 +512,15 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联互通标识 
      * @return IsInterconnection 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsInterconnection() {
         return this.IsInterconnection;
@@ -566,9 +528,7 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * Set 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsInterconnection 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInterconnection(Long IsInterconnection) {
         this.IsInterconnection = IsInterconnection;

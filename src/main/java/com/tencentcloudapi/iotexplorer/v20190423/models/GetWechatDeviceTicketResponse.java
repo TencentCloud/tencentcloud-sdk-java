@@ -25,7 +25,6 @@ public class GetWechatDeviceTicketResponse extends AbstractModel {
 
     /**
     * 微信设备信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WXDeviceInfo")
     @Expose
@@ -39,10 +38,8 @@ public class GetWechatDeviceTicketResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 微信设备信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微信设备信息 
      * @return WXDeviceInfo 微信设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WXDeviceInfo getWXDeviceInfo() {
         return this.WXDeviceInfo;
@@ -50,9 +47,7 @@ public class GetWechatDeviceTicketResponse extends AbstractModel {
 
     /**
      * Set 微信设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WXDeviceInfo 微信设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWXDeviceInfo(WXDeviceInfo WXDeviceInfo) {
         this.WXDeviceInfo = WXDeviceInfo;

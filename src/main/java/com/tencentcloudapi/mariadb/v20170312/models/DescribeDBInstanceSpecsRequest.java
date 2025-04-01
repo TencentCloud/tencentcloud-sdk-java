@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeDBInstanceSpecsRequest extends AbstractModel {
 
+    /**
+    * Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
+     * Get Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD 
+     * @return CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     * @param CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public DescribeDBInstanceSpecsRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeDBInstanceSpecsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDBInstanceSpecsRequest(DescribeDBInstanceSpecsRequest source) {
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeDBInstanceSpecsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

@@ -206,6 +206,13 @@ public class GatewayItem extends AbstractModel {
     private String AccessDomain;
 
     /**
+    * 标签键值对
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 用户uin 
      * @return Uin 用户uin
      */
@@ -621,6 +628,22 @@ public class GatewayItem extends AbstractModel {
         this.AccessDomain = AccessDomain;
     }
 
+    /**
+     * Get 标签键值对 
+     * @return Tags 标签键值对
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键值对
+     * @param Tags 标签键值对
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public GatewayItem() {
     }
 
@@ -710,6 +733,12 @@ public class GatewayItem extends AbstractModel {
         if (source.AccessDomain != null) {
             this.AccessDomain = new String(source.AccessDomain);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -743,6 +772,7 @@ public class GatewayItem extends AbstractModel {
         this.setParamSimple(map, prefix + "VersionNumLimit", this.VersionNumLimit);
         this.setParamSimple(map, prefix + "LongAccessId", this.LongAccessId);
         this.setParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

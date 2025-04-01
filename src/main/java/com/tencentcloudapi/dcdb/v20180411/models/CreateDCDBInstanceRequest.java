@@ -189,6 +189,13 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
     private Long DcnSyncMode;
 
     /**
+    * Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，可填写多个可用区。
@@ -572,6 +579,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
         this.DcnSyncMode = DcnSyncMode;
     }
 
+    /**
+     * Get Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD 
+     * @return CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     * @param CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -664,6 +687,9 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
         if (source.DcnSyncMode != null) {
             this.DcnSyncMode = new Long(source.DcnSyncMode);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -694,6 +720,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

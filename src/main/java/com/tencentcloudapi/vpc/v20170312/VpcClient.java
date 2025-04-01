@@ -2289,6 +2289,20 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeNatGatewayFlowMonitorDetail）用于查询NAT网关流量监控明细。
+
+- 只支持单个网关实例查询。即入参 `NatGatewayId` 最多只支持传一个，且必须传一个。
+- 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+     * @param req DescribeNatGatewayFlowMonitorDetailRequest
+     * @return DescribeNatGatewayFlowMonitorDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayFlowMonitorDetailResponse DescribeNatGatewayFlowMonitorDetail(DescribeNatGatewayFlowMonitorDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatGatewayFlowMonitorDetail", DescribeNatGatewayFlowMonitorDetailResponse.class);
+    }
+
+    /**
      *本接口（DescribeNatGatewaySourceIpTranslationNatRules）用于查询NAT网关SNAT转发规则对象数组。
      * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
      * @return DescribeNatGatewaySourceIpTranslationNatRulesResponse

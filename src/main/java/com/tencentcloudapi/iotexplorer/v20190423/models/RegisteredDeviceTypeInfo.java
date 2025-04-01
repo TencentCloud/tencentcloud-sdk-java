@@ -45,6 +45,13 @@ public class RegisteredDeviceTypeInfo extends AbstractModel {
     private Long SubDeviceNum;
 
     /**
+    * 已注册视频设备数
+    */
+    @SerializedName("VideoDeviceNum")
+    @Expose
+    private Long VideoDeviceNum;
+
+    /**
      * Get 已注册设备数 
      * @return NormalDeviceNum 已注册设备数
      */
@@ -92,6 +99,22 @@ public class RegisteredDeviceTypeInfo extends AbstractModel {
         this.SubDeviceNum = SubDeviceNum;
     }
 
+    /**
+     * Get 已注册视频设备数 
+     * @return VideoDeviceNum 已注册视频设备数
+     */
+    public Long getVideoDeviceNum() {
+        return this.VideoDeviceNum;
+    }
+
+    /**
+     * Set 已注册视频设备数
+     * @param VideoDeviceNum 已注册视频设备数
+     */
+    public void setVideoDeviceNum(Long VideoDeviceNum) {
+        this.VideoDeviceNum = VideoDeviceNum;
+    }
+
     public RegisteredDeviceTypeInfo() {
     }
 
@@ -109,6 +132,9 @@ public class RegisteredDeviceTypeInfo extends AbstractModel {
         if (source.SubDeviceNum != null) {
             this.SubDeviceNum = new Long(source.SubDeviceNum);
         }
+        if (source.VideoDeviceNum != null) {
+            this.VideoDeviceNum = new Long(source.VideoDeviceNum);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RegisteredDeviceTypeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NormalDeviceNum", this.NormalDeviceNum);
         this.setParamSimple(map, prefix + "GatewayDeviceNum", this.GatewayDeviceNum);
         this.setParamSimple(map, prefix + "SubDeviceNum", this.SubDeviceNum);
+        this.setParamSimple(map, prefix + "VideoDeviceNum", this.VideoDeviceNum);
 
     }
 }

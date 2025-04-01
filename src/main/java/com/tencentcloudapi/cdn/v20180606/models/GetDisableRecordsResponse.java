@@ -25,7 +25,6 @@ public class GetDisableRecordsResponse extends AbstractModel {
 
     /**
     * 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlRecordList")
     @Expose
@@ -33,7 +32,6 @@ public class GetDisableRecordsResponse extends AbstractModel {
 
     /**
     * 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class GetDisableRecordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封禁历史记录 
      * @return UrlRecordList 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlRecord [] getUrlRecordList() {
         return this.UrlRecordList;
@@ -58,19 +54,15 @@ public class GetDisableRecordsResponse extends AbstractModel {
 
     /**
      * Set 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlRecordList 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlRecordList(UrlRecord [] UrlRecordList) {
         this.UrlRecordList = UrlRecordList;
     }
 
     /**
-     * Get 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务总数，用于分页 
      * @return TotalCount 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class GetDisableRecordsResponse extends AbstractModel {
 
     /**
      * Set 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

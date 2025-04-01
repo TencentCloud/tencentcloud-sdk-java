@@ -25,7 +25,6 @@ public class CheckRecordSnapshotRollbackResponse extends AbstractModel {
 
     /**
     * 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -39,10 +38,8 @@ public class CheckRecordSnapshotRollbackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误原因 
      * @return Reason 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -50,9 +47,7 @@ public class CheckRecordSnapshotRollbackResponse extends AbstractModel {
 
     /**
      * Set 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

@@ -38,7 +38,8 @@ public class DescribeMaterialListRequest extends AbstractModel {
     private String MaterialId;
 
     /**
-    * 每次拉取条数
+    * 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
     */
     @SerializedName("Limit")
     @Expose
@@ -84,16 +85,20 @@ public class DescribeMaterialListRequest extends AbstractModel {
     }
 
     /**
-     * Get 每次拉取条数 
-     * @return Limit 每次拉取条数
+     * Get 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。 
+     * @return Limit 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次拉取条数
-     * @param Limit 每次拉取条数
+     * Set 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
+     * @param Limit 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

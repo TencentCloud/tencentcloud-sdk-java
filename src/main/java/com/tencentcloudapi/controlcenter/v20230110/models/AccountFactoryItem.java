@@ -25,7 +25,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
     @Expose
@@ -33,7 +32,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameEn")
     @Expose
@@ -49,7 +46,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -57,7 +53,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Required")
     @Expose
@@ -65,7 +60,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependsOn")
     @Expose
@@ -73,7 +67,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -81,7 +74,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DescriptionEn")
     @Expose
@@ -89,7 +81,6 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Classify")
     @Expose
@@ -97,17 +88,14 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
     * 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassifyEn")
     @Expose
     private String ClassifyEn;
 
     /**
-     * Get 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。 
      * @return Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
         return this.Identifier;
@@ -115,19 +103,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。 
      * @return Name 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -135,19 +119,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。 
      * @return NameEn 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameEn() {
         return this.NameEn;
@@ -155,19 +135,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameEn 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameEn(String NameEn) {
         this.NameEn = NameEn;
     }
 
     /**
-     * Get 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项权重，数值小权重越高，取值范围大于等于0。 
      * @return Weight 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -175,19 +151,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项是否必填，1必填，0非必填 
      * @return Required 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRequired() {
         return this.Required;
@@ -195,19 +167,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Required 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequired(Long Required) {
         this.Required = Required;
     }
 
     /**
-     * Get 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。 
      * @return DependsOn 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependsOnItem [] getDependsOn() {
         return this.DependsOn;
@@ -215,19 +183,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DependsOn 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependsOn(DependsOnItem [] DependsOn) {
         this.DependsOn = DependsOn;
     }
 
     /**
-     * Get 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线描述，长度为2~256个英文或中文字符，默认值为空。 
      * @return Description 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -235,19 +199,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项英文描述，长度为2~1024个英文字符，默认值为空。 
      * @return DescriptionEn 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescriptionEn() {
         return this.DescriptionEn;
@@ -255,19 +215,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescriptionEn 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescriptionEn(String DescriptionEn) {
         this.DescriptionEn = DescriptionEn;
     }
 
     /**
-     * Get 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线分类，长度为2~32个英文或中文字符，不能为空。 
      * @return Classify 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClassify() {
         return this.Classify;
@@ -275,19 +231,15 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Classify 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;
     }
 
     /**
-     * Get 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线英文分类，长度为2~64个英文字符，不能为空。 
      * @return ClassifyEn 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClassifyEn() {
         return this.ClassifyEn;
@@ -295,9 +247,7 @@ public class AccountFactoryItem extends AbstractModel {
 
     /**
      * Set 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassifyEn 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassifyEn(String ClassifyEn) {
         this.ClassifyEn = ClassifyEn;

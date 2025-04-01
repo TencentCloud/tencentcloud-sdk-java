@@ -25,7 +25,6 @@ public class ListEntitiesForPolicyResponse extends AbstractModel {
 
     /**
     * 实体总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -33,7 +32,6 @@ public class ListEntitiesForPolicyResponse extends AbstractModel {
 
     /**
     * 实体列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -47,10 +45,8 @@ public class ListEntitiesForPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实体总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实体总数 
      * @return TotalNum 实体总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
         return this.TotalNum;
@@ -58,19 +54,15 @@ public class ListEntitiesForPolicyResponse extends AbstractModel {
 
     /**
      * Set 实体总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalNum 实体总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 实体列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实体列表 
      * @return List 实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttachEntityOfPolicy [] getList() {
         return this.List;
@@ -78,9 +70,7 @@ public class ListEntitiesForPolicyResponse extends AbstractModel {
 
     /**
      * Set 实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(AttachEntityOfPolicy [] List) {
         this.List = List;

@@ -47,7 +47,6 @@ public class DeviceInfo extends AbstractModel {
     /**
     * 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstOnlineTime")
     @Expose
@@ -55,7 +54,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginTime")
     @Expose
@@ -63,7 +61,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -71,7 +68,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -79,7 +75,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 设备证书
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCert")
     @Expose
@@ -87,7 +82,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogLevel")
     @Expose
@@ -95,7 +89,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevAddr")
     @Expose
@@ -103,7 +96,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppKey")
     @Expose
@@ -111,7 +103,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevEUI")
     @Expose
@@ -119,7 +110,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppSKey")
     @Expose
@@ -127,7 +117,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NwkSKey")
     @Expose
@@ -135,7 +124,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 创建人Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserId")
     @Expose
@@ -143,7 +131,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 创建人昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorNickName")
     @Expose
@@ -151,7 +138,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 启用/禁用状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableState")
     @Expose
@@ -159,7 +145,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -167,7 +152,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -175,7 +159,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 设备类型（设备、子设备、网关）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -183,7 +166,6 @@ public class DeviceInfo extends AbstractModel {
 
     /**
     * 是否是 lora 设备
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLora")
     @Expose
@@ -239,10 +221,8 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Get 首次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstOnlineTime 首次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstOnlineTime() {
@@ -252,9 +232,7 @@ public class DeviceInfo extends AbstractModel {
     /**
      * Set 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstOnlineTime 首次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstOnlineTime(Long FirstOnlineTime) {
@@ -262,10 +240,8 @@ public class DeviceInfo extends AbstractModel {
     }
 
     /**
-     * Get 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次上线时间 
      * @return LoginTime 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLoginTime() {
         return this.LoginTime;
@@ -273,19 +249,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginTime 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginTime(Long LoginTime) {
         this.LoginTime = LoginTime;
     }
 
     /**
-     * Get 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备创建时间 
      * @return CreateTime 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -293,19 +265,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备固件版本 
      * @return Version 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -313,19 +281,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 设备证书
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备证书 
      * @return DeviceCert 设备证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceCert() {
         return this.DeviceCert;
@@ -333,19 +297,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 设备证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCert 设备证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCert(String DeviceCert) {
         this.DeviceCert = DeviceCert;
     }
 
     /**
-     * Get 日志级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志级别 
      * @return LogLevel 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogLevel() {
         return this.LogLevel;
@@ -353,19 +313,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogLevel 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogLevel(Long LogLevel) {
         this.LogLevel = LogLevel;
     }
 
     /**
-     * Get LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoRaWAN 设备地址 
      * @return DevAddr LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevAddr() {
         return this.DevAddr;
@@ -373,19 +329,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevAddr LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevAddr(String DevAddr) {
         this.DevAddr = DevAddr;
     }
 
     /**
-     * Get LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoRaWAN 应用密钥 
      * @return AppKey LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppKey() {
         return this.AppKey;
@@ -393,19 +345,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppKey LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;
     }
 
     /**
-     * Get LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoRaWAN 设备唯一标识 
      * @return DevEUI LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevEUI() {
         return this.DevEUI;
@@ -413,19 +361,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevEUI LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevEUI(String DevEUI) {
         this.DevEUI = DevEUI;
     }
 
     /**
-     * Get LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoRaWAN 应用会话密钥 
      * @return AppSKey LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppSKey() {
         return this.AppSKey;
@@ -433,19 +377,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppSKey LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppSKey(String AppSKey) {
         this.AppSKey = AppSKey;
     }
 
     /**
-     * Get LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoRaWAN 网络会话密钥 
      * @return NwkSKey LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNwkSKey() {
         return this.NwkSKey;
@@ -453,19 +393,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NwkSKey LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNwkSKey(String NwkSKey) {
         this.NwkSKey = NwkSKey;
     }
 
     /**
-     * Get 创建人Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人Id 
      * @return CreateUserId 创建人Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateUserId() {
         return this.CreateUserId;
@@ -473,19 +409,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 创建人Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUserId 创建人Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserId(Long CreateUserId) {
         this.CreateUserId = CreateUserId;
     }
 
     /**
-     * Get 创建人昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人昵称 
      * @return CreatorNickName 创建人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorNickName() {
         return this.CreatorNickName;
@@ -493,19 +425,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 创建人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorNickName 创建人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorNickName(String CreatorNickName) {
         this.CreatorNickName = CreatorNickName;
     }
 
     /**
-     * Get 启用/禁用状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用/禁用状态 
      * @return EnableState 启用/禁用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableState() {
         return this.EnableState;
@@ -513,19 +441,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 启用/禁用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableState 启用/禁用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableState(Long EnableState) {
         this.EnableState = EnableState;
     }
 
     /**
-     * Get 产品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品ID 
      * @return ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -533,19 +457,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -553,19 +473,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 设备类型（设备、子设备、网关）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型（设备、子设备、网关） 
      * @return DeviceType 设备类型（设备、子设备、网关）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -573,19 +489,15 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 设备类型（设备、子设备、网关）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型（设备、子设备、网关）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 是否是 lora 设备
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是 lora 设备 
      * @return IsLora 是否是 lora 设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsLora() {
         return this.IsLora;
@@ -593,9 +505,7 @@ public class DeviceInfo extends AbstractModel {
 
     /**
      * Set 是否是 lora 设备
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsLora 是否是 lora 设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLora(Boolean IsLora) {
         this.IsLora = IsLora;

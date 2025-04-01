@@ -25,7 +25,6 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
     * 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -33,7 +32,6 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
     * 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -41,7 +39,6 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
     * 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listover")
     @Expose
@@ -49,7 +46,6 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
     * 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventHistory")
     @Expose
@@ -63,10 +59,8 @@ public class ListEventHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 搜索上下文, 用作查询游标 
      * @return Context 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -74,19 +68,15 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
      * Set 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 搜索结果数量 
      * @return Total 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -94,19 +84,15 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
      * Set 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 搜索结果是否已经结束 
      * @return Listover 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getListover() {
         return this.Listover;
@@ -114,19 +100,15 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
      * Set 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Listover 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListover(Boolean Listover) {
         this.Listover = Listover;
     }
 
     /**
-     * Get 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 搜集结果集 
      * @return EventHistory 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventHistoryItem [] getEventHistory() {
         return this.EventHistory;
@@ -134,9 +116,7 @@ public class ListEventHistoryResponse extends AbstractModel {
 
     /**
      * Set 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventHistory 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventHistory(EventHistoryItem [] EventHistory) {
         this.EventHistory = EventHistory;

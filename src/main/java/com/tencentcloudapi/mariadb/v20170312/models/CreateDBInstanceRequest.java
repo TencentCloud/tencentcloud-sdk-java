@@ -174,6 +174,13 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private Long DcnSyncMode;
 
     /**
+    * cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 实例节点可用区分布，可填写多个可用区。 
      * @return Zones 实例节点可用区分布，可填写多个可用区。
      */
@@ -521,6 +528,22 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.DcnSyncMode = DcnSyncMode;
     }
 
+    /**
+     * Get cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD 
+     * @return CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     * @param CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -607,6 +630,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.DcnSyncMode != null) {
             this.DcnSyncMode = new Long(source.DcnSyncMode);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

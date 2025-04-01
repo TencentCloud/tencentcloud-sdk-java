@@ -25,7 +25,6 @@ public class EnableCachesResponse extends AbstractModel {
 
     /**
     * 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheOptResult")
     @Expose
@@ -33,7 +32,6 @@ public class EnableCachesResponse extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ public class EnableCachesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果列表 
      * @return CacheOptResult 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheOptResult getCacheOptResult() {
         return this.CacheOptResult;
@@ -58,19 +54,15 @@ public class EnableCachesResponse extends AbstractModel {
 
     /**
      * Set 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheOptResult 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheOptResult(CacheOptResult CacheOptResult) {
         this.CacheOptResult = CacheOptResult;
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -78,9 +70,7 @@ public class EnableCachesResponse extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -25,7 +25,6 @@ public class CreatePolicyVersionResponse extends AbstractModel {
 
     /**
     * 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
     @Expose
@@ -39,10 +38,8 @@ public class CreatePolicyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略版本号 
      * @return VersionId 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionId() {
         return this.VersionId;
@@ -50,9 +47,7 @@ public class CreatePolicyVersionResponse extends AbstractModel {
 
     /**
      * Set 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionId 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;

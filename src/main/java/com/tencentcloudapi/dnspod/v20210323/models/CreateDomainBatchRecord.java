@@ -25,7 +25,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubDomain")
     @Expose
@@ -33,7 +32,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordType")
     @Expose
@@ -41,7 +39,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordLine")
     @Expose
@@ -49,7 +46,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 记录值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,7 +53,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TTL")
     @Expose
@@ -65,7 +60,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +67,6 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
     * 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
     @Expose
@@ -95,10 +88,8 @@ public class CreateDomainBatchRecord extends AbstractModel {
     private Long Id;
 
     /**
-     * Get 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子域名(主机记录)。 
      * @return SubDomain 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubDomain() {
         return this.SubDomain;
@@ -106,19 +97,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubDomain 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录类型, 详见 DescribeRecordType 接口 
      * @return RecordType 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordType() {
         return this.RecordType;
@@ -126,19 +113,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordType 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析记录的线路，详见 DescribeRecordLineList 接口 
      * @return RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordLine() {
         return this.RecordLine;
@@ -146,19 +129,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 记录值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录值 
      * @return Value 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -166,19 +145,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录的 TTL 值 
      * @return TTL 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTTL() {
         return this.TTL;
@@ -186,19 +161,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TTL 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
     }
 
     /**
-     * Get 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录添加状态 
      * @return Status 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -206,19 +177,15 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 操作类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作类型 
      * @return Operation 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperation() {
         return this.Operation;
@@ -226,9 +193,7 @@ public class CreateDomainBatchRecord extends AbstractModel {
 
     /**
      * Set 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operation 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

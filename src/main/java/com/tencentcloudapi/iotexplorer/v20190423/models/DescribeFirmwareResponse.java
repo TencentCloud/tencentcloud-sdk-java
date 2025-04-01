@@ -39,7 +39,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5sum")
     @Expose
@@ -63,7 +60,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Createtime")
     @Expose
@@ -78,7 +74,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwType")
     @Expose
@@ -86,7 +81,6 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
     * 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefined")
     @Expose
@@ -132,10 +126,8 @@ public class DescribeFirmwareResponse extends AbstractModel {
     }
 
     /**
-     * Get 固件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件名称 
      * @return Name 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -143,19 +135,15 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 固件描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件描述 
      * @return Description 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -163,19 +151,15 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件Md5值 
      * @return Md5sum 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5sum() {
         return this.Md5sum;
@@ -183,19 +167,15 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5sum 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5sum(String Md5sum) {
         this.Md5sum = Md5sum;
     }
 
     /**
-     * Get 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件上传的秒级时间戳 
      * @return Createtime 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreatetime() {
         return this.Createtime;
@@ -203,9 +183,7 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Createtime 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatetime(Long Createtime) {
         this.Createtime = Createtime;
@@ -228,10 +206,8 @@ public class DescribeFirmwareResponse extends AbstractModel {
     }
 
     /**
-     * Get 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件升级模块 
      * @return FwType 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwType() {
         return this.FwType;
@@ -239,19 +215,15 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwType 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件用户自定义配置信息 
      * @return UserDefined 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDefined() {
         return this.UserDefined;
@@ -259,9 +231,7 @@ public class DescribeFirmwareResponse extends AbstractModel {
 
     /**
      * Set 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefined 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefined(String UserDefined) {
         this.UserDefined = UserDefined;

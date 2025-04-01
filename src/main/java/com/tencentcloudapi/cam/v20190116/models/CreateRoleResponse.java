@@ -25,7 +25,6 @@ public class CreateRoleResponse extends AbstractModel {
 
     /**
     * 角色ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateRoleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 角色ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色ID 
      * @return RoleId 角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleId() {
         return this.RoleId;
@@ -50,9 +47,7 @@ public class CreateRoleResponse extends AbstractModel {
 
     /**
      * Set 角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleId 角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;

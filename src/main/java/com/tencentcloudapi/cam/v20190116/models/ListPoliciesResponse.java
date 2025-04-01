@@ -48,7 +48,6 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
 
     /**
     * 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTypeList")
     @Expose
@@ -130,10 +129,8 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
     }
 
     /**
-     * Get 保留字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保留字段 
      * @return ServiceTypeList 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getServiceTypeList() {
         return this.ServiceTypeList;
@@ -141,9 +138,7 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
 
     /**
      * Set 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTypeList 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTypeList(String [] ServiceTypeList) {
         this.ServiceTypeList = ServiceTypeList;

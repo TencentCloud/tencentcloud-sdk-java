@@ -38,7 +38,7 @@ public class CreateOutputInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+    * 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
     */
     @SerializedName("Protocol")
     @Expose
@@ -155,16 +155,16 @@ public class CreateOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。 
-     * @return Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * Get 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。 
+     * @return Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
-     * @param Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * Set 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+     * @param Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

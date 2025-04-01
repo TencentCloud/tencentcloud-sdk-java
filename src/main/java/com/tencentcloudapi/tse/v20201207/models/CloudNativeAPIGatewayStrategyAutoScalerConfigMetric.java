@@ -35,7 +35,6 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
     * 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -43,7 +42,6 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
 
     /**
     * 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -51,7 +49,6 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
 
     /**
     * 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetValue")
     @Expose
@@ -80,12 +77,10 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
     /**
      * Get 指标资源名称
 - cpu
-- memory
-注意：此字段可能返回 null，表示取不到有效值。 
+- memory 
      * @return ResourceName 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -95,21 +90,17 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
      * Set 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标目标类型，目前只支持百分比Utilization 
      * @return TargetType 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
         return this.TargetType;
@@ -117,19 +108,15 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
 
     /**
      * Set 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标目标值 
      * @return TargetValue 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetValue() {
         return this.TargetValue;
@@ -137,9 +124,7 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends Abstrac
 
     /**
      * Set 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetValue 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetValue(Long TargetValue) {
         this.TargetValue = TargetValue;

@@ -204,7 +204,7 @@ HYBRID_PAID:
     */
     @SerializedName("ScheduledAction")
     @Expose
-    private String ScheduledAction;
+    private ScheduledAction ScheduledAction;
 
     /**
     * 实例列表
@@ -754,7 +754,7 @@ HYBRID_PAID:
      * @return ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getScheduledAction() {
+    public ScheduledAction getScheduledAction() {
         return this.ScheduledAction;
     }
 
@@ -764,7 +764,7 @@ HYBRID_PAID:
      * @param ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScheduledAction(String ScheduledAction) {
+    public void setScheduledAction(ScheduledAction ScheduledAction) {
         this.ScheduledAction = ScheduledAction;
     }
 
@@ -1086,7 +1086,7 @@ HYBRID_PAID:
             this.ScaleStrategy = new String(source.ScaleStrategy);
         }
         if (source.ScheduledAction != null) {
-            this.ScheduledAction = new String(source.ScheduledAction);
+            this.ScheduledAction = new ScheduledAction(source.ScheduledAction);
         }
         if (source.PodList != null) {
             this.PodList = new String[source.PodList.length];
@@ -1161,7 +1161,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
         this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
         this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
-        this.setParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
+        this.setParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
         this.setParamArraySimple(map, prefix + "PodList.", this.PodList);
         this.setParamObj(map, prefix + "Pods.", this.Pods);
         this.setParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);

@@ -31,7 +31,7 @@ public class DiskConfig extends AbstractModel {
     private Boolean Available;
 
     /**
-    * 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+    * 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -53,7 +53,7 @@ public class DiskConfig extends AbstractModel {
     private String InstanceFamily;
 
     /**
-    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
     */
     @SerializedName("DiskType")
     @Expose
@@ -61,7 +61,6 @@ public class DiskConfig extends AbstractModel {
 
     /**
     * 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepSize")
     @Expose
@@ -84,7 +83,7 @@ public class DiskConfig extends AbstractModel {
     private String DeviceClass;
 
     /**
-    * 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+    * 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -106,7 +105,6 @@ public class DiskConfig extends AbstractModel {
 
     /**
     * 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -129,16 +127,16 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。 
-     * @return DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * Get 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li> 
+     * @return DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * Set 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
-     * @param DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * Set 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
+     * @param DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
@@ -181,26 +179,24 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。 
-     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li> 
+     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘大小变化的最小步长，单位GB。 
      * @return StepSize 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStepSize() {
         return this.StepSize;
@@ -208,9 +204,7 @@ public class DiskConfig extends AbstractModel {
 
     /**
      * Set 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StepSize 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepSize(Long StepSize) {
         this.StepSize = StepSize;
@@ -257,16 +251,16 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。 
-     * @return DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Get 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li> 
+     * @return DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-     * @param DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Set 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
+     * @param DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
@@ -305,10 +299,8 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述预付费或后付费云盘的价格。 
      * @return Price 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Price getPrice() {
         return this.Price;
@@ -316,9 +308,7 @@ public class DiskConfig extends AbstractModel {
 
     /**
      * Set 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Price Price) {
         this.Price = Price;

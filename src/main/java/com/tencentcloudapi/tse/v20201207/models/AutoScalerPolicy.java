@@ -25,7 +25,6 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
     * 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,17 +39,14 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
     * 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodSeconds")
     @Expose
     private Long PeriodSeconds;
 
     /**
-     * Get 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，Pods 
      * @return Type 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -59,19 +54,15 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
      * Set 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return Value 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -79,19 +70,15 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩容周期 
      * @return PeriodSeconds 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriodSeconds() {
         return this.PeriodSeconds;
@@ -99,9 +86,7 @@ public class AutoScalerPolicy extends AbstractModel {
 
     /**
      * Set 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeriodSeconds 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodSeconds(Long PeriodSeconds) {
         this.PeriodSeconds = PeriodSeconds;

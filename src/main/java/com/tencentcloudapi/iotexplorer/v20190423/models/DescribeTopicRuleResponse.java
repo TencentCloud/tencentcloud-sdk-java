@@ -25,7 +25,6 @@ public class DescribeTopicRuleResponse extends AbstractModel {
 
     /**
     * 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTopicRuleResponse extends AbstractModel {
 
     /**
     * 规则绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CamTag")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeTopicRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述。 
      * @return Rule 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicRule getRule() {
         return this.Rule;
@@ -58,19 +54,15 @@ public class DescribeTopicRuleResponse extends AbstractModel {
 
     /**
      * Set 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(TopicRule Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 规则绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则绑定的标签 
      * @return CamTag 规则绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CamTag [] getCamTag() {
         return this.CamTag;
@@ -78,9 +70,7 @@ public class DescribeTopicRuleResponse extends AbstractModel {
 
     /**
      * Set 规则绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CamTag 规则绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCamTag(CamTag [] CamTag) {
         this.CamTag = CamTag;

@@ -25,7 +25,6 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
     * voip类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TWeCallType")
     @Expose
@@ -33,7 +32,6 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -41,17 +39,14 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
     * 已使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedNum")
     @Expose
     private Long UsedNum;
 
     /**
-     * Get voip类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get voip类型 
      * @return TWeCallType voip类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTWeCallType() {
         return this.TWeCallType;
@@ -59,19 +54,15 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
      * Set voip类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TWeCallType voip类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTWeCallType(String TWeCallType) {
         this.TWeCallType = TWeCallType;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalNum 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
         return this.TotalNum;
@@ -79,19 +70,15 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalNum 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 已使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用 
      * @return UsedNum 已使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedNum() {
         return this.UsedNum;
@@ -99,9 +86,7 @@ public class TWeCallLicenseInfo extends AbstractModel {
 
     /**
      * Set 已使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedNum 已使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedNum(Long UsedNum) {
         this.UsedNum = UsedNum;

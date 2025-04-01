@@ -46,7 +46,6 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
 
     /**
     * 误差精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Accuracy")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
     }
 
     /**
-     * Get 误差精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 误差精度预估，单位为米 
      * @return Accuracy 误差精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAccuracy() {
         return this.Accuracy;
@@ -119,9 +116,7 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
 
     /**
      * Set 误差精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Accuracy 误差精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccuracy(Float Accuracy) {
         this.Accuracy = Accuracy;

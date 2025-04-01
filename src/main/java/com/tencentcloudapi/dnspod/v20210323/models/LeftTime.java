@@ -25,7 +25,6 @@ public class LeftTime extends AbstractModel {
 
     /**
     * 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Days")
     @Expose
@@ -33,7 +32,6 @@ public class LeftTime extends AbstractModel {
 
     /**
     * 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hours")
     @Expose
@@ -41,17 +39,14 @@ public class LeftTime extends AbstractModel {
 
     /**
     * 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mins")
     @Expose
     private Long Mins;
 
     /**
-     * Get 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余天数 
      * @return Days 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDays() {
         return this.Days;
@@ -59,19 +54,15 @@ public class LeftTime extends AbstractModel {
 
     /**
      * Set 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Days 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDays(Long Days) {
         this.Days = Days;
     }
 
     /**
-     * Get 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余小时数 
      * @return Hours 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHours() {
         return this.Hours;
@@ -79,19 +70,15 @@ public class LeftTime extends AbstractModel {
 
     /**
      * Set 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hours 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHours(Long Hours) {
         this.Hours = Hours;
     }
 
     /**
-     * Get 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余分钟数 
      * @return Mins 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMins() {
         return this.Mins;
@@ -99,9 +86,7 @@ public class LeftTime extends AbstractModel {
 
     /**
      * Set 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mins 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMins(Long Mins) {
         this.Mins = Mins;

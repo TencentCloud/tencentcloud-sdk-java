@@ -25,7 +25,6 @@ public class DescribeDistrictIspDataResponse extends AbstractModel {
 
     /**
     * 地区运营商数据明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDistrictIspDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地区运营商数据明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区运营商数据明细 
      * @return Data 地区运营商数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DistrictIspInfo [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeDistrictIspDataResponse extends AbstractModel {
 
     /**
      * Set 地区运营商数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 地区运营商数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DistrictIspInfo [] Data) {
         this.Data = Data;

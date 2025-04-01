@@ -446,6 +446,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String ProxyVersion;
 
     /**
+    * Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1421,6 +1428,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get Cpu类型，如：英特尔：Intel/AMD，海光：Hygon 
+     * @return CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     * @param CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1636,6 +1659,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.ProxyVersion != null) {
             this.ProxyVersion = new String(source.ProxyVersion);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1706,6 +1732,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDcnStrongSyncSupported", this.IsDcnStrongSyncSupported);
         this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
         this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

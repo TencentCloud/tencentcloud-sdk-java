@@ -25,7 +25,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeMode")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalVersion")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserId")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
     * 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorNickName")
     @Expose
@@ -111,10 +101,8 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件任务ID 
      * @return TaskId 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -122,19 +110,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件任务状态 
      * @return Status 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -142,19 +126,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件任务创建时间，单位：秒 
      * @return CreateTime 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -162,19 +142,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件任务升级类型 
      * @return Type 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -182,19 +158,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -202,19 +174,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级） 
      * @return UpgradeMode 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpgradeMode() {
         return this.UpgradeMode;
@@ -222,19 +190,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpgradeMode 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeMode(String UpgradeMode) {
         this.UpgradeMode = UpgradeMode;
     }
 
     /**
-     * Get 产品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品ID 
      * @return ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -242,19 +206,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回 
      * @return OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalVersion() {
         return this.OriginalVersion;
@@ -262,19 +222,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalVersion(String OriginalVersion) {
         this.OriginalVersion = OriginalVersion;
     }
 
     /**
-     * Get 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建账号ID 
      * @return CreateUserId 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateUserId() {
         return this.CreateUserId;
@@ -282,19 +238,15 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUserId 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserId(Long CreateUserId) {
         this.CreateUserId = CreateUserId;
     }
 
     /**
-     * Get 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建账号ID昵称 
      * @return CreatorNickName 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorNickName() {
         return this.CreatorNickName;
@@ -302,9 +254,7 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
      * Set 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorNickName 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorNickName(String CreatorNickName) {
         this.CreatorNickName = CreatorNickName;

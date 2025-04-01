@@ -46,7 +46,6 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
     * 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
     @Expose
@@ -61,7 +60,6 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
     * 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deactived")
     @Expose
@@ -69,7 +67,6 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
     * 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeactivedDetail")
     @Expose
@@ -77,7 +74,6 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -132,10 +128,8 @@ public class AttachedPolicyOfRole extends AbstractModel {
     }
 
     /**
-     * Get 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略类型，User表示自定义策略，QCS表示预设策略 
      * @return PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyType() {
         return this.PolicyType;
@@ -143,9 +137,7 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
      * Set 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
@@ -168,10 +160,8 @@ public class AttachedPolicyOfRole extends AbstractModel {
     }
 
     /**
-     * Get 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已下线(0:否 1:是) 
      * @return Deactived 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeactived() {
         return this.Deactived;
@@ -179,19 +169,15 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
      * Set 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deactived 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactived(Long Deactived) {
         this.Deactived = Deactived;
     }
 
     /**
-     * Get 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已下线的产品列表 
      * @return DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeactivedDetail() {
         return this.DeactivedDetail;
@@ -199,19 +185,15 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
      * Set 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
         this.DeactivedDetail = DeactivedDetail;
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -219,9 +201,7 @@ public class AttachedPolicyOfRole extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

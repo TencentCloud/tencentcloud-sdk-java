@@ -25,7 +25,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 被应用基线项的成员账号uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberUin")
     @Expose
@@ -49,7 +46,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -65,7 +60,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMessage")
     @Expose
@@ -73,7 +67,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 基线项部署输出
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -81,7 +74,6 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,17 +81,14 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
     * 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。 
      * @return TaskId 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -107,19 +96,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。 
      * @return Identifier 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
         return this.Identifier;
@@ -127,19 +112,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Identifier 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 被应用基线项的成员账号uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被应用基线项的成员账号uin 
      * @return MemberUin 被应用基线项的成员账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -147,19 +128,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 被应用基线项的成员账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberUin 被应用基线项的成员账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过 
      * @return Status 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -167,19 +144,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码 
      * @return ErrCode 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrCode() {
         return this.ErrCode;
@@ -187,19 +160,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(String ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrMessage 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMessage() {
         return this.ErrMessage;
@@ -207,19 +176,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMessage 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMessage(String ErrMessage) {
         this.ErrMessage = ErrMessage;
     }
 
     /**
-     * Get 基线项部署输出
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项部署输出 
      * @return Output 基线项部署输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutput() {
         return this.Output;
@@ -227,19 +192,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 基线项部署输出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 基线项部署输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。 
      * @return CreateTime 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -247,19 +208,15 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。 
      * @return UpdateTime 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -267,9 +224,7 @@ public class BaselineStepTaskInfo extends AbstractModel {
 
     /**
      * Set 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

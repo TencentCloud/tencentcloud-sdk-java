@@ -25,7 +25,6 @@ public class DescribeActivateLicenseServiceResponse extends AbstractModel {
 
     /**
     * 增值服务激活码信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeActivateLicenseServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 增值服务激活码信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 增值服务激活码信息 
      * @return Data 增值服务激活码信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LicenseServiceNumInfo [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeActivateLicenseServiceResponse extends AbstractModel {
 
     /**
      * Set 增值服务激活码信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 增值服务激活码信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(LicenseServiceNumInfo [] Data) {
         this.Data = Data;

@@ -31,11 +31,25 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 切换的目标区域，会自动选择该可用区中延迟最低的节点
+    * 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
+
+    /**
+    * 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+    */
+    @SerializedName("ZoneMode")
+    @Expose
+    private String ZoneMode;
 
     /**
      * Get 实例Id，形如 tdsql-ow728lmc 
@@ -54,19 +68,63 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
     }
 
     /**
-     * Get 切换的目标区域，会自动选择该可用区中延迟最低的节点 
-     * @return Zone 切换的目标区域，会自动选择该可用区中延迟最低的节点
+     * Get 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区 
+     * @return Zone 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 切换的目标区域，会自动选择该可用区中延迟最低的节点
-     * @param Zone 切换的目标区域，会自动选择该可用区中延迟最低的节点
+     * Set 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
+     * @param Zone 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid 
+     * @return ZoneMode 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+     */
+    public String getZoneMode() {
+        return this.ZoneMode;
+    }
+
+    /**
+     * Set 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+     * @param ZoneMode 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+     */
+    public void setZoneMode(String ZoneMode) {
+        this.ZoneMode = ZoneMode;
     }
 
     public SwitchDBInstanceHARequest() {
@@ -83,6 +141,9 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ZoneMode != null) {
+            this.ZoneMode = new String(source.ZoneMode);
+        }
     }
 
 
@@ -92,6 +153,7 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneMode", this.ZoneMode);
 
     }
 }

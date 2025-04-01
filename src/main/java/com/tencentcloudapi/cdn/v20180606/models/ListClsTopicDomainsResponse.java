@@ -67,7 +67,6 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
 
     /**
     * 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -177,10 +176,8 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题最近更新时间 
      * @return UpdateTime 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -188,9 +185,7 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
 
     /**
      * Set 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

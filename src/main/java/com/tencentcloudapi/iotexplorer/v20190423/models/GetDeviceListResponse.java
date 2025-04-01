@@ -25,7 +25,6 @@ public class GetDeviceListResponse extends AbstractModel {
 
     /**
     * 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Devices")
     @Expose
@@ -33,7 +32,6 @@ public class GetDeviceListResponse extends AbstractModel {
 
     /**
     * 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class GetDeviceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice 
      * @return Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceInfo [] getDevices() {
         return this.Devices;
@@ -58,19 +54,15 @@ public class GetDeviceListResponse extends AbstractModel {
 
     /**
      * Set 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevices(DeviceInfo [] Devices) {
         this.Devices = Devices;
     }
 
     /**
-     * Get 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品下的设备总数 
      * @return Total 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class GetDeviceListResponse extends AbstractModel {
 
     /**
      * Set 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -179,6 +179,20 @@ UPDATING 更新中
     private Long AvailableReplicasCount;
 
     /**
+    * 服务组的subuin
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
+
+    /**
+    * 服务组的app_id
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -582,6 +596,38 @@ UPDATING 更新中
         this.AvailableReplicasCount = AvailableReplicasCount;
     }
 
+    /**
+     * Get 服务组的subuin 
+     * @return SubUin 服务组的subuin
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set 服务组的subuin
+     * @param SubUin 服务组的subuin
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
+
+    /**
+     * Get 服务组的app_id 
+     * @return AppId 服务组的app_id
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 服务组的app_id
+     * @param AppId 服务组的app_id
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
     public ServiceGroup() {
     }
 
@@ -650,6 +696,12 @@ UPDATING 更新中
         if (source.AvailableReplicasCount != null) {
             this.AvailableReplicasCount = new Long(source.AvailableReplicasCount);
         }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
     }
 
 
@@ -675,6 +727,8 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "WeightUpdateStatus", this.WeightUpdateStatus);
         this.setParamSimple(map, prefix + "ReplicasCount", this.ReplicasCount);
         this.setParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

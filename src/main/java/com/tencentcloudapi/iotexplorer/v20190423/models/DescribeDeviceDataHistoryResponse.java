@@ -25,7 +25,6 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
     * 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldName")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
     * 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listover")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
     * 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
     * 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性字段名称，对应数据模板中功能属性的标识符 
      * @return FieldName 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldName() {
         return this.FieldName;
@@ -74,19 +68,15 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
      * Set 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldName 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldName(String FieldName) {
         this.FieldName = FieldName;
     }
 
     /**
-     * Get 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。 
      * @return Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getListover() {
         return this.Listover;
@@ -94,19 +84,15 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
      * Set 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListover(Boolean Listover) {
         this.Listover = Listover;
     }
 
     /**
-     * Get 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据 
      * @return Context 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -114,19 +100,15 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
      * Set 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 历史数据结果数组，返回对应时间点及取值。 
      * @return Results 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceDataHistoryItem [] getResults() {
         return this.Results;
@@ -134,9 +116,7 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
      * Set 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(DeviceDataHistoryItem [] Results) {
         this.Results = Results;

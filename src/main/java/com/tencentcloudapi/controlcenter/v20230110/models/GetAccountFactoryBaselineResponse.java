@@ -25,7 +25,6 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
     * 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -33,7 +32,6 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
     * 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
     * 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineConfigItems")
     @Expose
@@ -49,7 +46,6 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
     * 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,7 +53,6 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
     * 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -71,10 +66,8 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属主账号uin。 
      * @return OwnerUin 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
@@ -82,19 +75,15 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
      * Set 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。 
      * @return Name 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -102,19 +91,15 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
      * Set 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线项配置列表。 
      * @return BaselineConfigItems 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineInfoItem [] getBaselineConfigItems() {
         return this.BaselineConfigItems;
@@ -122,19 +107,15 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
      * Set 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineConfigItems 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineConfigItems(BaselineInfoItem [] BaselineConfigItems) {
         this.BaselineConfigItems = BaselineConfigItems;
     }
 
     /**
-     * Get 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。 
      * @return CreateTime 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -142,19 +123,15 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
      * Set 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。 
      * @return UpdateTime 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -162,9 +139,7 @@ public class GetAccountFactoryBaselineResponse extends AbstractModel {
 
     /**
      * Set 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

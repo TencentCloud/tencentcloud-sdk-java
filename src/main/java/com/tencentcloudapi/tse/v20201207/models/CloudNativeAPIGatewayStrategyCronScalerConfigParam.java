@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
     * 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -33,7 +32,6 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
     * 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartAt")
     @Expose
@@ -41,7 +39,6 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
     * 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetReplicas")
     @Expose
@@ -49,17 +46,14 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
     * 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Crontab")
     @Expose
     private String Crontab;
 
     /**
-     * Get 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时伸缩周期 
      * @return Period 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeriod() {
         return this.Period;
@@ -67,19 +61,15 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
      * Set 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时伸缩开始时间 
      * @return StartAt 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartAt() {
         return this.StartAt;
@@ -87,19 +77,15 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
      * Set 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartAt 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;
     }
 
     /**
-     * Get 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数 
      * @return TargetReplicas 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetReplicas() {
         return this.TargetReplicas;
@@ -107,19 +93,15 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
      * Set 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetReplicas 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetReplicas(Long TargetReplicas) {
         this.TargetReplicas = TargetReplicas;
     }
 
     /**
-     * Get 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时伸缩cron表达式，无需输入 
      * @return Crontab 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontab() {
         return this.Crontab;
@@ -127,9 +109,7 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
 
     /**
      * Set 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Crontab 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontab(String Crontab) {
         this.Crontab = Crontab;

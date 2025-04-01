@@ -33,7 +33,6 @@ public class TWeCallActiveInfo extends AbstractModel {
 
     /**
     * Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sn")
     @Expose
@@ -41,7 +40,6 @@ public class TWeCallActiveInfo extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -79,10 +77,8 @@ public class TWeCallActiveInfo extends AbstractModel {
     }
 
     /**
-     * Get Sn信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sn信息 
      * @return Sn Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSn() {
         return this.Sn;
@@ -90,19 +86,15 @@ public class TWeCallActiveInfo extends AbstractModel {
 
     /**
      * Set Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sn Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -110,9 +102,7 @@ public class TWeCallActiveInfo extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

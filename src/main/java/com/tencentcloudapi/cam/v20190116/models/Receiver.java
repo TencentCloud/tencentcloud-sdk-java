@@ -82,7 +82,6 @@ public class Receiver extends AbstractModel {
 
     /**
     * 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatFlag")
     @Expose
@@ -90,7 +89,6 @@ public class Receiver extends AbstractModel {
 
     /**
     * 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -229,10 +227,8 @@ public class Receiver extends AbstractModel {
     }
 
     /**
-     * Get 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许微信接收通知 
      * @return WechatFlag 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWechatFlag() {
         return this.WechatFlag;
@@ -240,19 +236,15 @@ public class Receiver extends AbstractModel {
 
     /**
      * Set 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatFlag 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatFlag(Long WechatFlag) {
         this.WechatFlag = WechatFlag;
     }
 
     /**
-     * Get 账号uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号uin 
      * @return Uin 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
         return this.Uin;
@@ -260,9 +252,7 @@ public class Receiver extends AbstractModel {
 
     /**
      * Set 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

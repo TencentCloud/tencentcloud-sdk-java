@@ -25,7 +25,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -33,7 +32,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -57,7 +53,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -65,7 +60,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDocument")
     @Expose
@@ -81,7 +75,6 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
     * 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsServiceLinkedRolePolicy")
     @Expose
@@ -95,10 +88,8 @@ public class GetPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名。 
      * @return PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -106,19 +97,15 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述。 
      * @return Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -126,19 +113,15 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 表示自定义策略，2 表示预设策略。 
      * @return Type 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -146,19 +129,15 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略创建时间。 
      * @return AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -166,19 +145,15 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略最近更新时间。 
      * @return UpdateTime 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -186,19 +161,15 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略文档。 
      * @return PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
@@ -206,9 +177,7 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;
@@ -235,10 +204,8 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。 
      * @return IsServiceLinkedRolePolicy 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsServiceLinkedRolePolicy() {
         return this.IsServiceLinkedRolePolicy;
@@ -246,9 +213,7 @@ public class GetPolicyResponse extends AbstractModel {
 
     /**
      * Set 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsServiceLinkedRolePolicy 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsServiceLinkedRolePolicy(Long IsServiceLinkedRolePolicy) {
         this.IsServiceLinkedRolePolicy = IsServiceLinkedRolePolicy;

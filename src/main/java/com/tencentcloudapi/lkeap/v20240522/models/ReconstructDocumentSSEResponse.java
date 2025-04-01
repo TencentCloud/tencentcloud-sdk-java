@@ -52,7 +52,10 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     private String ProgressMessage;
 
     /**
-    * 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+    * 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
     */
     @SerializedName("DocumentRecognizeResultUrl")
     @Expose
@@ -137,16 +140,28 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     }
 
     /**
-     * Get 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。 
-     * @return DocumentRecognizeResultUrl 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+     * Get 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+ 
+     * @return DocumentRecognizeResultUrl 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
      */
     public String getDocumentRecognizeResultUrl() {
         return this.DocumentRecognizeResultUrl;
     }
 
     /**
-     * Set 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
-     * @param DocumentRecognizeResultUrl 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+     * Set 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
+     * @param DocumentRecognizeResultUrl 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
      */
     public void setDocumentRecognizeResultUrl(String DocumentRecognizeResultUrl) {
         this.DocumentRecognizeResultUrl = DocumentRecognizeResultUrl;

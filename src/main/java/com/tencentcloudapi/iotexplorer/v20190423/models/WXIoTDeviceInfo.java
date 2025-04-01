@@ -25,7 +25,6 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
     * sn信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SN")
     @Expose
@@ -33,7 +32,6 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
     * 票据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SNTicket")
     @Expose
@@ -41,17 +39,14 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
     * 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelId")
     @Expose
     private String ModelId;
 
     /**
-     * Get sn信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get sn信息 
      * @return SN sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSN() {
         return this.SN;
@@ -59,19 +54,15 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
      * Set sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SN sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSN(String SN) {
         this.SN = SN;
     }
 
     /**
-     * Get 票据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 票据 
      * @return SNTicket 票据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSNTicket() {
         return this.SNTicket;
@@ -79,19 +70,15 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
      * Set 票据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SNTicket 票据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSNTicket(String SNTicket) {
         this.SNTicket = SNTicket;
     }
 
     /**
-     * Get 模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板ID 
      * @return ModelId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelId() {
         return this.ModelId;
@@ -99,9 +86,7 @@ public class WXIoTDeviceInfo extends AbstractModel {
 
     /**
      * Set 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;

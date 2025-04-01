@@ -32,7 +32,6 @@ public class CloudStorageTimeData extends AbstractModel {
 
     /**
     * 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoURL")
     @Expose
@@ -55,10 +54,8 @@ public class CloudStorageTimeData extends AbstractModel {
     }
 
     /**
-     * Get 播放地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 播放地址 
      * @return VideoURL 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoURL() {
         return this.VideoURL;
@@ -66,9 +63,7 @@ public class CloudStorageTimeData extends AbstractModel {
 
     /**
      * Set 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoURL 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoURL(String VideoURL) {
         this.VideoURL = VideoURL;

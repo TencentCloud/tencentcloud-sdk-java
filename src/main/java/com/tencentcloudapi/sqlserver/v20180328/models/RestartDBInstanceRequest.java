@@ -31,6 +31,13 @@ public class RestartDBInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+    */
+    @SerializedName("WaitSwitch")
+    @Expose
+    private Long WaitSwitch;
+
+    /**
      * Get 数据库实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
@@ -46,6 +53,22 @@ public class RestartDBInstanceRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0 
+     * @return WaitSwitch 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+     */
+    public Long getWaitSwitch() {
+        return this.WaitSwitch;
+    }
+
+    /**
+     * Set 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+     * @param WaitSwitch 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+     */
+    public void setWaitSwitch(Long WaitSwitch) {
+        this.WaitSwitch = WaitSwitch;
+    }
+
     public RestartDBInstanceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class RestartDBInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.WaitSwitch != null) {
+            this.WaitSwitch = new Long(source.WaitSwitch);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class RestartDBInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
 
     }
 }

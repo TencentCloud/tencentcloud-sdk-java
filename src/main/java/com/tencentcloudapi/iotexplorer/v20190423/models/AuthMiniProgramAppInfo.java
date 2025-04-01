@@ -25,7 +25,6 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniProgramAppId")
     @Expose
@@ -33,7 +32,6 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -41,7 +39,6 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniProgramName")
     @Expose
@@ -49,7 +46,6 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseNum")
     @Expose
@@ -57,7 +53,6 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IotAppId")
     @Expose
@@ -65,17 +60,14 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IotAppName")
     @Expose
     private String IotAppName;
 
     /**
-     * Get 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序APPID 
      * @return MiniProgramAppId 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniProgramAppId() {
         return this.MiniProgramAppId;
@@ -83,19 +75,15 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniProgramAppId 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniProgramAppId(String MiniProgramAppId) {
         this.MiniProgramAppId = MiniProgramAppId;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -103,19 +91,15 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序名称 
      * @return MiniProgramName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniProgramName() {
         return this.MiniProgramName;
@@ -123,19 +107,15 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniProgramName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniProgramName(String MiniProgramName) {
         this.MiniProgramName = MiniProgramName;
     }
 
     /**
-     * Get 激活码数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 激活码数 
      * @return LicenseNum 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseNum() {
         return this.LicenseNum;
@@ -143,19 +123,15 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseNum 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseNum(Long LicenseNum) {
         this.LicenseNum = LicenseNum;
     }
 
     /**
-     * Get 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID  
      * @return IotAppId 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIotAppId() {
         return this.IotAppId;
@@ -163,19 +139,15 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IotAppId 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIotAppId(String IotAppId) {
         this.IotAppId = IotAppId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return IotAppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIotAppName() {
         return this.IotAppName;
@@ -183,9 +155,7 @@ public class AuthMiniProgramAppInfo extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IotAppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIotAppName(String IotAppName) {
         this.IotAppName = IotAppName;

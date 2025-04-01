@@ -53,7 +53,6 @@ public class PositionSpaceInfo extends AbstractModel {
 
     /**
     * 描述备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -159,10 +158,8 @@ public class PositionSpaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 描述备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述备注 
      * @return Description 描述备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -170,9 +167,7 @@ public class PositionSpaceInfo extends AbstractModel {
 
     /**
      * Set 描述备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

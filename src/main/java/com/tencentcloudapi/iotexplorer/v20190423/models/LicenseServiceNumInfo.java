@@ -46,7 +46,6 @@ public class LicenseServiceNumInfo extends AbstractModel {
 
     /**
     * TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TWeCallLicense")
     @Expose
@@ -101,10 +100,8 @@ public class LicenseServiceNumInfo extends AbstractModel {
     }
 
     /**
-     * Get TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TWeCall激活码 
      * @return TWeCallLicense TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TWeCallLicenseInfo [] getTWeCallLicense() {
         return this.TWeCallLicense;
@@ -112,9 +109,7 @@ public class LicenseServiceNumInfo extends AbstractModel {
 
     /**
      * Set TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TWeCallLicense TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTWeCallLicense(TWeCallLicenseInfo [] TWeCallLicense) {
         this.TWeCallLicense = TWeCallLicense;

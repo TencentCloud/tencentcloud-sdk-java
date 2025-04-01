@@ -25,7 +25,6 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
     * WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebpAdapter")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
     * TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TpgAdapter")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
     * GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GuetzliAdapter")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
     * AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvifAdapter")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeImageConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WebpAdapter配置 
      * @return WebpAdapter WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebpAdapter getWebpAdapter() {
         return this.WebpAdapter;
@@ -74,19 +68,15 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
      * Set WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebpAdapter WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebpAdapter(WebpAdapter WebpAdapter) {
         this.WebpAdapter = WebpAdapter;
     }
 
     /**
-     * Get TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TpgAdapter配置 
      * @return TpgAdapter TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TpgAdapter getTpgAdapter() {
         return this.TpgAdapter;
@@ -94,19 +84,15 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
      * Set TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpgAdapter TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTpgAdapter(TpgAdapter TpgAdapter) {
         this.TpgAdapter = TpgAdapter;
     }
 
     /**
-     * Get GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GuetzliAdapter配置 
      * @return GuetzliAdapter GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GuetzliAdapter getGuetzliAdapter() {
         return this.GuetzliAdapter;
@@ -114,19 +100,15 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
      * Set GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GuetzliAdapter GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGuetzliAdapter(GuetzliAdapter GuetzliAdapter) {
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
     /**
-     * Get AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AvifAdapter配置项 
      * @return AvifAdapter AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AvifAdapter getAvifAdapter() {
         return this.AvifAdapter;
@@ -134,9 +116,7 @@ public class DescribeImageConfigResponse extends AbstractModel {
 
     /**
      * Set AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvifAdapter AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvifAdapter(AvifAdapter AvifAdapter) {
         this.AvifAdapter = AvifAdapter;

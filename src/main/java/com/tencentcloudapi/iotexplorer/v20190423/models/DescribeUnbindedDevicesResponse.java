@@ -25,7 +25,6 @@ public class DescribeUnbindedDevicesResponse extends AbstractModel {
 
     /**
     * 未绑定的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnbindedDevices")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeUnbindedDevicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 未绑定的设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未绑定的设备列表 
      * @return UnbindedDevices 未绑定的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BindDeviceInfo [] getUnbindedDevices() {
         return this.UnbindedDevices;
@@ -57,9 +54,7 @@ public class DescribeUnbindedDevicesResponse extends AbstractModel {
 
     /**
      * Set 未绑定的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnbindedDevices 未绑定的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnbindedDevices(BindDeviceInfo [] UnbindedDevices) {
         this.UnbindedDevices = UnbindedDevices;

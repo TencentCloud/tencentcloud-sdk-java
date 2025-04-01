@@ -82,7 +82,6 @@ public class GetUserResponse extends AbstractModel {
 
     /**
     * 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecentlyLoginIP")
     @Expose
@@ -90,7 +89,6 @@ public class GetUserResponse extends AbstractModel {
 
     /**
     * 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecentlyLoginTime")
     @Expose
@@ -236,10 +234,8 @@ public class GetUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次登录ip 
      * @return RecentlyLoginIP 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecentlyLoginIP() {
         return this.RecentlyLoginIP;
@@ -247,19 +243,15 @@ public class GetUserResponse extends AbstractModel {
 
     /**
      * Set 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecentlyLoginIP 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecentlyLoginIP(String RecentlyLoginIP) {
         this.RecentlyLoginIP = RecentlyLoginIP;
     }
 
     /**
-     * Get 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次登录时间 
      * @return RecentlyLoginTime 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecentlyLoginTime() {
         return this.RecentlyLoginTime;
@@ -267,9 +259,7 @@ public class GetUserResponse extends AbstractModel {
 
     /**
      * Set 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecentlyLoginTime 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecentlyLoginTime(String RecentlyLoginTime) {
         this.RecentlyLoginTime = RecentlyLoginTime;

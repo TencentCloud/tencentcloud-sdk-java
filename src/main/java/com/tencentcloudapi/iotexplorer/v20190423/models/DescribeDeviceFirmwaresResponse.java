@@ -25,7 +25,6 @@ public class DescribeDeviceFirmwaresResponse extends AbstractModel {
 
     /**
     * 固件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Firmwares")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDeviceFirmwaresResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 固件信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 固件信息列表 
      * @return Firmwares 固件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceFirmwareInfo [] getFirmwares() {
         return this.Firmwares;
@@ -50,9 +47,7 @@ public class DescribeDeviceFirmwaresResponse extends AbstractModel {
 
     /**
      * Set 固件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Firmwares 固件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirmwares(DeviceFirmwareInfo [] Firmwares) {
         this.Firmwares = Firmwares;

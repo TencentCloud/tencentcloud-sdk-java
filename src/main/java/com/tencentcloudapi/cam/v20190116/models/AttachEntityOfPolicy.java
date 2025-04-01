@@ -32,7 +32,6 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
     * 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
     * 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -55,7 +53,6 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
     * 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachmentTime")
     @Expose
@@ -78,10 +75,8 @@ public class AttachEntityOfPolicy extends AbstractModel {
     }
 
     /**
-     * Get 实体名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实体名称 
      * @return Name 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -89,19 +84,15 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
      * Set 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实体Uin 
      * @return Uin 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
         return this.Uin;
@@ -109,9 +100,7 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
      * Set 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
@@ -134,10 +123,8 @@ public class AttachEntityOfPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略关联时间 
      * @return AttachmentTime 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttachmentTime() {
         return this.AttachmentTime;
@@ -145,9 +132,7 @@ public class AttachEntityOfPolicy extends AbstractModel {
 
     /**
      * Set 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachmentTime 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachmentTime(String AttachmentTime) {
         this.AttachmentTime = AttachmentTime;

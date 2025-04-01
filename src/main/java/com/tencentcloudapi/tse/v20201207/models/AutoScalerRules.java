@@ -25,7 +25,6 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
     * 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StabilizationWindowSeconds")
     @Expose
@@ -33,7 +32,6 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
     * 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectPolicy")
     @Expose
@@ -41,17 +39,14 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
     * 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policies")
     @Expose
     private AutoScalerPolicy [] Policies;
 
     /**
-     * Get 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 稳定窗口时间，扩容时默认0，缩容时默认300 
      * @return StabilizationWindowSeconds 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStabilizationWindowSeconds() {
         return this.StabilizationWindowSeconds;
@@ -59,19 +54,15 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
      * Set 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StabilizationWindowSeconds 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStabilizationWindowSeconds(Long StabilizationWindowSeconds) {
         this.StabilizationWindowSeconds = StabilizationWindowSeconds;
     }
 
     /**
-     * Get 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 选择策略依据 
      * @return SelectPolicy 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelectPolicy() {
         return this.SelectPolicy;
@@ -79,19 +70,15 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
      * Set 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelectPolicy 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectPolicy(String SelectPolicy) {
         this.SelectPolicy = SelectPolicy;
     }
 
     /**
-     * Get 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩缩容策略 
      * @return Policies 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScalerPolicy [] getPolicies() {
         return this.Policies;
@@ -99,9 +86,7 @@ public class AutoScalerRules extends AbstractModel {
 
     /**
      * Set 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policies 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicies(AutoScalerPolicy [] Policies) {
         this.Policies = Policies;

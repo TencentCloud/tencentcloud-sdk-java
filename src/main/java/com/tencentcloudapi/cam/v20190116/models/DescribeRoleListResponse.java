@@ -25,7 +25,6 @@ public class DescribeRoleListResponse extends AbstractModel {
 
     /**
     * 角色详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeRoleListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 角色详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色详情列表。 
      * @return List 角色详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoleInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeRoleListResponse extends AbstractModel {
 
     /**
      * Set 角色详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 角色详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RoleInfo [] List) {
         this.List = List;

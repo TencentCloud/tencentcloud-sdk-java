@@ -81,7 +81,6 @@ public class DescribeDiagnoseReportResponse extends AbstractModel {
 
     /**
     * 刷新检测信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PurgeInfo")
     @Expose
@@ -223,10 +222,8 @@ public class DescribeDiagnoseReportResponse extends AbstractModel {
     }
 
     /**
-     * Get 刷新检测信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 刷新检测信息 
      * @return PurgeInfo 刷新检测信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiagnoseData getPurgeInfo() {
         return this.PurgeInfo;
@@ -234,9 +231,7 @@ public class DescribeDiagnoseReportResponse extends AbstractModel {
 
     /**
      * Set 刷新检测信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PurgeInfo 刷新检测信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPurgeInfo(DiagnoseData PurgeInfo) {
         this.PurgeInfo = PurgeInfo;

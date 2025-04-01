@@ -25,7 +25,6 @@ public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
     * 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PurgeLogs")
     @Expose
@@ -33,7 +32,6 @@ public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
     * 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribePurgeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细刷新记录 
      * @return PurgeLogs 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PurgeTask [] getPurgeLogs() {
         return this.PurgeLogs;
@@ -58,19 +54,15 @@ public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
      * Set 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PurgeLogs 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPurgeLogs(PurgeTask [] PurgeLogs) {
         this.PurgeLogs = PurgeLogs;
     }
 
     /**
-     * Get 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务总数，用于分页 
      * @return TotalCount 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
      * Set 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

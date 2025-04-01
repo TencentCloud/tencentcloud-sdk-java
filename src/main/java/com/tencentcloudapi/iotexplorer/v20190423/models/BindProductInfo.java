@@ -39,7 +39,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -47,7 +46,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataProtocol")
     @Expose
@@ -55,7 +53,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -63,7 +60,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductType")
     @Expose
@@ -71,7 +67,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetType")
     @Expose
@@ -79,7 +74,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevStatus")
     @Expose
@@ -87,7 +81,6 @@ public class BindProductInfo extends AbstractModel {
 
     /**
     * 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductOwnerName")
     @Expose
@@ -126,10 +119,8 @@ public class BindProductInfo extends AbstractModel {
     }
 
     /**
-     * Get 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品所属项目ID。 
      * @return ProjectId 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -137,19 +128,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物模型类型。 
      * @return DataProtocol 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataProtocol() {
         return this.DataProtocol;
@@ -157,19 +144,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataProtocol 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataProtocol(Long DataProtocol) {
         this.DataProtocol = DataProtocol;
     }
 
     /**
-     * Get 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品分组模板ID 
      * @return CategoryId 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -177,19 +160,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 产品类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品类型 
      * @return ProductType 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductType() {
         return this.ProductType;
@@ -197,19 +176,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductType 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 连接类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接类型 
      * @return NetType 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetType() {
         return this.NetType;
@@ -217,19 +192,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetType 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return DevStatus 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevStatus() {
         return this.DevStatus;
@@ -237,19 +208,15 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevStatus 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevStatus(String DevStatus) {
         this.DevStatus = DevStatus;
     }
 
     /**
-     * Get 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品拥有者名称 
      * @return ProductOwnerName 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductOwnerName() {
         return this.ProductOwnerName;
@@ -257,9 +224,7 @@ public class BindProductInfo extends AbstractModel {
 
     /**
      * Set 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductOwnerName 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductOwnerName(String ProductOwnerName) {
         this.ProductOwnerName = ProductOwnerName;

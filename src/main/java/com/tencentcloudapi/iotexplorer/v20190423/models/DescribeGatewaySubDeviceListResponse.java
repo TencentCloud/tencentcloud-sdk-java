@@ -25,7 +25,6 @@ public class DescribeGatewaySubDeviceListResponse extends AbstractModel {
 
     /**
     * 设备的总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeGatewaySubDeviceListResponse extends AbstractModel {
 
     /**
     * 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeGatewaySubDeviceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备的总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备的总数 
      * @return Total 设备的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeGatewaySubDeviceListResponse extends AbstractModel {
 
     /**
      * Set 设备的总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 设备的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备列表 
      * @return DeviceList 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FamilySubDevice [] getDeviceList() {
         return this.DeviceList;
@@ -78,9 +70,7 @@ public class DescribeGatewaySubDeviceListResponse extends AbstractModel {
 
     /**
      * Set 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceList 设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceList(FamilySubDevice [] DeviceList) {
         this.DeviceList = DeviceList;

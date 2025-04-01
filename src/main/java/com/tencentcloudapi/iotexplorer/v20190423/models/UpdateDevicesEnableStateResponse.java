@@ -25,7 +25,6 @@ public class UpdateDevicesEnableStateResponse extends AbstractModel {
 
     /**
     * 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultCode")
     @Expose
@@ -33,7 +32,6 @@ public class UpdateDevicesEnableStateResponse extends AbstractModel {
 
     /**
     * 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultMessage")
     @Expose
@@ -47,10 +45,8 @@ public class UpdateDevicesEnableStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除的结果代码 
      * @return ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultCode() {
         return this.ResultCode;
@@ -58,19 +54,15 @@ public class UpdateDevicesEnableStateResponse extends AbstractModel {
 
     /**
      * Set 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultCode(String ResultCode) {
         this.ResultCode = ResultCode;
     }
 
     /**
-     * Get 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除的结果信息 
      * @return ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultMessage() {
         return this.ResultMessage;
@@ -78,9 +70,7 @@ public class UpdateDevicesEnableStateResponse extends AbstractModel {
 
     /**
      * Set 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultMessage(String ResultMessage) {
         this.ResultMessage = ResultMessage;

@@ -52,6 +52,20 @@ public class DescribeUserProjectListRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 是否过滤掉企业管理员
+    */
+    @SerializedName("IsFilterPerAuthUser")
+    @Expose
+    private Boolean IsFilterPerAuthUser;
+
+    /**
+    * 是否过滤掉当前用户
+    */
+    @SerializedName("IsFilterCurrentUser")
+    @Expose
+    private Boolean IsFilterCurrentUser;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -115,6 +129,38 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 是否过滤掉企业管理员 
+     * @return IsFilterPerAuthUser 是否过滤掉企业管理员
+     */
+    public Boolean getIsFilterPerAuthUser() {
+        return this.IsFilterPerAuthUser;
+    }
+
+    /**
+     * Set 是否过滤掉企业管理员
+     * @param IsFilterPerAuthUser 是否过滤掉企业管理员
+     */
+    public void setIsFilterPerAuthUser(Boolean IsFilterPerAuthUser) {
+        this.IsFilterPerAuthUser = IsFilterPerAuthUser;
+    }
+
+    /**
+     * Get 是否过滤掉当前用户 
+     * @return IsFilterCurrentUser 是否过滤掉当前用户
+     */
+    public Boolean getIsFilterCurrentUser() {
+        return this.IsFilterCurrentUser;
+    }
+
+    /**
+     * Set 是否过滤掉当前用户
+     * @param IsFilterCurrentUser 是否过滤掉当前用户
+     */
+    public void setIsFilterCurrentUser(Boolean IsFilterCurrentUser) {
+        this.IsFilterCurrentUser = IsFilterCurrentUser;
+    }
+
     public DescribeUserProjectListRequest() {
     }
 
@@ -135,6 +181,12 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.IsFilterPerAuthUser != null) {
+            this.IsFilterPerAuthUser = new Boolean(source.IsFilterPerAuthUser);
+        }
+        if (source.IsFilterCurrentUser != null) {
+            this.IsFilterCurrentUser = new Boolean(source.IsFilterCurrentUser);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AllPage", this.AllPage);
         this.setParamSimple(map, prefix + "PageNo", this.PageNo);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "IsFilterPerAuthUser", this.IsFilterPerAuthUser);
+        this.setParamSimple(map, prefix + "IsFilterCurrentUser", this.IsFilterCurrentUser);
 
     }
 }

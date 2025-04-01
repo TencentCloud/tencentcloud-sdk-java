@@ -310,6 +310,22 @@ public class DatasourceInfo extends AbstractModel {
     private Boolean UseVPC;
 
     /**
+    * 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
+    * 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
+
+    /**
      * Get 数据库ID 
      * @return Id 数据库ID
      */
@@ -1009,6 +1025,46 @@ public class DatasourceInfo extends AbstractModel {
         this.UseVPC = UseVPC;
     }
 
+    /**
+     * Get 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Owner 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Owner 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
+    /**
+     * Get 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerName 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerName 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1134,6 +1190,12 @@ public class DatasourceInfo extends AbstractModel {
         if (source.UseVPC != null) {
             this.UseVPC = new Boolean(source.UseVPC);
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
     }
 
 
@@ -1178,6 +1240,8 @@ public class DatasourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
         this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
 
     }
 }

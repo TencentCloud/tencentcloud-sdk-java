@@ -105,7 +105,6 @@ DOMAIN_EXPORT：导出域名列表
 
     /**
     * 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftTime")
     @Expose
@@ -312,10 +311,8 @@ DOMAIN_EXPORT：导出域名列表
     }
 
     /**
-     * Get 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余时间 
      * @return LeftTime 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LeftTime getLeftTime() {
         return this.LeftTime;
@@ -323,9 +320,7 @@ DOMAIN_EXPORT：导出域名列表
 
     /**
      * Set 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LeftTime 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftTime(LeftTime LeftTime) {
         this.LeftTime = LeftTime;

@@ -60,7 +60,6 @@ public class IncrementalMigrationStrategyInfo extends AbstractModel {
 
     /**
     * 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpOriginConfig")
     @Expose
@@ -147,10 +146,8 @@ public class IncrementalMigrationStrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回源源站配置。 
      * @return HttpOriginConfig 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IncrementalMigrationHttpOriginConfig getHttpOriginConfig() {
         return this.HttpOriginConfig;
@@ -158,9 +155,7 @@ public class IncrementalMigrationStrategyInfo extends AbstractModel {
 
     /**
      * Set 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpOriginConfig 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpOriginConfig(IncrementalMigrationHttpOriginConfig HttpOriginConfig) {
         this.HttpOriginConfig = HttpOriginConfig;

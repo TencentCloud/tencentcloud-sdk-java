@@ -567,6 +567,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *统计排序指定时间段内的top慢sql。
+     * @param req DescribeRedisSlowLogTopSqlsRequest
+     * @return DescribeRedisSlowLogTopSqlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisSlowLogTopSqlsResponse DescribeRedisSlowLogTopSqls(DescribeRedisSlowLogTopSqlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisSlowLogTopSqls", DescribeRedisSlowLogTopSqlsResponse.class);
+    }
+
+    /**
      *查询redis实例大key列表。
      * @param req DescribeRedisTopBigKeysRequest
      * @return DescribeRedisTopBigKeysResponse
@@ -619,6 +630,17 @@ public class DbbrainClient extends AbstractClient{
     public DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasks(DescribeSecurityAuditLogExportTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityAuditLogExportTasks", DescribeSecurityAuditLogExportTasksResponse.class);
+    }
+
+    /**
+     *统计排序指定时间段内的top慢sql。
+     * @param req DescribeSlowLogQueryTimeStatsRequest
+     * @return DescribeSlowLogQueryTimeStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogQueryTimeStatsResponse DescribeSlowLogQueryTimeStats(DescribeSlowLogQueryTimeStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSlowLogQueryTimeStats", DescribeSlowLogQueryTimeStatsResponse.class);
     }
 
     /**

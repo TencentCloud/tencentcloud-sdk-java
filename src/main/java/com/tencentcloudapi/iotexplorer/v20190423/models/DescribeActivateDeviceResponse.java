@@ -25,7 +25,6 @@ public class DescribeActivateDeviceResponse extends AbstractModel {
 
     /**
     * 设备激活详情信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeActivateDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备激活详情信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备激活详情信息 
      * @return Data 设备激活详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ActivateDeviceInfo getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeActivateDeviceResponse extends AbstractModel {
 
     /**
      * Set 设备激活详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 设备激活详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ActivateDeviceInfo Data) {
         this.Data = Data;

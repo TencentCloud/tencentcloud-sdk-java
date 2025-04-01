@@ -25,7 +25,6 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
     * 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
     * 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Configuration")
     @Expose
@@ -41,17 +39,14 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
     * 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyCount")
     @Expose
     private Long ApplyCount;
 
     /**
-     * Get 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。 
      * @return Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
         return this.Identifier;
@@ -59,19 +54,15 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
      * Set 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号工厂基线项配置，不同的基线项配置参数不同。 
      * @return Configuration 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfiguration() {
         return this.Configuration;
@@ -79,19 +70,15 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
      * Set 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Configuration 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;
     }
 
     /**
-     * Get 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线应用的账号数量。 
      * @return ApplyCount 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplyCount() {
         return this.ApplyCount;
@@ -99,9 +86,7 @@ public class BaselineInfoItem extends AbstractModel {
 
     /**
      * Set 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyCount 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyCount(Long ApplyCount) {
         this.ApplyCount = ApplyCount;

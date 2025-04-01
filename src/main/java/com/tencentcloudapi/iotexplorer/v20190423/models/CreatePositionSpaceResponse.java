@@ -25,7 +25,6 @@ public class CreatePositionSpaceResponse extends AbstractModel {
 
     /**
     * 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceId")
     @Expose
@@ -39,10 +38,8 @@ public class CreatePositionSpaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 空间Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空间Id 
      * @return SpaceId 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceId() {
         return this.SpaceId;
@@ -50,9 +47,7 @@ public class CreatePositionSpaceResponse extends AbstractModel {
 
     /**
      * Set 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceId 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;

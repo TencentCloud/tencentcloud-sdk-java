@@ -186,7 +186,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfSmsAppId")
     @Expose
@@ -194,7 +193,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfSmsAppKey")
     @Expose
@@ -202,7 +200,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfSmsSign")
     @Expose
@@ -210,7 +207,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfSmsTemplateId")
     @Expose
@@ -218,7 +214,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatNotifyStatus")
     @Expose
@@ -226,7 +221,6 @@ public class IotApplication extends AbstractModel {
 
     /**
     * 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InterconnectionProducts")
     @Expose
@@ -601,10 +595,8 @@ public class IotApplication extends AbstractModel {
     }
 
     /**
-     * Get 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自主短信配置APPID 
      * @return SelfSmsAppId 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfSmsAppId() {
         return this.SelfSmsAppId;
@@ -612,19 +604,15 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfSmsAppId 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfSmsAppId(String SelfSmsAppId) {
         this.SelfSmsAppId = SelfSmsAppId;
     }
 
     /**
-     * Get 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自主短信配置APPKey 
      * @return SelfSmsAppKey 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfSmsAppKey() {
         return this.SelfSmsAppKey;
@@ -632,19 +620,15 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfSmsAppKey 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfSmsAppKey(String SelfSmsAppKey) {
         this.SelfSmsAppKey = SelfSmsAppKey;
     }
 
     /**
-     * Get 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自主短信配置签名 
      * @return SelfSmsSign 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfSmsSign() {
         return this.SelfSmsSign;
@@ -652,19 +636,15 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfSmsSign 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfSmsSign(String SelfSmsSign) {
         this.SelfSmsSign = SelfSmsSign;
     }
 
     /**
-     * Get 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自主短信配置模板ID 
      * @return SelfSmsTemplateId 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSelfSmsTemplateId() {
         return this.SelfSmsTemplateId;
@@ -672,19 +652,15 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfSmsTemplateId 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfSmsTemplateId(Long SelfSmsTemplateId) {
         this.SelfSmsTemplateId = SelfSmsTemplateId;
     }
 
     /**
-     * Get 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第三方小程序强提醒开关 0：关闭；1：开启 
      * @return WechatNotifyStatus 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWechatNotifyStatus() {
         return this.WechatNotifyStatus;
@@ -692,19 +668,15 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatNotifyStatus 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatNotifyStatus(Long WechatNotifyStatus) {
         this.WechatNotifyStatus = WechatNotifyStatus;
     }
 
     /**
-     * Get 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联互通产品ID列表 
      * @return InterconnectionProducts 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterconnectionProducts() {
         return this.InterconnectionProducts;
@@ -712,9 +684,7 @@ public class IotApplication extends AbstractModel {
 
     /**
      * Set 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InterconnectionProducts 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterconnectionProducts(String InterconnectionProducts) {
         this.InterconnectionProducts = InterconnectionProducts;

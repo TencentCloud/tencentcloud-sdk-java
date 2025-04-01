@@ -32,7 +32,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -40,7 +39,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -48,7 +46,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 创建来源，1 通过控制台创建, 2 通过策略语法创建
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateMode")
     @Expose
@@ -56,7 +53,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
     @Expose
@@ -64,7 +60,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -96,7 +91,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 是否已下线，1代表已下线，0代表未下线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deactived")
     @Expose
@@ -104,7 +98,6 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
     * 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeactivedDetail")
     @Expose
@@ -127,10 +120,8 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -138,19 +129,15 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return AddTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -158,19 +145,15 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建 
      * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateMode() {
         return this.CreateMode;
@@ -178,19 +161,15 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateMode(Long CreateMode) {
         this.CreateMode = CreateMode;
     }
 
     /**
-     * Get 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 取值为User和QCS。User代表自定义策略，QCS代表系统策略 
      * @return PolicyType 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyType() {
         return this.PolicyType;
@@ -198,19 +177,15 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 策略备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略备注 
      * @return Remark 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -218,9 +193,7 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -287,10 +260,8 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否已下线，1代表已下线，0代表未下线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已下线，1代表已下线，0代表未下线 
      * @return Deactived 是否已下线，1代表已下线，0代表未下线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeactived() {
         return this.Deactived;
@@ -298,19 +269,15 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 是否已下线，1代表已下线，0代表未下线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deactived 是否已下线，1代表已下线，0代表未下线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactived(Long Deactived) {
         this.Deactived = Deactived;
     }
 
     /**
-     * Get 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已下线的产品列表 
      * @return DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeactivedDetail() {
         return this.DeactivedDetail;
@@ -318,9 +285,7 @@ public class AttachPolicyInfo extends AbstractModel {
 
     /**
      * Set 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
         this.DeactivedDetail = DeactivedDetail;

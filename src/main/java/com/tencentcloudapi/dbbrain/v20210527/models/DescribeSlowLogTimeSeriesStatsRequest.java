@@ -45,11 +45,32 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
+
+    /**
+    * Proxy节点ID。	
+    */
+    @SerializedName("InstanceProxyId")
+    @Expose
+    private String InstanceProxyId;
+
+    /**
+    * 实列节点ID。	
+    */
+    @SerializedName("InstanceNodeId")
+    @Expose
+    private String InstanceNodeId;
+
+    /**
+    * 查询类型，目前支持值：mongod，mongos。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
     /**
      * Get 实例 ID 。 
@@ -100,19 +121,67 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
      */
     public void setProduct(String Product) {
         this.Product = Product;
+    }
+
+    /**
+     * Get Proxy节点ID。	 
+     * @return InstanceProxyId Proxy节点ID。	
+     */
+    public String getInstanceProxyId() {
+        return this.InstanceProxyId;
+    }
+
+    /**
+     * Set Proxy节点ID。	
+     * @param InstanceProxyId Proxy节点ID。	
+     */
+    public void setInstanceProxyId(String InstanceProxyId) {
+        this.InstanceProxyId = InstanceProxyId;
+    }
+
+    /**
+     * Get 实列节点ID。	 
+     * @return InstanceNodeId 实列节点ID。	
+     */
+    public String getInstanceNodeId() {
+        return this.InstanceNodeId;
+    }
+
+    /**
+     * Set 实列节点ID。	
+     * @param InstanceNodeId 实列节点ID。	
+     */
+    public void setInstanceNodeId(String InstanceNodeId) {
+        this.InstanceNodeId = InstanceNodeId;
+    }
+
+    /**
+     * Get 查询类型，目前支持值：mongod，mongos。 
+     * @return Type 查询类型，目前支持值：mongod，mongos。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 查询类型，目前支持值：mongod，mongos。
+     * @param Type 查询类型，目前支持值：mongod，mongos。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public DescribeSlowLogTimeSeriesStatsRequest() {
@@ -135,6 +204,15 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.InstanceProxyId != null) {
+            this.InstanceProxyId = new String(source.InstanceProxyId);
+        }
+        if (source.InstanceNodeId != null) {
+            this.InstanceNodeId = new String(source.InstanceNodeId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
+        this.setParamSimple(map, prefix + "InstanceNodeId", this.InstanceNodeId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

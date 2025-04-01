@@ -66,6 +66,20 @@ public class DeviceActivationDetail extends AbstractModel {
     private Long UsedBluetoothLicense;
 
     /**
+    * 可免费注册设备数
+    */
+    @SerializedName("TotalFreeLicense")
+    @Expose
+    private Long TotalFreeLicense;
+
+    /**
+    * 已使用注册设备数
+    */
+    @SerializedName("UsedFreeLicense")
+    @Expose
+    private Long UsedFreeLicense;
+
+    /**
      * Get 可注册设备数 
      * @return TotalDeviceNum 可注册设备数
      */
@@ -161,6 +175,38 @@ public class DeviceActivationDetail extends AbstractModel {
         this.UsedBluetoothLicense = UsedBluetoothLicense;
     }
 
+    /**
+     * Get 可免费注册设备数 
+     * @return TotalFreeLicense 可免费注册设备数
+     */
+    public Long getTotalFreeLicense() {
+        return this.TotalFreeLicense;
+    }
+
+    /**
+     * Set 可免费注册设备数
+     * @param TotalFreeLicense 可免费注册设备数
+     */
+    public void setTotalFreeLicense(Long TotalFreeLicense) {
+        this.TotalFreeLicense = TotalFreeLicense;
+    }
+
+    /**
+     * Get 已使用注册设备数 
+     * @return UsedFreeLicense 已使用注册设备数
+     */
+    public Long getUsedFreeLicense() {
+        return this.UsedFreeLicense;
+    }
+
+    /**
+     * Set 已使用注册设备数
+     * @param UsedFreeLicense 已使用注册设备数
+     */
+    public void setUsedFreeLicense(Long UsedFreeLicense) {
+        this.UsedFreeLicense = UsedFreeLicense;
+    }
+
     public DeviceActivationDetail() {
     }
 
@@ -187,6 +233,12 @@ public class DeviceActivationDetail extends AbstractModel {
         if (source.UsedBluetoothLicense != null) {
             this.UsedBluetoothLicense = new Long(source.UsedBluetoothLicense);
         }
+        if (source.TotalFreeLicense != null) {
+            this.TotalFreeLicense = new Long(source.TotalFreeLicense);
+        }
+        if (source.UsedFreeLicense != null) {
+            this.UsedFreeLicense = new Long(source.UsedFreeLicense);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class DeviceActivationDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedNormalLicense", this.UsedNormalLicense);
         this.setParamSimple(map, prefix + "TotalBluetoothLicense", this.TotalBluetoothLicense);
         this.setParamSimple(map, prefix + "UsedBluetoothLicense", this.UsedBluetoothLicense);
+        this.setParamSimple(map, prefix + "TotalFreeLicense", this.TotalFreeLicense);
+        this.setParamSimple(map, prefix + "UsedFreeLicense", this.UsedFreeLicense);
 
     }
 }

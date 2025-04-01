@@ -25,7 +25,6 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
     * 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceList")
     @Expose
@@ -33,7 +32,6 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
     * 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureList")
     @Expose
@@ -41,7 +39,6 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
     * 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessList")
     @Expose
@@ -55,30 +52,28 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备激活返回数据 
      * @return DeviceList 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public DeviceActiveResult [] getDeviceList() {
         return this.DeviceList;
     }
 
     /**
      * Set 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceList 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDeviceList(DeviceActiveResult [] DeviceList) {
         this.DeviceList = DeviceList;
     }
 
     /**
-     * Get 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备激活失败返回数据 
      * @return FailureList 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceActiveResult [] getFailureList() {
         return this.FailureList;
@@ -86,19 +81,15 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
      * Set 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureList 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureList(DeviceActiveResult [] FailureList) {
         this.FailureList = FailureList;
     }
 
     /**
-     * Get 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备激活成功返回数据 
      * @return SuccessList 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceActiveResult [] getSuccessList() {
         return this.SuccessList;
@@ -106,9 +97,7 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
      * Set 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessList 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessList(DeviceActiveResult [] SuccessList) {
         this.SuccessList = SuccessList;

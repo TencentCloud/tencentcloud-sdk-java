@@ -27,6 +27,7 @@ public class ProductSkuItem extends AbstractModel {
     * 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
     */
     @SerializedName("InstanceType")
     @Expose
@@ -41,6 +42,8 @@ PRO ：专业版
 
     /**
     * 是否售卖
+1: 可售卖
+0: 不可售卖
     */
     @SerializedName("OnSale")
     @Expose
@@ -54,7 +57,7 @@ PRO ：专业版
     private Long TopicNumLimit;
 
     /**
-    * tps
+    * MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
     */
     @SerializedName("TpsLimit")
     @Expose
@@ -91,10 +94,12 @@ PRO ：专业版
     /**
      * Get 规格类型
 BASIC：基础版
-PRO ：专业版 
+PRO ：专业版
+PLATINUM： 铂金版 
      * @return InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -104,9 +109,11 @@ PRO ：专业版
      * Set 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
      * @param InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -129,8 +136,12 @@ PRO ：专业版
     }
 
     /**
-     * Get 是否售卖 
+     * Get 是否售卖
+1: 可售卖
+0: 不可售卖 
      * @return OnSale 是否售卖
+1: 可售卖
+0: 不可售卖
      */
     public Boolean getOnSale() {
         return this.OnSale;
@@ -138,7 +149,11 @@ PRO ：专业版
 
     /**
      * Set 是否售卖
+1: 可售卖
+0: 不可售卖
      * @param OnSale 是否售卖
+1: 可售卖
+0: 不可售卖
      */
     public void setOnSale(Boolean OnSale) {
         this.OnSale = OnSale;
@@ -161,16 +176,16 @@ PRO ：专业版
     }
 
     /**
-     * Get tps 
-     * @return TpsLimit tps
+     * Get MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698) 
+     * @return TpsLimit MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
     }
 
     /**
-     * Set tps
-     * @param TpsLimit tps
+     * Set MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
+     * @param TpsLimit MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;

@@ -67,17 +67,6 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
-     *创建黑石计算环境
-     * @param req CreateCpmComputeEnvRequest
-     * @return CreateCpmComputeEnvResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCpmComputeEnvResponse CreateCpmComputeEnv(CreateCpmComputeEnvRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCpmComputeEnv", CreateCpmComputeEnvResponse.class);
-    }
-
-    /**
      *用于创建任务模板
      * @param req CreateTaskTemplateRequest
      * @return CreateTaskTemplateResponse
@@ -187,17 +176,6 @@ public class BatchClient extends AbstractClient{
     public DescribeComputeEnvsResponse DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeComputeEnvs", DescribeComputeEnvsResponse.class);
-    }
-
-    /**
-     *创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
-     * @param req DescribeCpmOsInfoRequest
-     * @return DescribeCpmOsInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCpmOsInfoResponse DescribeCpmOsInfo(DescribeCpmOsInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCpmOsInfo", DescribeCpmOsInfoResponse.class);
     }
 
     /**

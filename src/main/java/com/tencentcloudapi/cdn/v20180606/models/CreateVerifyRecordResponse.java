@@ -46,7 +46,6 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
     * 文件验证 URL 指引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileVerifyUrl")
     @Expose
@@ -54,7 +53,6 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
     * 文件校验域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileVerifyDomains")
     @Expose
@@ -62,7 +60,6 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
     * 文件校验文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileVerifyName")
     @Expose
@@ -124,10 +121,8 @@ public class CreateVerifyRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get 文件验证 URL 指引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件验证 URL 指引 
      * @return FileVerifyUrl 文件验证 URL 指引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileVerifyUrl() {
         return this.FileVerifyUrl;
@@ -135,19 +130,15 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
      * Set 文件验证 URL 指引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileVerifyUrl 文件验证 URL 指引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileVerifyUrl(String FileVerifyUrl) {
         this.FileVerifyUrl = FileVerifyUrl;
     }
 
     /**
-     * Get 文件校验域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件校验域名列表 
      * @return FileVerifyDomains 文件校验域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFileVerifyDomains() {
         return this.FileVerifyDomains;
@@ -155,19 +146,15 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
      * Set 文件校验域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileVerifyDomains 文件校验域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileVerifyDomains(String [] FileVerifyDomains) {
         this.FileVerifyDomains = FileVerifyDomains;
     }
 
     /**
-     * Get 文件校验文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件校验文件名 
      * @return FileVerifyName 文件校验文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileVerifyName() {
         return this.FileVerifyName;
@@ -175,9 +162,7 @@ public class CreateVerifyRecordResponse extends AbstractModel {
 
     /**
      * Set 文件校验文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileVerifyName 文件校验文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileVerifyName(String FileVerifyName) {
         this.FileVerifyName = FileVerifyName;

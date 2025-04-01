@@ -25,7 +25,6 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
     * 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
     * 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
     * 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -66,7 +63,6 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
     * 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -74,7 +70,6 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
     * 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
     @Expose
@@ -88,10 +83,8 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存套餐开始时间 
      * @return StartTime 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -99,19 +92,15 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
      * Set 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存套餐过期时间 
      * @return ExpireTime 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -119,19 +108,15 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
      * Set 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 套餐id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐id 
      * @return PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -139,9 +124,7 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
      * Set 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
@@ -192,10 +175,8 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
     }
 
     /**
-     * Get 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单金额，单位为分 
      * @return Price 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrice() {
         return this.Price;
@@ -203,19 +184,15 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
      * Set 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付金额，单位为分 
      * @return Amount 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAmount() {
         return this.Amount;
@@ -223,9 +200,7 @@ public class DescribeCloudStorageOrderResponse extends AbstractModel {
 
     /**
      * Set 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Amount 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(Long Amount) {
         this.Amount = Amount;

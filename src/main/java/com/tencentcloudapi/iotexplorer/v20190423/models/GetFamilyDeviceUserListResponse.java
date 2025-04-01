@@ -25,7 +25,6 @@ public class GetFamilyDeviceUserListResponse extends AbstractModel {
 
     /**
     * 设备的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserList")
     @Expose
@@ -39,10 +38,8 @@ public class GetFamilyDeviceUserListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备的用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备的用户列表 
      * @return UserList 设备的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceUser [] getUserList() {
         return this.UserList;
@@ -50,9 +47,7 @@ public class GetFamilyDeviceUserListResponse extends AbstractModel {
 
     /**
      * Set 设备的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserList 设备的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserList(DeviceUser [] UserList) {
         this.UserList = UserList;

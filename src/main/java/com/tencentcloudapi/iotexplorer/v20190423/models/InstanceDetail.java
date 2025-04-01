@@ -102,7 +102,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalDevice")
     @Expose
@@ -110,7 +109,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivateDevice")
     @Expose
@@ -118,7 +116,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -126,7 +123,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -134,7 +130,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpDownTPS")
     @Expose
@@ -142,7 +137,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpDownCurrentTPS")
     @Expose
@@ -150,7 +144,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardTPS")
     @Expose
@@ -158,7 +151,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardCurrentTPS")
     @Expose
@@ -166,7 +158,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CellNum")
     @Expose
@@ -174,7 +165,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingTag")
     @Expose
@@ -182,7 +172,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EverydayFreeMessageCount")
     @Expose
@@ -190,7 +179,6 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDeviceOnlineCount")
     @Expose
@@ -373,10 +361,8 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 总设备数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总设备数 
      * @return TotalDevice 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalDevice() {
         return this.TotalDevice;
@@ -384,19 +370,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalDevice 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalDevice(Long TotalDevice) {
         this.TotalDevice = TotalDevice;
     }
 
     /**
-     * Get 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 激活设备数 
      * @return ActivateDevice 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActivateDevice() {
         return this.ActivateDevice;
@@ -404,19 +386,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivateDevice 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivateDevice(Long ActivateDevice) {
         this.ActivateDevice = ActivateDevice;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -424,19 +402,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态 
      * @return Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -444,19 +418,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息上下行配置TPS 
      * @return UpDownTPS 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpDownTPS() {
         return this.UpDownTPS;
@@ -464,19 +434,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpDownTPS 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpDownTPS(Long UpDownTPS) {
         this.UpDownTPS = UpDownTPS;
     }
 
     /**
-     * Get 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前消息上下行TPS 
      * @return UpDownCurrentTPS 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpDownCurrentTPS() {
         return this.UpDownCurrentTPS;
@@ -484,19 +450,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpDownCurrentTPS 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpDownCurrentTPS(Long UpDownCurrentTPS) {
         this.UpDownCurrentTPS = UpDownCurrentTPS;
     }
 
     /**
-     * Get 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息转发配置TPS 
      * @return ForwardTPS 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getForwardTPS() {
         return this.ForwardTPS;
@@ -504,19 +466,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardTPS 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardTPS(Long ForwardTPS) {
         this.ForwardTPS = ForwardTPS;
     }
 
     /**
-     * Get 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息转发当前TPS 
      * @return ForwardCurrentTPS 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getForwardCurrentTPS() {
         return this.ForwardCurrentTPS;
@@ -524,19 +482,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardCurrentTPS 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardCurrentTPS(Long ForwardCurrentTPS) {
         this.ForwardCurrentTPS = ForwardCurrentTPS;
     }
 
     /**
-     * Get 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例单元数 
      * @return CellNum 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCellNum() {
         return this.CellNum;
@@ -544,19 +498,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CellNum 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCellNum(Long CellNum) {
         this.CellNum = CellNum;
     }
 
     /**
-     * Get 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例Tag，企业实例必传 
      * @return BillingTag 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingTag() {
         return this.BillingTag;
@@ -564,19 +514,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingTag 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingTag(String BillingTag) {
         this.BillingTag = BillingTag;
     }
 
     /**
-     * Get 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每日消息数 
      * @return EverydayFreeMessageCount 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEverydayFreeMessageCount() {
         return this.EverydayFreeMessageCount;
@@ -584,19 +530,15 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EverydayFreeMessageCount 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEverydayFreeMessageCount(Long EverydayFreeMessageCount) {
         this.EverydayFreeMessageCount = EverydayFreeMessageCount;
     }
 
     /**
-     * Get 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大在线设备数 
      * @return MaxDeviceOnlineCount 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDeviceOnlineCount() {
         return this.MaxDeviceOnlineCount;
@@ -604,9 +546,7 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDeviceOnlineCount 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDeviceOnlineCount(Long MaxDeviceOnlineCount) {
         this.MaxDeviceOnlineCount = MaxDeviceOnlineCount;

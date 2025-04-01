@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCpmComputeEnvResponse extends AbstractModel {
+public class DescribeNatGatewayFlowMonitorDetailResponse extends AbstractModel {
 
     /**
-    * 计算环境ID
+    * 符合条件的对象数。
     */
-    @SerializedName("EnvId")
+    @SerializedName("TotalCount")
     @Expose
-    private String EnvId;
+    private Long TotalCount;
+
+    /**
+    * 网关流量监控明细。
+    */
+    @SerializedName("NatGatewayFlowMonitorDetailSet")
+    @Expose
+    private NatGatewayFlowMonitorDetail [] NatGatewayFlowMonitorDetailSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateCpmComputeEnvResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvId 计算环境ID
+     * Get 符合条件的对象数。 
+     * @return TotalCount 符合条件的对象数。
      */
-    public String getEnvId() {
-        return this.EnvId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvId 计算环境ID
+     * Set 符合条件的对象数。
+     * @param TotalCount 符合条件的对象数。
      */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 网关流量监控明细。 
+     * @return NatGatewayFlowMonitorDetailSet 网关流量监控明细。
+     */
+    public NatGatewayFlowMonitorDetail [] getNatGatewayFlowMonitorDetailSet() {
+        return this.NatGatewayFlowMonitorDetailSet;
+    }
+
+    /**
+     * Set 网关流量监控明细。
+     * @param NatGatewayFlowMonitorDetailSet 网关流量监控明细。
+     */
+    public void setNatGatewayFlowMonitorDetailSet(NatGatewayFlowMonitorDetail [] NatGatewayFlowMonitorDetailSet) {
+        this.NatGatewayFlowMonitorDetailSet = NatGatewayFlowMonitorDetailSet;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateCpmComputeEnvResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateCpmComputeEnvResponse() {
+    public DescribeNatGatewayFlowMonitorDetailResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCpmComputeEnvResponse(CreateCpmComputeEnvResponse source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
+    public DescribeNatGatewayFlowMonitorDetailResponse(DescribeNatGatewayFlowMonitorDetailResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.NatGatewayFlowMonitorDetailSet != null) {
+            this.NatGatewayFlowMonitorDetailSet = new NatGatewayFlowMonitorDetail[source.NatGatewayFlowMonitorDetailSet.length];
+            for (int i = 0; i < source.NatGatewayFlowMonitorDetailSet.length; i++) {
+                this.NatGatewayFlowMonitorDetailSet[i] = new NatGatewayFlowMonitorDetail(source.NatGatewayFlowMonitorDetailSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateCpmComputeEnvResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "NatGatewayFlowMonitorDetailSet.", this.NatGatewayFlowMonitorDetailSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

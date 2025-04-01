@@ -402,6 +402,13 @@ public class DescribeDCDBInstanceDetailResponse extends AbstractModel {
     private Long IsDcnSwitchSupported;
 
     /**
+    * cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1273,6 +1280,22 @@ public class DescribeDCDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	 
+     * @return CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+     * @param CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1470,6 +1493,9 @@ public class DescribeDCDBInstanceDetailResponse extends AbstractModel {
         if (source.IsDcnSwitchSupported != null) {
             this.IsDcnSwitchSupported = new Long(source.IsDcnSwitchSupported);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1534,6 +1560,7 @@ public class DescribeDCDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
         this.setParamSimple(map, prefix + "IsDcnStrongSyncSupported", this.IsDcnStrongSyncSupported);
         this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

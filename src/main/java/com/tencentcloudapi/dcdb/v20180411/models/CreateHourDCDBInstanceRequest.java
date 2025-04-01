@@ -182,6 +182,13 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
     private Long DcnSyncMode;
 
     /**
+    * Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。 
      * @return ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -549,6 +556,22 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
         this.DcnSyncMode = DcnSyncMode;
     }
 
+    /**
+     * Get Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD 
+     * @return CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     * @param CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateHourDCDBInstanceRequest() {
     }
 
@@ -635,6 +658,9 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
         if (source.DcnSyncMode != null) {
             this.DcnSyncMode = new Long(source.DcnSyncMode);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -664,6 +690,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

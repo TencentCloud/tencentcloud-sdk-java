@@ -61,7 +61,6 @@ public class CheckSnapshotRollbackResponse extends AbstractModel {
 
     /**
     * 检查失败数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Failed")
     @Expose
@@ -69,7 +68,6 @@ public class CheckSnapshotRollbackResponse extends AbstractModel {
 
     /**
     * 失败记录信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedRecordList")
     @Expose
@@ -167,10 +165,8 @@ public class CheckSnapshotRollbackResponse extends AbstractModel {
     }
 
     /**
-     * Get 检查失败数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查失败数量 
      * @return Failed 检查失败数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailed() {
         return this.Failed;
@@ -178,19 +174,15 @@ public class CheckSnapshotRollbackResponse extends AbstractModel {
 
     /**
      * Set 检查失败数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Failed 检查失败数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailed(Long Failed) {
         this.Failed = Failed;
     }
 
     /**
-     * Get 失败记录信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败记录信息 
      * @return FailedRecordList 失败记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotRecord [] getFailedRecordList() {
         return this.FailedRecordList;
@@ -198,9 +190,7 @@ public class CheckSnapshotRollbackResponse extends AbstractModel {
 
     /**
      * Set 失败记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedRecordList 失败记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedRecordList(SnapshotRecord [] FailedRecordList) {
         this.FailedRecordList = FailedRecordList;

@@ -25,7 +25,6 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
     * 见RecordInfoBatch
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordList")
     @Expose
@@ -40,7 +39,6 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -48,7 +46,6 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
     * 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainGrade")
     @Expose
@@ -64,7 +61,6 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
     * 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -80,17 +76,14 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
     * 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-     * Get 见RecordInfoBatch
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 见RecordInfoBatch 
      * @return RecordList 见RecordInfoBatch
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateRecordBatchRecord [] getRecordList() {
         return this.RecordList;
@@ -98,9 +91,7 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
      * Set 见RecordInfoBatch
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordList 见RecordInfoBatch
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordList(CreateRecordBatchRecord [] RecordList) {
         this.RecordList = RecordList;
@@ -123,10 +114,8 @@ public class CreateRecordBatchDetail extends AbstractModel {
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -134,19 +123,15 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名等级 
      * @return DomainGrade 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainGrade() {
         return this.DomainGrade;
@@ -154,9 +139,7 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
      * Set 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainGrade 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainGrade(String DomainGrade) {
         this.DomainGrade = DomainGrade;
@@ -183,10 +166,8 @@ public class CreateRecordBatchDetail extends AbstractModel {
     }
 
     /**
-     * Get 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该条任务运行状态 
      * @return Status 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -194,9 +175,7 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
      * Set 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -223,10 +202,8 @@ public class CreateRecordBatchDetail extends AbstractModel {
     }
 
     /**
-     * Get 域名ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名ID 
      * @return DomainId 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDomainId() {
         return this.DomainId;
@@ -234,9 +211,7 @@ public class CreateRecordBatchDetail extends AbstractModel {
 
     /**
      * Set 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainId 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

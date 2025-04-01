@@ -191,6 +191,30 @@ public class Project extends AbstractModel {
     private ProjectConfigList [] ConfigList;
 
     /**
+    * 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedUserName")
+    @Expose
+    private String CreatedUserName;
+
+    /**
+    * 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
+    * 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
+
+    /**
      * Get 项目ID 
      * @return Id 项目ID
      */
@@ -606,6 +630,66 @@ public class Project extends AbstractModel {
         this.ConfigList = ConfigList;
     }
 
+    /**
+     * Get 创建人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedUserName 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedUserName() {
+        return this.CreatedUserName;
+    }
+
+    /**
+     * Set 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedUserName 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedUserName(String CreatedUserName) {
+        this.CreatedUserName = CreatedUserName;
+    }
+
+    /**
+     * Get 所属人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Owner 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Owner 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
+    /**
+     * Get 所属人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerName 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerName 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
     public Project() {
     }
 
@@ -683,6 +767,15 @@ public class Project extends AbstractModel {
                 this.ConfigList[i] = new ProjectConfigList(source.ConfigList[i]);
             }
         }
+        if (source.CreatedUserName != null) {
+            this.CreatedUserName = new String(source.CreatedUserName);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
     }
 
 
@@ -711,6 +804,9 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "IsExternalManage", this.IsExternalManage);
         this.setParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
         this.setParamArrayObj(map, prefix + "ConfigList.", this.ConfigList);
+        this.setParamSimple(map, prefix + "CreatedUserName", this.CreatedUserName);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
 
     }
 }

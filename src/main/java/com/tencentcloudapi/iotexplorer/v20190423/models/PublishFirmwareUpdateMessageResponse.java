@@ -25,7 +25,6 @@ public class PublishFirmwareUpdateMessageResponse extends AbstractModel {
 
     /**
     * 请求状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class PublishFirmwareUpdateMessageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 请求状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求状态 
      * @return Status 请求状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class PublishFirmwareUpdateMessageResponse extends AbstractModel {
 
     /**
      * Set 请求状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 请求状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

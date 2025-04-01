@@ -32,7 +32,6 @@ public class CallDeviceActionSyncResponse extends AbstractModel {
 
     /**
     * 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputParams")
     @Expose
@@ -69,10 +68,8 @@ public class CallDeviceActionSyncResponse extends AbstractModel {
     }
 
     /**
-     * Get 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8 
      * @return OutputParams 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputParams() {
         return this.OutputParams;
@@ -80,9 +77,7 @@ public class CallDeviceActionSyncResponse extends AbstractModel {
 
     /**
      * Set 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputParams 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputParams(String OutputParams) {
         this.OutputParams = OutputParams;

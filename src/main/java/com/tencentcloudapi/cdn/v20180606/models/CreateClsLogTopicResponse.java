@@ -25,7 +25,6 @@ public class CreateClsLogTopicResponse extends AbstractModel {
 
     /**
     * 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateClsLogTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题ID 
      * @return TopicId 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -50,9 +47,7 @@ public class CreateClsLogTopicResponse extends AbstractModel {
 
     /**
      * Set 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

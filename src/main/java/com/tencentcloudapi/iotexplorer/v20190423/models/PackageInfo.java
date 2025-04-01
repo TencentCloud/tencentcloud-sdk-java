@@ -54,7 +54,6 @@ public class PackageInfo extends AbstractModel {
 
     /**
     * 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -62,7 +61,6 @@ public class PackageInfo extends AbstractModel {
 
     /**
     * 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -70,7 +68,6 @@ public class PackageInfo extends AbstractModel {
 
     /**
     * 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
     @Expose
@@ -78,7 +75,6 @@ public class PackageInfo extends AbstractModel {
 
     /**
     * 订单id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
     @Expose
@@ -93,7 +89,6 @@ public class PackageInfo extends AbstractModel {
 
     /**
     * 用户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CSUserId")
     @Expose
@@ -168,10 +163,8 @@ public class PackageInfo extends AbstractModel {
     }
 
     /**
-     * Get 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存套餐创建时间 
      * @return CreatedAt 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreatedAt() {
         return this.CreatedAt;
@@ -179,19 +172,15 @@ public class PackageInfo extends AbstractModel {
 
     /**
      * Set 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(Long CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存套餐更新时间 
      * @return UpdatedAt 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdatedAt() {
         return this.UpdatedAt;
@@ -199,19 +188,15 @@ public class PackageInfo extends AbstractModel {
 
     /**
      * Set 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(Long UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 套餐id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐id 
      * @return PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -219,19 +204,15 @@ public class PackageInfo extends AbstractModel {
 
     /**
      * Set 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 订单id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单id 
      * @return OrderId 订单id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
         return this.OrderId;
@@ -239,9 +220,7 @@ public class PackageInfo extends AbstractModel {
 
     /**
      * Set 订单id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 订单id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
@@ -264,10 +243,8 @@ public class PackageInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户id 
      * @return CSUserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCSUserId() {
         return this.CSUserId;
@@ -275,9 +252,7 @@ public class PackageInfo extends AbstractModel {
 
     /**
      * Set 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CSUserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCSUserId(String CSUserId) {
         this.CSUserId = CSUserId;

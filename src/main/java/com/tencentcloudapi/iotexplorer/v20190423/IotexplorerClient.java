@@ -281,7 +281,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *创建位置空间
+     *创建位置空间。
      * @param req CreatePositionSpaceRequest
      * @return CreatePositionSpaceResponse
      * @throws TencentCloudSDKException

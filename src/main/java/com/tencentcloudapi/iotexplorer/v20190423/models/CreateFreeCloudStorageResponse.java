@@ -25,7 +25,6 @@ public class CreateFreeCloudStorageResponse extends AbstractModel {
 
     /**
     * 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Price")
     @Expose
@@ -33,7 +32,6 @@ public class CreateFreeCloudStorageResponse extends AbstractModel {
 
     /**
     * 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
     @Expose
@@ -47,10 +45,8 @@ public class CreateFreeCloudStorageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单金额，单位为分 
      * @return Price 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrice() {
         return this.Price;
@@ -58,19 +54,15 @@ public class CreateFreeCloudStorageResponse extends AbstractModel {
 
     /**
      * Set 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Price 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付金额，单位为分 
      * @return Amount 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAmount() {
         return this.Amount;
@@ -78,9 +70,7 @@ public class CreateFreeCloudStorageResponse extends AbstractModel {
 
     /**
      * Set 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Amount 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(Long Amount) {
         this.Amount = Amount;

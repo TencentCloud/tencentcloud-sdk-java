@@ -39,7 +39,6 @@ public class TopicRule extends AbstractModel {
 
     /**
     * 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -47,7 +46,6 @@ public class TopicRule extends AbstractModel {
 
     /**
     * 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
     @Expose
@@ -55,7 +53,6 @@ public class TopicRule extends AbstractModel {
 
     /**
     * 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleDisabled")
     @Expose
@@ -94,10 +91,8 @@ public class TopicRule extends AbstractModel {
     }
 
     /**
-     * Get 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述。 
      * @return Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -105,19 +100,15 @@ public class TopicRule extends AbstractModel {
 
     /**
      * Set 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行为的JSON字符串。 
      * @return Actions 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActions() {
         return this.Actions;
@@ -125,19 +116,15 @@ public class TopicRule extends AbstractModel {
 
     /**
      * Set 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Actions 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否禁用规则 
      * @return RuleDisabled 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRuleDisabled() {
         return this.RuleDisabled;
@@ -145,9 +132,7 @@ public class TopicRule extends AbstractModel {
 
     /**
      * Set 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleDisabled 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleDisabled(Boolean RuleDisabled) {
         this.RuleDisabled = RuleDisabled;

@@ -25,7 +25,6 @@ public class DeviceData extends AbstractModel {
 
     /**
     * 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCert")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceData extends AbstractModel {
 
     /**
     * 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceData extends AbstractModel {
 
     /**
     * 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevicePrivateKey")
     @Expose
@@ -49,17 +46,14 @@ public class DeviceData extends AbstractModel {
 
     /**
     * 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevicePsk")
     @Expose
     private String DevicePsk;
 
     /**
-     * Get 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。 
      * @return DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceCert() {
         return this.DeviceCert;
@@ -67,19 +61,15 @@ public class DeviceData extends AbstractModel {
 
     /**
      * Set 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCert(String DeviceCert) {
         this.DeviceCert = DeviceCert;
     }
 
     /**
-     * Get 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称。 
      * @return DeviceName 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -87,19 +77,15 @@ public class DeviceData extends AbstractModel {
 
     /**
      * Set 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。 
      * @return DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevicePrivateKey() {
         return this.DevicePrivateKey;
@@ -107,19 +93,15 @@ public class DeviceData extends AbstractModel {
 
     /**
      * Set 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevicePrivateKey(String DevicePrivateKey) {
         this.DevicePrivateKey = DevicePrivateKey;
     }
 
     /**
-     * Get 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对称加密密钥，base64编码。采用对称加密时返回该参数。 
      * @return DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevicePsk() {
         return this.DevicePsk;
@@ -127,9 +109,7 @@ public class DeviceData extends AbstractModel {
 
     /**
      * Set 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevicePsk(String DevicePsk) {
         this.DevicePsk = DevicePsk;

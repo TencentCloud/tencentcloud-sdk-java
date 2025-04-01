@@ -25,7 +25,6 @@ public class DescribeInstanceResponse extends AbstractModel {
 
     /**
     * 实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例信息 
      * @return Data 实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceDetail getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeInstanceResponse extends AbstractModel {
 
     /**
      * Set 实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(InstanceDetail Data) {
         this.Data = Data;

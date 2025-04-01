@@ -33,7 +33,6 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
     * SN信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sn")
     @Expose
@@ -41,7 +40,6 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
     * 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -49,7 +47,6 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -80,10 +77,8 @@ public class DeviceActiveResult extends AbstractModel {
     }
 
     /**
-     * Get SN信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SN信息 
      * @return Sn SN信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSn() {
         return this.Sn;
@@ -91,19 +86,15 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
      * Set SN信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sn SN信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
     }
 
     /**
-     * Get 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停； 
      * @return ErrCode 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -111,19 +102,15 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
      * Set 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -131,9 +118,7 @@ public class DeviceActiveResult extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

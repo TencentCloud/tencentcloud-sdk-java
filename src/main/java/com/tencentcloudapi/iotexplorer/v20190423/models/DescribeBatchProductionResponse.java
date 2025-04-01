@@ -67,7 +67,6 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
     * 成功数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessCount")
     @Expose
@@ -75,7 +74,6 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
     * 量产最后失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastFailedReason")
     @Expose
@@ -83,7 +81,6 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
     * 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -193,10 +190,8 @@ public class DescribeBatchProductionResponse extends AbstractModel {
     }
 
     /**
-     * Get 成功数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功数 
      * @return SuccessCount 成功数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessCount() {
         return this.SuccessCount;
@@ -204,19 +199,15 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
      * Set 成功数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessCount 成功数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessCount(Long SuccessCount) {
         this.SuccessCount = SuccessCount;
     }
 
     /**
-     * Get 量产最后失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 量产最后失败原因 
      * @return LastFailedReason 量产最后失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastFailedReason() {
         return this.LastFailedReason;
@@ -224,19 +215,15 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
      * Set 量产最后失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastFailedReason 量产最后失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastFailedReason(String LastFailedReason) {
         this.LastFailedReason = LastFailedReason;
     }
 
     /**
-     * Get 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成 
      * @return Status 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -244,9 +231,7 @@ public class DescribeBatchProductionResponse extends AbstractModel {
 
     /**
      * Set 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

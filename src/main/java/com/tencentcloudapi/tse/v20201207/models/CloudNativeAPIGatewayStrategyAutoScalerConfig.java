@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 
     /**
     * 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReplicas")
     @Expose
@@ -88,10 +87,8 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
     private AutoScalerBehavior Behavior;
 
     /**
-     * Get 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大副本数 
      * @return MaxReplicas 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
@@ -99,9 +96,7 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 
     /**
      * Set 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicas 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;

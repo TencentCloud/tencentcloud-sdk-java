@@ -53,7 +53,6 @@ public class DescribeCloudStorageResponse extends AbstractModel {
 
     /**
     * 云存用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeCloudStorageResponse extends AbstractModel {
     }
 
     /**
-     * Get 云存用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存用户ID 
      * @return UserId 云存用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -142,9 +139,7 @@ public class DescribeCloudStorageResponse extends AbstractModel {
 
     /**
      * Set 云存用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 云存用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

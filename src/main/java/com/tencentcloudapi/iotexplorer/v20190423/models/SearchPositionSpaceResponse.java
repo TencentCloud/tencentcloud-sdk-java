@@ -25,7 +25,6 @@ public class SearchPositionSpaceResponse extends AbstractModel {
 
     /**
     * 位置空间列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class SearchPositionSpaceResponse extends AbstractModel {
 
     /**
     * 符合条件的位置空间个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class SearchPositionSpaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 位置空间列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位置空间列表 
      * @return List 位置空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PositionSpaceInfo [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ public class SearchPositionSpaceResponse extends AbstractModel {
 
     /**
      * Set 位置空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 位置空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(PositionSpaceInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get 符合条件的位置空间个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的位置空间个数 
      * @return Total 符合条件的位置空间个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class SearchPositionSpaceResponse extends AbstractModel {
 
     /**
      * Set 符合条件的位置空间个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 符合条件的位置空间个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

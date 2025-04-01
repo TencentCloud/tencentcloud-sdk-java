@@ -25,7 +25,6 @@ public class DescribeLoRaFrequencyResponse extends AbstractModel {
 
     /**
     * 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLoRaFrequencyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回详情项 
      * @return Data 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoRaFrequencyEntry getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeLoRaFrequencyResponse extends AbstractModel {
 
     /**
      * Set 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回详情项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(LoRaFrequencyEntry Data) {
         this.Data = Data;

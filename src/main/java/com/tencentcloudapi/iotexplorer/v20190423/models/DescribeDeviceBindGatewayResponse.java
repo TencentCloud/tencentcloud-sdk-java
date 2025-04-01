@@ -25,7 +25,6 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
     * 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayProductId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
     * 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayDeviceName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
     * 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
     * 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayProductOwnerName")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
     * 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayProductOwnerUin")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关产品ID 
      * @return GatewayProductId 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayProductId() {
         return this.GatewayProductId;
@@ -82,19 +75,15 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
      * Set 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayProductId 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayProductId(String GatewayProductId) {
         this.GatewayProductId = GatewayProductId;
     }
 
     /**
-     * Get 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关设备名 
      * @return GatewayDeviceName 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayDeviceName() {
         return this.GatewayDeviceName;
@@ -102,19 +91,15 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
      * Set 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayDeviceName 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayDeviceName(String GatewayDeviceName) {
         this.GatewayDeviceName = GatewayDeviceName;
     }
 
     /**
-     * Get 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关产品名称 
      * @return GatewayName 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayName() {
         return this.GatewayName;
@@ -122,19 +107,15 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
      * Set 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayName 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备对应产品所属的主账号名称 
      * @return GatewayProductOwnerName 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayProductOwnerName() {
         return this.GatewayProductOwnerName;
@@ -142,19 +123,15 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
      * Set 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayProductOwnerName 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayProductOwnerName(String GatewayProductOwnerName) {
         this.GatewayProductOwnerName = GatewayProductOwnerName;
     }
 
     /**
-     * Get 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备对应产品所属的主账号 UIN 
      * @return GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayProductOwnerUin() {
         return this.GatewayProductOwnerUin;
@@ -162,9 +139,7 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel {
 
     /**
      * Set 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayProductOwnerUin(String GatewayProductOwnerUin) {
         this.GatewayProductOwnerUin = GatewayProductOwnerUin;

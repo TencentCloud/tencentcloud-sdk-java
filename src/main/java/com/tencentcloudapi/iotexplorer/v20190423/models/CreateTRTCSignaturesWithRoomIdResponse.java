@@ -25,7 +25,6 @@ public class CreateTRTCSignaturesWithRoomIdResponse extends AbstractModel {
 
     /**
     * 返回参数数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TRTCParamList")
     @Expose
@@ -39,10 +38,8 @@ public class CreateTRTCSignaturesWithRoomIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回参数数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回参数数组 
      * @return TRTCParamList 返回参数数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TRTCParams [] getTRTCParamList() {
         return this.TRTCParamList;
@@ -50,9 +47,7 @@ public class CreateTRTCSignaturesWithRoomIdResponse extends AbstractModel {
 
     /**
      * Set 返回参数数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TRTCParamList 返回参数数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTRTCParamList(TRTCParams [] TRTCParamList) {
         this.TRTCParamList = TRTCParamList;

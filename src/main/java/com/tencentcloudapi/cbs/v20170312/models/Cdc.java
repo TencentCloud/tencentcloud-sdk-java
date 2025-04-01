@@ -40,7 +40,6 @@ public class Cdc extends AbstractModel {
 
     /**
     * 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -55,7 +54,6 @@ public class Cdc extends AbstractModel {
 
     /**
     * 独享集群的资源容量大小。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcResource")
     @Expose
@@ -133,10 +131,8 @@ public class Cdc extends AbstractModel {
     }
 
     /**
-     * Get 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。 
      * @return Zone 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -144,9 +140,7 @@ public class Cdc extends AbstractModel {
 
     /**
      * Set 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -169,10 +163,8 @@ public class Cdc extends AbstractModel {
     }
 
     /**
-     * Get 独享集群的资源容量大小。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独享集群的资源容量大小。 
      * @return CdcResource 独享集群的资源容量大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdcSize getCdcResource() {
         return this.CdcResource;
@@ -180,9 +172,7 @@ public class Cdc extends AbstractModel {
 
     /**
      * Set 独享集群的资源容量大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcResource 独享集群的资源容量大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcResource(CdcSize CdcResource) {
         this.CdcResource = CdcResource;

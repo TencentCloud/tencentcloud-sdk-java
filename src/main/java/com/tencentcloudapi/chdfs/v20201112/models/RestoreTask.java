@@ -38,7 +38,7 @@ public class RestoreTask extends AbstractModel {
     private String FilePath;
 
     /**
-    * 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
+    * 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
     */
     @SerializedName("Type")
     @Expose
@@ -98,16 +98,16 @@ public class RestoreTask extends AbstractModel {
     }
 
     /**
-     * Get 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速） 
-     * @return Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
+     * Get 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准） 
+     * @return Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
-     * @param Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
+     * Set 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
+     * @param Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
      */
     public void setType(Long Type) {
         this.Type = Type;

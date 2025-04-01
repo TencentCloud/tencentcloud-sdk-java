@@ -25,7 +25,6 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
     * 见BatchRecordInfo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordList")
     @Expose
@@ -48,7 +47,6 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
     * 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainGrade")
     @Expose
@@ -64,7 +62,6 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
     * 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -87,10 +84,8 @@ public class DescribeBatchTaskDetail extends AbstractModel {
     private Long DomainId;
 
     /**
-     * Get 见BatchRecordInfo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 见BatchRecordInfo 
      * @return RecordList 见BatchRecordInfo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchRecordInfo [] getRecordList() {
         return this.RecordList;
@@ -98,9 +93,7 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
      * Set 见BatchRecordInfo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordList 见BatchRecordInfo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordList(BatchRecordInfo [] RecordList) {
         this.RecordList = RecordList;
@@ -143,10 +136,8 @@ public class DescribeBatchTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 域名等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名等级 
      * @return DomainGrade 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainGrade() {
         return this.DomainGrade;
@@ -154,9 +145,7 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
      * Set 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainGrade 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainGrade(String DomainGrade) {
         this.DomainGrade = DomainGrade;
@@ -183,10 +172,8 @@ public class DescribeBatchTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该条任务运行状态 
      * @return Status 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -194,9 +181,7 @@ public class DescribeBatchTaskDetail extends AbstractModel {
 
     /**
      * Set 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

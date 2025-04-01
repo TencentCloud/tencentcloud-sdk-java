@@ -25,7 +25,6 @@ public class AutoScalerBehavior extends AbstractModel {
 
     /**
     * 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleUp")
     @Expose
@@ -33,17 +32,14 @@ public class AutoScalerBehavior extends AbstractModel {
 
     /**
     * 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleDown")
     @Expose
     private AutoScalerRules ScaleDown;
 
     /**
-     * Get 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩容行为配置 
      * @return ScaleUp 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScalerRules getScaleUp() {
         return this.ScaleUp;
@@ -51,19 +47,15 @@ public class AutoScalerBehavior extends AbstractModel {
 
     /**
      * Set 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleUp 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleUp(AutoScalerRules ScaleUp) {
         this.ScaleUp = ScaleUp;
     }
 
     /**
-     * Get 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缩容行为配置 
      * @return ScaleDown 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScalerRules getScaleDown() {
         return this.ScaleDown;
@@ -71,9 +63,7 @@ public class AutoScalerBehavior extends AbstractModel {
 
     /**
      * Set 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaleDown 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleDown(AutoScalerRules ScaleDown) {
         this.ScaleDown = ScaleDown;

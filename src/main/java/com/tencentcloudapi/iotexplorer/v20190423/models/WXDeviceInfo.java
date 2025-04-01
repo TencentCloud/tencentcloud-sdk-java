@@ -25,7 +25,6 @@ public class WXDeviceInfo extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -33,17 +32,14 @@ public class WXDeviceInfo extends AbstractModel {
 
     /**
     * 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WXIoTDeviceInfo")
     @Expose
     private WXIoTDeviceInfo WXIoTDeviceInfo;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceId() {
         return this.DeviceId;
@@ -51,19 +47,15 @@ public class WXDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备信息 
      * @return WXIoTDeviceInfo 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WXIoTDeviceInfo getWXIoTDeviceInfo() {
         return this.WXIoTDeviceInfo;
@@ -71,9 +63,7 @@ public class WXDeviceInfo extends AbstractModel {
 
     /**
      * Set 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WXIoTDeviceInfo 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWXIoTDeviceInfo(WXIoTDeviceInfo WXIoTDeviceInfo) {
         this.WXIoTDeviceInfo = WXIoTDeviceInfo;

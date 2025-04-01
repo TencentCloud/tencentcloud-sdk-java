@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCpmOsInfoResponse extends AbstractModel {
+public class DescribeSlowLogQueryTimeStatsResponse extends AbstractModel {
 
     /**
-    * 操作系统信息列表。
+    * 符合条件的记录总数。
     */
-    @SerializedName("OsInfoSet")
+    @SerializedName("TotalCount")
     @Expose
-    private OsInfo [] OsInfoSet;
+    private Long TotalCount;
+
+    /**
+    * 慢日志 top sql 列表。
+    */
+    @SerializedName("Items")
+    @Expose
+    private SqlCostDistribution [] Items;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeCpmOsInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作系统信息列表。 
-     * @return OsInfoSet 操作系统信息列表。
+     * Get 符合条件的记录总数。 
+     * @return TotalCount 符合条件的记录总数。
      */
-    public OsInfo [] getOsInfoSet() {
-        return this.OsInfoSet;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 操作系统信息列表。
-     * @param OsInfoSet 操作系统信息列表。
+     * Set 符合条件的记录总数。
+     * @param TotalCount 符合条件的记录总数。
      */
-    public void setOsInfoSet(OsInfo [] OsInfoSet) {
-        this.OsInfoSet = OsInfoSet;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 慢日志 top sql 列表。 
+     * @return Items 慢日志 top sql 列表。
+     */
+    public SqlCostDistribution [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 慢日志 top sql 列表。
+     * @param Items 慢日志 top sql 列表。
+     */
+    public void setItems(SqlCostDistribution [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -69,18 +92,21 @@ public class DescribeCpmOsInfoResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeCpmOsInfoResponse() {
+    public DescribeSlowLogQueryTimeStatsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCpmOsInfoResponse(DescribeCpmOsInfoResponse source) {
-        if (source.OsInfoSet != null) {
-            this.OsInfoSet = new OsInfo[source.OsInfoSet.length];
-            for (int i = 0; i < source.OsInfoSet.length; i++) {
-                this.OsInfoSet[i] = new OsInfo(source.OsInfoSet[i]);
+    public DescribeSlowLogQueryTimeStatsResponse(DescribeSlowLogQueryTimeStatsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new SqlCostDistribution[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new SqlCostDistribution(source.Items[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +119,8 @@ public class DescribeCpmOsInfoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "OsInfoSet.", this.OsInfoSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

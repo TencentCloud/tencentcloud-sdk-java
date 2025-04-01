@@ -81,7 +81,6 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -89,7 +88,6 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
     * 应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationCount")
     @Expose
@@ -97,7 +95,6 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
     * 设备注册总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCount")
     @Expose
@@ -105,7 +102,6 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
     * 是否开通物联使能
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableOpenState")
     @Expose
@@ -240,10 +236,8 @@ public class ProjectEntryEx extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -251,19 +245,15 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用数量 
      * @return ApplicationCount 应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationCount() {
         return this.ApplicationCount;
@@ -271,19 +261,15 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
      * Set 应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationCount 应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationCount(Long ApplicationCount) {
         this.ApplicationCount = ApplicationCount;
     }
 
     /**
-     * Get 设备注册总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备注册总数 
      * @return DeviceCount 设备注册总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceCount() {
         return this.DeviceCount;
@@ -291,19 +277,15 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
      * Set 设备注册总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCount 设备注册总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCount(Long DeviceCount) {
         this.DeviceCount = DeviceCount;
     }
 
     /**
-     * Get 是否开通物联使能
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通物联使能 
      * @return EnableOpenState 是否开通物联使能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableOpenState() {
         return this.EnableOpenState;
@@ -311,9 +293,7 @@ public class ProjectEntryEx extends AbstractModel {
 
     /**
      * Set 是否开通物联使能
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableOpenState 是否开通物联使能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableOpenState(Long EnableOpenState) {
         this.EnableOpenState = EnableOpenState;

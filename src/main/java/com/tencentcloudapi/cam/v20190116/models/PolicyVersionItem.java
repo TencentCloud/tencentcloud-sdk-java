@@ -25,7 +25,6 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
     * 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
     @Expose
@@ -33,7 +32,6 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
     * 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateDate")
     @Expose
@@ -41,17 +39,14 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
     * 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefaultVersion")
     @Expose
     private Long IsDefaultVersion;
 
     /**
-     * Get 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略版本号 
      * @return VersionId 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionId() {
         return this.VersionId;
@@ -59,19 +54,15 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
      * Set 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionId 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略版本创建时间 
      * @return CreateDate 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateDate() {
         return this.CreateDate;
@@ -79,19 +70,15 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
      * Set 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateDate 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateDate(String CreateDate) {
         this.CreateDate = CreateDate;
     }
 
     /**
-     * Get 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是正在生效的版本。0表示不是，1表示是 
      * @return IsDefaultVersion 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDefaultVersion() {
         return this.IsDefaultVersion;
@@ -99,9 +86,7 @@ public class PolicyVersionItem extends AbstractModel {
 
     /**
      * Set 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefaultVersion 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefaultVersion(Long IsDefaultVersion) {
         this.IsDefaultVersion = IsDefaultVersion;

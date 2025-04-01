@@ -25,7 +25,6 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
     * 升级任务源版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriVersion")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
     * 升级任务目标版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstVersion")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
     * 进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -62,10 +59,8 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 升级任务源版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 升级任务源版本。 
      * @return OriVersion 升级任务源版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriVersion() {
         return this.OriVersion;
@@ -73,19 +68,15 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
      * Set 升级任务源版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriVersion 升级任务源版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriVersion(String OriVersion) {
         this.OriVersion = OriVersion;
     }
 
     /**
-     * Get 升级任务目标版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 升级任务目标版本。 
      * @return DstVersion 升级任务目标版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstVersion() {
         return this.DstVersion;
@@ -93,9 +84,7 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
      * Set 升级任务目标版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstVersion 升级任务目标版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstVersion(String DstVersion) {
         this.DstVersion = DstVersion;
@@ -118,10 +107,8 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度 
      * @return Percent 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -129,9 +116,7 @@ public class DescribeFirmwareUpdateStatusResponse extends AbstractModel {
 
     /**
      * Set 进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

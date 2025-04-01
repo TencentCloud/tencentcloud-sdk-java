@@ -31,14 +31,18 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
     private String AndroidInstanceId;
 
     /**
-    * 分辨率宽度
+    * 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 分辨率高度
+    * 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
     */
     @SerializedName("Height")
     @Expose
@@ -46,6 +50,8 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
     * 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
     */
     @SerializedName("DPI")
     @Expose
@@ -68,40 +74,60 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
     }
 
     /**
-     * Get 分辨率宽度 
-     * @return Width 分辨率宽度
+     * Get 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720 
+     * @return Width 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 分辨率宽度
-     * @param Width 分辨率宽度
+     * Set 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
+     * @param Width 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 分辨率高度 
-     * @return Height 分辨率高度
+     * Get 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280 
+     * @return Height 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 分辨率高度
-     * @param Height 分辨率高度
+     * Set 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
+     * @param Height 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！ 
+     * Get 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480 
      * @return DPI 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
      */
     public Long getDPI() {
         return this.DPI;
@@ -109,7 +135,11 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
      * Set 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
      * @param DPI 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
      */
     public void setDPI(Long DPI) {
         this.DPI = DPI;

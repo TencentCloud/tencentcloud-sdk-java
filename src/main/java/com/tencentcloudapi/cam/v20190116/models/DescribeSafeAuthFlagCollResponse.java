@@ -46,7 +46,6 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel {
 
     /**
     * 是否提示信任设备1 ：提示 0: 不提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptTrust")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否提示信任设备1 ：提示 0: 不提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否提示信任设备1 ：提示 0: 不提示 
      * @return PromptTrust 是否提示信任设备1 ：提示 0: 不提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPromptTrust() {
         return this.PromptTrust;
@@ -119,9 +116,7 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel {
 
     /**
      * Set 是否提示信任设备1 ：提示 0: 不提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PromptTrust 是否提示信任设备1 ：提示 0: 不提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptTrust(Long PromptTrust) {
         this.PromptTrust = PromptTrust;

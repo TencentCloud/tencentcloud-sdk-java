@@ -159,6 +159,13 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     private Long DcnSyncMode;
 
     /**
+    * cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 节点可用区分布，可填写多个可用区。 
      * @return Zones 节点可用区分布，可填写多个可用区。
      */
@@ -470,6 +477,22 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         this.DcnSyncMode = DcnSyncMode;
     }
 
+    /**
+     * Get cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD 
+     * @return CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     * @param CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateHourDBInstanceRequest() {
     }
 
@@ -547,6 +570,9 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         if (source.DcnSyncMode != null) {
             this.DcnSyncMode = new Long(source.DcnSyncMode);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -573,6 +599,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         this.setParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
         this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }
