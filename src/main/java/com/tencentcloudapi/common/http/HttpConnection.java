@@ -27,15 +27,13 @@ import java.io.IOException;
 import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
-;
-
 public class HttpConnection {
 
     // https://stackoverflow.com/questions/31423154/performance-of-a-singleton-instance-okhttpclient
     // https://github.com/square/okhttp/issues/3372
     // Creating dispatcher and connectionPool is expensive.
     // Share them between OkHttpClients by singleton's Builder.
-    private static final OkHttpClient clientSingleton = new OkHttpClient();
+    private static OkHttpClient clientSingleton = new OkHttpClient();
     private OkHttpClient client;
 
     public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
@@ -143,5 +141,13 @@ public class HttpConnection {
         }
 
         return this.doRequest(request);
+    }
+
+    public static void setHttpClient(Object client) {
+        clientSingleton = (OkHttpClient) client;
+    }
+
+    public static Object getHttpClient() {
+        return clientSingleton;
     }
 }
