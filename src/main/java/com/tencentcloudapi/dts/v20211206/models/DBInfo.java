@@ -164,6 +164,13 @@ public class DBInfo extends AbstractModel {
     private String TmpToken;
 
     /**
+    * 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+    */
+    @SerializedName("EncryptConn")
+    @Expose
+    private String EncryptConn;
+
+    /**
     * tdsql的分片id。如节点类型为set必填。
     */
     @SerializedName("SetId")
@@ -491,6 +498,22 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
+     * Get 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted 
+     * @return EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+     */
+    public String getEncryptConn() {
+        return this.EncryptConn;
+    }
+
+    /**
+     * Set 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+     * @param EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+     */
+    public void setEncryptConn(String EncryptConn) {
+        this.EncryptConn = EncryptConn;
+    }
+
+    /**
      * Get tdsql的分片id。如节点类型为set必填。 
      * @return SetId tdsql的分片id。如节点类型为set必填。
      */
@@ -574,6 +597,9 @@ public class DBInfo extends AbstractModel {
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
+        if (source.EncryptConn != null) {
+            this.EncryptConn = new String(source.EncryptConn);
+        }
         if (source.SetId != null) {
             this.SetId = new String(source.SetId);
         }
@@ -604,6 +630,7 @@ public class DBInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
+        this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }

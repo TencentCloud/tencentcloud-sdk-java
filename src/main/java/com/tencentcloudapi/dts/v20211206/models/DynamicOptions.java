@@ -52,6 +52,41 @@ public class DynamicOptions extends AbstractModel {
     private ConflictHandleOption ConflictHandleOption;
 
     /**
+    * 同步到kafka链路的kafka配置
+    */
+    @SerializedName("KafkaOption")
+    @Expose
+    private KafkaOption KafkaOption;
+
+    /**
+    * 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+    */
+    @SerializedName("FilterBeginCommit")
+    @Expose
+    private Boolean FilterBeginCommit;
+
+    /**
+    * 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+    */
+    @SerializedName("FilterCheckpoint")
+    @Expose
+    private Boolean FilterCheckpoint;
+
+    /**
+    * 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+    */
+    @SerializedName("DealOfExistSameTable")
+    @Expose
+    private String DealOfExistSameTable;
+
+    /**
+    * 仅增量任务重新设置指定位点
+    */
+    @SerializedName("StartPosition")
+    @Expose
+    private String StartPosition;
+
+    /**
      * Get 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值 
      * @return OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
      */
@@ -115,6 +150,86 @@ public class DynamicOptions extends AbstractModel {
         this.ConflictHandleOption = ConflictHandleOption;
     }
 
+    /**
+     * Get 同步到kafka链路的kafka配置 
+     * @return KafkaOption 同步到kafka链路的kafka配置
+     */
+    public KafkaOption getKafkaOption() {
+        return this.KafkaOption;
+    }
+
+    /**
+     * Set 同步到kafka链路的kafka配置
+     * @param KafkaOption 同步到kafka链路的kafka配置
+     */
+    public void setKafkaOption(KafkaOption KafkaOption) {
+        this.KafkaOption = KafkaOption;
+    }
+
+    /**
+     * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持 
+     * @return FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     */
+    public Boolean getFilterBeginCommit() {
+        return this.FilterBeginCommit;
+    }
+
+    /**
+     * Set 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     * @param FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     */
+    public void setFilterBeginCommit(Boolean FilterBeginCommit) {
+        this.FilterBeginCommit = FilterBeginCommit;
+    }
+
+    /**
+     * Get 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持 
+     * @return FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     */
+    public Boolean getFilterCheckpoint() {
+        return this.FilterCheckpoint;
+    }
+
+    /**
+     * Set 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     * @param FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     */
+    public void setFilterCheckpoint(Boolean FilterCheckpoint) {
+        this.FilterCheckpoint = FilterCheckpoint;
+    }
+
+    /**
+     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行) 
+     * @return DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     */
+    public String getDealOfExistSameTable() {
+        return this.DealOfExistSameTable;
+    }
+
+    /**
+     * Set 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     * @param DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     */
+    public void setDealOfExistSameTable(String DealOfExistSameTable) {
+        this.DealOfExistSameTable = DealOfExistSameTable;
+    }
+
+    /**
+     * Get 仅增量任务重新设置指定位点 
+     * @return StartPosition 仅增量任务重新设置指定位点
+     */
+    public String getStartPosition() {
+        return this.StartPosition;
+    }
+
+    /**
+     * Set 仅增量任务重新设置指定位点
+     * @param StartPosition 仅增量任务重新设置指定位点
+     */
+    public void setStartPosition(String StartPosition) {
+        this.StartPosition = StartPosition;
+    }
+
     public DynamicOptions() {
     }
 
@@ -141,6 +256,21 @@ public class DynamicOptions extends AbstractModel {
         if (source.ConflictHandleOption != null) {
             this.ConflictHandleOption = new ConflictHandleOption(source.ConflictHandleOption);
         }
+        if (source.KafkaOption != null) {
+            this.KafkaOption = new KafkaOption(source.KafkaOption);
+        }
+        if (source.FilterBeginCommit != null) {
+            this.FilterBeginCommit = new Boolean(source.FilterBeginCommit);
+        }
+        if (source.FilterCheckpoint != null) {
+            this.FilterCheckpoint = new Boolean(source.FilterCheckpoint);
+        }
+        if (source.DealOfExistSameTable != null) {
+            this.DealOfExistSameTable = new String(source.DealOfExistSameTable);
+        }
+        if (source.StartPosition != null) {
+            this.StartPosition = new String(source.StartPosition);
+        }
     }
 
 
@@ -152,6 +282,11 @@ public class DynamicOptions extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
         this.setParamSimple(map, prefix + "ConflictHandleType", this.ConflictHandleType);
         this.setParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
+        this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+        this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+        this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
+        this.setParamSimple(map, prefix + "DealOfExistSameTable", this.DealOfExistSameTable);
+        this.setParamSimple(map, prefix + "StartPosition", this.StartPosition);
 
     }
 }
