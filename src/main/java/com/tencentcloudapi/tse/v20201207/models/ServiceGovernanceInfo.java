@@ -81,7 +81,6 @@ public class ServiceGovernanceInfo extends AbstractModel {
 
     /**
     * 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSTopics")
     @Expose
@@ -216,10 +215,8 @@ public class ServiceGovernanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎关联CLS日志主题信息 
      * @return CLSTopics 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PolarisCLSTopicInfo [] getCLSTopics() {
         return this.CLSTopics;
@@ -227,9 +224,7 @@ public class ServiceGovernanceInfo extends AbstractModel {
 
     /**
      * Set 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLSTopics 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSTopics(PolarisCLSTopicInfo [] CLSTopics) {
         this.CLSTopics = CLSTopics;

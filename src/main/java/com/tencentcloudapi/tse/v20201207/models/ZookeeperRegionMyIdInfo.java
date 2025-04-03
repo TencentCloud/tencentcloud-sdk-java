@@ -25,7 +25,6 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
     * 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
     * myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MyIdStart")
     @Expose
@@ -41,17 +39,14 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
     * myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MyIdEnd")
     @Expose
     private Long MyIdEnd;
 
     /**
-     * Get 地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域信息 
      * @return Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -59,19 +54,15 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
      * Set 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get myid 的起始号段 
      * @return MyIdStart myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMyIdStart() {
         return this.MyIdStart;
@@ -79,19 +70,15 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
      * Set myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MyIdStart myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMyIdStart(Long MyIdStart) {
         this.MyIdStart = MyIdStart;
     }
 
     /**
-     * Get myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get myid 的结束号段 
      * @return MyIdEnd myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMyIdEnd() {
         return this.MyIdEnd;
@@ -99,9 +86,7 @@ public class ZookeeperRegionMyIdInfo extends AbstractModel {
 
     /**
      * Set myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MyIdEnd myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMyIdEnd(Long MyIdEnd) {
         this.MyIdEnd = MyIdEnd;

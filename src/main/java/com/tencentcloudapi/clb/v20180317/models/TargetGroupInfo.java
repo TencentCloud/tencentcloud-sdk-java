@@ -75,6 +75,15 @@ public class TargetGroupInfo extends AbstractModel {
     private AssociationItem [] AssociatedRule;
 
     /**
+    * 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
     * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -241,6 +250,30 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
+     * Get 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
      * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
@@ -384,6 +417,9 @@ public class TargetGroupInfo extends AbstractModel {
                 this.AssociatedRule[i] = new AssociationItem(source.AssociatedRule[i]);
             }
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
         if (source.TargetGroupType != null) {
             this.TargetGroupType = new String(source.TargetGroupType);
         }
@@ -419,6 +455,7 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
         this.setParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
         this.setParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);

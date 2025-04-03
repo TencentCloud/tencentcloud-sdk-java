@@ -32,7 +32,6 @@ public class PublishConfigFilesResponse extends AbstractModel {
 
     /**
     * 配置文件发布Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigFileReleaseId")
     @Expose
@@ -62,10 +61,8 @@ public class PublishConfigFilesResponse extends AbstractModel {
     }
 
     /**
-     * Get 配置文件发布Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件发布Id 
      * @return ConfigFileReleaseId 配置文件发布Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigFileReleaseId() {
         return this.ConfigFileReleaseId;
@@ -73,9 +70,7 @@ public class PublishConfigFilesResponse extends AbstractModel {
 
     /**
      * Set 配置文件发布Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigFileReleaseId 配置文件发布Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigFileReleaseId(String ConfigFileReleaseId) {
         this.ConfigFileReleaseId = ConfigFileReleaseId;

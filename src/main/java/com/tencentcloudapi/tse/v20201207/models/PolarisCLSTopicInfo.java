@@ -25,7 +25,6 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
     * 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSetId")
     @Expose
@@ -33,7 +32,6 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
     * 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSetName")
     @Expose
@@ -41,7 +39,6 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -49,17 +46,14 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
     * 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集ID 
      * @return LogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSetId() {
         return this.LogSetId;
@@ -67,19 +61,15 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集名称 
      * @return LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSetName() {
         return this.LogSetName;
@@ -87,19 +77,15 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSetName(String LogSetName) {
         this.LogSetName = LogSetName;
     }
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -107,19 +93,15 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题名称 
      * @return TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -127,9 +109,7 @@ public class PolarisCLSTopicInfo extends AbstractModel {
 
     /**
      * Set 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

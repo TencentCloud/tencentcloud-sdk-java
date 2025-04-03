@@ -39,7 +39,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadatas")
     @Expose
@@ -47,7 +46,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -55,7 +53,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -63,7 +60,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -71,7 +67,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -79,7 +74,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -87,7 +81,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyInstanceCount")
     @Expose
@@ -95,7 +88,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalInstanceCount")
     @Expose
@@ -103,7 +95,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -111,7 +102,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -119,7 +109,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIds")
     @Expose
@@ -127,7 +116,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupIds")
     @Expose
@@ -135,7 +123,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveUserIds")
     @Expose
@@ -143,7 +130,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveGroupIds")
     @Expose
@@ -151,7 +137,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExportTo")
     @Expose
@@ -159,7 +144,6 @@ public class GovernanceService extends AbstractModel {
 
     /**
     * 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Revision")
     @Expose
@@ -205,10 +189,8 @@ public class GovernanceService extends AbstractModel {
     }
 
     /**
-     * Get 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据信息数组。 
      * @return Metadatas 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
@@ -216,19 +198,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadatas 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述信息。 
      * @return Comment 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -236,19 +214,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -256,19 +230,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间。 
      * @return ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -276,19 +246,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务所属部门。 
      * @return Department 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartment() {
         return this.Department;
@@ -296,19 +262,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(String Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务所属业务。 
      * @return Business 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusiness() {
         return this.Business;
@@ -316,19 +278,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康服务实例数 
      * @return HealthyInstanceCount 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthyInstanceCount() {
         return this.HealthyInstanceCount;
@@ -336,19 +294,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyInstanceCount 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyInstanceCount(Long HealthyInstanceCount) {
         this.HealthyInstanceCount = HealthyInstanceCount;
     }
 
     /**
-     * Get 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务实例总数 
      * @return TotalInstanceCount 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalInstanceCount() {
         return this.TotalInstanceCount;
@@ -356,19 +310,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalInstanceCount 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalInstanceCount(Long TotalInstanceCount) {
         this.TotalInstanceCount = TotalInstanceCount;
     }
 
     /**
-     * Get 服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务ID 
      * @return Id 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -376,19 +326,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以编辑 
      * @return Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -396,19 +342,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以编辑该资源的用户ID 
      * @return UserIds 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -416,19 +358,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIds 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以编辑该资源的用户组ID 
      * @return GroupIds 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
@@ -436,19 +374,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupIds 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 移除可以编辑该资源的用户ID 
      * @return RemoveUserIds 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
@@ -456,19 +390,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveUserIds 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 移除可以编辑该资源的用户组ID 
      * @return RemoveGroupIds 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
@@ -476,19 +406,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveGroupIds 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该服务对哪些命名空间可见	 
      * @return ExportTo 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExportTo() {
         return this.ExportTo;
@@ -496,19 +422,15 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExportTo 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExportTo(String [] ExportTo) {
         this.ExportTo = ExportTo;
     }
 
     /**
-     * Get 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该服务信息摘要签名 
      * @return Revision 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRevision() {
         return this.Revision;
@@ -516,9 +438,7 @@ public class GovernanceService extends AbstractModel {
 
     /**
      * Set 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Revision 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRevision(String Revision) {
         this.Revision = Revision;

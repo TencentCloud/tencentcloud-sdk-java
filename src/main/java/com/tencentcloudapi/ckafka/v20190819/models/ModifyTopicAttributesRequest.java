@@ -129,14 +129,14 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 生产限流，单位 MB/s
+    * 生产限流，单位 MB/s；设置为-1，则生产不限流
     */
     @SerializedName("QuotaProducerByteRate")
     @Expose
     private Long QuotaProducerByteRate;
 
     /**
-    * 消费限流，单位 MB/s
+    * 消费限流，单位 MB/s；设置为-1，则消费不限流
     */
     @SerializedName("QuotaConsumerByteRate")
     @Expose
@@ -390,32 +390,32 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 生产限流，单位 MB/s 
-     * @return QuotaProducerByteRate 生产限流，单位 MB/s
+     * Get 生产限流，单位 MB/s；设置为-1，则生产不限流 
+     * @return QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
      */
     public Long getQuotaProducerByteRate() {
         return this.QuotaProducerByteRate;
     }
 
     /**
-     * Set 生产限流，单位 MB/s
-     * @param QuotaProducerByteRate 生产限流，单位 MB/s
+     * Set 生产限流，单位 MB/s；设置为-1，则生产不限流
+     * @param QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
      */
     public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
         this.QuotaProducerByteRate = QuotaProducerByteRate;
     }
 
     /**
-     * Get 消费限流，单位 MB/s 
-     * @return QuotaConsumerByteRate 消费限流，单位 MB/s
+     * Get 消费限流，单位 MB/s；设置为-1，则消费不限流 
+     * @return QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
      */
     public Long getQuotaConsumerByteRate() {
         return this.QuotaConsumerByteRate;
     }
 
     /**
-     * Set 消费限流，单位 MB/s
-     * @param QuotaConsumerByteRate 消费限流，单位 MB/s
+     * Set 消费限流，单位 MB/s；设置为-1，则消费不限流
+     * @param QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
      */
     public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
         this.QuotaConsumerByteRate = QuotaConsumerByteRate;

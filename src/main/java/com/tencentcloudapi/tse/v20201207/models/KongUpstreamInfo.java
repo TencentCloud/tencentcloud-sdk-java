@@ -25,7 +25,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -33,7 +32,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -41,7 +39,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceID")
     @Expose
@@ -49,7 +46,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -57,7 +53,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -73,7 +68,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -81,7 +75,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfType")
     @Expose
@@ -89,7 +82,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfNamespace")
     @Expose
@@ -97,7 +89,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfLambdaName")
     @Expose
@@ -105,7 +96,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfLambdaQualifier")
     @Expose
@@ -113,7 +103,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowStart")
     @Expose
@@ -121,7 +110,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Algorithm")
     @Expose
@@ -129,7 +117,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScalingGroupID")
     @Expose
@@ -137,7 +124,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScalingCvmPort")
     @Expose
@@ -145,7 +131,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScalingTatCmdStatus")
     @Expose
@@ -153,7 +138,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScalingHookStatus")
     @Expose
@@ -161,7 +145,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceName")
     @Expose
@@ -169,7 +152,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealSourceType")
     @Expose
@@ -177,7 +159,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -185,7 +166,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfCamAuthEnable")
     @Expose
@@ -193,7 +173,6 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfIsBase64Encoded")
     @Expose
@@ -201,17 +180,14 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
     * 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfIsIntegratedResponse")
     @Expose
     private Boolean ScfIsIntegratedResponse;
 
     /**
-     * Get IP或域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP或域名 
      * @return Host IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -219,19 +195,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -239,19 +211,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务来源ID 
      * @return SourceID 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceID() {
         return this.SourceID;
@@ -259,19 +227,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceID 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceID(String SourceID) {
         this.SourceID = SourceID;
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -279,19 +243,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务（注册中心或Kubernetes中的服务）名字 
      * @return ServiceName 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -299,9 +259,7 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
@@ -328,10 +286,8 @@ public class KongUpstreamInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务来源类型 
      * @return SourceType 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceType() {
         return this.SourceType;
@@ -339,19 +295,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF函数类型 
      * @return ScfType SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScfType() {
         return this.ScfType;
@@ -359,19 +311,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfType SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfType(String ScfType) {
         this.ScfType = ScfType;
     }
 
     /**
-     * Get SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF函数命名空间 
      * @return ScfNamespace SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScfNamespace() {
         return this.ScfNamespace;
@@ -379,19 +327,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfNamespace SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfNamespace(String ScfNamespace) {
         this.ScfNamespace = ScfNamespace;
     }
 
     /**
-     * Get SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF函数名 
      * @return ScfLambdaName SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScfLambdaName() {
         return this.ScfLambdaName;
@@ -399,19 +343,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfLambdaName SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfLambdaName(String ScfLambdaName) {
         this.ScfLambdaName = ScfLambdaName;
     }
 
     /**
-     * Get SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SCF函数版本 
      * @return ScfLambdaQualifier SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScfLambdaQualifier() {
         return this.ScfLambdaQualifier;
@@ -419,19 +359,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfLambdaQualifier SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfLambdaQualifier(String ScfLambdaQualifier) {
         this.ScfLambdaQualifier = ScfLambdaQualifier;
     }
 
     /**
-     * Get 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冷启动时间，单位秒 
      * @return SlowStart 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSlowStart() {
         return this.SlowStart;
@@ -439,19 +375,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowStart 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowStart(Long SlowStart) {
         this.SlowStart = SlowStart;
     }
 
     /**
-     * Get 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing 
      * @return Algorithm 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlgorithm() {
         return this.Algorithm;
@@ -459,19 +391,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Algorithm 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM弹性伸缩组ID 
      * @return AutoScalingGroupID CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoScalingGroupID() {
         return this.AutoScalingGroupID;
@@ -479,19 +407,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalingGroupID CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScalingGroupID(String AutoScalingGroupID) {
         this.AutoScalingGroupID = AutoScalingGroupID;
     }
 
     /**
-     * Get CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM弹性伸缩组端口 
      * @return AutoScalingCvmPort CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoScalingCvmPort() {
         return this.AutoScalingCvmPort;
@@ -499,19 +423,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalingCvmPort CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScalingCvmPort(Long AutoScalingCvmPort) {
         this.AutoScalingCvmPort = AutoScalingCvmPort;
     }
 
     /**
-     * Get CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM弹性伸缩组使用的CVM TAT命令状态 
      * @return AutoScalingTatCmdStatus CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoScalingTatCmdStatus() {
         return this.AutoScalingTatCmdStatus;
@@ -519,19 +439,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalingTatCmdStatus CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScalingTatCmdStatus(String AutoScalingTatCmdStatus) {
         this.AutoScalingTatCmdStatus = AutoScalingTatCmdStatus;
     }
 
     /**
-     * Get CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM弹性伸缩组生命周期挂钩状态 
      * @return AutoScalingHookStatus CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoScalingHookStatus() {
         return this.AutoScalingHookStatus;
@@ -539,19 +455,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalingHookStatus CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScalingHookStatus(String AutoScalingHookStatus) {
         this.AutoScalingHookStatus = AutoScalingHookStatus;
     }
 
     /**
-     * Get 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务来源的名字 
      * @return SourceName 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceName() {
         return this.SourceName;
@@ -559,19 +471,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceName 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 精确的服务来源类型，新建服务来源时候传入的类型 
      * @return RealSourceType 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealSourceType() {
         return this.RealSourceType;
@@ -579,19 +487,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealSourceType 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealSourceType(String RealSourceType) {
         this.RealSourceType = RealSourceType;
     }
 
     /**
-     * Get upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查） 
      * @return HealthStatus upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthStatus() {
         return this.HealthStatus;
@@ -599,19 +503,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthStatus upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthStatus(String HealthStatus) {
         this.HealthStatus = HealthStatus;
     }
 
     /**
-     * Get 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云函数是否开启CAM鉴权，不填时默认为开启(true) 
      * @return ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScfCamAuthEnable() {
         return this.ScfCamAuthEnable;
@@ -619,19 +519,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfCamAuthEnable(Boolean ScfCamAuthEnable) {
         this.ScfCamAuthEnable = ScfCamAuthEnable;
     }
 
     /**
-     * Get 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云函数是否开启Base64编码，默认为false 
      * @return ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScfIsBase64Encoded() {
         return this.ScfIsBase64Encoded;
@@ -639,19 +535,15 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfIsBase64Encoded(Boolean ScfIsBase64Encoded) {
         this.ScfIsBase64Encoded = ScfIsBase64Encoded;
     }
 
     /**
-     * Get 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云函数是否开启响应集成，默认为false 
      * @return ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScfIsIntegratedResponse() {
         return this.ScfIsIntegratedResponse;
@@ -659,9 +551,7 @@ public class KongUpstreamInfo extends AbstractModel {
 
     /**
      * Set 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfIsIntegratedResponse(Boolean ScfIsIntegratedResponse) {
         this.ScfIsIntegratedResponse = ScfIsIntegratedResponse;

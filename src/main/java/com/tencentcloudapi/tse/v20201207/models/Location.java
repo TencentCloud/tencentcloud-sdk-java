@@ -25,7 +25,6 @@ public class Location extends AbstractModel {
 
     /**
     * 大区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -33,7 +32,6 @@ public class Location extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -41,17 +39,14 @@ public class Location extends AbstractModel {
 
     /**
     * 机房
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Campus")
     @Expose
     private String Campus;
 
     /**
-     * Get 大区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大区 
      * @return Region 大区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -59,19 +54,15 @@ public class Location extends AbstractModel {
 
     /**
      * Set 大区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 大区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -79,19 +70,15 @@ public class Location extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 机房
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机房 
      * @return Campus 机房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCampus() {
         return this.Campus;
@@ -99,9 +86,7 @@ public class Location extends AbstractModel {
 
     /**
      * Set 机房
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Campus 机房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCampus(String Campus) {
         this.Campus = Campus;

@@ -25,7 +25,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -41,7 +39,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -57,7 +53,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalServiceCount")
     @Expose
@@ -65,7 +60,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalHealthInstanceCount")
     @Expose
@@ -73,7 +67,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalInstanceCount")
     @Expose
@@ -81,7 +74,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -89,7 +81,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -97,7 +88,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIds")
     @Expose
@@ -105,7 +95,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupIds")
     @Expose
@@ -113,7 +102,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveUserIds")
     @Expose
@@ -121,7 +109,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveGroupIds")
     @Expose
@@ -129,7 +116,6 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceExportTo")
     @Expose
@@ -137,17 +123,14 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
     * 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private Boolean SyncToGlobalRegistry;
 
     /**
-     * Get 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间名称。 
      * @return Name 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,19 +138,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间描述信息。 
      * @return Comment 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -175,19 +154,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -195,19 +170,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间。 
      * @return ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -215,19 +186,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间下总服务数据量 
      * @return TotalServiceCount 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalServiceCount() {
         return this.TotalServiceCount;
@@ -235,19 +202,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalServiceCount 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalServiceCount(Long TotalServiceCount) {
         this.TotalServiceCount = TotalServiceCount;
     }
 
     /**
-     * Get 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间下总健康实例数量 
      * @return TotalHealthInstanceCount 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalHealthInstanceCount() {
         return this.TotalHealthInstanceCount;
@@ -255,19 +218,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalHealthInstanceCount 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalHealthInstanceCount(Long TotalHealthInstanceCount) {
         this.TotalHealthInstanceCount = TotalHealthInstanceCount;
     }
 
     /**
-     * Get 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间下总实例数量 
      * @return TotalInstanceCount 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalInstanceCount() {
         return this.TotalInstanceCount;
@@ -275,19 +234,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalInstanceCount 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalInstanceCount(Long TotalInstanceCount) {
         this.TotalInstanceCount = TotalInstanceCount;
     }
 
     /**
-     * Get 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间ID 
      * @return Id 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -295,19 +250,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以编辑 
      * @return Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -315,19 +266,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以操作此命名空间的用户ID列表 
      * @return UserIds 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -335,19 +282,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIds 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可以操作此命名空间的用户组ID列表 
      * @return GroupIds 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
@@ -355,19 +298,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupIds 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 移除可以操作此命名空间的用户ID列表 
      * @return RemoveUserIds 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
@@ -375,19 +314,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveUserIds 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 移除可以操作此命名空间的用户组ID列表 
      * @return RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
@@ -395,19 +330,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该命名空间下的服务对哪些命名空间可见 
      * @return ServiceExportTo 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getServiceExportTo() {
         return this.ServiceExportTo;
@@ -415,19 +346,15 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceExportTo 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceExportTo(String [] ServiceExportTo) {
         this.ServiceExportTo = ServiceExportTo;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启同步到全局注册中心	 
      * @return SyncToGlobalRegistry 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
@@ -435,9 +362,7 @@ public class GovernanceNamespace extends AbstractModel {
 
     /**
      * Set 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncToGlobalRegistry 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;

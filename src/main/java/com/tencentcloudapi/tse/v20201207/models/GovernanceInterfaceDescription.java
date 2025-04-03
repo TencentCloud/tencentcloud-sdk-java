@@ -25,7 +25,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -41,7 +39,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -49,7 +46,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -57,7 +53,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -65,7 +60,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Revision")
     @Expose
@@ -73,7 +67,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +74,6 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -89,17 +81,14 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
     * 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约接口ID 
      * @return ID 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -107,19 +96,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 方法名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方法名称 
      * @return Method 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
         return this.Method;
@@ -127,19 +112,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径/接口名称 
      * @return Path 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -147,19 +128,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容 
      * @return Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -167,19 +144,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 创建来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建来源 
      * @return Source 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -187,19 +160,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 信息摘要 
      * @return Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRevision() {
         return this.Revision;
@@ -207,19 +176,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRevision(String Revision) {
         this.Revision = Revision;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -227,19 +192,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -247,19 +208,15 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 接口名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接口名称 
      * @return Name 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -267,9 +224,7 @@ public class GovernanceInterfaceDescription extends AbstractModel {
 
     /**
      * Set 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

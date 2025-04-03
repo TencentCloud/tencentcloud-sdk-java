@@ -25,7 +25,6 @@ public class Metadata extends AbstractModel {
 
     /**
     * 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class Metadata extends AbstractModel {
 
     /**
     * 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据键名。 
      * @return Key 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class Metadata extends AbstractModel {
 
     /**
      * Set 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据键值。不填则默认为空字符串。 
      * @return Value 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class Metadata extends AbstractModel {
 
     /**
      * Set 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

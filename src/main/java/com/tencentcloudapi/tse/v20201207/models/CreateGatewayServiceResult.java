@@ -25,17 +25,14 @@ public class CreateGatewayServiceResult extends AbstractModel {
 
     /**
     * 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-     * Get 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关服务ID 
      * @return ServiceId 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceId() {
         return this.ServiceId;
@@ -43,9 +40,7 @@ public class CreateGatewayServiceResult extends AbstractModel {
 
     /**
      * Set 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceId 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

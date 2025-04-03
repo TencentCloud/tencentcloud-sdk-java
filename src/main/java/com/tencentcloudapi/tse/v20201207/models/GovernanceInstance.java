@@ -46,7 +46,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -54,7 +53,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -62,7 +60,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -70,7 +67,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -78,7 +74,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -86,7 +81,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableHealthCheck")
     @Expose
@@ -94,7 +88,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Healthy")
     @Expose
@@ -102,7 +95,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isolate")
     @Expose
@@ -110,7 +102,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -118,7 +109,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -126,7 +116,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadatas")
     @Expose
@@ -134,7 +123,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ttl")
     @Expose
@@ -142,7 +130,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -150,7 +137,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -158,7 +144,6 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -213,10 +198,8 @@ public class GovernanceInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ip地址。 
      * @return Host 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -224,19 +207,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例端口信息。 
      * @return Port 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -244,19 +223,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通信协议。 
      * @return Protocol 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -264,19 +239,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息。 
      * @return Version 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -284,19 +255,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡权重。 
      * @return Weight 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -304,19 +271,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启健康检查。 
      * @return EnableHealthCheck 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
@@ -324,19 +287,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableHealthCheck 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否健康。 
      * @return Healthy 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHealthy() {
         return this.Healthy;
@@ -344,19 +303,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Healthy 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthy(Boolean Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例是否隔离。 
      * @return Isolate 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsolate() {
         return this.Isolate;
@@ -364,19 +319,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Isolate 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolate(Boolean Isolate) {
         this.Isolate = Isolate;
     }
 
     /**
-     * Get 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例创建时间。 
      * @return CreateTime 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -384,19 +335,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例修改时间。 
      * @return ModifyTime 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -404,19 +351,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据数组。 
      * @return Metadatas 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
@@ -424,19 +367,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadatas 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报心跳间隔。 
      * @return Ttl 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTtl() {
         return this.Ttl;
@@ -444,19 +383,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ttl 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
     }
 
     /**
-     * Get 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息。 
      * @return InstanceVersion 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
@@ -464,19 +399,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceVersion 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 状态信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态信息 
      * @return HealthStatus 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthStatus() {
         return this.HealthStatus;
@@ -484,19 +415,15 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthStatus 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthStatus(String HealthStatus) {
         this.HealthStatus = HealthStatus;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Comment 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -504,9 +431,7 @@ public class GovernanceInstance extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

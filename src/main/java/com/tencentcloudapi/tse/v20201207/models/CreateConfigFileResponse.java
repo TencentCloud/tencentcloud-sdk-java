@@ -32,7 +32,6 @@ public class CreateConfigFileResponse extends AbstractModel {
 
     /**
     * 创建的配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigFileId")
     @Expose
@@ -62,10 +61,8 @@ public class CreateConfigFileResponse extends AbstractModel {
     }
 
     /**
-     * Get 创建的配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的配置文件Id 
      * @return ConfigFileId 创建的配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigFileId() {
         return this.ConfigFileId;
@@ -73,9 +70,7 @@ public class CreateConfigFileResponse extends AbstractModel {
 
     /**
      * Set 创建的配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigFileId 创建的配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigFileId(String ConfigFileId) {
         this.ConfigFileId = ConfigFileId;

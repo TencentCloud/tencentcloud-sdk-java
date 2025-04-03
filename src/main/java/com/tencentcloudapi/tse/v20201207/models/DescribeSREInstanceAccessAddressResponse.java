@@ -46,7 +46,6 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
     * 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleInternetAddress")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
     * 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleIntranetAddress")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
     * 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetBandWidth")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
     * 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleInternetBandWidth")
     @Expose
@@ -86,7 +82,6 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
     * InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBMultiRegion")
     @Expose
@@ -148,10 +143,8 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
     }
 
     /**
-     * Get 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控制台公网访问地址 
      * @return ConsoleInternetAddress 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsoleInternetAddress() {
         return this.ConsoleInternetAddress;
@@ -159,19 +152,15 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
      * Set 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleInternetAddress 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleInternetAddress(String ConsoleInternetAddress) {
         this.ConsoleInternetAddress = ConsoleInternetAddress;
     }
 
     /**
-     * Get 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控制台内网访问地址 
      * @return ConsoleIntranetAddress 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsoleIntranetAddress() {
         return this.ConsoleIntranetAddress;
@@ -179,19 +168,15 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
      * Set 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleIntranetAddress 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleIntranetAddress(String ConsoleIntranetAddress) {
         this.ConsoleIntranetAddress = ConsoleIntranetAddress;
     }
 
     /**
-     * Get 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端公网带宽 
      * @return InternetBandWidth 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetBandWidth() {
         return this.InternetBandWidth;
@@ -199,19 +184,15 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
      * Set 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetBandWidth 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetBandWidth(Long InternetBandWidth) {
         this.InternetBandWidth = InternetBandWidth;
     }
 
     /**
-     * Get 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控制台公网带宽 
      * @return ConsoleInternetBandWidth 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsoleInternetBandWidth() {
         return this.ConsoleInternetBandWidth;
@@ -219,9 +200,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
      * Set 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleInternetBandWidth 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleInternetBandWidth(Long ConsoleInternetBandWidth) {
         this.ConsoleInternetBandWidth = ConsoleInternetBandWidth;
@@ -248,10 +227,8 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
     }
 
     /**
-     * Get InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get InternetAddress 的公网 CLB 多可用区信息 
      * @return CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CLBMultiRegion getCLBMultiRegion() {
         return this.CLBMultiRegion;
@@ -259,9 +236,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel {
 
     /**
      * Set InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBMultiRegion(CLBMultiRegion CLBMultiRegion) {
         this.CLBMultiRegion = CLBMultiRegion;

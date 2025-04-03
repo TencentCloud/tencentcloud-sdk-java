@@ -25,17 +25,14 @@ public class PolarisLimiterAddress extends AbstractModel {
 
     /**
     * VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetAddress")
     @Expose
     private String IntranetAddress;
 
     /**
-     * Get VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC接入IP列表 
      * @return IntranetAddress VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntranetAddress() {
         return this.IntranetAddress;
@@ -43,9 +40,7 @@ public class PolarisLimiterAddress extends AbstractModel {
 
     /**
      * Set VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetAddress VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetAddress(String IntranetAddress) {
         this.IntranetAddress = IntranetAddress;

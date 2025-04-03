@@ -25,7 +25,6 @@ public class StorageOption extends AbstractModel {
 
     /**
     * 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class StorageOption extends AbstractModel {
 
     /**
     * 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,17 +39,14 @@ public class StorageOption extends AbstractModel {
 
     /**
     * 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
 
     /**
-     * Get 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储对象，分为snap和txn两种 
      * @return Name 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class StorageOption extends AbstractModel {
 
     /**
      * Set 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘 
      * @return Type 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -79,19 +70,15 @@ public class StorageOption extends AbstractModel {
 
     /**
      * Set 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储容量，[50, 3200]的范围 
      * @return Capacity 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacity() {
         return this.Capacity;
@@ -99,9 +86,7 @@ public class StorageOption extends AbstractModel {
 
     /**
      * Set 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Capacity 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;

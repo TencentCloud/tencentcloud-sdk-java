@@ -39,7 +39,6 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetAddress")
     @Expose
@@ -47,7 +46,6 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LbSubnetId")
     @Expose
@@ -86,10 +84,8 @@ public class VpcInfo extends AbstractModel {
     }
 
     /**
-     * Get 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网访问地址 
      * @return IntranetAddress 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntranetAddress() {
         return this.IntranetAddress;
@@ -97,19 +93,15 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetAddress 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetAddress(String IntranetAddress) {
         this.IntranetAddress = IntranetAddress;
     }
 
     /**
-     * Get 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡均衡接入点子网ID 
      * @return LbSubnetId 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLbSubnetId() {
         return this.LbSubnetId;
@@ -117,9 +109,7 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LbSubnetId 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLbSubnetId(String LbSubnetId) {
         this.LbSubnetId = LbSubnetId;

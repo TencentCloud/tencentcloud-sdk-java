@@ -29,7 +29,6 @@ public class ZookeeperRegionInfo extends AbstractModel {
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
     @Expose
@@ -37,7 +36,6 @@ public class ZookeeperRegionInfo extends AbstractModel {
 
     /**
     * 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainRegion")
     @Expose
@@ -45,7 +43,6 @@ public class ZookeeperRegionInfo extends AbstractModel {
 
     /**
     * 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherRegions")
     @Expose
@@ -56,14 +53,12 @@ public class ZookeeperRegionInfo extends AbstractModel {
 
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
-- MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。 
+- MasterSlave: 两地域，主备地域场景 
      * @return DeployMode 部署架构信息
 
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployMode() {
         return this.DeployMode;
@@ -75,23 +70,19 @@ public class ZookeeperRegionInfo extends AbstractModel {
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployMode 部署架构信息
 
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主地域的额外信息 
      * @return MainRegion 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZookeeperRegionMyIdInfo getMainRegion() {
         return this.MainRegion;
@@ -99,19 +90,15 @@ public class ZookeeperRegionInfo extends AbstractModel {
 
     /**
      * Set 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainRegion 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainRegion(ZookeeperRegionMyIdInfo MainRegion) {
         this.MainRegion = MainRegion;
     }
 
     /**
-     * Get 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他地域的额外信息 
      * @return OtherRegions 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZookeeperRegionMyIdInfo [] getOtherRegions() {
         return this.OtherRegions;
@@ -119,9 +106,7 @@ public class ZookeeperRegionInfo extends AbstractModel {
 
     /**
      * Set 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherRegions 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherRegions(ZookeeperRegionMyIdInfo [] OtherRegions) {
         this.OtherRegions = OtherRegions;

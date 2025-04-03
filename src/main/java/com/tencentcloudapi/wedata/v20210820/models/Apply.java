@@ -158,6 +158,13 @@ public class Apply extends AbstractModel {
     private String ApplyId;
 
     /**
+    * 扩展字段
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private String Metadata;
+
+    /**
      * Get 申请人id 
      * @return ApplicantId 申请人id
      */
@@ -477,6 +484,22 @@ public class Apply extends AbstractModel {
         this.ApplyId = ApplyId;
     }
 
+    /**
+     * Get 扩展字段 
+     * @return Metadata 扩展字段
+     */
+    public String getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 扩展字段
+     * @param Metadata 扩展字段
+     */
+    public void setMetadata(String Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public Apply() {
     }
 
@@ -539,6 +562,9 @@ public class Apply extends AbstractModel {
         if (source.ApplyId != null) {
             this.ApplyId = new String(source.ApplyId);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
     }
 
 
@@ -564,6 +590,7 @@ public class Apply extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
         this.setParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
         this.setParamSimple(map, prefix + "ApplyId", this.ApplyId);
+        this.setParamSimple(map, prefix + "Metadata", this.Metadata);
 
     }
 }

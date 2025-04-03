@@ -25,7 +25,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -57,7 +53,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -65,7 +60,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 创建者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateBy")
     @Expose
@@ -73,7 +67,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -81,7 +74,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 修改者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyBy")
     @Expose
@@ -89,7 +81,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 文件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileCount")
     @Expose
@@ -97,7 +88,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserIds")
     @Expose
@@ -105,7 +95,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupIds")
     @Expose
@@ -113,7 +102,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveUserIds")
     @Expose
@@ -121,7 +109,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveGroupIds")
     @Expose
@@ -129,7 +116,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -137,7 +123,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 归属者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
     @Expose
@@ -145,7 +130,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 部门
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -153,7 +137,6 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 业务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -161,17 +144,14 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
     * 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigFileGroupTags")
     @Expose
     private ConfigFileGroupTag [] ConfigFileGroupTags;
 
     /**
-     * Get 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件组id 
      * @return Id 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -179,19 +159,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件组名称 
      * @return Name 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -199,19 +175,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -219,19 +191,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Comment 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -239,19 +207,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -259,19 +223,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 创建者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者 
      * @return CreateBy 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateBy() {
         return this.CreateBy;
@@ -279,19 +239,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateBy 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -299,19 +255,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 修改者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改者 
      * @return ModifyBy 修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyBy() {
         return this.ModifyBy;
@@ -319,19 +271,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyBy 修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;
     }
 
     /**
-     * Get 文件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件数 
      * @return FileCount 文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileCount() {
         return this.FileCount;
@@ -339,19 +287,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileCount 文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileCount(Long FileCount) {
         this.FileCount = FileCount;
     }
 
     /**
-     * Get 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联用户，link_users 
      * @return UserIds 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -359,19 +303,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserIds 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组id，link_groups 
      * @return GroupIds 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
@@ -379,19 +319,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupIds 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get remove_link_users 
      * @return RemoveUserIds remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
@@ -399,19 +335,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveUserIds remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get remove_link_groups 
      * @return RemoveGroupIds remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
@@ -419,19 +351,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveGroupIds remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可编辑 
      * @return Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -439,19 +367,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 归属者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归属者 
      * @return Owner 归属者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
         return this.Owner;
@@ -459,19 +383,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 归属者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Owner 归属者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 部门
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门 
      * @return Department 部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartment() {
         return this.Department;
@@ -479,19 +399,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(String Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 业务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务 
      * @return Business 业务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusiness() {
         return this.Business;
@@ -499,19 +415,15 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 业务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 业务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件组标签 
      * @return ConfigFileGroupTags 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigFileGroupTag [] getConfigFileGroupTags() {
         return this.ConfigFileGroupTags;
@@ -519,9 +431,7 @@ public class ConfigFileGroup extends AbstractModel {
 
     /**
      * Set 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigFileGroupTags 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigFileGroupTags(ConfigFileGroupTag [] ConfigFileGroupTags) {
         this.ConfigFileGroupTags = ConfigFileGroupTags;

@@ -25,7 +25,6 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
     * 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBMultiZoneFlag")
     @Expose
@@ -33,7 +32,6 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
     * 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBMasterZone")
     @Expose
@@ -41,17 +39,14 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
     * 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLBSlaveZone")
     @Expose
     private String CLBSlaveZone;
 
     /**
-     * Get 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用多可用区 
      * @return CLBMultiZoneFlag 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCLBMultiZoneFlag() {
         return this.CLBMultiZoneFlag;
@@ -59,19 +54,15 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
      * Set 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBMultiZoneFlag 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBMultiZoneFlag(Boolean CLBMultiZoneFlag) {
         this.CLBMultiZoneFlag = CLBMultiZoneFlag;
     }
 
     /**
-     * Get 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主可用区信息 
      * @return CLBMasterZone 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLBMasterZone() {
         return this.CLBMasterZone;
@@ -79,19 +70,15 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
      * Set 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBMasterZone 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBMasterZone(String CLBMasterZone) {
         this.CLBMasterZone = CLBMasterZone;
     }
 
     /**
-     * Get 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区信息 
      * @return CLBSlaveZone 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLBSlaveZone() {
         return this.CLBSlaveZone;
@@ -99,9 +86,7 @@ public class CLBMultiRegion extends AbstractModel {
 
     /**
      * Set 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBSlaveZone 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLBSlaveZone(String CLBSlaveZone) {
         this.CLBSlaveZone = CLBSlaveZone;

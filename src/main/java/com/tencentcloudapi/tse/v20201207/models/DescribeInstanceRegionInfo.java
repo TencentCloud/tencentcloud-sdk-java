@@ -25,7 +25,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 引擎部署地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineRegion")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 引擎在该地域的副本数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Replica")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 引擎在该地域的规格id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecId")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetVpcInfos")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 控制台内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleIntranetVpcInfos")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 是否开公网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableClientInternet")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 限流客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimiterIntranetVpcInfos")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 是否为主地域，仅在服务治理中心多地域有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainRegion")
     @Expose
@@ -89,17 +81,14 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
     * 该地域所在的EKS集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EKSClusterID")
     @Expose
     private String EKSClusterID;
 
     /**
-     * Get 引擎部署地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎部署地域信息 
      * @return EngineRegion 引擎部署地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineRegion() {
         return this.EngineRegion;
@@ -107,19 +96,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 引擎部署地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineRegion 引擎部署地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get 引擎在该地域的副本数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎在该地域的副本数 
      * @return Replica 引擎在该地域的副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplica() {
         return this.Replica;
@@ -127,19 +112,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 引擎在该地域的副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Replica 引擎在该地域的副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplica(Long Replica) {
         this.Replica = Replica;
     }
 
     /**
-     * Get 引擎在该地域的规格id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎在该地域的规格id 
      * @return SpecId 引擎在该地域的规格id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecId() {
         return this.SpecId;
@@ -147,19 +128,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 引擎在该地域的规格id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecId 引擎在该地域的规格id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecId(String SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * Get 客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端内网的网络信息 
      * @return IntranetVpcInfos 客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getIntranetVpcInfos() {
         return this.IntranetVpcInfos;
@@ -167,19 +144,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetVpcInfos 客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetVpcInfos(VpcInfo [] IntranetVpcInfos) {
         this.IntranetVpcInfos = IntranetVpcInfos;
     }
 
     /**
-     * Get 控制台内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控制台内网的网络信息 
      * @return ConsoleIntranetVpcInfos 控制台内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getConsoleIntranetVpcInfos() {
         return this.ConsoleIntranetVpcInfos;
@@ -187,19 +160,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 控制台内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleIntranetVpcInfos 控制台内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleIntranetVpcInfos(VpcInfo [] ConsoleIntranetVpcInfos) {
         this.ConsoleIntranetVpcInfos = ConsoleIntranetVpcInfos;
     }
 
     /**
-     * Get 是否开公网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开公网 
      * @return EnableClientInternet 是否开公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableClientInternet() {
         return this.EnableClientInternet;
@@ -207,19 +176,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 是否开公网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableClientInternet 是否开公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableClientInternet(Boolean EnableClientInternet) {
         this.EnableClientInternet = EnableClientInternet;
     }
 
     /**
-     * Get 限流客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限流客户端内网的网络信息 
      * @return LimiterIntranetVpcInfos 限流客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getLimiterIntranetVpcInfos() {
         return this.LimiterIntranetVpcInfos;
@@ -227,19 +192,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 限流客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimiterIntranetVpcInfos 限流客户端内网的网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimiterIntranetVpcInfos(VpcInfo [] LimiterIntranetVpcInfos) {
         this.LimiterIntranetVpcInfos = LimiterIntranetVpcInfos;
     }
 
     /**
-     * Get 是否为主地域，仅在服务治理中心多地域有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为主地域，仅在服务治理中心多地域有效 
      * @return MainRegion 是否为主地域，仅在服务治理中心多地域有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMainRegion() {
         return this.MainRegion;
@@ -247,19 +208,15 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 是否为主地域，仅在服务治理中心多地域有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainRegion 是否为主地域，仅在服务治理中心多地域有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainRegion(Boolean MainRegion) {
         this.MainRegion = MainRegion;
     }
 
     /**
-     * Get 该地域所在的EKS集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该地域所在的EKS集群 
      * @return EKSClusterID 该地域所在的EKS集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEKSClusterID() {
         return this.EKSClusterID;
@@ -267,9 +224,7 @@ public class DescribeInstanceRegionInfo extends AbstractModel {
 
     /**
      * Set 该地域所在的EKS集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EKSClusterID 该地域所在的EKS集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEKSClusterID(String EKSClusterID) {
         this.EKSClusterID = EKSClusterID;

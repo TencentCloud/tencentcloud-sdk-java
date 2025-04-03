@@ -25,7 +25,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -41,7 +39,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -49,7 +46,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -57,7 +53,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -65,7 +60,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -73,7 +67,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Revision")
     @Expose
@@ -81,7 +74,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -89,7 +81,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -97,7 +88,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -105,17 +95,14 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interfaces")
     @Expose
     private GovernanceInterfaceDescription [] Interfaces;
 
     /**
-     * Get 契约名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约名称 
      * @return Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -123,19 +110,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属服务命名空间 
      * @return Namespace 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -143,19 +126,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -163,19 +142,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 契约ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约ID 
      * @return ID 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -183,19 +158,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属服务名称 
      * @return Service 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getService() {
         return this.Service;
@@ -203,19 +174,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -223,19 +190,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 信息摘要 
      * @return Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRevision() {
         return this.Revision;
@@ -243,19 +206,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRevision(String Revision) {
         this.Revision = Revision;
     }
 
     /**
-     * Get 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 额外内容描述 
      * @return Content 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -263,19 +222,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -283,19 +238,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -303,19 +254,15 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约接口列表 
      * @return Interfaces 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GovernanceInterfaceDescription [] getInterfaces() {
         return this.Interfaces;
@@ -323,9 +270,7 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interfaces 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterfaces(GovernanceInterfaceDescription [] Interfaces) {
         this.Interfaces = Interfaces;

@@ -25,7 +25,6 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
     * 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Group")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
     * 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
     * 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseVersion")
     @Expose
@@ -57,17 +53,14 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
     * 配置发布ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -75,19 +68,15 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置分组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置分组 
      * @return Group 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroup() {
         return this.Group;
@@ -95,19 +84,15 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
      * Set 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Group 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名称 
      * @return FileName 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -115,19 +100,15 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
      * Set 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 发布版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布版本 
      * @return ReleaseVersion 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseVersion() {
         return this.ReleaseVersion;
@@ -135,19 +116,15 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
      * Set 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseVersion 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseVersion(String ReleaseVersion) {
         this.ReleaseVersion = ReleaseVersion;
     }
 
     /**
-     * Get 配置发布ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布ID 
      * @return Id 配置发布ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -155,9 +132,7 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
 
     /**
      * Set 配置发布ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置发布ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;

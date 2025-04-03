@@ -81,7 +81,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -89,7 +88,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 是否开启持久化存储
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableStorage")
     @Expose
@@ -97,7 +95,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 数据存储方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -105,7 +102,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 云硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageCapacity")
     @Expose
@@ -113,7 +109,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paymode")
     @Expose
@@ -121,7 +116,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * EKS集群的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EKSClusterID")
     @Expose
@@ -129,7 +123,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -137,7 +130,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 环境配置信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvInfos")
     @Expose
@@ -145,7 +137,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎所在的区域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineRegion")
     @Expose
@@ -153,7 +144,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 注册引擎是否开启公网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableInternet")
     @Expose
@@ -161,7 +151,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 私有网络列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcInfos")
     @Expose
@@ -169,7 +158,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 服务治理相关信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceGovernanceInfos")
     @Expose
@@ -177,7 +165,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -185,7 +172,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎实例是否开启控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableConsoleInternet")
     @Expose
@@ -193,7 +179,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎实例是否开启控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableConsoleIntranet")
     @Expose
@@ -201,7 +186,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎实例是否展示参数配置页面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigInfoVisible")
     @Expose
@@ -209,7 +193,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎实例控制台默认密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleDefaultPwd")
     @Expose
@@ -217,7 +200,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 交易付费类型，0后付费/1预付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeType")
     @Expose
@@ -225,7 +207,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -233,7 +214,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 预付费到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
@@ -241,7 +221,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 隔离开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -249,7 +228,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 实例地域相关的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionInfos")
     @Expose
@@ -257,7 +235,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 所在EKS环境，分为common和yunti
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EKSType")
     @Expose
@@ -265,7 +242,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎的产品版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureVersion")
     @Expose
@@ -273,7 +249,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 引擎实例是否开启客户端内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableClientIntranet")
     @Expose
@@ -281,7 +256,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 存储额外配置选项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageOption")
     @Expose
@@ -289,7 +263,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * Zookeeper的额外环境数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZookeeperRegionInfo")
     @Expose
@@ -297,7 +270,6 @@ public class SREInstance extends AbstractModel {
 
     /**
     * 部署架构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
     @Expose
@@ -432,10 +404,8 @@ public class SREInstance extends AbstractModel {
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetIds 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
@@ -443,19 +413,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIds 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 是否开启持久化存储
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启持久化存储 
      * @return EnableStorage 是否开启持久化存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableStorage() {
         return this.EnableStorage;
@@ -463,19 +429,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 是否开启持久化存储
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableStorage 是否开启持久化存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableStorage(Boolean EnableStorage) {
         this.EnableStorage = EnableStorage;
     }
 
     /**
-     * Get 数据存储方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据存储方式 
      * @return StorageType 数据存储方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
         return this.StorageType;
@@ -483,19 +445,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 数据存储方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 数据存储方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 云硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘容量 
      * @return StorageCapacity 云硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageCapacity() {
         return this.StorageCapacity;
@@ -503,19 +461,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 云硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageCapacity 云硬盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageCapacity(Long StorageCapacity) {
         this.StorageCapacity = StorageCapacity;
     }
 
     /**
-     * Get 计费方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费方式 
      * @return Paymode 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymode() {
         return this.Paymode;
@@ -523,19 +477,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paymode 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymode(String Paymode) {
         this.Paymode = Paymode;
     }
 
     /**
-     * Get EKS集群的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EKS集群的ID 
      * @return EKSClusterID EKS集群的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEKSClusterID() {
         return this.EKSClusterID;
@@ -543,19 +493,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set EKS集群的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EKSClusterID EKS集群的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEKSClusterID(String EKSClusterID) {
         this.EKSClusterID = EKSClusterID;
     }
 
     /**
-     * Get 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群创建时间 
      * @return CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -563,19 +509,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 环境配置信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境配置信息列表 
      * @return EnvInfos 环境配置信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnvInfo [] getEnvInfos() {
         return this.EnvInfos;
@@ -583,19 +525,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 环境配置信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvInfos 环境配置信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvInfos(EnvInfo [] EnvInfos) {
         this.EnvInfos = EnvInfos;
     }
 
     /**
-     * Get 引擎所在的区域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎所在的区域 
      * @return EngineRegion 引擎所在的区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineRegion() {
         return this.EngineRegion;
@@ -603,19 +541,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎所在的区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineRegion 引擎所在的区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get 注册引擎是否开启公网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册引擎是否开启公网 
      * @return EnableInternet 注册引擎是否开启公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
@@ -623,19 +557,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 注册引擎是否开启公网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableInternet 注册引擎是否开启公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;
     }
 
     /**
-     * Get 私有网络列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络列表信息 
      * @return VpcInfos 私有网络列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getVpcInfos() {
         return this.VpcInfos;
@@ -643,19 +573,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 私有网络列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcInfos 私有网络列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcInfos(VpcInfo [] VpcInfos) {
         this.VpcInfos = VpcInfos;
     }
 
     /**
-     * Get 服务治理相关信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务治理相关信息列表 
      * @return ServiceGovernanceInfos 服务治理相关信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceGovernanceInfo [] getServiceGovernanceInfos() {
         return this.ServiceGovernanceInfos;
@@ -663,19 +589,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 服务治理相关信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceGovernanceInfos 服务治理相关信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceGovernanceInfos(ServiceGovernanceInfo [] ServiceGovernanceInfos) {
         this.ServiceGovernanceInfos = ServiceGovernanceInfos;
     }
 
     /**
-     * Get 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的标签信息 
      * @return Tags 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KVPair [] getTags() {
         return this.Tags;
@@ -683,19 +605,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(KVPair [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 引擎实例是否开启控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎实例是否开启控制台公网访问地址 
      * @return EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableConsoleInternet() {
         return this.EnableConsoleInternet;
@@ -703,19 +621,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎实例是否开启控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableConsoleInternet(Boolean EnableConsoleInternet) {
         this.EnableConsoleInternet = EnableConsoleInternet;
     }
 
     /**
-     * Get 引擎实例是否开启控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎实例是否开启控制台内网访问地址 
      * @return EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableConsoleIntranet() {
         return this.EnableConsoleIntranet;
@@ -723,19 +637,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎实例是否开启控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableConsoleIntranet(Boolean EnableConsoleIntranet) {
         this.EnableConsoleIntranet = EnableConsoleIntranet;
     }
 
     /**
-     * Get 引擎实例是否展示参数配置页面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎实例是否展示参数配置页面 
      * @return ConfigInfoVisible 引擎实例是否展示参数配置页面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getConfigInfoVisible() {
         return this.ConfigInfoVisible;
@@ -743,19 +653,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎实例是否展示参数配置页面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigInfoVisible 引擎实例是否展示参数配置页面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigInfoVisible(Boolean ConfigInfoVisible) {
         this.ConfigInfoVisible = ConfigInfoVisible;
     }
 
     /**
-     * Get 引擎实例控制台默认密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎实例控制台默认密码 
      * @return ConsoleDefaultPwd 引擎实例控制台默认密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsoleDefaultPwd() {
         return this.ConsoleDefaultPwd;
@@ -763,19 +669,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎实例控制台默认密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleDefaultPwd 引擎实例控制台默认密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleDefaultPwd(String ConsoleDefaultPwd) {
         this.ConsoleDefaultPwd = ConsoleDefaultPwd;
     }
 
     /**
-     * Get 交易付费类型，0后付费/1预付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易付费类型，0后付费/1预付费 
      * @return TradeType 交易付费类型，0后付费/1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTradeType() {
         return this.TradeType;
@@ -783,19 +685,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 交易付费类型，0后付费/1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeType 交易付费类型，0后付费/1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeType(Long TradeType) {
         this.TradeType = TradeType;
     }
 
     /**
-     * Get 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费 
      * @return AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -803,19 +701,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 预付费到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预付费到期时间 
      * @return CurDeadline 预付费到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -823,19 +717,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 预付费到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 预付费到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 隔离开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离开始时间 
      * @return IsolateTime 隔离开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -843,19 +733,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 隔离开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 实例地域相关的描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例地域相关的描述信息 
      * @return RegionInfos 实例地域相关的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInstanceRegionInfo [] getRegionInfos() {
         return this.RegionInfos;
@@ -863,19 +749,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 实例地域相关的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionInfos 实例地域相关的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionInfos(DescribeInstanceRegionInfo [] RegionInfos) {
         this.RegionInfos = RegionInfos;
     }
 
     /**
-     * Get 所在EKS环境，分为common和yunti
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所在EKS环境，分为common和yunti 
      * @return EKSType 所在EKS环境，分为common和yunti
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEKSType() {
         return this.EKSType;
@@ -883,19 +765,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 所在EKS环境，分为common和yunti
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EKSType 所在EKS环境，分为common和yunti
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEKSType(String EKSType) {
         this.EKSType = EKSType;
     }
 
     /**
-     * Get 引擎的产品版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎的产品版本 
      * @return FeatureVersion 引擎的产品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeatureVersion() {
         return this.FeatureVersion;
@@ -903,19 +781,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎的产品版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureVersion 引擎的产品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureVersion(String FeatureVersion) {
         this.FeatureVersion = FeatureVersion;
     }
 
     /**
-     * Get 引擎实例是否开启客户端内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎实例是否开启客户端内网访问地址 
      * @return EnableClientIntranet 引擎实例是否开启客户端内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableClientIntranet() {
         return this.EnableClientIntranet;
@@ -923,19 +797,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 引擎实例是否开启客户端内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableClientIntranet 引擎实例是否开启客户端内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableClientIntranet(Boolean EnableClientIntranet) {
         this.EnableClientIntranet = EnableClientIntranet;
     }
 
     /**
-     * Get 存储额外配置选项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储额外配置选项 
      * @return StorageOption 存储额外配置选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageOption [] getStorageOption() {
         return this.StorageOption;
@@ -943,19 +813,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 存储额外配置选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageOption 存储额外配置选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageOption(StorageOption [] StorageOption) {
         this.StorageOption = StorageOption;
     }
 
     /**
-     * Get Zookeeper的额外环境数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Zookeeper的额外环境数据信息 
      * @return ZookeeperRegionInfo Zookeeper的额外环境数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZookeeperRegionInfo getZookeeperRegionInfo() {
         return this.ZookeeperRegionInfo;
@@ -963,19 +829,15 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set Zookeeper的额外环境数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZookeeperRegionInfo Zookeeper的额外环境数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZookeeperRegionInfo(ZookeeperRegionInfo ZookeeperRegionInfo) {
         this.ZookeeperRegionInfo = ZookeeperRegionInfo;
     }
 
     /**
-     * Get 部署架构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署架构 
      * @return DeployMode 部署架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployMode() {
         return this.DeployMode;
@@ -983,9 +845,7 @@ public class SREInstance extends AbstractModel {
 
     /**
      * Set 部署架构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployMode 部署架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;

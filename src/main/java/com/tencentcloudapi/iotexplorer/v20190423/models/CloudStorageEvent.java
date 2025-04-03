@@ -53,7 +53,6 @@ public class CloudStorageEvent extends AbstractModel {
 
     /**
     * 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadStatus")
     @Expose
@@ -61,7 +60,6 @@ public class CloudStorageEvent extends AbstractModel {
 
     /**
     * 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -132,10 +130,8 @@ public class CloudStorageEvent extends AbstractModel {
     }
 
     /**
-     * Get 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	 
      * @return UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadStatus() {
         return this.UploadStatus;
@@ -143,19 +139,15 @@ public class CloudStorageEvent extends AbstractModel {
 
     /**
      * Set 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadStatus(String UploadStatus) {
         this.UploadStatus = UploadStatus;
     }
 
     /**
-     * Get 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件自定义数据	 
      * @return Data 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -163,9 +155,7 @@ public class CloudStorageEvent extends AbstractModel {
 
     /**
      * Set 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

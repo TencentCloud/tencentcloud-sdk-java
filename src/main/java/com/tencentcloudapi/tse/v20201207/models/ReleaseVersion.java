@@ -25,7 +25,6 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Active")
     @Expose
@@ -41,7 +39,6 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -49,7 +46,6 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -57,7 +53,6 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Group")
     @Expose
@@ -65,17 +60,14 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
     * 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-     * Get 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布的版本 
      * @return Name 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 是否生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否生效 
      * @return Active 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getActive() {
         return this.Active;
@@ -103,19 +91,15 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Active 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActive(Boolean Active) {
         this.Active = Active;
     }
 
     /**
-     * Get 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布的ID 
      * @return Id 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -123,19 +107,15 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布的命名空间 
      * @return Namespace 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -143,19 +123,15 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布的分组 
      * @return Group 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroup() {
         return this.Group;
@@ -163,19 +139,15 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Group 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置发布的文件名 
      * @return FileName 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -183,9 +155,7 @@ public class ReleaseVersion extends AbstractModel {
 
     /**
      * Set 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

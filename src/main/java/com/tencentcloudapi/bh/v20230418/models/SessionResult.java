@@ -164,6 +164,13 @@ public class SessionResult extends AbstractModel {
     private String AppAssetUrl;
 
     /**
+    * 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+    */
+    @SerializedName("ReplayType")
+    @Expose
+    private Long ReplayType;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -483,6 +490,22 @@ public class SessionResult extends AbstractModel {
         this.AppAssetUrl = AppAssetUrl;
     }
 
+    /**
+     * Get 回放类型 默认0, 1-rfb 2-mp4 3-ssh 
+     * @return ReplayType 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+     */
+    public Long getReplayType() {
+        return this.ReplayType;
+    }
+
+    /**
+     * Set 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+     * @param ReplayType 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+     */
+    public void setReplayType(Long ReplayType) {
+        this.ReplayType = ReplayType;
+    }
+
     public SessionResult() {
     }
 
@@ -551,6 +574,9 @@ public class SessionResult extends AbstractModel {
         if (source.AppAssetUrl != null) {
             this.AppAssetUrl = new String(source.AppAssetUrl);
         }
+        if (source.ReplayType != null) {
+            this.ReplayType = new Long(source.ReplayType);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class SessionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "AppAssetKind", this.AppAssetKind);
         this.setParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
+        this.setParamSimple(map, prefix + "ReplayType", this.ReplayType);
 
     }
 }

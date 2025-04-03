@@ -25,7 +25,6 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
     * 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -33,7 +32,6 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
     * 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
     * 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-     * Get 契约版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约版本 
      * @return Version 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -59,19 +54,15 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
      * Set 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 契约名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约名称 
      * @return Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
      * Set 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 唯一名称 
      * @return Key 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -99,9 +86,7 @@ public class GovernanceServiceContractVersion extends AbstractModel {
 
     /**
      * Set 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;

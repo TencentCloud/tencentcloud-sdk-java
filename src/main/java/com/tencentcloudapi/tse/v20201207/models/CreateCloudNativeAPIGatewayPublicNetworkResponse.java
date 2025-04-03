@@ -25,7 +25,6 @@ public class CreateCloudNativeAPIGatewayPublicNetworkResponse extends AbstractMo
 
     /**
     * 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCloudNativeAPIGatewayPublicNetworkResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 返回结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回结果 
      * @return Result 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreatePublicNetworkResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateCloudNativeAPIGatewayPublicNetworkResponse extends AbstractMo
 
     /**
      * Set 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(CreatePublicNetworkResult Result) {
         this.Result = Result;

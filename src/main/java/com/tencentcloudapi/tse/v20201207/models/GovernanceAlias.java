@@ -53,7 +53,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -61,7 +60,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -69,7 +67,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -77,7 +74,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -85,7 +81,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -156,10 +151,8 @@ public class GovernanceAlias extends AbstractModel {
     }
 
     /**
-     * Get 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务别名的描述信息 
      * @return Comment 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -167,19 +160,15 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务别名创建时间 
      * @return CreateTime 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -187,19 +176,15 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务别名修改时间 
      * @return ModifyTime 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -207,19 +192,15 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务别名ID 
      * @return Id 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -227,19 +208,15 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该服务别名是否可以编辑 
      * @return Editable 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -247,9 +224,7 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;

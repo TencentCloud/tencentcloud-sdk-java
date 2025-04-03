@@ -25,7 +25,6 @@ public class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractMode
 
     /**
     * 创建证书结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 创建证书结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建证书结果 
      * @return Result 创建证书结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateInfo getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractMode
 
     /**
      * Set 创建证书结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 创建证书结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(CertificateInfo Result) {
         this.Result = Result;

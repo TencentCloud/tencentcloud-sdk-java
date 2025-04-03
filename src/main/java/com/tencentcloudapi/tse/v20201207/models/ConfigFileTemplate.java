@@ -25,7 +25,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -57,7 +53,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -65,7 +60,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateBy")
     @Expose
@@ -81,7 +74,6 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -89,17 +81,14 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
     * 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyBy")
     @Expose
     private String ModifyBy;
 
     /**
-     * Get 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板id 
      * @return Id 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -107,19 +96,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板名称 
      * @return Name 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -127,19 +112,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板内容 
      * @return Content 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -147,19 +128,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板格式 
      * @return Format 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -167,19 +144,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板注释 
      * @return Comment 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -187,19 +160,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板创建时间 
      * @return CreateTime 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -207,19 +176,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板创建者 
      * @return CreateBy 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateBy() {
         return this.CreateBy;
@@ -227,19 +192,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateBy 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板修改时间 
      * @return ModifyTime 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -247,19 +208,15 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件模板修改者 
      * @return ModifyBy 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyBy() {
         return this.ModifyBy;
@@ -267,9 +224,7 @@ public class ConfigFileTemplate extends AbstractModel {
 
     /**
      * Set 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyBy 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;

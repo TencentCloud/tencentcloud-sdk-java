@@ -25,7 +25,6 @@ public class DescribeConfigFileResponse extends AbstractModel {
 
     /**
     * 配置文件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigFile")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeConfigFileResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置文件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置文件 
      * @return ConfigFile 配置文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigFile getConfigFile() {
         return this.ConfigFile;
@@ -50,9 +47,7 @@ public class DescribeConfigFileResponse extends AbstractModel {
 
     /**
      * Set 配置文件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigFile 配置文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigFile(ConfigFile ConfigFile) {
         this.ConfigFile = ConfigFile;

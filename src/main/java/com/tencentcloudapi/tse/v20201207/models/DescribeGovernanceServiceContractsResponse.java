@@ -39,7 +39,6 @@ public class DescribeGovernanceServiceContractsResponse extends AbstractModel {
 
     /**
     * 契约定义列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceContracts")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeGovernanceServiceContractsResponse extends AbstractModel {
     }
 
     /**
-     * Get 契约定义列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 契约定义列表 
      * @return ServiceContracts 契约定义列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GovernanceServiceContract [] getServiceContracts() {
         return this.ServiceContracts;
@@ -96,9 +93,7 @@ public class DescribeGovernanceServiceContractsResponse extends AbstractModel {
 
     /**
      * Set 契约定义列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceContracts 契约定义列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceContracts(GovernanceServiceContract [] ServiceContracts) {
         this.ServiceContracts = ServiceContracts;

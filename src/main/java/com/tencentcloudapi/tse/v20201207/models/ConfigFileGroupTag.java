@@ -25,7 +25,6 @@ public class ConfigFileGroupTag extends AbstractModel {
 
     /**
     * key-value 键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class ConfigFileGroupTag extends AbstractModel {
 
     /**
     * key-value 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get key-value 键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key-value 键 
      * @return Key key-value 键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class ConfigFileGroupTag extends AbstractModel {
 
     /**
      * Set key-value 键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key key-value 键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get key-value 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key-value 值 
      * @return Value key-value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class ConfigFileGroupTag extends AbstractModel {
 
     /**
      * Set key-value 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value key-value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
