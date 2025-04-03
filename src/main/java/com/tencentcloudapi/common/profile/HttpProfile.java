@@ -99,6 +99,13 @@ public class HttpProfile {
      */
     private String apigwEndpoint;
 
+    /**
+     * For more fine-grained customization of the http client, use Object-type to decouple from okhttp.
+     * If specified, all other configurations(timeout,proxy,...) will have no effect and users should do their setup
+     * separately.
+     */
+    private Object httpClient;
+
     public HttpProfile() {
         this.reqMethod = HttpProfile.REQ_POST;
         this.endpoint = null;
@@ -264,5 +271,13 @@ public class HttpProfile {
 
     public HostnameVerifier getHostnameVerifier() {
         return hostnameVerifier;
+    }
+
+    public Object getHttpClient() {
+        return httpClient;
+    }
+
+    public void setHttpClient(Object client) {
+        httpClient = client;
     }
 }
