@@ -73,6 +73,13 @@ public class LogInfo extends AbstractModel {
     private String PkgLogId;
 
     /**
+    * 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+    */
+    @SerializedName("HighLights")
+    @Expose
+    private HighLightItem [] HighLights;
+
+    /**
     * 日志内容的Json序列化字符串
     */
     @SerializedName("LogJson")
@@ -213,6 +220,22 @@ public class LogInfo extends AbstractModel {
     }
 
     /**
+     * Get 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	 
+     * @return HighLights 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     */
+    public HighLightItem [] getHighLights() {
+        return this.HighLights;
+    }
+
+    /**
+     * Set 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     * @param HighLights 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     */
+    public void setHighLights(HighLightItem [] HighLights) {
+        this.HighLights = HighLights;
+    }
+
+    /**
      * Get 日志内容的Json序列化字符串 
      * @return LogJson 日志内容的Json序列化字符串
      */
@@ -305,6 +328,12 @@ public class LogInfo extends AbstractModel {
         if (source.PkgLogId != null) {
             this.PkgLogId = new String(source.PkgLogId);
         }
+        if (source.HighLights != null) {
+            this.HighLights = new HighLightItem[source.HighLights.length];
+            for (int i = 0; i < source.HighLights.length; i++) {
+                this.HighLights[i] = new HighLightItem(source.HighLights[i]);
+            }
+        }
         if (source.LogJson != null) {
             this.LogJson = new String(source.LogJson);
         }
@@ -331,6 +360,7 @@ public class LogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
+        this.setParamArrayObj(map, prefix + "HighLights.", this.HighLights);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "RawLog", this.RawLog);

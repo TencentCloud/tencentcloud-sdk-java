@@ -144,6 +144,13 @@ public class SearchLogRequest extends AbstractModel {
     private Boolean UseNewAnalysis;
 
     /**
+    * 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+    */
+    @SerializedName("HighLight")
+    @Expose
+    private Boolean HighLight;
+
+    /**
      * Get 要检索分析的日志的起始时间，**Unix时间戳（毫秒）** 
      * @return From 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
      */
@@ -479,6 +486,22 @@ public class SearchLogRequest extends AbstractModel {
         this.UseNewAnalysis = UseNewAnalysis;
     }
 
+    /**
+     * Get 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索 
+     * @return HighLight 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+     */
+    public Boolean getHighLight() {
+        return this.HighLight;
+    }
+
+    /**
+     * Set 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+     * @param HighLight 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+     */
+    public void setHighLight(Boolean HighLight) {
+        this.HighLight = HighLight;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -526,6 +549,9 @@ public class SearchLogRequest extends AbstractModel {
         if (source.UseNewAnalysis != null) {
             this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
         }
+        if (source.HighLight != null) {
+            this.HighLight = new Boolean(source.HighLight);
+        }
     }
 
 
@@ -545,6 +571,7 @@ public class SearchLogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+        this.setParamSimple(map, prefix + "HighLight", this.HighLight);
 
     }
 }

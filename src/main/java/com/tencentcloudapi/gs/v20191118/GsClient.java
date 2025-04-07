@@ -39,6 +39,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *备份云手机到指定存储
+     * @param req BackUpAndroidInstanceToStorageRequest
+     * @return BackUpAndroidInstanceToStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorage(BackUpAndroidInstanceToStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BackUpAndroidInstanceToStorage", BackUpAndroidInstanceToStorageResponse.class);
+    }
+
+    /**
      *连接安卓实例
      * @param req ConnectAndroidInstanceRequest
      * @return ConnectAndroidInstanceResponse
@@ -348,6 +359,17 @@ public class GsClient extends AbstractClient{
     public RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(RestartAndroidInstancesAppRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartAndroidInstancesApp", RestartAndroidInstancesAppResponse.class);
+    }
+
+    /**
+     *指定存储还原云手机
+     * @param req RestoreAndroidInstanceFromStorageRequest
+     * @return RestoreAndroidInstanceFromStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreAndroidInstanceFromStorageResponse RestoreAndroidInstanceFromStorage(RestoreAndroidInstanceFromStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreAndroidInstanceFromStorage", RestoreAndroidInstanceFromStorageResponse.class);
     }
 
     /**

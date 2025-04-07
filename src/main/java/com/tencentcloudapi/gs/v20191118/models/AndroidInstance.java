@@ -115,6 +115,13 @@ public class AndroidInstance extends AbstractModel {
     private String UserId;
 
     /**
+    * 内网 IP
+    */
+    @SerializedName("PrivateIP")
+    @Expose
+    private String PrivateIP;
+
+    /**
      * Get 实例 ID 
      * @return AndroidInstanceId 实例 ID
      */
@@ -322,6 +329,22 @@ public class AndroidInstance extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 内网 IP 
+     * @return PrivateIP 内网 IP
+     */
+    public String getPrivateIP() {
+        return this.PrivateIP;
+    }
+
+    /**
+     * Set 内网 IP
+     * @param PrivateIP 内网 IP
+     */
+    public void setPrivateIP(String PrivateIP) {
+        this.PrivateIP = PrivateIP;
+    }
+
     public AndroidInstance() {
     }
 
@@ -372,6 +395,9 @@ public class AndroidInstance extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.PrivateIP != null) {
+            this.PrivateIP = new String(source.PrivateIP);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class AndroidInstance extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
 
     }
 }

@@ -105,19 +105,6 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
-     *产品下线
-
-移动网络发起Qos加速过程
-     * @param req CreateQosRequest
-     * @return CreateQosResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateQosResponse CreateQos(CreateQosRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateQos", CreateQosResponse.class);
-    }
-
-    /**
      *删除设备信息
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -148,32 +135,6 @@ public class MnaClient extends AbstractClient{
     public DeleteL3ConnResponse DeleteL3Conn(DeleteL3ConnRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteL3Conn", DeleteL3ConnResponse.class);
-    }
-
-    /**
-     *产品下线
-
-移动网络停止Qos加速过程
-     * @param req DeleteQosRequest
-     * @return DeleteQosResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteQosResponse DeleteQos(DeleteQosRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteQos", DeleteQosResponse.class);
-    }
-
-    /**
-     *产品下线
-
-获取Qos加速状态
-     * @param req DescribeQosRequest
-     * @return DescribeQosResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeQosResponse DescribeQos(DescribeQosRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeQos", DescribeQosResponse.class);
     }
 
     /**

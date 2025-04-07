@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HighLightItem extends AbstractModel {
 
     /**
-    * 高亮的日志Key
+    * 高亮的日志字段名称
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 高亮的语法
+    * 高亮的关键词
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 高亮的日志Key 
-     * @return Key 高亮的日志Key
+     * Get 高亮的日志字段名称 
+     * @return Key 高亮的日志字段名称
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 高亮的日志Key
-     * @param Key 高亮的日志Key
+     * Set 高亮的日志字段名称
+     * @param Key 高亮的日志字段名称
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 高亮的语法 
-     * @return Values 高亮的语法
+     * Get 高亮的关键词 
+     * @return Values 高亮的关键词
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 高亮的语法
-     * @param Values 高亮的语法
+     * Set 高亮的关键词
+     * @param Values 高亮的关键词
      */
     public void setValues(String [] Values) {
         this.Values = Values;

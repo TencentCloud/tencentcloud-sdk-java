@@ -41,7 +41,7 @@ public class LkeapClient extends AbstractClient{
     /**
      *### 接口功能
 
-调用接口，发起一次对话请求。单账号限制接口并发上限为5。
+调用接口，发起一次对话请求。单账号限制接口并发上限为100。
 如需使用OpenAI兼容接口， 请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)
 
 #### 在线体验
@@ -265,6 +265,17 @@ except TencentCloudSDKException as err:
     public DescribeDocResponse DescribeDoc(DescribeDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDoc", DescribeDocResponse.class);
+    }
+
+    /**
+     *获取字符使用量统计
+     * @param req GetCharacterUsageRequest
+     * @return GetCharacterUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCharacterUsageResponse GetCharacterUsage(GetCharacterUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCharacterUsage", GetCharacterUsageResponse.class);
     }
 
     /**
