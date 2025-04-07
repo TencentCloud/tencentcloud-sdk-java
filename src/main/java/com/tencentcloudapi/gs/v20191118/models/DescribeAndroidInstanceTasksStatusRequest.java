@@ -24,26 +24,95 @@ import java.util.HashMap;
 public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
 
     /**
-    * 任务ID列表
+    * 任务 ID 列表
     */
     @SerializedName("TaskIds")
     @Expose
     private String [] TaskIds;
 
     /**
-     * Get 任务ID列表 
-     * @return TaskIds 任务ID列表
+    * 条件过滤器
+    */
+    @SerializedName("Filter")
+    @Expose
+    private Filter [] Filter;
+
+    /**
+    * 偏移量，默认为 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 限制量，默认为20，最大值为100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get 任务 ID 列表 
+     * @return TaskIds 任务 ID 列表
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 任务ID列表
-     * @param TaskIds 任务ID列表
+     * Set 任务 ID 列表
+     * @param TaskIds 任务 ID 列表
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;
+    }
+
+    /**
+     * Get 条件过滤器 
+     * @return Filter 条件过滤器
+     */
+    public Filter [] getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set 条件过滤器
+     * @param Filter 条件过滤器
+     */
+    public void setFilter(Filter [] Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get 偏移量，默认为 0 
+     * @return Offset 偏移量，默认为 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为 0
+     * @param Offset 偏移量，默认为 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 限制量，默认为20，最大值为100 
+     * @return Limit 限制量，默认为20，最大值为100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 限制量，默认为20，最大值为100
+     * @param Limit 限制量，默认为20，最大值为100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     public DescribeAndroidInstanceTasksStatusRequest() {
@@ -60,6 +129,18 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
                 this.TaskIds[i] = new String(source.TaskIds[i]);
             }
         }
+        if (source.Filter != null) {
+            this.Filter = new Filter[source.Filter.length];
+            for (int i = 0; i < source.Filter.length; i++) {
+                this.Filter[i] = new Filter(source.Filter[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -68,6 +149,9 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+        this.setParamArrayObj(map, prefix + "Filter.", this.Filter);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

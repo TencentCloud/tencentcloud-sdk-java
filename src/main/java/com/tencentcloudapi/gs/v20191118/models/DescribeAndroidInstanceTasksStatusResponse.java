@@ -31,6 +31,13 @@ public class DescribeAndroidInstanceTasksStatusResponse extends AbstractModel {
     private AndroidInstanceTaskStatus [] TaskStatusSet;
 
     /**
+    * 任务总数量
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeAndroidInstanceTasksStatusResponse extends AbstractModel {
      */
     public void setTaskStatusSet(AndroidInstanceTaskStatus [] TaskStatusSet) {
         this.TaskStatusSet = TaskStatusSet;
+    }
+
+    /**
+     * Get 任务总数量 
+     * @return Total 任务总数量
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 任务总数量
+     * @param Total 任务总数量
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeAndroidInstanceTasksStatusResponse extends AbstractModel {
                 this.TaskStatusSet[i] = new AndroidInstanceTaskStatus(source.TaskStatusSet[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeAndroidInstanceTasksStatusResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskStatusSet.", this.TaskStatusSet);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

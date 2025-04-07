@@ -73,7 +73,10 @@ public class ClusterInfoItem extends AbstractModel {
     private String Region;
 
     /**
-    * 防护状态: 已防护: Defended 未防护: UnDefended
+    * 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
     */
     @SerializedName("DefenderStatus")
     @Expose
@@ -362,16 +365,28 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 防护状态: 已防护: Defended 未防护: UnDefended 
-     * @return DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
+     * Get 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened 
+     * @return DefenderStatus 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      */
     public String getDefenderStatus() {
         return this.DefenderStatus;
     }
 
     /**
-     * Set 防护状态: 已防护: Defended 未防护: UnDefended
-     * @param DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
+     * Set 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
+     * @param DefenderStatus 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      */
     public void setDefenderStatus(String DefenderStatus) {
         this.DefenderStatus = DefenderStatus;

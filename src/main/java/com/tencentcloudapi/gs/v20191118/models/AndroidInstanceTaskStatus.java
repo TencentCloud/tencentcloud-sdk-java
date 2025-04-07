@@ -52,6 +52,27 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
     private String TaskResult;
 
     /**
+    * 任务类型
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
+    * 任务创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 任务完成时间
+    */
+    @SerializedName("CompleteTime")
+    @Expose
+    private String CompleteTime;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -115,6 +136,54 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
         this.TaskResult = TaskResult;
     }
 
+    /**
+     * Get 任务类型 
+     * @return TaskType 任务类型
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型
+     * @param TaskType 任务类型
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 任务创建时间 
+     * @return CreateTime 任务创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 任务创建时间
+     * @param CreateTime 任务创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 任务完成时间 
+     * @return CompleteTime 任务完成时间
+     */
+    public String getCompleteTime() {
+        return this.CompleteTime;
+    }
+
+    /**
+     * Set 任务完成时间
+     * @param CompleteTime 任务完成时间
+     */
+    public void setCompleteTime(String CompleteTime) {
+        this.CompleteTime = CompleteTime;
+    }
+
     public AndroidInstanceTaskStatus() {
     }
 
@@ -135,6 +204,15 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
         if (source.TaskResult != null) {
             this.TaskResult = new String(source.TaskResult);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.CompleteTime != null) {
+            this.CompleteTime = new String(source.CompleteTime);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class AndroidInstanceTaskStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
         this.setParamSimple(map, prefix + "TaskResult", this.TaskResult);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CompleteTime", this.CompleteTime);
 
     }
 }

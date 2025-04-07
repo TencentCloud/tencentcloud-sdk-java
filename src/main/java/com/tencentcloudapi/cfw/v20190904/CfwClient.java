@@ -461,6 +461,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *cfw实例运行状态查询
+     * @param req DescribeCfwInsStatusRequest
+     * @return DescribeCfwInsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwInsStatusResponse DescribeCfwInsStatus(DescribeCfwInsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwInsStatus", DescribeCfwInsStatusResponse.class);
+    }
+
+    /**
      *获取入侵防御按钮列表
      * @param req DescribeDefenseSwitchRequest
      * @return DescribeDefenseSwitchResponse

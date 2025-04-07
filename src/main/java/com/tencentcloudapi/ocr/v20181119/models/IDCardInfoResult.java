@@ -134,6 +134,13 @@ public class IDCardInfoResult extends AbstractModel {
     private String PortraitUrl;
 
     /**
+    * 整型错误码
+    */
+    @SerializedName("IntErrorCode")
+    @Expose
+    private Long IntErrorCode;
+
+    /**
      * Get 警告代码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WarnCodes 警告代码
@@ -405,6 +412,22 @@ public class IDCardInfoResult extends AbstractModel {
         this.PortraitUrl = PortraitUrl;
     }
 
+    /**
+     * Get 整型错误码 
+     * @return IntErrorCode 整型错误码
+     */
+    public Long getIntErrorCode() {
+        return this.IntErrorCode;
+    }
+
+    /**
+     * Set 整型错误码
+     * @param IntErrorCode 整型错误码
+     */
+    public void setIntErrorCode(Long IntErrorCode) {
+        this.IntErrorCode = IntErrorCode;
+    }
+
     public IDCardInfoResult() {
     }
 
@@ -458,6 +481,9 @@ public class IDCardInfoResult extends AbstractModel {
         if (source.PortraitUrl != null) {
             this.PortraitUrl = new String(source.PortraitUrl);
         }
+        if (source.IntErrorCode != null) {
+            this.IntErrorCode = new Long(source.IntErrorCode);
+        }
     }
 
 
@@ -479,6 +505,7 @@ public class IDCardInfoResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "PortraitUrl", this.PortraitUrl);
+        this.setParamSimple(map, prefix + "IntErrorCode", this.IntErrorCode);
 
     }
 }
