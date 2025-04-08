@@ -36,29 +36,28 @@ public class ChatCompletions {
             // hunyuan ChatCompletions 同时支持 stream 和非 stream 的情况
             req.setStream(true);
 
-            ChatCompletionsResponse resp = client.ChatCompletions(req);
-
             if (req.getStream()) {
-                // stream 示例
-                Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-                for (SSEResponseModel.SSE e : resp) {
-                    ChatCompletionsResponse eventModel = gson.fromJson(e.Data, ChatCompletionsResponse.class);
-                    Choice[] choices = eventModel.getChoices();
-                    if (choices.length > 0) {
-                        System.out.println(choices[0].getDelta().getContent());
-                    }
+                try (ChatCompletionsResponse resp = client.ChatCompletions(req)) {
+                    // stream 示例
+                    Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+                    for (SSEResponseModel.SSE e : resp) {
+                        ChatCompletionsResponse eventModel = gson.fromJson(e.Data, ChatCompletionsResponse.class);
+                        Choice[] choices = eventModel.getChoices();
+                        if (choices.length > 0) {
+                            System.out.println(choices[0].getDelta().getContent());
+                        }
 
-                    // 如果希望在任意时刻中止事件流, 使用 resp.close() + break
-                    boolean iWantToCancelNow = false;
-                    if (iWantToCancelNow) {
-                        resp.close();
-                        break;
+                        // 如果希望在任意时刻中止事件流, 使用 break 即可
+                        boolean iWantToCancelNow = false;
+                        if (iWantToCancelNow) {
+                            break;
+                        }
                     }
                 }
             } else {
                 // 非 stream 示例
                 // 通过 Stream=false 参数来指定非 stream 协议, 一次性拿到结果
-                System.out.println(resp.getChoices()[0].getMessage().getContent());
+                System.out.println(client.ChatCompletions(req).getChoices()[0].getMessage().getContent());
             }
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();
