@@ -66,7 +66,7 @@ FailedOperation.UnKnowError：表示识别失败；
     private Polygon Polygon;
 
     /**
-    * 识别出的图片在混贴票据图片中的旋转角度。
+    * 识别出切图后各图片的旋转角度。
     */
     @SerializedName("Angle")
     @Expose
@@ -254,16 +254,16 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 识别出的图片在混贴票据图片中的旋转角度。 
-     * @return Angle 识别出的图片在混贴票据图片中的旋转角度。
+     * Get 识别出切图后各图片的旋转角度。 
+     * @return Angle 识别出切图后各图片的旋转角度。
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 识别出的图片在混贴票据图片中的旋转角度。
-     * @param Angle 识别出的图片在混贴票据图片中的旋转角度。
+     * Set 识别出切图后各图片的旋转角度。
+     * @param Angle 识别出切图后各图片的旋转角度。
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;

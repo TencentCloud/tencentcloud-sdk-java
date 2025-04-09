@@ -25,7 +25,6 @@ public class DescribePublicConfigReleasesResponse extends AbstractModel {
 
     /**
     * 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePublicConfigReleasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公共配置发布信息 
      * @return Result 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageConfigRelease getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribePublicConfigReleasesResponse extends AbstractModel {
 
     /**
      * Set 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageConfigRelease Result) {
         this.Result = Result;

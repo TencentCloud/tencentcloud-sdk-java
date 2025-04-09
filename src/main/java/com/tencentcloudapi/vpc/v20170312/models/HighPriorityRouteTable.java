@@ -25,7 +25,6 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * 高优路由表唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighPriorityRouteTableId")
     @Expose
@@ -33,7 +32,6 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -41,7 +39,6 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * 高优路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * 高优路由表关联的子网列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetSet")
     @Expose
@@ -57,7 +53,6 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * 高优路由表条目信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighPriorityRouteSet")
     @Expose
@@ -65,17 +60,14 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 高优路由表唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表唯一 ID。 
      * @return HighPriorityRouteTableId 高优路由表唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHighPriorityRouteTableId() {
         return this.HighPriorityRouteTableId;
@@ -83,19 +75,15 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set 高优路由表唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighPriorityRouteTableId 高优路由表唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighPriorityRouteTableId(String HighPriorityRouteTableId) {
         this.HighPriorityRouteTableId = HighPriorityRouteTableId;
     }
 
     /**
-     * Get VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -103,19 +91,15 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 高优路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表名称。 
      * @return Name 高优路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -123,19 +107,15 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set 高优路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 高优路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 高优路由表关联的子网列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表关联的子网列表。 
      * @return SubnetSet 高优路由表关联的子网列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubnetSet() {
         return this.SubnetSet;
@@ -143,19 +123,15 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set 高优路由表关联的子网列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetSet 高优路由表关联的子网列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetSet(String [] SubnetSet) {
         this.SubnetSet = SubnetSet;
     }
 
     /**
-     * Get 高优路由表条目信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表条目信息 
      * @return HighPriorityRouteSet 高优路由表条目信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HighPriorityRoute [] getHighPriorityRouteSet() {
         return this.HighPriorityRouteSet;
@@ -163,19 +139,15 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set 高优路由表条目信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighPriorityRouteSet 高优路由表条目信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighPriorityRouteSet(HighPriorityRoute [] HighPriorityRouteSet) {
         this.HighPriorityRouteSet = HighPriorityRouteSet;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -183,9 +155,7 @@ public class HighPriorityRouteTable extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

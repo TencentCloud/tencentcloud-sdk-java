@@ -46,7 +46,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerPort")
     @Expose
@@ -108,7 +107,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionPersist")
     @Expose
@@ -116,7 +114,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayLoop")
     @Expose
@@ -124,7 +121,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectTimeout")
     @Expose
@@ -132,7 +128,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyThreshold")
     @Expose
@@ -140,7 +135,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnhealthyThreshold")
     @Expose
@@ -148,7 +142,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailoverSwitch")
     @Expose
@@ -156,7 +149,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -164,7 +156,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckType")
     @Expose
@@ -172,7 +163,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckPort")
     @Expose
@@ -180,7 +170,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContextType")
     @Expose
@@ -188,7 +177,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendContext")
     @Expose
@@ -196,7 +184,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecvContext")
     @Expose
@@ -204,7 +191,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -212,7 +198,6 @@ public class UDPListener extends AbstractModel {
 
     /**
     * 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -267,10 +252,8 @@ public class UDPListener extends AbstractModel {
     }
 
     /**
-     * Get 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器转发源站端口，仅V1版本通道或通道组监听器有效 
      * @return RealServerPort 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealServerPort() {
         return this.RealServerPort;
@@ -278,9 +261,7 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerPort 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerPort(Long RealServerPort) {
         this.RealServerPort = RealServerPort;
@@ -419,10 +400,8 @@ public class UDPListener extends AbstractModel {
     }
 
     /**
-     * Get 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间 
      * @return SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSessionPersist() {
         return this.SessionPersist;
@@ -430,19 +409,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionPersist(Long SessionPersist) {
         this.SessionPersist = SessionPersist;
     }
 
     /**
-     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。 
      * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayLoop() {
         return this.DelayLoop;
@@ -450,19 +425,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayLoop(Long DelayLoop) {
         this.DelayLoop = DelayLoop;
     }
 
     /**
-     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。 
      * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectTimeout() {
         return this.ConnectTimeout;
@@ -470,19 +441,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
     }
 
     /**
-     * Get 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10 
      * @return HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthyThreshold() {
         return this.HealthyThreshold;
@@ -490,19 +457,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyThreshold(Long HealthyThreshold) {
         this.HealthyThreshold = HealthyThreshold;
     }
 
     /**
-     * Get 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10 
      * @return UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnhealthyThreshold() {
         return this.UnhealthyThreshold;
@@ -510,19 +473,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnhealthyThreshold(Long UnhealthyThreshold) {
         this.UnhealthyThreshold = UnhealthyThreshold;
     }
 
     /**
-     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启 
      * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailoverSwitch() {
         return this.FailoverSwitch;
@@ -530,19 +489,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailoverSwitch(Long FailoverSwitch) {
         this.FailoverSwitch = FailoverSwitch;
     }
 
     /**
-     * Get 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站是否开启健康检查：1开启，0关闭。 
      * @return HealthCheck 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
@@ -550,19 +505,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UDP源站健康类型。PORT表示检查端口，PING表示PING。 
      * @return CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckType() {
         return this.CheckType;
@@ -570,19 +521,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UDP源站健康检查探测端口。 
      * @return CheckPort UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckPort() {
         return this.CheckPort;
@@ -590,19 +537,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckPort UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckPort(Long CheckPort) {
         this.CheckPort = CheckPort;
     }
 
     /**
-     * Get UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。 
      * @return ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContextType() {
         return this.ContextType;
@@ -610,19 +553,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContextType(String ContextType) {
         this.ContextType = ContextType;
     }
 
     /**
-     * Get UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。 
      * @return SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSendContext() {
         return this.SendContext;
@@ -630,19 +569,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendContext(String SendContext) {
         this.SendContext = SendContext;
     }
 
     /**
-     * Get UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。 
      * @return RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecvContext() {
         return this.RecvContext;
@@ -650,19 +585,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecvContext(String RecvContext) {
         this.RecvContext = RecvContext;
     }
 
     /**
-     * Get 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器的通道ID，如果监听器属于通道组，则为null 
      * @return ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -670,19 +601,15 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器的通道组ID，如果监听器属于通道，则为null 
      * @return GroupId 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -690,9 +617,7 @@ public class UDPListener extends AbstractModel {
 
     /**
      * Set 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

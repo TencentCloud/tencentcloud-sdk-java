@@ -25,6 +25,8 @@ public class CreateEmbedWebUrlResponse extends AbstractModel {
 
     /**
     * 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
     */
     @SerializedName("WebUrl")
@@ -40,8 +42,12 @@ public class CreateEmbedWebUrlResponse extends AbstractModel {
 
     /**
      * Get 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接 
      * @return WebUrl 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      */
     public String getWebUrl() {
@@ -50,8 +56,12 @@ public class CreateEmbedWebUrlResponse extends AbstractModel {
 
     /**
      * Set 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      * @param WebUrl 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      */
     public void setWebUrl(String WebUrl) {

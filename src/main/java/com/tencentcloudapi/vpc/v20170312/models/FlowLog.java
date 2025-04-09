@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowLog extends AbstractModel {
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID。
+    * 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -45,7 +45,7 @@ public class FlowLog extends AbstractModel {
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+    * 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -59,7 +59,7 @@ public class FlowLog extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 流日志采集类型，ACCEPT|REJECT|ALL。
+    * 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
     */
     @SerializedName("TrafficType")
     @Expose
@@ -73,7 +73,7 @@ public class FlowLog extends AbstractModel {
     private String CloudLogId;
 
     /**
-    * 流日志存储ID状态。
+    * 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
     */
     @SerializedName("CloudLogState")
     @Expose
@@ -109,7 +109,6 @@ public class FlowLog extends AbstractModel {
 
     /**
     * 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
     @Expose
@@ -117,7 +116,6 @@ public class FlowLog extends AbstractModel {
 
     /**
     * 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowLogStorage")
     @Expose
@@ -125,23 +123,22 @@ public class FlowLog extends AbstractModel {
 
     /**
     * 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudLogRegion")
     @Expose
     private String CloudLogRegion;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID。 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID。
+     * Get 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。 
+     * @return VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID。
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID。
+     * Set 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -180,16 +177,16 @@ public class FlowLog extends AbstractModel {
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * Get 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。 
+     * @return ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * Set 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @param ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -212,16 +209,16 @@ public class FlowLog extends AbstractModel {
     }
 
     /**
-     * Get 流日志采集类型，ACCEPT|REJECT|ALL。 
-     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * Get 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。 
+     * @return TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set 流日志采集类型，ACCEPT|REJECT|ALL。
-     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * Set 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
+     * @param TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
@@ -244,16 +241,16 @@ public class FlowLog extends AbstractModel {
     }
 
     /**
-     * Get 流日志存储ID状态。 
-     * @return CloudLogState 流日志存储ID状态。
+     * Get 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。 
+     * @return CloudLogState 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
      */
     public String getCloudLogState() {
         return this.CloudLogState;
     }
 
     /**
-     * Set 流日志存储ID状态。
-     * @param CloudLogState 流日志存储ID状态。
+     * Set 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
+     * @param CloudLogState 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
      */
     public void setCloudLogState(String CloudLogState) {
         this.CloudLogState = CloudLogState;
@@ -324,10 +321,8 @@ public class FlowLog extends AbstractModel {
     }
 
     /**
-     * Get 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费端类型：cls、ckafka。 
      * @return StorageType 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
         return this.StorageType;
@@ -335,19 +330,15 @@ public class FlowLog extends AbstractModel {
 
     /**
      * Set 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费端信息，当消费端类型为ckafka时返回。 
      * @return FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FlowLogStorage getFlowLogStorage() {
         return this.FlowLogStorage;
@@ -355,19 +346,15 @@ public class FlowLog extends AbstractModel {
 
     /**
      * Set 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowLogStorage(FlowLogStorage FlowLogStorage) {
         this.FlowLogStorage = FlowLogStorage;
     }
 
     /**
-     * Get 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流日志存储ID对应的地域信息。 
      * @return CloudLogRegion 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudLogRegion() {
         return this.CloudLogRegion;
@@ -375,9 +362,7 @@ public class FlowLog extends AbstractModel {
 
     /**
      * Set 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudLogRegion 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudLogRegion(String CloudLogRegion) {
         this.CloudLogRegion = CloudLogRegion;

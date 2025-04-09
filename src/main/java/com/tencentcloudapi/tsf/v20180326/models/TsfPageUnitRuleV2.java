@@ -25,7 +25,6 @@ public class TsfPageUnitRuleV2 extends AbstractModel {
 
     /**
     * 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageUnitRuleV2 extends AbstractModel {
 
     /**
     * 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private UnitRule [] Content;
 
     /**
-     * Get 记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录总数 
      * @return TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageUnitRuleV2 extends AbstractModel {
 
     /**
      * Set 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录实体列表 
      * @return Content 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UnitRule [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageUnitRuleV2 extends AbstractModel {
 
     /**
      * Set 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(UnitRule [] Content) {
         this.Content = Content;

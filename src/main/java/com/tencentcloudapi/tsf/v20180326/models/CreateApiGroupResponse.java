@@ -25,7 +25,6 @@ public class CreateApiGroupResponse extends AbstractModel {
 
     /**
     * API分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateApiGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get API分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API分组ID 
      * @return Result API分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateApiGroupResponse extends AbstractModel {
 
     /**
      * Set API分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result API分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -25,7 +25,6 @@ public class DescribeUnitRulesResponse extends AbstractModel {
 
     /**
     * 分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeUnitRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页列表信息 
      * @return Result 分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageUnitRule [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeUnitRulesResponse extends AbstractModel {
 
     /**
      * Set 分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageUnitRule [] Result) {
         this.Result = Result;

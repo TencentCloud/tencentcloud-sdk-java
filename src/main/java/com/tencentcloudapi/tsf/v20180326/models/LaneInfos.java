@@ -25,7 +25,6 @@ public class LaneInfos extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class LaneInfos extends AbstractModel {
 
     /**
     * 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private LaneInfo [] Content;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class LaneInfos extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道信息列表 
      * @return Content 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LaneInfo [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class LaneInfos extends AbstractModel {
 
     /**
      * Set 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(LaneInfo [] Content) {
         this.Content = Content;

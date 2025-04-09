@@ -25,7 +25,6 @@ public class DescribeCloudNativeAPIGatewayPortsResponse extends AbstractModel {
 
     /**
     * 云原生API网关实例协议端口列表响应结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudNativeAPIGatewayPortsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云原生API网关实例协议端口列表响应结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云原生API网关实例协议端口列表响应结果 
      * @return Result 云原生API网关实例协议端口列表响应结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeGatewayInstancePortResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeCloudNativeAPIGatewayPortsResponse extends AbstractModel {
 
     /**
      * Set 云原生API网关实例协议端口列表响应结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 云原生API网关实例协议端口列表响应结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DescribeGatewayInstancePortResult Result) {
         this.Result = Result;

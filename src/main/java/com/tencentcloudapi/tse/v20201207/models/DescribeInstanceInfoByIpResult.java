@@ -25,7 +25,6 @@ public class DescribeInstanceInfoByIpResult extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeInstanceInfoByIpResult extends AbstractModel {
 
     /**
     * 分组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return GatewayId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -51,19 +47,15 @@ public class DescribeInstanceInfoByIpResult extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 分组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组id 
      * @return GroupId 分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -71,9 +63,7 @@ public class DescribeInstanceInfoByIpResult extends AbstractModel {
 
     /**
      * Set 分组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

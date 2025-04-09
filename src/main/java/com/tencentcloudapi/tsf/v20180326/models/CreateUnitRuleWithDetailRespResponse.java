@@ -25,7 +25,6 @@ public class CreateUnitRuleWithDetailRespResponse extends AbstractModel {
 
     /**
     * 单元化规则信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateUnitRuleWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 单元化规则信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单元化规则信息 
      * @return Result 单元化规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UnitRule getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateUnitRuleWithDetailRespResponse extends AbstractModel {
 
     /**
      * Set 单元化规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 单元化规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(UnitRule Result) {
         this.Result = Result;

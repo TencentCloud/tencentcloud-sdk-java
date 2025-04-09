@@ -25,17 +25,14 @@ public class AdvanceSettings extends AbstractModel {
 
     /**
     * 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubTaskConcurrency")
     @Expose
     private Long SubTaskConcurrency;
 
     /**
-     * Get 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子任务单机并发数限制，默认值为2 
      * @return SubTaskConcurrency 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubTaskConcurrency() {
         return this.SubTaskConcurrency;
@@ -43,9 +40,7 @@ public class AdvanceSettings extends AbstractModel {
 
     /**
      * Set 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubTaskConcurrency 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubTaskConcurrency(Long SubTaskConcurrency) {
         this.SubTaskConcurrency = SubTaskConcurrency;

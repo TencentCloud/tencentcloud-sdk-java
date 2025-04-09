@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SpekeDrm extends AbstractModel {
 
     /**
-    * 资源标记，
+    * 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
     */
     @SerializedName("ResourceId")
@@ -32,16 +32,16 @@ public class SpekeDrm extends AbstractModel {
     private String ResourceId;
 
     /**
-    * drm厂商访问地址；
+    * DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
     */
     @SerializedName("KeyServerUrl")
     @Expose
     private String KeyServerUrl;
 
     /**
-    * 加密初始化向量(32字节字符串)。
+    * 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
     */
     @SerializedName("Vector")
     @Expose
@@ -68,9 +68,9 @@ preset1：每个子流使用不同的key加密；
     private String EncryptionPreset;
 
     /**
-     * Get 资源标记，
+     * Get 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。 
-     * @return ResourceId 资源标记，
+     * @return ResourceId 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
      */
     public String getResourceId() {
@@ -78,9 +78,9 @@ preset1：每个子流使用不同的key加密；
     }
 
     /**
-     * Set 资源标记，
+     * Set 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
-     * @param ResourceId 资源标记，
+     * @param ResourceId 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
      */
     public void setResourceId(String ResourceId) {
@@ -88,40 +88,40 @@ preset1：每个子流使用不同的key加密；
     }
 
     /**
-     * Get drm厂商访问地址；
+     * Get DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密 
-     * @return KeyServerUrl drm厂商访问地址；
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密 
+     * @return KeyServerUrl DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
      */
     public String getKeyServerUrl() {
         return this.KeyServerUrl;
     }
 
     /**
-     * Set drm厂商访问地址；
+     * Set DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
-     * @param KeyServerUrl drm厂商访问地址；
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
+     * @param KeyServerUrl DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
      */
     public void setKeyServerUrl(String KeyServerUrl) {
         this.KeyServerUrl = KeyServerUrl;
     }
 
     /**
-     * Get 加密初始化向量(32字节字符串)。 
-     * @return Vector 加密初始化向量(32字节字符串)。
+     * Get 加密初始化向量(32字节字符串)，该字段内容为用户自定义。 
+     * @return Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set 加密初始化向量(32字节字符串)。
-     * @param Vector 加密初始化向量(32字节字符串)。
+     * Set 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+     * @param Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

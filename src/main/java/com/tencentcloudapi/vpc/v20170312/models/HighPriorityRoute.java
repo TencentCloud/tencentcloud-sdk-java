@@ -25,7 +25,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 高优路由表唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighPriorityRouteTableId")
     @Expose
@@ -33,7 +32,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 高优路由表条目唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighPriorityRouteId")
     @Expose
@@ -41,7 +39,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
@@ -49,7 +46,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 网关类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayType")
     @Expose
@@ -57,7 +53,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 网关唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -65,7 +60,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 高优路由条目描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -73,7 +67,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetRouteAlgorithm")
     @Expose
@@ -81,7 +74,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 出参展示，是否为CDC属性高优路由
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCdc")
     @Expose
@@ -89,7 +81,6 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 出参展示，CDC 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -97,17 +88,14 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 高优路由表唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表唯一 ID 
      * @return HighPriorityRouteTableId 高优路由表唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHighPriorityRouteTableId() {
         return this.HighPriorityRouteTableId;
@@ -115,19 +103,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 高优路由表唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighPriorityRouteTableId 高优路由表唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighPriorityRouteTableId(String HighPriorityRouteTableId) {
         this.HighPriorityRouteTableId = HighPriorityRouteTableId;
     }
 
     /**
-     * Get 高优路由表条目唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由表条目唯一 ID 
      * @return HighPriorityRouteId 高优路由表条目唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHighPriorityRouteId() {
         return this.HighPriorityRouteId;
@@ -135,19 +119,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 高优路由表条目唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighPriorityRouteId 高优路由表条目唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighPriorityRouteId(String HighPriorityRouteId) {
         this.HighPriorityRouteId = HighPriorityRouteId;
     }
 
     /**
-     * Get 目标网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标网段 
      * @return DestinationCidrBlock 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
@@ -155,19 +135,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationCidrBlock 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 网关类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关类型 
      * @return GatewayType 网关类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayType() {
         return this.GatewayType;
@@ -175,19 +151,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 网关类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayType 网关类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get 网关唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关唯一ID 
      * @return GatewayId 网关唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -195,19 +167,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 网关唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 高优路由条目描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高优路由条目描述 
      * @return Description 高优路由条目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -215,19 +183,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 高优路由条目描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 高优路由条目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。 
      * @return SubnetRouteAlgorithm ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetRouteAlgorithm() {
         return this.SubnetRouteAlgorithm;
@@ -235,19 +199,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetRouteAlgorithm ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetRouteAlgorithm(String SubnetRouteAlgorithm) {
         this.SubnetRouteAlgorithm = SubnetRouteAlgorithm;
     }
 
     /**
-     * Get 出参展示，是否为CDC属性高优路由
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出参展示，是否为CDC属性高优路由 
      * @return IsCdc 出参展示，是否为CDC属性高优路由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCdc() {
         return this.IsCdc;
@@ -255,19 +215,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 出参展示，是否为CDC属性高优路由
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCdc 出参展示，是否为CDC属性高优路由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCdc(Boolean IsCdc) {
         this.IsCdc = IsCdc;
     }
 
     /**
-     * Get 出参展示，CDC 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出参展示，CDC 唯一ID 
      * @return CdcId 出参展示，CDC 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -275,19 +231,15 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 出参展示，CDC 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 出参展示，CDC 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -295,9 +247,7 @@ public class HighPriorityRoute extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

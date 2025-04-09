@@ -25,17 +25,14 @@ public class KongCertificate extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cert")
     @Expose
     private KongCertificatesPreview Cert;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return Cert 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongCertificatesPreview getCert() {
         return this.Cert;
@@ -43,9 +40,7 @@ public class KongCertificate extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cert 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCert(KongCertificatesPreview Cert) {
         this.Cert = Cert;

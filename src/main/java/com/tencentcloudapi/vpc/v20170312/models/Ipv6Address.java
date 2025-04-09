@@ -71,7 +71,6 @@ public class Ipv6Address extends AbstractModel {
 
     /**
     * 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddress")
     @Expose
@@ -79,7 +78,6 @@ public class Ipv6Address extends AbstractModel {
 
     /**
     * `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressType")
     @Expose
@@ -198,10 +196,8 @@ public class Ipv6Address extends AbstractModel {
     }
 
     /**
-     * Get 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。 
      * @return PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
@@ -209,19 +205,15 @@ public class Ipv6Address extends AbstractModel {
 
     /**
      * Set 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址) 
      * @return AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressType() {
         return this.AddressType;
@@ -229,9 +221,7 @@ public class Ipv6Address extends AbstractModel {
 
     /**
      * Set `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

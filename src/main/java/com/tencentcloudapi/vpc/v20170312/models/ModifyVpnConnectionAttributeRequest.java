@@ -129,6 +129,13 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
     private HealthCheckConfig HealthCheckConfig;
 
     /**
+    * BGP隧道配置
+    */
+    @SerializedName("BgpConfig")
+    @Expose
+    private BgpConfig BgpConfig;
+
+    /**
      * Get VPN通道实例ID。形如：vpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      */
@@ -368,6 +375,22 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         this.HealthCheckConfig = HealthCheckConfig;
     }
 
+    /**
+     * Get BGP隧道配置 
+     * @return BgpConfig BGP隧道配置
+     */
+    public BgpConfig getBgpConfig() {
+        return this.BgpConfig;
+    }
+
+    /**
+     * Set BGP隧道配置
+     * @param BgpConfig BGP隧道配置
+     */
+    public void setBgpConfig(BgpConfig BgpConfig) {
+        this.BgpConfig = BgpConfig;
+    }
+
     public ModifyVpnConnectionAttributeRequest() {
     }
 
@@ -424,6 +447,9 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         if (source.HealthCheckConfig != null) {
             this.HealthCheckConfig = new HealthCheckConfig(source.HealthCheckConfig);
         }
+        if (source.BgpConfig != null) {
+            this.BgpConfig = new BgpConfig(source.BgpConfig);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
+        this.setParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
 
     }
 }

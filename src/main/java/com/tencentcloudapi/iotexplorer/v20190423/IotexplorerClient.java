@@ -710,6 +710,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取云存上报统计信息
+     * @param req DescribeCsReportCountDataInfoRequest
+     * @return DescribeCsReportCountDataInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCsReportCountDataInfoResponse DescribeCsReportCountDataInfo(DescribeCsReportCountDataInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCsReportCountDataInfo", DescribeCsReportCountDataInfoResponse.class);
+    }
+
+    /**
      *用于查看某个设备的详细信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse

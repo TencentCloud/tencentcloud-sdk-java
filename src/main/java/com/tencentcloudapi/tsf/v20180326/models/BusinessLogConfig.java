@@ -107,7 +107,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilebeatConfigEnable")
     @Expose
@@ -115,7 +114,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilebeatCloseTimeout")
     @Expose
@@ -322,10 +320,8 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启filebeat高级配置开关 
      * @return FilebeatConfigEnable 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFilebeatConfigEnable() {
         return this.FilebeatConfigEnable;
@@ -333,19 +329,15 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilebeatConfigEnable 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilebeatConfigEnable(Boolean FilebeatConfigEnable) {
         this.FilebeatConfigEnable = FilebeatConfigEnable;
     }
 
     /**
-     * Get close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get close_timeout参数 
      * @return FilebeatCloseTimeout close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFilebeatCloseTimeout() {
         return this.FilebeatCloseTimeout;
@@ -353,9 +345,7 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilebeatCloseTimeout close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilebeatCloseTimeout(Long FilebeatCloseTimeout) {
         this.FilebeatCloseTimeout = FilebeatCloseTimeout;

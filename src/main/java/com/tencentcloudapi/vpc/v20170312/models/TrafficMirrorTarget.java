@@ -39,7 +39,6 @@ public class TrafficMirrorTarget extends AbstractModel {
 
     /**
     * 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetEndPoints")
     @Expose
@@ -47,7 +46,6 @@ public class TrafficMirrorTarget extends AbstractModel {
 
     /**
     * 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -86,10 +84,8 @@ public class TrafficMirrorTarget extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量镜像的接收endpoint（公网IP） 
      * @return TargetEndPoints 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTargetEndPoints() {
         return this.TargetEndPoints;
@@ -97,19 +93,15 @@ public class TrafficMirrorTarget extends AbstractModel {
 
     /**
      * Set 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetEndPoints 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetEndPoints(String [] TargetEndPoints) {
         this.TargetEndPoints = TargetEndPoints;
     }
 
     /**
-     * Get 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量镜像的接收类型，分别为：IP/ENI/CLB 
      * @return TargetType 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
         return this.TargetType;
@@ -117,9 +109,7 @@ public class TrafficMirrorTarget extends AbstractModel {
 
     /**
      * Set 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;

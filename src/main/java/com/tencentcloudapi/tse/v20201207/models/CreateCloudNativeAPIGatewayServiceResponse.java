@@ -25,7 +25,6 @@ public class CreateCloudNativeAPIGatewayServiceResponse extends AbstractModel {
 
     /**
     * 网关服务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCloudNativeAPIGatewayServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 网关服务创建结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关服务创建结果 
      * @return Result 网关服务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateGatewayServiceResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateCloudNativeAPIGatewayServiceResponse extends AbstractModel {
 
     /**
      * Set 网关服务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 网关服务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(CreateGatewayServiceResult Result) {
         this.Result = Result;

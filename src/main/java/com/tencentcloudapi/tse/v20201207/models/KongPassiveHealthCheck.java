@@ -25,17 +25,14 @@ public class KongPassiveHealthCheck extends AbstractModel {
 
     /**
     * 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http 
      * @return Type 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -43,9 +40,7 @@ public class KongPassiveHealthCheck extends AbstractModel {
 
     /**
      * Set 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

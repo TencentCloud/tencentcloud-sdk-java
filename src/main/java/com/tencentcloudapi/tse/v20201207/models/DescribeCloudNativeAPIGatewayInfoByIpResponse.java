@@ -25,7 +25,6 @@ public class DescribeCloudNativeAPIGatewayInfoByIpResponse extends AbstractModel
 
     /**
     * 出参
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudNativeAPIGatewayInfoByIpResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 出参
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出参 
      * @return Result 出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInstanceInfoByIpResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeCloudNativeAPIGatewayInfoByIpResponse extends AbstractModel
 
     /**
      * Set 出参
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DescribeInstanceInfoByIpResult Result) {
         this.Result = Result;

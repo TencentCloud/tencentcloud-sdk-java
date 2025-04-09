@@ -25,7 +25,6 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
     * 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IngressIPv4TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
     * 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IngressIPv6TotalCount")
     @Expose
@@ -41,7 +39,6 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
     * 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EgressIPv4TotalCount")
     @Expose
@@ -49,17 +46,14 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
     * 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EgressIPv6TotalCount")
     @Expose
     private Long EgressIPv6TotalCount;
 
     /**
-     * Get 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入站IPv4总数 
      * @return IngressIPv4TotalCount 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIngressIPv4TotalCount() {
         return this.IngressIPv4TotalCount;
@@ -67,19 +61,15 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
      * Set 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IngressIPv4TotalCount 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngressIPv4TotalCount(Long IngressIPv4TotalCount) {
         this.IngressIPv4TotalCount = IngressIPv4TotalCount;
     }
 
     /**
-     * Get 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入站IPv6总数 
      * @return IngressIPv6TotalCount 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIngressIPv6TotalCount() {
         return this.IngressIPv6TotalCount;
@@ -87,19 +77,15 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
      * Set 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IngressIPv6TotalCount 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngressIPv6TotalCount(Long IngressIPv6TotalCount) {
         this.IngressIPv6TotalCount = IngressIPv6TotalCount;
     }
 
     /**
-     * Get 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出站IPv4总数 
      * @return EgressIPv4TotalCount 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEgressIPv4TotalCount() {
         return this.EgressIPv4TotalCount;
@@ -107,19 +93,15 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
      * Set 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EgressIPv4TotalCount 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgressIPv4TotalCount(Long EgressIPv4TotalCount) {
         this.EgressIPv4TotalCount = EgressIPv4TotalCount;
     }
 
     /**
-     * Get 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出站IPv6总数 
      * @return EgressIPv6TotalCount 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEgressIPv6TotalCount() {
         return this.EgressIPv6TotalCount;
@@ -127,9 +109,7 @@ public class PolicyStatistics extends AbstractModel {
 
     /**
      * Set 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EgressIPv6TotalCount 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgressIPv6TotalCount(Long EgressIPv6TotalCount) {
         this.EgressIPv6TotalCount = EgressIPv6TotalCount;

@@ -25,7 +25,6 @@ public class GatewayVo extends AbstractModel {
 
     /**
     * 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayDeployGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class GatewayVo extends AbstractModel {
 
     /**
     * 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayDeployGroupName")
     @Expose
@@ -41,7 +39,6 @@ public class GatewayVo extends AbstractModel {
 
     /**
     * API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNum")
     @Expose
@@ -49,17 +46,14 @@ public class GatewayVo extends AbstractModel {
 
     /**
     * API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Groups")
     @Expose
     private GatewayApiGroupVo [] Groups;
 
     /**
-     * Get 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关部署组ID 
      * @return GatewayDeployGroupId 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayDeployGroupId() {
         return this.GatewayDeployGroupId;
@@ -67,19 +61,15 @@ public class GatewayVo extends AbstractModel {
 
     /**
      * Set 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayDeployGroupId 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayDeployGroupId(String GatewayDeployGroupId) {
         this.GatewayDeployGroupId = GatewayDeployGroupId;
     }
 
     /**
-     * Get 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关部署组名称 
      * @return GatewayDeployGroupName 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayDeployGroupName() {
         return this.GatewayDeployGroupName;
@@ -87,19 +77,15 @@ public class GatewayVo extends AbstractModel {
 
     /**
      * Set 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayDeployGroupName 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayDeployGroupName(String GatewayDeployGroupName) {
         this.GatewayDeployGroupName = GatewayDeployGroupName;
     }
 
     /**
-     * Get API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API 分组个数 
      * @return GroupNum API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupNum() {
         return this.GroupNum;
@@ -107,19 +93,15 @@ public class GatewayVo extends AbstractModel {
 
     /**
      * Set API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupNum API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNum(Long GroupNum) {
         this.GroupNum = GroupNum;
     }
 
     /**
-     * Get API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API 分组列表 
      * @return Groups API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayApiGroupVo [] getGroups() {
         return this.Groups;
@@ -127,9 +109,7 @@ public class GatewayVo extends AbstractModel {
 
     /**
      * Set API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Groups API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroups(GatewayApiGroupVo [] Groups) {
         this.Groups = Groups;

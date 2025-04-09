@@ -81,7 +81,6 @@ public class NetworkAclEntry extends AbstractModel {
 
     /**
     * IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkAclIpv4EntryId")
     @Expose
@@ -89,7 +88,6 @@ public class NetworkAclEntry extends AbstractModel {
 
     /**
     * IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkAclIpv6EntryId")
     @Expose
@@ -224,10 +222,8 @@ public class NetworkAclEntry extends AbstractModel {
     }
 
     /**
-     * Get IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。 
      * @return NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkAclIpv4EntryId() {
         return this.NetworkAclIpv4EntryId;
@@ -235,19 +231,15 @@ public class NetworkAclEntry extends AbstractModel {
 
     /**
      * Set IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkAclIpv4EntryId(String NetworkAclIpv4EntryId) {
         this.NetworkAclIpv4EntryId = NetworkAclIpv4EntryId;
     }
 
     /**
-     * Get IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。 
      * @return NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkAclIpv6EntryId() {
         return this.NetworkAclIpv6EntryId;
@@ -255,9 +247,7 @@ public class NetworkAclEntry extends AbstractModel {
 
     /**
      * Set IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkAclIpv6EntryId(String NetworkAclIpv6EntryId) {
         this.NetworkAclIpv6EntryId = NetworkAclIpv6EntryId;

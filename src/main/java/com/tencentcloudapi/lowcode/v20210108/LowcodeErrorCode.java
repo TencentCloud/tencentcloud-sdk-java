@@ -6,6 +6,9 @@ public enum LowcodeErrorCode {
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
+     /* 低码用户不存在。 */
+     FAILEDOPERATION_LOWCODEUSERNOTEXIST("FailedOperation.LowcodeUserNotExist"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      

@@ -25,7 +25,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -49,7 +46,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamInfo")
     @Expose
@@ -57,7 +53,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamType")
     @Expose
@@ -65,7 +60,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -73,7 +67,6 @@ public class KongServicePreview extends AbstractModel {
 
     /**
     * 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -88,10 +81,8 @@ public class KongServicePreview extends AbstractModel {
     private String Path;
 
     /**
-     * Get 服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务ID 
      * @return ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -99,19 +90,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 服务名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名字 
      * @return Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -119,19 +106,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -139,19 +122,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 后端配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端配置 
      * @return UpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongUpstreamInfo getUpstreamInfo() {
         return this.UpstreamInfo;
@@ -159,19 +138,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamInfo(KongUpstreamInfo UpstreamInfo) {
         this.UpstreamInfo = UpstreamInfo;
     }
 
     /**
-     * Get 后端类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端类型 
      * @return UpstreamType 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamType() {
         return this.UpstreamType;
@@ -179,19 +154,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamType 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -199,19 +170,15 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可编辑 
      * @return Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -219,9 +186,7 @@ public class KongServicePreview extends AbstractModel {
 
     /**
      * Set 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;

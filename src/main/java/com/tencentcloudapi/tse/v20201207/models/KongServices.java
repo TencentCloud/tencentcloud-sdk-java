@@ -25,7 +25,6 @@ public class KongServices extends AbstractModel {
 
     /**
     * kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceList")
     @Expose
@@ -33,17 +32,14 @@ public class KongServices extends AbstractModel {
 
     /**
     * 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kong实例的服务列表 
      * @return ServiceList kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongServicePreview [] getServiceList() {
         return this.ServiceList;
@@ -51,19 +47,15 @@ public class KongServices extends AbstractModel {
 
     /**
      * Set kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceList kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceList(KongServicePreview [] ServiceList) {
         this.ServiceList = ServiceList;
     }
 
     /**
-     * Get 列表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表总数 
      * @return TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class KongServices extends AbstractModel {
 
     /**
      * Set 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

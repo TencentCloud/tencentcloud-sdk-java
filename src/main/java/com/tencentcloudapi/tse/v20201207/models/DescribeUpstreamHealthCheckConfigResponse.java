@@ -25,7 +25,6 @@ public class DescribeUpstreamHealthCheckConfigResponse extends AbstractModel {
 
     /**
     * 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeUpstreamHealthCheckConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查配置 
      * @return Result 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamHealthCheckConfig getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeUpstreamHealthCheckConfigResponse extends AbstractModel {
 
     /**
      * Set 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(UpstreamHealthCheckConfig Result) {
         this.Result = Result;

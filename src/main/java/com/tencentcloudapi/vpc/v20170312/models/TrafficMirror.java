@@ -102,7 +102,6 @@ public class TrafficMirror extends AbstractModel {
 
     /**
     * 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -110,7 +109,6 @@ public class TrafficMirror extends AbstractModel {
 
     /**
     * 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -118,7 +116,6 @@ public class TrafficMirror extends AbstractModel {
 
     /**
     * 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetInfo")
     @Expose
@@ -301,10 +298,8 @@ public class TrafficMirror extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量镜像的类型。 
      * @return Type 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -312,19 +307,15 @@ public class TrafficMirror extends AbstractModel {
 
     /**
      * Set 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量镜像所属的子网ID。 
      * @return SubnetId 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -332,19 +323,15 @@ public class TrafficMirror extends AbstractModel {
 
     /**
      * Set 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。 
      * @return TargetInfo 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TrafficMirrorTargetResourceInfo [] getTargetInfo() {
         return this.TargetInfo;
@@ -352,9 +339,7 @@ public class TrafficMirror extends AbstractModel {
 
     /**
      * Set 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetInfo 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetInfo(TrafficMirrorTargetResourceInfo [] TargetInfo) {
         this.TargetInfo = TargetInfo;

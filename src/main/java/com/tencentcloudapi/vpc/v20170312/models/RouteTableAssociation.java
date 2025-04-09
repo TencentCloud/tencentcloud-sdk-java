@@ -25,7 +25,6 @@ public class RouteTableAssociation extends AbstractModel {
 
     /**
     * 子网实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -33,17 +32,14 @@ public class RouteTableAssociation extends AbstractModel {
 
     /**
     * 路由表实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-     * Get 子网实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网实例ID。 
      * @return SubnetId 子网实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -51,19 +47,15 @@ public class RouteTableAssociation extends AbstractModel {
 
     /**
      * Set 子网实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 路由表实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表实例ID。 
      * @return RouteTableId 路由表实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableId() {
         return this.RouteTableId;
@@ -71,9 +63,7 @@ public class RouteTableAssociation extends AbstractModel {
 
     /**
      * Set 路由表实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableId 路由表实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

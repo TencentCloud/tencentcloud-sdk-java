@@ -25,7 +25,6 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -41,17 +39,14 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Key -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -59,19 +54,15 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Path -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -79,19 +70,15 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return Mode -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
         return this.Mode;
@@ -99,9 +86,7 @@ public class ConfigMapOption extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

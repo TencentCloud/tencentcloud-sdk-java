@@ -25,7 +25,6 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
     * HaVip绑定的子机或网卡唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
     * HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaVipId")
     @Expose
@@ -41,17 +39,14 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
     * HaVip绑定的类型。取值:CVM, ENI。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get HaVip绑定的子机或网卡唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HaVip绑定的子机或网卡唯一ID。 
      * @return InstanceId HaVip绑定的子机或网卡唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -59,19 +54,15 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
      * Set HaVip绑定的子机或网卡唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId HaVip绑定的子机或网卡唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HaVip实例唯一ID。 
      * @return HaVipId HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHaVipId() {
         return this.HaVipId;
@@ -79,19 +70,15 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
      * Set HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaVipId HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get HaVip绑定的类型。取值:CVM, ENI。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HaVip绑定的类型。取值:CVM, ENI。 
      * @return InstanceType HaVip绑定的类型。取值:CVM, ENI。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -99,9 +86,7 @@ public class HaVipAssociation extends AbstractModel {
 
     /**
      * Set HaVip绑定的类型。取值:CVM, ENI。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType HaVip绑定的类型。取值:CVM, ENI。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

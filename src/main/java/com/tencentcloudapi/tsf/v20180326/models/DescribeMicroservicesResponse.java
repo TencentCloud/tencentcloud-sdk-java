@@ -25,7 +25,6 @@ public class DescribeMicroservicesResponse extends AbstractModel {
 
     /**
     * 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeMicroservicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务分页列表信息 
      * @return Result 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageMicroservice getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeMicroservicesResponse extends AbstractModel {
 
     /**
      * Set 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageMicroservice Result) {
         this.Result = Result;

@@ -105,7 +105,6 @@ public class ContainerGroupOther extends AbstractModel {
 
     /**
     * 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNotEqualServiceConfig")
     @Expose
@@ -300,10 +299,8 @@ public class ContainerGroupOther extends AbstractModel {
     }
 
     /**
-     * Get 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务配置信息是否匹配 
      * @return IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNotEqualServiceConfig() {
         return this.IsNotEqualServiceConfig;
@@ -311,9 +308,7 @@ public class ContainerGroupOther extends AbstractModel {
 
     /**
      * Set 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNotEqualServiceConfig(Boolean IsNotEqualServiceConfig) {
         this.IsNotEqualServiceConfig = IsNotEqualServiceConfig;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ReleaseFileConfigResponse extends AbstractModel {
 
     /**
-    * 发布结果
-注意：此字段可能返回 null，表示取不到有效值。
+    * 发布结果，成功：true，失败：false。
     */
     @SerializedName("Result")
     @Expose
@@ -39,20 +38,16 @@ public class ReleaseFileConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发布结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 发布结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布结果，成功：true，失败：false。 
+     * @return Result 发布结果，成功：true，失败：false。
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 发布结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 发布结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 发布结果，成功：true，失败：false。
+     * @param Result 发布结果，成功：true，失败：false。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

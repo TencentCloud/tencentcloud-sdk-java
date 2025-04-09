@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayNodeConfig extends AbstractModel {
 
     /**
     * 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Specification")
     @Expose
@@ -33,17 +32,14 @@ public class CloudNativeAPIGatewayNodeConfig extends AbstractModel {
 
     /**
     * 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
     @Expose
     private Long Number;
 
     /**
-     * Get 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点配置, 1c2g|2c4g|4c8g|8c16g。 
      * @return Specification 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecification() {
         return this.Specification;
@@ -51,19 +47,15 @@ public class CloudNativeAPIGatewayNodeConfig extends AbstractModel {
 
     /**
      * Set 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Specification 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点数量，2-9。 
      * @return Number 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumber() {
         return this.Number;
@@ -71,9 +63,7 @@ public class CloudNativeAPIGatewayNodeConfig extends AbstractModel {
 
     /**
      * Set 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Number 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(Long Number) {
         this.Number = Number;

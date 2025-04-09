@@ -578,6 +578,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *获取云存上报统计信息
+     * @param req DescribeCsReportCountDataInfoRequest
+     * @return DescribeCsReportCountDataInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCsReportCountDataInfoResponse DescribeCsReportCountDataInfo(DescribeCsReportCountDataInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCsReportCountDataInfo", DescribeCsReportCountDataInfoResponse.class);
+    }
+
+    /**
      *获取数据转发列表
      * @param req DescribeDataForwardListRequest
      * @return DescribeDataForwardListResponse

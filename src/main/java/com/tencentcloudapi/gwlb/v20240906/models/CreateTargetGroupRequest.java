@@ -83,6 +83,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
+    * 标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 目标组名称，限定60个字符。 
      * @return TargetGroupName 目标组名称，限定60个字符。
      */
@@ -222,6 +229,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.AllDeadToAlive = AllDeadToAlive;
     }
 
+    /**
+     * Get 标签。 
+     * @return Tags 标签。
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签。
+     * @param Tags 标签。
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -257,6 +280,12 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.AllDeadToAlive != null) {
             this.AllDeadToAlive = new Boolean(source.AllDeadToAlive);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -272,6 +301,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
         this.setParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

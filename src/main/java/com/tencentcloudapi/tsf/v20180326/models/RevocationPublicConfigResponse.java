@@ -25,7 +25,6 @@ public class RevocationPublicConfigResponse extends AbstractModel {
 
     /**
     * true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class RevocationPublicConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get true：撤销成功；false：撤销失败 
      * @return Result true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class RevocationPublicConfigResponse extends AbstractModel {
 
     /**
      * Set true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

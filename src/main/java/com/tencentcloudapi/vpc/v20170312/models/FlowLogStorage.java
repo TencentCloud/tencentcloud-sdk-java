@@ -32,7 +32,6 @@ public class FlowLogStorage extends AbstractModel {
 
     /**
     * 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageTopic")
     @Expose
@@ -55,10 +54,8 @@ public class FlowLogStorage extends AbstractModel {
     }
 
     /**
-     * Get 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题Id，当流日志存储类型为ckafka时，必填。 
      * @return StorageTopic 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageTopic() {
         return this.StorageTopic;
@@ -66,9 +63,7 @@ public class FlowLogStorage extends AbstractModel {
 
     /**
      * Set 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageTopic 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageTopic(String StorageTopic) {
         this.StorageTopic = StorageTopic;

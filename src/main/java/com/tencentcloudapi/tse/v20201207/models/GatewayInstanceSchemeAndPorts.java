@@ -25,7 +25,6 @@ public class GatewayInstanceSchemeAndPorts extends AbstractModel {
 
     /**
     * 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scheme")
     @Expose
@@ -33,17 +32,14 @@ public class GatewayInstanceSchemeAndPorts extends AbstractModel {
 
     /**
     * 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortList")
     @Expose
     private Long [] PortList;
 
     /**
-     * Get 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议，可选HTTP、HTTPS、TCP和UDP 
      * @return Scheme 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheme() {
         return this.Scheme;
@@ -51,19 +47,15 @@ public class GatewayInstanceSchemeAndPorts extends AbstractModel {
 
     /**
      * Set 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scheme 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get 端口列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口列表 
      * @return PortList 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPortList() {
         return this.PortList;
@@ -71,9 +63,7 @@ public class GatewayInstanceSchemeAndPorts extends AbstractModel {
 
     /**
      * Set 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortList 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortList(Long [] PortList) {
         this.PortList = PortList;

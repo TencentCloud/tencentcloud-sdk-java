@@ -25,7 +25,6 @@ public class DescribeWafDomainsResponse extends AbstractModel {
 
     /**
     * 已被 WAF 防护域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeWafDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已被 WAF 防护域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已被 WAF 防护域名 
      * @return Result 已被 WAF 防护域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeWafDomainsResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeWafDomainsResponse extends AbstractModel {
 
     /**
      * Set 已被 WAF 防护域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 已被 WAF 防护域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DescribeWafDomainsResult Result) {
         this.Result = Result;

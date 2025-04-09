@@ -25,7 +25,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 开启主动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableActiveHealthCheck")
     @Expose
@@ -33,7 +32,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 主动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveHealthCheck")
     @Expose
@@ -41,7 +39,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 开启被动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnablePassiveHealthCheck")
     @Expose
@@ -49,7 +46,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 被动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassiveHealthCheck")
     @Expose
@@ -57,7 +53,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 连续健康阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Successes")
     @Expose
@@ -65,7 +60,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 连续异常阈值，单位：次	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Failures")
     @Expose
@@ -73,7 +67,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 超时阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeouts")
     @Expose
@@ -81,7 +74,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 健康HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyHttpStatuses")
     @Expose
@@ -89,7 +81,6 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 异常HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnhealthyHttpStatuses")
     @Expose
@@ -105,17 +96,14 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
     * 健康检查支持权重为0节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZeroWeightHeathCheck")
     @Expose
     private Boolean ZeroWeightHeathCheck;
 
     /**
-     * Get 开启主动健康检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启主动健康检查 
      * @return EnableActiveHealthCheck 开启主动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableActiveHealthCheck() {
         return this.EnableActiveHealthCheck;
@@ -123,19 +111,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 开启主动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableActiveHealthCheck 开启主动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableActiveHealthCheck(Boolean EnableActiveHealthCheck) {
         this.EnableActiveHealthCheck = EnableActiveHealthCheck;
     }
 
     /**
-     * Get 主动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主动健康检查配置 
      * @return ActiveHealthCheck 主动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongActiveHealthCheck getActiveHealthCheck() {
         return this.ActiveHealthCheck;
@@ -143,19 +127,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 主动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveHealthCheck 主动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveHealthCheck(KongActiveHealthCheck ActiveHealthCheck) {
         this.ActiveHealthCheck = ActiveHealthCheck;
     }
 
     /**
-     * Get 开启被动健康检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启被动健康检查 
      * @return EnablePassiveHealthCheck 开启被动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnablePassiveHealthCheck() {
         return this.EnablePassiveHealthCheck;
@@ -163,19 +143,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 开启被动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnablePassiveHealthCheck 开启被动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnablePassiveHealthCheck(Boolean EnablePassiveHealthCheck) {
         this.EnablePassiveHealthCheck = EnablePassiveHealthCheck;
     }
 
     /**
-     * Get 被动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被动健康检查配置 
      * @return PassiveHealthCheck 被动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongPassiveHealthCheck getPassiveHealthCheck() {
         return this.PassiveHealthCheck;
@@ -183,19 +159,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 被动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassiveHealthCheck 被动健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassiveHealthCheck(KongPassiveHealthCheck PassiveHealthCheck) {
         this.PassiveHealthCheck = PassiveHealthCheck;
     }
 
     /**
-     * Get 连续健康阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连续健康阈值，单位：次 
      * @return Successes 连续健康阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccesses() {
         return this.Successes;
@@ -203,19 +175,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 连续健康阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Successes 连续健康阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccesses(Long Successes) {
         this.Successes = Successes;
     }
 
     /**
-     * Get 连续异常阈值，单位：次	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连续异常阈值，单位：次	 
      * @return Failures 连续异常阈值，单位：次	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailures() {
         return this.Failures;
@@ -223,19 +191,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 连续异常阈值，单位：次	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Failures 连续异常阈值，单位：次	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailures(Long Failures) {
         this.Failures = Failures;
     }
 
     /**
-     * Get 超时阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超时阈值，单位：次 
      * @return Timeouts 超时阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeouts() {
         return this.Timeouts;
@@ -243,19 +207,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 超时阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeouts 超时阈值，单位：次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeouts(Long Timeouts) {
         this.Timeouts = Timeouts;
     }
 
     /**
-     * Get 健康HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康HTTP状态码 
      * @return HealthyHttpStatuses 健康HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getHealthyHttpStatuses() {
         return this.HealthyHttpStatuses;
@@ -263,19 +223,15 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 健康HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyHttpStatuses 健康HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyHttpStatuses(Long [] HealthyHttpStatuses) {
         this.HealthyHttpStatuses = HealthyHttpStatuses;
     }
 
     /**
-     * Get 异常HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常HTTP状态码 
      * @return UnhealthyHttpStatuses 异常HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getUnhealthyHttpStatuses() {
         return this.UnhealthyHttpStatuses;
@@ -283,9 +239,7 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 异常HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnhealthyHttpStatuses 异常HTTP状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnhealthyHttpStatuses(Long [] UnhealthyHttpStatuses) {
         this.UnhealthyHttpStatuses = UnhealthyHttpStatuses;
@@ -316,10 +270,8 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
     }
 
     /**
-     * Get 健康检查支持权重为0节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查支持权重为0节点 
      * @return ZeroWeightHeathCheck 健康检查支持权重为0节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getZeroWeightHeathCheck() {
         return this.ZeroWeightHeathCheck;
@@ -327,9 +279,7 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
 
     /**
      * Set 健康检查支持权重为0节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZeroWeightHeathCheck 健康检查支持权重为0节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZeroWeightHeathCheck(Boolean ZeroWeightHeathCheck) {
         this.ZeroWeightHeathCheck = ZeroWeightHeathCheck;

@@ -25,7 +25,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -33,7 +32,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -49,7 +47,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -57,7 +54,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -65,7 +61,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgLang")
     @Expose
@@ -73,7 +68,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +75,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -89,7 +82,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationResourceType")
     @Expose
@@ -97,7 +89,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationRuntimeType")
     @Expose
@@ -105,7 +96,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApigatewayServiceId")
     @Expose
@@ -129,7 +119,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * IgnoreCreateImageRepository
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreCreateImageRepository")
     @Expose
@@ -169,7 +158,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 应用编程语言类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramLanguage")
     @Expose
@@ -177,7 +165,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkType")
     @Expose
@@ -185,7 +172,6 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 注册配置治理信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceGovernanceConfig")
     @Expose
@@ -201,17 +187,14 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
     * 是否同时创建镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateSameNameImageRepository")
     @Expose
     private Boolean CreateSameNameImageRepository;
 
     /**
-     * Get 应用ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用ID 
      * @return ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -219,19 +202,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名称 
      * @return ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -239,9 +218,7 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
@@ -268,10 +245,8 @@ public class ApplicationForPage extends AbstractModel {
     }
 
     /**
-     * Get 应用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用类型 
      * @return ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
         return this.ApplicationType;
@@ -279,19 +254,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务类型 
      * @return MicroserviceType 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
@@ -299,19 +270,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get 编程语言
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编程语言 
      * @return ProgLang 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgLang() {
         return this.ProgLang;
@@ -319,19 +286,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgLang 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgLang(String ProgLang) {
         this.ProgLang = ProgLang;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -339,19 +302,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -359,19 +318,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用资源类型 
      * @return ApplicationResourceType 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationResourceType() {
         return this.ApplicationResourceType;
@@ -379,19 +334,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationResourceType 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationResourceType(String ApplicationResourceType) {
         this.ApplicationResourceType = ApplicationResourceType;
     }
 
     /**
-     * Get 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用runtime类型 
      * @return ApplicationRuntimeType 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationRuntimeType() {
         return this.ApplicationRuntimeType;
@@ -399,19 +350,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationRuntimeType 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationRuntimeType(String ApplicationRuntimeType) {
         this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
     /**
-     * Get Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Apigateway的serviceId 
      * @return ApigatewayServiceId Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApigatewayServiceId() {
         return this.ApigatewayServiceId;
@@ -419,9 +366,7 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApigatewayServiceId Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApigatewayServiceId(String ApigatewayServiceId) {
         this.ApigatewayServiceId = ApigatewayServiceId;
@@ -468,10 +413,8 @@ public class ApplicationForPage extends AbstractModel {
     }
 
     /**
-     * Get IgnoreCreateImageRepository
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IgnoreCreateImageRepository 
      * @return IgnoreCreateImageRepository IgnoreCreateImageRepository
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIgnoreCreateImageRepository() {
         return this.IgnoreCreateImageRepository;
@@ -479,9 +422,7 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set IgnoreCreateImageRepository
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreCreateImageRepository IgnoreCreateImageRepository
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreCreateImageRepository(Boolean IgnoreCreateImageRepository) {
         this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
@@ -568,10 +509,8 @@ public class ApplicationForPage extends AbstractModel {
     }
 
     /**
-     * Get 应用编程语言类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用编程语言类型 
      * @return ProgramLanguage 应用编程语言类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramLanguage() {
         return this.ProgramLanguage;
@@ -579,19 +518,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 应用编程语言类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgramLanguage 应用编程语言类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramLanguage(String ProgramLanguage) {
         this.ProgramLanguage = ProgramLanguage;
     }
 
     /**
-     * Get 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other] 
      * @return FrameworkType 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkType() {
         return this.FrameworkType;
@@ -599,19 +534,15 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrameworkType 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkType(String FrameworkType) {
         this.FrameworkType = FrameworkType;
     }
 
     /**
-     * Get 注册配置治理信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册配置治理信息 
      * @return ServiceGovernanceConfig 注册配置治理信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceGovernanceConfig getServiceGovernanceConfig() {
         return this.ServiceGovernanceConfig;
@@ -619,9 +550,7 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 注册配置治理信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceGovernanceConfig 注册配置治理信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceGovernanceConfig(ServiceGovernanceConfig ServiceGovernanceConfig) {
         this.ServiceGovernanceConfig = ServiceGovernanceConfig;
@@ -648,10 +577,8 @@ public class ApplicationForPage extends AbstractModel {
     }
 
     /**
-     * Get 是否同时创建镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否同时创建镜像仓库 
      * @return CreateSameNameImageRepository 是否同时创建镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCreateSameNameImageRepository() {
         return this.CreateSameNameImageRepository;
@@ -659,9 +586,7 @@ public class ApplicationForPage extends AbstractModel {
 
     /**
      * Set 是否同时创建镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateSameNameImageRepository 是否同时创建镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateSameNameImageRepository(Boolean CreateSameNameImageRepository) {
         this.CreateSameNameImageRepository = CreateSameNameImageRepository;

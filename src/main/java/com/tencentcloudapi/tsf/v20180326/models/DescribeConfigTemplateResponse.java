@@ -25,7 +25,6 @@ public class DescribeConfigTemplateResponse extends AbstractModel {
 
     /**
     * 导入结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeConfigTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导入结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导入结果 
      * @return Result 导入结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigTemplate getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeConfigTemplateResponse extends AbstractModel {
 
     /**
      * Set 导入结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 导入结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ConfigTemplate Result) {
         this.Result = Result;

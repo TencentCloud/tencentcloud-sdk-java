@@ -25,7 +25,6 @@ public class DescribeCloudNativeAPIGatewayRoutesResponse extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudNativeAPIGatewayRoutesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return Result 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongServiceRouteList getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeCloudNativeAPIGatewayRoutesResponse extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(KongServiceRouteList Result) {
         this.Result = Result;

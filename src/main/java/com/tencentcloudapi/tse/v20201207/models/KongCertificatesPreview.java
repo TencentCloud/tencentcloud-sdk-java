@@ -25,7 +25,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindDomains")
     @Expose
@@ -50,7 +47,6 @@ public class KongCertificatesPreview extends AbstractModel {
     /**
     * 证书状态：expired(已过期)
                    active(生效中)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -58,7 +54,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书pem格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Crt")
     @Expose
@@ -66,7 +61,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书私钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -74,7 +68,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -82,7 +75,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书上传时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -90,7 +82,6 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * 证书签发时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssueTime")
     @Expose
@@ -99,7 +90,6 @@ public class KongCertificatesPreview extends AbstractModel {
     /**
     * 证书来源：native(kong自定义证书)
                     ssl(ssl平台证书)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertSource")
     @Expose
@@ -107,17 +97,14 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
     * ssl平台证书Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-     * Get 证书名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书名称 
      * @return Name 证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -125,19 +112,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Id 
      * @return Id Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -145,19 +128,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的域名 
      * @return BindDomains 绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBindDomains() {
         return this.BindDomains;
@@ -165,9 +144,7 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindDomains 绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindDomains(String [] BindDomains) {
         this.BindDomains = BindDomains;
@@ -175,11 +152,9 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Get 证书状态：expired(已过期)
-                   active(生效中)
-注意：此字段可能返回 null，表示取不到有效值。 
+                   active(生效中) 
      * @return Status 证书状态：expired(已过期)
                    active(生效中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -188,20 +163,16 @@ public class KongCertificatesPreview extends AbstractModel {
     /**
      * Set 证书状态：expired(已过期)
                    active(生效中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 证书状态：expired(已过期)
                    active(生效中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 证书pem格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书pem格式 
      * @return Crt 证书pem格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrt() {
         return this.Crt;
@@ -209,19 +180,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书pem格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Crt 证书pem格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrt(String Crt) {
         this.Crt = Crt;
     }
 
     /**
-     * Get 证书私钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书私钥 
      * @return Key 证书私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -229,19 +196,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书私钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 证书私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书过期时间 
      * @return ExpireTime 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -249,19 +212,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 证书上传时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书上传时间 
      * @return CreateTime 证书上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -269,19 +228,15 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 证书上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 证书签发时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书签发时间 
      * @return IssueTime 证书签发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIssueTime() {
         return this.IssueTime;
@@ -289,9 +244,7 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set 证书签发时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IssueTime 证书签发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssueTime(String IssueTime) {
         this.IssueTime = IssueTime;
@@ -299,11 +252,9 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Get 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
-注意：此字段可能返回 null，表示取不到有效值。 
+                    ssl(ssl平台证书) 
      * @return CertSource 证书来源：native(kong自定义证书)
                     ssl(ssl平台证书)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertSource() {
         return this.CertSource;
@@ -312,20 +263,16 @@ public class KongCertificatesPreview extends AbstractModel {
     /**
      * Set 证书来源：native(kong自定义证书)
                     ssl(ssl平台证书)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertSource 证书来源：native(kong自定义证书)
                     ssl(ssl平台证书)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertSource(String CertSource) {
         this.CertSource = CertSource;
     }
 
     /**
-     * Get ssl平台证书Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ssl平台证书Id 
      * @return CertId ssl平台证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -333,9 +280,7 @@ public class KongCertificatesPreview extends AbstractModel {
 
     /**
      * Set ssl平台证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId ssl平台证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

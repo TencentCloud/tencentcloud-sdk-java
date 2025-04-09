@@ -25,7 +25,6 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
     * 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
     * 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -41,17 +39,14 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
     * 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
     @Expose
     private CloudNativeAPIGatewayConfig PublicNetwork;
 
     /**
-     * Get 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实例ID 
      * @return GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -59,19 +54,15 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
      * Set 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关分组ID 
      * @return GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -79,19 +70,15 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
      * Set 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端公网信息 
      * @return PublicNetwork 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayConfig getPublicNetwork() {
         return this.PublicNetwork;
@@ -99,9 +86,7 @@ public class DescribePublicNetworkResult extends AbstractModel {
 
     /**
      * Set 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicNetwork 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(CloudNativeAPIGatewayConfig PublicNetwork) {
         this.PublicNetwork = PublicNetwork;

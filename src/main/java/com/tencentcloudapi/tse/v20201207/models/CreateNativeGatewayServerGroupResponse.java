@@ -25,7 +25,6 @@ public class CreateNativeGatewayServerGroupResponse extends AbstractModel {
 
     /**
     * 网关分组创建信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateNativeGatewayServerGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 网关分组创建信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关分组创建信息 
      * @return Result 网关分组创建信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateCloudNativeAPIGatewayServerGroupResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateNativeGatewayServerGroupResponse extends AbstractModel {
 
     /**
      * Set 网关分组创建信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 网关分组创建信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(CreateCloudNativeAPIGatewayServerGroupResult Result) {
         this.Result = Result;

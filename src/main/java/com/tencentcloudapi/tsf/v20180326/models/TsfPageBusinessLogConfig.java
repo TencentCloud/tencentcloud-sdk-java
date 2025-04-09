@@ -25,7 +25,6 @@ public class TsfPageBusinessLogConfig extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class TsfPageBusinessLogConfig extends AbstractModel {
 
     /**
     * 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private BusinessLogConfig [] Content;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class TsfPageBusinessLogConfig extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务日志配置项列表 
      * @return Content 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BusinessLogConfig [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TsfPageBusinessLogConfig extends AbstractModel {
 
     /**
      * Set 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(BusinessLogConfig [] Content) {
         this.Content = Content;

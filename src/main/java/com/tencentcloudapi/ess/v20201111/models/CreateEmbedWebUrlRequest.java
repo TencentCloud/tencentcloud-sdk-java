@@ -36,12 +36,32 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>CREATE_CONTRACT_DRAFT_COOPEDIT：生成创建起草合同的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
 <li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
 <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
+
+注意：
+不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
+<table>
+<tr><th>EmbedType</th><th>权限</th></tr>
+<tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
+<tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
+<tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
+<tr><th>CREATE_CONTRACT_DRAFT_COOPEDIT</th><th>合同管理-起草合同</th></tr>
+<tr><th>PREVIEW_TEMPLATE</th><th>拥有下面三种权限的一种就行</br>
+模板管理-查询模板（本企业全部模板）</br>
+模板管理-查询模板（本部门全部模板）</br>
+模板管理-查询模板（本人创建模板）</th></tr>
+<tr><th>PREVIEW_SEAL_LIST</th><th>印章管理</th></tr>
+<tr><th>PREVIEW_SEAL_DETAIL</th><th>印章管理</th></tr>
+<tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
+<tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+<tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</table>
     */
     @SerializedName("EmbedType")
     @Expose
@@ -55,12 +75,14 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
 <li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为CREATE_CONTRACT_DRAFT_COOPEDIT，非必填，取值为资源 id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
 
 注意：
  1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
 ](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
+ 2. CREATE_CONTRACT_DRAFT_COOPEDIT中的BusinessId仅支持DOC 和 DOCX 的文件，并且大小不能超过 10M。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -120,22 +142,62 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
-<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
-<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
-<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
-<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul> 
-     * @return EmbedType WEB嵌入资源类型，支持以下类型
-<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
-<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
-<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>CREATE_CONTRACT_DRAFT_COOPEDIT：生成创建起草合同的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
 <li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
 <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
+
+注意：
+不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
+<table>
+<tr><th>EmbedType</th><th>权限</th></tr>
+<tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
+<tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
+<tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
+<tr><th>CREATE_CONTRACT_DRAFT_COOPEDIT</th><th>合同管理-起草合同</th></tr>
+<tr><th>PREVIEW_TEMPLATE</th><th>拥有下面三种权限的一种就行</br>
+模板管理-查询模板（本企业全部模板）</br>
+模板管理-查询模板（本部门全部模板）</br>
+模板管理-查询模板（本人创建模板）</th></tr>
+<tr><th>PREVIEW_SEAL_LIST</th><th>印章管理</th></tr>
+<tr><th>PREVIEW_SEAL_DETAIL</th><th>印章管理</th></tr>
+<tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
+<tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+<tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</table> 
+     * @return EmbedType WEB嵌入资源类型，支持以下类型
+<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>CREATE_CONTRACT_DRAFT_COOPEDIT：生成创建起草合同的嵌入页面</li>
+<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
+
+注意：
+不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
+<table>
+<tr><th>EmbedType</th><th>权限</th></tr>
+<tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
+<tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
+<tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
+<tr><th>CREATE_CONTRACT_DRAFT_COOPEDIT</th><th>合同管理-起草合同</th></tr>
+<tr><th>PREVIEW_TEMPLATE</th><th>拥有下面三种权限的一种就行</br>
+模板管理-查询模板（本企业全部模板）</br>
+模板管理-查询模板（本部门全部模板）</br>
+模板管理-查询模板（本人创建模板）</th></tr>
+<tr><th>PREVIEW_SEAL_LIST</th><th>印章管理</th></tr>
+<tr><th>PREVIEW_SEAL_DETAIL</th><th>印章管理</th></tr>
+<tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
+<tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+<tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</table>
      */
     public String getEmbedType() {
         return this.EmbedType;
@@ -146,22 +208,62 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>CREATE_CONTRACT_DRAFT_COOPEDIT：生成创建起草合同的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
 <li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
 <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
+
+注意：
+不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
+<table>
+<tr><th>EmbedType</th><th>权限</th></tr>
+<tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
+<tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
+<tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
+<tr><th>CREATE_CONTRACT_DRAFT_COOPEDIT</th><th>合同管理-起草合同</th></tr>
+<tr><th>PREVIEW_TEMPLATE</th><th>拥有下面三种权限的一种就行</br>
+模板管理-查询模板（本企业全部模板）</br>
+模板管理-查询模板（本部门全部模板）</br>
+模板管理-查询模板（本人创建模板）</th></tr>
+<tr><th>PREVIEW_SEAL_LIST</th><th>印章管理</th></tr>
+<tr><th>PREVIEW_SEAL_DETAIL</th><th>印章管理</th></tr>
+<tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
+<tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+<tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</table>
      * @param EmbedType WEB嵌入资源类型，支持以下类型
 <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>CREATE_CONTRACT_DRAFT_COOPEDIT：生成创建起草合同的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
 <li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
 <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
+
+注意：
+不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
+<table>
+<tr><th>EmbedType</th><th>权限</th></tr>
+<tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
+<tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
+<tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
+<tr><th>CREATE_CONTRACT_DRAFT_COOPEDIT</th><th>合同管理-起草合同</th></tr>
+<tr><th>PREVIEW_TEMPLATE</th><th>拥有下面三种权限的一种就行</br>
+模板管理-查询模板（本企业全部模板）</br>
+模板管理-查询模板（本部门全部模板）</br>
+模板管理-查询模板（本人创建模板）</th></tr>
+<tr><th>PREVIEW_SEAL_LIST</th><th>印章管理</th></tr>
+<tr><th>PREVIEW_SEAL_DETAIL</th><th>印章管理</th></tr>
+<tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
+<tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+<tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</table>
      */
     public void setEmbedType(String EmbedType) {
         this.EmbedType = EmbedType;
@@ -175,12 +277,14 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
 <li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为CREATE_CONTRACT_DRAFT_COOPEDIT，非必填，取值为资源 id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
 
 注意：
  1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
-](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。 
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
+ 2. CREATE_CONTRACT_DRAFT_COOPEDIT中的BusinessId仅支持DOC 和 DOCX 的文件，并且大小不能超过 10M。 
      * @return BusinessId WEB嵌入的业务资源ID
 
 当EmbedType取值
@@ -188,12 +292,14 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
 <li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为CREATE_CONTRACT_DRAFT_COOPEDIT，非必填，取值为资源 id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
 
 注意：
  1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
 ](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
+ 2. CREATE_CONTRACT_DRAFT_COOPEDIT中的BusinessId仅支持DOC 和 DOCX 的文件，并且大小不能超过 10M。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -207,12 +313,14 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
 <li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为CREATE_CONTRACT_DRAFT_COOPEDIT，非必填，取值为资源 id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
 
 注意：
  1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
 ](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
+ 2. CREATE_CONTRACT_DRAFT_COOPEDIT中的BusinessId仅支持DOC 和 DOCX 的文件，并且大小不能超过 10M。
      * @param BusinessId WEB嵌入的业务资源ID
 
 当EmbedType取值
@@ -220,12 +328,14 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 <li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
 <li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为CREATE_CONTRACT_DRAFT_COOPEDIT，非必填，取值为资源 id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
 <li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
 
 注意：
  1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
 ](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
+ 2. CREATE_CONTRACT_DRAFT_COOPEDIT中的BusinessId仅支持DOC 和 DOCX 的文件，并且大小不能超过 10M。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

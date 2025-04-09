@@ -25,7 +25,6 @@ public class DescribeConfigReleasesResponse extends AbstractModel {
 
     /**
     * 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeConfigReleasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页的配置发布信息 
      * @return Result 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageConfigRelease getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeConfigReleasesResponse extends AbstractModel {
 
     /**
      * Set 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageConfigRelease Result) {
         this.Result = Result;

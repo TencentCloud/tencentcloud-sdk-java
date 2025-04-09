@@ -160,6 +160,13 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private Boolean CanBatchReject;
 
     /**
+    * 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+    */
+    @SerializedName("PresetApproverInfo")
+    @Expose
+    private PresetApproverInfo PresetApproverInfo;
+
+    /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -547,6 +554,22 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.CanBatchReject = CanBatchReject;
     }
 
+    /**
+     * Get 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。 
+     * @return PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+     */
+    public PresetApproverInfo getPresetApproverInfo() {
+        return this.PresetApproverInfo;
+    }
+
+    /**
+     * Set 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+     * @param PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+     */
+    public void setPresetApproverInfo(PresetApproverInfo PresetApproverInfo) {
+        this.PresetApproverInfo = PresetApproverInfo;
+    }
+
     public CreateBatchQuickSignUrlRequest() {
     }
 
@@ -603,6 +626,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         if (source.CanBatchReject != null) {
             this.CanBatchReject = new Boolean(source.CanBatchReject);
         }
+        if (source.PresetApproverInfo != null) {
+            this.PresetApproverInfo = new PresetApproverInfo(source.PresetApproverInfo);
+        }
     }
 
 
@@ -623,6 +649,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Intention.", this.Intention);
         this.setParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+        this.setParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);
 
     }
 }

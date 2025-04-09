@@ -74,7 +74,6 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -193,10 +192,8 @@ public class SecurityGroup extends AbstractModel {
     }
 
     /**
-     * Get 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组更新时间。 
      * @return UpdateTime 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -204,9 +201,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

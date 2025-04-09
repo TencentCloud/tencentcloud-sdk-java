@@ -32,7 +32,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * HTTP链接地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpUrl")
     @Expose
@@ -54,7 +53,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 管理员用户名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminUser")
     @Expose
@@ -62,7 +60,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 管理员密码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminPassword")
     @Expose
@@ -70,7 +67,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 网络状态, Open|Closed|Updating
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -86,7 +82,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 内网子网 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -94,7 +89,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 内网VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -102,7 +96,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 负载均衡的描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -110,7 +103,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 负载均衡的规格类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaType")
     @Expose
@@ -118,7 +110,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * clb规格名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaName")
     @Expose
@@ -126,7 +117,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * clb vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -134,7 +124,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -142,7 +131,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 是否多可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiZoneFlag")
     @Expose
@@ -150,7 +138,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZoneId")
     @Expose
@@ -158,7 +145,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZoneId")
     @Expose
@@ -166,7 +152,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 主可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZoneName")
     @Expose
@@ -174,7 +159,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 备可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZoneName")
     @Expose
@@ -182,7 +166,6 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
     * 网络 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkId")
     @Expose
@@ -205,10 +188,8 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     }
 
     /**
-     * Get HTTP链接地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HTTP链接地址。 
      * @return HttpUrl HTTP链接地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpUrl() {
         return this.HttpUrl;
@@ -216,9 +197,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set HTTP链接地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpUrl HTTP链接地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpUrl(String HttpUrl) {
         this.HttpUrl = HttpUrl;
@@ -257,10 +236,8 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     }
 
     /**
-     * Get 管理员用户名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 管理员用户名。 
      * @return AdminUser 管理员用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminUser() {
         return this.AdminUser;
@@ -268,19 +245,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 管理员用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminUser 管理员用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminUser(String AdminUser) {
         this.AdminUser = AdminUser;
     }
 
     /**
-     * Get 管理员密码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 管理员密码。 
      * @return AdminPassword 管理员密码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminPassword() {
         return this.AdminPassword;
@@ -288,19 +261,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 管理员密码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdminPassword 管理员密码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get 网络状态, Open|Closed|Updating
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络状态, Open|Closed|Updating 
      * @return Status 网络状态, Open|Closed|Updating
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -308,9 +277,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 网络状态, Open|Closed|Updating
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 网络状态, Open|Closed|Updating
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -337,10 +304,8 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     }
 
     /**
-     * Get 内网子网 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网子网 ID 
      * @return SubnetId 内网子网 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -348,19 +313,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 内网子网 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 内网子网 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 内网VPC ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网VPC ID 
      * @return VpcId 内网VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -368,19 +329,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 内网VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 内网VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 负载均衡的描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡的描述 
      * @return Description 负载均衡的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -388,19 +345,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 负载均衡的描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 负载均衡的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 负载均衡的规格类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡的规格类型 
      * @return SlaType 负载均衡的规格类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaType() {
         return this.SlaType;
@@ -408,19 +361,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 负载均衡的规格类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaType 负载均衡的规格类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
     }
 
     /**
-     * Get clb规格名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb规格名称 
      * @return SlaName clb规格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaName() {
         return this.SlaName;
@@ -428,19 +377,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set clb规格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaName clb规格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaName(String SlaName) {
         this.SlaName = SlaName;
     }
 
     /**
-     * Get clb vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb vip 
      * @return Vip clb vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -448,19 +393,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set clb vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip clb vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽 
      * @return InternetMaxBandwidthOut 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -468,19 +409,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetMaxBandwidthOut 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 是否多可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否多可用区 
      * @return MultiZoneFlag 是否多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMultiZoneFlag() {
         return this.MultiZoneFlag;
@@ -488,19 +425,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 是否多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiZoneFlag 是否多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiZoneFlag(Boolean MultiZoneFlag) {
         this.MultiZoneFlag = MultiZoneFlag;
     }
 
     /**
-     * Get 主可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主可用区 
      * @return MasterZoneId 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterZoneId() {
         return this.MasterZoneId;
@@ -508,19 +441,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZoneId 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZoneId(String MasterZoneId) {
         this.MasterZoneId = MasterZoneId;
     }
 
     /**
-     * Get 备可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区 
      * @return SlaveZoneId 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaveZoneId() {
         return this.SlaveZoneId;
@@ -528,19 +457,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZoneId 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZoneId(String SlaveZoneId) {
         this.SlaveZoneId = SlaveZoneId;
     }
 
     /**
-     * Get 主可用区名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主可用区名称 
      * @return MasterZoneName 主可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterZoneName() {
         return this.MasterZoneName;
@@ -548,19 +473,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 主可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZoneName 主可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZoneName(String MasterZoneName) {
         this.MasterZoneName = MasterZoneName;
     }
 
     /**
-     * Get 备可用区名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备可用区名称 
      * @return SlaveZoneName 备可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaveZoneName() {
         return this.SlaveZoneName;
@@ -568,19 +489,15 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 备可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZoneName 备可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZoneName(String SlaveZoneName) {
         this.SlaveZoneName = SlaveZoneName;
     }
 
     /**
-     * Get 网络 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络 id 
      * @return NetworkId 网络 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkId() {
         return this.NetworkId;
@@ -588,9 +505,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
 
     /**
      * Set 网络 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkId 网络 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkId(String NetworkId) {
         this.NetworkId = NetworkId;

@@ -25,7 +25,6 @@ public class RouteECMPAlgorithm extends AbstractModel {
 
     /**
     *  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
@@ -33,17 +32,14 @@ public class RouteECMPAlgorithm extends AbstractModel {
 
     /**
     * 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetRouteAlgorithm")
     @Expose
     private String SubnetRouteAlgorithm;
 
     /**
-     * Get  目标网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  目标网段 
      * @return DestinationCidrBlock  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
@@ -51,19 +47,15 @@ public class RouteECMPAlgorithm extends AbstractModel {
 
     /**
      * Set  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationCidrBlock  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。 
      * @return SubnetRouteAlgorithm 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetRouteAlgorithm() {
         return this.SubnetRouteAlgorithm;
@@ -71,9 +63,7 @@ public class RouteECMPAlgorithm extends AbstractModel {
 
     /**
      * Set 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetRouteAlgorithm 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetRouteAlgorithm(String SubnetRouteAlgorithm) {
         this.SubnetRouteAlgorithm = SubnetRouteAlgorithm;

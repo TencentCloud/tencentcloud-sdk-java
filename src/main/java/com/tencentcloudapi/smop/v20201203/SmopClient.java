@@ -39,7 +39,9 @@ public class SmopClient extends AbstractClient{
     }
 
     /**
-     *提交任务事件接口
+     *smop产品下线，接口也一起下线
+
+提交任务事件接口
      * @param req SubmitTaskEventRequest
      * @return SubmitTaskEventResponse
      * @throws TencentCloudSDKException

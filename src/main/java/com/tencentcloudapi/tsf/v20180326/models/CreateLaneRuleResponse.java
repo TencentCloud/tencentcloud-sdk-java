@@ -25,7 +25,6 @@ public class CreateLaneRuleResponse extends AbstractModel {
 
     /**
     * 泳道规则Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateLaneRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 泳道规则Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道规则Id 
      * @return Result 泳道规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateLaneRuleResponse extends AbstractModel {
 
     /**
      * Set 泳道规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 泳道规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

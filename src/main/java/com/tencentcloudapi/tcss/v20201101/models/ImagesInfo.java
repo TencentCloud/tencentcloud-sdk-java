@@ -52,11 +52,18 @@ public class ImagesInfo extends AbstractModel {
     private Long Size;
 
     /**
-    * 主机个数
+    * 主机个数(包含普通节点数和超级节点数)
     */
     @SerializedName("HostCnt")
     @Expose
     private Long HostCnt;
+
+    /**
+    * 超级节点数
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
 
     /**
     * 容器个数
@@ -277,19 +284,35 @@ public class ImagesInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机个数 
-     * @return HostCnt 主机个数
+     * Get 主机个数(包含普通节点数和超级节点数) 
+     * @return HostCnt 主机个数(包含普通节点数和超级节点数)
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set 主机个数
-     * @param HostCnt 主机个数
+     * Set 主机个数(包含普通节点数和超级节点数)
+     * @param HostCnt 主机个数(包含普通节点数和超级节点数)
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
+    }
+
+    /**
+     * Get 超级节点数 
+     * @return SuperNodeCnt 超级节点数
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set 超级节点数
+     * @param SuperNodeCnt 超级节点数
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
     }
 
     /**
@@ -667,6 +690,9 @@ public class ImagesInfo extends AbstractModel {
         if (source.HostCnt != null) {
             this.HostCnt = new Long(source.HostCnt);
         }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
+        }
         if (source.ContainerCnt != null) {
             this.ContainerCnt = new Long(source.ContainerCnt);
         }
@@ -745,6 +771,7 @@ public class ImagesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "VulCnt", this.VulCnt);

@@ -25,7 +25,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyIndex")
     @Expose
@@ -33,7 +32,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -42,7 +40,6 @@ public class SecurityGroupPolicy extends AbstractModel {
     /**
     * 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -50,7 +47,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTemplate")
     @Expose
@@ -58,7 +54,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -66,7 +61,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
@@ -74,7 +68,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 安全组实例ID，例如：sg-ohuuioma。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -82,7 +75,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * IP地址ID或者IP地址组ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressTemplate")
     @Expose
@@ -90,7 +82,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * ACCEPT 或 DROP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -98,7 +89,6 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDescription")
     @Expose
@@ -106,17 +96,14 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
     * 安全组最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。 
      * @return PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyIndex() {
         return this.PolicyIndex;
@@ -124,19 +111,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 
     /**
-     * Get 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。 
      * @return Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -144,9 +127,7 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -154,11 +135,9 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Get 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
-注意：此字段可能返回 null，表示取不到有效值。 
+说明：如果Protocol设置为ALL，则Port也需要设置为all。 
      * @return Port 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -167,20 +146,16 @@ public class SecurityGroupPolicy extends AbstractModel {
     /**
      * Set 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。 
      * @return ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceTemplateSpecification getServiceTemplate() {
         return this.ServiceTemplate;
@@ -188,19 +163,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTemplate(ServiceTemplateSpecification ServiceTemplate) {
         this.ServiceTemplate = ServiceTemplate;
     }
 
     /**
-     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。 
      * @return CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
@@ -208,19 +179,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。 
      * @return Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
@@ -228,19 +195,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 安全组实例ID，例如：sg-ohuuioma。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组实例ID，例如：sg-ohuuioma。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
@@ -248,19 +211,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 安全组实例ID，例如：sg-ohuuioma。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get IP地址ID或者IP地址组ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP地址ID或者IP地址组ID。 
      * @return AddressTemplate IP地址ID或者IP地址组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddressTemplateSpecification getAddressTemplate() {
         return this.AddressTemplate;
@@ -268,19 +227,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set IP地址ID或者IP地址组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressTemplate IP地址ID或者IP地址组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
         this.AddressTemplate = AddressTemplate;
     }
 
     /**
-     * Get ACCEPT 或 DROP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ACCEPT 或 DROP。 
      * @return Action ACCEPT 或 DROP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -288,19 +243,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set ACCEPT 或 DROP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action ACCEPT 或 DROP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。 
      * @return PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDescription() {
         return this.PolicyDescription;
@@ -308,19 +259,15 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDescription(String PolicyDescription) {
         this.PolicyDescription = PolicyDescription;
     }
 
     /**
-     * Get 安全组最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组最近修改时间。 
      * @return ModifyTime 安全组最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -328,9 +275,7 @@ public class SecurityGroupPolicy extends AbstractModel {
 
     /**
      * Set 安全组最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 安全组最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

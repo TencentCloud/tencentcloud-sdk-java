@@ -25,7 +25,6 @@ public class CidrForCcn extends AbstractModel {
 
     /**
     * local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
@@ -33,17 +32,14 @@ public class CidrForCcn extends AbstractModel {
 
     /**
     * 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishedToVbc")
     @Expose
     private Boolean PublishedToVbc;
 
     /**
-     * Get local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get local cidr值。 
      * @return Cidr local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -51,19 +47,15 @@ public class CidrForCcn extends AbstractModel {
 
     /**
      * Set local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;
     }
 
     /**
-     * Get 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否发布到了云联网。 
      * @return PublishedToVbc 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublishedToVbc() {
         return this.PublishedToVbc;
@@ -71,9 +63,7 @@ public class CidrForCcn extends AbstractModel {
 
     /**
      * Set 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishedToVbc 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishedToVbc(Boolean PublishedToVbc) {
         this.PublishedToVbc = PublishedToVbc;

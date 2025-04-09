@@ -25,7 +25,6 @@ public class DescribePublicNetworkResponse extends AbstractModel {
 
     /**
     * 获取云原生API网关公网详情响应结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePublicNetworkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取云原生API网关公网详情响应结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取云原生API网关公网详情响应结果。 
      * @return Result 获取云原生API网关公网详情响应结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePublicNetworkResult getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribePublicNetworkResponse extends AbstractModel {
 
     /**
      * Set 获取云原生API网关公网详情响应结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 获取云原生API网关公网详情响应结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DescribePublicNetworkResult Result) {
         this.Result = Result;

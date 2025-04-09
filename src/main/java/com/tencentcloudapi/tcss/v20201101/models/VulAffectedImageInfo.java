@@ -38,11 +38,18 @@ public class VulAffectedImageInfo extends AbstractModel {
     private String ImageName;
 
     /**
-    * 关联的主机数
+    * 关联的主机数(包含普通节点数和超级节点数)
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
+
+    /**
+    * 关联的超级节点数
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
 
     /**
     * 关联的容器数
@@ -91,19 +98,35 @@ public class VulAffectedImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联的主机数 
-     * @return HostCount 关联的主机数
+     * Get 关联的主机数(包含普通节点数和超级节点数) 
+     * @return HostCount 关联的主机数(包含普通节点数和超级节点数)
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set 关联的主机数
-     * @param HostCount 关联的主机数
+     * Set 关联的主机数(包含普通节点数和超级节点数)
+     * @param HostCount 关联的主机数(包含普通节点数和超级节点数)
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
+    }
+
+    /**
+     * Get 关联的超级节点数 
+     * @return SuperNodeCount 关联的超级节点数
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set 关联的超级节点数
+     * @param SuperNodeCount 关联的超级节点数
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
     }
 
     /**
@@ -155,6 +178,9 @@ public class VulAffectedImageInfo extends AbstractModel {
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
         if (source.ContainerCount != null) {
             this.ContainerCount = new Long(source.ContainerCount);
         }
@@ -174,6 +200,7 @@ public class VulAffectedImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageID", this.ImageID);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
         this.setParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
         this.setParamArrayObj(map, prefix + "ComponentList.", this.ComponentList);
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManageDeviceRiskResponse extends AbstractModel {
+public class DescribeCsReportCountDataInfoResponse extends AbstractModel {
 
     /**
-    * 业务出参
+    * 云存上报统计信息
     */
     @SerializedName("Data")
     @Expose
-    private ManageDeviceRiskOutput Data;
+    private CountDataInfo Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,18 +38,18 @@ public class ManageDeviceRiskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务出参 
-     * @return Data 业务出参
+     * Get 云存上报统计信息 
+     * @return Data 云存上报统计信息
      */
-    public ManageDeviceRiskOutput getData() {
+    public CountDataInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 业务出参
-     * @param Data 业务出参
+     * Set 云存上报统计信息
+     * @param Data 云存上报统计信息
      */
-    public void setData(ManageDeviceRiskOutput Data) {
+    public void setData(CountDataInfo Data) {
         this.Data = Data;
     }
 
@@ -69,16 +69,16 @@ public class ManageDeviceRiskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ManageDeviceRiskResponse() {
+    public DescribeCsReportCountDataInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ManageDeviceRiskResponse(ManageDeviceRiskResponse source) {
+    public DescribeCsReportCountDataInfoResponse(DescribeCsReportCountDataInfoResponse source) {
         if (source.Data != null) {
-            this.Data = new ManageDeviceRiskOutput(source.Data);
+            this.Data = new CountDataInfo(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

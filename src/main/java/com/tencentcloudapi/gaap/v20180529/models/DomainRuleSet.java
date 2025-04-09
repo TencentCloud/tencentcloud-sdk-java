@@ -39,7 +39,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateId")
     @Expose
@@ -47,7 +46,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificateAlias")
     @Expose
@@ -55,7 +53,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientCertificateId")
     @Expose
@@ -63,7 +60,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientCertificateAlias")
     @Expose
@@ -71,7 +67,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicAuthConfId")
     @Expose
@@ -81,7 +76,6 @@ public class DomainRuleSet extends AbstractModel {
     * 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicAuth")
     @Expose
@@ -89,7 +83,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicAuthConfAlias")
     @Expose
@@ -97,7 +90,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerCertificateId")
     @Expose
@@ -107,7 +99,6 @@ public class DomainRuleSet extends AbstractModel {
     * 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerAuth")
     @Expose
@@ -115,7 +106,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerCertificateAlias")
     @Expose
@@ -123,7 +113,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GaapCertificateId")
     @Expose
@@ -133,7 +122,6 @@ public class DomainRuleSet extends AbstractModel {
     * 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GaapAuth")
     @Expose
@@ -141,7 +129,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GaapCertificateAlias")
     @Expose
@@ -149,7 +136,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerCertificateDomain")
     @Expose
@@ -157,7 +143,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolyClientCertificateAliasInfo")
     @Expose
@@ -165,7 +150,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolyRealServerCertificateAliasInfo")
     @Expose
@@ -176,7 +160,6 @@ public class DomainRuleSet extends AbstractModel {
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainStatus")
     @Expose
@@ -184,7 +167,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
     @Expose
@@ -194,7 +176,6 @@ public class DomainRuleSet extends AbstractModel {
     * Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -202,7 +183,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefaultServer")
     @Expose
@@ -210,7 +190,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TLSCiphers")
     @Expose
@@ -218,7 +197,6 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
     * TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TLSSupportVersion")
     @Expose
@@ -257,10 +235,8 @@ public class DomainRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。 
      * @return CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateId() {
         return this.CertificateId;
@@ -268,19 +244,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应服务器证书名称。 
      * @return CertificateAlias 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertificateAlias() {
         return this.CertificateAlias;
@@ -288,19 +260,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateAlias 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificateAlias(String CertificateAlias) {
         this.CertificateAlias = CertificateAlias;
     }
 
     /**
-     * Get 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。 
      * @return ClientCertificateId 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
@@ -308,19 +276,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateId 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
     }
 
     /**
-     * Get 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应客户端证书名称。 
      * @return ClientCertificateAlias 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientCertificateAlias() {
         return this.ClientCertificateAlias;
@@ -328,19 +292,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateAlias 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientCertificateAlias(String ClientCertificateAlias) {
         this.ClientCertificateAlias = ClientCertificateAlias;
     }
 
     /**
-     * Get 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应基础认证配置ID。 
      * @return BasicAuthConfId 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBasicAuthConfId() {
         return this.BasicAuthConfId;
@@ -348,9 +308,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicAuthConfId 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicAuthConfId(String BasicAuthConfId) {
         this.BasicAuthConfId = BasicAuthConfId;
@@ -359,12 +317,10 @@ public class DomainRuleSet extends AbstractModel {
     /**
      * Get 基础认证开关，其中：
 0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+1，表示已开启。 
      * @return BasicAuth 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBasicAuth() {
         return this.BasicAuth;
@@ -374,21 +330,17 @@ public class DomainRuleSet extends AbstractModel {
      * Set 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicAuth 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicAuth(Long BasicAuth) {
         this.BasicAuth = BasicAuth;
     }
 
     /**
-     * Get 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应基础认证配置名称。 
      * @return BasicAuthConfAlias 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBasicAuthConfAlias() {
         return this.BasicAuthConfAlias;
@@ -396,19 +348,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicAuthConfAlias 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicAuthConfAlias(String BasicAuthConfAlias) {
         this.BasicAuthConfAlias = BasicAuthConfAlias;
     }
 
     /**
-     * Get 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应源站认证证书ID。 
      * @return RealServerCertificateId 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealServerCertificateId() {
         return this.RealServerCertificateId;
@@ -416,9 +364,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateId 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerCertificateId(String RealServerCertificateId) {
         this.RealServerCertificateId = RealServerCertificateId;
@@ -427,12 +373,10 @@ public class DomainRuleSet extends AbstractModel {
     /**
      * Get 源站认证开关，其中：
 0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+1，表示已开启。 
      * @return RealServerAuth 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealServerAuth() {
         return this.RealServerAuth;
@@ -442,21 +386,17 @@ public class DomainRuleSet extends AbstractModel {
      * Set 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerAuth 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerAuth(Long RealServerAuth) {
         this.RealServerAuth = RealServerAuth;
     }
 
     /**
-     * Get 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应源站认证证书名称。 
      * @return RealServerCertificateAlias 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealServerCertificateAlias() {
         return this.RealServerCertificateAlias;
@@ -464,19 +404,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateAlias 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerCertificateAlias(String RealServerCertificateAlias) {
         this.RealServerCertificateAlias = RealServerCertificateAlias;
     }
 
     /**
-     * Get 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应通道认证证书ID。 
      * @return GaapCertificateId 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGaapCertificateId() {
         return this.GaapCertificateId;
@@ -484,9 +420,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GaapCertificateId 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGaapCertificateId(String GaapCertificateId) {
         this.GaapCertificateId = GaapCertificateId;
@@ -495,12 +429,10 @@ public class DomainRuleSet extends AbstractModel {
     /**
      * Get 通道认证开关，其中：
 0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。 
+1，表示已开启。 
      * @return GaapAuth 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGaapAuth() {
         return this.GaapAuth;
@@ -510,21 +442,17 @@ public class DomainRuleSet extends AbstractModel {
      * Set 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GaapAuth 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGaapAuth(Long GaapAuth) {
         this.GaapAuth = GaapAuth;
     }
 
     /**
-     * Get 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该域名对应通道认证证书名称。 
      * @return GaapCertificateAlias 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGaapCertificateAlias() {
         return this.GaapCertificateAlias;
@@ -532,19 +460,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GaapCertificateAlias 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGaapCertificateAlias(String GaapCertificateAlias) {
         this.GaapCertificateAlias = GaapCertificateAlias;
     }
 
     /**
-     * Get 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站认证域名。 
      * @return RealServerCertificateDomain 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealServerCertificateDomain() {
         return this.RealServerCertificateDomain;
@@ -552,19 +476,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateDomain 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerCertificateDomain(String RealServerCertificateDomain) {
         this.RealServerCertificateDomain = RealServerCertificateDomain;
     }
 
     /**
-     * Get 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多客户端证书时，返回多个证书的id和别名 
      * @return PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateAliasInfo [] getPolyClientCertificateAliasInfo() {
         return this.PolyClientCertificateAliasInfo;
@@ -572,19 +492,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolyClientCertificateAliasInfo(CertificateAliasInfo [] PolyClientCertificateAliasInfo) {
         this.PolyClientCertificateAliasInfo = PolyClientCertificateAliasInfo;
     }
 
     /**
-     * Get 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多源站证书时，返回多个证书的id和别名 
      * @return PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateAliasInfo [] getPolyRealServerCertificateAliasInfo() {
         return this.PolyRealServerCertificateAliasInfo;
@@ -592,9 +508,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolyRealServerCertificateAliasInfo(CertificateAliasInfo [] PolyRealServerCertificateAliasInfo) {
         this.PolyRealServerCertificateAliasInfo = PolyRealServerCertificateAliasInfo;
@@ -604,13 +518,11 @@ public class DomainRuleSet extends AbstractModel {
      * Get 域名的状态。
 0表示运行中，
 1表示变更中，
-2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。 
+2表示删除中。 
      * @return DomainStatus 域名的状态。
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDomainStatus() {
         return this.DomainStatus;
@@ -621,22 +533,18 @@ public class DomainRuleSet extends AbstractModel {
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainStatus 域名的状态。
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainStatus(Long DomainStatus) {
         this.DomainStatus = DomainStatus;
     }
 
     /**
-     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。 
      * @return BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBanStatus() {
         return this.BanStatus;
@@ -644,9 +552,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;
@@ -655,12 +561,10 @@ public class DomainRuleSet extends AbstractModel {
     /**
      * Get Http3特性标识，其中：
 0表示关闭；
-1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示启用。 
      * @return Http3Supported Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
@@ -670,21 +574,17 @@ public class DomainRuleSet extends AbstractModel {
      * Set Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Http3Supported Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;
     }
 
     /**
-     * Get 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为默认域名 
      * @return IsDefaultServer 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefaultServer() {
         return this.IsDefaultServer;
@@ -692,19 +592,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefaultServer 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefaultServer(Boolean IsDefaultServer) {
         this.IsDefaultServer = IsDefaultServer;
     }
 
     /**
-     * Get TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLS套件包 
      * @return TLSCiphers TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTLSCiphers() {
         return this.TLSCiphers;
@@ -712,19 +608,15 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TLSCiphers TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTLSCiphers(String TLSCiphers) {
         this.TLSCiphers = TLSCiphers;
     }
 
     /**
-     * Get TLS版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLS版本 
      * @return TLSSupportVersion TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTLSSupportVersion() {
         return this.TLSSupportVersion;
@@ -732,9 +624,7 @@ public class DomainRuleSet extends AbstractModel {
 
     /**
      * Set TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TLSSupportVersion TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTLSSupportVersion(String [] TLSSupportVersion) {
         this.TLSSupportVersion = TLSSupportVersion;

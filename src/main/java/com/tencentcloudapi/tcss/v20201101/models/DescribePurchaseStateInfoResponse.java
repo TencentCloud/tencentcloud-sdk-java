@@ -165,6 +165,13 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     private Long DefendHostCoresCnt;
 
     /**
+    * 试用的专业版核数
+    */
+    @SerializedName("TrialCoresCnt")
+    @Expose
+    private Long TrialCoresCnt;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -496,6 +503,22 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
+     * Get 试用的专业版核数 
+     * @return TrialCoresCnt 试用的专业版核数
+     */
+    public Long getTrialCoresCnt() {
+        return this.TrialCoresCnt;
+    }
+
+    /**
+     * Set 试用的专业版核数
+     * @param TrialCoresCnt 试用的专业版核数
+     */
+    public void setTrialCoresCnt(Long TrialCoresCnt) {
+        this.TrialCoresCnt = TrialCoresCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -579,6 +602,9 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.DefendHostCoresCnt != null) {
             this.DefendHostCoresCnt = new Long(source.DefendHostCoresCnt);
         }
+        if (source.TrialCoresCnt != null) {
+            this.TrialCoresCnt = new Long(source.TrialCoresCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -609,6 +635,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         this.setParamSimple(map, prefix + "FlexibleCoresLimit", this.FlexibleCoresLimit);
         this.setParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
         this.setParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
+        this.setParamSimple(map, prefix + "TrialCoresCnt", this.TrialCoresCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

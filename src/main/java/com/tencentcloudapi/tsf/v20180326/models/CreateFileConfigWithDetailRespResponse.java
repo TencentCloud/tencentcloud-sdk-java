@@ -25,7 +25,6 @@ public class CreateFileConfigWithDetailRespResponse extends AbstractModel {
 
     /**
     * 文件配置项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateFileConfigWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件配置项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件配置项 
      * @return Result 文件配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileConfig getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateFileConfigWithDetailRespResponse extends AbstractModel {
 
     /**
      * Set 文件配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 文件配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(FileConfig Result) {
         this.Result = Result;

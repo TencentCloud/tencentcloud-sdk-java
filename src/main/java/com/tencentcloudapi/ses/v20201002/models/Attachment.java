@@ -38,6 +38,13 @@ public class Attachment extends AbstractModel {
     private String Content;
 
     /**
+    * 附件URL。未开放功能，请勿使用。
+    */
+    @SerializedName("FileURL")
+    @Expose
+    private String FileURL;
+
+    /**
      * Get 附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。 
      * @return FileName 附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
      */
@@ -69,6 +76,22 @@ public class Attachment extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 附件URL。未开放功能，请勿使用。 
+     * @return FileURL 附件URL。未开放功能，请勿使用。
+     */
+    public String getFileURL() {
+        return this.FileURL;
+    }
+
+    /**
+     * Set 附件URL。未开放功能，请勿使用。
+     * @param FileURL 附件URL。未开放功能，请勿使用。
+     */
+    public void setFileURL(String FileURL) {
+        this.FileURL = FileURL;
+    }
+
     public Attachment() {
     }
 
@@ -83,6 +106,9 @@ public class Attachment extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.FileURL != null) {
+            this.FileURL = new String(source.FileURL);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class Attachment extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "FileURL", this.FileURL);
 
     }
 }

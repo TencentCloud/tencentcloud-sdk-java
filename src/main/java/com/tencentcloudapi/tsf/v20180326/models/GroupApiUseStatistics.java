@@ -25,7 +25,6 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
     * 总调用数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopStatusCode")
     @Expose
@@ -33,7 +32,6 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
     * 平均错误率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopTimeCost")
     @Expose
@@ -41,17 +39,14 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
     * 分位值对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quantile")
     @Expose
     private QuantileEntity Quantile;
 
     /**
-     * Get 总调用数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总调用数 
      * @return TopStatusCode 总调用数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiUseStatisticsEntity [] getTopStatusCode() {
         return this.TopStatusCode;
@@ -59,19 +54,15 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
      * Set 总调用数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopStatusCode 总调用数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopStatusCode(ApiUseStatisticsEntity [] TopStatusCode) {
         this.TopStatusCode = TopStatusCode;
     }
 
     /**
-     * Get 平均错误率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均错误率 
      * @return TopTimeCost 平均错误率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiUseStatisticsEntity [] getTopTimeCost() {
         return this.TopTimeCost;
@@ -79,19 +70,15 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
      * Set 平均错误率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopTimeCost 平均错误率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopTimeCost(ApiUseStatisticsEntity [] TopTimeCost) {
         this.TopTimeCost = TopTimeCost;
     }
 
     /**
-     * Get 分位值对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分位值对象 
      * @return Quantile 分位值对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QuantileEntity getQuantile() {
         return this.Quantile;
@@ -99,9 +86,7 @@ public class GroupApiUseStatistics extends AbstractModel {
 
     /**
      * Set 分位值对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quantile 分位值对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuantile(QuantileEntity Quantile) {
         this.Quantile = Quantile;

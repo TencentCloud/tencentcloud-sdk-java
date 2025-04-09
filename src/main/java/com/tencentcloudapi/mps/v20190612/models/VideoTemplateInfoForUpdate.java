@@ -192,8 +192,9 @@ second：表示秒
 
     /**
     * 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
-<li>side_by_side：左右视角</li>
-<li>top_bottom：上下视角</li>
+<li>side_by_side：原视频内容左右排列布局</li>
+<li>top_bottom：原视频内容上下排列布局</li>
+计费将按照切分后的分辨率尺寸上报用量及计费；
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -848,13 +849,15 @@ second：表示秒
 
     /**
      * Get 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
-<li>side_by_side：左右视角</li>
-<li>top_bottom：上下视角</li>
+<li>side_by_side：原视频内容左右排列布局</li>
+<li>top_bottom：原视频内容上下排列布局</li>
+计费将按照切分后的分辨率尺寸上报用量及计费；
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
-<li>side_by_side：左右视角</li>
-<li>top_bottom：上下视角</li>
+<li>side_by_side：原视频内容左右排列布局</li>
+<li>top_bottom：原视频内容上下排列布局</li>
+计费将按照切分后的分辨率尺寸上报用量及计费；
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -864,13 +867,15 @@ second：表示秒
 
     /**
      * Set 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
-<li>side_by_side：左右视角</li>
-<li>top_bottom：上下视角</li>
+<li>side_by_side：原视频内容左右排列布局</li>
+<li>top_bottom：原视频内容上下排列布局</li>
+计费将按照切分后的分辨率尺寸上报用量及计费；
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
-<li>side_by_side：左右视角</li>
-<li>top_bottom：上下视角</li>
+<li>side_by_side：原视频内容左右排列布局</li>
+<li>top_bottom：原视频内容上下排列布局</li>
+计费将按照切分后的分辨率尺寸上报用量及计费；
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
      */

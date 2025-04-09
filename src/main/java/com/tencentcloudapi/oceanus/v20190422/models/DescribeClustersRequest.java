@@ -53,6 +53,12 @@ public class DescribeClustersRequest extends AbstractModel {
 
     /**
     * 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
     */
     @SerializedName("Filters")
     @Expose
@@ -130,8 +136,20 @@ public class DescribeClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤规则 
+     * Get 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+     
      * @return Filters 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -139,7 +157,19 @@ public class DescribeClustersRequest extends AbstractModel {
 
     /**
      * Set 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
      * @param Filters 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

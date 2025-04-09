@@ -81,7 +81,6 @@ public class RouteTable extends AbstractModel {
 
     /**
     * local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalCidrForCcn")
     @Expose
@@ -216,10 +215,8 @@ public class RouteTable extends AbstractModel {
     }
 
     /**
-     * Get local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get local路由是否发布云联网。 
      * @return LocalCidrForCcn local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CidrForCcn [] getLocalCidrForCcn() {
         return this.LocalCidrForCcn;
@@ -227,9 +224,7 @@ public class RouteTable extends AbstractModel {
 
     /**
      * Set local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalCidrForCcn local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalCidrForCcn(CidrForCcn [] LocalCidrForCcn) {
         this.LocalCidrForCcn = LocalCidrForCcn;

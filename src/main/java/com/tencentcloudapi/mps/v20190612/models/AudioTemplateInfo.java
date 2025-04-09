@@ -55,11 +55,8 @@ public class AudioTemplateInfo extends AbstractModel {
     private Long Bitrate;
 
     /**
-    * 音频流的采样率，可选值：
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+    * 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
     */
     @SerializedName("SampleRate")
     @Expose
@@ -187,32 +184,20 @@ public class AudioTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 音频流的采样率，可选值：
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。 
-     * @return SampleRate 音频流的采样率，可选值：
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+     * Get 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！ 
+     * @return SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频流的采样率，可选值：
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
-     * @param SampleRate 音频流的采样率，可选值：
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+     * Set 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
+     * @param SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;

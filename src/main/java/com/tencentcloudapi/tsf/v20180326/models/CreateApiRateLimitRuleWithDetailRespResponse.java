@@ -25,7 +25,6 @@ public class CreateApiRateLimitRuleWithDetailRespResponse extends AbstractModel 
 
     /**
     * 创建的规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateApiRateLimitRuleWithDetailRespResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 创建的规则 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的规则 ID 
      * @return Result 创建的规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiRateLimitRule getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateApiRateLimitRuleWithDetailRespResponse extends AbstractModel 
 
     /**
      * Set 创建的规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 创建的规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ApiRateLimitRule Result) {
         this.Result = Result;

@@ -25,7 +25,6 @@ public class DescribePublicConfigReleaseLogsResponse extends AbstractModel {
 
     /**
     * 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePublicConfigReleaseLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页后的公共配置项发布历史列表 
      * @return Result 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageConfigReleaseLog getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribePublicConfigReleaseLogsResponse extends AbstractModel {
 
     /**
      * Set 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageConfigReleaseLog Result) {
         this.Result = Result;

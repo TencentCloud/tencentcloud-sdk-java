@@ -59,7 +59,7 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     private Long Size;
 
     /**
-    * 关联主机个数
+    * 关联主机个数(包含普通节点数和超级节点数)
     */
     @SerializedName("HostCnt")
     @Expose
@@ -71,6 +71,13 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     @SerializedName("ContainerCnt")
     @Expose
     private Long ContainerCnt;
+
+    /**
+    * 超级节点数
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
 
     /**
     * 最近扫描时间
@@ -314,16 +321,16 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 关联主机个数 
-     * @return HostCnt 关联主机个数
+     * Get 关联主机个数(包含普通节点数和超级节点数) 
+     * @return HostCnt 关联主机个数(包含普通节点数和超级节点数)
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set 关联主机个数
-     * @param HostCnt 关联主机个数
+     * Set 关联主机个数(包含普通节点数和超级节点数)
+     * @param HostCnt 关联主机个数(包含普通节点数和超级节点数)
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
@@ -343,6 +350,22 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
      */
     public void setContainerCnt(Long ContainerCnt) {
         this.ContainerCnt = ContainerCnt;
+    }
+
+    /**
+     * Get 超级节点数 
+     * @return SuperNodeCnt 超级节点数
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set 超级节点数
+     * @param SuperNodeCnt 超级节点数
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
     }
 
     /**
@@ -742,6 +765,9 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
         if (source.ContainerCnt != null) {
             this.ContainerCnt = new Long(source.ContainerCnt);
         }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
+        }
         if (source.ScanTime != null) {
             this.ScanTime = new String(source.ScanTime);
         }
@@ -825,6 +851,7 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "VulCnt", this.VulCnt);
         this.setParamSimple(map, prefix + "RiskCnt", this.RiskCnt);

@@ -25,7 +25,6 @@ public class DescribeUsableUnitNamespacesResponse extends AbstractModel {
 
     /**
     * 单元化命名空间对象列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeUsableUnitNamespacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 单元化命名空间对象列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单元化命名空间对象列表 
      * @return Result 单元化命名空间对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageUnitNamespace getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeUsableUnitNamespacesResponse extends AbstractModel {
 
     /**
      * Set 单元化命名空间对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 单元化命名空间对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageUnitNamespace Result) {
         this.Result = Result;

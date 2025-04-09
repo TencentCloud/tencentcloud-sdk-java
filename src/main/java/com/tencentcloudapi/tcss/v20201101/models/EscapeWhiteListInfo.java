@@ -45,11 +45,18 @@ public class EscapeWhiteListInfo extends AbstractModel {
     private Long ID;
 
     /**
-    * 关联主机数量
+    * 关联主机数量（包含普通节点和超级节点数量）
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
+
+    /**
+    * 关联超级节点数量
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
 
     /**
     * 关联容器数量
@@ -135,19 +142,35 @@ public class EscapeWhiteListInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联主机数量 
-     * @return HostCount 关联主机数量
+     * Get 关联主机数量（包含普通节点和超级节点数量） 
+     * @return HostCount 关联主机数量（包含普通节点和超级节点数量）
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set 关联主机数量
-     * @param HostCount 关联主机数量
+     * Set 关联主机数量（包含普通节点和超级节点数量）
+     * @param HostCount 关联主机数量（包含普通节点和超级节点数量）
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
+    }
+
+    /**
+     * Get 关联超级节点数量 
+     * @return SuperNodeCount 关联超级节点数量
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set 关联超级节点数量
+     * @param SuperNodeCount 关联超级节点数量
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
     }
 
     /**
@@ -250,6 +273,9 @@ public class EscapeWhiteListInfo extends AbstractModel {
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
         if (source.ContainerCount != null) {
             this.ContainerCount = new Long(source.ContainerCount);
         }
@@ -279,6 +305,7 @@ public class EscapeWhiteListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
         this.setParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
         this.setParamArraySimple(map, prefix + "EventType.", this.EventType);
         this.setParamSimple(map, prefix + "InsertTime", this.InsertTime);

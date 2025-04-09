@@ -25,7 +25,6 @@ public class CreatePathRewritesWithDetailRespResponse extends AbstractModel {
 
     /**
     * 返回路径重写规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreatePathRewritesWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回路径重写规则 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回路径重写规则 ID 
      * @return Result 返回路径重写规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreatePathRewritesWithDetailRespResponse extends AbstractModel {
 
     /**
      * Set 返回路径重写规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 返回路径重写规则 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String [] Result) {
         this.Result = Result;

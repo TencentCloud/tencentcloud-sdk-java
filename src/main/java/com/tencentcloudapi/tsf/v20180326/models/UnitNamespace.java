@@ -39,7 +39,6 @@ public class UnitNamespace extends AbstractModel {
 
     /**
     * 单元化命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -47,7 +46,6 @@ public class UnitNamespace extends AbstractModel {
 
     /**
     * 网关实体ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayInstanceId")
     @Expose
@@ -55,7 +53,6 @@ public class UnitNamespace extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -63,7 +60,6 @@ public class UnitNamespace extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -102,10 +98,8 @@ public class UnitNamespace extends AbstractModel {
     }
 
     /**
-     * Get 单元化命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单元化命名空间ID 
      * @return Id 单元化命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -113,19 +107,15 @@ public class UnitNamespace extends AbstractModel {
 
     /**
      * Set 单元化命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 单元化命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 网关实体ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实体ID 
      * @return GatewayInstanceId 网关实体ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayInstanceId() {
         return this.GatewayInstanceId;
@@ -133,19 +123,15 @@ public class UnitNamespace extends AbstractModel {
 
     /**
      * Set 网关实体ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayInstanceId 网关实体ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayInstanceId(String GatewayInstanceId) {
         this.GatewayInstanceId = GatewayInstanceId;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -153,19 +139,15 @@ public class UnitNamespace extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -173,9 +155,7 @@ public class UnitNamespace extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

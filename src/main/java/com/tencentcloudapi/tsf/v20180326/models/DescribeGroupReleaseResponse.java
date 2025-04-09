@@ -25,7 +25,6 @@ public class DescribeGroupReleaseResponse extends AbstractModel {
 
     /**
     * 部署组发布的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupReleaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 部署组发布的相关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署组发布的相关信息 
      * @return Result 部署组发布的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupRelease getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeGroupReleaseResponse extends AbstractModel {
 
     /**
      * Set 部署组发布的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 部署组发布的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(GroupRelease Result) {
         this.Result = Result;

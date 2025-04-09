@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.billing.v20180709.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSavingPlanCoverageResponse extends AbstractModel {
+public class DescribeCsReportCountDataInfoResponse extends AbstractModel {
 
     /**
-    * 节省计划覆盖率明细数据
+    * 云存上报统计信息
     */
-    @SerializedName("DetailSet")
+    @SerializedName("Data")
     @Expose
-    private SavingPlanCoverageDetail [] DetailSet;
-
-    /**
-    * 节省计划覆盖率聚合数据
-    */
-    @SerializedName("RateSet")
-    @Expose
-    private SavingPlanCoverageRate [] RateSet;
-
-    /**
-    * 查询命中的节省计划覆盖率明细数据总条数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private CountDataInfo Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +38,19 @@ public class DescribeSavingPlanCoverageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节省计划覆盖率明细数据 
-     * @return DetailSet 节省计划覆盖率明细数据
+     * Get 云存上报统计信息 
+     * @return Data 云存上报统计信息
      */
-    public SavingPlanCoverageDetail [] getDetailSet() {
-        return this.DetailSet;
+    public CountDataInfo getData() {
+        return this.Data;
     }
 
     /**
-     * Set 节省计划覆盖率明细数据
-     * @param DetailSet 节省计划覆盖率明细数据
+     * Set 云存上报统计信息
+     * @param Data 云存上报统计信息
      */
-    public void setDetailSet(SavingPlanCoverageDetail [] DetailSet) {
-        this.DetailSet = DetailSet;
-    }
-
-    /**
-     * Get 节省计划覆盖率聚合数据 
-     * @return RateSet 节省计划覆盖率聚合数据
-     */
-    public SavingPlanCoverageRate [] getRateSet() {
-        return this.RateSet;
-    }
-
-    /**
-     * Set 节省计划覆盖率聚合数据
-     * @param RateSet 节省计划覆盖率聚合数据
-     */
-    public void setRateSet(SavingPlanCoverageRate [] RateSet) {
-        this.RateSet = RateSet;
-    }
-
-    /**
-     * Get 查询命中的节省计划覆盖率明细数据总条数 
-     * @return TotalCount 查询命中的节省计划覆盖率明细数据总条数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 查询命中的节省计划覆盖率明细数据总条数
-     * @param TotalCount 查询命中的节省计划覆盖率明细数据总条数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setData(CountDataInfo Data) {
+        this.Data = Data;
     }
 
     /**
@@ -115,28 +69,16 @@ public class DescribeSavingPlanCoverageResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeSavingPlanCoverageResponse() {
+    public DescribeCsReportCountDataInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSavingPlanCoverageResponse(DescribeSavingPlanCoverageResponse source) {
-        if (source.DetailSet != null) {
-            this.DetailSet = new SavingPlanCoverageDetail[source.DetailSet.length];
-            for (int i = 0; i < source.DetailSet.length; i++) {
-                this.DetailSet[i] = new SavingPlanCoverageDetail(source.DetailSet[i]);
-            }
-        }
-        if (source.RateSet != null) {
-            this.RateSet = new SavingPlanCoverageRate[source.RateSet.length];
-            for (int i = 0; i < source.RateSet.length; i++) {
-                this.RateSet[i] = new SavingPlanCoverageRate(source.RateSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeCsReportCountDataInfoResponse(DescribeCsReportCountDataInfoResponse source) {
+        if (source.Data != null) {
+            this.Data = new CountDataInfo(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -148,9 +90,7 @@ public class DescribeSavingPlanCoverageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
-        this.setParamArrayObj(map, prefix + "RateSet.", this.RateSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
     * 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthyInterval")
     @Expose
@@ -33,7 +32,6 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
     * 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnHealthyInterval")
     @Expose
@@ -41,7 +39,6 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
     * 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpPath")
     @Expose
@@ -49,17 +46,14 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
     * GET HTTP 请求的超时时间，单位：秒。默认 60。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
     @Expose
     private Float Timeout;
 
     /**
-     * Get 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主动健康检查健康探测间隔，单位：秒，0表示不开启 
      * @return HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthyInterval() {
         return this.HealthyInterval;
@@ -67,19 +61,15 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
      * Set 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthyInterval(Long HealthyInterval) {
         this.HealthyInterval = HealthyInterval;
     }
 
     /**
-     * Get 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主动健康检查异常探测间隔，单位：秒，0表示不开启 
      * @return UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnHealthyInterval() {
         return this.UnHealthyInterval;
@@ -87,19 +77,15 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
      * Set 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnHealthyInterval(Long UnHealthyInterval) {
         this.UnHealthyInterval = UnHealthyInterval;
     }
 
     /**
-     * Get 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。 
      * @return HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpPath() {
         return this.HttpPath;
@@ -107,19 +93,15 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
      * Set 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpPath(String HttpPath) {
         this.HttpPath = HttpPath;
     }
 
     /**
-     * Get GET HTTP 请求的超时时间，单位：秒。默认 60。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GET HTTP 请求的超时时间，单位：秒。默认 60。 
      * @return Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTimeout() {
         return this.Timeout;
@@ -127,9 +109,7 @@ public class KongActiveHealthCheck extends AbstractModel {
 
     /**
      * Set GET HTTP 请求的超时时间，单位：秒。默认 60。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Float Timeout) {
         this.Timeout = Timeout;

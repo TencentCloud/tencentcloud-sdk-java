@@ -55,7 +55,11 @@ public class CreateRegisterCodeRequest extends AbstractModel {
     private Long EffectiveTime;
 
     /**
-    * 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+    * 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
     */
     @SerializedName("IpAddressRange")
     @Expose
@@ -138,16 +142,32 @@ public class CreateRegisterCodeRequest extends AbstractModel {
     }
 
     /**
-     * Get 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。 
-     * @return IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+     * Get 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。 
+     * @return IpAddressRange 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
      */
     public String getIpAddressRange() {
         return this.IpAddressRange;
     }
 
     /**
-     * Set 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
-     * @param IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+     * Set 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
+     * @param IpAddressRange 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
      */
     public void setIpAddressRange(String IpAddressRange) {
         this.IpAddressRange = IpAddressRange;

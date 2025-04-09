@@ -25,7 +25,6 @@ public class DescribeGatewayInstancePortResult extends AbstractModel {
 
     /**
     * 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeGatewayInstancePortResult extends AbstractModel {
 
     /**
     * 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayInstancePortList")
     @Expose
     private GatewayInstanceSchemeAndPorts [] GatewayInstancePortList;
 
     /**
-     * Get 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云原生API网关ID 
      * @return GatewayId 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -51,19 +47,15 @@ public class DescribeGatewayInstancePortResult extends AbstractModel {
 
     /**
      * Set 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实例协议端口列表 
      * @return GatewayInstancePortList 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayInstanceSchemeAndPorts [] getGatewayInstancePortList() {
         return this.GatewayInstancePortList;
@@ -71,9 +63,7 @@ public class DescribeGatewayInstancePortResult extends AbstractModel {
 
     /**
      * Set 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayInstancePortList 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayInstancePortList(GatewayInstanceSchemeAndPorts [] GatewayInstancePortList) {
         this.GatewayInstancePortList = GatewayInstancePortList;

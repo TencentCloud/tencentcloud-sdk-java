@@ -25,7 +25,6 @@ public class ReleaseConfigWithDetailRespResponse extends AbstractModel {
 
     /**
     * 配置项发布 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class ReleaseConfigWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置项发布 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项发布 ID 
      * @return Result 配置项发布 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigRelease getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class ReleaseConfigWithDetailRespResponse extends AbstractModel {
 
     /**
      * Set 配置项发布 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 配置项发布 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ConfigRelease Result) {
         this.Result = Result;

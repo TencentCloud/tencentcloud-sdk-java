@@ -25,7 +25,6 @@ public class DescribeCloudNativeAPIGatewayCertificateDetailsResponse extends Abs
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCloudNativeAPIGatewayCertificateDetailsResponse extends Abs
     private String RequestId;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return Result 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongCertificate getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeCloudNativeAPIGatewayCertificateDetailsResponse extends Abs
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(KongCertificate Result) {
         this.Result = Result;
