@@ -25,7 +25,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -57,7 +54,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
     @Expose
@@ -65,7 +61,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retries")
     @Expose
@@ -81,7 +76,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamInfo")
     @Expose
@@ -89,7 +83,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamType")
     @Expose
@@ -97,7 +90,6 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Editable")
     @Expose
@@ -105,17 +97,14 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务ID 
      * @return ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -123,19 +112,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 服务名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名字 
      * @return Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -143,19 +128,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 后端协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端协议 
      * @return Protocol 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -163,9 +144,7 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -192,10 +171,8 @@ public class KongServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端延时，单位ms 
      * @return Timeout 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
         return this.Timeout;
@@ -203,19 +180,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeout 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 重试次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试次数 
      * @return Retries 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetries() {
         return this.Retries;
@@ -223,9 +196,7 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Retries 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetries(Long Retries) {
         this.Retries = Retries;
@@ -252,10 +223,8 @@ public class KongServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 后端配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端配置 
      * @return UpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongUpstreamInfo getUpstreamInfo() {
         return this.UpstreamInfo;
@@ -263,19 +232,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamInfo(KongUpstreamInfo UpstreamInfo) {
         this.UpstreamInfo = UpstreamInfo;
     }
 
     /**
-     * Get 后端类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端类型 
      * @return UpstreamType 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamType() {
         return this.UpstreamType;
@@ -283,19 +248,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamType 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可编辑 
      * @return Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEditable() {
         return this.Editable;
@@ -303,19 +264,15 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -323,9 +280,7 @@ public class KongServiceDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

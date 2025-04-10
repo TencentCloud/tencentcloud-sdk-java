@@ -25,7 +25,6 @@ public class ForceSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffinityList")
     @Expose
@@ -33,17 +32,14 @@ public class ForceSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AntiAffinityList")
     @Expose
     private Affinity [] AntiAffinityList;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return AffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Affinity [] getAffinityList() {
         return this.AffinityList;
@@ -51,19 +47,15 @@ public class ForceSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffinityList(Affinity [] AffinityList) {
         this.AffinityList = AffinityList;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return AntiAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Affinity [] getAntiAffinityList() {
         return this.AntiAffinityList;
@@ -71,9 +63,7 @@ public class ForceSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AntiAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAntiAffinityList(Affinity [] AntiAffinityList) {
         this.AntiAffinityList = AntiAffinityList;

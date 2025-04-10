@@ -25,7 +25,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 路由的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 路由的 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     *  路由是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Methods")
     @Expose
@@ -57,7 +53,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paths")
     @Expose
@@ -65,7 +60,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hosts")
     @Expose
@@ -73,7 +67,6 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 路由对应服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -81,17 +74,14 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
     * 路由对应服务的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-     * Get 路由的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由的名字 
      * @return Name 路由的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,19 +89,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 路由的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 路由的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 路由的 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由的 ID 
      * @return Id 路由的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -119,19 +105,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 路由的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 路由的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  路由是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  路由是否开启 WAF 防护 
      * @return Status  路由是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -139,19 +121,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set  路由是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status  路由是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方法 
      * @return Methods 方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMethods() {
         return this.Methods;
@@ -159,19 +137,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Methods 方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethods(String [] Methods) {
         this.Methods = Methods;
     }
 
     /**
-     * Get 路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径 
      * @return Paths 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPaths() {
         return this.Paths;
@@ -179,19 +153,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paths 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaths(String [] Paths) {
         this.Paths = Paths;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Hosts 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHosts() {
         return this.Hosts;
@@ -199,19 +169,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hosts 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get 路由对应服务的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由对应服务的名字 
      * @return ServiceName 路由对应服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -219,19 +185,15 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 路由对应服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 路由对应服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 路由对应服务的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由对应服务的ID 
      * @return ServiceId 路由对应服务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceId() {
         return this.ServiceId;
@@ -239,9 +201,7 @@ public class RouteWafStatus extends AbstractModel {
 
     /**
      * Set 路由对应服务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceId 路由对应服务的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

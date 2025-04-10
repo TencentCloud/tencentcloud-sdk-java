@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -33,7 +32,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -41,7 +39,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionList")
     @Expose
@@ -57,7 +54,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceId")
     @Expose
@@ -65,7 +61,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -74,7 +69,6 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
     /**
     * 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
     @Expose
@@ -82,7 +76,6 @@ Standard｜Lane
 
     /**
     * 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchType")
     @Expose
@@ -90,7 +83,6 @@ Standard｜Lane
 
     /**
     * 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -98,7 +90,6 @@ Standard｜Lane
 
     /**
     * 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -106,7 +97,6 @@ Standard｜Lane
 
     /**
     * 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaneId")
     @Expose
@@ -114,7 +104,6 @@ Standard｜Lane
 
     /**
     * 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaneName")
     @Expose
@@ -122,7 +111,6 @@ Standard｜Lane
 
     /**
     * 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchMode")
     @Expose
@@ -137,10 +125,8 @@ Standard｜Lane
     private String LaneTag;
 
     /**
-     * Get 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复 
      * @return Priority 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -148,19 +134,15 @@ Standard｜Lane
 
     /**
      * Set 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用规则 
      * @return Enabled 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -168,19 +150,15 @@ Standard｜Lane
 
     /**
      * Set 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数匹配条件 
      * @return ConditionList 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayCanaryRuleCondition [] getConditionList() {
         return this.ConditionList;
@@ -188,9 +166,7 @@ Standard｜Lane
 
     /**
      * Set 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionList 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionList(CloudNativeAPIGatewayCanaryRuleCondition [] ConditionList) {
         this.ConditionList = ConditionList;
@@ -217,10 +193,8 @@ Standard｜Lane
     }
 
     /**
-     * Get 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归属服务 ID 
      * @return ServiceId 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceId() {
         return this.ServiceId;
@@ -228,19 +202,15 @@ Standard｜Lane
 
     /**
      * Set 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceId 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归属服务名称 
      * @return ServiceName 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -248,9 +218,7 @@ Standard｜Lane
 
     /**
      * Set 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
@@ -258,11 +226,9 @@ Standard｜Lane
 
     /**
      * Get 灰度规则类别
-Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。 
+Standard｜Lane 
      * @return RuleType 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
         return this.RuleType;
@@ -271,20 +237,16 @@ Standard｜Lane
     /**
      * Set 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleType 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全链路灰度策略多个条件之间的匹配方式，与AND，或OR 
      * @return MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchType() {
         return this.MatchType;
@@ -292,19 +254,15 @@ Standard｜Lane
 
     /**
      * Set 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchType(String MatchType) {
         this.MatchType = MatchType;
     }
 
     /**
-     * Get 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道组ID 
      * @return GroupId 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -312,19 +270,15 @@ Standard｜Lane
 
     /**
      * Set 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道组名称 
      * @return GroupName 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -332,19 +286,15 @@ Standard｜Lane
 
     /**
      * Set 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道ID 
      * @return LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaneId() {
         return this.LaneId;
@@ -352,19 +302,15 @@ Standard｜Lane
 
     /**
      * Set 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaneId(String LaneId) {
         this.LaneId = LaneId;
     }
 
     /**
-     * Get 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道名称 
      * @return LaneName 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaneName() {
         return this.LaneName;
@@ -372,19 +318,15 @@ Standard｜Lane
 
     /**
      * Set 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaneName 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaneName(String LaneName) {
         this.LaneName = LaneName;
     }
 
     /**
-     * Get 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道匹配规则：严格STRICT｜宽松PERMISSIVE 
      * @return MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchMode() {
         return this.MatchMode;
@@ -392,9 +334,7 @@ Standard｜Lane
 
     /**
      * Set 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchMode(String MatchMode) {
         this.MatchMode = MatchMode;

@@ -25,17 +25,14 @@ public class ResourceFieldRef extends AbstractModel {
 
     /**
     * k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-     * Get k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get k8s 的 Resource 
      * @return Resource k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -43,9 +40,7 @@ public class ResourceFieldRef extends AbstractModel {
 
     /**
      * Set k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

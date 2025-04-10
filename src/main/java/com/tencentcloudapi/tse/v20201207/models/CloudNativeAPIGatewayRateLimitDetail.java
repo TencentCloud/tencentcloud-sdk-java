@@ -39,7 +39,6 @@ public class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel {
 
     /**
     * 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -47,7 +46,6 @@ public class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel {
 
     /**
     * 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Header")
     @Expose
@@ -63,7 +61,6 @@ ip service consumer credential path header
 
     /**
     * 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalRedis")
     @Expose
@@ -75,7 +72,6 @@ local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
     @Expose
@@ -84,7 +80,6 @@ external_redis 外部redis
     /**
     * 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitResponse")
     @Expose
@@ -92,7 +87,6 @@ external_redis 外部redis
 
     /**
     * 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitResponseUrl")
     @Expose
@@ -179,10 +173,8 @@ default 直接返回
     }
 
     /**
-     * Get 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要进行流量控制的请求路径 
      * @return Path 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -190,19 +182,15 @@ default 直接返回
 
     /**
      * Set 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要进行流量控制的请求头Key 
      * @return Header 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeader() {
         return this.Header;
@@ -210,9 +198,7 @@ default 直接返回
 
     /**
      * Set 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Header 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeader(String Header) {
         this.Header = Header;
@@ -239,10 +225,8 @@ ip service consumer credential path header
     }
 
     /**
-     * Get 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外部redis配置 
      * @return ExternalRedis 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExternalRedis getExternalRedis() {
         return this.ExternalRedis;
@@ -250,9 +234,7 @@ ip service consumer credential path header
 
     /**
      * Set 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalRedis 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalRedis(ExternalRedis ExternalRedis) {
         this.ExternalRedis = ExternalRedis;
@@ -263,14 +245,12 @@ ip service consumer credential path header
 local 单机
 redis  默认redis
 external_redis 外部redis
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Policy 计数器策略 
 local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicy() {
         return this.Policy;
@@ -282,13 +262,11 @@ local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policy 计数器策略 
 local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
@@ -296,11 +274,9 @@ external_redis 外部redis
 
     /**
      * Get 响应配置，响应策略为text
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return RateLimitResponse 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitResponse getRateLimitResponse() {
         return this.RateLimitResponse;
@@ -309,20 +285,16 @@ external_redis 外部redis
     /**
      * Set 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitResponse 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitResponse(RateLimitResponse RateLimitResponse) {
         this.RateLimitResponse = RateLimitResponse;
     }
 
     /**
-     * Get 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求转发地址 
      * @return RateLimitResponseUrl 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRateLimitResponseUrl() {
         return this.RateLimitResponseUrl;
@@ -330,9 +302,7 @@ external_redis 外部redis
 
     /**
      * Set 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitResponseUrl 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitResponseUrl(String RateLimitResponseUrl) {
         this.RateLimitResponseUrl = RateLimitResponseUrl;

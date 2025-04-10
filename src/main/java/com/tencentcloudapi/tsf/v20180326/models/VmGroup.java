@@ -310,7 +310,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilebeatCgroupEnable")
     @Expose
@@ -318,7 +317,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilebeatMaxCpu")
     @Expose
@@ -326,7 +324,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilebeatMaxMem")
     @Expose
@@ -334,7 +331,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepositoryId")
     @Expose
@@ -342,7 +338,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -350,7 +345,6 @@ public class VmGroup extends AbstractModel {
 
     /**
     * 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepositoryType")
     @Expose
@@ -1029,10 +1023,8 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启cgroup控制内存cpu 
      * @return FilebeatCgroupEnable 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFilebeatCgroupEnable() {
         return this.FilebeatCgroupEnable;
@@ -1040,19 +1032,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilebeatCgroupEnable 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilebeatCgroupEnable(Boolean FilebeatCgroupEnable) {
         this.FilebeatCgroupEnable = FilebeatCgroupEnable;
     }
 
     /**
-     * Get filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get filebeat使用cpu上限 
      * @return FilebeatMaxCpu filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFilebeatMaxCpu() {
         return this.FilebeatMaxCpu;
@@ -1060,19 +1048,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilebeatMaxCpu filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilebeatMaxCpu(Float FilebeatMaxCpu) {
         this.FilebeatMaxCpu = FilebeatMaxCpu;
     }
 
     /**
-     * Get filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get filebeat使用内存上限 
      * @return FilebeatMaxMem filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFilebeatMaxMem() {
         return this.FilebeatMaxMem;
@@ -1080,19 +1064,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilebeatMaxMem filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilebeatMaxMem(Long FilebeatMaxMem) {
         this.FilebeatMaxMem = FilebeatMaxMem;
     }
 
     /**
-     * Get 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库ID 
      * @return RepositoryId 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepositoryId() {
         return this.RepositoryId;
@@ -1100,19 +1080,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepositoryId 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;
     }
 
     /**
-     * Get 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库名称 
      * @return RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepositoryName() {
         return this.RepositoryName;
@@ -1120,19 +1096,15 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
     }
 
     /**
-     * Get 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库类型 
      * @return RepositoryType 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepositoryType() {
         return this.RepositoryType;
@@ -1140,9 +1112,7 @@ public class VmGroup extends AbstractModel {
 
     /**
      * Set 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepositoryType 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;

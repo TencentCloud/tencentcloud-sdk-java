@@ -25,7 +25,6 @@ public class DescribeOverviewInvocationResponse extends AbstractModel {
 
     /**
     * 监控统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeOverviewInvocationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监控统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控统计数据列表 
      * @return Result 监控统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricDataPoint [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeOverviewInvocationResponse extends AbstractModel {
 
     /**
      * Set 监控统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 监控统计数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(MetricDataPoint [] Result) {
         this.Result = Result;

@@ -167,7 +167,7 @@ public class ServerlessIndexMetaField extends AbstractModel {
     private TagInfo [] TagList;
 
     /**
-    * 3782478.47
+    * 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexTraffic")
@@ -531,9 +531,9 @@ public class ServerlessIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Get 3782478.47
+     * Get 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexTraffic 3782478.47
+     * @return IndexTraffic 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getIndexTraffic() {
@@ -541,9 +541,9 @@ public class ServerlessIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 3782478.47
+     * Set 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexTraffic 3782478.47
+     * @param IndexTraffic 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexTraffic(Float IndexTraffic) {

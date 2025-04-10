@@ -39,7 +39,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * Zone id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -47,7 +46,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * Zone
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -55,7 +53,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -63,7 +60,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * 分组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -71,7 +67,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -79,7 +74,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -87,7 +81,6 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
     * 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefaultWeight")
     @Expose
@@ -126,10 +119,8 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
     }
 
     /**
-     * Get Zone id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Zone id 
      * @return ZoneId Zone id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneId() {
         return this.ZoneId;
@@ -137,19 +128,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set Zone id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId Zone id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Zone
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Zone 
      * @return Zone Zone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -157,19 +144,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set Zone
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone Zone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID 
      * @return GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -177,19 +160,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 分组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组名 
      * @return GroupName 分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -197,19 +176,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set 分组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -217,19 +192,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点权重 
      * @return Weight 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -237,19 +208,15 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否默认权重 
      * @return IsDefaultWeight 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefaultWeight() {
         return this.IsDefaultWeight;
@@ -257,9 +224,7 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
 
     /**
      * Set 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefaultWeight 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefaultWeight(Boolean IsDefaultWeight) {
         this.IsDefaultWeight = IsDefaultWeight;

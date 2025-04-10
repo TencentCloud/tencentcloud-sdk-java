@@ -25,7 +25,6 @@ public class SourceInstanceVpcInfo extends AbstractModel {
 
     /**
     * 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcID")
     @Expose
@@ -33,17 +32,14 @@ public class SourceInstanceVpcInfo extends AbstractModel {
 
     /**
     * 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetID")
     @Expose
     private String SubnetID;
 
     /**
-     * Get 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务引擎VPC信息 
      * @return VpcID 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcID() {
         return this.VpcID;
@@ -51,19 +47,15 @@ public class SourceInstanceVpcInfo extends AbstractModel {
 
     /**
      * Set 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcID 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcID(String VpcID) {
         this.VpcID = VpcID;
     }
 
     /**
-     * Get 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务引擎子网信息 
      * @return SubnetID 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetID() {
         return this.SubnetID;
@@ -71,9 +63,7 @@ public class SourceInstanceVpcInfo extends AbstractModel {
 
     /**
      * Set 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetID 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetID(String SubnetID) {
         this.SubnetID = SubnetID;

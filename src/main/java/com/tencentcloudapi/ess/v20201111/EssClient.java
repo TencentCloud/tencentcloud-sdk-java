@@ -1939,6 +1939,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
+
+# 支持的操作
+## 1. 删除模板 (OperateType=DELETE)
+此操作会从模板将企业自有模板中彻底删除，若要保留模板而不删除，可将将模板停用。
+
+## 2. 启用模板 (OperateType=ENABLE)
+此操作是将停用的模板启用，操作幂等，若模板已经启用，接口不报错。
+
+## 3. 停用模板 (OperateType=DELETE)
+此操作是将启用态的模板停用，操作幂等，若模板已经停用，接口不报错，停用后，无法通过此模板发起合同，已经发起的合同不受影响。
+     * @param req OperateTemplateRequest
+     * @return OperateTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateTemplateResponse OperateTemplate(OperateTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateTemplate", OperateTemplateResponse.class);
+    }
+
+    /**
      *给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`

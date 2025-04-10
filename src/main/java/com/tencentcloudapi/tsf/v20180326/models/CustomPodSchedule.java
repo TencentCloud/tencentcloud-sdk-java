@@ -25,7 +25,6 @@ public class CustomPodSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceSchedule")
     @Expose
@@ -33,17 +32,14 @@ public class CustomPodSchedule extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrySchedule")
     @Expose
     private TrySchedule TrySchedule;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return ForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ForceSchedule getForceSchedule() {
         return this.ForceSchedule;
@@ -51,19 +47,15 @@ public class CustomPodSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForceSchedule(ForceSchedule ForceSchedule) {
         this.ForceSchedule = ForceSchedule;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return TrySchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TrySchedule getTrySchedule() {
         return this.TrySchedule;
@@ -71,9 +63,7 @@ public class CustomPodSchedule extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrySchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrySchedule(TrySchedule TrySchedule) {
         this.TrySchedule = TrySchedule;

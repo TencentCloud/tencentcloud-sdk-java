@@ -25,7 +25,6 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
     * 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
@@ -33,7 +32,6 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
     * Headers
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
     @Expose
@@ -41,17 +39,14 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
     * http状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpStatus")
     @Expose
     private Long HttpStatus;
 
     /**
-     * Get 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义响应体 
      * @return Body 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -59,19 +54,15 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
      * Set 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get Headers
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Headers 
      * @return Headers Headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KVMapping [] getHeaders() {
         return this.Headers;
@@ -79,19 +70,15 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
      * Set Headers
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers Headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(KVMapping [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get http状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get http状态码 
      * @return HttpStatus http状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpStatus() {
         return this.HttpStatus;
@@ -99,9 +86,7 @@ public class RateLimitResponse extends AbstractModel {
 
     /**
      * Set http状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpStatus http状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpStatus(Long HttpStatus) {
         this.HttpStatus = HttpStatus;

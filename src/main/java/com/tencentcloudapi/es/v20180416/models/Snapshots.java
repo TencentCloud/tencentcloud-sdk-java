@@ -136,6 +136,14 @@ SUCCESS     备份成功
     private Failures [] Failures;
 
     /**
+    * 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserBackUp")
+    @Expose
+    private String UserBackUp;
+
+    /**
      * Get 快照名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotName 快照名称
@@ -427,6 +435,26 @@ SUCCESS     备份成功
         this.Failures = Failures;
     }
 
+    /**
+     * Get 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserBackUp 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserBackUp() {
+        return this.UserBackUp;
+    }
+
+    /**
+     * Set 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserBackUp 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserBackUp(String UserBackUp) {
+        this.UserBackUp = UserBackUp;
+    }
+
     public Snapshots() {
     }
 
@@ -483,6 +511,9 @@ SUCCESS     备份成功
                 this.Failures[i] = new Failures(source.Failures[i]);
             }
         }
+        if (source.UserBackUp != null) {
+            this.UserBackUp = new String(source.UserBackUp);
+        }
     }
 
 
@@ -503,6 +534,7 @@ SUCCESS     备份成功
         this.setParamSimple(map, prefix + "FailedShards", this.FailedShards);
         this.setParamSimple(map, prefix + "SuccessfulShards", this.SuccessfulShards);
         this.setParamArrayObj(map, prefix + "Failures.", this.Failures);
+        this.setParamSimple(map, prefix + "UserBackUp", this.UserBackUp);
 
     }
 }

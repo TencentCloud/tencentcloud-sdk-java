@@ -283,6 +283,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
+     * @param req DescribeLogsRequest
+     * @return DescribeLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogs", DescribeLogsResponse.class);
+    }
+
+    /**
      *查询模型优化任务详情
      * @param req DescribeModelAccelerateTaskRequest
      * @return DescribeModelAccelerateTaskResponse

@@ -32,7 +32,6 @@ public class SourceInfo extends AbstractModel {
 
     /**
     * 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcInfo")
     @Expose
@@ -40,7 +39,6 @@ public class SourceInfo extends AbstractModel {
 
     /**
     * 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Auth")
     @Expose
@@ -63,10 +61,8 @@ public class SourceInfo extends AbstractModel {
     }
 
     /**
-     * Get 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务引擎VPC信息 
      * @return VpcInfo 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SourceInstanceVpcInfo getVpcInfo() {
         return this.VpcInfo;
@@ -74,19 +70,15 @@ public class SourceInfo extends AbstractModel {
 
     /**
      * Set 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcInfo 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcInfo(SourceInstanceVpcInfo VpcInfo) {
         this.VpcInfo = VpcInfo;
     }
 
     /**
-     * Get 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 微服务引擎鉴权信息 
      * @return Auth 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SourceInstanceAuth getAuth() {
         return this.Auth;
@@ -94,9 +86,7 @@ public class SourceInfo extends AbstractModel {
 
     /**
      * Set 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Auth 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuth(SourceInstanceAuth Auth) {
         this.Auth = Auth;

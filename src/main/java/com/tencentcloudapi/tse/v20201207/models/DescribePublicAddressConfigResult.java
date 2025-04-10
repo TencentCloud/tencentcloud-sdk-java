@@ -25,7 +25,6 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
     * 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
     * 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigList")
     @Expose
@@ -41,17 +39,14 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
     * 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实例id 
      * @return GatewayId 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -59,19 +54,15 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
      * Set 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网地址信息 
      * @return ConfigList 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PublicAddressConfig [] getConfigList() {
         return this.ConfigList;
@@ -79,19 +70,15 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
      * Set 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigList 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigList(PublicAddressConfig [] ConfigList) {
         this.ConfigList = ConfigList;
     }
 
     /**
-     * Get 总个数	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总个数	 
      * @return TotalCount 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -99,9 +86,7 @@ public class DescribePublicAddressConfigResult extends AbstractModel {
 
     /**
      * Set 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

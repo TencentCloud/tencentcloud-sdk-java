@@ -193,6 +193,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *创建CKafka投递流任务
+     * @param req CreatePostCKafkaFlowRequest
+     * @return CreatePostCKafkaFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePostCKafkaFlowResponse CreatePostCKafkaFlow(CreatePostCKafkaFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePostCKafkaFlow", CreatePostCKafkaFlowResponse.class);
+    }
+
+    /**
      *创建CLS投递流任务
      * @param req CreatePostCLSFlowRequest
      * @return CreatePostCLSFlowResponse
@@ -853,6 +864,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取CKafka投递流任务列表
+     * @param req DescribePostCKafkaFlowsRequest
+     * @return DescribePostCKafkaFlowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostCKafkaFlowsResponse DescribePostCKafkaFlows(DescribePostCKafkaFlowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePostCKafkaFlows", DescribePostCKafkaFlowsResponse.class);
+    }
+
+    /**
      *获取CLS投递流任务列表
      * @param req DescribePostCLSFlowsRequest
      * @return DescribePostCLSFlowsResponse
@@ -1072,6 +1094,17 @@ public class WafClient extends AbstractClient{
     public DescribeWebshellStatusResponse DescribeWebshellStatus(DescribeWebshellStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWebshellStatus", DescribeWebshellStatusResponse.class);
+    }
+
+    /**
+     *销毁CKafka投递流任务
+     * @param req DestroyPostCKafkaFlowRequest
+     * @return DestroyPostCKafkaFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPostCKafkaFlowResponse DestroyPostCKafkaFlow(DestroyPostCKafkaFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyPostCKafkaFlow", DestroyPostCKafkaFlowResponse.class);
     }
 
     /**

@@ -52,6 +52,13 @@ public class GetRoomMessageRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 请求消息的userId
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -115,6 +122,22 @@ public class GetRoomMessageRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 请求消息的userId 
+     * @return UserId 请求消息的userId
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 请求消息的userId
+     * @param UserId 请求消息的userId
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public GetRoomMessageRequest() {
     }
 
@@ -135,6 +158,9 @@ public class GetRoomMessageRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class GetRoomMessageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "Seq", this.Seq);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

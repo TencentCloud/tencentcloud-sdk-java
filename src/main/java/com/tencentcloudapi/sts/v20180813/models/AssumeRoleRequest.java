@@ -83,6 +83,20 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
     private String SourceIdentity;
 
     /**
+    * MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token）
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
+
+    /**
+    * mfa身份验证码。
+    */
+    @SerializedName("TokenCode")
+    @Expose
+    private String TokenCode;
+
+    /**
      * Get 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 普通角色：
 qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
@@ -234,6 +248,38 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.SourceIdentity = SourceIdentity;
     }
 
+    /**
+     * Get MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token） 
+     * @return SerialNumber MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token）
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token）
+     * @param SerialNumber MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token）
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
+    }
+
+    /**
+     * Get mfa身份验证码。 
+     * @return TokenCode mfa身份验证码。
+     */
+    public String getTokenCode() {
+        return this.TokenCode;
+    }
+
+    /**
+     * Set mfa身份验证码。
+     * @param TokenCode mfa身份验证码。
+     */
+    public void setTokenCode(String TokenCode) {
+        this.TokenCode = TokenCode;
+    }
+
     public AssumeRoleRequest() {
     }
 
@@ -266,6 +312,12 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         if (source.SourceIdentity != null) {
             this.SourceIdentity = new String(source.SourceIdentity);
         }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
+        if (source.TokenCode != null) {
+            this.TokenCode = new String(source.TokenCode);
+        }
     }
 
 
@@ -280,6 +332,8 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SourceIdentity", this.SourceIdentity);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+        this.setParamSimple(map, prefix + "TokenCode", this.TokenCode);
 
     }
 }

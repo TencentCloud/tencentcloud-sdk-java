@@ -171,6 +171,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *创建运维任务
+     * @param req CreateOperationTaskRequest
+     * @return CreateOperationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOperationTaskResponse CreateOperationTask(CreateOperationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOperationTask", CreateOperationTaskResponse.class);
+    }
+
+    /**
      *创建堡垒机实例
      * @param req CreateResourceRequest
      * @return CreateResourceResponse
@@ -278,6 +289,17 @@ public class BhClient extends AbstractClient{
     public DeleteDevicesResponse DeleteDevices(DeleteDevicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDevices", DeleteDevicesResponse.class);
+    }
+
+    /**
+     *删除运维任务
+     * @param req DeleteOperationTasksRequest
+     * @return DeleteOperationTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOperationTasksResponse DeleteOperationTasks(DeleteOperationTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOperationTasks", DeleteOperationTasksResponse.class);
     }
 
     /**
@@ -457,6 +479,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *获取运维任务列表
+     * @param req DescribeOperationTaskRequest
+     * @return DescribeOperationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperationTaskResponse DescribeOperationTask(DescribeOperationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOperationTask", DescribeOperationTaskResponse.class);
+    }
+
+    /**
      *查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
      * @param req DescribeResourcesRequest
      * @return DescribeResourcesResponse
@@ -578,6 +611,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *修改运维任务
+     * @param req ModifyOperationTaskRequest
+     * @return ModifyOperationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOperationTaskResponse ModifyOperationTask(ModifyOperationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOperationTask", ModifyOperationTaskResponse.class);
+    }
+
+    /**
      *资源变配
      * @param req ModifyResourceRequest
      * @return ModifyResourceResponse
@@ -652,6 +696,17 @@ public class BhClient extends AbstractClient{
     public RunChangePwdTaskResponse RunChangePwdTask(RunChangePwdTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunChangePwdTask", RunChangePwdTaskResponse.class);
+    }
+
+    /**
+     *执行运维任务
+     * @param req RunOperationTaskRequest
+     * @return RunOperationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunOperationTaskResponse RunOperationTask(RunOperationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunOperationTask", RunOperationTaskResponse.class);
     }
 
     /**

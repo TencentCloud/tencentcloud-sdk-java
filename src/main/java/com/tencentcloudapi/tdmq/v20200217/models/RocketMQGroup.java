@@ -134,6 +134,22 @@ public class RocketMQGroup extends AbstractModel {
     private Long RetryMaxTimes;
 
     /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
      * Get 消费组名称 
      * @return Name 消费组名称
      */
@@ -393,6 +409,46 @@ public class RocketMQGroup extends AbstractModel {
         this.RetryMaxTimes = RetryMaxTimes;
     }
 
+    /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Namespace 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Namespace 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -446,6 +502,12 @@ public class RocketMQGroup extends AbstractModel {
         if (source.RetryMaxTimes != null) {
             this.RetryMaxTimes = new Long(source.RetryMaxTimes);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
     }
 
 
@@ -468,6 +530,8 @@ public class RocketMQGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
 
     }
 }

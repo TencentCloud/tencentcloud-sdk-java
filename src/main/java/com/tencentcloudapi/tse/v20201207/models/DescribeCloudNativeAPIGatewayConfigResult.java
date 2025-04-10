@@ -39,7 +39,6 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
     * 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupSubnetId")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
     * 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupVpcId")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
     * 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -94,10 +91,8 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
     }
 
     /**
-     * Get 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组子网信息 
      * @return GroupSubnetId 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupSubnetId() {
         return this.GroupSubnetId;
@@ -105,19 +100,15 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
      * Set 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupSubnetId 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupSubnetId(String GroupSubnetId) {
         this.GroupSubnetId = GroupSubnetId;
     }
 
     /**
-     * Get 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组VPC信息 
      * @return GroupVpcId 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupVpcId() {
         return this.GroupVpcId;
@@ -125,19 +116,15 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
      * Set 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupVpcId 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupVpcId(String GroupVpcId) {
         this.GroupVpcId = GroupVpcId;
     }
 
     /**
-     * Get 分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID 
      * @return GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -145,9 +132,7 @@ public class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel {
 
     /**
      * Set 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

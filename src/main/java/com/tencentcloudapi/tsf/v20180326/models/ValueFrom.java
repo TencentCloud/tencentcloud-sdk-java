@@ -25,7 +25,6 @@ public class ValueFrom extends AbstractModel {
 
     /**
     * k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldRef")
     @Expose
@@ -41,7 +40,6 @@ public class ValueFrom extends AbstractModel {
 
     /**
     * k8s env的configMapKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigMapKeyRef")
     @Expose
@@ -49,17 +47,14 @@ public class ValueFrom extends AbstractModel {
 
     /**
     * k8s env 的 secretKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKeyRef")
     @Expose
     private CommonRef SecretKeyRef;
 
     /**
-     * Get k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get k8s env 的 FieldRef 
      * @return FieldRef k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldRef getFieldRef() {
         return this.FieldRef;
@@ -67,9 +62,7 @@ public class ValueFrom extends AbstractModel {
 
     /**
      * Set k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldRef k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldRef(FieldRef FieldRef) {
         this.FieldRef = FieldRef;
@@ -96,10 +89,8 @@ public class ValueFrom extends AbstractModel {
     }
 
     /**
-     * Get k8s env的configMapKeyRef
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get k8s env的configMapKeyRef 
      * @return ConfigMapKeyRef k8s env的configMapKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonRef getConfigMapKeyRef() {
         return this.ConfigMapKeyRef;
@@ -107,19 +98,15 @@ public class ValueFrom extends AbstractModel {
 
     /**
      * Set k8s env的configMapKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigMapKeyRef k8s env的configMapKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigMapKeyRef(CommonRef ConfigMapKeyRef) {
         this.ConfigMapKeyRef = ConfigMapKeyRef;
     }
 
     /**
-     * Get k8s env 的 secretKeyRef
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get k8s env 的 secretKeyRef 
      * @return SecretKeyRef k8s env 的 secretKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonRef getSecretKeyRef() {
         return this.SecretKeyRef;
@@ -127,9 +114,7 @@ public class ValueFrom extends AbstractModel {
 
     /**
      * Set k8s env 的 secretKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretKeyRef k8s env 的 secretKeyRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKeyRef(CommonRef SecretKeyRef) {
         this.SecretKeyRef = SecretKeyRef;

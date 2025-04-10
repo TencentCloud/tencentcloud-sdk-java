@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayVpcConfig extends AbstractModel {
 
     /**
     * 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,17 +32,14 @@ public class CloudNativeAPIGatewayVpcConfig extends AbstractModel {
 
     /**
     * 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID。 
      * @return VpcId 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -51,19 +47,15 @@ public class CloudNativeAPIGatewayVpcConfig extends AbstractModel {
 
     /**
      * Set 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID。 
      * @return SubnetId 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -71,9 +63,7 @@ public class CloudNativeAPIGatewayVpcConfig extends AbstractModel {
 
     /**
      * Set 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

@@ -67,7 +67,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryCount")
     @Expose
@@ -75,7 +74,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryInterval")
     @Expose
@@ -104,7 +102,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessOperator")
     @Expose
@@ -112,7 +109,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessRatio")
     @Expose
@@ -120,7 +116,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardCount")
     @Expose
@@ -128,7 +123,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvanceSettings")
     @Expose
@@ -136,7 +130,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardArguments")
     @Expose
@@ -144,7 +137,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongFlowIds")
     @Expose
@@ -152,7 +144,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskLogId")
     @Expose
@@ -160,7 +151,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
     @Expose
@@ -168,7 +158,6 @@ public class TaskRecord extends AbstractModel {
 
     /**
     * 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskArgument")
     @Expose
@@ -271,10 +260,8 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 重试次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试次数 
      * @return RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryCount() {
         return this.RetryCount;
@@ -282,19 +269,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重试间隔 
      * @return RetryInterval 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
@@ -302,9 +285,7 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetryInterval 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
@@ -359,10 +340,8 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 判断任务成功的操作符 
      * @return SuccessOperator 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuccessOperator() {
         return this.SuccessOperator;
@@ -370,19 +349,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessOperator 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessOperator(String SuccessOperator) {
         this.SuccessOperator = SuccessOperator;
     }
 
     /**
-     * Get 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 判断任务成功的阈值 
      * @return SuccessRatio 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessRatio() {
         return this.SuccessRatio;
@@ -390,19 +365,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessRatio 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessRatio(Long SuccessRatio) {
         this.SuccessRatio = SuccessRatio;
     }
 
     /**
-     * Get 分片数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片数量 
      * @return ShardCount 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShardCount() {
         return this.ShardCount;
@@ -410,19 +381,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardCount 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
     }
 
     /**
-     * Get 高级设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高级设置 
      * @return AdvanceSettings 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdvanceSettings getAdvanceSettings() {
         return this.AdvanceSettings;
@@ -430,19 +397,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvanceSettings 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvanceSettings(AdvanceSettings AdvanceSettings) {
         this.AdvanceSettings = AdvanceSettings;
     }
 
     /**
-     * Get 分片参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分片参数 
      * @return ShardArguments 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShardArgument [] getShardArguments() {
         return this.ShardArguments;
@@ -450,19 +413,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardArguments 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardArguments(ShardArgument [] ShardArguments) {
         this.ShardArguments = ShardArguments;
     }
 
     /**
-     * Get 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属工作流ID 
      * @return BelongFlowIds 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBelongFlowIds() {
         return this.BelongFlowIds;
@@ -470,19 +429,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BelongFlowIds 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongFlowIds(String [] BelongFlowIds) {
         this.BelongFlowIds = BelongFlowIds;
     }
 
     /**
-     * Get 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务历史ID 
      * @return TaskLogId 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskLogId() {
         return this.TaskLogId;
@@ -490,19 +445,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskLogId 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskLogId(String TaskLogId) {
         this.TaskLogId = TaskLogId;
     }
 
     /**
-     * Get 触发类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发类型 
      * @return TriggerType 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerType() {
         return this.TriggerType;
@@ -510,19 +461,15 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerType 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务参数，长度限制10000个字符 
      * @return TaskArgument 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskArgument() {
         return this.TaskArgument;
@@ -530,9 +477,7 @@ public class TaskRecord extends AbstractModel {
 
     /**
      * Set 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskArgument 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskArgument(String TaskArgument) {
         this.TaskArgument = TaskArgument;

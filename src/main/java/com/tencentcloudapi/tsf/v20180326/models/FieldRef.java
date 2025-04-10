@@ -25,17 +25,14 @@ public class FieldRef extends AbstractModel {
 
     /**
     * k8s 的 FieldPath
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldPath")
     @Expose
     private String FieldPath;
 
     /**
-     * Get k8s 的 FieldPath
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get k8s 的 FieldPath 
      * @return FieldPath k8s 的 FieldPath
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldPath() {
         return this.FieldPath;
@@ -43,9 +40,7 @@ public class FieldRef extends AbstractModel {
 
     /**
      * Set k8s 的 FieldPath
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldPath k8s 的 FieldPath
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldPath(String FieldPath) {
         this.FieldPath = FieldPath;

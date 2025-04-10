@@ -1933,6 +1933,27 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
     }
 
     /**
+     *此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/partner/callback_types_templates" target="_blank">模板操作相关回调</a>
+
+# 支持的操作
+## 1. 删除模板 (OperateType=DELETE)
+此操作会从模板将企业自有模板中彻底删除，若要保留模板而不删除，可将将模板停用。
+
+## 2. 启用模板 (OperateType=ENABLE)
+此操作是将停用的模板启用，操作幂等，若模板已经启用，接口不报错。
+
+## 3. 停用模板 (OperateType=DELETE)
+此操作是将启用态的模板停用，操作幂等，若模板已经停用，接口不报错，停用后，无法通过此模板发起合同，已经发起的合同不受影响。
+     * @param req OperateTemplateRequest
+     * @return OperateTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateTemplateResponse OperateTemplate(OperateTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateTemplate", OperateTemplateResponse.class);
+    }
+
+    /**
      *该接口 (PrepareFlows) 用于创建待发起文件
 用户通过该接口进入签署流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
 目前该接口只支持B2C，<font color='red'> **不建议使用，将会废弃**</font>。

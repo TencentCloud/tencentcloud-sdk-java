@@ -25,7 +25,6 @@ public class InstancePort extends AbstractModel {
 
     /**
     * 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpPort")
     @Expose
@@ -33,7 +32,6 @@ public class InstancePort extends AbstractModel {
 
     /**
     * 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsPort")
     @Expose
@@ -41,7 +39,6 @@ public class InstancePort extends AbstractModel {
 
     /**
     * 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcpPort")
     @Expose
@@ -49,17 +46,14 @@ public class InstancePort extends AbstractModel {
 
     /**
     * 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UdpPort")
     @Expose
     private String UdpPort;
 
     /**
-     * Get 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听的 http 端口范围。 
      * @return HttpPort 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpPort() {
         return this.HttpPort;
@@ -67,19 +61,15 @@ public class InstancePort extends AbstractModel {
 
     /**
      * Set 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpPort 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpPort(String HttpPort) {
         this.HttpPort = HttpPort;
     }
 
     /**
-     * Get 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听的 https 端口范围。 
      * @return HttpsPort 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpsPort() {
         return this.HttpsPort;
@@ -87,19 +77,15 @@ public class InstancePort extends AbstractModel {
 
     /**
      * Set 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpsPort 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsPort(String HttpsPort) {
         this.HttpsPort = HttpsPort;
     }
 
     /**
-     * Get 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听的 tcp 端口范围。 
      * @return TcpPort 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTcpPort() {
         return this.TcpPort;
@@ -107,19 +93,15 @@ public class InstancePort extends AbstractModel {
 
     /**
      * Set 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcpPort 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcpPort(String TcpPort) {
         this.TcpPort = TcpPort;
     }
 
     /**
-     * Get 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听的 udp 端口范围。 
      * @return UdpPort 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUdpPort() {
         return this.UdpPort;
@@ -127,9 +109,7 @@ public class InstancePort extends AbstractModel {
 
     /**
      * Set 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UdpPort 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUdpPort(String UdpPort) {
         this.UdpPort = UdpPort;

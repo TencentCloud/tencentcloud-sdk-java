@@ -64,7 +64,7 @@ public class CosSnapShotInfo extends AbstractModel {
     private String Version;
 
     /**
-    * 普通索引信息列表
+    * 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommonIndexArr")
@@ -180,9 +180,9 @@ public class CosSnapShotInfo extends AbstractModel {
     }
 
     /**
-     * Get 普通索引信息列表
+     * Get 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CommonIndexArr 普通索引信息列表
+     * @return CommonIndexArr 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonIndexInfo [] getCommonIndexArr() {
@@ -190,9 +190,9 @@ public class CosSnapShotInfo extends AbstractModel {
     }
 
     /**
-     * Set 普通索引信息列表
+     * Set 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CommonIndexArr 普通索引信息列表
+     * @param CommonIndexArr 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommonIndexArr(CommonIndexInfo [] CommonIndexArr) {

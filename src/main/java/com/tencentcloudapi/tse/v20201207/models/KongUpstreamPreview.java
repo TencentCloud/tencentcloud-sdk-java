@@ -25,7 +25,6 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
     * 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
     * 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
     * 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Target")
     @Expose
     private KongTarget [] Target;
 
     /**
-     * Get 服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务ID 
      * @return ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -59,19 +54,15 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
      * Set 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 服务名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名字 
      * @return Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
      * Set 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 后端配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端配置 
      * @return Target 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongTarget [] getTarget() {
         return this.Target;
@@ -99,9 +86,7 @@ public class KongUpstreamPreview extends AbstractModel {
 
     /**
      * Set 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Target 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTarget(KongTarget [] Target) {
         this.Target = Target;

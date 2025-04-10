@@ -32,7 +32,6 @@ public class TaskRule extends AbstractModel {
 
     /**
     * Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expression")
     @Expose
@@ -63,10 +62,8 @@ public class TaskRule extends AbstractModel {
     }
 
     /**
-     * Get Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cron类型规则，cron表达式。 
      * @return Expression Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpression() {
         return this.Expression;
@@ -74,9 +71,7 @@ public class TaskRule extends AbstractModel {
 
     /**
      * Set Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expression Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpression(String Expression) {
         this.Expression = Expression;

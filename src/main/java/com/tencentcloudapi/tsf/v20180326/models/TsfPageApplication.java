@@ -25,7 +25,6 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
     * 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
     * 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -41,17 +39,14 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
     * 获取部署组实例列表返回的原始批次个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecTotalCount")
     @Expose
     private Long SpecTotalCount;
 
     /**
-     * Get 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用总数目 
      * @return TotalCount 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -59,19 +54,15 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
      * Set 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用信息列表 
      * @return Content 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicationForPage [] getContent() {
         return this.Content;
@@ -79,19 +70,15 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
      * Set 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(ApplicationForPage [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 获取部署组实例列表返回的原始批次个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取部署组实例列表返回的原始批次个数 
      * @return SpecTotalCount 获取部署组实例列表返回的原始批次个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpecTotalCount() {
         return this.SpecTotalCount;
@@ -99,9 +86,7 @@ public class TsfPageApplication extends AbstractModel {
 
     /**
      * Set 获取部署组实例列表返回的原始批次个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecTotalCount 获取部署组实例列表返回的原始批次个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecTotalCount(Long SpecTotalCount) {
         this.SpecTotalCount = SpecTotalCount;

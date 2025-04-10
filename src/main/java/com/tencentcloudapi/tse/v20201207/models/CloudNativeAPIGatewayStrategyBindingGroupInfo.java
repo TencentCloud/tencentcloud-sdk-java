@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
     * 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -33,7 +32,6 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
     * 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeConfig")
     @Expose
@@ -41,7 +39,6 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
     * 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindTime")
     @Expose
@@ -49,7 +46,6 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
     * 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -57,17 +53,14 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
     * 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关分组ID 
      * @return GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -75,19 +68,15 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
      * Set 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 节点配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点配置 
      * @return NodeConfig 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayNodeConfig getNodeConfig() {
         return this.NodeConfig;
@@ -95,19 +84,15 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
      * Set 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeConfig 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeConfig(CloudNativeAPIGatewayNodeConfig NodeConfig) {
         this.NodeConfig = NodeConfig;
     }
 
     /**
-     * Get 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定时间 
      * @return BindTime 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBindTime() {
         return this.BindTime;
@@ -115,19 +100,15 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
      * Set 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindTime 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindTime(String BindTime) {
         this.BindTime = BindTime;
     }
 
     /**
-     * Get 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关分组名称 
      * @return GroupName 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -135,19 +116,15 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
      * Set 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定状态 
      * @return Status 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -155,9 +132,7 @@ public class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 
     /**
      * Set 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

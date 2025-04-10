@@ -171,7 +171,7 @@ public class ServerlessSpace extends AbstractModel {
     private Long ClusterType;
 
     /**
-    * key:value
+    * 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
@@ -539,9 +539,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get key:value
+     * Get 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagList key:value
+     * @return TagList 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTagList() {
@@ -549,9 +549,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set key:value
+     * Set 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagList key:value
+     * @param TagList 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(TagInfo [] TagList) {

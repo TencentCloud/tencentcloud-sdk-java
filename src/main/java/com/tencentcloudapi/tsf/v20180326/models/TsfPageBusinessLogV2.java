@@ -55,7 +55,6 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
     * 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchAfter")
     @Expose
@@ -134,10 +133,8 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
     }
 
     /**
-     * Get 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询es时，使用searchAfter返回的游标 
      * @return SearchAfter 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSearchAfter() {
         return this.SearchAfter;
@@ -145,9 +142,7 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
      * Set 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchAfter 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchAfter(String [] SearchAfter) {
         this.SearchAfter = SearchAfter;

@@ -74,6 +74,22 @@ public class RocketMQTopic extends AbstractModel {
     private Long UpdateTime;
 
     /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 最后写入时间，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -214,6 +230,46 @@ public class RocketMQTopic extends AbstractModel {
     }
 
     /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Namespace 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Namespace 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * Get 最后写入时间，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastUpdateTime 最后写入时间，单位为秒
@@ -302,6 +358,12 @@ public class RocketMQTopic extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
         if (source.LastUpdateTime != null) {
             this.LastUpdateTime = new Long(source.LastUpdateTime);
         }
@@ -328,6 +390,8 @@ public class RocketMQTopic extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);

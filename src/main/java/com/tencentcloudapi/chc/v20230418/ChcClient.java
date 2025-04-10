@@ -182,6 +182,17 @@ public class ChcClient extends AbstractClient{
     }
 
     /**
+     *创建临时设备退出工单
+     * @param req CreateSpeciallyQuitWorkOrderRequest
+     * @return CreateSpeciallyQuitWorkOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSpeciallyQuitWorkOrderResponse CreateSpeciallyQuitWorkOrder(CreateSpeciallyQuitWorkOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSpeciallyQuitWorkOrder", CreateSpeciallyQuitWorkOrderResponse.class);
+    }
+
+    /**
      *获取机房内可用的型号列表
      * @param req DescribeAvailableModelListRequest
      * @return DescribeAvailableModelListResponse

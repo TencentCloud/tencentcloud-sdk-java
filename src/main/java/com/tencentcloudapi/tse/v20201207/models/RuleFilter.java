@@ -25,7 +25,6 @@ public class RuleFilter extends AbstractModel {
 
     /**
     * 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class RuleFilter extends AbstractModel {
 
     /**
     * 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
@@ -41,7 +39,6 @@ public class RuleFilter extends AbstractModel {
 
     /**
     * 操作符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -49,17 +46,14 @@ public class RuleFilter extends AbstractModel {
 
     /**
     * header或query对应的name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限流条件的Key 
      * @return Key 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -67,19 +61,15 @@ public class RuleFilter extends AbstractModel {
 
     /**
      * Set 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限流条件的Values 
      * @return Values 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -87,19 +77,15 @@ public class RuleFilter extends AbstractModel {
 
     /**
      * Set 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 操作符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作符 
      * @return Operator 操作符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -107,19 +93,15 @@ public class RuleFilter extends AbstractModel {
 
     /**
      * Set 操作符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get header或query对应的name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get header或query对应的name 
      * @return Name header或query对应的name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -127,9 +109,7 @@ public class RuleFilter extends AbstractModel {
 
     /**
      * Set header或query对应的name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name header或query对应的name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

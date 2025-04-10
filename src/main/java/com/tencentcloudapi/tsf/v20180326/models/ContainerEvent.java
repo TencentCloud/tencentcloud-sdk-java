@@ -25,7 +25,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 第一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTimestamp")
     @Expose
@@ -33,7 +32,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 最后一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTimestamp")
     @Expose
@@ -41,7 +39,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kind")
     @Expose
@@ -57,7 +53,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -65,7 +60,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -73,7 +67,6 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 详细描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -81,17 +74,14 @@ public class ContainerEvent extends AbstractModel {
 
     /**
     * 出现次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 第一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 第一次出现的时间，以 ms 为单位的时间戳 
      * @return FirstTimestamp 第一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstTimestamp() {
         return this.FirstTimestamp;
@@ -99,19 +89,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 第一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTimestamp 第一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTimestamp(Long FirstTimestamp) {
         this.FirstTimestamp = FirstTimestamp;
     }
 
     /**
-     * Get 最后一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次出现的时间，以 ms 为单位的时间戳 
      * @return LastTimestamp 最后一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastTimestamp() {
         return this.LastTimestamp;
@@ -119,19 +105,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 最后一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTimestamp 最后一次出现的时间，以 ms 为单位的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTimestamp(Long LastTimestamp) {
         this.LastTimestamp = LastTimestamp;
     }
 
     /**
-     * Get 级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 级别 
      * @return Type 级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -139,19 +121,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return Kind 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKind() {
         return this.Kind;
@@ -159,19 +137,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kind 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return Name 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -179,19 +153,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容 
      * @return Reason 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -199,19 +169,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 详细描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细描述 
      * @return Message 详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -219,19 +185,15 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 出现次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出现次数 
      * @return Count 出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -239,9 +201,7 @@ public class ContainerEvent extends AbstractModel {
 
     /**
      * Set 出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

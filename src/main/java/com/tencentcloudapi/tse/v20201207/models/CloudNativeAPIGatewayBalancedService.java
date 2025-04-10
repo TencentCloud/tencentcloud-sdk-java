@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
     * 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceID")
     @Expose
@@ -33,7 +32,6 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
     * 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -41,7 +39,6 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
     * Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamName")
     @Expose
@@ -49,17 +46,14 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
     * 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
     private Float Percent;
 
     /**
-     * Get 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务 ID，作为入参时，必填 
      * @return ServiceID 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceID() {
         return this.ServiceID;
@@ -67,19 +61,15 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
      * Set 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceID 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceID(String ServiceID) {
         this.ServiceID = ServiceID;
     }
 
     /**
-     * Get 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称，作为入参时，无意义 
      * @return ServiceName 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -87,19 +77,15 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
      * Set 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Upstream 名称，作为入参时，无意义 
      * @return UpstreamName Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamName() {
         return this.UpstreamName;
@@ -107,19 +93,15 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
      * Set Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamName Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamName(String UpstreamName) {
         this.UpstreamName = UpstreamName;
     }
 
     /**
-     * Get 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 百分比，10 即 10%，范围0-100 
      * @return Percent 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPercent() {
         return this.Percent;
@@ -127,9 +109,7 @@ public class CloudNativeAPIGatewayBalancedService extends AbstractModel {
 
     /**
      * Set 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Float Percent) {
         this.Percent = Percent;

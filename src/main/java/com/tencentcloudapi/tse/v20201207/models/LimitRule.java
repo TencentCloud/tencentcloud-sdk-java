@@ -25,7 +25,6 @@ public class LimitRule extends AbstractModel {
 
     /**
     * 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filters")
     @Expose
@@ -33,7 +32,6 @@ public class LimitRule extends AbstractModel {
 
     /**
     * 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitBy")
     @Expose
@@ -41,7 +39,6 @@ public class LimitRule extends AbstractModel {
 
     /**
     * 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QpsThresholds")
     @Expose
@@ -49,17 +46,14 @@ public class LimitRule extends AbstractModel {
 
     /**
     * 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccurateQpsThresholds")
     @Expose
     private AccurateQpsThreshold [] AccurateQpsThresholds;
 
     /**
-     * Get 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求匹配条件 
      * @return Filters 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleFilter [] getFilters() {
         return this.Filters;
@@ -67,19 +61,15 @@ public class LimitRule extends AbstractModel {
 
     /**
      * Set 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Filters 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilters(RuleFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数限流依据组合 
      * @return LimitBy 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValue [] getLimitBy() {
         return this.LimitBy;
@@ -87,19 +77,15 @@ public class LimitRule extends AbstractModel {
 
     /**
      * Set 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitBy 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitBy(KeyValue [] LimitBy) {
         this.LimitBy = LimitBy;
     }
 
     /**
-     * Get 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限流阈值 
      * @return QpsThresholds 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QpsThreshold [] getQpsThresholds() {
         return this.QpsThresholds;
@@ -107,19 +93,15 @@ public class LimitRule extends AbstractModel {
 
     /**
      * Set 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QpsThresholds 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQpsThresholds(QpsThreshold [] QpsThresholds) {
         this.QpsThresholds = QpsThresholds;
     }
 
     /**
-     * Get 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 精确限流阈值 
      * @return AccurateQpsThresholds 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccurateQpsThreshold [] getAccurateQpsThresholds() {
         return this.AccurateQpsThresholds;
@@ -127,9 +109,7 @@ public class LimitRule extends AbstractModel {
 
     /**
      * Set 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccurateQpsThresholds 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccurateQpsThresholds(AccurateQpsThreshold [] AccurateQpsThresholds) {
         this.AccurateQpsThresholds = AccurateQpsThresholds;

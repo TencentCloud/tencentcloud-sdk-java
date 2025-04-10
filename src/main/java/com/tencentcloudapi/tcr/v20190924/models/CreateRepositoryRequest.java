@@ -38,7 +38,9 @@ public class CreateRepositoryRequest extends AbstractModel {
     private String NamespaceName;
 
     /**
-    * 仓库名称
+    * 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -91,16 +93,24 @@ public class CreateRepositoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 仓库名称 
-     * @return RepositoryName 仓库名称
+     * Get 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ - 
+     * @return RepositoryName 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 仓库名称
-     * @param RepositoryName 仓库名称
+     * Set 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
+     * @param RepositoryName 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;

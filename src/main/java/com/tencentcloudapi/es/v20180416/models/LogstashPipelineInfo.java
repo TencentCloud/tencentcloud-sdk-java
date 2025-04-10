@@ -102,6 +102,22 @@ public class LogstashPipelineInfo extends AbstractModel {
     private Long QueueCheckPointWrites;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 管道ID 
      * @return PipelineId 管道ID
      */
@@ -293,6 +309,46 @@ public class LogstashPipelineInfo extends AbstractModel {
         this.QueueCheckPointWrites = QueueCheckPointWrites;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public LogstashPipelineInfo() {
     }
 
@@ -331,6 +387,12 @@ public class LogstashPipelineInfo extends AbstractModel {
         if (source.QueueCheckPointWrites != null) {
             this.QueueCheckPointWrites = new Long(source.QueueCheckPointWrites);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -348,6 +410,8 @@ public class LogstashPipelineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueType", this.QueueType);
         this.setParamSimple(map, prefix + "QueueMaxBytes", this.QueueMaxBytes);
         this.setParamSimple(map, prefix + "QueueCheckPointWrites", this.QueueCheckPointWrites);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

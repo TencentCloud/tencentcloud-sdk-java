@@ -25,7 +25,6 @@ public class KongCertificatesList extends AbstractModel {
 
     /**
     * 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -48,10 +47,8 @@ public class KongCertificatesList extends AbstractModel {
     private Long Pages;
 
     /**
-     * Get 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书列表总数 
      * @return Total 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -59,9 +56,7 @@ public class KongCertificatesList extends AbstractModel {
 
     /**
      * Set 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

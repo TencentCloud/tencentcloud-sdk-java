@@ -442,6 +442,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于删除cos导入任务
+     * @param req DeleteCosRechargeRequest
+     * @return DeleteCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosRechargeResponse DeleteCosRecharge(DeleteCosRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosRecharge", DeleteCosRechargeResponse.class);
+    }
+
+    /**
      *此接口用于删除仪表盘订阅
      * @param req DeleteDashboardSubscribeRequest
      * @return DeleteDashboardSubscribeResponse

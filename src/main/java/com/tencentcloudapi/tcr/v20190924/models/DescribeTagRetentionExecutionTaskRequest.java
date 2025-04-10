@@ -45,14 +45,14 @@ public class DescribeTagRetentionExecutionTaskRequest extends AbstractModel {
     private Long ExecutionId;
 
     /**
-    * 分页Page
+    * 页数，第几页，用于分页
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页PageSize
+    * 每页个数，用于分页，最大值为100
     */
     @SerializedName("Limit")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeTagRetentionExecutionTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页Page 
-     * @return Offset 分页Page
+     * Get 页数，第几页，用于分页 
+     * @return Offset 页数，第几页，用于分页
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Page
-     * @param Offset 分页Page
+     * Set 页数，第几页，用于分页
+     * @param Offset 页数，第几页，用于分页
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页PageSize 
-     * @return Limit 分页PageSize
+     * Get 每页个数，用于分页，最大值为100 
+     * @return Limit 每页个数，用于分页，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页PageSize
-     * @param Limit 分页PageSize
+     * Set 每页个数，用于分页，最大值为100
+     * @param Limit 每页个数，用于分页，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

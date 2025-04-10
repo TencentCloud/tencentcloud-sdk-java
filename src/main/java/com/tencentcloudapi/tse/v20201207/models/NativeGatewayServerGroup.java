@@ -76,7 +76,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindingStrategy")
     @Expose
@@ -84,7 +83,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -92,7 +90,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -100,7 +97,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -108,7 +104,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -116,7 +111,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultWeight")
     @Expose
@@ -124,7 +118,6 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
     * 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticNumber")
     @Expose
@@ -251,10 +244,8 @@ public class NativeGatewayServerGroup extends AbstractModel {
     }
 
     /**
-     * Get 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联策略信息 
      * @return BindingStrategy 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayStrategy getBindingStrategy() {
         return this.BindingStrategy;
@@ -262,19 +253,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindingStrategy 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindingStrategy(CloudNativeAPIGatewayStrategy BindingStrategy) {
         this.BindingStrategy = BindingStrategy;
     }
 
     /**
-     * Get 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实例 id 
      * @return GatewayId 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -282,19 +269,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽 
      * @return InternetMaxBandwidthOut 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -302,19 +285,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetMaxBandwidthOut 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -322,19 +301,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetIds() {
         return this.SubnetIds;
@@ -342,19 +317,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(String SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组默认权重 
      * @return DefaultWeight 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultWeight() {
         return this.DefaultWeight;
@@ -362,19 +333,15 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultWeight 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultWeight(Long DefaultWeight) {
         this.DefaultWeight = DefaultWeight;
     }
 
     /**
-     * Get 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性节点 
      * @return ElasticNumber 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticNumber() {
         return this.ElasticNumber;
@@ -382,9 +349,7 @@ public class NativeGatewayServerGroup extends AbstractModel {
 
     /**
      * Set 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticNumber 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticNumber(Long ElasticNumber) {
         this.ElasticNumber = ElasticNumber;

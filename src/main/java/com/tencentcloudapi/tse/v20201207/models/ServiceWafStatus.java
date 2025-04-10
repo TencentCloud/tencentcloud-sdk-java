@@ -25,7 +25,6 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
     *  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
     * 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
     * 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,17 +46,14 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
     *  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  服务的名字 
      * @return Name  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
      * Set  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务的 ID 
      * @return Id 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -87,19 +77,15 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
      * Set 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务的类型 
      * @return Type 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -107,19 +93,15 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
      * Set 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  服务是否开启 WAF 防护 
      * @return Status  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -127,9 +109,7 @@ public class ServiceWafStatus extends AbstractModel {
 
     /**
      * Set  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

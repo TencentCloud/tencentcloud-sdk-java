@@ -25,17 +25,14 @@ public class KongUpstreamList extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamList")
     @Expose
     private KongUpstreamPreview [] UpstreamList;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return UpstreamList 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KongUpstreamPreview [] getUpstreamList() {
         return this.UpstreamList;
@@ -43,9 +40,7 @@ public class KongUpstreamList extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamList 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamList(KongUpstreamPreview [] UpstreamList) {
         this.UpstreamList = UpstreamList;

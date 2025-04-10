@@ -25,7 +25,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -41,7 +39,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -49,7 +46,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,7 +53,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delimiter")
     @Expose
@@ -65,7 +60,6 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalConfigId")
     @Expose
@@ -73,17 +67,14 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
     * 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalConfigName")
     @Expose
     private String GlobalConfigName;
 
     /**
-     * Get 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件类型，支持 path, method, query, header, cookie, body 和 system。 
      * @return Type 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -91,19 +82,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名 
      * @return Key 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -111,19 +98,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等 
      * @return Operator 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -131,19 +114,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标参数值 
      * @return Value 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -151,19 +130,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。 
      * @return Delimiter 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelimiter() {
         return this.Delimiter;
@@ -171,19 +146,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Delimiter 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
     }
 
     /**
-     * Get 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全局配置 Id 
      * @return GlobalConfigId 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalConfigId() {
         return this.GlobalConfigId;
@@ -191,19 +162,15 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GlobalConfigId 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalConfigId(String GlobalConfigId) {
         this.GlobalConfigId = GlobalConfigId;
     }
 
     /**
-     * Get 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全局配置名称 
      * @return GlobalConfigName 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalConfigName() {
         return this.GlobalConfigName;
@@ -211,9 +178,7 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
 
     /**
      * Set 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GlobalConfigName 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalConfigName(String GlobalConfigName) {
         this.GlobalConfigName = GlobalConfigName;

@@ -121,6 +121,17 @@ public class StsClient extends AbstractClient{
     }
 
     /**
+     *获取MFA临时证书
+     * @param req GetSessionTokenRequest
+     * @return GetSessionTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSessionTokenResponse GetSessionToken(GetSessionTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSessionToken", GetSessionTokenResponse.class);
+    }
+
+    /**
      *拉取API密钥列表
      * @param req QueryApiKeyRequest
      * @return QueryApiKeyResponse

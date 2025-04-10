@@ -25,7 +25,6 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
     * 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalStatus")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
     * 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServicesStatus")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
     * 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteStatus")
     @Expose
@@ -49,17 +46,14 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
     * 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectStatus")
     @Expose
     private String ObjectStatus;
 
     /**
-     * Get 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全局防护状态 
      * @return GlobalStatus 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalStatus() {
         return this.GlobalStatus;
@@ -67,19 +61,15 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
      * Set 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GlobalStatus 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalStatus(String GlobalStatus) {
         this.GlobalStatus = GlobalStatus;
     }
 
     /**
-     * Get 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务防护状态 
      * @return ServicesStatus 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceWafStatus [] getServicesStatus() {
         return this.ServicesStatus;
@@ -87,19 +77,15 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
      * Set 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServicesStatus 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServicesStatus(ServiceWafStatus [] ServicesStatus) {
         this.ServicesStatus = ServicesStatus;
     }
 
     /**
-     * Get 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由防护状态 
      * @return RouteStatus 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RouteWafStatus [] getRouteStatus() {
         return this.RouteStatus;
@@ -107,19 +93,15 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
      * Set 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteStatus 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteStatus(RouteWafStatus [] RouteStatus) {
         this.RouteStatus = RouteStatus;
     }
 
     /**
-     * Get 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象防护状态 
      * @return ObjectStatus 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectStatus() {
         return this.ObjectStatus;
@@ -127,9 +109,7 @@ public class DescribeWafProtectionResult extends AbstractModel {
 
     /**
      * Set 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectStatus 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectStatus(String ObjectStatus) {
         this.ObjectStatus = ObjectStatus;

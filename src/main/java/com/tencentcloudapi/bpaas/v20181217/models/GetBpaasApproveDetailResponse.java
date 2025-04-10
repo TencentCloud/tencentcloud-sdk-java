@@ -39,7 +39,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyUinNick")
     @Expose
@@ -61,7 +60,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationParams")
     @Expose
@@ -69,7 +67,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -77,7 +74,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -85,7 +81,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -93,7 +88,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nodes")
     @Expose
@@ -101,7 +95,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApprovingNodeId")
     @Expose
@@ -109,7 +102,6 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
     * 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -155,10 +147,8 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请人昵称 
      * @return ApplyUinNick 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyUinNick() {
         return this.ApplyUinNick;
@@ -166,9 +156,7 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyUinNick 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyUinNick(String ApplyUinNick) {
         this.ApplyUinNick = ApplyUinNick;
@@ -207,10 +195,8 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 申请参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请参数 
      * @return ApplicationParams 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplyParam [] getApplicationParams() {
         return this.ApplicationParams;
@@ -218,19 +204,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationParams 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationParams(ApplyParam [] ApplicationParams) {
         this.ApplicationParams = ApplicationParams;
     }
 
     /**
-     * Get 申请原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请原因 
      * @return Reason 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -238,19 +220,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 申请时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请时间 
      * @return CreateTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -258,19 +236,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请单状态 
      * @return Status 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -278,19 +252,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点信息 
      * @return Nodes 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatusNode [] getNodes() {
         return this.Nodes;
@@ -298,19 +268,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nodes 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodes(StatusNode [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正在审批的节点id 
      * @return ApprovingNodeId 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApprovingNodeId() {
         return this.ApprovingNodeId;
@@ -318,19 +284,15 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApprovingNodeId 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApprovingNodeId(String ApprovingNodeId) {
         this.ApprovingNodeId = ApprovingNodeId;
     }
 
     /**
-     * Get 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间，时间格式：2021-12-12 10:12:10	 
      * @return ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -338,9 +300,7 @@ public class GetBpaasApproveDetailResponse extends AbstractModel {
 
     /**
      * Set 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

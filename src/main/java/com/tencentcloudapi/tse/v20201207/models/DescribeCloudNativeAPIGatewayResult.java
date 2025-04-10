@@ -90,7 +90,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -98,7 +97,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableCls")
     @Expose
@@ -106,7 +104,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeType")
     @Expose
@@ -114,7 +111,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureVersion")
     @Expose
@@ -122,7 +118,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -131,7 +126,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     /**
     * 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -139,7 +133,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
@@ -147,7 +140,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -155,7 +147,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableInternet")
     @Expose
@@ -163,7 +154,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineRegion")
     @Expose
@@ -171,7 +161,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IngressClassName")
     @Expose
@@ -179,7 +168,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetPayMode")
     @Expose
@@ -187,7 +175,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayMinorVersion")
     @Expose
@@ -195,7 +182,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePort")
     @Expose
@@ -203,7 +189,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -211,7 +196,6 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
     * 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -370,10 +354,8 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     }
 
     /**
-     * Get 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的标签信息 
      * @return Tags 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceTagInfo [] getTags() {
         return this.Tags;
@@ -381,19 +363,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(InstanceTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启 cls 日志 
      * @return EnableCls 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableCls() {
         return this.EnableCls;
@@ -401,19 +379,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableCls 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableCls(Boolean EnableCls) {
         this.EnableCls = EnableCls;
     }
 
     /**
-     * Get 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费模式，0表示后付费，1预付费 
      * @return TradeType 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTradeType() {
         return this.TradeType;
@@ -421,19 +395,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeType 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeType(Long TradeType) {
         this.TradeType = TradeType;
     }
 
     /**
-     * Get 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】 
      * @return FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeatureVersion() {
         return this.FeatureVersion;
@@ -441,19 +411,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureVersion(String FeatureVersion) {
         this.FeatureVersion = FeatureVersion;
     }
 
     /**
-     * Get 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网出流量带宽，[1,2048]Mbps 
      * @return InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -461,9 +427,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -471,11 +435,9 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0 
      * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -484,20 +446,16 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     /**
      * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间，预付费时使用 
      * @return CurDeadline 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -505,19 +463,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隔离时间，实例隔离时使用 
      * @return IsolateTime 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -525,19 +479,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateTime 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启客户端公网。 
      * @return EnableInternet 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
@@ -545,19 +495,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableInternet 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;
     }
 
     /**
-     * Get 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例实际的地域信息 
      * @return EngineRegion 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineRegion() {
         return this.EngineRegion;
@@ -565,19 +511,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineRegion 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ingress class名称 
      * @return IngressClassName Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIngressClassName() {
         return this.IngressClassName;
@@ -585,19 +527,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IngressClassName Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngressClassName(String IngressClassName) {
         this.IngressClassName = IngressClassName;
     }
 
     /**
-     * Get 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。 
      * @return InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternetPayMode() {
         return this.InternetPayMode;
@@ -605,19 +543,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetPayMode(String InternetPayMode) {
         this.InternetPayMode = InternetPayMode;
     }
 
     /**
-     * Get 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云原生API网关小版本号 
      * @return GatewayMinorVersion 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayMinorVersion() {
         return this.GatewayMinorVersion;
@@ -625,19 +559,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayMinorVersion 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayMinorVersion(String GatewayMinorVersion) {
         this.GatewayMinorVersion = GatewayMinorVersion;
     }
 
     /**
-     * Get 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例监听的端口信息 
      * @return InstancePort 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstancePort getInstancePort() {
         return this.InstancePort;
@@ -645,19 +575,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePort 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePort(InstancePort InstancePort) {
         this.InstancePort = InstancePort;
     }
 
     /**
-     * Get 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网CLB默认类型 
      * @return LoadBalancerType 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
@@ -665,19 +591,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerType 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP地址列表 
      * @return PublicIpAddresses 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -685,9 +607,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
      * Set 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

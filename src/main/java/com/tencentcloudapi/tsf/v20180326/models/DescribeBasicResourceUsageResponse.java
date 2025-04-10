@@ -25,7 +25,6 @@ public class DescribeBasicResourceUsageResponse extends AbstractModel {
 
     /**
     * TSF基本资源信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBasicResourceUsageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TSF基本资源信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TSF基本资源信息 
      * @return Result TSF基本资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OverviewBasicResourceUsage getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeBasicResourceUsageResponse extends AbstractModel {
 
     /**
      * Set TSF基本资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result TSF基本资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(OverviewBasicResourceUsage Result) {
         this.Result = Result;

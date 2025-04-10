@@ -25,7 +25,6 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -33,7 +32,6 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -41,7 +39,6 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -49,7 +46,6 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -57,7 +53,6 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkId")
     @Expose
@@ -65,17 +60,14 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
     * 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网 ip 
      * @return Vip 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -83,19 +75,15 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网最大带宽 
      * @return InternetMaxBandwidthOut 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -103,19 +91,15 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetMaxBandwidthOut 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网所属分组 id 
      * @return GroupId 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -123,19 +107,15 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网所属分组名 
      * @return GroupName 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -143,19 +123,15 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网负载均衡 id 
      * @return NetworkId 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkId() {
         return this.NetworkId;
@@ -163,19 +139,15 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkId 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkId(String NetworkId) {
         this.NetworkId = NetworkId;
     }
 
     /**
-     * Get 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网负载均衡描述 
      * @return Description 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -183,9 +155,7 @@ public class PublicAddressConfig extends AbstractModel {
 
     /**
      * Set 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

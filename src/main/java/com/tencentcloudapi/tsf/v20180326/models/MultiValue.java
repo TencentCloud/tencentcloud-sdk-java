@@ -25,17 +25,14 @@ public class MultiValue extends AbstractModel {
 
     /**
     * 数据点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private Float [] Values;
 
     /**
-     * Get 数据点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据点 
      * @return Values 数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getValues() {
         return this.Values;
@@ -43,9 +40,7 @@ public class MultiValue extends AbstractModel {
 
     /**
      * Set 数据点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(Float [] Values) {
         this.Values = Values;

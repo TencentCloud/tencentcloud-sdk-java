@@ -25,7 +25,6 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Username")
     @Expose
@@ -33,7 +32,6 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
     * 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -41,17 +39,14 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
     * 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessToken")
     @Expose
     private String AccessToken;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsername() {
         return this.Username;
@@ -59,19 +54,15 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 账户密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户密码 
      * @return Password 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -79,19 +70,15 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
      * Set 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问凭据 token 
      * @return AccessToken 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessToken() {
         return this.AccessToken;
@@ -99,9 +86,7 @@ public class SourceInstanceAuth extends AbstractModel {
 
     /**
      * Set 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessToken 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessToken(String AccessToken) {
         this.AccessToken = AccessToken;

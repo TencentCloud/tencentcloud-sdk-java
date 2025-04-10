@@ -25,17 +25,14 @@ public class GatewayConfig extends AbstractModel {
 
     /**
     * 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称 
      * @return Name 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -43,9 +40,7 @@ public class GatewayConfig extends AbstractModel {
 
     /**
      * Set 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

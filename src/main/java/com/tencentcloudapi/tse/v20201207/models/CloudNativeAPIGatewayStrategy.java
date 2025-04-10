@@ -32,7 +32,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -40,7 +39,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -48,7 +46,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -56,7 +53,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -64,7 +60,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -72,7 +67,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -80,7 +74,6 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
     * 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronConfig")
     @Expose
@@ -111,10 +104,8 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -122,19 +113,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -142,19 +129,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -162,19 +145,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -182,19 +161,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性伸缩配置 
      * @return Config 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayStrategyAutoScalerConfig getConfig() {
         return this.Config;
@@ -202,19 +177,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(CloudNativeAPIGatewayStrategyAutoScalerConfig Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关实例ID 
      * @return GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -222,19 +193,15 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时伸缩配置 
      * @return CronConfig 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudNativeAPIGatewayStrategyCronScalerConfig getCronConfig() {
         return this.CronConfig;
@@ -242,9 +209,7 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel {
 
     /**
      * Set 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronConfig 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronConfig(CloudNativeAPIGatewayStrategyCronScalerConfig CronConfig) {
         this.CronConfig = CronConfig;

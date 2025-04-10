@@ -27,7 +27,6 @@ public class UpdateHealthCheckSettingsResponse extends AbstractModel {
     * 更新健康检查配置操作是否成功。
 true：操作成功。
 false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -43,12 +42,10 @@ false：操作失败。
     /**
      * Get 更新健康检查配置操作是否成功。
 true：操作成功。
-false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+false：操作失败。 
      * @return Result 更新健康检查配置操作是否成功。
 true：操作成功。
 false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -58,11 +55,9 @@ false：操作失败。
      * Set 更新健康检查配置操作是否成功。
 true：操作成功。
 false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 更新健康检查配置操作是否成功。
 true：操作成功。
 false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

@@ -38,7 +38,7 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+    * 下架选择 1.自行解决 2.由腾讯IDC负责
     */
     @SerializedName("StuffOption")
     @Expose
@@ -133,16 +133,16 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
     }
 
     /**
-     * Get 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出 
-     * @return StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     * Get 下架选择 1.自行解决 2.由腾讯IDC负责 
+     * @return StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责
      */
     public String getStuffOption() {
         return this.StuffOption;
     }
 
     /**
-     * Set 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
-     * @param StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     * Set 下架选择 1.自行解决 2.由腾讯IDC负责
+     * @param StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责
      */
     public void setStuffOption(String StuffOption) {
         this.StuffOption = StuffOption;

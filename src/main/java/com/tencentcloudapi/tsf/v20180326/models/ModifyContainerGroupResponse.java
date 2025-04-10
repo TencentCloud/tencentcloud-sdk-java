@@ -27,7 +27,6 @@ public class ModifyContainerGroupResponse extends AbstractModel {
     * 更新部署组是否成功。
 true：成功。
 false：失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -43,12 +42,10 @@ false：失败。
     /**
      * Get 更新部署组是否成功。
 true：成功。
-false：失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+false：失败。 
      * @return Result 更新部署组是否成功。
 true：成功。
 false：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -58,11 +55,9 @@ false：失败。
      * Set 更新部署组是否成功。
 true：成功。
 false：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 更新部署组是否成功。
 true：成功。
 false：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
