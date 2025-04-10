@@ -530,6 +530,16 @@ header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
 request.SetHeader(header);
 ```
 
+## CommonHttpClient示例
+
+参考示例代码 [CustomHttpClient.java](examples/common/CustomHttpClient.java)
+```java
+// 可以通过 HttpProfile.setHttpClient 来自定义 httpClient
+// 注意: 如果使用自定义 httpClient, 则 HttpProfile 中的配置则不会生效，需要用户自己配置
+ClientProfile cpf = new ClientProfile();
+cpf.getHttpProfile().setHttpClient(...);
+```
+
 # 其他问题
 
 ## 版本升级
