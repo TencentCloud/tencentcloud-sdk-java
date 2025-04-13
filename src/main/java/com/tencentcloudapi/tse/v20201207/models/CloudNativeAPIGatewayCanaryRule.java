@@ -118,7 +118,6 @@ Standard｜Lane
 
     /**
     * 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaneTag")
     @Expose
@@ -341,10 +340,8 @@ Standard｜Lane
     }
 
     /**
-     * Get 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泳道标签 
      * @return LaneTag 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaneTag() {
         return this.LaneTag;
@@ -352,9 +349,7 @@ Standard｜Lane
 
     /**
      * Set 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaneTag 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaneTag(String LaneTag) {
         this.LaneTag = LaneTag;

@@ -311,6 +311,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取 AI 时延信息
+     * @param req DescribeAILatencyRequest
+     * @return DescribeAILatencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAILatencyResponse DescribeAILatency(DescribeAILatencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAILatency", DescribeAILatencyResponse.class);
+    }
+
+    /**
      *查询生效运营商白名单规则
      * @param req DescribeActiveCarrierPrivilegeNumberRequest
      * @return DescribeActiveCarrierPrivilegeNumberResponse
@@ -621,6 +632,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *强制客服下线
+     * @param req ForceMemberOfflineRequest
+     * @return ForceMemberOfflineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForceMemberOfflineResponse ForceMemberOffline(ForceMemberOfflineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForceMemberOffline", ForceMemberOfflineResponse.class);
+    }
+
+    /**
      *挂断电话
      * @param req HangUpCallRequest
      * @return HangUpCallResponse
@@ -706,6 +728,17 @@ public class CccClient extends AbstractClient{
     public ResetExtensionPasswordResponse ResetExtensionPassword(ResetExtensionPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetExtensionPassword", ResetExtensionPasswordResponse.class);
+    }
+
+    /**
+     *恢复客服上线
+     * @param req RestoreMemberOnlineRequest
+     * @return RestoreMemberOnlineResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreMemberOnlineResponse RestoreMemberOnline(RestoreMemberOnlineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreMemberOnline", RestoreMemberOnlineResponse.class);
     }
 
     /**

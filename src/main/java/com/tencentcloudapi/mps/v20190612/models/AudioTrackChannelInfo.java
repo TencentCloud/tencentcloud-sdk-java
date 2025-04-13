@@ -36,10 +36,10 @@ public class AudioTrackChannelInfo extends AbstractModel {
 
     /**
     * 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectType")
@@ -88,16 +88,16 @@ trask_channel： 表示使用音轨id和声道id；
 
     /**
      * Get 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SelectType 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelectType() {
@@ -106,16 +106,16 @@ trask_channel： 表示使用音轨id和声道id；
 
     /**
      * Set 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SelectType 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectType(String SelectType) {

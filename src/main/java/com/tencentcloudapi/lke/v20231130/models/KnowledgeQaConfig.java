@@ -32,7 +32,19 @@ public class KnowledgeQaConfig extends AbstractModel {
     private String Greeting;
 
     /**
-    * 角色描述，300字符以内
+    * 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleDescription")
@@ -120,6 +132,22 @@ public class KnowledgeQaConfig extends AbstractModel {
     private AppModel ThoughtModel;
 
     /**
+    * 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntentAchievements")
+    @Expose
+    private IntentAchievement [] IntentAchievements;
+
+    /**
+    * 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageTextRetrieval")
+    @Expose
+    private Boolean ImageTextRetrieval;
+
+    /**
      * Get 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Greeting 欢迎语，200字符以内
@@ -140,9 +168,33 @@ public class KnowledgeQaConfig extends AbstractModel {
     }
 
     /**
-     * Get 角色描述，300字符以内
+     * Get 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleDescription 角色描述，300字符以内
+     * @return RoleDescription 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleDescription() {
@@ -150,9 +202,33 @@ public class KnowledgeQaConfig extends AbstractModel {
     }
 
     /**
-     * Set 角色描述，300字符以内
+     * Set 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleDescription 角色描述，300字符以内
+     * @param RoleDescription 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleDescription(String RoleDescription) {
@@ -359,6 +435,46 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.ThoughtModel = ThoughtModel;
     }
 
+    /**
+     * Get 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntentAchievements 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntentAchievement [] getIntentAchievements() {
+        return this.IntentAchievements;
+    }
+
+    /**
+     * Set 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntentAchievements 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntentAchievements(IntentAchievement [] IntentAchievements) {
+        this.IntentAchievements = IntentAchievements;
+    }
+
+    /**
+     * Get 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageTextRetrieval 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getImageTextRetrieval() {
+        return this.ImageTextRetrieval;
+    }
+
+    /**
+     * Set 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageTextRetrieval 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageTextRetrieval(Boolean ImageTextRetrieval) {
+        this.ImageTextRetrieval = ImageTextRetrieval;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -409,6 +525,15 @@ public class KnowledgeQaConfig extends AbstractModel {
         if (source.ThoughtModel != null) {
             this.ThoughtModel = new AppModel(source.ThoughtModel);
         }
+        if (source.IntentAchievements != null) {
+            this.IntentAchievements = new IntentAchievement[source.IntentAchievements.length];
+            for (int i = 0; i < source.IntentAchievements.length; i++) {
+                this.IntentAchievements[i] = new IntentAchievement(source.IntentAchievements[i]);
+            }
+        }
+        if (source.ImageTextRetrieval != null) {
+            this.ImageTextRetrieval = new Boolean(source.ImageTextRetrieval);
+        }
     }
 
 
@@ -428,6 +553,8 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
+        this.setParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
+        this.setParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
 
     }
 }

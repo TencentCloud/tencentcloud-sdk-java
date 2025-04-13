@@ -231,6 +231,9 @@ public enum MonitorErrorCode {
      /* 重复提交任务。 */
      INVALIDPARAMETER_DUPTASK("InvalidParameter.DupTask"),
      
+     /* 无效的AppId。 */
+     INVALIDPARAMETER_INVALIDAPPID("InvalidParameter.InvalidAppId"),
+     
      /* 参数错误。 */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      

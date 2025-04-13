@@ -69,6 +69,13 @@ public class GetDocPreviewResponse extends AbstractModel {
     private String NewName;
 
     /**
+    * 文件md结果cos临时地址
+    */
+    @SerializedName("ParseResultCosUrl")
+    @Expose
+    private String ParseResultCosUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -184,6 +191,22 @@ public class GetDocPreviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 文件md结果cos临时地址 
+     * @return ParseResultCosUrl 文件md结果cos临时地址
+     */
+    public String getParseResultCosUrl() {
+        return this.ParseResultCosUrl;
+    }
+
+    /**
+     * Set 文件md结果cos临时地址
+     * @param ParseResultCosUrl 文件md结果cos临时地址
+     */
+    public void setParseResultCosUrl(String ParseResultCosUrl) {
+        this.ParseResultCosUrl = ParseResultCosUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -225,6 +248,9 @@ public class GetDocPreviewResponse extends AbstractModel {
         if (source.NewName != null) {
             this.NewName = new String(source.NewName);
         }
+        if (source.ParseResultCosUrl != null) {
+            this.ParseResultCosUrl = new String(source.ParseResultCosUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -241,6 +267,7 @@ public class GetDocPreviewResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "NewName", this.NewName);
+        this.setParamSimple(map, prefix + "ParseResultCosUrl", this.ParseResultCosUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

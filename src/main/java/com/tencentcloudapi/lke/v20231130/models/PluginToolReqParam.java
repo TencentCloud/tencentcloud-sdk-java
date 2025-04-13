@@ -66,6 +66,13 @@ public class PluginToolReqParam extends AbstractModel {
     private PluginToolReqParam [] SubParams;
 
     /**
+    * 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+    */
+    @SerializedName("GlobalHidden")
+    @Expose
+    private Boolean GlobalHidden;
+
+    /**
      * Get 参数名称 
      * @return Name 参数名称
      */
@@ -161,6 +168,22 @@ public class PluginToolReqParam extends AbstractModel {
         this.SubParams = SubParams;
     }
 
+    /**
+     * Get 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见 
+     * @return GlobalHidden 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+     */
+    public Boolean getGlobalHidden() {
+        return this.GlobalHidden;
+    }
+
+    /**
+     * Set 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+     * @param GlobalHidden 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+     */
+    public void setGlobalHidden(Boolean GlobalHidden) {
+        this.GlobalHidden = GlobalHidden;
+    }
+
     public PluginToolReqParam() {
     }
 
@@ -190,6 +213,9 @@ public class PluginToolReqParam extends AbstractModel {
                 this.SubParams[i] = new PluginToolReqParam(source.SubParams[i]);
             }
         }
+        if (source.GlobalHidden != null) {
+            this.GlobalHidden = new Boolean(source.GlobalHidden);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class PluginToolReqParam extends AbstractModel {
         this.setParamSimple(map, prefix + "IsRequired", this.IsRequired);
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamArrayObj(map, prefix + "SubParams.", this.SubParams);
+        this.setParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
 
     }
 }

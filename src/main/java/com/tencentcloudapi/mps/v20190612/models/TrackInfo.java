@@ -37,9 +37,9 @@ public class TrackInfo extends AbstractModel {
 
     /**
     * 声道音量大小，说明：
-当：AudioChannel的值为1时，此值长度为1；
-当：AudioChannel的值为2时，此值长度为2；
-当：AudioChannel的值为6时，此值长度大于2。
+当：AudioChannel的值为1时，此数组长度为1，例如：[6]；
+当：AudioChannel的值为2时，此数组长度为2，例如：[0,6]；
+当：AudioChannel的值为6时，此数组长度大于2小于16，例如：[-60,0,0,6]。
 此值数组值取值范围：[-60, 6]，其中-60代表静音、0代表保持原音量，6表示原音量增加一倍，默认值为-60。
 注意：支持3位小数。
 
@@ -87,17 +87,17 @@ public class TrackInfo extends AbstractModel {
 
     /**
      * Get 声道音量大小，说明：
-当：AudioChannel的值为1时，此值长度为1；
-当：AudioChannel的值为2时，此值长度为2；
-当：AudioChannel的值为6时，此值长度大于2。
+当：AudioChannel的值为1时，此数组长度为1，例如：[6]；
+当：AudioChannel的值为2时，此数组长度为2，例如：[0,6]；
+当：AudioChannel的值为6时，此数组长度大于2小于16，例如：[-60,0,0,6]。
 此值数组值取值范围：[-60, 6]，其中-60代表静音、0代表保持原音量，6表示原音量增加一倍，默认值为-60。
 注意：支持3位小数。
 
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ChannelVolume 声道音量大小，说明：
-当：AudioChannel的值为1时，此值长度为1；
-当：AudioChannel的值为2时，此值长度为2；
-当：AudioChannel的值为6时，此值长度大于2。
+当：AudioChannel的值为1时，此数组长度为1，例如：[6]；
+当：AudioChannel的值为2时，此数组长度为2，例如：[0,6]；
+当：AudioChannel的值为6时，此数组长度大于2小于16，例如：[-60,0,0,6]。
 此值数组值取值范围：[-60, 6]，其中-60代表静音、0代表保持原音量，6表示原音量增加一倍，默认值为-60。
 注意：支持3位小数。
 
@@ -109,17 +109,17 @@ public class TrackInfo extends AbstractModel {
 
     /**
      * Set 声道音量大小，说明：
-当：AudioChannel的值为1时，此值长度为1；
-当：AudioChannel的值为2时，此值长度为2；
-当：AudioChannel的值为6时，此值长度大于2。
+当：AudioChannel的值为1时，此数组长度为1，例如：[6]；
+当：AudioChannel的值为2时，此数组长度为2，例如：[0,6]；
+当：AudioChannel的值为6时，此数组长度大于2小于16，例如：[-60,0,0,6]。
 此值数组值取值范围：[-60, 6]，其中-60代表静音、0代表保持原音量，6表示原音量增加一倍，默认值为-60。
 注意：支持3位小数。
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelVolume 声道音量大小，说明：
-当：AudioChannel的值为1时，此值长度为1；
-当：AudioChannel的值为2时，此值长度为2；
-当：AudioChannel的值为6时，此值长度大于2。
+当：AudioChannel的值为1时，此数组长度为1，例如：[6]；
+当：AudioChannel的值为2时，此数组长度为2，例如：[0,6]；
+当：AudioChannel的值为6时，此数组长度大于2小于16，例如：[-60,0,0,6]。
 此值数组值取值范围：[-60, 6]，其中-60代表静音、0代表保持原音量，6表示原音量增加一倍，默认值为-60。
 注意：支持3位小数。
 

@@ -2132,7 +2132,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *获取登录审计列表
+     *获取异常登录列表
      * @param req DescribeHostLoginListRequest
      * @return DescribeHostLoginListResponse
      * @throws TencentCloudSDKException

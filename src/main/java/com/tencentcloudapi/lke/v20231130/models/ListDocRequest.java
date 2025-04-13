@@ -73,6 +73,20 @@ public class ListDocRequest extends AbstractModel {
     private String CateBizId;
 
     /**
+    * 文件类型分类筛选
+    */
+    @SerializedName("FileTypes")
+    @Expose
+    private String [] FileTypes;
+
+    /**
+    * 文档列表筛选标识位
+    */
+    @SerializedName("FilterFlag")
+    @Expose
+    private DocFilterFlag [] FilterFlag;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -184,6 +198,38 @@ public class ListDocRequest extends AbstractModel {
         this.CateBizId = CateBizId;
     }
 
+    /**
+     * Get 文件类型分类筛选 
+     * @return FileTypes 文件类型分类筛选
+     */
+    public String [] getFileTypes() {
+        return this.FileTypes;
+    }
+
+    /**
+     * Set 文件类型分类筛选
+     * @param FileTypes 文件类型分类筛选
+     */
+    public void setFileTypes(String [] FileTypes) {
+        this.FileTypes = FileTypes;
+    }
+
+    /**
+     * Get 文档列表筛选标识位 
+     * @return FilterFlag 文档列表筛选标识位
+     */
+    public DocFilterFlag [] getFilterFlag() {
+        return this.FilterFlag;
+    }
+
+    /**
+     * Set 文档列表筛选标识位
+     * @param FilterFlag 文档列表筛选标识位
+     */
+    public void setFilterFlag(DocFilterFlag [] FilterFlag) {
+        this.FilterFlag = FilterFlag;
+    }
+
     public ListDocRequest() {
     }
 
@@ -216,6 +262,18 @@ public class ListDocRequest extends AbstractModel {
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.FileTypes != null) {
+            this.FileTypes = new String[source.FileTypes.length];
+            for (int i = 0; i < source.FileTypes.length; i++) {
+                this.FileTypes[i] = new String(source.FileTypes[i]);
+            }
+        }
+        if (source.FilterFlag != null) {
+            this.FilterFlag = new DocFilterFlag[source.FilterFlag.length];
+            for (int i = 0; i < source.FilterFlag.length; i++) {
+                this.FilterFlag[i] = new DocFilterFlag(source.FilterFlag[i]);
+            }
+        }
     }
 
 
@@ -230,6 +288,8 @@ public class ListDocRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
+        this.setParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHostLoginListResponse extends AbstractModel {
+public class DescribeAILatencyResponse extends AbstractModel {
 
     /**
-    * 总数
+    * 时延明细数据
+ -1表示无对应数据
     */
-    @SerializedName("TotalCount")
+    @SerializedName("AILatencyDetail")
     @Expose
-    private Long TotalCount;
+    private AILatencyDetail [] AILatencyDetail;
 
     /**
-    * 异常登录列表
+    * 时延统计数据
+ -1表示无对应数据
     */
-    @SerializedName("HostLoginList")
+    @SerializedName("AILatencyStatistics")
     @Expose
-    private HostLoginList [] HostLoginList;
+    private AILatencyStatistics AILatencyStatistics;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +47,43 @@ public class DescribeHostLoginListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get 时延明细数据
+ -1表示无对应数据 
+     * @return AILatencyDetail 时延明细数据
+ -1表示无对应数据
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public AILatencyDetail [] getAILatencyDetail() {
+        return this.AILatencyDetail;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set 时延明细数据
+ -1表示无对应数据
+     * @param AILatencyDetail 时延明细数据
+ -1表示无对应数据
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setAILatencyDetail(AILatencyDetail [] AILatencyDetail) {
+        this.AILatencyDetail = AILatencyDetail;
     }
 
     /**
-     * Get 异常登录列表 
-     * @return HostLoginList 异常登录列表
+     * Get 时延统计数据
+ -1表示无对应数据 
+     * @return AILatencyStatistics 时延统计数据
+ -1表示无对应数据
      */
-    public HostLoginList [] getHostLoginList() {
-        return this.HostLoginList;
+    public AILatencyStatistics getAILatencyStatistics() {
+        return this.AILatencyStatistics;
     }
 
     /**
-     * Set 异常登录列表
-     * @param HostLoginList 异常登录列表
+     * Set 时延统计数据
+ -1表示无对应数据
+     * @param AILatencyStatistics 时延统计数据
+ -1表示无对应数据
      */
-    public void setHostLoginList(HostLoginList [] HostLoginList) {
-        this.HostLoginList = HostLoginList;
+    public void setAILatencyStatistics(AILatencyStatistics AILatencyStatistics) {
+        this.AILatencyStatistics = AILatencyStatistics;
     }
 
     /**
@@ -92,22 +102,22 @@ public class DescribeHostLoginListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeHostLoginListResponse() {
+    public DescribeAILatencyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeHostLoginListResponse(DescribeHostLoginListResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.HostLoginList != null) {
-            this.HostLoginList = new HostLoginList[source.HostLoginList.length];
-            for (int i = 0; i < source.HostLoginList.length; i++) {
-                this.HostLoginList[i] = new HostLoginList(source.HostLoginList[i]);
+    public DescribeAILatencyResponse(DescribeAILatencyResponse source) {
+        if (source.AILatencyDetail != null) {
+            this.AILatencyDetail = new AILatencyDetail[source.AILatencyDetail.length];
+            for (int i = 0; i < source.AILatencyDetail.length; i++) {
+                this.AILatencyDetail[i] = new AILatencyDetail(source.AILatencyDetail[i]);
             }
+        }
+        if (source.AILatencyStatistics != null) {
+            this.AILatencyStatistics = new AILatencyStatistics(source.AILatencyStatistics);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +129,8 @@ public class DescribeHostLoginListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "HostLoginList.", this.HostLoginList);
+        this.setParamArrayObj(map, prefix + "AILatencyDetail.", this.AILatencyDetail);
+        this.setParamObj(map, prefix + "AILatencyStatistics.", this.AILatencyStatistics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,6 +38,14 @@ public class TargetRegionInfo extends AbstractModel {
     private String VpcId;
 
     /**
+    * Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Long NumericalVpcId;
+
+    /**
      * Get Target所属地域，如 ap-guangzhou 
      * @return Region Target所属地域，如 ap-guangzhou
      */
@@ -69,6 +77,26 @@ public class TargetRegionInfo extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumericalVpcId Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * Set Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumericalVpcId Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumericalVpcId(Long NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
     public TargetRegionInfo() {
     }
 
@@ -83,6 +111,9 @@ public class TargetRegionInfo extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class TargetRegionInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
 
     }
 }
