@@ -512,6 +512,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
+     * @param req DescribeCvmInfoRequest
+     * @return DescribeCvmInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCvmInfoResponse DescribeCvmInfo(DescribeCvmInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCvmInfo", DescribeCvmInfoResponse.class);
+    }
+
+    /**
      *获取Datahub消费分组offset
      * @param req DescribeDatahubGroupOffsetsRequest
      * @return DescribeDatahubGroupOffsetsResponse
@@ -752,6 +763,17 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopicSyncReplica", DescribeTopicSyncReplicaResponse.class);
+    }
+
+    /**
+     *本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
+     * @param req DescribeTypeInstancesRequest
+     * @return DescribeTypeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTypeInstancesResponse DescribeTypeInstances(DescribeTypeInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTypeInstances", DescribeTypeInstancesResponse.class);
     }
 
     /**

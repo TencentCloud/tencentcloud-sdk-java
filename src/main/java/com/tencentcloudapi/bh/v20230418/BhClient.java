@@ -105,6 +105,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *添加访问白名单规则
+     * @param req CreateAccessWhiteListRuleRequest
+     * @return CreateAccessWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessWhiteListRuleResponse CreateAccessWhiteListRule(CreateAccessWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessWhiteListRule", CreateAccessWhiteListRuleResponse.class);
+    }
+
+    /**
      *新建访问权限
      * @param req CreateAclRequest
      * @return CreateAclResponse
@@ -212,6 +223,17 @@ public class BhClient extends AbstractClient{
     public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateUserGroup", CreateUserGroupResponse.class);
+    }
+
+    /**
+     *删除访问白名单规则
+     * @param req DeleteAccessWhiteListRulesRequest
+     * @return DeleteAccessWhiteListRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccessWhiteListRulesResponse DeleteAccessWhiteListRules(DeleteAccessWhiteListRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAccessWhiteListRules", DeleteAccessWhiteListRulesResponse.class);
     }
 
     /**
@@ -344,6 +366,17 @@ public class BhClient extends AbstractClient{
     public DeployResourceResponse DeployResource(DeployResourceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeployResource", DeployResourceResponse.class);
+    }
+
+    /**
+     *查询访问白名单规则列表
+     * @param req DescribeAccessWhiteListRulesRequest
+     * @return DescribeAccessWhiteListRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRules(DescribeAccessWhiteListRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessWhiteListRules", DescribeAccessWhiteListRulesResponse.class);
     }
 
     /**
@@ -784,6 +817,17 @@ public class BhClient extends AbstractClient{
     public SearchSessionCommandResponse SearchSessionCommand(SearchSessionCommandRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchSessionCommand", SearchSessionCommandResponse.class);
+    }
+
+    /**
+     *搜索运维任务执行结果
+     * @param req SearchTaskResultRequest
+     * @return SearchTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchTaskResultResponse SearchTaskResult(SearchTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchTaskResult", SearchTaskResultResponse.class);
     }
 
 }

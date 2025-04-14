@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProgramFpgaImageRequest extends AbstractModel {
 
     /**
-    * 实例的ID信息。
+    * 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class ProgramFpgaImageRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 实例的ID信息。 
-     * @return InstanceId 实例的ID信息。
+     * Get 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。 
+     * @return InstanceId 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例的ID信息。
-     * @param InstanceId 实例的ID信息。
+     * Set 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+     * @param InstanceId 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

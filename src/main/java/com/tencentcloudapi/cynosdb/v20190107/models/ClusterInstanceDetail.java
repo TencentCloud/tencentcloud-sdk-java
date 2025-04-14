@@ -143,6 +143,13 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String DbMode;
 
     /**
+    * 节点列表
+    */
+    @SerializedName("NodeList")
+    @Expose
+    private String [] NodeList;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -414,6 +421,22 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.DbMode = DbMode;
     }
 
+    /**
+     * Get 节点列表 
+     * @return NodeList 节点列表
+     */
+    public String [] getNodeList() {
+        return this.NodeList;
+    }
+
+    /**
+     * Set 节点列表
+     * @param NodeList 节点列表
+     */
+    public void setNodeList(String [] NodeList) {
+        this.NodeList = NodeList;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -479,6 +502,12 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.DbMode != null) {
             this.DbMode = new String(source.DbMode);
         }
+        if (source.NodeList != null) {
+            this.NodeList = new String[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new String(source.NodeList[i]);
+            }
+        }
     }
 
 
@@ -503,6 +532,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
 
     }
 }

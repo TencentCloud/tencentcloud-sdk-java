@@ -2160,6 +2160,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *获取实例列表
+     * @param req GetInstanceLogRequest
+     * @return GetInstanceLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInstanceLogResponse GetInstanceLog(GetInstanceLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInstanceLog", GetInstanceLogResponse.class);
+    }
+
+    /**
      *提取数据集成节点字段Schema
      * @param req GetIntegrationNodeColumnSchemaRequest
      * @return GetIntegrationNodeColumnSchemaResponse
@@ -2193,6 +2204,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *获取实例列表
+     * @param req GetTaskInstanceRequest
+     * @return GetTaskInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskInstanceResponse GetTaskInstance(GetTaskInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTaskInstance", GetTaskInstanceResponse.class);
+    }
+
+    /**
      *资源管理-判断资源文件是否存在
      * @param req JudgeResourceFileRequest
      * @return JudgeResourceFileResponse
@@ -2223,6 +2245,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public KillScheduleInstancesResponse KillScheduleInstances(KillScheduleInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillScheduleInstances", KillScheduleInstancesResponse.class);
+    }
+
+    /**
+     *获取实例列表
+     * @param req ListInstancesRequest
+     * @return ListInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListInstancesResponse ListInstances(ListInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListInstances", ListInstancesResponse.class);
     }
 
     /**

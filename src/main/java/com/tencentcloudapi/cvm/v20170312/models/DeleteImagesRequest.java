@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class DeleteImagesRequest extends AbstractModel {
 
     /**
-    * 准备删除的镜像Id列表
+    * 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
     */
     @SerializedName("ImageIds")
     @Expose
     private String [] ImageIds;
 
     /**
-    * 是否删除镜像关联的快照
+    * 是否删除镜像关联的快照。
+默认值：false
     */
     @SerializedName("DeleteBindedSnap")
     @Expose
     private Boolean DeleteBindedSnap;
 
     /**
-    * 检测是否支持删除镜像
+    * 检测是否支持删除镜像。
+默认值：false
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-     * Get 准备删除的镜像Id列表 
-     * @return ImageIds 准备删除的镜像Id列表
+     * Get 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。 
+     * @return ImageIds 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public String [] getImageIds() {
         return this.ImageIds;
     }
 
     /**
-     * Set 准备删除的镜像Id列表
-     * @param ImageIds 准备删除的镜像Id列表
+     * Set 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
+     * @param ImageIds 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;
     }
 
     /**
-     * Get 是否删除镜像关联的快照 
-     * @return DeleteBindedSnap 是否删除镜像关联的快照
+     * Get 是否删除镜像关联的快照。
+默认值：false 
+     * @return DeleteBindedSnap 是否删除镜像关联的快照。
+默认值：false
      */
     public Boolean getDeleteBindedSnap() {
         return this.DeleteBindedSnap;
     }
 
     /**
-     * Set 是否删除镜像关联的快照
-     * @param DeleteBindedSnap 是否删除镜像关联的快照
+     * Set 是否删除镜像关联的快照。
+默认值：false
+     * @param DeleteBindedSnap 是否删除镜像关联的快照。
+默认值：false
      */
     public void setDeleteBindedSnap(Boolean DeleteBindedSnap) {
         this.DeleteBindedSnap = DeleteBindedSnap;
     }
 
     /**
-     * Get 检测是否支持删除镜像 
-     * @return DryRun 检测是否支持删除镜像
+     * Get 检测是否支持删除镜像。
+默认值：false 
+     * @return DryRun 检测是否支持删除镜像。
+默认值：false
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 检测是否支持删除镜像
-     * @param DryRun 检测是否支持删除镜像
+     * Set 检测是否支持删除镜像。
+默认值：false
+     * @param DryRun 检测是否支持删除镜像。
+默认值：false
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

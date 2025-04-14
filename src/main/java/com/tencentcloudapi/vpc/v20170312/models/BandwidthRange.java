@@ -31,14 +31,26 @@ public class BandwidthRange extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 带宽下限，单位：Mbps。
+    * 带宽下限，单位：Mbps。计费类型以及对应的带宽下限：
+- TOP5_POSTPAID_BY_MONTH: 默认无下限
+- BANDWIDTH_POSTPAID_BY_DAY: 50
+- FIXED_PREPAID_BY_MONTH: 100
+- ENHANCED95_POSTPAID_BY_MONTH: 300
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 50
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 50
     */
     @SerializedName("BandwidthLowerLimit")
     @Expose
     private Long BandwidthLowerLimit;
 
     /**
-    * 带宽上限，单位：Mbps。
+    * 带宽上限，单位：Mbps。计费类型以及对应的带宽上限：
+- TOP5_POSTPAID_BY_MONTH: 默认无上限
+- BANDWIDTH_POSTPAID_BY_DAY: 300
+- FIXED_PREPAID_BY_MONTH: 5000
+- ENHANCED95_POSTPAID_BY_MONTH: 5000
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 300
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 2000
     */
     @SerializedName("BandwidthUpperLimit")
     @Expose
@@ -61,32 +73,80 @@ public class BandwidthRange extends AbstractModel {
     }
 
     /**
-     * Get 带宽下限，单位：Mbps。 
-     * @return BandwidthLowerLimit 带宽下限，单位：Mbps。
+     * Get 带宽下限，单位：Mbps。计费类型以及对应的带宽下限：
+- TOP5_POSTPAID_BY_MONTH: 默认无下限
+- BANDWIDTH_POSTPAID_BY_DAY: 50
+- FIXED_PREPAID_BY_MONTH: 100
+- ENHANCED95_POSTPAID_BY_MONTH: 300
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 50
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 50 
+     * @return BandwidthLowerLimit 带宽下限，单位：Mbps。计费类型以及对应的带宽下限：
+- TOP5_POSTPAID_BY_MONTH: 默认无下限
+- BANDWIDTH_POSTPAID_BY_DAY: 50
+- FIXED_PREPAID_BY_MONTH: 100
+- ENHANCED95_POSTPAID_BY_MONTH: 300
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 50
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 50
      */
     public Long getBandwidthLowerLimit() {
         return this.BandwidthLowerLimit;
     }
 
     /**
-     * Set 带宽下限，单位：Mbps。
-     * @param BandwidthLowerLimit 带宽下限，单位：Mbps。
+     * Set 带宽下限，单位：Mbps。计费类型以及对应的带宽下限：
+- TOP5_POSTPAID_BY_MONTH: 默认无下限
+- BANDWIDTH_POSTPAID_BY_DAY: 50
+- FIXED_PREPAID_BY_MONTH: 100
+- ENHANCED95_POSTPAID_BY_MONTH: 300
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 50
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 50
+     * @param BandwidthLowerLimit 带宽下限，单位：Mbps。计费类型以及对应的带宽下限：
+- TOP5_POSTPAID_BY_MONTH: 默认无下限
+- BANDWIDTH_POSTPAID_BY_DAY: 50
+- FIXED_PREPAID_BY_MONTH: 100
+- ENHANCED95_POSTPAID_BY_MONTH: 300
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 50
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 50
      */
     public void setBandwidthLowerLimit(Long BandwidthLowerLimit) {
         this.BandwidthLowerLimit = BandwidthLowerLimit;
     }
 
     /**
-     * Get 带宽上限，单位：Mbps。 
-     * @return BandwidthUpperLimit 带宽上限，单位：Mbps。
+     * Get 带宽上限，单位：Mbps。计费类型以及对应的带宽上限：
+- TOP5_POSTPAID_BY_MONTH: 默认无上限
+- BANDWIDTH_POSTPAID_BY_DAY: 300
+- FIXED_PREPAID_BY_MONTH: 5000
+- ENHANCED95_POSTPAID_BY_MONTH: 5000
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 300
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 2000 
+     * @return BandwidthUpperLimit 带宽上限，单位：Mbps。计费类型以及对应的带宽上限：
+- TOP5_POSTPAID_BY_MONTH: 默认无上限
+- BANDWIDTH_POSTPAID_BY_DAY: 300
+- FIXED_PREPAID_BY_MONTH: 5000
+- ENHANCED95_POSTPAID_BY_MONTH: 5000
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 300
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 2000
      */
     public Long getBandwidthUpperLimit() {
         return this.BandwidthUpperLimit;
     }
 
     /**
-     * Set 带宽上限，单位：Mbps。
-     * @param BandwidthUpperLimit 带宽上限，单位：Mbps。
+     * Set 带宽上限，单位：Mbps。计费类型以及对应的带宽上限：
+- TOP5_POSTPAID_BY_MONTH: 默认无上限
+- BANDWIDTH_POSTPAID_BY_DAY: 300
+- FIXED_PREPAID_BY_MONTH: 5000
+- ENHANCED95_POSTPAID_BY_MONTH: 5000
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 300
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 2000
+     * @param BandwidthUpperLimit 带宽上限，单位：Mbps。计费类型以及对应的带宽上限：
+- TOP5_POSTPAID_BY_MONTH: 默认无上限
+- BANDWIDTH_POSTPAID_BY_DAY: 300
+- FIXED_PREPAID_BY_MONTH: 5000
+- ENHANCED95_POSTPAID_BY_MONTH: 5000
+- PEAK_BANDWIDTH_POSTPAID_BY_DAY: 300
+- PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 2000
      */
     public void setBandwidthUpperLimit(Long BandwidthUpperLimit) {
         this.BandwidthUpperLimit = BandwidthUpperLimit;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyLaunchTemplateDefaultVersionRequest extends AbstractModel {
 
     /**
-    * 启动模板ID。
+    * 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
     */
     @SerializedName("LaunchTemplateId")
     @Expose
     private String LaunchTemplateId;
 
     /**
-    * 待设置的默认版本号。
+    * 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
     */
     @SerializedName("DefaultVersion")
     @Expose
     private Long DefaultVersion;
 
     /**
-     * Get 启动模板ID。 
-     * @return LaunchTemplateId 启动模板ID。
+     * Get 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。 
+     * @return LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
     }
 
     /**
-     * Set 启动模板ID。
-     * @param LaunchTemplateId 启动模板ID。
+     * Set 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
+     * @param LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;
     }
 
     /**
-     * Get 待设置的默认版本号。 
-     * @return DefaultVersion 待设置的默认版本号。
+     * Get 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。 
+     * @return DefaultVersion 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     public Long getDefaultVersion() {
         return this.DefaultVersion;
     }
 
     /**
-     * Set 待设置的默认版本号。
-     * @param DefaultVersion 待设置的默认版本号。
+     * Set 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
+     * @param DefaultVersion 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     public void setDefaultVersion(Long DefaultVersion) {
         this.DefaultVersion = DefaultVersion;

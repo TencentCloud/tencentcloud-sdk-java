@@ -66,7 +66,7 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
     private String LaunchTemplateVersionDescription;
 
     /**
-    * 创建者。
+    * 创建者的AppId。
     */
     @SerializedName("CreatedBy")
     @Expose
@@ -169,16 +169,16 @@ public class LaunchTemplateVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建者。 
-     * @return CreatedBy 创建者。
+     * Get 创建者的AppId。 
+     * @return CreatedBy 创建者的AppId。
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set 创建者。
-     * @param CreatedBy 创建者。
+     * Set 创建者的AppId。
+     * @param CreatedBy 创建者的AppId。
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;

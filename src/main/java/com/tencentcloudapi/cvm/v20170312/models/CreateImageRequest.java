@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateImageRequest extends AbstractModel {
 
     /**
-    * 镜像名称
+    * 镜像名称。
+最多支持60个字符。
     */
     @SerializedName("ImageName")
     @Expose
@@ -32,13 +33,16 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
     * 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 镜像描述
+    * 镜像描述。
+最多支持 256 个字符。
     */
     @SerializedName("ImageDescription")
     @Expose
@@ -63,14 +67,18 @@ public class CreateImageRequest extends AbstractModel {
     private String Sysprep;
 
     /**
-    * 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+    * 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。
     */
     @SerializedName("DataDiskIds")
     @Expose
     private String [] DataDiskIds;
 
     /**
-    * 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
+    * 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。
     */
     @SerializedName("SnapshotIds")
     @Expose
@@ -85,6 +93,7 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
     * 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -98,24 +107,32 @@ public class CreateImageRequest extends AbstractModel {
     private String ImageFamily;
 
     /**
-     * Get 镜像名称 
-     * @return ImageName 镜像名称
+     * Get 镜像名称。
+最多支持60个字符。 
+     * @return ImageName 镜像名称。
+最多支持60个字符。
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 镜像名称
-     * @param ImageName 镜像名称
+     * Set 镜像名称。
+最多支持60个字符。
+     * @param ImageName 镜像名称。
+最多支持60个字符。
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。 
+     * Get 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。 
      * @return InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -123,23 +140,31 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
      * Set 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      * @param InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像描述 
-     * @return ImageDescription 镜像描述
+     * Get 镜像描述。
+最多支持 256 个字符。 
+     * @return ImageDescription 镜像描述。
+最多支持 256 个字符。
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set 镜像描述
-     * @param ImageDescription 镜像描述
+     * Set 镜像描述。
+最多支持 256 个字符。
+     * @param ImageDescription 镜像描述。
+最多支持 256 个字符。
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;
@@ -194,32 +219,48 @@ public class CreateImageRequest extends AbstractModel {
     }
 
     /**
-     * Get 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID 
-     * @return DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+     * Get 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。 
+     * @return DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。
      */
     public String [] getDataDiskIds() {
         return this.DataDiskIds;
     }
 
     /**
-     * Set 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
-     * @param DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+     * Set 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。
+     * @param DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。
      */
     public void setDataDiskIds(String [] DataDiskIds) {
         this.DataDiskIds = DataDiskIds;
     }
 
     /**
-     * Get 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。 
-     * @return SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
+     * Get 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。 
+     * @return SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
     }
 
     /**
-     * Set 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
-     * @param SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
+     * Set 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。
+     * @param SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+InstanceId 和 SnapshotIds 为二选一必填参数。
+可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;
@@ -242,8 +283,10 @@ public class CreateImageRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。 
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。 
      * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
@@ -251,7 +294,9 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
      * Set 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。
      * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;

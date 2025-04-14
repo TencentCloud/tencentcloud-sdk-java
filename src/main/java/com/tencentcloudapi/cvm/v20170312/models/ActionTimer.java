@@ -38,33 +38,28 @@ public class ActionTimer extends AbstractModel {
     private String ActionTime;
 
     /**
-    * 扩展数据
+    * 扩展数据。仅做出参使用。
     */
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
 
     /**
-    * 定时器ID。
+    * 定时器ID。仅做出参使用。
     */
     @SerializedName("ActionTimerId")
     @Expose
     private String ActionTimerId;
 
     /**
-    * 定时器状态，取值范围：
-
-UNDO：未触发
-DOING：触发中
-DONE：已经触发
-
+    * 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 定时器对应的实例ID。
+    * 定时器对应的实例ID。仅做出参使用。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -103,84 +98,64 @@ DONE：已经触发
     }
 
     /**
-     * Get 扩展数据 
-     * @return Externals 扩展数据
+     * Get 扩展数据。仅做出参使用。 
+     * @return Externals 扩展数据。仅做出参使用。
      */
     public Externals getExternals() {
         return this.Externals;
     }
 
     /**
-     * Set 扩展数据
-     * @param Externals 扩展数据
+     * Set 扩展数据。仅做出参使用。
+     * @param Externals 扩展数据。仅做出参使用。
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;
     }
 
     /**
-     * Get 定时器ID。 
-     * @return ActionTimerId 定时器ID。
+     * Get 定时器ID。仅做出参使用。 
+     * @return ActionTimerId 定时器ID。仅做出参使用。
      */
     public String getActionTimerId() {
         return this.ActionTimerId;
     }
 
     /**
-     * Set 定时器ID。
-     * @param ActionTimerId 定时器ID。
+     * Set 定时器ID。仅做出参使用。
+     * @param ActionTimerId 定时器ID。仅做出参使用。
      */
     public void setActionTimerId(String ActionTimerId) {
         this.ActionTimerId = ActionTimerId;
     }
 
     /**
-     * Get 定时器状态，取值范围：
-
-UNDO：未触发
-DOING：触发中
-DONE：已经触发
- 
-     * @return Status 定时器状态，取值范围：
-
-UNDO：未触发
-DOING：触发中
-DONE：已经触发
-
+     * Get 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li> 
+     * @return Status 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 定时器状态，取值范围：
-
-UNDO：未触发
-DOING：触发中
-DONE：已经触发
-
-     * @param Status 定时器状态，取值范围：
-
-UNDO：未触发
-DOING：触发中
-DONE：已经触发
-
+     * Set 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
+     * @param Status 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 定时器对应的实例ID。 
-     * @return InstanceId 定时器对应的实例ID。
+     * Get 定时器对应的实例ID。仅做出参使用。 
+     * @return InstanceId 定时器对应的实例ID。仅做出参使用。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 定时器对应的实例ID。
-     * @param InstanceId 定时器对应的实例ID。
+     * Set 定时器对应的实例ID。仅做出参使用。
+     * @param InstanceId 定时器对应的实例ID。仅做出参使用。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

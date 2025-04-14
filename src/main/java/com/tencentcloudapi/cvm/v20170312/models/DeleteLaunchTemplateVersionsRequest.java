@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteLaunchTemplateVersionsRequest extends AbstractModel {
 
     /**
-    * 启动模板ID。
+    * 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
     */
     @SerializedName("LaunchTemplateId")
     @Expose
     private String LaunchTemplateId;
 
     /**
-    * 实例启动模板版本列表。
+    * 实例启动模板版本列表。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
     */
     @SerializedName("LaunchTemplateVersions")
     @Expose
     private Long [] LaunchTemplateVersions;
 
     /**
-     * Get 启动模板ID。 
-     * @return LaunchTemplateId 启动模板ID。
+     * Get 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。 
+     * @return LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
     }
 
     /**
-     * Set 启动模板ID。
-     * @param LaunchTemplateId 启动模板ID。
+     * Set 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
+     * @param LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;
     }
 
     /**
-     * Get 实例启动模板版本列表。 
-     * @return LaunchTemplateVersions 实例启动模板版本列表。
+     * Get 实例启动模板版本列表。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。 
+     * @return LaunchTemplateVersions 实例启动模板版本列表。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     public Long [] getLaunchTemplateVersions() {
         return this.LaunchTemplateVersions;
     }
 
     /**
-     * Set 实例启动模板版本列表。
-     * @param LaunchTemplateVersions 实例启动模板版本列表。
+     * Set 实例启动模板版本列表。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
+     * @param LaunchTemplateVersions 实例启动模板版本列表。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     public void setLaunchTemplateVersions(Long [] LaunchTemplateVersions) {
         this.LaunchTemplateVersions = LaunchTemplateVersions;

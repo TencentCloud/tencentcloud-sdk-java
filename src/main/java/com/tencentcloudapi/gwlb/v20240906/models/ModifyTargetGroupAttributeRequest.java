@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyTargetGroupAttributeRequest extends AbstractModel {
 
     /**
-    * 目标组的ID。
+    * 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
-     * Get 目标组的ID。 
-     * @return TargetGroupId 目标组的ID。
+     * Get 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。 
+     * @return TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组的ID。
-     * @param TargetGroupId 目标组的ID。
+     * Set 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+     * @param TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

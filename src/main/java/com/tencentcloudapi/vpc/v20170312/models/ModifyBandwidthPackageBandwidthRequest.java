@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyBandwidthPackageBandwidthRequest extends AbstractModel {
 
     /**
-    * 带宽包限速大小。单位：Mbps。
+    * 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
     private Long InternetMaxBandwidth;
 
     /**
-    * 共享带宽包ID
+    * 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-     * Get 带宽包限速大小。单位：Mbps。 
-     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps。
+     * Get 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)  
+     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set 带宽包限速大小。单位：Mbps。
-     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps。
+     * Set 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
+     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;
     }
 
     /**
-     * Get 共享带宽包ID 
-     * @return BandwidthPackageId 共享带宽包ID
+     * Get 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。 
+     * @return BandwidthPackageId 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 共享带宽包ID
-     * @param BandwidthPackageId 共享带宽包ID
+     * Set 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     * @param BandwidthPackageId 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

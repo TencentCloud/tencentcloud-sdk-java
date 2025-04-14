@@ -537,6 +537,38 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private CreateAndDDLSupport IfSupportCreateAndDDL;
 
     /**
+    * 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataFromType")
+    @Expose
+    private String DataFromType;
+
+    /**
+    * 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineOwner")
+    @Expose
+    private String EngineOwner;
+
+    /**
+    * 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataLayerUuid")
+    @Expose
+    private String DataLayerUuid;
+
+    /**
+    * 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataLayerName")
+    @Expose
+    private String DataLayerName;
+
+    /**
     * 字段数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -1829,6 +1861,86 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     }
 
     /**
+     * Get 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataFromType 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataFromType() {
+        return this.DataFromType;
+    }
+
+    /**
+     * Set 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataFromType 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataFromType(String DataFromType) {
+        this.DataFromType = DataFromType;
+    }
+
+    /**
+     * Get 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineOwner() {
+        return this.EngineOwner;
+    }
+
+    /**
+     * Set 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineOwner(String EngineOwner) {
+        this.EngineOwner = EngineOwner;
+    }
+
+    /**
+     * Get 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataLayerUuid 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataLayerUuid() {
+        return this.DataLayerUuid;
+    }
+
+    /**
+     * Set 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataLayerUuid 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataLayerUuid(String DataLayerUuid) {
+        this.DataLayerUuid = DataLayerUuid;
+    }
+
+    /**
+     * Get 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataLayerName 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataLayerName() {
+        return this.DataLayerName;
+    }
+
+    /**
+     * Set 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataLayerName 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataLayerName(String DataLayerName) {
+        this.DataLayerName = DataLayerName;
+    }
+
+    /**
      * Get 字段数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ColumnCount 字段数量
@@ -2066,6 +2178,18 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.IfSupportCreateAndDDL != null) {
             this.IfSupportCreateAndDDL = new CreateAndDDLSupport(source.IfSupportCreateAndDDL);
         }
+        if (source.DataFromType != null) {
+            this.DataFromType = new String(source.DataFromType);
+        }
+        if (source.EngineOwner != null) {
+            this.EngineOwner = new String(source.EngineOwner);
+        }
+        if (source.DataLayerUuid != null) {
+            this.DataLayerUuid = new String(source.DataLayerUuid);
+        }
+        if (source.DataLayerName != null) {
+            this.DataLayerName = new String(source.DataLayerName);
+        }
         if (source.ColumnCount != null) {
             this.ColumnCount = new Long(source.ColumnCount);
         }
@@ -2140,6 +2264,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
         this.setParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
         this.setParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
+        this.setParamSimple(map, prefix + "DataFromType", this.DataFromType);
+        this.setParamSimple(map, prefix + "EngineOwner", this.EngineOwner);
+        this.setParamSimple(map, prefix + "DataLayerUuid", this.DataLayerUuid);
+        this.setParamSimple(map, prefix + "DataLayerName", this.DataLayerName);
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
 
     }

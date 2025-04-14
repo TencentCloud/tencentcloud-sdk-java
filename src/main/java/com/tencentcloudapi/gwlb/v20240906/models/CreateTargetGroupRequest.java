@@ -31,7 +31,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * 目标组的vpcid属性，不填则使用默认vpc
+    * 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
     */
     @SerializedName("VpcId")
     @Expose
@@ -106,16 +106,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的vpcid属性，不填则使用默认vpc 
-     * @return VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * Get 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。 
+     * @return VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 目标组的vpcid属性，不填则使用默认vpc
-     * @param VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * Set 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+     * @param VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

@@ -31,7 +31,7 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 网关负载均衡后端目标设备所属的私有网络的子网ID。
+    * 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -59,7 +59,7 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     private TagInfo [] Tags;
 
     /**
-    * 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。
+    * 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。
     */
     @SerializedName("LBChargeType")
     @Expose
@@ -82,16 +82,16 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡后端目标设备所属的私有网络的子网ID。 
-     * @return SubnetId 网关负载均衡后端目标设备所属的私有网络的子网ID。
+     * Get 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。 
+     * @return SubnetId 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 网关负载均衡后端目标设备所属的私有网络的子网ID。
-     * @param SubnetId 网关负载均衡后端目标设备所属的私有网络的子网ID。
+     * Set 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
+     * @param SubnetId 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -146,16 +146,16 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。 
-     * @return LBChargeType 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。
+     * Get 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。 
+     * @return LBChargeType 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。
      */
     public String getLBChargeType() {
         return this.LBChargeType;
     }
 
     /**
-     * Set 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。
-     * @param LBChargeType 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。
+     * Set 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。
+     * @param LBChargeType 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。
      */
     public void setLBChargeType(String LBChargeType) {
         this.LBChargeType = LBChargeType;

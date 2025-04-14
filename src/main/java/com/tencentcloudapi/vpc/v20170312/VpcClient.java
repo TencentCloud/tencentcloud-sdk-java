@@ -1192,7 +1192,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+     *接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)和[IP带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)
      * @param req DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      * @throws TencentCloudSDKException
@@ -3479,6 +3479,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口 (MigrateBandwidthPackageResources) 用于共享带宽包之间迁移资源
+     * @param req MigrateBandwidthPackageResourcesRequest
+     * @return MigrateBandwidthPackageResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public MigrateBandwidthPackageResourcesResponse MigrateBandwidthPackageResources(MigrateBandwidthPackageResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MigrateBandwidthPackageResources", MigrateBandwidthPackageResourcesResponse.class);
+    }
+
+    /**
      *本接口（MigrateNetworkInterface）用于弹性网卡迁移。
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req MigrateNetworkInterfaceRequest
@@ -3589,7 +3600,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *接口用于修改带宽包属性，包括带宽包名字等
+     *接口用于修改带宽包属性，包括带宽包名称和计费模式
      * @param req ModifyBandwidthPackageAttributeRequest
      * @return ModifyBandwidthPackageAttributeResponse
      * @throws TencentCloudSDKException

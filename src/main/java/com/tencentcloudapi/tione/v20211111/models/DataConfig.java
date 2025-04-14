@@ -112,6 +112,13 @@ public class DataConfig extends AbstractModel {
     private CBSConfig CBSSource;
 
     /**
+    * 主机路径信息
+    */
+    @SerializedName("HostPathSource")
+    @Expose
+    private HostPath HostPathSource;
+
+    /**
      * Get 映射路径 
      * @return MappingPath 映射路径
      */
@@ -331,6 +338,22 @@ public class DataConfig extends AbstractModel {
         this.CBSSource = CBSSource;
     }
 
+    /**
+     * Get 主机路径信息 
+     * @return HostPathSource 主机路径信息
+     */
+    public HostPath getHostPathSource() {
+        return this.HostPathSource;
+    }
+
+    /**
+     * Set 主机路径信息
+     * @param HostPathSource 主机路径信息
+     */
+    public void setHostPathSource(HostPath HostPathSource) {
+        this.HostPathSource = HostPathSource;
+    }
+
     public DataConfig() {
     }
 
@@ -372,6 +395,9 @@ public class DataConfig extends AbstractModel {
         if (source.CBSSource != null) {
             this.CBSSource = new CBSConfig(source.CBSSource);
         }
+        if (source.HostPathSource != null) {
+            this.HostPathSource = new HostPath(source.HostPathSource);
+        }
     }
 
 
@@ -390,6 +416,7 @@ public class DataConfig extends AbstractModel {
         this.setParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
         this.setParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
         this.setParamObj(map, prefix + "CBSSource.", this.CBSSource);
+        this.setParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
 
     }
 }

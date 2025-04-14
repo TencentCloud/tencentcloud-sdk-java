@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeBandwidthPackageBillUsageRequest extends AbstractModel {
 
     /**
-    * 后付费共享带宽包的唯一ID
+    * 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-     * Get 后付费共享带宽包的唯一ID 
-     * @return BandwidthPackageId 后付费共享带宽包的唯一ID
+     * Get 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。 
+     * @return BandwidthPackageId 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 后付费共享带宽包的唯一ID
-     * @param BandwidthPackageId 后付费共享带宽包的唯一ID
+     * Set 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
+     * @param BandwidthPackageId 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
 
     /**
-    * 网关负载均衡的唯一ID。
+    * 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     private Boolean DeleteProtect;
 
     /**
-     * Get 网关负载均衡的唯一ID。 
-     * @return LoadBalancerId 网关负载均衡的唯一ID。
+     * Get 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。 
+     * @return LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 网关负载均衡的唯一ID。
-     * @param LoadBalancerId 网关负载均衡的唯一ID。
+     * Set 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+     * @param LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

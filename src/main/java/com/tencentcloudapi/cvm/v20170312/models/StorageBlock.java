@@ -31,14 +31,14 @@ public class StorageBlock extends AbstractModel {
     private String Type;
 
     /**
-    * HDD本地存储的最小容量
+    * HDD本地存储的最小容量。单位：GiB。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * HDD本地存储的最大容量
+    * HDD本地存储的最大容量。单位：GiB。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -61,32 +61,32 @@ public class StorageBlock extends AbstractModel {
     }
 
     /**
-     * Get HDD本地存储的最小容量 
-     * @return MinSize HDD本地存储的最小容量
+     * Get HDD本地存储的最小容量。单位：GiB。 
+     * @return MinSize HDD本地存储的最小容量。单位：GiB。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set HDD本地存储的最小容量
-     * @param MinSize HDD本地存储的最小容量
+     * Set HDD本地存储的最小容量。单位：GiB。
+     * @param MinSize HDD本地存储的最小容量。单位：GiB。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get HDD本地存储的最大容量 
-     * @return MaxSize HDD本地存储的最大容量
+     * Get HDD本地存储的最大容量。单位：GiB。 
+     * @return MaxSize HDD本地存储的最大容量。单位：GiB。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set HDD本地存储的最大容量
-     * @param MaxSize HDD本地存储的最大容量
+     * Set HDD本地存储的最大容量。单位：GiB。
+     * @param MaxSize HDD本地存储的最大容量。单位：GiB。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

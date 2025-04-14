@@ -32,7 +32,7 @@ public class DescribeInstancesOperationLimitRequest extends AbstractModel {
 
     /**
     * 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+<li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li>
     */
     @SerializedName("Operation")
     @Expose
@@ -56,9 +56,9 @@ public class DescribeInstancesOperationLimitRequest extends AbstractModel {
 
     /**
      * Get 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li> 
+<li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li> 
      * @return Operation 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+<li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li>
      */
     public String getOperation() {
         return this.Operation;
@@ -66,9 +66,9 @@ public class DescribeInstancesOperationLimitRequest extends AbstractModel {
 
     /**
      * Set 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+<li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li>
      * @param Operation 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+<li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

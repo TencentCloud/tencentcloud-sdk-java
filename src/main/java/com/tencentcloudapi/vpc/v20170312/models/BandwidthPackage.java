@@ -31,15 +31,26 @@ public class BandwidthPackage extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
+    * 带宽包类型，包括：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
-
+    * 带宽包计费类型, 包括:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
     */
     @SerializedName("ChargeType")
     @Expose
@@ -113,36 +124,80 @@ public class BandwidthPackage extends AbstractModel {
     }
 
     /**
-     * Get 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC' 
-     * @return NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
+     * Get 带宽包类型，包括：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li> 
+     * @return NetworkType 带宽包类型，包括：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
-     * @param NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
+     * Set 带宽包类型，包括：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+     * @param NetworkType 带宽包类型，包括：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
- 
-     * @return ChargeType 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
-
+     * Get 带宽包计费类型, 包括:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li> 
+     * @return ChargeType 带宽包计费类型, 包括:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
-
-     * @param ChargeType 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
-
+     * Set 带宽包计费类型, 包括:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
+     * @param ChargeType 带宽包计费类型, 包括:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;

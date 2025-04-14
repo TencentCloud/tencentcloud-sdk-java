@@ -24,28 +24,36 @@ import java.util.HashMap;
 public class AddBandwidthPackageResourcesRequest extends AbstractModel {
 
     /**
-    * 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+    * 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 带宽包唯一标识ID，形如'bwp-xxxx'
+    * 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
+    * 带宽包类型，可选值：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 资源类型，包括'Address', 'LoadBalance'
+    * 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
     */
     @SerializedName("ResourceType")
     @Expose
@@ -59,64 +67,96 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
     private String Protocol;
 
     /**
-     * Get 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx' 
-     * @return ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+     * Get 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。 
+     * @return ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
-     * @param ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+     * Set 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+     * @param ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 带宽包唯一标识ID，形如'bwp-xxxx' 
-     * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
+     * Get 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。 
+     * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 带宽包唯一标识ID，形如'bwp-xxxx'
-     * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
+     * Set 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。 
-     * @return NetworkType 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
+     * Get 带宽包类型，可选值：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li> 
+     * @return NetworkType 带宽包类型，可选值：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
-     * @param NetworkType 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
+     * Set 带宽包类型，可选值：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+     * @param NetworkType 带宽包类型，可选值：
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>ANYCAST：公网加速带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 资源类型，包括'Address', 'LoadBalance' 
-     * @return ResourceType 资源类型，包括'Address', 'LoadBalance'
+     * Get 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li> 
+     * @return ResourceType 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，包括'Address', 'LoadBalance'
-     * @param ResourceType 资源类型，包括'Address', 'LoadBalance'
+     * Set 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+     * @param ResourceType 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteInstancesActionTimerRequest extends AbstractModel {
 
     /**
-    * 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+    * 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
     */
     @SerializedName("ActionTimerIds")
     @Expose
     private String [] ActionTimerIds;
 
     /**
-     * Get 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。 
-     * @return ActionTimerIds 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+     * Get 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。 
+     * @return ActionTimerIds 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
      */
     public String [] getActionTimerIds() {
         return this.ActionTimerIds;
     }
 
     /**
-     * Set 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
-     * @param ActionTimerIds 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+     * Set 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
+     * @param ActionTimerIds 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
      */
     public void setActionTimerIds(String [] ActionTimerIds) {
         this.ActionTimerIds = ActionTimerIds;

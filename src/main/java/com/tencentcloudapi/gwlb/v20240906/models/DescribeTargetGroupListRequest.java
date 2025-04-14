@@ -33,7 +33,7 @@ public class DescribeTargetGroupListRequest extends AbstractModel {
     /**
     * 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
     */
     @SerializedName("Filters")
@@ -41,14 +41,14 @@ public class DescribeTargetGroupListRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 显示的偏移起始量。
+    * 显示的偏移起始量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 显示条数限制，默认为20。
+    * 显示条数限制，默认为20，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -73,11 +73,11 @@ public class DescribeTargetGroupListRequest extends AbstractModel {
     /**
      * Get 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name” 
      * @return Filters 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public Filter [] getFilters() {
@@ -87,11 +87,11 @@ public class DescribeTargetGroupListRequest extends AbstractModel {
     /**
      * Set 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      * @param Filters 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public void setFilters(Filter [] Filters) {
@@ -99,32 +99,32 @@ public class DescribeTargetGroupListRequest extends AbstractModel {
     }
 
     /**
-     * Get 显示的偏移起始量。 
-     * @return Offset 显示的偏移起始量。
+     * Get 显示的偏移起始量，默认为0。 
+     * @return Offset 显示的偏移起始量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 显示的偏移起始量。
-     * @param Offset 显示的偏移起始量。
+     * Set 显示的偏移起始量，默认为0。
+     * @param Offset 显示的偏移起始量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 显示条数限制，默认为20。 
-     * @return Limit 显示条数限制，默认为20。
+     * Get 显示条数限制，默认为20，最大值为1000。 
+     * @return Limit 显示条数限制，默认为20，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 显示条数限制，默认为20。
-     * @param Limit 显示条数限制，默认为20。
+     * Set 显示条数限制，默认为20，最大值为1000。
+     * @param Limit 显示条数限制，默认为20，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

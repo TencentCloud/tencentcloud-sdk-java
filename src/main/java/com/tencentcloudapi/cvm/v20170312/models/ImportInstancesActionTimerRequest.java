@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImportInstancesActionTimerRequest extends AbstractModel {
 
     /**
-    * 实例id列表，可以通过DescribeInstances接口查询到。
+    * 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,16 +38,16 @@ public class ImportInstancesActionTimerRequest extends AbstractModel {
     private ActionTimer ActionTimer;
 
     /**
-     * Get 实例id列表，可以通过DescribeInstances接口查询到。 
-     * @return InstanceIds 实例id列表，可以通过DescribeInstances接口查询到。
+     * Get 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。 
+     * @return InstanceIds 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例id列表，可以通过DescribeInstances接口查询到。
-     * @param InstanceIds 实例id列表，可以通过DescribeInstances接口查询到。
+     * Set 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+     * @param InstanceIds 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

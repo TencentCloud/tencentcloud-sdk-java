@@ -32,7 +32,6 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
 
     /**
     * 修改后实例名称。可任意命名，但不得超过60个字符。
-<dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -46,7 +45,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     private String UserData;
 
     /**
-    * 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert>
+    * 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
     */
     @SerializedName("SecurityGroups")
     @Expose
@@ -109,10 +108,8 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后实例名称。可任意命名，但不得超过60个字符。
-<dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert> 
+     * Get 修改后实例名称。可任意命名，但不得超过60个字符。 
      * @return InstanceName 修改后实例名称。可任意命名，但不得超过60个字符。
-<dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert>
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -120,9 +117,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
 
     /**
      * Set 修改后实例名称。可任意命名，但不得超过60个字符。
-<dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert>
      * @param InstanceName 修改后实例名称。可任意命名，但不得超过60个字符。
-<dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -145,16 +140,16 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert> 
-     * @return SecurityGroups 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert>
+     * Get 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。 
+     * @return SecurityGroups 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * Set 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert>
-     * @param SecurityGroups 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert>
+     * Set 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+     * @param SecurityGroups 指定实例的修改后的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;

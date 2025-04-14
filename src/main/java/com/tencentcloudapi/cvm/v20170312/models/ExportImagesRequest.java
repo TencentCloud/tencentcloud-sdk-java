@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ExportImagesRequest extends AbstractModel {
 
     /**
-    * COS存储桶名称
+    * COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
     */
     @SerializedName("BucketName")
     @Expose
@@ -32,6 +33,7 @@ public class ExportImagesRequest extends AbstractModel {
 
     /**
     * 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
     */
     @SerializedName("ImageIds")
     @Expose
@@ -45,21 +47,24 @@ public class ExportImagesRequest extends AbstractModel {
     private String ExportFormat;
 
     /**
-    * 导出文件的名称前缀列表
+    * 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
     */
     @SerializedName("FileNamePrefixList")
     @Expose
     private String [] FileNamePrefixList;
 
     /**
-    * 是否只导出系统盘
+    * 是否只导出系统盘。
+默认值：false
     */
     @SerializedName("OnlyExportRootDisk")
     @Expose
     private Boolean OnlyExportRootDisk;
 
     /**
-    * 检测镜像是否支持导出
+    * 检测镜像是否支持导出。
+默认值：false
     */
     @SerializedName("DryRun")
     @Expose
@@ -73,24 +78,30 @@ public class ExportImagesRequest extends AbstractModel {
     private String RoleName;
 
     /**
-     * Get COS存储桶名称 
-     * @return BucketName COS存储桶名称
+     * Get COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。 
+     * @return BucketName COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set COS存储桶名称
-     * @param BucketName COS存储桶名称
+     * Set COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
+     * @param BucketName COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。 
+     * Get 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。 
      * @return ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public String [] getImageIds() {
         return this.ImageIds;
@@ -98,7 +109,9 @@ public class ExportImagesRequest extends AbstractModel {
 
     /**
      * Set 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      * @param ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;
@@ -121,48 +134,60 @@ public class ExportImagesRequest extends AbstractModel {
     }
 
     /**
-     * Get 导出文件的名称前缀列表 
-     * @return FileNamePrefixList 导出文件的名称前缀列表
+     * Get 导出文件的名称前缀列表。
+默认导出文件无名称前缀。 
+     * @return FileNamePrefixList 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
      */
     public String [] getFileNamePrefixList() {
         return this.FileNamePrefixList;
     }
 
     /**
-     * Set 导出文件的名称前缀列表
-     * @param FileNamePrefixList 导出文件的名称前缀列表
+     * Set 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
+     * @param FileNamePrefixList 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
      */
     public void setFileNamePrefixList(String [] FileNamePrefixList) {
         this.FileNamePrefixList = FileNamePrefixList;
     }
 
     /**
-     * Get 是否只导出系统盘 
-     * @return OnlyExportRootDisk 是否只导出系统盘
+     * Get 是否只导出系统盘。
+默认值：false 
+     * @return OnlyExportRootDisk 是否只导出系统盘。
+默认值：false
      */
     public Boolean getOnlyExportRootDisk() {
         return this.OnlyExportRootDisk;
     }
 
     /**
-     * Set 是否只导出系统盘
-     * @param OnlyExportRootDisk 是否只导出系统盘
+     * Set 是否只导出系统盘。
+默认值：false
+     * @param OnlyExportRootDisk 是否只导出系统盘。
+默认值：false
      */
     public void setOnlyExportRootDisk(Boolean OnlyExportRootDisk) {
         this.OnlyExportRootDisk = OnlyExportRootDisk;
     }
 
     /**
-     * Get 检测镜像是否支持导出 
-     * @return DryRun 检测镜像是否支持导出
+     * Get 检测镜像是否支持导出。
+默认值：false 
+     * @return DryRun 检测镜像是否支持导出。
+默认值：false
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 检测镜像是否支持导出
-     * @param DryRun 检测镜像是否支持导出
+     * Set 检测镜像是否支持导出。
+默认值：false
+     * @param DryRun 检测镜像是否支持导出。
+默认值：false
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

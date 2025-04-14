@@ -421,6 +421,20 @@ pause
     private String InstanceStorageType;
 
     /**
+    * 未知字段
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
+
+    /**
+    * libradb 节点信息
+    */
+    @SerializedName("NodeList")
+    @Expose
+    private String [] NodeList;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1336,6 +1350,38 @@ pause
         this.InstanceStorageType = InstanceStorageType;
     }
 
+    /**
+     * Get 未知字段 
+     * @return CynosVersionTag 未知字段
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set 未知字段
+     * @param CynosVersionTag 未知字段
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
+    }
+
+    /**
+     * Get libradb 节点信息 
+     * @return NodeList libradb 节点信息
+     */
+    public String [] getNodeList() {
+        return this.NodeList;
+    }
+
+    /**
+     * Set libradb 节点信息
+     * @param NodeList libradb 节点信息
+     */
+    public void setNodeList(String [] NodeList) {
+        this.NodeList = NodeList;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1527,6 +1573,15 @@ pause
         if (source.InstanceStorageType != null) {
             this.InstanceStorageType = new String(source.InstanceStorageType);
         }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
+        }
+        if (source.NodeList != null) {
+            this.NodeList = new String[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new String(source.NodeList[i]);
+            }
+        }
     }
 
 
@@ -1590,6 +1645,8 @@ pause
         this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+        this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
 
     }
 }

@@ -30,6 +30,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+注意：仅部分地域支持三网带宽包和精品BGP带宽包。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -37,12 +38,12 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
     * 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
 
     */
     @SerializedName("ChargeType")
@@ -50,21 +51,21 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String ChargeType;
 
     /**
-    * 带宽包名称。
+    * 带宽包名称。名称长度小于60，只包含数字、字母和下划线。
     */
     @SerializedName("BandwidthPackageName")
     @Expose
     private String BandwidthPackageName;
 
     /**
-    * 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
+    * 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
     private Long BandwidthPackageCount;
 
     /**
-    * 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+    * 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
@@ -85,14 +86,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String Protocol;
 
     /**
-    * 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+    * 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 网络出口，默认值：center_egress1
+    * 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
     */
     @SerializedName("Egress")
     @Expose
@@ -104,13 +105,15 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
-<li>SINGLEISP_CUCC: 中国联通共享带宽包</li> 
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+注意：仅部分地域支持三网带宽包和精品BGP带宽包。 
      * @return NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+注意：仅部分地域支持三网带宽包和精品BGP带宽包。
      */
     public String getNetworkType() {
         return this.NetworkType;
@@ -123,12 +126,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+注意：仅部分地域支持三网带宽包和精品BGP带宽包。
      * @param NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+注意：仅部分地域支持三网带宽包和精品BGP带宽包。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -136,20 +141,20 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
      * Get 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
  
      * @return ChargeType 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
 
      */
     public String getChargeType() {
@@ -158,20 +163,20 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
      * Set 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
 
      * @param ChargeType 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
 
      */
     public void setChargeType(String ChargeType) {
@@ -179,48 +184,48 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽包名称。 
-     * @return BandwidthPackageName 带宽包名称。
+     * Get 带宽包名称。名称长度小于60，只包含数字、字母和下划线。 
+     * @return BandwidthPackageName 带宽包名称。名称长度小于60，只包含数字、字母和下划线。
      */
     public String getBandwidthPackageName() {
         return this.BandwidthPackageName;
     }
 
     /**
-     * Set 带宽包名称。
-     * @param BandwidthPackageName 带宽包名称。
+     * Set 带宽包名称。名称长度小于60，只包含数字、字母和下划线。
+     * @param BandwidthPackageName 带宽包名称。名称长度小于60，只包含数字、字母和下划线。
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
         this.BandwidthPackageName = BandwidthPackageName;
     }
 
     /**
-     * Get 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。 
-     * @return BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
+     * Get 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。 
+     * @return BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
-     * @param BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
+     * Set 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。
+     * @param BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;
     }
 
     /**
-     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。 
-     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
+     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
-     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)
+     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;
@@ -259,32 +264,32 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。 
-     * @return TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     * Get 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。 
+     * @return TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
-     * @param TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     * Set 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
+     * @param TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 网络出口，默认值：center_egress1 
-     * @return Egress 网络出口，默认值：center_egress1
+     * Get 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。 
+     * @return Egress 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 网络出口，默认值：center_egress1
-     * @param Egress 网络出口，默认值：center_egress1
+     * Set 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
+     * @param Egress 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

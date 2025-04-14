@@ -31,7 +31,7 @@ public class ResetInstancesTypeRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
+    * 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[ DescribeInstanceTypeConfigs ](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -61,16 +61,16 @@ public class ResetInstancesTypeRequest extends AbstractModel {
     }
 
     /**
-     * Get 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。 
-     * @return InstanceType 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
+     * Get 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[ DescribeInstanceTypeConfigs ](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。 
+     * @return InstanceType 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[ DescribeInstanceTypeConfigs ](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
-     * @param InstanceType 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
+     * Set 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[ DescribeInstanceTypeConfigs ](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
+     * @param InstanceType 调整后的实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[ DescribeInstanceTypeConfigs ](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

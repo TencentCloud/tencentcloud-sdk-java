@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeCloudBaseRunVersionRsByConditionRequest extends AbstractModel {
 
+    /**
+    * 环境ID；EnvId和ClusterId不能同时为空
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+    * 集群ID；EnvId和ClusterId不能同时为空
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 过滤网关服务开关
+    */
+    @SerializedName("FilterGwSwitch")
+    @Expose
+    private Boolean FilterGwSwitch;
+
+    /**
+     * Get 环境ID；EnvId和ClusterId不能同时为空 
+     * @return EnvId 环境ID；EnvId和ClusterId不能同时为空
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID；EnvId和ClusterId不能同时为空
+     * @param EnvId 环境ID；EnvId和ClusterId不能同时为空
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * Get 集群ID；EnvId和ClusterId不能同时为空 
+     * @return ClusterId 集群ID；EnvId和ClusterId不能同时为空
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID；EnvId和ClusterId不能同时为空
+     * @param ClusterId 集群ID；EnvId和ClusterId不能同时为空
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 过滤网关服务开关 
+     * @return FilterGwSwitch 过滤网关服务开关
+     */
+    public Boolean getFilterGwSwitch() {
+        return this.FilterGwSwitch;
+    }
+
+    /**
+     * Set 过滤网关服务开关
+     * @param FilterGwSwitch 过滤网关服务开关
+     */
+    public void setFilterGwSwitch(Boolean FilterGwSwitch) {
+        this.FilterGwSwitch = FilterGwSwitch;
+    }
+
     public DescribeCloudBaseRunVersionRsByConditionRequest() {
     }
 
@@ -31,6 +100,15 @@ public class DescribeCloudBaseRunVersionRsByConditionRequest extends AbstractMod
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCloudBaseRunVersionRsByConditionRequest(DescribeCloudBaseRunVersionRsByConditionRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.FilterGwSwitch != null) {
+            this.FilterGwSwitch = new Boolean(source.FilterGwSwitch);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class DescribeCloudBaseRunVersionRsByConditionRequest extends AbstractMod
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "FilterGwSwitch", this.FilterGwSwitch);
 
     }
 }

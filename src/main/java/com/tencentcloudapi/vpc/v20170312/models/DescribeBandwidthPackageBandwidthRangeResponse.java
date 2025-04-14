@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBandwidthPackageBandwidthRangeResponse extends AbstractModel {
 
     /**
-    * 带宽包带宽上下限详细信息。
+    * 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。
     */
     @SerializedName("BandwidthRangeSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBandwidthPackageBandwidthRangeResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 带宽包带宽上下限详细信息。 
-     * @return BandwidthRangeSet 带宽包带宽上下限详细信息。
+     * Get 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。 
+     * @return BandwidthRangeSet 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。
      */
     public BandwidthRange [] getBandwidthRangeSet() {
         return this.BandwidthRangeSet;
     }
 
     /**
-     * Set 带宽包带宽上下限详细信息。
-     * @param BandwidthRangeSet 带宽包带宽上下限详细信息。
+     * Set 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。
+     * @param BandwidthRangeSet 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。
      */
     public void setBandwidthRangeSet(BandwidthRange [] BandwidthRangeSet) {
         this.BandwidthRangeSet = BandwidthRangeSet;

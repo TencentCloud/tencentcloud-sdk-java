@@ -76,6 +76,28 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *创建安卓应用
+     * @param req CreateAndroidAppRequest
+     * @return CreateAndroidAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidAppResponse CreateAndroidApp(CreateAndroidAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidApp", CreateAndroidAppResponse.class);
+    }
+
+    /**
+     *创建安卓应用版本
+     * @param req CreateAndroidAppVersionRequest
+     * @return CreateAndroidAppVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidAppVersionResponse CreateAndroidAppVersion(CreateAndroidAppVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidAppVersion", CreateAndroidAppVersionResponse.class);
+    }
+
+    /**
      *创建安卓实例镜像
      * @param req CreateAndroidInstanceImageRequest
      * @return CreateAndroidInstanceImageResponse
@@ -142,6 +164,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *用于创建 Cos 临时密钥
+     * @param req CreateCosCredentialRequest
+     * @return CreateCosCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosCredentialResponse CreateCosCredential(CreateCosCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosCredential", CreateCosCredentialResponse.class);
+    }
+
+    /**
      *创建会话
      * @param req CreateSessionRequest
      * @return CreateSessionResponse
@@ -150,6 +183,28 @@ public class GsClient extends AbstractClient{
     public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSession", CreateSessionResponse.class);
+    }
+
+    /**
+     *删除安卓应用
+     * @param req DeleteAndroidAppRequest
+     * @return DeleteAndroidAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAndroidAppResponse DeleteAndroidApp(DeleteAndroidAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAndroidApp", DeleteAndroidAppResponse.class);
+    }
+
+    /**
+     *删除安卓应用版本
+     * @param req DeleteAndroidAppVersionRequest
+     * @return DeleteAndroidAppVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAndroidAppVersionResponse DeleteAndroidAppVersion(DeleteAndroidAppVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAndroidAppVersion", DeleteAndroidAppVersionResponse.class);
     }
 
     /**
@@ -282,6 +337,17 @@ public class GsClient extends AbstractClient{
     public InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(InstallAndroidInstancesAppRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InstallAndroidInstancesApp", InstallAndroidInstancesAppResponse.class);
+    }
+
+    /**
+     *修改安卓应用信息
+     * @param req ModifyAndroidAppRequest
+     * @return ModifyAndroidAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidAppResponse ModifyAndroidApp(ModifyAndroidAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidApp", ModifyAndroidAppResponse.class);
     }
 
     /**

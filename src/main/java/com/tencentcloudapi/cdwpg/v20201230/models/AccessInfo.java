@@ -25,7 +25,6 @@ public class AccessInfo extends AbstractModel {
 
     /**
     * 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -33,17 +32,14 @@ public class AccessInfo extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址 
      * @return Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -51,19 +47,15 @@ public class AccessInfo extends AbstractModel {
 
     /**
      * Set 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -71,9 +63,7 @@ public class AccessInfo extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

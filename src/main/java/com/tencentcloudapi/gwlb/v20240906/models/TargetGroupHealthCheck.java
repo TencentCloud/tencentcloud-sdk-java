@@ -63,14 +63,14 @@ public class TargetGroupHealthCheck extends AbstractModel {
     private Long IntervalTime;
 
     /**
-    * 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+    * 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
     */
     @SerializedName("HealthNum")
     @Expose
     private Long HealthNum;
 
     /**
-    * 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+    * 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
     */
     @SerializedName("UnHealthNum")
     @Expose
@@ -173,32 +173,32 @@ public class TargetGroupHealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。 
-     * @return HealthNum 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * Get 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。 
+     * @return HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public Long getHealthNum() {
         return this.HealthNum;
     }
 
     /**
-     * Set 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
-     * @param HealthNum 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * Set 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @param HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。 
-     * @return UnHealthNum 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * Get 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。 
+     * @return UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public Long getUnHealthNum() {
         return this.UnHealthNum;
     }
 
     /**
-     * Set 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
-     * @param UnHealthNum 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * Set 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @param UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public void setUnHealthNum(Long UnHealthNum) {
         this.UnHealthNum = UnHealthNum;

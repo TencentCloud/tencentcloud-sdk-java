@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RegisterTargetGroupInstancesRequest extends AbstractModel {
 
     /**
-    * 目标组ID
+    * 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class RegisterTargetGroupInstancesRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-     * Get 目标组ID 
-     * @return TargetGroupId 目标组ID
+     * Get 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。 
+     * @return TargetGroupId 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组ID
-     * @param TargetGroupId 目标组ID
+     * Set 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
+     * @param TargetGroupId 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

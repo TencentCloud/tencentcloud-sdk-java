@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteGatewayLoadBalancerRequest extends AbstractModel {
 
     /**
-    * 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。
+    * 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683)  接口获取。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * Get 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。 
-     * @return LoadBalancerIds 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。
+     * Get 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683)  接口获取。 
+     * @return LoadBalancerIds 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683)  接口获取。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。
-     * @param LoadBalancerIds 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。
+     * Set 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683)  接口获取。
+     * @param LoadBalancerIds 要删除的网关负载均衡实例 ID数组，数组大小最大支持20。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683)  接口获取。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeBandwidthPackageBandwidthRangeRequest extends AbstractModel {
 
     /**
-    * 带宽包资源ID列表，单次查询上限20。
+    * 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
     */
     @SerializedName("BandwidthPackageIds")
     @Expose
     private String [] BandwidthPackageIds;
 
     /**
-     * Get 带宽包资源ID列表，单次查询上限20。 
-     * @return BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。
+     * Get 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。 
+     * @return BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public String [] getBandwidthPackageIds() {
         return this.BandwidthPackageIds;
     }
 
     /**
-     * Set 带宽包资源ID列表，单次查询上限20。
-     * @param BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。
+     * Set 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     * @param BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
         this.BandwidthPackageIds = BandwidthPackageIds;

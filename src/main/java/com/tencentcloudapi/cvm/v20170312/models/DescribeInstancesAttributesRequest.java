@@ -32,7 +32,7 @@ UserData: 实例自定义数据
     private String [] Attributes;
 
     /**
-    * 实例ID列表
+    * 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -59,16 +59,16 @@ UserData: 实例自定义数据
     }
 
     /**
-     * Get 实例ID列表 
-     * @return InstanceIds 实例ID列表
+     * Get 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。 
+     * @return InstanceIds 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表
-     * @param InstanceIds 实例ID列表
+     * Set 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+     * @param InstanceIds 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

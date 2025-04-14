@@ -101,6 +101,13 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     private Long CurrentLifeRound;
 
     /**
+    * 最大生命周期数
+    */
+    @SerializedName("MaxLifeRound")
+    @Expose
+    private Long MaxLifeRound;
+
+    /**
     * 当前生命周期重试次数
     */
     @SerializedName("Tries")
@@ -291,6 +298,22 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     }
 
     /**
+     * Get 最大生命周期数 
+     * @return MaxLifeRound 最大生命周期数
+     */
+    public Long getMaxLifeRound() {
+        return this.MaxLifeRound;
+    }
+
+    /**
+     * Set 最大生命周期数
+     * @param MaxLifeRound 最大生命周期数
+     */
+    public void setMaxLifeRound(Long MaxLifeRound) {
+        this.MaxLifeRound = MaxLifeRound;
+    }
+
+    /**
      * Get 当前生命周期重试次数 
      * @return Tries 当前生命周期重试次数
      */
@@ -366,6 +389,9 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         if (source.CurrentLifeRound != null) {
             this.CurrentLifeRound = new Long(source.CurrentLifeRound);
         }
+        if (source.MaxLifeRound != null) {
+            this.MaxLifeRound = new Long(source.MaxLifeRound);
+        }
         if (source.Tries != null) {
             this.Tries = new Long(source.Tries);
         }
@@ -390,6 +416,7 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
         this.setParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
         this.setParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+        this.setParamSimple(map, prefix + "MaxLifeRound", this.MaxLifeRound);
         this.setParamSimple(map, prefix + "Tries", this.Tries);
         this.setParamSimple(map, prefix + "Dynamic", this.Dynamic);
 

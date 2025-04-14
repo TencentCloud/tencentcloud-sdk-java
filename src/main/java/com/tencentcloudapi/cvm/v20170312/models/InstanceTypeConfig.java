@@ -59,7 +59,7 @@ public class InstanceTypeConfig extends AbstractModel {
     private Long CPU;
 
     /**
-    * 内存容量，单位：`GB`。
+    * 内存容量，单位：`GiB`。
     */
     @SerializedName("Memory")
     @Expose
@@ -160,16 +160,16 @@ public class InstanceTypeConfig extends AbstractModel {
     }
 
     /**
-     * Get 内存容量，单位：`GB`。 
-     * @return Memory 内存容量，单位：`GB`。
+     * Get 内存容量，单位：`GiB`。 
+     * @return Memory 内存容量，单位：`GiB`。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存容量，单位：`GB`。
-     * @param Memory 内存容量，单位：`GB`。
+     * Set 内存容量，单位：`GiB`。
+     * @param Memory 内存容量，单位：`GiB`。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;

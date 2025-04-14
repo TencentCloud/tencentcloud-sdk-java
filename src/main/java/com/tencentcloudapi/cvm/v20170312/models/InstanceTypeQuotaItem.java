@@ -38,7 +38,7 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+    * 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -94,7 +94,7 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     private LocalDiskType [] LocalDiskTypeList;
 
     /**
-    * 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+    * 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
     */
     @SerializedName("Status")
     @Expose
@@ -179,10 +179,7 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
     * 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
     */
     @SerializedName("StatusCategory")
     @Expose
@@ -221,16 +218,16 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。 
-     * @return InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+     * Get 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li> 
+     * @return InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
-     * @param InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+     * Set 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
+     * @param InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -349,16 +346,16 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。 
-     * @return Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+     * Get 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li> 
+     * @return Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
-     * @param Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+     * Set 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
+     * @param Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -542,15 +539,9 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
      * Get 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li> 
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li> 
      * @return StatusCategory 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
      */
     public String getStatusCategory() {
         return this.StatusCategory;
@@ -558,15 +549,9 @@ public class InstanceTypeQuotaItem extends AbstractModel {
 
     /**
      * Set 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
      * @param StatusCategory 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
      */
     public void setStatusCategory(String StatusCategory) {
         this.StatusCategory = StatusCategory;

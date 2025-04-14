@@ -126,6 +126,13 @@ public class TargetGroupInfo extends AbstractModel {
     private Long RegisteredInstancesCount;
 
     /**
+    * 目标组的标签。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private TagInfo [] Tag;
+
+    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -377,6 +384,22 @@ public class TargetGroupInfo extends AbstractModel {
         this.RegisteredInstancesCount = RegisteredInstancesCount;
     }
 
+    /**
+     * Get 目标组的标签。 
+     * @return Tag 目标组的标签。
+     */
+    public TagInfo [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 目标组的标签。
+     * @param Tag 目标组的标签。
+     */
+    public void setTag(TagInfo [] Tag) {
+        this.Tag = Tag;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -427,6 +450,12 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.RegisteredInstancesCount != null) {
             this.RegisteredInstancesCount = new Long(source.RegisteredInstancesCount);
         }
+        if (source.Tag != null) {
+            this.Tag = new TagInfo[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new TagInfo(source.Tag[i]);
+            }
+        }
     }
 
 
@@ -447,6 +476,7 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
         this.setParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
         this.setParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

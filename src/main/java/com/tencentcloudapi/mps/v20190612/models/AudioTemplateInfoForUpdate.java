@@ -56,7 +56,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     private Long Bitrate;
 
     /**
-    * 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+    * 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -189,10 +190,12 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * Get 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * @return SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,10 +204,12 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * Set 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * @param SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
      */

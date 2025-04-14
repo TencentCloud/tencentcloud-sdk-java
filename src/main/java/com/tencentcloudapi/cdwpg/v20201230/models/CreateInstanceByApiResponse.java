@@ -25,7 +25,6 @@ public class CreateInstanceByApiResponse extends AbstractModel {
 
     /**
     * 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateInstanceByApiResponse extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -55,10 +53,8 @@ public class CreateInstanceByApiResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程ID 
      * @return FlowId 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -66,19 +62,15 @@ public class CreateInstanceByApiResponse extends AbstractModel {
 
     /**
      * Set 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -86,9 +78,7 @@ public class CreateInstanceByApiResponse extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

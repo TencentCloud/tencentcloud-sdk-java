@@ -24,72 +24,82 @@ import java.util.HashMap;
 public class RemoveBandwidthPackageResourcesRequest extends AbstractModel {
 
     /**
-    * 带宽包唯一标识ID，形如'bwp-xxxx'
-    */
-    @SerializedName("BandwidthPackageId")
-    @Expose
-    private String BandwidthPackageId;
-
-    /**
-    * 资源类型，包括‘Address’, ‘LoadBalance’
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private String ResourceType;
-
-    /**
-    * 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+    * 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-     * Get 带宽包唯一标识ID，形如'bwp-xxxx' 
-     * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
-     */
-    public String getBandwidthPackageId() {
-        return this.BandwidthPackageId;
-    }
+    * 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
 
     /**
-     * Set 带宽包唯一标识ID，形如'bwp-xxxx'
-     * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
-     */
-    public void setBandwidthPackageId(String BandwidthPackageId) {
-        this.BandwidthPackageId = BandwidthPackageId;
-    }
+    * 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
 
     /**
-     * Get 资源类型，包括‘Address’, ‘LoadBalance’ 
-     * @return ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
-     */
-    public String getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set 资源类型，包括‘Address’, ‘LoadBalance’
-     * @param ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
-     */
-    public void setResourceType(String ResourceType) {
-        this.ResourceType = ResourceType;
-    }
-
-    /**
-     * Get 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx' 
-     * @return ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * Get 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。 
+     * @return ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
-     * @param ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * Set 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+     * @param ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
+    }
+
+    /**
+     * Get 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。 
+     * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
+    }
+
+    /**
+     * Get 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li> 
+     * @return ResourceType 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+     * @param ResourceType 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     public RemoveBandwidthPackageResourcesRequest() {
@@ -100,17 +110,17 @@ public class RemoveBandwidthPackageResourcesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RemoveBandwidthPackageResourcesRequest(RemoveBandwidthPackageResourcesRequest source) {
-        if (source.BandwidthPackageId != null) {
-            this.BandwidthPackageId = new String(source.BandwidthPackageId);
-        }
-        if (source.ResourceType != null) {
-            this.ResourceType = new String(source.ResourceType);
-        }
         if (source.ResourceIds != null) {
             this.ResourceIds = new String[source.ResourceIds.length];
             for (int i = 0; i < source.ResourceIds.length; i++) {
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
+        }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
         }
     }
 
@@ -119,9 +129,9 @@ public class RemoveBandwidthPackageResourcesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
 
     }
 }

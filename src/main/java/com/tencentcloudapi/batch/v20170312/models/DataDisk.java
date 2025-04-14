@@ -46,13 +46,7 @@ public class DataDisk extends AbstractModel {
     private String DiskId;
 
     /**
-    * 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+    * 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -66,13 +60,7 @@ public class DataDisk extends AbstractModel {
     private String SnapshotId;
 
     /**
-    * 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+    * 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -172,40 +160,16 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li> 
-     * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * Get 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。 
+     * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
-     * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * Set 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
+     * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
@@ -228,40 +192,16 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li> 
-     * @return Encrypt 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * Get 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。 
+     * @return Encrypt 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
-     * @param Encrypt 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * Set 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
+     * @param Encrypt 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;

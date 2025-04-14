@@ -24,7 +24,15 @@ import java.util.HashMap;
 public class InstanceLifeDetailDto extends AbstractModel {
 
     /**
-    * 实例状态
+    * **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -40,7 +48,16 @@ public class InstanceLifeDetailDto extends AbstractModel {
     private String StartTime;
 
     /**
-    * 实例生命周期阶段状态
+    * **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailState")
@@ -56,9 +73,25 @@ public class InstanceLifeDetailDto extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 实例状态
+     * Get **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 实例状态
+     * @return State **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
@@ -66,9 +99,25 @@ public class InstanceLifeDetailDto extends AbstractModel {
     }
 
     /**
-     * Set 实例状态
+     * Set **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 实例状态
+     * @param State **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
@@ -96,9 +145,27 @@ public class InstanceLifeDetailDto extends AbstractModel {
     }
 
     /**
-     * Get 实例生命周期阶段状态
+     * Get **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetailState 实例生命周期阶段状态
+     * @return DetailState **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetailState() {
@@ -106,9 +173,27 @@ public class InstanceLifeDetailDto extends AbstractModel {
     }
 
     /**
-     * Set 实例生命周期阶段状态
+     * Set **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetailState 实例生命周期阶段状态
+     * @param DetailState **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailState(String DetailState) {

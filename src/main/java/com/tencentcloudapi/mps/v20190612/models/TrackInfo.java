@@ -25,8 +25,8 @@ public class TrackInfo extends AbstractModel {
 
     /**
     * 音轨和声道数字，说明：
-当：SelectType值为trask，此值为整数类型，例如：1；
-当：SelectType值为trask_channel，此值为小数类型，例如：1.0；
+当：SelectType值为track，此值为整数类型，例如：1；
+当：SelectType值为track_channel，此值为小数类型，例如：1.0；
 默认值：1.0
 注意：整数部分代表音轨序号，以小数部分代表声道。音轨序号即为音轨的stream index，支持输入0和正整数。小数部分最多支持2位小数，并且仅支持0-63，但是如果Codec为aac/eac3/ac3时，小数部分仅支持0-15。例如：对于stream index为1的音轨，1.0代表这个音轨的第1个声道，1.1代表这个音轨的第2个声道。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,14 +51,14 @@ public class TrackInfo extends AbstractModel {
 
     /**
      * Get 音轨和声道数字，说明：
-当：SelectType值为trask，此值为整数类型，例如：1；
-当：SelectType值为trask_channel，此值为小数类型，例如：1.0；
+当：SelectType值为track，此值为整数类型，例如：1；
+当：SelectType值为track_channel，此值为小数类型，例如：1.0；
 默认值：1.0
 注意：整数部分代表音轨序号，以小数部分代表声道。音轨序号即为音轨的stream index，支持输入0和正整数。小数部分最多支持2位小数，并且仅支持0-63，但是如果Codec为aac/eac3/ac3时，小数部分仅支持0-15。例如：对于stream index为1的音轨，1.0代表这个音轨的第1个声道，1.1代表这个音轨的第2个声道。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TrackNum 音轨和声道数字，说明：
-当：SelectType值为trask，此值为整数类型，例如：1；
-当：SelectType值为trask_channel，此值为小数类型，例如：1.0；
+当：SelectType值为track，此值为整数类型，例如：1；
+当：SelectType值为track_channel，此值为小数类型，例如：1.0；
 默认值：1.0
 注意：整数部分代表音轨序号，以小数部分代表声道。音轨序号即为音轨的stream index，支持输入0和正整数。小数部分最多支持2位小数，并且仅支持0-63，但是如果Codec为aac/eac3/ac3时，小数部分仅支持0-15。例如：对于stream index为1的音轨，1.0代表这个音轨的第1个声道，1.1代表这个音轨的第2个声道。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -69,14 +69,14 @@ public class TrackInfo extends AbstractModel {
 
     /**
      * Set 音轨和声道数字，说明：
-当：SelectType值为trask，此值为整数类型，例如：1；
-当：SelectType值为trask_channel，此值为小数类型，例如：1.0；
+当：SelectType值为track，此值为整数类型，例如：1；
+当：SelectType值为track_channel，此值为小数类型，例如：1.0；
 默认值：1.0
 注意：整数部分代表音轨序号，以小数部分代表声道。音轨序号即为音轨的stream index，支持输入0和正整数。小数部分最多支持2位小数，并且仅支持0-63，但是如果Codec为aac/eac3/ac3时，小数部分仅支持0-15。例如：对于stream index为1的音轨，1.0代表这个音轨的第1个声道，1.1代表这个音轨的第2个声道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TrackNum 音轨和声道数字，说明：
-当：SelectType值为trask，此值为整数类型，例如：1；
-当：SelectType值为trask_channel，此值为小数类型，例如：1.0；
+当：SelectType值为track，此值为整数类型，例如：1；
+当：SelectType值为track_channel，此值为小数类型，例如：1.0；
 默认值：1.0
 注意：整数部分代表音轨序号，以小数部分代表声道。音轨序号即为音轨的stream index，支持输入0和正整数。小数部分最多支持2位小数，并且仅支持0-63，但是如果Codec为aac/eac3/ac3时，小数部分仅支持0-15。例如：对于stream index为1的音轨，1.0代表这个音轨的第1个声道，1.1代表这个音轨的第2个声道。
 注意：此字段可能返回 null，表示取不到有效值。
